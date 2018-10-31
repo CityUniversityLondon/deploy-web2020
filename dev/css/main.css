@@ -42,7 +42,7 @@ strong {
 a,
 button {
     color: inherit;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 a {
@@ -67,6 +67,11 @@ img {
     max-width: 100%;
     height: auto;
     border: 0;
+}
+
+iframe {
+    display: block;
+    margin: 1rem;
 }
 
 .fa,
@@ -191,71 +196,50 @@ img {
 }
 
 .fa-spin {
-    -webkit-animation: fa-spin 2s infinite linear;
-            animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
 }
 
 .fa-pulse {
-    -webkit-animation: fa-spin 1s infinite steps(8);
-            animation: fa-spin 1s infinite steps(8);
-}
-
-@-webkit-keyframes fa-spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-    }
+    animation: fa-spin 1s infinite steps(8);
 }
 
 @keyframes fa-spin {
     0% {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-        -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 .fa-rotate-90 {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
+    transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
-    -webkit-transform: scale(-1, 1);
-            transform: scale(-1, 1);
+    transform: scale(-1, 1);
 }
 
 .fa-flip-vertical {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-    -webkit-transform: scale(1, -1);
-            transform: scale(1, -1);
+    transform: scale(1, -1);
 }
 
 .fa-flip-horizontal.fa-flip-vertical {
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
-    -webkit-transform: scale(-1, -1);
-            transform: scale(-1, -1);
+    transform: scale(-1, -1);
 }
 
 :root .fa-rotate-90,
@@ -5186,10 +5170,6 @@ readers do not read off random characters that represent icons */
     content: "\f25d";
 }
 
-.fa-rendact:before {
-    content: "\f3e4";
-}
-
 .fa-renren:before {
     content: "\f18b";
 }
@@ -6274,6 +6254,10 @@ readers do not read off random characters that represent icons */
     content: "\f69e";
 }
 
+.fa-think-peaks:before {
+    content: "\f731";
+}
+
 .fa-thumbs-down:before {
     content: "\f165";
 }
@@ -7082,6 +7066,10 @@ readers do not read off random characters that represent icons */
     content: "\f298";
 }
 
+.fa-wpressr:before {
+    content: "\f3e4";
+}
+
 .fa-wrench:before {
     content: "\f0ad";
 }
@@ -7422,9 +7410,49 @@ readers do not read off random characters that represent icons */
     src: local("Font Awesome Brands Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fontawesome/fa-brands-400.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fontawesome/fa-brands-400.woff) format("woff");
 }
 
+main p, main li, main h6, .cms-editor div.cms-editor-warning p {
+    font-size: 1rem;
+    line-height: 1.375rem;
+}
+
+main h5 {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+main .standfirst, main h4 {
+    font-size: 1.2rem;
+    line-height: 1.625rem;
+}
+
+main h3 {
+    font-size: 1.4rem;
+    line-height: 1.875rem;
+}
+
+main h2 {
+    font-size: 1.6rem;
+    line-height: 2.125rem;
+}
+
+main h1 {
+    font-size: 1.8rem;
+    line-height: 2.375rem;
+}
+
+.breadcrumbs ol li {
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+}
+
+.cms-editor div.cms-editor-warning p:after, footer .copyright {
+    font-size: 0.8rem;
+    line-height: 1.125rem;
+}
+
 html {
-    background-color: #f5f5f5;
-    color: #16161d;
+    background-color: #ffffff;
+    color: #1e1e1e;
     box-sizing: border-box;
     min-height: 100%;
     overflow-x: hidden;
@@ -7439,18 +7467,29 @@ html {
 }
 
 body {
-    background-color: #f5f5f5;
-    color: #16161d;
+    background-color: #ffffff;
+    color: #1e1e1e;
 }
 
 html {
     font-family: "PT Sans", sans-serif;
+    font-feature-settings: 'lnum' 0;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    -webkit-font-feature-settings: 'lnum' 0;
-            font-feature-settings: 'lnum' 0;
+    line-height: 18px;
     text-rendering: optimizeLegibility;
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+
+u {
+    text-decoration: none;
 }
 
 .fal {
@@ -7585,156 +7624,185 @@ html {
     font-weight: 900;
 }
 
-article p, article li {
+main p, main li {
     font-family: "PT Sans", sans-serif;
-    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.375rem;
-    max-width: calc(1rem * 30);
+    max-width: 60ch;
 }
 
-article p b, article li b,
-article p strong,
-article li strong {
+main p b, main li b,
+main p strong,
+main li strong {
     font-weight: 700;
 }
 
-article p i, article li i,
-article p em,
-article li em {
+main p i, main li i,
+main p em,
+main li em {
     font-style: italic;
 }
 
-article p u, article li u {
-    text-decoration: none;
-}
-
-article p + p,
-article p + ol,
-article p + ul,
-article p + dl {
+main p + p,
+main p + ol,
+main p + ul,
+main p + dl {
     margin-top: 1rem;
 }
 
-article .standfirst {
+main .standfirst {
     font-family: "FF Meta", sans-serif;
-    font-size: 1.2rem;
     font-style: normal;
     font-weight: 300;
-    line-height: 1.625rem;
-    max-width: calc(1.2rem * 30);
+    max-width: 60ch;
 }
 
-article ol,
-article ul,
-article dl {
-    margin-left: 1rem;
-    max-width: calc(1rem * 29);
+main ol,
+main ul,
+main dl {
+    margin-left: 1.8rem;
+    max-width: 60ch;
 }
 
-article ul {
+main ul {
     list-style: disc;
 }
 
-article ul ul {
+main ul ul {
     list-style: circle;
 }
 
-article li + li {
+main li + li {
     margin-top: 1rem;
 }
 
-article h1,
-article h2,
-article h3,
-article h4,
-article h5,
-article h6 {
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
     font-family: "FF Meta", sans-serif;
-    -webkit-font-feature-settings: 'lnum' 1;
-            font-feature-settings: 'lnum' 1;
+    font-feature-settings: 'lnum' 1;
 }
 
-article h1 b,
-article h1 strong,
-article h2 b,
-article h2 strong,
-article h3 b,
-article h3 strong,
-article h4 b,
-article h4 strong,
-article h5 b,
-article h5 strong,
-article h6 b,
-article h6 strong {
+main h1 b,
+main h1 strong,
+main h2 b,
+main h2 strong,
+main h3 b,
+main h3 strong,
+main h4 b,
+main h4 strong,
+main h5 b,
+main h5 strong,
+main h6 b,
+main h6 strong {
     font-weight: inherit;
 }
 
-article h1 u,
-article h2 u,
-article h3 u,
-article h4 u,
-article h5 u,
-article h6 u {
+main h1 u,
+main h2 u,
+main h3 u,
+main h4 u,
+main h5 u,
+main h6 u {
     text-decoration: none;
 }
 
-article h6 {
-    font-size: 1rem;
+main h6 {
     font-style: normal;
     font-weight: 700;
-    line-height: 1.375rem;
     margin-top: 1rem;
 }
 
-article h5 {
-    font-size: 1.1rem;
+main h5 {
     font-style: normal;
-    font-weight: 700;
-    line-height: 1.5rem;
+    font-weight: 600;
     margin-top: 1.1rem;
 }
 
-article h4 {
-    font-size: 1.2rem;
+main h4 {
     font-style: normal;
     font-weight: 600;
-    line-height: 1.625rem;
     margin-top: 1.2rem;
 }
 
-article h3 {
-    font-size: 1.4rem;
+main h3 {
     font-style: normal;
     font-weight: 600;
-    line-height: 1.875rem;
     margin-top: 1.4rem;
 }
 
-article h2 {
-    font-size: 1.6rem;
+main h2 {
     font-style: normal;
     font-weight: 600;
-    line-height: 2.125rem;
     margin-top: 1.6rem;
 }
 
-article h1 {
-    font-size: 1.8rem;
+main h1 {
     font-style: normal;
     font-weight: 600;
-    line-height: 2.375rem;
+}
+
+a {
+    background-color: inherit;
+    border-bottom-width: 0;
+    color: inherit;
+    cursor: pointer;
+    background: unset;
+    border-bottom-color: #dd0036;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    color: #dd0036;
+    text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+    background-color: inherit;
+    color: inherit;
+    outline-width: 0;
+}
+
+a:focus {
+    background: unset;
+    color: #dd0036;
+    outline-color: #1e1e1e;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
+}
+
+a:hover {
+    background: #dd0036;
+    color: #ffffff;
+    outline: none;
+}
+
+a:active {
+    background: #dd0036;
+    color: #ffffff;
+    outline-color: #1e1e1e;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
 }
 
 body {
-    margin: 0 auto 1rem;
+    margin: 0 auto;
     max-width: 1440px;
+}
+
+@media (max-width: 1439px) {
+    body {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
 }
 
 .breadcrumbs {
     display: grid;
-    margin-top: 0.9rem;
+    margin-top: 0.8rem;
 }
 
 .breadcrumbs ol {
@@ -7745,26 +7813,118 @@ body {
 
 .breadcrumbs ol li {
     font-family: "PT Caption", sans-serif;
-    font-size: 0.9rem;
-    font-weight: normal;
-    line-height: 1.25rem;
     float: left;
-    margin-bottom: 0.9rem;
+    font-weight: normal;
+    margin-bottom: 0.8rem;
 }
 
-.breadcrumbs ol li + li {
-    margin-left: 0.9rem;
+.breadcrumbs ol li:not(:last-of-type) {
+    margin-right: 0.8rem;
 }
 
-.breadcrumbs ol li + li:before {
-    content: '>';
-    margin-right: 0.9rem;
+.breadcrumbs ol li:not(:last-of-type):after {
+    font-family: "Font Awesome";
+    content: '\f105';
+    font-weight: 300;
+    margin-left: 0.8rem;
+}
+
+.cms-editor-warning {
+    display: none;
+}
+
+.cms-editor div.cms-editor-warning {
+    display: block;
+}
+
+.cms-editor div.cms-editor-warning p {
+    background: darkred !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    padding-left: 0.9rem !important;
+    padding-right: 0.9rem !important;
+    margin-bottom: 0.9rem !important;
+    max-width: 60ch;
+    padding-top: 0.9rem !important;
+    padding-bottom: calc(1rem * 3) !important;
+    position: relative !important;
+}
+
+.cms-editor div.cms-editor-warning p:after {
+    font-family: "PT Caption", sans-serif;
+    bottom: 0.9rem !important;
+    content: 'CMS editor warning' !important;
+    font-weight: 400 !important;
+    position: absolute !important;
+    right: 0.9rem !important;
+}
+
+.cms-editor span.cms-editor-warning {
+    background: darkred !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    padding-left: 0.9rem !important;
+    padding-right: 0.9rem !important;
+    display: inline;
+}
+
+footer {
+    margin-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 footer .copyright {
     font-family: "PT Caption", sans-serif;
-    font-size: 0.9rem;
     font-weight: 400;
-    line-height: 1.25rem;
     text-align: right;
+}
+
+.global-header .header-logo a {
+    background-color: inherit;
+    border-bottom-width: 0;
+    color: inherit;
+    cursor: pointer;
+    color: #dd0036;
+    text-decoration: none;
+}
+
+.global-header .header-logo a:hover, .global-header .header-logo a:focus, .global-header .header-logo a:active {
+    background-color: inherit;
+    color: inherit;
+    outline-width: 0;
+}
+
+.global-header .header-logo a:hover {
+    color: #440011;
+    outline: none;
+}
+
+.global-header .header-logo a:focus {
+    color: #dd0036;
+    outline-color: #1e1e1e;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
+}
+
+.global-header .header-logo a:active {
+    color: #440011;
+    outline-color: #1e1e1e;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
+}
+
+.global-nav ul {
+    list-style: none;
+}
+
+.global-nav li {
+    margin-top: 0.8rem;
+}
+
+.global-nav .global-nav__level3,
+.global-nav .global-nav__level4,
+.global-nav .global-nav__level5 {
+    margin-left: 1rem;
 }
