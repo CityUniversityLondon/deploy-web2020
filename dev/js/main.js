@@ -182,7 +182,7 @@ function launchPattern(pattern) {
     var className = pattern.className,
         launch = pattern.launch;
     Array.from(document.getElementsByClassName(className)).filter(function (element) {
-      return !element.className.indexOf(className + '-njs');
+      return !element.className.indexOf(className + '-no-js');
     }).forEach(function (element) {
       return tryCatch(function () {
         return launch(element);
@@ -192,6 +192,7 @@ function launchPattern(pattern) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  document.getElementsByTagName('html').forEach(this.className = 'js');
   _component_list__WEBPACK_IMPORTED_MODULE_0__["default"].forEach(launchPattern);
 });
 
