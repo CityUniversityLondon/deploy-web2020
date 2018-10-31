@@ -14,7 +14,7 @@ function launchPattern(pattern) {
     if (typeof pattern === 'function') {
         tryCatch(pattern);
     } else if (pattern.className) {
-        let { className, launch } = pattern;
+        const { className, launch } = pattern;
         Array.from(document.getElementsByClassName(className))
             .filter(element => !element.className.indexOf(className + '-no-js'))
             .forEach(element => tryCatch(() => launch(element)));
