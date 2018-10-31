@@ -16,11 +16,12 @@ function launchPattern(pattern) {
     } else if (pattern.className) {
         let { className, launch } = pattern;
         Array.from(document.getElementsByClassName(className))
-            .filter(element => !element.className.indexOf(className + '-njs'))
+            .filter(element => !element.className.indexOf(className + '-no-js'))
             .forEach(element => tryCatch(() => launch(element)));
     }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    document.getElementsByTagName('html').forEach((this.className = 'js'));
     patterns.forEach(launchPattern);
 });
