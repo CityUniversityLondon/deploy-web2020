@@ -22,7 +22,6 @@ function launchPattern(pattern) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.info('DOMContentLoaded');
     Array.from(document.getElementsByTagName('html')).forEach(
         element => (element.className = 'js')
     );
