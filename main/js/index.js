@@ -22,6 +22,8 @@ function launchPattern(pattern) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementsByTagName('html').forEach((this.className = 'js'));
+    Array.from(document.getElementsByTagName('html')).forEach(
+        element => (element.className = 'js')
+    );
     patterns.forEach(launchPattern);
 });
