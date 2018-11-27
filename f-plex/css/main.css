@@ -8242,7 +8242,7 @@ u {
 
 .sans {
     font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 400;
+    font-weight: 450;
 }
 
 .sans b,
@@ -8257,7 +8257,7 @@ u {
 
 .serif {
     font-family: "IBM Plex Serif", serif;
-    font-weight: 400;
+    font-weight: 450;
 }
 
 .serif b,
@@ -8272,7 +8272,7 @@ u {
 
 .mono {
     font-family: "IBM Plex Mono", monospace;
-    font-weight: 400;
+    font-weight: 450;
 }
 
 .mono b,
@@ -8529,8 +8529,9 @@ main blockquote {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
+    font-feature-settings: 'salt' 1, 'zero' 1;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 450;
     max-width: 55ch;
 }
 
@@ -8662,8 +8663,9 @@ main dd {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
+    font-feature-settings: 'salt' 1, 'zero' 1;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 450;
     max-width: 55ch;
 }
 
@@ -8681,8 +8683,9 @@ main li {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
+    font-feature-settings: 'salt' 1, 'zero' 1;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 450;
     max-width: 55ch;
     margin-top: 0.5rem;
 }
@@ -8727,8 +8730,9 @@ main table td {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
+    font-feature-settings: 'salt' 1, 'zero' 1;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 450;
     max-width: 55ch;
     vertical-align: top;
 }
@@ -9746,8 +9750,9 @@ figure figcaption {
         font-family: "IBM Plex Sans", sans-serif;
         font-size: 1rem;
         line-height: 1.625rem;
+        font-feature-settings: 'salt' 1, 'zero' 1;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 450;
         max-width: 55ch;
         font-family: "PT Caption", sans-serif;
         font-size: 0.9rem;
