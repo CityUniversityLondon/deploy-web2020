@@ -8701,7 +8701,7 @@ main li em {
 }
 
 main table {
-    font-feature-settings: 'tnum' 1, 'pnum' 1;
+    font-feature-settings: 'tnum' 1, 'lnum' 1, 'pnum' 0, 'onum' 0;
     margin-top: 0.5rem;
     min-width: 66%;
 }
