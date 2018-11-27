@@ -8354,7 +8354,7 @@ u {
 h6,
 .h6-style {
     font-family: "FF Meta", sans-serif;
-    font-feature-settings: 'lnum' 1, 'onum' 0;
+    font-feature-settings: 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
     font-size: 1rem;
     line-height: 1.625rem;
     font-style: normal;
@@ -8377,7 +8377,7 @@ h6 u,
 h5,
 .h5-style {
     font-family: "FF Meta", sans-serif;
-    font-feature-settings: 'lnum' 1, 'onum' 0;
+    font-feature-settings: 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
     font-size: 1.1rem;
     line-height: 2.0375rem;
     font-style: normal;
@@ -8400,7 +8400,7 @@ h5 u,
 h4,
 .h4-style {
     font-family: "FF Meta", sans-serif;
-    font-feature-settings: 'lnum' 1, 'onum' 0;
+    font-feature-settings: 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
     font-size: 1.2rem;
     line-height: 2.2rem;
     font-style: normal;
@@ -8423,7 +8423,7 @@ h4 u,
 h3,
 .h3-style {
     font-family: "FF Meta", sans-serif;
-    font-feature-settings: 'lnum' 1, 'onum' 0;
+    font-feature-settings: 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
     font-size: 1.4rem;
     line-height: 2.525rem;
     font-style: normal;
@@ -8446,7 +8446,7 @@ h3 u,
 h2,
 .h2-style {
     font-family: "FF Meta", sans-serif;
-    font-feature-settings: 'lnum' 1, 'onum' 0;
+    font-feature-settings: 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
     font-size: 1.6rem;
     line-height: 2.85rem;
     font-style: normal;
@@ -8469,7 +8469,7 @@ h2 u,
 h1,
 .h1-style {
     font-family: "FF Meta", sans-serif;
-    font-feature-settings: 'lnum' 1, 'onum' 0;
+    font-feature-settings: 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
     font-size: 1.8rem;
     line-height: 3.175rem;
     font-style: normal;
@@ -8529,7 +8529,7 @@ main blockquote {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
-    font-feature-settings: 'salt' 1, 'zero' 1;
+    font-feature-settings: 'salt' 1, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
@@ -8586,7 +8586,7 @@ main figure {
 
 main header p {
     font-family: "FF Meta", sans-serif;
-    font-feature-settings: 'lnum' 1, 'onum' 0;
+    font-feature-settings: 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
     font-size: 1.8rem;
     line-height: 3.175rem;
     font-style: normal;
@@ -8638,7 +8638,7 @@ main ul ul {
 
 main dt {
     font-family: "FF Meta", sans-serif;
-    font-feature-settings: 'lnum' 1, 'onum' 0;
+    font-feature-settings: 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
     font-size: 1rem;
     line-height: 1.625rem;
     font-style: normal;
@@ -8663,7 +8663,7 @@ main dd {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
-    font-feature-settings: 'salt' 1, 'zero' 1;
+    font-feature-settings: 'salt' 1, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
@@ -8683,7 +8683,7 @@ main li {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
-    font-feature-settings: 'salt' 1, 'zero' 1;
+    font-feature-settings: 'salt' 1, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
@@ -8708,7 +8708,7 @@ main table {
 
 main table th {
     font-family: "FF Meta", sans-serif;
-    font-feature-settings: 'lnum' 1, 'onum' 0;
+    font-feature-settings: 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
     font-size: 1rem;
     line-height: 1.625rem;
     font-style: normal;
@@ -8730,7 +8730,7 @@ main table td {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
-    font-feature-settings: 'salt' 1, 'zero' 1;
+    font-feature-settings: 'salt' 1, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
@@ -9332,7 +9332,7 @@ figure figcaption {
 
 .js .menu .menu__button {
     font-family: "FF Meta", sans-serif;
-    font-feature-settings: 'lnum' 1, 'onum' 0;
+    font-feature-settings: 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
     font-size: 1.8rem;
     line-height: 3.175rem;
     font-style: normal;
@@ -9750,7 +9750,7 @@ figure figcaption {
         font-family: "IBM Plex Sans", sans-serif;
         font-size: 1rem;
         line-height: 1.625rem;
-        font-feature-settings: 'salt' 1, 'zero' 1;
+        font-feature-settings: 'salt' 1, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
         font-style: normal;
         font-weight: 450;
         max-width: 55ch;
@@ -9898,7 +9898,7 @@ blockquote footer {
     }
     .js .tabs__links li a span {
         font-family: "FF Meta", sans-serif;
-        font-feature-settings: 'lnum' 1, 'onum' 0;
+        font-feature-settings: 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
         font-size: 1rem;
         line-height: 1.625rem;
         font-style: normal;
@@ -10024,7 +10024,7 @@ blockquote footer {
     }
     .js .tabs__links li a span {
         font-family: "FF Meta", sans-serif;
-        font-feature-settings: 'lnum' 1, 'onum' 0;
+        font-feature-settings: 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
         font-size: 1rem;
         line-height: 1.625rem;
         font-style: normal;
