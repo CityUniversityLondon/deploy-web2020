@@ -7454,7 +7454,7 @@ readers do not read off random characters that represent icons */
 @font-face {
     font-family: "FF Meta";
     font-style: normal;
-    font-weight: 200;
+    font-weight: 100;
     font-display: swap;
     src: local("FF Meta Thin"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ffmeta/ff-meta-w03-thin.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ffmeta/ff-meta-w03-thin.woff) format("woff");
 }
@@ -7518,7 +7518,7 @@ readers do not read off random characters that represent icons */
 @font-face {
     font-family: "FF Meta";
     font-style: italic;
-    font-weight: 200;
+    font-weight: 100;
     font-display: swap;
     src: local("FF Meta Thin Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ffmeta/ff-meta-w03-thin-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ffmeta/ff-meta-w03-thin-italic.woff) format("woff");
 }
@@ -7574,7 +7574,7 @@ readers do not read off random characters that represent icons */
 @font-face {
     font-family: "Roboto";
     font-style: normal;
-    font-weight: 200;
+    font-weight: 100;
     font-display: swap;
     src: local("Roboto Thin"), url(/__data/assets/git_bridge/0005/440879/main/fonts/roboto/Roboto-Thin.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/roboto/Roboto-Thin.woff) format("woff");
 }
@@ -7622,7 +7622,7 @@ readers do not read off random characters that represent icons */
 @font-face {
     font-family: "Roboto";
     font-style: italic;
-    font-weight: 200;
+    font-weight: 100;
     font-display: swap;
     src: local("Roboto Thin Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/roboto/Roboto-ThinItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/roboto/Roboto-ThinItalic.woff) format("woff");
 }
@@ -7774,7 +7774,7 @@ readers do not read off random characters that represent icons */
 @font-face {
     font-family: "IBM Plex Sans";
     font-style: normal;
-    font-weight: 200;
+    font-weight: 100;
     font-display: swap;
     src: local("IBM Plex Sans Extra Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-ExtraLight.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-ExtraLight.woff) format("woff");
 }
@@ -7902,7 +7902,7 @@ readers do not read off random characters that represent icons */
 @font-face {
     font-family: "IBM Plex Serif";
     font-style: normal;
-    font-weight: 200;
+    font-weight: 100;
     font-display: swap;
     src: local("IBM Plex Serif Extra Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-ExtraLight.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-ExtraLight.woff) format("woff");
 }
@@ -8030,7 +8030,7 @@ readers do not read off random characters that represent icons */
 @font-face {
     font-family: "IBM Plex Mono";
     font-style: normal;
-    font-weight: 200;
+    font-weight: 100;
     font-display: swap;
     src: local("IBM Plex Mono Extra Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-ExtraLight.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-ExtraLight.woff) format("woff");
 }
@@ -8329,6 +8329,10 @@ u {
 
 .weight-normal {
     font-weight: 400;
+}
+
+.weight-text {
+    font-weight: 450;
 }
 
 .weight-book {
