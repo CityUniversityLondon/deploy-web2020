@@ -7829,7 +7829,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Sans";
-    font-style: normal;
+    font-style: italic;
     font-weight: 100;
     font-display: swap;
     src: local("IBM Plex Sans Thin Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-ThinItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-ThinItalic.woff) format("woff");
@@ -7845,7 +7845,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Sans";
-    font-style: normal;
+    font-style: italic;
     font-weight: 300;
     font-display: swap;
     src: local("IBM Plex Sans Light Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-LightItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-LightItalic.woff) format("woff");
@@ -7853,7 +7853,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Sans";
-    font-style: normal;
+    font-style: italic;
     font-weight: 400;
     font-display: swap;
     src: local("IBM Plex Sans Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-Italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-Italic.woff) format("woff");
@@ -7861,7 +7861,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Sans";
-    font-style: normal;
+    font-style: italic;
     font-weight: 450;
     font-display: swap;
     src: local("IBM Plex Sans Text Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-TextItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-TextItalic.woff) format("woff");
@@ -7869,7 +7869,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Sans";
-    font-style: normal;
+    font-style: italic;
     font-weight: 500;
     font-display: swap;
     src: local("IBM Plex Sans Medium Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-MediumItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-MediumItalic.woff) format("woff");
@@ -7877,7 +7877,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Sans";
-    font-style: normal;
+    font-style: italic;
     font-weight: 600;
     font-display: swap;
     src: local("IBM Plex Sans Semi Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-SemiBoldItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-SemiBoldItalic.woff) format("woff");
@@ -7885,7 +7885,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Sans";
-    font-style: normal;
+    font-style: italic;
     font-weight: 700;
     font-display: swap;
     src: local("IBM Plex Sans Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-BoldItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-BoldItalic.woff) format("woff");
@@ -7957,7 +7957,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Serif";
-    font-style: normal;
+    font-style: italic;
     font-weight: 100;
     font-display: swap;
     src: local("IBM Plex Serif Thin Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-ThinItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-ThinItalic.woff) format("woff");
@@ -7965,7 +7965,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Serif";
-    font-style: normal;
+    font-style: italic;
     font-weight: 200;
     font-display: swap;
     src: local("IBM Plex Serif Extra Light Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-ExtraLightItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-ExtraLightItalic.woff) format("woff");
@@ -7973,7 +7973,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Serif";
-    font-style: normal;
+    font-style: italic;
     font-weight: 300;
     font-display: swap;
     src: local("IBM Plex Serif Light Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-LightItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-LightItalic.woff) format("woff");
@@ -7981,7 +7981,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Serif";
-    font-style: normal;
+    font-style: italic;
     font-weight: 400;
     font-display: swap;
     src: local("IBM Plex Serif Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-Italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-Italic.woff) format("woff");
@@ -7989,7 +7989,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Serif";
-    font-style: normal;
+    font-style: italic;
     font-weight: 450;
     font-display: swap;
     src: local("IBM Plex Serif Text Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-TextItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-TextItalic.woff) format("woff");
@@ -7997,7 +7997,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Serif";
-    font-style: normal;
+    font-style: italic;
     font-weight: 500;
     font-display: swap;
     src: local("IBM Plex Serif Medium Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-MediumItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-MediumItalic.woff) format("woff");
@@ -8005,7 +8005,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Serif";
-    font-style: normal;
+    font-style: italic;
     font-weight: 600;
     font-display: swap;
     src: local("IBM Plex Serif Semi Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-SemiBoldItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-SemiBoldItalic.woff) format("woff");
@@ -8013,7 +8013,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Serif";
-    font-style: normal;
+    font-style: italic;
     font-weight: 700;
     font-display: swap;
     src: local("IBM Plex Serif Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-BoldItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexserif/IBMPlexSerif-BoldItalic.woff) format("woff");
@@ -8085,7 +8085,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Mono";
-    font-style: normal;
+    font-style: italic;
     font-weight: 100;
     font-display: swap;
     src: local("IBM Plex Mono Thin Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-ThinItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-ThinItalic.woff) format("woff");
@@ -8093,7 +8093,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Mono";
-    font-style: normal;
+    font-style: italic;
     font-weight: 200;
     font-display: swap;
     src: local("IBM Plex Mono Extra Light Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-ExtraLightItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-ExtraLightItalic.woff) format("woff");
@@ -8101,7 +8101,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Mono";
-    font-style: normal;
+    font-style: italic;
     font-weight: 300;
     font-display: swap;
     src: local("IBM Plex Mono Light Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-LightItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-LightItalic.woff) format("woff");
@@ -8109,7 +8109,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Mono";
-    font-style: normal;
+    font-style: italic;
     font-weight: 400;
     font-display: swap;
     src: local("IBM Plex Mono Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-Italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-Italic.woff) format("woff");
@@ -8117,7 +8117,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Mono";
-    font-style: normal;
+    font-style: italic;
     font-weight: 450;
     font-display: swap;
     src: local("IBM Plex Mono Text Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-TextItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-TextItalic.woff) format("woff");
@@ -8125,7 +8125,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Mono";
-    font-style: normal;
+    font-style: italic;
     font-weight: 500;
     font-display: swap;
     src: local("IBM Plex Mono Medium Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-MediumItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-MediumItalic.woff) format("woff");
@@ -8133,7 +8133,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Mono";
-    font-style: normal;
+    font-style: italic;
     font-weight: 600;
     font-display: swap;
     src: local("IBM Plex Mono Semi Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-SemiBoldItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-SemiBoldItalic.woff) format("woff");
@@ -8141,7 +8141,7 @@ readers do not read off random characters that represent icons */
 
 @font-face {
     font-family: "IBM Plex Mono";
-    font-style: normal;
+    font-style: italic;
     font-weight: 700;
     font-display: swap;
     src: local("IBM Plex Mono Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-BoldItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexmono/IBMPlexMono-BoldItalic.woff) format("woff");
