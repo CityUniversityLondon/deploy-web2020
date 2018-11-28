@@ -2606,7 +2606,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * try a function, log the error if it throws an exception.
  *
- * @param  {Function} f
+ * @param {Function} f - The function to call.
  */
 
 function tryCatch(f) {
@@ -2649,7 +2649,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // }
   Array.from(document.getElementsByTagName('html')).forEach(html => {
     Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(html, 'no-js', false);
-    html.className += ' js';
+    html.className = (html.className + ' js').trim();
   });
   _patterns__WEBPACK_IMPORTED_MODULE_1__["default"].forEach(launchPattern);
 }, false);
