@@ -8537,7 +8537,15 @@ main blockquote {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
-    font-feature-settings: 'ss01' 0, 'ss02' 0, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 0, 'ss03' 1, 'ss04' 0, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
@@ -8671,7 +8679,15 @@ main dd {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
-    font-feature-settings: 'ss01' 0, 'ss02' 0, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 0, 'ss03' 1, 'ss04' 0, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
@@ -8691,7 +8707,15 @@ main li {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
-    font-feature-settings: 'ss01' 0, 'ss02' 0, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 0, 'ss03' 1, 'ss04' 0, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
@@ -8738,7 +8762,15 @@ main table td {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
-    font-feature-settings: 'ss01' 0, 'ss02' 0, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 0, 'ss03' 1, 'ss04' 0, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
@@ -9758,7 +9790,15 @@ figure figcaption {
         font-family: "IBM Plex Sans", sans-serif;
         font-size: 1rem;
         line-height: 1.625rem;
-        font-feature-settings: 'ss01' 0, 'ss02' 0, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
+        /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+        font-feature-settings: 'ss01' 0, 'ss02' 0, 'ss03' 1, 'ss04' 0, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
         font-style: normal;
         font-weight: 450;
         max-width: 55ch;
