@@ -8675,65 +8675,11 @@ main dt:first-of-type {
     margin-top: 0;
 }
 
-main dd {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-size: 1rem;
-    line-height: 1.625rem;
-    /**
-     * IBM Plex OpenType stylistic sets:
-     *
-     * ss01: 0/1 double-storey/simple 'a'
-     * ss02: 0/1 double-storey/simple 'g'
-     * ss03: 0/1 plain/slashed '0'
-     * ss04: 0/1 plain/dotted '0'
-     */
-    font-feature-settings: 'ss01' 0, 'ss02' 0, 'ss03' 0, 'ss04' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
-    font-style: normal;
-    font-weight: 450;
-    max-width: 55ch;
-}
-
-main dd b,
-main dd strong {
-    font-weight: 700;
-}
-
-main dd i,
-main dd em {
-    font-style: italic;
-}
-
 main li {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-size: 1rem;
-    line-height: 1.625rem;
-    /**
-     * IBM Plex OpenType stylistic sets:
-     *
-     * ss01: 0/1 double-storey/simple 'a'
-     * ss02: 0/1 double-storey/simple 'g'
-     * ss03: 0/1 plain/slashed '0'
-     * ss04: 0/1 plain/dotted '0'
-     */
-    font-feature-settings: 'ss01' 0, 'ss02' 0, 'ss03' 0, 'ss04' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
-    font-style: normal;
-    font-weight: 450;
-    max-width: 55ch;
     margin-top: 0.5rem;
 }
 
-main li b,
-main li strong {
-    font-weight: 700;
-}
-
-main li i,
-main li em {
-    font-style: italic;
-}
-
 main table {
-    font-feature-settings: 'tnum' 1, 'lnum' 1, 'pnum' 0, 'onum' 0;
     margin-top: 0.5rem;
     min-width: 66%;
 }
@@ -8774,6 +8720,7 @@ main table td {
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
+    font-feature-settings: 'ss01' 0, 'ss02' 0, 'ss03' 1, 'ss04' 0, 'tnum' 1, 'lnum' 1, 'pnum' 0, 'onum' 0;
     vertical-align: top;
 }
 
