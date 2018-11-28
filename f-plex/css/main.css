@@ -8355,6 +8355,10 @@ u {
     font-weight: 900;
 }
 
+.style-fraction {
+    font-feature-settings: 'frac' 1;
+}
+
 h6,
 .h6-style {
     font-family: "FF Meta", sans-serif;
@@ -8533,7 +8537,7 @@ main blockquote {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
-    font-feature-settings: 'salt' 1, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 0, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
@@ -8667,7 +8671,7 @@ main dd {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
-    font-feature-settings: 'salt' 1, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 0, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
@@ -8687,7 +8691,7 @@ main li {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
-    font-feature-settings: 'salt' 1, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 0, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
@@ -8734,7 +8738,7 @@ main table td {
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625rem;
-    font-feature-settings: 'salt' 1, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 0, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
@@ -9754,7 +9758,7 @@ figure figcaption {
         font-family: "IBM Plex Sans", sans-serif;
         font-size: 1rem;
         line-height: 1.625rem;
-        font-feature-settings: 'salt' 1, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
+        font-feature-settings: 'ss01' 0, 'ss02' 0, 'zero' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
         font-style: normal;
         font-weight: 450;
         max-width: 55ch;
