@@ -8740,6 +8740,11 @@ a {
     color: inherit;
     cursor: pointer;
     text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.1s ease-in;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -8752,6 +8757,10 @@ a:hover, a:focus, a:active {
     outline-width: 0;
 }
 
+a:hover {
+    background-size: 100% 100%;
+}
+
 a:focus {
     color: #006bbd;
     outline-color: #1e1e1e;
@@ -8761,7 +8770,7 @@ a:focus {
 }
 
 a:hover {
-    background-color: #006bbd;
+    border-bottom-color: transparent;
     color: #ffffff;
     outline: none;
 }
@@ -8818,6 +8827,7 @@ body {
         outline-style: dotted;
     }
     .js .accordion > .accordion__heading button:hover {
+        background-image: none;
         color: #1e1e1e;
     }
     .js .accordion > .accordion__heading button:active {
@@ -8866,7 +8876,6 @@ body {
 }
 
 .breadcrumbs ol li {
-    font-family: "PT Caption", sans-serif;
     font-size: 0.9rem;
     line-height: 1.7125rem;
     font-weight: normal;
@@ -8908,7 +8917,6 @@ body {
 }
 
 .cms-editor div.cms-editor-warning p:after {
-    font-family: "PT Caption", sans-serif;
     font-size: 0.8rem;
     line-height: 1.55rem;
     bottom: 0.9rem;
@@ -8928,7 +8936,6 @@ body {
 }
 
 .cms-editor .cms-editor-warning-remover {
-    font-family: "PT Caption", sans-serif;
     font-size: 0.8rem;
     line-height: 1.55rem;
     background-color: inherit;
@@ -8936,6 +8943,11 @@ body {
     color: inherit;
     cursor: pointer;
     text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.1s ease-in;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -8951,6 +8963,10 @@ body {
     outline-width: 0;
 }
 
+.cms-editor .cms-editor-warning-remover:hover {
+    background-size: 100% 100%;
+}
+
 .cms-editor .cms-editor-warning-remover:focus {
     color: #006bbd;
     outline-color: #1e1e1e;
@@ -8960,7 +8976,7 @@ body {
 }
 
 .cms-editor .cms-editor-warning-remover:hover {
-    background-color: #006bbd;
+    border-bottom-color: transparent;
     color: #ffffff;
     outline: none;
 }
@@ -8990,6 +9006,11 @@ body {
     color: inherit;
     cursor: pointer;
     text-decoration: none;
+    background-image: linear-gradient(120deg, #9bb7d4 0%, #9bb7d4 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.1s ease-in;
     border-bottom-color: #9bb7d4;
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -9002,6 +9023,10 @@ body {
     outline-width: 0;
 }
 
+.js .cookie-notice a:hover {
+    background-size: 100% 100%;
+}
+
 .js .cookie-notice a:focus {
     color: #9bb7d4;
     outline-color: #ffffff;
@@ -9011,7 +9036,7 @@ body {
 }
 
 .js .cookie-notice a:hover {
-    background-color: #9bb7d4;
+    border-bottom-color: transparent;
     color: #1e1e1e;
     outline: none;
 }
@@ -9033,7 +9058,6 @@ body {
         background: rgba(30, 30, 30, 0.9);
         bottom: 0;
         color: #ffffff;
-        font-family: font-family("small");
         left: 0;
         position: fixed;
         width: 100vw;
@@ -9077,7 +9101,6 @@ body {
 }
 
 figure figcaption {
-    font-family: "PT Caption", sans-serif;
     font-size: 0.8rem;
     line-height: 1.55rem;
 }
@@ -9141,7 +9164,6 @@ figure figcaption {
 }
 
 .global-footer > .copyright {
-    font-family: "PT Caption", sans-serif;
     font-size: 0.8rem;
     line-height: 1.55rem;
     font-weight: 400;
@@ -9159,34 +9181,35 @@ figure figcaption {
     grid-area: switcher;
 }
 
-.footer-logo a {
+.global-footer .footer-logo a {
     background-color: inherit;
     border-bottom-width: 0;
     color: inherit;
     cursor: pointer;
     text-decoration: none;
+    background-image: none;
     border: none;
     display: inline-block;
 }
 
-.footer-logo a:hover, .footer-logo a:focus, .footer-logo a:active {
+.global-footer .footer-logo a:hover, .global-footer .footer-logo a:focus, .global-footer .footer-logo a:active {
     background-color: inherit;
     color: inherit;
     outline-width: 0;
 }
 
-.footer-logo a:focus {
+.global-footer .footer-logo a:focus {
     outline-color: #1e1e1e;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
 }
 
-.footer-logo a:hover {
+.global-footer .footer-logo a:hover {
     outline: none;
 }
 
-.footer-logo a:active {
+.global-footer .footer-logo a:active {
     outline-color: #1e1e1e;
     outline-width: 2px;
     outline-style: dotted;
@@ -9240,6 +9263,7 @@ figure figcaption {
     color: inherit;
     cursor: pointer;
     text-decoration: none;
+    background-image: none;
     border: none;
     display: inline-block;
 }
@@ -9368,6 +9392,7 @@ figure figcaption {
 }
 
 .js .menu .menu__button button:hover {
+    background-image: none;
     color: #1e1e1e;
 }
 
@@ -9632,7 +9657,6 @@ figure figcaption {
 
 @media screen {
     .js .pagination__wrapper .pagination__controls {
-        font-family: "PT Caption", sans-serif;
         font-size: 0.9rem;
         line-height: 1.7125rem;
         align-items: stretch;
@@ -9664,6 +9688,7 @@ figure figcaption {
         outline-style: dotted;
     }
     .js .pagination__wrapper .pagination__controls button:hover {
+        background-image: none;
         color: #1e1e1e;
     }
     .js .pagination__wrapper .pagination__controls button:active {
@@ -9749,7 +9774,6 @@ figure figcaption {
         font-style: normal;
         font-weight: 450;
         max-width: 55ch;
-        font-family: "PT Caption", sans-serif;
         font-size: 0.9rem;
         line-height: 1.7125rem;
         margin-top: 0;
@@ -10058,7 +10082,6 @@ blockquote footer {
 }
 
 .theme-switcher {
-    font-family: "PT Caption", sans-serif;
     font-size: 0.8rem;
     line-height: 1.55rem;
     font-weight: 400;
@@ -10075,6 +10098,11 @@ blockquote footer {
     color: inherit;
     cursor: pointer;
     text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.1s ease-in;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -10087,6 +10115,10 @@ blockquote footer {
     outline-width: 0;
 }
 
+.theme-switcher__option button:hover {
+    background-size: 100% 100%;
+}
+
 .theme-switcher__option button:focus {
     color: #006bbd;
     outline-color: #1e1e1e;
@@ -10096,7 +10128,7 @@ blockquote footer {
 }
 
 .theme-switcher__option button:hover {
-    background-color: #006bbd;
+    border-bottom-color: transparent;
     color: #ffffff;
     outline: none;
 }
@@ -10789,6 +10821,11 @@ blockquote footer {
         color: inherit;
         cursor: pointer;
         text-decoration: none;
+        background-image: linear-gradient(120deg, #9bb7d4 0%, #9bb7d4 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        background-position: 0 100%;
+        transition: background-size 0.1s ease-in;
         border-bottom-color: #9bb7d4;
         border-bottom-style: solid;
         border-bottom-width: 2px;
@@ -10799,6 +10836,9 @@ blockquote footer {
         color: inherit;
         outline-width: 0;
     }
+    .theme--dark a:hover {
+        background-size: 100% 100%;
+    }
     .theme--dark a:focus {
         color: #9bb7d4;
         outline-color: #ffffff;
@@ -10807,7 +10847,7 @@ blockquote footer {
         outline-offset: 3px;
     }
     .theme--dark a:hover {
-        background-color: #9bb7d4;
+        border-bottom-color: transparent;
         color: #1e1e1e;
         outline: none;
     }
@@ -10837,6 +10877,7 @@ blockquote footer {
         color: inherit;
         cursor: pointer;
         text-decoration: none;
+        background-image: none;
         border: none;
     }
     .theme--dark .global-header .header-logo a:hover, .theme--dark .global-header .header-logo a:focus, .theme--dark .global-header .header-logo a:active {
@@ -10851,6 +10892,7 @@ blockquote footer {
         outline-offset: 3px;
     }
     .theme--dark .global-header .header-logo a:hover {
+        background-image: none;
         outline: none;
     }
     .theme--dark .global-header .header-logo a:active {
@@ -10865,29 +10907,31 @@ blockquote footer {
     .theme--dark .global-footer {
         border-top-color: #ffffff;
     }
-    .theme--dark .footer-logo a {
+    .theme--dark .global-footer .footer-logo a {
         background-color: inherit;
         border-bottom-width: 0;
         color: inherit;
         cursor: pointer;
         text-decoration: none;
+        background-image: none;
         border: none;
     }
-    .theme--dark .footer-logo a:hover, .theme--dark .footer-logo a:focus, .theme--dark .footer-logo a:active {
+    .theme--dark .global-footer .footer-logo a:hover, .theme--dark .global-footer .footer-logo a:focus, .theme--dark .global-footer .footer-logo a:active {
         background-color: inherit;
         color: inherit;
         outline-width: 0;
     }
-    .theme--dark .footer-logo a:focus {
+    .theme--dark .global-footer .footer-logo a:focus {
         outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
     }
-    .theme--dark .footer-logo a:hover {
+    .theme--dark .global-footer .footer-logo a:hover {
+        background-image: none;
         outline: none;
     }
-    .theme--dark .footer-logo a:active {
+    .theme--dark .global-footer .footer-logo a:active {
         outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
@@ -10939,6 +10983,11 @@ blockquote footer {
         color: inherit;
         cursor: pointer;
         text-decoration: none;
+        background-image: linear-gradient(120deg, #9bb7d4 0%, #9bb7d4 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        background-position: 0 100%;
+        transition: background-size 0.1s ease-in;
         border-bottom-color: #9bb7d4;
         border-bottom-style: solid;
         border-bottom-width: 2px;
@@ -10949,6 +10998,9 @@ blockquote footer {
         color: inherit;
         outline-width: 0;
     }
+    .theme--dark.js .cms-editor .cms-editor-warning-remover:hover {
+        background-size: 100% 100%;
+    }
     .theme--dark.js .cms-editor .cms-editor-warning-remover:focus {
         color: #9bb7d4;
         outline-color: #ffffff;
@@ -10957,7 +11009,7 @@ blockquote footer {
         outline-offset: 3px;
     }
     .theme--dark.js .cms-editor .cms-editor-warning-remover:hover {
-        background-color: #9bb7d4;
+        border-bottom-color: transparent;
         color: #1e1e1e;
         outline: none;
     }
@@ -11231,6 +11283,11 @@ blockquote footer {
         color: inherit;
         cursor: pointer;
         text-decoration: none;
+        background-image: linear-gradient(120deg, #9bb7d4 0%, #9bb7d4 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        background-position: 0 100%;
+        transition: background-size 0.1s ease-in;
         border-bottom-color: #9bb7d4;
         border-bottom-style: solid;
         border-bottom-width: 2px;
@@ -11241,6 +11298,9 @@ blockquote footer {
         color: inherit;
         outline-width: 0;
     }
+    .theme--dark.js .theme-switcher__option button:hover {
+        background-size: 100% 100%;
+    }
     .theme--dark.js .theme-switcher__option button:focus {
         color: #9bb7d4;
         outline-color: #ffffff;
@@ -11249,7 +11309,7 @@ blockquote footer {
         outline-offset: 3px;
     }
     .theme--dark.js .theme-switcher__option button:hover {
-        background-color: #9bb7d4;
+        border-bottom-color: transparent;
         color: #1e1e1e;
         outline: none;
     }
