@@ -9563,7 +9563,6 @@ figure figcaption {
 }
 
 .js .menu[data-open='true'] .menu__columns {
-    font-family: "PT Caption", sans-serif;
     font-size: 0.9rem;
     line-height: 1.7125rem;
     font-style: normal;
