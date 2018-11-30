@@ -4888,8 +4888,6 @@ function parametersToObject(parameterString) {
  */
 
 function objectToParameters(parameterObj) {
-  console.log(parameterObj.keys);
-
   if (Object.keys(parameterObj).length > 0) {
     let parameters = '?';
 
