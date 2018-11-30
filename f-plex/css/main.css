@@ -8317,6 +8317,7 @@ u {
 
 .roboto {
     font-family: "Roboto", sans-serif;
+    font-feature-settings: unset;
     font-weight: 400;
 }
 
