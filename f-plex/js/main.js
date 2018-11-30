@@ -3544,8 +3544,8 @@ __webpack_require__.r(__webpack_exports__);
  * Persist a query parameter to all same-site anchors inside an element.
  *
  * @param {HTMLElement} elem - An element containing anchors to decorate.
- * @param {string} param - The name of a query parameter
- * @param {string} value - The value for the query parameter
+ * @param {string} param - The name of a query parameter.
+ * @param {string} value - The value for the query parameter.
  */
 
 function devcorate(elem, param, value) {
@@ -4870,8 +4870,8 @@ function isVisible(elem) {
 
 function parametersToObject(parameterString) {
   const parameters = {};
-  parameterString.substr(1).split(/&/).forEach(parameter => {
-    const _parameter$split = parameter.split(/=/),
+  parameterString.substr(1).split('&').forEach(parameter => {
+    const _parameter$split = parameter.split('='),
           _parameter$split2 = _slicedToArray(_parameter$split, 2),
           k = _parameter$split2[0],
           v = _parameter$split2[1];

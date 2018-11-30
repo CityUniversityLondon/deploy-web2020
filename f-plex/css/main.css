@@ -8085,7 +8085,7 @@ readers do not read off random characters that represent icons */
 
 html {
     background-color: #ffffff;
-    color: #1e1e1e;
+    color: #141414;
     box-sizing: border-box;
     min-height: 100%;
     overflow-x: hidden;
@@ -8677,7 +8677,7 @@ a {
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.1s ease-in;
+    transition: background-size 0.125s ease-in;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -8696,7 +8696,7 @@ a:hover {
 
 a:focus {
     color: #006bbd;
-    outline-color: #1e1e1e;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -8711,7 +8711,7 @@ a:hover {
 a:active {
     background-color: #006bbd;
     color: #ffffff;
-    outline-color: #1e1e1e;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -8736,7 +8736,7 @@ body {
         display: none;
     }
     .js .accordion > .accordion__heading {
-        border-bottom: 1px solid #1e1e1e;
+        border-bottom: 1px solid #141414;
     }
     .js .accordion > .accordion__heading button {
         background-color: inherit;
@@ -8755,16 +8755,16 @@ body {
         outline-width: 0;
     }
     .js .accordion > .accordion__heading button:focus {
-        outline-color: #1e1e1e;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
     }
     .js .accordion > .accordion__heading button:hover {
         background-image: none;
-        color: #1e1e1e;
+        color: #141414;
     }
     .js .accordion > .accordion__heading button:active {
-        outline-color: #1e1e1e;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -8880,7 +8880,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.1s ease-in;
+    transition: background-size 0.125s ease-in;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -8902,7 +8902,7 @@ body {
 
 .cms-editor .cms-editor-warning-remover:focus {
     color: #006bbd;
-    outline-color: #1e1e1e;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -8917,7 +8917,7 @@ body {
 .cms-editor .cms-editor-warning-remover:active {
     background-color: #006bbd;
     color: #ffffff;
-    outline-color: #1e1e1e;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -8939,14 +8939,22 @@ body {
     color: inherit;
     cursor: pointer;
     text-decoration: none;
-    background-image: linear-gradient(120deg, #9bb7d4 0%, #9bb7d4 100%);
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.1s ease-in;
-    border-bottom-color: #9bb7d4;
+    transition: background-size 0.125s ease-in;
+    border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 2px;
+    color: #006bbd;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.125s ease-in;
+    background-image: linear-gradient(120deg, #9bb7d4 0%, #9bb7d4 100%);
+    border-bottom-color: #9bb7d4;
     color: #9bb7d4;
 }
 
@@ -8961,8 +8969,8 @@ body {
 }
 
 .js .cookie-notice a:focus {
-    color: #9bb7d4;
-    outline-color: #ffffff;
+    color: #006bbd;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -8970,17 +8978,36 @@ body {
 
 .js .cookie-notice a:hover {
     border-bottom-color: transparent;
-    color: #1e1e1e;
+    color: #ffffff;
     outline: none;
 }
 
 .js .cookie-notice a:active {
-    background-color: #9bb7d4;
-    color: #1e1e1e;
-    outline-color: #ffffff;
+    background-color: #006bbd;
+    color: #ffffff;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
+}
+
+.js .cookie-notice a:hover {
+    background-size: 100% 100%;
+}
+
+.js .cookie-notice a:focus {
+    color: #9bb7d4;
+    outline-color: #ffffff;
+}
+
+.js .cookie-notice a:hover {
+    color: #141414;
+}
+
+.js .cookie-notice a:active {
+    background-color: #9bb7d4;
+    color: #141414;
+    outline-color: #ffffff;
 }
 
 @media screen {
@@ -9003,8 +9030,9 @@ body {
     color: inherit;
     cursor: pointer;
     text-decoration: none;
-    color: #9bb7d4;
+    color: #006bbd;
     border: none;
+    color: #9bb7d4;
     background: initial;
     display: block;
     margin: 0 auto 1rem auto;
@@ -9017,9 +9045,25 @@ body {
 }
 
 .js .cookie-notice button:focus {
-    outline-color: #ffffff;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
+}
+
+.js .cookie-notice button:hover {
+    background-image: none;
+    color: #141414;
+}
+
+.js .cookie-notice button:active {
+    outline-color: #141414;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
+}
+
+.js .cookie-notice button:focus {
+    outline-color: #ffffff;
 }
 
 .js .cookie-notice button:hover {
@@ -9028,9 +9072,6 @@ body {
 
 .js .cookie-notice button:active {
     outline-color: #ffffff;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
 }
 
 figure figcaption {
@@ -9042,7 +9083,7 @@ figure figcaption {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 1.4rem 1.4rem;
-    border-top: 1px solid #1e1e1e;
+    border-top: 1px solid #141414;
     margin-top: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -9132,7 +9173,7 @@ figure figcaption {
 }
 
 .global-footer .footer-logo a:focus {
-    outline-color: #1e1e1e;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -9143,7 +9184,7 @@ figure figcaption {
 }
 
 .global-footer .footer-logo a:active {
-    outline-color: #1e1e1e;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -9208,7 +9249,7 @@ figure figcaption {
 }
 
 .global-header .header-logo a:focus {
-    outline-color: #1e1e1e;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -9219,7 +9260,7 @@ figure figcaption {
 }
 
 .global-header .header-logo a:active {
-    outline-color: #1e1e1e;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -9249,7 +9290,7 @@ figure figcaption {
 }
 
 .menu li.menu__current > span:focus {
-    outline-color: #1e1e1e;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
 }
@@ -9319,18 +9360,18 @@ figure figcaption {
 }
 
 .js .menu .menu__button button:focus {
-    outline-color: #1e1e1e;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
 }
 
 .js .menu .menu__button button:hover {
     background-image: none;
-    color: #1e1e1e;
+    color: #141414;
 }
 
 .js .menu .menu__button button:active {
-    outline-color: #1e1e1e;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -9442,17 +9483,17 @@ figure figcaption {
 }
 
 .js .menu[data-open='true'] .menu__columns__col > ul button:focus {
-    outline-color: #1e1e1e;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
 }
 
 .js .menu[data-open='true'] .menu__columns__col > ul button:hover {
-    color: #1e1e1e;
+    color: #141414;
 }
 
 .js .menu[data-open='true'] .menu__columns__col > ul button:active {
-    outline-color: #1e1e1e;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -9486,7 +9527,7 @@ figure figcaption {
 }
 
 .js .menu[data-open='true'] .menu__columns__col > ul button[aria-expanded='true']:hover .menu__button__icon:before, .js .menu[data-open='true'] .menu__columns__col > ul button[aria-expanded='true']:focus .menu__button__icon:before {
-    border-bottom-color: #1e1e1e;
+    border-bottom-color: #141414;
 }
 
 .js .menu[data-open='true'] .menu__columns {
@@ -9614,23 +9655,23 @@ figure figcaption {
         outline-width: 0;
     }
     .js .pagination__wrapper .pagination__controls button:focus {
-        outline-color: #1e1e1e;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
     }
     .js .pagination__wrapper .pagination__controls button:hover {
         background-image: none;
-        color: #1e1e1e;
+        color: #141414;
     }
     .js .pagination__wrapper .pagination__controls button:active {
-        outline-color: #1e1e1e;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
     }
     .js .pagination__wrapper .pagination__controls button[disabled] {
         cursor: default;
-        color: #1e1e1e;
+        color: #141414;
     }
     .js .pagination__wrapper .pagination__controls button[disabled]:focus, .js .pagination__wrapper .pagination__controls button[disabled]:active, .js .pagination__wrapper .pagination__controls button[disabled]:hover {
         outline: none;
@@ -9639,14 +9680,14 @@ figure figcaption {
         font-weight: 700;
     }
     .js .pagination__wrapper .pagination__controls button[aria-expanded='true'] span {
-        border-bottom: 2px solid #1e1e1e;
+        border-bottom: 2px solid #141414;
     }
     .js .pagination__wrapper .pagination__controls button[aria-hidden] {
         display: none;
     }
     .js .pagination__wrapper .pagination__controls [data-page='2'][aria-hidden],
     .js .pagination__wrapper .pagination__controls .pagination__controls__button--penultimate[aria-hidden] {
-        color: #1e1e1e;
+        color: #141414;
         cursor: default;
         display: block;
         font-weight: 400;
@@ -9787,6 +9828,11 @@ blockquote footer {
         color: inherit;
         cursor: pointer;
         text-decoration: none;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        background-position: 0 100%;
+        transition: background-size 0.125s ease-in;
         color: #006bbd;
         display: block;
         height: 100%;
@@ -9798,6 +9844,9 @@ blockquote footer {
         color: inherit;
         outline-width: 0;
     }
+    .js .tabs__links li a:hover {
+        background-size: 100% 100%;
+    }
     .js .tabs__links li a span {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
@@ -9807,13 +9856,12 @@ blockquote footer {
         color: #006bbd;
     }
     .js .tabs__links li a:focus span {
-        outline-color: #1e1e1e;
+        outline-color: #141414;
         outline-offset: 3px;
         outline-style: dotted;
         outline-width: 2px;
     }
     .js .tabs__links li a:hover {
-        background-color: #006bbd;
         color: #ffffff;
     }
     .js .tabs__links li a:hover span {
@@ -9913,6 +9961,11 @@ blockquote footer {
         color: inherit;
         cursor: pointer;
         text-decoration: none;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        background-position: 0 100%;
+        transition: background-size 0.125s ease-in;
         color: #006bbd;
         display: block;
         height: 100%;
@@ -9924,6 +9977,9 @@ blockquote footer {
         color: inherit;
         outline-width: 0;
     }
+    .js .tabs__links li a:hover {
+        background-size: 100% 100%;
+    }
     .js .tabs__links li a span {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
@@ -9933,13 +9989,12 @@ blockquote footer {
         color: #006bbd;
     }
     .js .tabs__links li a:focus span {
-        outline-color: #1e1e1e;
+        outline-color: #141414;
         outline-offset: 3px;
         outline-style: dotted;
         outline-width: 2px;
     }
     .js .tabs__links li a:hover {
-        background-color: #006bbd;
         color: #ffffff;
     }
     .js .tabs__links li a:hover span {
@@ -10034,7 +10089,7 @@ blockquote footer {
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.1s ease-in;
+    transition: background-size 0.125s ease-in;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -10053,7 +10108,7 @@ blockquote footer {
 
 .theme-switcher__option button:focus {
     color: #006bbd;
-    outline-color: #1e1e1e;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -10068,7 +10123,7 @@ blockquote footer {
 .theme-switcher__option button:active {
     background-color: #006bbd;
     color: #ffffff;
-    outline-color: #1e1e1e;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -10753,14 +10808,22 @@ blockquote footer {
         color: inherit;
         cursor: pointer;
         text-decoration: none;
-        background-image: linear-gradient(120deg, #9bb7d4 0%, #9bb7d4 100%);
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
         background-position: 0 100%;
-        transition: background-size 0.1s ease-in;
-        border-bottom-color: #9bb7d4;
+        transition: background-size 0.125s ease-in;
+        border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 2px;
+        color: #006bbd;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        background-position: 0 100%;
+        transition: background-size 0.125s ease-in;
+        background-image: linear-gradient(120deg, #9bb7d4 0%, #9bb7d4 100%);
+        border-bottom-color: #9bb7d4;
         color: #9bb7d4;
     }
     .theme--dark a:hover, .theme--dark a:focus, .theme--dark a:active {
@@ -10772,24 +10835,39 @@ blockquote footer {
         background-size: 100% 100%;
     }
     .theme--dark a:focus {
-        color: #9bb7d4;
-        outline-color: #ffffff;
+        color: #006bbd;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
     }
     .theme--dark a:hover {
         border-bottom-color: transparent;
-        color: #1e1e1e;
+        color: #ffffff;
         outline: none;
     }
     .theme--dark a:active {
-        background-color: #9bb7d4;
-        color: #1e1e1e;
-        outline-color: #ffffff;
+        background-color: #006bbd;
+        color: #ffffff;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
+    }
+    .theme--dark a:hover {
+        background-size: 100% 100%;
+    }
+    .theme--dark a:focus {
+        color: #9bb7d4;
+        outline-color: #ffffff;
+    }
+    .theme--dark a:hover {
+        color: #141414;
+    }
+    .theme--dark a:active {
+        background-color: #9bb7d4;
+        color: #141414;
+        outline-color: #ffffff;
     }
     .theme--dark .skip-link:focus {
         background-color: #1e1e1e;
@@ -10818,20 +10896,25 @@ blockquote footer {
         outline-width: 0;
     }
     .theme--dark .global-header .header-logo a:focus {
-        outline-color: #ffffff;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
     }
     .theme--dark .global-header .header-logo a:hover {
-        background-image: none;
         outline: none;
     }
     .theme--dark .global-header .header-logo a:active {
-        outline-color: #ffffff;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
+    }
+    .theme--dark .global-header .header-logo a:focus {
+        outline-color: #ffffff;
+    }
+    .theme--dark .global-header .header-logo a:active {
+        outline-color: #ffffff;
     }
 }
 
@@ -10854,20 +10937,25 @@ blockquote footer {
         outline-width: 0;
     }
     .theme--dark .global-footer .footer-logo a:focus {
-        outline-color: #ffffff;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
     }
     .theme--dark .global-footer .footer-logo a:hover {
-        background-image: none;
         outline: none;
     }
     .theme--dark .global-footer .footer-logo a:active {
-        outline-color: #ffffff;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
+    }
+    .theme--dark .global-footer .footer-logo a:focus {
+        outline-color: #ffffff;
+    }
+    .theme--dark .global-footer .footer-logo a:active {
+        outline-color: #ffffff;
     }
 }
 
@@ -10881,8 +10969,9 @@ blockquote footer {
     color: inherit;
     cursor: pointer;
     text-decoration: none;
-    color: #9bb7d4;
+    color: #006bbd;
     border: none;
+    color: #9bb7d4;
 }
 
 .theme--dark.js .accordion > .accordion__heading button:hover, .theme--dark.js .accordion > .accordion__heading button:focus, .theme--dark.js .accordion > .accordion__heading button:active {
@@ -10892,9 +10981,25 @@ blockquote footer {
 }
 
 .theme--dark.js .accordion > .accordion__heading button:focus {
-    outline-color: #ffffff;
+    outline-color: #141414;
     outline-width: 2px;
     outline-style: dotted;
+}
+
+.theme--dark.js .accordion > .accordion__heading button:hover {
+    background-image: none;
+    color: #141414;
+}
+
+.theme--dark.js .accordion > .accordion__heading button:active {
+    outline-color: #141414;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
+}
+
+.theme--dark.js .accordion > .accordion__heading button:focus {
+    outline-color: #ffffff;
 }
 
 .theme--dark.js .accordion > .accordion__heading button:hover {
@@ -10903,9 +11008,6 @@ blockquote footer {
 
 .theme--dark.js .accordion > .accordion__heading button:active {
     outline-color: #ffffff;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
 }
 
 @media screen {
@@ -10915,14 +11017,22 @@ blockquote footer {
         color: inherit;
         cursor: pointer;
         text-decoration: none;
-        background-image: linear-gradient(120deg, #9bb7d4 0%, #9bb7d4 100%);
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
         background-position: 0 100%;
-        transition: background-size 0.1s ease-in;
-        border-bottom-color: #9bb7d4;
+        transition: background-size 0.125s ease-in;
+        border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 2px;
+        color: #006bbd;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        background-position: 0 100%;
+        transition: background-size 0.125s ease-in;
+        background-image: linear-gradient(120deg, #9bb7d4 0%, #9bb7d4 100%);
+        border-bottom-color: #9bb7d4;
         color: #9bb7d4;
     }
     .theme--dark.js .cms-editor .cms-editor-warning-remover:hover, .theme--dark.js .cms-editor .cms-editor-warning-remover:focus, .theme--dark.js .cms-editor .cms-editor-warning-remover:active {
@@ -10934,24 +11044,39 @@ blockquote footer {
         background-size: 100% 100%;
     }
     .theme--dark.js .cms-editor .cms-editor-warning-remover:focus {
-        color: #9bb7d4;
-        outline-color: #ffffff;
+        color: #006bbd;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
     }
     .theme--dark.js .cms-editor .cms-editor-warning-remover:hover {
         border-bottom-color: transparent;
-        color: #1e1e1e;
+        color: #ffffff;
         outline: none;
     }
     .theme--dark.js .cms-editor .cms-editor-warning-remover:active {
-        background-color: #9bb7d4;
-        color: #1e1e1e;
-        outline-color: #ffffff;
+        background-color: #006bbd;
+        color: #ffffff;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
+    }
+    .theme--dark.js .cms-editor .cms-editor-warning-remover:hover {
+        background-size: 100% 100%;
+    }
+    .theme--dark.js .cms-editor .cms-editor-warning-remover:focus {
+        color: #9bb7d4;
+        outline-color: #ffffff;
+    }
+    .theme--dark.js .cms-editor .cms-editor-warning-remover:hover {
+        color: #141414;
+    }
+    .theme--dark.js .cms-editor .cms-editor-warning-remover:active {
+        background-color: #9bb7d4;
+        color: #141414;
+        outline-color: #ffffff;
     }
 }
 
@@ -10971,8 +11096,9 @@ blockquote footer {
         color: inherit;
         cursor: pointer;
         text-decoration: none;
-        color: #9bb7d4;
+        color: #006bbd;
         border: none;
+        color: #9bb7d4;
     }
     .theme--dark.js .menu .menu__button button:hover, .theme--dark.js .menu .menu__button button:focus, .theme--dark.js .menu .menu__button button:active {
         background-color: inherit;
@@ -10980,18 +11106,28 @@ blockquote footer {
         outline-width: 0;
     }
     .theme--dark.js .menu .menu__button button:focus {
-        outline-color: #ffffff;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
+    }
+    .theme--dark.js .menu .menu__button button:hover {
+        background-image: none;
+        color: #141414;
+    }
+    .theme--dark.js .menu .menu__button button:active {
+        outline-color: #141414;
+        outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
+    }
+    .theme--dark.js .menu .menu__button button:focus {
+        outline-color: #ffffff;
     }
     .theme--dark.js .menu .menu__button button:hover {
         color: #ffffff;
     }
     .theme--dark.js .menu .menu__button button:active {
         outline-color: #ffffff;
-        outline-width: 2px;
-        outline-style: dotted;
-        outline-offset: 3px;
     }
     .theme--dark.js .menu[data-open='true'] .menu__columns {
         background-color: #1e1e1e;
@@ -11009,8 +11145,9 @@ blockquote footer {
         color: inherit;
         cursor: pointer;
         text-decoration: none;
-        color: #9bb7d4;
+        color: #006bbd;
         border: none;
+        color: #9bb7d4;
     }
     .theme--dark.js .menu[data-open='true'] .menu__columns__col > ul button:hover, .theme--dark.js .menu[data-open='true'] .menu__columns__col > ul button:focus, .theme--dark.js .menu[data-open='true'] .menu__columns__col > ul button:active {
         background-color: inherit;
@@ -11018,18 +11155,27 @@ blockquote footer {
         outline-width: 0;
     }
     .theme--dark.js .menu[data-open='true'] .menu__columns__col > ul button:focus {
-        outline-color: #ffffff;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
+    }
+    .theme--dark.js .menu[data-open='true'] .menu__columns__col > ul button:hover {
+        color: #141414;
+    }
+    .theme--dark.js .menu[data-open='true'] .menu__columns__col > ul button:active {
+        outline-color: #141414;
+        outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
+    }
+    .theme--dark.js .menu[data-open='true'] .menu__columns__col > ul button:focus {
+        outline-color: #ffffff;
     }
     .theme--dark.js .menu[data-open='true'] .menu__columns__col > ul button:hover {
         color: #ffffff;
     }
     .theme--dark.js .menu[data-open='true'] .menu__columns__col > ul button:active {
         outline-color: #ffffff;
-        outline-width: 2px;
-        outline-style: dotted;
-        outline-offset: 3px;
     }
     .theme--dark.js .menu[data-open='true'] .menu__columns__col > ul button[aria-expanded='true'] .menu__button__icon:before {
         border-bottom-color: #9bb7d4;
@@ -11046,8 +11192,9 @@ blockquote footer {
         color: inherit;
         cursor: pointer;
         text-decoration: none;
-        color: #9bb7d4;
+        color: #006bbd;
         border: none;
+        color: #9bb7d4;
     }
     .theme--dark.js .pagination__controls button:hover, .theme--dark.js .pagination__controls button:focus, .theme--dark.js .pagination__controls button:active {
         background-color: inherit;
@@ -11055,18 +11202,28 @@ blockquote footer {
         outline-width: 0;
     }
     .theme--dark.js .pagination__controls button:focus {
-        outline-color: #ffffff;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
+    }
+    .theme--dark.js .pagination__controls button:hover {
+        background-image: none;
+        color: #141414;
+    }
+    .theme--dark.js .pagination__controls button:active {
+        outline-color: #141414;
+        outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
+    }
+    .theme--dark.js .pagination__controls button:focus {
+        outline-color: #ffffff;
     }
     .theme--dark.js .pagination__controls button:hover {
         color: #ffffff;
     }
     .theme--dark.js .pagination__controls button:active {
         outline-color: #ffffff;
-        outline-width: 2px;
-        outline-style: dotted;
-        outline-offset: 3px;
     }
     .theme--dark.js .pagination__controls button[disabled] {
         color: #ffffff;
@@ -11090,6 +11247,18 @@ blockquote footer {
         color: inherit;
         cursor: pointer;
         text-decoration: none;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        background-position: 0 100%;
+        transition: background-size 0.125s ease-in;
+        color: #006bbd;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        background-position: 0 100%;
+        transition: background-size 0.125s ease-in;
+        background-image: linear-gradient(120deg, #9bb7d4 0%, #9bb7d4 100%);
         color: #9bb7d4;
     }
     .theme--dark.js .tabs__links li a:hover, .theme--dark.js .tabs__links li a:focus, .theme--dark.js .tabs__links li a:active {
@@ -11097,36 +11266,60 @@ blockquote footer {
         color: inherit;
         outline-width: 0;
     }
+    .theme--dark.js .tabs__links li a:hover {
+        background-size: 100% 100%;
+    }
     .theme--dark.js .tabs__links li a span {
-        border-bottom-color: #9bb7d4;
+        border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 2px;
+    }
+    .theme--dark.js .tabs__links li a:focus {
+        color: #006bbd;
+    }
+    .theme--dark.js .tabs__links li a:focus span {
+        outline-color: #141414;
+        outline-offset: 3px;
+        outline-style: dotted;
+        outline-width: 2px;
+    }
+    .theme--dark.js .tabs__links li a:hover {
+        color: #ffffff;
+    }
+    .theme--dark.js .tabs__links li a:hover span {
+        outline: none;
+    }
+    .theme--dark.js .tabs__links li a:active {
+        background-color: #006bbd;
+        color: #ffffff;
+    }
+    .theme--dark.js .tabs__links li a:active span {
+        outline-color: #ffffff;
+        outline-offset: 3px;
+        outline-style: dotted;
+        outline-width: 2px;
+    }
+    .theme--dark.js .tabs__links li a:hover {
+        background-size: 100% 100%;
+    }
+    .theme--dark.js .tabs__links li a span {
+        border-bottom-color: #9bb7d4;
     }
     .theme--dark.js .tabs__links li a:focus {
         color: #9bb7d4;
     }
     .theme--dark.js .tabs__links li a:focus span {
         outline-color: #ffffff;
-        outline-width: 2px;
-        outline-style: dotted;
-        outline-offset: 3px;
     }
     .theme--dark.js .tabs__links li a:hover {
-        background-color: #9bb7d4;
-        color: #1e1e1e;
-    }
-    .theme--dark.js .tabs__links li a:hover span {
-        outline: none;
+        color: #141414;
     }
     .theme--dark.js .tabs__links li a:active {
         background-color: #9bb7d4;
-        color: #1e1e1e;
+        color: #141414;
     }
     .theme--dark.js .tabs__links li a:active span {
-        outline-color: #1e1e1e;
-        outline-width: 2px;
-        outline-style: dotted;
-        outline-offset: 3px;
+        outline-color: #141414;
     }
     .theme--dark.js .tabs__links li a:not(:hover):not([aria-selected='true']) {
         background-color: #141414;
@@ -11154,6 +11347,18 @@ blockquote footer {
         color: inherit;
         cursor: pointer;
         text-decoration: none;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        background-position: 0 100%;
+        transition: background-size 0.125s ease-in;
+        color: #006bbd;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        background-position: 0 100%;
+        transition: background-size 0.125s ease-in;
+        background-image: linear-gradient(120deg, #9bb7d4 0%, #9bb7d4 100%);
         color: #9bb7d4;
     }
     .theme--dark.js .tabs__links li a:hover, .theme--dark.js .tabs__links li a:focus, .theme--dark.js .tabs__links li a:active {
@@ -11161,36 +11366,60 @@ blockquote footer {
         color: inherit;
         outline-width: 0;
     }
+    .theme--dark.js .tabs__links li a:hover {
+        background-size: 100% 100%;
+    }
     .theme--dark.js .tabs__links li a span {
-        border-bottom-color: #9bb7d4;
+        border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 2px;
+    }
+    .theme--dark.js .tabs__links li a:focus {
+        color: #006bbd;
+    }
+    .theme--dark.js .tabs__links li a:focus span {
+        outline-color: #141414;
+        outline-offset: 3px;
+        outline-style: dotted;
+        outline-width: 2px;
+    }
+    .theme--dark.js .tabs__links li a:hover {
+        color: #ffffff;
+    }
+    .theme--dark.js .tabs__links li a:hover span {
+        outline: none;
+    }
+    .theme--dark.js .tabs__links li a:active {
+        background-color: #006bbd;
+        color: #ffffff;
+    }
+    .theme--dark.js .tabs__links li a:active span {
+        outline-color: #ffffff;
+        outline-offset: 3px;
+        outline-style: dotted;
+        outline-width: 2px;
+    }
+    .theme--dark.js .tabs__links li a:hover {
+        background-size: 100% 100%;
+    }
+    .theme--dark.js .tabs__links li a span {
+        border-bottom-color: #9bb7d4;
     }
     .theme--dark.js .tabs__links li a:focus {
         color: #9bb7d4;
     }
     .theme--dark.js .tabs__links li a:focus span {
         outline-color: #ffffff;
-        outline-width: 2px;
-        outline-style: dotted;
-        outline-offset: 3px;
     }
     .theme--dark.js .tabs__links li a:hover {
-        background-color: #9bb7d4;
-        color: #1e1e1e;
-    }
-    .theme--dark.js .tabs__links li a:hover span {
-        outline: none;
+        color: #141414;
     }
     .theme--dark.js .tabs__links li a:active {
         background-color: #9bb7d4;
-        color: #1e1e1e;
+        color: #141414;
     }
     .theme--dark.js .tabs__links li a:active span {
-        outline-color: #1e1e1e;
-        outline-width: 2px;
-        outline-style: dotted;
-        outline-offset: 3px;
+        outline-color: #141414;
     }
     .theme--dark.js .tabs__links li a:not(:hover):not([aria-selected='true']) {
         background-color: #141414;
@@ -11215,14 +11444,22 @@ blockquote footer {
         color: inherit;
         cursor: pointer;
         text-decoration: none;
-        background-image: linear-gradient(120deg, #9bb7d4 0%, #9bb7d4 100%);
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
         background-position: 0 100%;
-        transition: background-size 0.1s ease-in;
-        border-bottom-color: #9bb7d4;
+        transition: background-size 0.125s ease-in;
+        border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 2px;
+        color: #006bbd;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        background-position: 0 100%;
+        transition: background-size 0.125s ease-in;
+        background-image: linear-gradient(120deg, #9bb7d4 0%, #9bb7d4 100%);
+        border-bottom-color: #9bb7d4;
         color: #9bb7d4;
     }
     .theme--dark.js .theme-switcher__option button:hover, .theme--dark.js .theme-switcher__option button:focus, .theme--dark.js .theme-switcher__option button:active {
@@ -11234,23 +11471,38 @@ blockquote footer {
         background-size: 100% 100%;
     }
     .theme--dark.js .theme-switcher__option button:focus {
-        color: #9bb7d4;
-        outline-color: #ffffff;
+        color: #006bbd;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
     }
     .theme--dark.js .theme-switcher__option button:hover {
         border-bottom-color: transparent;
-        color: #1e1e1e;
+        color: #ffffff;
         outline: none;
     }
     .theme--dark.js .theme-switcher__option button:active {
-        background-color: #9bb7d4;
-        color: #1e1e1e;
-        outline-color: #ffffff;
+        background-color: #006bbd;
+        color: #ffffff;
+        outline-color: #141414;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
+    }
+    .theme--dark.js .theme-switcher__option button:hover {
+        background-size: 100% 100%;
+    }
+    .theme--dark.js .theme-switcher__option button:focus {
+        color: #9bb7d4;
+        outline-color: #ffffff;
+    }
+    .theme--dark.js .theme-switcher__option button:hover {
+        color: #141414;
+    }
+    .theme--dark.js .theme-switcher__option button:active {
+        background-color: #9bb7d4;
+        color: #141414;
+        outline-color: #ffffff;
     }
 }
