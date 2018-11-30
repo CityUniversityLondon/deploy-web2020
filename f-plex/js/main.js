@@ -3103,11 +3103,14 @@ const aria = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns */ "./src/patterns.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./util */ "./src/util.js");
-/* harmony import */ var _patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/devcorate/devcorate */ "./src/patterns/devcorate/devcorate.js");
+/* harmony import */ var core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.regexp.search */ "./node_modules/core-js/modules/es6.regexp.search.js");
+/* harmony import */ var core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns */ "./src/patterns.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./util */ "./src/util.js");
+/* harmony import */ var _patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/devcorate/devcorate */ "./src/patterns/devcorate/devcorate.js");
+
 
 
 
@@ -3166,13 +3169,13 @@ document.addEventListener('DOMContentLoaded', () => {
   //     }, false);
   // }
   Array.from(document.getElementsByTagName('html')).forEach(html => {
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(html, 'no-js', false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(html, 'no-js', false);
     html.className = (html.className + ' js').trim();
   });
-  _patterns__WEBPACK_IMPORTED_MODULE_1__["default"].forEach(launchPattern);
-  const parameters = Object(_util__WEBPACK_IMPORTED_MODULE_2__["parametersToObject"])(location.href);
-  parameters['dev'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_3__["devcorate"])(document.querySelector('body'), 'dev', parameters['dev']);
-  parameters['rel'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_3__["devcorate"])(document.querySelector('body'), 'rel', parameters['rel']);
+  _patterns__WEBPACK_IMPORTED_MODULE_2__["default"].forEach(launchPattern);
+  const parameters = Object(_util__WEBPACK_IMPORTED_MODULE_3__["parametersToObject"])(location.search);
+  parameters['dev'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_4__["devcorate"])(document.querySelector('body'), 'dev', parameters['dev']);
+  parameters['rel'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_4__["devcorate"])(document.querySelector('body'), 'rel', parameters['rel']);
 }, false);
 
 /***/ }),
@@ -3548,9 +3551,9 @@ __webpack_require__.r(__webpack_exports__);
 function devcorate(elem, param, value) {
   Array.from(elem.querySelectorAll('a')).forEach(anchor => {
     if (anchor.origin === location.origin) {
-      const parameters = Object(_util__WEBPACK_IMPORTED_MODULE_2__["parametersToObject"])(location.search);
+      const parameters = anchor.search ? Object(_util__WEBPACK_IMPORTED_MODULE_2__["parametersToObject"])(anchor.search) : {};
       parameters[param] = value;
-      anchor.href = `${anchor.origin}/${anchor.pathname}${Object(_util__WEBPACK_IMPORTED_MODULE_2__["objectToParameters"])(parameters)}${anchor.hash}`;
+      anchor.href = `${anchor.origin}${anchor.pathname}${Object(_util__WEBPACK_IMPORTED_MODULE_2__["objectToParameters"])(parameters)}${anchor.hash}`;
     }
   });
 }
@@ -4885,10 +4888,12 @@ function parametersToObject(parameterString) {
  */
 
 function objectToParameters(parameterObj) {
-  if (parameterObj.keys.length > 0) {
+  console.log(parameterObj.keys);
+
+  if (Object.keys(parameterObj).length > 0) {
     let parameters = '?';
 
-    for (const key in parameterObj.keys) {
+    for (const key in parameterObj) {
       parameters.length === 1 ? parameters += key + '=' + parameterObj[key] : parameters += '&' + key + '=' + parameterObj[key];
     }
 
