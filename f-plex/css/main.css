@@ -8574,6 +8574,7 @@ main dl i,
 main dl em,
 main blockquote i,
 main blockquote em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 0, 'ss04' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
     font-style: italic;
 }
 
@@ -8731,7 +8732,12 @@ main table td strong {
 
 main table td i,
 main table td em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 0, 'ss04' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
     font-style: italic;
+}
+
+main table td em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'tnum' 1, 'lnum' 1, 'pnum' 0, 'onum' 0;
 }
 
 a {
@@ -9785,6 +9791,7 @@ figure figcaption {
     }
     .js .pagination__wrapper .pagination__summary i,
     .js .pagination__wrapper .pagination__summary em {
+        font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 0, 'ss04' 1, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
         font-style: italic;
     }
 }
