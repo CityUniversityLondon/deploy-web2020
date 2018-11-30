@@ -8884,7 +8884,7 @@ body {
 .breadcrumbs ol li {
     font-size: 0.9rem;
     line-height: 1.7125rem;
-    font-weight: normal;
+    font-weight: 450;
     margin-bottom: 0.8rem;
 }
 
@@ -9569,6 +9569,7 @@ figure figcaption {
     font-weight: 400;
     background-color: #ffffff;
     display: grid;
+    font-weight: 450;
     gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
