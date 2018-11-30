@@ -7710,7 +7710,7 @@ readers do not read off random characters that represent icons */
 @font-face {
     font-family: "Plex Sans";
     font-style: normal;
-    font-weight: 100;
+    font-weight: 200;
     font-display: swap;
     src: local("Plex Sans Extra Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-ExtraLight.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/plexsans/IBMPlexSans-ExtraLight.woff) format("woff");
 }
