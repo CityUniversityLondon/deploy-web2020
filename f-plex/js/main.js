@@ -4854,7 +4854,7 @@ function reduceMotion() {
  * displayed: none; or similar. Doesn't necessarily mean it's visible in the
  * window.
  *
- * @param  {HTMLElement} elem - An HTML element
+ * @param {HTMLElement} elem - An HTML element.
  * @returns {boolean} - Is it visible?
  */
 
@@ -4865,7 +4865,7 @@ function isVisible(elem) {
  * Turn a query string into an object.
  *
  * @param {string} parameterString - An HTML query string.
- * @returns {object} An object containing the parameters
+ * @returns {object} An object containing the parameters.
  */
 
 function parametersToObject(parameterString) {
@@ -4892,7 +4892,8 @@ function objectToParameters(parameterObj) {
     let parameters = '?';
 
     for (const key in parameterObj) {
-      parameters.length === 1 ? parameters += key + '=' + parameterObj[key] : parameters += '&' + key + '=' + parameterObj[key];
+      parameters.length !== 1 && (parameters += '&');
+      parameters += key + '=' + parameterObj[key];
     }
 
     return parameters;
