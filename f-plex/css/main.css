@@ -8488,7 +8488,7 @@ main dl b,
 main dl strong,
 main blockquote b,
 main blockquote strong {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 main p i,
@@ -8654,7 +8654,7 @@ main table td {
 
 main table td b,
 main table td strong {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 main table td i,
@@ -9228,6 +9228,7 @@ figure figcaption {
 }
 
 .global-header .header-logo {
+    align-self: start;
     grid-area: logo;
 }
 
@@ -9299,14 +9300,33 @@ figure figcaption {
     border-bottom: 2px solid #006bbd;
 }
 
+.no-js .menu {
+    font-size: 0.8rem;
+    grid-area: menu;
+}
+
 .no-js .menu .menu__button {
     display: none;
+}
+
+.no-js .menu li {
+    margin-top: 0.8rem;
 }
 
 .no-js .menu .menu__level3,
 .no-js .menu .menu__level4,
 .no-js .menu .menu__level5 {
+    display: none;
     margin-left: 1rem;
+}
+
+.no-js .menu .menu__current > .menu__level3,
+.no-js .menu .menu__current > .menu__level4,
+.no-js .menu .menu__current > .menu__level5,
+.no-js .menu .menu__hierarchy > .menu__level3,
+.no-js .menu .menu__hierarchy > .menu__level4,
+.no-js .menu .menu__hierarchy > .menu__level5 {
+    display: block;
 }
 
 .js .menu {
@@ -9753,7 +9773,7 @@ figure figcaption {
     }
     .js .pagination__wrapper .pagination__summary b,
     .js .pagination__wrapper .pagination__summary strong {
-        font-weight: 700;
+        font-weight: 600;
     }
     .js .pagination__wrapper .pagination__summary i,
     .js .pagination__wrapper .pagination__summary em {
