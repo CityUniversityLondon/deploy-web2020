@@ -536,7 +536,7 @@ self.addEventListener('install', function (event) {
 });
 self.addEventListener('fetch', function (event) {
   // only cache same sub-domain
-  if (event.request.method === 'GET' && event.request.url.indexOf(location.protocol + '//' + location.hostname) === 0) {
+  if (event.request.method === 'GET' && event.request.url.indexOf(window.location.origin) === 0) {
     event.respondWith(caches.match(event.request).then(function (response) {
       if (response) {
         return response;

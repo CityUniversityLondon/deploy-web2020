@@ -3231,8 +3231,11 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
 /* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.regexp.search */ "./node_modules/core-js/modules/es6.regexp.search.js");
+/* harmony import */ var core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
 
 
 
@@ -3259,7 +3262,7 @@ const className = 'accordion',
 
 function setSection(heading, open) {
   heading.dataset.open = open;
-  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, open);
+  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, open);
 }
 /**
  * Respond to button clicks - open if closed, close if open.
@@ -3277,9 +3280,9 @@ function setSection(heading, open) {
 function buttonClick(button, headings, toggleOpen) {
   const heading = button.parentNode;
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded))) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded))) {
     setSection(heading, false);
-    history.pushState(null, null, window.location.pathname);
+    history.pushState(null, null, `${window.location.pathname}${window.location.search}`);
   } else {
     toggleOpen && headings.forEach(heading => setSection(heading, false));
     setSection(heading, true);
@@ -3302,7 +3305,7 @@ function buttonFromHeading(heading) {
         iconSpan = document.createElement('span');
   textSpan.className = headingTextClassName;
   iconSpan.className = headingIconClassName;
-  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, true);
   button.setAttribute('type', 'button');
   textSpan.appendChild(document.createTextNode(heading.textContent));
   wrapper.appendChild(textSpan);
@@ -3333,14 +3336,14 @@ function buttonFromHeading(heading) {
 
 function launchAccordion(accordion) {
   const locationHash = window.location.hash.substr(1),
-        toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(accordion.dataset.toggleopen),
-        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(accordion.dataset.defaultopen),
+        toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(accordion.dataset.toggleopen),
+        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(accordion.dataset.defaultopen),
         headings = Array.from(accordion.querySelectorAll(`.${headingClassName}`));
   let idLinked = false;
   headings.forEach(heading => {
     const content = heading.nextElementSibling,
           button = buttonFromHeading(heading);
-    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].labelledBy, heading.id);
+    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].labelledBy, heading.id);
     content.setAttribute('role', 'region');
     heading.replaceChild(button, heading.firstChild);
     /**
@@ -3550,7 +3553,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function devcorate(elem, param, value) {
   Array.from(elem.querySelectorAll('a')).forEach(anchor => {
-    if (anchor.origin === location.origin) {
+    if (anchor.origin === window.location.origin) {
       const parameters = anchor.search ? Object(_util__WEBPACK_IMPORTED_MODULE_2__["parametersToObject"])(anchor.search) : {};
       parameters[param] = value;
       anchor.href = `${anchor.origin}${anchor.pathname}${Object(_util__WEBPACK_IMPORTED_MODULE_2__["objectToParameters"])(parameters)}${anchor.hash}`;
