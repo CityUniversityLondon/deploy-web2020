@@ -3388,8 +3388,7 @@ function buttonFromHeading(heading) {
   iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, true);
   button.setAttribute('type', 'button');
   textSpan.appendChild(document.createTextNode(heading.textContent));
-  wrapper.appendChild(textSpan);
-  wrapper.appendChild(iconSpan);
+  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(wrapper, [textSpan, iconSpan]);
   button.appendChild(wrapper);
   return button;
 }
@@ -3700,7 +3699,7 @@ function handleNo(container) {
   Array.from(container.querySelectorAll('*')).forEach(elem => container.removeChild(elem));
   link.href = feedbackPage;
   link.appendChild(linkText);
-  [messagePrefix, link, messageSuffix].forEach(elem => container.appendChild(elem));
+  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(container, [messagePrefix, link, messageSuffix]);
 }
 /**
  * Handle a click on the "yes, it's useful" button.
@@ -3716,7 +3715,9 @@ function handleYes(container) {
   container.appendChild(message);
 }
 /**
+ * By default, the Feedback widget contains a link to the feedback form.
  *
+ * With JavaScript, we add “is it useful?” buttons to track events to GA.
  *
  * @param {HTMLElement} elem - The feedback widget.
  */
@@ -3735,7 +3736,7 @@ function launchFeedback(elem) {
   noButton.appendChild(document.createTextNode('No'));
   noButton.addEventListener('click', () => handleNo(directFeedbackContainer), true);
   questionSpan.appendChild(questionText);
-  [questionSpan, yesButton, noButton].forEach(elem => directFeedbackContainer.appendChild(elem));
+  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(directFeedbackContainer, [questionSpan, yesButton, noButton]);
   directFeedbackContainer.className = className + '__direct';
   directFeedbackContainer.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].live, 'polite');
   elem.insertBefore(directFeedbackContainer, elem.firstElementChild);
@@ -3824,8 +3825,7 @@ function prepareSubMenu(menuItem, subMenu) {
   iconSpan.toggleAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, true);
   iconSpan.className = `${buttonIconClassName} fal fa-fw`;
   textSpan.className = `${buttonTextClassName}`;
-  menuItemBtn.appendChild(iconSpan);
-  menuItemBtn.appendChild(textSpan);
+  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(menuItemBtn, [iconSpan, textSpan]);
   menuItem.insertBefore(menuItemBtn, subMenu);
 
   if (menuItem.className.indexOf(currentClassName) >= 0 || menuItem.className.indexOf(hierarchyClassName) >= 0) {
@@ -4955,7 +4955,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4967,6 +4967,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parametersToObject", function() { return parametersToObject; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "objectToParameters", function() { return objectToParameters; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gaEvent", function() { return gaEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendAll", function() { return appendAll; });
 /* harmony import */ var core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es7.symbol.async-iterator */ "./node_modules/core-js/modules/es7.symbol.async-iterator.js");
 /* harmony import */ var core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es6_symbol__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.symbol */ "./node_modules/core-js/modules/es6.symbol.js");
@@ -5109,6 +5110,16 @@ function gaEvent(event, eventCategory, eventAction, eventLabel, eventValue) {
     eventLabel: eventLabel,
     eventValue: eventValue
   });
+}
+/**
+ * Append an array of elements to an element.
+ *
+ * @param {HTMLElement} elem - The parent element.
+ * @param {HTMLElement[]} children - An array of elements to append to it.
+ */
+
+function appendAll(elem, children) {
+  children.forEach(child => elem.appendChild(child));
 }
 
 /***/ }),
