@@ -9074,6 +9074,130 @@ body {
     outline-color: #ffffff;
 }
 
+.feedback {
+    grid-area: feedback;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'direct formlink';
+}
+
+@media (max-width: 600px) {
+    .feedback {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 'direct' 'formlink';
+    }
+}
+
+.feedback .feedback__form-link,
+.feedback .feedback__direct {
+    font-family: "Plex Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 0, 'ss03' 0, 'ss04' 0, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
+    font-style: normal;
+    font-weight: 450;
+    max-width: 55ch;
+    max-width: unset;
+}
+
+.feedback .feedback__form-link b,
+.feedback .feedback__form-link strong,
+.feedback .feedback__direct b,
+.feedback .feedback__direct strong {
+    font-weight: 600;
+}
+
+.feedback .feedback__form-link i,
+.feedback .feedback__form-link em,
+.feedback .feedback__direct i,
+.feedback .feedback__direct em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 0, 'ss04' 0, 'lnum' 0, 'onum' 1, 'pnum' 1, 'tnum' 0;
+    font-style: italic;
+}
+
+.feedback .feedback__form-link {
+    grid-area: formlink;
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    .feedback .feedback__form-link {
+        text-align: left;
+    }
+}
+
+.feedback .feedback__direct {
+    grid-area: direct;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .feedback .feedback__direct {
+        margin-bottom: 1rem;
+    }
+}
+
+.feedback .feedback__direct button {
+    background-color: inherit;
+    border-bottom-width: 0;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.125s ease-in;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    color: #006bbd;
+    margin-left: 1rem;
+}
+
+.feedback .feedback__direct button:hover, .feedback .feedback__direct button:focus, .feedback .feedback__direct button:active {
+    background-color: inherit;
+    color: inherit;
+    outline-width: 0;
+}
+
+.feedback .feedback__direct button:hover {
+    background-size: 100% 100%;
+}
+
+.feedback .feedback__direct button:focus {
+    color: #006bbd;
+    outline-color: #141414;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
+}
+
+.feedback .feedback__direct button:hover {
+    border-bottom-color: transparent;
+    color: #ffffff;
+    outline: none;
+}
+
+.feedback .feedback__direct button:active {
+    background-color: #006bbd;
+    color: #ffffff;
+    outline-color: #141414;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
+}
+
 figure figcaption {
     font-size: 0.8rem;
     line-height: 1.55rem;
@@ -9087,8 +9211,8 @@ figure figcaption {
     margin-top: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    grid-template-rows: auto auto;
-    grid-template-areas: 'switcher switcher switcher switcher . . . . . uol uol city' 'copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright';
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 'feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback' 'switcher switcher switcher switcher . . . . . uol uol city' 'copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright';
 }
 
 @media (max-width: 900px) {
@@ -9107,14 +9231,14 @@ figure figcaption {
 
 @media (max-width: 900px) {
     .global-footer {
-        grid-template-areas: 'switcher switcher switcher switcher . uol uol city' 'copyright copyright copyright copyright copyright copyright copyright copyright';
+        grid-template-areas: 'feedback feedback feedback feedback feedback feedback feedback feedback' 'switcher switcher switcher switcher . uol uol city' 'copyright copyright copyright copyright copyright copyright copyright copyright';
     }
 }
 
 @media (max-width: 600px) {
     .global-footer {
-        grid-template-rows: auto auto auto;
-        grid-template-areas: 'switcher switcher switcher switcher' 'uol uol city city' 'copyright copyright copyright copyright';
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 'feedback feedback feedback feedback' 'switcher switcher switcher switcher' 'uol uol city city' 'copyright copyright copyright copyright';
     }
 }
 
@@ -10977,6 +11101,83 @@ blockquote footer {
     .theme--dark .global-footer .footer-logo a:active {
         outline-color: #ffffff;
     }
+}
+
+.theme--dark .feedback .feedback__direct button {
+    background-color: inherit;
+    border-bottom-width: 0;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.125s ease-in;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    color: #006bbd;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.125s ease-in;
+    background-image: linear-gradient(120deg, #9bb7d4 0%, #9bb7d4 100%);
+    border-bottom-color: #9bb7d4;
+    color: #9bb7d4;
+}
+
+.theme--dark .feedback .feedback__direct button:hover, .theme--dark .feedback .feedback__direct button:focus, .theme--dark .feedback .feedback__direct button:active {
+    background-color: inherit;
+    color: inherit;
+    outline-width: 0;
+}
+
+.theme--dark .feedback .feedback__direct button:hover {
+    background-size: 100% 100%;
+}
+
+.theme--dark .feedback .feedback__direct button:focus {
+    color: #006bbd;
+    outline-color: #141414;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
+}
+
+.theme--dark .feedback .feedback__direct button:hover {
+    border-bottom-color: transparent;
+    color: #ffffff;
+    outline: none;
+}
+
+.theme--dark .feedback .feedback__direct button:active {
+    background-color: #006bbd;
+    color: #ffffff;
+    outline-color: #141414;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
+}
+
+.theme--dark .feedback .feedback__direct button:hover {
+    background-size: 100% 100%;
+}
+
+.theme--dark .feedback .feedback__direct button:focus {
+    color: #9bb7d4;
+    outline-color: #ffffff;
+}
+
+.theme--dark .feedback .feedback__direct button:hover {
+    color: #141414;
+}
+
+.theme--dark .feedback .feedback__direct button:active {
+    background-color: #9bb7d4;
+    color: #141414;
+    outline-color: #ffffff;
 }
 
 .theme--dark.js .accordion > .accordion__heading {
