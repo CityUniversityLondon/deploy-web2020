@@ -3735,9 +3735,7 @@ function launchFeedback(elem) {
   noButton.appendChild(document.createTextNode('No'));
   noButton.addEventListener('click', () => handleNo(directFeedbackContainer), true);
   questionSpan.appendChild(questionText);
-  directFeedbackContainer.appendChild(questionSpan);
-  directFeedbackContainer.appendChild(yesButton);
-  directFeedbackContainer.appendChild(noButton);
+  [questionSpan, yesButton, noButton].forEach(elem => directFeedbackContainer.appendChild(elem));
   directFeedbackContainer.className = className + '__direct';
   directFeedbackContainer.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].live, 'polite');
   elem.insertBefore(directFeedbackContainer, elem.firstElementChild);
