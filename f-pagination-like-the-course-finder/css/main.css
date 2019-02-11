@@ -14083,10 +14083,9 @@ article figure figcaption a:active {
 
 @media screen {
     .js .pagination__wrapper .pagination__controls {
-        align-items: stretch;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-wrap: nowrap;
+        justify-content: center;
     }
     .js .pagination__wrapper .pagination__controls button {
         background-color: initial;
@@ -14219,15 +14218,15 @@ article figure figcaption a:active {
         color: #696969;
         cursor: default;
         font-weight: 700;
-        outline-color: none;
+        outline-color: transparent;
         outline-offset: 0;
         outline-style: none;
-        outline-width: none;
+        outline-width: 0;
     }
     .js .pagination__wrapper .pagination__controls button span {
         display: inline-block;
-        padding-left: 0.25rem;
-        padding-right: 0.25rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
     .js .pagination__wrapper .pagination__controls .pagination__controls__ellipsis {
         align-items: center;
@@ -14237,11 +14236,11 @@ article figure figcaption a:active {
     .js .pagination__wrapper .pagination__controls .pagination__controls__ellipsis span {
         display: inline-block;
         padding-bottom: 2px;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
     .js .pagination__wrapper .pagination__controls button,
     .js .pagination__wrapper .pagination__controls .pagination__controls__ellipsis {
-        flex-basis: 0;
-        flex-grow: 1;
         margin-right: 0.5rem;
         margin-top: 0.75rem;
         min-height: 44px;
@@ -14326,6 +14325,8 @@ article figure figcaption a:active {
         font-family: "Font Awesome";
         font-size: 0.875em;
         font-weight: 400;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
     .js .pagination__wrapper .pagination__controls .pagination__controls__button--next {
         margin-right: 0;
@@ -17503,10 +17504,10 @@ blockquote footer {
         color: #696969;
         cursor: default;
         font-weight: 700;
-        outline-color: none;
+        outline-color: transparent;
         outline-offset: 0;
         outline-style: none;
-        outline-width: none;
+        outline-width: 0;
     }
     .theme--dark.js .pagination__controls button:focus {
         background-color: #1e1e1e;
