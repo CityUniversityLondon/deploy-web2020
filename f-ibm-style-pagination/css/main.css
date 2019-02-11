@@ -14085,7 +14085,7 @@ article figure figcaption a:active {
     .js .pagination__wrapper .pagination__controls {
         display: flex;
         flex-wrap: nowrap;
-        justify-content: center;
+        justify-content: flex-end;
     }
     .js .pagination__wrapper .pagination__controls button {
         background-color: initial;
@@ -14347,7 +14347,7 @@ article figure figcaption a:active {
         letter-spacing: 0em;
         margin-top: 0;
         max-width: unset;
-        text-align: center;
+        text-align: right;
     }
 }
 
