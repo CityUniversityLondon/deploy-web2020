@@ -11804,11 +11804,29 @@ main table td em {
         grid-column-gap: 1rem;
         grid-row-gap: 1rem;
     }
+    .js .accordion > .accordion__heading[data-open='true'] {
+        border-bottom: 0;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] button {
+        border-width: 2px 2px 1px 2px;
+        border-color: #0c0c0e #0c0c0e #d8d8d8 #0c0c0e;
+        border-style: dotted dotted solid dotted;
+        background: #f2f2f2;
+    }
     .js .accordion > .accordion__heading[data-open='true'] button .accordion__heading__indicator:before {
-        content: "\f068";
+        content: "\f00d";
+        color: #0c0c0e;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] button .accordion__heading__text {
+        text-decoration: underline;
+        color: #0c0c0e;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body {
         display: block;
+        background: #f2f2f2;
+        border-width: 0 2px 2px 2px;
+        border-style: dotted;
+        border-color: #0c0c0e;
     }
     .js .accordion > .accordion__heading button:focus {
         outline: 2px dotted #0c0c0e;
