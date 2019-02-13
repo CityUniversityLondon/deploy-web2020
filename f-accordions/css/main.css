@@ -11818,6 +11818,11 @@ main table td em {
         text-decoration: underline;
         color: #006bbd;
     }
+    .js .accordion > .accordion__heading button:active {
+        text-decoration: underline;
+        outline: 2px dotted #0c0c0e;
+        outline-offset: 3px;
+    }
 }
 
 .breadcrumbs {
