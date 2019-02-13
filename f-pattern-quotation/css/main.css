@@ -14461,16 +14461,26 @@ blockquote .blockquote__body .fas.fa-quote-left::before {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    width: 40px;
-    top: -25px;
-    padding: 10px;
-    color: #dd0036;
+    width: 2.5rem;
+    top: -1.25rem;
+    padding: 0.5rem;
 }
 
 blockquote .blockquote__body .fas.fa-quote-left {
     display: block;
-    border-top: 3px #dd0036 solid;
     height: 1.75rem;
+    border-top-style: solid;
+    border-top-width: 3px;
+}
+
+blockquote .blockquote__body .fa-quote-left--red {
+    color: #dd0036;
+    border-top-color: #dd0036;
+}
+
+blockquote .blockquote__body .fa-quote-left--black {
+    color: black;
+    border-top-color: black;
 }
 
 blockquote footer {
@@ -14499,6 +14509,11 @@ micro 2 = $measure--half
 micro5 = $measure--small1
 micro7 = $measure--small3
 
+QUESTIONS:
+1. QUOTE BIGGER IN RED LINE?
+2. QUOTE GRAPPHICS COLOUR CHANGE
+3. BLOCK QUOTE NOTE center on mobile
+4. Cited line smaller?
 
 */
 @media print {
