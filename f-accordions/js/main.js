@@ -3891,7 +3891,22 @@ function launchAccordion(accordion) {
         defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.defaultopen),
         allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.allowsingle),
         headings = Array.from(accordion.querySelectorAll(`.${headingClassName}`));
-  let idLinked = false;
+  let idLinked = false; // Isolate indicator icon from rest of button focus styles
+
+  document.addEventListener('keyup', function (e) {
+    const accordion__headings = document.getElementsByClassName('accordion__heading__text');
+
+    for (const accordion__heading of accordion__headings) {
+      // If user tabs into accordion
+      if (e.which == 9 && e.target.contains(accordion__heading)) {
+        const accordionIndicators = document.getElementsByClassName('accordion__heading__indicator');
+
+        for (const accordionIndicator of accordionIndicators) {
+          accordionIndicator.classList.add('in-focus');
+        }
+      }
+    }
+  });
 
   if (!(allowSingle || headings.length > 1)) {
     /**

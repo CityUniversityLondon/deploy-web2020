@@ -11698,6 +11698,21 @@ main table td em {
 }
 
 @media screen {
+    .js .accordion > .accordion__heading button .accordion__heading__text:hover {
+        text-decoration: underline;
+    }
+    .js .accordion > .accordion__heading button .accordion__heading__indicator.in-focus {
+        color: purple;
+        text-decoration: none;
+    }
+    .js .accordion > .accordion__heading button .accordion__heading__indicator.in-focus:before:focus {
+        text-decoration: none;
+        color: green;
+    }
+    .js .accordion > .accordion__heading button .accordion__heading__indicator.in-focus:focus {
+        text-decoration: none;
+        color: red;
+    }
     .js .accordion > .accordion__body {
         display: none;
     }
@@ -11719,8 +11734,12 @@ main table td em {
         text-decoration: none;
         color: #006bbd;
         border: none;
+        font-size: 1.125rem;
+        line-height: 1.25;
+        letter-spacing: -0.008em;
         width: 100%;
         text-align: left;
+        padding: 1rem;
     }
 }
 
@@ -11782,14 +11801,48 @@ main table td em {
     .js .accordion > .accordion__heading button[disabled]:focus, .js .accordion > .accordion__heading button[disabled]:hover, .js .accordion > .accordion__heading button[disabled]:active {
         outline: none;
     }
+}
+
+@media screen and (min-width: 433px) and (max-width: 768px) {
+    .js .accordion > .accordion__heading button {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1919px) {
+    .js .accordion > .accordion__heading button {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 3839px) {
+    .js .accordion > .accordion__heading button {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media screen and (min-width: 3840px) and (max-width: 7679px) {
+    .js .accordion > .accordion__heading button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media screen and (min-width: 7680px) {
+    .js .accordion > .accordion__heading button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media screen {
     .js .accordion > .accordion__heading button:hover {
         background: #f2f2f2;
         color: #006bbd;
     }
-    .js .accordion > .accordion__heading button .accordion__heading__text {
-        font-weight: medium;
+    .js .accordion > .accordion__heading button:focus {
         color: #006bbd;
-        text-decoration: none;
+    }
+    .js .accordion > .accordion__heading button .accordion__heading__text {
+        color: #006bbd;
     }
     .js .accordion > .accordion__heading button .accordion__heading__indicator {
         align-self: center;
@@ -11797,6 +11850,46 @@ main table td em {
     }
     .js .accordion > .accordion__heading button .accordion__heading__indicator:before {
         content: "\f067";
+        font-size: 1.125rem;
+        line-height: 1.25;
+        letter-spacing: -0.008em;
+    }
+}
+
+@media screen and (min-width: 433px) and (max-width: 768px) {
+    .js .accordion > .accordion__heading button .accordion__heading__indicator:before {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1919px) {
+    .js .accordion > .accordion__heading button .accordion__heading__indicator:before {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 3839px) {
+    .js .accordion > .accordion__heading button .accordion__heading__indicator:before {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media screen and (min-width: 3840px) and (max-width: 7679px) {
+    .js .accordion > .accordion__heading button .accordion__heading__indicator:before {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media screen and (min-width: 7680px) {
+    .js .accordion > .accordion__heading button .accordion__heading__indicator:before {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media screen {
+    .js .accordion > .accordion__heading button .accordion__heading__indicator:before:focus {
+        color: #006bbd;
+        text-decoration: none;
     }
     .js .accordion > .accordion__heading button div {
         display: grid;
@@ -11827,14 +11920,18 @@ main table td em {
         border-width: 0 2px 2px 2px;
         border-style: dotted;
         border-color: #0c0c0e;
+        padding: 1rem;
     }
     .js .accordion > .accordion__heading button:focus {
         outline: 2px dotted #0c0c0e;
         text-decoration: underline;
     }
-    .js .accordion > .accordion__heading button .accordion__heading__text:hover {
+    .js .accordion > .accordion__heading button > .accordion__heading__text:hover {
         text-decoration: underline;
         color: #006bbd;
+    }
+    .js .accordion > .accordion__heading button > .accordion__heading__text:focus {
+        text-decoration: underline;
     }
     .js .accordion > .accordion__heading button:active {
         text-decoration: underline;
