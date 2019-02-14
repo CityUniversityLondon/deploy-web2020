@@ -4153,6 +4153,8 @@ __webpack_require__.r(__webpack_exports__);
  *  Finds external links and adds font awesome icon to indicate external link
  *
  */
+const className = 'content';
+
 function findExternalLink() {
   var anchors = document.getElementsByClassName('content')[0].querySelectorAll('a');
   anchors.forEach(function (i) {
@@ -4164,11 +4166,12 @@ function findExternalLink() {
       }
     }
   });
-}
+} // findExternalLink();
 
-findExternalLink();
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: findExternalLink
+  launchFn: findExternalLink,
+  launchQuery: `.${className}`
 });
 
 /***/ }),
