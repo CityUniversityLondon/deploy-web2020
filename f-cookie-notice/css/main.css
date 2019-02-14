@@ -12274,7 +12274,7 @@ main table td em {
         text-decoration: inherit;
         position: absolute;
         opacity: 0;
-        right: 1.5rem;
+        transform: translateX(-0.75rem);
         transition: none;
     }
     .js .cookie-notice button:focus, .js .cookie-notice button:hover, .js .cookie-notice button:active {
@@ -12285,7 +12285,7 @@ main table td em {
     }
     .js .cookie-notice button:focus:after, .js .cookie-notice button:hover:after, .js .cookie-notice button:active:after {
         opacity: 1;
-        right: 0.5rem;
+        transform: translateX(0.75rem);
     }
 }
 
@@ -12326,10 +12326,17 @@ main table td em {
     border: none;
     border-radius: 0.25rem;
     padding: 0.75rem 1.5rem;
-    background: transparent;
-    color: #0c0c0e;
-    border: 2px solid #0c0c0e;
-    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
+    background: initial;
+    display: inline-block;
+    position: relative;
+    background: inital;
+    color: inital;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.5rem;
+    background: #dd0036;
+    color: #ffffff;
+    border: 2px solid #dd0036;
 }
 
 @media (min-width: 769px) {
@@ -12341,7 +12348,7 @@ main table td em {
         text-decoration: inherit;
         position: absolute;
         opacity: 0;
-        right: 1.5rem;
+        transform: translateX(-0.75rem);
         transition: none;
     }
     #dannytest:focus, #dannytest:hover, #dannytest:active {
@@ -12352,7 +12359,31 @@ main table td em {
     }
     #dannytest:focus:after, #dannytest:hover:after, #dannytest:active:after {
         opacity: 1;
-        right: 0.5rem;
+        transform: translateX(0.75rem);
+    }
+}
+
+@media (min-width: 769px) {
+    #dannytest:after {
+        content: '\f061';
+        font-family: 'Font Awesome';
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        position: absolute;
+        opacity: 0;
+        transform: translateX(-0.75rem);
+        transition: none;
+    }
+    #dannytest:focus, #dannytest:hover, #dannytest:active {
+        padding: 0.75rem 2rem 0.75rem 1rem;
+        color: #ffffff;
+        background-color: transparent;
+        border: 2px solid #dd0036;
+    }
+    #dannytest:focus:after, #dannytest:hover:after, #dannytest:active:after {
+        opacity: 1;
+        transform: translateX(0.75rem);
     }
 }
 
@@ -12363,21 +12394,28 @@ main table td em {
     #dannytest:after {
         transition: all 0.5s;
     }
-    #dannytest:focus, #dannytest:active, #dannytest:hover {
-        color: #ffffff;
-        background-color: #0c0c0e;
-        border-color: #0c0c0e;
-    }
     #dannytest:focus {
-        color: #0c0c0e;
-        background: #ffffff;
-        outline: 2px dotted #0c0c0e;
+        color: #ffffff;
+        background: #dd0036;
+        outline: 2px dotted #ffffff;
         outline-offset: 3px;
     }
     #dannytest:active {
-        outline: 2px dotted #0c0c0e;
+        outline: 2px dotted #ffffff;
         outline-offset: 3px;
-        border-color: #ffffff;
+    }
+}
+
+@media (min-width: 769px) {
+    #dannytest:after {
+        content: '';
+    }
+    #dannytest:focus, #dannytest:active, #dannytest:hover {
+        padding: 0.75rem 1.5rem;
+    }
+    #dannytest:hover, #dannytest:active {
+        color: #ffffff;
+        background: #c21d2c;
     }
 }
 
