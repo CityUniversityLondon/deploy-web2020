@@ -14388,9 +14388,8 @@ article figure figcaption a:active {
 blockquote .blockquote__body {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     position: relative;
-    margin-top: 1.75rem;
 }
 
 blockquote .blockquote__body--text-align-left {
@@ -14406,6 +14405,7 @@ blockquote .blockquote__body--text-align-center {
 }
 
 blockquote .blockquote__body svg {
+    margin-top: 1.75rem;
     margin-bottom: 1.75rem;
 }
 
@@ -14414,84 +14414,21 @@ blockquote .blockquote__body .svg--red {
 }
 
 blockquote .blockquote__body .svg--black {
-    fill: black;
-}
-
-blockquote .blockquote__body:before, blockquote .blockquote__body:after {
-    font-size: 1.266rem;
-    line-height: 1.25;
-    letter-spacing: -0.011em;
-    display: block;
-    position: absolute;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    blockquote .blockquote__body:before, blockquote .blockquote__body:after {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    blockquote .blockquote__body:before, blockquote .blockquote__body:after {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    blockquote .blockquote__body:before, blockquote .blockquote__body:after {
-        letter-spacing: -0.015em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    blockquote .blockquote__body:before, blockquote .blockquote__body:after {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    blockquote .blockquote__body:before, blockquote .blockquote__body:after {
-        letter-spacing: -0.017em;
-    }
-}
-
-blockquote .blockquote__body:before {
-    left: 1rem;
-}
-
-blockquote .blockquote__body:after {
-    right: 1rem;
-}
-
-blockquote .blockquote__body .fas.fa-quote-left::before {
-    background: white;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 2.5rem;
-    top: -1.25rem;
-    padding: 0.5rem;
+    fill: #0c0c0e;
 }
 
 blockquote footer {
-    margin-top: 0.5rem;
     padding-left: 1.25rem;
     margin-bottom: 1.75rem;
     text-align: left;
     font-size: 1rem;
-    position: relative;
 }
 
-blockquote footer cite a {
+blockquote footer cite {
     color: #696969;
-    border-bottom: none;
 }
 
 blockquote footer .fa.fa-external-link {
-    /* position: absolute;
-            right: 0.5rem;
-            top: 0.5rem; */
     margin-left: 1.75rem;
 }
 
