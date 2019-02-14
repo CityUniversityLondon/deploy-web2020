@@ -14385,10 +14385,6 @@ article figure figcaption a:active {
     }
 }
 
-blockquote {
-    margin-left: 1rem;
-}
-
 blockquote .blockquote__body {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -14407,6 +14403,18 @@ blockquote .blockquote__body--text-align-right {
 
 blockquote .blockquote__body--text-align-center {
     text-align: center;
+}
+
+blockquote .blockquote__body svg {
+    margin-bottom: 1.75rem;
+}
+
+blockquote .blockquote__body .svg--red {
+    fill: #dd0036;
+}
+
+blockquote .blockquote__body .svg--black {
+    fill: black;
 }
 
 blockquote .blockquote__body:before, blockquote .blockquote__body:after {
@@ -14466,23 +14474,6 @@ blockquote .blockquote__body .fas.fa-quote-left::before {
     padding: 0.5rem;
 }
 
-blockquote .blockquote__body .fas.fa-quote-left {
-    display: block;
-    height: 1.75rem;
-    border-top-style: solid;
-    border-top-width: 3px;
-}
-
-blockquote .blockquote__body .fa-quote-left--red {
-    color: #dd0036;
-    border-top-color: #dd0036;
-}
-
-blockquote .blockquote__body .fa-quote-left--black {
-    color: black;
-    border-top-color: black;
-}
-
 blockquote footer {
     margin-top: 0.5rem;
     padding-left: 1.25rem;
@@ -14505,16 +14496,10 @@ blockquote footer .fa.fa-external-link {
 }
 
 /*
-micro 2 = $measure--half
-micro5 = $measure--small1
-micro7 = $measure--small3
-
 QUESTIONS:
-1. QUOTE BIGGER IN RED LINE?
-2. QUOTE GRAPPHICS COLOUR CHANGE
-3. BLOCK QUOTE NOTE center on mobile
-4. Cited line smaller?
-
+1. Quote graphics too small?
+2. Black variable?
+3. Cited line smaller?
 */
 @media print {
     .js .tabs .tabs__links {
