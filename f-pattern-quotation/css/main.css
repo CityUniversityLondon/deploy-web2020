@@ -14390,6 +14390,8 @@ blockquote .blockquote__body {
     padding-right: 1.25rem;
     padding-bottom: 0.5rem;
     position: relative;
+    color: #0c0c0e;
+    font-size: 1.266rem;
 }
 
 blockquote .blockquote__body--text-align-left {
@@ -14435,8 +14437,9 @@ blockquote footer .fa.fa-external-link {
 /*
 QUESTIONS:
 1. Quote graphics too small?
-2. Black variable?
-3. Cited line smaller?
+2. body text to be gamma
+3. add area atributes.... 
+4. Cited line smaller?
 */
 @media print {
     .js .tabs .tabs__links {
