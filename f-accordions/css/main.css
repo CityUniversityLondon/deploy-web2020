@@ -11705,6 +11705,9 @@ main table td em {
         color: purple;
         text-decoration: none;
     }
+    .js .accordion > .accordion__heading button .accordion__heading__indicator.in-focus:before {
+        text-decoration: none;
+    }
     .js .accordion > .accordion__heading button .accordion__heading__indicator.in-focus:before:focus {
         text-decoration: none;
         color: green;
@@ -11719,6 +11722,9 @@ main table td em {
     .js .accordion > .accordion__heading {
         border-bottom: 1px dotted #e5e5e5;
         margin-top: 0;
+    }
+    .js .accordion > .accordion__heading .selected {
+        color: red;
     }
     .js .accordion > .accordion__heading button {
         background-color: initial;

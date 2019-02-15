@@ -3803,7 +3803,9 @@ const className = 'accordion',
       headingTextClassName = headingClassName + '__text',
       headingIconClassName = headingClassName + '__indicator fal',
       scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_4__["reduceMotion"])() ? 0 : 999,
-      scrollTo = false;
+      scrollTo = false; // let heights = [];
+// let IDs = [];
+
 /**
  * Sets a heading and the button nested within to be open or closed.
  *
@@ -3829,6 +3831,8 @@ function setSection(heading, open) {
 
 
 function buttonClick(button, headings, toggleOpen) {
+  // console.log(IDs);
+  // console.log(heights);
   const heading = button.parentNode;
 
   if (Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded))) {
@@ -3861,7 +3865,17 @@ function buttonFromHeading(heading) {
   button.setAttribute('type', 'button');
   textSpan.appendChild(document.createTextNode(heading.textContent));
   Object(_util__WEBPACK_IMPORTED_MODULE_4__["appendAll"])(wrapper, [textSpan, iconSpan]);
-  button.appendChild(wrapper);
+  button.appendChild(wrapper); // Add class to accordion body depending on parent element state
+
+  heading.addEventListener('click', () => {
+    let headingOpen = heading.getAttribute('data-open');
+
+    if (headingOpen == 'true') {
+      heading.nextElementSibling.classList.add('selected');
+    } else {
+      heading.nextElementSibling.classList.remove('selected');
+    }
+  });
   return button;
 }
 /**
@@ -3891,7 +3905,57 @@ function launchAccordion(accordion) {
         defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.defaultopen),
         allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.allowsingle),
         headings = Array.from(accordion.querySelectorAll(`.${headingClassName}`));
-  let idLinked = false; // Isolate indicator icon from rest of button focus styles
+  let idLinked = false;
+
+  if (!(allowSingle || headings.length > 1)) {
+    /**
+     * not enough content to accordion
+     */
+    Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(accordion, className, false);
+    return;
+  } // Immediately hide all accordion body elements on load
+  // const accordionBodies = document.getElementsByClassName('accordion__body');
+  // let heights = [];
+  // let IDs = [];
+  // for (const accordionBody of accordionBodies) {
+  //     let id = accordionBody.getAttribute('id');
+  //     IDs.push(id);
+  //     let height = accordionBody.offsetHeight;
+  //     heights.push(height);
+  //     if (accordionBody.classList.contains('selected')) {
+  //         accordionBody.style.display = 'block';
+  //     } else {
+  //         accordionBody.style.display = 'hide';
+  //     }
+  // }
+  // console.log(IDs);
+  // console.log(heights);
+  // let groupedData = [['id', 'height'], [IDs], [heights]];
+  // var data = [
+  //     ['fruits', 'frozen', 'fresh', 'rotten'],
+  //     ['apples', 884, 494, 494],
+  //     ['oranges', 4848, 494, 4949],
+  //     ['kiwi', 848, 33, 33],
+  // ];
+  // function convertToArrayOfObjects(data) {
+  //     var keys = data.shift(),
+  //         i = 0,
+  //         k = 0,
+  //         obj = null,
+  //         output = [];
+  //     for (i = 0; i < data.length; i++) {
+  //         obj = {};
+  //         for (k = 0; k < keys.length; k++) {
+  //             obj[keys[k]] = data[i][k];
+  //         }
+  //         // console.log(obj);
+  //         output.push(obj);
+  //     }
+  //     return output;
+  // }
+  // convertToArrayOfObjects(groupedData);
+  // Isolate indicator icon from rest of button focus
+
 
   document.addEventListener('keyup', function (e) {
     const accordion__headings = document.getElementsByClassName('accordion__heading__text');
@@ -3907,15 +3971,6 @@ function launchAccordion(accordion) {
       }
     }
   });
-
-  if (!(allowSingle || headings.length > 1)) {
-    /**
-     * not enough content to accordion
-     */
-    Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(accordion, className, false);
-    return;
-  }
-
   headings.forEach(heading => {
     const content = heading.nextElementSibling,
           button = buttonFromHeading(heading);
