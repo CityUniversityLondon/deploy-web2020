@@ -4158,16 +4158,15 @@ const className = 'content';
 function findExternalLink() {
   var anchors = document.getElementsByClassName('content')[0].querySelectorAll('a');
   anchors.forEach(function (i) {
-    if (i.origin !== window.location.origin) {
-      if (i.querySelectorAll('.fa-external-link').length === 0) {
-        var node = document.createElement('span');
-        node.className = 'fa fa-external-link';
-        i.appendChild(node);
-      }
+    // checks if anchors link is external & not an image & not contain font awesome icon already
+    if (i.origin !== window.location.origin && i.querySelectorAll('img').length < 1 && i.querySelectorAll('.fa-external-link').length < 1) {
+      // adds font awesome external link icon after completing checks
+      var node = document.createElement('span');
+      node.className = 'fa fa-external-link';
+      i.appendChild(node);
     }
   });
-} // findExternalLink();
-
+}
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: findExternalLink,
