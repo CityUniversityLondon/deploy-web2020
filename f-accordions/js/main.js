@@ -3803,9 +3803,7 @@ const className = 'accordion',
       headingTextClassName = headingClassName + '__text',
       headingIconClassName = headingClassName + '__indicator fal',
       scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_4__["reduceMotion"])() ? 0 : 999,
-      scrollTo = false; // let heights = [];
-// let IDs = [];
-
+      scrollTo = false;
 /**
  * Sets a heading and the button nested within to be open or closed.
  *
@@ -3831,8 +3829,8 @@ function setSection(heading, open) {
 
 
 function buttonClick(button, headings, toggleOpen) {
-  // console.log(IDs);
-  // console.log(heights);
+  // let heights = [];
+  // let IDs = [];
   const heading = button.parentNode;
 
   if (Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded))) {
@@ -3843,7 +3841,63 @@ function buttonClick(button, headings, toggleOpen) {
     setSection(heading, true);
     scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
     history.pushState(null, null, '#' + heading.id);
-  }
+  } // let buttonChildren = button.childNodes;
+  // for (const buttonChild of buttonChildren) {
+  //     // console.log(buttonChild);
+  // }
+  // let buttonBody = heading.nextElementSibling;
+  // let buttonBodyId = buttonBody.getAttribute('id');
+  // console.log(buttonBodyId);
+  // Immediately hide all accordion body elements on load
+
+  /* const accordionBodies = document.getElementsByClassName('accordion__body');
+  for (const accordionBody of accordionBodies) {
+      if (accordionBody.getAttribute('id') == buttonBodyId && !(accordionBody.classList.contains('selected'))) {
+          // accordionBody.style.display = 'block';
+          let id = accordionBody.getAttribute('id');
+          IDs.push(id);
+          let height = accordionBody.offsetHeight;
+          heights.push(height);
+           console.log(id);
+          console.log(height);
+           accordionBody.style.height = height;
+          accordionBody.style.display = 'hide';
+      } else {
+          // let id = accordionBody.getAttribute('id');
+          // IDs.push(id);
+          // let height = accordionBody.offsetHeight;
+          // heights.push(height);
+          // console.log(id);
+          // console.log(height);
+          accordionBody.style.height = '1000';
+          // accordionBody.style.display = 'none';
+      }
+  } */
+  // let groupedData = [['id', 'height'], [...IDs], [...heights]];
+  // var data = [
+  //     ['fruits', 'frozen', 'fresh', 'rotten'],
+  //     ['apples', 884, 494, 494],
+  //     ['oranges', 4848, 494, 4949],
+  //     ['kiwi', 848, 33, 33],
+  // ];
+  // function convertToArrayOfObjects(data) {
+  //     var keys = data.shift(),
+  //         i = 0,
+  //         k = 0,
+  //         obj = null,
+  //         output = [];
+  //     for (i = 0; i < data.length; i++) {
+  //         obj = {};
+  //         for (k = 0; k < keys.length; k++) {
+  //             obj[keys[k]] = data[i][k];
+  //         }
+  //         // console.log(obj);
+  //         // output.push(obj);
+  //     }
+  //     return output;
+  // }
+  // convertToArrayOfObjects(groupedData);
+
 }
 /**
  * Create a button from the text content of a heading.
@@ -3913,48 +3967,7 @@ function launchAccordion(accordion) {
      */
     Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(accordion, className, false);
     return;
-  } // Immediately hide all accordion body elements on load
-  // const accordionBodies = document.getElementsByClassName('accordion__body');
-  // let heights = [];
-  // let IDs = [];
-  // for (const accordionBody of accordionBodies) {
-  //     let id = accordionBody.getAttribute('id');
-  //     IDs.push(id);
-  //     let height = accordionBody.offsetHeight;
-  //     heights.push(height);
-  //     if (accordionBody.classList.contains('selected')) {
-  //         accordionBody.style.display = 'block';
-  //     } else {
-  //         accordionBody.style.display = 'hide';
-  //     }
-  // }
-  // console.log(IDs);
-  // console.log(heights);
-  // let groupedData = [['id', 'height'], [IDs], [heights]];
-  // var data = [
-  //     ['fruits', 'frozen', 'fresh', 'rotten'],
-  //     ['apples', 884, 494, 494],
-  //     ['oranges', 4848, 494, 4949],
-  //     ['kiwi', 848, 33, 33],
-  // ];
-  // function convertToArrayOfObjects(data) {
-  //     var keys = data.shift(),
-  //         i = 0,
-  //         k = 0,
-  //         obj = null,
-  //         output = [];
-  //     for (i = 0; i < data.length; i++) {
-  //         obj = {};
-  //         for (k = 0; k < keys.length; k++) {
-  //             obj[keys[k]] = data[i][k];
-  //         }
-  //         // console.log(obj);
-  //         output.push(obj);
-  //     }
-  //     return output;
-  // }
-  // convertToArrayOfObjects(groupedData);
-  // Isolate indicator icon from rest of button focus
+  } // Isolate indicator icon from rest of button focus
 
 
   document.addEventListener('keyup', function (e) {
