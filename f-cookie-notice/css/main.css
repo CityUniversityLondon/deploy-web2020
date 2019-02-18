@@ -1071,6 +1071,67 @@
     background-color: #ffffff;
 }
 
+/**
+ *
+ * Call to action Primary style on a dark background
+ * To use @include cta-primary-dark-bg();
+ * this will style the CTA to defualt primary colours
+ * 
+ * to modify the colours pass in the background colour and colour as parameters
+ * e.g @include cta-primary-dark-bg(yellow, green);
+ * 
+ *
+ */
+/**
+ *
+ * Call to action style for a light background
+ * Primary colors will be used if no parameters is pass as args
+ * e.g @include cta-primary-light-bg();
+ * 
+ * to modify the colours used pass in a backgound or colour arg
+ * e.g @include cta-primary-light-bg(yellow, green);
+ *
+ */
+/**
+ *
+ * Call to action outlined on a dark background
+ * to use just call @include cta-outlined-dark-bg();
+ *
+ */
+/**
+ 
+     TODO:
+     - Allow mixin to accept parameters to change default colours?
+ 
+  */
+/**
+
+    TODO:
+    - Allow mixin to accept parameter to change default colours
+
+ */
+/**
+ *
+ * CTA on a light background
+ * to use with default colours
+ * e.g @include cta-basic-light-bg();
+ *
+ * colours can be modify by passing arg to the mixin
+ * e.g @include cta-basic-light-bg(yellow, green);
+ * this will change the background to yellow and color to green
+ *
+ */
+/**
+ *
+ * CTA on a dark background
+ * To used the default colour
+ * e.g @include cta-basic-dark-bg();
+ * 
+ * to modify the colour used you can pass in arg to the mixin
+ * e.g @include cta-basic-dark-bg(yellow, blue);
+ * this will modify the background and color attributes
+ *
+ */
 html {
     -webkit-text-size-adjust: 100%;
        -moz-text-size-adjust: 100%;
@@ -12252,17 +12313,16 @@ main table td em {
 }
 
 .js .cookie-notice button {
-    background: initial;
     display: inline-block;
     position: relative;
-    background: inital;
+    background: initial;
     color: inital;
     border: none;
     border-radius: 0.25rem;
     padding: 0.75rem 1.5rem;
-    background: #dd0036;
+    background: transparent;
     color: #ffffff;
-    border: 2px solid #dd0036;
+    border: 2px solid #ffffff;
 }
 
 @media (min-width: 769px) {
@@ -12296,15 +12356,19 @@ main table td em {
     .js .cookie-notice button:after {
         transition: all 0.5s;
     }
+    .js .cookie-notice button:focus, .js .cookie-notice button:active, .js .cookie-notice button:hover {
+        color: #0c0c0e;
+        background-color: #ffffff;
+        border-color: #ffffff;
+    }
     .js .cookie-notice button:focus {
-        color: #ffffff;
-        background: #dd0036;
         outline: 2px dotted #ffffff;
         outline-offset: 3px;
     }
     .js .cookie-notice button:active {
         outline: 2px dotted #ffffff;
         outline-offset: 3px;
+        border-color: #ffffff;
     }
 }
 
@@ -12318,18 +12382,9 @@ main table td em {
 }
 
 #dannytest {
-    background: initial;
     display: inline-block;
     position: relative;
-    background: inital;
-    color: inital;
-    border: none;
-    border-radius: 0.25rem;
-    padding: 0.75rem 1.5rem;
     background: initial;
-    display: inline-block;
-    position: relative;
-    background: inital;
     color: inital;
     border: none;
     border-radius: 0.25rem;
@@ -12337,30 +12392,13 @@ main table td em {
     background: #dd0036;
     color: #ffffff;
     border: 2px solid #dd0036;
-}
-
-@media (min-width: 769px) {
-    #dannytest:after {
-        content: '\f061';
-        font-family: 'Font Awesome';
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        position: absolute;
-        opacity: 0;
-        transform: translateX(-0.75rem);
-        transition: none;
-    }
-    #dannytest:focus, #dannytest:hover, #dannytest:active {
-        padding: 0.75rem 2rem 0.75rem 1rem;
-        color: #ffffff;
-        background-color: transparent;
-        border: 2px solid #dd0036;
-    }
-    #dannytest:focus:after, #dannytest:hover:after, #dannytest:active:after {
-        opacity: 1;
-        transform: translateX(0.75rem);
-    }
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
+    background: #dd0036;
+    color: #ffffff;
+    border-color: #dd0036;
+    background: yellow;
+    color: green;
+    border-color: yellow;
 }
 
 @media (min-width: 769px) {
@@ -12397,12 +12435,17 @@ main table td em {
     #dannytest:focus {
         color: #ffffff;
         background: #dd0036;
-        outline: 2px dotted #ffffff;
+        outline: 2px dotted #0c0c0e;
         outline-offset: 3px;
     }
     #dannytest:active {
-        outline: 2px dotted #ffffff;
+        color: #dd0036;
+        outline: 2px dotted #0c0c0e;
         outline-offset: 3px;
+    }
+    #dannytest:hover {
+        color: #dd0036;
+        border-color: #dd0036;
     }
 }
 
@@ -12411,11 +12454,31 @@ main table td em {
         content: '';
     }
     #dannytest:focus, #dannytest:active, #dannytest:hover {
+        background: #dd0036;
+        color: #ffffff;
+        border-color: #dd0036;
         padding: 0.75rem 1.5rem;
     }
     #dannytest:hover, #dannytest:active {
-        color: #ffffff;
-        background: #c21d2c;
+        background: #c40030;
+    }
+}
+
+@media (min-width: 769px) {
+    #dannytest:after {
+        content: '';
+    }
+    #dannytest:focus, #dannytest:active, #dannytest:hover {
+        background: yellow;
+        color: green;
+        border-color: yellow;
+    }
+    #dannytest:hover, #dannytest:active {
+        background: #e6e600;
+    }
+    #dannytest:focus, #dannytest:active {
+        outline: 2px dotted #ffffff;
+        outline-offset: 3px;
     }
 }
 
