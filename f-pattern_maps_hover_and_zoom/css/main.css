@@ -12907,7 +12907,7 @@ article figure figcaption a:active {
         background: rgba(12, 12, 14, 0.1);
     }
     figure.figure--map a:hover picture img {
-        transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in;
         transform: scale(1.04);
     }
     figure.figure--map a:focus, figure.figure--map a:active {
