@@ -12320,9 +12320,9 @@ main table td em {
     border: none;
     border-radius: 0.25rem;
     padding: 0.75rem 1.5rem;
-    background: transparent;
+    border: 2px solid #dd0036;
+    background: #dd0036;
     color: #ffffff;
-    border: 2px solid #ffffff;
 }
 
 @media (min-width: 769px) {
@@ -12356,19 +12356,18 @@ main table td em {
     .js .cookie-notice button:after {
         transition: all 0.5s;
     }
-    .js .cookie-notice button:focus, .js .cookie-notice button:active, .js .cookie-notice button:hover {
-        color: #0c0c0e;
-        background-color: #ffffff;
-        border-color: #ffffff;
-    }
     .js .cookie-notice button:focus {
+        color: #ffffff;
+        background: #dd0036;
         outline: 2px dotted #ffffff;
         outline-offset: 3px;
     }
     .js .cookie-notice button:active {
         outline: 2px dotted #ffffff;
         outline-offset: 3px;
-        border-color: #ffffff;
+    }
+    .js .cookie-notice button:hover {
+        border-color: #dd0036;
     }
 }
 
@@ -12396,9 +12395,9 @@ main table td em {
     background: #dd0036;
     color: #ffffff;
     border-color: #dd0036;
-    background: yellow;
-    color: green;
-    border-color: yellow;
+    background: #dd0036;
+    color: #ffffff;
+    border-color: #dd0036;
 }
 
 @media (min-width: 769px) {
@@ -12469,12 +12468,12 @@ main table td em {
         content: '';
     }
     #dannytest:focus, #dannytest:active, #dannytest:hover {
-        background: yellow;
-        color: green;
-        border-color: yellow;
+        background: #dd0036;
+        color: #ffffff;
+        border-color: #dd0036;
     }
     #dannytest:hover, #dannytest:active {
-        background: #e6e600;
+        background: #c40030;
     }
     #dannytest:focus, #dannytest:active {
         outline: 2px dotted #ffffff;
