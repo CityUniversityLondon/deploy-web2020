@@ -12891,43 +12891,45 @@ article figure figcaption a:active {
 }
 
 @media (min-width: 1280px) {
-    figure.figure--map {
-        position: relative;
-    }
-    figure.figure--map:hover:before {
-        content: '';
-        border: 2px dotted #0c0c0e;
-        height: 104.5%;
-        width: 103%;
-        display: block;
-        position: absolute;
-        left: -10px;
-        top: -12px;
-    }
-    figure.figure--map:hover picture {
-        overflow: hidden;
-    }
-    figure.figure--map:hover picture img {
-        transform: scale(1.04);
-    }
-    figure.figure--map:hover picture:after {
-        content: '';
-        background: rgba(12, 12, 14, 0.1);
-        height: 100%;
-        width: 100%;
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
     figure.figure--map a {
         display: block;
         transition: none;
         background-image: none;
     }
-    figure.figure--map picture {
-        display: block;
+    figure.figure--map a:hover {
+        overflow: hidden;
+    }
+    figure.figure--map a:hover picture:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(12, 12, 14, 0.1);
+    }
+    figure.figure--map a:hover picture img {
+        transform: scale(1.04);
+    }
+    figure.figure--map a:active {
+        outline: 2px dotted;
+        outline-offset: 6px;
+        overflow: hidden;
+    }
+    figure.figure--map a:active picture img {
+        transform: scale(1.04);
+    }
+    figure.figure--map a:focus {
+        outline: 2px dotted;
+        outline-offset: 6px;
+        overflow: hidden;
+    }
+    figure.figure--map a:focus picture img {
+        transform: scale(1.04);
+    }
+    figure.figure--map a picture {
         position: relative;
+        display: block;
     }
 }
 
