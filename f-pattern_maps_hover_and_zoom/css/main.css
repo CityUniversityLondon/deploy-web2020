@@ -12911,8 +12911,13 @@ article figure figcaption a:active {
     figure.figure--map a:hover picture img {
         transform: scale(1.04);
     }
+    figure.figure--map a:focus, figure.figure--map a:active {
+        outline-color: #0c0c0e;
+        outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
+    }
     figure.figure--map a:active {
-        outline: 2px dotted;
         outline-offset: 6px;
         overflow: hidden;
     }
@@ -12920,7 +12925,6 @@ article figure figcaption a:active {
         transform: scale(1.04);
     }
     figure.figure--map a:focus {
-        outline: 2px dotted;
         outline-offset: 6px;
         overflow: hidden;
     }
