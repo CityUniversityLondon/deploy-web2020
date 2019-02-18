@@ -12892,12 +12892,10 @@ article figure figcaption a:active {
 
 @media (min-width: 1280px) {
     figure.figure--map a {
+        overflow: hidden;
         display: block;
         transition: none;
         background-image: none;
-    }
-    figure.figure--map a:hover {
-        overflow: hidden;
     }
     figure.figure--map a:hover picture:after {
         content: '';
@@ -12909,6 +12907,7 @@ article figure figcaption a:active {
         background: rgba(12, 12, 14, 0.1);
     }
     figure.figure--map a:hover picture img {
+        transition: all 0.4s ease-in-out;
         transform: scale(1.04);
     }
     figure.figure--map a:focus, figure.figure--map a:active {
@@ -12917,19 +12916,8 @@ article figure figcaption a:active {
         outline-style: dotted;
         outline-offset: 3px;
     }
-    figure.figure--map a:active {
-        outline-offset: 6px;
-        overflow: hidden;
-    }
-    figure.figure--map a:active picture img {
-        transform: scale(1.04);
-    }
-    figure.figure--map a:focus {
-        outline-offset: 6px;
-        overflow: hidden;
-    }
-    figure.figure--map a:focus picture img {
-        transform: scale(1.04);
+    figure.figure--map a:active, figure.figure--map a:focus {
+        outline-offset: 7px;
     }
     figure.figure--map a picture {
         position: relative;
