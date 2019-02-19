@@ -12334,7 +12334,7 @@ main table td em {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .js .cookie-notice button {
         transition: all 0.6s;
     }
@@ -12363,7 +12363,7 @@ main table td em {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .js .cookie-notice button:focus {
         color: #ffffff;
         background: #dd0036;
@@ -12416,7 +12416,7 @@ main table td em {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     #dannytest {
         transition: all 0.6s;
     }
@@ -12445,7 +12445,7 @@ main table td em {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     #dannytest:focus {
         color: #ffffff;
         background: #dd0036;
@@ -12466,7 +12466,7 @@ main table td em {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     #dannytest:after {
         content: '';
     }
@@ -12511,7 +12511,7 @@ main table td em {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .cta-block li:nth-child(1) a {
         transition: all 0.6s;
     }
@@ -12540,7 +12540,7 @@ main table td em {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .cta-block li:nth-child(1) a:focus {
         color: #ffffff;
         background: #dd0036;
@@ -12583,7 +12583,7 @@ main table td em {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .cta-block li:nth-child(2) a {
         transition: all 0.6s;
     }
@@ -12612,7 +12612,7 @@ main table td em {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .cta-block li:nth-child(2) a:focus, .cta-block li:nth-child(2) a:active, .cta-block li:nth-child(2) a:hover {
         color: #ffffff;
         background-color: #0c0c0e;
@@ -12659,7 +12659,7 @@ main table td em {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .cta-block li:nth-child(3) a {
         transition: all 0.6s;
     }
@@ -12688,7 +12688,7 @@ main table td em {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .cta-block li:nth-child(3) a:focus {
         color: #ffffff;
         background: #dd0036;
@@ -12709,7 +12709,7 @@ main table td em {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .cta-block li:nth-child(3) a:after {
         content: '';
     }
@@ -16803,7 +16803,7 @@ blockquote footer {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .theme--dark .cta-block li:nth-child(1) a {
         transition: all 0.6s;
     }
@@ -16832,7 +16832,7 @@ blockquote footer {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .theme--dark .cta-block li:nth-child(1) a:focus {
         color: #ffffff;
         background: #dd0036;
@@ -16872,7 +16872,7 @@ blockquote footer {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .theme--dark .cta-block li:nth-child(2) a {
         transition: all 0.6s;
     }
@@ -16901,7 +16901,7 @@ blockquote footer {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .theme--dark .cta-block li:nth-child(2) a:active, .theme--dark .cta-block li:nth-child(2) a:hover {
         color: #0c0c0e;
         background-color: #ffffff;
@@ -16950,7 +16950,7 @@ blockquote footer {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .theme--dark .cta-block li:nth-child(3) a {
         transition: all 0.6s;
     }
@@ -16979,7 +16979,7 @@ blockquote footer {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .theme--dark .cta-block li:nth-child(3) a:focus {
         color: #ffffff;
         background: #dd0036;
@@ -17000,7 +17000,7 @@ blockquote footer {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .theme--dark .cta-block li:nth-child(3) a:after {
         content: '';
     }
@@ -17018,7 +17018,7 @@ blockquote footer {
     }
 }
 
-@media (min-width: 769px) {
+@media (hover: hover) {
     .theme--dark .cta-block li:nth-child(3) a:after {
         content: '';
     }
