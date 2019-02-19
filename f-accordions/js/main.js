@@ -3788,6 +3788,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 /**
  * Accordion
  *
@@ -3841,39 +3845,43 @@ function buttonClick(button, headings, toggleOpen) {
     setSection(heading, true);
     scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
     history.pushState(null, null, '#' + heading.id);
-  } // let buttonChildren = button.childNodes;
-  // for (const buttonChild of buttonChildren) {
-  //     // console.log(buttonChild);
-  // }
-  // let buttonBody = heading.nextElementSibling;
-  // let buttonBodyId = buttonBody.getAttribute('id');
-  // console.log(buttonBodyId);
-  // Immediately hide all accordion body elements on load
+  }
 
-  /* const accordionBodies = document.getElementsByClassName('accordion__body');
+  let accBodyEls = document.getElementsByClassName('accordion__body');
+  accBodyEls = [...accBodyEls];
+
+  for (const accBodyEl of accBodyEls) {
+    accBodyEl.style.backgroundColor = 'red';
+  }
+
+  let buttonBody = heading.nextElementSibling;
+  let buttonBodyId = buttonBody.getAttribute('id'); // console.log(`Accordion body ID: ${buttonBodyId}`);
+
+  let IDs = [];
+  let heights = []; // Immediately hide all accordion body elements on load
+
+  const accordionBodies = document.getElementsByClassName('accordion__body');
+
   for (const accordionBody of accordionBodies) {
-      if (accordionBody.getAttribute('id') == buttonBodyId && !(accordionBody.classList.contains('selected'))) {
-          // accordionBody.style.display = 'block';
-          let id = accordionBody.getAttribute('id');
-          IDs.push(id);
-          let height = accordionBody.offsetHeight;
-          heights.push(height);
-           console.log(id);
-          console.log(height);
-           accordionBody.style.height = height;
-          accordionBody.style.display = 'hide';
-      } else {
-          // let id = accordionBody.getAttribute('id');
-          // IDs.push(id);
-          // let height = accordionBody.offsetHeight;
-          // heights.push(height);
-          // console.log(id);
-          // console.log(height);
-          accordionBody.style.height = '1000';
-          // accordionBody.style.display = 'none';
-      }
-  } */
-  // let groupedData = [['id', 'height'], [...IDs], [...heights]];
+    if (accordionBody.getAttribute('id') == buttonBodyId && !accordionBody.classList.contains('selected')) {// accordionBody.style.display = 'block';
+      // let id = accordionBody.getAttribute('id');
+      // IDs.push(id);
+      // let height = accordionBody.offsetHeight;
+      // heights.push(height);
+      // console.log(`ID: ${id}`);
+      // console.log(`Height: ${height}`);
+      // accordionBody.style.height = height;
+      // accordionBody.style.display = 'hide';
+    } else {
+      let id = accordionBody.getAttribute('id');
+      IDs.push(id);
+      let height = accordionBody.offsetHeight;
+      heights.push(height); // console.log(id);
+      // console.log(height);
+      //accordionBody.style.height = '1000';
+      // accordionBody.style.display = 'none';
+    }
+  } // let groupedData = [['id', 'height'], [...IDs], [...heights]];
   // var data = [
   //     ['fruits', 'frozen', 'fresh', 'rotten'],
   //     ['apples', 884, 494, 494],
@@ -3983,7 +3991,29 @@ function launchAccordion(accordion) {
         }
       }
     }
-  });
+  }); // Add height attribute to each accordion body
+
+  let accordionBodies = document.getElementsByClassName('accordion__body');
+  accordionBodies = [...accordionBodies];
+
+  function setBodyHeights() {
+    return _setBodyHeights.apply(this, arguments);
+  }
+
+  function _setBodyHeights() {
+    _setBodyHeights = _asyncToGenerator(function* () {
+      let p1;
+
+      for (const accordionBody of accordionBodies) {
+        p1 = accordionBody.setAttribute('height', accordionBody.offsetHeight);
+      }
+
+      yield Promise.all([p1]);
+    });
+    return _setBodyHeights.apply(this, arguments);
+  }
+
+  setBodyHeights();
   headings.forEach(heading => {
     const content = heading.nextElementSibling,
           button = buttonFromHeading(heading);

@@ -11721,10 +11721,9 @@ main table td em {
         border-width: 0 2px 2px 2px;
         border-style: dotted;
         border-color: #0c0c0e;
-        padding: 0 1rem;
         max-height: 0px;
         height: auto;
-        transition: max-height 2s ease-out;
+        transition: max-height 5s ease-out;
         overflow: hidden;
     }
     .js .accordion > .accordion__heading {
@@ -11930,15 +11929,20 @@ main table td em {
         border-width: 0 2px 2px 2px;
         border-style: dotted;
         border-color: #0c0c0e;
-        padding: 1rem;
+        max-height: 500px;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] + .accordion__body p {
+        margin: 1rem;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body.selected {
-        max-height: 900px;
+        max-height: 500px;
         background: #f2f2f2;
-        padding: 1rem;
         border-width: 0 2px 2px 2px;
         border-style: dotted;
         border-color: #0c0c0e;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] + .accordion__body.selected p {
+        margin: 1rem;
     }
     .js .accordion > .accordion__heading button:focus {
         outline: 2px dotted #0c0c0e;
