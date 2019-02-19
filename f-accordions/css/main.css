@@ -11844,6 +11844,7 @@ main table td em {
     .js .accordion > .accordion__heading button:hover {
         background: #f2f2f2;
         color: #006bbd;
+        text-decoration: underline;
     }
     .js .accordion > .accordion__heading button:focus {
         color: #006bbd;
