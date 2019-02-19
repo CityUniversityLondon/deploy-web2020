@@ -12890,39 +12890,39 @@ article figure figcaption a:active {
     }
 }
 
-@media (min-width: 1280px) {
-    figure.figure--map a {
-        overflow: hidden;
-        display: block;
-        transition: none;
-        background-image: none;
-    }
-    figure.figure--map a:hover picture:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: rgba(12, 12, 14, 0.1);
-    }
-    figure.figure--map a:hover picture img {
-        transition: all 0.4s ease-in;
-        transform: scale(1.04);
-    }
-    figure.figure--map a:focus, figure.figure--map a:active {
-        outline-color: #0c0c0e;
-        outline-width: 2px;
-        outline-style: dotted;
-        outline-offset: 3px;
-    }
-    figure.figure--map a:active, figure.figure--map a:focus {
-        outline-offset: 7px;
-    }
-    figure.figure--map a picture {
-        position: relative;
-        display: block;
-    }
+figure.figure--map a {
+    overflow: hidden;
+    display: block;
+    transition: none;
+    background-image: none;
+}
+
+figure.figure--map a:hover picture:after {
+    background: rgba(12, 12, 14, 0.1);
+}
+
+figure.figure--map a:hover picture img {
+    transform: scale(1.04);
+}
+
+figure.figure--map a img {
+    transition: all 0.4s ease-in-out;
+}
+
+figure.figure--map a picture {
+    position: relative;
+    display: block;
+}
+
+figure.figure--map a picture:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    transition: background 0.2s ease-in-out;
 }
 
 .global-footer {
