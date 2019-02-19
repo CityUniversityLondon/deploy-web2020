@@ -11720,7 +11720,7 @@ main table td em {
         background: #f2f2f2;
         max-height: 0px;
         height: auto;
-        transition: max-height 5s ease-out;
+        transition: max-height 0.3 ease-out;
         overflow: hidden;
     }
     .js .accordion > .accordion__heading {
@@ -11860,8 +11860,6 @@ main table td em {
         content: "\f067";
         display: inline-block;
         text-decoration: none;
-        /* IE 9 */
-        /* Safari 3-8 */
         transform: rotate(0deg);
         transition: 0.3s all;
         text-decoration: none;
@@ -11914,6 +11912,7 @@ main table td em {
     }
     .js .accordion > .accordion__heading[data-open='true'] {
         border-bottom: 0;
+        margin-top: 1rem;
     }
     .js .accordion > .accordion__heading[data-open='true'] button {
         border-width: 2px 2px 1px 2px;
@@ -11948,6 +11947,7 @@ main table td em {
         border-width: 0 2px 2px 2px;
         border-style: dotted;
         border-color: #0c0c0e;
+        margin-bottom: 1rem;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body.selected p {
         margin: 1rem;
