@@ -3852,6 +3852,8 @@ function buttonClick(button, headings, toggleOpen) {
 
   for (const accBodyEl of accBodyEls) {
     accBodyEl.style.backgroundColor = 'red';
+    accBodyEl.style.maxHeight = '300px';
+    accBodyEl.style.transition = 'max-height: 5s ease-out';
   }
 
   let buttonBody = heading.nextElementSibling;
