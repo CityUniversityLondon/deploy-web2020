@@ -3788,10 +3788,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 /**
  * Accordion
  *
@@ -3845,16 +3841,14 @@ function buttonClick(button, headings, toggleOpen) {
     setSection(heading, true);
     scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
     history.pushState(null, null, '#' + heading.id);
-  }
+  } // let accBodyEls = document.getElementsByClassName('accordion__body');
+  // accBodyEls = [...accBodyEls];
+  // for (const accBodyEl of accBodyEls) {
+  // accBodyEl.style.backgroundColor = 'red';
+  // accBodyEl.style.maxHeight = '300px';
+  // accBodyEl.style.transition = 'max-height: 5s ease-out';
+  // }
 
-  let accBodyEls = document.getElementsByClassName('accordion__body');
-  accBodyEls = [...accBodyEls];
-
-  for (const accBodyEl of accBodyEls) {
-    accBodyEl.style.backgroundColor = 'red';
-    accBodyEl.style.maxHeight = '300px';
-    accBodyEl.style.transition = 'max-height: 5s ease-out';
-  }
 
   let buttonBody = heading.nextElementSibling;
   let buttonBodyId = buttonBody.getAttribute('id'); // console.log(`Accordion body ID: ${buttonBodyId}`);
@@ -3994,28 +3988,20 @@ function launchAccordion(accordion) {
       }
     }
   }); // Add height attribute to each accordion body
+  // let accordionBodies = document.getElementsByClassName('accordion__body');
+  // accordionBodies = [...accordionBodies];
+  // async function setBodyHeights() {
+  //     let p1;
+  //     for (const accordionBody of accordionBodies) {
+  //         p1 = accordionBody.setAttribute(
+  //             'height',
+  //             accordionBody.offsetHeight
+  //         );
+  //     }
+  //     await Promise.all([p1]);
+  // }
+  // setBodyHeights();
 
-  let accordionBodies = document.getElementsByClassName('accordion__body');
-  accordionBodies = [...accordionBodies];
-
-  function setBodyHeights() {
-    return _setBodyHeights.apply(this, arguments);
-  }
-
-  function _setBodyHeights() {
-    _setBodyHeights = _asyncToGenerator(function* () {
-      let p1;
-
-      for (const accordionBody of accordionBodies) {
-        p1 = accordionBody.setAttribute('height', accordionBody.offsetHeight);
-      }
-
-      yield Promise.all([p1]);
-    });
-    return _setBodyHeights.apply(this, arguments);
-  }
-
-  setBodyHeights();
   headings.forEach(heading => {
     const content = heading.nextElementSibling,
           button = buttonFromHeading(heading);

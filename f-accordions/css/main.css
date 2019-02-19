@@ -11857,6 +11857,13 @@ main table td em {
     }
     .js .accordion > .accordion__heading button .accordion__heading__indicator:before {
         content: "\f067";
+        display: inline-block;
+        text-decoration: none;
+        /* IE 9 */
+        /* Safari 3-8 */
+        transform: rotate(0deg);
+        transition: 0.3s all;
+        text-decoration: none;
         font-size: 1.125rem;
         line-height: 1.25;
         letter-spacing: -0.008em;
@@ -11914,8 +11921,11 @@ main table td em {
         background: #f2f2f2;
     }
     .js .accordion > .accordion__heading[data-open='true'] button .accordion__heading__indicator:before {
-        content: "\f00d";
-        color: #0c0c0e;
+        content: "\f067";
+        display: inline-block;
+        text-decoration: none;
+        transform: rotate(135deg);
+        transition: 0.3s all;
     }
     .js .accordion > .accordion__heading[data-open='true'] button .accordion__heading__text {
         text-decoration: underline;
