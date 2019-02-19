@@ -12905,6 +12905,10 @@ figure.figure--map a:hover picture img {
     transform: scale(1.04);
 }
 
+figure.figure--map a:active picture img, figure.figure--map a:focus picture img {
+    transform: scale(1.04);
+}
+
 figure.figure--map a img {
     transition: all 0.4s ease-in-out;
 }
