@@ -12696,6 +12696,7 @@ article figure a {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 @media (hover: hover) {
@@ -12728,14 +12729,7 @@ article figure a:focus, article figure a:active {
     text-decoration: none;
 }
 
-article figure a:focus {
-    outline-color: #0c0c0e;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
-}
-
-article figure a:active {
+article figure a:focus, article figure a:active {
     outline-color: #0c0c0e;
     outline-width: 2px;
     outline-style: dotted;
@@ -12893,8 +12887,6 @@ article figure figcaption a:active {
 figure.figure--map a {
     overflow: hidden;
     display: block;
-    transition: none;
-    background-image: none;
 }
 
 figure.figure--map a:hover picture:after {
@@ -13116,6 +13108,7 @@ figure.figure--map a picture:after {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     display: inline-block;
 }
 
@@ -13149,14 +13142,7 @@ figure.figure--map a picture:after {
     text-decoration: none;
 }
 
-.global-footer .footer-logo a:focus {
-    outline-color: #0c0c0e;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
-}
-
-.global-footer .footer-logo a:active {
+.global-footer .footer-logo a:focus, .global-footer .footer-logo a:active {
     outline-color: #0c0c0e;
     outline-width: 2px;
     outline-style: dotted;
@@ -13284,6 +13270,7 @@ figure.figure--map a picture:after {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     display: inline-block;
 }
 
@@ -13317,14 +13304,7 @@ figure.figure--map a picture:after {
     text-decoration: none;
 }
 
-.global-header .header-logo a:focus {
-    outline-color: #0c0c0e;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
-}
-
-.global-header .header-logo a:active {
+.global-header .header-logo a:focus, .global-header .header-logo a:active {
     outline-color: #0c0c0e;
     outline-width: 2px;
     outline-style: dotted;
@@ -16206,6 +16186,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -16239,13 +16220,7 @@ blockquote footer {
         outline-width: 0;
         text-decoration: none;
     }
-    .theme--dark .global-header .header-logo a:focus {
-        outline-color: #0c0c0e;
-        outline-width: 2px;
-        outline-style: dotted;
-        outline-offset: 3px;
-    }
-    .theme--dark .global-header .header-logo a:active {
+    .theme--dark .global-header .header-logo a:focus, .theme--dark .global-header .header-logo a:active {
         outline-color: #0c0c0e;
         outline-width: 2px;
         outline-style: dotted;
@@ -16275,6 +16250,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -16308,13 +16284,7 @@ blockquote footer {
         outline-width: 0;
         text-decoration: none;
     }
-    .theme--dark .global-footer .footer-logo a:focus {
-        outline-color: #0c0c0e;
-        outline-width: 2px;
-        outline-style: dotted;
-        outline-offset: 3px;
-    }
-    .theme--dark .global-footer .footer-logo a:active {
+    .theme--dark .global-footer .footer-logo a:focus, .theme--dark .global-footer .footer-logo a:active {
         outline-color: #0c0c0e;
         outline-width: 2px;
         outline-style: dotted;
@@ -16760,6 +16730,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 @media (hover: hover) {
@@ -16792,14 +16763,7 @@ blockquote footer {
     text-decoration: none;
 }
 
-.theme--dark article figure a:focus {
-    outline-color: #0c0c0e;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
-}
-
-.theme--dark article figure a:active {
+.theme--dark article figure a:focus, .theme--dark article figure a:active {
     outline-color: #0c0c0e;
     outline-width: 2px;
     outline-style: dotted;
