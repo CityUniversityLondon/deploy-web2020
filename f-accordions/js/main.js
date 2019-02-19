@@ -3987,7 +3987,18 @@ function launchAccordion(accordion) {
         }
       }
     }
-  }); // Add height attribute to each accordion body
+  }); // // Remove dotted border on selected body items
+  // function removeBorder(e) {
+  //     let selectedElClass = e.srcElement.className;
+  //     if (e)
+  //         for (const accordionBody of accordionBodies) {
+  //             if (accordionBody.classList.contains('selected')) {
+  //                 this.style.border = '0';
+  //             }
+  //         }
+  // }
+  // document.addEventListener('click', removeBorder);
+  // Add height attribute to each accordion body
   // let accordionBodies = document.getElementsByClassName('accordion__body');
   // accordionBodies = [...accordionBodies];
   // async function setBodyHeights() {
