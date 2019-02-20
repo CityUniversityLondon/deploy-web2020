@@ -11905,6 +11905,9 @@ main table td em {
         border-bottom: 1px solid #d8d8d8;
         outline: 0;
     }
+    .js .accordion > .accordion__heading[data-open='true']:focus-within + .accordion__body {
+        border: 2px dotted #0c0c0e;
+    }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body {
         display: block;
         background: #f2f2f2;
