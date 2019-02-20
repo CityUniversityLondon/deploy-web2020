@@ -12381,18 +12381,18 @@ main table td em {
     .js .cookie-notice button:focus {
         color: #ffffff;
         background: #dd0036;
-        outline: 2px dotted #ffffff;
-        outline-offset: 3px;
-    }
-    .js .cookie-notice button:active {
-        outline: 2px dotted #ffffff;
-        outline-offset: 3px;
     }
     .js .cookie-notice button:hover {
         border-color: #dd0036;
     }
     .js .cookie-notice button:disabled {
         color: rgba(255, 255, 255, 0.7);
+    }
+    .js .cookie-notice button:focus, .js .cookie-notice button:active {
+        outline-color: #ffffff;
+        outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
     }
 }
 
@@ -12477,13 +12477,9 @@ main table td em {
     #dannytest:focus {
         color: #ffffff;
         background: #dd0036;
-        outline: 2px dotted #0c0c0e;
-        outline-offset: 3px;
     }
     #dannytest:active {
         color: #dd0036;
-        outline: 2px dotted #0c0c0e;
-        outline-offset: 3px;
     }
     #dannytest:hover {
         color: #dd0036;
@@ -12491,6 +12487,12 @@ main table td em {
     }
     #dannytest:disabled {
         color: rgba(255, 255, 255, 0.7);
+    }
+    #dannytest:focus, #dannytest:active {
+        outline-color: #0c0c0e;
+        outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
     }
 }
 
@@ -12586,13 +12588,9 @@ main table td em {
     .cta-block li:nth-child(1) a:focus {
         color: #ffffff;
         background: #dd0036;
-        outline: 2px dotted #0c0c0e;
-        outline-offset: 3px;
     }
     .cta-block li:nth-child(1) a:active {
         color: #dd0036;
-        outline: 2px dotted #0c0c0e;
-        outline-offset: 3px;
     }
     .cta-block li:nth-child(1) a:hover {
         color: #dd0036;
@@ -12600,6 +12598,12 @@ main table td em {
     }
     .cta-block li:nth-child(1) a:disabled {
         color: rgba(255, 255, 255, 0.7);
+    }
+    .cta-block li:nth-child(1) a:focus, .cta-block li:nth-child(1) a:active {
+        outline-color: #0c0c0e;
+        outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
     }
 }
 
@@ -12677,16 +12681,18 @@ main table td em {
     .cta-block li:nth-child(2) a:focus {
         color: #0c0c0e;
         background: #ffffff;
-        outline: 2px dotted #0c0c0e;
-        outline-offset: 3px;
     }
     .cta-block li:nth-child(2) a:active {
-        outline: 2px dotted #0c0c0e;
-        outline-offset: 3px;
         border-color: #ffffff;
     }
     .cta-block li:nth-child(2) a:disabled {
         color: rgba(255, 255, 255, 0.7);
+    }
+    .cta-block li:nth-child(2) a:focus, .cta-block li:nth-child(2) a:active {
+        outline-color: #0c0c0e;
+        outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
     }
 }
 
@@ -12762,13 +12768,9 @@ main table td em {
     .cta-block li:nth-child(3) a:focus {
         color: #ffffff;
         background: #dd0036;
-        outline: 2px dotted #0c0c0e;
-        outline-offset: 3px;
     }
     .cta-block li:nth-child(3) a:active {
         color: #dd0036;
-        outline: 2px dotted #0c0c0e;
-        outline-offset: 3px;
     }
     .cta-block li:nth-child(3) a:hover {
         color: #dd0036;
@@ -12776,6 +12778,12 @@ main table td em {
     }
     .cta-block li:nth-child(3) a:disabled {
         color: rgba(255, 255, 255, 0.7);
+    }
+    .cta-block li:nth-child(3) a:focus, .cta-block li:nth-child(3) a:active {
+        outline-color: #0c0c0e;
+        outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
     }
 }
 
@@ -16920,18 +16928,18 @@ blockquote footer {
     .theme--dark .cta-block li:nth-child(1) a:focus {
         color: #ffffff;
         background: #dd0036;
-        outline: 2px dotted #ffffff;
-        outline-offset: 3px;
-    }
-    .theme--dark .cta-block li:nth-child(1) a:active {
-        outline: 2px dotted #ffffff;
-        outline-offset: 3px;
     }
     .theme--dark .cta-block li:nth-child(1) a:hover {
         border-color: #dd0036;
     }
     .theme--dark .cta-block li:nth-child(1) a:disabled {
         color: rgba(255, 255, 255, 0.7);
+    }
+    .theme--dark .cta-block li:nth-child(1) a:focus, .theme--dark .cta-block li:nth-child(1) a:active {
+        outline-color: #ffffff;
+        outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
     }
 }
 
@@ -17007,16 +17015,18 @@ blockquote footer {
     }
     .theme--dark .cta-block li:nth-child(2) a:focus {
         border-color: #ffffff;
-        outline: 2px dotted #ffffff;
-        outline-offset: 3px;
     }
     .theme--dark .cta-block li:nth-child(2) a:active {
-        outline: 2px dotted #ffffff;
-        outline-offset: 3px;
         border-color: #ffffff;
     }
     .theme--dark .cta-block li:nth-child(2) a:disabled {
         color: rgba(255, 255, 255, 0.7);
+    }
+    .theme--dark .cta-block li:nth-child(2) a:focus, .theme--dark .cta-block li:nth-child(2) a:active {
+        outline-color: #ffffff;
+        outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
     }
 }
 
@@ -17095,13 +17105,9 @@ blockquote footer {
     .theme--dark .cta-block li:nth-child(3) a:focus {
         color: #ffffff;
         background: #dd0036;
-        outline: 2px dotted #0c0c0e;
-        outline-offset: 3px;
     }
     .theme--dark .cta-block li:nth-child(3) a:active {
         color: #dd0036;
-        outline: 2px dotted #0c0c0e;
-        outline-offset: 3px;
     }
     .theme--dark .cta-block li:nth-child(3) a:hover {
         color: #dd0036;
@@ -17109,6 +17115,12 @@ blockquote footer {
     }
     .theme--dark .cta-block li:nth-child(3) a:disabled {
         color: rgba(255, 255, 255, 0.7);
+    }
+    .theme--dark .cta-block li:nth-child(3) a:focus, .theme--dark .cta-block li:nth-child(3) a:active {
+        outline-color: #0c0c0e;
+        outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
     }
 }
 
