@@ -11702,7 +11702,7 @@ main table td em {
         display: none;
     }
     .js .accordion > .accordion__heading {
-        border-bottom: 1px dotted #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
         margin-top: 0;
     }
     .js .accordion > .accordion__heading button {
@@ -11725,6 +11725,7 @@ main table td em {
         border-top: 2px #0c0c0e dotted;
         border-right: 2px #0c0c0e dotted;
         border-bottom: 2px #0c0c0e dotted;
+        border-bottom: 0;
         border-left: 2px #0c0c0e dotted;
     }
     .js .accordion > .accordion__heading[data-open='true'] button {
@@ -11880,6 +11881,13 @@ main table td em {
         color: #006bbd;
         border: 0;
     }
+    .js .accordion > .accordion__heading[data-open='true'] button {
+        border-top: 2px dotted #0c0c0e;
+        border-left: 2px dotted #0c0c0e;
+        border-right: 2px dotted #0c0c0e;
+        border-bottom: 1px solid #d8d8d8;
+        margin-top: 1rem;
+    }
     .js .accordion > .accordion__heading[data-open='true'] button .accordion__heading__indicator:before {
         display: inline-block;
         text-decoration: none;
@@ -11887,20 +11895,31 @@ main table td em {
         transition: 0.3s all;
     }
     .js .accordion > .accordion__heading[data-open='true'] button:hover {
-        border: 2px solid transparent;
         background: #f2f2f2;
         color: #0c0c0e;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] button:focus, .js .accordion > .accordion__heading[data-open='true'] button:active {
+        border-top: 2px dotted #0c0c0e;
+        border-left: 2px dotted #0c0c0e;
+        border-right: 2px dotted #0c0c0e;
+        border-bottom: 1px solid #d8d8d8;
+        outline: 0;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body {
         display: block;
         background: #f2f2f2;
         padding: 1rem;
+        border-top: 0;
+        border-left: 2px dotted #0c0c0e;
+        border-right: 2px dotted #0c0c0e;
+        border-bottom: 2px dotted #0c0c0e;
+        margin-bottom: 1rem;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body p {
         margin: 1rem 0;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body:focus, .js .accordion > .accordion__heading[data-open='true'] + .accordion__bodyactive {
-        border-width: 0 2px 2px;
+        border-width: 0 1px 1px;
         border-style: dotted;
         border-color: #0c0c0e;
     }
@@ -11912,6 +11931,23 @@ main table td em {
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body:first-child {
         margin-top: 0;
+    }
+    .js .accordion > .accordion__heading:focus {
+        border-top: 2px dotted #0c0c0e;
+        border-left: 2px dotted #0c0c0e;
+        border-right: 2px dotted #0c0c0e;
+        border-bottom: 2px dotted #0c0c0e;
+    }
+    .js .accordion > .accordion__heading:active {
+        border: 0;
+        border-bottom: 1px solid transparent;
+    }
+    .js .accordion > .accordion__heading button:focus, .js .accordion > .accordion__heading button:active {
+        border-top: 2px dotted #0c0c0e;
+        border-left: 2px dotted #0c0c0e;
+        border-right: 2px dotted #0c0c0e;
+        border-bottom: 2px dotted #0c0c0e;
+        outline: 0;
     }
 }
 
