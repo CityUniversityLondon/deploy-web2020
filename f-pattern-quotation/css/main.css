@@ -11884,6 +11884,7 @@ main table td em {
     border-bottom-width: 2px;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
 }
 
 @media (hover: hover) {
@@ -12798,6 +12799,7 @@ article figure figcaption a {
     border-bottom-width: 2px;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
 }
 
 @media (hover: hover) {
@@ -13341,6 +13343,7 @@ article figure figcaption a:active {
     border-bottom-width: 2px;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
     border-bottom-color: transparent;
 }
 
@@ -14391,6 +14394,9 @@ blockquote .blockquote__body {
     padding-bottom: 0.5rem;
     position: relative;
     color: #0c0c0e;
+}
+
+blockquote .blockquote__body p {
     font-size: 1.266rem;
 }
 
@@ -14430,17 +14436,109 @@ blockquote footer cite {
     color: #696969;
 }
 
-blockquote footer .fa.fa-external-link {
-    margin-left: 1.75rem;
+blockquote footer cite a {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    color: #1e1e1e;
+    position: relative;
+    background-image: none;
 }
 
-/*
-QUESTIONS:
-1. Quote graphics too small?
-2. body text to be gamma
-3. add area atributes.... 
-4. Cited line smaller?
-*/
+@media (hover: hover) {
+    blockquote footer cite a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+blockquote footer cite a:focus, blockquote footer cite a:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+blockquote footer cite a:before {
+    background: #dd0036;
+    bottom: -2px;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s ease, width 0.6s ease;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    blockquote footer cite a:before {
+        transition: none;
+    }
+}
+
+blockquote footer cite a:focus {
+    color: #1e1e1e;
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    outline-color: #0c0c0e;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
+}
+
+@media (hover: hover) {
+    blockquote footer cite a:hover {
+        border-bottom-color: #1e1e1e;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        color: #1e1e1e;
+    }
+    blockquote footer cite a:hover:before {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+blockquote footer cite a:active {
+    border-bottom-color: #dd0036;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    outline-color: #0c0c0e;
+    outline-offset: 3px;
+    outline-style: dotted;
+    outline-width: 2px;
+}
+
 @media print {
     .js .tabs .tabs__links {
         display: none;
@@ -16296,6 +16394,7 @@ QUESTIONS:
     border-bottom-width: 2px;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
     border-bottom-color: #ffffff;
     color: #ffffff;
 }
@@ -16786,6 +16885,7 @@ QUESTIONS:
     border-bottom-width: 2px;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
     border-bottom-color: #ffffff;
     color: #ffffff;
 }
@@ -17028,6 +17128,7 @@ QUESTIONS:
         border-bottom-width: 2px;
         color: #1e1e1e;
         position: relative;
+        background-image: none;
         border-bottom-color: #ffffff;
         color: #ffffff;
         border-bottom-color: transparent;
