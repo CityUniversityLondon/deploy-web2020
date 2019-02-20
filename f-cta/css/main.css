@@ -12326,6 +12326,12 @@ main table td em {
     color: #ffffff;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .js .cookie-notice button {
+        transition: none;
+    }
+}
+
 @media (max-width: 432px) {
     .js .cookie-notice button {
         display: flex;
@@ -12346,11 +12352,19 @@ main table td em {
         text-decoration: inherit;
         opacity: 0;
         transform: translateX(-0.75rem);
-        transition: none;
         position: absolute;
         right: 1.5rem;
         transition: all 0.6s;
     }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: reduce) {
+    .js .cookie-notice button:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
     .js .cookie-notice button:focus, .js .cookie-notice button:hover, .js .cookie-notice button:active {
         padding: 0.75rem 2rem 0.75rem 1rem;
         color: #ffffff;
@@ -12408,6 +12422,12 @@ main table td em {
     border-color: #dd0036;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    #dannytest {
+        transition: none;
+    }
+}
+
 @media (max-width: 432px) {
     #dannytest {
         display: flex;
@@ -12428,11 +12448,19 @@ main table td em {
         text-decoration: inherit;
         opacity: 0;
         transform: translateX(-0.75rem);
-        transition: none;
         position: absolute;
         right: 1.5rem;
         transition: all 0.6s;
     }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: reduce) {
+    #dannytest:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
     #dannytest:focus, #dannytest:hover, #dannytest:active {
         padding: 0.75rem 2rem 0.75rem 1rem;
         color: #ffffff;
@@ -12503,6 +12531,12 @@ main table td em {
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .cta-block li:nth-child(1) a {
+        transition: none;
+    }
+}
+
 @media (max-width: 432px) {
     .cta-block li:nth-child(1) a {
         display: flex;
@@ -12523,11 +12557,19 @@ main table td em {
         text-decoration: inherit;
         opacity: 0;
         transform: translateX(-0.75rem);
-        transition: none;
         position: absolute;
         right: 1.5rem;
         transition: all 0.6s;
     }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: reduce) {
+    .cta-block li:nth-child(1) a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
     .cta-block li:nth-child(1) a:focus, .cta-block li:nth-child(1) a:hover, .cta-block li:nth-child(1) a:active {
         padding: 0.75rem 2rem 0.75rem 1rem;
         color: #ffffff;
@@ -12575,6 +12617,12 @@ main table td em {
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15);
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .cta-block li:nth-child(2) a {
+        transition: none;
+    }
+}
+
 @media (max-width: 432px) {
     .cta-block li:nth-child(2) a {
         display: flex;
@@ -12595,11 +12643,19 @@ main table td em {
         text-decoration: inherit;
         opacity: 0;
         transform: translateX(-0.75rem);
-        transition: none;
         position: absolute;
         right: 1.5rem;
         transition: all 0.6s;
     }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: reduce) {
+    .cta-block li:nth-child(2) a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
     .cta-block li:nth-child(2) a:focus, .cta-block li:nth-child(2) a:hover, .cta-block li:nth-child(2) a:active {
         padding: 0.75rem 2rem 0.75rem 1rem;
         color: #ffffff;
@@ -12651,6 +12707,12 @@ main table td em {
     border-color: #dd0036;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .cta-block li:nth-child(3) a {
+        transition: none;
+    }
+}
+
 @media (max-width: 432px) {
     .cta-block li:nth-child(3) a {
         display: flex;
@@ -12671,11 +12733,19 @@ main table td em {
         text-decoration: inherit;
         opacity: 0;
         transform: translateX(-0.75rem);
-        transition: none;
         position: absolute;
         right: 1.5rem;
         transition: all 0.6s;
     }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: reduce) {
+    .cta-block li:nth-child(3) a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
     .cta-block li:nth-child(3) a:focus, .cta-block li:nth-child(3) a:hover, .cta-block li:nth-child(3) a:active {
         padding: 0.75rem 2rem 0.75rem 1rem;
         color: #ffffff;
@@ -16795,6 +16865,12 @@ blockquote footer {
     color: #ffffff;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .theme--dark .cta-block li:nth-child(1) a {
+        transition: none;
+    }
+}
+
 @media (max-width: 432px) {
     .theme--dark .cta-block li:nth-child(1) a {
         display: flex;
@@ -16815,11 +16891,19 @@ blockquote footer {
         text-decoration: inherit;
         opacity: 0;
         transform: translateX(-0.75rem);
-        transition: none;
         position: absolute;
         right: 1.5rem;
         transition: all 0.6s;
     }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: reduce) {
+    .theme--dark .cta-block li:nth-child(1) a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
     .theme--dark .cta-block li:nth-child(1) a:focus, .theme--dark .cta-block li:nth-child(1) a:hover, .theme--dark .cta-block li:nth-child(1) a:active {
         padding: 0.75rem 2rem 0.75rem 1rem;
         color: #ffffff;
@@ -16864,6 +16948,12 @@ blockquote footer {
     border: 2px solid #ffffff;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .theme--dark .cta-block li:nth-child(2) a {
+        transition: none;
+    }
+}
+
 @media (max-width: 432px) {
     .theme--dark .cta-block li:nth-child(2) a {
         display: flex;
@@ -16884,11 +16974,19 @@ blockquote footer {
         text-decoration: inherit;
         opacity: 0;
         transform: translateX(-0.75rem);
-        transition: none;
         position: absolute;
         right: 1.5rem;
         transition: all 0.6s;
     }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: reduce) {
+    .theme--dark .cta-block li:nth-child(2) a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
     .theme--dark .cta-block li:nth-child(2) a:focus, .theme--dark .cta-block li:nth-child(2) a:hover, .theme--dark .cta-block li:nth-child(2) a:active {
         padding: 0.75rem 2rem 0.75rem 1rem;
         color: #ffffff;
@@ -16942,6 +17040,12 @@ blockquote footer {
     border-color: #dd0036;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .theme--dark .cta-block li:nth-child(3) a {
+        transition: none;
+    }
+}
+
 @media (max-width: 432px) {
     .theme--dark .cta-block li:nth-child(3) a {
         display: flex;
@@ -16962,11 +17066,19 @@ blockquote footer {
         text-decoration: inherit;
         opacity: 0;
         transform: translateX(-0.75rem);
-        transition: none;
         position: absolute;
         right: 1.5rem;
         transition: all 0.6s;
     }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: reduce) {
+    .theme--dark .cta-block li:nth-child(3) a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
     .theme--dark .cta-block li:nth-child(3) a:focus, .theme--dark .cta-block li:nth-child(3) a:hover, .theme--dark .cta-block li:nth-child(3) a:active {
         padding: 0.75rem 2rem 0.75rem 1rem;
         color: #ffffff;
