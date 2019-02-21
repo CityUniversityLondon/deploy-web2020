@@ -10219,6 +10219,7 @@ article a {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -10243,6 +10244,7 @@ article a {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -10258,6 +10260,7 @@ article a:focus, article a:active {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -11615,6 +11618,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     color: #006bbd;
     border: none;
     margin-top: 1rem;
@@ -11634,6 +11638,7 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -11651,6 +11656,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 .form input[type='submit']:focus,
@@ -11716,6 +11722,7 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
         color: #006bbd;
         border: none;
         width: 100%;
@@ -11736,6 +11743,7 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -11752,6 +11760,7 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
     .js .accordion > .accordion__heading button:focus {
         color: #1e1e1e;
@@ -11880,6 +11889,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -11900,6 +11910,7 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -11915,6 +11926,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 .breadcrumbs a:before {
@@ -12089,6 +12101,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -12121,6 +12134,7 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -12136,6 +12150,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12279,6 +12294,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     color: #006bbd;
     border: none;
     color: #6894c0;
@@ -12300,6 +12316,7 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -12315,6 +12332,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 .js .cookie-notice button:focus {
@@ -12447,6 +12465,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -12471,6 +12490,7 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -12486,6 +12506,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12595,6 +12616,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -12620,6 +12642,7 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -12635,6 +12658,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12712,6 +12736,7 @@ article figure a {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -12727,6 +12752,7 @@ article figure a:focus, article figure a:active {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 article figure a:focus, article figure a:active {
@@ -12788,6 +12814,7 @@ article figure figcaption a {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -12808,6 +12835,7 @@ article figure figcaption a {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -12823,6 +12851,7 @@ article figure figcaption a:focus, article figure figcaption a:active {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 article figure figcaption a:before {
@@ -13125,6 +13154,7 @@ figure.figure--map a picture:after {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -13140,6 +13170,7 @@ figure.figure--map a picture:after {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 .global-footer .footer-logo a:focus, .global-footer .footer-logo a:active {
@@ -13287,6 +13318,7 @@ figure.figure--map a picture:after {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -13302,6 +13334,7 @@ figure.figure--map a picture:after {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 .global-header .header-logo a:focus, .global-header .header-logo a:active {
@@ -13356,6 +13389,7 @@ figure.figure--map a picture:after {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -13377,6 +13411,7 @@ figure.figure--map a picture:after {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -13392,6 +13427,7 @@ figure.figure--map a picture:after {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 .menu li a:before {
@@ -13584,6 +13620,7 @@ figure.figure--map a picture:after {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     color: #006bbd;
     border: none;
 }
@@ -13601,6 +13638,7 @@ figure.figure--map a picture:after {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -13616,6 +13654,7 @@ figure.figure--map a picture:after {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 .js .menu .menu__button button:focus {
@@ -13747,6 +13786,7 @@ figure.figure--map a picture:after {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     color: #006bbd;
     border: none;
     margin-right: 0.5rem;
@@ -13765,6 +13805,7 @@ figure.figure--map a picture:after {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -13780,6 +13821,7 @@ figure.figure--map a picture:after {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 .js .menu[data-open='true'] .menu__columns__col > ul button:focus {
@@ -14119,6 +14161,7 @@ figure.figure--map a picture:after {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
         background-color: #ffffff;
         background-image: linear-gradient(120deg, #dd0036 0%, #dd0036 100%);
         background-position: 0 100%;
@@ -14155,6 +14198,7 @@ figure.figure--map a picture:after {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -14171,6 +14215,7 @@ figure.figure--map a picture:after {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -14518,6 +14563,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
@@ -14544,6 +14590,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -14560,6 +14607,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -14790,6 +14838,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -14814,6 +14863,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -14829,6 +14879,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -15916,6 +15967,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
@@ -15949,6 +16001,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -15965,6 +16018,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -16086,6 +16140,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     color: #006bbd;
     border: none;
     color: #6894c0;
@@ -16104,6 +16159,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -16119,6 +16175,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 .theme--dark .form input[type='submit']:focus {
@@ -16203,6 +16260,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -16219,6 +16277,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
     .theme--dark .global-header .header-logo a:focus, .theme--dark .global-header .header-logo a:active {
         outline-color: #0c0c0e;
@@ -16267,6 +16326,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -16283,6 +16343,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
     .theme--dark .global-footer .footer-logo a:focus, .theme--dark .global-footer .footer-logo a:active {
         outline-color: #0c0c0e;
@@ -16310,6 +16371,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -16332,6 +16394,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -16347,6 +16410,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 .theme--dark .breadcrumbs a:before {
@@ -16440,6 +16504,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -16472,6 +16537,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -16487,6 +16553,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -16585,6 +16652,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -16617,6 +16685,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -16632,6 +16701,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -16746,6 +16816,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -16761,6 +16832,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 .theme--dark article figure a:focus, .theme--dark article figure a:active {
@@ -16794,6 +16866,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 2px;
@@ -16816,6 +16889,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -16831,6 +16905,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 .theme--dark article figure figcaption a:before {
@@ -16924,6 +16999,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     color: #006bbd;
     border: none;
     color: #6894c0;
@@ -16942,6 +17018,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -16957,6 +17034,7 @@ blockquote footer {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 .theme--dark.js .accordion > .accordion__heading button:focus {
@@ -17036,6 +17114,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
         border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
         border-bottom-width: 2px;
@@ -17060,6 +17139,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -17076,6 +17156,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
     .theme--dark.js .menu li a:before {
         background: #dd0036;
@@ -17181,6 +17262,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
         color: #006bbd;
         border: none;
         color: #6894c0;
@@ -17200,6 +17282,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -17216,6 +17299,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
     .theme--dark.js .menu .menu__button button:focus {
         color: #1e1e1e;
@@ -17289,6 +17373,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
         color: #006bbd;
         border: none;
         color: #6894c0;
@@ -17308,6 +17393,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -17324,6 +17410,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
     .theme--dark.js .menu[data-open='true'] .menu__columns__col > ul button:focus {
         outline-color: #0c0c0e;
@@ -17382,6 +17469,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
         background-color: #ffffff;
         background-image: linear-gradient(120deg, #dd0036 0%, #dd0036 100%);
         background-position: 0 100%;
@@ -17423,6 +17511,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -17439,6 +17528,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -17556,6 +17646,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
@@ -17585,6 +17676,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -17601,6 +17693,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -17725,6 +17818,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
@@ -17754,6 +17848,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -17770,6 +17865,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -17891,6 +17987,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
@@ -17924,6 +18021,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -17940,6 +18038,7 @@ blockquote footer {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
