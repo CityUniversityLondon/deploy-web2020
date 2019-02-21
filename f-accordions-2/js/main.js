@@ -3846,23 +3846,21 @@ function buttonClick(button, headings, toggleOpen) {
   let nextBodyId = nextBody.getAttribute('id');
   Object.keys(bodyObj).forEach(function (key) {
     if (key == nextBodyId) {
-      // console.log(bodyObj[key]);
       // Needs extra 40px to make body height expand enough on shallow accordion bodies
-      nextBody.style.maxHeight = parseInt(bodyObj[key]) + 40 + 'px';
-      nextBody.style.transition = 'maxHeight 2s';
+      nextBody.style.maxHeight = parseInt(bodyObj[key]) + 40 + 'px'; // nextBody.style.transition = 'all 2s';
+
+      nextBody.style.transition = 'height 2s';
     }
-  });
-
-  if (heading.getAttribute('data-open') == 'true') {
-    // console.log(nextBodyHeight);
-    nextBody.style.visibility = 'visible'; // nextBody.style.maxHeight = nextBodyHeight;
-
-    nextBody.style.transition = 'height 2s';
-  } else {
-    nextBody.style.visibility = 'hidden'; // nextBody.style.maxHeight = '0';
-
-    nextBody.style.transition = 'height 2s';
-  }
+  }); // if (heading.getAttribute('data-open') == 'true') {
+  //     // console.log(nextBodyHeight);
+  //     nextBody.style.visibility = 'visible';
+  //     // nextBody.style.maxHeight = nextBodyHeight;
+  //     nextBody.style.transition = 'height 2s';
+  // } else {
+  //     nextBody.style.visibility = 'hidden';
+  //     // nextBody.style.maxHeight = '0';
+  //     nextBody.style.transition = 'height 2s';
+  // }
 }
 /**
  * Create a button from the text content of a heading.
@@ -3959,6 +3957,22 @@ function launchAccordion(accordion) {
     var values = heights; // var bodyObj = {};
 
     keys.forEach((key, i) => bodyObj[key] = values[i]);
+    let headingStates = document.getElementsByClassName('accordion__heading');
+
+    for (const headingState of headingStates) {
+      let body = headingState.nextElementSibling;
+
+      if (headingState.getAttribute('data-open') == 'true') {
+        let defaultOpenId = headingState.nextElementSibling.getAttribute('id'); // console.log(defaultOpenId);
+
+        Object.keys(bodyObj).forEach(function (key) {
+          if (defaultOpenId == key) {
+            body.style.maxHeight = parseInt(bodyObj[key]) + 40 + 'px';
+          }
+        });
+      }
+    }
+
     button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
   });
 

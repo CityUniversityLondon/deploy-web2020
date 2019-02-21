@@ -11700,7 +11700,6 @@ main table td em {
 @media screen {
     .js .accordion > .accordion__body {
         display: none;
-        height: auto;
         visibility: hidden;
         max-height: 0;
     }
@@ -11914,6 +11913,7 @@ main table td em {
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body {
         display: block;
         height: auto;
+        visibility: visible;
         background: #f2f2f2;
         padding: 1rem;
         border-top: 0;
