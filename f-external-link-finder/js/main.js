@@ -4163,6 +4163,7 @@ function findExternalLink() {
       // adds font awesome external link icon after completing checks
       var node = document.createElement('span');
       node.className = 'fa fa-external-link';
+      node.setAttribute('aria-hidden', 'true');
       i.appendChild(node);
     }
   });
