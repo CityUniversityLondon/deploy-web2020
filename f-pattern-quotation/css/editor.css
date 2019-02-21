@@ -10133,6 +10133,7 @@ article a {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -10157,6 +10158,7 @@ article a {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -10172,6 +10174,7 @@ article a:focus, article a:active {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -11506,6 +11509,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -11563,6 +11567,7 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -11578,6 +11583,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-image: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12000,6 +12006,7 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
@@ -12033,6 +12040,7 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
@@ -12049,6 +12057,7 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-image: none;
     }
 }
 
