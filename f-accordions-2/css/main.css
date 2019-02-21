@@ -11701,7 +11701,8 @@ main table td em {
     .js .accordion > .accordion__body {
         display: none;
         height: auto;
-        visibility: visible;
+        visibility: hidden;
+        max-height: 0;
     }
     .js .accordion > .accordion__heading {
         border-bottom: 1px solid #e5e5e5;

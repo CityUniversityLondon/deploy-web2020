@@ -3845,8 +3845,11 @@ function buttonClick(button, headings, toggleOpen) {
   let nextBody = heading.nextElementSibling;
   let nextBodyId = nextBody.getAttribute('id');
   Object.keys(bodyObj).forEach(function (key) {
-    // console.log(key);
-    if (key == nextBodyId) {// console.log(bodyObj[key]);
+    if (key == nextBodyId) {
+      // console.log(bodyObj[key]);
+      // Needs extra 40px to make body height expand enough on shallow accordion bodies
+      nextBody.style.maxHeight = parseInt(bodyObj[key]) + 40 + 'px';
+      nextBody.style.transition = 'maxHeight 2s';
     }
   });
 
