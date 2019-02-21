@@ -3840,6 +3840,19 @@ function buttonClick(button, headings, toggleOpen) {
     scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
     history.pushState(null, null, '#' + heading.id);
   }
+
+  let nextBody = heading.nextElementSibling; // console.log(nextBody.offsetHeight);
+
+  if (heading.getAttribute('data-open') == 'true') {
+    // console.log(nextBodyHeight);
+    nextBody.style.visibility = 'visible'; // nextBody.style.maxHeight = nextBodyHeight;
+
+    nextBody.style.transition = 'height 2s';
+  } else {
+    nextBody.style.visibility = 'hidden'; // nextBody.style.maxHeight = '0';
+
+    nextBody.style.transition = 'height 2s';
+  }
 }
 /**
  * Create a button from the text content of a heading.
@@ -3919,6 +3932,23 @@ function launchAccordion(accordion) {
     } else {
       setSection(heading, false);
     }
+
+    let heights = [];
+    let ids = [];
+    let accordionBodies = document.getElementsByClassName('accordion__body');
+
+    for (const accordionBody of accordionBodies) {
+      accordionBody.setAttribute('height', accordionBody.offsetHeight);
+      let bodyHeight = accordionBody.offsetHeight;
+      let id = accordionBody.getAttribute('id');
+      heights.push(bodyHeight);
+      ids.push(id);
+    }
+
+    var keys = ids;
+    var values = heights;
+    var bodyObj = {};
+    keys.forEach((key, i) => bodyObj[key] = values[i]); // console.log(bodyObj);
 
     button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
   });

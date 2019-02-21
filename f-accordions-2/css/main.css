@@ -11700,6 +11700,8 @@ main table td em {
 @media screen {
     .js .accordion > .accordion__body {
         display: none;
+        height: auto;
+        visibility: visible;
     }
     .js .accordion > .accordion__heading {
         border-bottom: 1px solid #e5e5e5;
@@ -11882,9 +11884,9 @@ main table td em {
         border: 0;
     }
     .js .accordion > .accordion__heading[data-open='true'] button {
-        border-top: 2px dotted #0c0c0e;
-        border-left: 2px dotted #0c0c0e;
-        border-right: 2px dotted #0c0c0e;
+        border-top: 2px dotted transparent;
+        border-left: 2px dotted transparent;
+        border-right: 2px dotted transparent;
         border-bottom: 1px solid #d8d8d8;
         margin-top: 1rem;
     }
@@ -11910,12 +11912,13 @@ main table td em {
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body {
         display: block;
+        height: auto;
         background: #f2f2f2;
         padding: 1rem;
         border-top: 0;
-        border-left: 2px dotted #0c0c0e;
-        border-right: 2px dotted #0c0c0e;
-        border-bottom: 2px dotted #0c0c0e;
+        border-left: 2px dotted transparent;
+        border-right: 2px dotted transparent;
+        border-bottom: 2px dotted transparent;
         margin-bottom: 1rem;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body p {
