@@ -3803,7 +3803,8 @@ const className = 'accordion',
       headingTextClassName = headingClassName + '__text',
       headingIconClassName = headingClassName + '__indicator fal',
       scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_4__["reduceMotion"])() ? 0 : 999,
-      scrollTo = false;
+      scrollTo = false,
+      bodyObj = {};
 /**
  * Sets a heading and the button nested within to be open or closed.
  *
@@ -3841,7 +3842,13 @@ function buttonClick(button, headings, toggleOpen) {
     history.pushState(null, null, '#' + heading.id);
   }
 
-  let nextBody = heading.nextElementSibling; // console.log(nextBody.offsetHeight);
+  let nextBody = heading.nextElementSibling;
+  let nextBodyId = nextBody.getAttribute('id');
+  Object.keys(bodyObj).forEach(function (key) {
+    // console.log(key);
+    if (key == nextBodyId) {// console.log(bodyObj[key]);
+    }
+  });
 
   if (heading.getAttribute('data-open') == 'true') {
     // console.log(nextBodyHeight);
@@ -3946,10 +3953,9 @@ function launchAccordion(accordion) {
     }
 
     var keys = ids;
-    var values = heights;
-    var bodyObj = {};
-    keys.forEach((key, i) => bodyObj[key] = values[i]); // console.log(bodyObj);
+    var values = heights; // var bodyObj = {};
 
+    keys.forEach((key, i) => bodyObj[key] = values[i]);
     button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
   });
 
