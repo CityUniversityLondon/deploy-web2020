@@ -3849,14 +3849,6 @@ function buttonClick(button, headings, toggleOpen) {
   let nextBody = heading.nextElementSibling;
   let nextBodyId = nextBody.getAttribute('id');
   /* ASYNC/AWAIT TEST */
-  // function breathe(amount) {
-  //     return new Promise((resolve, reject) => {
-  //         if (amount > 1000) {
-  //             reject('That value is too big');
-  //         }
-  //         setTimeout(() => resolve(`Done for ${amount}ms time`), amount);
-  //     });
-  // }
 
   function assignHeight(height) {
     nextBody.style.maxHeight = `${height}px`;
@@ -3864,21 +3856,43 @@ function buttonClick(button, headings, toggleOpen) {
   }
 
   Object.keys(bodyObj).forEach(function (key) {
-    function go() {
-      return _go.apply(this, arguments);
+    // console.log(key);
+    // console.log(nextBodyId);
+    // let contentOpen = !button.getAttribute('aria-expanded');
+    let contentVisible = window.getComputedStyle(nextBody).display; // console.log(contentVisible);
+    // console.log(contentOpen);
+
+    function slideDown() {
+      return _slideDown.apply(this, arguments);
     }
 
-    function _go() {
-      _go = _asyncToGenerator(function* () {
+    function _slideDown() {
+      _slideDown = _asyncToGenerator(function* () {
         yield assignHeight(0);
         yield assignHeight(1);
-        yield assignHeight(parseInt(bodyObj[key] + 100));
+        yield assignHeight(parseInt(bodyObj[key] + 100)); // console.log('sliding down');
       });
-      return _go.apply(this, arguments);
+      return _slideDown.apply(this, arguments);
     }
 
-    if (key == nextBodyId) {
-      go();
+    function slideUp() {
+      return _slideUp.apply(this, arguments);
+    } // Slide down content
+
+
+    function _slideUp() {
+      _slideUp = _asyncToGenerator(function* () {
+        yield assignHeight(parseInt(bodyObj[key] + 100));
+        yield assignHeight(1);
+        yield assignHeight(0); // console.log('sliding up');
+      });
+      return _slideUp.apply(this, arguments);
+    }
+
+    if (key == nextBodyId && contentVisible == 'block') {
+      slideDown();
+    } else if (key == nextBodyId && contentVisible !== 'block') {
+      slideUp();
     }
   }); // Object.keys(bodyObj).forEach(function(key) {
   //     if (key == nextBodyId) {
