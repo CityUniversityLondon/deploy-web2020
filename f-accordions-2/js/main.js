@@ -3788,6 +3788,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 /**
  * Accordion
  *
@@ -3842,25 +3846,57 @@ function buttonClick(button, headings, toggleOpen) {
     history.pushState(null, null, '#' + heading.id);
   }
 
-  let nextBody = heading.nextElementSibling;
-  let nextBodyId = nextBody.getAttribute('id');
-  Object.keys(bodyObj).forEach(function (key) {
-    if (key == nextBodyId) {
-      // Needs extra 40px to make body height expand enough on shallow accordion bodies
-      nextBody.style.maxHeight = parseInt(bodyObj[key]) + 40 + 'px'; // nextBody.style.transition = 'all 2s';
+  let nextBody = heading.nextElementSibling; // let nextBodyId = nextBody.getAttribute('id');
 
-      nextBody.style.transition = 'height 2s';
-    }
-  }); // if (heading.getAttribute('data-open') == 'true') {
-  //     // console.log(nextBodyHeight);
-  //     nextBody.style.visibility = 'visible';
-  //     // nextBody.style.maxHeight = nextBodyHeight;
-  //     nextBody.style.transition = 'height 2s';
-  // } else {
-  //     nextBody.style.visibility = 'hidden';
-  //     // nextBody.style.maxHeight = '0';
-  //     nextBody.style.transition = 'height 2s';
+  /* ASYNC/AWAIT TEST */
+  // function breathe(amount) {
+  //     return new Promise((resolve, reject) => {
+  //         if (amount > 1000) {
+  //             reject('That value is too big');
+  //         }
+  //         setTimeout(() => resolve(`Done for ${amount}ms time`), amount);
+  //     });
   // }
+
+  function assignHeight(height) {
+    nextBody.style.maxHeight = `${height}px`;
+    nextBody.style.height = `${height}px`;
+    nextBody.style.transition = 'all 3s';
+  }
+
+  function go() {
+    return _go.apply(this, arguments);
+  }
+
+  function _go() {
+    _go = _asyncToGenerator(function* () {
+      yield assignHeight(0);
+      yield assignHeight(1);
+      yield assignHeight(200);
+    });
+    return _go.apply(this, arguments);
+  }
+
+  go(); // Object.keys(bodyObj).forEach(function(key) {
+  //     if (key == nextBodyId) {
+  //         // Needs extra 400px to make body height expand enough on shallow accordion bodies
+  //         nextBody.style.maxHeight = parseInt(bodyObj[key]) + 400 + 'px';
+  //         // nextBody.style.transition = 'all 2s';
+  //         nextBody.style.transition = 'maxHeight 2s';
+  //         nextBody.style.transition = 'height 2s';
+  //     }
+  // });
+  // Object.keys(bodyObj).forEach(function(key) {
+  //     if (key == nextBodyId) {
+  //         // Needs extra 400px to make body height expand enough on shallow accordion bodies
+  //         nextBody.style.maxHeight = parseInt(bodyObj[key]) + 400 + 'px';
+  //         // nextBody.style.transition = 'all 2s';
+  //         nextBody.style.transition = 'maxHeight 2s';
+  //         nextBody.style.transition = 'height 2s';
+  //     }
+  // });
+
+  /* END ASYNC/AWAIT TEST */
 }
 /**
  * Create a button from the text content of a heading.
