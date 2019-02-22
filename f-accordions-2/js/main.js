@@ -3846,8 +3846,8 @@ function buttonClick(button, headings, toggleOpen) {
     history.pushState(null, null, '#' + heading.id);
   }
 
-  let nextBody = heading.nextElementSibling; // let nextBodyId = nextBody.getAttribute('id');
-
+  let nextBody = heading.nextElementSibling;
+  let nextBodyId = nextBody.getAttribute('id');
   /* ASYNC/AWAIT TEST */
   // function breathe(amount) {
   //     return new Promise((resolve, reject) => {
@@ -3860,33 +3860,27 @@ function buttonClick(button, headings, toggleOpen) {
 
   function assignHeight(height) {
     nextBody.style.maxHeight = `${height}px`;
-    nextBody.style.height = `${height}px`;
-    nextBody.style.transition = 'all 3s';
+    nextBody.style.transition = 'all 0.3s';
   }
 
-  function go() {
-    return _go.apply(this, arguments);
-  }
+  Object.keys(bodyObj).forEach(function (key) {
+    function go() {
+      return _go.apply(this, arguments);
+    }
 
-  function _go() {
-    _go = _asyncToGenerator(function* () {
-      yield assignHeight(0);
-      yield assignHeight(1);
-      yield assignHeight(200);
-    });
-    return _go.apply(this, arguments);
-  }
+    function _go() {
+      _go = _asyncToGenerator(function* () {
+        yield assignHeight(0);
+        yield assignHeight(1);
+        yield assignHeight(parseInt(bodyObj[key] + 100));
+      });
+      return _go.apply(this, arguments);
+    }
 
-  go(); // Object.keys(bodyObj).forEach(function(key) {
-  //     if (key == nextBodyId) {
-  //         // Needs extra 400px to make body height expand enough on shallow accordion bodies
-  //         nextBody.style.maxHeight = parseInt(bodyObj[key]) + 400 + 'px';
-  //         // nextBody.style.transition = 'all 2s';
-  //         nextBody.style.transition = 'maxHeight 2s';
-  //         nextBody.style.transition = 'height 2s';
-  //     }
-  // });
-  // Object.keys(bodyObj).forEach(function(key) {
+    if (key == nextBodyId) {
+      go();
+    }
+  }); // Object.keys(bodyObj).forEach(function(key) {
   //     if (key == nextBodyId) {
   //         // Needs extra 400px to make body height expand enough on shallow accordion bodies
   //         nextBody.style.maxHeight = parseInt(bodyObj[key]) + 400 + 'px';
