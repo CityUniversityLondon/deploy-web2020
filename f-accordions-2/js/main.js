@@ -3775,14 +3775,17 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.regexp.search */ "./node_modules/core-js/modules/es6.regexp.search.js");
-/* harmony import */ var core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.regexp.split */ "./node_modules/core-js/modules/es6.regexp.split.js");
+/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.regexp.search */ "./node_modules/core-js/modules/es6.regexp.search.js");
+/* harmony import */ var core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
 
 
 
@@ -3802,7 +3805,7 @@ const className = 'accordion',
       headingClassName = className + '__heading',
       headingTextClassName = headingClassName + '__text',
       headingIconClassName = headingClassName + '__indicator fal',
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_4__["reduceMotion"])() ? 0 : 999,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_5__["reduceMotion"])() ? 0 : 999,
       scrollTo = false,
       bodyObj = {};
 /**
@@ -3814,7 +3817,7 @@ const className = 'accordion',
 
 function setSection(heading, open) {
   heading.dataset.open = open;
-  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, open); // heading.classList.add(active);
 }
 /**
  * Respond to button clicks - open if closed, close if open.
@@ -3832,66 +3835,81 @@ function setSection(heading, open) {
 function buttonClick(button, headings, toggleOpen) {
   const heading = button.parentNode;
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded))) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded))) {
     setSection(heading, false);
     history.pushState(null, null, `${window.location.pathname}${window.location.search}`);
   } else {
     toggleOpen && headings.forEach(heading => setSection(heading, false));
     setSection(heading, true);
-    scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
+    scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(heading, scrollDuration);
     history.pushState(null, null, '#' + heading.id);
-  }
+  } // Toggle body class. Adjust maxHeight as necessary
+
 
   let nextBody = heading.nextElementSibling;
   nextBody.classList.toggle('active');
+  nextBody.style.maxHeight ? nextBody.style.maxHeight = null : nextBody.style.maxHeight = nextBody.scrollHeight + 'px';
 
-  if (nextBody.style.maxHeight) {
-    nextBody.style.maxHeight = null;
-  } else {
-    nextBody.style.maxHeight = nextBody.scrollHeight + 'px';
-  }
-  /* ASYNC/AWAIT TEST */
+  if (toggleOpen) {
+    let buttonParentId = button.parentNode.getAttribute('id'); // console.log(buttonParentId);
 
-  /* function assignHeight(height) {
-      nextBody.style.maxHeight = `${height}px`;
-      nextBody.style.transition = 'all 0.3s';
-  }
-   Object.keys(bodyObj).forEach(function(key) {
-      // console.log(key);
-      // console.log(nextBodyId);
-      // let contentOpen = !button.getAttribute('aria-expanded');
-      let contentVisible = window.getComputedStyle(nextBody).display;
-      // console.log(contentVisible);
-      // console.log(contentOpen);
-      async function slideDown() {
-          await assignHeight(0);
-          await assignHeight(1);
-          await assignHeight(parseInt(bodyObj[key] + 100));
-          // console.log('sliding down');
-      }
-      async function slideUp() {
-          await assignHeight(parseInt(bodyObj[key] + 100));
-          await assignHeight(1);
-          await assignHeight(0);
-          // console.log('sliding up');
-      }
-      // Slide down content
-      if (key == nextBodyId && contentVisible == 'block') {
-          slideDown();
-      } else if (key == nextBodyId && contentVisible !== 'block') {
-          slideUp();
-      }
-  });
-   // Object.keys(bodyObj).forEach(function(key) {
-  //     if (key == nextBodyId) {
-  //         // Needs extra 400px to make body height expand enough on shallow accordion bodies
-  //         nextBody.style.maxHeight = parseInt(bodyObj[key]) + 400 + 'px';
-  //         // nextBody.style.transition = 'all 2s';
-  //         nextBody.style.transition = 'maxHeight 2s';
-  //         nextBody.style.transition = 'height 2s';
+    let buttonParentStrings = buttonParentId.split('-');
+    let accordionId = buttonParentStrings[0];
+    let headingId = buttonParentStrings[1];
+    let headingIdStrings = headingId.split('header');
+    let headingIdNum = headingIdStrings[1]; // console.log('Heading ID num: ' + headingIdNum);
+    // console.log('Accordion ID: ' + buttonParentStrings[0]);
+    // console.log('Heading ID: ' + headingId)
+
+    let targetAccordion = document.getElementById(accordionId);
+    let accordionBodies = targetAccordion.querySelectorAll('.accordion__body');
+
+    for (const accordionBody of accordionBodies) {
+      let accordionBodyId = accordionBody.getAttribute('id');
+      let accordionBodyStrings = accordionBodyId.split('body');
+      let bodyIdNum = accordionBodyStrings[1]; // console.log('Body ID num: ' + bodyIdNum);
+
+      if (bodyIdNum !== headingIdNum && accordionBody.classList.contains('active')) {
+        accordionBody.classList.remove('active'); // accordionBody.style.maxHeight = '0px';
+
+        accordionBody.style.maxHeight ? accordionBody.style.maxHeight = null : accordionBody.style.maxHeight = accordionBody.scrollHeight + 'px';
+      } // accordionBody.classList.remove('active');
+      // accordionBody.style.maxHeight = '0px';
+      // console.log(accordionBody);
+      // }
+
+    }
+  } // let clickedId = nextBody.getAttribute('id');
+  // // One accordion body visible at a time accordion and non-open item clicked
+  // if (toggleOpen) {
+  //     // Body ID of selected item
+  //     // console.log('Clicked ID: ' + clickedId);
+  //     // console.log(nextBody.classList);
+  //     // Loop all accordion items
+  //     for (const heading of headings) {
+  //         // Get body IDs
+  //         let bodies = heading.nextSibling;
+  //         for (const body of bodies) {
+  //             console.log(body);
+  //         }
+  //         // console.log(nextBody.getAttribute('id'));
+  //         var getClosest = function (elem, selector) {
+  //             for ( ; elem && elem !== document; elem = elem.parentNode ) {
+  //                 if ( elem.matches( selector ) ) return elem;
+  //             }
+  //             return null;
+  //         };
+  //         // If the clicked item is an `.accordion-toggle` get the parent `.accordion`
+  //         if ( event.target.classList.contains('accordion') ) {
+  //             // Get the parent with the `.accordion` class
+  //             var parent = getClosest(event.target, '.accordion');
+  //             console.log(parent);
+  //         }
+  //         if (heading.nextElementSibling !== clickedId) {
+  //             heading.classList.remove('active');
+  //         }
   //     }
-  // });
-   /* END ASYNC/AWAIT TEST */
+  // }
 
 }
 /**
@@ -3910,10 +3928,10 @@ function buttonFromHeading(heading) {
         iconSpan = document.createElement('span');
   textSpan.className = headingTextClassName;
   iconSpan.className = headingIconClassName;
-  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, true);
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, true);
   button.setAttribute('type', 'button');
   textSpan.appendChild(document.createTextNode(heading.textContent));
-  Object(_util__WEBPACK_IMPORTED_MODULE_4__["appendAll"])(wrapper, [textSpan, iconSpan]);
+  Object(_util__WEBPACK_IMPORTED_MODULE_5__["appendAll"])(wrapper, [textSpan, iconSpan]);
   button.appendChild(wrapper);
   return button;
 }
@@ -3940,9 +3958,9 @@ function buttonFromHeading(heading) {
 
 function launchAccordion(accordion) {
   const locationHash = window.location.hash.substr(1),
-        toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.toggleopen),
-        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.defaultopen),
-        allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.allowsingle),
+        toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(accordion.dataset.toggleopen),
+        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(accordion.dataset.defaultopen),
+        allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(accordion.dataset.allowsingle),
         headings = Array.from(accordion.querySelectorAll(`.${headingClassName}`));
   let idLinked = false;
 
@@ -3950,14 +3968,14 @@ function launchAccordion(accordion) {
     /**
      * not enough content to accordion
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(accordion, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_5__["removeClass"])(accordion, className, false);
     return;
   }
 
   headings.forEach(heading => {
     const content = heading.nextElementSibling,
           button = buttonFromHeading(heading);
-    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].labelledBy, heading.id);
+    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].labelledBy, heading.id);
     content.setAttribute('role', 'region');
     heading.replaceChild(button, heading.firstChild);
     /**
@@ -3972,34 +3990,40 @@ function launchAccordion(accordion) {
     } else {
       setSection(heading, false);
     }
+    /**
+     * When page loads, set default open accordion body's element maximum height.
+     * This is needed as our slide up/down transitions are based on maximum height
+     * values switching from a number to null on each click.
+     */
+
 
     let heights = [];
     let ids = [];
     let accordionBodies = document.getElementsByClassName('accordion__body');
 
     for (const accordionBody of accordionBodies) {
-      accordionBody.setAttribute('height', accordionBody.offsetHeight);
       let bodyHeight = accordionBody.offsetHeight;
       let id = accordionBody.getAttribute('id');
       heights.push(bodyHeight);
       ids.push(id);
-    }
+    } // Assign height and ID values to global accordion body object
 
-    var keys = ids;
-    var values = heights; // var bodyObj = {};
 
-    keys.forEach((key, i) => bodyObj[key] = values[i]);
+    ids.forEach((id, i) => bodyObj[id] = heights[i]);
     let headingStates = document.getElementsByClassName('accordion__heading');
 
     for (const headingState of headingStates) {
-      let body = headingState.nextElementSibling;
+      let nextBody = headingState.nextElementSibling;
 
       if (headingState.getAttribute('data-open') == 'true') {
-        let defaultOpenId = headingState.nextElementSibling.getAttribute('id'); // console.log(defaultOpenId);
-
+        let defaultOpenId = headingState.nextElementSibling.getAttribute('id');
+        nextBody.classList.add('active');
         Object.keys(bodyObj).forEach(function (key) {
           if (defaultOpenId == key) {
-            body.style.maxHeight = parseInt(bodyObj[key]) + 40 + 'px';
+            /**
+             * Additional arbitrary number passed to maxHeight to accommodate shallow accordion bodies
+             * It will never be reached but a numeric value is needed for the height transition */
+            nextBody.style.maxHeight = parseInt(bodyObj[key] + 200) + 'px';
           }
         });
       }
