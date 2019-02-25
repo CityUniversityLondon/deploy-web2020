@@ -11699,10 +11699,11 @@ main table td em {
 
 @media screen {
     .js .accordion > .accordion__body {
-        display: none;
         height: auto;
-        visibility: hidden;
         max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background: #f2f2f2;
     }
     .js .accordion > .accordion__heading {
         border-bottom: 1px solid #e5e5e5;
@@ -11912,16 +11913,11 @@ main table td em {
         border: 2px dotted #0c0c0e;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body {
-        display: block;
-        height: auto;
-        visibility: visible;
-        background: #f2f2f2;
         padding: 1rem;
-        border-top: 0;
-        border-left: 2px dotted transparent;
-        border-right: 2px dotted transparent;
-        border-bottom: 2px dotted transparent;
-        margin-bottom: 1rem;
+        background-color: #f2f2f2;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body p {
         margin: 1rem 0;

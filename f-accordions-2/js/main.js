@@ -3788,10 +3788,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
 /**
  * Accordion
  *
@@ -3847,54 +3843,46 @@ function buttonClick(button, headings, toggleOpen) {
   }
 
   let nextBody = heading.nextElementSibling;
-  let nextBodyId = nextBody.getAttribute('id');
+  nextBody.classList.toggle('active');
+
+  if (nextBody.style.maxHeight) {
+    nextBody.style.maxHeight = null;
+  } else {
+    nextBody.style.maxHeight = nextBody.scrollHeight + 'px';
+  }
   /* ASYNC/AWAIT TEST */
 
-  function assignHeight(height) {
-    nextBody.style.maxHeight = `${height}px`;
-    nextBody.style.transition = 'all 0.3s';
+  /* function assignHeight(height) {
+      nextBody.style.maxHeight = `${height}px`;
+      nextBody.style.transition = 'all 0.3s';
   }
-
-  Object.keys(bodyObj).forEach(function (key) {
-    // console.log(key);
-    // console.log(nextBodyId);
-    // let contentOpen = !button.getAttribute('aria-expanded');
-    let contentVisible = window.getComputedStyle(nextBody).display; // console.log(contentVisible);
-    // console.log(contentOpen);
-
-    function slideDown() {
-      return _slideDown.apply(this, arguments);
-    }
-
-    function _slideDown() {
-      _slideDown = _asyncToGenerator(function* () {
-        yield assignHeight(0);
-        yield assignHeight(1);
-        yield assignHeight(parseInt(bodyObj[key] + 100)); // console.log('sliding down');
-      });
-      return _slideDown.apply(this, arguments);
-    }
-
-    function slideUp() {
-      return _slideUp.apply(this, arguments);
-    } // Slide down content
-
-
-    function _slideUp() {
-      _slideUp = _asyncToGenerator(function* () {
-        yield assignHeight(parseInt(bodyObj[key] + 100));
-        yield assignHeight(1);
-        yield assignHeight(0); // console.log('sliding up');
-      });
-      return _slideUp.apply(this, arguments);
-    }
-
-    if (key == nextBodyId && contentVisible == 'block') {
-      slideDown();
-    } else if (key == nextBodyId && contentVisible !== 'block') {
-      slideUp();
-    }
-  }); // Object.keys(bodyObj).forEach(function(key) {
+   Object.keys(bodyObj).forEach(function(key) {
+      // console.log(key);
+      // console.log(nextBodyId);
+      // let contentOpen = !button.getAttribute('aria-expanded');
+      let contentVisible = window.getComputedStyle(nextBody).display;
+      // console.log(contentVisible);
+      // console.log(contentOpen);
+      async function slideDown() {
+          await assignHeight(0);
+          await assignHeight(1);
+          await assignHeight(parseInt(bodyObj[key] + 100));
+          // console.log('sliding down');
+      }
+      async function slideUp() {
+          await assignHeight(parseInt(bodyObj[key] + 100));
+          await assignHeight(1);
+          await assignHeight(0);
+          // console.log('sliding up');
+      }
+      // Slide down content
+      if (key == nextBodyId && contentVisible == 'block') {
+          slideDown();
+      } else if (key == nextBodyId && contentVisible !== 'block') {
+          slideUp();
+      }
+  });
+   // Object.keys(bodyObj).forEach(function(key) {
   //     if (key == nextBodyId) {
   //         // Needs extra 400px to make body height expand enough on shallow accordion bodies
   //         nextBody.style.maxHeight = parseInt(bodyObj[key]) + 400 + 'px';
@@ -3903,8 +3891,8 @@ function buttonClick(button, headings, toggleOpen) {
   //         nextBody.style.transition = 'height 2s';
   //     }
   // });
+   /* END ASYNC/AWAIT TEST */
 
-  /* END ASYNC/AWAIT TEST */
 }
 /**
  * Create a button from the text content of a heading.
