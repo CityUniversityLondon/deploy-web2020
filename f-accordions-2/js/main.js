@@ -3803,8 +3803,7 @@ const className = 'accordion',
       headingTextClassName = headingClassName + '__text',
       headingIconClassName = headingClassName + '__indicator fal',
       scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_4__["reduceMotion"])() ? 0 : 999,
-      scrollTo = false,
-      bodyObj = {};
+      scrollTo = false;
 /**
  * Sets a heading and the button nested within to be open or closed.
  *
@@ -3818,10 +3817,10 @@ function setSection(heading, open) {
 
   if (open) {
     heading.nextElementSibling.classList.add('active');
-    heading.nextElementSibling.style.maxHeight = heading.nextElementSibling.scrollHeight + 'px';
+    heading.nextElementSibling.style.maxHeight = parseInt(heading.nextElementSibling.scrollHeight + 40) + 'px';
   } else {
     heading.nextElementSibling.classList.remove('active');
-    heading.nextElementSibling.style.maxHeight = null; // heading.nextElementSibling.style.maxHeight = heading.nextElementSibling.scrollHeight + 'px';
+    heading.nextElementSibling.style.maxHeight = null;
   }
 }
 /**
@@ -3838,54 +3837,17 @@ function setSection(heading, open) {
 
 
 function buttonClick(button, headings, toggleOpen) {
-  const heading = button.parentNode; // Closing
+  const heading = button.parentNode;
 
   if (Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded))) {
     setSection(heading, false);
-    history.pushState(null, null, `${window.location.pathname}${window.location.search}`); // heading.nextElementSibling.classList.toggle('active');
+    history.pushState(null, null, `${window.location.pathname}${window.location.search}`);
   } else {
-    // Opening
     toggleOpen && headings.forEach(heading => setSection(heading, false));
     setSection(heading, true);
     scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
     history.pushState(null, null, '#' + heading.id);
-  } // Toggle body class. Adjust maxHeight as necessary
-  // let nextBody = heading.nextElementSibling;
-  // nextBody.classList.toggle('active');
-  // nextBody.style.maxHeight
-  //     ? nextBody.style.maxHeight = null
-  //     : nextBody.style.maxHeight = nextBody.scrollHeight + 'px';
-
-  /**
-   * Target accordions which only permit one accordion body being open at a time.
-   * This block ensures only only one accordion body has a class of active, which
-   * is required to make the slide transition work.
-   */
-  // if (toggleOpen) {
-  //     // Selected (clicked) accordion variables
-  //     let clickedButtonParentId = button.parentNode.getAttribute('id');
-  //     let clickedButtonParentStrings = clickedButtonParentId.split('-');
-  //     let clickedAccordionId = clickedButtonParentStrings[0];
-  //     let clickedHeadingId = clickedButtonParentStrings[1];
-  //     let clickedHeadingIdStrings = clickedHeadingId.split('header');
-  //     let clickedHeadingIdNum = clickedHeadingIdStrings[1];
-  //     // Manipulate selected (clicked) accordion
-  //     let targetAccordion = document.getElementById(clickedAccordionId);
-  //     let targetAccordionBodies = targetAccordion.querySelectorAll('.accordion__body');
-  //     for (const targetAccordionBody of targetAccordionBodies) {
-  //         let targetAccordionBodyId = targetAccordionBody.getAttribute('id');
-  //         let targetAccordionBodyStrings = targetAccordionBodyId.split('body');
-  //         let targetAccordionBodyIdNum = targetAccordionBodyStrings[1];
-  //         // Remove 'active' class from accordion body elements which have not been clicked
-  //         if (targetAccordionBodyIdNum !== clickedHeadingIdNum && targetAccordionBody.classList.contains('active')) {
-  //             targetAccordionBody.classList.remove('active');
-  //             targetAccordionBody.style.maxHeight
-  //                 ? (targetAccordionBody.style.maxHeight = null)
-  //                 : (targetAccordionBody.style.maxHeight = targetAccordionBody.scrollHeight + 'px');
-  //         }
-  //     }
-  // }
-
+  }
 }
 /**
  * Create a button from the text content of a heading.
@@ -3965,50 +3927,12 @@ function launchAccordion(accordion) {
     } else {
       setSection(heading, false);
     }
-    /**
-     * When page loads, set default open accordion body's element maximum height.
-     * This is needed as our slide up/down transitions are based on maximum height
-     * values switching from a number to null on each click.
-     */
-
-
-    let heights = [];
-    let ids = [];
-    let accordionBodies = document.getElementsByClassName('accordion__body');
-
-    for (const accordionBody of accordionBodies) {
-      let bodyHeight = accordionBody.offsetHeight;
-      let id = accordionBody.getAttribute('id');
-      heights.push(bodyHeight);
-      ids.push(id);
-    } // Assign height and ID values to global accordion body object
-
-
-    ids.forEach((id, i) => bodyObj[id] = heights[i]);
-    let headingStates = document.getElementsByClassName('accordion__heading');
-
-    for (const headingState of headingStates) {
-      let nextBody = headingState.nextElementSibling;
-
-      if (headingState.getAttribute('data-open') == 'true') {
-        let defaultOpenId = headingState.nextElementSibling.getAttribute('id'); // nextBody.classList.add('active');
-
-        Object.keys(bodyObj).forEach(function (key) {
-          if (defaultOpenId == key) {
-            /**
-             * Additional arbitrary number passed to maxHeight to accommodate shallow accordion bodies
-             * It will never be reached but a numeric value is needed for the height transition */
-            nextBody.style.maxHeight = parseInt(bodyObj[key] + 200) + 'px';
-          }
-        });
-      }
-    }
 
     button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
   });
 
   if (defaultOpen && !idLinked) {
-    setSection(headings[0], true); // headings[0].nextElementSibling.classList.add('active');
+    setSection(headings[0], true);
   }
 }
 
