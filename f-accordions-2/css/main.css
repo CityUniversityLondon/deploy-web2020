@@ -11703,6 +11703,9 @@ main table td em {
         overflow: hidden;
         transition: max-height 0.3s ease-out;
     }
+    .js .accordion > .accordion__body.active {
+        margin-bottom: 1rem;
+    }
     .js .accordion > .accordion__heading {
         border-bottom: 1px solid #e5e5e5;
         margin-top: 0;
@@ -11881,13 +11884,12 @@ main table td em {
     .js .accordion > .accordion__heading button:hover {
         text-decoration: underline;
         color: #006bbd;
-        border: 0;
+        border: 2px solid transparent;
     }
     .js .accordion > .accordion__heading[data-open='true'] button {
         border-top: 2px dotted #0c0c0e;
         border-left: 2px dotted #0c0c0e;
         border-right: 2px dotted #0c0c0e;
-        border-bottom: 1px solid #d8d8d8;
         margin-top: 1rem;
     }
     .js .accordion > .accordion__heading[data-open='true'] button .accordion__heading__indicator:before {
@@ -11923,7 +11925,7 @@ main table td em {
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body p {
         margin: 1rem 0;
     }
-    .js .accordion > .accordion__heading[data-open='true'] + .accordion__body:focus, .js .accordion > .accordion__heading[data-open='true'] + .accordion__bodyactive {
+    .js .accordion > .accordion__heading[data-open='true'] + .accordion__body:focus, .js .accordion > .accordion__heading[data-open='true'] + .accordion__body:active {
         border-width: 0 1px 1px;
         border-style: dotted;
         border-color: #0c0c0e;
@@ -11946,6 +11948,9 @@ main table td em {
     .js .accordion > .accordion__heading:active {
         border: 0;
         border-bottom: 1px solid transparent;
+    }
+    .js .accordion > .accordion__heading button {
+        border: 2px solid transparent;
     }
     .js .accordion > .accordion__heading button:focus, .js .accordion > .accordion__heading button:active {
         border-top: 2px dotted #0c0c0e;
