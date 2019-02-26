@@ -3775,17 +3775,14 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.regexp.split */ "./node_modules/core-js/modules/es6.regexp.split.js");
-/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.regexp.search */ "./node_modules/core-js/modules/es6.regexp.search.js");
-/* harmony import */ var core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.regexp.search */ "./node_modules/core-js/modules/es6.regexp.search.js");
+/* harmony import */ var core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_search__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -3805,7 +3802,7 @@ const className = 'accordion',
       headingClassName = className + '__heading',
       headingTextClassName = headingClassName + '__text',
       headingIconClassName = headingClassName + '__indicator fal',
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_5__["reduceMotion"])() ? 0 : 999,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_4__["reduceMotion"])() ? 0 : 999,
       scrollTo = false,
       bodyObj = {};
 /**
@@ -3817,7 +3814,15 @@ const className = 'accordion',
 
 function setSection(heading, open) {
   heading.dataset.open = open;
-  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, open); // heading.classList.add(active);
+  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+
+  if (open) {
+    heading.nextElementSibling.classList.add('active');
+    heading.nextElementSibling.style.maxHeight = heading.nextElementSibling.scrollHeight + 'px';
+  } else {
+    heading.nextElementSibling.classList.remove('active');
+    heading.nextElementSibling.style.maxHeight = null; // heading.nextElementSibling.style.maxHeight = heading.nextElementSibling.scrollHeight + 'px';
+  }
 }
 /**
  * Respond to button clicks - open if closed, close if open.
@@ -3833,80 +3838,50 @@ function setSection(heading, open) {
 
 
 function buttonClick(button, headings, toggleOpen) {
-  const heading = button.parentNode;
+  const heading = button.parentNode; // Closing
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded))) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded))) {
     setSection(heading, false);
-    history.pushState(null, null, `${window.location.pathname}${window.location.search}`);
+    history.pushState(null, null, `${window.location.pathname}${window.location.search}`); // heading.nextElementSibling.classList.toggle('active');
   } else {
+    // Opening
     toggleOpen && headings.forEach(heading => setSection(heading, false));
     setSection(heading, true);
-    scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(heading, scrollDuration);
+    scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
     history.pushState(null, null, '#' + heading.id);
   } // Toggle body class. Adjust maxHeight as necessary
+  // let nextBody = heading.nextElementSibling;
+  // nextBody.classList.toggle('active');
+  // nextBody.style.maxHeight
+  //     ? nextBody.style.maxHeight = null
+  //     : nextBody.style.maxHeight = nextBody.scrollHeight + 'px';
 
-
-  let nextBody = heading.nextElementSibling;
-  nextBody.classList.toggle('active');
-  nextBody.style.maxHeight ? nextBody.style.maxHeight = null : nextBody.style.maxHeight = nextBody.scrollHeight + 'px';
-
-  if (toggleOpen) {
-    let buttonParentId = button.parentNode.getAttribute('id'); // console.log(buttonParentId);
-
-    let buttonParentStrings = buttonParentId.split('-');
-    let accordionId = buttonParentStrings[0];
-    let headingId = buttonParentStrings[1];
-    let headingIdStrings = headingId.split('header');
-    let headingIdNum = headingIdStrings[1]; // console.log('Heading ID num: ' + headingIdNum);
-    // console.log('Accordion ID: ' + buttonParentStrings[0]);
-    // console.log('Heading ID: ' + headingId)
-
-    let targetAccordion = document.getElementById(accordionId);
-    let accordionBodies = targetAccordion.querySelectorAll('.accordion__body');
-
-    for (const accordionBody of accordionBodies) {
-      let accordionBodyId = accordionBody.getAttribute('id');
-      let accordionBodyStrings = accordionBodyId.split('body');
-      let bodyIdNum = accordionBodyStrings[1]; // console.log('Body ID num: ' + bodyIdNum);
-
-      if (bodyIdNum !== headingIdNum && accordionBody.classList.contains('active')) {
-        accordionBody.classList.remove('active'); // accordionBody.style.maxHeight = '0px';
-
-        accordionBody.style.maxHeight ? accordionBody.style.maxHeight = null : accordionBody.style.maxHeight = accordionBody.scrollHeight + 'px';
-      } // accordionBody.classList.remove('active');
-      // accordionBody.style.maxHeight = '0px';
-      // console.log(accordionBody);
-      // }
-
-    }
-  } // let clickedId = nextBody.getAttribute('id');
-  // // One accordion body visible at a time accordion and non-open item clicked
+  /**
+   * Target accordions which only permit one accordion body being open at a time.
+   * This block ensures only only one accordion body has a class of active, which
+   * is required to make the slide transition work.
+   */
   // if (toggleOpen) {
-  //     // Body ID of selected item
-  //     // console.log('Clicked ID: ' + clickedId);
-  //     // console.log(nextBody.classList);
-  //     // Loop all accordion items
-  //     for (const heading of headings) {
-  //         // Get body IDs
-  //         let bodies = heading.nextSibling;
-  //         for (const body of bodies) {
-  //             console.log(body);
-  //         }
-  //         // console.log(nextBody.getAttribute('id'));
-  //         var getClosest = function (elem, selector) {
-  //             for ( ; elem && elem !== document; elem = elem.parentNode ) {
-  //                 if ( elem.matches( selector ) ) return elem;
-  //             }
-  //             return null;
-  //         };
-  //         // If the clicked item is an `.accordion-toggle` get the parent `.accordion`
-  //         if ( event.target.classList.contains('accordion') ) {
-  //             // Get the parent with the `.accordion` class
-  //             var parent = getClosest(event.target, '.accordion');
-  //             console.log(parent);
-  //         }
-  //         if (heading.nextElementSibling !== clickedId) {
-  //             heading.classList.remove('active');
+  //     // Selected (clicked) accordion variables
+  //     let clickedButtonParentId = button.parentNode.getAttribute('id');
+  //     let clickedButtonParentStrings = clickedButtonParentId.split('-');
+  //     let clickedAccordionId = clickedButtonParentStrings[0];
+  //     let clickedHeadingId = clickedButtonParentStrings[1];
+  //     let clickedHeadingIdStrings = clickedHeadingId.split('header');
+  //     let clickedHeadingIdNum = clickedHeadingIdStrings[1];
+  //     // Manipulate selected (clicked) accordion
+  //     let targetAccordion = document.getElementById(clickedAccordionId);
+  //     let targetAccordionBodies = targetAccordion.querySelectorAll('.accordion__body');
+  //     for (const targetAccordionBody of targetAccordionBodies) {
+  //         let targetAccordionBodyId = targetAccordionBody.getAttribute('id');
+  //         let targetAccordionBodyStrings = targetAccordionBodyId.split('body');
+  //         let targetAccordionBodyIdNum = targetAccordionBodyStrings[1];
+  //         // Remove 'active' class from accordion body elements which have not been clicked
+  //         if (targetAccordionBodyIdNum !== clickedHeadingIdNum && targetAccordionBody.classList.contains('active')) {
+  //             targetAccordionBody.classList.remove('active');
+  //             targetAccordionBody.style.maxHeight
+  //                 ? (targetAccordionBody.style.maxHeight = null)
+  //                 : (targetAccordionBody.style.maxHeight = targetAccordionBody.scrollHeight + 'px');
   //         }
   //     }
   // }
@@ -3928,10 +3903,10 @@ function buttonFromHeading(heading) {
         iconSpan = document.createElement('span');
   textSpan.className = headingTextClassName;
   iconSpan.className = headingIconClassName;
-  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, true);
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, true);
   button.setAttribute('type', 'button');
   textSpan.appendChild(document.createTextNode(heading.textContent));
-  Object(_util__WEBPACK_IMPORTED_MODULE_5__["appendAll"])(wrapper, [textSpan, iconSpan]);
+  Object(_util__WEBPACK_IMPORTED_MODULE_4__["appendAll"])(wrapper, [textSpan, iconSpan]);
   button.appendChild(wrapper);
   return button;
 }
@@ -3958,9 +3933,9 @@ function buttonFromHeading(heading) {
 
 function launchAccordion(accordion) {
   const locationHash = window.location.hash.substr(1),
-        toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(accordion.dataset.toggleopen),
-        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(accordion.dataset.defaultopen),
-        allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(accordion.dataset.allowsingle),
+        toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.toggleopen),
+        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.defaultopen),
+        allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.allowsingle),
         headings = Array.from(accordion.querySelectorAll(`.${headingClassName}`));
   let idLinked = false;
 
@@ -3968,14 +3943,14 @@ function launchAccordion(accordion) {
     /**
      * not enough content to accordion
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_5__["removeClass"])(accordion, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(accordion, className, false);
     return;
   }
 
   headings.forEach(heading => {
     const content = heading.nextElementSibling,
           button = buttonFromHeading(heading);
-    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].labelledBy, heading.id);
+    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].labelledBy, heading.id);
     content.setAttribute('role', 'region');
     heading.replaceChild(button, heading.firstChild);
     /**
@@ -4016,8 +3991,8 @@ function launchAccordion(accordion) {
       let nextBody = headingState.nextElementSibling;
 
       if (headingState.getAttribute('data-open') == 'true') {
-        let defaultOpenId = headingState.nextElementSibling.getAttribute('id');
-        nextBody.classList.add('active');
+        let defaultOpenId = headingState.nextElementSibling.getAttribute('id'); // nextBody.classList.add('active');
+
         Object.keys(bodyObj).forEach(function (key) {
           if (defaultOpenId == key) {
             /**
@@ -4033,7 +4008,7 @@ function launchAccordion(accordion) {
   });
 
   if (defaultOpen && !idLinked) {
-    setSection(headings[0], true);
+    setSection(headings[0], true); // headings[0].nextElementSibling.classList.add('active');
   }
 }
 
