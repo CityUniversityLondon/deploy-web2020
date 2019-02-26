@@ -3813,14 +3813,24 @@ const className = 'accordion',
 
 function setSection(heading, open) {
   heading.dataset.open = open;
+  heading.setAttribute('tabindex', '1');
   heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+  let bodyLinks = heading.nextElementSibling.getElementsByTagName('a');
 
   if (open) {
     heading.nextElementSibling.classList.add('active');
     heading.nextElementSibling.style.maxHeight = parseInt(heading.nextElementSibling.scrollHeight + 40) + 'px';
+
+    for (const bodyLink of bodyLinks) {
+      bodyLink.setAttribute('tabindex', '1');
+    }
   } else {
     heading.nextElementSibling.classList.remove('active');
     heading.nextElementSibling.style.maxHeight = null;
+
+    for (const bodyLink of bodyLinks) {
+      bodyLink.setAttribute('tabindex', '-1');
+    }
   }
 }
 /**
