@@ -11717,11 +11717,7 @@ main table td em {
         border-left: 2px transparent dotted;
     }
     .js .accordion > .accordion__heading button:hover {
-        border-top: 2px transparent dotted;
-        border-right: 2px transparent dotted;
-        border-bottom: 1px #f2f2f2 dotted;
-        border-left: 2px transparent dotted;
-        background: #f2f2f2;
+        background: red;
         color: #006bbd;
         text-decoration: underline;
     }
@@ -11734,19 +11730,11 @@ main table td em {
         border-left: 2px #0c0c0e dotted;
     }
     .js .accordion > .accordion__heading[data-open='true'] button {
-        border-top: 2px transparent dotted;
-        border-right: 2px transparent dotted;
-        border-bottom: 2px #f2f2f2 solid;
-        border-left: 2px transparent dotted;
         background: #f2f2f2;
         color: #0c0c0e;
     }
     .js .accordion > .accordion__heading[data-open='true'] button:focus,
     .js .accordion > .accordion__heading[data-open='true'] button:active {
-        border-top: 2px #f2f2f2 dotted;
-        border-right: 2px #f2f2f2 dotted;
-        border-bottom: 1px #d8d8d8 solid;
-        border-left: 2px #f2f2f2 dotted;
         background: #f2f2f2;
         color: #0c0c0e;
     }
@@ -11886,11 +11874,23 @@ main table td em {
         color: #006bbd;
         border: 2px solid transparent;
     }
+    .js .accordion > .accordion__heading[data-open='true'] {
+        margin-top: 1rem;
+        border-bottom: 0;
+    }
+    .js .accordion > .accordion__heading[data-open='true']:focus {
+        border: 0;
+        outline: 0;
+    }
+    .js .accordion > .accordion__heading[data-open='true']:active {
+        border: 0;
+        outline: 0;
+    }
     .js .accordion > .accordion__heading[data-open='true'] button {
         border-top: 2px dotted #0c0c0e;
         border-left: 2px dotted #0c0c0e;
         border-right: 2px dotted #0c0c0e;
-        margin-top: 1rem;
+        border-bottom: 1px solid #d8d8d8;
     }
     .js .accordion > .accordion__heading[data-open='true'] button .accordion__heading__indicator:before {
         display: inline-block;
@@ -11898,19 +11898,12 @@ main table td em {
         transform: rotate(135deg);
         transition: 0.3s all;
     }
-    .js .accordion > .accordion__heading[data-open='true'] button:hover {
-        background: #f2f2f2;
-        color: #0c0c0e;
-    }
     .js .accordion > .accordion__heading[data-open='true'] button:focus, .js .accordion > .accordion__heading[data-open='true'] button:active {
         border-top: 2px dotted #0c0c0e;
         border-left: 2px dotted #0c0c0e;
         border-right: 2px dotted #0c0c0e;
         border-bottom: 1px solid #d8d8d8;
         outline: 0;
-    }
-    .js .accordion > .accordion__heading[data-open='true']:focus-within + .accordion__body {
-        border: 2px dotted #0c0c0e;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body {
         border-top: 0;
@@ -11940,24 +11933,32 @@ main table td em {
         margin-top: 0;
     }
     .js .accordion > .accordion__heading:focus {
-        border-top: 2px dotted #0c0c0e;
-        border-left: 2px dotted #0c0c0e;
-        border-right: 2px dotted #0c0c0e;
-        border-bottom: 2px dotted #0c0c0e;
+        outline: 2px dotted #0c0c0e;
+        border: 0;
     }
     .js .accordion > .accordion__heading:active {
         border: 0;
         border-bottom: 1px solid transparent;
+        outline: 0;
     }
     .js .accordion > .accordion__heading button {
         border: 2px solid transparent;
     }
-    .js .accordion > .accordion__heading button:focus, .js .accordion > .accordion__heading button:active {
-        border-top: 2px dotted #0c0c0e;
-        border-left: 2px dotted #0c0c0e;
-        border-right: 2px dotted #0c0c0e;
-        border-bottom: 2px dotted #0c0c0e;
-        outline: 0;
+    .js .accordion > .accordion__heading button:focus {
+        border: 0;
+        outline: none;
+    }
+    .js .accordion > .accordion__heading button:active {
+        border: 2px dotted #0c0c0e;
+        outline: none;
+    }
+    .js .accordion > .accordion__heading button ::-moz-focus-inner {
+        border: 0;
+        outline: none;
+    }
+    .js .accordion > .accordion__heading button:hover {
+        background: #f2f2f2;
+        color: #0c0c0e;
     }
 }
 

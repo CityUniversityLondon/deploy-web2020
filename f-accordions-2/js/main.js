@@ -3933,7 +3933,9 @@ function launchAccordion(accordion) {
 
     if (locationHash === heading.id) {
       idLinked = true;
-      setSection(heading, true);
+      setSection(heading, true); // FF/Safari bug fix
+
+      heading.nextElementSibling.style.maxHeight = '10000px';
     } else {
       setSection(heading, false);
     }
@@ -3942,7 +3944,9 @@ function launchAccordion(accordion) {
   });
 
   if (defaultOpen && !idLinked) {
-    setSection(headings[0], true);
+    setSection(headings[0], true); // FF/Safari bug fix
+
+    headings[0].nextElementSibling.style.maxHeight = '10000px';
   }
 }
 
