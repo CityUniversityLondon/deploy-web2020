@@ -12161,6 +12161,7 @@ main table td em {
     background: none;
     border-bottom-color: #8a8a8a;
     color: #8a8a8a;
+    transition: color 0.3s ease;
 }
 
 @media (hover: hover) {
