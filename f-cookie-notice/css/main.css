@@ -12494,6 +12494,7 @@ main table td em {
     .cta-block .primary-cta-arrow--bright:active {
         color: #dd0036;
         border-color: #dd0036;
+        box-shadow: none;
     }
     .cta-block .primary-cta-arrow--bright:active:focus, .cta-block .primary-cta-arrow--bright:active:active {
         outline-color: #0c0c0e;
@@ -12593,6 +12594,7 @@ main table td em {
     .cta-block .primary-cta--bright:active {
         color: #dd0036;
         border-color: #dd0036;
+        box-shadow: none;
     }
     .cta-block .primary-cta--bright:active:focus, .cta-block .primary-cta--bright:active:active {
         outline-color: #0c0c0e;
@@ -12899,6 +12901,7 @@ main table td em {
     }
     .cta-block .outline-cta-arrow--bright:active {
         border-color: #ffffff;
+        box-shadow: none;
     }
     .cta-block .outline-cta-arrow--bright:active:focus, .cta-block .outline-cta-arrow--bright:active:active {
         outline-color: #0c0c0e;
@@ -12994,6 +12997,7 @@ main table td em {
     }
     .cta-block .outline-cta--bright:active {
         border-color: #ffffff;
+        box-shadow: none;
     }
     .cta-block .outline-cta--bright:active:focus, .cta-block .outline-cta--bright:active:active {
         outline-color: #0c0c0e;
@@ -13293,6 +13297,7 @@ main table td em {
     .cta-block .basic-cta--bright:active {
         color: #dd0036;
         border-color: #dd0036;
+        box-shadow: none;
     }
     .cta-block .basic-cta--bright:active:focus, .cta-block .basic-cta--bright:active:active {
         outline-color: #0c0c0e;
@@ -13414,6 +13419,7 @@ main table td em {
     .cta-block .basic-cta--dark:active {
         color: #dd0036;
         border-color: #dd0036;
+        box-shadow: none;
     }
     .cta-block .basic-cta--dark:active:focus, .cta-block .basic-cta--dark:active:active {
         outline-color: #0c0c0e;
@@ -17820,6 +17826,7 @@ blockquote footer {
     .theme--dark .cta-block li:nth-child(3) a:active {
         color: #dd0036;
         border-color: #dd0036;
+        box-shadow: none;
     }
     .theme--dark .cta-block li:nth-child(3) a:active:focus, .theme--dark .cta-block li:nth-child(3) a:active:active {
         outline-color: #0c0c0e;
