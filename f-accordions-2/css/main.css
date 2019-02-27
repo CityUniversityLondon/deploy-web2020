@@ -11717,9 +11717,8 @@ main table td em {
         border-left: 2px transparent dotted;
     }
     .js .accordion > .accordion__heading button:hover {
-        background: red;
+        background: #f2f2f2;
         color: #006bbd;
-        text-decoration: underline;
     }
     .js .accordion > .accordion__heading button:focus,
     .js .accordion > .accordion__heading button:active {
@@ -11878,11 +11877,7 @@ main table td em {
         margin-top: 1rem;
         border-bottom: 0;
     }
-    .js .accordion > .accordion__heading[data-open='true']:focus {
-        border: 0;
-        outline: 0;
-    }
-    .js .accordion > .accordion__heading[data-open='true']:active {
+    .js .accordion > .accordion__heading[data-open='true']:focus, .js .accordion > .accordion__heading[data-open='true']:active {
         border: 0;
         outline: 0;
     }
@@ -11904,6 +11899,10 @@ main table td em {
         border-right: 2px dotted #0c0c0e;
         border-bottom: 1px solid #d8d8d8;
         outline: 0;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] button:hover {
+        background: #f2f2f2;
+        color: #0c0c0e;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body {
         border-top: 0;
@@ -11952,13 +11951,9 @@ main table td em {
         border: 2px dotted #0c0c0e;
         outline: none;
     }
-    .js .accordion > .accordion__heading button ::-moz-focus-inner {
-        border: 0;
-        outline: none;
-    }
     .js .accordion > .accordion__heading button:hover {
         background: #f2f2f2;
-        color: #0c0c0e;
+        color: #006bbd;
     }
 }
 
