@@ -14087,6 +14087,17 @@ article figure figcaption a:active {
         flex-wrap: nowrap;
         justify-content: flex-end;
     }
+}
+
+@media screen and (max-width: 767px) {
+    .js .pagination__wrapper .pagination__controls {
+        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+@media screen {
     .js .pagination__wrapper .pagination__controls button {
         background-color: initial;
         border-bottom-color: initial;
@@ -14236,8 +14247,6 @@ article figure figcaption a:active {
     .js .pagination__wrapper .pagination__controls .pagination__controls__ellipsis span {
         display: inline-block;
         padding-bottom: 2px;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
     }
     .js .pagination__wrapper .pagination__controls button,
     .js .pagination__wrapper .pagination__controls .pagination__controls__ellipsis {
