@@ -4162,7 +4162,7 @@ function findExternalLink() {
     if (i.origin !== window.location.origin && i.querySelectorAll('img').length < 1 && i.querySelectorAll('.fa-external-link').length < 1 && !i.parentElement.className.includes('cta-block')) {
       // adds font awesome external link icon after completing checks
       var node = document.createElement('span');
-      node.className = 'fa fa-external-link';
+      node.className = 'fa fa-external-link inline-external-link ';
       node.setAttribute('aria-hidden', 'true');
       i.appendChild(node);
     }

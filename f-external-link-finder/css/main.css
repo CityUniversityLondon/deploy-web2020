@@ -14902,6 +14902,11 @@ blockquote footer {
     display: block;
 }
 
+.fa-external-link,
+.inline-external-link {
+    margin-left: 0.5rem;
+}
+
 .generic {
     display: grid;
     grid-row-gap: 0;
