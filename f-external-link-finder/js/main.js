@@ -4158,8 +4158,8 @@ const className = 'content';
 function findExternalLink() {
   var anchors = document.getElementsByClassName('content')[0].querySelectorAll('a');
   anchors.forEach(function (i) {
-    // checks if anchors link is external & not an image & not contain font awesome icon already
-    if (i.origin !== window.location.origin && i.querySelectorAll('img').length < 1 && i.querySelectorAll('.fa-external-link').length < 1) {
+    // checks if anchors link is external & not an image & not contain font awesome icon already & isn't a CTA
+    if (i.origin !== window.location.origin && i.querySelectorAll('img').length < 1 && i.querySelectorAll('.fa-external-link').length < 1 && !i.parentElement.className.includes('cta-block')) {
       // adds font awesome external link icon after completing checks
       var node = document.createElement('span');
       node.className = 'fa fa-external-link';
