@@ -11697,178 +11697,6 @@ main table td em {
     color: #dd0036;
 }
 
-.accordion.accordion-button--blue {
-    border-bottom: 1px solid #e5e5e5;
-    margin-top: 0;
-}
-
-.accordion.accordion-button--blue .accordion__heading[data-open='true'] {
-    color: white;
-}
-
-.accordion.accordion-button--blue .accordion__heading[data-open='true'] button {
-    background: blue;
-}
-
-.accordion.accordion-button--blue:focus {
-    outline: 2px dotted #0c0c0e;
-    border: 0;
-}
-
-.accordion.accordion-button--blue:active {
-    border: 0;
-    border-bottom: 1px solid transparent;
-    outline: 0;
-}
-
-.accordion.accordion-button--blue button {
-    font-size: 1.125rem;
-    line-height: 1.25;
-    letter-spacing: -0.008em;
-    width: 100%;
-    text-align: left;
-    padding: 1rem;
-    color: #006bbd;
-    border: 2px solid transparent;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .accordion.accordion-button--blue button {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .accordion.accordion-button--blue button {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .accordion.accordion-button--blue button {
-        letter-spacing: -0.014em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .accordion.accordion-button--blue button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .accordion.accordion-button--blue button {
-        letter-spacing: -0.017em;
-    }
-}
-
-.accordion.accordion-button--blue button div {
-    display: grid;
-    grid-template-columns: 9fr 1fr;
-    grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
-}
-
-.accordion.accordion-button--blue button .accordion__heading__indicator {
-    align-self: center;
-    text-align: right;
-}
-
-.accordion.accordion-button--blue button .accordion__heading__indicator:before {
-    content: "\f067";
-    display: inline-block;
-    text-decoration: none;
-    transform: rotate(0deg);
-    transition: 0.3s all;
-}
-
-.accordion.accordion-button--blue button:hover {
-    text-decoration: underline;
-    color: #006bbd;
-    border: 2px solid transparent;
-    background: #f2f2f2;
-}
-
-.accordion.accordion-button--blue button:focus {
-    outline: 2px dotted #0c0c0e;
-    border: 0;
-}
-
-.accordion.accordion-button--blue button:active {
-    border: 2px dotted #0c0c0e;
-    outline: none;
-}
-
-.accordion.accordion-button--blue[data-open='true'] {
-    margin-top: 1rem;
-    border-bottom: 0;
-}
-
-.accordion.accordion-button--blue[data-open='true']:focus, .accordion.accordion-button--blue[data-open='true']:active {
-    border: 0;
-    outline: 0;
-}
-
-.accordion.accordion-button--blue[data-open='true'] button {
-    border-top: 2px dotted #0c0c0e;
-    border-left: 2px dotted #0c0c0e;
-    border-right: 2px dotted #0c0c0e;
-    border-bottom: 1px solid #d8d8d8;
-    color: #0c0c0e;
-}
-
-.accordion.accordion-button--blue[data-open='true'] button .accordion__heading__indicator:before {
-    display: inline-block;
-    text-decoration: none;
-    transform: rotate(135deg);
-    transition: 0.3s all;
-}
-
-.accordion.accordion-button--blue[data-open='true'] button:focus, .accordion.accordion-button--blue[data-open='true'] button:active {
-    border-top: 2px dotted #0c0c0e;
-    border-left: 2px dotted #0c0c0e;
-    border-right: 2px dotted #0c0c0e;
-    border-bottom: 1px solid #d8d8d8;
-    outline: 0;
-}
-
-.accordion.accordion-button--blue[data-open='true'] button:hover {
-    background: #f2f2f2;
-    color: #0c0c0e;
-}
-
-.accordion.accordion-button--blue[data-open='true'] + .accordion__body {
-    border-top: 0;
-    border-left: 2px dotted #0c0c0e;
-    border-right: 2px dotted #0c0c0e;
-    border-bottom: 2px dotted #0c0c0e;
-    padding: 1rem;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
-
-.accordion.accordion-button--blue[data-open='true'] + .accordion__body p {
-    margin: 1rem 0;
-}
-
-.accordion.accordion-button--blue[data-open='true'] + .accordion__body:focus, .accordion.accordion-button--blue[data-open='true'] + .accordion__body:active {
-    border-width: 0 1px 1px;
-    border-style: dotted;
-    border-color: #0c0c0e;
-}
-
-.accordion.accordion-button--blue[data-open='true'] + .accordion__body > :first-child {
-    margin-top: 0;
-}
-
-.accordion.accordion-button--blue[data-open='true'] + .accordion__body > :last-child {
-    margin-bottom: 0;
-}
-
-.accordion.accordion-button--blue[data-open='true'] + .accordion__body:first-child {
-    margin-top: 0;
-}
-
 @media screen {
     .js .accordion > .accordion__body {
         max-height: 0;
@@ -12024,8 +11852,12 @@ main table td em {
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body:first-child {
         margin-top: 0;
     }
-    .js .accordion > .accordion__heading button {
+    .js .accordion > .accordion__heading[data-open='true'] button {
         background: #f2f2f2;
+    }
+    .js .accordion.accordion-button--blue .accordion__heading[data-open='true'] button {
+        background: blue;
+        color: white;
     }
 }
 
