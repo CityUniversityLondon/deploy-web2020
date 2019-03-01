@@ -11816,6 +11816,9 @@ main table td em {
     .js .accordion > .accordion__heading[data-open='true'] button .accordion__heading__indicator {
         padding: 1rem;
     }
+    .js .accordion > .accordion__heading[data-open='true'] button .accordion__heading__text:hover {
+        text-decoration: underline;
+    }
     .js .accordion > .accordion__heading[data-open='true'] button .accordion__heading__indicator:before {
         display: inline-block;
         text-decoration: none;
@@ -11862,12 +11865,12 @@ main table td em {
     .js .accordion > .accordion__heading[data-open='true'] button {
         background: #f2f2f2;
     }
-    .js .accordion.accordion-button--blue .accordion__heading[data-open='true'] .accordion__heading__text {
+    .js .accordion.accordion-button--blue-red-test .accordion__heading[data-open='true'] .accordion__heading__text {
         background: blue;
         color: white;
     }
-    .js .accordion.accordion-button--blue .accordion__heading[data-open='true'] .accordion__heading__indicator {
-        background: blue;
+    .js .accordion.accordion-button--blue-red-test .accordion__heading[data-open='true'] .accordion__heading__indicator {
+        background: red;
         color: white;
     }
 }
