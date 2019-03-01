@@ -14927,7 +14927,6 @@ blockquote footer {
 
 @media (min-width: 769px) {
     .timetable-dates {
-        background-color: #ececec;
         display: grid;
         grid-template-columns: 22% auto;
     }
