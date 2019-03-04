@@ -14494,27 +14494,27 @@ article figure figcaption a:active {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(2, auto);
-        grid-template-areas: 'heading heading heading heading heading heading heading heading' 'col1 col1 col1 col2 col2 col2 col3 col3';
+        grid-template-areas: 'heading heading heading heading heading heading heading heading' 'location location location contact contact contact cta cta';
     }
 }
 
-.key-information-box--short-course .heading-small {
+.key-information-box--short-course .key-information-box__date {
     grid-area: heading;
     font-size: 1rem;
     color: #1e1e1e;
     font-weight: 700;
 }
 
-.key-information-box--short-course .content-column-one {
-    grid-area: col1;
+.key-information-box--short-course .key-information-box__location {
+    grid-area: location;
 }
 
-.key-information-box--short-course .content-column-two {
-    grid-area: col2;
+.key-information-box--short-course .key-information-box__contact {
+    grid-area: contact;
 }
 
-.key-information-box--short-course .content-column-three {
-    grid-area: col3;
+.key-information-box--short-course .key-information-box__cta {
+    grid-area: cta;
 }
 
 .menu {
