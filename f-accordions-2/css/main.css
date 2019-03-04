@@ -11703,6 +11703,7 @@ main table td em {
         overflow: hidden;
         background-color: #f2f2f2;
         transition: max-height 0.2s ease-out;
+        padding: 0 1rem;
     }
     .js .accordion > .accordion__body.active {
         margin-bottom: 1rem;
