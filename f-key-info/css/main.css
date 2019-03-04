@@ -14488,33 +14488,53 @@ article figure figcaption a:active {
     }
 }
 
+.key-information-box--short-course .key-information-box--dates-quantity {
+    padding: 1.75rem 0;
+    color: #dd0036;
+    border-bottom: 1px solid #a1a1a1;
+    font-size: 0.889rem;
+}
+
+.key-information-box--short-course .key-information-box--dates-quantity .fa-calendar-day {
+    padding: 0 0.5rem 0 0;
+}
+
+.key-information-box--short-course .key-information-box__listing {
+    border-bottom: 1px dotted #cbcbcb;
+    padding: 1.75rem 0;
+}
+
 @media (min-width: 901px) {
-    .key-information-box--short-course {
+    .key-information-box--short-course .key-information-box__listing {
         display: grid;
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(2, auto);
-        grid-template-areas: 'heading heading heading heading heading heading heading heading' 'location location location contact contact contact cta cta';
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 'quantity quantity quantity quantity quantity quantity quantity quantity ' 'heading heading heading heading heading heading heading heading' 'col1 col1 col1 col2 col2 col2 col3 col3 ';
     }
 }
 
-.key-information-box--short-course .key-information-box__date {
+.key-information-box--short-course .key-information-box__listing .key-information-box--dates-quantity {
+    grid-area: quantity;
+}
+
+.key-information-box--short-course .key-information-box__listing .key-information-box__date {
     grid-area: heading;
     font-size: 1rem;
     color: #1e1e1e;
     font-weight: 700;
 }
 
-.key-information-box--short-course .key-information-box__location {
-    grid-area: location;
+.key-information-box--short-course .key-information-box__listing .key-information-box__col-one {
+    grid-area: col1;
 }
 
-.key-information-box--short-course .key-information-box__contact {
-    grid-area: contact;
+.key-information-box--short-course .key-information-box__listing .key-information-box__col-two {
+    grid-area: col2;
 }
 
-.key-information-box--short-course .key-information-box__cta {
-    grid-area: cta;
+.key-information-box--short-course .key-information-box__listing .key-information-box__col-three {
+    grid-area: col3;
 }
 
 .menu {
