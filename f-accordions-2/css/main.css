@@ -11729,7 +11729,7 @@ main table td em {
         text-align: left;
         padding: 1rem;
         color: #006bbd;
-        border: 2px solid transparent;
+        outline: 2px solid transparent;
     }
 }
 
@@ -11786,7 +11786,7 @@ main table td em {
     .js .accordion > .accordion__heading button:hover {
         text-decoration: underline;
         color: #006bbd;
-        border: 2px solid transparent;
+        outline: 2px solid transparent;
         background: #f2f2f2;
     }
     .js .accordion > .accordion__heading button:focus {
@@ -11794,8 +11794,7 @@ main table td em {
         border: 0;
     }
     .js .accordion > .accordion__heading button:active {
-        border: 2px dotted #0c0c0e;
-        outline: none;
+        outline: 2px dotted #0c0c0e;
     }
     .js .accordion > .accordion__heading[data-open='true'] {
         margin-top: 1rem;
