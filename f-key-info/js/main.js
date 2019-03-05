@@ -3737,12 +3737,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns/cms-editor-warning/cms-editor-warning */ "./src/patterns/cms-editor-warning/cms-editor-warning.js");
 /* harmony import */ var _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/cookie-notice/cookie-notice */ "./src/patterns/cookie-notice/cookie-notice.js");
 /* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
-/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
-/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
-/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
-/* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
+/* harmony import */ var _patterns_key_information_box_key_information_box__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/key-information-box/key-information-box */ "./src/patterns/key-information-box/key-information-box.js");
+/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
+/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
+/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
+/* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
 
 
 /**
@@ -3764,7 +3765,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_9__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_box_key_information_box__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_10__["default"]]);
 
 /***/ }),
 
@@ -4287,6 +4289,43 @@ function launchFeedback(elem) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchFeedback,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/key-information-box/key-information-box.js":
+/*!*****************************************************************!*\
+  !*** ./src/patterns/key-information-box/key-information-box.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+/**
+ * Key information box
+ *
+ * @module patterns/key-information-box/key-information-box
+ * @author Mark Skinsley <mark.skinsley@city.ac.uk>
+ * @copyright City, University of London 2018
+ */
+// import scroll from 'zenscroll';
+// import aria from '../../aria-attributes';
+// import { toBool, appendAll, reduceMotion, removeClass } from '../../util';
+const className = 'keyInformationBox';
+
+function launchKeyInformationBox() {// let listings = document.querySelectorAll('.key-information-box__listing');
+  // console.log(listings.length);
+  // for (const listing of listings) {
+  // console.log(listing);
+  // }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchKeyInformationBox(),
   launchQuery: `.${className}`
 });
 
