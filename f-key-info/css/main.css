@@ -14500,6 +14500,10 @@ article figure figcaption a:active {
 }
 
 @media (max-width: 767px) {
+    .key-information-box--short-course .key-information-box__listing {
+        padding: 1rem 2rem;
+        background-color: #f2f2f2;
+    }
     .key-information-box--short-course .key-information-box__listing:nth-of-type(2) ~ .key-information-box__listing {
         display: none;
     }
@@ -14671,24 +14675,72 @@ article figure figcaption a:active {
     }
 }
 
-.key-information-box--short-course .content-control .fa-arrow-left,
-.key-information-box--short-course .content-control .fa-arrow-right {
-    top: 50%;
+.key-information-box--short-course .content-control .content-slider .fa-arrow-left,
+.key-information-box--short-course .content-control .content-slider .fa-arrow-right {
+    top: 45%;
     position: absolute;
+    border: 4px solid #dd0036;
+    padding: 0.5rem;
+    background: #ffffff;
+    font-size: 1.602rem;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .key-information-box--short-course .content-control .content-slider .fa-arrow-left,
+    .key-information-box--short-course .content-control .content-slider .fa-arrow-right {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .key-information-box--short-course .content-control .content-slider .fa-arrow-left,
+    .key-information-box--short-course .content-control .content-slider .fa-arrow-right {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .key-information-box--short-course .content-control .content-slider .fa-arrow-left,
+    .key-information-box--short-course .content-control .content-slider .fa-arrow-right {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .key-information-box--short-course .content-control .content-slider .fa-arrow-left,
+    .key-information-box--short-course .content-control .content-slider .fa-arrow-right {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .key-information-box--short-course .content-control .content-slider .fa-arrow-left,
+    .key-information-box--short-course .content-control .content-slider .fa-arrow-right {
+        letter-spacing: -0.017em;
+    }
 }
 
 @media (min-width: 769px) {
-    .key-information-box--short-course .content-control .fa-arrow-left,
-    .key-information-box--short-course .content-control .fa-arrow-right {
+    .key-information-box--short-course .content-control .content-slider .fa-arrow-left,
+    .key-information-box--short-course .content-control .content-slider .fa-arrow-right {
         display: none;
     }
 }
 
-.key-information-box--short-course .content-control .fa-arrow-left {
+.key-information-box--short-course .content-control .content-slider .fa-arrow-left:disabled,
+.key-information-box--short-course .content-control .content-slider .fa-arrow-right:disabled {
+    opacity: 0.3;
+}
+
+.key-information-box--short-course .content-control .content-slider .fa-arrow-left .fa-arrow-left,
+.key-information-box--short-course .content-control .content-slider .fa-arrow-right .fa-arrow-left {
     left: 0;
 }
 
-.key-information-box--short-course .content-control .fa-arrow-right {
+.key-information-box--short-course .content-control .content-slider .fa-arrow-left .fa-arrow-right,
+.key-information-box--short-course .content-control .content-slider .fa-arrow-right .fa-arrow-right {
     right: 0;
 }
 
@@ -14705,25 +14757,25 @@ article figure figcaption a:active {
     }
 }
 
-.key-information-box--short-course .content-control .fa-plus-circle,
-.key-information-box--short-course .content-control .fa-minus-circle {
+.key-information-box--short-course .content-control .content-toggle .fa-plus-circle,
+.key-information-box--short-course .content-control .content-toggle .fa-minus-circle {
     display: none;
 }
 
-.key-information-box--short-course .content-control .fa-plus-circle a,
-.key-information-box--short-course .content-control .fa-minus-circle a {
+.key-information-box--short-course .content-control .content-toggle .fa-plus-circle a,
+.key-information-box--short-course .content-control .content-toggle .fa-minus-circle a {
     display: none;
 }
 
 @media (min-width: 769px) {
-    .key-information-box--short-course .content-control .fa-plus-circle,
-    .key-information-box--short-course .content-control .fa-minus-circle {
+    .key-information-box--short-course .content-control .content-toggle .fa-plus-circle,
+    .key-information-box--short-course .content-control .content-toggle .fa-minus-circle {
         display: inline;
         color: #006bbd;
         padding-right: 0.5rem;
     }
-    .key-information-box--short-course .content-control .fa-plus-circle a,
-    .key-information-box--short-course .content-control .fa-minus-circle a {
+    .key-information-box--short-course .content-control .content-toggle .fa-plus-circle a,
+    .key-information-box--short-course .content-control .content-toggle .fa-minus-circle a {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -14749,8 +14801,8 @@ article figure figcaption a:active {
 }
 
 @media (min-width: 769px) and (hover: hover) {
-    .key-information-box--short-course .content-control .fa-plus-circle a:hover,
-    .key-information-box--short-course .content-control .fa-minus-circle a:hover {
+    .key-information-box--short-course .content-control .content-toggle .fa-plus-circle a:hover,
+    .key-information-box--short-course .content-control .content-toggle .fa-minus-circle a:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -14767,9 +14819,9 @@ article figure figcaption a:active {
 }
 
 @media (min-width: 769px) {
-    .key-information-box--short-course .content-control .fa-plus-circle a:focus, .key-information-box--short-course .content-control .fa-plus-circle a:active,
-    .key-information-box--short-course .content-control .fa-minus-circle a:focus,
-    .key-information-box--short-course .content-control .fa-minus-circle a:active {
+    .key-information-box--short-course .content-control .content-toggle .fa-plus-circle a:focus, .key-information-box--short-course .content-control .content-toggle .fa-plus-circle a:active,
+    .key-information-box--short-course .content-control .content-toggle .fa-minus-circle a:focus,
+    .key-information-box--short-course .content-control .content-toggle .fa-minus-circle a:active {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -14786,28 +14838,28 @@ article figure figcaption a:active {
 }
 
 @media (min-width: 769px) and (prefers-reduced-motion: reduce) {
-    .key-information-box--short-course .content-control .fa-plus-circle a,
-    .key-information-box--short-course .content-control .fa-minus-circle a {
+    .key-information-box--short-course .content-control .content-toggle .fa-plus-circle a,
+    .key-information-box--short-course .content-control .content-toggle .fa-minus-circle a {
         transition: none;
     }
 }
 
 @media (min-width: 769px) and (hover: hover) {
-    .key-information-box--short-course .content-control .fa-plus-circle a:hover,
-    .key-information-box--short-course .content-control .fa-minus-circle a:hover {
+    .key-information-box--short-course .content-control .content-toggle .fa-plus-circle a:hover,
+    .key-information-box--short-course .content-control .content-toggle .fa-minus-circle a:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
 @media (min-width: 769px) {
-    .key-information-box--short-course .content-control .fa-plus-circle a:visited,
-    .key-information-box--short-course .content-control .fa-minus-circle a:visited {
+    .key-information-box--short-course .content-control .content-toggle .fa-plus-circle a:visited,
+    .key-information-box--short-course .content-control .content-toggle .fa-minus-circle a:visited {
         border-bottom-color: #4c2c92;
         color: #4c2c92;
     }
-    .key-information-box--short-course .content-control .fa-plus-circle a:focus,
-    .key-information-box--short-course .content-control .fa-minus-circle a:focus {
+    .key-information-box--short-course .content-control .content-toggle .fa-plus-circle a:focus,
+    .key-information-box--short-course .content-control .content-toggle .fa-minus-circle a:focus {
         color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
@@ -14820,8 +14872,8 @@ article figure figcaption a:active {
 }
 
 @media (min-width: 769px) and (hover: hover) {
-    .key-information-box--short-course .content-control .fa-plus-circle a:hover,
-    .key-information-box--short-course .content-control .fa-minus-circle a:hover {
+    .key-information-box--short-course .content-control .content-toggle .fa-plus-circle a:hover,
+    .key-information-box--short-course .content-control .content-toggle .fa-minus-circle a:hover {
         border-bottom-color: #006bbd;
         border-bottom-width: 2px;
         border-bottom-style: solid;
@@ -14830,8 +14882,8 @@ article figure figcaption a:active {
 }
 
 @media (min-width: 769px) {
-    .key-information-box--short-course .content-control .fa-plus-circle a:active,
-    .key-information-box--short-course .content-control .fa-minus-circle a:active {
+    .key-information-box--short-course .content-control .content-toggle .fa-plus-circle a:active,
+    .key-information-box--short-course .content-control .content-toggle .fa-minus-circle a:active {
         background-color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
@@ -14842,17 +14894,17 @@ article figure figcaption a:active {
         outline-style: dotted;
         outline-offset: 3px;
     }
-    .key-information-box--short-course .content-control .fa-plus-circle a:visited,
-    .key-information-box--short-course .content-control .fa-minus-circle a:visited {
+    .key-information-box--short-course .content-control .content-toggle .fa-plus-circle a:visited,
+    .key-information-box--short-course .content-control .content-toggle .fa-minus-circle a:visited {
         border-bottom-color: #006bbd;
         color: #006bbd;
     }
-    .key-information-box--short-course .content-control .fa-plus-circle a:hover,
-    .key-information-box--short-course .content-control .fa-minus-circle a:hover {
+    .key-information-box--short-course .content-control .content-toggle .fa-plus-circle a:hover,
+    .key-information-box--short-course .content-control .content-toggle .fa-minus-circle a:hover {
         color: #ffffff;
     }
-    .key-information-box--short-course .content-control .fa-plus-circle a:active,
-    .key-information-box--short-course .content-control .fa-minus-circle a:active {
+    .key-information-box--short-course .content-control .content-toggle .fa-plus-circle a:active,
+    .key-information-box--short-course .content-control .content-toggle .fa-minus-circle a:active {
         color: #ffffff;
     }
 }
