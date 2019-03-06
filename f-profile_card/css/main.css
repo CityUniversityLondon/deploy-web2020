@@ -12178,17 +12178,19 @@ main table td em {
 
 .card--profile .card--profile__description {
     margin-top: 0.5rem;
-}
-
-.card--profile .card--profile__description {
     flex-basis: 100%;
 }
 
 .card--profile .card--profile__thumbnail {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
     margin-top: 0.5rem;
+}
+
+@media (min-width: 433px) {
+    .card--profile .card--profile__thumbnail {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+    }
 }
 
 .card--profile .card--profile__thumbnail figure {
@@ -12201,12 +12203,12 @@ main table td em {
 }
 
 .card--profile .card--profile__thumbnail .card--profile__description {
-    flex-basis: 79%;
     margin-top: 0;
 }
 
 @media (min-width: 433px) {
     .card--profile .card--profile__thumbnail .card--profile__description {
+        flex-basis: 79%;
         padding-left: 2rem;
     }
 }
