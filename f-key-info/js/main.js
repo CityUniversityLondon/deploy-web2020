@@ -4315,9 +4315,9 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'keyInformationBox';
 
 function launchKeyInformationBox() {
-  let listings = document.querySelectorAll('.key-information-box__listing');
+  let listings = document.querySelectorAll('.key-information-box__listing'); // Content toggle on desktop if more than three listings
 
-  if (listings.length > 3) {
+  if (screen.width > 1280 && listings.length > 3) {
     const contentControls = document.querySelectorAll('.content-control');
 
     for (const contentControl of contentControls) {

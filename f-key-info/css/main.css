@@ -14499,54 +14499,45 @@ article figure figcaption a:active {
     padding: 0 0.5rem 0 0;
 }
 
-.key-information-box--short-course .key-information-box__listing {
-    border-bottom: 1px dotted #cbcbcb;
-    padding: 1.75rem 0;
-}
-
-@media (min-width: 433px) {
+@media (min-width: 1281px) {
     .key-information-box--short-course .key-information-box__listing {
         display: grid;
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(4, auto);
         grid-template-areas: 'quantity quantity quantity quantity quantity quantity quantity quantity ' 'heading heading heading heading heading heading heading heading' 'col1 col1 col1 col2 col2 col2 col3 col3' 'more more more more more more more more';
+        border-bottom: 1px dotted #cbcbcb;
+        padding: 1.75rem 0;
     }
-}
-
-.key-information-box--short-course .key-information-box__listing:nth-of-type(4) ~ .key-information-box__listing {
-    display: none;
-}
-
-.key-information-box--short-course .key-information-box__listing .key-information-box--dates-quantity {
-    grid-area: quantity;
-}
-
-.key-information-box--short-course .key-information-box__listing .key-information-box__date {
-    grid-area: heading;
-    font-size: 1rem;
-    color: #1e1e1e;
-    font-weight: 700;
-}
-
-.key-information-box--short-course .key-information-box__listing .key-information-box__col-one {
-    grid-area: col1;
-}
-
-.key-information-box--short-course .key-information-box__listing .key-information-box__col-two {
-    grid-area: col2;
-}
-
-.key-information-box--short-course .key-information-box__listing .key-information-box__col-three {
-    grid-area: col3;
-}
-
-.key-information-box--short-course .key-information-box__listing #places.key-information__data-item {
-    text-align: center;
+    .key-information-box--short-course .key-information-box__listing:nth-of-type(4) ~ .key-information-box__listing {
+        display: none;
+    }
+    .key-information-box--short-course .key-information-box__listing .key-information-box--dates-quantity {
+        grid-area: quantity;
+    }
+    .key-information-box--short-course .key-information-box__listing .key-information-box__date {
+        grid-area: heading;
+        font-size: 1rem;
+        color: #1e1e1e;
+        font-weight: 700;
+    }
+    .key-information-box--short-course .key-information-box__listing .key-information-box__col-one {
+        grid-area: col1;
+    }
+    .key-information-box--short-course .key-information-box__listing .key-information-box__col-two {
+        grid-area: col2;
+    }
+    .key-information-box--short-course .key-information-box__listing .key-information-box__col-three {
+        grid-area: col3;
+    }
+    .key-information-box--short-course .key-information-box__listing #places.key-information__data-item {
+        text-align: center;
+    }
 }
 
 .key-information-box--short-course .key-information-box__listing .cta-block {
     text-align: center;
+    max-width: 100%;
 }
 
 .key-information-box--short-course .key-information-box__listing .cta-block .basic-cta--bright {
@@ -14675,36 +14666,42 @@ article figure figcaption a:active {
 }
 
 .key-information-box--short-course .content-control {
-    grid-area: more;
-    text-align: center;
-    padding-top: 1.75rem;
+    display: none;
 }
 
-.key-information-box--short-course .content-control a {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    background-image: none;
-    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    transition: background-size 0.3s ease;
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    color: #006bbd;
+@media (min-width: 1281px) {
+    .key-information-box--short-course .content-control {
+        display: block;
+        grid-area: more;
+        text-align: center;
+        padding-top: 1.75rem;
+    }
+    .key-information-box--short-course .content-control a {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-image: none;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        background-position: 0 100%;
+        transition: background-size 0.3s ease;
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        color: #006bbd;
+    }
 }
 
-@media (hover: hover) {
+@media (min-width: 1281px) and (hover: hover) {
     .key-information-box--short-course .content-control a:hover {
         background-color: initial;
         border-bottom-color: initial;
@@ -14721,51 +14718,54 @@ article figure figcaption a:active {
     }
 }
 
-.key-information-box--short-course .content-control a:focus, .key-information-box--short-course .content-control a:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    background-image: none;
+@media (min-width: 1281px) {
+    .key-information-box--short-course .content-control a:focus, .key-information-box--short-course .content-control a:active {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-image: none;
+    }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (min-width: 1281px) and (prefers-reduced-motion: reduce) {
     .key-information-box--short-course .content-control a {
         transition: none;
     }
 }
 
-@media (hover: hover) {
+@media (min-width: 1281px) and (hover: hover) {
     .key-information-box--short-course .content-control a:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.key-information-box--short-course .content-control a:visited {
-    border-bottom-color: #4c2c92;
-    color: #4c2c92;
+@media (min-width: 1281px) {
+    .key-information-box--short-course .content-control a:visited {
+        border-bottom-color: #4c2c92;
+        color: #4c2c92;
+    }
+    .key-information-box--short-course .content-control a:focus {
+        color: #006bbd;
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        outline-color: #0c0c0e;
+        outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
+    }
 }
 
-.key-information-box--short-course .content-control a:focus {
-    color: #006bbd;
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    outline-color: #0c0c0e;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
-}
-
-@media (hover: hover) {
+@media (min-width: 1281px) and (hover: hover) {
     .key-information-box--short-course .content-control a:hover {
         border-bottom-color: #006bbd;
         border-bottom-width: 2px;
@@ -14774,34 +14774,32 @@ article figure figcaption a:active {
     }
 }
 
-.key-information-box--short-course .content-control a:active {
-    background-color: #006bbd;
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    color: #ffffff;
-    outline-color: #0c0c0e;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
-}
-
-.key-information-box--short-course .content-control a:visited {
-    border-bottom-color: #006bbd;
-    color: #006bbd;
-}
-
-.key-information-box--short-course .content-control a:hover {
-    color: #ffffff;
-}
-
-.key-information-box--short-course .content-control a:active {
-    color: #ffffff;
-}
-
-.key-information-box--short-course .content-control span {
-    color: #006bbd;
-    padding-right: 0.5rem;
+@media (min-width: 1281px) {
+    .key-information-box--short-course .content-control a:active {
+        background-color: #006bbd;
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        color: #ffffff;
+        outline-color: #0c0c0e;
+        outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
+    }
+    .key-information-box--short-course .content-control a:visited {
+        border-bottom-color: #006bbd;
+        color: #006bbd;
+    }
+    .key-information-box--short-course .content-control a:hover {
+        color: #ffffff;
+    }
+    .key-information-box--short-course .content-control a:active {
+        color: #ffffff;
+    }
+    .key-information-box--short-course .content-control span {
+        color: #006bbd;
+        padding-right: 0.5rem;
+    }
 }
 
 .menu {
