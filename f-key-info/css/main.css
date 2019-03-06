@@ -14674,13 +14674,13 @@ article figure figcaption a:active {
     }
 }
 
-.key-information-box--short-course .load-more {
+.key-information-box--short-course .content-control {
     grid-area: more;
     text-align: center;
     padding-top: 1.75rem;
 }
 
-.key-information-box--short-course .load-more span {
+.key-information-box--short-course .content-control span {
     color: #006bbd;
     padding-right: 0.5rem;
 }

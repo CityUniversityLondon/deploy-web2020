@@ -4312,16 +4312,27 @@ __webpack_require__.r(__webpack_exports__);
  * @author Mark Skinsley <mark.skinsley@city.ac.uk>
  * @copyright City, University of London 2018
  */
-// import scroll from 'zenscroll';
-// import aria from '../../aria-attributes';
-// import { toBool, appendAll, reduceMotion, removeClass } from '../../util';
 const className = 'keyInformationBox';
 
-function launchKeyInformationBox() {// let listings = document.querySelectorAll('.key-information-box__listing');
-  // console.log(listings.length);
-  // for (const listing of listings) {
-  // console.log(listing);
-  // }
+function launchKeyInformationBox() {
+  let listings = document.querySelectorAll('.key-information-box__listing');
+
+  if (listings.length > 3) {
+    const contentControls = document.querySelectorAll('.content-control');
+
+    for (const contentControl of contentControls) {
+      contentControl.addEventListener('click', e => {
+        e.preventDefault();
+        const loadMoreText = '<span class=`far fa-plus-circle`></span><a href=`#`>Load more</a>';
+        const loadLessText = '<span class=`far fa-minus-circle`></span><a href=`#`>Load less</a>';
+        contentControl.classList.toggle('open');
+
+        for (let i = 3; i < listings.length; i++) {
+          contentControl.classList.contains('open') ? (listings[i].style.display = 'grid') && (contentControl.innerHTML = loadLessText) : (listings[i].style.display = 'none') && (contentControl.innerHTML = loadMoreText);
+        }
+      });
+    }
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
