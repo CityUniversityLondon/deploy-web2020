@@ -4317,8 +4317,8 @@ const className = 'keyInformationBox';
 function launchKeyInformationBox() {
   let listings = document.querySelectorAll('.key-information-box__listing'); // Content toggle on desktop if more than three listings
 
-  if (screen.width > 1280 && listings.length > 3) {
-    const contentControls = document.querySelectorAll('.content-control');
+  if (screen.width > 768 && listings.length > 3) {
+    const contentControls = document.querySelectorAll('.content-toggle');
 
     for (const contentControl of contentControls) {
       contentControl.addEventListener('click', e => {
@@ -4339,6 +4339,7 @@ function launchKeyInformationBox() {
         }
       });
     }
+  } else if (screen.width < 768 && listings.length) {//
   }
 }
 

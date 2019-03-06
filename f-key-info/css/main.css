@@ -14499,7 +14499,13 @@ article figure figcaption a:active {
     padding: 0 0.5rem 0 0;
 }
 
-@media (min-width: 1281px) {
+@media (max-width: 767px) {
+    .key-information-box--short-course .key-information-box__listing:nth-of-type(2) ~ .key-information-box__listing {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
     .key-information-box--short-course .key-information-box__listing {
         display: grid;
         grid-column-gap: 1.5rem;
@@ -14665,18 +14671,59 @@ article figure figcaption a:active {
     }
 }
 
-.key-information-box--short-course .content-control {
+.key-information-box--short-course .content-control .fa-arrow-left,
+.key-information-box--short-course .content-control .fa-arrow-right {
+    top: 50%;
+    position: absolute;
+}
+
+@media (min-width: 769px) {
+    .key-information-box--short-course .content-control .fa-arrow-left,
+    .key-information-box--short-course .content-control .fa-arrow-right {
+        display: none;
+    }
+}
+
+.key-information-box--short-course .content-control .fa-arrow-left {
+    left: 0;
+}
+
+.key-information-box--short-course .content-control .fa-arrow-right {
+    right: 0;
+}
+
+.key-information-box--short-course .content-control .content-toggle {
     display: none;
 }
 
-@media (min-width: 1281px) {
-    .key-information-box--short-course .content-control {
+@media (min-width: 769px) {
+    .key-information-box--short-course .content-control .content-toggle {
         display: block;
         grid-area: more;
         text-align: center;
         padding-top: 1.75rem;
     }
-    .key-information-box--short-course .content-control a {
+}
+
+.key-information-box--short-course .content-control .fa-plus-circle,
+.key-information-box--short-course .content-control .fa-minus-circle {
+    display: none;
+}
+
+.key-information-box--short-course .content-control .fa-plus-circle a,
+.key-information-box--short-course .content-control .fa-minus-circle a {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .key-information-box--short-course .content-control .fa-plus-circle,
+    .key-information-box--short-course .content-control .fa-minus-circle {
+        display: inline;
+        color: #006bbd;
+        padding-right: 0.5rem;
+    }
+    .key-information-box--short-course .content-control .fa-plus-circle a,
+    .key-information-box--short-course .content-control .fa-minus-circle a {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -14701,8 +14748,9 @@ article figure figcaption a:active {
     }
 }
 
-@media (min-width: 1281px) and (hover: hover) {
-    .key-information-box--short-course .content-control a:hover {
+@media (min-width: 769px) and (hover: hover) {
+    .key-information-box--short-course .content-control .fa-plus-circle a:hover,
+    .key-information-box--short-course .content-control .fa-minus-circle a:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -14718,8 +14766,10 @@ article figure figcaption a:active {
     }
 }
 
-@media (min-width: 1281px) {
-    .key-information-box--short-course .content-control a:focus, .key-information-box--short-course .content-control a:active {
+@media (min-width: 769px) {
+    .key-information-box--short-course .content-control .fa-plus-circle a:focus, .key-information-box--short-course .content-control .fa-plus-circle a:active,
+    .key-information-box--short-course .content-control .fa-minus-circle a:focus,
+    .key-information-box--short-course .content-control .fa-minus-circle a:active {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -14735,25 +14785,29 @@ article figure figcaption a:active {
     }
 }
 
-@media (min-width: 1281px) and (prefers-reduced-motion: reduce) {
-    .key-information-box--short-course .content-control a {
+@media (min-width: 769px) and (prefers-reduced-motion: reduce) {
+    .key-information-box--short-course .content-control .fa-plus-circle a,
+    .key-information-box--short-course .content-control .fa-minus-circle a {
         transition: none;
     }
 }
 
-@media (min-width: 1281px) and (hover: hover) {
-    .key-information-box--short-course .content-control a:hover {
+@media (min-width: 769px) and (hover: hover) {
+    .key-information-box--short-course .content-control .fa-plus-circle a:hover,
+    .key-information-box--short-course .content-control .fa-minus-circle a:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-@media (min-width: 1281px) {
-    .key-information-box--short-course .content-control a:visited {
+@media (min-width: 769px) {
+    .key-information-box--short-course .content-control .fa-plus-circle a:visited,
+    .key-information-box--short-course .content-control .fa-minus-circle a:visited {
         border-bottom-color: #4c2c92;
         color: #4c2c92;
     }
-    .key-information-box--short-course .content-control a:focus {
+    .key-information-box--short-course .content-control .fa-plus-circle a:focus,
+    .key-information-box--short-course .content-control .fa-minus-circle a:focus {
         color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
@@ -14765,8 +14819,9 @@ article figure figcaption a:active {
     }
 }
 
-@media (min-width: 1281px) and (hover: hover) {
-    .key-information-box--short-course .content-control a:hover {
+@media (min-width: 769px) and (hover: hover) {
+    .key-information-box--short-course .content-control .fa-plus-circle a:hover,
+    .key-information-box--short-course .content-control .fa-minus-circle a:hover {
         border-bottom-color: #006bbd;
         border-bottom-width: 2px;
         border-bottom-style: solid;
@@ -14774,8 +14829,9 @@ article figure figcaption a:active {
     }
 }
 
-@media (min-width: 1281px) {
-    .key-information-box--short-course .content-control a:active {
+@media (min-width: 769px) {
+    .key-information-box--short-course .content-control .fa-plus-circle a:active,
+    .key-information-box--short-course .content-control .fa-minus-circle a:active {
         background-color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
@@ -14786,19 +14842,18 @@ article figure figcaption a:active {
         outline-style: dotted;
         outline-offset: 3px;
     }
-    .key-information-box--short-course .content-control a:visited {
+    .key-information-box--short-course .content-control .fa-plus-circle a:visited,
+    .key-information-box--short-course .content-control .fa-minus-circle a:visited {
         border-bottom-color: #006bbd;
         color: #006bbd;
     }
-    .key-information-box--short-course .content-control a:hover {
+    .key-information-box--short-course .content-control .fa-plus-circle a:hover,
+    .key-information-box--short-course .content-control .fa-minus-circle a:hover {
         color: #ffffff;
     }
-    .key-information-box--short-course .content-control a:active {
+    .key-information-box--short-course .content-control .fa-plus-circle a:active,
+    .key-information-box--short-course .content-control .fa-minus-circle a:active {
         color: #ffffff;
-    }
-    .key-information-box--short-course .content-control span {
-        color: #006bbd;
-        padding-right: 0.5rem;
     }
 }
 
