@@ -4323,12 +4323,19 @@ function launchKeyInformationBox() {
     for (const contentControl of contentControls) {
       contentControl.addEventListener('click', e => {
         e.preventDefault();
-        const loadMoreText = '<span class=`far fa-plus-circle`></span><a href=`#`>Load more</a>';
-        const loadLessText = '<span class=`far fa-minus-circle`></span><a href=`#`>Load less</a>';
+        let loadMoreText = '<span class=fa-plus-circle></span><a href=#>Load more</a>';
+        let loadLessText = '<span class=fa-minus-circle></span><a href=#>Load less</a>';
         contentControl.classList.toggle('open');
 
         for (let i = 3; i < listings.length; i++) {
           contentControl.classList.contains('open') ? (listings[i].style.display = 'grid') && (contentControl.innerHTML = loadLessText) : (listings[i].style.display = 'none') && (contentControl.innerHTML = loadMoreText);
+        } // Manually add 'far' class. Not possible to set in initial variable declaration
+
+
+        let spans = contentControl.getElementsByTagName('span');
+
+        for (let span of spans) {
+          span.classList.add('far');
         }
       });
     }
