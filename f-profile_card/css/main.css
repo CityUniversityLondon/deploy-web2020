@@ -12142,7 +12142,6 @@ main table td em {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    display: block;
     color: #696969;
     margin-top: 0.2rem;
 }
@@ -12177,32 +12176,37 @@ main table td em {
     }
 }
 
-.card--profile .card__content {
-    align-items: flex-start;
-    flex-direction: row;
-}
-
-.card--profile figure {
-    flex-basis: auto;
+.card--profile .card--profile__description {
     margin-top: 0.5rem;
 }
 
-.card--profile figure img {
+.card--profile .card--profile__thumbnail {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 0.5rem;
+}
+
+.card--profile .card--profile__thumbnail figure {
+    margin-top: 0;
+}
+
+.card--profile .card--profile__thumbnail figure img {
     border-radius: 100%;
     max-width: 114px;
 }
 
-.card--profile figure + .card--profile__description {
+.card--profile .card--profile__thumbnail figure + .card--profile__description {
     flex-basis: 100%;
-    margin-top: 0.5rem;
 }
 
-.card--profile.card--profile__thumbnail .card--profile__description {
+.card--profile .card--profile__thumbnail .card--profile__description {
     flex-basis: 79%;
+    margin-top: 0;
 }
 
 @media (min-width: 433px) {
-    .card--profile.card--profile__thumbnail .card--profile__description {
+    .card--profile .card--profile__thumbnail .card--profile__description {
         padding-left: 2rem;
     }
 }
