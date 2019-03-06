@@ -16167,12 +16167,16 @@ blockquote footer {
 }
 
 .back-to-top-stick .footer__back-to-top__button__label {
-    width: 100px;
+    width: 70px;
     color: grey;
     text-align: center;
     margin-top: 15px;
     display: block;
     background: white;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1rem;
+    padding: 5px;
 }
 
 .generic {

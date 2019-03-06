@@ -3995,8 +3995,7 @@ updateProgress();
 
 window.onscroll = function () {
   updateProgress();
-}; //$(window).scroll(updateProgress);
-
+};
 /*-----end progress meter---------------------------------------- */
 
 
