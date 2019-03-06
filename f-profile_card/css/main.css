@@ -12185,7 +12185,7 @@ main table td em {
     margin-top: 0.5rem;
 }
 
-@media (min-width: 433px) {
+@media (min-width: 769px) {
     .card--profile .card--profile__thumbnail {
         display: flex;
         align-items: flex-start;
@@ -12206,7 +12206,7 @@ main table td em {
     margin-top: 0;
 }
 
-@media (min-width: 433px) {
+@media (min-width: 769px) {
     .card--profile .card--profile__thumbnail .card--profile__description {
         flex-basis: 79%;
         padding-left: 2rem;
