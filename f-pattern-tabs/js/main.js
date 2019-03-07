@@ -5270,10 +5270,10 @@ function toggleLink(link, selected) {
   link.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].selected, selected);
 
   if (selected) {
-    link.removeAttribute('tabindex');
+    //link.removeAttribute('tabindex');
     link.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current, true);
   } else {
-    link.setAttribute('tabindex', -1);
+    link.setAttribute('tabindex', 0);
     link.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current);
   }
 }
@@ -5408,7 +5408,7 @@ function prepareLinks(linkItems) {
 function preparePanels(panels) {
   panels.forEach(panel => {
     panel.setAttribute('role', 'tabpanel');
-    panel.setAttribute('tabindex', -1);
+    panel.setAttribute('tabindex', 0);
     panel.toggleAttribute('hidden', true);
   });
 }

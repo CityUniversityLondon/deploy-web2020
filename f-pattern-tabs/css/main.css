@@ -15664,7 +15664,7 @@ blockquote footer {
         overflow-x: hidden;
         width: 100%;
         position: relative;
-        bottom: -5px;
+        bottom: -7px;
     }
     .js .tabs .tabs__links li {
         flex-grow: 1;
@@ -15713,6 +15713,8 @@ blockquote footer {
         width: 100%;
         position: relative;
         overflow: hidden;
+        padding: 0px;
+        border: 2px solid transparent;
     }
 }
 
@@ -15838,7 +15840,7 @@ blockquote footer {
         transform: translateX(105%);
         animation: slide-right-out 0.2s ease 0s both normal;
         position: absolute;
-        bottom: 0;
+        bottom: 0px;
         left: 0;
         content: '';
         opacity: 0;
@@ -15855,8 +15857,21 @@ blockquote footer {
         transition: none;
     }
     .js .tabs .tabs__links li a[aria-selected='true'] {
-        border-bottom: 8px solid #65218e;
         font-weight: 700;
+    }
+    .js .tabs .tabs__links li a[aria-selected='true'] span {
+        border-bottom: 8px solid #65218e;
+    }
+    .js .tabs .tabs__links li a:hover {
+        border-bottom: 2px solid transparent;
+    }
+    .js .tabs .tabs__links li a:focus {
+        border: 2px dotted black;
+        padding: 0px;
+        background: #f2f2f2;
+    }
+    .js .tabs .tabs__links li a:focus span {
+        outline: none;
     }
     .js .tabs .tabs__links li a span {
         font-family: "Meta Sans", sans-serif;
@@ -15869,6 +15884,9 @@ blockquote footer {
         line-height: 1.25;
         margin-top: 1rem;
         border-bottom: none;
+        display: block;
+        margin-top: 0px;
+        line-height: 2.75;
     }
     .js .tabs .tabs__links li a span i,
     .js .tabs .tabs__links li a span em {
@@ -15941,6 +15959,12 @@ blockquote footer {
 @media screen and (max-width: 768px) {
     .js .tabs--accordion .accordion {
         display: block;
+    }
+    .js .tabs--accordion .accordion__heading button .accordion__heading__indicator {
+        text-align: center;
+        align-self: normal;
+        background: #3e1031;
+        color: white;
     }
     .js .tabs--accordion .tabs {
         display: none;
