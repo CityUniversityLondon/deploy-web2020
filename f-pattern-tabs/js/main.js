@@ -3815,7 +3815,25 @@ const className = 'accordion',
 
 function setSection(heading, open) {
   heading.dataset.open = open;
+  heading.setAttribute('tabindex', '1');
   heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+  let bodyLinks = heading.nextElementSibling.getElementsByTagName('a');
+
+  if (open) {
+    heading.nextElementSibling.classList.add('active');
+    heading.nextElementSibling.style.maxHeight = parseInt(heading.nextElementSibling.scrollHeight + 40) + 'px';
+
+    for (const bodyLink of bodyLinks) {
+      bodyLink.setAttribute('tabindex', '1');
+    }
+  } else {
+    heading.nextElementSibling.classList.remove('active');
+    heading.nextElementSibling.style.maxHeight = null;
+
+    for (const bodyLink of bodyLinks) {
+      bodyLink.setAttribute('tabindex', '-1');
+    }
+  }
 }
 /**
  * Respond to button clicks - open if closed, close if open.
@@ -3917,7 +3935,9 @@ function launchAccordion(accordion) {
 
     if (locationHash === heading.id) {
       idLinked = true;
-      setSection(heading, true);
+      setSection(heading, true); // FF/Safari bug fix
+
+      heading.nextElementSibling.style.maxHeight = '10000px';
     } else {
       setSection(heading, false);
     }
@@ -3926,7 +3946,9 @@ function launchAccordion(accordion) {
   });
 
   if (defaultOpen && !idLinked) {
-    setSection(headings[0], true);
+    setSection(headings[0], true); // FF/Safari bug fix
+
+    headings[0].nextElementSibling.style.maxHeight = '10000px';
   }
 }
 

@@ -11768,109 +11768,179 @@ main table td em {
 
 @media screen {
     .js .accordion > .accordion__body {
-        display: none;
+        max-height: 0;
+        overflow: hidden;
+        background-color: #f2f2f2;
+        transition: max-height 0.2s ease-out;
+        padding: 0 1rem;
+    }
+    .js .accordion > .accordion__body.active {
+        margin-bottom: 1rem;
     }
     .js .accordion > .accordion__heading {
-        border-bottom: 1px solid #1e1e1e;
+        border-bottom: 1px solid #e5e5e5;
+        margin-top: 0;
+    }
+    .js .accordion > .accordion__heading:focus {
+        outline: 2px dotted #0c0c0e;
+        border: 0;
+    }
+    .js .accordion > .accordion__heading:active {
+        border: 0;
+        border-bottom: 1px solid transparent;
+        outline: 0;
     }
     .js .accordion > .accordion__heading button {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-        background-image: none;
-        color: #006bbd;
-        border: none;
+        font-size: 1.125rem;
+        line-height: 1.25;
+        letter-spacing: -0.008em;
         width: 100%;
         text-align: left;
+        padding: 1rem;
+        color: #006bbd;
+        outline: 2px solid transparent;
     }
 }
 
-@media screen and (hover: hover) {
-    .js .accordion > .accordion__heading button:hover {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-        background-image: none;
+@media screen and (min-width: 433px) and (max-width: 768px) {
+    .js .accordion > .accordion__heading button {
+        letter-spacing: -0.011em;
     }
 }
 
-@media screen {
-    .js .accordion > .accordion__heading button:focus, .js .accordion > .accordion__heading button:active {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-        background-image: none;
-    }
-    .js .accordion > .accordion__heading button:focus {
-        color: #1e1e1e;
-        outline-color: #0c0c0e;
-        outline-width: 2px;
-        outline-style: dotted;
+@media screen and (min-width: 769px) and (max-width: 1919px) {
+    .js .accordion > .accordion__heading button {
+        letter-spacing: -0.011em;
     }
 }
 
-@media screen and (hover: hover) {
-    .js .accordion > .accordion__heading button:hover {
-        background-image: none;
-        color: #1e1e1e;
+@media screen and (min-width: 1920px) and (max-width: 3839px) {
+    .js .accordion > .accordion__heading button {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media screen and (min-width: 3840px) and (max-width: 7679px) {
+    .js .accordion > .accordion__heading button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media screen and (min-width: 7680px) {
+    .js .accordion > .accordion__heading button {
+        letter-spacing: -0.017em;
     }
 }
 
 @media screen {
-    .js .accordion > .accordion__heading button:active {
-        outline-color: #0c0c0e;
-        outline-width: 2px;
-        outline-style: dotted;
-        outline-offset: 3px;
-    }
-    .js .accordion > .accordion__heading button[disabled] {
-        color: #1e1e1e;
-    }
-    .js .accordion > .accordion__heading button[disabled]:focus, .js .accordion > .accordion__heading button[disabled]:hover, .js .accordion > .accordion__heading button[disabled]:active {
-        outline: none;
-    }
     .js .accordion > .accordion__heading button div {
         display: grid;
         grid-template-columns: 9fr 1fr;
         grid-column-gap: 1rem;
         grid-row-gap: 1rem;
+        grid-column-gap: 0;
     }
     .js .accordion > .accordion__heading button .accordion__heading__indicator {
         align-self: center;
         text-align: right;
+        height: 100%;
     }
     .js .accordion > .accordion__heading button .accordion__heading__indicator:before {
         content: "\f067";
+        display: inline-block;
+        text-decoration: none;
+        transform: rotate(0deg);
+        transition: 0.3s all;
+    }
+    .js .accordion > .accordion__heading button:hover {
+        text-decoration: underline;
+        color: #006bbd;
+        outline: 2px solid transparent;
+        background: #f2f2f2;
+    }
+    .js .accordion > .accordion__heading button:focus {
+        outline: 2px dotted #0c0c0e;
+        border: 0;
+    }
+    .js .accordion > .accordion__heading button:active {
+        outline: 2px dotted #0c0c0e;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] {
+        margin-top: 1rem;
+        border-bottom: 0;
+    }
+    .js .accordion > .accordion__heading[data-open='true']:focus, .js .accordion > .accordion__heading[data-open='true']:active {
+        border: 0;
+        outline: 0;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] button {
+        border-top: 2px dotted #0c0c0e;
+        border-left: 2px dotted #0c0c0e;
+        border-right: 2px dotted #0c0c0e;
+        border-bottom: 1px solid #d8d8d8;
+        color: #0c0c0e;
+        padding: 0;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] button .accordion__heading__text,
+    .js .accordion > .accordion__heading[data-open='true'] button .accordion__heading__indicator {
+        padding: 1rem;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] button .accordion__heading__text:hover {
+        text-decoration: underline;
     }
     .js .accordion > .accordion__heading[data-open='true'] button .accordion__heading__indicator:before {
-        content: "\f068";
+        display: inline-block;
+        text-decoration: none;
+        transform: rotate(135deg);
+        transition: 0.3s all;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] button:focus, .js .accordion > .accordion__heading[data-open='true'] button:active {
+        border-top: 2px dotted #0c0c0e;
+        border-left: 2px dotted #0c0c0e;
+        border-right: 2px dotted #0c0c0e;
+        border-bottom: 1px solid #d8d8d8;
+        outline: 0;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] button:hover {
+        background: #f2f2f2;
+        color: #0c0c0e;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body {
-        display: block;
+        border-top: 0;
+        border-left: 2px dotted #0c0c0e;
+        border-right: 2px dotted #0c0c0e;
+        border-bottom: 2px dotted #0c0c0e;
+        padding: 1rem;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] + .accordion__body p {
+        margin: 1rem 0;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] + .accordion__body:focus, .js .accordion > .accordion__heading[data-open='true'] + .accordion__body:active {
+        border-width: 0 1px 1px;
+        border-style: dotted;
+        border-color: #0c0c0e;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] + .accordion__body > :first-child {
+        margin-top: 0;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] + .accordion__body > :last-child {
+        margin-bottom: 0;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] + .accordion__body:first-child {
+        margin-top: 0;
+    }
+    .js .accordion > .accordion__heading[data-open='true'] button {
+        background: #f2f2f2;
+    }
+    .js .accordion.accordion-button--blue-red-test .accordion__heading[data-open='true'] .accordion__heading__text {
+        background: blue;
+        color: white;
+    }
+    .js .accordion.accordion-button--blue-red-test .accordion__heading[data-open='true'] .accordion__heading__indicator {
+        background: red;
+        color: white;
     }
 }
 
@@ -15960,11 +16030,47 @@ blockquote footer {
     .js .tabs--accordion .accordion {
         display: block;
     }
+    .js .tabs--accordion .accordion__heading:first-child {
+        border-top: 2px solid #f2f2f2;
+    }
+    .js .tabs--accordion .accordion__heading:first-child:focus {
+        border-top: 2px dotted transparent;
+    }
+    .js .tabs--accordion .accordion__heading {
+        border-bottom: 2px solid #f2f2f2;
+    }
+    .js .tabs--accordion .accordion__heading:active {
+        outline: 2px dotted #0c0c0e;
+        border-bottom: 2px solid #f2f2f2;
+        text-decoration: underline;
+    }
+    .js .tabs--accordion .accordion__heading:focus {
+        border-bottom: 2px dotted transparent;
+    }
+    .js .tabs--accordion .accordion__heading[data-open='true'] button .accordion__heading__text {
+        background: #3e1031;
+        color: white;
+        text-decoration: underline;
+    }
+    .js .tabs--accordion .accordion__heading button {
+        padding: 0px;
+        display: block;
+    }
+    .js .tabs--accordion .accordion__heading button:hover {
+        background: #ffffff;
+        color: #1e1e1e;
+    }
+    .js .tabs--accordion .accordion__heading button .accordion__heading__text {
+        color: #1e1e1e;
+        padding: 1rem;
+    }
     .js .tabs--accordion .accordion__heading button .accordion__heading__indicator {
         text-align: center;
         align-self: normal;
         background: #3e1031;
         color: white;
+        padding: 1rem;
+        text-decoration: underline;
     }
     .js .tabs--accordion .tabs {
         display: none;
