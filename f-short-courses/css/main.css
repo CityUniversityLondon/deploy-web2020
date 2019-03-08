@@ -14701,52 +14701,150 @@ article figure figcaption > span {
     margin-top: 0;
 }
 
-.key-information--short-course > ul > li {
-    display: grid;
-    grid-row-gap: 0;
-}
-
-@media (max-width: 432px) {
-    .key-information--short-course > ul > li {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .key-information--short-course > ul > li {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .key-information--short-course > ul > li {
-        grid-column-gap: 1.5rem;
-    }
-}
-
 @media (max-width: 767px) {
     .key-information--short-course > ul > li {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (min-width: 768px) {
-    .key-information--short-course > ul > li {
-        grid-template-columns: repeat(8, 1fr);
-    }
-}
-
-@media (max-width: 767px) {
-    .key-information--short-course > ul > li {
+        display: grid;
+        grid-row-gap: 0;
         grid-template-rows: repeat(4, auto);
         grid-template-areas: 'heading heading heading heading' 'date date date date' 'location location location location' 'button button button button';
     }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) and (max-width: 432px) {
     .key-information--short-course > ul > li {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 433px) and (max-width: 900px) {
+    .key-information--short-course > ul > li {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 901px) {
+    .key-information--short-course > ul > li {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) and (max-width: 767px) {
+    .key-information--short-course > ul > li {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 767px) and (min-width: 768px) {
+    .key-information--short-course > ul > li {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .key-information--short-course > ul > li {
+        display: grid;
+        grid-row-gap: 0;
         grid-template-rows: repeat(2, auto);
         grid-template-areas: 'heading heading heading heading heading heading heading heading' 'date date date location location location button button';
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (max-width: 432px) {
+    .key-information--short-course > ul > li {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 433px) and (max-width: 900px) {
+    .key-information--short-course > ul > li {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 901px) {
+    .key-information--short-course > ul > li {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (max-width: 767px) {
+    .key-information--short-course > ul > li {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 768px) {
+    .key-information--short-course > ul > li {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .key-information--short-course > ul > li {
+        display: grid;
+        grid-row-gap: 0;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 'heading heading heading heading heading heading heading heading' 'date date date location location location button button';
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 432px) {
+    .key-information--short-course > ul > li {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1280px) and (min-width: 433px) and (max-width: 900px) {
+    .key-information--short-course > ul > li {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1280px) and (min-width: 901px) {
+    .key-information--short-course > ul > li {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 767px) {
+    .key-information--short-course > ul > li {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1280px) and (min-width: 768px) {
+    .key-information--short-course > ul > li {
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1279px) {
+    .key-information--short-course > ul > li {
+        display: grid;
+        grid-row-gap: 0;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading' 'date date date date date location location location location location button button';
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1279px) and (max-width: 432px) {
+    .key-information--short-course > ul > li {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1279px) and (min-width: 433px) and (max-width: 900px) {
+    .key-information--short-course > ul > li {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1279px) and (min-width: 901px) {
+    .key-information--short-course > ul > li {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(12, 1fr);
     }
 }
 
@@ -17521,7 +17619,13 @@ blockquote footer {
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 901px) and (max-width: 1279px) {
+    .key-information--short-course {
+        grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading' 'dates dates dates dates dates dates dates dates dates dates dates dates';
+    }
+}
+
+@media (min-width: 1280px) {
     .key-information--short-course {
         grid-template-areas: '. . heading heading heading heading heading heading heading heading . .' '. . dates dates dates dates dates dates dates dates . .';
     }
