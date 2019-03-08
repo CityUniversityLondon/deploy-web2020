@@ -12344,7 +12344,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     border: 0.125rem solid #dd0036;
     background: #dd0036;
     color: #ffffff;
@@ -12457,7 +12457,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     background: #dd0036;
     border: 0.125rem solid #dd0036;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
@@ -12569,7 +12569,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     background: #dd0036;
     border: 0.125rem solid #dd0036;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
@@ -12706,7 +12706,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     border: 0.125rem solid #dd0036;
     background: #dd0036;
     color: #ffffff;
@@ -12805,7 +12805,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     border: 0.125rem solid #dd0036;
     background: #dd0036;
     color: #ffffff;
@@ -12929,7 +12929,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     background: transparent;
     border: 0.125rem solid #0c0c0e;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
@@ -13045,7 +13045,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     background: transparent;
     border: 0.125rem solid #0c0c0e;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
@@ -13175,7 +13175,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     background: transparent;
     border: 0.125rem solid #ffffff;
     color: #ffffff;
@@ -13288,7 +13288,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     background: transparent;
     border: 0.125rem solid #ffffff;
     color: #ffffff;
@@ -13415,7 +13415,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     background: #dd0036;
     border: 0.125rem solid #dd0036;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
@@ -13559,7 +13559,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     background: #dd0036;
     border: 0.125rem solid #dd0036;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
@@ -18443,7 +18443,7 @@ blockquote footer {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     border: 0.125rem solid #dd0036;
     background: #dd0036;
     color: #ffffff;
@@ -18567,7 +18567,7 @@ blockquote footer {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     background: transparent;
     border: 0.125rem solid #ffffff;
     color: #ffffff;
@@ -18694,7 +18694,7 @@ blockquote footer {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     background: #dd0036;
     border: 0.125rem solid #dd0036;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
