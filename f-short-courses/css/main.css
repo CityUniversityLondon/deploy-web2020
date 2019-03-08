@@ -12374,7 +12374,7 @@ main table td em {
     right: 1.5rem;
     text-decoration: inherit;
     transform: translateX(-0.75rem);
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12488,7 +12488,7 @@ main table td em {
     right: 1.5rem;
     text-decoration: inherit;
     transform: translateX(-0.75rem);
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12602,7 +12602,7 @@ main table td em {
     right: 1.5rem;
     text-decoration: inherit;
     transform: translateX(-0.75rem);
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12736,7 +12736,7 @@ main table td em {
     right: 1.5rem;
     text-decoration: inherit;
     transform: translateX(-0.75rem);
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12837,7 +12837,7 @@ main table td em {
     right: 1.5rem;
     text-decoration: inherit;
     transform: translateX(-0.75rem);
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12960,7 +12960,7 @@ main table td em {
     right: 1.5rem;
     text-decoration: inherit;
     transform: translateX(-0.75rem);
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13076,7 +13076,7 @@ main table td em {
     right: 1.5rem;
     text-decoration: inherit;
     transform: translateX(-0.75rem);
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13205,7 +13205,7 @@ main table td em {
     right: 1.5rem;
     text-decoration: inherit;
     transform: translateX(-0.75rem);
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13318,7 +13318,7 @@ main table td em {
     right: 1.5rem;
     text-decoration: inherit;
     transform: translateX(-0.75rem);
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13449,7 +13449,7 @@ main table td em {
     right: 1.5rem;
     text-decoration: inherit;
     transform: translateX(-0.75rem);
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13596,7 +13596,7 @@ main table td em {
     right: 1.5rem;
     text-decoration: inherit;
     transform: translateX(-0.75rem);
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -18475,7 +18475,7 @@ blockquote footer {
     right: 1.5rem;
     text-decoration: inherit;
     transform: translateX(-0.75rem);
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -18597,7 +18597,7 @@ blockquote footer {
     right: 1.5rem;
     text-decoration: inherit;
     transform: translateX(-0.75rem);
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -18731,7 +18731,7 @@ blockquote footer {
     right: 1.5rem;
     text-decoration: inherit;
     transform: translateX(-0.75rem);
-    transition: all 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
 }
 
 @media (prefers-reduced-motion: reduce) {
