@@ -4303,6 +4303,10 @@ function launchFeedback(elem) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+
+
 
 
 /**
@@ -4315,22 +4319,36 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'keyInformationBox';
 
 function launchKeyInformationBox() {
-  let listings = document.querySelectorAll('.key-information-box__listing'); // Content toggle on desktop if more than three listings
+  let listings = document.querySelectorAll('.key-information-box__listing'),
+      contentControls = document.querySelectorAll('.content-toggle'),
+      counter = 0,
+      prevBtn = document.getElementById('previous-listing'),
+      nextBtn = document.getElementById('next-listing');
+
+  function selectedListing() {
+    for (const listing of listings.entries()) {
+      listing[0] == counter ? listing[1].style.display = 'block' : listing[1].style.display = 'none';
+    }
+  }
+
+  function btnDisable() {
+    let listingsLength = listings.length - 1;
+    counter == 0 ? prevBtn.setAttribute('disabled', true) : counter > 0 && counter < listingsLength ? (prevBtn.removeAttribute('disabled'), nextBtn.removeAttribute('disabled')) : nextBtn.setAttribute('disabled', true);
+  } // Desktop: Toggle control listings when more than three listings exist
+
 
   if (screen.width > 768 && listings.length > 3) {
-    const contentControls = document.querySelectorAll('.content-toggle');
-
     for (const contentControl of contentControls) {
       contentControl.addEventListener('click', e => {
         e.preventDefault();
-        let loadMoreText = '<span class=fa-plus-circle></span><a href=#>Load more</a>';
-        let loadLessText = '<span class=fa-minus-circle></span><a href=#>Load less</a>';
-        contentControl.classList.toggle('open');
+        contentControl.classList.toggle('open'); // Only show first three listings on desktop
 
         for (let i = 3; i < listings.length; i++) {
           contentControl.classList.contains('open') ? (listings[i].style.display = 'grid') && (contentControl.innerHTML = loadLessText) : (listings[i].style.display = 'none') && (contentControl.innerHTML = loadMoreText);
-        } // Manually add 'far' class. Not possible to set in initial variable declaration
+        }
 
+        let loadMoreText = '<span class=fa-plus-circle></span><a href=#>Load more</a>';
+        let loadLessText = '<span class=fa-minus-circle></span><a href=#>Load less</a>'; // Manually add 'far' class. Not possible to set in initial variable declaration
 
         let spans = contentControl.getElementsByTagName('span');
 
@@ -4338,8 +4356,20 @@ function launchKeyInformationBox() {
           span.classList.add('far');
         }
       });
-    }
-  } else if (screen.width < 768 && listings.length) {//
+    } // Mobile: one listing visible at a time
+
+  } else if (screen.width < 768 && listings.length > 1) {
+    btnDisable();
+    prevBtn.addEventListener('click', () => {
+      counter = counter - 1;
+      btnDisable();
+      selectedListing();
+    });
+    nextBtn.addEventListener('click', () => {
+      counter = counter + 1;
+      btnDisable();
+      selectedListing();
+    });
   }
 }
 

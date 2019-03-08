@@ -14734,13 +14734,11 @@ article figure figcaption a:active {
     opacity: 0.3;
 }
 
-.key-information-box--short-course .content-control .content-slider .fa-arrow-left .fa-arrow-left,
-.key-information-box--short-course .content-control .content-slider .fa-arrow-right .fa-arrow-left {
+.key-information-box--short-course .content-control .content-slider .fa-arrow-left {
     left: 0;
 }
 
-.key-information-box--short-course .content-control .content-slider .fa-arrow-left .fa-arrow-right,
-.key-information-box--short-course .content-control .content-slider .fa-arrow-right .fa-arrow-right {
+.key-information-box--short-course .content-control .content-slider .fa-arrow-right {
     right: 0;
 }
 
