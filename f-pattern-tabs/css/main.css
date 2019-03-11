@@ -1070,6 +1070,27 @@
     background-color: #ffffff;
 }
 
+/* ghost animation - underline animation used on tab buttons */
+
+@keyframes slide-left-in {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: none;
+    }
+}
+
+@keyframes slide-right-out {
+    from {
+        transform: none;
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* End of ghost animation */
 /**
  *
  * Call to action Primary style on a dark background
@@ -15692,24 +15713,6 @@ blockquote footer {
     font-size: 1rem;
 }
 
-@keyframes slide-left-in {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: none;
-    }
-}
-
-@keyframes slide-right-out {
-    from {
-        transform: none;
-    }
-    to {
-        transform: translateX(100%);
-    }
-}
-
 @media print {
     .js .tabs .tabs__links {
         display: none;
@@ -15742,9 +15745,7 @@ blockquote footer {
         margin-top: 0;
         max-width: unset;
         text-align: center;
-        /*&:hover .ghost::before {
-                @include ghost-in();
-            }*/
+        margin-right: 0.75rem;
     }
     .js .tabs .tabs__links li a {
         background-color: initial;
@@ -15785,6 +15786,7 @@ blockquote footer {
         overflow: hidden;
         padding: 0px;
         border: 2px solid transparent;
+        color: #696969;
     }
 }
 
@@ -15916,7 +15918,7 @@ blockquote footer {
         opacity: 0;
         background-color: #d8d8d8;
         width: 100%;
-        height: 8px;
+        height: 0.5rem;
         transition: opacity 0.2s ease 0.2s;
         z-index: 0;
     }
@@ -15930,15 +15932,17 @@ blockquote footer {
         font-weight: 700;
     }
     .js .tabs .tabs__links li a[aria-selected='true'] span {
-        border-bottom: 8px solid #65218e;
+        border-bottom: 0.5rem solid #65218e;
+        color: #0c0c0e;
     }
     .js .tabs .tabs__links li a:hover {
         border-bottom: 2px solid transparent;
     }
     .js .tabs .tabs__links li a:focus {
-        border: 2px dotted black;
+        border: 2px dotted #0c0c0e;
         padding: 0px;
         background: #f2f2f2;
+        color: #696969;
     }
     .js .tabs .tabs__links li a:focus span {
         outline: none;
@@ -16049,8 +16053,11 @@ blockquote footer {
     }
     .js .tabs--accordion .accordion__heading[data-open='true'] button .accordion__heading__text {
         background: #3e1031;
-        color: white;
+        color: #ffffff;
         text-decoration: underline;
+    }
+    .js .tabs--accordion .accordion__heading[data-open='true'] button .accordion__heading__indicator {
+        padding: 1rem 0.89rem;
     }
     .js .tabs--accordion .accordion__heading button {
         padding: 0px;

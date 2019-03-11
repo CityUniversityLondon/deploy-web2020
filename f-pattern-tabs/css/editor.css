@@ -1070,6 +1070,27 @@
     background-color: #ffffff;
 }
 
+/* ghost animation - underline animation used on tab buttons */
+
+@keyframes slide-left-in {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: none;
+    }
+}
+
+@keyframes slide-right-out {
+    from {
+        transform: none;
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* End of ghost animation */
 .fa,
 .fas,
 .far,
