@@ -12137,6 +12137,7 @@ main table td em {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
+    color: #ffffff;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12146,7 +12147,7 @@ main table td em {
 }
 
 @media (hover: hover) {
-    .card--course:hover a:hover {
+    .card--course:hover a {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
@@ -12164,7 +12165,6 @@ main table td em {
 }
 
 .card--course:focus {
-    background-color: transparent;
     outline: none;
 }
 
@@ -12270,6 +12270,7 @@ main table td em {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
+    color: #ffffff;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12279,7 +12280,7 @@ main table td em {
 }
 
 @media (hover: hover) {
-    .card--course--related:hover a:hover {
+    .card--course--related:hover a {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
@@ -12297,7 +12298,6 @@ main table td em {
 }
 
 .card--course--related:focus {
-    background-color: transparent;
     outline: none;
 }
 
