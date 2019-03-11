@@ -14499,10 +14499,21 @@ article figure figcaption a:active {
     padding: 0 0.5rem 0 0;
 }
 
-@media (max-width: 899px) {
+@media (max-width: 767px) {
     .key-information-box--short-course .key-information-box__listing {
         padding: 1rem 2rem;
         background-color: #f2f2f2;
+        display: block;
+    }
+}
+
+@media (max-width: 899px) {
+    .key-information-box--short-course .key-information-box__listing {
+        display: grid;
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 'quantity quantity quantity quantity quantity quantity quantity quantity' 'heading heading heading heading heading heading heading heading' 'col1 col1 col1 col2 col2 col2 col3 col3' 'more more more more more more more more';
     }
 }
 
@@ -14516,27 +14527,42 @@ article figure figcaption a:active {
         border-bottom: 1px dotted #cbcbcb;
         padding: 1.75rem 0;
     }
-    .key-information-box--short-course .key-information-box__listing .key-information-box--dates-quantity {
-        grid-area: quantity;
-    }
-    .key-information-box--short-course .key-information-box__listing .key-information-box__date {
-        grid-area: heading;
-        font-size: 1rem;
-        color: #1e1e1e;
-        font-weight: 700;
-    }
-    .key-information-box--short-course .key-information-box__listing .key-information-box__col-one {
-        grid-area: col1;
-    }
-    .key-information-box--short-course .key-information-box__listing .key-information-box__col-two {
-        grid-area: col2;
-    }
-    .key-information-box--short-course .key-information-box__listing .key-information-box__col-three {
-        grid-area: col3;
-    }
     .key-information-box--short-course .key-information-box__listing #places.key-information__data-item {
         text-align: center;
     }
+}
+
+@media (min-width: 1281px) {
+    .key-information-box--short-course .key-information-box__listing {
+        display: grid;
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: '. . quantity quantity quantity quantity quantity quantity quantity quantity . .' '. . heading heading heading heading heading heading heading heading . .' '. . col1 col1 col1 col2 col2 col2 col3 col3 . . ' '. . more more more more more more more more . .';
+    }
+}
+
+.key-information-box--short-course .key-information-box__listing .key-information-box--dates-quantity {
+    grid-area: quantity;
+}
+
+.key-information-box--short-course .key-information-box__listing .key-information-box__date {
+    grid-area: heading;
+    font-size: 1rem;
+    color: #1e1e1e;
+    font-weight: 700;
+}
+
+.key-information-box--short-course .key-information-box__listing .key-information-box__col-one {
+    grid-area: col1;
+}
+
+.key-information-box--short-course .key-information-box__listing .key-information-box__col-two {
+    grid-area: col2;
+}
+
+.key-information-box--short-course .key-information-box__listing .key-information-box__col-three {
+    grid-area: col3;
 }
 
 .key-information-box--short-course .key-information-box__listing .cta-block {

@@ -4322,6 +4322,7 @@ function launchKeyInformationBox() {
   let listings = document.querySelectorAll('.key-information-box__listing'),
       contentControls = document.querySelectorAll('.content-toggle'),
       counter = 0,
+      browserWidth = document.documentElement.scrollWidth,
       prevBtn = document.getElementById('previous-listing'),
       nextBtn = document.getElementById('next-listing'),
       loadMoreText = '<span class=fa-plus-circle></span><a href=#>Load more</a>',
@@ -4340,7 +4341,7 @@ function launchKeyInformationBox() {
   } // Desktop: Toggle control listings when more than three listings exist
 
 
-  if (screen.width > 768 && listings.length > 3) {
+  if (browserWidth > 768 && listings.length > 3) {
     for (const listing of listings.entries()) {
       listing[0] > 2 ? listing[1].style.display = 'none' : listing[1].style.display = 'grid';
     }
@@ -4363,9 +4364,9 @@ function launchKeyInformationBox() {
       });
     } // Mobile: one listing visible at a time
 
-  } else if (screen.width < 768 && listings.length > 1) {
+  } else if (browserWidth < 768 && listings.length > 1) {
     for (const listing of listings.entries()) {
-      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'display';
+      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
     }
 
     navBtnState();
@@ -4379,8 +4380,17 @@ function launchKeyInformationBox() {
       navBtnState();
       listingDisplay();
     });
+  } else if (browserWidth < 768 && listings.length == 1) {
+    for (const listing of listings.entries()) {
+      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
+    }
+
+    navBtnState();
   }
-}
+} // Run function on resize as well as launch as some styles overriden by JS
+
+
+window.onresize = () => launchKeyInformationBox();
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchKeyInformationBox(),
