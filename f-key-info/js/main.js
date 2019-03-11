@@ -4323,21 +4323,28 @@ function launchKeyInformationBox() {
       contentControls = document.querySelectorAll('.content-toggle'),
       counter = 0,
       prevBtn = document.getElementById('previous-listing'),
-      nextBtn = document.getElementById('next-listing');
+      nextBtn = document.getElementById('next-listing'),
+      loadMoreText = '<span class=fa-plus-circle></span><a href=#>Load more</a>',
+      loadLessText = '<span class=fa-minus-circle></span><a href=#>Load less</a>'; // Mobile: Show listing entry based on navigation button clicks
 
-  function selectedListing() {
+  function listingDisplay() {
     for (const listing of listings.entries()) {
       listing[0] == counter ? listing[1].style.display = 'block' : listing[1].style.display = 'none';
     }
-  }
+  } // Mobile: Enable/disable navigation buttons based on position of listing in collection
 
-  function btnDisable() {
+
+  function navBtnState() {
     let listingsLength = listings.length - 1;
     counter == 0 ? prevBtn.setAttribute('disabled', true) : counter > 0 && counter < listingsLength ? (prevBtn.removeAttribute('disabled'), nextBtn.removeAttribute('disabled')) : nextBtn.setAttribute('disabled', true);
   } // Desktop: Toggle control listings when more than three listings exist
 
 
   if (screen.width > 768 && listings.length > 3) {
+    for (const listing of listings.entries()) {
+      listing[0] > 2 ? listing[1].style.display = 'none' : listing[1].style.display = 'grid';
+    }
+
     for (const contentControl of contentControls) {
       contentControl.addEventListener('click', e => {
         e.preventDefault();
@@ -4345,10 +4352,8 @@ function launchKeyInformationBox() {
 
         for (let i = 3; i < listings.length; i++) {
           contentControl.classList.contains('open') ? (listings[i].style.display = 'grid') && (contentControl.innerHTML = loadLessText) : (listings[i].style.display = 'none') && (contentControl.innerHTML = loadMoreText);
-        }
+        } // Manually add 'far' class. Not possible to set in initial variable declaration
 
-        let loadMoreText = '<span class=fa-plus-circle></span><a href=#>Load more</a>';
-        let loadLessText = '<span class=fa-minus-circle></span><a href=#>Load less</a>'; // Manually add 'far' class. Not possible to set in initial variable declaration
 
         let spans = contentControl.getElementsByTagName('span');
 
@@ -4359,16 +4364,20 @@ function launchKeyInformationBox() {
     } // Mobile: one listing visible at a time
 
   } else if (screen.width < 768 && listings.length > 1) {
-    btnDisable();
+    for (const listing of listings.entries()) {
+      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'display';
+    }
+
+    navBtnState();
     prevBtn.addEventListener('click', () => {
       counter = counter - 1;
-      btnDisable();
-      selectedListing();
+      navBtnState();
+      listingDisplay();
     });
     nextBtn.addEventListener('click', () => {
       counter = counter + 1;
-      btnDisable();
-      selectedListing();
+      navBtnState();
+      listingDisplay();
     });
   }
 }
