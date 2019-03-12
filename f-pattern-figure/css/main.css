@@ -12834,6 +12834,10 @@ article figure figcaption {
     }
 }
 
+article figure figcaption .figcaption__credit {
+    display: block;
+}
+
 article figure figcaption a {
     background-color: initial;
     border-bottom-color: initial;
