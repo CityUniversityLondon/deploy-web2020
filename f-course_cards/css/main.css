@@ -12122,8 +12122,8 @@ main table td em {
 }
 
 .card--course--simple {
-    padding: 0.5rem;
     background-color: transparent;
+    padding: 1rem;
 }
 
 .card--course--simple:hover {
@@ -12251,8 +12251,8 @@ main table td em {
 }
 
 .card--course--related-course {
-    padding: 0.5rem;
     background-color: transparent;
+    padding: 1rem;
     display: grid;
     grid-template-columns: 140px auto;
     grid-column-gap: 1.25rem;
@@ -12353,11 +12353,33 @@ main table td em {
     color: #1e1e1e;
 }
 
-.card--course--related-course:focus {
+.card--course--related-course:hover img {
+    transform: scale(1.4);
+}
+
+.card--course--related-course:hover .image-container:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.card--course--related-course:focus, .card--course--related-course:active {
     outline-color: #0c0c0e;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
+}
+
+.card--course--related-course .image-container {
+    overflow: hidden;
+    width: 140px;
+    height: 140px;
+    position: relative;
 }
 
 .card--course--related-course a {
@@ -12376,7 +12398,7 @@ main table td em {
 }
 
 .card--course--related-course img {
-    max-width: 140px;
+    transition: all 0.3s ease-in-out;
 }
 
 .card--profile .card--profile__details {
