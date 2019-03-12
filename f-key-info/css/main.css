@@ -14715,6 +14715,7 @@ article figure figcaption a:active {
 
 .key-information-box--short-course .content-wrapper .content .content-control .content-slider {
     display: none;
+    position: relative;
 }
 
 .key-information-box--short-course .content-wrapper .content .content-control .content-slider .fa-arrow-left,

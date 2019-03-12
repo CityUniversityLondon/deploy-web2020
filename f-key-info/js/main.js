@@ -4371,6 +4371,18 @@ function launchKeyInformationBox() {
 
   } else if (browserWidth < 768 && listings.length > 1) {
     for (const listing of listings.entries()) {
+      // Capture listing height and set to data attribute
+      listing[1].style.display = 'block';
+      listing[1].setAttribute('data-height', listing[1].offsetHeight);
+      listing[1].style.display = 'none'; // On load, set mobile navigation buttons at correct height
+
+      if (counter == 0 && listing[0] == 0) {
+        let navBtnHeight = listing[1].getAttribute('data-height'); // console.log(navBtnHeight);
+
+        prevBtn.style.top = `-${navBtnHeight}px`;
+        nextBtn.style.top = `-${navBtnHeight}px`;
+      }
+
       listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
     }
 
@@ -4379,11 +4391,25 @@ function launchKeyInformationBox() {
       counter = counter - 1;
       navBtnState();
       listingDisplay();
+
+      for (const listing of listings.entries()) {
+        if (counter == listing[0]) {
+          prevBtn.style.top = `-${listing[1].getAttribute('data-height')}px`;
+          nextBtn.style.top = `-${listing[1].getAttribute('data-height')}px`;
+        }
+      }
     });
     nextBtn.addEventListener('click', () => {
       counter = counter + 1;
       navBtnState();
       listingDisplay();
+
+      for (const listing of listings.entries()) {
+        if (counter == listing[0]) {
+          prevBtn.style.top = `-${listing[1].getAttribute('data-height')}px`;
+          nextBtn.style.top = `-${listing[1].getAttribute('data-height')}px`;
+        }
+      }
     });
   } else if (browserWidth < 768 && listings.length == 1) {
     for (const listing of listings.entries()) {
