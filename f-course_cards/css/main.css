@@ -12353,6 +12353,11 @@ main table td em {
     color: #1e1e1e;
 }
 
+.card--course--related-course:hover a:before {
+    opacity: 1;
+    width: 100%;
+}
+
 .card--course--related-course:hover img {
     transform: scale(1.4);
 }
@@ -12375,6 +12380,17 @@ main table td em {
     outline-offset: 3px;
 }
 
+.card--course--related-course:focus a:before {
+    background: #696969;
+    bottom: -2px;
+    content: '';
+    display: block;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
 .card--course--related-course .image-container {
     overflow: hidden;
     width: 140px;
@@ -12389,12 +12405,32 @@ main table td em {
     border: none !important;
     /* article a overrides */
     color: #696969;
+    position: relative;
 }
 
 .card--course--related-course a:hover {
     background-image: none !important;
     transition: none !important;
     border: none !important;
+}
+
+.card--course--related-course a:before {
+    background: #1e1e1e;
+    bottom: -2px;
+    content: '';
+    display: block;
+    height: 3px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s ease, width 0.6s ease;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--course--related-course a:before {
+        transition: none;
+    }
 }
 
 .card--course--related-course img {
