@@ -4321,6 +4321,7 @@ const className = 'keyInformationBox';
 function launchKeyInformationBox() {
   let listings = document.querySelectorAll('.key-information-box__listing'),
       contentControls = document.querySelectorAll('.content-toggle'),
+      contentSliders = document.querySelectorAll('.content-slider'),
       counter = 0,
       browserWidth = document.documentElement.scrollWidth,
       prevBtn = document.getElementById('previous-listing'),
@@ -4336,6 +4337,10 @@ function launchKeyInformationBox() {
 
 
   function navBtnState() {
+    for (const contentSlider of contentSliders) {
+      contentSlider.style.display = 'block';
+    }
+
     let listingsLength = listings.length - 1;
     counter == 0 ? prevBtn.setAttribute('disabled', true) : counter > 0 && counter < listingsLength ? (prevBtn.removeAttribute('disabled'), nextBtn.removeAttribute('disabled')) : nextBtn.setAttribute('disabled', true);
   } // Desktop: Toggle control listings when more than three listings exist
