@@ -4326,6 +4326,7 @@ function launchKeyInformationBox() {
       browserWidth = document.documentElement.scrollWidth,
       prevBtn = document.getElementById('previous-listing'),
       nextBtn = document.getElementById('next-listing'),
+      listingHeight = '',
       loadMoreText = '<span class=fa-plus-circle></span><a href=#>Load more</a>',
       loadLessText = '<span class=fa-minus-circle></span><a href=#>Load less</a>'; // Mobile: Show listing entry based on navigation button clicks
 
@@ -4343,6 +4344,17 @@ function launchKeyInformationBox() {
 
     let listingsLength = listings.length - 1;
     counter == 0 ? prevBtn.setAttribute('disabled', true) : counter > 0 && counter < listingsLength ? (prevBtn.removeAttribute('disabled'), nextBtn.removeAttribute('disabled')) : nextBtn.setAttribute('disabled', true);
+  } // Mobile: Set mobile listings navigation buttons to correct position based on listing height
+
+
+  function navBtnPosition() {
+    for (const listing of listings.entries()) {
+      if (counter == listing[0]) {
+        listingHeight = listing[1].getAttribute('data-height');
+        prevBtn.style.top = parseInt(`-${listingHeight}`) + 100 + 'px';
+        nextBtn.style.top = parseInt(`-${listingHeight}`) + 100 + 'px';
+      }
+    }
   } // Desktop: Toggle control listings when more than three listings exist
 
 
@@ -4376,13 +4388,7 @@ function launchKeyInformationBox() {
       listing[1].setAttribute('data-height', listing[1].offsetHeight);
       listing[1].style.display = 'none'; // On load, set mobile navigation buttons at correct height
 
-      if (counter == 0 && listing[0] == 0) {
-        let navBtnHeight = listing[1].getAttribute('data-height'); // console.log(navBtnHeight);
-
-        prevBtn.style.top = `-${navBtnHeight}px`;
-        nextBtn.style.top = `-${navBtnHeight}px`;
-      }
-
+      counter == 0 && listing[0] == 0 ? navBtnPosition() : null;
       listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
     }
 
@@ -4390,26 +4396,14 @@ function launchKeyInformationBox() {
     prevBtn.addEventListener('click', () => {
       counter = counter - 1;
       navBtnState();
+      navBtnPosition();
       listingDisplay();
-
-      for (const listing of listings.entries()) {
-        if (counter == listing[0]) {
-          prevBtn.style.top = `-${listing[1].getAttribute('data-height')}px`;
-          nextBtn.style.top = `-${listing[1].getAttribute('data-height')}px`;
-        }
-      }
     });
     nextBtn.addEventListener('click', () => {
       counter = counter + 1;
       navBtnState();
+      navBtnPosition();
       listingDisplay();
-
-      for (const listing of listings.entries()) {
-        if (counter == listing[0]) {
-          prevBtn.style.top = `-${listing[1].getAttribute('data-height')}px`;
-          nextBtn.style.top = `-${listing[1].getAttribute('data-height')}px`;
-        }
-      }
     });
   } else if (browserWidth < 768 && listings.length == 1) {
     for (const listing of listings.entries()) {
@@ -4417,6 +4411,7 @@ function launchKeyInformationBox() {
     }
 
     navBtnState();
+    navBtnPosition();
   }
 } // Run function on resize as well as launch as some styles overriden by JS
 

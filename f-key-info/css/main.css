@@ -14519,21 +14519,21 @@ article figure figcaption a:active {
     display: grid;
 }
 
-@media (min-width: 768px) and (max-width: 899px) {
-    .key-information-box--short-course .content-wrapper .content .key-information-box__listing {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas: 'quantity quantity quantity quantity quantity quantity quantity quantity' 'heading heading heading heading heading heading heading heading' 'col1 col1 col1 col2 col2 col2 col3 col3' 'more more more more more more more more';
-    }
-}
-
 @media (max-width: 767px) {
     .key-information-box--short-course .content-wrapper .content .key-information-box__listing {
         padding: 1rem 2rem;
         background-color: #f2f2f2;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas: 'quantity quantity quantity quantity' 'heading heading heading heading' 'col1 col1 col1 col1' 'col2 col2 col2 col2' 'col3 col3 col3 col3' 'more more more more';
+    }
+}
+
+@media (min-width: 768px) and (max-width: 899px) {
+    .key-information-box--short-course .content-wrapper .content .key-information-box__listing {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 'quantity quantity quantity quantity quantity quantity quantity quantity' 'heading heading heading heading heading heading heading heading' 'col1 col1 col1 col2 col2 col2 col3 col3' 'more more more more more more more more';
     }
 }
 
@@ -14778,11 +14778,11 @@ article figure figcaption a:active {
 }
 
 .key-information-box--short-course .content-wrapper .content .content-control .content-slider .fa-arrow-left {
-    left: 0;
+    left: -1.5rem;
 }
 
 .key-information-box--short-course .content-wrapper .content .content-control .content-slider .fa-arrow-right {
-    right: 0;
+    right: -1.5rem;
 }
 
 .key-information-box--short-course .content-wrapper .content .content-control .content-toggle {
