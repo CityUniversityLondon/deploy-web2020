@@ -14921,28 +14921,11 @@ blockquote footer {
     margin-top: 1rem;
 }
 
-.timetable-dates {
+.timetable {
     padding-bottom: 1.5rem;
 }
 
-@media (min-width: 769px) {
-    .timetable-dates {
-        display: grid;
-        grid-template-columns: 22% auto;
-    }
-}
-
-.timetable-dates .column:first-child {
-    border-top: 3px dotted #5d184a;
-}
-
-@media (min-width: 769px) {
-    .timetable-dates .column:first-child {
-        border: none;
-    }
-}
-
-.timetable-dates .heading {
+.timetable .heading {
     color: #0c0c0e;
     display: table;
     height: 100%;
@@ -14951,70 +14934,288 @@ blockquote footer {
 }
 
 @media (min-width: 769px) {
-    .timetable-dates .heading {
+    .timetable .heading {
         padding: 0;
         border-left: 3px dotted #5d184a;
     }
-    .timetable-dates .heading span {
+    .timetable .heading span {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
     }
 }
 
-.timetable-dates .heading span {
+.timetable .heading span {
     font-weight: 700;
 }
 
-.timetable-dates .row {
+.timetable .row {
     background-color: #ffffff;
     margin-bottom: 2px;
     padding: 0.6rem 1rem;
 }
 
-.timetable-dates .row:last-child {
+.timetable .row:last-child {
     margin-bottom: 0;
 }
 
-.timetable-dates .row span {
+.timetable .row span {
     display: inline-block;
     padding: 0.2rem 0;
 }
 
 @media (min-width: 769px) {
-    .timetable-dates .row span {
+    .timetable .row span {
         padding: 0;
     }
 }
 
-.timetable-dates .row span.separator {
+.timetable .row span.separator {
     color: #cbcbcb;
     padding: 0;
 }
 
-.timetable-dates .row span.last-row span {
+.timetable .row span.last-row span {
     display: none;
 }
 
 @media (min-width: 769px) {
-    .timetable-dates .row span.last-row span {
+    .timetable .row span.last-row span {
         display: inline;
     }
 }
 
-.timetable-dates .row .icon {
+.timetable .row .icon {
     padding-right: 0.3rem;
     color: #5d184a;
 }
 
+.timetable-terms {
+    padding-bottom: 1.5rem;
+}
+
+.timetable-terms .heading {
+    color: #0c0c0e;
+    display: table;
+    height: 100%;
+    width: 100%;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+}
+
+@media (min-width: 769px) {
+    .timetable-terms .heading {
+        padding: 0;
+        border-left: 3px dotted #5d184a;
+    }
+    .timetable-terms .heading span {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+.timetable-terms .heading span {
+    font-weight: 700;
+}
+
+.timetable-terms .row {
+    background-color: #ffffff;
+    margin-bottom: 2px;
+    padding: 0.6rem 1rem;
+}
+
+.timetable-terms .row:last-child {
+    margin-bottom: 0;
+}
+
+.timetable-terms .row span {
+    display: inline-block;
+    padding: 0.2rem 0;
+}
+
+@media (min-width: 769px) {
+    .timetable-terms .row span {
+        padding: 0;
+    }
+}
+
+.timetable-terms .row span.separator {
+    color: #cbcbcb;
+    padding: 0;
+}
+
+.timetable-terms .row span.last-row span {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .timetable-terms .row span.last-row span {
+        display: inline;
+    }
+}
+
+.timetable-terms .row .icon {
+    padding-right: 0.3rem;
+    color: #5d184a;
+}
+
+@media (min-width: 769px) {
+    .timetable-terms {
+        display: grid;
+        grid-template-columns: 22% auto;
+    }
+}
+
+.timetable-terms .column:first-child {
+    border-top: 3px dotted #5d184a;
+}
+
+@media (min-width: 769px) {
+    .timetable-terms .column:first-child {
+        border: none;
+    }
+}
+
 .timetable-text {
+    padding-bottom: 1.5rem;
     padding-left: 2.5rem;
     border-left: 8px solid #7c2062;
 }
 
+.timetable-text .heading {
+    color: #0c0c0e;
+    display: table;
+    height: 100%;
+    width: 100%;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+}
+
+@media (min-width: 769px) {
+    .timetable-text .heading {
+        padding: 0;
+        border-left: 3px dotted #5d184a;
+    }
+    .timetable-text .heading span {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+.timetable-text .heading span {
+    font-weight: 700;
+}
+
+.timetable-text .row {
+    background-color: #ffffff;
+    margin-bottom: 2px;
+    padding: 0.6rem 1rem;
+}
+
+.timetable-text .row:last-child {
+    margin-bottom: 0;
+}
+
+.timetable-text .row span {
+    display: inline-block;
+    padding: 0.2rem 0;
+}
+
+@media (min-width: 769px) {
+    .timetable-text .row span {
+        padding: 0;
+    }
+}
+
+.timetable-text .row span.separator {
+    color: #cbcbcb;
+    padding: 0;
+}
+
+.timetable-text .row span.last-row span {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .timetable-text .row span.last-row span {
+        display: inline;
+    }
+}
+
+.timetable-text .row .icon {
+    padding-right: 0.3rem;
+    color: #5d184a;
+}
+
 .timetable-info {
+    padding-bottom: 1.5rem;
     padding-left: 2.5rem;
     position: relative;
+}
+
+.timetable-info .heading {
+    color: #0c0c0e;
+    display: table;
+    height: 100%;
+    width: 100%;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+}
+
+@media (min-width: 769px) {
+    .timetable-info .heading {
+        padding: 0;
+        border-left: 3px dotted #5d184a;
+    }
+    .timetable-info .heading span {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+.timetable-info .heading span {
+    font-weight: 700;
+}
+
+.timetable-info .row {
+    background-color: #ffffff;
+    margin-bottom: 2px;
+    padding: 0.6rem 1rem;
+}
+
+.timetable-info .row:last-child {
+    margin-bottom: 0;
+}
+
+.timetable-info .row span {
+    display: inline-block;
+    padding: 0.2rem 0;
+}
+
+@media (min-width: 769px) {
+    .timetable-info .row span {
+        padding: 0;
+    }
+}
+
+.timetable-info .row span.separator {
+    color: #cbcbcb;
+    padding: 0;
+}
+
+.timetable-info .row span.last-row span {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .timetable-info .row span.last-row span {
+        display: inline;
+    }
+}
+
+.timetable-info .row .icon {
+    padding-right: 0.3rem;
+    color: #5d184a;
 }
 
 .timetable-info span {
