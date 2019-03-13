@@ -16118,6 +16118,28 @@ blockquote footer {
             transition: padding 1s ease; */
 }
 
+.footer__back-to-top a .footer__back-to-top__button__label {
+    color: #696969;
+    border-bottom: 2px solid #696969;
+}
+
+.footer__back-to-top a .footer__back-to-top__button__arrow {
+    color: white;
+    background: gray;
+    border-radius: 50%;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.footer__back-to-top a .footer__back-to-top__button__arrow:before {
+    vertical-align: middle;
+}
+
 .footer__back-to-top a .progress-circle {
     display: none;
 }
@@ -16166,11 +16188,13 @@ blockquote footer {
     height: 50px;
     width: 50px;
     background: #696969;
+    margin-left: 0px;
 }
 
 .back-to-top-stick .footer__back-to-top__button .footer__back-to-top__button__arrow:before {
     border-top: 2px solid white;
     padding-top: 8px;
+    vertical-align: initial;
 }
 
 .back-to-top-stick .footer__back-to-top__button__label {
