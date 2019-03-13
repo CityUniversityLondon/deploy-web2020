@@ -4320,15 +4320,15 @@ const className = 'keyInformationBox';
 
 function launchKeyInformationBox() {
   let listings = document.querySelectorAll('.key-information-box__listing'),
-      contentControls = document.querySelectorAll('.content-toggle'),
+      contentToggles = document.querySelectorAll('.content-toggle'),
       contentSliders = document.querySelectorAll('.content-slider'),
       counter = 0,
       browserWidth = document.documentElement.scrollWidth,
       prevBtn = document.getElementById('previous-listing'),
       nextBtn = document.getElementById('next-listing'),
-      listingHeight = ''; // loadMoreText =
-  //     '<span class=fa-plus-circle></span><a href=#>Load more</a>';
-  // Mobile: Show listing entry based on navigation button clicks
+      listingHeight = '',
+      listingsVisible = [],
+      listingsLength = []; // Mobile: Show listing entry based on navigation button clicks
 
   function listingDisplay() {
     for (const listing of listings.entries()) {
@@ -4357,81 +4357,36 @@ function launchKeyInformationBox() {
     }
   }
 
-  let listingsVisible = [];
-  let listingsLength = [];
-
   function listingsControl() {
-    // listingsVisible = [];
+    // Clear listings length array as this runs on every 'Load more' click
     listingsLength = [];
 
     for (const listing of listings.entries()) {
       listingsLength.push(listings.length);
       listing[0] > 2 ? listing[1].style.display = 'none' : listing[1].style.display = 'grid';
+      listing[1].style.display == 'grid' ? listingsVisible.push(listing[1].style.display) : null;
+    }
 
-      if (listing[1].style.display == 'grid') {
-        listingsVisible.push(listing[1].style.display);
-      }
-    } // console.log(listingsLength.length);
-    // console.log(listingsVisible.length);
-
+    listingsVisible.length >= listingsLength.length ? contentToggles[0].style.display = 'none' : null;
   } // Desktop: Toggle control listings when more than three listings exist
 
 
   if (browserWidth > 768 && listings.length > 3) {
     listingsControl();
 
-    for (const contentControl of contentControls) {
-      contentControl.addEventListener('click', e => {
-        let preClickVis = listingsVisible.length;
+    for (const contentToggle of contentToggles) {
+      contentToggle.addEventListener('click', e => {
+        // This will increase with each 'Load more' click, so visible listings
+        // must be captured before any further listings are made visible
+        let preExpandListingsVisible = listingsVisible.length;
         e.preventDefault();
-        listingsControl();
 
-        for (const listing of listings.entries()) {
-          if (listing[0] < preClickVis + 3) {
-            listing[1].style.display = 'grid';
-          } else {
-            listing[1].style.display = 'none';
-          } // listing[0] > (listingsVisible.length + 2) && listing[0] < (listingsLength - 5)
-          //     ? (listing[1].style.display = 'none')
-          //     : (listing[1].style.display = 'grid');
-          // console.log(listing[1]);
-          // console.log('All listings: ' + listings.length);
-          // if (listing[1].style.display == 'grid') {
-          //     visibleListings = listings.length;
-          //     // console.log(visibleListings);
-          //     for (
-          //         let i = visibleListings;
-          //         i < listings.length;
-          //         i++
-          //     ) {
-          //         listings[i + 1].style.display = 'grid';
-          //     }
-          // console.log(visibleListings);
-          // }
-          // visibleListings = (listing.style.display = 'grid');
-          // visibleListings = visibleListings.length;
-          // console.log(visibleListings);
+        if (preExpandListingsVisible < listings.length) {
+          listingsControl();
 
-        } // Only show first three listings on desktop
-        // for (i; i < listings.length; i++) {
-        //     listings[i].style.display = 'grid';
-        //     // i++;
-        //     console.log(i);
-        //     return i;
-        // }
-        // for (let i = 3; i < listings.length; i++) {
-        //     contentControl.classList.contains('open')
-        //         ? (listings[i+1].style.display = 'grid') &&
-        //           (contentControl.innerHTML = loadMoreText)
-        //         : null;
-        // }
-        // Manually add 'far' class. Not possible to set in initial variable declaration
-
-
-        let spans = contentControl.getElementsByTagName('span');
-
-        for (let span of spans) {
-          span.classList.add('far');
+          for (const listing of listings.entries()) {
+            listing[0] < preExpandListingsVisible + 3 ? listing[1].style.display = 'grid' : listing[1].style.display = 'none';
+          }
         }
       });
     } // Mobile: one listing visible at a time
