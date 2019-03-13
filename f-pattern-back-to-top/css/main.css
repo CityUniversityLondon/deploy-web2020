@@ -16084,6 +16084,7 @@ blockquote footer {
     border-bottom: none;
     color: black;
     font-size: 0.889rem;
+    transition: opacity 1s ease;
 }
 
 .footer__back-to-top a:active {
@@ -16151,6 +16152,7 @@ blockquote footer {
     z-index: 100;
     text-decoration: none;
     width: 60px;
+    opacity: 0;
 }
 
 .back-to-top-stick .footer__back-to-top__button {
@@ -16209,6 +16211,11 @@ blockquote footer {
     line-height: 1.1rem;
     padding: 5px;
     display: none;
+}
+
+.back-to-top-show {
+    opacity: 1 !important;
+    transition: opacity 1s ease;
 }
 
 .generic {

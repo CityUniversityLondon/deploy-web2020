@@ -3959,46 +3959,83 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 /**
- *  Back to top link button which appears on the up scroll and on long pages
+ *  Back to top link button only appears on long pages and when you have scrolled down long enough
  *
  */
-//const className = 'footer__back-to-top__button';
-//var lastScrollTop = 0; // for calculating scrolling direction
 const scrollToTopBut = document.getElementsByClassName('footer__back-to-top')[0].querySelectorAll('a')[0];
+const viewPortHeight = window.innerHeight; // calculates viewport height
+
+const docHeight = document.documentElement.scrollHeight; // calculates page height
+
+/**
+ *  Parameters
+ *
+ */
+
+const pageHeight = 1.5; // only appears on long pages which are 'X' times the viewport height
+
+const scrollPos = 1; // sets how many viewport heights you need to scroll down for back to top to appear
+
+/**
+ *  Initialises for long pages only
+ *
+ */
+
+function initBacktoTop() {
+  if (docHeight > viewPortHeight * pageHeight) {
+    scrollToTopBut.style.opacity = 0;
+    scrollToTopBut.classList.add('back-to-top-stick');
+  }
+}
+/**
+ *  Button fading behaviour
+ *
+ */
+
 
 function scrollButBehav() {
-  scrollToTopBut.classList.add('back-to-top-stick');
+  var screenPos = window.pageYOffset; // calculates scroll position
+
+  if (screenPos > viewPortHeight * scrollPos) {
+    // shows button when scrolled down far enough - see parameters
+    scrollToTopBut.classList.add('back-to-top-show');
+  } else if (screenPos < 200) {
+    // hides button when close to top of the page
+    scrollToTopBut.classList.remove('back-to-top-show');
+  }
 }
-/*-----start progress meter---------------------------------------- */
+/**
+ *  Progress meter:
+ *
+ */
 // 1. Set up SVG animation
 
 
-var progressPath = document.querySelector('path');
-var pathLength = progressPath.getTotalLength();
+const progressPath = document.querySelector('path');
+let pathLength = progressPath.getTotalLength();
 progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
 progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
 progressPath.style.strokeDashoffset = pathLength;
 progressPath.getBoundingClientRect();
-progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 300ms linear'; // 2. Define updateProgress function
+progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 0ms linear'; // 2. Define updateProgress function
 
 var updateProgress = function updateProgress() {
   // calculate values
-  var scroll = window.pageYOffset;
-  var height = document.documentElement.scrollHeight - window.innerHeight;
-  var progress = pathLength - scroll * pathLength / height; // update dashOffset
+  let scroll = window.pageYOffset;
+  let height = document.documentElement.scrollHeight - window.innerHeight;
+  let progress = pathLength - scroll * pathLength / height; // update dashOffset
 
-  progressPath.style.strokeDashoffset = progress; // update progress count
+  progressPath.style.strokeDashoffset = progress;
 }; // 3. trigger updateProgress once on load and then on scroll
 
 
-updateProgress();
-
 window.onscroll = function () {
   updateProgress();
+  scrollButBehav();
 };
-/*-----end progress meter---------------------------------------- */
 
-
+updateProgress();
+initBacktoTop();
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: scrollButBehav,
   launchQuery: `.${'footer__back-to-top__button'}`
