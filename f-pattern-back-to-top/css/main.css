@@ -16089,10 +16089,12 @@ blockquote footer {
 .footer__back-to-top a:active {
     color: black;
     outline: 2px dotted black;
+    background: none;
+    border-bottom-width: 0px;
 }
 
 .footer__back-to-top a:focus {
-    outline: 3px solid black;
+    outline: 2px dotted black;
     color: black;
     border-bottom-width: 0px;
 }
@@ -16109,10 +16111,11 @@ blockquote footer {
 }
 
 .footer__back-to-top a:hover .footer__back-to-top__button__arrow {
-    padding-top: 0px;
-    padding-bottom: 5px;
-    border-top-color: black;
-    transition: padding 1s ease;
+    background: #0c0c0e;
+    /* padding-top: 0px;
+            padding-bottom: 5px;
+            border-top-color: black;
+            transition: padding 1s ease; */
 }
 
 .footer__back-to-top a .progress-circle {
@@ -16125,18 +16128,15 @@ blockquote footer {
     bottom: 10px;
     z-index: 100;
     text-decoration: none;
-    width: 100px;
+    width: 60px;
 }
 
 .back-to-top-stick .footer__back-to-top__button {
     width: 60px;
     height: 60px;
-    box-shadow: 1px 1px 10px grey;
     border-radius: 50%;
-    background-color: white;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
 }
 
 .back-to-top-stick .footer__back-to-top__button svg path {
@@ -16148,22 +16148,29 @@ blockquote footer {
 }
 
 .back-to-top-stick .footer__back-to-top__button svg.progress-circle path {
-    stroke: #7de0c6;
+    stroke: #0c0c0e;
     stroke-width: 5;
 }
 
 .back-to-top-stick .footer__back-to-top__button .footer__back-to-top__button__arrow {
-    border-top: solid 2px grey;
-    padding-top: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding-top: 21px;
+    left: 5px;
     text-align: center;
     width: 20px;
-    top: 15px;
+    top: 5px;
     display: block;
     position: absolute;
-    font-size: 20px;
-    color: grey;
+    font-size: 16px;
+    color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background: #696969;
+}
+
+.back-to-top-stick .footer__back-to-top__button .footer__back-to-top__button__arrow:before {
+    border-top: 2px solid white;
+    padding-top: 8px;
 }
 
 .back-to-top-stick .footer__back-to-top__button__label {
@@ -16177,6 +16184,7 @@ blockquote footer {
     margin-right: auto;
     line-height: 1.1rem;
     padding: 5px;
+    display: none;
 }
 
 .generic {
