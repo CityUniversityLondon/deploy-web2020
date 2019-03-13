@@ -4355,12 +4355,14 @@ function launchKeyInformationBox() {
         nextBtn.style.top = parseInt(`-${listingHeight}`) + 100 + 'px';
       }
     }
-  } // Desktop: Toggle control listings when more than three listings exist
+  }
 
+  let listingsVisible = [];
+  let listingsLength = [];
 
-  if (browserWidth > 768 && listings.length > 3) {
-    let listingsVisible = [];
-    let listingsLength = [];
+  function listingsControl() {
+    // listingsVisible = [];
+    listingsLength = [];
 
     for (const listing of listings.entries()) {
       listingsLength.push(listings.length);
@@ -4372,22 +4374,41 @@ function launchKeyInformationBox() {
     } // console.log(listingsLength.length);
     // console.log(listingsVisible.length);
 
+  } // Desktop: Toggle control listings when more than three listings exist
+
+
+  if (browserWidth > 768 && listings.length > 3) {
+    listingsControl();
 
     for (const contentControl of contentControls) {
       contentControl.addEventListener('click', e => {
+        let preClickVis = listingsVisible.length;
         e.preventDefault();
-        let visibleListings = 0;
+        listingsControl();
 
         for (const listing of listings.entries()) {
+          if (listing[0] < preClickVis + 3) {
+            listing[1].style.display = 'grid';
+          } else {
+            listing[1].style.display = 'none';
+          } // listing[0] > (listingsVisible.length + 2) && listing[0] < (listingsLength - 5)
+          //     ? (listing[1].style.display = 'none')
+          //     : (listing[1].style.display = 'grid');
+          // console.log(listing[1]);
           // console.log('All listings: ' + listings.length);
-          if (listing[1].style.display == 'grid') {
-            visibleListings = listings.length; // console.log(visibleListings);
-
-            for (let i = visibleListings; i < listings.length; i++) {
-              listings[i + 1].style.display = 'grid';
-            } // console.log(visibleListings);
-
-          } // visibleListings = (listing.style.display = 'grid');
+          // if (listing[1].style.display == 'grid') {
+          //     visibleListings = listings.length;
+          //     // console.log(visibleListings);
+          //     for (
+          //         let i = visibleListings;
+          //         i < listings.length;
+          //         i++
+          //     ) {
+          //         listings[i + 1].style.display = 'grid';
+          //     }
+          // console.log(visibleListings);
+          // }
+          // visibleListings = (listing.style.display = 'grid');
           // visibleListings = visibleListings.length;
           // console.log(visibleListings);
 
