@@ -16139,6 +16139,7 @@ blockquote footer {
 
 .footer__back-to-top a .footer__back-to-top__button__arrow:before {
     vertical-align: middle;
+    padding-top: 3px;
 }
 
 .footer__back-to-top a .progress-circle {
