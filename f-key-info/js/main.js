@@ -4326,9 +4326,9 @@ function launchKeyInformationBox() {
       browserWidth = document.documentElement.scrollWidth,
       prevBtn = document.getElementById('previous-listing'),
       nextBtn = document.getElementById('next-listing'),
-      listingHeight = '',
-      loadMoreText = '<span class=fa-plus-circle></span><a href=#>Load more</a>',
-      loadLessText = '<span class=fa-minus-circle></span><a href=#>Load less</a>'; // Mobile: Show listing entry based on navigation button clicks
+      listingHeight = ''; // loadMoreText =
+  //     '<span class=fa-plus-circle></span><a href=#>Load more</a>';
+  // Mobile: Show listing entry based on navigation button clicks
 
   function listingDisplay() {
     for (const listing of listings.entries()) {
@@ -4359,18 +4359,52 @@ function launchKeyInformationBox() {
 
 
   if (browserWidth > 768 && listings.length > 3) {
+    let listingsVisible = [];
+    let listingsLength = [];
+
     for (const listing of listings.entries()) {
+      listingsLength.push(listings.length);
       listing[0] > 2 ? listing[1].style.display = 'none' : listing[1].style.display = 'grid';
-    }
+
+      if (listing[1].style.display == 'grid') {
+        listingsVisible.push(listing[1].style.display);
+      }
+    } // console.log(listingsLength.length);
+    // console.log(listingsVisible.length);
+
 
     for (const contentControl of contentControls) {
       contentControl.addEventListener('click', e => {
         e.preventDefault();
-        contentControl.classList.toggle('open'); // Only show first three listings on desktop
+        let visibleListings = 0;
 
-        for (let i = 3; i < listings.length; i++) {
-          contentControl.classList.contains('open') ? (listings[i].style.display = 'grid') && (contentControl.innerHTML = loadLessText) : (listings[i].style.display = 'none') && (contentControl.innerHTML = loadMoreText);
-        } // Manually add 'far' class. Not possible to set in initial variable declaration
+        for (const listing of listings.entries()) {
+          // console.log('All listings: ' + listings.length);
+          if (listing[1].style.display == 'grid') {
+            visibleListings = listings.length; // console.log(visibleListings);
+
+            for (let i = visibleListings; i < listings.length; i++) {
+              listings[i + 1].style.display = 'grid';
+            } // console.log(visibleListings);
+
+          } // visibleListings = (listing.style.display = 'grid');
+          // visibleListings = visibleListings.length;
+          // console.log(visibleListings);
+
+        } // Only show first three listings on desktop
+        // for (i; i < listings.length; i++) {
+        //     listings[i].style.display = 'grid';
+        //     // i++;
+        //     console.log(i);
+        //     return i;
+        // }
+        // for (let i = 3; i < listings.length; i++) {
+        //     contentControl.classList.contains('open')
+        //         ? (listings[i+1].style.display = 'grid') &&
+        //           (contentControl.innerHTML = loadMoreText)
+        //         : null;
+        // }
+        // Manually add 'far' class. Not possible to set in initial variable declaration
 
 
         let spans = contentControl.getElementsByTagName('span');
