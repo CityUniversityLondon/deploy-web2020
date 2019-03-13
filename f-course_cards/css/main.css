@@ -12122,45 +12122,11 @@ main table td em {
 }
 
 /***
-    Shared styling for all course cards
+    Do we have this mixin?
 ***/
 .card--course--simple {
     background-color: transparent;
-}
-
-.card--course--simple:hover a {
-    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    transition: background-size 0.3s ease;
-    color: #ffffff;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--course--simple:hover a {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--course--simple:hover a {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    }
-}
-
-.card--course--simple:focus a, .card--course--simple:active a {
-    outline-color: #0c0c0e;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
-}
-
-@media (min-width: 769px) {
-    .card--course--simple {
-        padding: 1rem;
-    }
+    padding: 1rem;
 }
 
 .card--course--simple:hover {
@@ -12270,21 +12236,8 @@ main table td em {
     display: grid;
     grid-template-columns: auto auto;
     grid-column-gap: 1.25rem;
-    /* refactor? 
-    &:focus {
-        a:before {
-            background-color: $color-gray7;
-            bottom: -2px;
-            content: '';
-            display: block;
-            height: 3px;
-            left: 0;
-            position: absolute;
-            width: 100%;
-        }
-    }
-    */
     background-color: transparent;
+    padding: 1rem;
 }
 
 @media (hover: hover) {
@@ -12349,6 +12302,12 @@ main table td em {
     outline-offset: 3px;
 }
 
+@media (max-width: 767px) {
+    .card--course--related-course .title {
+        line-height: 1.5rem;
+    }
+}
+
 .card--course--related-course .image-container {
     overflow: hidden;
     width: 50px;
@@ -12373,6 +12332,11 @@ main table td em {
     height: 100%;
     background-color: transparent;
     transition: background-color 0.3s ease-in-out;
+}
+
+.card--course--related-course .image-container img {
+    width: 100%;
+    height: 100%;
 }
 
 .card--course--related-course .title {
@@ -12401,12 +12365,6 @@ main table td em {
 
 .card--course--related-course img {
     transition: all 0.3s ease-in-out;
-}
-
-@media (min-width: 769px) {
-    .card--course--related-course {
-        padding: 1rem;
-    }
 }
 
 .card--course--related-course:hover {
