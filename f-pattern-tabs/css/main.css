@@ -15947,6 +15947,14 @@ blockquote footer {
     .js .tabs .tabs__links li a:focus span {
         outline: none;
     }
+    .js .tabs .tabs__links li a:active {
+        color: #0c0c0e;
+        background: #f2f2f2;
+        border: 2px dotted #0c0c0e;
+    }
+    .js .tabs .tabs__links li a:active span {
+        outline-width: 0px;
+    }
     .js .tabs .tabs__links li a span {
         font-family: "Meta Sans", sans-serif;
         font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
