@@ -15062,7 +15062,7 @@ blockquote footer {
 @media (min-width: 769px) {
     .timetable-terms {
         display: grid;
-        grid-template-columns: 22% auto;
+        grid-template-columns: 8rem auto;
     }
 }
 
@@ -15079,7 +15079,7 @@ blockquote footer {
 .timetable-text {
     padding-bottom: 1.5rem;
     padding-left: 2.5rem;
-    border-left: 8px solid #7c2062;
+    border-left: 0.5rem solid #7c2062;
 }
 
 .timetable-text .heading {
@@ -15221,8 +15221,8 @@ blockquote footer {
 .timetable-info span {
     color: #a1a1a1;
     position: absolute;
-    left: 5px;
-    top: 12px;
+    left: 0.3125rem;
+    top: 0.75rem;
 }
 
 .generic {
