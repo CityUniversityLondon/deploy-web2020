@@ -3994,7 +3994,7 @@ function initBacktoTop() {
 
 
 function scrollButBehav() {
-  var screenPos = window.pageYOffset; // calculates scroll position
+  let screenPos = window.pageYOffset; // calculates scroll position
 
   if (screenPos > viewPortHeight * scrollPos) {
     // shows button when scrolled down far enough - see parameters
@@ -4019,14 +4019,14 @@ progressPath.style.strokeDashoffset = pathLength;
 progressPath.getBoundingClientRect();
 progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 0ms linear'; // 2. Define updateProgress function
 
-var updateProgress = function updateProgress() {
+function updateProgress() {
   // calculate values
   let scroll = window.pageYOffset;
   let height = document.documentElement.scrollHeight - window.innerHeight;
   let progress = pathLength - scroll * pathLength / height; // update dashOffset
 
   progressPath.style.strokeDashoffset = progress;
-}; // 3. trigger updateProgress once on load and then on scroll
+} // 3. trigger updateProgress once on load and then on scroll
 
 
 window.onscroll = function () {
