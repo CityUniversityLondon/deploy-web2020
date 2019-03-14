@@ -3819,7 +3819,7 @@ function setSection(heading, open) {
 
   if (open) {
     heading.nextElementSibling.classList.add('active');
-    heading.nextElementSibling.style.maxHeight = parseInt(heading.nextElementSibling.scrollHeight + 40) + 'px';
+    heading.nextElementSibling.style.maxHeight = parseInt(heading.nextElementSibling.scrollHeight + 2.5) + 'rem';
 
     for (const bodyLink of bodyLinks) {
       bodyLink.setAttribute('tabindex', '1');
@@ -3933,9 +3933,7 @@ function launchAccordion(accordion) {
 
     if (locationHash === heading.id) {
       idLinked = true;
-      setSection(heading, true); // FF/Safari bug fix
-
-      heading.nextElementSibling.style.maxHeight = '10000px';
+      setSection(heading, true);
     } else {
       setSection(heading, false);
     }
@@ -3944,9 +3942,7 @@ function launchAccordion(accordion) {
   });
 
   if (defaultOpen && !idLinked) {
-    setSection(headings[0], true); // FF/Safari bug fix
-
-    headings[0].nextElementSibling.style.maxHeight = '10000px';
+    setSection(headings[0], true);
   }
 }
 
