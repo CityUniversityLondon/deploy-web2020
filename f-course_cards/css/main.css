@@ -12134,6 +12134,12 @@ main table td em {
     transition: background-color 0.3s ease-in-out;
 }
 
+@media (max-width: 767px) {
+    .card--course--simple .title {
+        line-height: 1.5rem;
+    }
+}
+
 .card--course--simple .type {
     color: #dd0036;
     font-size: 0.889rem;
@@ -12177,7 +12183,7 @@ main table td em {
     font-size: 1rem;
 }
 
-.card--course--simple .quick-info {
+.card--course--simple .key-info {
     margin-top: 1.5rem;
     color: #696969;
     font-size: 0.889rem;
@@ -12186,37 +12192,37 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--simple .quick-info {
+    .card--course--simple .key-info {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--simple .quick-info {
+    .card--course--simple .key-info {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--simple .quick-info {
+    .card--course--simple .key-info {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--simple .quick-info {
+    .card--course--simple .key-info {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--simple .quick-info {
+    .card--course--simple .key-info {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--simple .quick-info span {
-    width: 26px;
+.card--course--simple .key-info span {
+    width: 1.625rem;
     color: #dd0036;
 }
 
@@ -12274,7 +12280,7 @@ main table td em {
 
 @media (min-width: 769px) {
     .card--course--related-course {
-        grid-template-columns: 140px auto;
+        grid-template-columns: 8.75rem auto;
     }
 }
 
@@ -12302,23 +12308,17 @@ main table td em {
     outline-offset: 3px;
 }
 
-@media (max-width: 767px) {
-    .card--course--related-course .title {
-        line-height: 1.5rem;
-    }
-}
-
 .card--course--related-course .image-container {
     overflow: hidden;
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
     position: relative;
 }
 
 @media (min-width: 769px) {
     .card--course--related-course .image-container {
-        width: 140px;
-        height: 140px;
+        width: 8.75rem;
+        height: 8.75rem;
     }
 }
 
@@ -12346,10 +12346,10 @@ main table td em {
 
 .card--course--related-course .title:before {
     background: #1e1e1e;
-    bottom: -7px;
+    bottom: -0.4375rem;
     content: '';
     display: block;
-    height: 3px;
+    height: 0.1875rem;
     left: 0;
     opacity: 0;
     position: absolute;
@@ -12370,6 +12370,12 @@ main table td em {
 .card--course--related-course:hover {
     background-color: #f2f2f2;
     transition: background-color 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+    .card--course--related-course .title {
+        line-height: 1.5rem;
+    }
 }
 
 .card--course--related-course .type {
@@ -12415,7 +12421,7 @@ main table td em {
     font-size: 1rem;
 }
 
-.card--course--related-course .quick-info {
+.card--course--related-course .key-info {
     margin-top: 1.5rem;
     color: #696969;
     font-size: 0.889rem;
@@ -12424,37 +12430,37 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course .quick-info {
+    .card--course--related-course .key-info {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course .quick-info {
+    .card--course--related-course .key-info {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course .quick-info {
+    .card--course--related-course .key-info {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course .quick-info {
+    .card--course--related-course .key-info {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--related-course .quick-info {
+    .card--course--related-course .key-info {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--related-course .quick-info span {
-    width: 26px;
+.card--course--related-course .key-info span {
+    width: 1.625rem;
     color: #dd0036;
 }
 
