@@ -16082,41 +16082,31 @@ blockquote footer {
 .footer__back-to-top a {
     float: right;
     border-bottom: none;
-    color: black;
     font-size: 0.889rem;
     transition: opacity 1s ease;
 }
 
 .footer__back-to-top a:active {
-    color: black;
-    outline: 2px dotted black;
+    outline: 2px dotted #0c0c0e;
     background: none;
     border-bottom-width: 0px;
 }
 
 .footer__back-to-top a:focus {
-    outline: 2px dotted black;
-    color: black;
+    outline: 2px dotted #0c0c0e;
     border-bottom-width: 0px;
 }
 
-.footer__back-to-top a:focus .footer__back-to-top__button__arrow {
-    border-top-color: black;
-}
-
 .footer__back-to-top a:hover {
-    color: black;
+    color: #1e1e1e;
     background: none;
     text-decoration: none;
     border-bottom-width: 0px;
 }
 
-.footer__back-to-top a:hover .footer__back-to-top__button__arrow {
-    background: #0c0c0e;
-    /* padding-top: 0px;
-            padding-bottom: 5px;
-            border-top-color: black;
-            transition: padding 1s ease; */
+.footer__back-to-top a:hover .footer__back-to-top__button__arrow,
+.footer__back-to-top a:active .footer__back-to-top__button__arrow {
+    background: #1e1e1e;
 }
 
 .footer__back-to-top a .footer__back-to-top__button__label {
@@ -16124,11 +16114,17 @@ blockquote footer {
     border-bottom: 2px solid #696969;
 }
 
+.footer__back-to-top a:hover .footer__back-to-top__button__label,
+.footer__back-to-top a:active .footer__back-to-top__button__label {
+    color: #1e1e1e;
+    border-bottom: 2px solid #1e1e1e;
+}
+
 .footer__back-to-top a .footer__back-to-top__button__arrow {
-    color: white;
-    background: gray;
+    color: #ffffff;
+    background: #696969;
     border-radius: 50%;
-    padding: 5px;
+    padding: 8px;
     height: 30px;
     width: 30px;
     margin-left: 10px;
@@ -16139,7 +16135,9 @@ blockquote footer {
 
 .footer__back-to-top a .footer__back-to-top__button__arrow:before {
     vertical-align: middle;
-    padding-top: 3px;
+    padding-top: 4px;
+    font-size: 10px;
+    border-top: 2px solid #ffffff;
 }
 
 .footer__back-to-top a .progress-circle {
@@ -16152,13 +16150,21 @@ blockquote footer {
     bottom: 10px;
     z-index: 100;
     text-decoration: none;
-    width: 60px;
+    width: 48px;
     opacity: 0;
+    overflow: hidden;
+}
+
+@media (max-width: 432px) {
+    .back-to-top-stick {
+        right: 5px;
+        bottom: 5px;
+    }
 }
 
 .back-to-top-stick .footer__back-to-top__button {
-    width: 60px;
-    height: 60px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     display: block;
     position: relative;
@@ -16178,39 +16184,27 @@ blockquote footer {
 }
 
 .back-to-top-stick .footer__back-to-top__button .footer__back-to-top__button__arrow {
-    padding-top: 21px;
-    left: 5px;
+    padding-top: 17px;
+    left: 4px;
     text-align: center;
     width: 20px;
-    top: 5px;
+    top: 4px;
     display: block;
     position: absolute;
-    font-size: 16px;
-    color: white;
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    background: #696969;
+    height: 40px;
+    width: 40px;
     margin-left: 0px;
 }
 
 .back-to-top-stick .footer__back-to-top__button .footer__back-to-top__button__arrow:before {
-    border-top: 2px solid white;
-    padding-top: 8px;
+    border-top: 2px solid #ffffff;
+    padding-top: 6px;
     vertical-align: initial;
+    font-size: 13px;
 }
 
 .back-to-top-stick .footer__back-to-top__button__label {
-    width: 70px;
-    color: grey;
-    text-align: center;
-    margin-top: 15px;
-    display: block;
-    background: white;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.1rem;
-    padding: 5px;
     display: none;
 }
 
