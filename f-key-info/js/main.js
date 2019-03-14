@@ -4305,6 +4305,8 @@ function launchFeedback(elem) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
 /* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
@@ -4316,6 +4318,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Mark Skinsley <mark.skinsley@city.ac.uk>
  * @copyright City, University of London 2018
  */
+
 const className = 'keyInformationBox';
 
 function launchKeyInformationBox() {
@@ -4333,6 +4336,7 @@ function launchKeyInformationBox() {
   function listingDisplay() {
     for (const listing of listings.entries()) {
       listing[0] == counter ? listing[1].style.display = 'block' : listing[1].style.display = 'none';
+      listing[1].setAttribute('data-id', `listing-${listing[0]}`);
     }
   } // Mobile: Enable/disable navigation buttons based on position of listing in collection
 
@@ -4372,6 +4376,7 @@ function launchKeyInformationBox() {
 
 
   if (browserWidth > 768 && listings.length > 3) {
+    listingDisplay();
     listingsControl();
 
     for (const contentToggle of contentToggles) {
@@ -4385,6 +4390,8 @@ function launchKeyInformationBox() {
           listingsControl();
 
           for (const listing of listings.entries()) {
+            let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
+            zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing);
             listing[0] < preExpandListingsVisible + 3 ? listing[1].style.display = 'grid' : listing[1].style.display = 'none';
           }
         }
