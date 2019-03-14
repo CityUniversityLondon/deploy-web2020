@@ -12919,7 +12919,7 @@ figure.figure--map a {
 }
 
 figure.figure--map a:hover picture:after {
-    background: rgba(12, 12, 14, 0.1);
+    background-color: rgba(12, 12, 14, 0.1);
 }
 
 figure.figure--map a:hover picture img {
@@ -12947,7 +12947,7 @@ figure.figure--map a picture:after {
     height: 100%;
     width: 100%;
     background: transparent;
-    transition: background 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .global-footer {
