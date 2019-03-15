@@ -14517,6 +14517,14 @@ article figure figcaption a:active {
 
 .key-information-box--short-course .content-wrapper .content .key-information-box__listing {
     display: grid;
+    position: relative;
+    opacity: 1;
+    transition: opacity 1s linear;
+}
+
+.key-information-box--short-course .content-wrapper .content .key-information-box__listing.hide {
+    position: fixed;
+    opacity: 0;
 }
 
 @media (max-width: 767px) {

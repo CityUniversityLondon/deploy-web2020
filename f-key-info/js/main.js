@@ -4331,11 +4331,17 @@ function launchKeyInformationBox() {
       nextBtn = document.getElementById('next-listing'),
       listingHeight = '',
       listingsVisible = [],
-      listingsLength = []; // Mobile: Show listing entry based on navigation button clicks
+      listingsLength = [],
+      defaultDuration = 2000,
+      edgeOffset = 50;
+  zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Mobile: Show listing entry based on navigation button clicks
 
   function listingDisplay() {
     for (const listing of listings.entries()) {
-      listing[0] == counter ? listing[1].style.display = 'block' : listing[1].style.display = 'none';
+      if (browserWidth < 768 && listings.length > 1) {
+        listing[0] == counter ? listing[1].style.display = 'block' : listing[1].style.display = 'none';
+      }
+
       listing[1].setAttribute('data-id', `listing-${listing[0]}`);
     }
   } // Mobile: Enable/disable navigation buttons based on position of listing in collection
@@ -4367,7 +4373,7 @@ function launchKeyInformationBox() {
 
     for (const listing of listings.entries()) {
       listingsLength.push(listings.length);
-      listing[0] > 2 ? listing[1].style.display = 'none' : listing[1].style.display = 'grid';
+      listing[0] > 2 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
       listing[1].style.display == 'grid' ? listingsVisible.push(listing[1].style.display) : null;
     }
 
@@ -4391,8 +4397,9 @@ function launchKeyInformationBox() {
 
           for (const listing of listings.entries()) {
             let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
-            zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing);
-            listing[0] < preExpandListingsVisible + 3 ? listing[1].style.display = 'grid' : listing[1].style.display = 'none';
+            zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 40, function () {// console.log('done');
+            });
+            listing[0] < preExpandListingsVisible + 3 ? (listing[1].style.display = 'grid', listing[1].classList.remove('hide')) : listing[1].classList.add('hide');
           }
         }
       });
