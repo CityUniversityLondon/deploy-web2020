@@ -14761,32 +14761,33 @@ article figure figcaption a:active {
 .key-information-box--short-course .content-wrapper .content .content-control .content-slider .fa-arrow-right {
     top: 45%;
     position: absolute;
-    border: 4px solid #dd0036;
+    border: 4px solid #3e1031;
     padding: 0.5rem;
     background: #ffffff;
-    font-size: 1.602rem;
+    width: 3rem;
+    font-size: 1.424rem;
     line-height: 1.25;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.013em;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
     .key-information-box--short-course .content-wrapper .content .content-control .content-slider .fa-arrow-left,
     .key-information-box--short-course .content-wrapper .content .content-control .content-slider .fa-arrow-right {
-        letter-spacing: -0.016em;
+        letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .key-information-box--short-course .content-wrapper .content .content-control .content-slider .fa-arrow-left,
     .key-information-box--short-course .content-wrapper .content .content-control .content-slider .fa-arrow-right {
-        letter-spacing: -0.016em;
+        letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .key-information-box--short-course .content-wrapper .content .content-control .content-slider .fa-arrow-left,
     .key-information-box--short-course .content-wrapper .content .content-control .content-slider .fa-arrow-right {
-        letter-spacing: -0.017em;
+        letter-spacing: -0.016em;
     }
 }
 
