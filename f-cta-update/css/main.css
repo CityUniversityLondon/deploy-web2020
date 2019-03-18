@@ -12917,6 +12917,7 @@ main table td em {
 }
 
 .cta-block .primary-cta--dark:active {
+    background: transparent;
     border-color: #dd0036;
 }
 
@@ -17966,6 +17967,7 @@ blockquote footer {
 }
 
 .theme--dark .cta-block li:nth-child(1) a:active {
+    background: transparent;
     border-color: #dd0036;
 }
 
