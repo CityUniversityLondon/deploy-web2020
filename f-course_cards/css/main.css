@@ -12127,17 +12127,27 @@ main table td em {
 .card--course--simple {
     background-color: transparent;
     padding: 1rem;
+    position: relative;
 }
 
-.card--course--simple:hover {
+.card--course--simple:hover .background {
     background-color: #f2f2f2;
-    transition: background-color 0.3s ease-in-out;
+    transform: scale(1.03);
 }
 
-@media (max-width: 767px) {
-    .card--course--simple .title {
-        line-height: 1.5rem;
-    }
+.card--course--simple .background {
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.card--course--simple .title {
+    line-height: 1.5rem;
 }
 
 .card--course--simple .type {
@@ -12244,6 +12254,7 @@ main table td em {
     grid-column-gap: 1.25rem;
     background-color: transparent;
     padding: 1rem;
+    position: relative;
 }
 
 @media (hover: hover) {
@@ -12367,15 +12378,24 @@ main table td em {
     transition: all 0.3s ease-in-out;
 }
 
-.card--course--related-course:hover {
+.card--course--related-course:hover .background {
     background-color: #f2f2f2;
-    transition: background-color 0.3s ease-in-out;
+    transform: scale(1.03);
 }
 
-@media (max-width: 767px) {
-    .card--course--related-course .title {
-        line-height: 1.5rem;
-    }
+.card--course--related-course .background {
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.card--course--related-course .title {
+    line-height: 1.5rem;
 }
 
 .card--course--related-course .type {
