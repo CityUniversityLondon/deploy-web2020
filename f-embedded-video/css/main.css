@@ -16315,14 +16315,10 @@ blockquote footer {
     margin-bottom: 2rem;
 }
 
-.embedded-video .youtube-video__align-right {
-    grid-column: 2 / 3;
-    margin-top: 1.25rem;
-}
-
 .embedded-video .youtube-video {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    grid-column: 1 / -1;
 }
 
 .embedded-video .youtube-video .youtube-video__wrapper {
@@ -16344,6 +16340,11 @@ blockquote footer {
 .embedded-video .youtube-video .youtube-video__caption-element--text,
 .embedded-video .youtube-video .youtube-video__caption-element--time {
     display: block;
+}
+
+.embedded-video .youtube-video__align-right {
+    grid-column: 2 / 3;
+    margin-top: 1.25rem;
 }
 
 @media screen and (max-width: 900px) {
