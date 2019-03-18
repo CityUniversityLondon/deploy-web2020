@@ -12448,7 +12448,7 @@ main table td em {
     margin: 0;
 }
 
-.cta-block .primary-cta-arrow--bright {
+.primary-cta-arrow--bright {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -12465,20 +12465,20 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .primary-cta-arrow--bright {
+    .primary-cta-arrow--bright {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .cta-block .primary-cta-arrow--bright {
+    .primary-cta-arrow--bright {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.cta-block .primary-cta-arrow--bright:after {
+.primary-cta-arrow--bright:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -12492,56 +12492,56 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .primary-cta-arrow--bright:after {
+    .primary-cta-arrow--bright:after {
         transition: none;
     }
 }
 
-.cta-block .primary-cta-arrow--bright:focus, .cta-block .primary-cta-arrow--bright:active {
+.primary-cta-arrow--bright:focus, .primary-cta-arrow--bright:active {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
     padding: 0.75rem 2rem 0.75rem 1rem;
 }
 
-.cta-block .primary-cta-arrow--bright:focus:after, .cta-block .primary-cta-arrow--bright:active:after {
+.primary-cta-arrow--bright:focus:after, .primary-cta-arrow--bright:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .cta-block .primary-cta-arrow--bright:hover {
+    .primary-cta-arrow--bright:hover {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
         padding: 0.75rem 2rem 0.75rem 1rem;
     }
-    .cta-block .primary-cta-arrow--bright:hover:after {
+    .primary-cta-arrow--bright:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.cta-block .primary-cta-arrow--bright:focus {
+.primary-cta-arrow--bright:focus {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
 }
 
-.cta-block .primary-cta-arrow--bright:focus:focus, .cta-block .primary-cta-arrow--bright:focus:active {
+.primary-cta-arrow--bright:focus:focus, .primary-cta-arrow--bright:focus:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.cta-block .primary-cta-arrow--bright:active {
+.primary-cta-arrow--bright:active {
     border-color: #dd0036;
     box-shadow: none;
     color: #dd0036;
 }
 
-.cta-block .primary-cta-arrow--bright:active:focus, .cta-block .primary-cta-arrow--bright:active:active {
+.primary-cta-arrow--bright:active:focus, .primary-cta-arrow--bright:active:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
@@ -12549,18 +12549,18 @@ main table td em {
 }
 
 @media (hover: hover) {
-    .cta-block .primary-cta-arrow--bright:hover {
+    .primary-cta-arrow--bright:hover {
         background: #ffffff;
         border-color: #dd0036;
         color: #dd0036;
     }
 }
 
-.cta-block .primary-cta-arrow--bright:disabled {
+.primary-cta-arrow--bright:disabled {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.cta-block .primary-cta--bright {
+.primary-cta--bright {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -12579,20 +12579,20 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .primary-cta--bright {
+    .primary-cta--bright {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .cta-block .primary-cta--bright {
+    .primary-cta--bright {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.cta-block .primary-cta--bright:after {
+.primary-cta--bright:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -12606,56 +12606,56 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .primary-cta--bright:after {
+    .primary-cta--bright:after {
         transition: none;
     }
 }
 
-.cta-block .primary-cta--bright:focus, .cta-block .primary-cta--bright:active {
+.primary-cta--bright:focus, .primary-cta--bright:active {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
     padding: 0.75rem 2rem 0.75rem 1rem;
 }
 
-.cta-block .primary-cta--bright:focus:after, .cta-block .primary-cta--bright:active:after {
+.primary-cta--bright:focus:after, .primary-cta--bright:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .cta-block .primary-cta--bright:hover {
+    .primary-cta--bright:hover {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
         padding: 0.75rem 2rem 0.75rem 1rem;
     }
-    .cta-block .primary-cta--bright:hover:after {
+    .primary-cta--bright:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.cta-block .primary-cta--bright:focus {
+.primary-cta--bright:focus {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
 }
 
-.cta-block .primary-cta--bright:focus:focus, .cta-block .primary-cta--bright:focus:active {
+.primary-cta--bright:focus:focus, .primary-cta--bright:focus:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.cta-block .primary-cta--bright:active {
+.primary-cta--bright:active {
     border-color: #dd0036;
     box-shadow: none;
     color: #dd0036;
 }
 
-.cta-block .primary-cta--bright:active:focus, .cta-block .primary-cta--bright:active:active {
+.primary-cta--bright:active:focus, .primary-cta--bright:active:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
@@ -12663,41 +12663,41 @@ main table td em {
 }
 
 @media (hover: hover) {
-    .cta-block .primary-cta--bright:hover {
+    .primary-cta--bright:hover {
         background: #ffffff;
         border-color: #dd0036;
         color: #dd0036;
     }
 }
 
-.cta-block .primary-cta--bright:disabled {
+.primary-cta--bright:disabled {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.cta-block .primary-cta--bright:after {
+.primary-cta--bright:after {
     content: '';
 }
 
-.cta-block .primary-cta--bright:focus, .cta-block .primary-cta--bright:active {
+.primary-cta--bright:focus, .primary-cta--bright:active {
     padding: 0.75rem 1.5rem;
 }
 
-.cta-block .primary-cta--bright:focus {
+.primary-cta--bright:focus {
     background: #dd0036;
 }
 
 @media (hover: hover) {
-    .cta-block .primary-cta--bright:hover {
+    .primary-cta--bright:hover {
         border-color: #dd0036;
         padding: 0.75rem 1.5rem;
     }
 }
 
-.cta-block .primary-cta--bright:active {
+.primary-cta--bright:active {
     border-color: #dd0036;
 }
 
-.cta-block .primary-cta-arrow--dark {
+.primary-cta-arrow--dark {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -12713,20 +12713,20 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .primary-cta-arrow--dark {
+    .primary-cta-arrow--dark {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .cta-block .primary-cta-arrow--dark {
+    .primary-cta-arrow--dark {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.cta-block .primary-cta-arrow--dark:after {
+.primary-cta-arrow--dark:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -12740,46 +12740,46 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .primary-cta-arrow--dark:after {
+    .primary-cta-arrow--dark:after {
         transition: none;
     }
 }
 
-.cta-block .primary-cta-arrow--dark:focus, .cta-block .primary-cta-arrow--dark:active {
+.primary-cta-arrow--dark:focus, .primary-cta-arrow--dark:active {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
     padding: 0.75rem 2rem 0.75rem 1rem;
 }
 
-.cta-block .primary-cta-arrow--dark:focus:after, .cta-block .primary-cta-arrow--dark:active:after {
+.primary-cta-arrow--dark:focus:after, .primary-cta-arrow--dark:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .cta-block .primary-cta-arrow--dark:hover {
+    .primary-cta-arrow--dark:hover {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
         padding: 0.75rem 2rem 0.75rem 1rem;
     }
-    .cta-block .primary-cta-arrow--dark:hover:after {
+    .primary-cta-arrow--dark:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.cta-block .primary-cta-arrow--dark:focus {
+.primary-cta-arrow--dark:focus {
     background: #dd0036;
     color: #ffffff;
 }
 
-.cta-block .primary-cta-arrow--dark:active, .cta-block .primary-cta-arrow--dark:focus {
+.primary-cta-arrow--dark:active, .primary-cta-arrow--dark:focus {
     border-color: #dd0036;
 }
 
-.cta-block .primary-cta-arrow--dark:active:focus, .cta-block .primary-cta-arrow--dark:active:active, .cta-block .primary-cta-arrow--dark:focus:focus, .cta-block .primary-cta-arrow--dark:focus:active {
+.primary-cta-arrow--dark:active:focus, .primary-cta-arrow--dark:active:active, .primary-cta-arrow--dark:focus:focus, .primary-cta-arrow--dark:focus:active {
     outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
@@ -12787,16 +12787,16 @@ main table td em {
 }
 
 @media (hover: hover) {
-    .cta-block .primary-cta-arrow--dark:hover {
+    .primary-cta-arrow--dark:hover {
         border-color: #dd0036;
     }
 }
 
-.cta-block .primary-cta-arrow--dark:disabled {
+.primary-cta-arrow--dark:disabled {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.cta-block .primary-cta--dark {
+.primary-cta--dark {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -12814,20 +12814,20 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .primary-cta--dark {
+    .primary-cta--dark {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .cta-block .primary-cta--dark {
+    .primary-cta--dark {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.cta-block .primary-cta--dark:after {
+.primary-cta--dark:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -12841,46 +12841,46 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .primary-cta--dark:after {
+    .primary-cta--dark:after {
         transition: none;
     }
 }
 
-.cta-block .primary-cta--dark:focus, .cta-block .primary-cta--dark:active {
+.primary-cta--dark:focus, .primary-cta--dark:active {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
     padding: 0.75rem 2rem 0.75rem 1rem;
 }
 
-.cta-block .primary-cta--dark:focus:after, .cta-block .primary-cta--dark:active:after {
+.primary-cta--dark:focus:after, .primary-cta--dark:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .cta-block .primary-cta--dark:hover {
+    .primary-cta--dark:hover {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
         padding: 0.75rem 2rem 0.75rem 1rem;
     }
-    .cta-block .primary-cta--dark:hover:after {
+    .primary-cta--dark:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.cta-block .primary-cta--dark:focus {
+.primary-cta--dark:focus {
     background: #dd0036;
     color: #ffffff;
 }
 
-.cta-block .primary-cta--dark:active, .cta-block .primary-cta--dark:focus {
+.primary-cta--dark:active, .primary-cta--dark:focus {
     border-color: #dd0036;
 }
 
-.cta-block .primary-cta--dark:active:focus, .cta-block .primary-cta--dark:active:active, .cta-block .primary-cta--dark:focus:focus, .cta-block .primary-cta--dark:focus:active {
+.primary-cta--dark:active:focus, .primary-cta--dark:active:active, .primary-cta--dark:focus:focus, .primary-cta--dark:focus:active {
     outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
@@ -12888,40 +12888,40 @@ main table td em {
 }
 
 @media (hover: hover) {
-    .cta-block .primary-cta--dark:hover {
+    .primary-cta--dark:hover {
         border-color: #dd0036;
     }
 }
 
-.cta-block .primary-cta--dark:disabled {
+.primary-cta--dark:disabled {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.cta-block .primary-cta--dark:focus, .cta-block .primary-cta--dark:active {
+.primary-cta--dark:focus, .primary-cta--dark:active {
     padding: 0.75rem 1.5rem;
 }
 
 @media (hover: hover) {
-    .cta-block .primary-cta--dark:hover {
+    .primary-cta--dark:hover {
         border-color: #dd0036;
         padding: 0.75rem 1.5rem;
     }
 }
 
-.cta-block .primary-cta--dark:after {
+.primary-cta--dark:after {
     content: '';
 }
 
-.cta-block .primary-cta--dark:focus {
+.primary-cta--dark:focus {
     background: #dd0036;
 }
 
-.cta-block .primary-cta--dark:active {
+.primary-cta--dark:active {
     background: transparent;
     border-color: #dd0036;
 }
 
-.cta-block .outline-cta-arrow--bright {
+.outline-cta-arrow--bright {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -12938,20 +12938,20 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .outline-cta-arrow--bright {
+    .outline-cta-arrow--bright {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .cta-block .outline-cta-arrow--bright {
+    .outline-cta-arrow--bright {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.cta-block .outline-cta-arrow--bright:after {
+.outline-cta-arrow--bright:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -12965,58 +12965,58 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .outline-cta-arrow--bright:after {
+    .outline-cta-arrow--bright:after {
         transition: none;
     }
 }
 
-.cta-block .outline-cta-arrow--bright:focus, .cta-block .outline-cta-arrow--bright:active {
+.outline-cta-arrow--bright:focus, .outline-cta-arrow--bright:active {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
     padding: 0.75rem 2rem 0.75rem 1rem;
 }
 
-.cta-block .outline-cta-arrow--bright:focus:after, .cta-block .outline-cta-arrow--bright:active:after {
+.outline-cta-arrow--bright:focus:after, .outline-cta-arrow--bright:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .cta-block .outline-cta-arrow--bright:hover {
+    .outline-cta-arrow--bright:hover {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
         padding: 0.75rem 2rem 0.75rem 1rem;
     }
-    .cta-block .outline-cta-arrow--bright:hover:after {
+    .outline-cta-arrow--bright:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
 @media (hover: hover) {
-    .cta-block .outline-cta-arrow--bright:hover {
+    .outline-cta-arrow--bright:hover {
         background-color: #0c0c0e;
         border-color: #0c0c0e;
         color: #ffffff;
     }
 }
 
-.cta-block .outline-cta-arrow--bright:focus {
+.outline-cta-arrow--bright:focus {
     background: #ffffff;
     color: #0c0c0e;
     border-color: #0c0c0e;
 }
 
-.cta-block .outline-cta-arrow--bright:focus:focus, .cta-block .outline-cta-arrow--bright:focus:active {
+.outline-cta-arrow--bright:focus:focus, .outline-cta-arrow--bright:focus:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.cta-block .outline-cta-arrow--bright:active {
+.outline-cta-arrow--bright:active {
     background-color: #0c0c0e;
     border-color: #0c0c0e;
     color: #ffffff;
@@ -13024,18 +13024,18 @@ main table td em {
     box-shadow: none;
 }
 
-.cta-block .outline-cta-arrow--bright:active:focus, .cta-block .outline-cta-arrow--bright:active:active {
+.outline-cta-arrow--bright:active:focus, .outline-cta-arrow--bright:active:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.cta-block .outline-cta-arrow--bright:disabled {
+.outline-cta-arrow--bright:disabled {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.cta-block .outline-cta--bright {
+.outline-cta--bright {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -13052,20 +13052,20 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .outline-cta--bright {
+    .outline-cta--bright {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .cta-block .outline-cta--bright {
+    .outline-cta--bright {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.cta-block .outline-cta--bright:after {
+.outline-cta--bright:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -13079,58 +13079,58 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .outline-cta--bright:after {
+    .outline-cta--bright:after {
         transition: none;
     }
 }
 
-.cta-block .outline-cta--bright:focus, .cta-block .outline-cta--bright:active {
+.outline-cta--bright:focus, .outline-cta--bright:active {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
     padding: 0.75rem 2rem 0.75rem 1rem;
 }
 
-.cta-block .outline-cta--bright:focus:after, .cta-block .outline-cta--bright:active:after {
+.outline-cta--bright:focus:after, .outline-cta--bright:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .cta-block .outline-cta--bright:hover {
+    .outline-cta--bright:hover {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
         padding: 0.75rem 2rem 0.75rem 1rem;
     }
-    .cta-block .outline-cta--bright:hover:after {
+    .outline-cta--bright:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
 @media (hover: hover) {
-    .cta-block .outline-cta--bright:hover {
+    .outline-cta--bright:hover {
         background-color: #0c0c0e;
         border-color: #0c0c0e;
         color: #ffffff;
     }
 }
 
-.cta-block .outline-cta--bright:focus {
+.outline-cta--bright:focus {
     background: #ffffff;
     color: #0c0c0e;
     border-color: #0c0c0e;
 }
 
-.cta-block .outline-cta--bright:focus:focus, .cta-block .outline-cta--bright:focus:active {
+.outline-cta--bright:focus:focus, .outline-cta--bright:focus:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.cta-block .outline-cta--bright:active {
+.outline-cta--bright:active {
     background-color: #0c0c0e;
     border-color: #0c0c0e;
     color: #ffffff;
@@ -13138,32 +13138,32 @@ main table td em {
     box-shadow: none;
 }
 
-.cta-block .outline-cta--bright:active:focus, .cta-block .outline-cta--bright:active:active {
+.outline-cta--bright:active:focus, .outline-cta--bright:active:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.cta-block .outline-cta--bright:disabled {
+.outline-cta--bright:disabled {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.cta-block .outline-cta--bright:after {
+.outline-cta--bright:after {
     content: '';
 }
 
-.cta-block .outline-cta--bright:focus, .cta-block .outline-cta--bright:active {
+.outline-cta--bright:focus, .outline-cta--bright:active {
     padding: 0.75rem 1.5rem;
 }
 
 @media (hover: hover) {
-    .cta-block .outline-cta--bright:hover {
+    .outline-cta--bright:hover {
         padding: 0.75rem 1.5rem;
     }
 }
 
-.cta-block .outline-cta-arrow--dark {
+.outline-cta-arrow--dark {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -13179,20 +13179,20 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .outline-cta-arrow--dark {
+    .outline-cta-arrow--dark {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .cta-block .outline-cta-arrow--dark {
+    .outline-cta-arrow--dark {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.cta-block .outline-cta-arrow--dark:after {
+.outline-cta-arrow--dark:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -13206,77 +13206,77 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .outline-cta-arrow--dark:after {
+    .outline-cta-arrow--dark:after {
         transition: none;
     }
 }
 
-.cta-block .outline-cta-arrow--dark:focus, .cta-block .outline-cta-arrow--dark:active {
+.outline-cta-arrow--dark:focus, .outline-cta-arrow--dark:active {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
     padding: 0.75rem 2rem 0.75rem 1rem;
 }
 
-.cta-block .outline-cta-arrow--dark:focus:after, .cta-block .outline-cta-arrow--dark:active:after {
+.outline-cta-arrow--dark:focus:after, .outline-cta-arrow--dark:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .cta-block .outline-cta-arrow--dark:hover {
+    .outline-cta-arrow--dark:hover {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
         padding: 0.75rem 2rem 0.75rem 1rem;
     }
-    .cta-block .outline-cta-arrow--dark:hover:after {
+    .outline-cta-arrow--dark:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.cta-block .outline-cta-arrow--dark:active {
+.outline-cta-arrow--dark:active {
     background-color: #ffffff;
     border-color: #ffffff;
     color: #0c0c0e;
 }
 
 @media (hover: hover) {
-    .cta-block .outline-cta-arrow--dark:hover {
+    .outline-cta-arrow--dark:hover {
         background-color: #ffffff;
         border-color: #ffffff;
         color: #0c0c0e;
     }
 }
 
-.cta-block .outline-cta-arrow--dark:focus {
+.outline-cta-arrow--dark:focus {
     border-color: #ffffff;
 }
 
-.cta-block .outline-cta-arrow--dark:focus:focus, .cta-block .outline-cta-arrow--dark:focus:active {
+.outline-cta-arrow--dark:focus:focus, .outline-cta-arrow--dark:focus:active {
     outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.cta-block .outline-cta-arrow--dark:active {
+.outline-cta-arrow--dark:active {
     border-color: #ffffff;
 }
 
-.cta-block .outline-cta-arrow--dark:active:focus, .cta-block .outline-cta-arrow--dark:active:active {
+.outline-cta-arrow--dark:active:focus, .outline-cta-arrow--dark:active:active {
     outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.cta-block .outline-cta-arrow--dark:disabled {
+.outline-cta-arrow--dark:disabled {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.cta-block .outline-cta--dark {
+.outline-cta--dark {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -13292,20 +13292,20 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .outline-cta--dark {
+    .outline-cta--dark {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .cta-block .outline-cta--dark {
+    .outline-cta--dark {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.cta-block .outline-cta--dark:after {
+.outline-cta--dark:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -13319,91 +13319,91 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .outline-cta--dark:after {
+    .outline-cta--dark:after {
         transition: none;
     }
 }
 
-.cta-block .outline-cta--dark:focus, .cta-block .outline-cta--dark:active {
+.outline-cta--dark:focus, .outline-cta--dark:active {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
     padding: 0.75rem 2rem 0.75rem 1rem;
 }
 
-.cta-block .outline-cta--dark:focus:after, .cta-block .outline-cta--dark:active:after {
+.outline-cta--dark:focus:after, .outline-cta--dark:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .cta-block .outline-cta--dark:hover {
+    .outline-cta--dark:hover {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
         padding: 0.75rem 2rem 0.75rem 1rem;
     }
-    .cta-block .outline-cta--dark:hover:after {
+    .outline-cta--dark:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.cta-block .outline-cta--dark:active {
+.outline-cta--dark:active {
     background-color: #ffffff;
     border-color: #ffffff;
     color: #0c0c0e;
 }
 
 @media (hover: hover) {
-    .cta-block .outline-cta--dark:hover {
+    .outline-cta--dark:hover {
         background-color: #ffffff;
         border-color: #ffffff;
         color: #0c0c0e;
     }
 }
 
-.cta-block .outline-cta--dark:focus {
+.outline-cta--dark:focus {
     border-color: #ffffff;
 }
 
-.cta-block .outline-cta--dark:focus:focus, .cta-block .outline-cta--dark:focus:active {
+.outline-cta--dark:focus:focus, .outline-cta--dark:focus:active {
     outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.cta-block .outline-cta--dark:active {
+.outline-cta--dark:active {
     border-color: #ffffff;
 }
 
-.cta-block .outline-cta--dark:active:focus, .cta-block .outline-cta--dark:active:active {
+.outline-cta--dark:active:focus, .outline-cta--dark:active:active {
     outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.cta-block .outline-cta--dark:disabled {
+.outline-cta--dark:disabled {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.cta-block .outline-cta--dark:after {
+.outline-cta--dark:after {
     content: '';
 }
 
-.cta-block .outline-cta--dark:focus, .cta-block .outline-cta--dark:active {
+.outline-cta--dark:focus, .outline-cta--dark:active {
     padding: 0.75rem 1.5rem;
 }
 
 @media (hover: hover) {
-    .cta-block .outline-cta--dark:hover {
+    .outline-cta--dark:hover {
         padding: 0.75rem 1.5rem;
     }
 }
 
-.cta-block .basic-cta--bright {
+.basic-cta--bright {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -13423,20 +13423,20 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .basic-cta--bright {
+    .basic-cta--bright {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .cta-block .basic-cta--bright {
+    .basic-cta--bright {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.cta-block .basic-cta--bright:after {
+.basic-cta--bright:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -13450,56 +13450,56 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .basic-cta--bright:after {
+    .basic-cta--bright:after {
         transition: none;
     }
 }
 
-.cta-block .basic-cta--bright:focus, .cta-block .basic-cta--bright:active {
+.basic-cta--bright:focus, .basic-cta--bright:active {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
     padding: 0.75rem 2rem 0.75rem 1rem;
 }
 
-.cta-block .basic-cta--bright:focus:after, .cta-block .basic-cta--bright:active:after {
+.basic-cta--bright:focus:after, .basic-cta--bright:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .cta-block .basic-cta--bright:hover {
+    .basic-cta--bright:hover {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
         padding: 0.75rem 2rem 0.75rem 1rem;
     }
-    .cta-block .basic-cta--bright:hover:after {
+    .basic-cta--bright:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.cta-block .basic-cta--bright:focus {
+.basic-cta--bright:focus {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
 }
 
-.cta-block .basic-cta--bright:focus:focus, .cta-block .basic-cta--bright:focus:active {
+.basic-cta--bright:focus:focus, .basic-cta--bright:focus:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.cta-block .basic-cta--bright:active {
+.basic-cta--bright:active {
     border-color: #dd0036;
     box-shadow: none;
     color: #dd0036;
 }
 
-.cta-block .basic-cta--bright:active:focus, .cta-block .basic-cta--bright:active:active {
+.basic-cta--bright:active:focus, .basic-cta--bright:active:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
@@ -13507,34 +13507,34 @@ main table td em {
 }
 
 @media (hover: hover) {
-    .cta-block .basic-cta--bright:hover {
+    .basic-cta--bright:hover {
         background: #ffffff;
         border-color: #dd0036;
         color: #dd0036;
     }
 }
 
-.cta-block .basic-cta--bright:disabled {
+.basic-cta--bright:disabled {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.cta-block .basic-cta--bright:after {
+.basic-cta--bright:after {
     content: '';
 }
 
-.cta-block .basic-cta--bright:focus, .cta-block .basic-cta--bright:active {
+.basic-cta--bright:focus, .basic-cta--bright:active {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
     padding: 0.75rem 1.5rem;
 }
 
-.cta-block .basic-cta--bright:active {
+.basic-cta--bright:active {
     background: #aa002a;
 }
 
 @media (hover: hover) {
-    .cta-block .basic-cta--bright:hover {
+    .basic-cta--bright:hover {
         background: #dd0036;
         background: #aa002a;
         border-color: #dd0036;
@@ -13543,11 +13543,11 @@ main table td em {
     }
 }
 
-.cta-block .basic-cta--bright:disabled {
+.basic-cta--bright:disabled {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.cta-block .basic-cta--dark {
+.basic-cta--dark {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -13570,20 +13570,20 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .basic-cta--dark {
+    .basic-cta--dark {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .cta-block .basic-cta--dark {
+    .basic-cta--dark {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.cta-block .basic-cta--dark:after {
+.basic-cta--dark:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -13597,56 +13597,56 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .cta-block .basic-cta--dark:after {
+    .basic-cta--dark:after {
         transition: none;
     }
 }
 
-.cta-block .basic-cta--dark:focus, .cta-block .basic-cta--dark:active {
+.basic-cta--dark:focus, .basic-cta--dark:active {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
     padding: 0.75rem 2rem 0.75rem 1rem;
 }
 
-.cta-block .basic-cta--dark:focus:after, .cta-block .basic-cta--dark:active:after {
+.basic-cta--dark:focus:after, .basic-cta--dark:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .cta-block .basic-cta--dark:hover {
+    .basic-cta--dark:hover {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
         padding: 0.75rem 2rem 0.75rem 1rem;
     }
-    .cta-block .basic-cta--dark:hover:after {
+    .basic-cta--dark:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.cta-block .basic-cta--dark:focus {
+.basic-cta--dark:focus {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
 }
 
-.cta-block .basic-cta--dark:focus:focus, .cta-block .basic-cta--dark:focus:active {
+.basic-cta--dark:focus:focus, .basic-cta--dark:focus:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.cta-block .basic-cta--dark:active {
+.basic-cta--dark:active {
     border-color: #dd0036;
     box-shadow: none;
     color: #dd0036;
 }
 
-.cta-block .basic-cta--dark:active:focus, .cta-block .basic-cta--dark:active:active {
+.basic-cta--dark:active:focus, .basic-cta--dark:active:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
@@ -13654,34 +13654,34 @@ main table td em {
 }
 
 @media (hover: hover) {
-    .cta-block .basic-cta--dark:hover {
+    .basic-cta--dark:hover {
         background: #ffffff;
         border-color: #dd0036;
         color: #dd0036;
     }
 }
 
-.cta-block .basic-cta--dark:disabled {
+.basic-cta--dark:disabled {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.cta-block .basic-cta--dark:after {
+.basic-cta--dark:after {
     content: '';
 }
 
-.cta-block .basic-cta--dark:focus, .cta-block .basic-cta--dark:active {
+.basic-cta--dark:focus, .basic-cta--dark:active {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
     padding: 0.75rem 1.5rem;
 }
 
-.cta-block .basic-cta--dark:active {
+.basic-cta--dark:active {
     background: #aa002a;
 }
 
 @media (hover: hover) {
-    .cta-block .basic-cta--dark:hover {
+    .basic-cta--dark:hover {
         background: #dd0036;
         background: #aa002a;
         border-color: #dd0036;
@@ -13690,26 +13690,26 @@ main table td em {
     }
 }
 
-.cta-block .basic-cta--dark:disabled {
+.basic-cta--dark:disabled {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.cta-block .basic-cta--dark:after {
+.basic-cta--dark:after {
     content: '';
 }
 
-.cta-block .basic-cta--dark:focus, .cta-block .basic-cta--dark:active {
+.basic-cta--dark:focus, .basic-cta--dark:active {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
 }
 
-.cta-block .basic-cta--dark:active {
+.basic-cta--dark:active {
     background: #aa002a;
 }
 
 @media (hover: hover) {
-    .cta-block .basic-cta--dark:hover {
+    .basic-cta--dark:hover {
         background: #dd0036;
         background: #aa002a;
         border-color: #dd0036;
@@ -13717,14 +13717,14 @@ main table td em {
     }
 }
 
-.cta-block .basic-cta--dark:focus:focus, .cta-block .basic-cta--dark:focus:active, .cta-block .basic-cta--dark:active:focus, .cta-block .basic-cta--dark:active:active {
+.basic-cta--dark:focus:focus, .basic-cta--dark:focus:active, .basic-cta--dark:active:focus, .basic-cta--dark:active:active {
     outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.cta-block .basic-cta--dark:disabled {
+.basic-cta--dark:disabled {
     color: rgba(255, 255, 255, 0.7);
 }
 
