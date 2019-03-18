@@ -16144,6 +16144,12 @@ blockquote footer {
     display: none;
 }
 
+@media print {
+    .footer__back-to-top {
+        display: none;
+    }
+}
+
 .back-to-top-stick {
     position: fixed;
     right: 20px;
