@@ -16294,19 +16294,6 @@ blockquote footer {
     padding-bottom: 3.25rem;
 }
 
-@media screen and (max-width: 900px) {
-    .embedded-video {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-@media screen and (max-width: 432px) {
-    .embedded-video {
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
-    }
-}
-
 .embedded-video .embedded-video-details {
     grid-column: 1 / 2;
     align-items: center;
@@ -16323,18 +16310,17 @@ blockquote footer {
     height: 0.25rem;
     width: 6rem;
     display: block;
-    background: purple;
+    background: #5d184a;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
 .embedded-video .youtube-video__align-right {
-    grid-column: 2 / 3 !important;
-    margin-top: 0;
+    grid-column: 2 / 3;
+    margin-top: 1.25rem;
 }
 
 .embedded-video .youtube-video {
-    grid-column: 1 / -1;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
@@ -16358,6 +16344,26 @@ blockquote footer {
 .embedded-video .youtube-video .youtube-video__caption-element--text,
 .embedded-video .youtube-video .youtube-video__caption-element--time {
     display: block;
+}
+
+@media screen and (max-width: 900px) {
+    .embedded-video {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .embedded-video .youtube-video__align-right {
+        grid-column: 1 / -1;
+    }
+}
+
+@media screen and (max-width: 432px) {
+    .embedded-video {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .embedded-video .embedded-video-details__seperator {
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
 }
 
 .fa-external-link,
