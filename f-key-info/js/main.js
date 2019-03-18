@@ -4332,13 +4332,16 @@ function launchKeyInformationBox() {
       listingHeight = '',
       listingsVisible = [],
       listingsLength = [],
+      paginated = document.getElementsByClassName('key-information-box--short-course-paginated'),
+      paginatedPage,
       defaultDuration = 2000,
       edgeOffset = 50;
-  zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Mobile: Show listing entry based on navigation button clicks
+  zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset);
+  paginated.length > 0 ? paginatedPage = true : paginatedPage = false; // Mobile: Show listing entry based on navigation button clicks
 
   function listingDisplay() {
     for (const listing of listings.entries()) {
-      if (browserWidth < 768 && listings.length > 1) {
+      if (browserWidth < 768 && listings.length > 1 && !paginatedPage) {
         listing[0] == counter ? listing[1].style.display = 'block' : listing[1].style.display = 'none';
       }
 
@@ -4397,15 +4400,14 @@ function launchKeyInformationBox() {
 
           for (const listing of listings.entries()) {
             let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
-            zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 40, function () {// console.log('done');
-            });
+            zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 40, function () {});
             listing[0] < preExpandListingsVisible + 3 ? (listing[1].style.display = 'grid', listing[1].classList.remove('hide')) : listing[1].classList.add('hide');
           }
         }
-      });
+      }, false);
     } // Mobile: one listing visible at a time
 
-  } else if (browserWidth < 768 && listings.length > 1) {
+  } else if (browserWidth < 768 && listings.length > 1 && !paginatedPage) {
     for (const listing of listings.entries()) {
       // Capture listing height and set to data attribute
       listing[1].style.display = 'block';
@@ -4429,6 +4431,9 @@ function launchKeyInformationBox() {
       navBtnPosition();
       listingDisplay();
     });
+  } else if (browserWidth < 768 && listings.length > 1 && paginatedPage) {
+    let listWrapper = document.getElementById('short-course-key-info-listings');
+    listWrapper.classList.add('paginated-list');
   } else if (browserWidth < 768 && listings.length == 1) {
     for (const listing of listings.entries()) {
       listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
