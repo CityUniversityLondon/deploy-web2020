@@ -4012,7 +4012,7 @@ function scrollButBehav() {
 
 
 const progressPath = document.querySelector('path');
-let pathLength = progressPath.getTotalLength();
+const pathLength = progressPath.getTotalLength();
 progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
 progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
 progressPath.style.strokeDashoffset = pathLength;
@@ -4038,7 +4038,7 @@ updateProgress();
 initBacktoTop();
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: scrollButBehav,
-  launchQuery: `.${'footer__back-to-top__button'}`
+  launchQuery: '.footer__back-to-top__button'
 });
 
 /***/ }),
