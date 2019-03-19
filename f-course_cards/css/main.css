@@ -12121,9 +12121,6 @@ main table td em {
     }
 }
 
-/***
-    Do we have this mixin?
-***/
 .card--course--simple {
     background-color: transparent;
     padding: 1rem;
@@ -12201,11 +12198,11 @@ main table td em {
 }
 
 .card--course--simple .key-info {
-    margin-top: 1.5rem;
     color: #696969;
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
+    margin-top: 1.5rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -12431,11 +12428,11 @@ main table td em {
 }
 
 .card--course--related-course .key-info {
-    margin-top: 1.5rem;
     color: #696969;
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
+    margin-top: 1.5rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -12761,7 +12758,7 @@ main table td em {
         border-color: #dd0036;
     }
     .js .cookie-notice button:active:focus, .js .cookie-notice button:active:active, .js .cookie-notice button:focus:focus, .js .cookie-notice button:focus:active {
-        outline-color: #ffffff;
+        outline-color: #0c0c0e;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -13077,7 +13074,7 @@ main table td em {
         border-color: #dd0036;
     }
     .cta-block .primary-cta-arrow--dark:active:focus, .cta-block .primary-cta-arrow--dark:active:active, .cta-block .primary-cta-arrow--dark:focus:focus, .cta-block .primary-cta-arrow--dark:focus:active {
-        outline-color: #ffffff;
+        outline-color: #0c0c0e;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -13164,7 +13161,7 @@ main table td em {
         border-color: #dd0036;
     }
     .cta-block .primary-cta--dark:active:focus, .cta-block .primary-cta--dark:active:active, .cta-block .primary-cta--dark:focus:focus, .cta-block .primary-cta--dark:focus:active {
-        outline-color: #ffffff;
+        outline-color: #0c0c0e;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -13474,7 +13471,7 @@ main table td em {
         border-color: #ffffff;
     }
     .cta-block .outline-cta-arrow--dark:focus:focus, .cta-block .outline-cta-arrow--dark:focus:active {
-        outline-color: #ffffff;
+        outline-color: #0c0c0e;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -13483,7 +13480,7 @@ main table td em {
         border-color: #ffffff;
     }
     .cta-block .outline-cta-arrow--dark:active:focus, .cta-block .outline-cta-arrow--dark:active:active {
-        outline-color: #ffffff;
+        outline-color: #0c0c0e;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -13568,7 +13565,7 @@ main table td em {
         border-color: #ffffff;
     }
     .cta-block .outline-cta--dark:focus:focus, .cta-block .outline-cta--dark:focus:active {
-        outline-color: #ffffff;
+        outline-color: #0c0c0e;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -13577,7 +13574,7 @@ main table td em {
         border-color: #ffffff;
     }
     .cta-block .outline-cta--dark:active:focus, .cta-block .outline-cta--dark:active:active {
-        outline-color: #ffffff;
+        outline-color: #0c0c0e;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -13852,7 +13849,7 @@ main table td em {
         background: #c40030;
     }
     .cta-block .basic-cta--dark:focus:focus, .cta-block .basic-cta--dark:focus:active, .cta-block .basic-cta--dark:active:focus, .cta-block .basic-cta--dark:active:active {
-        outline-color: #ffffff;
+        outline-color: #0c0c0e;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -15714,10 +15711,10 @@ article figure figcaption > span {
         border-bottom-width: 2px;
         color: #1e1e1e;
         font-weight: 700;
-        outline-color: #1e1e1e;
-        outline-offset: 3px;
-        outline-style: dotted;
+        outline-color: #0c0c0e;
         outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
     }
 }
 
@@ -15737,10 +15734,10 @@ article figure figcaption > span {
         border-bottom-width: 2px;
         color: #ffffff;
         font-weight: 700;
-        outline-color: #1e1e1e;
-        outline-offset: 3px;
-        outline-style: dotted;
+        outline-color: #0c0c0e;
         outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
     }
     .js .pagination__wrapper .pagination__controls button:disabled {
         background-color: transparent;
@@ -18054,7 +18051,7 @@ blockquote footer {
         border-color: #dd0036;
     }
     .theme--dark .cta-block li:nth-child(1) a:active:focus, .theme--dark .cta-block li:nth-child(1) a:active:active, .theme--dark .cta-block li:nth-child(1) a:focus:focus, .theme--dark .cta-block li:nth-child(1) a:focus:active {
-        outline-color: #ffffff;
+        outline-color: #0c0c0e;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -18161,7 +18158,7 @@ blockquote footer {
         border-color: #ffffff;
     }
     .theme--dark .cta-block li:nth-child(2) a:focus:focus, .theme--dark .cta-block li:nth-child(2) a:focus:active {
-        outline-color: #ffffff;
+        outline-color: #0c0c0e;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -18170,7 +18167,7 @@ blockquote footer {
         border-color: #ffffff;
     }
     .theme--dark .cta-block li:nth-child(2) a:active:focus, .theme--dark .cta-block li:nth-child(2) a:active:active {
-        outline-color: #ffffff;
+        outline-color: #0c0c0e;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -18325,7 +18322,7 @@ blockquote footer {
         background: #c40030;
     }
     .theme--dark .cta-block li:nth-child(3) a:focus:focus, .theme--dark .cta-block li:nth-child(3) a:focus:active, .theme--dark .cta-block li:nth-child(3) a:active:focus, .theme--dark .cta-block li:nth-child(3) a:active:active {
-        outline-color: #ffffff;
+        outline-color: #0c0c0e;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -19401,10 +19398,10 @@ blockquote footer {
         border-bottom-width: 2px;
         color: #1e1e1e;
         font-weight: 700;
-        outline-color: #1e1e1e;
-        outline-offset: 3px;
-        outline-style: dotted;
+        outline-color: #0c0c0e;
         outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
     }
 }
 
@@ -19424,10 +19421,10 @@ blockquote footer {
         border-bottom-width: 2px;
         color: #ffffff;
         font-weight: 700;
-        outline-color: #1e1e1e;
-        outline-offset: 3px;
-        outline-style: dotted;
+        outline-color: #0c0c0e;
         outline-width: 2px;
+        outline-style: dotted;
+        outline-offset: 3px;
     }
     .theme--dark.js .pagination__controls button:disabled {
         background-color: transparent;
