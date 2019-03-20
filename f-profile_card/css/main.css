@@ -12108,23 +12108,14 @@ main table td em {
     list-style-type: none;
 }
 
-.card .card__content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-@media (min-width: 433px) {
-    .card .card__content {
-        align-items: flex-end;
-        flex-direction: row;
-    }
-}
-
 .card--profile {
-    margin-top: 0 !important;
     border-top: 1px dotted #cbcbcb;
     padding: 2rem 0;
+}
+
+.card--profile .card__content {
+    display: flex;
+    flex-direction: column;
 }
 
 .card--profile:first-child {
@@ -12132,85 +12123,68 @@ main table td em {
     padding-top: 0;
 }
 
-.card--profile .card--profile__name {
+.card--profile__name {
     color: #1e1e1e;
     font-size: 1.266rem;
     font-weight: 700;
 }
 
-.card--profile .card--profile__jobtitle {
+.card--profile__jobtitle {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
     color: #696969;
-    margin-top: 0.2rem;
+    margin-top: 0.25rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--profile .card--profile__jobtitle {
+    .card--profile__jobtitle {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--profile .card--profile__jobtitle {
+    .card--profile__jobtitle {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--profile .card--profile__jobtitle {
+    .card--profile__jobtitle {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--profile .card--profile__jobtitle {
+    .card--profile__jobtitle {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--profile .card--profile__jobtitle {
+    .card--profile__jobtitle {
         letter-spacing: -0.017em;
     }
 }
 
-.card--profile .card--profile__description {
-    margin-top: 0.5rem;
-    flex-basis: 100%;
-}
-
-.card--profile .card--profile__thumbnail {
+.card--profile__thumbnail {
     margin-top: 0.5rem;
 }
 
 @media (min-width: 769px) {
-    .card--profile .card--profile__thumbnail {
+    .card--profile__thumbnail {
         display: flex;
-        align-items: flex-start;
-        flex-direction: row;
     }
 }
 
-.card--profile .card--profile__thumbnail figure {
+.card--profile__thumbnail figure {
     margin-top: 0;
+    padding-right: 2rem;
 }
 
-.card--profile .card--profile__thumbnail figure img {
+.card--profile__thumbnail figure img {
     border-radius: 100%;
-    max-width: 7.125rem;
-}
-
-.card--profile .card--profile__thumbnail .card--profile__description {
-    margin-top: 0;
-}
-
-@media (min-width: 769px) {
-    .card--profile .card--profile__thumbnail .card--profile__description {
-        flex-basis: 79%;
-        padding-left: 2rem;
-    }
+    max-width: 7rem;
 }
 
 .js .cookie-notice {
