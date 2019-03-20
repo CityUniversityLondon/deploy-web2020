@@ -16079,48 +16079,48 @@ blockquote footer {
     display: block;
 }
 
-.footer__back-to-top a {
+.back-to-top a {
     float: right;
     border-bottom: none;
     font-size: 0.889rem;
     transition: opacity 1s ease;
 }
 
-.footer__back-to-top a:active {
+.back-to-top a:active {
     outline: 2px dotted #0c0c0e;
     background: none;
     border-bottom-width: 0px;
 }
 
-.footer__back-to-top a:focus {
+.back-to-top a:focus {
     outline: 2px dotted #0c0c0e;
     border-bottom-width: 0px;
 }
 
-.footer__back-to-top a:hover {
+.back-to-top a:hover {
     color: #1e1e1e;
     background: none;
     text-decoration: none;
     border-bottom-width: 0px;
 }
 
-.footer__back-to-top a:hover .footer__back-to-top__button__arrow,
-.footer__back-to-top a:active .footer__back-to-top__button__arrow {
+.back-to-top a:hover .back-to-top__button__arrow,
+.back-to-top a:active .back-to-top__button__arrow {
     background: #1e1e1e;
 }
 
-.footer__back-to-top a .footer__back-to-top__button__label {
+.back-to-top a .back-to-top__button__label {
     color: #696969;
     border-bottom: 2px solid #696969;
 }
 
-.footer__back-to-top a:hover .footer__back-to-top__button__label,
-.footer__back-to-top a:active .footer__back-to-top__button__label {
+.back-to-top a:hover .back-to-top__button__label,
+.back-to-top a:active .back-to-top__button__label {
     color: #1e1e1e;
     border-bottom: 2px solid #1e1e1e;
 }
 
-.footer__back-to-top a .footer__back-to-top__button__arrow {
+.back-to-top a .back-to-top__button__arrow {
     color: #ffffff;
     background: #696969;
     border-radius: 50%;
@@ -16133,19 +16133,19 @@ blockquote footer {
     vertical-align: middle;
 }
 
-.footer__back-to-top a .footer__back-to-top__button__arrow:before {
+.back-to-top a .back-to-top__button__arrow:before {
     vertical-align: middle;
     padding-top: 4px;
     font-size: 10px;
     border-top: 2px solid #ffffff;
 }
 
-.footer__back-to-top a .progress-circle {
+.back-to-top a .progress-circle {
     display: none;
 }
 
 @media print {
-    .footer__back-to-top {
+    .back-to-top {
         display: none;
     }
 }
@@ -16168,7 +16168,7 @@ blockquote footer {
     }
 }
 
-.back-to-top-stick .footer__back-to-top__button {
+.back-to-top-stick .back-to-top__button {
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -16176,20 +16176,20 @@ blockquote footer {
     position: relative;
 }
 
-.back-to-top-stick .footer__back-to-top__button svg path {
+.back-to-top-stick .back-to-top__button svg path {
     fill: none;
 }
 
-.back-to-top-stick .footer__back-to-top__button .progress-circle {
+.back-to-top-stick .back-to-top__button .progress-circle {
     display: block;
 }
 
-.back-to-top-stick .footer__back-to-top__button svg.progress-circle path {
+.back-to-top-stick .back-to-top__button svg.progress-circle path {
     stroke: #0c0c0e;
     stroke-width: 5;
 }
 
-.back-to-top-stick .footer__back-to-top__button .footer__back-to-top__button__arrow {
+.back-to-top-stick .back-to-top__button .back-to-top__button__arrow {
     padding-top: 17px;
     left: 4px;
     text-align: center;
@@ -16203,14 +16203,14 @@ blockquote footer {
     margin-left: 0px;
 }
 
-.back-to-top-stick .footer__back-to-top__button .footer__back-to-top__button__arrow:before {
+.back-to-top-stick .back-to-top__button .back-to-top__button__arrow:before {
     border-top: 2px solid #ffffff;
     padding-top: 6px;
     vertical-align: initial;
     font-size: 13px;
 }
 
-.back-to-top-stick .footer__back-to-top__button__label {
+.back-to-top-stick .back-to-top__button__label {
     display: none;
 }
 

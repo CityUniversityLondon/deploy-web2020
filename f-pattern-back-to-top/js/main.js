@@ -3962,7 +3962,7 @@ __webpack_require__.r(__webpack_exports__);
  *  Back to top link button only appears on long pages and when you have scrolled down long enough
  *
  */
-const scrollToTopBut = document.getElementsByClassName('footer__back-to-top')[0].querySelectorAll('a')[0];
+const scrollToTopBut = document.getElementsByClassName('back-to-top')[0].querySelectorAll('a')[0];
 const viewPortHeight = window.innerHeight; // calculates viewport height
 
 const docHeight = document.documentElement.scrollHeight; // calculates page height
@@ -4038,7 +4038,7 @@ updateProgress();
 initBacktoTop();
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: scrollButBehav,
-  launchQuery: '.footer__back-to-top__button'
+  launchQuery: '.back-to-top__button'
 });
 
 /***/ }),
