@@ -12834,10 +12834,6 @@ article figure figcaption {
     }
 }
 
-article figure figcaption .figcaption__credit {
-    display: block;
-}
-
 article figure figcaption a {
     background-color: initial;
     border-bottom-color: initial;
@@ -12942,8 +12938,13 @@ article figure figcaption a:active {
     border-bottom-width: 2px;
 }
 
+.figcaption__credit {
+    display: block;
+}
+
+/*  possible remove the below?   */
 @media (max-width: 432px) {
-    article figure.figure--svg img {
+    article figure .figure--svg img {
         padding-bottom: 100vw;
     }
 }
