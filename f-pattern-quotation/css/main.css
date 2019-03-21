@@ -14433,43 +14433,43 @@ article figure figcaption a:active {
     }
 }
 
-blockquote .blockquote__body {
+.blockquote__body {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     padding-bottom: 0.5rem;
     color: #0c0c0e;
 }
 
-blockquote .blockquote__body p {
+.blockquote__body p {
     font-size: 1.266rem;
 }
 
-blockquote .blockquote__body p em {
+.blockquote__body p em {
     font-style: normal;
 }
 
-blockquote .blockquote__body--text-align-left {
+.blockquote__body--text-align-left {
     text-align: left;
 }
 
-blockquote .blockquote__body--text-align-right {
+.blockquote__body--text-align-right {
     text-align: right;
 }
 
-blockquote .blockquote__body--text-align-center {
+.blockquote__body--text-align-center {
     text-align: center;
 }
 
-blockquote .blockquote__body svg {
+.blockquote__body svg {
     margin-top: 1.75rem;
     margin-bottom: 1.75rem;
 }
 
-blockquote .blockquote__body .svg--red {
+.blockquote__body .svg--red {
     fill: #dd0036;
 }
 
-blockquote .blockquote__body .svg--black {
+.blockquote__body .svg--black {
     fill: #0c0c0e;
 }
 
