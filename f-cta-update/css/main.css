@@ -12344,7 +12344,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s;
+    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
     border: 0.125rem solid #dd0036;
     background: #dd0036;
     color: #ffffff;
@@ -12408,6 +12408,11 @@ main table td em {
     }
 }
 
+.js .cookie-notice button:visited {
+    color: #ffffff;
+    border-color: #dd0036;
+}
+
 .js .cookie-notice button:focus {
     background: #dd0036;
     color: #ffffff;
@@ -12457,7 +12462,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s;
+    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background: #dd0036;
     border: 0.125rem solid #dd0036;
@@ -12522,6 +12527,11 @@ main table td em {
     }
 }
 
+.primary-cta-arrow--bright:visited {
+    border-color: #dd0036;
+    color: #ffffff;
+}
+
 .primary-cta-arrow--bright:focus {
     background: #dd0036;
     border-color: #dd0036;
@@ -12535,10 +12545,19 @@ main table td em {
     outline-offset: 0.1875rem;
 }
 
+@media (hover: hover) {
+    .primary-cta-arrow--bright:hover {
+        background: #ffffff;
+        border-color: #dd0036;
+        color: #dd0036;
+    }
+}
+
 .primary-cta-arrow--bright:active {
     border-color: #dd0036;
     box-shadow: none;
     color: #dd0036;
+    background: transparent;
 }
 
 .primary-cta-arrow--bright:active:focus, .primary-cta-arrow--bright:active:active {
@@ -12546,14 +12565,6 @@ main table td em {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
-}
-
-@media (hover: hover) {
-    .primary-cta-arrow--bright:hover {
-        background: #ffffff;
-        border-color: #dd0036;
-        color: #dd0036;
-    }
 }
 
 .primary-cta-arrow--bright:disabled {
@@ -12569,7 +12580,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s;
+    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background: #dd0036;
     border: 0.125rem solid #dd0036;
@@ -12636,6 +12647,11 @@ main table td em {
     }
 }
 
+.primary-cta--bright:visited {
+    border-color: #dd0036;
+    color: #ffffff;
+}
+
 .primary-cta--bright:focus {
     background: #dd0036;
     border-color: #dd0036;
@@ -12643,19 +12659,6 @@ main table td em {
 }
 
 .primary-cta--bright:focus:focus, .primary-cta--bright:focus:active {
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-}
-
-.primary-cta--bright:active {
-    border-color: #dd0036;
-    box-shadow: none;
-    color: #dd0036;
-}
-
-.primary-cta--bright:active:focus, .primary-cta--bright:active:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
@@ -12670,8 +12673,27 @@ main table td em {
     }
 }
 
+.primary-cta--bright:active {
+    border-color: #dd0036;
+    box-shadow: none;
+    color: #dd0036;
+    background: transparent;
+}
+
+.primary-cta--bright:active:focus, .primary-cta--bright:active:active {
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
 .primary-cta--bright:disabled {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.primary-cta--bright:visited {
+    border-color: #dd0036;
+    color: #ffffff;
 }
 
 .primary-cta--bright:after {
@@ -12695,6 +12717,7 @@ main table td em {
 
 .primary-cta--bright:active {
     border-color: #dd0036;
+    background: transparent;
 }
 
 .primary-cta-arrow--dark {
@@ -12706,7 +12729,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s;
+    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
     border: 0.125rem solid #dd0036;
     background: #dd0036;
     color: #ffffff;
@@ -12770,6 +12793,11 @@ main table td em {
     }
 }
 
+.primary-cta-arrow--dark:visited {
+    color: #ffffff;
+    border-color: #dd0036;
+}
+
 .primary-cta-arrow--dark:focus {
     background: #dd0036;
     color: #ffffff;
@@ -12805,7 +12833,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s;
+    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
     border: 0.125rem solid #dd0036;
     background: #dd0036;
     color: #ffffff;
@@ -12871,6 +12899,11 @@ main table td em {
     }
 }
 
+.primary-cta--dark:visited {
+    color: #ffffff;
+    border-color: #dd0036;
+}
+
 .primary-cta--dark:focus {
     background: #dd0036;
     color: #ffffff;
@@ -12895,6 +12928,11 @@ main table td em {
 
 .primary-cta--dark:disabled {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.primary-cta--dark:visited {
+    color: #ffffff;
+    border-color: #dd0036;
 }
 
 .primary-cta--dark:focus, .primary-cta--dark:active {
@@ -12930,7 +12968,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s;
+    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background: transparent;
     border: 0.125rem solid #0c0c0e;
@@ -12995,9 +13033,14 @@ main table td em {
     }
 }
 
+.outline-cta-arrow--bright:visited {
+    border-color: #0c0c0e;
+    color: #0c0c0e;
+}
+
 @media (hover: hover) {
     .outline-cta-arrow--bright:hover {
-        background-color: #0c0c0e;
+        background: #0c0c0e;
         border-color: #0c0c0e;
         color: #ffffff;
     }
@@ -13017,7 +13060,7 @@ main table td em {
 }
 
 .outline-cta-arrow--bright:active {
-    background-color: #0c0c0e;
+    background: #0c0c0e;
     border-color: #0c0c0e;
     color: #ffffff;
     border-color: #0c0c0e;
@@ -13044,7 +13087,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s;
+    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background: transparent;
     border: 0.125rem solid #0c0c0e;
@@ -13109,9 +13152,14 @@ main table td em {
     }
 }
 
+.outline-cta--bright:visited {
+    border-color: #0c0c0e;
+    color: #0c0c0e;
+}
+
 @media (hover: hover) {
     .outline-cta--bright:hover {
-        background-color: #0c0c0e;
+        background: #0c0c0e;
         border-color: #0c0c0e;
         color: #ffffff;
     }
@@ -13131,7 +13179,7 @@ main table td em {
 }
 
 .outline-cta--bright:active {
-    background-color: #0c0c0e;
+    background: #0c0c0e;
     border-color: #0c0c0e;
     color: #ffffff;
     border-color: #0c0c0e;
@@ -13172,7 +13220,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s;
+    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
     background: transparent;
     border: 0.125rem solid #ffffff;
     color: #ffffff;
@@ -13236,15 +13284,20 @@ main table td em {
     }
 }
 
+.outline-cta-arrow--dark:visited {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
 .outline-cta-arrow--dark:active {
-    background-color: #ffffff;
+    background: #ffffff;
     border-color: #ffffff;
     color: #0c0c0e;
 }
 
 @media (hover: hover) {
     .outline-cta-arrow--dark:hover {
-        background-color: #ffffff;
+        background: #ffffff;
         border-color: #ffffff;
         color: #0c0c0e;
     }
@@ -13285,7 +13338,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s;
+    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
     background: transparent;
     border: 0.125rem solid #ffffff;
     color: #ffffff;
@@ -13349,15 +13402,20 @@ main table td em {
     }
 }
 
+.outline-cta--dark:visited {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
 .outline-cta--dark:active {
-    background-color: #ffffff;
+    background: #ffffff;
     border-color: #ffffff;
     color: #0c0c0e;
 }
 
 @media (hover: hover) {
     .outline-cta--dark:hover {
-        background-color: #ffffff;
+        background: #ffffff;
         border-color: #ffffff;
         color: #0c0c0e;
     }
@@ -13412,7 +13470,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s;
+    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background: #dd0036;
     border: 0.125rem solid #dd0036;
@@ -13480,6 +13538,11 @@ main table td em {
     }
 }
 
+.basic-cta--bright:visited {
+    border-color: #dd0036;
+    color: #ffffff;
+}
+
 .basic-cta--bright:focus {
     background: #dd0036;
     border-color: #dd0036;
@@ -13487,19 +13550,6 @@ main table td em {
 }
 
 .basic-cta--bright:focus:focus, .basic-cta--bright:focus:active {
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-}
-
-.basic-cta--bright:active {
-    border-color: #dd0036;
-    box-shadow: none;
-    color: #dd0036;
-}
-
-.basic-cta--bright:active:focus, .basic-cta--bright:active:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
@@ -13514,8 +13564,27 @@ main table td em {
     }
 }
 
+.basic-cta--bright:active {
+    border-color: #dd0036;
+    box-shadow: none;
+    color: #dd0036;
+    background: transparent;
+}
+
+.basic-cta--bright:active:focus, .basic-cta--bright:active:active {
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
 .basic-cta--bright:disabled {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.basic-cta--bright:visited {
+    border-color: #dd0036;
+    color: #ffffff;
 }
 
 .basic-cta--bright:after {
@@ -13529,10 +13598,6 @@ main table td em {
     padding: 0.75rem 1.5rem;
 }
 
-.basic-cta--bright:active {
-    background: #aa002a;
-}
-
 @media (hover: hover) {
     .basic-cta--bright:hover {
         background: #dd0036;
@@ -13541,6 +13606,10 @@ main table td em {
         color: #ffffff;
         padding: 0.75rem 1.5rem;
     }
+}
+
+.basic-cta--bright:active {
+    background: #aa002a;
 }
 
 .basic-cta--bright:disabled {
@@ -13556,7 +13625,7 @@ main table td em {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s;
+    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background: #dd0036;
     border: 0.125rem solid #dd0036;
@@ -13627,6 +13696,11 @@ main table td em {
     }
 }
 
+.basic-cta--dark:visited {
+    border-color: #dd0036;
+    color: #ffffff;
+}
+
 .basic-cta--dark:focus {
     background: #dd0036;
     border-color: #dd0036;
@@ -13634,19 +13708,6 @@ main table td em {
 }
 
 .basic-cta--dark:focus:focus, .basic-cta--dark:focus:active {
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-}
-
-.basic-cta--dark:active {
-    border-color: #dd0036;
-    box-shadow: none;
-    color: #dd0036;
-}
-
-.basic-cta--dark:active:focus, .basic-cta--dark:active:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
@@ -13661,8 +13722,27 @@ main table td em {
     }
 }
 
+.basic-cta--dark:active {
+    border-color: #dd0036;
+    box-shadow: none;
+    color: #dd0036;
+    background: transparent;
+}
+
+.basic-cta--dark:active:focus, .basic-cta--dark:active:active {
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
 .basic-cta--dark:disabled {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.basic-cta--dark:visited {
+    border-color: #dd0036;
+    color: #ffffff;
 }
 
 .basic-cta--dark:after {
@@ -13676,10 +13756,6 @@ main table td em {
     padding: 0.75rem 1.5rem;
 }
 
-.basic-cta--dark:active {
-    background: #aa002a;
-}
-
 @media (hover: hover) {
     .basic-cta--dark:hover {
         background: #dd0036;
@@ -13690,8 +13766,17 @@ main table td em {
     }
 }
 
+.basic-cta--dark:active {
+    background: #aa002a;
+}
+
 .basic-cta--dark:disabled {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.basic-cta--dark:visited {
+    border-color: #dd0036;
+    color: #ffffff;
 }
 
 .basic-cta--dark:after {
@@ -13704,10 +13789,6 @@ main table td em {
     color: #ffffff;
 }
 
-.basic-cta--dark:active {
-    background: #aa002a;
-}
-
 @media (hover: hover) {
     .basic-cta--dark:hover {
         background: #dd0036;
@@ -13715,6 +13796,10 @@ main table td em {
         border-color: #dd0036;
         color: #ffffff;
     }
+}
+
+.basic-cta--dark:active {
+    background: #aa002a;
 }
 
 .basic-cta--dark:focus:focus, .basic-cta--dark:focus:active, .basic-cta--dark:active:focus, .basic-cta--dark:active:active {
@@ -17855,7 +17940,7 @@ blockquote footer {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s;
+    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
     border: 0.125rem solid #dd0036;
     background: #dd0036;
     color: #ffffff;
@@ -17921,6 +18006,11 @@ blockquote footer {
     }
 }
 
+.theme--dark .cta-block li:nth-child(1) a:visited {
+    color: #ffffff;
+    border-color: #dd0036;
+}
+
 .theme--dark .cta-block li:nth-child(1) a:focus {
     background: #dd0036;
     color: #ffffff;
@@ -17945,6 +18035,11 @@ blockquote footer {
 
 .theme--dark .cta-block li:nth-child(1) a:disabled {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.theme--dark .cta-block li:nth-child(1) a:visited {
+    color: #ffffff;
+    border-color: #dd0036;
 }
 
 .theme--dark .cta-block li:nth-child(1) a:focus, .theme--dark .cta-block li:nth-child(1) a:active {
@@ -17980,7 +18075,7 @@ blockquote footer {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s;
+    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
     background: transparent;
     border: 0.125rem solid #ffffff;
     color: #ffffff;
@@ -18044,15 +18139,20 @@ blockquote footer {
     }
 }
 
+.theme--dark .cta-block li:nth-child(2) a:visited {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
 .theme--dark .cta-block li:nth-child(2) a:active {
-    background-color: #ffffff;
+    background: #ffffff;
     border-color: #ffffff;
     color: #0c0c0e;
 }
 
 @media (hover: hover) {
     .theme--dark .cta-block li:nth-child(2) a:hover {
-        background-color: #ffffff;
+        background: #ffffff;
         border-color: #ffffff;
         color: #0c0c0e;
     }
@@ -18107,7 +18207,7 @@ blockquote footer {
     font-weight: 600;
     padding: 0.75rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s;
+    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background: #dd0036;
     border: 0.125rem solid #dd0036;
@@ -18178,6 +18278,11 @@ blockquote footer {
     }
 }
 
+.theme--dark .cta-block li:nth-child(3) a:visited {
+    border-color: #dd0036;
+    color: #ffffff;
+}
+
 .theme--dark .cta-block li:nth-child(3) a:focus {
     background: #dd0036;
     border-color: #dd0036;
@@ -18185,19 +18290,6 @@ blockquote footer {
 }
 
 .theme--dark .cta-block li:nth-child(3) a:focus:focus, .theme--dark .cta-block li:nth-child(3) a:focus:active {
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-}
-
-.theme--dark .cta-block li:nth-child(3) a:active {
-    border-color: #dd0036;
-    box-shadow: none;
-    color: #dd0036;
-}
-
-.theme--dark .cta-block li:nth-child(3) a:active:focus, .theme--dark .cta-block li:nth-child(3) a:active:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
@@ -18212,8 +18304,27 @@ blockquote footer {
     }
 }
 
+.theme--dark .cta-block li:nth-child(3) a:active {
+    border-color: #dd0036;
+    box-shadow: none;
+    color: #dd0036;
+    background: transparent;
+}
+
+.theme--dark .cta-block li:nth-child(3) a:active:focus, .theme--dark .cta-block li:nth-child(3) a:active:active {
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
 .theme--dark .cta-block li:nth-child(3) a:disabled {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.theme--dark .cta-block li:nth-child(3) a:visited {
+    border-color: #dd0036;
+    color: #ffffff;
 }
 
 .theme--dark .cta-block li:nth-child(3) a:after {
@@ -18227,10 +18338,6 @@ blockquote footer {
     padding: 0.75rem 1.5rem;
 }
 
-.theme--dark .cta-block li:nth-child(3) a:active {
-    background: #aa002a;
-}
-
 @media (hover: hover) {
     .theme--dark .cta-block li:nth-child(3) a:hover {
         background: #dd0036;
@@ -18241,8 +18348,17 @@ blockquote footer {
     }
 }
 
+.theme--dark .cta-block li:nth-child(3) a:active {
+    background: #aa002a;
+}
+
 .theme--dark .cta-block li:nth-child(3) a:disabled {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.theme--dark .cta-block li:nth-child(3) a:visited {
+    border-color: #dd0036;
+    color: #ffffff;
 }
 
 .theme--dark .cta-block li:nth-child(3) a:after {
@@ -18255,10 +18371,6 @@ blockquote footer {
     color: #ffffff;
 }
 
-.theme--dark .cta-block li:nth-child(3) a:active {
-    background: #aa002a;
-}
-
 @media (hover: hover) {
     .theme--dark .cta-block li:nth-child(3) a:hover {
         background: #dd0036;
@@ -18266,6 +18378,10 @@ blockquote footer {
         border-color: #dd0036;
         color: #ffffff;
     }
+}
+
+.theme--dark .cta-block li:nth-child(3) a:active {
+    background: #aa002a;
 }
 
 .theme--dark .cta-block li:nth-child(3) a:focus:focus, .theme--dark .cta-block li:nth-child(3) a:focus:active, .theme--dark .cta-block li:nth-child(3) a:active:focus, .theme--dark .cta-block li:nth-child(3) a:active:active {
