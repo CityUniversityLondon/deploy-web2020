@@ -12152,7 +12152,7 @@ main table td em {
 }
 
 .card--course--transparent .title {
-    line-height: 1.5rem;
+    line-height: 1.625;
     font-weight: 600;
 }
 
@@ -12161,7 +12161,7 @@ main table td em {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -12233,56 +12233,82 @@ main table td em {
 
 .card--course--transparent .key-info {
     color: #696969;
+}
+
+.card--course--transparent .key-info span {
+    float: left;
+    width: 1.5rem;
+    color: #dd0036;
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--transparent .key-info {
+    .card--course--transparent .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--transparent .key-info {
+    .card--course--transparent .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--transparent .key-info {
+    .card--course--transparent .key-info span {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--transparent .key-info {
+    .card--course--transparent .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--transparent .key-info {
+    .card--course--transparent .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--transparent .key-info span {
-    float: left;
-    width: 1.625rem;
-    color: #dd0036;
-    padding-top: 0.4rem;
+.card--course--transparent .key-info div {
+    margin-left: 1.5rem;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
 }
 
-@media (min-width: 1281px) {
-    .card--course--transparent .key-info span {
-        padding-top: 0.3rem;
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--course--transparent .key-info div {
+        letter-spacing: -0.005em;
     }
 }
 
-.card--course--transparent .key-info div {
-    margin-left: 1.625rem;
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--course--transparent .key-info div {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--course--transparent .key-info div {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--course--transparent .key-info div {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--course--transparent .key-info div {
+        letter-spacing: -0.017em;
+    }
 }
 
 .card--course--background {
@@ -12316,7 +12342,7 @@ main table td em {
 }
 
 .card--course--background .title {
-    line-height: 1.5rem;
+    line-height: 1.625;
     font-weight: 600;
 }
 
@@ -12325,7 +12351,7 @@ main table td em {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -12397,56 +12423,82 @@ main table td em {
 
 .card--course--background .key-info {
     color: #696969;
+}
+
+.card--course--background .key-info span {
+    float: left;
+    width: 1.5rem;
+    color: #dd0036;
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--background .key-info {
+    .card--course--background .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--background .key-info {
+    .card--course--background .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--background .key-info {
+    .card--course--background .key-info span {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--background .key-info {
+    .card--course--background .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--background .key-info {
+    .card--course--background .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--background .key-info span {
-    float: left;
-    width: 1.625rem;
-    color: #dd0036;
-    padding-top: 0.4rem;
+.card--course--background .key-info div {
+    margin-left: 1.5rem;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
 }
 
-@media (min-width: 1281px) {
-    .card--course--background .key-info span {
-        padding-top: 0.3rem;
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--course--background .key-info div {
+        letter-spacing: -0.005em;
     }
 }
 
-.card--course--background .key-info div {
-    margin-left: 1.625rem;
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--course--background .key-info div {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--course--background .key-info div {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--course--background .key-info div {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--course--background .key-info div {
+        letter-spacing: -0.017em;
+    }
 }
 
 .card--course--related-course {
@@ -12495,7 +12547,7 @@ main table td em {
 }
 
 .card--course--related-course .title {
-    line-height: 1.5rem;
+    line-height: 1.625;
     font-weight: 600;
 }
 
@@ -12504,7 +12556,7 @@ main table td em {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -12576,56 +12628,82 @@ main table td em {
 
 .card--course--related-course .key-info {
     color: #696969;
+}
+
+.card--course--related-course .key-info span {
+    float: left;
+    width: 1.5rem;
+    color: #dd0036;
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course .key-info {
+    .card--course--related-course .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course .key-info {
+    .card--course--related-course .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course .key-info {
+    .card--course--related-course .key-info span {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course .key-info {
+    .card--course--related-course .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--related-course .key-info {
+    .card--course--related-course .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--related-course .key-info span {
-    float: left;
-    width: 1.625rem;
-    color: #dd0036;
-    padding-top: 0.4rem;
+.card--course--related-course .key-info div {
+    margin-left: 1.5rem;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
 }
 
-@media (min-width: 1281px) {
-    .card--course--related-course .key-info span {
-        padding-top: 0.3rem;
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--course--related-course .key-info div {
+        letter-spacing: -0.005em;
     }
 }
 
-.card--course--related-course .key-info div {
-    margin-left: 1.625rem;
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--course--related-course .key-info div {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--course--related-course .key-info div {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--course--related-course .key-info div {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--course--related-course .key-info div {
+        letter-spacing: -0.017em;
+    }
 }
 
 @media (hover: hover) {
@@ -12662,13 +12740,13 @@ main table td em {
 
 @media (min-width: 769px) {
     .card--course--related-course {
-        grid-template-columns: 8.75rem auto;
+        grid-template-columns: 8.5rem auto;
     }
 }
 
 .card--course--related-course:hover .title {
     color: #1e1e1e;
-    background-size: 100% 2px;
+    background-size: 100% 0.2rem;
 }
 
 .card--course--related-course:hover img {
@@ -12681,15 +12759,15 @@ main table td em {
 
 .card--course--related-course .image-container {
     overflow: hidden;
-    width: 3.125rem;
-    height: 3.125rem;
+    width: 3.25rem;
+    height: 3.25rem;
     position: relative;
 }
 
 @media (min-width: 769px) {
     .card--course--related-course .image-container {
-        width: 8.75rem;
-        height: 8.75rem;
+        width: 8.5rem;
+        height: 8.5rem;
     }
 }
 
@@ -12712,11 +12790,11 @@ main table td em {
 
 .card--course--related-course .title {
     color: #696969;
-    padding-bottom: 0.12rem;
+    padding-bottom: 0.25rem;
     background-image: linear-gradient(#1e1e1e, #1e1e1e);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 2px;
+    background-size: 0% 0.2rem;
     transition: background-size 0.6s;
 }
 
@@ -12770,7 +12848,7 @@ main table td em {
 }
 
 .card--course--related-course--background .title {
-    line-height: 1.5rem;
+    line-height: 1.625;
     font-weight: 600;
 }
 
@@ -12779,7 +12857,7 @@ main table td em {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    margin-top: 1.5rem;
+    margin-top: 1.25rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -12851,56 +12929,82 @@ main table td em {
 
 .card--course--related-course--background .key-info {
     color: #696969;
+}
+
+.card--course--related-course--background .key-info span {
+    float: left;
+    width: 1.5rem;
+    color: #dd0036;
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course--background .key-info {
+    .card--course--related-course--background .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course--background .key-info {
+    .card--course--related-course--background .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course--background .key-info {
+    .card--course--related-course--background .key-info span {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course--background .key-info {
+    .card--course--related-course--background .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--related-course--background .key-info {
+    .card--course--related-course--background .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--related-course--background .key-info span {
-    float: left;
-    width: 1.625rem;
-    color: #dd0036;
-    padding-top: 0.4rem;
+.card--course--related-course--background .key-info div {
+    margin-left: 1.5rem;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
 }
 
-@media (min-width: 1281px) {
-    .card--course--related-course--background .key-info span {
-        padding-top: 0.3rem;
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--course--related-course--background .key-info div {
+        letter-spacing: -0.005em;
     }
 }
 
-.card--course--related-course--background .key-info div {
-    margin-left: 1.625rem;
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--course--related-course--background .key-info div {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--course--related-course--background .key-info div {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--course--related-course--background .key-info div {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--course--related-course--background .key-info div {
+        letter-spacing: -0.017em;
+    }
 }
 
 @media (hover: hover) {
@@ -12937,13 +13041,13 @@ main table td em {
 
 @media (min-width: 769px) {
     .card--course--related-course--background {
-        grid-template-columns: 8.75rem auto;
+        grid-template-columns: 8.5rem auto;
     }
 }
 
 .card--course--related-course--background:hover .title {
     color: #1e1e1e;
-    background-size: 100% 2px;
+    background-size: 100% 0.2rem;
 }
 
 .card--course--related-course--background:hover img {
@@ -12956,15 +13060,15 @@ main table td em {
 
 .card--course--related-course--background .image-container {
     overflow: hidden;
-    width: 3.125rem;
-    height: 3.125rem;
+    width: 3.25rem;
+    height: 3.25rem;
     position: relative;
 }
 
 @media (min-width: 769px) {
     .card--course--related-course--background .image-container {
-        width: 8.75rem;
-        height: 8.75rem;
+        width: 8.5rem;
+        height: 8.5rem;
     }
 }
 
@@ -12987,11 +13091,11 @@ main table td em {
 
 .card--course--related-course--background .title {
     color: #696969;
-    padding-bottom: 0.12rem;
+    padding-bottom: 0.25rem;
     background-image: linear-gradient(#1e1e1e, #1e1e1e);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 2px;
+    background-size: 0% 0.2rem;
     transition: background-size 0.6s;
 }
 
