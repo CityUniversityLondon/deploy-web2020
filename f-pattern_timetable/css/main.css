@@ -14952,7 +14952,7 @@ blockquote footer {
 .timetable .row {
     background-color: #ffffff;
     margin-bottom: 2px;
-    padding: 0.3rem 1rem;
+    padding: 0.25rem 1rem;
 }
 
 .timetable .row:last-child {
@@ -14961,7 +14961,7 @@ blockquote footer {
 
 .timetable .row span {
     display: inline-block;
-    padding: 0.2rem 0;
+    padding: 0.25rem 0;
     line-height: 1.625;
 }
 
@@ -14987,7 +14987,7 @@ blockquote footer {
 }
 
 .timetable .row .icon {
-    padding-right: 0.3rem;
+    padding-right: 0.25rem;
     color: #5d184a;
 }
 
@@ -15022,7 +15022,7 @@ blockquote footer {
 .timetable-terms .row {
     background-color: #ffffff;
     margin-bottom: 2px;
-    padding: 0.3rem 1rem;
+    padding: 0.25rem 1rem;
 }
 
 .timetable-terms .row:last-child {
@@ -15031,7 +15031,7 @@ blockquote footer {
 
 .timetable-terms .row span {
     display: inline-block;
-    padding: 0.2rem 0;
+    padding: 0.25rem 0;
     line-height: 1.625;
 }
 
@@ -15057,7 +15057,7 @@ blockquote footer {
 }
 
 .timetable-terms .row .icon {
-    padding-right: 0.3rem;
+    padding-right: 0.25rem;
     color: #5d184a;
 }
 
@@ -15111,7 +15111,7 @@ blockquote footer {
 .timetable-text .row {
     background-color: #ffffff;
     margin-bottom: 2px;
-    padding: 0.3rem 1rem;
+    padding: 0.25rem 1rem;
 }
 
 .timetable-text .row:last-child {
@@ -15120,7 +15120,7 @@ blockquote footer {
 
 .timetable-text .row span {
     display: inline-block;
-    padding: 0.2rem 0;
+    padding: 0.25rem 0;
     line-height: 1.625;
 }
 
@@ -15146,7 +15146,7 @@ blockquote footer {
 }
 
 .timetable-text .row .icon {
-    padding-right: 0.3rem;
+    padding-right: 0.25rem;
     color: #5d184a;
 }
 
@@ -15183,7 +15183,7 @@ blockquote footer {
 .timetable-info .row {
     background-color: #ffffff;
     margin-bottom: 2px;
-    padding: 0.3rem 1rem;
+    padding: 0.25rem 1rem;
 }
 
 .timetable-info .row:last-child {
@@ -15192,7 +15192,7 @@ blockquote footer {
 
 .timetable-info .row span {
     display: inline-block;
-    padding: 0.2rem 0;
+    padding: 0.25rem 0;
     line-height: 1.625;
 }
 
@@ -15218,14 +15218,14 @@ blockquote footer {
 }
 
 .timetable-info .row .icon {
-    padding-right: 0.3rem;
+    padding-right: 0.25rem;
     color: #5d184a;
 }
 
 .timetable-info span {
     color: #a1a1a1;
     position: absolute;
-    left: 0.3125rem;
+    left: 0.25rem;
     top: 0.75rem;
 }
 
