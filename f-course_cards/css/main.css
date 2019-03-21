@@ -11993,7 +11993,7 @@ main table td em {
 }
 
 .breadcrumbs a:focus, .breadcrumbs a:active {
-    outline-color: #0c0c0e;
+    outline-color: #ffffff;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -12132,13 +12132,6 @@ main table td em {
     transform: scale(1.03);
 }
 
-.card--course--transparent:active .background, .card--course--transparent:focus .background {
-    outline-color: #0c0c0e;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
-}
-
 .card--course--transparent:after {
     content: '';
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -12149,6 +12142,13 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+.card--course--transparent:focus:after, .card--course--transparent:active:after {
+    outline-color: #0c0c0e;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
 }
 
 .card--course--transparent .title {
@@ -12296,13 +12296,6 @@ main table td em {
     transform: scale(1.03);
 }
 
-.card--course--background:active .background, .card--course--background:focus .background {
-    outline-color: #0c0c0e;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
-}
-
 .card--course--background:after {
     content: '';
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -12313,6 +12306,13 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+.card--course--background:focus:after, .card--course--background:active:after {
+    outline-color: #0c0c0e;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
 }
 
 .card--course--background .title {
@@ -12475,13 +12475,6 @@ main table td em {
     transform: scale(1.03);
 }
 
-.card--course--related-course:active .background, .card--course--related-course:focus .background {
-    outline-color: #0c0c0e;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
-}
-
 .card--course--related-course:after {
     content: '';
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -12492,6 +12485,13 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+.card--course--related-course:focus:after, .card--course--related-course:active:after {
+    outline-color: #0c0c0e;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
 }
 
 .card--course--related-course .title {
@@ -12750,13 +12750,6 @@ main table td em {
     transform: scale(1.03);
 }
 
-.card--course--related-course--background:active .background, .card--course--related-course--background:focus .background {
-    outline-color: #0c0c0e;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
-}
-
 .card--course--related-course--background:after {
     content: '';
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -12767,6 +12760,13 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+.card--course--related-course--background:focus:after, .card--course--related-course--background:active:after {
+    outline-color: #0c0c0e;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
 }
 
 .card--course--related-course--background .title {
@@ -13387,7 +13387,7 @@ main table td em {
         border-color: #dd0036;
     }
     .cta-block .primary-cta-arrow--bright:focus:focus, .cta-block .primary-cta-arrow--bright:focus:active {
-        outline-color: #0c0c0e;
+        outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -13398,7 +13398,7 @@ main table td em {
         box-shadow: none;
     }
     .cta-block .primary-cta-arrow--bright:active:focus, .cta-block .primary-cta-arrow--bright:active:active {
-        outline-color: #0c0c0e;
+        outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -13488,7 +13488,7 @@ main table td em {
         border-color: #dd0036;
     }
     .cta-block .primary-cta--bright:focus:focus, .cta-block .primary-cta--bright:focus:active {
-        outline-color: #0c0c0e;
+        outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -13499,7 +13499,7 @@ main table td em {
         box-shadow: none;
     }
     .cta-block .primary-cta--bright:active:focus, .cta-block .primary-cta--bright:active:active {
-        outline-color: #0c0c0e;
+        outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -13799,7 +13799,7 @@ main table td em {
         background: #ffffff;
     }
     .cta-block .outline-cta-arrow--bright:focus:focus, .cta-block .outline-cta-arrow--bright:focus:active {
-        outline-color: #0c0c0e;
+        outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -13809,7 +13809,7 @@ main table td em {
         box-shadow: none;
     }
     .cta-block .outline-cta-arrow--bright:active:focus, .cta-block .outline-cta-arrow--bright:active:active {
-        outline-color: #0c0c0e;
+        outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -13896,7 +13896,7 @@ main table td em {
         background: #ffffff;
     }
     .cta-block .outline-cta--bright:focus:focus, .cta-block .outline-cta--bright:focus:active {
-        outline-color: #0c0c0e;
+        outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -13906,7 +13906,7 @@ main table td em {
         box-shadow: none;
     }
     .cta-block .outline-cta--bright:active:focus, .cta-block .outline-cta--bright:active:active {
-        outline-color: #0c0c0e;
+        outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -14198,7 +14198,7 @@ main table td em {
         border-color: #dd0036;
     }
     .cta-block .basic-cta--bright:focus:focus, .cta-block .basic-cta--bright:focus:active {
-        outline-color: #0c0c0e;
+        outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -14209,7 +14209,7 @@ main table td em {
         box-shadow: none;
     }
     .cta-block .basic-cta--bright:active:focus, .cta-block .basic-cta--bright:active:active {
-        outline-color: #0c0c0e;
+        outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -14321,7 +14321,7 @@ main table td em {
         border-color: #dd0036;
     }
     .cta-block .basic-cta--dark:focus:focus, .cta-block .basic-cta--dark:focus:active {
-        outline-color: #0c0c0e;
+        outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -14332,7 +14332,7 @@ main table td em {
         box-shadow: none;
     }
     .cta-block .basic-cta--dark:active:focus, .cta-block .basic-cta--dark:active:active {
-        outline-color: #0c0c0e;
+        outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -14883,7 +14883,7 @@ article figure figcaption a:focus, article figure figcaption a:active {
 }
 
 article figure figcaption a:focus, article figure figcaption a:active {
-    outline-color: #0c0c0e;
+    outline-color: #ffffff;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -15439,7 +15439,7 @@ article figure figcaption > span {
 }
 
 .menu li a:focus, .menu li a:active {
-    outline-color: #0c0c0e;
+    outline-color: #ffffff;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -18424,7 +18424,7 @@ blockquote footer {
 }
 
 .theme--dark .breadcrumbs a:focus, .theme--dark .breadcrumbs a:active {
-    outline-color: #0c0c0e;
+    outline-color: #ffffff;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -18794,7 +18794,7 @@ blockquote footer {
         border-color: #dd0036;
     }
     .theme--dark .cta-block li:nth-child(3) a:focus:focus, .theme--dark .cta-block li:nth-child(3) a:focus:active {
-        outline-color: #0c0c0e;
+        outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -18805,7 +18805,7 @@ blockquote footer {
         box-shadow: none;
     }
     .theme--dark .cta-block li:nth-child(3) a:active:focus, .theme--dark .cta-block li:nth-child(3) a:active:active {
-        outline-color: #0c0c0e;
+        outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
@@ -19293,7 +19293,7 @@ blockquote footer {
 }
 
 .theme--dark article figure figcaption a:focus, .theme--dark article figure figcaption a:active {
-    outline-color: #0c0c0e;
+    outline-color: #ffffff;
     outline-width: 2px;
     outline-style: dotted;
     outline-offset: 3px;
@@ -19542,7 +19542,7 @@ blockquote footer {
         background-image: none;
     }
     .theme--dark.js .menu li a:focus, .theme--dark.js .menu li a:active {
-        outline-color: #0c0c0e;
+        outline-color: #ffffff;
         outline-width: 2px;
         outline-style: dotted;
         outline-offset: 3px;
