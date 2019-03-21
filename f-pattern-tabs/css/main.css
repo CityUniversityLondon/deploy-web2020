@@ -15737,7 +15737,7 @@ blockquote footer {
         overflow-x: hidden;
         width: 100%;
         position: relative;
-        bottom: -7px;
+        bottom: -0.4rem;
     }
     .js .tabs .tabs__links li {
         flex-grow: 1;
@@ -15784,7 +15784,7 @@ blockquote footer {
         width: 100%;
         position: relative;
         overflow: hidden;
-        padding: 0px;
+        padding: 0;
         border: 2px solid transparent;
         color: #696969;
     }
