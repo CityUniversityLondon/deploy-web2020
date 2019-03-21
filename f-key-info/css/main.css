@@ -14514,6 +14514,15 @@ article figure figcaption a:active {
     }
 }
 
+.key-information-box--short-course .key-information__data-item .icon--float-left {
+    float: left;
+    margin-top: 0.5rem;
+}
+
+.key-information-box--short-course .key-information__data-item .icon-text.icon-text--margin-left {
+    margin-left: 1.5rem;
+}
+
 .key-information-box--short-course .content-wrapper {
     display: grid;
 }
