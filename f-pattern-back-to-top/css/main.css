@@ -16109,38 +16109,13 @@ blockquote footer {
     background: #1e1e1e;
 }
 
-.back-to-top a .back-to-top__button__label {
-    color: #696969;
-    border-bottom: 2px solid #696969;
-}
-
 .back-to-top a:hover .back-to-top__button__label,
 .back-to-top a:active .back-to-top__button__label {
     color: #1e1e1e;
     border-bottom: 2px solid #1e1e1e;
 }
 
-.back-to-top a .back-to-top__button__arrow {
-    color: #ffffff;
-    background: #696969;
-    border-radius: 50%;
-    padding: 8px;
-    height: 30px;
-    width: 30px;
-    margin-left: 10px;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.back-to-top a .back-to-top__button__arrow:before {
-    vertical-align: middle;
-    padding-top: 4px;
-    font-size: 10px;
-    border-top: 2px solid #ffffff;
-}
-
-.back-to-top a .progress-circle {
+.back-to-top a svg {
     display: none;
 }
 
@@ -16148,6 +16123,11 @@ blockquote footer {
     .back-to-top {
         display: none;
     }
+}
+
+.back-to-top__button__label {
+    color: #696969;
+    border-bottom: 2px solid #696969;
 }
 
 .back-to-top-stick {
@@ -16168,6 +16148,30 @@ blockquote footer {
     }
 }
 
+.back-to-top__button__label {
+    display: none;
+}
+
+.back-to-top__button__arrow {
+    color: #ffffff;
+    background: #696969;
+    border-radius: 50%;
+    padding: 8px;
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.back-to-top__button__arrow:before {
+    vertical-align: middle;
+    padding-top: 4px;
+    font-size: 10px;
+    border-top: 2px solid #ffffff;
+}
+
 .back-to-top-stick .back-to-top__button {
     width: 48px;
     height: 48px;
@@ -16176,24 +16180,20 @@ blockquote footer {
     position: relative;
 }
 
-.back-to-top-stick .back-to-top__button svg path {
-    fill: none;
-}
-
-.back-to-top-stick .back-to-top__button .progress-circle {
+.back-to-top-stick .back-to-top__button svg {
     display: block;
 }
 
-.back-to-top-stick .back-to-top__button svg.progress-circle path {
+.back-to-top-stick .back-to-top__button svg path {
+    fill: none;
     stroke: #0c0c0e;
     stroke-width: 5;
 }
 
-.back-to-top-stick .back-to-top__button .back-to-top__button__arrow {
+.back-to-top-stick .back-to-top__button__arrow {
     padding-top: 17px;
     left: 4px;
     text-align: center;
-    width: 20px;
     top: 4px;
     display: block;
     position: absolute;
@@ -16203,7 +16203,7 @@ blockquote footer {
     margin-left: 0px;
 }
 
-.back-to-top-stick .back-to-top__button .back-to-top__button__arrow:before {
+.back-to-top-stick .back-to-top__button__arrow:before {
     border-top: 2px solid #ffffff;
     padding-top: 6px;
     vertical-align: initial;
