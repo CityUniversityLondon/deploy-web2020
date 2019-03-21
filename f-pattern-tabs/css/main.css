@@ -15714,7 +15714,8 @@ blockquote footer {
 }
 
 @media print {
-    .js .tabs .tabs__links {
+    .js .tabs .tabs__links,
+    .js .tabs--accordion .accordion {
         display: none;
     }
     .js .tabs .tabs__panel[hidden] {
@@ -16032,12 +16033,6 @@ blockquote footer {
     }
 }
 
-@media print {
-    .js .tabs--accordion .accordion {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 768px) {
     .js .tabs--accordion .accordion {
         display: block;
@@ -16079,13 +16074,24 @@ blockquote footer {
         color: #1e1e1e;
         padding: 1rem;
     }
-    .js .tabs--accordion .accordion__heading button .accordion__heading__indicator {
+    .js
+.tabs--accordion
+.accordion__heading
+button
+.accordion__heading__indicator {
         text-align: center;
         align-self: normal;
         background: #3e1031;
         color: white;
         padding: 1rem;
         text-decoration: underline;
+    }
+    .js
+.tabs--accordion
+.accordion__heading
+button
+.accordion__heading__indicator:before {
+        vertical-align: sub;
     }
     .js .tabs--accordion .tabs {
         display: none;
