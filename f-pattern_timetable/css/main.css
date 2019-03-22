@@ -14960,7 +14960,6 @@ blockquote footer {
 }
 
 .timetable .row span {
-    display: inline-block;
     padding: 0.25rem 0;
     line-height: 1.625;
 }
@@ -14968,6 +14967,7 @@ blockquote footer {
 @media (min-width: 769px) {
     .timetable .row span {
         padding: 0;
+        display: inline-block;
     }
 }
 
@@ -14976,18 +14976,13 @@ blockquote footer {
     padding: 0;
 }
 
-.timetable .row span.last-row span {
-    display: none;
+.timetable .last-row div {
+    margin-left: 1.25rem;
+    line-height: 1.625;
 }
 
-@media (min-width: 769px) {
-    .timetable .row span.last-row span {
-        display: inline;
-    }
-}
-
-.timetable .row .icon {
-    padding-right: 0.25rem;
+.timetable .last-row .icon {
+    float: left;
     color: #5d184a;
 }
 
@@ -15030,7 +15025,6 @@ blockquote footer {
 }
 
 .timetable-terms .row span {
-    display: inline-block;
     padding: 0.25rem 0;
     line-height: 1.625;
 }
@@ -15038,6 +15032,7 @@ blockquote footer {
 @media (min-width: 769px) {
     .timetable-terms .row span {
         padding: 0;
+        display: inline-block;
     }
 }
 
@@ -15046,18 +15041,13 @@ blockquote footer {
     padding: 0;
 }
 
-.timetable-terms .row span.last-row span {
-    display: none;
+.timetable-terms .last-row div {
+    margin-left: 1.25rem;
+    line-height: 1.625;
 }
 
-@media (min-width: 769px) {
-    .timetable-terms .row span.last-row span {
-        display: inline;
-    }
-}
-
-.timetable-terms .row .icon {
-    padding-right: 0.25rem;
+.timetable-terms .last-row .icon {
+    float: left;
     color: #5d184a;
 }
 
@@ -15119,7 +15109,6 @@ blockquote footer {
 }
 
 .timetable-text .row span {
-    display: inline-block;
     padding: 0.25rem 0;
     line-height: 1.625;
 }
@@ -15127,6 +15116,7 @@ blockquote footer {
 @media (min-width: 769px) {
     .timetable-text .row span {
         padding: 0;
+        display: inline-block;
     }
 }
 
@@ -15135,18 +15125,13 @@ blockquote footer {
     padding: 0;
 }
 
-.timetable-text .row span.last-row span {
-    display: none;
+.timetable-text .last-row div {
+    margin-left: 1.25rem;
+    line-height: 1.625;
 }
 
-@media (min-width: 769px) {
-    .timetable-text .row span.last-row span {
-        display: inline;
-    }
-}
-
-.timetable-text .row .icon {
-    padding-right: 0.25rem;
+.timetable-text .last-row .icon {
+    float: left;
     color: #5d184a;
 }
 
@@ -15191,7 +15176,6 @@ blockquote footer {
 }
 
 .timetable-info .row span {
-    display: inline-block;
     padding: 0.25rem 0;
     line-height: 1.625;
 }
@@ -15199,6 +15183,7 @@ blockquote footer {
 @media (min-width: 769px) {
     .timetable-info .row span {
         padding: 0;
+        display: inline-block;
     }
 }
 
@@ -15207,18 +15192,13 @@ blockquote footer {
     padding: 0;
 }
 
-.timetable-info .row span.last-row span {
-    display: none;
+.timetable-info .last-row div {
+    margin-left: 1.25rem;
+    line-height: 1.625;
 }
 
-@media (min-width: 769px) {
-    .timetable-info .row span.last-row span {
-        display: inline;
-    }
-}
-
-.timetable-info .row .icon {
-    padding-right: 0.25rem;
+.timetable-info .last-row .icon {
+    float: left;
     color: #5d184a;
 }
 
