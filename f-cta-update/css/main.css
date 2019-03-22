@@ -13600,9 +13600,8 @@ main table td em {
 
 @media (hover: hover) {
     .basic-cta--bright:hover {
-        background: #dd0036;
         background: #aa002a;
-        border-color: #dd0036;
+        border-color: #aa002a;
         color: #ffffff;
         padding: 0.5rem 1.5rem;
     }
@@ -13610,6 +13609,7 @@ main table td em {
 
 .basic-cta--bright:active {
     background: #aa002a;
+    border-color: #aa002a;
 }
 
 .basic-cta--bright:disabled {
@@ -13758,9 +13758,8 @@ main table td em {
 
 @media (hover: hover) {
     .basic-cta--dark:hover {
-        background: #dd0036;
         background: #aa002a;
-        border-color: #dd0036;
+        border-color: #aa002a;
         color: #ffffff;
         padding: 0.5rem 1.5rem;
     }
@@ -13768,6 +13767,7 @@ main table td em {
 
 .basic-cta--dark:active {
     background: #aa002a;
+    border-color: #aa002a;
 }
 
 .basic-cta--dark:disabled {
@@ -18340,9 +18340,8 @@ blockquote footer {
 
 @media (hover: hover) {
     .theme--dark .cta-block li:nth-child(3) a:hover {
-        background: #dd0036;
         background: #aa002a;
-        border-color: #dd0036;
+        border-color: #aa002a;
         color: #ffffff;
         padding: 0.5rem 1.5rem;
     }
@@ -18350,6 +18349,7 @@ blockquote footer {
 
 .theme--dark .cta-block li:nth-child(3) a:active {
     background: #aa002a;
+    border-color: #aa002a;
 }
 
 .theme--dark .cta-block li:nth-child(3) a:disabled {
