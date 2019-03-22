@@ -12942,9 +12942,8 @@ article figure figcaption a:active {
     display: block;
 }
 
-/*  possible remove the below?   */
 @media (max-width: 432px) {
-    article figure .figure--svg img {
+    article figure.figure--svg img {
         padding-bottom: 100vw;
     }
 }
