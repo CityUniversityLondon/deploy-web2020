@@ -4335,7 +4335,8 @@ function launchKeyInformationBox() {
       paginated = document.getElementsByClassName('key-information-box--short-course-paginated'),
       paginatedPage,
       defaultDuration = 2000,
-      edgeOffset = 50;
+      edgeOffset = 100; // Zen scroll setup
+
   zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset);
   paginated.length > 0 ? paginatedPage = true : paginatedPage = false; // Mobile: Show listing entry based on navigation button clicks
 
@@ -4381,30 +4382,53 @@ function launchKeyInformationBox() {
     }
 
     listingsVisible.length >= listingsLength.length ? contentToggles[0].style.display = 'none' : null;
-  } // Desktop: Toggle control listings when more than three listings exist
+  } // Show number of available starting dates.
 
 
-  if (browserWidth > 768 && listings.length > 3) {
-    listingDisplay();
-    listingsControl();
+  function listingsQuantity() {
+    let listingsNumber = [];
 
-    for (const contentToggle of contentToggles) {
-      contentToggle.addEventListener('click', e => {
-        // This will increase with each 'Load more' click, so visible listings
-        // must be captured before any further listings are made visible
-        let preExpandListingsVisible = listingsVisible.length;
-        e.preventDefault();
+    for (const listing of listings.entries()) {
+      listingsNumber.push(listing.length);
+    }
 
-        if (preExpandListingsVisible < listings.length) {
-          listingsControl();
+    listingsNumber = listingsNumber.length;
+    let datesQuantities = document.querySelectorAll('.key-information-box--dates-quantity');
 
-          for (const listing of listings.entries()) {
-            let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
-            zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 40, function () {});
-            listing[0] < preExpandListingsVisible + 3 ? (listing[1].style.display = 'grid', listing[1].classList.remove('hide')) : listing[1].classList.add('hide');
+    for (const datesQuantity of datesQuantities) {
+      let date;
+      listingsNumber == 1 ? date = 'date' : date = 'dates';
+      datesQuantity.innerHTML = `<p><span class="fas fa-calendar-day"></span>${listingsNumber} available start ${date}</p>`;
+    }
+  }
+
+  listingsQuantity(); // Desktop: Toggle control listings when more than three listings exist
+
+  if (browserWidth > 768) {
+    if (listings.length > 3) {
+      listingDisplay();
+      listingsControl();
+
+      for (const contentToggle of contentToggles) {
+        contentToggle.addEventListener('click', e => {
+          // This will increase with each 'Load more' click, so visible listings
+          // must be captured before any further listings are made visible
+          let preExpandListingsVisible = listingsVisible.length;
+          e.preventDefault();
+
+          if (preExpandListingsVisible < listings.length) {
+            listingsControl();
+
+            for (const listing of listings.entries()) {
+              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
+              zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200, function () {});
+              listing[0] < preExpandListingsVisible + 3 ? (listing[1].style.display = 'grid', listing[1].classList.remove('hide')) : listing[1].classList.add('hide');
+            }
           }
-        }
-      }, false);
+        }, false);
+      }
+    } else {
+      contentToggles[0].style.display = 'none';
     } // Mobile: one listing visible at a time
 
   } else if (browserWidth < 768 && listings.length > 1 && !paginatedPage) {
@@ -4432,15 +4456,26 @@ function launchKeyInformationBox() {
       listingDisplay();
     });
   } else if (browserWidth < 768 && listings.length > 1 && paginatedPage) {
+    // listingsControl();
     let listWrapper = document.getElementById('short-course-key-info-listings');
     listWrapper.classList.add('paginated-list');
+    listingsQuantity(); // Scroll to top of listings after each paginated index click
+
+    let paginationControls = document.querySelectorAll('.pagination__controls > button');
+
+    for (const paginationControl of paginationControls) {
+      paginationControl.addEventListener('click', () => {
+        let listingsTop = document.getElementById('short-course-key-info-listings');
+
+        if (paginationControl.getAttribute('aria-expanded') !== true) {
+          zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(listingsTop, 0);
+        }
+      });
+    }
   } else if (browserWidth < 768 && listings.length == 1) {
     for (const listing of listings.entries()) {
       listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
     }
-
-    navBtnState();
-    navBtnPosition();
   }
 } // Run function on resize as well as launch as some styles overriden by JS
 
