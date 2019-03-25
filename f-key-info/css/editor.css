@@ -9741,13 +9741,13 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .alpha-type {
-        letter-spacing: -0.008em;
+        letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .alpha-type {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.014em;
     }
 }
 
@@ -9777,13 +9777,13 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .beta-type {
-        letter-spacing: -0.011em;
+        letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .beta-type {
-        letter-spacing: -0.014em;
+        letter-spacing: -0.015em;
     }
 }
 
@@ -9813,13 +9813,13 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .gamma-type {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .gamma-type {
-        letter-spacing: -0.015em;
+        letter-spacing: -0.016em;
     }
 }
 
@@ -9849,13 +9849,13 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .delta-type {
-        letter-spacing: -0.015em;
+        letter-spacing: -0.016em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .delta-type {
-        letter-spacing: -0.016em;
+        letter-spacing: -0.017em;
     }
 }
 
@@ -9921,7 +9921,7 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .zeta-type {
-        letter-spacing: -0.016em;
+        letter-spacing: -0.017em;
     }
 }
 
@@ -9957,13 +9957,13 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .small-type {
-        letter-spacing: -0.005em;
+        letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .small-type {
-        letter-spacing: -0.01em;
+        letter-spacing: -0.013em;
     }
 }
 
@@ -9993,13 +9993,13 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .extra-small-type {
-        letter-spacing: 0em;
+        letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .extra-small-type {
-        letter-spacing: -0.007em;
+        letter-spacing: -0.01em;
     }
 }
 
@@ -10099,25 +10099,25 @@ html em {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     html {
-        font-size: 18px;
+        font-size: 20.25px;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     html {
-        font-size: 22px;
+        font-size: 24.75px;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
     html {
-        font-size: 46px;
+        font-size: 51.75px;
     }
 }
 
 @media (min-width: 7680px) {
     html {
-        font-size: 92px;
+        font-size: 103.5px;
     }
 }
 
@@ -10141,7 +10141,7 @@ article a {
     transition: background-size 0.3s ease;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     color: #006bbd;
 }
 
@@ -10199,17 +10199,17 @@ article a:focus {
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
-    outline-width: 2px;
+    outline-width: 0.125rem;
     outline-style: dotted;
-    outline-offset: 3px;
+    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
     article a:hover {
         border-bottom-color: #006bbd;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         border-bottom-style: solid;
         color: #ffffff;
     }
@@ -10219,12 +10219,12 @@ article a:active {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     color: #ffffff;
     outline-color: #0c0c0e;
-    outline-width: 2px;
+    outline-width: 0.125rem;
     outline-style: dotted;
-    outline-offset: 3px;
+    outline-offset: 0.1875rem;
 }
 
 u {
@@ -10400,13 +10400,13 @@ u {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .content-style {
-        letter-spacing: -0.008em;
+        letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .content-style {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.014em;
     }
 }
 
@@ -10481,14 +10481,14 @@ h6 u,
 @media (min-width: 769px) and (max-width: 1919px) {
     h6,
     .h6-style {
-        letter-spacing: -0.008em;
+        letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     h6,
     .h6-style {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.014em;
     }
 }
 
@@ -10561,14 +10561,14 @@ h5 u,
 @media (min-width: 769px) and (max-width: 1919px) {
     h5,
     .h5-style {
-        letter-spacing: -0.011em;
+        letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     h5,
     .h5-style {
-        letter-spacing: -0.014em;
+        letter-spacing: -0.015em;
     }
 }
 
@@ -10641,14 +10641,14 @@ h4 u,
 @media (min-width: 769px) and (max-width: 1919px) {
     h4,
     .h4-style {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     h4,
     .h4-style {
-        letter-spacing: -0.015em;
+        letter-spacing: -0.016em;
     }
 }
 
@@ -10721,14 +10721,14 @@ h3 u,
 @media (min-width: 769px) and (max-width: 1919px) {
     h3,
     .h3-style {
-        letter-spacing: -0.015em;
+        letter-spacing: -0.016em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     h3,
     .h3-style {
-        letter-spacing: -0.016em;
+        letter-spacing: -0.017em;
     }
 }
 
@@ -10880,7 +10880,7 @@ h1 u,
 @media (min-width: 769px) and (max-width: 1919px) {
     h1,
     .h1-style {
-        letter-spacing: -0.016em;
+        letter-spacing: -0.017em;
     }
 }
 
@@ -10975,7 +10975,7 @@ main blockquote {
     main ul,
     main dl,
     main blockquote {
-        letter-spacing: -0.008em;
+        letter-spacing: -0.011em;
     }
 }
 
@@ -10985,7 +10985,7 @@ main blockquote {
     main ul,
     main dl,
     main blockquote {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.014em;
     }
 }
 
@@ -11141,14 +11141,14 @@ main .standfirst-style {
 @media (min-width: 769px) and (max-width: 1919px) {
     main .standfirst,
     main .standfirst-style {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     main .standfirst,
     main .standfirst-style {
-        letter-spacing: -0.015em;
+        letter-spacing: -0.016em;
     }
 }
 
@@ -11234,13 +11234,13 @@ main dt u {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     main dt {
-        letter-spacing: -0.008em;
+        letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     main dt {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.014em;
     }
 }
 
@@ -11317,13 +11317,13 @@ main table th u {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     main table th {
-        letter-spacing: -0.008em;
+        letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     main table th {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.014em;
     }
 }
 
@@ -11363,13 +11363,13 @@ main table td {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     main table td {
-        letter-spacing: -0.008em;
+        letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     main table td {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.014em;
     }
 }
 
@@ -11426,13 +11426,13 @@ main table td em {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .cms-editor div.cms-editor-warning p {
-        letter-spacing: -0.008em;
+        letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .cms-editor div.cms-editor-warning p {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.014em;
     }
 }
 
@@ -11467,13 +11467,13 @@ main table td em {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .cms-editor div.cms-editor-warning p:after {
-        letter-spacing: 0em;
+        letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .cms-editor div.cms-editor-warning p:after {
-        letter-spacing: -0.007em;
+        letter-spacing: -0.01em;
     }
 }
 
@@ -11520,7 +11520,7 @@ main table td em {
     transition: background-size 0.3s ease;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     color: #006bbd;
     position: absolute;
     right: 0;
@@ -11535,13 +11535,13 @@ main table td em {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .cms-editor .cms-editor-warning-remover {
-        letter-spacing: 0em;
+        letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .cms-editor .cms-editor-warning-remover {
-        letter-spacing: -0.007em;
+        letter-spacing: -0.01em;
     }
 }
 
@@ -11611,17 +11611,17 @@ main table td em {
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
-    outline-width: 2px;
+    outline-width: 0.125rem;
     outline-style: dotted;
-    outline-offset: 3px;
+    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
     .cms-editor .cms-editor-warning-remover:hover {
         border-bottom-color: #006bbd;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         border-bottom-style: solid;
         color: #ffffff;
     }
@@ -11631,12 +11631,12 @@ main table td em {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     color: #ffffff;
     outline-color: #0c0c0e;
-    outline-width: 2px;
+    outline-width: 0.125rem;
     outline-style: dotted;
-    outline-offset: 3px;
+    outline-offset: 0.1875rem;
 }
 
 .ux-personas {
@@ -11962,13 +11962,13 @@ main table td em {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .user-journey__steps h3 {
-        letter-spacing: -0.008em;
+        letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .user-journey__steps h3 {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.014em;
     }
 }
 
@@ -12020,7 +12020,7 @@ main table td em {
         transition: background-size 0.3s ease;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         color: #006bbd;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
@@ -12089,18 +12089,18 @@ main table td em {
         color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         outline-color: #0c0c0e;
-        outline-width: 2px;
+        outline-width: 0.125rem;
         outline-style: dotted;
-        outline-offset: 3px;
+        outline-offset: 0.1875rem;
     }
 }
 
 @media screen and (hover: hover) {
     .theme--dark .cms-editor .cms-editor-warning-remover:hover {
         border-bottom-color: #006bbd;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         border-bottom-style: solid;
         color: #ffffff;
     }
@@ -12111,12 +12111,12 @@ main table td em {
         background-color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
         outline-color: #0c0c0e;
-        outline-width: 2px;
+        outline-width: 0.125rem;
         outline-style: dotted;
-        outline-offset: 3px;
+        outline-offset: 0.1875rem;
     }
 }
 
