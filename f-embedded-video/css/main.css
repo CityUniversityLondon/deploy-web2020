@@ -16297,6 +16297,8 @@ blockquote footer {
 @media screen and (max-width: 900px) {
     .embedded-video {
         grid-template-columns: repeat(8, 1fr);
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
     }
 }
 
@@ -16376,16 +16378,17 @@ blockquote footer {
 
 @media screen and (max-width: 900px) {
     .embedded-video .youtube-video__align-right,
-    .embedded-video-details,
-    .youtube-video {
+    .embedded-video-details {
         grid-column: 2 / 8;
+    }
+    .youtube-video {
+        grid-column: 1 / -1;
     }
 }
 
 @media screen and (max-width: 432px) {
     .embedded-video .youtube-video__align-right,
-    .embedded-video-details,
-    .youtube-video {
+    .embedded-video-details {
         grid-column: 1 / -1;
     }
 }
