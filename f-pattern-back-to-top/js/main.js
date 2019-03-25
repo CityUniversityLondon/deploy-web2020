@@ -3817,7 +3817,25 @@ const className = 'accordion',
 
 function setSection(heading, open) {
   heading.dataset.open = open;
+  heading.setAttribute('tabindex', '1');
   heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+  let bodyLinks = heading.nextElementSibling.getElementsByTagName('a');
+
+  if (open) {
+    heading.nextElementSibling.classList.add('active');
+    heading.nextElementSibling.style.maxHeight = parseInt(heading.nextElementSibling.scrollHeight + 40) + 'px';
+
+    for (const bodyLink of bodyLinks) {
+      bodyLink.setAttribute('tabindex', '1');
+    }
+  } else {
+    heading.nextElementSibling.classList.remove('active');
+    heading.nextElementSibling.style.maxHeight = null;
+
+    for (const bodyLink of bodyLinks) {
+      bodyLink.setAttribute('tabindex', '-1');
+    }
+  }
 }
 /**
  * Respond to button clicks - open if closed, close if open.
@@ -3919,7 +3937,9 @@ function launchAccordion(accordion) {
 
     if (locationHash === heading.id) {
       idLinked = true;
-      setSection(heading, true);
+      setSection(heading, true); // FF/Safari bug fix
+
+      heading.nextElementSibling.style.maxHeight = '10000px';
     } else {
       setSection(heading, false);
     }
@@ -3928,7 +3948,9 @@ function launchAccordion(accordion) {
   });
 
   if (defaultOpen && !idLinked) {
-    setSection(headings[0], true);
+    setSection(headings[0], true); // FF/Safari bug fix
+
+    headings[0].nextElementSibling.style.maxHeight = '10000px';
   }
 }
 
@@ -4264,11 +4286,11 @@ const className = 'content';
 function findExternalLink() {
   var anchors = document.getElementsByClassName('content')[0].querySelectorAll('a');
   anchors.forEach(function (i) {
-    // checks if anchors link is external & not an image & not contain font awesome icon already
-    if (i.origin !== window.location.origin && i.querySelectorAll('img').length < 1 && i.querySelectorAll('.fa-external-link').length < 1) {
+    // checks if anchors link is external & not an image & not contain font awesome icon already & isn't a CTA
+    if (i.origin !== window.location.origin && i.querySelectorAll('img').length < 1 && i.querySelectorAll('.fa-external-link').length < 1 && !i.parentElement.className.includes('cta-block')) {
       // adds font awesome external link icon after completing checks
       var node = document.createElement('span');
-      node.className = 'fa fa-external-link';
+      node.className = 'fa fa-external-link inline-external-link ';
       node.setAttribute('aria-hidden', 'true');
       i.appendChild(node);
     }
@@ -5376,10 +5398,10 @@ function toggleLink(link, selected) {
   link.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].selected, selected);
 
   if (selected) {
-    link.removeAttribute('tabindex');
+    //link.removeAttribute('tabindex');
     link.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current, true);
   } else {
-    link.setAttribute('tabindex', -1);
+    link.setAttribute('tabindex', 0);
     link.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current);
   }
 }
@@ -5514,7 +5536,7 @@ function prepareLinks(linkItems) {
 function preparePanels(panels) {
   panels.forEach(panel => {
     panel.setAttribute('role', 'tabpanel');
-    panel.setAttribute('tabindex', -1);
+    panel.setAttribute('tabindex', 0);
     panel.toggleAttribute('hidden', true);
   });
 }
