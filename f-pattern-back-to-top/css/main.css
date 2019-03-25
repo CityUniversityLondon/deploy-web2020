@@ -16211,7 +16211,7 @@ blockquote footer {
 }
 
 .back-to-top-show {
-    opacity: 1 !important;
+    opacity: 0.75 !important;
     transition: opacity 1s ease;
 }
 
