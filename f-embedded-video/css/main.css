@@ -16310,7 +16310,13 @@ blockquote footer {
 
 .embedded-video .youtube-video__align-right {
     grid-column: 6 / 13;
-    margin-top: 1.25rem;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .embedded-video .youtube-video__align-right {
+        margin-top: 1.25rem;
+    }
 }
 
 .embedded-video-details {
