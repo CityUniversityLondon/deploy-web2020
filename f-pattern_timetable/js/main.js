@@ -3742,6 +3742,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
 /* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
 /* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
+/* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
 
 
 /**
@@ -3762,7 +3763,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_8__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_9__["default"]]);
 
 /***/ }),
 
@@ -4121,6 +4123,56 @@ function devcorate(elem, param, value) {
     }
   });
 }
+
+/***/ }),
+
+/***/ "./src/patterns/external-link-finder/external-link-finder.js":
+/*!*******************************************************************!*\
+  !*** ./src/patterns/external-link-finder/external-link-finder.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+
+
+
+
+/**
+ * External Link Finder
+ *
+ * @module patterns/external-link-finder/external-link-finder
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+/**
+ *  Finds external links and adds font awesome icon to indicate external link
+ *
+ */
+const className = 'content';
+
+function findExternalLink() {
+  var anchors = document.getElementsByClassName('content')[0].querySelectorAll('a');
+  anchors.forEach(function (i) {
+    // checks if anchors link is external & not an image & not contain font awesome icon already & isn't a CTA
+    if (i.origin !== window.location.origin && i.querySelectorAll('img').length < 1 && i.querySelectorAll('.fa-external-link').length < 1 && !i.parentElement.className.includes('cta-block')) {
+      // adds font awesome external link icon after completing checks
+      var node = document.createElement('span');
+      node.className = 'fa fa-external-link inline-external-link ';
+      node.setAttribute('aria-hidden', 'true');
+      i.appendChild(node);
+    }
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: findExternalLink,
+  launchQuery: `.${className}`
+});
 
 /***/ }),
 
