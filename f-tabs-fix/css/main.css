@@ -16067,6 +16067,9 @@ blockquote footer {
         text-align: center;
         margin-right: 0.75rem;
     }
+    .js .tabs .tabs__links li:last-of-type {
+        margin-right: 0;
+    }
     .js .tabs .tabs__links li a {
         background-color: initial;
         border-bottom-color: initial;
