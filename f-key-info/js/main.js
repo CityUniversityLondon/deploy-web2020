@@ -4322,7 +4322,7 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'keyInformationBox';
 
 function launchKeyInformationBox() {
-  let listings = document.querySelectorAll('.key-information-box__listing'),
+  let listings = document.querySelectorAll('.key-info__listing'),
       contentToggles = document.querySelectorAll('.content-toggle'),
       contentSliders = document.querySelectorAll('.content-slider'),
       counter = 0,
