@@ -12440,8 +12440,13 @@ main table td em {
 
 @media (hover: hover) {
     .js .cookie-notice button:hover {
+        background: transparent;
         border-color: #dd0036;
     }
+}
+
+.js .cookie-notice button:active {
+    background: transparent;
 }
 
 .js .cookie-notice button:disabled {
@@ -12737,6 +12742,7 @@ main table td em {
 
 @media (hover: hover) {
     .primary-cta--bright:hover {
+        background: #ffffff;
         border-color: #dd0036;
         padding: 0.5rem 1.5rem;
     }
@@ -12856,8 +12862,13 @@ main table td em {
 
 @media (hover: hover) {
     .primary-cta-arrow--dark:hover {
+        background: transparent;
         border-color: #dd0036;
     }
+}
+
+.primary-cta-arrow--dark:active {
+    background: transparent;
 }
 
 .primary-cta-arrow--dark:disabled {
@@ -12971,8 +12982,13 @@ main table td em {
 
 @media (hover: hover) {
     .primary-cta--dark:hover {
+        background: transparent;
         border-color: #dd0036;
     }
+}
+
+.primary-cta--dark:active {
+    background: transparent;
 }
 
 .primary-cta--dark:disabled {
@@ -12992,22 +13008,23 @@ main table td em {
     transform: none;
 }
 
-@media (hover: hover) {
-    .primary-cta--dark:hover {
-        border-color: #dd0036;
-        padding: 0.5rem 1.5rem;
-    }
-    .primary-cta--dark:hover span {
-        transform: none;
-    }
-}
-
 .primary-cta--dark:after {
     content: '';
 }
 
 .primary-cta--dark:focus {
     background: #dd0036;
+}
+
+@media (hover: hover) {
+    .primary-cta--dark:hover {
+        background: transparent;
+        border-color: #dd0036;
+        padding: 0.5rem 1.5rem;
+    }
+    .primary-cta--dark:hover span {
+        transform: none;
+    }
 }
 
 .primary-cta--dark:active {
@@ -13103,14 +13120,6 @@ main table td em {
     color: #0c0c0e;
 }
 
-@media (hover: hover) {
-    .outline-cta-arrow--bright:hover {
-        background: #0c0c0e;
-        border-color: #0c0c0e;
-        color: #ffffff;
-    }
-}
-
 .outline-cta-arrow--bright:focus {
     background: #ffffff;
     color: #0c0c0e;
@@ -13122,6 +13131,14 @@ main table td em {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+}
+
+@media (hover: hover) {
+    .outline-cta-arrow--bright:hover {
+        background: #0c0c0e;
+        border-color: #0c0c0e;
+        color: #ffffff;
+    }
 }
 
 .outline-cta-arrow--bright:active {
@@ -13231,14 +13248,6 @@ main table td em {
     color: #0c0c0e;
 }
 
-@media (hover: hover) {
-    .outline-cta--bright:hover {
-        background: #0c0c0e;
-        border-color: #0c0c0e;
-        color: #ffffff;
-    }
-}
-
 .outline-cta--bright:focus {
     background: #ffffff;
     color: #0c0c0e;
@@ -13250,6 +13259,14 @@ main table td em {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+}
+
+@media (hover: hover) {
+    .outline-cta--bright:hover {
+        background: #0c0c0e;
+        border-color: #0c0c0e;
+        color: #ffffff;
+    }
 }
 
 .outline-cta--bright:active {
@@ -18072,6 +18089,8 @@ blockquote footer {
     border: 0.125rem solid #dd0036;
     background: #dd0036;
     color: #ffffff;
+    background: #dd0036;
+    color: #ffffff;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -18164,12 +18183,54 @@ blockquote footer {
 
 @media (hover: hover) {
     .theme--dark .cta-block li:nth-child(1) a:hover {
+        background: transparent;
         border-color: #dd0036;
     }
 }
 
+.theme--dark .cta-block li:nth-child(1) a:active {
+    background: transparent;
+}
+
 .theme--dark .cta-block li:nth-child(1) a:disabled {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.theme--dark .cta-block li:nth-child(1) a:visited {
+    color: #ffffff;
+    border-color: #dd0036;
+}
+
+.theme--dark .cta-block li:nth-child(1) a:focus, .theme--dark .cta-block li:nth-child(1) a:active {
+    padding: 0.5rem 1.5rem;
+}
+
+.theme--dark .cta-block li:nth-child(1) a:focus span, .theme--dark .cta-block li:nth-child(1) a:active span {
+    transform: none;
+}
+
+.theme--dark .cta-block li:nth-child(1) a:after {
+    content: '';
+}
+
+.theme--dark .cta-block li:nth-child(1) a:focus {
+    background: #dd0036;
+}
+
+@media (hover: hover) {
+    .theme--dark .cta-block li:nth-child(1) a:hover {
+        background: transparent;
+        border-color: #dd0036;
+        padding: 0.5rem 1.5rem;
+    }
+    .theme--dark .cta-block li:nth-child(1) a:hover span {
+        transform: none;
+    }
+}
+
+.theme--dark .cta-block li:nth-child(1) a:active {
+    background: transparent;
+    border-color: #dd0036;
 }
 
 .theme--dark .cta-block li:nth-child(2) a {
@@ -18297,6 +18358,24 @@ blockquote footer {
 
 .theme--dark .cta-block li:nth-child(2) a:disabled {
     color: rgba(255, 255, 255, 0.7);
+}
+
+.theme--dark .cta-block li:nth-child(2) a:after {
+    content: '';
+}
+
+.theme--dark .cta-block li:nth-child(2) a:focus, .theme--dark .cta-block li:nth-child(2) a:active {
+    padding: 0.5rem 1.5rem;
+}
+
+@media (hover: hover) {
+    .theme--dark .cta-block li:nth-child(2) a:hover {
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+.theme--dark .cta-block li:nth-child(2) a:hover span, .theme--dark .cta-block li:nth-child(2) a:active span, .theme--dark .cta-block li:nth-child(2) a:focus span {
+    transform: none;
 }
 
 .theme--dark .cta-block li:nth-child(3) a {
