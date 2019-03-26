@@ -16831,20 +16831,20 @@ button
     transition: opacity 1s ease;
 }
 
-.timetable .content {
+.content {
     background-color: #ececec;
     padding: 0 1rem;
 }
 
-.timetable .timetable-container {
+.timetable-container {
     margin-top: 1rem;
 }
 
-.timetable .timetable {
+.timetable {
     padding-bottom: 1.5rem;
 }
 
-.timetable .timetable .heading {
+.timetable .heading {
     color: #0c0c0e;
     display: table;
     height: 100%;
@@ -16853,63 +16853,63 @@ button
 }
 
 @media (min-width: 769px) {
-    .timetable .timetable .heading {
+    .timetable .heading {
         padding: 0;
         border-left: 0.1875rem dotted #5d184a;
     }
-    .timetable .timetable .heading span {
+    .timetable .heading span {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
     }
 }
 
-.timetable .timetable .heading span {
+.timetable .heading span {
     font-weight: 700;
 }
 
-.timetable .timetable .row {
+.timetable .row {
     background-color: #ffffff;
     margin-bottom: 0.125rem;
     padding: 0.25rem 1rem;
 }
 
-.timetable .timetable .row:last-child {
+.timetable .row:last-child {
     margin-bottom: 0;
 }
 
-.timetable .timetable .row span {
+.timetable .row span {
     padding: 0.25rem 0;
     line-height: 1.625;
 }
 
 @media (min-width: 769px) {
-    .timetable .timetable .row span {
+    .timetable .row span {
         padding: 0;
         display: inline-block;
     }
 }
 
-.timetable .timetable .row span.separator {
+.timetable .row span.separator {
     color: #cbcbcb;
     padding: 0;
 }
 
-.timetable .timetable .last-row div {
+.timetable .last-row div {
     margin-left: 1.25rem;
     line-height: 1.625;
 }
 
-.timetable .timetable .last-row .icon {
+.timetable .last-row .icon {
     float: left;
     color: #5d184a;
 }
 
-.timetable .timetable-terms {
+.timetable-terms {
     padding-bottom: 1.5rem;
 }
 
-.timetable .timetable-terms .heading {
+.timetable-terms .heading {
     color: #0c0c0e;
     display: table;
     height: 100%;
@@ -16918,82 +16918,82 @@ button
 }
 
 @media (min-width: 769px) {
-    .timetable .timetable-terms .heading {
+    .timetable-terms .heading {
         padding: 0;
         border-left: 0.1875rem dotted #5d184a;
     }
-    .timetable .timetable-terms .heading span {
+    .timetable-terms .heading span {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
     }
 }
 
-.timetable .timetable-terms .heading span {
+.timetable-terms .heading span {
     font-weight: 700;
 }
 
-.timetable .timetable-terms .row {
+.timetable-terms .row {
     background-color: #ffffff;
     margin-bottom: 0.125rem;
     padding: 0.25rem 1rem;
 }
 
-.timetable .timetable-terms .row:last-child {
+.timetable-terms .row:last-child {
     margin-bottom: 0;
 }
 
-.timetable .timetable-terms .row span {
+.timetable-terms .row span {
     padding: 0.25rem 0;
     line-height: 1.625;
 }
 
 @media (min-width: 769px) {
-    .timetable .timetable-terms .row span {
+    .timetable-terms .row span {
         padding: 0;
         display: inline-block;
     }
 }
 
-.timetable .timetable-terms .row span.separator {
+.timetable-terms .row span.separator {
     color: #cbcbcb;
     padding: 0;
 }
 
-.timetable .timetable-terms .last-row div {
+.timetable-terms .last-row div {
     margin-left: 1.25rem;
     line-height: 1.625;
 }
 
-.timetable .timetable-terms .last-row .icon {
+.timetable-terms .last-row .icon {
     float: left;
     color: #5d184a;
 }
 
 @media (min-width: 769px) {
-    .timetable .timetable-terms {
+    .timetable-terms {
         display: grid;
         grid-template-columns: 8rem auto;
     }
 }
 
-.timetable .timetable-terms .column:first-child {
+.timetable-terms .column:first-child {
     border-top: 0.1875rem dotted #5d184a;
 }
 
 @media (min-width: 769px) {
-    .timetable .timetable-terms .column:first-child {
+    .timetable-terms .column:first-child {
         border: none;
     }
 }
 
-.timetable .timetable-text {
+.timetable-text {
     padding-bottom: 1.5rem;
     padding-left: 2.5rem;
     border-left: 0.5rem solid #7c2062;
 }
 
-.timetable .timetable-text .heading {
+.timetable-text .heading {
     color: #0c0c0e;
     display: table;
     height: 100%;
@@ -17002,65 +17002,65 @@ button
 }
 
 @media (min-width: 769px) {
-    .timetable .timetable-text .heading {
+    .timetable-text .heading {
         padding: 0;
         border-left: 0.1875rem dotted #5d184a;
     }
-    .timetable .timetable-text .heading span {
+    .timetable-text .heading span {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
     }
 }
 
-.timetable .timetable-text .heading span {
+.timetable-text .heading span {
     font-weight: 700;
 }
 
-.timetable .timetable-text .row {
+.timetable-text .row {
     background-color: #ffffff;
     margin-bottom: 0.125rem;
     padding: 0.25rem 1rem;
 }
 
-.timetable .timetable-text .row:last-child {
+.timetable-text .row:last-child {
     margin-bottom: 0;
 }
 
-.timetable .timetable-text .row span {
+.timetable-text .row span {
     padding: 0.25rem 0;
     line-height: 1.625;
 }
 
 @media (min-width: 769px) {
-    .timetable .timetable-text .row span {
+    .timetable-text .row span {
         padding: 0;
         display: inline-block;
     }
 }
 
-.timetable .timetable-text .row span.separator {
+.timetable-text .row span.separator {
     color: #cbcbcb;
     padding: 0;
 }
 
-.timetable .timetable-text .last-row div {
+.timetable-text .last-row div {
     margin-left: 1.25rem;
     line-height: 1.625;
 }
 
-.timetable .timetable-text .last-row .icon {
+.timetable-text .last-row .icon {
     float: left;
     color: #5d184a;
 }
 
-.timetable .timetable-info {
+.timetable-info {
     padding-bottom: 1.5rem;
     padding-left: 2.5rem;
     position: relative;
 }
 
-.timetable .timetable-info .heading {
+.timetable-info .heading {
     color: #0c0c0e;
     display: table;
     height: 100%;
@@ -17069,59 +17069,59 @@ button
 }
 
 @media (min-width: 769px) {
-    .timetable .timetable-info .heading {
+    .timetable-info .heading {
         padding: 0;
         border-left: 0.1875rem dotted #5d184a;
     }
-    .timetable .timetable-info .heading span {
+    .timetable-info .heading span {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
     }
 }
 
-.timetable .timetable-info .heading span {
+.timetable-info .heading span {
     font-weight: 700;
 }
 
-.timetable .timetable-info .row {
+.timetable-info .row {
     background-color: #ffffff;
     margin-bottom: 0.125rem;
     padding: 0.25rem 1rem;
 }
 
-.timetable .timetable-info .row:last-child {
+.timetable-info .row:last-child {
     margin-bottom: 0;
 }
 
-.timetable .timetable-info .row span {
+.timetable-info .row span {
     padding: 0.25rem 0;
     line-height: 1.625;
 }
 
 @media (min-width: 769px) {
-    .timetable .timetable-info .row span {
+    .timetable-info .row span {
         padding: 0;
         display: inline-block;
     }
 }
 
-.timetable .timetable-info .row span.separator {
+.timetable-info .row span.separator {
     color: #cbcbcb;
     padding: 0;
 }
 
-.timetable .timetable-info .last-row div {
+.timetable-info .last-row div {
     margin-left: 1.25rem;
     line-height: 1.625;
 }
 
-.timetable .timetable-info .last-row .icon {
+.timetable-info .last-row .icon {
     float: left;
     color: #5d184a;
 }
 
-.timetable .timetable-info span {
+.timetable-info span {
     color: #a1a1a1;
     position: absolute;
     left: 0.25rem;
