@@ -12344,7 +12344,7 @@ main table td em {
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     border: 0.125rem solid #dd0036;
     background: #dd0036;
     color: #ffffff;
@@ -12362,6 +12362,10 @@ main table td em {
         justify-content: center;
         text-align: center;
     }
+}
+
+.js .cookie-notice button span {
+    transition: transform 0.6s;
 }
 
 .js .cookie-notice button:after {
@@ -12387,7 +12391,10 @@ main table td em {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.js .cookie-notice button:focus span, .js .cookie-notice button:active span {
+    transform: translateX(-0.5rem);
 }
 
 .js .cookie-notice button:focus:after, .js .cookie-notice button:active:after {
@@ -12400,7 +12407,9 @@ main table td em {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
-        padding: 0.5rem 2rem 0.5rem 1rem;
+    }
+    .js .cookie-notice button:hover span {
+        transform: translateX(-0.5rem);
     }
     .js .cookie-notice button:hover:after {
         opacity: 1;
@@ -12462,7 +12471,7 @@ main table td em {
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background: #dd0036;
     border: 0.125rem solid #dd0036;
@@ -12481,6 +12490,10 @@ main table td em {
         justify-content: center;
         text-align: center;
     }
+}
+
+.primary-cta-arrow--bright span {
+    transition: transform 0.6s;
 }
 
 .primary-cta-arrow--bright:after {
@@ -12506,7 +12519,10 @@ main table td em {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.primary-cta-arrow--bright:focus span, .primary-cta-arrow--bright:active span {
+    transform: translateX(-0.5rem);
 }
 
 .primary-cta-arrow--bright:focus:after, .primary-cta-arrow--bright:active:after {
@@ -12519,7 +12535,9 @@ main table td em {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
-        padding: 0.5rem 2rem 0.5rem 1rem;
+    }
+    .primary-cta-arrow--bright:hover span {
+        transform: translateX(-0.5rem);
     }
     .primary-cta-arrow--bright:hover:after {
         opacity: 1;
@@ -12580,7 +12598,7 @@ main table td em {
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background: #dd0036;
     border: 0.125rem solid #dd0036;
@@ -12601,6 +12619,10 @@ main table td em {
         justify-content: center;
         text-align: center;
     }
+}
+
+.primary-cta--bright span {
+    transition: transform 0.6s;
 }
 
 .primary-cta--bright:after {
@@ -12626,7 +12648,10 @@ main table td em {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.primary-cta--bright:focus span, .primary-cta--bright:active span {
+    transform: translateX(-0.5rem);
 }
 
 .primary-cta--bright:focus:after, .primary-cta--bright:active:after {
@@ -12639,7 +12664,9 @@ main table td em {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
-        padding: 0.5rem 2rem 0.5rem 1rem;
+    }
+    .primary-cta--bright:hover span {
+        transform: translateX(-0.5rem);
     }
     .primary-cta--bright:hover:after {
         opacity: 1;
@@ -12720,6 +12747,10 @@ main table td em {
     background: transparent;
 }
 
+.primary-cta--bright:hover span, .primary-cta--bright:active span, .primary-cta--bright:focus span {
+    transform: none;
+}
+
 .primary-cta-arrow--dark {
     background: initial;
     border-radius: 0.25rem;
@@ -12729,7 +12760,7 @@ main table td em {
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     border: 0.125rem solid #dd0036;
     background: #dd0036;
     color: #ffffff;
@@ -12747,6 +12778,10 @@ main table td em {
         justify-content: center;
         text-align: center;
     }
+}
+
+.primary-cta-arrow--dark span {
+    transition: transform 0.6s;
 }
 
 .primary-cta-arrow--dark:after {
@@ -12772,7 +12807,10 @@ main table td em {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.primary-cta-arrow--dark:focus span, .primary-cta-arrow--dark:active span {
+    transform: translateX(-0.5rem);
 }
 
 .primary-cta-arrow--dark:focus:after, .primary-cta-arrow--dark:active:after {
@@ -12785,7 +12823,9 @@ main table td em {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
-        padding: 0.5rem 2rem 0.5rem 1rem;
+    }
+    .primary-cta-arrow--dark:hover span {
+        transform: translateX(-0.5rem);
     }
     .primary-cta-arrow--dark:hover:after {
         opacity: 1;
@@ -12833,7 +12873,7 @@ main table td em {
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     border: 0.125rem solid #dd0036;
     background: #dd0036;
     color: #ffffff;
@@ -12853,6 +12893,10 @@ main table td em {
         justify-content: center;
         text-align: center;
     }
+}
+
+.primary-cta--dark span {
+    transition: transform 0.6s;
 }
 
 .primary-cta--dark:after {
@@ -12878,7 +12922,10 @@ main table td em {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.primary-cta--dark:focus span, .primary-cta--dark:active span {
+    transform: translateX(-0.5rem);
 }
 
 .primary-cta--dark:focus:after, .primary-cta--dark:active:after {
@@ -12891,7 +12938,9 @@ main table td em {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
-        padding: 0.5rem 2rem 0.5rem 1rem;
+    }
+    .primary-cta--dark:hover span {
+        transform: translateX(-0.5rem);
     }
     .primary-cta--dark:hover:after {
         opacity: 1;
@@ -12939,10 +12988,17 @@ main table td em {
     padding: 0.5rem 1.5rem;
 }
 
+.primary-cta--dark:focus span, .primary-cta--dark:active span {
+    transform: none;
+}
+
 @media (hover: hover) {
     .primary-cta--dark:hover {
         border-color: #dd0036;
         padding: 0.5rem 1.5rem;
+    }
+    .primary-cta--dark:hover span {
+        transform: none;
     }
 }
 
@@ -12968,7 +13024,7 @@ main table td em {
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background: transparent;
     border: 0.125rem solid #0c0c0e;
@@ -12987,6 +13043,10 @@ main table td em {
         justify-content: center;
         text-align: center;
     }
+}
+
+.outline-cta-arrow--bright span {
+    transition: transform 0.6s;
 }
 
 .outline-cta-arrow--bright:after {
@@ -13012,7 +13072,10 @@ main table td em {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.outline-cta-arrow--bright:focus span, .outline-cta-arrow--bright:active span {
+    transform: translateX(-0.5rem);
 }
 
 .outline-cta-arrow--bright:focus:after, .outline-cta-arrow--bright:active:after {
@@ -13025,7 +13088,9 @@ main table td em {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
-        padding: 0.5rem 2rem 0.5rem 1rem;
+    }
+    .outline-cta-arrow--bright:hover span {
+        transform: translateX(-0.5rem);
     }
     .outline-cta-arrow--bright:hover:after {
         opacity: 1;
@@ -13087,7 +13152,7 @@ main table td em {
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background: transparent;
     border: 0.125rem solid #0c0c0e;
@@ -13106,6 +13171,10 @@ main table td em {
         justify-content: center;
         text-align: center;
     }
+}
+
+.outline-cta--bright span {
+    transition: transform 0.6s;
 }
 
 .outline-cta--bright:after {
@@ -13131,7 +13200,10 @@ main table td em {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.outline-cta--bright:focus span, .outline-cta--bright:active span {
+    transform: translateX(-0.5rem);
 }
 
 .outline-cta--bright:focus:after, .outline-cta--bright:active:after {
@@ -13144,7 +13216,9 @@ main table td em {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
-        padding: 0.5rem 2rem 0.5rem 1rem;
+    }
+    .outline-cta--bright:hover span {
+        transform: translateX(-0.5rem);
     }
     .outline-cta--bright:hover:after {
         opacity: 1;
@@ -13211,6 +13285,10 @@ main table td em {
     }
 }
 
+.outline-cta--bright:hover span, .outline-cta--bright:active span, .outline-cta--bright:focus span {
+    transform: none;
+}
+
 .outline-cta-arrow--dark {
     background: initial;
     border-radius: 0.25rem;
@@ -13220,7 +13298,7 @@ main table td em {
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     background: transparent;
     border: 0.125rem solid #ffffff;
     color: #ffffff;
@@ -13238,6 +13316,10 @@ main table td em {
         justify-content: center;
         text-align: center;
     }
+}
+
+.outline-cta-arrow--dark span {
+    transition: transform 0.6s;
 }
 
 .outline-cta-arrow--dark:after {
@@ -13263,7 +13345,10 @@ main table td em {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.outline-cta-arrow--dark:focus span, .outline-cta-arrow--dark:active span {
+    transform: translateX(-0.5rem);
 }
 
 .outline-cta-arrow--dark:focus:after, .outline-cta-arrow--dark:active:after {
@@ -13276,7 +13361,9 @@ main table td em {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
-        padding: 0.5rem 2rem 0.5rem 1rem;
+    }
+    .outline-cta-arrow--dark:hover span {
+        transform: translateX(-0.5rem);
     }
     .outline-cta-arrow--dark:hover:after {
         opacity: 1;
@@ -13338,7 +13425,7 @@ main table td em {
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     background: transparent;
     border: 0.125rem solid #ffffff;
     color: #ffffff;
@@ -13356,6 +13443,10 @@ main table td em {
         justify-content: center;
         text-align: center;
     }
+}
+
+.outline-cta--dark span {
+    transition: transform 0.6s;
 }
 
 .outline-cta--dark:after {
@@ -13381,7 +13472,10 @@ main table td em {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.outline-cta--dark:focus span, .outline-cta--dark:active span {
+    transform: translateX(-0.5rem);
 }
 
 .outline-cta--dark:focus:after, .outline-cta--dark:active:after {
@@ -13394,7 +13488,9 @@ main table td em {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
-        padding: 0.5rem 2rem 0.5rem 1rem;
+    }
+    .outline-cta--dark:hover span {
+        transform: translateX(-0.5rem);
     }
     .outline-cta--dark:hover:after {
         opacity: 1;
@@ -13461,6 +13557,10 @@ main table td em {
     }
 }
 
+.outline-cta--dark:hover span, .outline-cta--dark:active span, .outline-cta--dark:focus span {
+    transform: none;
+}
+
 .basic-cta--bright {
     background: initial;
     border-radius: 0.25rem;
@@ -13470,7 +13570,7 @@ main table td em {
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background: #dd0036;
     border: 0.125rem solid #dd0036;
@@ -13492,6 +13592,10 @@ main table td em {
         justify-content: center;
         text-align: center;
     }
+}
+
+.basic-cta--bright span {
+    transition: transform 0.6s;
 }
 
 .basic-cta--bright:after {
@@ -13517,7 +13621,10 @@ main table td em {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.basic-cta--bright:focus span, .basic-cta--bright:active span {
+    transform: translateX(-0.5rem);
 }
 
 .basic-cta--bright:focus:after, .basic-cta--bright:active:after {
@@ -13530,7 +13637,9 @@ main table td em {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
-        padding: 0.5rem 2rem 0.5rem 1rem;
+    }
+    .basic-cta--bright:hover span {
+        transform: translateX(-0.5rem);
     }
     .basic-cta--bright:hover:after {
         opacity: 1;
@@ -13595,7 +13704,10 @@ main table td em {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
-    padding: 0.5rem 1.5rem;
+}
+
+.basic-cta--bright:focus span, .basic-cta--bright:active span {
+    transform: none;
 }
 
 @media (hover: hover) {
@@ -13603,7 +13715,9 @@ main table td em {
         background: #aa002a;
         border-color: #aa002a;
         color: #ffffff;
-        padding: 0.5rem 1.5rem;
+    }
+    .basic-cta--bright:hover span {
+        transform: none;
     }
 }
 
@@ -13625,7 +13739,7 @@ main table td em {
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background: #dd0036;
     border: 0.125rem solid #dd0036;
@@ -13652,6 +13766,10 @@ main table td em {
     }
 }
 
+.basic-cta--dark span {
+    transition: transform 0.6s;
+}
+
 .basic-cta--dark:after {
     content: '\f061';
     font-family: 'Font Awesome';
@@ -13675,7 +13793,10 @@ main table td em {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.basic-cta--dark:focus span, .basic-cta--dark:active span {
+    transform: translateX(-0.5rem);
 }
 
 .basic-cta--dark:focus:after, .basic-cta--dark:active:after {
@@ -13688,7 +13809,9 @@ main table td em {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
-        padding: 0.5rem 2rem 0.5rem 1rem;
+    }
+    .basic-cta--dark:hover span {
+        transform: translateX(-0.5rem);
     }
     .basic-cta--dark:hover:after {
         opacity: 1;
@@ -13753,7 +13876,10 @@ main table td em {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
-    padding: 0.5rem 1.5rem;
+}
+
+.basic-cta--dark:focus span, .basic-cta--dark:active span {
+    transform: none;
 }
 
 @media (hover: hover) {
@@ -13761,7 +13887,9 @@ main table td em {
         background: #aa002a;
         border-color: #aa002a;
         color: #ffffff;
-        padding: 0.5rem 1.5rem;
+    }
+    .basic-cta--dark:hover span {
+        transform: none;
     }
 }
 
@@ -17940,10 +18068,8 @@ blockquote footer {
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     border: 0.125rem solid #dd0036;
-    background: #dd0036;
-    color: #ffffff;
     background: #dd0036;
     color: #ffffff;
 }
@@ -17960,6 +18086,10 @@ blockquote footer {
         justify-content: center;
         text-align: center;
     }
+}
+
+.theme--dark .cta-block li:nth-child(1) a span {
+    transition: transform 0.6s;
 }
 
 .theme--dark .cta-block li:nth-child(1) a:after {
@@ -17985,7 +18115,10 @@ blockquote footer {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.theme--dark .cta-block li:nth-child(1) a:focus span, .theme--dark .cta-block li:nth-child(1) a:active span {
+    transform: translateX(-0.5rem);
 }
 
 .theme--dark .cta-block li:nth-child(1) a:focus:after, .theme--dark .cta-block li:nth-child(1) a:active:after {
@@ -17998,7 +18131,9 @@ blockquote footer {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
-        padding: 0.5rem 2rem 0.5rem 1rem;
+    }
+    .theme--dark .cta-block li:nth-child(1) a:hover span {
+        transform: translateX(-0.5rem);
     }
     .theme--dark .cta-block li:nth-child(1) a:hover:after {
         opacity: 1;
@@ -18037,35 +18172,6 @@ blockquote footer {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.theme--dark .cta-block li:nth-child(1) a:visited {
-    color: #ffffff;
-    border-color: #dd0036;
-}
-
-.theme--dark .cta-block li:nth-child(1) a:focus, .theme--dark .cta-block li:nth-child(1) a:active {
-    padding: 0.5rem 1.5rem;
-}
-
-@media (hover: hover) {
-    .theme--dark .cta-block li:nth-child(1) a:hover {
-        border-color: #dd0036;
-        padding: 0.5rem 1.5rem;
-    }
-}
-
-.theme--dark .cta-block li:nth-child(1) a:after {
-    content: '';
-}
-
-.theme--dark .cta-block li:nth-child(1) a:focus {
-    background: #dd0036;
-}
-
-.theme--dark .cta-block li:nth-child(1) a:active {
-    background: transparent;
-    border-color: #dd0036;
-}
-
 .theme--dark .cta-block li:nth-child(2) a {
     background: initial;
     border-radius: 0.25rem;
@@ -18075,7 +18181,7 @@ blockquote footer {
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     background: transparent;
     border: 0.125rem solid #ffffff;
     color: #ffffff;
@@ -18093,6 +18199,10 @@ blockquote footer {
         justify-content: center;
         text-align: center;
     }
+}
+
+.theme--dark .cta-block li:nth-child(2) a span {
+    transition: transform 0.6s;
 }
 
 .theme--dark .cta-block li:nth-child(2) a:after {
@@ -18118,7 +18228,10 @@ blockquote footer {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.theme--dark .cta-block li:nth-child(2) a:focus span, .theme--dark .cta-block li:nth-child(2) a:active span {
+    transform: translateX(-0.5rem);
 }
 
 .theme--dark .cta-block li:nth-child(2) a:focus:after, .theme--dark .cta-block li:nth-child(2) a:active:after {
@@ -18131,7 +18244,9 @@ blockquote footer {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
-        padding: 0.5rem 2rem 0.5rem 1rem;
+    }
+    .theme--dark .cta-block li:nth-child(2) a:hover span {
+        transform: translateX(-0.5rem);
     }
     .theme--dark .cta-block li:nth-child(2) a:hover:after {
         opacity: 1;
@@ -18184,20 +18299,6 @@ blockquote footer {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.theme--dark .cta-block li:nth-child(2) a:after {
-    content: '';
-}
-
-.theme--dark .cta-block li:nth-child(2) a:focus, .theme--dark .cta-block li:nth-child(2) a:active {
-    padding: 0.5rem 1.5rem;
-}
-
-@media (hover: hover) {
-    .theme--dark .cta-block li:nth-child(2) a:hover {
-        padding: 0.5rem 1.5rem;
-    }
-}
-
 .theme--dark .cta-block li:nth-child(3) a {
     background: initial;
     border-radius: 0.25rem;
@@ -18207,7 +18308,7 @@ blockquote footer {
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
-    transition: background-color 0.6s, transform 0.6s, padding 0.6s;
+    transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background: #dd0036;
     border: 0.125rem solid #dd0036;
@@ -18234,6 +18335,10 @@ blockquote footer {
     }
 }
 
+.theme--dark .cta-block li:nth-child(3) a span {
+    transition: transform 0.6s;
+}
+
 .theme--dark .cta-block li:nth-child(3) a:after {
     content: '\f061';
     font-family: 'Font Awesome';
@@ -18257,7 +18362,10 @@ blockquote footer {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    padding: 0.5rem 2rem 0.5rem 1rem;
+}
+
+.theme--dark .cta-block li:nth-child(3) a:focus span, .theme--dark .cta-block li:nth-child(3) a:active span {
+    transform: translateX(-0.5rem);
 }
 
 .theme--dark .cta-block li:nth-child(3) a:focus:after, .theme--dark .cta-block li:nth-child(3) a:active:after {
@@ -18270,7 +18378,9 @@ blockquote footer {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
-        padding: 0.5rem 2rem 0.5rem 1rem;
+    }
+    .theme--dark .cta-block li:nth-child(3) a:hover span {
+        transform: translateX(-0.5rem);
     }
     .theme--dark .cta-block li:nth-child(3) a:hover:after {
         opacity: 1;
@@ -18335,7 +18445,10 @@ blockquote footer {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
-    padding: 0.5rem 1.5rem;
+}
+
+.theme--dark .cta-block li:nth-child(3) a:focus span, .theme--dark .cta-block li:nth-child(3) a:active span {
+    transform: none;
 }
 
 @media (hover: hover) {
@@ -18343,7 +18456,9 @@ blockquote footer {
         background: #aa002a;
         border-color: #aa002a;
         color: #ffffff;
-        padding: 0.5rem 1.5rem;
+    }
+    .theme--dark .cta-block li:nth-child(3) a:hover span {
+        transform: none;
     }
 }
 
