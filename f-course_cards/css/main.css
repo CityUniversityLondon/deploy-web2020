@@ -12144,13 +12144,6 @@ main table td em {
     z-index: -1;
 }
 
-.card--course--transparent:focus:after, .card--course--transparent:active:after {
-    outline-color: #0c0c0e;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
-}
-
 .card--course--transparent .title {
     line-height: 1.625;
     font-weight: 600;
@@ -12332,13 +12325,6 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-}
-
-.card--course--background:focus:after, .card--course--background:active:after {
-    outline-color: #0c0c0e;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
 }
 
 .card--course--background .title {
@@ -12537,13 +12523,6 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-}
-
-.card--course--related-course:focus:after, .card--course--related-course:active:after {
-    outline-color: #0c0c0e;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
 }
 
 .card--course--related-course .title {
@@ -12757,6 +12736,13 @@ main table td em {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+.card--course--related-course:focus:after, .card--course--related-course:active:after {
+    outline-color: #0c0c0e;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
+}
+
 .card--course--related-course .image-container {
     overflow: hidden;
     width: 3.25rem;
@@ -12838,13 +12824,6 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-}
-
-.card--course--related-course--background:focus:after, .card--course--related-course--background:active:after {
-    outline-color: #0c0c0e;
-    outline-width: 2px;
-    outline-style: dotted;
-    outline-offset: 3px;
 }
 
 .card--course--related-course--background .title {
@@ -13056,6 +13035,13 @@ main table td em {
 
 .card--course--related-course--background:hover .image-container:after {
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card--course--related-course--background:focus:after, .card--course--related-course--background:active:after {
+    outline-color: #0c0c0e;
+    outline-width: 2px;
+    outline-style: dotted;
+    outline-offset: 3px;
 }
 
 .card--course--related-course--background .image-container {
