@@ -3765,6 +3765,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ //import backToTopLink from './patterns/back-to-top-link/back-to-top-link';
 
 /* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_box_key_information_box__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_10__["default"]]);
 
@@ -3817,7 +3818,25 @@ const className = 'accordion',
 
 function setSection(heading, open) {
   heading.dataset.open = open;
+  heading.setAttribute('tabindex', '1');
   heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+  let bodyLinks = heading.nextElementSibling.getElementsByTagName('a');
+
+  if (open) {
+    heading.nextElementSibling.classList.add('active');
+    heading.nextElementSibling.style.maxHeight = parseInt(heading.nextElementSibling.scrollHeight + 40) + 'px';
+
+    for (const bodyLink of bodyLinks) {
+      bodyLink.setAttribute('tabindex', '1');
+    }
+  } else {
+    heading.nextElementSibling.classList.remove('active');
+    heading.nextElementSibling.style.maxHeight = null;
+
+    for (const bodyLink of bodyLinks) {
+      bodyLink.setAttribute('tabindex', '-1');
+    }
+  }
 }
 /**
  * Respond to button clicks - open if closed, close if open.
@@ -3919,7 +3938,9 @@ function launchAccordion(accordion) {
 
     if (locationHash === heading.id) {
       idLinked = true;
-      setSection(heading, true);
+      setSection(heading, true); // FF/Safari bug fix
+
+      heading.nextElementSibling.style.maxHeight = '10000px';
     } else {
       setSection(heading, false);
     }
@@ -3928,7 +3949,9 @@ function launchAccordion(accordion) {
   });
 
   if (defaultOpen && !idLinked) {
-    setSection(headings[0], true);
+    setSection(headings[0], true); // FF/Safari bug fix
+
+    headings[0].nextElementSibling.style.maxHeight = '10000px';
   }
 }
 
@@ -4314,7 +4337,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Key information box
  *
- * @module patterns/key-information-box/key-information-box
+ * @module patterns/key-info/key-info
  * @author Mark Skinsley <mark.skinsley@city.ac.uk>
  * @copyright City, University of London 2018
  */
@@ -4332,7 +4355,7 @@ function launchKeyInformationBox() {
       listingHeight = '',
       listingsVisible = [],
       listingsLength = [],
-      paginated = document.getElementsByClassName('key-information-box--short-course-paginated'),
+      paginated = document.getElementsByClassName('key-info--short-course-paginated'),
       paginatedPage,
       defaultDuration = 2000,
       edgeOffset = 100; // Zen scroll setup
@@ -4393,7 +4416,7 @@ function launchKeyInformationBox() {
     }
 
     listingsNumber = listingsNumber.length;
-    let datesQuantities = document.querySelectorAll('.key-information-box--dates-quantity');
+    let datesQuantities = document.querySelectorAll('.key-info--dates-quantity');
 
     for (const datesQuantity of datesQuantities) {
       let date;
@@ -5467,10 +5490,10 @@ function toggleLink(link, selected) {
   link.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].selected, selected);
 
   if (selected) {
-    link.removeAttribute('tabindex');
+    //link.removeAttribute('tabindex');
     link.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current, true);
   } else {
-    link.setAttribute('tabindex', -1);
+    link.setAttribute('tabindex', 0);
     link.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current);
   }
 }
@@ -5605,7 +5628,7 @@ function prepareLinks(linkItems) {
 function preparePanels(panels) {
   panels.forEach(panel => {
     panel.setAttribute('role', 'tabpanel');
-    panel.setAttribute('tabindex', -1);
+    panel.setAttribute('tabindex', 0);
     panel.toggleAttribute('hidden', true);
   });
 }

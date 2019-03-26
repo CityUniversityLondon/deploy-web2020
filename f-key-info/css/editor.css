@@ -1070,6 +1070,27 @@
     background-color: #ffffff;
 }
 
+/* ghost animation - underline animation used on tab buttons */
+
+@keyframes slide-left-in {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: none;
+    }
+}
+
+@keyframes slide-right-out {
+    from {
+        transform: none;
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* End of ghost animation */
 .fa,
 .fas,
 .far,
@@ -9741,13 +9762,13 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .alpha-type {
-        letter-spacing: -0.011em;
+        letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .alpha-type {
-        letter-spacing: -0.014em;
+        letter-spacing: -0.013em;
     }
 }
 
@@ -9777,13 +9798,13 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .beta-type {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .beta-type {
-        letter-spacing: -0.015em;
+        letter-spacing: -0.014em;
     }
 }
 
@@ -9813,13 +9834,13 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .gamma-type {
-        letter-spacing: -0.015em;
+        letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .gamma-type {
-        letter-spacing: -0.016em;
+        letter-spacing: -0.015em;
     }
 }
 
@@ -9849,13 +9870,13 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .delta-type {
-        letter-spacing: -0.016em;
+        letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .delta-type {
-        letter-spacing: -0.017em;
+        letter-spacing: -0.016em;
     }
 }
 
@@ -9921,7 +9942,7 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .zeta-type {
-        letter-spacing: -0.017em;
+        letter-spacing: -0.016em;
     }
 }
 
@@ -9957,13 +9978,13 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .small-type {
-        letter-spacing: -0.008em;
+        letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .small-type {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.01em;
     }
 }
 
@@ -9993,13 +10014,13 @@ readers do not read off random characters that represent icons */
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .extra-small-type {
-        letter-spacing: -0.005em;
+        letter-spacing: 0em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .extra-small-type {
-        letter-spacing: -0.01em;
+        letter-spacing: -0.007em;
     }
 }
 
@@ -10099,25 +10120,25 @@ html em {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     html {
-        font-size: 20.25px;
+        font-size: 18px;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     html {
-        font-size: 24.75px;
+        font-size: 22px;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
     html {
-        font-size: 51.75px;
+        font-size: 46px;
     }
 }
 
 @media (min-width: 7680px) {
     html {
-        font-size: 103.5px;
+        font-size: 92px;
     }
 }
 
@@ -10133,7 +10154,6 @@ article a {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    background-image: none;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -10158,7 +10178,6 @@ article a {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-image: none;
     }
 }
 
@@ -10174,7 +10193,6 @@ article a:focus, article a:active {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    background-image: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -10400,13 +10418,13 @@ u {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .content-style {
-        letter-spacing: -0.011em;
+        letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .content-style {
-        letter-spacing: -0.014em;
+        letter-spacing: -0.013em;
     }
 }
 
@@ -10481,14 +10499,14 @@ h6 u,
 @media (min-width: 769px) and (max-width: 1919px) {
     h6,
     .h6-style {
-        letter-spacing: -0.011em;
+        letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     h6,
     .h6-style {
-        letter-spacing: -0.014em;
+        letter-spacing: -0.013em;
     }
 }
 
@@ -10561,14 +10579,14 @@ h5 u,
 @media (min-width: 769px) and (max-width: 1919px) {
     h5,
     .h5-style {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     h5,
     .h5-style {
-        letter-spacing: -0.015em;
+        letter-spacing: -0.014em;
     }
 }
 
@@ -10641,14 +10659,14 @@ h4 u,
 @media (min-width: 769px) and (max-width: 1919px) {
     h4,
     .h4-style {
-        letter-spacing: -0.015em;
+        letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     h4,
     .h4-style {
-        letter-spacing: -0.016em;
+        letter-spacing: -0.015em;
     }
 }
 
@@ -10721,14 +10739,14 @@ h3 u,
 @media (min-width: 769px) and (max-width: 1919px) {
     h3,
     .h3-style {
-        letter-spacing: -0.016em;
+        letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     h3,
     .h3-style {
-        letter-spacing: -0.017em;
+        letter-spacing: -0.016em;
     }
 }
 
@@ -10880,7 +10898,7 @@ h1 u,
 @media (min-width: 769px) and (max-width: 1919px) {
     h1,
     .h1-style {
-        letter-spacing: -0.017em;
+        letter-spacing: -0.016em;
     }
 }
 
@@ -10975,7 +10993,7 @@ main blockquote {
     main ul,
     main dl,
     main blockquote {
-        letter-spacing: -0.011em;
+        letter-spacing: -0.008em;
     }
 }
 
@@ -10985,7 +11003,7 @@ main blockquote {
     main ul,
     main dl,
     main blockquote {
-        letter-spacing: -0.014em;
+        letter-spacing: -0.013em;
     }
 }
 
@@ -11141,14 +11159,14 @@ main .standfirst-style {
 @media (min-width: 769px) and (max-width: 1919px) {
     main .standfirst,
     main .standfirst-style {
-        letter-spacing: -0.015em;
+        letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     main .standfirst,
     main .standfirst-style {
-        letter-spacing: -0.016em;
+        letter-spacing: -0.015em;
     }
 }
 
@@ -11234,13 +11252,13 @@ main dt u {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     main dt {
-        letter-spacing: -0.011em;
+        letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     main dt {
-        letter-spacing: -0.014em;
+        letter-spacing: -0.013em;
     }
 }
 
@@ -11317,13 +11335,13 @@ main table th u {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     main table th {
-        letter-spacing: -0.011em;
+        letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     main table th {
-        letter-spacing: -0.014em;
+        letter-spacing: -0.013em;
     }
 }
 
@@ -11363,13 +11381,13 @@ main table td {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     main table td {
-        letter-spacing: -0.011em;
+        letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     main table td {
-        letter-spacing: -0.014em;
+        letter-spacing: -0.013em;
     }
 }
 
@@ -11426,13 +11444,13 @@ main table td em {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .cms-editor div.cms-editor-warning p {
-        letter-spacing: -0.011em;
+        letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .cms-editor div.cms-editor-warning p {
-        letter-spacing: -0.014em;
+        letter-spacing: -0.013em;
     }
 }
 
@@ -11467,13 +11485,13 @@ main table td em {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .cms-editor div.cms-editor-warning p:after {
-        letter-spacing: -0.005em;
+        letter-spacing: 0em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .cms-editor div.cms-editor-warning p:after {
-        letter-spacing: -0.01em;
+        letter-spacing: -0.007em;
     }
 }
 
@@ -11512,7 +11530,6 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    background-image: none;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -11535,13 +11552,13 @@ main table td em {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .cms-editor .cms-editor-warning-remover {
-        letter-spacing: -0.005em;
+        letter-spacing: 0em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .cms-editor .cms-editor-warning-remover {
-        letter-spacing: -0.01em;
+        letter-spacing: -0.007em;
     }
 }
 
@@ -11570,7 +11587,6 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-image: none;
     }
 }
 
@@ -11586,7 +11602,6 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    background-image: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -11962,13 +11977,13 @@ main table td em {
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .user-journey__steps h3 {
-        letter-spacing: -0.011em;
+        letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .user-journey__steps h3 {
-        letter-spacing: -0.014em;
+        letter-spacing: -0.013em;
     }
 }
 
@@ -12012,7 +12027,6 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-image: none;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
@@ -12046,7 +12060,6 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-image: none;
     }
 }
 
@@ -12063,7 +12076,6 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-image: none;
     }
 }
 
