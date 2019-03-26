@@ -16831,15 +16831,6 @@ button
     transition: opacity 1s ease;
 }
 
-.content {
-    background-color: #ececec;
-    padding: 0 1rem;
-}
-
-.timetable-container {
-    margin-top: 1rem;
-}
-
 .timetable {
     padding-bottom: 1.5rem;
 }
