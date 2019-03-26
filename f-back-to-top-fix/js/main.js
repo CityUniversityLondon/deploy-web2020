@@ -3743,7 +3743,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
 /* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
 /* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
-/* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
 
 
 /**
@@ -3764,9 +3763,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ //import backToTopLink from './patterns/back-to-top-link/back-to-top-link';
 
-
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_10__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_9__["default"]]);
 
 /***/ }),
 
@@ -3956,111 +3955,6 @@ function launchAccordion(accordion) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchAccordion,
-  launchQuery: `.${className}`
-});
-
-/***/ }),
-
-/***/ "./src/patterns/back-to-top-link/back-to-top-link.js":
-/*!***********************************************************!*\
-  !*** ./src/patterns/back-to-top-link/back-to-top-link.js ***!
-  \***********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-
-/**
- * Back To Top Link Scroll
- *
- * @module patterns/external-link-finder/external-link-finder
- * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
- */
-
-/**
- *  Back to top link button only appears on long pages and when you have scrolled down long enough
- *
- */
-const className = 'back-to-top';
-const scrollToTopBut = document.getElementsByClassName('back-to-top')[0].querySelectorAll('a')[0];
-const viewPortHeight = window.innerHeight; // calculates viewport height
-
-const docHeight = document.documentElement.scrollHeight; // calculates page height
-
-/**
- *  Parameters
- *
- */
-
-const pageHeight = 1.5; // only appears on long pages which are 'X' times the viewport height
-
-const scrollPos = 1; // sets how many viewport heights you need to scroll down for back to top to appear
-
-/**
- *  Initialises for long pages only
- *
- */
-
-function initBacktoTop() {
-  if (docHeight > viewPortHeight * pageHeight) {
-    scrollToTopBut.style.opacity = 0;
-    scrollToTopBut.classList.add('back-to-top-stick');
-  }
-}
-/**
- *  Button fading behaviour
- *
- */
-
-
-function scrollButBehav() {
-  let screenPos = window.pageYOffset; // calculates scroll position
-
-  if (screenPos > viewPortHeight * scrollPos) {
-    // shows button when scrolled down far enough - see parameters
-    scrollToTopBut.classList.add('back-to-top-show');
-  } else if (screenPos < 200) {
-    // hides button when close to top of the page
-    scrollToTopBut.classList.remove('back-to-top-show');
-  }
-}
-/**
- *  Progress meter:
- *
- */
-// 1. Set up SVG animation
-
-
-const progressPath = document.querySelector('path');
-const pathLength = progressPath.getTotalLength();
-progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-progressPath.style.strokeDashoffset = pathLength;
-progressPath.getBoundingClientRect();
-progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 0ms linear'; // 2. Define updateProgress function
-
-function updateProgress() {
-  // calculate values
-  let scroll = window.pageYOffset;
-  let height = document.documentElement.scrollHeight - window.innerHeight;
-  let progress = pathLength - scroll * pathLength / height; // update dashOffset
-
-  progressPath.style.strokeDashoffset = progress;
-} // 3. trigger updateProgress once on load and then on scroll
-
-
-window.onscroll = function () {
-  updateProgress();
-  scrollButBehav();
-};
-
-updateProgress();
-initBacktoTop();
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: scrollButBehav,
   launchQuery: `.${className}`
 });
 
