@@ -3984,11 +3984,10 @@ __webpack_require__.r(__webpack_exports__);
  *  Back to top link button only appears on long pages and when you have scrolled down long enough
  *
  */
-const className = 'back-to-top';
-const scrollToTopBut = document.getElementsByClassName('back-to-top')[0].querySelectorAll('a')[0];
-const viewPortHeight = window.innerHeight; // calculates viewport height
-
-const docHeight = document.documentElement.scrollHeight; // calculates page height
+const className = 'back-to-top',
+      viewPortHeight = window.innerHeight,
+      // calculates viewport height
+docHeight = document.documentElement.scrollHeight; // calculates page height
 
 /**
  *  Parameters
@@ -4005,9 +4004,16 @@ const scrollPos = 1; // sets how many viewport heights you need to scroll down f
  */
 
 function initBacktoTop() {
+  const scrollToTopBut = document.getElementsByClassName('back-to-top')[0].querySelectorAll('a')[0];
+
   if (docHeight > viewPortHeight * pageHeight) {
     scrollToTopBut.style.opacity = 0;
     scrollToTopBut.classList.add('back-to-top-stick');
+
+    window.onscroll = function () {
+      updateProgress();
+      scrollButBehav();
+    };
   }
 }
 /**
@@ -4017,6 +4023,7 @@ function initBacktoTop() {
 
 
 function scrollButBehav() {
+  const scrollToTopBut = document.getElementsByClassName('back-to-top')[0].querySelectorAll('a')[0];
   let screenPos = window.pageYOffset; // calculates scroll position
 
   if (screenPos > viewPortHeight * scrollPos) {
@@ -4031,36 +4038,28 @@ function scrollButBehav() {
  *  Progress meter:
  *
  */
-// 1. Set up SVG animation
+// updateProgress function
 
-
-const progressPath = document.querySelector('path');
-const pathLength = progressPath.getTotalLength();
-progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-progressPath.style.strokeDashoffset = pathLength;
-progressPath.getBoundingClientRect();
-progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 0ms linear'; // 2. Define updateProgress function
 
 function updateProgress() {
-  // calculate values
+  // Setting up SVG animation
+  const progressPath = document.querySelector('path');
+  const pathLength = progressPath.getTotalLength();
+  progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+  progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+  progressPath.style.strokeDashoffset = pathLength;
+  progressPath.getBoundingClientRect();
+  progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 0ms linear'; // Calculate values
+
   let scroll = window.pageYOffset;
   let height = document.documentElement.scrollHeight - window.innerHeight;
-  let progress = pathLength - scroll * pathLength / height; // update dashOffset
+  let progress = pathLength - scroll * pathLength / height; // Updates progress bar
 
   progressPath.style.strokeDashoffset = progress;
-} // 3. trigger updateProgress once on load and then on scroll
+}
 
-
-window.onscroll = function () {
-  updateProgress();
-  scrollButBehav();
-};
-
-updateProgress();
-initBacktoTop();
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: scrollButBehav,
+  launchFn: initBacktoTop,
   launchQuery: `.${className}`
 });
 

@@ -16067,6 +16067,9 @@ blockquote footer {
         text-align: center;
         margin-right: 0.75rem;
     }
+    .js .tabs .tabs__links li:last-of-type {
+        margin-right: 0;
+    }
     .js .tabs .tabs__links li a {
         background-color: initial;
         border-bottom-color: initial;
@@ -16236,22 +16239,35 @@ blockquote footer {
         transition: opacity 0.2s ease 0.2s;
         z-index: 0;
     }
+}
+
+@media screen and (hover: hover) {
     .js .tabs .tabs__links li a[aria-selected='false']:hover span::before {
         transform: translateX(-105%);
         animation: slide-left-in 0.2s ease 0s both normal;
         opacity: 1;
         transition: none;
     }
+}
+
+@media screen {
     .js .tabs .tabs__links li a[aria-selected='true'] {
         font-weight: 700;
     }
     .js .tabs .tabs__links li a[aria-selected='true'] span {
-        border-bottom: 0.5rem solid #65218e;
+        border-bottom: 0.5rem solid #5d184a;
         color: #0c0c0e;
     }
+}
+
+@media screen and (hover: hover) {
     .js .tabs .tabs__links li a:hover {
         border-bottom: 0.125rem solid transparent;
+        background: none;
     }
+}
+
+@media screen {
     .js .tabs .tabs__links li a:focus {
         border: 0.125rem dotted #0c0c0e;
         padding: 0px;
@@ -16360,12 +16376,12 @@ blockquote footer {
         border-bottom: 0.125rem solid #f2f2f2;
     }
     .js .tabs--accordion .accordion__heading:active {
-        outline: 0.125rem dotted #0c0c0e;
         border-bottom: 0.125rem solid #f2f2f2;
         text-decoration: underline;
     }
     .js .tabs--accordion .accordion__heading:focus {
         border-bottom: 0.125rem dotted transparent;
+        outline: none;
     }
     .js .tabs--accordion .accordion__heading[data-open='true'] button .accordion__heading__text {
         background: #3e1031;
@@ -16375,14 +16391,23 @@ blockquote footer {
     .js .tabs--accordion .accordion__heading[data-open='true'] button .accordion__heading__indicator {
         padding: 1rem 0.89rem;
     }
+    .js .tabs--accordion .accordion__heading[data-open='false']:focus button {
+        outline: 0.125rem dotted #0c0c0e;
+    }
     .js .tabs--accordion .accordion__heading button {
         padding: 0px;
         display: block;
     }
+}
+
+@media screen and (max-width: 768px) and (hover: hover) {
     .js .tabs--accordion .accordion__heading button:hover {
         background: #ffffff;
         color: #1e1e1e;
     }
+}
+
+@media screen and (max-width: 768px) {
     .js .tabs--accordion .accordion__heading button .accordion__heading__text {
         color: #1e1e1e;
         padding: 1rem;
