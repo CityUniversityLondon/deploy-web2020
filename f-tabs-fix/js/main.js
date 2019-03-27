@@ -3822,7 +3822,9 @@ function setSection(heading, open) {
 
   if (open) {
     heading.nextElementSibling.classList.add('active');
-    heading.nextElementSibling.style.maxHeight = parseInt(heading.nextElementSibling.scrollHeight + 40) + 'px';
+    let bodyHeight = heading.nextElementSibling.scrollHeight;
+    let bodyHeightRem = Object(_util__WEBPACK_IMPORTED_MODULE_4__["pxToRem"])(bodyHeight);
+    heading.nextElementSibling.style.maxHeight = parseInt(bodyHeightRem + 5) + 'rem';
 
     for (const bodyLink of bodyLinks) {
       bodyLink.setAttribute('tabindex', '1');
@@ -3936,9 +3938,7 @@ function launchAccordion(accordion) {
 
     if (locationHash === heading.id) {
       idLinked = true;
-      setSection(heading, true); // FF/Safari bug fix
-
-      heading.nextElementSibling.style.maxHeight = '10000px';
+      setSection(heading, true);
     } else {
       setSection(heading, false);
     }
@@ -3947,9 +3947,7 @@ function launchAccordion(accordion) {
   });
 
   if (defaultOpen && !idLinked) {
-    setSection(headings[0], true); // FF/Safari bug fix
-
-    headings[0].nextElementSibling.style.maxHeight = '10000px';
+    setSection(headings[0], true);
   }
 }
 
@@ -5627,7 +5625,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5640,6 +5638,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "objectToParameters", function() { return objectToParameters; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gaEvent", function() { return gaEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendAll", function() { return appendAll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pxToRem", function() { return pxToRem; });
 /* harmony import */ var core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es7.symbol.async-iterator */ "./node_modules/core-js/modules/es7.symbol.async-iterator.js");
 /* harmony import */ var core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es6_symbol__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.symbol */ "./node_modules/core-js/modules/es6.symbol.js");
@@ -5794,6 +5793,19 @@ function gaEvent(event, eventCategory, eventAction, eventLabel, eventValue, nonI
 
 function appendAll(elem, children) {
   children.forEach(child => elem.appendChild(child));
+}
+/**
+ * Convert a pixel value to equivalent REM value.
+ *
+ * @param {number} pxValue - Value in pixels.
+ */
+
+function pxToRem(pxValue) {
+  let browserWidth = document.documentElement.scrollWidth,
+      fontBase;
+  browserWidth > 768 ? fontBase = 18 : fontBase = 16;
+  let remValue = pxValue / fontBase;
+  return remValue;
 }
 
 /***/ }),
