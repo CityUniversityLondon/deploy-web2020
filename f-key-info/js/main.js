@@ -3737,7 +3737,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns/cms-editor-warning/cms-editor-warning */ "./src/patterns/cms-editor-warning/cms-editor-warning.js");
 /* harmony import */ var _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/cookie-notice/cookie-notice */ "./src/patterns/cookie-notice/cookie-notice.js");
 /* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
-/* harmony import */ var _patterns_key_information_box_key_information_box__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/key-information-box/key-information-box */ "./src/patterns/key-information-box/key-information-box.js");
+!(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/key-info-box/key-info-box'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
 /* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
 /* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
@@ -3767,7 +3767,7 @@ __webpack_require__.r(__webpack_exports__);
 
  //import backToTopLink from './patterns/back-to-top-link/back-to-top-link';
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_box_key_information_box__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_10__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], !(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/key-info-box/key-info-box'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_10__["default"]]);
 
 /***/ }),
 
@@ -4312,204 +4312,6 @@ function launchFeedback(elem) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchFeedback,
-  launchQuery: `.${className}`
-});
-
-/***/ }),
-
-/***/ "./src/patterns/key-information-box/key-information-box.js":
-/*!*****************************************************************!*\
-  !*** ./src/patterns/key-information-box/key-information-box.js ***!
-  \*****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-
-/**
- * Key information box
- *
- * @module patterns/key-info/key-info
- * @author Mark Skinsley <mark.skinsley@city.ac.uk>
- * @copyright City, University of London 2018
- */
-
-const className = 'keyInformationBox';
-
-function launchKeyInformationBox() {
-  let listings = document.querySelectorAll('.key-info__listing'),
-      contentToggles = document.querySelectorAll('.content-toggle'),
-      contentSliders = document.querySelectorAll('.content-slider'),
-      counter = 0,
-      browserWidth = document.documentElement.scrollWidth,
-      prevBtn = document.getElementById('key-info-previous-item'),
-      nextBtn = document.getElementById('key-info-next-item'),
-      listingHeight = '',
-      listingsVisible = [],
-      listingsLength = [],
-      paginated = document.getElementsByClassName('key-info--short-course-paginated'),
-      paginatedPage,
-      defaultDuration = 2000,
-      edgeOffset = 100; // Zen scroll setup
-
-  zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset);
-  paginated.length > 0 ? paginatedPage = true : paginatedPage = false; // Mobile: Show listing entry based on navigation button clicks
-
-  function listingDisplay() {
-    for (const listing of listings.entries()) {
-      if (browserWidth < 768 && listings.length > 1 && !paginatedPage) {
-        listing[0] == counter ? listing[1].style.display = 'block' : listing[1].style.display = 'none';
-      }
-
-      listing[1].setAttribute('data-id', `listing-${listing[0]}`);
-    }
-  } // Mobile: Enable/disable navigation buttons based on position of listing in collection
-
-
-  function navBtnState() {
-    for (const contentSlider of contentSliders) {
-      contentSlider.style.display = 'block';
-    }
-
-    let listingsLength = listings.length - 1;
-    counter == 0 ? prevBtn.setAttribute('disabled', true) : counter > 0 && counter < listingsLength ? (prevBtn.removeAttribute('disabled'), nextBtn.removeAttribute('disabled')) : nextBtn.setAttribute('disabled', true);
-  } // Mobile: Set mobile listings navigation buttons to correct position based on listing height
-
-
-  function navBtnPosition() {
-    for (const listing of listings.entries()) {
-      if (counter == listing[0]) {
-        listingHeight = listing[1].getAttribute('data-height');
-        prevBtn.style.top = parseInt(`-${listingHeight}`) + 100 + 'px';
-        nextBtn.style.top = parseInt(`-${listingHeight}`) + 100 + 'px';
-      }
-    }
-  }
-
-  function listingsControl() {
-    // Clear listings length array as this runs on every 'Load more' click
-    listingsLength = [];
-
-    for (const listing of listings.entries()) {
-      listingsLength.push(listings.length);
-      listing[0] > 2 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
-      listing[1].style.display == 'grid' ? listingsVisible.push(listing[1].style.display) : null;
-    }
-
-    listingsVisible.length >= listingsLength.length ? contentToggles[0].style.display = 'none' : null;
-  } // Show number of available starting dates.
-
-
-  function listingsQuantity() {
-    let listingsNumber = [];
-
-    for (const listing of listings.entries()) {
-      listingsNumber.push(listing.length);
-    }
-
-    listingsNumber = listingsNumber.length;
-    let datesQuantities = document.querySelectorAll('.key-info--dates-quantity');
-
-    for (const datesQuantity of datesQuantities) {
-      let date;
-      listingsNumber == 1 ? date = 'date' : date = 'dates';
-      datesQuantity.innerHTML = `<span class="icon--float-left fas fa-calendar-day"></span>
-                <div class="icon-text icon-text--margin-left">
-                    <p>${listingsNumber} available start ${date}</p>
-                </div>`;
-    }
-  }
-
-  listingsQuantity(); // Desktop: Toggle control listings when more than three listings exist
-
-  if (browserWidth > 768) {
-    if (listings.length > 3) {
-      listingDisplay();
-      listingsControl();
-
-      for (const contentToggle of contentToggles) {
-        contentToggle.addEventListener('click', e => {
-          // This will increase with each 'Load more' click, so visible listings
-          // must be captured before any further listings are made visible
-          let preExpandListingsVisible = listingsVisible.length;
-          e.preventDefault();
-
-          if (preExpandListingsVisible < listings.length) {
-            listingsControl();
-
-            for (const listing of listings.entries()) {
-              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
-              zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200, function () {});
-              listing[0] < preExpandListingsVisible + 3 ? (listing[1].style.display = 'grid', listing[1].classList.remove('hide')) : listing[1].classList.add('hide');
-            }
-          }
-        }, false);
-      }
-    } else {
-      contentToggles[0].style.display = 'none';
-    } // Mobile: one listing visible at a time
-
-  } else if (browserWidth < 768 && listings.length > 1 && !paginatedPage) {
-    for (const listing of listings.entries()) {
-      // Capture listing height and set to data attribute
-      listing[1].style.display = 'block';
-      listing[1].setAttribute('data-height', listing[1].offsetHeight);
-      listing[1].style.display = 'none'; // On load, set mobile navigation buttons at correct height
-
-      counter == 0 && listing[0] == 0 ? navBtnPosition() : null;
-      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
-    }
-
-    navBtnState();
-    prevBtn.addEventListener('click', () => {
-      counter = counter - 1;
-      navBtnState();
-      navBtnPosition();
-      listingDisplay();
-    });
-    nextBtn.addEventListener('click', () => {
-      counter = counter + 1;
-      navBtnState();
-      navBtnPosition();
-      listingDisplay();
-    });
-  } else if (browserWidth < 768 && listings.length > 1 && paginatedPage) {
-    // listingsControl();
-    let listWrapper = document.getElementById('short-course-key-info-listings');
-    listWrapper.classList.add('paginated-list');
-    listingsQuantity(); // Scroll to top of listings after each paginated index click
-
-    let paginationControls = document.querySelectorAll('.pagination__controls > button');
-
-    for (const paginationControl of paginationControls) {
-      paginationControl.addEventListener('click', () => {
-        let listingsTop = document.getElementById('short-course-key-info-listings');
-
-        if (paginationControl.getAttribute('aria-expanded') !== true) {
-          zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(listingsTop, 0);
-        }
-      });
-    }
-  } else if (browserWidth < 768 && listings.length == 1) {
-    for (const listing of listings.entries()) {
-      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
-    }
-  }
-} // Run function on resize as well as launch as some styles overriden by JS
-
-
-window.onresize = () => launchKeyInformationBox();
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchKeyInformationBox(),
   launchQuery: `.${className}`
 });
 
