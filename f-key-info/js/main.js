@@ -4350,8 +4350,8 @@ function launchKeyInformationBox() {
       contentSliders = document.querySelectorAll('.content-slider'),
       counter = 0,
       browserWidth = document.documentElement.scrollWidth,
-      prevBtn = document.getElementById('previous-listing'),
-      nextBtn = document.getElementById('next-listing'),
+      prevBtn = document.getElementById('key-info-previous-item'),
+      nextBtn = document.getElementById('key-info-next-item'),
       listingHeight = '',
       listingsVisible = [],
       listingsLength = [],
@@ -4421,7 +4421,10 @@ function launchKeyInformationBox() {
     for (const datesQuantity of datesQuantities) {
       let date;
       listingsNumber == 1 ? date = 'date' : date = 'dates';
-      datesQuantity.innerHTML = `<p><span class="fas fa-calendar-day"></span>${listingsNumber} available start ${date}</p>`;
+      datesQuantity.innerHTML = `<span class="icon--float-left fas fa-calendar-day"></span>
+                <div class="icon-text icon-text--margin-left">
+                    <p>${listingsNumber} available start ${date}</p>
+                </div>`;
     }
   }
 

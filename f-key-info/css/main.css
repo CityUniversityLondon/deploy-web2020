@@ -15184,13 +15184,18 @@ article figure figcaption > span {
     }
 }
 
-.key-info__data-item .icon--float-left {
-    float: left;
+.icon--float-left {
     margin-top: 0.5rem;
+    float: left;
+    margin-right: 0.5rem;
 }
 
-.key-info__data-item .icon-text.icon-text--margin-left {
+.icon-text.icon-text--margin-left {
     margin-left: 1.5rem;
+}
+
+.key-info__data-item--centered {
+    text-align: center;
 }
 
 @media (max-width: 767px) {
@@ -15207,19 +15212,11 @@ article figure figcaption > span {
     padding: 1rem;
 }
 
-.content-wrapper .content .pagination__wrapper {
-    max-width: 100% !important;
-}
-
 .content-wrapper .content .key-info--dates-quantity {
     padding: 0 0 1.25rem 0;
     color: #3e1031;
     border-bottom: 0.0625rem solid #a1a1a1;
     font-size: 0.889rem;
-}
-
-.content-wrapper .content .key-info--dates-quantity .fa-calendar-day {
-    padding: 0 0.5rem 0 0;
 }
 
 .content-wrapper .content .key-info__listing {
@@ -15263,9 +15260,6 @@ article figure figcaption > span {
         border-bottom: 0.0625rem dotted #cbcbcb;
         padding: 1.75rem 0;
     }
-    .content-wrapper .content .key-info__listing #places.key-information__data-item {
-        text-align: center;
-    }
 }
 
 .content-wrapper .content .key-info__listing .key-info--dates-quantity {
@@ -15291,10 +15285,6 @@ article figure figcaption > span {
     grid-area: c3;
 }
 
-.content-wrapper .content .key-info__listing .key-info__col-three.center {
-    text-align: center;
-}
-
 .content-wrapper .content .key-info__listing .cta-block {
     text-align: center;
 }
@@ -15305,8 +15295,8 @@ article figure figcaption > span {
 }
 
 .content-wrapper .content .content-control .content-slider {
-    display: none;
     position: relative;
+    display: none;
 }
 
 .content-wrapper .content .content-control .content-slider .fa-arrow-left--btn-prev,
@@ -15317,6 +15307,7 @@ article figure figcaption > span {
     padding: 0.5rem;
     background: #ffffff;
     width: 3rem;
+    color: #3e1031;
     font-size: 1.424rem;
     line-height: 1.25;
     letter-spacing: -0.013em;
@@ -15378,10 +15369,14 @@ article figure figcaption > span {
 }
 
 .content-wrapper .content .content-control .content-toggle {
+    text-align: center;
+}
+
+.content-wrapper .content .content-control .content-toggle button {
     display: none;
 }
 
-.content-wrapper .content .content-control .content-toggle a.icon {
+.content-wrapper .content .content-control .content-toggle button .fa-plus-circle {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -15407,7 +15402,7 @@ article figure figcaption > span {
 }
 
 @media (hover: hover) {
-    .content-wrapper .content .content-control .content-toggle a.icon:hover {
+    .content-wrapper .content .content-control .content-toggle button .fa-plus-circle:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -15422,7 +15417,7 @@ article figure figcaption > span {
     }
 }
 
-.content-wrapper .content .content-control .content-toggle a.icon:focus, .content-wrapper .content .content-control .content-toggle a.icon:active {
+.content-wrapper .content .content-control .content-toggle button .fa-plus-circle:focus, .content-wrapper .content .content-control .content-toggle button .fa-plus-circle:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -15437,24 +15432,24 @@ article figure figcaption > span {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .content-wrapper .content .content-control .content-toggle a.icon {
+    .content-wrapper .content .content-control .content-toggle button .fa-plus-circle {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .content-wrapper .content .content-control .content-toggle a.icon:hover {
+    .content-wrapper .content .content-control .content-toggle button .fa-plus-circle:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.content-wrapper .content .content-control .content-toggle a.icon:visited {
+.content-wrapper .content .content-control .content-toggle button .fa-plus-circle:visited {
     border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
-.content-wrapper .content .content-control .content-toggle a.icon:focus {
+.content-wrapper .content .content-control .content-toggle button .fa-plus-circle:focus {
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -15466,7 +15461,7 @@ article figure figcaption > span {
 }
 
 @media (hover: hover) {
-    .content-wrapper .content .content-control .content-toggle a.icon:hover {
+    .content-wrapper .content .content-control .content-toggle button .fa-plus-circle:hover {
         border-bottom-color: #006bbd;
         border-bottom-width: 0.125rem;
         border-bottom-style: solid;
@@ -15474,7 +15469,7 @@ article figure figcaption > span {
     }
 }
 
-.content-wrapper .content .content-control .content-toggle a.icon:active {
+.content-wrapper .content .content-control .content-toggle button .fa-plus-circle:active {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -15486,26 +15481,26 @@ article figure figcaption > span {
     outline-offset: 0.1875rem;
 }
 
-.content-wrapper .content .content-control .content-toggle a.icon:visited {
+.content-wrapper .content .content-control .content-toggle button .fa-plus-circle:visited {
     border-bottom-color: #006bbd;
     color: #006bbd;
 }
 
-.content-wrapper .content .content-control .content-toggle a.icon:hover {
+.content-wrapper .content .content-control .content-toggle button .fa-plus-circle:hover {
     color: #ffffff;
 }
 
-.content-wrapper .content .content-control .content-toggle a.icon:active {
+.content-wrapper .content .content-control .content-toggle button .fa-plus-circle:active {
     color: #ffffff;
 }
 
-.content-wrapper .content .content-control .content-toggle a.icon:hover {
+.content-wrapper .content .content-control .content-toggle button .fa-plus-circle:hover {
     border: 0;
     color: #006bbd;
     background-size: 0% 0%;
 }
 
-.content-wrapper .content .content-control .content-toggle a.label {
+.content-wrapper .content .content-control .content-toggle button .label {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -15529,7 +15524,7 @@ article figure figcaption > span {
 }
 
 @media (hover: hover) {
-    .content-wrapper .content .content-control .content-toggle a.label:hover {
+    .content-wrapper .content .content-control .content-toggle button .label:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -15544,7 +15539,7 @@ article figure figcaption > span {
     }
 }
 
-.content-wrapper .content .content-control .content-toggle a.label:focus, .content-wrapper .content .content-control .content-toggle a.label:active {
+.content-wrapper .content .content-control .content-toggle button .label:focus, .content-wrapper .content .content-control .content-toggle button .label:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -15559,24 +15554,24 @@ article figure figcaption > span {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .content-wrapper .content .content-control .content-toggle a.label {
+    .content-wrapper .content .content-control .content-toggle button .label {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .content-wrapper .content .content-control .content-toggle a.label:hover {
+    .content-wrapper .content .content-control .content-toggle button .label:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.content-wrapper .content .content-control .content-toggle a.label:visited {
+.content-wrapper .content .content-control .content-toggle button .label:visited {
     border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
-.content-wrapper .content .content-control .content-toggle a.label:focus {
+.content-wrapper .content .content-control .content-toggle button .label:focus {
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -15588,7 +15583,7 @@ article figure figcaption > span {
 }
 
 @media (hover: hover) {
-    .content-wrapper .content .content-control .content-toggle a.label:hover {
+    .content-wrapper .content .content-control .content-toggle button .label:hover {
         border-bottom-color: #006bbd;
         border-bottom-width: 0.125rem;
         border-bottom-style: solid;
@@ -15596,7 +15591,7 @@ article figure figcaption > span {
     }
 }
 
-.content-wrapper .content .content-control .content-toggle a.label:active {
+.content-wrapper .content .content-control .content-toggle button .label:active {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -15608,25 +15603,24 @@ article figure figcaption > span {
     outline-offset: 0.1875rem;
 }
 
-.content-wrapper .content .content-control .content-toggle a.label:visited {
+.content-wrapper .content .content-control .content-toggle button .label:visited {
     border-bottom-color: #006bbd;
     color: #006bbd;
 }
 
-.content-wrapper .content .content-control .content-toggle a.label:hover {
+.content-wrapper .content .content-control .content-toggle button .label:hover {
     color: #ffffff;
 }
 
-.content-wrapper .content .content-control .content-toggle a.label:active {
+.content-wrapper .content .content-control .content-toggle button .label:active {
     color: #ffffff;
 }
 
 @media (min-width: 769px) {
-    .content-wrapper .content .content-control .content-toggle {
-        display: block;
+    .content-wrapper .content .content-control .content-toggle button {
+        display: inline-block;
         grid-area: m;
-        text-align: center;
-        padding: 1.75rem;
+        margin: 1.75rem;
     }
 }
 
