@@ -5508,7 +5508,7 @@ function launchTabs(tabs) {
   preparePanels(panels);
   const idLinked = prepareLinks(linkItems);
 
-  if (linkItems.length > Number.parseInt(tabs.dataset.mobiletabs)) {
+  if (linkItems.length > Number.parseInt(tabs.dataset.mobiletabs) && Number.parseInt(tabs.dataset.noaccordion) === 0) {
     accordionize(tabs);
   }
   /**
