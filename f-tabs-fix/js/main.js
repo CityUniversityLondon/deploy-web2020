@@ -5504,8 +5504,12 @@ function launchTabs(tabs) {
     return;
   }
 
-  controls.setAttribute('role', 'tablist');
-  preparePanels(panels);
+  controls.setAttribute('role', 'tablist'); // by default no-tabs is zero. If yes it would not css style the tabs. Also check template in squiz
+
+  if (tabs.getAttribute('data-notabs') === '0') {
+    preparePanels(panels);
+  }
+
   const idLinked = prepareLinks(linkItems);
 
   if (linkItems.length > Number.parseInt(tabs.dataset.mobiletabs)) {
