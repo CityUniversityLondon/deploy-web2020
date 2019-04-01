@@ -1070,6 +1070,27 @@
     background-color: #ffffff;
 }
 
+/* ghost animation - underline animation used on tab buttons */
+
+@keyframes slide-left-in {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: none;
+    }
+}
+
+@keyframes slide-right-out {
+    from {
+        transform: none;
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* End of ghost animation */
 .fa,
 .fas,
 .far,
@@ -10133,7 +10154,6 @@ article a {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    background-image: none;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -10141,7 +10161,7 @@ article a {
     transition: background-size 0.3s ease;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     color: #006bbd;
 }
 
@@ -10158,7 +10178,6 @@ article a {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-image: none;
     }
 }
 
@@ -10174,7 +10193,6 @@ article a:focus, article a:active {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    background-image: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -10199,17 +10217,17 @@ article a:focus {
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
-    outline-width: 2px;
+    outline-width: 0.125rem;
     outline-style: dotted;
-    outline-offset: 3px;
+    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
     article a:hover {
         border-bottom-color: #006bbd;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         border-bottom-style: solid;
         color: #ffffff;
     }
@@ -10219,12 +10237,12 @@ article a:active {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     color: #ffffff;
     outline-color: #0c0c0e;
-    outline-width: 2px;
+    outline-width: 0.125rem;
     outline-style: dotted;
-    outline-offset: 3px;
+    outline-offset: 0.1875rem;
 }
 
 u {
@@ -11512,7 +11530,6 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    background-image: none;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -11520,7 +11537,7 @@ main table td em {
     transition: background-size 0.3s ease;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     color: #006bbd;
     position: absolute;
     right: 0;
@@ -11570,7 +11587,6 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-image: none;
     }
 }
 
@@ -11586,7 +11602,6 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    background-image: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -11611,17 +11626,17 @@ main table td em {
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
-    outline-width: 2px;
+    outline-width: 0.125rem;
     outline-style: dotted;
-    outline-offset: 3px;
+    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
     .cms-editor .cms-editor-warning-remover:hover {
         border-bottom-color: #006bbd;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         border-bottom-style: solid;
         color: #ffffff;
     }
@@ -11631,12 +11646,12 @@ main table td em {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     color: #ffffff;
     outline-color: #0c0c0e;
-    outline-width: 2px;
+    outline-width: 0.125rem;
     outline-style: dotted;
-    outline-offset: 3px;
+    outline-offset: 0.1875rem;
 }
 
 .ux-personas {
@@ -12012,7 +12027,6 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-image: none;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
@@ -12020,7 +12034,7 @@ main table td em {
         transition: background-size 0.3s ease;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         color: #006bbd;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
@@ -12046,7 +12060,6 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-image: none;
     }
 }
 
@@ -12063,7 +12076,6 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-image: none;
     }
 }
 
@@ -12089,18 +12101,18 @@ main table td em {
         color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         outline-color: #0c0c0e;
-        outline-width: 2px;
+        outline-width: 0.125rem;
         outline-style: dotted;
-        outline-offset: 3px;
+        outline-offset: 0.1875rem;
     }
 }
 
 @media screen and (hover: hover) {
     .theme--dark .cms-editor .cms-editor-warning-remover:hover {
         border-bottom-color: #006bbd;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         border-bottom-style: solid;
         color: #ffffff;
     }
@@ -12111,12 +12123,12 @@ main table td em {
         background-color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
         outline-color: #0c0c0e;
-        outline-width: 2px;
+        outline-width: 0.125rem;
         outline-style: dotted;
-        outline-offset: 3px;
+        outline-offset: 0.1875rem;
     }
 }
 
