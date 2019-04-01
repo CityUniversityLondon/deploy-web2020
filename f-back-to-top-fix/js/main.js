@@ -4012,7 +4012,7 @@ function initBacktoTop() {
 
     window.onscroll = function () {
       updateProgress();
-      scrollButBehav();
+      scrollButtonShow();
     };
   }
 }
@@ -4022,7 +4022,7 @@ function initBacktoTop() {
  */
 
 
-function scrollButBehav() {
+function scrollButtonShow() {
   const scrollToTopBut = document.getElementsByClassName('back-to-top')[0].querySelectorAll('a')[0];
   let screenPos = window.pageYOffset; // calculates scroll position
 
