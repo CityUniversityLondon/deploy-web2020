@@ -4431,10 +4431,12 @@ function launchKeyInfoBox() {
     for (const datesQuantity of datesQuantities) {
       let date;
       listingsNumber == 1 ? date = 'date' : date = 'dates';
-      datesQuantity.innerHTML = `<span class="icon--float-left fas fa-calendar-day"></span>
-                <div class="icon-text icon-text--margin-left">
-                    <p>${listingsNumber} available start ${date}</p>
-                </div>`;
+      datesQuantity.innerHTML = `<div class='icon'>
+                                            <span class="fas fa-calendar-day"></span>
+                                            <div class="icon-text icon-text--margin-left">
+                                                <p>${listingsNumber} available start ${date}</p>
+                                            </div>
+                                        </div>`;
     }
   }
 

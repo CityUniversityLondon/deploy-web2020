@@ -15155,24 +15155,6 @@ article figure figcaption > span {
     outline-offset: 0.1875rem;
 }
 
-.key-info {
-    max-width: 80rem;
-}
-
-@media (max-width: 1440px) {
-    .key-info {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 1441px) {
-    .key-info {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 @media (max-width: 767px) {
     .key-info .content-wrapper {
         grid-template-columns: repeat(4, 1fr);
@@ -15198,14 +15180,56 @@ article figure figcaption > span {
     }
 }
 
-.icon--float-left {
-    margin-top: 0.5rem;
-    float: left;
-    margin-right: 0.5rem;
+.icon {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
 }
 
-.icon-text.icon-text--margin-left {
-    margin-left: 1.5rem;
+@media (min-width: 433px) and (max-width: 768px) {
+    .icon {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .icon {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .icon {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .icon {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .icon {
+        letter-spacing: -0.017em;
+    }
+}
+
+.icon span {
+    float: left;
+    color: #3e1031;
+    margin: 0.25rem 0;
+    line-height: inherit;
+}
+
+.icon span.fa.fa-external-link.inline-external-link {
+    float: none;
+    margin: 0 0 0 0.5rem;
+}
+
+.icon div {
+    margin: 0 0 0 1.5rem;
 }
 
 .key-info__data-item--centered {
