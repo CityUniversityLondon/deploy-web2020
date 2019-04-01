@@ -17235,8 +17235,23 @@ button
 
 .module-selector__content__moduleLink a {
     color: #cbcbcb;
-    border-bottom-color: #cbcbcb;
-    text-decoration: underline;
+    border-bottom: #cbcbcb 2px solid;
+}
+
+.module-selector__content__moduleLink a:focus:focus, .module-selector__content__moduleLink a:focus:active, .module-selector__content__moduleLink a:active:focus, .module-selector__content__moduleLink a:active:active {
+    outline-color: #ffffff;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+.module-selector__content__moduleLink a:hover, .module-selector__content__moduleLink a:active {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.module-selector__content__moduleLink .fa-plus {
+    font-size: 0.75rem;
 }
 
 @media (min-width: 433px) {
@@ -17274,7 +17289,6 @@ button
         display: flex;
         flex-direction: column;
         justify-content: center;
-        font-size: 0.5rem;
         margin-right: 2rem;
     }
 }
