@@ -12269,37 +12269,37 @@ main table td em {
     max-width: 7rem;
 }
 
-.card--testimonial--transparent {
-    background-color: transparent;
-    margin-top: 2rem;
-}
-
 @media (min-width: 769px) {
-    .card--testimonial--transparent {
+    .card--testimonial--photo {
         display: grid;
         grid-template-columns: 8rem auto;
         grid-column-gap: 1.5rem;
     }
 }
 
-.card--testimonial--transparent:first-of-type {
-    margin-top: 0;
-}
-
-.card--testimonial--transparent .testimonial__column:first-of-type {
+.card--testimonial--photo .testimonial__column:first-of-type {
     text-align: center;
 }
 
-.card--testimonial--transparent .testimonial__photo {
+.card--testimonial--photo .testimonial__photo {
     border-radius: 50%;
     max-width: 8rem;
     margin-bottom: 2rem;
 }
 
 @media (min-width: 769px) {
-    .card--testimonial--transparent .testimonial__photo {
+    .card--testimonial--photo .testimonial__photo {
         margin-bottom: 0;
     }
+}
+
+.card--testimonial--transparent {
+    background-color: transparent;
+    margin-top: 2rem;
+}
+
+.card--testimonial--transparent:first-of-type {
+    margin-top: 0;
 }
 
 .card--testimonial--transparent .testimonial__quote {
@@ -12345,6 +12345,7 @@ main table td em {
     font-size: 1.802rem;
     line-height: 1.25;
     letter-spacing: -0.016em;
+    font-family: "Meta Sans", sans-serif;
     color: #3e1031;
 }
 
@@ -12422,32 +12423,8 @@ main table td em {
     margin-top: 2rem;
 }
 
-@media (min-width: 769px) {
-    .card--testimonial--background {
-        display: grid;
-        grid-template-columns: 8rem auto;
-        grid-column-gap: 1.5rem;
-    }
-}
-
 .card--testimonial--background:first-of-type {
     margin-top: 0;
-}
-
-.card--testimonial--background .testimonial__column:first-of-type {
-    text-align: center;
-}
-
-.card--testimonial--background .testimonial__photo {
-    border-radius: 50%;
-    max-width: 8rem;
-    margin-bottom: 2rem;
-}
-
-@media (min-width: 769px) {
-    .card--testimonial--background .testimonial__photo {
-        margin-bottom: 0;
-    }
 }
 
 .card--testimonial--background .testimonial__quote {
@@ -12493,6 +12470,7 @@ main table td em {
     font-size: 1.802rem;
     line-height: 1.25;
     letter-spacing: -0.016em;
+    font-family: "Meta Sans", sans-serif;
     color: #3e1031;
 }
 
