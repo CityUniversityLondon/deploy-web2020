@@ -3744,6 +3744,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
 /* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
 /* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
+/* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
 
 
 /**
@@ -3765,9 +3766,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- //import backToTopLink from './patterns/back-to-top-link/back-to-top-link';
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_box__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_10__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_box__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_11__["default"]]);
 
 /***/ }),
 
@@ -3824,7 +3825,9 @@ function setSection(heading, open) {
 
   if (open) {
     heading.nextElementSibling.classList.add('active');
-    heading.nextElementSibling.style.maxHeight = parseInt(heading.nextElementSibling.scrollHeight + 40) + 'px';
+    let bodyHeight = heading.nextElementSibling.scrollHeight;
+    let bodyHeightRem = Object(_util__WEBPACK_IMPORTED_MODULE_4__["pxToRem"])(bodyHeight);
+    heading.nextElementSibling.style.maxHeight = parseInt(bodyHeightRem + 5) + 'rem';
 
     for (const bodyLink of bodyLinks) {
       bodyLink.setAttribute('tabindex', '1');
@@ -3938,9 +3941,7 @@ function launchAccordion(accordion) {
 
     if (locationHash === heading.id) {
       idLinked = true;
-      setSection(heading, true); // FF/Safari bug fix
-
-      heading.nextElementSibling.style.maxHeight = '10000px';
+      setSection(heading, true);
     } else {
       setSection(heading, false);
     }
@@ -3949,14 +3950,116 @@ function launchAccordion(accordion) {
   });
 
   if (defaultOpen && !idLinked) {
-    setSection(headings[0], true); // FF/Safari bug fix
-
-    headings[0].nextElementSibling.style.maxHeight = '10000px';
+    setSection(headings[0], true);
   }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchAccordion,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/back-to-top-link/back-to-top-link.js":
+/*!***********************************************************!*\
+  !*** ./src/patterns/back-to-top-link/back-to-top-link.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+/**
+ * Back To Top Link Scroll
+ *
+ * @module patterns/external-link-finder/external-link-finder
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+/**
+ *  Back to top link button only appears on long pages and when you have scrolled down long enough
+ *
+ */
+const className = 'back-to-top',
+      viewPortHeight = window.innerHeight,
+      // calculates viewport height
+docHeight = document.documentElement.scrollHeight; // calculates page height
+
+/**
+ *  Parameters
+ *
+ */
+
+const pageHeight = 1.5; // only appears on long pages which are 'X' times the viewport height
+
+const scrollPos = 1; // sets how many viewport heights you need to scroll down for back to top to appear
+
+/**
+ *  Initialises for long pages only
+ *
+ */
+
+function initBacktoTop() {
+  const scrollToTopBut = document.getElementsByClassName('back-to-top')[0].querySelectorAll('a')[0];
+
+  if (docHeight > viewPortHeight * pageHeight) {
+    scrollToTopBut.style.opacity = 0;
+    scrollToTopBut.classList.add('back-to-top-stick');
+
+    window.onscroll = function () {
+      updateProgress();
+      scrollButtonShow();
+    };
+  }
+}
+/**
+ *  Button fading behaviour
+ *
+ */
+
+
+function scrollButtonShow() {
+  const scrollToTopBut = document.getElementsByClassName('back-to-top')[0].querySelectorAll('a')[0];
+  let screenPos = window.pageYOffset; // calculates scroll position
+
+  if (screenPos > viewPortHeight * scrollPos) {
+    // shows button when scrolled down far enough - see parameters
+    scrollToTopBut.classList.add('back-to-top-show');
+  } else if (screenPos < 200) {
+    // hides button when close to top of the page
+    scrollToTopBut.classList.remove('back-to-top-show');
+  }
+}
+/**
+ *  Progress meter:
+ *
+ */
+// updateProgress function
+
+
+function updateProgress() {
+  // Setting up SVG animation
+  const progressPath = document.querySelector('path');
+  const pathLength = progressPath.getTotalLength();
+  progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+  progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+  progressPath.style.strokeDashoffset = pathLength;
+  progressPath.getBoundingClientRect();
+  progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 0ms linear'; // Calculate values
+
+  let scroll = window.pageYOffset;
+  let height = document.documentElement.scrollHeight - window.innerHeight;
+  let progress = pathLength - scroll * pathLength / height; // Updates progress bar
+
+  progressPath.style.strokeDashoffset = progress;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: initBacktoTop,
   launchQuery: `.${className}`
 });
 
@@ -4183,8 +4286,14 @@ const className = 'content';
 function findExternalLink() {
   var anchors = document.getElementsByClassName('content')[0].querySelectorAll('a');
   anchors.forEach(function (i) {
-    // checks if anchors link is external & not an image & not contain font awesome icon already & isn't a CTA
-    if (i.origin !== window.location.origin && i.querySelectorAll('img').length < 1 && i.querySelectorAll('.fa-external-link').length < 1 && !i.parentElement.className.includes('cta-block')) {
+    /** checks if anchors links are :
+     * external
+     * not an image
+     * not contain font awesome icon already
+     * not a CTA
+     * not an email hyperlink
+     */
+    if (i.origin !== window.location.origin && i.querySelectorAll('img').length < 1 && i.querySelectorAll('.fa-external-link').length < 1 && !i.parentElement.className.includes('cta-block') && i.href.indexOf('mailto:')) {
       // adds font awesome external link icon after completing checks
       var node = document.createElement('span');
       node.className = 'fa fa-external-link inline-external-link ';
@@ -4431,7 +4540,7 @@ function launchKeyInfoBox() {
     for (const datesQuantity of datesQuantities) {
       let date;
       listingsNumber == 1 ? date = 'date' : date = 'dates';
-      datesQuantity.innerHTML = `<div class='icon'>
+      datesQuantity.innerHTML = `<div class='key-info__icon'>
                                             <span class="fas fa-calendar-day"></span>
                                             <div class="icon-text icon-text--margin-left">
                                                 <p>${listingsNumber} available start ${date}</p>
@@ -5729,8 +5838,12 @@ function launchTabs(tabs) {
     return;
   }
 
-  controls.setAttribute('role', 'tablist');
-  preparePanels(panels);
+  controls.setAttribute('role', 'tablist'); // by default no-tabs is zero. If yes it would not css style the tabs. Also check template in squiz
+
+  if (tabs.getAttribute('data-notabs') === '0') {
+    preparePanels(panels);
+  }
+
   const idLinked = prepareLinks(linkItems);
 
   if (linkItems.length > Number.parseInt(tabs.dataset.mobiletabs)) {
@@ -5850,7 +5963,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5863,6 +5976,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "objectToParameters", function() { return objectToParameters; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gaEvent", function() { return gaEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendAll", function() { return appendAll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pxToRem", function() { return pxToRem; });
 /* harmony import */ var core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es7.symbol.async-iterator */ "./node_modules/core-js/modules/es7.symbol.async-iterator.js");
 /* harmony import */ var core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es6_symbol__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.symbol */ "./node_modules/core-js/modules/es6.symbol.js");
@@ -6017,6 +6131,19 @@ function gaEvent(event, eventCategory, eventAction, eventLabel, eventValue, nonI
 
 function appendAll(elem, children) {
   children.forEach(child => elem.appendChild(child));
+}
+/**
+ * Convert a pixel value to equivalent REM value.
+ *
+ * @param {number} pxValue - Value in pixels.
+ */
+
+function pxToRem(pxValue) {
+  let browserWidth = document.documentElement.scrollWidth,
+      fontBase;
+  browserWidth > 768 ? fontBase = 18 : fontBase = 16;
+  let remValue = pxValue / fontBase;
+  return remValue;
 }
 
 /***/ }),
