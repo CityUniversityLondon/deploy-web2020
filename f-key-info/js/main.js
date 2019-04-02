@@ -4439,6 +4439,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -4450,6 +4451,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Mark Skinsley <mark.skinsley@city.ac.uk>
  * @copyright City, University of London 2018
  */
+
 
 const className = 'keyInfoBox';
 
@@ -4507,8 +4509,8 @@ function launchKeyInfoBox() {
     for (const listing of listings.entries()) {
       if (counter == listing[0]) {
         listingHeight = listing[1].getAttribute('data-height');
-        prevBtn.style.top = parseInt(`-${listingHeight}`) + 100 + 'px';
-        nextBtn.style.top = parseInt(`-${listingHeight}`) + 100 + 'px';
+        prevBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(`-${listingHeight}`)) + Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(100) + 'rem';
+        nextBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(`-${listingHeight}`)) + Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(100) + 'rem';
       }
     }
   }
@@ -4540,12 +4542,14 @@ function launchKeyInfoBox() {
     for (const datesQuantity of datesQuantities) {
       let date;
       listingsNumber == 1 ? date = 'date' : date = 'dates';
-      datesQuantity.innerHTML = `<div class='key-info__icon'>
-                                            <span class="fas fa-calendar-day"></span>
-                                            <div class="icon-text icon-text--margin-left">
-                                                <p>${listingsNumber} available start ${date}</p>
-                                            </div>
-                                        </div>`;
+      let datesString = `<span class="fas fa-calendar-day"></span>
+                                <div class="icon-text icon-text--margin-left">
+                                    <p>${listingsNumber} available start ${date}</p>
+                                </div>`;
+      let div = document.createElement('div');
+      div.classList.add('key-info__icon');
+      div.innerHTML = datesString;
+      datesQuantity.appendChild(div);
     }
   }
 
