@@ -14108,6 +14108,7 @@ main table td em {
     border-color: #d8d8d8;
     background: #d8d8d8;
     color: #0c0c0e;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14256,6 +14257,10 @@ main table td em {
 
 .primary-cta--grey--bright:hover, .primary-cta--grey--bright:active {
     color: #ffffff;
+}
+
+.primary-cta--grey--bright:hover, .primary-cta--grey--bright:focus {
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
 .feedback {
@@ -17235,7 +17240,7 @@ button
 
 .module-selector__content__moduleLink a {
     color: #cbcbcb;
-    border-bottom: #cbcbcb 2px solid;
+    border-bottom: #cbcbcb 0.1rem solid;
 }
 
 .module-selector__content__moduleLink a:focus:focus, .module-selector__content__moduleLink a:focus:active, .module-selector__content__moduleLink a:active:focus, .module-selector__content__moduleLink a:active:active {
