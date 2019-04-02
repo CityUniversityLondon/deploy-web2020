@@ -4540,12 +4540,14 @@ function listingsQuantity() {
   for (const datesQuantity of datesQuantities) {
     let date;
     listingsNumber == 1 ? date = 'date' : date = 'dates';
-    let datesString = `<span class="fas fa-calendar-day"></span>
+    let datesString = `<div class="key-info__icon">
+                            <span class="fas fa-calendar-day"></span>
                             <div class="icon-text icon-text--margin-left">
                                 <p>${listingsNumber} available start ${date}</p>
                             </div>`;
     let div = document.createElement('div');
-    div.classList.add('key-info__icon'); // div.append(datesString);
+    div.classList.add('key-info__icon');
+    datesQuantity.appendChild(div); // div.append(datesString);
 
     datesQuantity.innerHTML = datesString;
   }
@@ -4609,13 +4611,11 @@ function launchKeyInfoBox() {
       counter = counter - 1;
       navBtnState();
       navBtnPosition();
-      listingDisplay();
     });
     nextBtn.addEventListener('click', () => {
       counter = counter + 1;
       navBtnState();
       navBtnPosition();
-      listingDisplay();
     });
   } else if (browserWidth < 768 && listings.length == 1) {
     for (const listing of listings.entries()) {
@@ -4628,7 +4628,7 @@ function launchKeyInfoBox() {
 window.onresize = () => launchKeyInfoBox();
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchKeyInfoBox(),
+  // launchFn: launchKeyInfoBox(),
   launchQuery: `.${className}`
 });
 

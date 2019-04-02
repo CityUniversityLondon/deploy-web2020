@@ -15173,6 +15173,24 @@ article figure figcaption a:active {
     outline-offset: 0.1875rem;
 }
 
+.key-info {
+    max-width: 80rem;
+}
+
+@media (max-width: 1440px) {
+    .key-info {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    .key-info {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media (max-width: 767px) {
     .key-info .content-wrapper {
         grid-template-columns: repeat(4, 1fr);
@@ -15328,10 +15346,11 @@ article figure figcaption a:active {
 
 .key-info__cta-block {
     text-align: center;
+    margin: 0.5rem 0 0 0;
 }
 
 .key-info__cta-block .cta-block__cta {
-    margin-top: 0.5rem;
+    margin: 0.5rem 0 0 0;
     display: block;
 }
 
