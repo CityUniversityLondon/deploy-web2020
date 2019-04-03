@@ -17168,7 +17168,7 @@ button
     color: #ffffff;
     background: #015a79;
     padding: 2rem 10rem;
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 1279px) and (min-width: 433px) {
@@ -17218,7 +17218,7 @@ button
         display: flex;
         justify-content: space-between;
     }
-    .module-selector__content p {
+    .module-selector__content .module-selector__content__text {
         width: 23%;
     }
 }
@@ -17227,27 +17227,148 @@ button
     .module-selector__content {
         flex-wrap: wrap;
     }
-    .module-selector__content p {
+    .module-selector__content .module-selector__content__text {
         width: 30%;
     }
 }
 
 @media (max-width: 432px) {
-    .module-selector__content p {
+    .module-selector__content .module-selector__content__text {
         margin-bottom: 1rem;
     }
 }
 
 .module-selector__content__moduleLink a {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.3s ease;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+    background: none;
+    border-bottom-color: #8a8a8a;
+    color: #8a8a8a;
     color: #cbcbcb;
-    border-bottom: #cbcbcb 0.1rem solid;
+    border-bottom-color: #cbcbcb;
 }
 
-.module-selector__content__moduleLink a:focus:focus, .module-selector__content__moduleLink a:focus:active, .module-selector__content__moduleLink a:active:focus, .module-selector__content__moduleLink a:active:active {
-    outline-color: #ffffff;
+@media (hover: hover) {
+    .module-selector__content__moduleLink a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.module-selector__content__moduleLink a:focus, .module-selector__content__moduleLink a:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .module-selector__content__moduleLink a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .module-selector__content__moduleLink a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.module-selector__content__moduleLink a:visited {
+    border-bottom-color: #4c2c92;
+    color: #4c2c92;
+}
+
+.module-selector__content__moduleLink a:focus {
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+}
+
+@media (hover: hover) {
+    .module-selector__content__moduleLink a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-width: 0.125rem;
+        border-bottom-style: solid;
+        color: #ffffff;
+    }
+}
+
+.module-selector__content__moduleLink a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+.module-selector__content__moduleLink a:visited {
+    border-bottom-color: #9b7ed9;
+    color: #9b7ed9;
+}
+
+.module-selector__content__moduleLink a:focus {
+    color: #8a8a8a;
+    border-bottom-color: #8a8a8a;
+    outline-color: #ffffff;
+}
+
+@media (hover: hover) {
+    .module-selector__content__moduleLink a:hover {
+        border-bottom: #ffffff solid 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.module-selector__content__moduleLink a:active {
+    background-color: transparent;
+    border-bottom-color: #ffffff;
+    color: #ffffff;
+    outline-color: #ffffff;
 }
 
 .module-selector__content__moduleLink a:hover, .module-selector__content__moduleLink a:active {
