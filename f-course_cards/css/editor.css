@@ -1070,6 +1070,27 @@
     background-color: #ffffff;
 }
 
+/* ghost animation - underline animation used on tab buttons */
+
+@keyframes slide-left-in {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: none;
+    }
+}
+
+@keyframes slide-right-out {
+    from {
+        transform: none;
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* End of ghost animation */
 .fa,
 .fas,
 .far,
@@ -10134,7 +10155,6 @@ article a {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    background-image: none;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -10142,7 +10162,7 @@ article a {
     transition: background-size 0.3s ease;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     color: #006bbd;
 }
 
@@ -10160,7 +10180,6 @@ article a {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-image: none;
     }
 }
 
@@ -10177,7 +10196,6 @@ article a:focus, article a:active {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    background-image: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -10202,17 +10220,17 @@ article a:focus {
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
-    outline-width: 2px;
+    outline-width: 0.125rem;
     outline-style: dotted;
-    outline-offset: 3px;
+    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
     article a:hover {
         border-bottom-color: #006bbd;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         border-bottom-style: solid;
         color: #ffffff;
     }
@@ -10222,12 +10240,12 @@ article a:active {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     color: #ffffff;
     outline-color: #0c0c0e;
-    outline-width: 2px;
+    outline-width: 0.125rem;
     outline-style: dotted;
-    outline-offset: 3px;
+    outline-offset: 0.1875rem;
 }
 
 u {
@@ -11516,7 +11534,6 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    background-image: none;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -11524,7 +11541,7 @@ main table td em {
     transition: background-size 0.3s ease;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     color: #006bbd;
     position: absolute;
     right: 0;
@@ -11575,7 +11592,6 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-image: none;
     }
 }
 
@@ -11592,7 +11608,6 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    background-image: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -11617,17 +11632,17 @@ main table td em {
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
-    outline-width: 2px;
+    outline-width: 0.125rem;
     outline-style: dotted;
-    outline-offset: 3px;
+    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
     .cms-editor .cms-editor-warning-remover:hover {
         border-bottom-color: #006bbd;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         border-bottom-style: solid;
         color: #ffffff;
     }
@@ -11637,12 +11652,12 @@ main table td em {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
-    border-bottom-width: 2px;
+    border-bottom-width: 0.125rem;
     color: #ffffff;
     outline-color: #0c0c0e;
-    outline-width: 2px;
+    outline-width: 0.125rem;
     outline-style: dotted;
-    outline-offset: 3px;
+    outline-offset: 0.1875rem;
 }
 
 .ux-personas {
@@ -11691,39 +11706,39 @@ main table td em {
 @media (max-width: 432px) {
     .documentation .content-wrapper {
         grid-column-gap: 1rem;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(6, 1fr);
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
     .documentation .content-wrapper {
         grid-column-gap: 1rem;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(12, 1fr);
     }
 }
 
 @media (min-width: 901px) {
     .documentation .content-wrapper {
         grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(18, 1fr);
     }
 }
 
 @media (max-width: 432px) {
     .documentation .content-wrapper {
-        grid-template-areas: 'main main main main';
+        grid-template-areas: 'main main main main main main';
     }
 }
 
 @media (min-width: 433px) {
     .documentation .content-wrapper {
-        grid-template-areas: '. main main main main main main .';
+        grid-template-areas: '. . main main main main main main main main . .';
     }
 }
 
 @media (min-width: 901px) {
     .documentation .content-wrapper {
-        grid-template-areas: '. . . main main main main main main . . .';
+        grid-template-areas: '. . . . . main main main main main main main main . . . . .';
     }
 }
 
@@ -11754,42 +11769,42 @@ main table td em {
 @media (max-width: 432px) {
     .persona {
         grid-column-gap: 1rem;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(6, 1fr);
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
     .persona {
         grid-column-gap: 1rem;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(12, 1fr);
     }
 }
 
 @media (min-width: 901px) {
     .persona {
         grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(18, 1fr);
     }
 }
 
 @media (max-width: 432px) {
     .persona {
         grid-template-rows: repeat(9, auto);
-        grid-template-areas: 'thumbnail thumbnail thumbnail thumbnail' 'details details details details' 'motivation motivation motivation motivation' 'needs needs needs needs' 'challenges challenges challenges challenges' 'education education education education' 'devices devices devices devices';
+        grid-template-areas: 'thumbnail thumbnail thumbnail thumbnail thumbnail thumbnail' 'details details details details details details' 'motivation motivation motivation motivation motivation motivation' 'needs needs needs needs needs needs' 'challenges challenges challenges challenges challenges challenges' 'education education education education education education' 'devices devices devices devices devices devices';
     }
 }
 
 @media (min-width: 433px) {
     .persona {
         grid-template-rows: repeat(8, auto);
-        grid-template-areas: 'thumbnail thumbnail thumbnail details details details details details' 'motivation motivation motivation motivation motivation motivation motivation motivation' 'needs needs needs needs challenges challenges challenges challenges' 'devices devices devices devices education education education education';
+        grid-template-areas: 'thumbnail thumbnail thumbnail thumbnail details details details details details details details details' 'motivation motivation motivation motivation motivation motivation motivation motivation motivation motivation motivation motivation' 'needs needs needs needs needs needs challenges challenges challenges challenges challenges challenges' 'devices devices devices devices devices devices education education education education education education';
     }
 }
 
 @media (min-width: 901px) {
     .persona {
         grid-template-rows: repeat(6, auto);
-        grid-template-areas: 'thumbnail thumbnail thumbnail thumbnail details details details details details details details details' 'motivation motivation motivation motivation motivation motivation motivation motivation motivation motivation motivation motivation' 'needs needs needs needs needs needs challenges challenges challenges challenges challenges challenges' 'devices devices devices devices devices devices education education education education education education';
+        grid-template-areas: 'thumbnail thumbnail thumbnail thumbnail thumbnail thumbnail details details details details details details details details details details details details' 'motivation motivation motivation motivation motivation motivation motivation motivation motivation motivation motivation motivation motivation motivation motivation motivation motivation motivation' 'needs needs needs needs needs needs needs needs needs challenges challenges challenges challenges challenges challenges challenges challenges challenges' 'devices devices devices devices devices devices devices devices devices education education education education education education education education education';
     }
 }
 
@@ -11864,39 +11879,39 @@ main table td em {
 @media (max-width: 432px) {
     .user-journey .content-wrapper {
         grid-column-gap: 1rem;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(6, 1fr);
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
     .user-journey .content-wrapper {
         grid-column-gap: 1rem;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(12, 1fr);
     }
 }
 
 @media (min-width: 901px) {
     .user-journey .content-wrapper {
         grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(18, 1fr);
     }
 }
 
 @media (max-width: 432px) {
     .user-journey .content-wrapper {
-        grid-template-areas: 'main main main main';
+        grid-template-areas: 'main main main main main main';
     }
 }
 
 @media (min-width: 433px) {
     .user-journey .content-wrapper {
-        grid-template-areas: '. main main main main main main .';
+        grid-template-areas: '. . main main main main main main main main . .';
     }
 }
 
 @media (min-width: 901px) {
     .user-journey .content-wrapper {
-        grid-template-areas: '. . . main main main main main main . . .';
+        grid-template-areas: '. . . . . main main main main main main main main . . . . .';
     }
 }
 
@@ -12019,7 +12034,6 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-image: none;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
@@ -12027,7 +12041,7 @@ main table td em {
         transition: background-size 0.3s ease;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         color: #006bbd;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
@@ -12054,7 +12068,6 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-image: none;
     }
 }
 
@@ -12072,7 +12085,6 @@ main table td em {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-image: none;
     }
 }
 
@@ -12098,18 +12110,18 @@ main table td em {
         color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         outline-color: #0c0c0e;
-        outline-width: 2px;
+        outline-width: 0.125rem;
         outline-style: dotted;
-        outline-offset: 3px;
+        outline-offset: 0.1875rem;
     }
 }
 
 @media screen and (hover: hover) {
     .theme--dark .cms-editor .cms-editor-warning-remover:hover {
         border-bottom-color: #006bbd;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         border-bottom-style: solid;
         color: #ffffff;
     }
@@ -12120,12 +12132,12 @@ main table td em {
         background-color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
-        border-bottom-width: 2px;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
         outline-color: #0c0c0e;
-        outline-width: 2px;
+        outline-width: 0.125rem;
         outline-style: dotted;
-        outline-offset: 3px;
+        outline-offset: 0.1875rem;
     }
 }
 
