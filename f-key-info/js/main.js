@@ -3737,7 +3737,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns/cms-editor-warning/cms-editor-warning */ "./src/patterns/cms-editor-warning/cms-editor-warning.js");
 /* harmony import */ var _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/cookie-notice/cookie-notice */ "./src/patterns/cookie-notice/cookie-notice.js");
 /* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/key-info-box/key-info-paginated'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-paginated */ "./src/patterns/key-info-box/key-info-paginated.js");
 /* harmony import */ var _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-slider */ "./src/patterns/key-info-box/key-info-slider.js");
 /* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
 /* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
@@ -3772,7 +3772,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], // keyInfoBox,
-!(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/key-info-box/key-info-paginated'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"]]);
+_patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"]]);
 
 /***/ }),
 
@@ -4425,6 +4425,183 @@ function launchFeedback(elem) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchFeedback,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/key-info-box/key-info-paginated.js":
+/*!*********************************************************!*\
+  !*** ./src/patterns/key-info-box/key-info-paginated.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+/**
+ * Key information box
+ *
+ * @module patterns/key-info-box/key-info-box
+ * @author Mark Skinsley <mark.skinsley@city.ac.uk>
+ * @copyright City, University of London 2018
+ */
+
+const className = 'keyInfoPaginated';
+let listings = document.querySelectorAll('.key-info__listing'),
+    contentToggles = document.querySelectorAll('.content-toggle'),
+    browserWidth = document.documentElement.scrollWidth,
+    listingDates = document.querySelectorAll('.key-info__date'),
+    listingsVisible = [],
+    listingsLength = [],
+    paginated = document.getElementsByClassName('key-info--short-course-paginated'),
+    paginatedPage,
+    defaultDuration = 2000,
+    edgeOffset = 100; // Zen scroll setup
+
+zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Detect if page uses paginated index
+
+paginated.length > 0 ? paginatedPage = true : paginatedPage = false; // Add '-1' tabindex to all listing dates. Will give screenreaders context
+
+function dateTabIndexPaginated() {
+  for (const listingDate of listingDates) {
+    listingDate.setAttribute('tabindex', '-1');
+  }
+} // Mobile: Show listing entry based on navigation button clicks
+
+
+function listingDisplayPaginated() {
+  for (const listing of listings.entries()) {
+    listing[1].setAttribute('data-id', `listing-${listing[0]}`);
+  }
+}
+
+function listingsControlPaginated() {
+  // Clear listings length array as this runs on every 'Load more' click
+  listingsLength = [];
+
+  for (const listing of listings.entries()) {
+    listingsLength.push(listings.length);
+    listing[0] > 2 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
+    listing[1].style.display == 'grid' ? listingsVisible.push(listing[1].style.display) : null;
+  }
+
+  listingsVisible.length >= listingsLength.length ? contentToggles[0].style.display = 'none' : null;
+} // Show number of available starting dates.
+
+
+function listingsQuantityPaginated() {
+  let listingsNumber = [];
+
+  for (const listing of listings.entries()) {
+    listingsNumber.push(listing.length);
+  }
+
+  listingsNumber = listingsNumber.length;
+  let datesQuantities = document.querySelectorAll('.key-info--dates-quantity');
+
+  for (const datesQuantity of datesQuantities) {
+    let date;
+    listingsNumber == 1 ? date = 'date' : date = 'dates';
+    let iconWrapper = document.createElement('div');
+    iconWrapper.classList.add('key-info__icon');
+    datesQuantity.appendChild(iconWrapper);
+    let calendarIcon = document.createElement('span');
+    calendarIcon.classList.add('fas');
+    calendarIcon.classList.add('fa-calendar-day');
+    iconWrapper.appendChild(calendarIcon);
+    let iconTextDiv = document.createElement('div');
+    iconTextDiv.classList.add('icon-text');
+    iconTextDiv.classList.add('icon-text--margin-left');
+    iconWrapper.appendChild(iconTextDiv);
+    let iconTextP = document.createElement('p');
+    iconTextP.appendChild(document.createTextNode(listingsNumber + ' available start ' + date));
+    iconTextDiv.appendChild(iconTextP);
+  }
+}
+
+function launchKeyInfoPaginated() {
+  dateTabIndexPaginated(); // listingsQuantityPaginated();
+  // Desktop: Toggle control listings when more than three listings exist
+
+  if (browserWidth > 768) {
+    if (listings.length > 3) {
+      listingDisplayPaginated();
+      listingsControlPaginated();
+
+      for (const contentToggle of contentToggles) {
+        contentToggle.addEventListener('click', e => {
+          // This will increase with each 'Load more' click, so visible listings
+          // must be captured before any further listings are made visible
+          let preExpandListingsVisible = listingsVisible.length;
+          e.preventDefault();
+
+          if (preExpandListingsVisible < listings.length) {
+            listingsControlPaginated();
+
+            for (const listing of listings.entries()) {
+              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`); // Zen scroll to first listing of newly visible listings and focus on date
+
+              zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200, function () {});
+              let targetListingDate = targetListing.querySelectorAll('.key-info__date');
+              targetListingDate[0].focus(); // Bring in newly visible listings in two phases to allow for opacity transition
+
+              if (listing[0] < preExpandListingsVisible + 3) {
+                const promise = new Promise(resolve => {
+                  resolve(listing[1].style.display = 'grid');
+                });
+                promise.then(() => {
+                  listing[1].classList.remove('hide');
+                });
+              }
+            }
+          }
+        }, false);
+      }
+    } else {
+      contentToggles[0].style.display = 'none';
+    } // Mobile: one listing visible at a time
+
+  } else if (browserWidth < 768 && listings.length > 1 && paginatedPage) {
+    let listWrapper = document.getElementById('short-course-key-info-listings');
+    listWrapper.classList.add('paginated-list'); // Scroll to top of listings after each paginated index click
+
+    let paginationControls = document.querySelectorAll('.pagination__controls > button');
+
+    for (const paginationControl of paginationControls) {
+      paginationControl.addEventListener('click', () => {
+        let listingsTop = document.getElementById('short-course-key-info-listings');
+
+        if (paginationControl.getAttribute('aria-expanded') !== true) {
+          zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(listingsTop, 0);
+        }
+      });
+    }
+  } else if (browserWidth < 768 && listings.length == 1) {
+    for (const listing of listings.entries()) {
+      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
+    }
+  }
+}
+
+if (paginatedPage) {
+  // console.log('paginated');
+  listingsQuantityPaginated();
+  launchKeyInfoPaginated(); // Run function on resize as well as launch as some styles overriden by JS
+
+  window.onresize = () => launchKeyInfoPaginated();
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  // launchFn: launchKeyInfoPaginated(),
   launchQuery: `.${className}`
 });
 
