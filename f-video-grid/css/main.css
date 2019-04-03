@@ -16591,14 +16591,14 @@ button
 
 .embedded-video {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
+    grid-template-columns: repeat(18, 1fr);
     padding-top: 3.25rem;
     padding-bottom: 3.25rem;
 }
 
 @media screen and (max-width: 900px) {
     .embedded-video {
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(12, 1fr);
         padding-top: 2.5rem;
         padding-bottom: 2.5rem;
     }
@@ -16613,7 +16613,7 @@ button
 }
 
 .embedded-video .youtube-video__align-right {
-    grid-column: 8 / 17;
+    grid-column: 8 / 19;
     margin-top: 0;
 }
 
@@ -16681,7 +16681,7 @@ button
 @media screen and (max-width: 900px) {
     .embedded-video .youtube-video__align-right,
     .embedded-video-details {
-        grid-column: 2 / 8;
+        grid-column: 3 / 11;
     }
     .youtube-video {
         grid-column: 1 / -1;
