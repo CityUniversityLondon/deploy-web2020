@@ -12810,7 +12810,6 @@ main table td em {
 }
 
 .card--course--related-course:visited .title {
-    border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
@@ -13112,7 +13111,6 @@ main table td em {
 }
 
 .card--course--related-course--background:visited .title {
-    border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
