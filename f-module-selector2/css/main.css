@@ -17399,6 +17399,11 @@ button
     outline-color: #ffffff;
 }
 
+.module-selector__content__moduleLink a:visited {
+    border-bottom-color: #cbcbcb;
+    color: #cbcbcb;
+}
+
 .module-selector__content__moduleLink a:hover, .module-selector__content__moduleLink a:active {
     color: #ffffff;
     border-color: #ffffff;
@@ -17420,7 +17425,7 @@ button
         margin-bottom: 1rem;
     }
     .module-selector__content__moduleLink .fa-plus {
-        left: -1.5rem;
+        left: -2.5rem;
     }
 }
 
