@@ -10290,7 +10290,6 @@ html em {
 
 article a {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -10315,7 +10314,6 @@ article a {
 @media (hover: hover) {
     article a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -10331,7 +10329,6 @@ article a {
 
 article a:focus, article a:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -11692,7 +11689,6 @@ main table td em {
 .form input[type='submit'],
 .form textarea[type='submit'] {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -11712,7 +11708,6 @@ main table td em {
     .form input[type='submit']:hover,
     .form textarea[type='submit']:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -11730,7 +11725,6 @@ main table td em {
 .form textarea[type='submit']:focus,
 .form textarea[type='submit']:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -12033,7 +12027,6 @@ main table td em {
 
 .breadcrumbs a {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -12054,7 +12047,6 @@ main table td em {
 @media (hover: hover) {
     .breadcrumbs a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -12070,7 +12062,6 @@ main table td em {
 
 .breadcrumbs a:focus, .breadcrumbs a:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -12562,7 +12553,6 @@ main table td em {
     margin-bottom: 2rem;
     position: relative;
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -12573,6 +12563,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    transition: none;
     display: grid;
     grid-template-columns: auto auto;
     grid-column-gap: 1.25rem;
@@ -12754,7 +12745,6 @@ main table td em {
 @media (hover: hover) {
     .card--course--related-course:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -12770,7 +12760,6 @@ main table td em {
 
 .card--course--related-course:focus, .card--course--related-course:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -12787,6 +12776,10 @@ main table td em {
     .card--course--related-course {
         grid-template-columns: 8.5rem auto;
     }
+}
+
+.card--course--related-course:hover {
+    background-image: none;
 }
 
 .card--course--related-course:hover .title {
@@ -12863,7 +12856,6 @@ main table td em {
     margin-bottom: 2rem;
     position: relative;
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -12874,6 +12866,7 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    transition: none;
     display: grid;
     grid-template-columns: auto auto;
     grid-column-gap: 1.25rem;
@@ -13055,7 +13048,6 @@ main table td em {
 @media (hover: hover) {
     .card--course--related-course--background:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -13071,7 +13063,6 @@ main table td em {
 
 .card--course--related-course--background:focus, .card--course--related-course--background:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -13088,6 +13079,10 @@ main table td em {
     .card--course--related-course--background {
         grid-template-columns: 8.5rem auto;
     }
+}
+
+.card--course--related-course--background:hover {
+    background-image: none;
 }
 
 .card--course--related-course--background:hover .title {
@@ -13249,7 +13244,6 @@ main table td em {
 
 .js .cookie-notice a {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -13278,7 +13272,6 @@ main table td em {
 @media (hover: hover) {
     .js .cookie-notice a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -13294,7 +13287,6 @@ main table td em {
 
 .js .cookie-notice a:focus, .js .cookie-notice a:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -14976,7 +14968,6 @@ main table td em {
 
 .feedback .feedback__form-link a {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -15001,7 +14992,6 @@ main table td em {
 @media (hover: hover) {
     .feedback .feedback__form-link a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -15017,7 +15007,6 @@ main table td em {
 
 .feedback .feedback__form-link a:focus, .feedback .feedback__form-link a:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -15143,7 +15132,6 @@ main table td em {
 
 .feedback .feedback__direct button {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -15169,7 +15157,6 @@ main table td em {
 @media (hover: hover) {
     .feedback .feedback__direct button:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -15185,7 +15172,6 @@ main table td em {
 
 .feedback .feedback__direct button:focus, .feedback .feedback__direct button:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -15250,7 +15236,6 @@ main table td em {
 
 article figure a {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -15266,7 +15251,6 @@ article figure a {
 @media (hover: hover) {
     article figure a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -15282,7 +15266,6 @@ article figure a {
 
 article figure a:focus, article figure a:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -15352,7 +15335,6 @@ article figure figcaption {
 
 article figure figcaption a {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -15373,7 +15355,6 @@ article figure figcaption a {
 @media (hover: hover) {
     article figure figcaption a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -15389,7 +15370,6 @@ article figure figcaption a {
 
 article figure figcaption a:focus, article figure figcaption a:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -15642,7 +15622,6 @@ article figure figcaption > span {
 
 .global-footer .footer-logo a {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -15659,7 +15638,6 @@ article figure figcaption > span {
 @media (hover: hover) {
     .global-footer .footer-logo a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -15675,7 +15653,6 @@ article figure figcaption > span {
 
 .global-footer .footer-logo a:focus, .global-footer .footer-logo a:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -15813,7 +15790,6 @@ article figure figcaption > span {
 
 .global-header .header-logo a {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -15830,7 +15806,6 @@ article figure figcaption > span {
 @media (hover: hover) {
     .global-header .header-logo a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -15846,7 +15821,6 @@ article figure figcaption > span {
 
 .global-header .header-logo a:focus, .global-header .header-logo a:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -15908,7 +15882,6 @@ article figure figcaption > span {
 
 .menu li a {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -15930,7 +15903,6 @@ article figure figcaption > span {
 @media (hover: hover) {
     .menu li a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -15946,7 +15918,6 @@ article figure figcaption > span {
 
 .menu li a:focus, .menu li a:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -16138,7 +16109,6 @@ article figure figcaption > span {
 
 .js .menu .menu__button button {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -16156,7 +16126,6 @@ article figure figcaption > span {
 @media (hover: hover) {
     .js .menu .menu__button button:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -16172,7 +16141,6 @@ article figure figcaption > span {
 
 .js .menu .menu__button button:focus, .js .menu .menu__button button:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -16304,7 +16272,6 @@ article figure figcaption > span {
 
 .js .menu[data-open='true'] .menu__columns__col > ul button {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -16323,7 +16290,6 @@ article figure figcaption > span {
 @media (hover: hover) {
     .js .menu[data-open='true'] .menu__columns__col > ul button:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -16339,7 +16305,6 @@ article figure figcaption > span {
 
 .js .menu[data-open='true'] .menu__columns__col > ul button:focus, .js .menu[data-open='true'] .menu__columns__col > ul button:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -16689,7 +16654,6 @@ article figure figcaption > span {
 @media screen {
     .js .pagination__wrapper .pagination__controls button {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -16726,7 +16690,6 @@ article figure figcaption > span {
 @media screen and (hover: hover) {
     .js .pagination__wrapper .pagination__controls button:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -16743,7 +16706,6 @@ article figure figcaption > span {
 @media screen {
     .js .pagination__wrapper .pagination__controls button:focus, .js .pagination__wrapper .pagination__controls button:active {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -17072,7 +17034,6 @@ blockquote footer {
     }
     .js .tabs .tabs__links li a {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -17090,7 +17051,6 @@ blockquote footer {
         transition: background-size 0.3s ease;
         color: #006bbd;
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -17116,7 +17076,6 @@ blockquote footer {
 @media screen and (hover: hover) {
     .js .tabs .tabs__links li a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -17133,7 +17092,6 @@ blockquote footer {
 @media screen {
     .js .tabs .tabs__links li a:focus, .js .tabs .tabs__links li a:active {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -17202,7 +17160,6 @@ blockquote footer {
 @media screen and (hover: hover) {
     .js .tabs .tabs__links li a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -17219,7 +17176,6 @@ blockquote footer {
 @media screen {
     .js .tabs .tabs__links li a:focus, .js .tabs .tabs__links li a:active {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -17475,7 +17431,6 @@ button
 
 .theme-switcher__option button {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -17500,7 +17455,6 @@ button
 @media (hover: hover) {
     .theme-switcher__option button:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -17516,7 +17470,6 @@ button
 
 .theme-switcher__option button:focus, .theme-switcher__option button:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -18833,7 +18786,6 @@ button
     }
     .theme--dark article a {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -18867,7 +18819,6 @@ button
 @media screen and (hover: hover) {
     .theme--dark article a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -18884,7 +18835,6 @@ button
 @media screen {
     .theme--dark article a:focus, .theme--dark article a:active {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -19010,7 +18960,6 @@ button
 
 .theme--dark .form input[type='submit'] {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -19029,7 +18978,6 @@ button
 @media (hover: hover) {
     .theme--dark .form input[type='submit']:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -19045,7 +18993,6 @@ button
 
 .theme--dark .form input[type='submit']:focus, .theme--dark .form input[type='submit']:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -19113,7 +19060,6 @@ button
 @media screen {
     .theme--dark .global-header .header-logo a {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -19130,7 +19076,6 @@ button
 @media screen and (hover: hover) {
     .theme--dark .global-header .header-logo a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -19147,7 +19092,6 @@ button
 @media screen {
     .theme--dark .global-header .header-logo a:focus, .theme--dark .global-header .header-logo a:active {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -19185,7 +19129,6 @@ button
     }
     .theme--dark .global-footer .footer-logo a {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -19202,7 +19145,6 @@ button
 @media screen and (hover: hover) {
     .theme--dark .global-footer .footer-logo a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -19219,7 +19161,6 @@ button
 @media screen {
     .theme--dark .global-footer .footer-logo a:focus, .theme--dark .global-footer .footer-logo a:active {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -19253,7 +19194,6 @@ button
 
 .theme--dark .breadcrumbs a {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -19276,7 +19216,6 @@ button
 @media (hover: hover) {
     .theme--dark .breadcrumbs a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -19292,7 +19231,6 @@ button
 
 .theme--dark .breadcrumbs a:focus, .theme--dark .breadcrumbs a:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -19854,7 +19792,6 @@ button
 
 .theme--dark .feedback .feedback__form-link a {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -19887,7 +19824,6 @@ button
 @media (hover: hover) {
     .theme--dark .feedback .feedback__form-link a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -19903,7 +19839,6 @@ button
 
 .theme--dark .feedback .feedback__form-link a:focus, .theme--dark .feedback .feedback__form-link a:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -20006,7 +19941,6 @@ button
 
 .theme--dark .feedback .feedback__direct button {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -20039,7 +19973,6 @@ button
 @media (hover: hover) {
     .theme--dark .feedback .feedback__direct button:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -20055,7 +19988,6 @@ button
 
 .theme--dark .feedback .feedback__direct button:focus, .theme--dark .feedback .feedback__direct button:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -20158,7 +20090,6 @@ button
 
 .theme--dark article figure a {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -20174,7 +20105,6 @@ button
 @media (hover: hover) {
     .theme--dark article figure a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -20190,7 +20120,6 @@ button
 
 .theme--dark article figure a:focus, .theme--dark article figure a:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -20231,7 +20160,6 @@ button
 
 .theme--dark article figure figcaption a {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -20254,7 +20182,6 @@ button
 @media (hover: hover) {
     .theme--dark article figure figcaption a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -20270,7 +20197,6 @@ button
 
 .theme--dark article figure figcaption a:focus, .theme--dark article figure figcaption a:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -20363,7 +20289,6 @@ button
 
 .theme--dark.js .accordion > .accordion__heading button {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -20382,7 +20307,6 @@ button
 @media (hover: hover) {
     .theme--dark.js .accordion > .accordion__heading button:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -20398,7 +20322,6 @@ button
 
 .theme--dark.js .accordion > .accordion__heading button:focus, .theme--dark.js .accordion > .accordion__heading button:active {
     background-color: initial;
-    background-image: none;
     border-bottom-color: initial;
     border-bottom-style: none;
     border-bottom-width: 0;
@@ -20478,7 +20401,6 @@ button
     }
     .theme--dark.js .menu li a {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -20503,7 +20425,6 @@ button
 @media screen and (hover: hover) {
     .theme--dark.js .menu li a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -20520,7 +20441,6 @@ button
 @media screen {
     .theme--dark.js .menu li a:focus, .theme--dark.js .menu li a:active {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -20624,7 +20544,6 @@ button
     }
     .theme--dark.js .menu .menu__button button {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -20644,7 +20563,6 @@ button
 @media screen and (hover: hover) {
     .theme--dark.js .menu .menu__button button:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -20661,7 +20579,6 @@ button
 @media screen {
     .theme--dark.js .menu .menu__button button:focus, .theme--dark.js .menu .menu__button button:active {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -20735,7 +20652,6 @@ button
     }
     .theme--dark.js .menu[data-open='true'] .menu__columns__col > ul button {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -20755,7 +20671,6 @@ button
 @media screen and (hover: hover) {
     .theme--dark.js .menu[data-open='true'] .menu__columns__col > ul button:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -20772,7 +20687,6 @@ button
 @media screen {
     .theme--dark.js .menu[data-open='true'] .menu__columns__col > ul button:focus, .theme--dark.js .menu[data-open='true'] .menu__columns__col > ul button:active {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -20831,7 +20745,6 @@ button
 @media screen {
     .theme--dark.js .pagination__controls button {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -20873,7 +20786,6 @@ button
 @media screen and (hover: hover) {
     .theme--dark.js .pagination__controls button:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -20890,7 +20802,6 @@ button
 @media screen {
     .theme--dark.js .pagination__controls button:focus, .theme--dark.js .pagination__controls button:active {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -21008,7 +20919,6 @@ button
     }
     .theme--dark.js .tabs__links li a {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -21038,7 +20948,6 @@ button
 @media screen and (min-width: 433px) and (hover: hover) {
     .theme--dark.js .tabs__links li a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -21055,7 +20964,6 @@ button
 @media screen and (min-width: 433px) {
     .theme--dark.js .tabs__links li a:focus, .theme--dark.js .tabs__links li a:active {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -21182,7 +21090,6 @@ button
     }
     .theme--dark.js .tabs__links li a {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -21212,7 +21119,6 @@ button
 @media screen and (max-width: 432px) and (hover: hover) {
     .theme--dark.js .tabs__links li a:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -21229,7 +21135,6 @@ button
 @media screen and (max-width: 432px) {
     .theme--dark.js .tabs__links li a:focus, .theme--dark.js .tabs__links li a:active {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -21353,7 +21258,6 @@ button
 @media screen {
     .theme--dark.js .theme-switcher__option button {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -21387,7 +21291,6 @@ button
 @media screen and (hover: hover) {
     .theme--dark.js .theme-switcher__option button:hover {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
@@ -21404,7 +21307,6 @@ button
 @media screen {
     .theme--dark.js .theme-switcher__option button:focus, .theme--dark.js .theme-switcher__option button:active {
         background-color: initial;
-        background-image: none;
         border-bottom-color: initial;
         border-bottom-style: none;
         border-bottom-width: 0;
