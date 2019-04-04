@@ -4510,7 +4510,7 @@ function listingsQuantityPaginated() {
     let date;
     listingsNumber == 1 ? date = 'date' : date = 'dates';
     let iconWrapper = document.createElement('div');
-    iconWrapper.classList.add('key-info__icon');
+    iconWrapper.classList.add('key-info__icon--left');
     datesQuantity.appendChild(iconWrapper);
     let calendarIcon = document.createElement('span');
     calendarIcon.classList.add('fas');
@@ -4684,7 +4684,7 @@ function listingsQuantitySlider() {
     let date;
     listingsNumber == 1 ? date = 'date' : date = 'dates';
     let iconWrapper = document.createElement('div');
-    iconWrapper.classList.add('key-info__icon');
+    iconWrapper.classList.add('key-info__icon--left');
     datesQuantity.appendChild(iconWrapper);
     let calendarIcon = document.createElement('span');
     calendarIcon.classList.add('fas');
