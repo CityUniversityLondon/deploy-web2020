@@ -4504,7 +4504,7 @@ function listingsQuantityPaginated() {
   }
 
   listingsNumber = listingsNumber.length;
-  let datesQuantities = document.querySelectorAll('.key-info--dates-quantity');
+  let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
 
   for (const datesQuantity of datesQuantities) {
     let date;
@@ -4678,7 +4678,7 @@ function listingsQuantitySlider() {
   }
 
   listingsNumber = listingsNumber.length;
-  let datesQuantities = document.querySelectorAll('.key-info--dates-quantity');
+  let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
 
   for (const datesQuantity of datesQuantities) {
     let date;

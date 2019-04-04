@@ -1070,6 +1070,20 @@
     background-color: #ffffff;
 }
 
+/* Icon positioning
+
+Demo HTML
+<div class="key-info__icon--left">
+    <span class="fas fa-envelope"></span>
+    <div>Text relating to icon</div>
+</div>
+
+Demo SCSS
+.key-info__icon--left {
+    @include key-info-icon(left, $color-pink90);
+}
+
+*/
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
