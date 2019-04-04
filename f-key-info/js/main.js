@@ -4455,7 +4455,7 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2018
  */
 
-const className = 'keyInfoPaginated';
+const className = 'key-info-paginated';
 let listings = document.querySelectorAll('.key-info__listing'),
     contentToggles = document.querySelectorAll('.content-toggle'),
     browserWidth = document.documentElement.scrollWidth,
@@ -4467,9 +4467,7 @@ let listings = document.querySelectorAll('.key-info__listing'),
     defaultDuration = 2000,
     edgeOffset = 100; // Zen scroll setup
 
-zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Detect if page uses paginated index
-
-paginated.length > 0 ? paginatedPage = true : paginatedPage = false; // Add '-1' tabindex to all listing dates. Will give screenreaders context
+zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
 
 function dateTabIndexPaginated() {
   for (const listingDate of listingDates) {
@@ -4529,8 +4527,7 @@ function listingsQuantityPaginated() {
 }
 
 function launchKeyInfoPaginated() {
-  dateTabIndexPaginated(); // listingsQuantityPaginated();
-  // Desktop: Toggle control listings when more than three listings exist
+  dateTabIndexPaginated(); // Desktop: Toggle control listings when more than three listings exist
 
   if (browserWidth > 768) {
     if (listings.length > 3) {
@@ -4590,10 +4587,12 @@ function launchKeyInfoPaginated() {
       listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
     }
   }
-}
+} // Detect if page uses paginated index
+
+
+paginated.length > 0 ? paginatedPage = true : paginatedPage = false;
 
 if (paginatedPage) {
-  // console.log('paginated');
   listingsQuantityPaginated();
   launchKeyInfoPaginated(); // Run function on resize as well as launch as some styles overriden by JS
 
@@ -4601,7 +4600,6 @@ if (paginatedPage) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  // launchFn: launchKeyInfoPaginated(),
   launchQuery: `.${className}`
 });
 
@@ -4634,7 +4632,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-const className = 'keyInfoBox';
+const className = 'key-info-slider';
 let listings = document.querySelectorAll('.key-info__listing'),
     contentToggles = document.querySelectorAll('.content-toggle'),
     contentSliders = document.querySelectorAll('.content-slider'),
@@ -4645,14 +4643,12 @@ let listings = document.querySelectorAll('.key-info__listing'),
     listingDates = document.querySelectorAll('.key-info__date'),
     listingsVisible = [],
     listingsLength = [],
-    paginated = document.getElementsByClassName('key-info--short-course-paginated'),
-    paginatedPage,
+    slider = document.getElementsByClassName('key-info--short-course-slider'),
+    sliderPage,
     defaultDuration = 2000,
     edgeOffset = 100; // Zen scroll setup
 
-zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Detect if page uses paginated index
-
-paginated.length > 0 ? paginatedPage = true : paginatedPage = false; // Add '-1' tabindex to all listing dates. Will give screenreaders context
+zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
 
 function dateTabIndexSlider() {
   for (const listingDate of listingDates) {
@@ -4709,7 +4705,7 @@ function launchKeyInfoBoxSlider() {
 
   function listingDisplaySlider() {
     for (const listing of listings.entries()) {
-      if (browserWidth < 768 && listings.length > 1 && !paginatedPage) {
+      if (browserWidth < 768 && listings.length > 1) {
         listing[0] == counter ? listing[1].style.display = 'block' : listing[1].style.display = 'none';
       }
 
@@ -4738,8 +4734,7 @@ function launchKeyInfoBoxSlider() {
     }
   }
 
-  dateTabIndexSlider(); // listingsQuantitySlider();
-  // Desktop: Toggle control listings when more than three listings exist
+  dateTabIndexSlider(); // Desktop: Toggle control listings when more than three listings exist
 
   if (browserWidth > 768) {
     if (listings.length > 3) {
@@ -4779,7 +4774,7 @@ function launchKeyInfoBoxSlider() {
       contentToggles[0].style.display = 'none';
     } // Mobile: one listing visible at a time
 
-  } else if (browserWidth < 768 && listings.length > 1 && !paginatedPage) {
+  } else if (browserWidth < 768 && listings.length > 1) {
     for (const listing of listings.entries()) {
       // Capture listing height and set to data attribute
       listing[1].style.display = 'block';
@@ -4792,54 +4787,35 @@ function launchKeyInfoBoxSlider() {
 
     navBtnStateSlider();
     prevBtn.addEventListener('click', () => {
-      counter = counter - 1; // console.log(counter);
-
+      counter = counter - 1;
       navBtnStateSlider();
       navBtnPositionSlider();
       listingDisplaySlider();
     });
     nextBtn.addEventListener('click', () => {
-      counter = counter + 1; // console.log(counter);
-
+      counter = counter + 1;
       navBtnStateSlider();
       navBtnPositionSlider();
       listingDisplaySlider();
     });
-  } else if (browserWidth < 768 && listings.length > 1 && paginatedPage) {
-    // listingsControl();
-    let listWrapper = document.getElementById('short-course-key-info-listings');
-    listWrapper.classList.add('paginated-list'); // listingsQuantitySlider();
-    // Scroll to top of listings after each paginated index click
-
-    let paginationControls = document.querySelectorAll('.pagination__controls > button');
-
-    for (const paginationControl of paginationControls) {
-      paginationControl.addEventListener('click', () => {
-        let listingsTop = document.getElementById('short-course-key-info-listings');
-
-        if (paginationControl.getAttribute('aria-expanded') !== true) {
-          zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(listingsTop, 0);
-        }
-      });
-    }
   } else if (browserWidth < 768 && listings.length == 1) {
     for (const listing of listings.entries()) {
       listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
     }
   }
-} // Run function on resize as well as launch as some styles overriden by JS
+} // Detect if page uses slider
 
 
-window.onresize = () => launchKeyInfoBoxSlider();
+slider.length > 0 ? sliderPage = true : sliderPage = false;
 
-if (!paginatedPage) {
-  // console.log('slider');
+if (sliderPage) {
   listingsQuantitySlider();
-  launchKeyInfoBoxSlider();
+  launchKeyInfoBoxSlider(); // Run function on resize as well as launch as some styles overriden by JS
+
+  window.onresize = () => launchKeyInfoBoxSlider();
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  // launchFn: launchKeyInfoBoxSlider(),
   launchQuery: `.${className}`
 });
 
