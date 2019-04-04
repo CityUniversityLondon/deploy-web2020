@@ -17166,7 +17166,7 @@ button
 .module-selector {
     display: grid;
     grid-row-gap: 0;
-    grid-template-areas: '. heading heading heading heading . . . . . . .' '. c c c c c c c c c c .';
+    grid-template-areas: '. heading heading heading heading . . . . . . .' '. c c c c c c c c c c .';
     position: relative;
     color: #ffffff;
     background: #015a79;
@@ -17196,14 +17196,14 @@ button
 
 @media (max-width: 899px) and (min-width: 433px) {
     .module-selector {
-        grid-template-areas: 'heading heading heading heading heading . . .' 'c c c c c c c c';
+        grid-template-areas: 'heading heading heading heading heading . . .' 'c c c c c c c c';
         padding: 0 3rem;
     }
 }
 
 @media (max-width: 432px) {
     .module-selector {
-        grid-template-areas: 'heading heading heading heading' 'c c c c';
+        grid-template-areas: 'heading heading heading heading' 'c c c c';
         padding: 0 1rem;
     }
 }
@@ -17426,6 +17426,12 @@ button
     }
     .module-selector__content__moduleLink .fa-plus {
         left: -2.5rem;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1279px) {
+    .module-selector__content__moduleLink .fa-plus {
+        left: -1.5rem;
     }
 }
 
