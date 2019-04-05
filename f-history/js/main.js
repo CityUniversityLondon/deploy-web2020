@@ -4467,12 +4467,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Get number of visible listings on load
 
     function visibleItemsCount() {
-      // visibleItems = [];
+      visibleItems.length = 0;
+
       for (const loadMoreItem of loadMoreItems) {
         if (!loadMoreItem.classList.contains('hide')) {
           visibleItems.push(loadMoreItem);
         }
       } // visibleItemsLength = visibleItems.length;
+      // console.log(visibleItems);
       // console.log(visibleItemsLength);
 
     }
@@ -4480,8 +4482,8 @@ document.addEventListener('DOMContentLoaded', function () {
     visibleItemsCount(); // Get number of visible listings after first click
 
     loadMoreButton.addEventListener('click', () => {
-      visibleItems = []; // console.log(visibleItems);
-
+      // visibleItems = [];
+      // console.log(visibleItems);
       visibleItemsCount();
     });
   } // Detect what type of dynamic element is being used
