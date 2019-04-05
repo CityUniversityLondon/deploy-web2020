@@ -4646,8 +4646,7 @@ let listings = document.querySelectorAll('.key-info__listing'),
     slider = document.getElementsByClassName('key-info--short-course-slider'),
     sliderPage,
     defaultDuration = 2000,
-    edgeOffset = 100,
-    testArray = []; // Zen scroll setup
+    edgeOffset = 100; // Zen scroll setup
 
 zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
 
@@ -4655,33 +4654,28 @@ function dateTabIndexSlider() {
   for (const listingDate of listingDates) {
     listingDate.setAttribute('tabindex', '-1');
   }
-}
+} // Initial listings display
 
-function listingsControlSlider() {
-  // Clear listings length array as this runs on every 'Load more' click
-  listingsLength = []; // console.log(listingsVisible);
+
+function defaultListingsDisplay() {
+  listingsLength = [];
 
   for (const listing of listings.entries()) {
     listingsLength.push(listings.length);
     listing[0] > 2 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
-    listing[1].style.display == 'grid' ? listingsVisible.push(listing[1].style.display) : null;
-  } // console.log(testArray.length);
-  //
-  // console.log(listingsVisible.length);
-  // console.log(listingsLength.length);
+  }
+} // Visible listings: needed to decide if more content still to be loaded.
 
-}
 
-function test() {
-  testArray = [];
+function calculateVisibleListings() {
+  listingsVisible = [];
 
   for (const listing of listings) {
     if (!listing.classList.contains('hide')) {
-      testArray.push(listing);
+      listingsVisible.push(listing);
     }
-  } // console.log(testArray.length);
-
-} // Show number of available starting dates.
+  }
+} // Show number of listings in data set
 
 
 function listingsQuantitySlider() {
@@ -4746,29 +4740,28 @@ function launchKeyInfoBoxSlider() {
         nextBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(`-${listingHeight}`)) + Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(100) + 'rem';
       }
     }
-  }
+  } // Run regardless of viewport size
+
 
   dateTabIndexSlider(); // Desktop: Toggle control listings when more than three listings exist
 
   if (browserWidth > 768) {
     if (listings.length > 3) {
       listingDisplaySlider();
-      listingsControlSlider();
-      test();
+      defaultListingsDisplay();
+      calculateVisibleListings();
 
       for (const contentToggle of contentToggles) {
         contentToggle.addEventListener('click', e => {
           // This will increase with each 'Load more' click, so visible listings
           // must be captured before any further listings are made visible
-          let preExpandListingsVisible = testArray.length;
+          let preExpandListingsVisible = listingsVisible.length;
           e.preventDefault();
 
           if (preExpandListingsVisible < listings.length) {
-            listingsControlSlider();
-
             for (const listing of listings.entries()) {
               let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
-              let testArrayLength = parseInt(testArray.length);
+              let testArrayLength = parseInt(listingsVisible.length);
               listingsLength = parseInt(listingsLength);
               let remainingItems = parseInt(listingsLength - testArrayLength);
 
@@ -4788,21 +4781,13 @@ function launchKeyInfoBoxSlider() {
                 });
                 promise.then(() => {
                   listing[1].classList.remove('hide');
-                });
-                promise.then(() => {
-                  test();
-                }); // promise.then(() => {
-                //     if (testArray.length > 0) {
-                //         console.log(testArray.length);
-                //         console.log(listingsLength);
-                //         testArray.length >= listingsLength.length
-                //             ? (contentToggles[0].style.display = 'none')
-                //             : null;
-                //     }
-                // });
-              }
-            } // console.log(testArray.length);
+                }); // Calculating visible listings must run here after display properties are updated
 
+                promise.then(() => {
+                  calculateVisibleListings();
+                });
+              }
+            }
           }
         }, false);
       }
