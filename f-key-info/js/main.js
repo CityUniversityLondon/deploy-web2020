@@ -4646,7 +4646,8 @@ let listings = document.querySelectorAll('.key-info__listing'),
     slider = document.getElementsByClassName('key-info--short-course-slider'),
     sliderPage,
     defaultDuration = 2000,
-    edgeOffset = 100; // Zen scroll setup
+    edgeOffset = 100,
+    testArray = []; // Zen scroll setup
 
 zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
 
@@ -4658,7 +4659,7 @@ function dateTabIndexSlider() {
 
 function listingsControlSlider() {
   // Clear listings length array as this runs on every 'Load more' click
-  listingsLength = [];
+  listingsLength = []; // console.log(listingsVisible);
 
   for (const listing of listings.entries()) {
     listingsLength.push(listings.length);
@@ -4666,7 +4667,19 @@ function listingsControlSlider() {
     listing[1].style.display == 'grid' ? listingsVisible.push(listing[1].style.display) : null;
   }
 
-  listingsVisible.length >= listingsLength.length ? contentToggles[0].style.display = 'none' : null;
+  testArray.length >= listingsLength.length ? contentToggles[0].style.display = 'none' : null; // console.log(listingsVisible.length);
+  // console.log(listingsLength.length);
+}
+
+function test() {
+  testArray = [];
+
+  for (const listing of listings) {
+    if (!listing.classList.contains('hide')) {
+      testArray.push(listing);
+    }
+  } // console.log(testArray.length);
+
 } // Show number of available starting dates.
 
 
@@ -4740,12 +4753,13 @@ function launchKeyInfoBoxSlider() {
     if (listings.length > 3) {
       listingDisplaySlider();
       listingsControlSlider();
+      test();
 
       for (const contentToggle of contentToggles) {
         contentToggle.addEventListener('click', e => {
           // This will increase with each 'Load more' click, so visible listings
           // must be captured before any further listings are made visible
-          let preExpandListingsVisible = listingsVisible.length;
+          let preExpandListingsVisible = testArray.length;
           e.preventDefault();
 
           if (preExpandListingsVisible < listings.length) {
@@ -4765,8 +4779,18 @@ function launchKeyInfoBoxSlider() {
                 promise.then(() => {
                   listing[1].classList.remove('hide');
                 });
+                promise.then(() => {
+                  test();
+                });
+                promise.then(() => {
+                  if (testArray.length > 0) {
+                    // console.log('still more to load');
+                    listing[1].style.display = 'grid';
+                  }
+                });
               }
-            }
+            } // console.log(testArray.length);
+
           }
         }, false);
       }
