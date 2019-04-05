@@ -4473,6 +4473,17 @@ function dateTabIndexPaginated() {
   for (const listingDate of listingDates) {
     listingDate.setAttribute('tabindex', '-1');
   }
+} // Visible listings: needed to decide if more content still to be loaded.
+
+
+function calculateVisibleListings() {
+  listingsVisible = [];
+
+  for (const listing of listings) {
+    if (!listing.classList.contains('hide')) {
+      listingsVisible.push(listing);
+    }
+  }
 } // Mobile: Show listing entry based on navigation button clicks
 
 
@@ -4480,19 +4491,16 @@ function listingDisplayPaginated() {
   for (const listing of listings.entries()) {
     listing[1].setAttribute('data-id', `listing-${listing[0]}`);
   }
-}
+} // Initial listings display
 
-function listingsControlPaginated() {
-  // Clear listings length array as this runs on every 'Load more' click
+
+function defaultListingsDisplay() {
   listingsLength = [];
 
   for (const listing of listings.entries()) {
     listingsLength.push(listings.length);
     listing[0] > 2 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
-    listing[1].style.display == 'grid' ? listingsVisible.push(listing[1].style.display) : null;
   }
-
-  listingsVisible.length >= listingsLength.length ? contentToggles[0].style.display = 'none' : null;
 } // Show number of available starting dates.
 
 
@@ -4532,7 +4540,8 @@ function launchKeyInfoPaginated() {
   if (browserWidth > 768) {
     if (listings.length > 3) {
       listingDisplayPaginated();
-      listingsControlPaginated();
+      defaultListingsDisplay();
+      calculateVisibleListings();
 
       for (const contentToggle of contentToggles) {
         contentToggle.addEventListener('click', e => {
@@ -4542,10 +4551,17 @@ function launchKeyInfoPaginated() {
           e.preventDefault();
 
           if (preExpandListingsVisible < listings.length) {
-            listingsControlPaginated();
-
             for (const listing of listings.entries()) {
-              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`); // Zen scroll to first listing of newly visible listings and focus on date
+              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
+              let listingsVisibleLength = parseInt(listingsVisible.length);
+              listingsLength = parseInt(listingsLength);
+              let remainingItems = parseInt(listingsLength - listingsVisibleLength);
+
+              if (remainingItems < 3) {
+                zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, -200, function () {});
+                contentToggles[0].style.display = 'none';
+              } // Zen scroll to first listing of newly visible listings and focus on date
+
 
               zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200, function () {});
               let targetListingDate = targetListing.querySelectorAll('.key-info__date');
@@ -4557,6 +4573,10 @@ function launchKeyInfoPaginated() {
                 });
                 promise.then(() => {
                   listing[1].classList.remove('hide');
+                }); // Calculating visible listings must run here after display properties are updated
+
+                promise.then(() => {
+                  calculateVisibleListings();
                 });
               }
             }
@@ -4628,7 +4648,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/key-info-box/key-info-box
  * @author Mark Skinsley <mark.skinsley@city.ac.uk>
- * @copyright City, University of London 2018
+ * @copyright City, University of London 2019
  */
 
 
@@ -4761,9 +4781,9 @@ function launchKeyInfoBoxSlider() {
           if (preExpandListingsVisible < listings.length) {
             for (const listing of listings.entries()) {
               let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
-              let testArrayLength = parseInt(listingsVisible.length);
+              let listingsVisibleLength = parseInt(listingsVisible.length);
               listingsLength = parseInt(listingsLength);
-              let remainingItems = parseInt(listingsLength - testArrayLength);
+              let remainingItems = parseInt(listingsLength - listingsVisibleLength);
 
               if (remainingItems < 3) {
                 zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, -200, function () {});
