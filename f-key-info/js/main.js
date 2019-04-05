@@ -4503,7 +4503,7 @@ function listingsQuantityPaginated() {
     listingsNumber.push(listing.length);
   }
 
-  listingsNumber = listingsNumber.length;
+  listingsNumber = listingsNumber.length - 1;
   let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
 
   for (const datesQuantity of datesQuantities) {
@@ -4677,7 +4677,7 @@ function listingsQuantitySlider() {
     listingsNumber.push(listing.length);
   }
 
-  listingsNumber = listingsNumber.length;
+  listingsNumber = listingsNumber.length - 1;
   let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
 
   for (const datesQuantity of datesQuantities) {
