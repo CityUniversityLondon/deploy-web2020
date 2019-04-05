@@ -4665,10 +4665,11 @@ function listingsControlSlider() {
     listingsLength.push(listings.length);
     listing[0] > 2 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
     listing[1].style.display == 'grid' ? listingsVisible.push(listing[1].style.display) : null;
-  }
-
-  testArray.length >= listingsLength.length ? contentToggles[0].style.display = 'none' : null; // console.log(listingsVisible.length);
+  } // console.log(testArray.length);
+  //
+  // console.log(listingsVisible.length);
   // console.log(listingsLength.length);
+
 }
 
 function test() {
@@ -4690,7 +4691,7 @@ function listingsQuantitySlider() {
     listingsNumber.push(listing.length);
   }
 
-  listingsNumber = listingsNumber.length - 1;
+  listingsNumber = listingsNumber.length;
   let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
 
   for (const datesQuantity of datesQuantities) {
@@ -4766,7 +4767,16 @@ function launchKeyInfoBoxSlider() {
             listingsControlSlider();
 
             for (const listing of listings.entries()) {
-              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`); // Zen scroll to first listing of newly visible listings and focus on date
+              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
+              let testArrayLength = parseInt(testArray.length);
+              listingsLength = parseInt(listingsLength);
+              let remainingItems = parseInt(listingsLength - testArrayLength);
+
+              if (remainingItems < 3) {
+                zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, -200, function () {});
+                contentToggles[0].style.display = 'none';
+              } // Zen scroll to first listing of newly visible listings and focus on date
+
 
               zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200, function () {});
               let targetListingDate = targetListing.querySelectorAll('.key-info__date');
@@ -4781,13 +4791,15 @@ function launchKeyInfoBoxSlider() {
                 });
                 promise.then(() => {
                   test();
-                });
-                promise.then(() => {
-                  if (testArray.length > 0) {
-                    // console.log('still more to load');
-                    listing[1].style.display = 'grid';
-                  }
-                });
+                }); // promise.then(() => {
+                //     if (testArray.length > 0) {
+                //         console.log(testArray.length);
+                //         console.log(listingsLength);
+                //         testArray.length >= listingsLength.length
+                //             ? (contentToggles[0].style.display = 'none')
+                //             : null;
+                //     }
+                // });
               }
             } // console.log(testArray.length);
 
