@@ -4441,6 +4441,7 @@ function launchFeedback(elem) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../key-info-box/key-info-paginated */ "./src/patterns/key-info-box/key-info-paginated.js");
 
 
 /**
@@ -4450,7 +4451,13 @@ __webpack_require__.r(__webpack_exports__);
  * @author Mark Skinsley <mark.skinsley@city.ac.uk>
  * @copyright City, University of London 2019
  */
-const className = 'history';
+
+/**
+ * Variable (number) used in Key Info to control number of listings displayed on page
+ * load and subsequent 'Load more' clicks
+ **/
+
+const className = 'dynamic';
 /**
  *  Wait until all DOM content is rendered. Some class names in other patterns are set dynamically
  *  so these must be present before running functions in this pattern.
@@ -4461,30 +4468,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function loadMore() {
     let loadMoreWrapper = document.querySelector('.dynamic--load-more'),
-        loadMoreButton = loadMoreWrapper.querySelector('.content-toggle button'),
-        loadMoreItems = loadMoreWrapper.querySelectorAll('.key-info__listing'),
-        visibleItems = []; // visibleItemsLength;
-    // Get number of visible listings on load
+        loadMoreButton = loadMoreWrapper.querySelector('.content-toggle button'); // Get number of visible listings after first click
 
-    function visibleItemsCount() {
-      visibleItems.length = 0;
-
-      for (const loadMoreItem of loadMoreItems) {
-        if (!loadMoreItem.classList.contains('hide')) {
-          visibleItems.push(loadMoreItem);
-        }
-      } // visibleItemsLength = visibleItems.length;
-      // console.log(visibleItems);
-      // console.log(visibleItemsLength);
-
-    }
-
-    visibleItemsCount(); // Get number of visible listings after first click
-
-    loadMoreButton.addEventListener('click', () => {
-      // visibleItems = [];
-      // console.log(visibleItems);
-      visibleItemsCount();
+    loadMoreButton.addEventListener('click', () => {// console.log(listingsVisible)
     });
   } // Detect what type of dynamic element is being used
 
@@ -4498,7 +4484,6 @@ document.addEventListener('DOMContentLoaded', function () {
   dynamicContentType();
 }, false);
 /* harmony default export */ __webpack_exports__["default"] = ({
-  // launchFn: ,
   launchQuery: `.${className}`
 });
 
@@ -4508,11 +4493,13 @@ document.addEventListener('DOMContentLoaded', function () {
 /*!*********************************************************!*\
   !*** ./src/patterns/key-info-box/key-info-paginated.js ***!
   \*********************************************************/
-/*! exports provided: default */
+/*! exports provided: listingsLength, batchNumber, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "listingsLength", function() { return listingsLength; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "batchNumber", function() { return batchNumber; });
 /* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
 /* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
@@ -4531,6 +4518,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'key-info-paginated';
 let listings = document.querySelectorAll('.key-info__listing'),
+    batchNumber = 3,
     contentToggles = document.querySelectorAll('.content-toggle'),
     browserWidth = document.documentElement.scrollWidth,
     listingDates = document.querySelectorAll('.key-info__date'),
@@ -4543,34 +4531,42 @@ let listings = document.querySelectorAll('.key-info__listing'),
 
 zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
 
-function dateTabIndexPaginated() {
+function dateTabIndex() {
   for (const listingDate of listingDates) {
     listingDate.setAttribute('tabindex', '-1');
+  }
+} // Visible listings: needed to decide if more content still to be loaded.
+
+
+function calculateVisibleListings() {
+  listingsVisible = [];
+
+  for (const listing of listings) {
+    if (!listing.classList.contains('hide')) {
+      listingsVisible.push(listing);
+    }
   }
 } // Mobile: Show listing entry based on navigation button clicks
 
 
-function listingDisplayPaginated() {
+function listingDisplay() {
   for (const listing of listings.entries()) {
     listing[1].setAttribute('data-id', `listing-${listing[0]}`);
   }
-}
+} // Initial listings display
 
-function listingsControlPaginated() {
-  // Clear listings length array as this runs on every 'Load more' click
+
+function defaultListingsDisplay() {
   listingsLength = [];
 
   for (const listing of listings.entries()) {
     listingsLength.push(listings.length);
-    listing[0] > 2 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
-    listing[1].style.display == 'grid' ? listingsVisible.push(listing[1].style.display) : null;
+    listing[0] > batchNumber - 1 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
   }
-
-  listingsVisible.length >= listingsLength.length ? contentToggles[0].style.display = 'none' : null;
 } // Show number of available starting dates.
 
 
-function listingsQuantityPaginated() {
+function listingsQuantity() {
   let listingsNumber = [];
 
   for (const listing of listings.entries()) {
@@ -4600,13 +4596,14 @@ function listingsQuantityPaginated() {
   }
 }
 
-function launchKeyInfoPaginated() {
-  dateTabIndexPaginated(); // Desktop: Toggle control listings when more than three listings exist
+function launchKeyInfo(batchNumber) {
+  dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
 
   if (browserWidth > 768) {
-    if (listings.length > 3) {
-      listingDisplayPaginated();
-      listingsControlPaginated();
+    if (listings.length > batchNumber) {
+      listingDisplay();
+      defaultListingsDisplay();
+      calculateVisibleListings();
 
       for (const contentToggle of contentToggles) {
         contentToggle.addEventListener('click', e => {
@@ -4616,21 +4613,32 @@ function launchKeyInfoPaginated() {
           e.preventDefault();
 
           if (preExpandListingsVisible < listings.length) {
-            listingsControlPaginated();
-
             for (const listing of listings.entries()) {
-              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`); // Zen scroll to first listing of newly visible listings and focus on date
+              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
+              let listingsVisibleLength = parseInt(listingsVisible.length);
+              listingsLength = parseInt(listingsLength);
+              let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
 
-              zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200, function () {});
-              let targetListingDate = targetListing.querySelectorAll('.key-info__date');
+              zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200);
+              let targetListingDate = targetListing.querySelectorAll('.key-info__date'); // Final batch of listings, zen scroll to 'load more' button and offset
+
+              if (remainingItems <= batchNumber) {
+                zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(contentToggle, 200);
+                contentToggles[0].style.display = 'none';
+              }
+
               targetListingDate[0].focus(); // Bring in newly visible listings in two phases to allow for opacity transition
 
-              if (listing[0] < preExpandListingsVisible + 3) {
+              if (listing[0] < preExpandListingsVisible + batchNumber) {
                 const promise = new Promise(resolve => {
                   resolve(listing[1].style.display = 'grid');
                 });
                 promise.then(() => {
                   listing[1].classList.remove('hide');
+                }); // Calculating visible listings must run here after display properties are updated
+
+                promise.then(() => {
+                  calculateVisibleListings();
                 });
               }
             }
@@ -4667,11 +4675,12 @@ function launchKeyInfoPaginated() {
 paginated.length > 0 ? paginatedPage = true : paginatedPage = false;
 
 if (paginatedPage) {
-  listingsQuantityPaginated();
-  launchKeyInfoPaginated(); // Run function on resize as well as launch as some styles overriden by JS
+  listingsQuantity();
+  launchKeyInfo(batchNumber); // Run function on resize as well as launch as some styles overriden by JS
 
-  window.onresize = () => launchKeyInfoPaginated();
+  window.onresize = () => launchKeyInfo(batchNumber);
 }
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchQuery: `.${className}`
@@ -4702,12 +4711,13 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/key-info-box/key-info-box
  * @author Mark Skinsley <mark.skinsley@city.ac.uk>
- * @copyright City, University of London 2018
+ * @copyright City, University of London 2019
  */
 
 
 const className = 'key-info-slider';
 let listings = document.querySelectorAll('.key-info__listing'),
+    batchNumber = 3,
     contentToggles = document.querySelectorAll('.content-toggle'),
     contentSliders = document.querySelectorAll('.content-slider'),
     browserWidth = document.documentElement.scrollWidth,
@@ -4724,27 +4734,35 @@ let listings = document.querySelectorAll('.key-info__listing'),
 
 zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
 
-function dateTabIndexSlider() {
+function dateTabIndex() {
   for (const listingDate of listingDates) {
     listingDate.setAttribute('tabindex', '-1');
   }
-}
+} // Initial listings display
 
-function listingsControlSlider() {
-  // Clear listings length array as this runs on every 'Load more' click
+
+function defaultListingsDisplay() {
   listingsLength = [];
 
   for (const listing of listings.entries()) {
     listingsLength.push(listings.length);
-    listing[0] > 2 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
-    listing[1].style.display == 'grid' ? listingsVisible.push(listing[1].style.display) : null;
+    listing[0] > batchNumber - 1 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
   }
-
-  listingsVisible.length >= listingsLength.length ? contentToggles[0].style.display = 'none' : null;
-} // Show number of available starting dates.
+} // Visible listings: needed to decide if more content still to be loaded.
 
 
-function listingsQuantitySlider() {
+function calculateVisibleListings() {
+  listingsVisible = [];
+
+  for (const listing of listings) {
+    if (!listing.classList.contains('hide')) {
+      listingsVisible.push(listing);
+    }
+  }
+} // Show number of listings in data set
+
+
+function listingsQuantity() {
   let listingsNumber = [];
 
   for (const listing of listings.entries()) {
@@ -4773,11 +4791,16 @@ function listingsQuantitySlider() {
     iconTextDiv.appendChild(iconTextP);
   }
 }
+/**
+ * Launches Key Info slider pattern. Pass in how many listings should display per batch,
+ * i.e. each time user selects 'Load more'.
+ *  */
 
-function launchKeyInfoBoxSlider() {
+
+function launchKeyInfo(batchNumber) {
   let counter = 0; // Mobile: Show listing entry based on navigation button clicks
 
-  function listingDisplaySlider() {
+  function listingDisplay() {
     for (const listing of listings.entries()) {
       if (browserWidth < 768 && listings.length > 1) {
         listing[0] == counter ? listing[1].style.display = 'block' : listing[1].style.display = 'none';
@@ -4788,17 +4811,17 @@ function launchKeyInfoBoxSlider() {
   } // Mobile: Enable/disable navigation buttons based on position of listing in collection
 
 
-  function navBtnStateSlider() {
+  function navBtnState() {
     for (const contentSlider of contentSliders) {
       contentSlider.style.display = 'block';
     }
 
     let listingsLength = listings.length - 1;
-    counter == 0 ? prevBtn.setAttribute('disabled', true) : counter > 0 && counter < listingsLength ? (prevBtn.removeAttribute('disabled'), nextBtn.removeAttribute('disabled')) : nextBtn.setAttribute('disabled', true);
+    counter == 0 ? (prevBtn.setAttribute('disabled', true), nextBtn.removeAttribute('disabled')) : counter > 0 && counter < listingsLength ? (prevBtn.removeAttribute('disabled'), nextBtn.removeAttribute('disabled')) : (nextBtn.setAttribute('disabled', true), prevBtn.removeAttribute('disabled'));
   } // Mobile: Set mobile listings navigation buttons to correct position based on listing height
 
 
-  function navBtnPositionSlider() {
+  function navBtnPosition() {
     for (const listing of listings.entries()) {
       if (counter == listing[0]) {
         listingHeight = listing[1].getAttribute('data-height');
@@ -4806,14 +4829,16 @@ function launchKeyInfoBoxSlider() {
         nextBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(`-${listingHeight}`)) + Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(100) + 'rem';
       }
     }
-  }
+  } // Run regardless of viewport size
 
-  dateTabIndexSlider(); // Desktop: Toggle control listings when more than three listings exist
+
+  dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
 
   if (browserWidth > 768) {
-    if (listings.length > 3) {
-      listingDisplaySlider();
-      listingsControlSlider();
+    if (listings.length > batchNumber) {
+      listingDisplay();
+      defaultListingsDisplay();
+      calculateVisibleListings();
 
       for (const contentToggle of contentToggles) {
         contentToggle.addEventListener('click', e => {
@@ -4823,21 +4848,32 @@ function launchKeyInfoBoxSlider() {
           e.preventDefault();
 
           if (preExpandListingsVisible < listings.length) {
-            listingsControlSlider();
-
             for (const listing of listings.entries()) {
-              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`); // Zen scroll to first listing of newly visible listings and focus on date
+              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
+              let listingsVisibleLength = parseInt(listingsVisible.length);
+              listingsLength = parseInt(listingsLength);
+              let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
 
-              zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200, function () {});
-              let targetListingDate = targetListing.querySelectorAll('.key-info__date');
+              zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200);
+              let targetListingDate = targetListing.querySelectorAll('.key-info__date'); // Final batch of listings, zen scroll to 'load more' button and offset
+
+              if (remainingItems <= batchNumber) {
+                zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(contentToggle, 0);
+                contentToggles[0].style.display = 'none';
+              }
+
               targetListingDate[0].focus(); // Bring in newly visible listings in two phases to allow for opacity transition
 
-              if (listing[0] < preExpandListingsVisible + 3) {
+              if (listing[0] < preExpandListingsVisible + batchNumber) {
                 const promise = new Promise(resolve => {
                   resolve(listing[1].style.display = 'grid');
                 });
                 promise.then(() => {
                   listing[1].classList.remove('hide');
+                }); // Calculating visible listings must run here after display properties are updated
+
+                promise.then(() => {
+                  calculateVisibleListings();
                 });
               }
             }
@@ -4855,22 +4891,22 @@ function launchKeyInfoBoxSlider() {
       listing[1].setAttribute('data-height', listing[1].offsetHeight);
       listing[1].style.display = 'none'; // On load, set mobile navigation buttons at correct height
 
-      counter == 0 && listing[0] == 0 ? navBtnPositionSlider() : null;
+      counter == 0 && listing[0] == 0 ? navBtnPosition() : null;
       listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
     }
 
-    navBtnStateSlider();
+    navBtnState();
     prevBtn.addEventListener('click', () => {
       counter = counter - 1;
-      navBtnStateSlider();
-      navBtnPositionSlider();
-      listingDisplaySlider();
+      navBtnState();
+      navBtnPosition();
+      listingDisplay();
     });
     nextBtn.addEventListener('click', () => {
       counter = counter + 1;
-      navBtnStateSlider();
-      navBtnPositionSlider();
-      listingDisplaySlider();
+      navBtnState();
+      navBtnPosition();
+      listingDisplay();
     });
   } else if (browserWidth < 768 && listings.length == 1) {
     for (const listing of listings.entries()) {
@@ -4883,10 +4919,10 @@ function launchKeyInfoBoxSlider() {
 slider.length > 0 ? sliderPage = true : sliderPage = false;
 
 if (sliderPage) {
-  listingsQuantitySlider();
-  launchKeyInfoBoxSlider(); // Run function on resize as well as launch as some styles overriden by JS
+  listingsQuantity();
+  launchKeyInfo(batchNumber); // Run function on resize as well as launch as some styles overriden by JS
 
-  window.onresize = () => launchKeyInfoBoxSlider();
+  window.onresize = () => launchKeyInfo(batchNumber);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
