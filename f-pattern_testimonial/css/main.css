@@ -12296,6 +12296,7 @@ main table td em {
 .card--testimonial--transparent {
     background-color: transparent;
     margin-top: 2rem;
+    list-style: none;
 }
 
 .card--testimonial--transparent .testimonial__quote {
