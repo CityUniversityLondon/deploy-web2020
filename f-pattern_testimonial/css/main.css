@@ -12299,29 +12299,35 @@ main table td em {
 }
 
 .card--testimonial--transparent .testimonial__quote {
-    font-size: 1.424rem;
+    font-size: 1.266rem;
     line-height: 1.25;
-    letter-spacing: -0.013em;
+    letter-spacing: -0.011em;
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-style: normal;
     font-weight: 300;
+    line-height: 1.625;
+    margin-top: 0.5rem;
+    max-width: 55ch;
     margin-top: 0;
     color: #1e1e1e;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
     .card--testimonial--transparent .testimonial__quote {
-        letter-spacing: -0.015em;
+        letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .card--testimonial--transparent .testimonial__quote {
-        letter-spacing: -0.015em;
+        letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .card--testimonial--transparent .testimonial__quote {
-        letter-spacing: -0.016em;
+        letter-spacing: -0.015em;
     }
 }
 
@@ -12335,44 +12341,15 @@ main table td em {
     .card--testimonial--transparent .testimonial__quote {
         letter-spacing: -0.017em;
     }
+}
+
+.card--testimonial--transparent .testimonial__quote i,
+.card--testimonial--transparent .testimonial__quote em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
 }
 
 .card--testimonial--transparent .testimonial__quote .quote-marks {
-    font-size: 1.802rem;
-    line-height: 1.25;
-    letter-spacing: -0.016em;
-    font-family: "Meta Sans", sans-serif;
     color: #3e1031;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--testimonial--transparent .testimonial__quote .quote-marks {
-        letter-spacing: -0.016em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--testimonial--transparent .testimonial__quote .quote-marks {
-        letter-spacing: -0.016em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--testimonial--transparent .testimonial__quote .quote-marks {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--testimonial--transparent .testimonial__quote .quote-marks {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--testimonial--transparent .testimonial__quote .quote-marks {
-        letter-spacing: -0.017em;
-    }
 }
 
 .card--testimonial--transparent .testimonial__credit {
