@@ -17407,6 +17407,7 @@ button
 .module-selector__content__moduleLink a:hover, .module-selector__content__moduleLink a:active {
     color: #ffffff;
     border-color: #ffffff;
+    background-image: none;
 }
 
 .module-selector__content__moduleLink .fa-plus {
