@@ -4616,8 +4616,7 @@ paginated.length > 0 ? paginatedPage = true : paginatedPage = false;
 if (paginatedPage) {
   listingsQuantity();
   launchKeyInfo(batchQuantity); // Run function on resize as well as launch as some styles overriden by JS
-
-  window.onresize = () => launchKeyInfo(batchQuantity);
+  // window.onresize = () => launchKeyInfo(batchQuantity);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4859,8 +4858,7 @@ slider.length > 0 ? sliderPage = true : sliderPage = false;
 if (sliderPage) {
   listingsQuantity();
   launchKeyInfo(batchQuantity); // Run function on resize as well as launch as some styles overriden by JS
-
-  window.onresize = () => launchKeyInfo(batchQuantity);
+  // window.onresize = () => launchKeyInfo(batchQuantity);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
