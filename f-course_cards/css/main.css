@@ -12191,6 +12191,7 @@ main table td em {
 }
 
 .card--course--transparent {
+    list-style: none;
     margin-bottom: 2rem;
     position: relative;
 }
@@ -12369,6 +12370,7 @@ main table td em {
 }
 
 .card--course--background {
+    list-style: none;
     margin-bottom: 2rem;
     position: relative;
 }
@@ -12547,6 +12549,11 @@ main table td em {
 }
 
 .card--course--related-course {
+    list-style: none;
+}
+
+.card--course--related-course a {
+    list-style: none;
     margin-bottom: 2rem;
     position: relative;
     background-color: initial;
@@ -12566,12 +12573,12 @@ main table td em {
     grid-column-gap: 1.25rem;
 }
 
-.card--course--related-course:hover:after {
+.card--course--related-course a:hover:after {
     background-color: #f2f2f2;
     transform: scale(1.03);
 }
 
-.card--course--related-course:after {
+.card--course--related-course a:after {
     content: '';
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     background-color: transparent;
@@ -12583,7 +12590,7 @@ main table td em {
     z-index: -1;
 }
 
-.card--course--related-course .type {
+.card--course--related-course a .type {
     color: #dd0036;
     font-size: 0.889rem;
     line-height: 1.625;
@@ -12592,36 +12599,36 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course .type {
+    .card--course--related-course a .type {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course .type {
+    .card--course--related-course a .type {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course .type {
+    .card--course--related-course a .type {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course .type {
+    .card--course--related-course a .type {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--related-course .type {
+    .card--course--related-course a .type {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--related-course p {
+.card--course--related-course a p {
     margin: 0 0 1.5rem 0;
     font-size: 0.889rem;
     line-height: 1.625;
@@ -12630,40 +12637,40 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course p {
+    .card--course--related-course a p {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course p {
+    .card--course--related-course a p {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course p {
+    .card--course--related-course a p {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course p {
+    .card--course--related-course a p {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--related-course p {
+    .card--course--related-course a p {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--related-course .key-info {
+.card--course--related-course a .key-info {
     color: #696969;
 }
 
-.card--course--related-course .key-info span {
+.card--course--related-course a .key-info span {
     float: left;
     width: 1.75rem;
     color: #dd0036;
@@ -12673,36 +12680,36 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course .key-info span {
+    .card--course--related-course a .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course .key-info span {
+    .card--course--related-course a .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course .key-info span {
+    .card--course--related-course a .key-info span {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course .key-info span {
+    .card--course--related-course a .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--related-course .key-info span {
+    .card--course--related-course a .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--related-course .key-info div {
+.card--course--related-course a .key-info div {
     margin-left: 1.5rem;
     font-size: 0.889rem;
     line-height: 1.625;
@@ -12710,37 +12717,37 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course .key-info div {
+    .card--course--related-course a .key-info div {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course .key-info div {
+    .card--course--related-course a .key-info div {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course .key-info div {
+    .card--course--related-course a .key-info div {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course .key-info div {
+    .card--course--related-course a .key-info div {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--related-course .key-info div {
+    .card--course--related-course a .key-info div {
         letter-spacing: -0.017em;
     }
 }
 
 @media (hover: hover) {
-    .card--course--related-course:hover {
+    .card--course--related-course a:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -12755,7 +12762,7 @@ main table td em {
     }
 }
 
-.card--course--related-course:focus, .card--course--related-course:active {
+.card--course--related-course a:focus, .card--course--related-course a:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -12770,40 +12777,40 @@ main table td em {
 }
 
 @media (min-width: 769px) {
-    .card--course--related-course {
+    .card--course--related-course a {
         grid-template-columns: 8.5rem auto;
     }
 }
 
-.card--course--related-course:hover {
+.card--course--related-course a:hover {
     background-image: none;
 }
 
-.card--course--related-course:hover .title {
+.card--course--related-course a:hover .title {
     color: #1e1e1e;
     background-size: 100% 0.2rem;
 }
 
-.card--course--related-course:hover img {
+.card--course--related-course a:hover img {
     transform: scale(1.1);
 }
 
-.card--course--related-course:hover .image-container:after {
+.card--course--related-course a:hover .image-container:after {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.card--course--related-course:focus:after, .card--course--related-course:active:after {
+.card--course--related-course a:focus:after, .card--course--related-course a:active:after {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.card--course--related-course:visited .title {
+.card--course--related-course a:visited .title {
     color: #4c2c92;
 }
 
-.card--course--related-course .image-container {
+.card--course--related-course a .image-container {
     overflow: hidden;
     width: 3.25rem;
     height: 3.25rem;
@@ -12811,13 +12818,13 @@ main table td em {
 }
 
 @media (min-width: 769px) {
-    .card--course--related-course .image-container {
+    .card--course--related-course a .image-container {
         width: 8.5rem;
         height: 8.5rem;
     }
 }
 
-.card--course--related-course .image-container:after {
+.card--course--related-course a .image-container:after {
     content: '';
     display: block;
     position: absolute;
@@ -12829,12 +12836,12 @@ main table td em {
     transition: background-color 0.3s ease-in-out;
 }
 
-.card--course--related-course .image-container img {
+.card--course--related-course a .image-container img {
     width: 100%;
     height: 100%;
 }
 
-.card--course--related-course .title {
+.card--course--related-course a .title {
     color: #696969;
     padding-bottom: 0.25rem;
     background-image: linear-gradient(#1e1e1e, #1e1e1e);
@@ -12844,11 +12851,16 @@ main table td em {
     transition: background-size 0.6s;
 }
 
-.card--course--related-course img {
+.card--course--related-course a img {
     transition: all 0.3s ease-in-out;
 }
 
 .card--course--related-course--background {
+    list-style: none;
+}
+
+.card--course--related-course--background a {
+    list-style: none;
     margin-bottom: 2rem;
     position: relative;
     background-color: initial;
@@ -12868,12 +12880,12 @@ main table td em {
     grid-column-gap: 1.25rem;
 }
 
-.card--course--related-course--background:hover:after {
+.card--course--related-course--background a:hover:after {
     background-color: #e5e5e5;
     transform: scale(1.03);
 }
 
-.card--course--related-course--background:after {
+.card--course--related-course--background a:after {
     content: '';
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     background-color: #f2f2f2;
@@ -12885,7 +12897,7 @@ main table td em {
     z-index: -1;
 }
 
-.card--course--related-course--background .type {
+.card--course--related-course--background a .type {
     color: #dd0036;
     font-size: 0.889rem;
     line-height: 1.625;
@@ -12894,36 +12906,36 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course--background .type {
+    .card--course--related-course--background a .type {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course--background .type {
+    .card--course--related-course--background a .type {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course--background .type {
+    .card--course--related-course--background a .type {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course--background .type {
+    .card--course--related-course--background a .type {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--related-course--background .type {
+    .card--course--related-course--background a .type {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--related-course--background p {
+.card--course--related-course--background a p {
     margin: 0 0 1.5rem 0;
     font-size: 0.889rem;
     line-height: 1.625;
@@ -12932,40 +12944,40 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course--background p {
+    .card--course--related-course--background a p {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course--background p {
+    .card--course--related-course--background a p {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course--background p {
+    .card--course--related-course--background a p {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course--background p {
+    .card--course--related-course--background a p {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--related-course--background p {
+    .card--course--related-course--background a p {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--related-course--background .key-info {
+.card--course--related-course--background a .key-info {
     color: #696969;
 }
 
-.card--course--related-course--background .key-info span {
+.card--course--related-course--background a .key-info span {
     float: left;
     width: 1.75rem;
     color: #dd0036;
@@ -12975,36 +12987,36 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course--background .key-info span {
+    .card--course--related-course--background a .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course--background .key-info span {
+    .card--course--related-course--background a .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course--background .key-info span {
+    .card--course--related-course--background a .key-info span {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course--background .key-info span {
+    .card--course--related-course--background a .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--related-course--background .key-info span {
+    .card--course--related-course--background a .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--related-course--background .key-info div {
+.card--course--related-course--background a .key-info div {
     margin-left: 1.5rem;
     font-size: 0.889rem;
     line-height: 1.625;
@@ -13012,37 +13024,37 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course--background .key-info div {
+    .card--course--related-course--background a .key-info div {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course--background .key-info div {
+    .card--course--related-course--background a .key-info div {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course--background .key-info div {
+    .card--course--related-course--background a .key-info div {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course--background .key-info div {
+    .card--course--related-course--background a .key-info div {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--related-course--background .key-info div {
+    .card--course--related-course--background a .key-info div {
         letter-spacing: -0.017em;
     }
 }
 
 @media (hover: hover) {
-    .card--course--related-course--background:hover {
+    .card--course--related-course--background a:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -13057,7 +13069,7 @@ main table td em {
     }
 }
 
-.card--course--related-course--background:focus, .card--course--related-course--background:active {
+.card--course--related-course--background a:focus, .card--course--related-course--background a:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -13072,40 +13084,40 @@ main table td em {
 }
 
 @media (min-width: 769px) {
-    .card--course--related-course--background {
+    .card--course--related-course--background a {
         grid-template-columns: 8.5rem auto;
     }
 }
 
-.card--course--related-course--background:hover {
+.card--course--related-course--background a:hover {
     background-image: none;
 }
 
-.card--course--related-course--background:hover .title {
+.card--course--related-course--background a:hover .title {
     color: #1e1e1e;
     background-size: 100% 0.2rem;
 }
 
-.card--course--related-course--background:hover img {
+.card--course--related-course--background a:hover img {
     transform: scale(1.1);
 }
 
-.card--course--related-course--background:hover .image-container:after {
+.card--course--related-course--background a:hover .image-container:after {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.card--course--related-course--background:focus:after, .card--course--related-course--background:active:after {
+.card--course--related-course--background a:focus:after, .card--course--related-course--background a:active:after {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.card--course--related-course--background:visited .title {
+.card--course--related-course--background a:visited .title {
     color: #4c2c92;
 }
 
-.card--course--related-course--background .image-container {
+.card--course--related-course--background a .image-container {
     overflow: hidden;
     width: 3.25rem;
     height: 3.25rem;
@@ -13113,13 +13125,13 @@ main table td em {
 }
 
 @media (min-width: 769px) {
-    .card--course--related-course--background .image-container {
+    .card--course--related-course--background a .image-container {
         width: 8.5rem;
         height: 8.5rem;
     }
 }
 
-.card--course--related-course--background .image-container:after {
+.card--course--related-course--background a .image-container:after {
     content: '';
     display: block;
     position: absolute;
@@ -13131,12 +13143,12 @@ main table td em {
     transition: background-color 0.3s ease-in-out;
 }
 
-.card--course--related-course--background .image-container img {
+.card--course--related-course--background a .image-container img {
     width: 100%;
     height: 100%;
 }
 
-.card--course--related-course--background .title {
+.card--course--related-course--background a .title {
     color: #696969;
     padding-bottom: 0.25rem;
     background-image: linear-gradient(#1e1e1e, #1e1e1e);
@@ -13146,7 +13158,7 @@ main table td em {
     transition: background-size 0.6s;
 }
 
-.card--course--related-course--background img {
+.card--course--related-course--background a img {
     transition: all 0.3s ease-in-out;
 }
 
