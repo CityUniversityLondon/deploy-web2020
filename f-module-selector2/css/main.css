@@ -17256,7 +17256,7 @@ button
         flex-wrap: wrap;
     }
     .module-selector__content .module-selector__content__text {
-        width: 30%;
+        width: 25%;
     }
 }
 
@@ -17267,7 +17267,6 @@ button
 @media (max-width: 767px) {
     .module-selector__content__text {
         display: flex;
-        max-width: 26ch;
     }
     .module-selector__content__text .fa-plus {
         display: flex;
@@ -17453,17 +17452,16 @@ button
 @media (max-width: 899px) and (min-width: 768px) {
     .module-selector__content__moduleLink {
         position: relative;
-        width: 30%;
+        width: 25%;
     }
     .module-selector__content__moduleLink .fa-plus {
-        left: -2rem;
+        left: -3rem;
     }
 }
 
 @media (max-width: 767px) {
     .module-selector__content__moduleLink {
         display: flex;
-        max-width: 26ch;
     }
     .module-selector__content__moduleLink .fa-plus {
         display: flex;
@@ -17472,6 +17470,12 @@ button
         margin-right: 2rem;
         height: inherit;
         position: static;
+    }
+}
+
+@media (max-width: 767px) {
+    .module-selector__content__moduleLink__module {
+        display: block;
     }
 }
 
