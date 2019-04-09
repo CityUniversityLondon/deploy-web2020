@@ -12191,7 +12191,7 @@ main table td em {
 }
 
 .card--course--transparent {
-    padding: 1rem;
+    list-style: none;
     margin-bottom: 2rem;
     position: relative;
 }
@@ -12370,7 +12370,7 @@ main table td em {
 }
 
 .card--course--background {
-    padding: 1rem;
+    list-style: none;
     margin-bottom: 2rem;
     position: relative;
 }
@@ -12549,7 +12549,7 @@ main table td em {
 }
 
 .card--course--related-course {
-    padding: 1rem;
+    list-style: none;
     margin-bottom: 2rem;
     position: relative;
     background-color: initial;
@@ -12852,7 +12852,7 @@ main table td em {
 }
 
 .card--course--related-course--background {
-    padding: 1rem;
+    list-style: none;
     margin-bottom: 2rem;
     position: relative;
     background-color: initial;
