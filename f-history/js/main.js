@@ -4571,10 +4571,16 @@ function launchFeedback(elem) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.regexp.split */ "./node_modules/core-js/modules/es6.regexp.split.js");
-/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../key-info-box/key-info-paginated */ "./src/patterns/key-info-box/key-info-paginated.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.regexp.replace */ "./node_modules/core-js/modules/es6.regexp.replace.js");
+/* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.regexp.split */ "./node_modules/core-js/modules/es6.regexp.split.js");
+/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../key-info-box/key-info-paginated */ "./src/patterns/key-info-box/key-info-paginated.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
 
 
 
@@ -4603,7 +4609,9 @@ document.addEventListener('DOMContentLoaded', function () {
   let dynamicElementWrapper = document.querySelector('.dynamic'); // Target element using 'load more' functionality
 
   function loadMore() {
-    let loadMoreWrapper = document.querySelector('.dynamic--load-more'),
+    let groupType = 'keyinfo',
+        itemType = 'listing',
+        loadMoreWrapper = document.querySelector('.dynamic--load-more'),
         loadMoreButton = loadMoreWrapper.querySelector('.content-toggle button'),
         counter = 0;
     /**
@@ -4614,10 +4622,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function buildUrlLoadMore() {
       loadMoreButton.addEventListener('click', () => {
         counter += 1;
-        let listingPosition = counter * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_1__["batchNumber"] + 1;
+        let listingPosition = counter * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"] + 1;
         const parentWrapper = loadMoreButton.closest('.dynamic--load-more');
         const parentWrapperId = parentWrapper.getAttribute('id');
-        history.pushState('', '', `#keyinfo${parentWrapperId}-listing${listingPosition}`);
+        history.pushState('', '', `#${groupType}${parentWrapperId}-${itemType}${listingPosition}`);
       });
     }
     /**
@@ -4630,19 +4638,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (urlHash) {
         // Split hashed part of URL into parts to identify location to scroll to
-        let hashParts = urlHash.split('-'); // let parentWrapperId = hashParts[0];
-
+        let hashParts = urlHash.split('-');
+        let parentWrapperId = hashParts[0];
         let listingId = hashParts[1];
-        let listingIdNum = Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(listingId);
+        let listingIdNum = Object(_util__WEBPACK_IMPORTED_MODULE_4__["numberFromString"])(listingId);
         /**
          * Work out which batches should be visible if user returns to page.
          * Use listing ID number from hash to calculate which batch this is part of.
          * Load that batch and all previous in overall listing.
          */
 
-        let visibleBatches = Math.floor(listingIdNum / _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_1__["batchNumber"]);
-        let remainders = listingIdNum % _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_1__["batchNumber"];
-        remainders ? visibleBatches += 1 : null; // let totalVisibleListings = visibleBatches * batchNumber;
+        let visibleBatches = Math.floor(listingIdNum / _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]);
+        let remainders = listingIdNum % _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
+        /**
+         * If listing number in URL hash not divisble by batch number, display next
+         * batch as well so listing is visible.
+         */
+
+        remainders ? visibleBatches += 1 : null;
+        let totalVisibleListings = visibleBatches * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]; // Target relevant grouping, in case there are multiple instances on the page
+
+        let parentWrapper = parentWrapperId.replace(groupType, '');
+        parentWrapper = document.getElementById(parentWrapper);
+        let items = parentWrapper.querySelectorAll('.key-info__listing');
+
+        for (const item of items.entries()) {
+          if (item[0] < totalVisibleListings) {
+            if (item[1].classList.contains('hide')) {
+              item[1].classList.remove('hide');
+            }
+          }
+        }
       }
     } // Run
 
@@ -4690,7 +4716,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/key-info-box/key-info-box
  * @author Mark Skinsley <mark.skinsley@city.ac.uk>
- * @copyright City, University of London 2018
+ * @copyright City, University of London 2019
  */
 
 const className = 'key-info-paginated';
