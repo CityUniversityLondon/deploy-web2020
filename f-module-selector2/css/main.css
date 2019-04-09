@@ -17241,6 +17241,12 @@ button
     margin-top: 0;
 }
 
+@media (max-width: 767px) {
+    .module-selector__content {
+        line-height: 2;
+    }
+}
+
 @media (min-width: 768px) {
     .module-selector__content {
         display: flex;
