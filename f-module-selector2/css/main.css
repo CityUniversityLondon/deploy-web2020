@@ -17467,13 +17467,10 @@ button
 
 @media (max-width: 767px) {
     .module-selector__content__moduleLink {
-        display: flex;
+        display: block;
     }
     .module-selector__content__moduleLink .fa-plus {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-right: 2rem;
+        padding: 0.75rem 0;
         height: inherit;
         position: static;
     }
