@@ -17317,6 +17317,46 @@ button
     margin-left: 0.5rem;
 }
 
+.social-icon {
+    border-style: none;
+}
+
+.social-icon span {
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: #0c0c0e;
+    color: #ffffff;
+    border-radius: 50%;
+    transition: background-color 0.6s, transform 0.6s;
+}
+
+.social-icon span:before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.social-icon span:focus:focus, .social-icon span:focus:active, .social-icon span:active:focus, .social-icon span:active:active {
+    outline-color: #ffffff;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+.social-icon span:hover, .social-icon span:active {
+    transform: scale(1.2);
+    background-color: #dd0036;
+}
+
+.social-icon:active, .social-icon:hover, .social-icon:focus, .social-icon:visited {
+    border-bottom-style: none;
+}
+
+.social-icon:hover, .social-icon:active {
+    background-image: none;
+}
+
 .generic {
     display: grid;
     grid-row-gap: 0;
