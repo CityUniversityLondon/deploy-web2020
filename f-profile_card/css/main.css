@@ -12173,18 +12173,15 @@ main table td em {
 
 @media (min-width: 769px) {
     .card--profile__thumbnail {
-        display: flex;
+        display: grid;
+        grid-template-columns: 7rem auto;
     }
 }
 
-.card--profile__thumbnail figure {
-    margin-top: 0;
-    padding-right: 2rem;
-}
-
-.card--profile__thumbnail figure img {
+.card--profile__thumbnail img {
     border-radius: 100%;
     max-width: 7rem;
+    max-height: 7rem;
 }
 
 .js .cookie-notice {
