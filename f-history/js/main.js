@@ -4600,92 +4600,94 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const className = 'dynamic';
+let dynamicElementWrapper = document.querySelector('.dynamic'),
+    groupType = 'keyinfo',
+    itemType = 'listing',
+    loadMoreWrapper = document.querySelector('.dynamic--load-more'),
+    loadMoreButton = loadMoreWrapper.querySelector('.content-toggle button'),
+    counter = 0,
+    urlHash = window.location.hash.substr(1),
+    listingPosition = '';
 /**
- *  Wait until all DOM content is rendered. Some class names in other patterns are set dynamically
- *  so these must be present before running functions in this pattern.
+ * Build URL on each 'Load more' click.
+ * Include ID of parent wrapper and position of first new listing in each batch loaded.
  */
 
-document.addEventListener('DOMContentLoaded', function () {
-  let dynamicElementWrapper = document.querySelector('.dynamic'); // Target element using 'load more' functionality
+function buildUrlLoadMore(num) {
+  loadMoreButton.addEventListener('click', () => {
+    num += 1;
+    const updateListingPosition = new Promise(resolve => {
+      resolve(listingPosition = num * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"] + 1);
+    });
+    updateListingPosition.then(() => {
+      history.pushState('', '', `#${groupType}${parentWrapperId}-${itemType}${listingPosition}`); // When user navigates back/forward to page, use listing position stored locally
 
-  function loadMore() {
-    let groupType = 'keyinfo',
-        itemType = 'listing',
-        loadMoreWrapper = document.querySelector('.dynamic--load-more'),
-        loadMoreButton = loadMoreWrapper.querySelector('.content-toggle button'),
-        counter = 0;
-    /**
-     * Build URL on each 'Load more' click.
-     * Include ID of parent wrapper and position of first new listing in each batch loaded.
-     */
-
-    function buildUrlLoadMore() {
-      loadMoreButton.addEventListener('click', () => {
-        counter += 1;
-        let listingPosition = counter * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"] + 1;
-        const parentWrapper = loadMoreButton.closest('.dynamic--load-more');
-        const parentWrapperId = parentWrapper.getAttribute('id');
-        history.pushState('', '', `#${groupType}${parentWrapperId}-${itemType}${listingPosition}`);
-      });
-    }
-    /**
-     * Look at URL, use wrapper and listing ID to scroll to relevant anchor
-     */
+      localStorage.setItem('storageListingPosition', `${num}`);
+    });
+    const parentWrapper = loadMoreButton.closest('.dynamic--load-more');
+    const parentWrapperId = parentWrapper.getAttribute('id');
+  });
+} // Look at URL, use wrapper and listing ID to scroll to relevant anchor
 
 
-    function scrolltoListing() {
-      let urlHash = window.location.hash.substr(1);
+function scrolltoListing() {
+  // Split hashed part of URL into parts to identify location to scroll to
+  let hashParts = urlHash.split('-');
+  let parentWrapperId = hashParts[0];
+  let listingId = hashParts[1];
+  let listingIdNum = Object(_util__WEBPACK_IMPORTED_MODULE_4__["numberFromString"])(listingId);
+  /**
+   * Work out which batches should be visible if user returns to page.
+   * Use listing ID number from hash to calculate which batch this is part of.
+   * Load that batch and all previous in overall listing.
+   */
 
-      if (urlHash) {
-        // Split hashed part of URL into parts to identify location to scroll to
-        let hashParts = urlHash.split('-');
-        let parentWrapperId = hashParts[0];
-        let listingId = hashParts[1];
-        let listingIdNum = Object(_util__WEBPACK_IMPORTED_MODULE_4__["numberFromString"])(listingId);
-        /**
-         * Work out which batches should be visible if user returns to page.
-         * Use listing ID number from hash to calculate which batch this is part of.
-         * Load that batch and all previous in overall listing.
-         */
+  let visibleBatches = Math.floor(listingIdNum / _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]);
+  let remainders = listingIdNum % _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
+  /**
+   * If listing number in URL hash not divisble by batch number, display next
+   * batch as well so hashed listing is visible.
+   */
 
-        let visibleBatches = Math.floor(listingIdNum / _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]);
-        let remainders = listingIdNum % _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
-        /**
-         * If listing number in URL hash not divisble by batch number, display next
-         * batch as well so listing is visible.
-         */
+  remainders ? visibleBatches += 1 : null;
+  let totalVisibleListings = visibleBatches * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]; // Target relevant grouping, in case there are multiple instances on the page
 
-        remainders ? visibleBatches += 1 : null;
-        let totalVisibleListings = visibleBatches * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]; // Target relevant grouping, in case there are multiple instances on the page
+  let parentWrapper = parentWrapperId.replace(groupType, '');
+  parentWrapper = document.getElementById(parentWrapper);
+  let items = parentWrapper.querySelectorAll('.key-info__listing');
 
-        let parentWrapper = parentWrapperId.replace(groupType, '');
-        parentWrapper = document.getElementById(parentWrapper);
-        let items = parentWrapper.querySelectorAll('.key-info__listing');
-
-        for (const item of items.entries()) {
-          if (item[0] < totalVisibleListings) {
-            if (item[1].classList.contains('hide')) {
-              item[1].classList.remove('hide');
-            }
-          }
-        }
+  for (const item of items.entries()) {
+    if (item[0] < totalVisibleListings) {
+      if (item[1].classList.contains('hide')) {
+        item[1].classList.remove('hide');
       }
-    } // Run
-
-
-    buildUrlLoadMore();
-    scrolltoListing();
-  } // Detect what type of dynamic element is being used
-
-
-  function dynamicContentType() {
-    if (dynamicElementWrapper.classList.contains('dynamic--load-more')) {
-      loadMore();
     }
   }
+} // Target element using 'load more' functionality
 
-  dynamicContentType();
-}, false);
+
+function loadMore() {
+  if (window.performance && window.performance.navigation.type == window.performance.navigation.TYPE_BACK_FORWARD) {
+    let storageListingPosition = parseInt(localStorage.getItem('storageListingPosition')); // console.log(`Storage listing position: ${storageListingPosition}`);
+
+    buildUrlLoadMore(storageListingPosition);
+  } else {
+    buildUrlLoadMore(counter);
+  }
+
+  if (urlHash) {
+    scrolltoListing();
+  }
+} // Detect what type of dynamic pattern is being used, e.g. 'Load more'
+
+
+function dynamicContentType() {
+  if (dynamicElementWrapper.classList.contains('dynamic--load-more')) {
+    loadMore();
+  }
+}
+
+dynamicContentType();
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchQuery: `.${className}`
 });
