@@ -17252,17 +17252,11 @@ button
         display: flex;
         justify-content: space-between;
     }
-    .module-selector__content .module-selector__content__text {
-        width: 23%;
-    }
 }
 
-@media (max-width: 899px) and (min-width: 768px) {
+@media (max-width: 1279px) and (min-width: 768px) {
     .module-selector__content {
         flex-wrap: wrap;
-    }
-    .module-selector__content .module-selector__content__text {
-        width: 25%;
     }
 }
 
@@ -17282,6 +17276,18 @@ button
         height: inherit;
         position: static;
         font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .module-selector__content__text {
+        width: 22%;
+    }
+}
+
+@media (max-width: 1279px) and (min-width: 768px) {
+    .module-selector__content__text {
+        width: 27%;
     }
 }
 
@@ -17440,7 +17446,6 @@ button
 
 @media (min-width: 901px) {
     .module-selector__content__moduleLink {
-        width: 23%;
         position: relative;
         margin-bottom: 1rem;
     }
@@ -17449,16 +17454,16 @@ button
     }
 }
 
-@media (min-width: 901px) and (max-width: 1279px) {
+@media (min-width: 1280px) and (max-width: 1440px) {
     .module-selector__content__moduleLink .fa-plus {
-        left: -1.5rem;
+        left: -2rem;
     }
 }
 
-@media (max-width: 899px) and (min-width: 768px) {
+@media (max-width: 1279px) and (min-width: 768px) {
     .module-selector__content__moduleLink {
         position: relative;
-        width: 25%;
+        width: 27%;
     }
     .module-selector__content__moduleLink .fa-plus {
         left: -3rem;
@@ -17473,6 +17478,12 @@ button
         padding: 0.75rem 0;
         height: inherit;
         position: static;
+    }
+}
+
+@media (min-width: 1280px) {
+    .module-selector__content__moduleLink {
+        width: 22%;
     }
 }
 
