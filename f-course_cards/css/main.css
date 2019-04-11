@@ -12190,32 +12190,31 @@ main table td em {
     list-style-type: none;
 }
 
-.card--course--transparent {
+.card--course {
     list-style: none;
     margin-bottom: 2rem;
     position: relative;
 }
 
+.card--course:after {
+    content: '';
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 @media (hover: hover) {
-    .card--course--transparent:hover:after {
+    .card--course:hover:after {
         background-color: #f2f2f2;
         transform: scale(1.03);
     }
 }
 
-.card--course--transparent:after {
-    content: '';
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.card--course--transparent .type {
+.card--course .type {
     color: #dd0036;
     font-size: 0.889rem;
     line-height: 1.625;
@@ -12224,36 +12223,36 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--transparent .type {
+    .card--course .type {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--transparent .type {
+    .card--course .type {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--transparent .type {
+    .card--course .type {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--transparent .type {
+    .card--course .type {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--transparent .type {
+    .card--course .type {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--transparent p {
+.card--course p {
     margin: 0 0 1.5rem 0;
     font-size: 0.889rem;
     line-height: 1.625;
@@ -12262,304 +12261,118 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--transparent p {
+    .card--course p {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--transparent p {
+    .card--course p {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--transparent p {
+    .card--course p {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--transparent p {
+    .card--course p {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--transparent p {
+    .card--course p {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--transparent .key-info {
-    color: #696969;
-}
-
-.card--course--transparent .key-info span {
+.card--course .key-info span {
     float: left;
-    width: 1.75rem;
     color: #dd0036;
+    margin: 0.25rem 0;
+    line-height: inherit;
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--transparent .key-info span {
+    .card--course .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--transparent .key-info span {
+    .card--course .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--transparent .key-info span {
+    .card--course .key-info span {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--transparent .key-info span {
+    .card--course .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--transparent .key-info span {
+    .card--course .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--transparent .key-info div {
-    margin-left: 1.5rem;
+.card--course .key-info div {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--course--transparent .key-info div {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--transparent .key-info div {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--transparent .key-info div {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--transparent .key-info div {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--course--transparent .key-info div {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--course--background {
-    list-style: none;
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-@media (hover: hover) {
-    .card--course--background:hover:after {
-        background-color: #e5e5e5;
-        transform: scale(1.03);
-    }
-}
-
-.card--course--background:after {
-    content: '';
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    background-color: #f2f2f2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.card--course--background .type {
-    color: #dd0036;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    margin-top: 1.25rem;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--course--background .type {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--background .type {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--background .type {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--background .type {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--course--background .type {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--course--background p {
-    margin: 0 0 1.5rem 0;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    color: #1e1e1e;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--course--background p {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--background p {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--background p {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--background p {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--course--background p {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--course--background .key-info {
     color: #696969;
-}
-
-.card--course--background .key-info span {
-    float: left;
-    width: 1.75rem;
-    color: #dd0036;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
+    margin: 0 0 0 1.5rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--background .key-info span {
+    .card--course .key-info div {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--background .key-info span {
+    .card--course .key-info div {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--background .key-info span {
+    .card--course .key-info div {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--background .key-info span {
+    .card--course .key-info div {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--background .key-info span {
+    .card--course .key-info div {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--background .key-info div {
-    margin-left: 1.5rem;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--course--background .key-info div {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--background .key-info div {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--background .key-info div {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--background .key-info div {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--course--background .key-info div {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--course--related-course {
-    list-style: none;
+.card--course .key-info span {
+    margin: 0;
 }
 
 .card--course--related-course a {
-    list-style: none;
-    margin-bottom: 2rem;
-    position: relative;
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -12575,6 +12388,81 @@ main table td em {
     display: grid;
     grid-template-columns: auto auto;
     grid-column-gap: 1.25rem;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .card--course--related-course a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card--course--related-course a:focus, .card--course--related-course a:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (min-width: 769px) {
+    .card--course--related-course a {
+        grid-template-columns: 8.5rem auto;
+    }
+}
+
+@media (hover: hover) {
+    .card--course--related-course a:hover {
+        background-image: none;
+    }
+    .card--course--related-course a:hover .title {
+        color: #1e1e1e;
+        background-size: 100% 0.2rem;
+    }
+    .card--course--related-course a:hover img {
+        transform: scale(1.1);
+    }
+    .card--course--related-course a:hover .image-container:after {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.card--course--related-course a:focus:after, .card--course--related-course a:active:after {
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+.card--course--related-course a:visited .title {
+    color: #4c2c92;
+}
+
+.card--course--related-course a:after {
+    content: '';
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 @media (hover: hover) {
@@ -12582,18 +12470,6 @@ main table td em {
         background-color: #f2f2f2;
         transform: scale(1.03);
     }
-}
-
-.card--course--related-course a:after {
-    content: '';
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    background-color: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
 }
 
 .card--course--related-course a .type {
@@ -12672,14 +12548,11 @@ main table td em {
     }
 }
 
-.card--course--related-course a .key-info {
-    color: #696969;
-}
-
 .card--course--related-course a .key-info span {
     float: left;
-    width: 1.75rem;
     color: #dd0036;
+    margin: 0.25rem 0;
+    line-height: inherit;
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
@@ -12716,10 +12589,11 @@ main table td em {
 }
 
 .card--course--related-course a .key-info div {
-    margin-left: 1.5rem;
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
+    color: #696969;
+    margin: 0 0 0 1.5rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -12752,67 +12626,8 @@ main table td em {
     }
 }
 
-@media (hover: hover) {
-    .card--course--related-course a:hover {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.card--course--related-course a:focus, .card--course--related-course a:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (min-width: 769px) {
-    .card--course--related-course a {
-        grid-template-columns: 8.5rem auto;
-    }
-}
-
-@media (hover: hover) {
-    .card--course--related-course a:hover {
-        background-image: none;
-    }
-    .card--course--related-course a:hover .title {
-        color: #1e1e1e;
-        background-size: 100% 0.2rem;
-    }
-    .card--course--related-course a:hover img {
-        transform: scale(1.1);
-    }
-    .card--course--related-course a:hover .image-container:after {
-        background-color: rgba(0, 0, 0, 0.1);
-    }
-}
-
-.card--course--related-course a:focus:after, .card--course--related-course a:active:after {
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-}
-
-.card--course--related-course a:visited .title {
-    color: #4c2c92;
+.card--course--related-course a .key-info span {
+    margin: 0;
 }
 
 .card--course--related-course a .image-container {
@@ -12857,314 +12672,6 @@ main table td em {
 }
 
 .card--course--related-course a img {
-    transition: all 0.3s ease-in-out;
-}
-
-.card--course--related-course--background {
-    list-style: none;
-}
-
-.card--course--related-course--background a {
-    list-style: none;
-    margin-bottom: 2rem;
-    position: relative;
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    transition: none;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-column-gap: 1.25rem;
-}
-
-@media (hover: hover) {
-    .card--course--related-course--background a:hover:after {
-        background-color: #e5e5e5;
-        transform: scale(1.03);
-    }
-}
-
-.card--course--related-course--background a:after {
-    content: '';
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    background-color: #f2f2f2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.card--course--related-course--background a .type {
-    color: #dd0036;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    margin-top: 1.25rem;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course--background a .type {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course--background a .type {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course--background a .type {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course--background a .type {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--course--related-course--background a .type {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--course--related-course--background a p {
-    margin: 0 0 1.5rem 0;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    color: #1e1e1e;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course--background a p {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course--background a p {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course--background a p {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course--background a p {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--course--related-course--background a p {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--course--related-course--background a .key-info {
-    color: #696969;
-}
-
-.card--course--related-course--background a .key-info span {
-    float: left;
-    width: 1.75rem;
-    color: #dd0036;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course--background a .key-info span {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course--background a .key-info span {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course--background a .key-info span {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course--background a .key-info span {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--course--related-course--background a .key-info span {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--course--related-course--background a .key-info div {
-    margin-left: 1.5rem;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course--background a .key-info div {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course--background a .key-info div {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course--background a .key-info div {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course--background a .key-info div {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--course--related-course--background a .key-info div {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (hover: hover) {
-    .card--course--related-course--background a:hover {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.card--course--related-course--background a:focus, .card--course--related-course--background a:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (min-width: 769px) {
-    .card--course--related-course--background a {
-        grid-template-columns: 8.5rem auto;
-    }
-}
-
-@media (hover: hover) {
-    .card--course--related-course--background a:hover {
-        background-image: none;
-    }
-    .card--course--related-course--background a:hover .title {
-        color: #1e1e1e;
-        background-size: 100% 0.2rem;
-    }
-    .card--course--related-course--background a:hover img {
-        transform: scale(1.1);
-    }
-    .card--course--related-course--background a:hover .image-container:after {
-        background-color: rgba(0, 0, 0, 0.1);
-    }
-}
-
-.card--course--related-course--background a:focus:after, .card--course--related-course--background a:active:after {
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-}
-
-.card--course--related-course--background a:visited .title {
-    color: #4c2c92;
-}
-
-.card--course--related-course--background a .image-container {
-    overflow: hidden;
-    width: 3.25rem;
-    height: 3.25rem;
-    position: relative;
-}
-
-@media (min-width: 769px) {
-    .card--course--related-course--background a .image-container {
-        width: 8.5rem;
-        height: 8.5rem;
-    }
-}
-
-.card--course--related-course--background a .image-container:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.card--course--related-course--background a .image-container img {
-    width: 100%;
-    height: 100%;
-}
-
-.card--course--related-course--background a .title {
-    color: #696969;
-    padding-bottom: 0.25rem;
-    background-image: linear-gradient(#1e1e1e, #1e1e1e);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.2rem;
-    transition: background-size 0.6s;
-}
-
-.card--course--related-course--background a img {
     transition: all 0.3s ease-in-out;
 }
 
