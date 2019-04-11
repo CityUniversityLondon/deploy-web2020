@@ -12372,7 +12372,7 @@ main table td em {
     margin: 0;
 }
 
-.card--course--related-course a {
+.card--related-course a {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -12392,7 +12392,7 @@ main table td em {
 }
 
 @media (hover: hover) {
-    .card--course--related-course a:hover {
+    .card--related-course a:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -12407,7 +12407,7 @@ main table td em {
     }
 }
 
-.card--course--related-course a:focus, .card--course--related-course a:active {
+.card--related-course a:focus, .card--related-course a:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -12422,39 +12422,39 @@ main table td em {
 }
 
 @media (min-width: 769px) {
-    .card--course--related-course a {
+    .card--related-course a {
         grid-template-columns: 8.5rem auto;
     }
 }
 
 @media (hover: hover) {
-    .card--course--related-course a:hover {
+    .card--related-course a:hover {
         background-image: none;
     }
-    .card--course--related-course a:hover .title {
+    .card--related-course a:hover .title {
         color: #1e1e1e;
         background-size: 100% 0.2rem;
     }
-    .card--course--related-course a:hover img {
+    .card--related-course a:hover img {
         transform: scale(1.1);
     }
-    .card--course--related-course a:hover .image-container:after {
+    .card--related-course a:hover .image-container:after {
         background-color: rgba(0, 0, 0, 0.1);
     }
 }
 
-.card--course--related-course a:focus:after, .card--course--related-course a:active:after {
+.card--related-course a:focus:after, .card--related-course a:active:after {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.card--course--related-course a:visited .title {
+.card--related-course a:visited .title {
     color: #4c2c92;
 }
 
-.card--course--related-course a:after {
+.card--related-course a:after {
     content: '';
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     position: absolute;
@@ -12466,13 +12466,13 @@ main table td em {
 }
 
 @media (hover: hover) {
-    .card--course--related-course a:hover:after {
+    .card--related-course a:hover:after {
         background-color: #f2f2f2;
         transform: scale(1.03);
     }
 }
 
-.card--course--related-course a .type {
+.card--related-course a .type {
     color: #dd0036;
     font-size: 0.889rem;
     line-height: 1.625;
@@ -12481,36 +12481,36 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course a .type {
+    .card--related-course a .type {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course a .type {
+    .card--related-course a .type {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course a .type {
+    .card--related-course a .type {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course a .type {
+    .card--related-course a .type {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--related-course a .type {
+    .card--related-course a .type {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--related-course a p {
+.card--related-course a p {
     margin: 0 0 1.5rem 0;
     font-size: 0.889rem;
     line-height: 1.625;
@@ -12519,36 +12519,36 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course a p {
+    .card--related-course a p {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course a p {
+    .card--related-course a p {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course a p {
+    .card--related-course a p {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course a p {
+    .card--related-course a p {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--related-course a p {
+    .card--related-course a p {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--related-course a .key-info span {
+.card--related-course a .key-info span {
     float: left;
     color: #dd0036;
     margin: 0.25rem 0;
@@ -12559,36 +12559,36 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course a .key-info span {
+    .card--related-course a .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course a .key-info span {
+    .card--related-course a .key-info span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course a .key-info span {
+    .card--related-course a .key-info span {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course a .key-info span {
+    .card--related-course a .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--related-course a .key-info span {
+    .card--related-course a .key-info span {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--related-course a .key-info div {
+.card--related-course a .key-info div {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
@@ -12597,40 +12597,40 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--course--related-course a .key-info div {
+    .card--related-course a .key-info div {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--course--related-course a .key-info div {
+    .card--related-course a .key-info div {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--course--related-course a .key-info div {
+    .card--related-course a .key-info div {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--course--related-course a .key-info div {
+    .card--related-course a .key-info div {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--course--related-course a .key-info div {
+    .card--related-course a .key-info div {
         letter-spacing: -0.017em;
     }
 }
 
-.card--course--related-course a .key-info span {
+.card--related-course a .key-info span {
     margin: 0;
 }
 
-.card--course--related-course a .image-container {
+.card--related-course a .image-container {
     overflow: hidden;
     width: 3.25rem;
     height: 3.25rem;
@@ -12638,13 +12638,13 @@ main table td em {
 }
 
 @media (min-width: 769px) {
-    .card--course--related-course a .image-container {
+    .card--related-course a .image-container {
         width: 8.5rem;
         height: 8.5rem;
     }
 }
 
-.card--course--related-course a .image-container:after {
+.card--related-course a .image-container:after {
     content: '';
     display: block;
     position: absolute;
@@ -12656,12 +12656,12 @@ main table td em {
     transition: background-color 0.3s ease-in-out;
 }
 
-.card--course--related-course a .image-container img {
+.card--related-course a .image-container img {
     width: 100%;
     height: 100%;
 }
 
-.card--course--related-course a .title {
+.card--related-course a .title {
     color: #696969;
     padding-bottom: 0.25rem;
     background-image: linear-gradient(#1e1e1e, #1e1e1e);
@@ -12671,7 +12671,7 @@ main table td em {
     transition: background-size 0.6s;
 }
 
-.card--course--related-course a img {
+.card--related-course a img {
     transition: all 0.3s ease-in-out;
 }
 
