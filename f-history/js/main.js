@@ -4579,6 +4579,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../key-info-box/key-info-paginated */ "./src/patterns/key-info-box/key-info-paginated.js");
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
@@ -4593,10 +4595,6 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 
-/**
- * Variable (number) used in Key Info to control number of listings displayed on page
- * load and subsequent 'Load more' clicks
- **/
 
 
 const className = 'dynamic';
@@ -4607,61 +4605,80 @@ let dynamicElementWrapper = document.querySelector('.dynamic'),
     loadMoreButton = loadMoreWrapper.querySelector('.content-toggle button'),
     counter = 0,
     urlHash = window.location.hash.substr(1),
-    listingPosition = '';
+    listingPosition = ''; // Zen scroll setup
+
+zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.setup(_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["defaultDuration"], _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["edgeOffset"]);
 /**
- * Build URL on each 'Load more' click.
+ * Build URL on each 'Load more' click, e.g. => '#keyinfoabc123-listing4
  * Include ID of parent wrapper and position of first new listing in each batch loaded.
  */
 
 function buildUrlLoadMore(num) {
-  loadMoreButton.addEventListener('click', () => {
-    num += 1;
-    const updateListingPosition = new Promise(resolve => {
-      resolve(listingPosition = num * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"] + 1);
-    });
-    updateListingPosition.then(() => {
-      history.pushState('', '', `#${groupType}${parentWrapperId}-${itemType}${listingPosition}`); // When user navigates back/forward to page, use listing position stored locally
+  if (urlHash) {
+    let hashParts = urlHash.split('-');
+    let parentWrapperId = hashParts[0];
+    let listingId = hashParts[1];
+    let listingIdNum = Object(_util__WEBPACK_IMPORTED_MODULE_4__["numberFromString"])(listingId);
+    listingPosition += _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
+    let visibleBatches = Math.floor(listingIdNum / _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]);
+    let remainders = listingIdNum % _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
+    remainders ? visibleBatches += 1 : null;
+    let totalVisibleListings = visibleBatches * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
+    let parentWrapper = parentWrapperId.replace(groupType, '');
+    parentWrapper = document.getElementById(parentWrapper);
+    let items = parentWrapper.querySelectorAll('.key-info__listing');
 
-      localStorage.setItem('storageListingPosition', `${num}`);
-    });
-    const parentWrapper = loadMoreButton.closest('.dynamic--load-more');
-    const parentWrapperId = parentWrapper.getAttribute('id');
-  });
-} // Look at URL, use wrapper and listing ID to scroll to relevant anchor
+    for (const item of items.entries()) {
+      if (item[0] < totalVisibleListings) {
+        if (item[0] == listingIdNum) {
+          let target = item[1];
+          zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.to(target);
+        }
 
-
-function scrolltoListing() {
-  // Split hashed part of URL into parts to identify location to scroll to
-  let hashParts = urlHash.split('-');
-  let parentWrapperId = hashParts[0];
-  let listingId = hashParts[1];
-  let listingIdNum = Object(_util__WEBPACK_IMPORTED_MODULE_4__["numberFromString"])(listingId);
-  /**
-   * Work out which batches should be visible if user returns to page.
-   * Use listing ID number from hash to calculate which batch this is part of.
-   * Load that batch and all previous in overall listing.
-   */
-
-  let visibleBatches = Math.floor(listingIdNum / _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]);
-  let remainders = listingIdNum % _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
-  /**
-   * If listing number in URL hash not divisble by batch number, display next
-   * batch as well so hashed listing is visible.
-   */
-
-  remainders ? visibleBatches += 1 : null;
-  let totalVisibleListings = visibleBatches * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]; // Target relevant grouping, in case there are multiple instances on the page
-
-  let parentWrapper = parentWrapperId.replace(groupType, '');
-  parentWrapper = document.getElementById(parentWrapper);
-  let items = parentWrapper.querySelectorAll('.key-info__listing');
-
-  for (const item of items.entries()) {
-    if (item[0] < totalVisibleListings) {
-      if (item[1].classList.contains('hide')) {
-        item[1].classList.remove('hide');
+        if (item[1].classList.contains('hide')) {
+          item[1].classList.remove('hide');
+        }
       }
     }
+
+    loadMoreButton.addEventListener('click', () => {
+      visibleBatches += 1;
+      totalVisibleListings = visibleBatches * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]; // console.log(`I now need to show ${visibleBatches} batches`);
+      // console.log(`That means ${totalVisibleListings} listings. Let's start looping...`);
+      // console.log(`Our batch number is now ${visibleBatches}`)
+
+      for (const item of items.entries()) {
+        if (item[0] < totalVisibleListings) {
+          if (item[1].classList.contains('hide')) {
+            item[1].classList.remove('hide');
+          }
+        }
+      }
+
+      const updateListingPosition = new Promise(resolve => {
+        resolve(listingPosition = (visibleBatches - 1) * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"] + 1);
+      });
+      updateListingPosition.then(() => {
+        history.pushState('', '', `#${parentWrapperId}-${itemType}${listingPosition}`);
+      });
+    });
+    localStorage.setItem('storageListingPosition', `${visibleBatches}`);
+  } else {
+    const parentWrapper = loadMoreButton.closest('.dynamic--load-more');
+    const parentWrapperId = parentWrapper.getAttribute('id');
+    loadMoreButton.addEventListener('click', () => {
+      // console.log(num);
+      num += 1;
+      const updateListingPosition = new Promise(resolve => {
+        resolve(listingPosition = num * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"] + 1);
+      });
+      updateListingPosition.then(() => {
+        history.pushState('', '', `#${groupType}${parentWrapperId}-${itemType}${listingPosition}`); // When user navigates back/forward to page, use listing position stored locally
+
+        localStorage.setItem('storageListingPosition', `${num}`);
+      }); // scrolltoListing(urlHash);
+    });
+    localStorage.setItem('storageListingPosition', `${num}`);
   }
 } // Target element using 'load more' functionality
 
@@ -4672,12 +4689,14 @@ function loadMore() {
 
     buildUrlLoadMore(storageListingPosition);
   } else {
+    localStorage.clear();
     buildUrlLoadMore(counter);
-  }
+  } // if (urlHash) {
+  //     let storageListingPosition = parseInt(
+  //         localStorage.getItem('storageListingPosition')
+  //     );
+  // }
 
-  if (urlHash) {
-    scrolltoListing();
-  }
 } // Detect what type of dynamic pattern is being used, e.g. 'Load more'
 
 
@@ -4698,13 +4717,15 @@ dynamicContentType();
 /*!*********************************************************!*\
   !*** ./src/patterns/key-info-box/key-info-paginated.js ***!
   \*********************************************************/
-/*! exports provided: listingsLength, batchNumber, default */
+/*! exports provided: listingsLength, batchNumber, edgeOffset, defaultDuration, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "listingsLength", function() { return listingsLength; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "batchNumber", function() { return batchNumber; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "edgeOffset", function() { return edgeOffset; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "defaultDuration", function() { return defaultDuration; });
 /* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
 /* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
