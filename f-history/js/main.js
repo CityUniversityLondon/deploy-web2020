@@ -4616,6 +4616,10 @@ zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.setup(_key_info_box_key_info_pa
 function showHideItems(elems, maxVisible, targetElemIndex) {
   for (const elem of elems.entries()) {
     if (elem[0] < maxVisible) {
+      if (maxVisible > elems.length) {
+        loadMoreButton.style.display = 'none';
+      }
+
       if (elem[0] == targetElemIndex) {
         let scrollTarget = elem[1];
         zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.to(scrollTarget);
