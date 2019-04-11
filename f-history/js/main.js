@@ -4571,12 +4571,12 @@ function launchFeedback(elem) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.regexp.replace */ "./node_modules/core-js/modules/es6.regexp.replace.js");
-/* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es6.regexp.split */ "./node_modules/core-js/modules/es6.regexp.split.js");
-/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.regexp.replace */ "./node_modules/core-js/modules/es6.regexp.replace.js");
+/* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.regexp.split */ "./node_modules/core-js/modules/es6.regexp.split.js");
+/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../key-info-box/key-info-paginated */ "./src/patterns/key-info-box/key-info-paginated.js");
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
@@ -4598,63 +4598,75 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const className = 'dynamic';
-let dynamicElementWrapper = document.querySelector('.dynamic'),
-    groupType = 'keyinfo',
-    itemType = 'listing',
-    loadMoreWrapper = document.querySelector('.dynamic--load-more'),
+let loadMoreWrapper = document.querySelector('.dynamic--load-more'),
     loadMoreButton = loadMoreWrapper.querySelector('.content-toggle button'),
-    counter = 0,
     urlHash = window.location.hash.substr(1),
-    listingPosition = ''; // Zen scroll setup
+    listingPosition = ''; // Blank by default for non-hashed URLs
+// Zen scroll setup
 
 zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.setup(_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["defaultDuration"], _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["edgeOffset"]);
 /**
- * Build URL on each 'Load more' click, e.g. => '#keyinfoabc123-listing4
- * Include ID of parent wrapper and position of first new listing in each batch loaded.
+ * Control what elements should display in listing.
+ *
+ * @param {HTMLElement[]} elems - All elements in group of listings.
+ * @param {number} maxVisible - Maximum number of elements that should be visible at any one time.
+ * @param {number} targetElemIndex - Index value of element to scroll to.
  */
 
-function buildUrlLoadMore(num) {
-  if (urlHash) {
-    let hashParts = urlHash.split('-');
-    let parentWrapperId = hashParts[0];
-    let listingId = hashParts[1];
-    let listingIdNum = Object(_util__WEBPACK_IMPORTED_MODULE_4__["numberFromString"])(listingId);
-    listingPosition += _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
-    let visibleBatches = Math.floor(listingIdNum / _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]);
-    let remainders = listingIdNum % _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
-    remainders ? visibleBatches += 1 : null;
-    let totalVisibleListings = visibleBatches * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
-    let parentWrapper = parentWrapperId.replace(groupType, '');
-    parentWrapper = document.getElementById(parentWrapper);
-    let items = parentWrapper.querySelectorAll('.key-info__listing');
+function showHideItems(elems, maxVisible, targetElemIndex) {
+  for (const elem of elems.entries()) {
+    if (elem[0] < maxVisible) {
+      if (elem[0] == targetElemIndex) {
+        let scrollTarget = elem[1];
+        zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.to(scrollTarget);
+      }
 
-    for (const item of items.entries()) {
-      if (item[0] < totalVisibleListings) {
-        if (item[0] == listingIdNum) {
-          let target = item[1];
-          zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.to(target);
-        }
-
-        if (item[1].classList.contains('hide')) {
-          item[1].classList.remove('hide');
-        }
+      if (elem[1].classList.contains('hide')) {
+        elem[1].classList.remove('hide');
       }
     }
+  }
+}
+/**
+ * Build URL on each 'Load more' click, e.g. => '#keyinfoabc123-listing4
+ * Include ID of parent wrapper and position of first new listing in each batch loaded.
+ *
+ * @param {number} loadMoreClicks - Number of 'Load more' clicks.
+ * @param {string} groupType - Pattern type ID of parent wrapper.
+ * @param {string} itemType - Descriptive string that will be passed to the URL, e.g. 'listing'.
+ * @param {string} itemTypeClass - Class name of child elements being shown/hidden.
+ *
+ */
 
+
+function buildDynamicUrl(loadMoreClicks, groupType, itemType, itemTypeClass) {
+  let parentWrapper = loadMoreButton.closest('.dynamic--load-more');
+  let parentWrapperId = parentWrapper.getAttribute('id');
+
+  if (urlHash) {
+    let urlHashParts = urlHash.split('-');
+    parentWrapperId = urlHashParts[0];
+    let listingId = Object(_util__WEBPACK_IMPORTED_MODULE_4__["numberFromString"])(urlHashParts[1]);
+    listingPosition += _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
+    let visibleBatches = Math.floor(listingId / _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]);
+    let remainders = listingId % _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
+    /**
+     * Remainders condition ensures next batch always shows so browser can scroll to a visible listing
+     */
+
+    remainders ? visibleBatches += 1 : null;
+    let totalVisibleListings = visibleBatches * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
+    parentWrapper = parentWrapperId.replace(groupType, '');
+    parentWrapper = document.getElementById(parentWrapper);
+    let items = parentWrapper.querySelectorAll(itemTypeClass);
+    showHideItems(items, totalVisibleListings, listingId);
     loadMoreButton.addEventListener('click', () => {
       visibleBatches += 1;
       totalVisibleListings = visibleBatches * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]; // console.log(`I now need to show ${visibleBatches} batches`);
       // console.log(`That means ${totalVisibleListings} listings. Let's start looping...`);
       // console.log(`Our batch number is now ${visibleBatches}`)
 
-      for (const item of items.entries()) {
-        if (item[0] < totalVisibleListings) {
-          if (item[1].classList.contains('hide')) {
-            item[1].classList.remove('hide');
-          }
-        }
-      }
-
+      showHideItems(items, totalVisibleListings, listingId);
       const updateListingPosition = new Promise(resolve => {
         resolve(listingPosition = (visibleBatches - 1) * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"] + 1);
       });
@@ -4664,33 +4676,33 @@ function buildUrlLoadMore(num) {
     });
     localStorage.setItem('storageListingPosition', `${visibleBatches}`);
   } else {
-    const parentWrapper = loadMoreButton.closest('.dynamic--load-more');
-    const parentWrapperId = parentWrapper.getAttribute('id');
     loadMoreButton.addEventListener('click', () => {
-      // console.log(num);
-      num += 1;
+      // console.log(loadMoreClicks);
+      loadMoreClicks += 1;
       const updateListingPosition = new Promise(resolve => {
-        resolve(listingPosition = num * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"] + 1);
+        resolve(listingPosition = loadMoreClicks * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"] + 1);
       });
       updateListingPosition.then(() => {
         history.pushState('', '', `#${groupType}${parentWrapperId}-${itemType}${listingPosition}`); // When user navigates back/forward to page, use listing position stored locally
 
-        localStorage.setItem('storageListingPosition', `${num}`);
-      }); // scrolltoListing(urlHash);
+        localStorage.setItem('storageListingPosition', `${loadMoreClicks}`);
+      });
     });
-    localStorage.setItem('storageListingPosition', `${num}`);
+    localStorage.setItem('storageListingPosition', `${loadMoreClicks}`);
   }
 } // Target element using 'load more' functionality
 
 
 function loadMore() {
-  if (window.performance && window.performance.navigation.type == window.performance.navigation.TYPE_BACK_FORWARD) {
+  let counter = 0;
+
+  if (_util__WEBPACK_IMPORTED_MODULE_4__["browserBackForward"]) {
     let storageListingPosition = parseInt(localStorage.getItem('storageListingPosition')); // console.log(`Storage listing position: ${storageListingPosition}`);
 
-    buildUrlLoadMore(storageListingPosition);
+    buildDynamicUrl(storageListingPosition, 'keyinfo', 'listing', '.key-info__listing');
   } else {
     localStorage.clear();
-    buildUrlLoadMore(counter);
+    buildDynamicUrl(counter, 'keyinfo', 'listing', '.key-info__listing');
   } // if (urlHash) {
   //     let storageListingPosition = parseInt(
   //         localStorage.getItem('storageListingPosition')
@@ -4701,6 +4713,8 @@ function loadMore() {
 
 
 function dynamicContentType() {
+  let dynamicElementWrapper = document.querySelector('.dynamic');
+
   if (dynamicElementWrapper.classList.contains('dynamic--load-more')) {
     loadMore();
   }
@@ -6473,7 +6487,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, browserBackForward */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6488,6 +6502,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendAll", function() { return appendAll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pxToRem", function() { return pxToRem; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "numberFromString", function() { return numberFromString; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "browserBackForward", function() { return browserBackForward; });
 /* harmony import */ var core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es7.symbol.async-iterator */ "./node_modules/core-js/modules/es7.symbol.async-iterator.js");
 /* harmony import */ var core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es6_symbol__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.symbol */ "./node_modules/core-js/modules/es6.symbol.js");
@@ -6669,6 +6684,12 @@ function numberFromString(string) {
   let number = string.replace(/\D/g, '');
   return number;
 }
+/**
+ * Variable to capture browser back/forward event
+ */
+
+let browserBackForward = window.performance && window.performance.navigation.type == window.performance.navigation.TYPE_BACK_FORWARD;
+
 
 /***/ }),
 
