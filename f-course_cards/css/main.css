@@ -12196,9 +12196,11 @@ main table td em {
     position: relative;
 }
 
-.card--course--transparent:hover:after {
-    background-color: #f2f2f2;
-    transform: scale(1.03);
+@media (hover: hover) {
+    .card--course--transparent:hover:after {
+        background-color: #f2f2f2;
+        transform: scale(1.03);
+    }
 }
 
 .card--course--transparent:after {
@@ -12375,9 +12377,11 @@ main table td em {
     position: relative;
 }
 
-.card--course--background:hover:after {
-    background-color: #e5e5e5;
-    transform: scale(1.03);
+@media (hover: hover) {
+    .card--course--background:hover:after {
+        background-color: #e5e5e5;
+        transform: scale(1.03);
+    }
 }
 
 .card--course--background:after {
@@ -12573,9 +12577,11 @@ main table td em {
     grid-column-gap: 1.25rem;
 }
 
-.card--course--related-course a:hover:after {
-    background-color: #f2f2f2;
-    transform: scale(1.03);
+@media (hover: hover) {
+    .card--course--related-course a:hover:after {
+        background-color: #f2f2f2;
+        transform: scale(1.03);
+    }
 }
 
 .card--course--related-course a:after {
@@ -12782,21 +12788,20 @@ main table td em {
     }
 }
 
-.card--course--related-course a:hover {
-    background-image: none;
-}
-
-.card--course--related-course a:hover .title {
-    color: #1e1e1e;
-    background-size: 100% 0.2rem;
-}
-
-.card--course--related-course a:hover img {
-    transform: scale(1.1);
-}
-
-.card--course--related-course a:hover .image-container:after {
-    background-color: rgba(0, 0, 0, 0.1);
+@media (hover: hover) {
+    .card--course--related-course a:hover {
+        background-image: none;
+    }
+    .card--course--related-course a:hover .title {
+        color: #1e1e1e;
+        background-size: 100% 0.2rem;
+    }
+    .card--course--related-course a:hover img {
+        transform: scale(1.1);
+    }
+    .card--course--related-course a:hover .image-container:after {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 
 .card--course--related-course a:focus:after, .card--course--related-course a:active:after {
@@ -12880,9 +12885,11 @@ main table td em {
     grid-column-gap: 1.25rem;
 }
 
-.card--course--related-course--background a:hover:after {
-    background-color: #e5e5e5;
-    transform: scale(1.03);
+@media (hover: hover) {
+    .card--course--related-course--background a:hover:after {
+        background-color: #e5e5e5;
+        transform: scale(1.03);
+    }
 }
 
 .card--course--related-course--background a:after {
@@ -13089,21 +13096,20 @@ main table td em {
     }
 }
 
-.card--course--related-course--background a:hover {
-    background-image: none;
-}
-
-.card--course--related-course--background a:hover .title {
-    color: #1e1e1e;
-    background-size: 100% 0.2rem;
-}
-
-.card--course--related-course--background a:hover img {
-    transform: scale(1.1);
-}
-
-.card--course--related-course--background a:hover .image-container:after {
-    background-color: rgba(0, 0, 0, 0.1);
+@media (hover: hover) {
+    .card--course--related-course--background a:hover {
+        background-image: none;
+    }
+    .card--course--related-course--background a:hover .title {
+        color: #1e1e1e;
+        background-size: 100% 0.2rem;
+    }
+    .card--course--related-course--background a:hover img {
+        transform: scale(1.1);
+    }
+    .card--course--related-course--background a:hover .image-container:after {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 
 .card--course--related-course--background a:focus:after, .card--course--related-course--background a:active:after {
