@@ -17330,25 +17330,6 @@ button
     z-index: 4;
 }
 
-.modal__close {
-    position: absolute;
-    right: 1px;
-    top: 1px;
-    padding: 0.5rem;
-    cursor: pointer;
-}
-
-.modal__close:focus, .modal__close:active {
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-}
-
-.modal__close:active, .modal__close:focus {
-    outline-offset: 0;
-}
-
 .modal__heading {
     font-size: 1.266rem;
     line-height: 1.25;
@@ -17400,9 +17381,40 @@ button
 }
 
 .modal__content {
-    background: #fff;
+    background: #ffffff;
     padding: 0.5rem 2rem 2rem;
     position: relative;
+    overflow: hidden;
+}
+
+.modal__close {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    padding: 0.5rem;
+    color: #696969;
+    cursor: pointer;
+}
+
+.modal__close:focus, .modal__close:active {
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+.modal__close:hover, .modal__close:active {
+    color: #1e1e1e;
+    background-color: #f2f2f2;
+    transform: scale(1.2);
+}
+
+.modal__close:active, .modal__close:focus {
+    outline-offset: 0;
+}
+
+.modal__close:focus {
+    color: #696969;
 }
 
 .modal__body-copy {
@@ -17416,26 +17428,81 @@ button
 }
 
 .modal__start-dates a {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
     font-size: 1rem;
     padding: 0.75rem;
     color: #494949;
     margin-top: 2rem;
     position: relative;
-    /* article a overrides ;( */
-    border: 0.0625rem solid #d8d8d8 !important;
-    background-image: none;
-    background-size: 0;
-    background-repeat: initial;
-    background-position: initial;
-    transition: none;
+    border: 0.0625rem solid #d8d8d8;
+    border-bottom-color: #d8d8d8;
+    border-bottom-width: 0.0625rem;
+}
+
+.modal__start-dates a:focus, .modal__start-dates a:active {
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+.modal__start-dates a:visited {
+    border-bottom-color: #d8d8d8;
 }
 
 .modal__start-dates a:hover {
-    color: #1e1e1e;
-    /* article a overrrides ;( */
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #3e1031;
+    border: 0.0625rem solid #3e1031;
+    border-bottom-color: #3e1031;
+    border-bottom-width: 0.0625rem;
     background-image: none;
-    transition: none;
     background-size: initial;
+}
+
+.modal__start-dates a:hover span:before {
+    content: '\f271';
+}
+
+.modal__start-dates a:focus {
+    background-color: #f2f2f2;
+    color: #0c0c0e;
+    border: 0.0625rem solid #cbcbcb;
+    border-bottom-color: #cbcbcb;
+    border-bottom-width: 0.0625rem;
+}
+
+.modal__start-dates a:active {
+    background-color: #250020;
+    color: #ffffff;
+    border: 0.0625rem solid #250020;
+    border-bottom-color: #250020;
+    border-bottom-width: 0.0625rem;
+}
+
+.modal__start-dates a:active span:before {
+    content: '\f274';
 }
 
 .modal__start-dates a span {
