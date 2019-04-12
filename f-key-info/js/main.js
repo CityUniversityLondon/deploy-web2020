@@ -4659,8 +4659,6 @@ let listings = document.querySelectorAll('.key-info__listing'),
     listingDates = document.querySelectorAll('.key-info__date'),
     listingsVisible = [],
     listingsLength = [],
-    slider = document.getElementsByClassName('key-info--short-course-slider'),
-    sliderPage,
     defaultDuration = 2000,
     edgeOffset = 100; // Zen scroll setup
 
@@ -4845,18 +4843,15 @@ function launchKeyInfo(batchQuantity) {
       listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
     }
   }
-} // Detect if page uses slider
+}
 
-
-slider.length > 0 ? sliderPage = true : sliderPage = false;
-
-if (sliderPage) {
+function launchKeyInfoSlider() {
   listingsQuantity();
-  launchKeyInfo(batchQuantity); // Run function on resize as well as launch as some styles overriden by JS
-  // window.onresize = () => launchKeyInfo(batchQuantity);
+  launchKeyInfo(batchQuantity);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchKeyInfoSlider,
   launchQuery: `.${className}`
 });
 
