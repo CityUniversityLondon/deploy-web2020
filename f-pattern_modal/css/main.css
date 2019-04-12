@@ -17318,15 +17318,15 @@ button
 }
 
 .modal__popup {
-    background: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 100%;
-    display: flex;
     align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    height: 100%;
     justify-content: center;
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
+    width: 100%;
     z-index: 4;
 }
 
@@ -17382,9 +17382,9 @@ button
 
 .modal__content {
     background: #ffffff;
+    overflow: hidden;
     padding: 0.5rem 2.5rem 3rem;
     position: relative;
-    overflow: hidden;
 }
 
 a.modal__close {
@@ -17401,12 +17401,12 @@ a.modal__close {
     text-decoration: none;
     background-image: none;
     background-size: initial;
+    color: #696969;
+    cursor: pointer;
+    padding: 0.75rem;
     position: absolute;
     right: 0.25rem;
     top: 0.25rem;
-    padding: 0.75rem;
-    color: #696969;
-    cursor: pointer;
 }
 
 a.modal__close:focus, a.modal__close:active {
@@ -17423,15 +17423,15 @@ a.modal__close:hover {
 
 @media (hover: hover) {
     a.modal__close:hover {
-        color: #1e1e1e;
         background-color: #f2f2f2;
+        color: #1e1e1e;
         transform: scale(1.2);
     }
 }
 
 a.modal__close:active {
-    color: #1e1e1e;
     background-color: #f2f2f2;
+    color: #1e1e1e;
     transform: scale(1.2);
     border: none;
     border-bottom-width: 0;
@@ -17464,7 +17464,6 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .modal__buttons a {
-    display: block;
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -17476,14 +17475,14 @@ a.modal__close:active, a.modal__close:focus {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    font-size: 1rem;
-    padding: 0.75rem;
-    color: #494949;
-    margin-top: 2rem;
-    position: relative;
     border: 0.0625rem solid #d8d8d8;
     border-bottom-color: #d8d8d8;
     border-bottom-width: 0.0625rem;
+    color: #494949;
+    font-size: 1rem;
+    margin-top: 2rem;
+    padding: 0.75rem;
+    position: relative;
 }
 
 .modal__buttons a:focus, .modal__buttons a:active {
@@ -17511,10 +17510,10 @@ a.modal__close:active, a.modal__close:focus {
         outline-width: 0;
         text-decoration: none;
         color: #ffffff;
-        background-color: #3e1031;
         border: 0.0625rem solid #3e1031;
         border-bottom-color: #3e1031;
         border-bottom-width: 0.0625rem;
+        background-color: #3e1031;
         background-image: none;
         background-size: initial;
     }
@@ -17525,18 +17524,18 @@ a.modal__close:active, a.modal__close:focus {
 
 .modal__buttons a:focus {
     background-color: #f2f2f2;
-    color: #0c0c0e;
     border: 0.0625rem solid #cbcbcb;
     border-bottom-color: #cbcbcb;
     border-bottom-width: 0.0625rem;
+    color: #0c0c0e;
 }
 
 .modal__buttons a:active {
     background-color: #250020;
-    color: #ffffff;
     border: 0.0625rem solid #250020;
     border-bottom-color: #250020;
     border-bottom-width: 0.0625rem;
+    color: #ffffff;
 }
 
 .modal__buttons a:active span:before {
@@ -17544,8 +17543,8 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .modal__buttons a span {
-    position: absolute;
     bottom: 1rem;
+    position: absolute;
     right: 1rem;
 }
 
