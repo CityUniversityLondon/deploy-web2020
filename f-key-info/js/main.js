@@ -4504,18 +4504,17 @@ function defaultListingsDisplay() {
 
 
 function listingsQuantity() {
-  let listingsNumber = [];
+  const listingsNumber = [];
 
   for (const listing of listings.entries()) {
     listingsNumber.push(listing.length);
   }
 
-  listingsNumber = listingsNumber.length;
   let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
 
   for (const datesQuantity of datesQuantities) {
     let date;
-    listingsNumber == 1 ? date = 'date' : date = 'dates';
+    listingsNumber.length == 1 ? date = 'date' : date = 'dates';
     let iconWrapper = document.createElement('div');
     iconWrapper.classList.add('key-info__icon--left');
     datesQuantity.appendChild(iconWrapper);
@@ -4524,11 +4523,9 @@ function listingsQuantity() {
     calendarIcon.classList.add('fa-calendar-day');
     iconWrapper.appendChild(calendarIcon);
     let iconTextDiv = document.createElement('div');
-    iconTextDiv.classList.add('icon-text');
-    iconTextDiv.classList.add('icon-text--margin-left');
     iconWrapper.appendChild(iconTextDiv);
     let iconTextP = document.createElement('p');
-    iconTextP.appendChild(document.createTextNode(listingsNumber + ' available start ' + date));
+    iconTextP.appendChild(document.createTextNode(listingsNumber.length + ' available start ' + date));
     iconTextDiv.appendChild(iconTextP);
   }
 }
@@ -4693,18 +4690,17 @@ function calculateVisibleListings() {
 
 
 function listingsQuantity() {
-  let listingsNumber = [];
+  const listingsNumber = [];
 
   for (const listing of listings.entries()) {
     listingsNumber.push(listing.length);
   }
 
-  listingsNumber = listingsNumber.length;
   let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
 
   for (const datesQuantity of datesQuantities) {
     let date;
-    listingsNumber == 1 ? date = 'date' : date = 'dates';
+    listingsNumber.length == 1 ? date = 'date' : date = 'dates';
     let iconWrapper = document.createElement('div');
     iconWrapper.classList.add('key-info__icon--left');
     datesQuantity.appendChild(iconWrapper);
@@ -4713,11 +4709,9 @@ function listingsQuantity() {
     calendarIcon.classList.add('fa-calendar-day');
     iconWrapper.appendChild(calendarIcon);
     let iconTextDiv = document.createElement('div');
-    iconTextDiv.classList.add('icon-text');
-    iconTextDiv.classList.add('icon-text--margin-left');
     iconWrapper.appendChild(iconTextDiv);
     let iconTextP = document.createElement('p');
-    iconTextP.appendChild(document.createTextNode(listingsNumber + ' available start ' + date));
+    iconTextP.appendChild(document.createTextNode(listingsNumber.length + ' available start ' + date));
     iconTextDiv.appendChild(iconTextP);
   }
 }
