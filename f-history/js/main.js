@@ -4598,8 +4598,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const className = 'dynamic';
-let loadMoreWrapper = document.querySelector('.dynamic--load-more'),
-    loadMoreButton = loadMoreWrapper.querySelector('.content-toggle button'),
+let loadMoreButton = document.querySelector('.content-toggle button'),
     urlHash = window.location.hash.substr(1),
     listingPosition = ''; // Blank by default for non-hashed URLs
 // Zen scroll setup
@@ -4616,17 +4615,22 @@ zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.setup(_key_info_box_key_info_pa
 function showHideItems(elems, maxVisible, targetElemIndex) {
   for (const elem of elems.entries()) {
     if (elem[0] < maxVisible) {
+      // Hide 'load more' button if user at the end of all listings
       if (maxVisible > elems.length) {
         loadMoreButton.style.display = 'none';
       }
 
-      if (elem[0] == targetElemIndex) {
-        let scrollTarget = elem[1];
-        zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.to(scrollTarget);
-      }
-
       if (elem[1].classList.contains('hide')) {
         elem[1].classList.remove('hide');
+      } // Add focus to first element in new batch. Disable for original page load.
+
+
+      if (elem[0] == targetElemIndex && !(targetElemIndex < _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"])) {
+        // console.log('target elem index: ' + targetElemIndex);
+        let scrollTarget = elem[1];
+        scrollTarget.focus(); // console.log('scroll target: ' + scrollTarget);
+
+        zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.to(scrollTarget);
       }
     }
   }
@@ -4637,40 +4641,50 @@ function showHideItems(elems, maxVisible, targetElemIndex) {
  *
  * @param {number} loadMoreClicks - Number of 'Load more' clicks.
  * @param {string} groupType - Pattern type ID of parent wrapper.
+ * @param {string} groupTypeClass - Class name of parent wrapper.
  * @param {string} itemType - Descriptive string that will be passed to the URL, e.g. 'listing'.
  * @param {string} itemTypeClass - Class name of child elements being shown/hidden.
  *
  */
 
 
-function buildDynamicUrl(loadMoreClicks, groupType, itemType, itemTypeClass) {
-  let parentWrapper = loadMoreButton.closest('.dynamic--load-more');
-  let parentWrapperId = parentWrapper.getAttribute('id');
+function buildDynamicUrl(loadMoreClicks, groupType, groupTypeClass, itemType, itemTypeClass) {
+  // By default, target area of the page with matching wrapper
+  let parentWrapper = loadMoreButton.closest(groupTypeClass);
+  let parentWrapperId = parentWrapper.getAttribute('id'); // Load hashed page directly, i.e. no browser back click
 
   if (urlHash) {
+    // Calcuate position in listings based on hashed URL parameters
     let urlHashParts = urlHash.split('-');
     parentWrapperId = urlHashParts[0];
-    let listingId = Object(_util__WEBPACK_IMPORTED_MODULE_4__["numberFromString"])(urlHashParts[1]);
+    let listingId = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_4__["numberFromString"])(urlHashParts[1]));
     listingPosition += _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
     let visibleBatches = Math.floor(listingId / _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]);
     let remainders = listingId % _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
     /**
-     * Remainders condition ensures next batch always shows so browser can scroll to a visible listing
+     * Remainders condition ensures next batch always shows so browser
+     * can scroll to a visible listing, instead of targeting hidden content
      */
 
     remainders ? visibleBatches += 1 : null;
     let totalVisibleListings = visibleBatches * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
     parentWrapper = parentWrapperId.replace(groupType, '');
-    parentWrapper = document.getElementById(parentWrapper);
-    let items = parentWrapper.querySelectorAll(itemTypeClass);
-    showHideItems(items, totalVisibleListings, listingId);
-    loadMoreButton.addEventListener('click', () => {
-      visibleBatches += 1;
-      totalVisibleListings = visibleBatches * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]; // console.log(`I now need to show ${visibleBatches} batches`);
-      // console.log(`That means ${totalVisibleListings} listings. Let's start looping...`);
-      // console.log(`Our batch number is now ${visibleBatches}`)
+    parentWrapper = document.getElementById(parentWrapper); // Elements to loop through
 
-      showHideItems(items, totalVisibleListings, listingId);
+    let items = parentWrapper.querySelectorAll(itemTypeClass);
+
+    for (const item of items) {
+      item.setAttribute('tabindex', '1');
+    } // console.log(`Listing id: ${listingId}`)
+
+
+    showHideItems(items, totalVisibleListings, listingId - 1);
+    loadMoreButton.addEventListener('click', () => {
+      listingId += _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
+      visibleBatches += 1;
+      totalVisibleListings = visibleBatches * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]; // console.log('New listing Id: ' + listingId);
+
+      showHideItems(items, totalVisibleListings, listingId - 1);
       const updateListingPosition = new Promise(resolve => {
         resolve(listingPosition = (visibleBatches - 1) * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"] + 1);
       });
@@ -4678,11 +4692,28 @@ function buildDynamicUrl(loadMoreClicks, groupType, itemType, itemTypeClass) {
         history.pushState('', '', `#${parentWrapperId}-${itemType}${listingPosition}`);
       });
     });
-    localStorage.setItem('storageListingPosition', `${visibleBatches}`);
+    /**
+     * Put number of visible batches in local storage so this can be
+     * accessed on browser back click
+     *  */
+
+    localStorage.setItem('storageListingPosition', `${visibleBatches}`); // Regular page load, i.e. no hash and no browser back click
   } else {
+    let visibleBatches = 1;
+    let listingId = 0;
+    let items = parentWrapper.querySelectorAll(itemTypeClass);
+
+    for (const item of items) {
+      item.setAttribute('tabindex', '1');
+    }
+
+    let totalVisibleListings = visibleBatches * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
+    showHideItems(items, totalVisibleListings, listingId);
     loadMoreButton.addEventListener('click', () => {
-      // console.log(loadMoreClicks);
+      listingId += _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
       loadMoreClicks += 1;
+      totalVisibleListings += _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]; // showHideItems(items, totalVisibleListings, listingId);
+
       const updateListingPosition = new Promise(resolve => {
         resolve(listingPosition = loadMoreClicks * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"] + 1);
       });
@@ -4690,6 +4721,7 @@ function buildDynamicUrl(loadMoreClicks, groupType, itemType, itemTypeClass) {
         history.pushState('', '', `#${groupType}${parentWrapperId}-${itemType}${listingPosition}`); // When user navigates back/forward to page, use listing position stored locally
 
         localStorage.setItem('storageListingPosition', `${loadMoreClicks}`);
+        showHideItems(items, totalVisibleListings, listingId);
       });
     });
     localStorage.setItem('storageListingPosition', `${loadMoreClicks}`);
@@ -4701,18 +4733,12 @@ function loadMore() {
   let counter = 0;
 
   if (_util__WEBPACK_IMPORTED_MODULE_4__["browserBackForward"]) {
-    let storageListingPosition = parseInt(localStorage.getItem('storageListingPosition')); // console.log(`Storage listing position: ${storageListingPosition}`);
-
-    buildDynamicUrl(storageListingPosition, 'keyinfo', 'listing', '.key-info__listing');
+    let storageListingPosition = parseInt(localStorage.getItem('storageListingPosition'));
+    buildDynamicUrl(storageListingPosition, 'keyinfo', '.dynamic--load-more', 'listing', '.key-info__listing');
   } else {
     localStorage.clear();
-    buildDynamicUrl(counter, 'keyinfo', 'listing', '.key-info__listing');
-  } // if (urlHash) {
-  //     let storageListingPosition = parseInt(
-  //         localStorage.getItem('storageListingPosition')
-  //     );
-  // }
-
+    buildDynamicUrl(counter, 'keyinfo', '.dynamic--load-more', 'listing', '.key-info__listing');
+  }
 } // Detect what type of dynamic pattern is being used, e.g. 'Load more'
 
 
@@ -4858,20 +4884,24 @@ function launchKeyInfo(batchNumber) {
 
           if (preExpandListingsVisible < listings.length) {
             for (const listing of listings.entries()) {
-              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
+              // let targetListing = document.querySelector(
+              //     `[data-id='listing-${preExpandListingsVisible}']`
+              // );
               let listingsVisibleLength = parseInt(listingsVisible.length);
               listingsLength = parseInt(listingsLength);
               let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
-
-              zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200);
-              let targetListingDate = targetListing.querySelectorAll('.key-info__date'); // Final batch of listings, zen scroll to 'load more' button and offset
+              // scroll.to(targetListing, 200);
+              // let targetListingDate = targetListing.querySelectorAll(
+              //     '.key-info__date'
+              // );
+              // Final batch of listings, zen scroll to 'load more' button and offset
 
               if (remainingItems <= batchNumber) {
-                zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(contentToggle, 200);
+                // scroll.to(contentToggle, 200);
                 contentToggles[0].style.display = 'none';
-              }
+              } // targetListingDate[0].focus();
+              // Bring in newly visible listings in two phases to allow for opacity transition
 
-              targetListingDate[0].focus(); // Bring in newly visible listings in two phases to allow for opacity transition
 
               if (listing[0] < preExpandListingsVisible + batchNumber) {
                 const promise = new Promise(resolve => {
@@ -4901,10 +4931,10 @@ function launchKeyInfo(batchNumber) {
 
     for (const paginationControl of paginationControls) {
       paginationControl.addEventListener('click', () => {
-        let listingsTop = document.getElementById('short-course-key-info-listings');
-
-        if (paginationControl.getAttribute('aria-expanded') !== true) {
-          zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(listingsTop, 0);
+        // let listingsTop = document.getElementById(
+        //     'short-course-key-info-listings'
+        // );
+        if (paginationControl.getAttribute('aria-expanded') !== true) {// scroll.to(listingsTop, 0);
         }
       });
     }
@@ -5093,20 +5123,24 @@ function launchKeyInfo(batchNumber) {
 
           if (preExpandListingsVisible < listings.length) {
             for (const listing of listings.entries()) {
-              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
+              // let targetListing = document.querySelector(
+              //     `[data-id='listing-${preExpandListingsVisible}']`
+              // );
               let listingsVisibleLength = parseInt(listingsVisible.length);
               listingsLength = parseInt(listingsLength);
               let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
-
-              zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200);
-              let targetListingDate = targetListing.querySelectorAll('.key-info__date'); // Final batch of listings, zen scroll to 'load more' button and offset
+              // scroll.to(targetListing, 200);
+              // let targetListingDate = targetListing.querySelectorAll(
+              //     '.key-info__date'
+              // );
+              // Final batch of listings, zen scroll to 'load more' button and offset
 
               if (remainingItems <= batchNumber) {
-                zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(contentToggle, 0);
+                // scroll.to(contentToggle, 0);
                 contentToggles[0].style.display = 'none';
-              }
+              } // targetListingDate[0].focus();
+              // Bring in newly visible listings in two phases to allow for opacity transition
 
-              targetListingDate[0].focus(); // Bring in newly visible listings in two phases to allow for opacity transition
 
               if (listing[0] < preExpandListingsVisible + batchNumber) {
                 const promise = new Promise(resolve => {
