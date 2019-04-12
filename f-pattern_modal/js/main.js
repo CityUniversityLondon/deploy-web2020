@@ -4894,7 +4894,7 @@ const className = 'modal-group';
 
 function launchModal() {
   let modalOpenTriggers = document.querySelectorAll('a.modal__trigger');
-  let modalCloseTriggers = document.querySelectorAll('span.modal__close');
+  let modalCloseTriggers = document.querySelectorAll('a.modal__close');
 
   for (let i = 0; i < modalOpenTriggers.length; i++) {
     modalOpenTriggers[i].addEventListener('click', handleTriggerClick, false);
