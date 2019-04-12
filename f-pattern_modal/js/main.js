@@ -4880,6 +4880,16 @@ __webpack_require__.r(__webpack_exports__);
  * @author Daniel Miller <daniel.miller@city.ac.uk>
  * @copyright City, University of London 2018
  */
+
+/**
+    <a href="#" class="modal__trigger">Open Modal</a>
+        <div class="modal__popup" display="none">
+            <div class="modal__content">
+                <span class="modal__close fas fa-times"></span>
+            </div>
+        </div>
+    </a>
+**/
 const className = 'modal-group';
 
 function launchModal() {

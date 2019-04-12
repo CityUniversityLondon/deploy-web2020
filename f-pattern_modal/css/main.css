@@ -17416,54 +17416,32 @@ button
 }
 
 .modal__start-dates a {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (hover: hover) {
-    .modal__start-dates a:hover {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.modal__start-dates a:focus, .modal__start-dates a:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.75rem;
+    color: #494949;
+    margin-top: 2rem;
+    position: relative;
+    /* article a overrides ;( */
+    border: 0.0625rem solid #d8d8d8 !important;
+    background-image: none;
+    background-size: 0;
+    background-repeat: initial;
+    background-position: initial;
+    transition: none;
 }
 
 .modal__start-dates a:hover {
+    color: #1e1e1e;
+    /* article a overrrides ;( */
     background-image: none;
     transition: none;
-    border: none;
-    background-size: 0;
+    background-size: initial;
+}
+
+.modal__start-dates a span {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
 }
 
 .generic {
