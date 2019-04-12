@@ -4880,22 +4880,29 @@ __webpack_require__.r(__webpack_exports__);
  * @author Daniel Miller <daniel.miller@city.ac.uk>
  * @copyright City, University of London 2018
  */
-const className = 'modal';
+const className = 'modal-group';
 
 function launchModal() {
-  var modal = document.getElementsByClassName('modal')[0],
-      modalTrigger = document.getElementsByClassName('modal__trigger')[0],
-      modalClose = document.getElementsByClassName('modal__close')[0];
+  let modalOpenTriggers = document.querySelectorAll('a.modal__trigger');
+  let modalCloseTriggers = document.querySelectorAll('span.modal__close');
 
-  modalTrigger.onclick = e => {
-    e.preventDefault();
-    modal.style.display = 'flex';
-  };
+  for (let i = 0; i < modalOpenTriggers.length; i++) {
+    modalOpenTriggers[i].addEventListener('click', handleTriggerClick, false);
+  }
 
-  modalClose.onclick = e => {
+  for (let i = 0; i < modalCloseTriggers.length; i++) {
+    modalCloseTriggers[i].addEventListener('click', handleTriggerClose, false);
+  }
+
+  function handleTriggerClick(e) {
     e.preventDefault();
-    modal.style.display = 'none';
-  };
+    e.target.nextElementSibling.style.display = 'flex';
+  }
+
+  function handleTriggerClose(e) {
+    e.preventDefault();
+    e.target.parentNode.parentNode.style.display = 'none';
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
