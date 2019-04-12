@@ -4463,8 +4463,6 @@ let listings = document.querySelectorAll('.key-info__listing'),
     listingDates = document.querySelectorAll('.key-info__date'),
     listingsVisible = [],
     listingsLength = [],
-    paginated = document.getElementsByClassName('key-info--short-course-paginated'),
-    paginatedPage,
     defaultDuration = 2000,
     edgeOffset = 100; // Zen scroll setup
 
@@ -4588,7 +4586,7 @@ function launchKeyInfo(batchQuantity) {
       contentToggles[0].style.display = 'none';
     } // Mobile: one listing visible at a time
 
-  } else if (browserWidth < 768 && listings.length > 1 && paginatedPage) {
+  } else if (browserWidth < 768 && listings.length > 1) {
     let listWrapper = document.getElementById('short-course-key-info-listings');
     listWrapper.classList.add('paginated-list'); // Scroll to top of listings after each paginated index click
 
@@ -4608,18 +4606,15 @@ function launchKeyInfo(batchQuantity) {
       listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
     }
   }
-} // Detect if page uses paginated index
+}
 
-
-paginated.length > 0 ? paginatedPage = true : paginatedPage = false;
-
-if (paginatedPage) {
+function launchKeyInfoPaginated() {
   listingsQuantity();
-  launchKeyInfo(batchQuantity); // Run function on resize as well as launch as some styles overriden by JS
-  // window.onresize = () => launchKeyInfo(batchQuantity);
+  launchKeyInfo(batchQuantity);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchKeyInfoPaginated,
   launchQuery: `.${className}`
 });
 
