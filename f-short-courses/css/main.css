@@ -12376,13 +12376,19 @@ main table td em {
 
 .card--course:after {
     content: '';
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--course:after {
+        transition: none;
+    }
 }
 
 @media (hover: hover) {
@@ -12445,16 +12451,24 @@ main table td em {
     padding-right: 1.25rem;
 }
 
+.card--related-course a:focus .title {
+    background-size: 100% 0.25rem;
+}
+
 @media (hover: hover) {
     .card--related-course a:hover {
         background-image: none;
     }
     .card--related-course a:hover .title {
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
         background-size: 100% 0.25rem;
         color: #1e1e1e;
     }
     .card--related-course a:hover img {
-        transform: scale(1.1);
+        transform: scale(1.04);
+    }
+    .card--related-course a:hover .image-container {
+        transform: scale(1.04);
     }
     .card--related-course a:hover .image-container:after {
         background-color: rgba(0, 0, 0, 0.1);
@@ -12474,13 +12488,19 @@ main table td em {
 
 .card--related-course a:after {
     content: '';
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--related-course a:after {
+        transition: none;
+    }
 }
 
 @media (hover: hover) {
@@ -12495,6 +12515,13 @@ main table td em {
     width: 4.75rem;
     overflow: hidden;
     position: relative;
+    transition: transform 0.3s ease-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--related-course a .image-container {
+        transition: none;
+    }
 }
 
 @media (min-width: 768px) {
@@ -12512,13 +12539,20 @@ main table td em {
     left: 0;
     position: absolute;
     top: 0;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in;
     width: 100%;
 }
 
 .card--related-course a .image-container img {
     height: 100%;
     width: 100%;
+    transition: transform 0.3s ease-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--related-course a .image-container img {
+        transition: none;
+    }
 }
 
 .card--related-course a .title {
@@ -12533,13 +12567,13 @@ main table td em {
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
-    background-image: linear-gradient(#1e1e1e, #1e1e1e);
+    background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 0.25rem;
     color: #696969;
     padding-bottom: 0.25rem;
-    transition: background-size 0.6s;
+    transition: background-size 0.6s ease-in;
 }
 
 .card--related-course a .title i,
@@ -12624,10 +12658,6 @@ main table td em {
     .card--related-course a .title {
         letter-spacing: -0.017em;
     }
-}
-
-.card--related-course a img {
-    transition: all 0.3s ease-in-out;
 }
 
 .card--related-course a .type {
