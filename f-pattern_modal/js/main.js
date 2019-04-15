@@ -4871,6 +4871,10 @@ function launchMenu(menu) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+
+
 
 
 /**
@@ -4895,23 +4899,23 @@ const className = 'modal-group';
 function launchModal() {
   let modalOpenTriggers = document.querySelectorAll('a.modal__trigger');
   let modalCloseTriggers = document.querySelectorAll('a.modal__close');
+  modalOpenTriggers.forEach(trigger => {
+    trigger.addEventListener('click', handleTriggerOpen, false);
+  });
+  modalCloseTriggers.forEach(trigger => {
+    trigger.addEventListener('click', handleTriggerClose, false);
+  });
 
-  for (let i = 0; i < modalOpenTriggers.length; i++) {
-    modalOpenTriggers[i].addEventListener('click', handleTriggerClick, false);
-  }
-
-  for (let i = 0; i < modalCloseTriggers.length; i++) {
-    modalCloseTriggers[i].addEventListener('click', handleTriggerClose, false);
-  }
-
-  function handleTriggerClick(e) {
+  function handleTriggerOpen(e) {
     e.preventDefault();
-    e.target.nextElementSibling.style.display = 'flex';
+    e.target.nextElementSibling.classList.remove('modal__popup--hidden');
+    e.target.nextElementSibling.classList.add('modal__popup--show');
   }
 
   function handleTriggerClose(e) {
     e.preventDefault();
-    e.target.parentNode.parentNode.style.display = 'none';
+    e.target.parentNode.parentNode.classList.remove('modal__popup--show');
+    e.target.parentNode.parentNode.classList.add('modal__popup--hidden');
   }
 }
 
