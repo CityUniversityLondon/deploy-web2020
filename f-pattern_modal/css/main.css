@@ -17486,6 +17486,7 @@ a.modal__close:active, a.modal__close:focus {
     border-bottom-color: #d8d8d8;
     border-bottom-width: 0.0625rem;
     color: #494949;
+    display: block;
     font-size: 1rem;
     margin-top: 2rem;
     padding: 0.75rem;
