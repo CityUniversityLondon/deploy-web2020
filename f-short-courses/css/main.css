@@ -12562,11 +12562,10 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    transition: none;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-column-gap: 1.25rem;
+    display: flex;
+    flex-direction: row;
     position: relative;
+    transition: none;
 }
 
 @media (hover: hover) {
@@ -12610,8 +12609,8 @@ main table td em {
         background-image: none;
     }
     .card--related-course a:hover .title {
-        color: #1e1e1e;
         background-size: 100% 0.2rem;
+        color: #1e1e1e;
     }
     .card--related-course a:hover img {
         transform: scale(1.1);
@@ -12809,43 +12808,43 @@ main table td em {
 }
 
 .card--related-course a .image-container {
-    overflow: hidden;
-    width: 3.25rem;
     height: 3.25rem;
+    overflow: hidden;
     position: relative;
+    width: 3.25rem;
 }
 
 @media (min-width: 769px) {
     .card--related-course a .image-container {
-        width: 8.5rem;
         height: 8.5rem;
+        width: 8.5rem;
     }
 }
 
 .card--related-course a .image-container:after {
+    background-color: transparent;
     content: '';
     display: block;
+    height: 100%;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
     transition: background-color 0.3s ease-in-out;
+    width: 100%;
 }
 
 .card--related-course a .image-container img {
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 
 .card--related-course a .title {
-    color: #696969;
-    padding-bottom: 0.25rem;
     background-image: linear-gradient(#1e1e1e, #1e1e1e);
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 0.2rem;
+    color: #696969;
+    padding-bottom: 0.25rem;
     transition: background-size 0.6s;
 }
 
@@ -19448,13 +19447,20 @@ button
 
 .short-course--short-course .short-course__related-courses .related-content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
     .short-course--short-course .short-course__related-courses .related-content {
-        flex-direction: column;
+        flex-direction: row;
     }
+    .short-course--short-course .short-course__related-courses .related-content .card + .card {
+        margin-left: 1rem;
+    }
+}
+
+.short-course--short-course .short-course__related-courses .related-content .card {
+    flex-grow: 1;
 }
 
 .short-course--short-course .short-course__related-courses h2 {
