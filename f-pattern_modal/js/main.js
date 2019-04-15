@@ -4893,7 +4893,9 @@ __webpack_require__.r(__webpack_exports__);
         </div>
     </div>
 **/
-const className = 'modal-group';
+const className = 'modal-group',
+      modalHiddenClass = 'modal__popup--hidden',
+      modalShowClass = 'modal__popup--show';
 
 function launchModal() {
   let modalOpenTriggers = document.querySelectorAll('a.modal__trigger');
@@ -4908,9 +4910,18 @@ function launchModal() {
     let keyCode = e.keyCode;
 
     if (keyCode === 27) {
-      let activeModal = document.getElementsByClassName('modal__popup--show')[0];
+      let activeModal = document.getElementsByClassName(modalShowClass)[0];
       closeModal(activeModal);
     }
+  });
+  document.addEventListener('click', e => {
+    e.target.classList.forEach(className => {
+      if (className === modalShowClass) {
+        let activeModal = document.getElementsByClassName(modalShowClass)[0];
+        closeModal(activeModal);
+        return;
+      }
+    });
   });
 }
 
@@ -4927,14 +4938,14 @@ const handleTriggerClose = e => {
 };
 
 const openModal = modal => {
-  modal.classList.remove('modal__popup--hidden');
-  modal.classList.add('modal__popup--show');
+  modal.classList.remove(modalHiddenClass);
+  modal.classList.add(modalShowClass);
   modal.focus();
 };
 
 const closeModal = modal => {
-  modal.classList.remove('modal__popup--show');
-  modal.classList.add('modal__popup--hidden');
+  modal.classList.remove(modalShowClass);
+  modal.classList.add(modalHiddenClass);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = ({
