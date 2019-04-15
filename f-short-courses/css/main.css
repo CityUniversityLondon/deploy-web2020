@@ -19615,13 +19615,6 @@ button
     }
 }
 
-@media screen and (max-width: 1440px) {
-    .js .short-course__content .tabs__links {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
 @media screen {
     .js .short-course__content .accordion {
         max-width: 80rem;
