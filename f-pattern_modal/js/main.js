@@ -4887,12 +4887,11 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
     <a href="#" class="modal__trigger">Open Modal</a>
-        <div class="modal__popup" display="none">
-            <div class="modal__content">
-                <span class="modal__close fas fa-times"></span>
-            </div>
+    <div class="modal__popup" display="none">
+        <div class="modal__content">
+            <span class="modal__close fas fa-times"></span>
         </div>
-    </a>
+    </div>
 **/
 const className = 'modal-group';
 
@@ -4905,19 +4904,38 @@ function launchModal() {
   modalCloseTriggers.forEach(trigger => {
     trigger.addEventListener('click', handleTriggerClose, false);
   });
+  document.addEventListener('keydown', e => {
+    let keyCode = e.keyCode;
 
-  function handleTriggerOpen(e) {
-    e.preventDefault();
-    e.target.nextElementSibling.classList.remove('modal__popup--hidden');
-    e.target.nextElementSibling.classList.add('modal__popup--show');
-  }
-
-  function handleTriggerClose(e) {
-    e.preventDefault();
-    e.target.parentNode.parentNode.classList.remove('modal__popup--show');
-    e.target.parentNode.parentNode.classList.add('modal__popup--hidden');
-  }
+    if (keyCode === 27) {
+      let activeModal = document.getElementsByClassName('modal__popup--show')[0];
+      closeModal(activeModal);
+    }
+  });
 }
+
+const handleTriggerOpen = e => {
+  e.preventDefault();
+  let modalPopup = e.target.nextElementSibling;
+  openModal(modalPopup);
+};
+
+const handleTriggerClose = e => {
+  e.preventDefault();
+  let modalPopup = e.target.parentNode.parentNode;
+  closeModal(modalPopup);
+};
+
+const openModal = modal => {
+  modal.classList.remove('modal__popup--hidden');
+  modal.classList.add('modal__popup--show');
+  modal.focus();
+};
+
+const closeModal = modal => {
+  modal.classList.remove('modal__popup--show');
+  modal.classList.add('modal__popup--hidden');
+};
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchModal,
