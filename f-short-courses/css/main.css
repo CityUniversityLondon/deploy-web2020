@@ -19540,30 +19540,7 @@ button
 }
 
 .short-course--short-course .short-course__video {
-    grid-row-gap: 0;
-    display: grid;
     max-width: 80rem;
-}
-
-@media (max-width: 432px) {
-    .short-course--short-course .short-course__video {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .short-course--short-course .short-course__video {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .short-course--short-course .short-course__video {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
 }
 
 @media (min-width: 1441px) {
@@ -19578,28 +19555,6 @@ button
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
-}
-
-@media (max-width: 432px) {
-    .short-course--short-course .short-course__video {
-        grid-template-areas: 'video video video video video video';
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .short-course--short-course .short-course__video {
-        grid-template-areas: 'video video video video video video video video video video video video';
-    }
-}
-
-@media (min-width: 901px) {
-    .short-course--short-course .short-course__video {
-        grid-template-areas: 'video video video video video video video video video video video video video video video video video video';
-    }
-}
-
-.short-course--short-course .short-course__video .embedded-video {
-    grid-area: video;
 }
 
 @media screen {
