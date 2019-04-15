@@ -17412,8 +17412,8 @@ a.modal__close {
     cursor: pointer;
     padding: 0.75rem;
     position: absolute;
-    right: 0.25rem;
-    top: 0.25rem;
+    right: 1px;
+    top: 1px;
 }
 
 a.modal__close:focus, a.modal__close:active {
@@ -17432,14 +17432,16 @@ a.modal__close:hover {
     a.modal__close:hover {
         background-color: #f2f2f2;
         color: #1e1e1e;
-        transform: scale(1.2);
     }
+}
+
+a.modal__close:hover:before {
+    font-size: 1.075em;
 }
 
 a.modal__close:active {
     background-color: #f2f2f2;
     color: #1e1e1e;
-    transform: scale(1.2);
     border: none;
     border-bottom-width: 0;
     border-bottom-color: transparent;
