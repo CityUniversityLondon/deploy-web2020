@@ -17343,6 +17343,13 @@ button
     height: 70%;
 }
 
+@media (max-width: 767px) {
+    .banner__group__overlay {
+        position: relative;
+        height: 100%;
+    }
+}
+
 .banner__group__overlay__heading {
     position: absolute;
     margin-left: 7rem;
@@ -17354,6 +17361,28 @@ button
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     width: 54ch;
     font-size: 2.5rem;
+}
+
+@media (max-width: 1439px) {
+    .banner__group__overlay__heading h1 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner__group__overlay__heading {
+        margin: 0 2rem;
+    }
+    .banner__group__overlay__heading h1 {
+        font-size: 1.5em;
+        width: 100%;
+    }
+}
+
+@media (max-width: 431px) {
+    .banner__group__overlay__heading h1 {
+        font-size: 1em;
+    }
 }
 
 .generic {
