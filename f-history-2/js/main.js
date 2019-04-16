@@ -1812,6 +1812,136 @@ __webpack_require__(/*! ./_fix-re-wks */ "./node_modules/core-js/modules/_fix-re
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/es6.regexp.replace.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/modules/es6.regexp.replace.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/core-js/modules/_an-object.js");
+var toObject = __webpack_require__(/*! ./_to-object */ "./node_modules/core-js/modules/_to-object.js");
+var toLength = __webpack_require__(/*! ./_to-length */ "./node_modules/core-js/modules/_to-length.js");
+var toInteger = __webpack_require__(/*! ./_to-integer */ "./node_modules/core-js/modules/_to-integer.js");
+var advanceStringIndex = __webpack_require__(/*! ./_advance-string-index */ "./node_modules/core-js/modules/_advance-string-index.js");
+var regExpExec = __webpack_require__(/*! ./_regexp-exec-abstract */ "./node_modules/core-js/modules/_regexp-exec-abstract.js");
+var max = Math.max;
+var min = Math.min;
+var floor = Math.floor;
+var SUBSTITUTION_SYMBOLS = /\$([$&`']|\d\d?|<[^>]*>)/g;
+var SUBSTITUTION_SYMBOLS_NO_NAMED = /\$([$&`']|\d\d?)/g;
+
+var maybeToString = function (it) {
+  return it === undefined ? it : String(it);
+};
+
+// @@replace logic
+__webpack_require__(/*! ./_fix-re-wks */ "./node_modules/core-js/modules/_fix-re-wks.js")('replace', 2, function (defined, REPLACE, $replace, maybeCallNative) {
+  return [
+    // `String.prototype.replace` method
+    // https://tc39.github.io/ecma262/#sec-string.prototype.replace
+    function replace(searchValue, replaceValue) {
+      var O = defined(this);
+      var fn = searchValue == undefined ? undefined : searchValue[REPLACE];
+      return fn !== undefined
+        ? fn.call(searchValue, O, replaceValue)
+        : $replace.call(String(O), searchValue, replaceValue);
+    },
+    // `RegExp.prototype[@@replace]` method
+    // https://tc39.github.io/ecma262/#sec-regexp.prototype-@@replace
+    function (regexp, replaceValue) {
+      var res = maybeCallNative($replace, regexp, this, replaceValue);
+      if (res.done) return res.value;
+
+      var rx = anObject(regexp);
+      var S = String(this);
+      var functionalReplace = typeof replaceValue === 'function';
+      if (!functionalReplace) replaceValue = String(replaceValue);
+      var global = rx.global;
+      if (global) {
+        var fullUnicode = rx.unicode;
+        rx.lastIndex = 0;
+      }
+      var results = [];
+      while (true) {
+        var result = regExpExec(rx, S);
+        if (result === null) break;
+        results.push(result);
+        if (!global) break;
+        var matchStr = String(result[0]);
+        if (matchStr === '') rx.lastIndex = advanceStringIndex(S, toLength(rx.lastIndex), fullUnicode);
+      }
+      var accumulatedResult = '';
+      var nextSourcePosition = 0;
+      for (var i = 0; i < results.length; i++) {
+        result = results[i];
+        var matched = String(result[0]);
+        var position = max(min(toInteger(result.index), S.length), 0);
+        var captures = [];
+        // NOTE: This is equivalent to
+        //   captures = result.slice(1).map(maybeToString)
+        // but for some reason `nativeSlice.call(result, 1, result.length)` (called in
+        // the slice polyfill when slicing native arrays) "doesn't work" in safari 9 and
+        // causes a crash (https://pastebin.com/N21QzeQA) when trying to debug it.
+        for (var j = 1; j < result.length; j++) captures.push(maybeToString(result[j]));
+        var namedCaptures = result.groups;
+        if (functionalReplace) {
+          var replacerArgs = [matched].concat(captures, position, S);
+          if (namedCaptures !== undefined) replacerArgs.push(namedCaptures);
+          var replacement = String(replaceValue.apply(undefined, replacerArgs));
+        } else {
+          replacement = getSubstitution(matched, S, position, captures, namedCaptures, replaceValue);
+        }
+        if (position >= nextSourcePosition) {
+          accumulatedResult += S.slice(nextSourcePosition, position) + replacement;
+          nextSourcePosition = position + matched.length;
+        }
+      }
+      return accumulatedResult + S.slice(nextSourcePosition);
+    }
+  ];
+
+    // https://tc39.github.io/ecma262/#sec-getsubstitution
+  function getSubstitution(matched, str, position, captures, namedCaptures, replacement) {
+    var tailPos = position + matched.length;
+    var m = captures.length;
+    var symbols = SUBSTITUTION_SYMBOLS_NO_NAMED;
+    if (namedCaptures !== undefined) {
+      namedCaptures = toObject(namedCaptures);
+      symbols = SUBSTITUTION_SYMBOLS;
+    }
+    return $replace.call(replacement, symbols, function (match, ch) {
+      var capture;
+      switch (ch.charAt(0)) {
+        case '$': return '$';
+        case '&': return matched;
+        case '`': return str.slice(0, position);
+        case "'": return str.slice(tailPos);
+        case '<':
+          capture = namedCaptures[ch.slice(1, -1)];
+          break;
+        default: // \d\d?
+          var n = +ch;
+          if (n === 0) return match;
+          if (n > m) {
+            var f = floor(n / 10);
+            if (f === 0) return match;
+            if (f <= m) return captures[f - 1] === undefined ? ch.charAt(1) : captures[f - 1] + ch.charAt(1);
+            return match;
+          }
+          capture = captures[n - 1];
+      }
+      return capture === undefined ? '' : capture;
+    });
+  }
+});
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/es6.regexp.search.js":
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.search.js ***!
@@ -3737,11 +3867,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns/cms-editor-warning/cms-editor-warning */ "./src/patterns/cms-editor-warning/cms-editor-warning.js");
 /* harmony import */ var _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/cookie-notice/cookie-notice */ "./src/patterns/cookie-notice/cookie-notice.js");
 /* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
-/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
-/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
-/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
+/* harmony import */ var _patterns_history_history__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/history/history */ "./src/patterns/history/history.js");
+/* harmony import */ var _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-paginated */ "./src/patterns/key-info-box/key-info-paginated.js");
+/* harmony import */ var _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-slider */ "./src/patterns/key-info-box/key-info-slider.js");
+/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
+/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
+/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
+/* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
+/* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
 
 
 /**
@@ -3762,7 +3897,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_8__["default"]]);
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_history_history__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"]]);
 
 /***/ }),
 
@@ -3813,7 +3953,27 @@ const className = 'accordion',
 
 function setSection(heading, open) {
   heading.dataset.open = open;
+  heading.setAttribute('tabindex', '1');
   heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+  let bodyLinks = heading.nextElementSibling.getElementsByTagName('a');
+
+  if (open) {
+    heading.nextElementSibling.classList.add('active');
+    let bodyHeight = heading.nextElementSibling.scrollHeight;
+    let bodyHeightRem = Object(_util__WEBPACK_IMPORTED_MODULE_4__["pxToRem"])(bodyHeight);
+    heading.nextElementSibling.style.maxHeight = parseInt(bodyHeightRem + 5) + 'rem';
+
+    for (const bodyLink of bodyLinks) {
+      bodyLink.setAttribute('tabindex', '1');
+    }
+  } else {
+    heading.nextElementSibling.classList.remove('active');
+    heading.nextElementSibling.style.maxHeight = null;
+
+    for (const bodyLink of bodyLinks) {
+      bodyLink.setAttribute('tabindex', '-1');
+    }
+  }
 }
 /**
  * Respond to button clicks - open if closed, close if open.
@@ -3930,6 +4090,110 @@ function launchAccordion(accordion) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchAccordion,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/back-to-top-link/back-to-top-link.js":
+/*!***********************************************************!*\
+  !*** ./src/patterns/back-to-top-link/back-to-top-link.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+/**
+ * Back To Top Link Scroll
+ *
+ * @module patterns/external-link-finder/external-link-finder
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+/**
+ *  Back to top link button only appears on long pages and when you have scrolled down long enough
+ *
+ */
+const className = 'back-to-top',
+      viewPortHeight = window.innerHeight,
+      // calculates viewport height
+docHeight = document.documentElement.scrollHeight; // calculates page height
+
+/**
+ *  Parameters
+ *
+ */
+
+const pageHeight = 1.5; // only appears on long pages which are 'X' times the viewport height
+
+const scrollPos = 1; // sets how many viewport heights you need to scroll down for back to top to appear
+
+/**
+ *  Initialises for long pages only
+ *
+ */
+
+function initBacktoTop() {
+  const scrollToTopBut = document.getElementsByClassName('back-to-top')[0].querySelectorAll('a')[0];
+
+  if (docHeight > viewPortHeight * pageHeight) {
+    scrollToTopBut.style.opacity = 0;
+    scrollToTopBut.classList.add('back-to-top-stick');
+
+    window.onscroll = function () {
+      updateProgress();
+      scrollButtonShow();
+    };
+  }
+}
+/**
+ *  Button fading behaviour
+ *
+ */
+
+
+function scrollButtonShow() {
+  const scrollToTopBut = document.getElementsByClassName('back-to-top')[0].querySelectorAll('a')[0];
+  let screenPos = window.pageYOffset; // calculates scroll position
+
+  if (screenPos > viewPortHeight * scrollPos) {
+    // shows button when scrolled down far enough - see parameters
+    scrollToTopBut.classList.add('back-to-top-show');
+  } else if (screenPos < 200) {
+    // hides button when close to top of the page
+    scrollToTopBut.classList.remove('back-to-top-show');
+  }
+}
+/**
+ *  Progress meter:
+ *
+ */
+// updateProgress function
+
+
+function updateProgress() {
+  // Setting up SVG animation
+  const progressPath = document.querySelector('path');
+  const pathLength = progressPath.getTotalLength();
+  progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+  progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+  progressPath.style.strokeDashoffset = pathLength;
+  progressPath.getBoundingClientRect();
+  progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 0ms linear'; // Calculate values
+
+  let scroll = window.pageYOffset;
+  let height = document.documentElement.scrollHeight - window.innerHeight;
+  let progress = pathLength - scroll * pathLength / height; // Updates progress bar
+
+  progressPath.style.strokeDashoffset = progress;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: initBacktoTop,
   launchQuery: `.${className}`
 });
 
@@ -4124,6 +4388,62 @@ function devcorate(elem, param, value) {
 
 /***/ }),
 
+/***/ "./src/patterns/external-link-finder/external-link-finder.js":
+/*!*******************************************************************!*\
+  !*** ./src/patterns/external-link-finder/external-link-finder.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+
+
+
+
+/**
+ * External Link Finder
+ *
+ * @module patterns/external-link-finder/external-link-finder
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+/**
+ *  Finds external links and adds font awesome icon to indicate external link
+ *
+ */
+const className = 'content';
+
+function findExternalLink() {
+  var anchors = document.getElementsByClassName('content')[0].querySelectorAll('a');
+  anchors.forEach(function (i) {
+    /** checks if anchors links are :
+     * external
+     * not an image
+     * not contain font awesome icon already
+     * not a CTA
+     * not an email hyperlink
+     */
+    if (i.origin !== window.location.origin && i.querySelectorAll('img').length < 1 && i.querySelectorAll('.fa-external-link').length < 1 && !i.parentElement.className.includes('cta-block') && i.href.indexOf('mailto:')) {
+      // adds font awesome external link icon after completing checks
+      var node = document.createElement('span');
+      node.className = 'fa fa-external-link inline-external-link ';
+      node.setAttribute('aria-hidden', 'true');
+      i.appendChild(node);
+    }
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: findExternalLink,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
 /***/ "./src/patterns/feedback/feedback.js":
 /*!*******************************************!*\
   !*** ./src/patterns/feedback/feedback.js ***!
@@ -4235,6 +4555,662 @@ function launchFeedback(elem) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchFeedback,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/history/history.js":
+/*!*****************************************!*\
+  !*** ./src/patterns/history/history.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.regexp.replace */ "./node_modules/core-js/modules/es6.regexp.replace.js");
+/* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.regexp.split */ "./node_modules/core-js/modules/es6.regexp.split.js");
+/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../key-info-box/key-info-paginated */ "./src/patterns/key-info-box/key-info-paginated.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+/**
+ * History - build URL on dynamic content pages
+ *
+ * @module patterns/history/history
+ * @author Mark Skinsley <mark.skinsley@city.ac.uk>
+ * @copyright City, University of London 2019
+ */
+
+
+
+let batchNumber = 3;
+const className = 'dynamic';
+let loadMoreButton = document.querySelector('.content-toggle button'),
+    urlHash = window.location.hash.substr(1),
+    listingPosition = ''; // Blank by default for non-hashed URLs
+// Zen scroll setup
+
+zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.setup(_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["defaultDuration"], _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["edgeOffset"]);
+/**
+ * Control what elements should display in listing.
+ *
+ * @param {HTMLElement[]} elems - All elements in group of listings.
+ * @param {number} maxVisible - Maximum number of elements that should be visible at any one time.
+ * @param {number} targetElemIndex - Index value of element to scroll to.
+ */
+
+function showHideItems(elems, maxVisible, targetElemIndex) {
+  for (const elem of elems.entries()) {
+    // Only look at listings within max listings range
+    if (elem[0] < maxVisible) {
+      // Hide 'load more' button if user at the end of all listings
+      if (maxVisible > elems.length) {
+        loadMoreButton.style.display = 'none';
+      }
+
+      if (elem[1].classList.contains('hide')) {
+        elem[1].classList.remove('hide');
+      } // Add focus to first element in new batch. Disable for original page load.
+
+
+      if (elem[0] == targetElemIndex && !(targetElemIndex < batchNumber)) {
+        let scrollTarget = elem[1];
+        scrollTarget.focus();
+      } else if (elem[0] == targetElemIndex && targetElemIndex == 1) {
+        let scrollTarget1 = elem[1];
+        scrollTarget1.focus();
+      }
+    }
+  }
+}
+/**
+ * Build URL on each 'Load more' click, e.g. => '#keyinfoabc123-listing4
+ * Include ID of parent wrapper and position of first new listing in each batch loaded.
+ *
+ * @param {number} loadMoreClicks - Number of 'Load more' clicks.
+ * @param {string} groupType - Pattern type ID of parent wrapper.
+ * @param {string} groupTypeClass - Class name of parent wrapper.
+ * @param {string} itemType - Descriptive string that will be passed to the URL, e.g. 'listing'.
+ * @param {string} itemTypeClass - Class name of child elements being shown/hidden.
+ *
+ */
+
+
+function buildDynamicUrl(loadMoreClicks, groupType, groupTypeClass, itemType, itemTypeClass) {
+  // By default, target area of the page with matching wrapper
+  let parentWrapper = loadMoreButton.closest(groupTypeClass); // scroll.to(parentWrapper);
+
+  let parentWrapperId = parentWrapper.getAttribute('id'); // let firstItem;
+
+  let items = parentWrapper.querySelectorAll(itemTypeClass);
+
+  for (const item of items.entries()) {
+    item[1].setAttribute('tabindex', '1');
+
+    if (item[0] == 0) {// firstItem = item[1];
+    }
+  } // Load hashed page directly, i.e. no browser back click
+
+
+  if (urlHash) {
+    // Calcuate position in listings based on hashed URL parameters
+    let urlHashParts = urlHash.split('-');
+    parentWrapperId = urlHashParts[0];
+    let listingId = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_4__["numberFromString"])(urlHashParts[1]));
+    listingPosition += batchNumber;
+    let visibleBatches = Math.floor(listingId / batchNumber);
+    let remainders = listingId % batchNumber;
+    /**
+     * Remainders condition ensures next batch always shows so browser
+     * can scroll to a visible listing, instead of targeting hidden content
+     */
+
+    remainders ? visibleBatches += 1 : null;
+    let totalVisibleListings = visibleBatches * batchNumber;
+    parentWrapper = parentWrapperId.replace(groupType, '');
+    parentWrapper = document.getElementById(parentWrapper);
+    showHideItems(items, totalVisibleListings, listingId - 1);
+    loadMoreButton.addEventListener('click', () => {
+      listingId += batchNumber;
+      visibleBatches += 1;
+      totalVisibleListings = visibleBatches * batchNumber;
+      showHideItems(items, totalVisibleListings, listingId - 1);
+      const updateListingPosition = new Promise(resolve => {
+        resolve(listingPosition = (visibleBatches - 1) * batchNumber + 1);
+      });
+      updateListingPosition.then(() => {
+        history.replaceState('', '', `#${parentWrapperId}-${itemType}${listingPosition}`);
+      });
+    });
+    /**
+     * Put number of visible batches in local storage so this can be
+     * accessed on browser back click
+     **/
+
+    localStorage.setItem('storageListingPosition', `${visibleBatches}`); // Regular page load, i.e. no hash and no browser back click
+  } else {
+    let visibleBatches = 1;
+    let listingId = 0;
+    let totalVisibleListings = visibleBatches * batchNumber; // showHideItems(items, totalVisibleListings, listingId);
+
+    loadMoreButton.addEventListener('click', () => {
+      listingId += batchNumber;
+      loadMoreClicks += 1;
+      totalVisibleListings += batchNumber;
+      let latestUrlHash = window.location.hash.substr(1);
+      /**
+       * If hash exists, replace state to prevent history stack building further.
+       * Allows for single browser back click from hashed URL to default view.
+       *  */
+
+      if (latestUrlHash) {
+        // console.log('There is a URL hash at this stage');
+        // console.log('listing position: ' + listingPosition);
+        const updateListingPosition = new Promise(resolve => {
+          resolve(listingPosition = loadMoreClicks * batchNumber + 1);
+        });
+        updateListingPosition.then(() => {
+          history.replaceState('', '', `#${groupType}${parentWrapperId}-${itemType}${listingPosition}`);
+        }); //  console.log(items);
+
+        showHideItems(items, totalVisibleListings, listingId); // When no hash in URL, push listing ID to history stack
+      } else {
+        showHideItems(items, totalVisibleListings, listingId);
+
+        window.onpopstate = () => {
+          if (!urlHash) {
+            let abc123 = document.getElementById('abc123');
+            zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.to(abc123);
+            totalVisibleListings = batchNumber;
+            listingId = 1;
+
+            for (const item of items.entries()) {
+              if (item[0] > batchNumber - 1) {
+                item[1].classList.add('hide');
+                item[1].style.display = 'none';
+              } else {
+                item[1].classList.remove('hide');
+              }
+            }
+
+            loadMoreButton.addEventListener('click', () => {
+              for (const item of items.entries()) {
+                item[1].classList.add('hide');
+                item[1].style.display = 'none';
+              }
+            });
+            showHideItems(items, totalVisibleListings, listingId);
+          }
+        };
+
+        totalVisibleListings = totalVisibleListings - batchNumber;
+        listingPosition = batchNumber * 1 + 1;
+        showHideItems(items, batchNumber * 2, listingPosition);
+        history.pushState('', '', `#${groupType}${parentWrapperId}-${itemType}${listingPosition}`);
+      }
+    }); // When user navigates back/forward to page, use listing position stored locally
+
+    localStorage.setItem('storageListingPosition', `${loadMoreClicks}`);
+  }
+} // Target element using 'load more' functionality
+
+
+function loadMore() {
+  let counter = 0;
+
+  if (_util__WEBPACK_IMPORTED_MODULE_4__["browserBackForward"] && urlHash) {
+    let storageListingPosition = parseInt(localStorage.getItem('storageListingPosition'));
+    buildDynamicUrl(storageListingPosition, 'keyinfo', '.dynamic--load-more', 'listing', '.key-info__listing');
+  } else {
+    localStorage.clear();
+    buildDynamicUrl(counter, 'keyinfo', '.dynamic--load-more', 'listing', '.key-info__listing');
+  }
+} // Detect what type of dynamic pattern is being used, e.g. 'Load more'
+
+
+function dynamicContentType() {
+  let dynamicElementWrapper = document.querySelector('.dynamic');
+
+  if (dynamicElementWrapper.classList.contains('dynamic--load-more')) {
+    loadMore();
+  }
+}
+
+dynamicContentType();
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/key-info-box/key-info-paginated.js":
+/*!*********************************************************!*\
+  !*** ./src/patterns/key-info-box/key-info-paginated.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+/**
+ * Key information box
+ *
+ * @module patterns/key-info-box/key-info-box
+ * @author Mark Skinsley <mark.skinsley@city.ac.uk>
+ * @copyright City, University of London 2018
+ */
+
+const className = 'key-info-paginated';
+let listings = document.querySelectorAll('.key-info__listing'),
+    batchQuantity = 3,
+    contentToggles = document.querySelectorAll('.content-toggle'),
+    browserWidth = document.documentElement.scrollWidth,
+    listingDates = document.querySelectorAll('.key-info__date'),
+    listingsVisible = [],
+    listingsLength = [],
+    defaultDuration = 2000,
+    edgeOffset = 100; // Zen scroll setup
+
+zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
+
+function dateTabIndex() {
+  for (const listingDate of listingDates) {
+    listingDate.setAttribute('tabindex', '-1');
+  }
+} // Visible listings: needed to decide if more content still to be loaded.
+
+
+function calculateVisibleListings() {
+  listingsVisible = [];
+
+  for (const listing of listings) {
+    if (!listing.classList.contains('hide')) {
+      listingsVisible.push(listing);
+    }
+  }
+} // Mobile: Show listing entry based on navigation button clicks
+
+
+function listingDisplay() {
+  for (const listing of listings.entries()) {
+    listing[1].setAttribute('data-id', `listing-${listing[0]}`);
+  }
+} // Initial listings display
+
+
+function defaultListingsDisplay() {
+  listingsLength = [];
+
+  for (const listing of listings.entries()) {
+    listingsLength.push(listings.length);
+    listing[0] > batchQuantity - 1 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
+  }
+} // Show number of available starting dates.
+
+
+function listingsQuantity() {
+  const listingsNumber = [];
+
+  for (const listing of listings.entries()) {
+    listingsNumber.push(listing.length);
+  }
+
+  let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
+
+  for (const datesQuantity of datesQuantities) {
+    let date;
+    listingsNumber.length == 1 ? date = 'date' : date = 'dates';
+    let iconWrapper = document.createElement('div');
+    iconWrapper.classList.add('key-info__icon--left');
+    datesQuantity.appendChild(iconWrapper);
+    let calendarIcon = document.createElement('span');
+    calendarIcon.classList.add('fas');
+    calendarIcon.classList.add('fa-calendar-day');
+    iconWrapper.appendChild(calendarIcon);
+    let iconTextDiv = document.createElement('div');
+    iconWrapper.appendChild(iconTextDiv);
+    let iconTextP = document.createElement('p');
+    iconTextP.appendChild(document.createTextNode(listingsNumber.length + ' available start ' + date));
+    iconTextDiv.appendChild(iconTextP);
+  }
+}
+
+function launchKeyInfo(batchQuantity) {
+  dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
+
+  if (browserWidth > 768) {
+    if (listings.length > batchQuantity) {
+      listingDisplay();
+      defaultListingsDisplay();
+      calculateVisibleListings();
+
+      for (const contentToggle of contentToggles) {
+        contentToggle.addEventListener('click', e => {
+          // This will increase with each 'Load more' click, so visible listings
+          // must be captured before any further listings are made visible
+          let preExpandListingsVisible = listingsVisible.length;
+          e.preventDefault();
+
+          if (preExpandListingsVisible < listings.length) {
+            for (const listing of listings.entries()) {
+              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
+              let listingsVisibleLength = parseInt(listingsVisible.length);
+              listingsLength = parseInt(listingsLength);
+              let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
+
+              zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200);
+              let targetListingDate = targetListing.querySelectorAll('.key-info__date'); // Final batch of listings, zen scroll to 'load more' button and offset
+
+              if (remainingItems <= batchQuantity) {
+                zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(contentToggle, 200);
+                contentToggles[0].style.display = 'none';
+              }
+
+              targetListingDate[0].focus(); // Bring in newly visible listings in two phases to allow for opacity transition
+
+              if (listing[0] < preExpandListingsVisible + batchQuantity) {
+                const promise = new Promise(resolve => {
+                  resolve(listing[1].style.display = 'grid');
+                });
+                promise.then(() => {
+                  listing[1].classList.remove('hide');
+                }); // Calculating visible listings must run here after display properties are updated
+
+                promise.then(() => {
+                  calculateVisibleListings();
+                });
+              }
+            }
+          }
+        }, false);
+      }
+    } else {
+      contentToggles[0].style.display = 'none';
+    } // Mobile: one listing visible at a time
+
+  } else if (browserWidth < 768 && listings.length > 1) {
+    let listWrapper = document.getElementById('short-course-key-info-listings');
+    listWrapper.classList.add('paginated-list'); // Scroll to top of listings after each paginated index click
+
+    let paginationControls = document.querySelectorAll('.pagination__controls > button');
+
+    for (const paginationControl of paginationControls) {
+      paginationControl.addEventListener('click', () => {
+        let listingsTop = document.getElementById('short-course-key-info-listings');
+
+        if (paginationControl.getAttribute('aria-expanded') !== true) {
+          zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(listingsTop, 0);
+        }
+      });
+    }
+  } else if (browserWidth < 768 && listings.length == 1) {
+    for (const listing of listings.entries()) {
+      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
+    }
+  }
+}
+
+function launchKeyInfoPaginated() {
+  listingsQuantity();
+  launchKeyInfo(batchQuantity);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchKeyInfoPaginated,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/key-info-box/key-info-slider.js":
+/*!******************************************************!*\
+  !*** ./src/patterns/key-info-box/key-info-slider.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+
+
+/**
+ * Key information box
+ *
+ * @module patterns/key-info-box/key-info-box
+ * @author Mark Skinsley <mark.skinsley@city.ac.uk>
+ * @copyright City, University of London 2019
+ */
+
+
+const className = 'key-info-slider';
+let listings = document.querySelectorAll('.key-info__listing'),
+    batchQuantity = 3,
+    contentToggles = document.querySelectorAll('.content-toggle'),
+    contentSliders = document.querySelectorAll('.content-slider'),
+    browserWidth = document.documentElement.scrollWidth,
+    prevBtn = document.getElementById('key-info-previous-item'),
+    nextBtn = document.getElementById('key-info-next-item'),
+    listingHeight = '',
+    listingDates = document.querySelectorAll('.key-info__date'),
+    listingsVisible = [],
+    listingsLength = [],
+    defaultDuration = 2000,
+    edgeOffset = 100; // Zen scroll setup
+
+zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
+
+function dateTabIndex() {
+  for (const listingDate of listingDates) {
+    listingDate.setAttribute('tabindex', '-1');
+  }
+} // Initial listings display
+
+
+function defaultListingsDisplay() {
+  listingsLength = [];
+
+  for (const listing of listings.entries()) {
+    listingsLength.push(listings.length);
+    listing[0] > batchQuantity - 1 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
+  }
+} // Visible listings: needed to decide if more content still to be loaded.
+
+
+function calculateVisibleListings() {
+  listingsVisible = [];
+
+  for (const listing of listings) {
+    if (!listing.classList.contains('hide')) {
+      listingsVisible.push(listing);
+    }
+  }
+} // Show number of listings in data set
+
+
+function listingsQuantity() {
+  const listingsNumber = [];
+
+  for (const listing of listings.entries()) {
+    listingsNumber.push(listing.length);
+  }
+
+  let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
+
+  for (const datesQuantity of datesQuantities) {
+    let date;
+    listingsNumber.length == 1 ? date = 'date' : date = 'dates';
+    let iconWrapper = document.createElement('div');
+    iconWrapper.classList.add('key-info__icon--left');
+    datesQuantity.appendChild(iconWrapper);
+    let calendarIcon = document.createElement('span');
+    calendarIcon.classList.add('fas');
+    calendarIcon.classList.add('fa-calendar-day');
+    iconWrapper.appendChild(calendarIcon);
+    let iconTextDiv = document.createElement('div');
+    iconWrapper.appendChild(iconTextDiv);
+    let iconTextP = document.createElement('p');
+    iconTextP.appendChild(document.createTextNode(listingsNumber.length + ' available start ' + date));
+    iconTextDiv.appendChild(iconTextP);
+  }
+}
+/**
+ * Launches Key Info slider pattern. Pass in how many listings should display per batch,
+ * i.e. each time user selects 'Load more'.
+ *  */
+
+
+function launchKeyInfo(batchQuantity) {
+  let counter = 0; // Mobile: Show listing entry based on navigation button clicks
+
+  function listingDisplay() {
+    for (const listing of listings.entries()) {
+      if (browserWidth < 768 && listings.length > 1) {
+        listing[0] == counter ? listing[1].style.display = 'block' : listing[1].style.display = 'none';
+      }
+
+      listing[1].setAttribute('data-id', `listing-${listing[0]}`);
+    }
+  } // Mobile: Enable/disable navigation buttons based on position of listing in collection
+
+
+  function navBtnState() {
+    for (const contentSlider of contentSliders) {
+      contentSlider.style.display = 'block';
+    }
+
+    let listingsLength = listings.length - 1;
+    counter == 0 ? (prevBtn.setAttribute('disabled', true), nextBtn.removeAttribute('disabled')) : counter > 0 && counter < listingsLength ? (prevBtn.removeAttribute('disabled'), nextBtn.removeAttribute('disabled')) : (nextBtn.setAttribute('disabled', true), prevBtn.removeAttribute('disabled'));
+  } // Mobile: Set mobile listings navigation buttons to correct position based on listing height
+
+
+  function navBtnPosition() {
+    for (const listing of listings.entries()) {
+      if (counter == listing[0]) {
+        listingHeight = listing[1].getAttribute('data-height');
+        prevBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(`-${listingHeight}`)) + Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(100) + 'rem';
+        nextBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(`-${listingHeight}`)) + Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(100) + 'rem';
+      }
+    }
+  } // Run regardless of viewport size
+
+
+  dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
+
+  if (browserWidth > 768) {
+    if (listings.length > batchQuantity) {
+      listingDisplay();
+      defaultListingsDisplay();
+      calculateVisibleListings();
+
+      for (const contentToggle of contentToggles) {
+        contentToggle.addEventListener('click', e => {
+          // This will increase with each 'Load more' click, so visible listings
+          // must be captured before any further listings are made visible
+          let preExpandListingsVisible = listingsVisible.length;
+          e.preventDefault();
+
+          if (preExpandListingsVisible < listings.length) {
+            for (const listing of listings.entries()) {
+              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
+              let listingsVisibleLength = parseInt(listingsVisible.length);
+              listingsLength = parseInt(listingsLength);
+              let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
+
+              zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200);
+              let targetListingDate = targetListing.querySelectorAll('.key-info__date'); // Final batch of listings, zen scroll to 'load more' button and offset
+
+              if (remainingItems <= batchQuantity) {
+                zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(contentToggle, 0);
+                contentToggles[0].style.display = 'none';
+              }
+
+              targetListingDate[0].focus(); // Bring in newly visible listings in two phases to allow for opacity transition
+
+              if (listing[0] < preExpandListingsVisible + batchQuantity) {
+                const promise = new Promise(resolve => {
+                  resolve(listing[1].style.display = 'grid');
+                });
+                promise.then(() => {
+                  listing[1].classList.remove('hide');
+                }); // Calculating visible listings must run here after display properties are updated
+
+                promise.then(() => {
+                  calculateVisibleListings();
+                });
+              }
+            }
+          }
+        }, false);
+      }
+    } else {
+      contentToggles[0].style.display = 'none';
+    } // Mobile: one listing visible at a time
+
+  } else if (browserWidth < 768 && listings.length > 1) {
+    for (const listing of listings.entries()) {
+      // Capture listing height and set to data attribute
+      listing[1].style.display = 'block';
+      listing[1].setAttribute('data-height', listing[1].offsetHeight);
+      listing[1].style.display = 'none'; // On load, set mobile navigation buttons at correct height
+
+      counter == 0 && listing[0] == 0 ? navBtnPosition() : null;
+      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
+    }
+
+    navBtnState();
+    prevBtn.addEventListener('click', () => {
+      counter = counter - 1;
+      navBtnState();
+      navBtnPosition();
+      listingDisplay();
+    });
+    nextBtn.addEventListener('click', () => {
+      counter = counter + 1;
+      navBtnState();
+      navBtnPosition();
+      listingDisplay();
+    });
+  } else if (browserWidth < 768 && listings.length == 1) {
+    for (const listing of listings.entries()) {
+      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
+    }
+  }
+}
+
+function launchKeyInfoSlider() {
+  listingsQuantity();
+  launchKeyInfo(batchQuantity);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchKeyInfoSlider,
   launchQuery: `.${className}`
 });
 
@@ -5218,10 +6194,10 @@ function toggleLink(link, selected) {
   link.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].selected, selected);
 
   if (selected) {
-    link.removeAttribute('tabindex');
+    //link.removeAttribute('tabindex');
     link.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current, true);
   } else {
-    link.setAttribute('tabindex', -1);
+    link.setAttribute('tabindex', 0);
     link.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current);
   }
 }
@@ -5356,7 +6332,7 @@ function prepareLinks(linkItems) {
 function preparePanels(panels) {
   panels.forEach(panel => {
     panel.setAttribute('role', 'tabpanel');
-    panel.setAttribute('tabindex', -1);
+    panel.setAttribute('tabindex', 0);
     panel.toggleAttribute('hidden', true);
   });
 }
@@ -5431,8 +6407,12 @@ function launchTabs(tabs) {
     return;
   }
 
-  controls.setAttribute('role', 'tablist');
-  preparePanels(panels);
+  controls.setAttribute('role', 'tablist'); // zero by passes by not using CSS styling on the tabs
+
+  if (tabs.getAttribute('data-mobiletabs') > 0) {
+    preparePanels(panels);
+  }
+
   const idLinked = prepareLinks(linkItems);
 
   if (linkItems.length > Number.parseInt(tabs.dataset.mobiletabs)) {
@@ -5552,7 +6532,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5565,6 +6545,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "objectToParameters", function() { return objectToParameters; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gaEvent", function() { return gaEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendAll", function() { return appendAll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pxToRem", function() { return pxToRem; });
 /* harmony import */ var core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es7.symbol.async-iterator */ "./node_modules/core-js/modules/es7.symbol.async-iterator.js");
 /* harmony import */ var core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es6_symbol__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.symbol */ "./node_modules/core-js/modules/es6.symbol.js");
@@ -5719,6 +6700,19 @@ function gaEvent(event, eventCategory, eventAction, eventLabel, eventValue, nonI
 
 function appendAll(elem, children) {
   children.forEach(child => elem.appendChild(child));
+}
+/**
+ * Convert a pixel value to equivalent REM value.
+ *
+ * @param {number} pxValue - Value in pixels.
+ */
+
+function pxToRem(pxValue) {
+  let browserWidth = document.documentElement.scrollWidth,
+      fontBase;
+  browserWidth > 768 ? fontBase = 18 : fontBase = 16;
+  let remValue = pxValue / fontBase;
+  return remValue;
 }
 
 /***/ }),
