@@ -4613,6 +4613,10 @@ zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.setup(_key_info_box_key_info_pa
  */
 
 function showHideItems(elems, maxVisible, targetElemIndex) {
+  // console.log('show/hide function running');
+  // console.log('Items: ' + elems);
+  // console.log('MaxVisible: ' + maxVisible);
+  // console.log('Target index: ' + targetElemIndex);
   for (const elem of elems.entries()) {
     if (elem[0] < maxVisible) {
       // Hide 'load more' button if user at the end of all listings
@@ -4700,28 +4704,7 @@ function buildDynamicUrl(loadMoreClicks, groupType, groupTypeClass, itemType, it
     let visibleBatches = 1;
     let listingId = 0;
     let totalVisibleListings = visibleBatches * _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
-    showHideItems(items, totalVisibleListings, listingId); // console.log('Before click local storage batches: ' + localStorageBatches);
-    // if (!localStorageBatches) {
-    //     loadMoreButton.addEventListener('click', () => {
-    //         localStorageBatches += 1;
-    //         console.log('keep building that URL');
-    //         window.onpopstate = () => {
-    //             listingPosition = 1;
-    //             localStorageBatches = null;
-    //             console.log('After click local storage batches: ' + localStorageBatches);
-    //             loadMoreButton.addEventListener('click', () => {
-    //                 listingPosition += 3;
-    //                 console.log('Stop building that URL');
-    //                 history.pushState(
-    //                     '',
-    //                     '',
-    //                     `#${parentWrapperId}-${itemType}${listingPosition}`
-    //                 );
-    //             })
-    //         }
-    //     })
-    // }
-
+    showHideItems(items, totalVisibleListings, listingId);
     loadMoreButton.addEventListener('click', () => {
       // console.log('Any load more click event on default load, even after in-page back click');
       // console.log('Load more clicks at this stage:  ' + loadMoreClicks);
@@ -4734,31 +4717,7 @@ function buildDynamicUrl(loadMoreClicks, groupType, groupTypeClass, itemType, it
       listingId += _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
       loadMoreClicks += 1;
       totalVisibleListings += _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
-      let latestUrlHash = window.location.hash.substr(1); // showHideItems(items, totalVisibleListings, listingId);
-      // const updateListingPosition = new Promise(resolve => {
-      //     resolve((listingPosition = loadMoreClicks * batchNumber + 1));
-      // });
-      // No URL hash and more than 1 load more click, i.e. clicked back in page
-      // if (!latestUrlHash && loadMoreClicks > 1) {
-      //     console.log('Time to build listings from scratch');
-      //     console.log('Load more clicks: ' + loadMoreClicks);
-      //     // Reset variables
-      //     visibleBatches = 1;
-      //     listingId = 0;
-      //     totalVisibleListings = visibleBatches * batchNumber;
-      //     listingPosition = (batchNumber + 1);
-      //     // totalVisibleListings = 6;
-      //     showHideItems(items, totalVisibleListings, listingPosition);
-      //     updateListingPosition.then(() => {
-      //         history.pushState(
-      //             '',
-      //             '',
-      //             `#${groupType}${parentWrapperId}-${itemType}${listingPosition}`
-      //         );
-      //     });
-      //     console.log(totalVisibleListings);
-      // }
-
+      let latestUrlHash = window.location.hash.substr(1);
       /**
        * If hash exists, replace state to prevent history stack building further.
        * Allows for single browser back click from hashed URL to default view.
@@ -4775,15 +4734,31 @@ function buildDynamicUrl(loadMoreClicks, groupType, groupTypeClass, itemType, it
         });
         showHideItems(items, totalVisibleListings, listingId); // When no hash in URL, push listing ID to history stack
       } else {
-        // console.log('no url hash');
-        listingPosition = 4;
-        const updateListingPosition2 = new Promise(resolve => {
-          resolve(_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"] * 1 + 1);
-        });
-        updateListingPosition2.then(() => {
-          history.pushState('', '', `#${groupType}${parentWrapperId}-${itemType}${listingPosition}`);
-        });
-        showHideItems(items, 6, listingPosition);
+        window.onpopstate = () => {
+          if (!urlHash) {
+            // console.log('back to default');
+            totalVisibleListings = _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]; // console.log('Total visible listings: ' + totalVisibleListings);
+
+            listingId = _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"] + 1; // console.log('Listing ID: ' + listingId);
+            // items = parentWrapper.querySelectorAll(itemTypeClass);
+
+            for (const item of items.entries()) {
+              if (item[0] > _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"]) {
+                item[1].classList.add('hide');
+                item[1].style.display = 'none';
+              } else {
+                item[1].classList.remove('hide');
+              }
+            }
+
+            showHideItems(items, totalVisibleListings, listingId);
+          }
+        };
+
+        totalVisibleListings = totalVisibleListings - _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"];
+        listingPosition = _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["batchNumber"] * 1 + 1; // console.log(totalVisibleListings);
+
+        history.pushState('', '', `#${groupType}${parentWrapperId}-${itemType}${listingPosition}`); //  showHideItems(items, (batchNumber * 2), listingPosition);
       }
     }); // When user navigates back/forward to page, use listing position stored locally
 
