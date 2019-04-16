@@ -17317,43 +17317,96 @@ button
     margin-left: 0.5rem;
 }
 
-.social-icon {
-    border-style: none;
-}
-
-.social-icon span {
+article .social-icon {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    display: block;
     width: 2.25rem;
     height: 2.25rem;
     background-color: #0c0c0e;
     color: #ffffff;
     border-radius: 50%;
     transition: background-color 0.6s, transform 0.6s;
+    border-style: none;
 }
 
-.social-icon span:before {
+@media (hover: hover) {
+    article .social-icon:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+article .social-icon:focus, article .social-icon:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+article .social-icon span {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article .social-icon:before {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
 
-.social-icon span:focus:focus, .social-icon span:focus:active, .social-icon span:active:focus, .social-icon span:active:active {
-    outline-color: #ffffff;
+article .social-icon:focus {
+    background: #0c0c0e;
+    color: #ffffff;
+}
+
+article .social-icon:focus:focus, article .social-icon:focus:active, article .social-icon:active:focus, article .social-icon:active:active {
+    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.social-icon span:hover, .social-icon span:active {
+article .social-icon:hover, article .social-icon:active {
     transform: scale(1.2);
     background-color: #dd0036;
+    color: #ffffff;
 }
 
-.social-icon:active, .social-icon:hover, .social-icon:focus, .social-icon:visited {
+article .social-icon:active, article .social-icon:hover, article .social-icon:focus, article .social-icon:visited {
     border-bottom-style: none;
 }
 
-.social-icon:hover, .social-icon:active {
+article .social-icon:hover, article .social-icon:active {
     background-image: none;
 }
 
