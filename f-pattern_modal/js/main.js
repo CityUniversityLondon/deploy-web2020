@@ -4965,9 +4965,7 @@ const openModal = modal => {
   modal.classList.remove(modalHiddenClass);
   modal.classList.add(modalShowClass);
   modal.firstElementChild.showModal();
-  setTimeout(function () {
-    modal.classList.add(modalTransitioningClass);
-  }, 100);
+  modal.classList.add(modalTransitioningClass);
 };
 
 const closeModal = modal => {
@@ -4983,7 +4981,7 @@ const transitionEnded = e => {
   modal.classList.add(modalShowContentClass);
   setTimeout(function () {
     modal.classList.remove(modalTransitioningClass);
-  }, 300);
+  }, 50);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = ({
