@@ -4899,22 +4899,37 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'modal-group',
       modalHiddenClass = 'modal__popup--hidden',
-      modalShowClass = 'modal__popup--show';
+      modalShowClass = 'modal__popup--show',
+      modalTransitioningClass = 'modal__popup--transitioning',
+      modalShowContentClass = 'modal_popup--show-content';
 
 function launchModal() {
   let modalOpenTriggers = document.querySelectorAll('a.modal__trigger');
   let modalCloseTriggers = document.querySelectorAll('a.modal__close');
+  let modalCurtains = document.querySelectorAll('div.modal__curtain');
+  /**
+   * Add click listeners to open and close triggers
+   */
+
   modalOpenTriggers.forEach(trigger => {
     trigger.addEventListener('click', handleTriggerOpen, false);
   });
   modalCloseTriggers.forEach(trigger => {
     trigger.addEventListener('click', handleTriggerClose, false);
   });
+  /**
+   * Listen for escape key press and exit the active modal
+   */
+
   document.addEventListener('keydown', e => {
     let keyCode = e.keyCode;
     let activeModal = document.getElementsByClassName(modalShowClass)[0];
     if (keyCode === 27) closeModal(activeModal);
   });
+  /**
+   * Listen for a click anywhere outside the modal and close active modal
+   */
+
   document.addEventListener('click', e => {
     e.target.classList.forEach(className => {
       if (className === modalShowClass) {
@@ -4923,6 +4938,13 @@ function launchModal() {
         return;
       }
     });
+  });
+  /**
+   * Listen for when reveal transition over
+   */
+
+  modalCurtains.forEach(curtain => {
+    curtain.addEventListener('webkitTransitionEnd', transitionEnded, false);
   });
 }
 
@@ -4935,7 +4957,7 @@ const handleTriggerOpen = e => {
 
 const handleTriggerClose = e => {
   e.preventDefault();
-  let modalPopup = e.target.parentNode.parentNode;
+  let modalPopup = e.target.parentNode.parentNode.parentNode;
   closeModal(modalPopup);
 };
 
@@ -4943,12 +4965,25 @@ const openModal = modal => {
   modal.classList.remove(modalHiddenClass);
   modal.classList.add(modalShowClass);
   modal.firstElementChild.showModal();
+  setTimeout(function () {
+    modal.classList.add(modalTransitioningClass);
+  }, 100);
 };
 
 const closeModal = modal => {
+  modal.classList.remove(modalTransitioningClass);
   modal.classList.remove(modalShowClass);
+  modal.classList.remove(modalShowContentClass);
   modal.classList.add(modalHiddenClass);
   modal.firstElementChild.close();
+};
+
+const transitionEnded = e => {
+  let modal = e.target.parentNode.parentNode;
+  modal.classList.add(modalShowContentClass);
+  setTimeout(function () {
+    modal.classList.remove(modalTransitioningClass);
+  }, 300);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = ({

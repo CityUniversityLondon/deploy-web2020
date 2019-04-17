@@ -17317,6 +17317,23 @@ button
     margin-left: 0.5rem;
 }
 
+.modal__popup {
+    background: #0c0c0e;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: opacity 0.25s ease-in-out;
+    width: 100%;
+    z-index: 4;
+}
+
+.modal__popup dialog {
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+
 .modal__popup--hidden {
     opacity: 0;
     pointer-events: none;
@@ -17327,18 +17344,35 @@ button
     pointer-events: auto;
 }
 
-.modal__popup {
-    align-items: center;
-    background: #0c0c0e;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    left: 0;
-    position: fixed;
+.modal__content {
+    opacity: 0;
+    pointer-events: none;
+    background: #ffffff;
+    border: none;
+    overflow: hidden;
+    padding: 0.5rem 2.5rem 3rem;
+    position: relative;
+}
+
+.modal__curtain {
+    position: absolute;
     top: 0;
-    transition: opacity 0.5s ease-in-out;
+    left: 0;
+    background: purple;
+    height: 100%;
+    max-height: 0;
     width: 100%;
-    z-index: 4;
+    transition: max-height 0.25s ease-in-out;
+    z-index: 1;
+}
+
+.modal__popup--transitioning .modal__curtain {
+    max-height: 366px;
+}
+
+.modal_popup--show-content .modal__content {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .modal__heading {
@@ -17389,14 +17423,6 @@ button
 .modal__heading i,
 .modal__heading em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
-}
-
-dialog.modal__content {
-    background: #ffffff;
-    border: none;
-    overflow: hidden;
-    padding: 0.5rem 2.5rem 3rem;
-    position: relative;
 }
 
 a.modal__close {
