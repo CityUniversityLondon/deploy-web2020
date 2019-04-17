@@ -4290,9 +4290,10 @@ function findExternalLink() {
      * not contain font awesome icon already
      * not a CTA
      * not an email hyperlink
+     * not a telephone number link
      * has to contain a href value
      */
-    if (i.origin !== window.location.origin && i.querySelectorAll('img').length < 1 && i.querySelectorAll('.fa-external-link').length < 1 && !i.parentElement.className.includes('cta-block') && i.href.indexOf('mailto:') && i.origin) {
+    if (i.origin !== window.location.origin && i.querySelectorAll('img').length < 1 && i.querySelectorAll('.fa-external-link').length < 1 && !i.parentElement.className.includes('cta-block') && i.href.indexOf('mailto:') !== 0 && i.href.indexOf('tel:') !== 0 && i.origin) {
       // adds font awesome external link icon after completing checks
       var node = document.createElement('span');
       node.className = 'fa fa-external-link inline-external-link ';
