@@ -15994,6 +15994,9 @@ article figure figcaption a:active {
         grid-area: m;
         margin: 1.75rem;
     }
+    .key-info__content-control .content-toggle button.hide {
+        display: none;
+    }
 }
 
 .menu {

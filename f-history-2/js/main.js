@@ -4622,6 +4622,13 @@ function itemsDisplay() {
       item[1].classList.remove('hide');
       item[1].style.display = 'grid';
     }
+  } // If remaining items is less than batchNumber, remove 'Load more' button
+
+
+  if (visibleItems > items.length) {
+    loadMoreButton.classList.add('hide');
+  } else {
+    loadMoreButton.classList.remove('hide');
   }
 } // Scroll to, and focus first listing of new batch
 
@@ -4635,9 +4642,9 @@ function scrollToTargetListing() {
       zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(item[1]);
     }
   }
-}
+} // scrollToTargetListing();
+// Push state to URL: used to build initial hash
 
-scrollToTargetListing(); // Push state to URL: used to build initial hash
 
 function pushUrlState() {
   let targetListingUrlParam = visibleItems - (batchNumber - 1);
