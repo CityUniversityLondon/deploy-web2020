@@ -17318,21 +17318,25 @@ button
 }
 
 .modal__popup--hidden {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .modal__popup--show {
-    display: flex;
+    opacity: 0.7;
+    pointer-events: auto;
 }
 
 .modal__popup {
     align-items: center;
-    background: rgba(0, 0, 0, 0.7);
+    background: #0c0c0e;
+    display: flex;
     height: 100%;
     justify-content: center;
     left: 0;
     position: fixed;
     top: 0;
+    transition: opacity 0.5s ease-in-out;
     width: 100%;
     z-index: 4;
 }
@@ -17387,8 +17391,9 @@ button
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
 }
 
-.modal__content {
+dialog.modal__content {
     background: #ffffff;
+    border: none;
     overflow: hidden;
     padding: 0.5rem 2.5rem 3rem;
     position: relative;
