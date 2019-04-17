@@ -4456,15 +4456,13 @@ __webpack_require__.r(__webpack_exports__);
  */
 // mport { numberFromString, browserBackForward } from '../../util';
 
-const className = 'dynamic'; // Default setup
-
+const className = 'dynamic';
+let batchNumber = 3;
 let wrapper = document.querySelector('.dynamic');
 wrapper.setAttribute('data-listings-show', batchNumber);
 let parentId = wrapper.getAttribute('id');
-let batchNumber = 3;
 let visibleItems = parseInt(wrapper.getAttribute('data-listings-show'));
-let items = wrapper.querySelectorAll('.key-info__listing'); // let loadMoreClicks = 0;
-
+let items = wrapper.querySelectorAll('.key-info__listing');
 let targetListing;
 let loadMoreButton = document.querySelector('.content-toggle button'); // Loop through listings
 
@@ -4480,7 +4478,7 @@ function itemsDisplay() {
       item[1].style.display = 'grid';
     }
   }
-} // Zen scroll and focus on first listing in new batch
+} // Scroll to, and focus first listing of new batch
 
 
 function scrollToTargetListing() {
@@ -4492,8 +4490,9 @@ function scrollToTargetListing() {
       zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(item[1]);
     }
   }
-} // Push state to URL: used to build initial hash
+}
 
+scrollToTargetListing(); // Push state to URL: used to build initial hash
 
 function pushUrlState() {
   let targetListingUrlParam = visibleItems - (batchNumber - 1);
@@ -4508,7 +4507,6 @@ function replaceUrlState() {
 
 
 loadMoreButton.addEventListener('click', () => {
-  // loadMoreClicks += 1;
   visibleItems += batchNumber;
   wrapper.setAttribute('data-listings-show', visibleItems);
   itemsDisplay();
@@ -4520,7 +4518,15 @@ loadMoreButton.addEventListener('click', () => {
   } else {
     pushUrlState();
   }
-});
+}); // Back click: hash to no hash. Restore default settings.
+
+window.onpopstate = () => {
+  wrapper.setAttribute('data-listings-show', batchNumber);
+  wrapper.scrollIntoView();
+  visibleItems = batchNumber;
+  itemsDisplay();
+};
+
 itemsDisplay();
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchQuery: `.${className}`
