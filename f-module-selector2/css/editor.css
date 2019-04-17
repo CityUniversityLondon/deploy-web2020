@@ -11704,14 +11704,14 @@ main table td em {
     }
 }
 
-@media (min-width: 433px) and (max-width: 1280px) {
+@media (min-width: 433px) and (max-width: 1279px) {
     .documentation .content-wrapper {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
     .documentation .content-wrapper {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
@@ -11767,14 +11767,14 @@ main table td em {
     }
 }
 
-@media (min-width: 433px) and (max-width: 1280px) {
+@media (min-width: 433px) and (max-width: 1279px) {
     .persona {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
     .persona {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
@@ -11877,14 +11877,14 @@ main table td em {
     }
 }
 
-@media (min-width: 433px) and (max-width: 1280px) {
+@media (min-width: 433px) and (max-width: 1279px) {
     .user-journey .content-wrapper {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 1280px) {
     .user-journey .content-wrapper {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
