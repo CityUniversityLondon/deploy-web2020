@@ -17402,12 +17402,29 @@ article .social-icon:hover, article .social-icon:active {
     color: #ffffff;
 }
 
+article .social-icon:visited {
+    color: #ffffff;
+}
+
 article .social-icon:active, article .social-icon:hover, article .social-icon:focus, article .social-icon:visited {
     border-bottom-style: none;
 }
 
 article .social-icon:hover, article .social-icon:active {
     background-image: none;
+}
+
+.tooltip {
+    position: absolute;
+    left: 50px;
+    color: black;
+    border: 1px solid black;
+    padding: 0.5rem;
+}
+
+.tooltip.successful {
+    border-color: #3eff10;
+    background-color: #3eff10;
 }
 
 .generic {
