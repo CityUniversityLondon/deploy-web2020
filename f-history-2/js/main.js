@@ -4591,19 +4591,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const className = 'dynamic';
-let batchNumber = 3;
-let wrapper = document.querySelector('.dynamic');
-wrapper.setAttribute('data-listings-show', batchNumber);
-let parentId = wrapper.getAttribute('id');
-let visibleItems = parseInt(wrapper.getAttribute('data-listings-show'));
-let items = wrapper.querySelectorAll('.key-info__listing');
-let targetListing;
-let loadMoreButton = document.querySelector('.content-toggle button');
-let hashedPageLoad = window.location.hash; // Load correct number of listings if loading hashed page
+let batchNumber = 3,
+    wrapper = document.querySelector('.dynamic'),
+    parentId = wrapper.getAttribute('id'),
+    visibleItems = parseInt(wrapper.getAttribute('data-listings-show')),
+    items = wrapper.querySelectorAll('.key-info__listing'),
+    targetListing,
+    loadMoreButton = document.querySelector('.content-toggle button'),
+    hashedUrl = window.location.hash; // Set wrapper to have default number of listings visible on load
 
-if (hashedPageLoad) {
-  let hashedPageLoadParts = hashedPageLoad.split('-');
-  let listingPosition = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(hashedPageLoadParts[1]));
+wrapper.setAttribute('data-listings-show', batchNumber); // Load correct number of listings if loading hashed page
+
+if (hashedUrl) {
+  let hashedUrlParts = hashedUrl.split('-'),
+      listingPosition = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(hashedUrlParts[1]));
   visibleItems = listingPosition + (batchNumber - 1);
   wrapper.setAttribute('data-listings-show', visibleItems);
   itemsDisplay();
@@ -4622,15 +4623,11 @@ function itemsDisplay() {
       item[1].classList.remove('hide');
       item[1].style.display = 'grid';
     }
-  } // If remaining items is less than batchNumber, remove 'Load more' button
+  } // If visible items exceeds items length, remove 'Load more' button
 
 
-  if (visibleItems > items.length) {
-    loadMoreButton.classList.add('hide');
-  } else {
-    loadMoreButton.classList.remove('hide');
-  }
-} // Scroll to, and focus first listing of new batch
+  visibleItems > items.length ? loadMoreButton.classList.add('hide') : loadMoreButton.classList.remove('hide');
+} // Scroll to, and focus on first listing of new batch
 
 
 function scrollToTargetListing() {
@@ -4642,19 +4639,18 @@ function scrollToTargetListing() {
       zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(item[1]);
     }
   }
-} // scrollToTargetListing();
-// Push state to URL: used to build initial hash
+} // Push state to URL: used to build initial hash
 
 
 function pushUrlState() {
-  let targetListingUrlParam = visibleItems - (batchNumber - 1);
-  history.pushState('', '', `#keyinfo${parentId}-listing${targetListingUrlParam}`);
-} // Replace URL state: used to swap existing hash
+  let newListingParam = visibleItems - (batchNumber - 1);
+  history.pushState('', '', `#keyinfo${parentId}-listing${newListingParam}`);
+} // Replace URL state: used to swap existing hash with updated value
 
 
 function replaceUrlState() {
-  let targetListingUrlParam = visibleItems - (batchNumber - 1);
-  history.replaceState('', '', `#keyinfo${parentId}-listing${targetListingUrlParam}`);
+  let newListingParam = visibleItems - (batchNumber - 1);
+  history.replaceState('', '', `#keyinfo${parentId}-listing${newListingParam}`);
 } // Run on every 'load more' click: increase listings by batch number
 
 
@@ -4663,24 +4659,22 @@ loadMoreButton.addEventListener('click', () => {
   wrapper.setAttribute('data-listings-show', visibleItems);
   itemsDisplay();
   scrollToTargetListing();
-  let urlHash = window.location.hash;
-
-  if (urlHash) {
-    replaceUrlState();
-  } else {
-    pushUrlState();
-  }
-}); // Back click: hash to no hash. Restore default settings.
+  hashedUrl ? replaceUrlState() : pushUrlState();
+}); // Back click: hashed URL to no hash. Restore default settings.
 
 window.onpopstate = () => {
   wrapper.setAttribute('data-listings-show', batchNumber);
-  wrapper.scrollIntoView();
+  zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(wrapper);
   visibleItems = batchNumber;
   itemsDisplay();
 };
 
-itemsDisplay();
+function launchHistory() {
+  itemsDisplay();
+}
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchHistory,
   launchQuery: `.${className}`
 });
 
