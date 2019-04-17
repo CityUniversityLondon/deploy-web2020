@@ -3737,7 +3737,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns/cms-editor-warning/cms-editor-warning */ "./src/patterns/cms-editor-warning/cms-editor-warning.js");
 /* harmony import */ var _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/cookie-notice/cookie-notice */ "./src/patterns/cookie-notice/cookie-notice.js");
 /* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/history/history1'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _patterns_history_history1__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/history/history1 */ "./src/patterns/history/history1.js");
 /* harmony import */ var _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-paginated */ "./src/patterns/key-info-box/key-info-paginated.js");
 /* harmony import */ var _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-slider */ "./src/patterns/key-info-box/key-info-slider.js");
 /* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
@@ -3772,7 +3772,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], !(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/history/history1'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_history_history1__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"]]);
 
 /***/ }),
 
@@ -4425,6 +4425,104 @@ function launchFeedback(elem) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchFeedback,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/history/history1.js":
+/*!******************************************!*\
+  !*** ./src/patterns/history/history1.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+/**
+ * History - build URL on dynamic content pages
+ *
+ * @module patterns/history/history
+ * @author Mark Skinsley <mark.skinsley@city.ac.uk>
+ * @copyright City, University of London 2019
+ */
+// mport { numberFromString, browserBackForward } from '../../util';
+
+const className = 'dynamic'; // Default setup
+
+let wrapper = document.querySelector('.dynamic');
+wrapper.setAttribute('data-listings-show', batchNumber);
+let parentId = wrapper.getAttribute('id');
+let batchNumber = 3;
+let visibleItems = parseInt(wrapper.getAttribute('data-listings-show'));
+let items = wrapper.querySelectorAll('.key-info__listing'); // let loadMoreClicks = 0;
+
+let targetListing;
+let loadMoreButton = document.querySelector('.content-toggle button'); // Loop through listings
+
+function itemsDisplay() {
+  for (const item of items.entries()) {
+    item[1].setAttribute('tabindex', '1');
+
+    if (item[0] >= visibleItems) {
+      item[1].classList.add('hide');
+      item[1].style.display = 'none';
+    } else {
+      item[1].classList.remove('hide');
+      item[1].style.display = 'grid';
+    }
+  }
+} // Zen scroll and focus on first listing in new batch
+
+
+function scrollToTargetListing() {
+  targetListing = visibleItems - batchNumber;
+
+  for (const item of items.entries()) {
+    if (item[0] == targetListing) {
+      item[1].focus();
+      zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(item[1]);
+    }
+  }
+} // Push state to URL: used to build initial hash
+
+
+function pushUrlState() {
+  let targetListingUrlParam = visibleItems - (batchNumber - 1);
+  history.pushState('', '', `#keyinfo${parentId}-listing${targetListingUrlParam}`);
+} // Replace URL state: used to swap existing hash
+
+
+function replaceUrlState() {
+  let targetListingUrlParam = visibleItems - (batchNumber - 1);
+  history.replaceState('', '', `#keyinfo${parentId}-listing${targetListingUrlParam}`);
+} // Run on every 'load more' click: increase listings by batch number
+
+
+loadMoreButton.addEventListener('click', () => {
+  // loadMoreClicks += 1;
+  visibleItems += batchNumber;
+  wrapper.setAttribute('data-listings-show', visibleItems);
+  itemsDisplay();
+  scrollToTargetListing();
+  let urlHash = window.location.hash;
+
+  if (urlHash) {
+    replaceUrlState();
+  } else {
+    pushUrlState();
+  }
+});
+itemsDisplay();
+/* harmony default export */ __webpack_exports__["default"] = ({
   launchQuery: `.${className}`
 });
 
