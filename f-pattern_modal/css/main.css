@@ -17320,9 +17320,9 @@ button
 .modal__popup {
     background: #0c0c0e;
     height: 100%;
+    top: 0;
     left: 0;
     position: fixed;
-    top: 0;
     transition: opacity 0.25s ease-in-out;
     width: 100%;
     z-index: 4;
@@ -17354,20 +17354,26 @@ button
     position: relative;
 }
 
-.modal__curtain {
+.modal__reveal {
     position: absolute;
-    top: 0;
-    left: 0;
-    background: purple;
+    background: #7f40f1;
     height: 100%;
-    max-height: 0;
     width: 100%;
-    transition: max-height 0.25s ease-in-out;
     z-index: 1;
+    transition: transform 0.5s ease;
+    transform: scaleY(0);
 }
 
-.modal__popup--transitioning .modal__curtain {
-    max-height: 366px;
+.modal__reveal--fromtop {
+    transform-origin: 50% 0;
+}
+
+.modal__reveal--frombottom {
+    transform-origin: 50% 100%;
+}
+
+.modal__popup--transitioning-in .modal__reveal--fromtop {
+    transform: scaleY(1);
 }
 
 .modal_popup--show-content .modal__content {

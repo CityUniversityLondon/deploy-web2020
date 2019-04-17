@@ -4887,26 +4887,26 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 /**
-    <a href="#" class="modal__trigger">
-        Open the modal
-    </a>
-    <div class="modal__popup modal__popup--hidden">
-        <dialog class="modal__content" role="dialog" aria-labelledby="modal__heading" aria-modal="true">
-            ...
-        </dialog>
-    </div>
+    <a href="#" class="modal__trigger">Open Modal 1</a>
+        <div class="modal__popup modal__popup--hidden">
+            <dialog aria-labelledby="modal__heading" aria-modal="true">
+                <div class="modal__curtain"></div>
+                <div class="modal__content">
+                    <a href="#" class="modal__close fas fa-times"></a>
+
+                ....
 **/
 
 const className = 'modal-group',
       modalHiddenClass = 'modal__popup--hidden',
       modalShowClass = 'modal__popup--show',
-      modalTransitioningClass = 'modal__popup--transitioning',
-      modalShowContentClass = 'modal_popup--show-content';
+      modalShowContentClass = 'modal_popup--show-content',
+      modalTransitioningInClass = 'modal__popup--transitioning-in';
 
 function launchModal() {
-  let modalOpenTriggers = document.querySelectorAll('a.modal__trigger');
-  let modalCloseTriggers = document.querySelectorAll('a.modal__close');
-  let modalCurtains = document.querySelectorAll('div.modal__curtain');
+  let modalOpenTriggers = document.querySelectorAll('a.modal__trigger'),
+      modalCloseTriggers = document.querySelectorAll('a.modal__close'),
+      modalInReveals = document.querySelectorAll('div.modal__reveal');
   /**
    * Add click listeners to open and close triggers
    */
@@ -4940,11 +4940,11 @@ function launchModal() {
     });
   });
   /**
-   * Listen for when reveal transition over
+   * Listen for when reveal in transition over
    */
 
-  modalCurtains.forEach(curtain => {
-    curtain.addEventListener('webkitTransitionEnd', transitionEnded, false);
+  modalInReveals.forEach(elem => {
+    elem.addEventListener('webkitTransitionEnd', transitionInEnded, false);
   });
 }
 
@@ -4961,26 +4961,30 @@ const handleTriggerClose = e => {
   closeModal(modalPopup);
 };
 
-const openModal = modal => {
-  modal.classList.remove(modalHiddenClass);
-  modal.classList.add(modalShowClass);
-  modal.firstElementChild.showModal();
-  modal.classList.add(modalTransitioningClass);
+const openModal = modalPopup => {
+  modalPopup.classList.remove(modalHiddenClass);
+  modalPopup.classList.add(modalShowClass);
+  modalPopup.firstElementChild.showModal();
+  modalPopup.classList.add(modalTransitioningInClass);
 };
 
-const closeModal = modal => {
-  modal.classList.remove(modalTransitioningClass);
-  modal.classList.remove(modalShowClass);
-  modal.classList.remove(modalShowContentClass);
-  modal.classList.add(modalHiddenClass);
-  modal.firstElementChild.close();
+const closeModal = modalPopup => {
+  modalPopup.classList.remove(modalShowClass, modalShowContentClass);
+  modalPopup.classList.add(modalHiddenClass);
+  modalPopup.firstElementChild.close();
+  let modalReveal = modalPopup.firstElementChild.firstElementChild;
+  modalReveal.classList.remove('modal__reveal--frombottom');
+  modalReveal.classList.add('modal__reveal--fromtop');
 };
 
-const transitionEnded = e => {
-  let modal = e.target.parentNode.parentNode;
-  modal.classList.add(modalShowContentClass);
+const transitionInEnded = e => {
+  let modalPopup = e.target.parentNode.parentNode;
+  let modalReveal = e.target;
+  modalReveal.classList.remove('modal__reveal--fromtop');
+  modalReveal.classList.add('modal__reveal--frombottom');
+  modalPopup.classList.add(modalShowContentClass);
   setTimeout(function () {
-    modal.classList.remove(modalTransitioningClass);
+    modalPopup.classList.remove(modalTransitioningInClass);
   }, 50);
 };
 
