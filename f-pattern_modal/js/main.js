@@ -4972,14 +4972,12 @@ const closeModal = modalPopup => {
   modalPopup.classList.remove(modalShowClass, modalShowContentClass);
   modalPopup.classList.add(modalHiddenClass);
   modalPopup.firstElementChild.close();
-  let modalReveal = modalPopup.firstElementChild.firstElementChild;
-  modalReveal.classList.remove('modal__reveal--frombottom');
-  modalReveal.classList.add('modal__reveal--fromtop');
 };
 
 const transitionInEnded = e => {
   let modalPopup = e.target.parentNode.parentNode;
   let modalReveal = e.target;
+  modalReveal.classList.contains('modal__reveal--fromtop');
   modalReveal.classList.remove('modal__reveal--fromtop');
   modalReveal.classList.add('modal__reveal--frombottom');
   modalPopup.classList.add(modalShowContentClass);
