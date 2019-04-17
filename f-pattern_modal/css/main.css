@@ -17372,8 +17372,11 @@ button
     transform-origin: 50% 100%;
 }
 
-.modal__popup--transitioning-in .modal__reveal--fromtop,
-.modal__popup--transitioning-in .modal__reveal--frombottom {
+.modal__popup--transitioning-in .modal__reveal--fromtop {
+    transform: scaleY(1);
+}
+
+.modal__popup--transitioning-out .modal__reveal--frombottom {
     transform: scaleY(1);
 }
 

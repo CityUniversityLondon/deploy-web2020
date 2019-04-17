@@ -4901,12 +4901,14 @@ const className = 'modal-group',
       modalHiddenClass = 'modal__popup--hidden',
       modalShowClass = 'modal__popup--show',
       modalShowContentClass = 'modal_popup--show-content',
-      modalTransitioningInClass = 'modal__popup--transitioning-in';
+      modalTransitioningInClass = 'modal__popup--transitioning-in',
+      modalTransitioningOutClass = 'modal__popup--transitioning-out';
 
 function launchModal() {
   let modalOpenTriggers = document.querySelectorAll('a.modal__trigger'),
       modalCloseTriggers = document.querySelectorAll('a.modal__close'),
-      modalInReveals = document.querySelectorAll('div.modal__reveal');
+      modalInReveals = document.querySelectorAll('div.modal__reveal--fromtop'),
+      modalOutReveals = document.querySelectorAll('div.modal__reveal--frombottom');
   /**
    * Add click listeners to open and close triggers
    */
@@ -4940,11 +4942,14 @@ function launchModal() {
     });
   });
   /**
-   * Listen for when reveal in transition over
+   * Listen for when reveal in/out transition over
    */
 
   modalInReveals.forEach(elem => {
     elem.addEventListener('webkitTransitionEnd', transitionInEnded, false);
+  });
+  modalOutReveals.forEach(elem => {
+    elem.addEventListener('webkitTransitionEnd', transitionOutEnded, false);
   });
 }
 
@@ -4964,26 +4969,49 @@ const handleTriggerClose = e => {
 const openModal = modalPopup => {
   modalPopup.classList.remove(modalHiddenClass);
   modalPopup.classList.add(modalShowClass);
-  modalPopup.firstElementChild.showModal();
+  modalPopup.firstElementChild.showModal(); // this line needs to come last
+
   modalPopup.classList.add(modalTransitioningInClass);
 };
 
 const closeModal = modalPopup => {
-  modalPopup.classList.remove(modalShowClass, modalShowContentClass);
-  modalPopup.classList.add(modalHiddenClass);
-  modalPopup.firstElementChild.close();
+  modalPopup.classList.add(modalTransitioningOutClass);
 };
 
 const transitionInEnded = e => {
   let modalPopup = e.target.parentNode.parentNode;
   let modalReveal = e.target;
-  modalReveal.classList.contains('modal__reveal--fromtop');
-  modalReveal.classList.remove('modal__reveal--fromtop');
-  modalReveal.classList.add('modal__reveal--frombottom');
+
+  if (modalReveal.classList.contains('modal__reveal--fromtop')) {
+    modalReveal.classList.remove('modal__reveal--fromtop');
+    modalReveal.classList.add('modal__reveal--frombottom');
+  } else {
+    modalReveal.classList.remove('modal__reveal--frombottom');
+    modalReveal.classList.add('modal__reveal--fromtop');
+  }
+
   modalPopup.classList.add(modalShowContentClass);
   setTimeout(function () {
     modalPopup.classList.remove(modalTransitioningInClass);
   }, 50);
+};
+
+const transitionOutEnded = e => {
+  let modalPopup = e.target.parentNode.parentNode;
+  let modalReveal = e.target; // after first transition, remove the content underneath the background
+
+  modalPopup.classList.remove(modalShowContentClass); // switch these so the transition direction changes
+
+  modalReveal.classList.remove('modal__reveal--frombottom');
+  modalReveal.classList.add('modal__reveal--fromtop'); // trigger the second transition
+
+  modalPopup.classList.remove(modalTransitioningOutClass); // finally, remove the modal popup
+
+  setTimeout(function () {
+    modalPopup.classList.remove(modalShowClass);
+    modalPopup.classList.add(modalHiddenClass);
+    modalPopup.firstElementChild.close();
+  }, 450);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = ({
