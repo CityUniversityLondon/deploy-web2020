@@ -1812,136 +1812,6 @@ __webpack_require__(/*! ./_fix-re-wks */ "./node_modules/core-js/modules/_fix-re
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/es6.regexp.replace.js":
-/*!************************************************************!*\
-  !*** ./node_modules/core-js/modules/es6.regexp.replace.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/core-js/modules/_an-object.js");
-var toObject = __webpack_require__(/*! ./_to-object */ "./node_modules/core-js/modules/_to-object.js");
-var toLength = __webpack_require__(/*! ./_to-length */ "./node_modules/core-js/modules/_to-length.js");
-var toInteger = __webpack_require__(/*! ./_to-integer */ "./node_modules/core-js/modules/_to-integer.js");
-var advanceStringIndex = __webpack_require__(/*! ./_advance-string-index */ "./node_modules/core-js/modules/_advance-string-index.js");
-var regExpExec = __webpack_require__(/*! ./_regexp-exec-abstract */ "./node_modules/core-js/modules/_regexp-exec-abstract.js");
-var max = Math.max;
-var min = Math.min;
-var floor = Math.floor;
-var SUBSTITUTION_SYMBOLS = /\$([$&`']|\d\d?|<[^>]*>)/g;
-var SUBSTITUTION_SYMBOLS_NO_NAMED = /\$([$&`']|\d\d?)/g;
-
-var maybeToString = function (it) {
-  return it === undefined ? it : String(it);
-};
-
-// @@replace logic
-__webpack_require__(/*! ./_fix-re-wks */ "./node_modules/core-js/modules/_fix-re-wks.js")('replace', 2, function (defined, REPLACE, $replace, maybeCallNative) {
-  return [
-    // `String.prototype.replace` method
-    // https://tc39.github.io/ecma262/#sec-string.prototype.replace
-    function replace(searchValue, replaceValue) {
-      var O = defined(this);
-      var fn = searchValue == undefined ? undefined : searchValue[REPLACE];
-      return fn !== undefined
-        ? fn.call(searchValue, O, replaceValue)
-        : $replace.call(String(O), searchValue, replaceValue);
-    },
-    // `RegExp.prototype[@@replace]` method
-    // https://tc39.github.io/ecma262/#sec-regexp.prototype-@@replace
-    function (regexp, replaceValue) {
-      var res = maybeCallNative($replace, regexp, this, replaceValue);
-      if (res.done) return res.value;
-
-      var rx = anObject(regexp);
-      var S = String(this);
-      var functionalReplace = typeof replaceValue === 'function';
-      if (!functionalReplace) replaceValue = String(replaceValue);
-      var global = rx.global;
-      if (global) {
-        var fullUnicode = rx.unicode;
-        rx.lastIndex = 0;
-      }
-      var results = [];
-      while (true) {
-        var result = regExpExec(rx, S);
-        if (result === null) break;
-        results.push(result);
-        if (!global) break;
-        var matchStr = String(result[0]);
-        if (matchStr === '') rx.lastIndex = advanceStringIndex(S, toLength(rx.lastIndex), fullUnicode);
-      }
-      var accumulatedResult = '';
-      var nextSourcePosition = 0;
-      for (var i = 0; i < results.length; i++) {
-        result = results[i];
-        var matched = String(result[0]);
-        var position = max(min(toInteger(result.index), S.length), 0);
-        var captures = [];
-        // NOTE: This is equivalent to
-        //   captures = result.slice(1).map(maybeToString)
-        // but for some reason `nativeSlice.call(result, 1, result.length)` (called in
-        // the slice polyfill when slicing native arrays) "doesn't work" in safari 9 and
-        // causes a crash (https://pastebin.com/N21QzeQA) when trying to debug it.
-        for (var j = 1; j < result.length; j++) captures.push(maybeToString(result[j]));
-        var namedCaptures = result.groups;
-        if (functionalReplace) {
-          var replacerArgs = [matched].concat(captures, position, S);
-          if (namedCaptures !== undefined) replacerArgs.push(namedCaptures);
-          var replacement = String(replaceValue.apply(undefined, replacerArgs));
-        } else {
-          replacement = getSubstitution(matched, S, position, captures, namedCaptures, replaceValue);
-        }
-        if (position >= nextSourcePosition) {
-          accumulatedResult += S.slice(nextSourcePosition, position) + replacement;
-          nextSourcePosition = position + matched.length;
-        }
-      }
-      return accumulatedResult + S.slice(nextSourcePosition);
-    }
-  ];
-
-    // https://tc39.github.io/ecma262/#sec-getsubstitution
-  function getSubstitution(matched, str, position, captures, namedCaptures, replacement) {
-    var tailPos = position + matched.length;
-    var m = captures.length;
-    var symbols = SUBSTITUTION_SYMBOLS_NO_NAMED;
-    if (namedCaptures !== undefined) {
-      namedCaptures = toObject(namedCaptures);
-      symbols = SUBSTITUTION_SYMBOLS;
-    }
-    return $replace.call(replacement, symbols, function (match, ch) {
-      var capture;
-      switch (ch.charAt(0)) {
-        case '$': return '$';
-        case '&': return matched;
-        case '`': return str.slice(0, position);
-        case "'": return str.slice(tailPos);
-        case '<':
-          capture = namedCaptures[ch.slice(1, -1)];
-          break;
-        default: // \d\d?
-          var n = +ch;
-          if (n === 0) return match;
-          if (n > m) {
-            var f = floor(n / 10);
-            if (f === 0) return match;
-            if (f <= m) return captures[f - 1] === undefined ? ch.charAt(1) : captures[f - 1] + ch.charAt(1);
-            return match;
-          }
-          capture = captures[n - 1];
-      }
-      return capture === undefined ? '' : capture;
-    });
-  }
-});
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/modules/es6.regexp.search.js":
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.search.js ***!
@@ -3867,7 +3737,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns/cms-editor-warning/cms-editor-warning */ "./src/patterns/cms-editor-warning/cms-editor-warning.js");
 /* harmony import */ var _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/cookie-notice/cookie-notice */ "./src/patterns/cookie-notice/cookie-notice.js");
 /* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
-/* harmony import */ var _patterns_history_history__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/history/history */ "./src/patterns/history/history.js");
+!(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/history/history1'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /* harmony import */ var _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-paginated */ "./src/patterns/key-info-box/key-info-paginated.js");
 /* harmony import */ var _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-slider */ "./src/patterns/key-info-box/key-info-slider.js");
 /* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
@@ -3902,7 +3772,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_history_history__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], !(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/history/history1'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"]]);
 
 /***/ }),
 
@@ -4560,241 +4430,6 @@ function launchFeedback(elem) {
 
 /***/ }),
 
-/***/ "./src/patterns/history/history.js":
-/*!*****************************************!*\
-  !*** ./src/patterns/history/history.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.regexp.replace */ "./node_modules/core-js/modules/es6.regexp.replace.js");
-/* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.regexp.split */ "./node_modules/core-js/modules/es6.regexp.split.js");
-/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../key-info-box/key-info-paginated */ "./src/patterns/key-info-box/key-info-paginated.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_5__);
-
-
-
-
-
-
-/**
- * History - build URL on dynamic content pages
- *
- * @module patterns/history/history
- * @author Mark Skinsley <mark.skinsley@city.ac.uk>
- * @copyright City, University of London 2019
- */
-
-
-
-let batchNumber = 3;
-const className = 'dynamic';
-let loadMoreButton = document.querySelector('.content-toggle button'),
-    urlHash = window.location.hash.substr(1),
-    listingPosition = ''; // Blank by default for non-hashed URLs
-// Zen scroll setup
-
-zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.setup(_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["defaultDuration"], _key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_3__["edgeOffset"]);
-/**
- * Control what elements should display in listing.
- *
- * @param {HTMLElement[]} elems - All elements in group of listings.
- * @param {number} maxVisible - Maximum number of elements that should be visible at any one time.
- * @param {number} targetElemIndex - Index value of element to scroll to.
- */
-
-function showHideItems(elems, maxVisible, targetElemIndex) {
-  for (const elem of elems.entries()) {
-    // Only look at listings within max listings range
-    if (elem[0] < maxVisible) {
-      // Hide 'load more' button if user at the end of all listings
-      if (maxVisible > elems.length) {
-        loadMoreButton.style.display = 'none';
-      }
-
-      if (elem[1].classList.contains('hide')) {
-        elem[1].classList.remove('hide');
-      } // Add focus to first element in new batch. Disable for original page load.
-
-
-      if (elem[0] == targetElemIndex && !(targetElemIndex < batchNumber)) {
-        let scrollTarget = elem[1];
-        scrollTarget.focus();
-      } else if (elem[0] == targetElemIndex && targetElemIndex == 1) {
-        let scrollTarget1 = elem[1];
-        scrollTarget1.focus();
-      }
-    }
-  }
-}
-/**
- * Build URL on each 'Load more' click, e.g. => '#keyinfoabc123-listing4
- * Include ID of parent wrapper and position of first new listing in each batch loaded.
- *
- * @param {number} loadMoreClicks - Number of 'Load more' clicks.
- * @param {string} groupType - Pattern type ID of parent wrapper.
- * @param {string} groupTypeClass - Class name of parent wrapper.
- * @param {string} itemType - Descriptive string that will be passed to the URL, e.g. 'listing'.
- * @param {string} itemTypeClass - Class name of child elements being shown/hidden.
- *
- */
-
-
-function buildDynamicUrl(loadMoreClicks, groupType, groupTypeClass, itemType, itemTypeClass) {
-  // By default, target area of the page with matching wrapper
-  let parentWrapper = loadMoreButton.closest(groupTypeClass); // scroll.to(parentWrapper);
-
-  let parentWrapperId = parentWrapper.getAttribute('id'); // let firstItem;
-
-  let items = parentWrapper.querySelectorAll(itemTypeClass);
-
-  for (const item of items.entries()) {
-    item[1].setAttribute('tabindex', '1');
-
-    if (item[0] == 0) {// firstItem = item[1];
-    }
-  } // Load hashed page directly, i.e. no browser back click
-
-
-  if (urlHash) {
-    // Calcuate position in listings based on hashed URL parameters
-    let urlHashParts = urlHash.split('-');
-    parentWrapperId = urlHashParts[0];
-    let listingId = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_4__["numberFromString"])(urlHashParts[1]));
-    listingPosition += batchNumber;
-    let visibleBatches = Math.floor(listingId / batchNumber);
-    let remainders = listingId % batchNumber;
-    /**
-     * Remainders condition ensures next batch always shows so browser
-     * can scroll to a visible listing, instead of targeting hidden content
-     */
-
-    remainders ? visibleBatches += 1 : null;
-    let totalVisibleListings = visibleBatches * batchNumber;
-    parentWrapper = parentWrapperId.replace(groupType, '');
-    parentWrapper = document.getElementById(parentWrapper);
-    showHideItems(items, totalVisibleListings, listingId - 1);
-    loadMoreButton.addEventListener('click', () => {
-      listingId += batchNumber;
-      visibleBatches += 1;
-      totalVisibleListings = visibleBatches * batchNumber;
-      showHideItems(items, totalVisibleListings, listingId - 1);
-      const updateListingPosition = new Promise(resolve => {
-        resolve(listingPosition = (visibleBatches - 1) * batchNumber + 1);
-      });
-      updateListingPosition.then(() => {
-        history.replaceState('', '', `#${parentWrapperId}-${itemType}${listingPosition}`);
-      });
-    });
-    /**
-     * Put number of visible batches in local storage so this can be
-     * accessed on browser back click
-     **/
-
-    localStorage.setItem('storageListingPosition', `${visibleBatches}`); // Regular page load, i.e. no hash and no browser back click
-  } else {
-    let visibleBatches = 1;
-    let listingId = 0;
-    let totalVisibleListings = visibleBatches * batchNumber; // showHideItems(items, totalVisibleListings, listingId);
-
-    loadMoreButton.addEventListener('click', () => {
-      listingId += batchNumber;
-      loadMoreClicks += 1;
-      totalVisibleListings += batchNumber;
-      let latestUrlHash = window.location.hash.substr(1);
-      /**
-       * If hash exists, replace state to prevent history stack building further.
-       * Allows for single browser back click from hashed URL to default view.
-       *  */
-
-      if (latestUrlHash) {
-        // console.log('There is a URL hash at this stage');
-        // console.log('listing position: ' + listingPosition);
-        const updateListingPosition = new Promise(resolve => {
-          resolve(listingPosition = loadMoreClicks * batchNumber + 1);
-        });
-        updateListingPosition.then(() => {
-          history.replaceState('', '', `#${groupType}${parentWrapperId}-${itemType}${listingPosition}`);
-        }); //  console.log(items);
-
-        showHideItems(items, totalVisibleListings, listingId); // When no hash in URL, push listing ID to history stack
-      } else {
-        showHideItems(items, totalVisibleListings, listingId);
-
-        window.onpopstate = () => {
-          if (!urlHash) {
-            let abc123 = document.getElementById('abc123');
-            zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.to(abc123);
-            totalVisibleListings = batchNumber;
-            listingId = 1;
-
-            for (const item of items.entries()) {
-              if (item[0] > batchNumber - 1) {
-                item[1].classList.add('hide');
-                item[1].style.display = 'none';
-              } else {
-                item[1].classList.remove('hide');
-              }
-            }
-
-            loadMoreButton.addEventListener('click', () => {
-              for (const item of items.entries()) {
-                item[1].classList.add('hide');
-                item[1].style.display = 'none';
-              }
-            });
-            showHideItems(items, totalVisibleListings, listingId);
-          }
-        };
-
-        totalVisibleListings = totalVisibleListings - batchNumber;
-        listingPosition = batchNumber * 1 + 1;
-        showHideItems(items, batchNumber * 2, listingPosition);
-        history.pushState('', '', `#${groupType}${parentWrapperId}-${itemType}${listingPosition}`);
-      }
-    }); // When user navigates back/forward to page, use listing position stored locally
-
-    localStorage.setItem('storageListingPosition', `${loadMoreClicks}`);
-  }
-} // Target element using 'load more' functionality
-
-
-function loadMore() {
-  let counter = 0;
-
-  if (_util__WEBPACK_IMPORTED_MODULE_4__["browserBackForward"] && urlHash) {
-    let storageListingPosition = parseInt(localStorage.getItem('storageListingPosition'));
-    buildDynamicUrl(storageListingPosition, 'keyinfo', '.dynamic--load-more', 'listing', '.key-info__listing');
-  } else {
-    localStorage.clear();
-    buildDynamicUrl(counter, 'keyinfo', '.dynamic--load-more', 'listing', '.key-info__listing');
-  }
-} // Detect what type of dynamic pattern is being used, e.g. 'Load more'
-
-
-function dynamicContentType() {
-  let dynamicElementWrapper = document.querySelector('.dynamic');
-
-  if (dynamicElementWrapper.classList.contains('dynamic--load-more')) {
-    loadMore();
-  }
-}
-
-dynamicContentType();
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchQuery: `.${className}`
-});
-
-/***/ }),
-
 /***/ "./src/patterns/key-info-box/key-info-paginated.js":
 /*!*********************************************************!*\
   !*** ./src/patterns/key-info-box/key-info-paginated.js ***!
@@ -4827,8 +4462,8 @@ let listings = document.querySelectorAll('.key-info__listing'),
     browserWidth = document.documentElement.scrollWidth,
     listingDates = document.querySelectorAll('.key-info__date'),
     listingsVisible = [],
-    listingsLength = [],
-    defaultDuration = 2000,
+    // listingsLength = [],
+defaultDuration = 2000,
     edgeOffset = 100; // Zen scroll setup
 
 zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
@@ -4857,15 +4492,16 @@ function listingDisplay() {
   }
 } // Initial listings display
 
-
-function defaultListingsDisplay() {
-  listingsLength = [];
-
-  for (const listing of listings.entries()) {
-    listingsLength.push(listings.length);
-    listing[0] > batchQuantity - 1 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
-  }
-} // Show number of available starting dates.
+/* function defaultListingsDisplay() {
+    listingsLength = [];
+    for (const listing of listings.entries()) {
+        listingsLength.push(listings.length);
+        listing[0] > batchQuantity - 1
+            ? listing[1].classList.add('hide')
+            : (listing[1].style.display = 'grid');
+    }
+} */
+// Show number of available starting dates.
 
 
 function listingsQuantity() {
@@ -4900,50 +4536,64 @@ function launchKeyInfo(batchQuantity) {
 
   if (browserWidth > 768) {
     if (listings.length > batchQuantity) {
-      listingDisplay();
-      defaultListingsDisplay();
+      listingDisplay(); // defaultListingsDisplay();
+
       calculateVisibleListings();
-
-      for (const contentToggle of contentToggles) {
-        contentToggle.addEventListener('click', e => {
-          // This will increase with each 'Load more' click, so visible listings
-          // must be captured before any further listings are made visible
-          let preExpandListingsVisible = listingsVisible.length;
-          e.preventDefault();
-
-          if (preExpandListingsVisible < listings.length) {
-            for (const listing of listings.entries()) {
-              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
-              let listingsVisibleLength = parseInt(listingsVisible.length);
-              listingsLength = parseInt(listingsLength);
-              let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
-
-              zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200);
-              let targetListingDate = targetListing.querySelectorAll('.key-info__date'); // Final batch of listings, zen scroll to 'load more' button and offset
-
-              if (remainingItems <= batchQuantity) {
-                zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(contentToggle, 200);
-                contentToggles[0].style.display = 'none';
-              }
-
-              targetListingDate[0].focus(); // Bring in newly visible listings in two phases to allow for opacity transition
-
-              if (listing[0] < preExpandListingsVisible + batchQuantity) {
-                const promise = new Promise(resolve => {
-                  resolve(listing[1].style.display = 'grid');
-                });
-                promise.then(() => {
-                  listing[1].classList.remove('hide');
-                }); // Calculating visible listings must run here after display properties are updated
-
-                promise.then(() => {
-                  calculateVisibleListings();
-                });
-              }
-            }
-          }
-        }, false);
-      }
+      /* for (const contentToggle of contentToggles) {
+              contentToggle.addEventListener(
+              'click',
+              e => {
+                  // This will increase with each 'Load more' click, so visible listings
+                  // must be captured before any further listings are made visible
+                  let preExpandListingsVisible = listingsVisible.length;
+                  e.preventDefault();
+                  if (preExpandListingsVisible < listings.length) {
+                      for (const listing of listings.entries()) {
+                          let targetListing = document.querySelector(
+                              `[data-id='listing-${preExpandListingsVisible}']`
+                          );
+                          let listingsVisibleLength = parseInt(
+                              listingsVisible.length
+                          );
+                          listingsLength = parseInt(listingsLength);
+                          let remainingItems = parseInt(
+                              listingsLength - listingsVisibleLength
+                          );
+                          // Zen scroll to first listing of newly visible listings and focus on date
+                          scroll.to(targetListing, 200);
+                          let targetListingDate = targetListing.querySelectorAll(
+                              '.key-info__date'
+                          );
+                          // Final batch of listings, zen scroll to 'load more' button and offset
+                          if (remainingItems <= batchQuantity) {
+                              scroll.to(contentToggle, 200);
+                              contentToggles[0].style.display = 'none';
+                          }
+                          targetListingDate[0].focus();
+                          // Bring in newly visible listings in two phases to allow for opacity transition
+                          if (
+                              listing[0] <
+                              preExpandListingsVisible + batchQuantity
+                          ) {
+                              const promise = new Promise(resolve => {
+                                  resolve(
+                                      (listing[1].style.display = 'grid')
+                                  );
+                              });
+                              promise.then(() => {
+                                  listing[1].classList.remove('hide');
+                              });
+                              // Calculating visible listings must run here after display properties are updated
+                              promise.then(() => {
+                                  calculateVisibleListings();
+                              });
+                          }
+                      }
+                  }
+              },
+              false
+          );
+      } */
     } else {
       contentToggles[0].style.display = 'none';
     } // Mobile: one listing visible at a time
