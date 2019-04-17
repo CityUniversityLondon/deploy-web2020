@@ -17335,6 +17335,13 @@ button
     min-width: 100%;
 }
 
+@media (max-width: 768px) {
+    .banner__group__image img {
+        max-width: none;
+        max-height: 20rem;
+    }
+}
+
 .banner__group__overlay {
     background: linear-gradient(to top, #303030, transparent 100%);
     position: absolute;
@@ -17345,7 +17352,6 @@ button
 
 @media (max-width: 767px) {
     .banner__group__overlay {
-        position: relative;
         height: 100%;
     }
 }
@@ -17374,14 +17380,17 @@ button
         margin: 0 2rem;
     }
     .banner__group__overlay__heading h1 {
-        font-size: 1.5em;
+        font-size: 2em;
         width: 100%;
     }
 }
 
 @media (max-width: 431px) {
+    .banner__group__overlay__heading {
+        bottom: 1.25rem;
+    }
     .banner__group__overlay__heading h1 {
-        font-size: 1em;
+        font-size: 1.8em;
     }
 }
 
