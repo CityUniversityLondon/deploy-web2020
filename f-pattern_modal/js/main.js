@@ -4935,6 +4935,19 @@ function launchModal() {
     }
   });
   /**
+   * Listen for a click anywhere outside the modal and close active modal
+   */
+
+  document.addEventListener('click', e => {
+    e.target.classList.forEach(className => {
+      if (className === modalShowClass) {
+        let activeModal = document.getElementsByClassName(modalShowClass)[0];
+        closeModal(activeModal);
+        return;
+      }
+    });
+  });
+  /**
    * Listen for when reveal in/out transition over
    */
 
