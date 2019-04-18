@@ -4599,7 +4599,8 @@ let visibleItems = parseInt(wrapper.getAttribute('data-listings-show'));
 let items = wrapper.querySelectorAll('.key-info__listing');
 let targetListing;
 let loadMoreButton = document.querySelector('.content-toggle button');
-let hashedPageLoad = window.location.hash; // Load correct number of listings if loading hashed page
+let hashedPageLoad = window.location.hash;
+let aPartsPos; // Load correct number of listings if loading hashed page
 
 if (hashedPageLoad) {
   let hashedPageLoadParts = hashedPageLoad.split('-');
@@ -4608,6 +4609,8 @@ if (hashedPageLoad) {
   wrapper.setAttribute('data-listings-show', visibleItems);
   itemsDisplay();
   scrollToTargetListing();
+} else {
+  itemsDisplay();
 } // Loop through listings
 
 
@@ -4642,8 +4645,7 @@ function scrollToTargetListing() {
       zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(item[1]);
     }
   }
-} // scrollToTargetListing();
-// Push state to URL: used to build initial hash
+} // Push state to URL: used to build initial hash
 
 
 function pushUrlState() {
@@ -4670,16 +4672,35 @@ loadMoreButton.addEventListener('click', () => {
   } else {
     pushUrlState();
   }
+
+  let aParts = window.location.hash.split('-');
+  aPartsPos = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(aParts[1]));
+  aPartsPos += 2;
 }); // Back click: hash to no hash. Restore default settings.
 
 window.onpopstate = () => {
-  wrapper.setAttribute('data-listings-show', batchNumber);
-  wrapper.scrollIntoView();
-  visibleItems = batchNumber;
-  itemsDisplay();
+  let hashRef = window.location.hash;
+
+  if (hashRef) {
+    visibleItems = aPartsPos;
+    wrapper.setAttribute('data-listings-show', visibleItems);
+    itemsDisplay();
+    scrollToTargetListing();
+
+    for (const item of items.entries()) {
+      if (item[0] == visibleItems) {
+        item[1].focus();
+      }
+    }
+  } else {
+    visibleItems = batchNumber;
+    itemsDisplay();
+    wrapper.setAttribute('data-listings-show', batchNumber); // console.log('scroll to top');
+
+    wrapper.scrollIntoView();
+  }
 };
 
-itemsDisplay();
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchQuery: `.${className}`
 });
