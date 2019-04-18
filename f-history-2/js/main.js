@@ -4569,10 +4569,10 @@ function launchFeedback(elem) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.regexp.split */ "./node_modules/core-js/modules/es6.regexp.split.js");
-/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.regexp.split */ "./node_modules/core-js/modules/es6.regexp.split.js");
+/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_3__);
@@ -4590,29 +4590,26 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-const className = 'dynamic';
-let batchNumber = 3;
-let wrapper = document.querySelector('.dynamic');
-wrapper.setAttribute('data-listings-show', batchNumber);
-let parentId = wrapper.getAttribute('id');
+const className = 'history';
+let itemsIncrement = 3,
+    wrapper = document.querySelector('.history'),
+    wrapperId = wrapper.getAttribute('id'),
+    items = wrapper.querySelectorAll('.key-info__listing'),
+    targetItem,
+    loadMoreBtn = document.querySelector('.content-toggle button'),
+    hashedUrl = window.location.hash,
+    currentItem;
+/**
+ * Give wrapper a numeric data attribute. As this changes, so
+ * will the number of visible items.
+ */
+
+wrapper.setAttribute('data-listings-show', itemsIncrement);
 let visibleItems = parseInt(wrapper.getAttribute('data-listings-show'));
-let items = wrapper.querySelectorAll('.key-info__listing');
-let targetListing;
-let loadMoreButton = document.querySelector('.content-toggle button');
-let hashedPageLoad = window.location.hash;
-let aPartsPos; // Load correct number of listings if loading hashed page
-
-if (hashedPageLoad) {
-  let hashedPageLoadParts = hashedPageLoad.split('-');
-  let listingPosition = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(hashedPageLoadParts[1]));
-  visibleItems = listingPosition + (batchNumber - 1);
-  wrapper.setAttribute('data-listings-show', visibleItems);
-  itemsDisplay();
-  scrollToTargetListing();
-} else {
-  itemsDisplay();
-} // Loop through listings
-
+/**
+ * Control what items will display based on wrapper's
+ * 'data-listings-show' data attribute.
+ * */
 
 function itemsDisplay() {
   for (const item of items.entries()) {
@@ -4625,22 +4622,22 @@ function itemsDisplay() {
       item[1].classList.remove('hide');
       item[1].style.display = 'grid';
     }
-  } // If remaining items is less than batchNumber, remove 'Load more' button
+  } // Hide 'load more' button when reached end of listings
 
 
   if (visibleItems > items.length) {
-    loadMoreButton.classList.add('hide');
+    loadMoreBtn.classList.add('hide');
   } else {
-    loadMoreButton.classList.remove('hide');
+    loadMoreBtn.classList.remove('hide');
   }
 } // Scroll to, and focus first listing of new batch
 
 
-function scrollToTargetListing() {
-  targetListing = visibleItems - batchNumber;
+function scrollToItem() {
+  targetItem = visibleItems - itemsIncrement;
 
   for (const item of items.entries()) {
-    if (item[0] == targetListing) {
+    if (item[0] == targetItem) {
       item[1].focus();
       zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(item[1]);
     }
@@ -4649,59 +4646,63 @@ function scrollToTargetListing() {
 
 
 function pushUrlState() {
-  let targetListingUrlParam = visibleItems - (batchNumber - 1);
-  history.pushState('', '', `#keyinfo${parentId}-listing${targetListingUrlParam}`);
+  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
+  history.pushState('', '', `#keyinfo${wrapperId}-listing${targetListingUrlParam}`);
 } // Replace URL state: used to swap existing hash
 
 
 function replaceUrlState() {
-  let targetListingUrlParam = visibleItems - (batchNumber - 1);
-  history.replaceState('', '', `#keyinfo${parentId}-listing${targetListingUrlParam}`);
+  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
+  history.replaceState('', '', `#keyinfo${wrapperId}-listing${targetListingUrlParam}`);
 } // Run on every 'load more' click: increase listings by batch number
 
 
-loadMoreButton.addEventListener('click', () => {
-  visibleItems += batchNumber;
+loadMoreBtn.addEventListener('click', () => {
+  visibleItems += itemsIncrement;
   wrapper.setAttribute('data-listings-show', visibleItems);
   itemsDisplay();
-  scrollToTargetListing();
-  let urlHash = window.location.hash;
+  scrollToItem(); // let urlHash = window.location.hash;
 
-  if (urlHash) {
-    replaceUrlState();
-  } else {
-    pushUrlState();
-  }
+  hashedUrl ? replaceUrlState() : pushUrlState(); // Capture latest hash - needed for change in pop state
 
-  let aParts = window.location.hash.split('-');
-  aPartsPos = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(aParts[1]));
-  aPartsPos += 2;
+  let updatedUrlParts = window.location.hash.split('-');
+  currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(updatedUrlParts[1]));
+  currentItem = currentItem + (itemsIncrement - 1);
 }); // Back click: hash to no hash. Restore default settings.
 
 window.onpopstate = () => {
-  let hashRef = window.location.hash;
+  // Must re-assign variable on pop state change
+  hashedUrl = window.location.hash;
 
-  if (hashRef) {
-    visibleItems = aPartsPos;
+  if (hashedUrl) {
+    visibleItems = currentItem;
     wrapper.setAttribute('data-listings-show', visibleItems);
     itemsDisplay();
-    scrollToTargetListing();
-
-    for (const item of items.entries()) {
-      if (item[0] == visibleItems) {
-        item[1].focus();
-      }
-    }
+    scrollToItem();
   } else {
-    visibleItems = batchNumber;
+    visibleItems = itemsIncrement;
     itemsDisplay();
-    wrapper.setAttribute('data-listings-show', batchNumber); // console.log('scroll to top');
-
-    wrapper.scrollIntoView();
+    wrapper.setAttribute('data-listings-show', itemsIncrement);
+    zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(wrapper);
   }
 };
 
+function launchHistory() {
+  // Load correct number of items based on URL hash
+  if (hashedUrl) {
+    let hashedUrlParts = hashedUrl.split('-');
+    let activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(hashedUrlParts[1]));
+    visibleItems = activeItem + (itemsIncrement - 1);
+    wrapper.setAttribute('data-listings-show', visibleItems);
+    itemsDisplay();
+    scrollToItem();
+  } else {
+    itemsDisplay();
+  }
+}
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchHistory,
   launchQuery: `.${className}`
 });
 
