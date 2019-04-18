@@ -17330,11 +17330,12 @@ button
     z-index: 3;
 }
 
-.modal--in {
+body.modal--in {
     overflow: hidden;
+    position: fixed;
 }
 
-.modal--in .modal__background {
+body.modal--in .modal__background {
     opacity: 0.7;
 }
 
@@ -17373,7 +17374,7 @@ button
 }
 
 .modal__reveal {
-    background: #7f40f1;
+    background: #015a79;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -17383,7 +17384,7 @@ button
 }
 
 .modal__reveal:nth-child(2) {
-    background-color: #40f180;
+    background: #3e1031;
 }
 
 .modal__reveal--fromtop {

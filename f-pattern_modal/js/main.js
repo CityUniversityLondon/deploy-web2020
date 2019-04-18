@@ -4904,7 +4904,8 @@ const className = 'modal-group',
       modalTransitioningInClass = 'modal__popup--transitioning-in',
       modalTransitioningOutClass = 'modal__popup--transitioning-out',
       modalRevealFromTop = 'modal__reveal--fromtop',
-      modalRevealFromBottom = 'modal__reveal--frombottom';
+      modalRevealFromBottom = 'modal__reveal--frombottom',
+      windowHeight = window.outerHeight;
 
 function launchModal() {
   let modalOpenTriggers = document.querySelectorAll('a.modal__trigger'),
@@ -4981,14 +4982,22 @@ const handleTriggerClose = e => {
 
 const openModal = modalPopup => {
   // fade background in
-  document.body.classList.add('modal--in'); // show the modal, but keep the content div hidden
+  document.body.classList.add('modal--in');
 
-  modalPopup.classList.remove(modalHiddenClass);
-  modalPopup.classList.add(modalShowClass); // trigger the first transition after the container displayed
+  if (windowHeight >= 768) {
+    // show the modal, but keep the content div hidden
+    modalPopup.classList.remove(modalHiddenClass);
+    modalPopup.classList.add(modalShowClass); // trigger the first transition after the container displayed
 
-  setTimeout(function () {
-    modalPopup.classList.add(modalTransitioningInClass);
-  }, 50);
+    setTimeout(function () {
+      modalPopup.classList.add(modalTransitioningInClass);
+    }, 50);
+  } else {
+    // show the modal, skip transition
+    modalPopup.classList.remove(modalHiddenClass);
+    modalPopup.classList.add(modalShowClass);
+    modalPopup.classList.add(modalShowContentClass);
+  }
 };
 
 const closeModal = (modalPopup, escCloseModal) => {
@@ -4997,9 +5006,16 @@ const closeModal = (modalPopup, escCloseModal) => {
     modalPopup.classList.remove(modalShowClass);
     modalPopup.classList.add(modalHiddenClass);
     document.body.classList.remove('modal--in');
-  } else {
+  }
+
+  if (windowHeight >= 768) {
     // trigger transition, callback handles the closing
     modalPopup.classList.add(modalTransitioningOutClass);
+  } else {
+    modalPopup.classList.remove(modalShowClass);
+    modalPopup.classList.add(modalHiddenClass);
+    modalPopup.classList.remove(modalShowContentClass);
+    document.body.classList.remove('modal--in');
   }
 };
 
