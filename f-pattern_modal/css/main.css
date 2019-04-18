@@ -17317,31 +17317,44 @@ button
     margin-left: 0.5rem;
 }
 
-.modal__popup {
+.modal__background {
     background: #0c0c0e;
+    pointer-events: none;
     height: 100%;
+    opacity: 0;
     top: 0;
     left: 0;
     position: fixed;
-    transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.35s ease;
+    width: 100%;
+    z-index: 3;
+}
+
+.modal--in .modal__background {
+    opacity: 0.7;
+}
+
+.modal__popup {
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    position: fixed;
     width: 100%;
     z-index: 4;
 }
 
-.modal__popup dialog {
-    background: transparent;
-    padding: 0;
-    border: none;
+.modal__popup div[role='modal'] {
+    position: relative;
 }
 
 .modal__popup--hidden {
-    opacity: 0;
-    pointer-events: none;
+    display: none;
 }
 
 .modal__popup--show {
-    opacity: 0.7;
-    pointer-events: auto;
+    display: flex;
 }
 
 .modal__content {
@@ -17360,7 +17373,7 @@ button
     height: 100%;
     width: 100%;
     z-index: 1;
-    transition: transform 0.4s ease-in;
+    transition: transform 0.35s cubic-bezier(0.53, 0.745, 1, 0.83);
     transform: scaleY(0);
 }
 
@@ -17376,15 +17389,12 @@ button
     transform-origin: 50% 100%;
 }
 
-.modal__popup--transitioning-in .modal__reveal--fromtop {
-    transform: scaleY(1);
-}
-
+.modal__popup--transitioning-in .modal__reveal--fromtop,
 .modal__popup--transitioning-out .modal__reveal--frombottom {
     transform: scaleY(1);
 }
 
-.modal_popup--show-content .modal__content {
+.modal__popup--show-content .modal__content {
     opacity: 1;
     pointer-events: auto;
 }

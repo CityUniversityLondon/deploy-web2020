@@ -4900,9 +4900,11 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'modal-group',
       modalHiddenClass = 'modal__popup--hidden',
       modalShowClass = 'modal__popup--show',
-      modalShowContentClass = 'modal_popup--show-content',
+      modalShowContentClass = 'modal__popup--show-content',
       modalTransitioningInClass = 'modal__popup--transitioning-in',
-      modalTransitioningOutClass = 'modal__popup--transitioning-out';
+      modalTransitioningOutClass = 'modal__popup--transitioning-out',
+      modalRevealFromTop = 'modal__reveal--fromtop',
+      modalRevealFromBottom = 'modal__reveal--frombottom';
 
 function launchModal() {
   let modalOpenTriggers = document.querySelectorAll('a.modal__trigger'),
@@ -4926,30 +4928,28 @@ function launchModal() {
   document.addEventListener('keydown', e => {
     let keyCode = e.keyCode;
     let activeModal = document.getElementsByClassName(modalShowClass)[0];
-    if (keyCode === 27) closeModal(activeModal);
-  });
-  /**
-   * Listen for a click anywhere outside the modal and close active modal
-   */
 
-  document.addEventListener('click', e => {
-    e.target.classList.forEach(className => {
-      if (className === modalShowClass) {
-        let activeModal = document.getElementsByClassName(modalShowClass)[0];
-        closeModal(activeModal);
-        return;
-      }
-    });
+    if (keyCode === 27) {
+      let espCloseModal = true;
+      closeModal(activeModal, espCloseModal);
+    }
   });
   /**
    * Listen for when reveal in/out transition over
    */
 
   modalInReveals.forEach(elem => {
-    elem.addEventListener('webkitTransitionEnd', transitionInEnded, false);
+    // chrome & safari
+    elem.addEventListener('webkitTransitionEnd', transitionInEnded, false); // standard
+
+    elem.addEventListener('transitionend', transitionInEnded, false); // moz
+
+    elem.addEventListener('mozTransitionEnd', transitionInEnded, false);
   });
   modalOutReveals.forEach(elem => {
     elem.addEventListener('webkitTransitionEnd', transitionOutEnded, false);
+    elem.addEventListener('transitionend', transitionOutEnded, false);
+    elem.addEventListener('mozTransitionEnd', transitionOutEnded, false);
   });
 }
 
@@ -4967,35 +4967,47 @@ const handleTriggerClose = e => {
 };
 
 const openModal = modalPopup => {
-  // show the modal, but keep the content div hidden
-  modalPopup.classList.remove(modalHiddenClass);
-  modalPopup.classList.add(modalShowClass);
-  modalPopup.firstElementChild.showModal(); // trigger the first transition
+  // fade background in
+  document.body.classList.add('modal--in'); // show the modal, but keep the content div hidden
 
-  modalPopup.classList.add(modalTransitioningInClass);
+  modalPopup.classList.remove(modalHiddenClass);
+  modalPopup.classList.add(modalShowClass); // trigger the first transition after the container displayed
+
+  setTimeout(function () {
+    modalPopup.classList.add(modalTransitioningInClass);
+  }, 50);
 };
 
-const closeModal = modalPopup => {
-  // trigger transition, callback handles the closing
-  modalPopup.classList.add(modalTransitioningOutClass);
+const closeModal = (modalPopup, escCloseModal) => {
+  if (escCloseModal) {
+    // if escape close, just close
+    modalPopup.classList.remove(modalShowClass);
+    modalPopup.classList.add(modalHiddenClass);
+    document.body.classList.remove('modal--in');
+  } else {
+    // trigger transition, callback handles the closing
+    modalPopup.classList.add(modalTransitioningOutClass);
+  }
 };
 
 const transitionInEnded = e => {
   let modalPopup = e.target.parentNode.parentNode;
   let modalReveal = e.target; // switch classes to reverse transition or reset for next transition
 
-  if (modalReveal.classList.contains('modal__reveal--fromtop')) {
-    modalReveal.classList.remove('modal__reveal--fromtop');
-    modalReveal.classList.add('modal__reveal--frombottom');
+  if (modalReveal.classList.contains(modalRevealFromTop)) {
+    modalReveal.classList.remove(modalRevealFromTop);
+    modalReveal.classList.add(modalRevealFromBottom);
   } else {
-    modalReveal.classList.remove('modal__reveal--frombottom');
-    modalReveal.classList.add('modal__reveal--fromtop');
+    modalReveal.classList.remove(modalRevealFromBottom);
+    modalReveal.classList.add(modalRevealFromTop);
   } // show the content so it's revealed on transition
 
 
   modalPopup.classList.add(modalShowContentClass); // trigger the second transition
 
-  modalPopup.classList.remove(modalTransitioningInClass);
+  setTimeout(function () {
+    modalPopup.classList.remove(modalTransitioningInClass);
+  }, 300);
 };
 
 const transitionOutEnded = e => {
@@ -5004,19 +5016,21 @@ const transitionOutEnded = e => {
 
   modalPopup.classList.remove(modalShowContentClass); // switch these so the transition direction changes
 
-  modalReveal.classList.remove('modal__reveal--frombottom');
-  modalReveal.classList.add('modal__reveal--fromtop'); // trigger the second transition
+  modalReveal.classList.remove(modalRevealFromBottom);
+  modalReveal.classList.add(modalRevealFromTop); // trigger the second transition - delay slightly
 
-  modalPopup.classList.remove(modalTransitioningOutClass);
+  setTimeout(function () {
+    modalPopup.classList.remove(modalTransitioningOutClass);
+  }, 300);
   setTimeout(function () {
     // switch these classes back for next transition
-    modalReveal.classList.remove('modal__reveal--fromtop');
-    modalReveal.classList.add('modal__reveal--frombottom'); // finally, remove the modal popup
+    modalReveal.classList.remove(modalRevealFromTop);
+    modalReveal.classList.add(modalRevealFromBottom); // finally, remove the modal popup and background
 
     modalPopup.classList.remove(modalShowClass);
     modalPopup.classList.add(modalHiddenClass);
-    modalPopup.firstElementChild.close();
-  }, 460);
+    document.body.classList.remove('modal--in');
+  }, 500);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = ({
