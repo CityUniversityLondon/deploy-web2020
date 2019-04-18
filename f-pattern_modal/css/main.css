@@ -17366,7 +17366,8 @@ button
     pointer-events: none;
     background: #ffffff;
     border: none;
-    overflow: hidden;
+    max-height: 500px;
+    overflow: scroll;
     padding: 0.5rem 2.5rem 3rem;
     position: relative;
 }
