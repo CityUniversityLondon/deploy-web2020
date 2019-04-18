@@ -17396,10 +17396,12 @@ article .social-icon:focus:focus, article .social-icon:focus:active, article .so
     outline-offset: 0.1875rem;
 }
 
-article .social-icon:hover, article .social-icon:active {
-    transform: scale(1.2);
-    background-color: #dd0036;
-    color: #ffffff;
+@media (hover: hover) {
+    article .social-icon:hover, article .social-icon:active {
+        transform: scale(1.2);
+        background-color: #dd0036;
+        color: #ffffff;
+    }
 }
 
 article .social-icon:visited {
@@ -17415,16 +17417,21 @@ article .social-icon:hover, article .social-icon:active {
 }
 
 .tooltip {
+    font-family: 'Plex Sans';
     position: absolute;
-    left: 50px;
-    color: black;
-    border: 1px solid black;
+    right: 50px;
+    color: #696969;
+    border: 1px solid #e5e5e5;
+    border-radius: 0.1rem;
     padding: 0.5rem;
+    background-color: #e5e5e5;
+    transition: all 0.6s;
 }
 
 .tooltip.successful {
-    border-color: #3eff10;
-    background-color: #3eff10;
+    border-color: #1e1e1e;
+    background-color: #1e1e1e;
+    color: #ffffff;
 }
 
 .generic {

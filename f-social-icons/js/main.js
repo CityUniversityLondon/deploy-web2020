@@ -5385,6 +5385,7 @@ function copyIconToClipboard(elem) {
       // Now that we've selected the anchor text, execute the copy command
       var successful = document.execCommand('copy');
       var msg = successful ? 'successful' : 'unsuccessful';
+      document.querySelector('.tooltip').textContent = 'Link Copied';
       document.querySelector('.tooltip').classList.add(msg);
     } catch (err) {
       throw new Error(e);
