@@ -12400,6 +12400,7 @@ main table td em {
     .js .cookie-notice a:hover {
         border-bottom: #ffffff solid 0.125rem;
         color: #ffffff;
+        background-image: none;
     }
 }
 
@@ -17415,6 +17416,7 @@ button
     .module-selector__content__moduleLink a:hover {
         border-bottom: #ffffff solid 0.125rem;
         color: #ffffff;
+        background-image: none;
     }
 }
 
@@ -17430,10 +17432,9 @@ button
     color: #cbcbcb;
 }
 
-.module-selector__content__moduleLink a:hover, .module-selector__content__moduleLink a:active {
-    color: #ffffff;
-    border-color: #ffffff;
-    background-image: none;
+.module-selector__content__moduleLink a:focus {
+    color: #cbcbcb;
+    border-bottom-color: #cbcbcb;
 }
 
 .module-selector__content__moduleLink .module-selector__separator {
