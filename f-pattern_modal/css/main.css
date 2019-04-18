@@ -17330,6 +17330,10 @@ button
     z-index: 3;
 }
 
+.modal--in {
+    overflow: hidden;
+}
+
 .modal--in .modal__background {
     opacity: 0.7;
 }
