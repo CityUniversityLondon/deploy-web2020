@@ -17366,7 +17366,7 @@ button
     pointer-events: none;
     background: #ffffff;
     border: none;
-    max-height: 500px;
+    max-height: 60vh;
     overflow: scroll;
     padding: 0.5rem 2.5rem 3rem;
     position: relative;
