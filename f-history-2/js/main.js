@@ -4597,8 +4597,7 @@ let itemsIncrement = 3,
     items = wrapper.querySelectorAll('.key-info__listing'),
     targetItem,
     loadMoreBtn = document.querySelector('.content-toggle button'),
-    hashedUrl = window.location.hash,
-    currentItem;
+    hashedUrl = window.location.hash;
 /**
  * Give wrapper a numeric data attribute. As this changes, so
  * will the number of visible items.
@@ -4663,11 +4662,7 @@ loadMoreBtn.addEventListener('click', () => {
   itemsDisplay();
   scrollToItem(); // let urlHash = window.location.hash;
 
-  hashedUrl ? replaceUrlState() : pushUrlState(); // Capture latest hash - needed for change in pop state
-
-  let updatedUrlParts = window.location.hash.split('-');
-  currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(updatedUrlParts[1]));
-  currentItem = currentItem + (itemsIncrement - 1);
+  hashedUrl ? replaceUrlState() : pushUrlState();
 }); // Back click: hash to no hash. Restore default settings.
 
 window.onpopstate = () => {
@@ -4675,6 +4670,10 @@ window.onpopstate = () => {
   hashedUrl = window.location.hash;
 
   if (hashedUrl) {
+    // Capture latest hash
+    let updatedUrlParts = window.location.hash.split('-');
+    let currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(updatedUrlParts[1]));
+    currentItem = currentItem + (itemsIncrement - 1);
     visibleItems = currentItem;
     wrapper.setAttribute('data-listings-show', visibleItems);
     itemsDisplay();
