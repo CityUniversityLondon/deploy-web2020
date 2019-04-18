@@ -3737,12 +3737,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns/cms-editor-warning/cms-editor-warning */ "./src/patterns/cms-editor-warning/cms-editor-warning.js");
 /* harmony import */ var _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/cookie-notice/cookie-notice */ "./src/patterns/cookie-notice/cookie-notice.js");
 /* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
-/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
-/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
-/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
-/* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
+/* harmony import */ var _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-paginated */ "./src/patterns/key-info-box/key-info-paginated.js");
+/* harmony import */ var _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-slider */ "./src/patterns/key-info-box/key-info-slider.js");
+/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
+/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
+/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
+/* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
+/* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
 
 
 /**
@@ -3763,9 +3766,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- //import backToTopLink from './patterns/back-to-top-link/back-to-top-link';
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_9__["default"]]);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"]]);
 
 /***/ }),
 
@@ -3953,6 +3958,110 @@ function launchAccordion(accordion) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchAccordion,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/back-to-top-link/back-to-top-link.js":
+/*!***********************************************************!*\
+  !*** ./src/patterns/back-to-top-link/back-to-top-link.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+/**
+ * Back To Top Link Scroll
+ *
+ * @module patterns/external-link-finder/external-link-finder
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+/**
+ *  Back to top link button only appears on long pages and when you have scrolled down long enough
+ *
+ */
+const className = 'back-to-top',
+      viewPortHeight = window.innerHeight,
+      // calculates viewport height
+docHeight = document.documentElement.scrollHeight; // calculates page height
+
+/**
+ *  Parameters
+ *
+ */
+
+const pageHeight = 1.5; // only appears on long pages which are 'X' times the viewport height
+
+const scrollPos = 1; // sets how many viewport heights you need to scroll down for back to top to appear
+
+/**
+ *  Initialises for long pages only
+ *
+ */
+
+function initBacktoTop() {
+  const scrollToTopBut = document.getElementsByClassName('back-to-top')[0].querySelectorAll('a')[0];
+
+  if (docHeight > viewPortHeight * pageHeight) {
+    scrollToTopBut.style.opacity = 0;
+    scrollToTopBut.classList.add('back-to-top-stick');
+
+    window.onscroll = function () {
+      updateProgress();
+      scrollButtonShow();
+    };
+  }
+}
+/**
+ *  Button fading behaviour
+ *
+ */
+
+
+function scrollButtonShow() {
+  const scrollToTopBut = document.getElementsByClassName('back-to-top')[0].querySelectorAll('a')[0];
+  let screenPos = window.pageYOffset; // calculates scroll position
+
+  if (screenPos > viewPortHeight * scrollPos) {
+    // shows button when scrolled down far enough - see parameters
+    scrollToTopBut.classList.add('back-to-top-show');
+  } else if (screenPos < 200) {
+    // hides button when close to top of the page
+    scrollToTopBut.classList.remove('back-to-top-show');
+  }
+}
+/**
+ *  Progress meter:
+ *
+ */
+// updateProgress function
+
+
+function updateProgress() {
+  // Setting up SVG animation
+  const progressPath = document.querySelector('path');
+  const pathLength = progressPath.getTotalLength();
+  progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+  progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+  progressPath.style.strokeDashoffset = pathLength;
+  progressPath.getBoundingClientRect();
+  progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 0ms linear'; // Calculate values
+
+  let scroll = window.pageYOffset;
+  let height = document.documentElement.scrollHeight - window.innerHeight;
+  let progress = pathLength - scroll * pathLength / height; // Updates progress bar
+
+  progressPath.style.strokeDashoffset = progress;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: initBacktoTop,
   launchQuery: `.${className}`
 });
 
@@ -4179,8 +4288,14 @@ const className = 'content';
 function findExternalLink() {
   var anchors = document.getElementsByClassName('content')[0].querySelectorAll('a');
   anchors.forEach(function (i) {
-    // checks if anchors link is external & not an image & not contain font awesome icon already & isn't a CTA
-    if (i.origin !== window.location.origin && i.querySelectorAll('img').length < 1 && i.querySelectorAll('.fa-external-link').length < 1 && !i.parentElement.className.includes('cta-block')) {
+    /** checks if anchors links are :
+     * external
+     * not an image
+     * not contain font awesome icon already
+     * not a CTA
+     * not an email hyperlink
+     */
+    if (i.origin !== window.location.origin && i.querySelectorAll('img').length < 1 && i.querySelectorAll('.fa-external-link').length < 1 && !i.parentElement.className.includes('cta-block') && i.href.indexOf('mailto:')) {
       // adds font awesome external link icon after completing checks
       var node = document.createElement('span');
       node.className = 'fa fa-external-link inline-external-link ';
@@ -4308,6 +4423,427 @@ function launchFeedback(elem) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchFeedback,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/key-info-box/key-info-paginated.js":
+/*!*********************************************************!*\
+  !*** ./src/patterns/key-info-box/key-info-paginated.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+/**
+ * Key information box
+ *
+ * @module patterns/key-info-box/key-info-box
+ * @author Mark Skinsley <mark.skinsley@city.ac.uk>
+ * @copyright City, University of London 2018
+ */
+
+const className = 'key-info-paginated';
+let listings = document.querySelectorAll('.key-info__listing'),
+    batchQuantity = 3,
+    contentToggles = document.querySelectorAll('.content-toggle'),
+    browserWidth = document.documentElement.scrollWidth,
+    listingDates = document.querySelectorAll('.key-info__date'),
+    listingsVisible = [],
+    listingsLength = [],
+    defaultDuration = 2000,
+    edgeOffset = 100; // Zen scroll setup
+
+zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
+
+function dateTabIndex() {
+  for (const listingDate of listingDates) {
+    listingDate.setAttribute('tabindex', '-1');
+  }
+} // Visible listings: needed to decide if more content still to be loaded.
+
+
+function calculateVisibleListings() {
+  listingsVisible = [];
+
+  for (const listing of listings) {
+    if (!listing.classList.contains('hide')) {
+      listingsVisible.push(listing);
+    }
+  }
+} // Mobile: Show listing entry based on navigation button clicks
+
+
+function listingDisplay() {
+  for (const listing of listings.entries()) {
+    listing[1].setAttribute('data-id', `listing-${listing[0]}`);
+  }
+} // Initial listings display
+
+
+function defaultListingsDisplay() {
+  listingsLength = [];
+
+  for (const listing of listings.entries()) {
+    listingsLength.push(listings.length);
+    listing[0] > batchQuantity - 1 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
+  }
+} // Show number of available starting dates.
+
+
+function listingsQuantity() {
+  const listingsNumber = [];
+
+  for (const listing of listings.entries()) {
+    listingsNumber.push(listing.length);
+  }
+
+  let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
+
+  for (const datesQuantity of datesQuantities) {
+    let date;
+    listingsNumber.length == 1 ? date = 'date' : date = 'dates';
+    let iconWrapper = document.createElement('div');
+    iconWrapper.classList.add('key-info__icon--left');
+    datesQuantity.appendChild(iconWrapper);
+    let calendarIcon = document.createElement('span');
+    calendarIcon.classList.add('fas');
+    calendarIcon.classList.add('fa-calendar-day');
+    iconWrapper.appendChild(calendarIcon);
+    let iconTextDiv = document.createElement('div');
+    iconWrapper.appendChild(iconTextDiv);
+    let iconTextP = document.createElement('p');
+    iconTextP.appendChild(document.createTextNode(listingsNumber.length + ' available start ' + date));
+    iconTextDiv.appendChild(iconTextP);
+  }
+}
+
+function launchKeyInfo(batchQuantity) {
+  dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
+
+  if (browserWidth > 768) {
+    if (listings.length > batchQuantity) {
+      listingDisplay();
+      defaultListingsDisplay();
+      calculateVisibleListings();
+
+      for (const contentToggle of contentToggles) {
+        contentToggle.addEventListener('click', e => {
+          // This will increase with each 'Load more' click, so visible listings
+          // must be captured before any further listings are made visible
+          let preExpandListingsVisible = listingsVisible.length;
+          e.preventDefault();
+
+          if (preExpandListingsVisible < listings.length) {
+            for (const listing of listings.entries()) {
+              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
+              let listingsVisibleLength = parseInt(listingsVisible.length);
+              listingsLength = parseInt(listingsLength);
+              let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
+
+              zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200);
+              let targetListingDate = targetListing.querySelectorAll('.key-info__date'); // Final batch of listings, zen scroll to 'load more' button and offset
+
+              if (remainingItems <= batchQuantity) {
+                zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(contentToggle, 200);
+                contentToggles[0].style.display = 'none';
+              }
+
+              targetListingDate[0].focus(); // Bring in newly visible listings in two phases to allow for opacity transition
+
+              if (listing[0] < preExpandListingsVisible + batchQuantity) {
+                const promise = new Promise(resolve => {
+                  resolve(listing[1].style.display = 'grid');
+                });
+                promise.then(() => {
+                  listing[1].classList.remove('hide');
+                }); // Calculating visible listings must run here after display properties are updated
+
+                promise.then(() => {
+                  calculateVisibleListings();
+                });
+              }
+            }
+          }
+        }, false);
+      }
+    } else {
+      contentToggles[0].style.display = 'none';
+    } // Mobile: one listing visible at a time
+
+  } else if (browserWidth < 768 && listings.length > 1) {
+    let listWrapper = document.getElementById('short-course-key-info-listings');
+    listWrapper.classList.add('paginated-list'); // Scroll to top of listings after each paginated index click
+
+    let paginationControls = document.querySelectorAll('.pagination__controls > button');
+
+    for (const paginationControl of paginationControls) {
+      paginationControl.addEventListener('click', () => {
+        let listingsTop = document.getElementById('short-course-key-info-listings');
+
+        if (paginationControl.getAttribute('aria-expanded') !== true) {
+          zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(listingsTop, 0);
+        }
+      });
+    }
+  } else if (browserWidth < 768 && listings.length == 1) {
+    for (const listing of listings.entries()) {
+      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
+    }
+  }
+}
+
+function launchKeyInfoPaginated() {
+  listingsQuantity();
+  launchKeyInfo(batchQuantity);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchKeyInfoPaginated,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/key-info-box/key-info-slider.js":
+/*!******************************************************!*\
+  !*** ./src/patterns/key-info-box/key-info-slider.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+
+
+/**
+ * Key information box
+ *
+ * @module patterns/key-info-box/key-info-box
+ * @author Mark Skinsley <mark.skinsley@city.ac.uk>
+ * @copyright City, University of London 2019
+ */
+
+
+const className = 'key-info-slider';
+let listings = document.querySelectorAll('.key-info__listing'),
+    batchQuantity = 3,
+    contentToggles = document.querySelectorAll('.content-toggle'),
+    contentSliders = document.querySelectorAll('.content-slider'),
+    browserWidth = document.documentElement.scrollWidth,
+    prevBtn = document.getElementById('key-info-previous-item'),
+    nextBtn = document.getElementById('key-info-next-item'),
+    listingHeight = '',
+    listingDates = document.querySelectorAll('.key-info__date'),
+    listingsVisible = [],
+    listingsLength = [],
+    defaultDuration = 2000,
+    edgeOffset = 100; // Zen scroll setup
+
+zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
+
+function dateTabIndex() {
+  for (const listingDate of listingDates) {
+    listingDate.setAttribute('tabindex', '-1');
+  }
+} // Initial listings display
+
+
+function defaultListingsDisplay() {
+  listingsLength = [];
+
+  for (const listing of listings.entries()) {
+    listingsLength.push(listings.length);
+    listing[0] > batchQuantity - 1 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
+  }
+} // Visible listings: needed to decide if more content still to be loaded.
+
+
+function calculateVisibleListings() {
+  listingsVisible = [];
+
+  for (const listing of listings) {
+    if (!listing.classList.contains('hide')) {
+      listingsVisible.push(listing);
+    }
+  }
+} // Show number of listings in data set
+
+
+function listingsQuantity() {
+  const listingsNumber = [];
+
+  for (const listing of listings.entries()) {
+    listingsNumber.push(listing.length);
+  }
+
+  let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
+
+  for (const datesQuantity of datesQuantities) {
+    let date;
+    listingsNumber.length == 1 ? date = 'date' : date = 'dates';
+    let iconWrapper = document.createElement('div');
+    iconWrapper.classList.add('key-info__icon--left');
+    datesQuantity.appendChild(iconWrapper);
+    let calendarIcon = document.createElement('span');
+    calendarIcon.classList.add('fas');
+    calendarIcon.classList.add('fa-calendar-day');
+    iconWrapper.appendChild(calendarIcon);
+    let iconTextDiv = document.createElement('div');
+    iconWrapper.appendChild(iconTextDiv);
+    let iconTextP = document.createElement('p');
+    iconTextP.appendChild(document.createTextNode(listingsNumber.length + ' available start ' + date));
+    iconTextDiv.appendChild(iconTextP);
+  }
+}
+/**
+ * Launches Key Info slider pattern. Pass in how many listings should display per batch,
+ * i.e. each time user selects 'Load more'.
+ *  */
+
+
+function launchKeyInfo(batchQuantity) {
+  let counter = 0; // Mobile: Show listing entry based on navigation button clicks
+
+  function listingDisplay() {
+    for (const listing of listings.entries()) {
+      if (browserWidth < 768 && listings.length > 1) {
+        listing[0] == counter ? listing[1].style.display = 'block' : listing[1].style.display = 'none';
+      }
+
+      listing[1].setAttribute('data-id', `listing-${listing[0]}`);
+    }
+  } // Mobile: Enable/disable navigation buttons based on position of listing in collection
+
+
+  function navBtnState() {
+    for (const contentSlider of contentSliders) {
+      contentSlider.style.display = 'block';
+    }
+
+    let listingsLength = listings.length - 1;
+    counter == 0 ? (prevBtn.setAttribute('disabled', true), nextBtn.removeAttribute('disabled')) : counter > 0 && counter < listingsLength ? (prevBtn.removeAttribute('disabled'), nextBtn.removeAttribute('disabled')) : (nextBtn.setAttribute('disabled', true), prevBtn.removeAttribute('disabled'));
+  } // Mobile: Set mobile listings navigation buttons to correct position based on listing height
+
+
+  function navBtnPosition() {
+    for (const listing of listings.entries()) {
+      if (counter == listing[0]) {
+        listingHeight = listing[1].getAttribute('data-height');
+        prevBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(`-${listingHeight}`)) + Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(100) + 'rem';
+        nextBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(`-${listingHeight}`)) + Object(_util__WEBPACK_IMPORTED_MODULE_2__["pxToRem"])(100) + 'rem';
+      }
+    }
+  } // Run regardless of viewport size
+
+
+  dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
+
+  if (browserWidth > 768) {
+    if (listings.length > batchQuantity) {
+      listingDisplay();
+      defaultListingsDisplay();
+      calculateVisibleListings();
+
+      for (const contentToggle of contentToggles) {
+        contentToggle.addEventListener('click', e => {
+          // This will increase with each 'Load more' click, so visible listings
+          // must be captured before any further listings are made visible
+          let preExpandListingsVisible = listingsVisible.length;
+          e.preventDefault();
+
+          if (preExpandListingsVisible < listings.length) {
+            for (const listing of listings.entries()) {
+              let targetListing = document.querySelector(`[data-id='listing-${preExpandListingsVisible}']`);
+              let listingsVisibleLength = parseInt(listingsVisible.length);
+              listingsLength = parseInt(listingsLength);
+              let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
+
+              zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(targetListing, 200);
+              let targetListingDate = targetListing.querySelectorAll('.key-info__date'); // Final batch of listings, zen scroll to 'load more' button and offset
+
+              if (remainingItems <= batchQuantity) {
+                zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(contentToggle, 0);
+                contentToggles[0].style.display = 'none';
+              }
+
+              targetListingDate[0].focus(); // Bring in newly visible listings in two phases to allow for opacity transition
+
+              if (listing[0] < preExpandListingsVisible + batchQuantity) {
+                const promise = new Promise(resolve => {
+                  resolve(listing[1].style.display = 'grid');
+                });
+                promise.then(() => {
+                  listing[1].classList.remove('hide');
+                }); // Calculating visible listings must run here after display properties are updated
+
+                promise.then(() => {
+                  calculateVisibleListings();
+                });
+              }
+            }
+          }
+        }, false);
+      }
+    } else {
+      contentToggles[0].style.display = 'none';
+    } // Mobile: one listing visible at a time
+
+  } else if (browserWidth < 768 && listings.length > 1) {
+    for (const listing of listings.entries()) {
+      // Capture listing height and set to data attribute
+      listing[1].style.display = 'block';
+      listing[1].setAttribute('data-height', listing[1].offsetHeight);
+      listing[1].style.display = 'none'; // On load, set mobile navigation buttons at correct height
+
+      counter == 0 && listing[0] == 0 ? navBtnPosition() : null;
+      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
+    }
+
+    navBtnState();
+    prevBtn.addEventListener('click', () => {
+      counter = counter - 1;
+      navBtnState();
+      navBtnPosition();
+      listingDisplay();
+    });
+    nextBtn.addEventListener('click', () => {
+      counter = counter + 1;
+      navBtnState();
+      navBtnPosition();
+      listingDisplay();
+    });
+  } else if (browserWidth < 768 && listings.length == 1) {
+    for (const listing of listings.entries()) {
+      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
+    }
+  }
+}
+
+function launchKeyInfoSlider() {
+  listingsQuantity();
+  launchKeyInfo(batchQuantity);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchKeyInfoSlider,
   launchQuery: `.${className}`
 });
 
@@ -5504,8 +6040,12 @@ function launchTabs(tabs) {
     return;
   }
 
-  controls.setAttribute('role', 'tablist');
-  preparePanels(panels);
+  controls.setAttribute('role', 'tablist'); // zero by passes by not using CSS styling on the tabs
+
+  if (tabs.getAttribute('data-mobiletabs') > 0) {
+    preparePanels(panels);
+  }
+
   const idLinked = prepareLinks(linkItems);
 
   if (linkItems.length > Number.parseInt(tabs.dataset.mobiletabs)) {
