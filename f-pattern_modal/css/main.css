@@ -17367,7 +17367,7 @@ body.modal--in .modal__background {
     pointer-events: none;
     background: #ffffff;
     border: none;
-    max-height: 60vh;
+    max-height: 75vh;
     overflow: scroll;
     padding: 0.5rem 2.5rem 3rem;
     position: relative;

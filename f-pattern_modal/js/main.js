@@ -5032,7 +5032,7 @@ const transitionInEnded = e => {
   } // show the content so it's revealed on transition
 
 
-  modalPopup.classList.add(modalShowContentClass); // trigger the second transition
+  modalPopup.classList.add(modalShowContentClass); // trigger the second transition - delay slightly
 
   setTimeout(function () {
     modalPopup.classList.remove(modalTransitioningInClass);
