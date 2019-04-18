@@ -14102,13 +14102,13 @@ main table td em {
     padding: 0.5rem 1.5rem;
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
-    border: 0.125rem solid #dd0036;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background: #dd0036;
+    border: 0.125rem solid #dd0036;
     color: #ffffff;
     border-color: #d8d8d8;
     background: #d8d8d8;
     color: #0c0c0e;
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14179,21 +14179,18 @@ main table td em {
 }
 
 .primary-cta--grey--bright:visited {
-    color: #ffffff;
     border-color: #dd0036;
+    color: #ffffff;
 }
 
 .primary-cta--grey--bright:focus {
     background: #dd0036;
+    border-color: #dd0036;
     color: #ffffff;
 }
 
-.primary-cta--grey--bright:active, .primary-cta--grey--bright:focus {
-    border-color: #dd0036;
-}
-
-.primary-cta--grey--bright:active:focus, .primary-cta--grey--bright:active:active, .primary-cta--grey--bright:focus:focus, .primary-cta--grey--bright:focus:active {
-    outline-color: #ffffff;
+.primary-cta--grey--bright:focus:focus, .primary-cta--grey--bright:focus:active {
+    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
@@ -14201,13 +14198,24 @@ main table td em {
 
 @media (hover: hover) {
     .primary-cta--grey--bright:hover {
-        background: transparent;
+        background: #ffffff;
         border-color: #dd0036;
+        color: #dd0036;
     }
 }
 
 .primary-cta--grey--bright:active {
+    border-color: #dd0036;
+    box-shadow: none;
+    color: #dd0036;
     background: transparent;
+}
+
+.primary-cta--grey--bright:active:focus, .primary-cta--grey--bright:active:active {
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
 }
 
 .primary-cta--grey--bright:disabled {
@@ -14215,20 +14223,17 @@ main table td em {
 }
 
 .primary-cta--grey--bright:visited {
-    color: #0c0c0e;
     border-color: #d8d8d8;
-}
-
-.primary-cta--grey--bright:focus, .primary-cta--grey--bright:active {
-    padding: 0.5rem 1.5rem;
-}
-
-.primary-cta--grey--bright:focus span, .primary-cta--grey--bright:active span {
-    transform: none;
+    color: #0c0c0e;
 }
 
 .primary-cta--grey--bright:after {
     content: '';
+}
+
+.primary-cta--grey--bright:focus, .primary-cta--grey--bright:active {
+    color: #d8d8d8;
+    padding: 0.5rem 1.5rem;
 }
 
 .primary-cta--grey--bright:focus {
@@ -14240,27 +14245,24 @@ main table td em {
 @media (hover: hover) {
     .primary-cta--grey--bright:hover {
         background: transparent;
-        color: #d8d8d8;
         border-color: #d8d8d8;
         padding: 0.5rem 1.5rem;
-    }
-    .primary-cta--grey--bright:hover span {
-        transform: none;
+        color: #d8d8d8;
     }
 }
 
 .primary-cta--grey--bright:active {
-    background: transparent;
-    border-color: #d8d8d8;
     color: #d8d8d8;
+    border-color: #d8d8d8;
+    background: transparent;
+}
+
+.primary-cta--grey--bright:hover span, .primary-cta--grey--bright:active span, .primary-cta--grey--bright:focus span {
+    transform: none;
 }
 
 .primary-cta--grey--bright:hover, .primary-cta--grey--bright:active {
     color: #ffffff;
-}
-
-.primary-cta--grey--bright:hover, .primary-cta--grey--bright:focus {
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
 .feedback {
