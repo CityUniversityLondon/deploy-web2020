@@ -4887,12 +4887,12 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 /**
-    <a href="#" class="modal__trigger">Open Modal 1</a>
-        <div class="modal__popup modal__popup--hidden">
-            <dialog aria-labelledby="modal__heading" aria-modal="true">
-                <div class="modal__curtain"></div>
-                <div class="modal__content">
-                    <a href="#" class="modal__close fas fa-times"></a>
+   <div class="modal__popup modal__popup--hidden">
+        <dialog aria-labelledby="modal__heading" aria-modal="true">
+            <div class="modal__reveal modal__reveal--fromtop"></div>
+            <div class="modal__reveal modal__reveal--frombottom"></div>
+            <div class="modal__content">
+                <a href="#" class="modal__close fas fa-times"></a>
 
                 ....
 **/
@@ -4967,20 +4967,22 @@ const handleTriggerClose = e => {
 };
 
 const openModal = modalPopup => {
+  // show the modal, but keep the content div hidden
   modalPopup.classList.remove(modalHiddenClass);
   modalPopup.classList.add(modalShowClass);
-  modalPopup.firstElementChild.showModal(); // this line needs to come last
+  modalPopup.firstElementChild.showModal(); // trigger the first transition
 
   modalPopup.classList.add(modalTransitioningInClass);
 };
 
 const closeModal = modalPopup => {
+  // trigger transition, callback handles the closing
   modalPopup.classList.add(modalTransitioningOutClass);
 };
 
 const transitionInEnded = e => {
   let modalPopup = e.target.parentNode.parentNode;
-  let modalReveal = e.target;
+  let modalReveal = e.target; // switch classes to reverse transition or reset for next transition
 
   if (modalReveal.classList.contains('modal__reveal--fromtop')) {
     modalReveal.classList.remove('modal__reveal--fromtop');
@@ -4988,12 +4990,12 @@ const transitionInEnded = e => {
   } else {
     modalReveal.classList.remove('modal__reveal--frombottom');
     modalReveal.classList.add('modal__reveal--fromtop');
-  }
+  } // show the content so it's revealed on transition
 
-  modalPopup.classList.add(modalShowContentClass);
-  setTimeout(function () {
-    modalPopup.classList.remove(modalTransitioningInClass);
-  }, 50);
+
+  modalPopup.classList.add(modalShowContentClass); // trigger the second transition
+
+  modalPopup.classList.remove(modalTransitioningInClass);
 };
 
 const transitionOutEnded = e => {
@@ -5005,13 +5007,16 @@ const transitionOutEnded = e => {
   modalReveal.classList.remove('modal__reveal--frombottom');
   modalReveal.classList.add('modal__reveal--fromtop'); // trigger the second transition
 
-  modalPopup.classList.remove(modalTransitioningOutClass); // finally, remove the modal popup
-
+  modalPopup.classList.remove(modalTransitioningOutClass);
   setTimeout(function () {
+    // switch these classes back for next transition
+    modalReveal.classList.remove('modal__reveal--fromtop');
+    modalReveal.classList.add('modal__reveal--frombottom'); // finally, remove the modal popup
+
     modalPopup.classList.remove(modalShowClass);
     modalPopup.classList.add(modalHiddenClass);
     modalPopup.firstElementChild.close();
-  }, 450);
+  }, 460);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = ({

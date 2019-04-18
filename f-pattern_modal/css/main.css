@@ -17355,13 +17355,17 @@ button
 }
 
 .modal__reveal {
-    position: absolute;
     background: #7f40f1;
+    position: absolute;
     height: 100%;
     width: 100%;
     z-index: 1;
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease-in;
     transform: scaleY(0);
+}
+
+.modal__reveal:nth-child(2) {
+    background-color: #40f180;
 }
 
 .modal__reveal--fromtop {
