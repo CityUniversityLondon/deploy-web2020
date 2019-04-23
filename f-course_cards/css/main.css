@@ -12483,27 +12483,27 @@ main table td em {
 
 .card--related-course a p {
     margin: 0.25rem 0 0.25rem;
-    font-size: 0.889rem;
+    font-size: 1rem;
     line-height: 1.625;
-    letter-spacing: 0em;
+    letter-spacing: -0.005em;
     color: #1e1e1e;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
     .card--related-course a p {
-        letter-spacing: -0.005em;
+        letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .card--related-course a p {
-        letter-spacing: -0.005em;
+        letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .card--related-course a p {
-        letter-spacing: -0.01em;
+        letter-spacing: -0.013em;
     }
 }
 
