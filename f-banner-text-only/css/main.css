@@ -18350,7 +18350,7 @@ button
 .banner__content {
     display: grid;
     grid-row-gap: 0;
-    grid-template-areas: '. . l l l l l l l l l l l l l l . .' '. . h h h h h h h h h h h h h h . .';
+    grid-template-areas: '. l l l l l l l l l l l l l l l . .' '. h h h h h h h h h h h h h h h . .';
     padding: 3.25rem 0;
 }
 
@@ -18404,7 +18404,7 @@ button
 
 .banner__content__labels li:not(:first-of-type) {
     position: relative;
-    margin-left: 2rem;
+    margin-left: 5rem;
 }
 
 .banner__content__labels li:not(:first-of-type):before {
