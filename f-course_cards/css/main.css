@@ -12473,6 +12473,7 @@ main table td em {
 }
 
 .card--related-course a:focus .card--related-course__title {
+    color: #696969;
     background-image: linear-gradient(#696969, #696969);
 }
 
