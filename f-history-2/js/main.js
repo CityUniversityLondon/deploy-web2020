@@ -4592,112 +4592,128 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'load-more';
 let wrapper = document.querySelector('.load-more'),
-    wrapperId = wrapper.getAttribute('id'),
-    items = wrapper.querySelectorAll('.item'),
-    itemsIncrement = parseInt(wrapper.dataset.increment),
-    targetItem,
-    loadMoreBtn = wrapper.querySelector('.content-toggle button'),
+    // wrapperId = wrapper.getAttribute('id'),
+// items = wrapper.querySelectorAll('.item'),
+itemsIncrement = parseInt(wrapper.dataset.increment),
+    // targetItem,
+loadMoreBtn = wrapper.querySelector('.content-toggle button'),
     hashedUrl = window.location.hash;
 /**
  * Give wrapper a numeric data attribute. As this changes, so
  * will the number of visible items.
  */
 
-wrapper.setAttribute('data-listings-show', itemsIncrement);
-let visibleItems = parseInt(wrapper.getAttribute('data-listings-show'));
+wrapper.setAttribute('data-listings-show', itemsIncrement); // let visibleItems = parseInt(wrapper.getAttribute('data-listings-show'));
+
 /**
  * Control what items will display based on wrapper's
  * 'data-listings-show' data attribute.
  * */
 
-function itemsDisplay() {
-  for (const item of items.entries()) {
-    item[1].setAttribute('tabindex', '1');
+function itemsDisplay(aItems, aVisibleItems, aLoadMoreBtn) {
+  for (const aItem of aItems.entries()) {
+    aItem[1].setAttribute('tabindex', '1');
 
-    if (item[0] >= visibleItems) {
-      item[1].classList.add('hide');
-      item[1].style.display = 'none';
+    if (aItem[0] >= aVisibleItems) {
+      aItem[1].classList.add('hide');
+      aItem[1].style.display = 'none';
     } else {
-      item[1].classList.remove('hide');
-      item[1].style.display = 'grid';
+      aItem[1].classList.remove('hide');
+      aItem[1].style.display = 'grid';
     }
   } // Hide 'load more' button when reached end of listings
 
 
-  if (visibleItems > items.length) {
-    loadMoreBtn.classList.add('hide');
+  if (aVisibleItems > aItems.length) {
+    aLoadMoreBtn.classList.add('hide');
   } else {
-    loadMoreBtn.classList.remove('hide');
+    aLoadMoreBtn.classList.remove('hide');
   }
 } // Scroll to, and focus first listing of new batch
 
 
-function scrollToItem() {
-  targetItem = visibleItems - itemsIncrement;
+function scrollToItem(aItems, aVisibleItems, aItemsIncrement) {
+  let aTargetItem = aVisibleItems - aItemsIncrement;
 
-  for (const item of items.entries()) {
-    if (item[0] == targetItem) {
-      item[1].focus();
-      zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(item[1]);
+  for (const aItem of aItems.entries()) {
+    if (aItem[0] == aTargetItem) {
+      aItem[1].focus();
+      zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(aItem[1]);
     }
   }
 } // Push state to URL: used to build initial hash
 
 
-function pushUrlState() {
-  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
-  history.pushState('', '', `#keyinfo${wrapperId}-listing${targetListingUrlParam}`);
+function pushUrlState(aWrapperId, aVisibleItems, aItemsIncrement) {
+  let aTargetListingUrlParam = aVisibleItems - (aItemsIncrement - 1);
+  history.pushState('', '', `#keyinfo${aWrapperId}-listing${aTargetListingUrlParam}`);
 } // Replace URL state: used to swap existing hash
 
 
-function replaceUrlState() {
-  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
-  history.replaceState('', '', `#keyinfo${wrapperId}-listing${targetListingUrlParam}`);
-} // Run on every 'load more' click: increase listings by batch number
-
-
-loadMoreBtn.addEventListener('click', () => {
-  visibleItems += itemsIncrement;
-  wrapper.setAttribute('data-listings-show', visibleItems);
-  itemsDisplay();
-  scrollToItem();
-  hashedUrl = window.location.hash;
-  hashedUrl ? replaceUrlState() : pushUrlState();
-}); // Back click: hash to no hash. Restore default settings.
-
-window.onpopstate = () => {
-  // Must re-assign variable on pop state change
-  hashedUrl = window.location.hash;
-
-  if (hashedUrl) {
-    // Capture latest hash
-    let updatedUrlParts = window.location.hash.split('-');
-    let currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(updatedUrlParts[1]));
-    currentItem = currentItem + (itemsIncrement - 1);
-    visibleItems = currentItem;
-    wrapper.setAttribute('data-listings-show', visibleItems);
-    itemsDisplay(); // scrollToItem();
-  } else {
-    visibleItems = itemsIncrement;
-    itemsDisplay();
-    wrapper.setAttribute('data-listings-show', itemsIncrement);
-    zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(wrapper);
-  }
-};
+function replaceUrlState(aWrapperId, aVisibleItems, aItemsIncrement) {
+  let aTargetListingUrlParam = aVisibleItems - (aItemsIncrement - 1);
+  history.replaceState('', '', `#keyinfo${aWrapperId}-listing${aTargetListingUrlParam}`);
+}
 
 function launchLoadMore() {
-  // Load correct number of items based on URL hash
+  let bWrapper = document.querySelector('.load-more'),
+      bWrapperId = bWrapper.getAttribute('id'),
+      bItems = bWrapper.querySelectorAll('.item'),
+      bItemsIncrement = parseInt(bWrapper.dataset.increment),
+      // bTargetItem,
+  bLoadMoreBtn = bWrapper.querySelector('.content-toggle button'); // bHashedUrl = window.location.hash;
+
+  /**
+   * Give wrapper a numeric data attribute. As this changes, so
+   * will the number of visible items.
+   */
+
+  bWrapper.setAttribute('data-listings-show', bItemsIncrement);
+  let bVisibleItems = parseInt(bWrapper.getAttribute('data-listings-show')); // Load correct number of items based on URL hash
+
   if (hashedUrl) {
     let hashedUrlParts = hashedUrl.split('-');
     let activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(hashedUrlParts[1]));
-    visibleItems = activeItem + (itemsIncrement - 1);
-    wrapper.setAttribute('data-listings-show', visibleItems);
-    itemsDisplay();
-    scrollToItem();
+    bVisibleItems = activeItem + (bItemsIncrement - 1);
+    bWrapper.setAttribute('data-listings-show', bVisibleItems);
+    itemsDisplay(bItems, bVisibleItems, bLoadMoreBtn);
+    scrollToItem(bItems, bVisibleItems, bItemsIncrement);
   } else {
-    itemsDisplay();
-    zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(wrapper);
-  }
+    itemsDisplay(bItems, bVisibleItems, bLoadMoreBtn); // scroll.to(wrapper);
+  } // Run on every 'load more' click: increase listings by batch number
+
+
+  loadMoreBtn.addEventListener('click', () => {
+    bVisibleItems += bItemsIncrement;
+    bWrapper.setAttribute('data-listings-show', bVisibleItems);
+    itemsDisplay(bItems, bVisibleItems, bLoadMoreBtn);
+    scrollToItem(bItems, bVisibleItems, bItemsIncrement);
+    hashedUrl = window.location.hash;
+    hashedUrl ? replaceUrlState(bWrapperId, bVisibleItems, bItemsIncrement) : pushUrlState(bWrapperId, bVisibleItems, bItemsIncrement);
+  }); // Back click: hash to no hash. Restore default settings.
+
+  window.onpopstate = () => {
+    // Must re-assign variable on pop state change
+    hashedUrl = window.location.hash;
+
+    if (hashedUrl) {
+      // console.log('a');
+      // Capture latest hash
+      let updatedUrlParts = window.location.hash.split('-');
+      let currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(updatedUrlParts[1]));
+      currentItem = currentItem + (bItemsIncrement - 1);
+      bVisibleItems = currentItem;
+      bWrapper.setAttribute('data-listings-show', bVisibleItems);
+      itemsDisplay(bItems, bVisibleItems, bLoadMoreBtn);
+      scrollToItem(bItems, bVisibleItems, bItemsIncrement);
+    } else {
+      // console.log('b');
+      bVisibleItems = bItemsIncrement;
+      itemsDisplay(bItems, bVisibleItems, bLoadMoreBtn);
+      bWrapper.setAttribute('data-listings-show', bItemsIncrement);
+      zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(bWrapper);
+    }
+  };
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
