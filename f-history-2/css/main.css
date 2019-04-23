@@ -15748,6 +15748,11 @@ article figure figcaption a:active {
     display: none;
 }
 
+.key-info__content-control .content-toggle button:hover {
+    background: #006bbd;
+    color: #ffffff;
+}
+
 .key-info__content-control .content-toggle button .fa-plus-circle {
     background-color: initial;
     border-bottom-color: initial;
@@ -15872,6 +15877,10 @@ article figure figcaption a:active {
     background-size: 0% 0%;
 }
 
+.key-info__content-control .content-toggle button .fa-plus-circle:hover {
+    color: #ffffff;
+}
+
 .key-info__content-control .content-toggle button .label {
     background-color: initial;
     border-bottom-color: initial;
@@ -15986,6 +15995,11 @@ article figure figcaption a:active {
 
 .key-info__content-control .content-toggle button .label:active {
     color: #ffffff;
+}
+
+.key-info__content-control .content-toggle button .label:hover {
+    color: #ffffff;
+    text-decoration: none;
 }
 
 @media (min-width: 769px) {

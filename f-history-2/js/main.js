@@ -4590,13 +4590,13 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-const className = 'history';
-let itemsIncrement = 3,
-    wrapper = document.querySelector('.history'),
+const className = 'load-more';
+let wrapper = document.querySelector('.load-more'),
     wrapperId = wrapper.getAttribute('id'),
-    items = wrapper.querySelectorAll('.key-info__listing'),
+    items = wrapper.querySelectorAll('.item'),
+    itemsIncrement = parseInt(wrapper.dataset.increment),
     targetItem,
-    loadMoreBtn = document.querySelector('.content-toggle button'),
+    loadMoreBtn = wrapper.querySelector('.content-toggle button'),
     hashedUrl = window.location.hash;
 /**
  * Give wrapper a numeric data attribute. As this changes, so
@@ -4685,7 +4685,7 @@ window.onpopstate = () => {
   }
 };
 
-function launchHistory() {
+function launchLoadMore() {
   // Load correct number of items based on URL hash
   if (hashedUrl) {
     let hashedUrlParts = hashedUrl.split('-');
@@ -4701,7 +4701,7 @@ function launchHistory() {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchHistory,
+  launchFn: launchLoadMore,
   launchQuery: `.${className}`
 });
 
