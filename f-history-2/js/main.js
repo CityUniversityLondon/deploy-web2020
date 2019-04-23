@@ -4591,105 +4591,119 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const className = 'load-more';
-let wrapper = document.querySelector('.load-more'),
-    // wrapperId = wrapper.getAttribute('id'),
-// items = wrapper.querySelectorAll('.item'),
-itemsIncrement = parseInt(wrapper.dataset.increment),
-    // targetItem,
-loadMoreBtn = wrapper.querySelector('.content-toggle button'),
-    hashedUrl = window.location.hash;
+let hashedUrl = window.location.hash;
 /**
- * Give wrapper a numeric data attribute. As this changes, so
- * will the number of visible items.
+ * Control what items will display based on wrapper's 'data-listings-show' data attribute.
+ *
+ * @param {HTMLElement} [items] - Elements controlled by 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {HTMLElement} loadMoreBtn - Button controlling particular item group.
  */
 
-wrapper.setAttribute('data-listings-show', itemsIncrement); // let visibleItems = parseInt(wrapper.getAttribute('data-listings-show'));
+function itemsDisplay(items, visibleItems, loadMoreBtn) {
+  for (const item of items.entries()) {
+    item[1].setAttribute('tabindex', '1');
 
-/**
- * Control what items will display based on wrapper's
- * 'data-listings-show' data attribute.
- * */
-
-function itemsDisplay(aItems, aVisibleItems, aLoadMoreBtn) {
-  for (const aItem of aItems.entries()) {
-    aItem[1].setAttribute('tabindex', '1');
-
-    if (aItem[0] >= aVisibleItems) {
-      aItem[1].classList.add('hide');
-      aItem[1].style.display = 'none';
+    if (item[0] >= visibleItems) {
+      item[1].classList.add('hide');
+      item[1].style.display = 'none';
     } else {
-      aItem[1].classList.remove('hide');
-      aItem[1].style.display = 'grid';
+      item[1].classList.remove('hide');
+      item[1].style.display = 'grid';
     }
   } // Hide 'load more' button when reached end of listings
 
 
-  if (aVisibleItems > aItems.length) {
-    aLoadMoreBtn.classList.add('hide');
+  if (visibleItems > items.length) {
+    loadMoreBtn.classList.add('hide');
   } else {
-    aLoadMoreBtn.classList.remove('hide');
+    loadMoreBtn.classList.remove('hide');
   }
-} // Scroll to, and focus first listing of new batch
+}
+/**
+ * Scroll to, and focus first listing of new batch
+ *
+ * @param {HTMLElement} [items] - Elements controlled by 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
+ */
 
 
-function scrollToItem(aItems, aVisibleItems, aItemsIncrement) {
-  let aTargetItem = aVisibleItems - aItemsIncrement;
+function scrollToItem(items, visibleItems, itemsIncrement) {
+  let targetItem = visibleItems - itemsIncrement;
 
-  for (const aItem of aItems.entries()) {
-    if (aItem[0] == aTargetItem) {
-      aItem[1].focus();
-      zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(aItem[1]);
+  for (const item of items.entries()) {
+    if (item[0] == targetItem) {
+      item[1].focus();
+      zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(item[1]);
+    } else if (visibleItems == itemsIncrement) {
+      if (item[0] == 0) {
+        item[1].focus();
+        zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(item[1]);
+      }
     }
   }
-} // Push state to URL: used to build initial hash
+}
+/**
+ * Push state to URL: used to build initial hash
+ *
+ * @param {HTMLElement} wrapperId - Parent element wrapping items and 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
+ */
 
 
-function pushUrlState(aWrapperId, aVisibleItems, aItemsIncrement) {
-  let aTargetListingUrlParam = aVisibleItems - (aItemsIncrement - 1);
-  history.pushState('', '', `#keyinfo${aWrapperId}-listing${aTargetListingUrlParam}`);
-} // Replace URL state: used to swap existing hash
+function pushUrlState(wrapperId, visibleItems, itemsIncrement) {
+  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
+  history.pushState('', '', `#keyinfo${wrapperId}-listing${targetListingUrlParam}`);
+}
+/**
+ * Replace URL state: used to swap existing hash
+ *
+ * @param {HTMLElement} wrapperId - Parent element wrapping items and 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
+ */
 
 
-function replaceUrlState(aWrapperId, aVisibleItems, aItemsIncrement) {
-  let aTargetListingUrlParam = aVisibleItems - (aItemsIncrement - 1);
-  history.replaceState('', '', `#keyinfo${aWrapperId}-listing${aTargetListingUrlParam}`);
+function replaceUrlState(wrapperId, visibleItems, itemsIncrement) {
+  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
+  history.replaceState('', '', `#keyinfo${wrapperId}-listing${targetListingUrlParam}`);
 }
 
 function launchLoadMore() {
-  let bWrapper = document.querySelector('.load-more'),
-      bWrapperId = bWrapper.getAttribute('id'),
-      bItems = bWrapper.querySelectorAll('.item'),
-      bItemsIncrement = parseInt(bWrapper.dataset.increment),
-      // bTargetItem,
-  bLoadMoreBtn = bWrapper.querySelector('.content-toggle button'); // bHashedUrl = window.location.hash;
-
+  let wrapper = document.querySelector('.load-more'),
+      wrapperId = wrapper.getAttribute('id'),
+      items = wrapper.querySelectorAll('.item'),
+      itemsIncrement = parseInt(wrapper.dataset.increment),
+      loadMoreBtn = wrapper.querySelector('.content-toggle button');
   /**
    * Give wrapper a numeric data attribute. As this changes, so
    * will the number of visible items.
    */
 
-  bWrapper.setAttribute('data-listings-show', bItemsIncrement);
-  let bVisibleItems = parseInt(bWrapper.getAttribute('data-listings-show')); // Load correct number of items based on URL hash
+  wrapper.setAttribute('data-listings-show', itemsIncrement);
+  let visibleItems = parseInt(wrapper.getAttribute('data-listings-show')); // Load correct number of items based on URL hash
 
   if (hashedUrl) {
     let hashedUrlParts = hashedUrl.split('-');
     let activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(hashedUrlParts[1]));
-    bVisibleItems = activeItem + (bItemsIncrement - 1);
-    bWrapper.setAttribute('data-listings-show', bVisibleItems);
-    itemsDisplay(bItems, bVisibleItems, bLoadMoreBtn);
-    scrollToItem(bItems, bVisibleItems, bItemsIncrement);
+    visibleItems = activeItem + (itemsIncrement - 1);
+    wrapper.setAttribute('data-listings-show', visibleItems);
+    itemsDisplay(items, visibleItems, loadMoreBtn);
+    scrollToItem(items, visibleItems, itemsIncrement);
   } else {
-    itemsDisplay(bItems, bVisibleItems, bLoadMoreBtn); // scroll.to(wrapper);
+    itemsDisplay(items, visibleItems, loadMoreBtn); // scroll.to(wrapper);
   } // Run on every 'load more' click: increase listings by batch number
 
 
   loadMoreBtn.addEventListener('click', () => {
-    bVisibleItems += bItemsIncrement;
-    bWrapper.setAttribute('data-listings-show', bVisibleItems);
-    itemsDisplay(bItems, bVisibleItems, bLoadMoreBtn);
-    scrollToItem(bItems, bVisibleItems, bItemsIncrement);
+    visibleItems += itemsIncrement;
+    wrapper.setAttribute('data-listings-show', visibleItems);
+    itemsDisplay(items, visibleItems, loadMoreBtn);
+    scrollToItem(items, visibleItems, itemsIncrement);
     hashedUrl = window.location.hash;
-    hashedUrl ? replaceUrlState(bWrapperId, bVisibleItems, bItemsIncrement) : pushUrlState(bWrapperId, bVisibleItems, bItemsIncrement);
+    hashedUrl ? replaceUrlState(wrapperId, visibleItems, itemsIncrement) : pushUrlState(wrapperId, visibleItems, itemsIncrement);
   }); // Back click: hash to no hash. Restore default settings.
 
   window.onpopstate = () => {
@@ -4697,21 +4711,19 @@ function launchLoadMore() {
     hashedUrl = window.location.hash;
 
     if (hashedUrl) {
-      // console.log('a');
       // Capture latest hash
       let updatedUrlParts = window.location.hash.split('-');
       let currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(updatedUrlParts[1]));
-      currentItem = currentItem + (bItemsIncrement - 1);
-      bVisibleItems = currentItem;
-      bWrapper.setAttribute('data-listings-show', bVisibleItems);
-      itemsDisplay(bItems, bVisibleItems, bLoadMoreBtn);
-      scrollToItem(bItems, bVisibleItems, bItemsIncrement);
+      currentItem = currentItem + (itemsIncrement - 1);
+      visibleItems = currentItem;
+      wrapper.setAttribute('data-listings-show', visibleItems);
+      itemsDisplay(items, visibleItems, loadMoreBtn);
+      scrollToItem(items, visibleItems, itemsIncrement);
     } else {
-      // console.log('b');
-      bVisibleItems = bItemsIncrement;
-      itemsDisplay(bItems, bVisibleItems, bLoadMoreBtn);
-      bWrapper.setAttribute('data-listings-show', bItemsIncrement);
-      zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(bWrapper);
+      visibleItems = itemsIncrement;
+      itemsDisplay(items, visibleItems, loadMoreBtn);
+      wrapper.setAttribute('data-listings-show', itemsIncrement);
+      scrollToItem(items, visibleItems, itemsIncrement);
     }
   };
 }
