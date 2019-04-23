@@ -12575,7 +12575,7 @@ main table td em {
     padding-top: 1.25rem;
 }
 
-.card--related-course a:focus .title {
+.card--related-course a:focus .card--related-course__title {
     background-size: 100% 0.25rem;
 }
 
@@ -12583,7 +12583,7 @@ main table td em {
     .card--related-course a:hover {
         background-image: none;
     }
-    .card--related-course a:hover .title {
+    .card--related-course a:hover .card--related-course__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
         background-size: 100% 0.25rem;
         color: #1e1e1e;
@@ -12591,10 +12591,10 @@ main table td em {
     .card--related-course a:hover img {
         transform: scale(1.04);
     }
-    .card--related-course a:hover .image-container {
+    .card--related-course a:hover .card--related-course__image-container {
         transform: scale(1.04);
     }
-    .card--related-course a:hover .image-container:after {
+    .card--related-course a:hover .card--related-course__image-container:after {
         background-color: rgba(0, 0, 0, 0.1);
     }
 }
