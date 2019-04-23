@@ -4660,8 +4660,8 @@ loadMoreBtn.addEventListener('click', () => {
   visibleItems += itemsIncrement;
   wrapper.setAttribute('data-listings-show', visibleItems);
   itemsDisplay();
-  scrollToItem(); // let urlHash = window.location.hash;
-
+  scrollToItem();
+  hashedUrl = window.location.hash;
   hashedUrl ? replaceUrlState() : pushUrlState();
 }); // Back click: hash to no hash. Restore default settings.
 
@@ -4676,8 +4676,7 @@ window.onpopstate = () => {
     currentItem = currentItem + (itemsIncrement - 1);
     visibleItems = currentItem;
     wrapper.setAttribute('data-listings-show', visibleItems);
-    itemsDisplay();
-    scrollToItem();
+    itemsDisplay(); // scrollToItem();
   } else {
     visibleItems = itemsIncrement;
     itemsDisplay();
@@ -4697,6 +4696,7 @@ function launchHistory() {
     scrollToItem();
   } else {
     itemsDisplay();
+    zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(wrapper);
   }
 }
 
