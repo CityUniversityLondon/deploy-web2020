@@ -18500,19 +18500,19 @@ button
 
 @media (max-width: 432px) {
     .case-study--business {
-        grid-template-areas: 'main main main main main main';
+        grid-template-areas: 'top top top top top top' 'main main main main main main';
     }
 }
 
 @media (min-width: 433px) {
     .case-study--business {
-        grid-template-areas: '. . main main main main main main main main . .';
+        grid-template-areas: 'top top top top top top top top top top top top' '. . main main main main main main main main . .';
     }
 }
 
 @media (min-width: 901px) {
     .case-study--business {
-        grid-template-areas: 'top top top top top top top top top top top top top top top top top top' '. . . . . main main main main main main main main . . . . .';
+        grid-template-areas: 'top top top top top top top top top top top top top top top top top top' '. . . . . main main main main main main main main . . . . social';
     }
 }
 
@@ -18535,7 +18535,7 @@ button
     }
 }
 
-.wrap-overview {
+.case-study--business .wrap-overview {
     grid-area: top;
     background: #1e1e1e;
     color: white;
@@ -18585,6 +18585,22 @@ button
 
 .case-study--business .overview header {
     grid-column: 1 / -1;
+    padding-top: 3.25rem;
+}
+
+.case-study--business .overview header .label {
+    color: #dd0036;
+    font-size: 1.125rem;
+}
+
+.case-study--business .overview header .label .separator {
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0 1.25rem 0 1.25rem;
+}
+
+.case-study--business .overview header h1 {
+    padding-bottom: 3.5rem;
 }
 
 .case-study--business .overview .overview__main {
@@ -18592,6 +18608,7 @@ button
     display: grid;
     grid-row-gap: 0;
     grid-template-columns: repeat(18, 1fr);
+    padding-top: 5rem;
 }
 
 @media (max-width: 432px) {
@@ -18615,45 +18632,73 @@ button
     }
 }
 
-.overview__main__standfirst {
-    background: grey;
+.case-study--business .overview__main__standfirst {
     grid-column: 1 / -1;
 }
 
-.overview__main__logos {
+.case-study--business .overview__main__logos {
     grid-column: 1 / 6;
+    padding-top: 1.25rem;
 }
 
-.overview__main__details {
+.case-study--business .overview__main__logos img {
+    width: 7rem;
+    border-radius: 50%;
+    border: 0.125rem solid #e5e5e5;
+}
+
+.case-study--business .overview__main__details {
     grid-column: 7 / -1;
+    padding-top: 1.25rem;
+}
+
+.case-study--business .overview__main__details a {
+    color: #8a8a8a;
+    border-bottom-color: #8a8a8a;
+    background-image: none;
+}
+
+.case-study--business .overview__main__details a:focus, .case-study--business .overview__main__details a:active {
+    outline-color: #ffffff;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+.case-study--business .overview__main__details a:hover {
+    background-image: none;
+    color: #ffffff;
+}
+
+.case-study--business .overview__main__details a:active {
+    color: #ffffff;
+    background-image: none;
+    background-color: transparent;
 }
 
 .case-study--business .overview__main__banner-video {
-    grid-column: 1 / -1;
+    grid-column: 4 / 16;
+    padding-bottom: 5rem;
+    text-align: center;
 }
 
-.overview__main__banner-image {
-    grid-column: 1 / -1;
+.case-study--business .overview__main__banner-video figcaption {
+    display: inline-block;
 }
 
-/*
-<!-- Banner image -->
-%begin_asset_metadata_casestudy.banner.image%
-    <figure class="">
-        <picture>
-          <!--  %asset_metadata_casestudy.banner.image-->
-             <source srcset="%nested_get_imageasset^as_asset:image_v_breakpoint-mobile_url%" media="(max-width: 424px)">
-             <source srcset="%nested_get_imageasset^as_asset:image_v_breakpoint-tablet_url%" media="(max-width: 768px)">
-             <source srcset="%nested_get_imageasset^as_asset:image_v_breakpoint-between_url%" media="(max-width: 900px)">
-             <source srcset="%nested_get_imageasset^as_asset:image_v_breakpoint-desktop_url%" media="(max-width: 1280px)">
-             <source srcset="%asset_metadata_casestudy.banner.image^as_asset:image_v_breakpoint-max_url%" media="(max-width: 1440px)">
-            <img src="%nested_get_imageasset^as_asset:image_v_breakpoint-max_url%" alt="%nested_get_alt^trim%" width="%nested_get_imageasset^as_asset:image_v_breakpoint-max_width%" height="%nested_get_imageasset^as_asset:image_v_breakpoint-max_height%" />
-        </picture>
-    </figure>
-    asset_metadata_figure.image
-%end_asset_metadata%
+.case-study--business .overview__main__banner-video figcaption time {
+    float: left;
+}
 
-*/
+.case-study--business .overview__main__banner-image {
+    grid-column: 1 / -1;
+    padding-bottom: 5rem;
+}
+
+.leading-section-separator {
+    display: block;
+}
+
 .content-hub {
     display: grid;
     grid-row-gap: 0;
