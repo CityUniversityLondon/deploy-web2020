@@ -20186,6 +20186,8 @@ button
     display: grid;
     max-width: 80rem;
     grid-template-rows: repeat(2, auto);
+    padding-bottom: 4.25rem;
+    padding-top: 4.25rem;
 }
 
 @media (max-width: 432px) {
@@ -20248,13 +20250,12 @@ button
 
 .short-course--short-course .short-course__tutors h2:after {
     background-color: #3e1031;
-    content: ' ';
+    content: '';
     display: block;
     height: 0.25rem;
-    margin-bottom: 2rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     width: 6rem;
 }
 
@@ -20266,27 +20267,9 @@ button
 }
 
 .short-course--short-course .short-course__testimonials {
-    max-width: 80rem;
-}
-
-@media (min-width: 1441px) {
-    .short-course--short-course .short-course__testimonials {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .short-course--short-course .short-course__testimonials {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .short-course--short-course .short-course__testimonials {
-        margin-bottom: 1rem;
-    }
+    border-top: 0.125rem solid #d8d8d8;
+    padding-bottom: 4.25rem;
+    padding-top: 4.25rem;
 }
 
 .short-course--short-course .short-course__testimonials h2 {
@@ -20295,23 +20278,39 @@ button
 
 .short-course--short-course .short-course__testimonials h2:after {
     background-color: #3e1031;
-    content: ' ';
+    content: '';
     display: block;
     height: 0.25rem;
-    margin-bottom: 2rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     width: 6rem;
 }
 
 .short-course--short-course .short-course__testimonials .related-content {
+    max-width: 80rem;
     display: flex;
     justify-content: center;
 }
 
+@media (min-width: 1441px) {
+    .short-course--short-course .short-course__testimonials .related-content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .short-course--short-course .short-course__testimonials .related-content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
 .short-course--short-course .short-course__related-courses {
     max-width: 80rem;
+    padding-bottom: 4.25rem;
+    padding-top: 4.25rem;
 }
 
 @media (min-width: 1441px) {
@@ -20331,6 +20330,7 @@ button
 .short-course--short-course .short-course__related-courses .related-content {
     display: flex;
     flex-direction: column;
+    margin-top: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -20351,13 +20351,12 @@ button
 
 .short-course--short-course .short-course__related-courses h2:after {
     background-color: #3e1031;
-    content: ' ';
+    content: '';
     display: block;
     height: 0.25rem;
-    margin-bottom: 2rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     width: 6rem;
 }
 
