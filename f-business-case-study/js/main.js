@@ -3746,6 +3746,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
 /* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
 /* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
+/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
 
 
 /**
@@ -3770,7 +3771,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__["default"]]);
 
 /***/ }),
 
@@ -5765,6 +5767,67 @@ function addPagination(elem, itemCount) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: addPagination,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/social-icon/social-icon.js":
+/*!*************************************************!*\
+  !*** ./src/patterns/social-icon/social-icon.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+const className = 'fa-link';
+
+function copyIconToClipboard(elem) {
+  let copy = elem;
+  copy.addEventListener('mouseover', () => {
+    var t = document.createElement('div');
+    var link = document.createElement('span');
+    t.className = 'tooltip';
+    link.className = 'link-copy';
+    var textlink = document.createTextNode('http://google.com');
+    var textnode = document.createTextNode('Copy link');
+    t.appendChild(textnode);
+    link.appendChild(textlink);
+    t.appendChild(link);
+    document.querySelector('.fa-link').appendChild(t);
+  });
+  copy.addEventListener('click', e => {
+    e.preventDefault();
+    var text = document.querySelector('.link-copy');
+    var range = document.createRange();
+    range.selectNode(text);
+    window.getSelection().addRange(range);
+
+    try {
+      // Now that we've selected the anchor text, execute the copy command
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'successful' : 'unsuccessful';
+      document.querySelector('.tooltip').textContent = 'Link Copied';
+      document.querySelector('.tooltip').classList.add(msg);
+    } catch (err) {
+      throw new Error(e);
+    } // Remove the selections - NOTE: Should use
+    // removeRange(range) when it is supported
+
+
+    window.getSelection().removeAllRanges();
+  });
+  copy.addEventListener('mouseout', e => {
+    //remove element from mouseover
+    e.target.childNodes[0].remove();
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: copyIconToClipboard,
   launchQuery: `.${className}`
 });
 
