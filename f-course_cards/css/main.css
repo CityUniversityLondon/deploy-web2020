@@ -12472,8 +12472,8 @@ main table td em {
     outline-offset: 0.1875rem;
 }
 
-.card--related-course a:focus .card--related-course__title, .card--related-course a:active .card--related-course__title {
-    color: #696969;
+.card--related-course a:focus .card--related-course__title {
+    background-image: linear-gradient(#696969, #696969);
 }
 
 .card--related-course a:visited .card--related-course__title {
