@@ -4905,7 +4905,15 @@ const className = 'modal-group',
       modalTransitioningOutClass = 'modal__popup--transitioning-out',
       modalRevealFromTop = 'modal__reveal--fromtop',
       modalRevealFromBottom = 'modal__reveal--frombottom',
-      windowHeight = window.outerHeight;
+      modalBackground = document.createElement('div');
+let windowWidth = window.innerWidth;
+modalBackground.setAttribute('class', 'modal__background');
+window.addEventListener('resize', getWindowWidth);
+
+function getWindowWidth() {
+  // reassign new width
+  windowWidth = window.innerWidth;
+}
 
 function launchModal() {
   let modalOpenTriggers = document.querySelectorAll('a.modal__trigger'),
@@ -4931,8 +4939,8 @@ function launchModal() {
     let activeModal = document.getElementsByClassName(modalShowClass)[0];
 
     if (keyCode === 27) {
-      let espCloseModal = true;
-      closeModal(activeModal, espCloseModal);
+      let escCloseModal = true;
+      closeModal(activeModal, escCloseModal);
     }
   });
   /**
@@ -4981,10 +4989,15 @@ const handleTriggerClose = e => {
 };
 
 const openModal = modalPopup => {
-  // fade background in
+  // add background div to src if not present
+  if (!document.body.contains(modalBackground)) {
+    document.body.appendChild(modalBackground);
+  } // fade background in
+
+
   document.body.classList.add('modal--in');
 
-  if (windowHeight >= 768) {
+  if (windowWidth >= 768) {
     // show the modal, but keep the content div hidden
     modalPopup.classList.remove(modalHiddenClass);
     modalPopup.classList.add(modalShowClass); // trigger the first transition after the container displayed
@@ -5008,7 +5021,7 @@ const closeModal = (modalPopup, escCloseModal) => {
     document.body.classList.remove('modal--in');
   }
 
-  if (windowHeight >= 768) {
+  if (windowWidth >= 768) {
     // trigger transition, callback handles the closing
     modalPopup.classList.add(modalTransitioningOutClass);
   } else {
