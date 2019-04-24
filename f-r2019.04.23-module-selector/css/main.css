@@ -13191,7 +13191,6 @@ main table td em {
 
 .primary-cta--bright:focus, .primary-cta--bright:active {
     color: #dd0036;
-    padding: 0.5rem 1.5rem;
 }
 
 .primary-cta--bright:focus {
@@ -13204,7 +13203,6 @@ main table td em {
     .primary-cta--bright:hover {
         background: transparent;
         border-color: #dd0036;
-        padding: 0.5rem 1.5rem;
     }
 }
 
@@ -13456,10 +13454,6 @@ main table td em {
     border-color: #dd0036;
 }
 
-.primary-cta--dark:focus, .primary-cta--dark:active {
-    padding: 0.5rem 1.5rem;
-}
-
 .primary-cta--dark:after {
     content: '';
 }
@@ -13475,7 +13469,6 @@ main table td em {
         background: transparent;
         color: #dd0036;
         border-color: #dd0036;
-        padding: 0.5rem 1.5rem;
     }
 }
 
@@ -13753,16 +13746,6 @@ main table td em {
     content: '';
 }
 
-.outline-cta--bright:focus, .outline-cta--bright:active {
-    padding: 0.5rem 1.5rem;
-}
-
-@media (hover: hover) {
-    .outline-cta--bright:hover {
-        padding: 0.5rem 1.5rem;
-    }
-}
-
 .outline-cta--bright:active span, .outline-cta--bright:focus span, .outline-cta--bright:hover span {
     transform: none;
 }
@@ -14029,16 +14012,6 @@ main table td em {
     content: '';
 }
 
-.outline-cta--dark:focus, .outline-cta--dark:active {
-    padding: 0.5rem 1.5rem;
-}
-
-@media (hover: hover) {
-    .outline-cta--dark:hover {
-        padding: 0.5rem 1.5rem;
-    }
-}
-
 .outline-cta--dark:active span, .outline-cta--dark:focus span, .outline-cta--dark:hover span {
     transform: none;
 }
@@ -14190,7 +14163,6 @@ main table td em {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
-    padding: 0.5rem 1.5rem;
 }
 
 @media (hover: hover) {
@@ -14198,7 +14170,6 @@ main table td em {
         background: #aa002a;
         border-color: #aa002a;
         color: #ffffff;
-        padding: 0.5rem 1.5rem;
     }
 }
 
@@ -14365,7 +14336,6 @@ main table td em {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
-    padding: 0.5rem 1.5rem;
 }
 
 @media (hover: hover) {
@@ -14373,7 +14343,6 @@ main table td em {
         background: #aa002a;
         border-color: #aa002a;
         color: #ffffff;
-        padding: 0.5rem 1.5rem;
     }
 }
 
@@ -14703,7 +14672,6 @@ main table td em {
     background: #3e1031;
     border-color: #3e1031;
     color: #ffffff;
-    padding: 0.5rem 1.5rem;
 }
 
 @media (hover: hover) {
@@ -14711,7 +14679,6 @@ main table td em {
         background: #150611;
         border-color: #150611;
         color: #ffffff;
-        padding: 0.5rem 1.5rem;
     }
 }
 
@@ -14853,10 +14820,6 @@ main table td em {
     border-color: #d8d8d8;
 }
 
-.primary-cta--grey--bright:focus, .primary-cta--grey--bright:active {
-    padding: 0.5rem 1.5rem;
-}
-
 .primary-cta--grey--bright:after {
     content: '';
 }
@@ -14872,7 +14835,6 @@ main table td em {
         background: transparent;
         color: #d8d8d8;
         border-color: #d8d8d8;
-        padding: 0.5rem 1.5rem;
     }
 }
 
@@ -20698,10 +20660,6 @@ button
     border-color: #dd0036;
 }
 
-.theme--dark .cta-block li:nth-child(1) a:focus, .theme--dark .cta-block li:nth-child(1) a:active {
-    padding: 0.5rem 1.5rem;
-}
-
 .theme--dark .cta-block li:nth-child(1) a:after {
     content: '';
 }
@@ -20717,7 +20675,6 @@ button
         background: transparent;
         color: #dd0036;
         border-color: #dd0036;
-        padding: 0.5rem 1.5rem;
     }
 }
 
@@ -20864,16 +20821,6 @@ button
 
 .theme--dark .cta-block li:nth-child(2) a:after {
     content: '';
-}
-
-.theme--dark .cta-block li:nth-child(2) a:focus, .theme--dark .cta-block li:nth-child(2) a:active {
-    padding: 0.5rem 1.5rem;
-}
-
-@media (hover: hover) {
-    .theme--dark .cta-block li:nth-child(2) a:hover {
-        padding: 0.5rem 1.5rem;
-    }
 }
 
 .theme--dark .cta-block li:nth-child(2) a:active span, .theme--dark .cta-block li:nth-child(2) a:focus span, .theme--dark .cta-block li:nth-child(2) a:hover span {
@@ -21030,7 +20977,6 @@ button
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
-    padding: 0.5rem 1.5rem;
 }
 
 @media (hover: hover) {
@@ -21038,7 +20984,6 @@ button
         background: #aa002a;
         border-color: #aa002a;
         color: #ffffff;
-        padding: 0.5rem 1.5rem;
     }
 }
 
