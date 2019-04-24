@@ -15745,12 +15745,22 @@ article figure figcaption a:active {
 }
 
 .key-info__content-control .content-toggle button {
-    display: none;
+    padding: 0.25rem;
+    display: flex;
 }
 
 .key-info__content-control .content-toggle button:hover {
     background: #006bbd;
+}
+
+.key-info__content-control .content-toggle button:hover span {
+    background: #006bbd;
     color: #ffffff;
+}
+
+.key-info__content-control .content-toggle button:active, .key-info__content-control .content-toggle button:focus {
+    outline: 0.125rem dotted #0c0c0e;
+    outline-offset: 0.1875rem;
 }
 
 .key-info__content-control .content-toggle button .fa-plus-circle {
@@ -15775,7 +15785,7 @@ article figure figcaption a:active {
     border-bottom-width: 0.125rem;
     color: #006bbd;
     border: 0;
-    margin-right: 0.25rem;
+    padding: 0 0.25rem 0 0;
 }
 
 @media (hover: hover) {
@@ -15878,7 +15888,12 @@ article figure figcaption a:active {
 }
 
 .key-info__content-control .content-toggle button .fa-plus-circle:hover {
+    background: #006bbd;
     color: #ffffff;
+}
+
+.key-info__content-control .content-toggle button .fa-plus-circle:active {
+    outline: 0;
 }
 
 .key-info__content-control .content-toggle button .label {
@@ -15999,16 +16014,24 @@ article figure figcaption a:active {
 
 .key-info__content-control .content-toggle button .label:hover {
     color: #ffffff;
-    text-decoration: none;
+}
+
+.key-info__content-control .content-toggle button .label:active {
+    outline: 0;
 }
 
 @media (min-width: 769px) {
     .key-info__content-control .content-toggle button {
-        display: inline-block;
         grid-area: m;
-        margin: 1.75rem;
+        margin: 1.75rem auto;
     }
     .key-info__content-control .content-toggle button.hide {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .key-info__content-control .content-toggle button {
         display: none;
     }
 }
