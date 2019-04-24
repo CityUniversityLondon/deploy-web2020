@@ -18922,12 +18922,10 @@ button
     background-image: none;
 }
 
-@media (min-width: 901px) and (hover: hover) {
-    .module-selector__content__moduleLink a:hover {
-        color: #ffffff;
-        border-color: #ffffff;
-        background-image: none;
-    }
+.module-selector__content__moduleLink a:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-image: none;
 }
 
 @media (min-width: 901px) {
