@@ -18404,7 +18404,7 @@ button
 
 .banner__content__labels li:not(:first-of-type) {
     position: relative;
-    margin-left: 5rem;
+    margin-left: 2rem;
 }
 
 .banner__content__labels li:not(:first-of-type):before {
