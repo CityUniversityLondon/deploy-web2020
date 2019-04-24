@@ -18940,17 +18940,80 @@ button
     height: 70%;
 }
 
+@media (max-width: 767px) {
+    .banner__group__overlay {
+        height: 100%;
+    }
+}
+
 .banner__group__overlay__heading {
+    display: grid;
+    grid-row-gap: 0;
+    grid-template-areas: '. . h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 . . .';
     position: absolute;
-    margin-left: 7rem;
     bottom: 3.25rem;
 }
 
+@media (max-width: 432px) {
+    .banner__group__overlay__heading {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .banner__group__overlay__heading {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .banner__group__overlay__heading {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
 .banner__group__overlay__heading h1 {
+    grid-area: h1;
     color: #ffffff;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     width: 54ch;
     font-size: 2.5rem;
+}
+
+@media (max-width: 1279px) {
+    .banner__group__overlay__heading {
+        grid-template-areas: '. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .';
+    }
+}
+
+@media (max-width: 1439px) {
+    .banner__group__overlay__heading h1 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .banner__group__overlay__heading {
+        bottom: 1.25rem;
+    }
+    .banner__group__overlay__heading h1 {
+        font-size: 1.75em;
+        width: 100%;
+    }
+}
+
+@media (max-width: 431px) {
+    .banner__group__overlay__heading {
+        margin: 0 2rem;
+        grid-template-areas: 'h1 h1 h1 h1 h1 h1';
+        bottom: 1.25rem;
+    }
+    .banner__group__overlay__heading h1 {
+        font-size: 1.5em;
+    }
 }
 
 .generic {
