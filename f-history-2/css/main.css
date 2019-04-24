@@ -15754,7 +15754,6 @@ article figure figcaption a:active {
 }
 
 .key-info__content-control .content-toggle button:hover span {
-    background: #006bbd;
     color: #ffffff;
 }
 
@@ -15785,7 +15784,7 @@ article figure figcaption a:active {
     border-bottom-width: 0.125rem;
     color: #006bbd;
     border: 0;
-    padding: 0 0.25rem 0 0;
+    padding: 0.0625rem 0.25rem 0 0;
 }
 
 @media (hover: hover) {
@@ -15883,13 +15882,8 @@ article figure figcaption a:active {
 
 .key-info__content-control .content-toggle button .fa-plus-circle:hover {
     border: 0;
-    color: #006bbd;
-    background-size: 0% 0%;
-}
-
-.key-info__content-control .content-toggle button .fa-plus-circle:hover {
-    background: #006bbd;
     color: #ffffff;
+    background-size: 0% 0%;
 }
 
 .key-info__content-control .content-toggle button .fa-plus-circle:active {
@@ -16009,10 +16003,6 @@ article figure figcaption a:active {
 }
 
 .key-info__content-control .content-toggle button .label:active {
-    color: #ffffff;
-}
-
-.key-info__content-control .content-toggle button .label:hover {
     color: #ffffff;
 }
 
