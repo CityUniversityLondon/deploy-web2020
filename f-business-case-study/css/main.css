@@ -1070,6 +1070,20 @@
     background-color: #ffffff;
 }
 
+/* Icon positioning
+
+Demo HTML
+<div class="key-info__icon--left">
+    <span class="fas fa-envelope"></span>
+    <div>Text relating to icon</div>
+</div>
+
+Demo SCSS
+.key-info__icon--left {
+    @include key-info-icon(left, $color-pink90);
+}
+
+*/
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
@@ -18329,123 +18343,6 @@ button
     margin-left: 0.5rem;
 }
 
-article .social-icon {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    display: block;
-    width: 2.25rem;
-    height: 2.25rem;
-    background-color: #0c0c0e;
-    color: #ffffff;
-    border-radius: 50%;
-    transition: background-color 0.6s, transform 0.6s;
-    border-style: none;
-}
-
-@media (hover: hover) {
-    article .social-icon:hover {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-article .social-icon:focus, article .social-icon:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-article .social-icon span {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-article .social-icon:before {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-article .social-icon:focus {
-    background: #0c0c0e;
-    color: #ffffff;
-}
-
-article .social-icon:focus:focus, article .social-icon:focus:active, article .social-icon:active:focus, article .social-icon:active:active {
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-}
-
-@media (hover: hover) {
-    article .social-icon:hover, article .social-icon:active {
-        transform: scale(1.2);
-        background-color: #dd0036;
-        color: #ffffff;
-    }
-}
-
-article .social-icon:visited {
-    color: #ffffff;
-}
-
-article .social-icon:active, article .social-icon:hover, article .social-icon:focus, article .social-icon:visited {
-    border-bottom-style: none;
-}
-
-article .social-icon:hover, article .social-icon:active {
-    background-image: none;
-}
-
-.tooltip {
-    font-family: 'Plex Sans';
-    position: absolute;
-    right: 50px;
-    color: #696969;
-    border: 1px solid #e5e5e5;
-    border-radius: 0.1rem;
-    padding: 0.5rem;
-    background-color: #e5e5e5;
-    transition: all 0.6s;
-}
-
-.tooltip.successful {
-    border-color: #1e1e1e;
-    background-color: #1e1e1e;
-    color: #ffffff;
-}
-
 .generic {
     display: grid;
     grid-row-gap: 0;
@@ -18609,13 +18506,13 @@ article .social-icon:hover, article .social-icon:active {
 
 @media (max-width: 432px) {
     .case-study--business {
-        grid-template-areas: 'top top top top top top' 'main main main main main main';
+        grid-template-areas: 't t t t t t' 'm m m m m m' 'c c c c c c' 'r r r r r r';
     }
 }
 
 @media (min-width: 433px) {
     .case-study--business {
-        grid-template-areas: 'top top top top top top top top top top top top' '. . main main main main main main main main . .';
+        grid-template-areas: 't t t t t t t t t t t t' '. . m m m m m m m m . .' 'c c c c c c c c c c c c' 'r r r r r r r r r r r r';
     }
 }
 
@@ -18732,8 +18629,14 @@ article .social-icon:hover, article .social-icon:active {
     padding-top: 1.25rem;
 }
 
+.case-study--business .overview__main__logos figure {
+    display: inline-block;
+    margin-right: 1.25rem;
+}
+
 .case-study--business .overview__main__logos img {
     width: 7rem;
+    height: 7rem;
     border-radius: 50%;
     border: 0.125rem solid #e5e5e5;
 }
@@ -18746,7 +18649,6 @@ article .social-icon:hover, article .social-icon:active {
 .case-study--business .overview__main__details a {
     color: #8a8a8a;
     border-bottom-color: #8a8a8a;
-    background-image: none;
 }
 
 .case-study--business .overview__main__details a:focus, .case-study--business .overview__main__details a:active {
@@ -18757,14 +18659,12 @@ article .social-icon:hover, article .social-icon:active {
 }
 
 .case-study--business .overview__main__details a:hover {
-    background-image: none;
     color: #ffffff;
+    border-bottom-color: transparent;
 }
 
 .case-study--business .overview__main__details a:active {
     color: #ffffff;
-    background-image: none;
-    background-color: transparent;
 }
 
 .case-study--business .overview__main__banner-video {
@@ -18864,84 +18764,46 @@ article .social-icon:hover, article .social-icon:active {
 
 .wrap-contact-details {
     background: #f2f2f2;
+    grid-area: c;
+}
+
+.contact-details {
     max-width: 80rem;
-    display: grid;
-    grid-row-gap: 0;
 }
 
 @media (max-width: 1440px) {
-    .wrap-contact-details {
+    .contact-details {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 1441px) {
-    .wrap-contact-details {
+    .contact-details {
         margin-left: auto;
         margin-right: auto;
-    }
-}
-
-@media (max-width: 432px) {
-    .wrap-contact-details {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .wrap-contact-details {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .wrap-contact-details {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
     }
 }
 
 .wrap-related-case-studies {
+    grid-area: r;
+}
+
+.related-case-studies {
     max-width: 80rem;
-    display: grid;
-    grid-row-gap: 0;
 }
 
 @media (max-width: 1440px) {
-    .wrap-related-case-studies {
+    .related-case-studies {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 1441px) {
-    .wrap-related-case-studies {
+    .related-case-studies {
         margin-left: auto;
         margin-right: auto;
-    }
-}
-
-@media (max-width: 432px) {
-    .wrap-related-case-studies {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .wrap-related-case-studies {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .wrap-related-case-studies {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
     }
 }
 
