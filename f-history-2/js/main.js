@@ -3867,7 +3867,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns/cms-editor-warning/cms-editor-warning */ "./src/patterns/cms-editor-warning/cms-editor-warning.js");
 /* harmony import */ var _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/cookie-notice/cookie-notice */ "./src/patterns/cookie-notice/cookie-notice.js");
 /* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/load-more/load-more'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
 /* harmony import */ var _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-paginated */ "./src/patterns/key-info-box/key-info-paginated.js");
 /* harmony import */ var _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-slider */ "./src/patterns/key-info-box/key-info-slider.js");
 /* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
@@ -3902,7 +3902,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], !(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/load-more/load-more'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"]]);
 
 /***/ }),
 
@@ -4991,6 +4991,182 @@ function launchKeyInfoSlider() {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchKeyInfoSlider,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/load-more/load-more.js":
+/*!*********************************************!*\
+  !*** ./src/patterns/load-more/load-more.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.regexp.split */ "./node_modules/core-js/modules/es6.regexp.split.js");
+/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+/**
+ * Load more - show additional items on 'Load more' button click. Update URL to illustrate where user is in item set.
+ *
+ * @module patterns/load-more/load-more
+ * @author Mark Skinsley <mark.skinsley@city.ac.uk>
+ * @copyright City, University of London 2019
+ */
+
+
+const className = 'load-more';
+let hashedUrl = window.location.hash;
+/**
+ * Control what items will display based on wrapper's 'data-listings-show' data attribute.
+ *
+ * @param {HTMLElement} [items] - Elements controlled by 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {HTMLElement} loadMoreBtn - Button controlling particular item group.
+ */
+
+function itemsDisplay(items, visibleItems, loadMoreBtn) {
+  for (const item of items.entries()) {
+    item[1].setAttribute('tabindex', '-1');
+
+    if (item[0] >= visibleItems) {
+      item[1].classList.add('hide');
+      item[1].style.display = 'none';
+    } else {
+      item[1].classList.remove('hide');
+      item[1].style.display = 'grid';
+    }
+  } // Hide 'load more' button when reached end of listings
+
+
+  if (visibleItems > items.length) {
+    loadMoreBtn.classList.add('hide');
+  } else {
+    loadMoreBtn.classList.remove('hide');
+  }
+}
+/**
+ * Scroll to, and focus first listing of newly visible items batch.
+ *
+ * @param {HTMLElement} [items] - Elements controlled by 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {number} itemsIncrement - Number of additional items shown when 'Load more' button is clicked.
+ */
+
+
+function scrollToItem(items, visibleItems, itemsIncrement) {
+  let targetItem = visibleItems - itemsIncrement;
+
+  for (const item of items.entries()) {
+    if (item[0] == targetItem) {
+      item[1].focus();
+      zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(item[1]);
+    } else if (visibleItems == itemsIncrement) {
+      if (item[0] == 0) {
+        item[1].focus();
+        zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(item[1]);
+      }
+    }
+  }
+}
+/**
+ * Push state to URL: used to build initial hash
+ *
+ * @param {HTMLElement} wrapperId - Parent element wrapping items and 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
+ */
+
+
+function pushUrlState(wrapperId, visibleItems, itemsIncrement) {
+  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
+  history.pushState('', '', `#keyinfo${wrapperId}-listing${targetListingUrlParam}`);
+}
+/**
+ * Replace URL state: used to swap existing hash
+ *
+ * @param {HTMLElement} wrapperId - Parent element wrapping items and 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
+ */
+
+
+function replaceUrlState(wrapperId, visibleItems, itemsIncrement) {
+  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
+  history.replaceState('', '', `#keyinfo${wrapperId}-listing${targetListingUrlParam}`);
+}
+
+function launchLoadMore() {
+  let wrapper = document.querySelector('.load-more'),
+      wrapperId = wrapper.getAttribute('id'),
+      items = wrapper.querySelectorAll('.item'),
+      itemsIncrement = parseInt(wrapper.dataset.increment),
+      loadMoreBtn = wrapper.querySelector('.content-toggle button');
+  /**
+   * Give wrapper a numeric data attribute. As this changes, so
+   * will the number of visible items.
+   */
+
+  wrapper.setAttribute('data-listings-show', itemsIncrement);
+  let visibleItems = parseInt(wrapper.getAttribute('data-listings-show')); // Load correct number of items based on URL hash
+
+  if (hashedUrl) {
+    let hashedUrlParts = hashedUrl.split('-');
+    let activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(hashedUrlParts[1]));
+    visibleItems = activeItem + (itemsIncrement - 1);
+    wrapper.setAttribute('data-listings-show', visibleItems);
+    itemsDisplay(items, visibleItems, loadMoreBtn);
+    scrollToItem(items, visibleItems, itemsIncrement);
+  } else {
+    itemsDisplay(items, visibleItems, loadMoreBtn);
+    scrollToItem(items, visibleItems, itemsIncrement);
+  } // Run on every 'load more' click: increase listings by batch number
+
+
+  loadMoreBtn.addEventListener('click', () => {
+    visibleItems += itemsIncrement;
+    wrapper.setAttribute('data-listings-show', visibleItems);
+    itemsDisplay(items, visibleItems, loadMoreBtn);
+    scrollToItem(items, visibleItems, itemsIncrement);
+    hashedUrl = window.location.hash;
+    hashedUrl ? replaceUrlState(wrapperId, visibleItems, itemsIncrement) : pushUrlState(wrapperId, visibleItems, itemsIncrement);
+  }); // Back/forward browser clicks.
+
+  window.onpopstate = () => {
+    // Must re-assign variable on pop state change
+    hashedUrl = window.location.hash;
+
+    if (hashedUrl) {
+      // Capture latest hash
+      let updatedUrlParts = window.location.hash.split('-');
+      let currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(updatedUrlParts[1]));
+      currentItem = currentItem + (itemsIncrement - 1);
+      visibleItems = currentItem;
+      wrapper.setAttribute('data-listings-show', visibleItems);
+      itemsDisplay(items, visibleItems, loadMoreBtn);
+      scrollToItem(items, visibleItems, itemsIncrement);
+    } else {
+      visibleItems = itemsIncrement;
+      itemsDisplay(items, visibleItems, loadMoreBtn);
+      wrapper.setAttribute('data-listings-show', itemsIncrement);
+      scrollToItem(items, visibleItems, itemsIncrement);
+    }
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchLoadMore,
   launchQuery: `.${className}`
 });
 
