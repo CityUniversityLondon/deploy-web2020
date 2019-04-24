@@ -12463,7 +12463,7 @@ main table td em {
 }
 
 .card--contact__name {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     color: #1e1e1e;
     font-weight: 500;
 }
@@ -12473,7 +12473,7 @@ main table td em {
 }
 
 .card--contact__key-info {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .card--contact__key-info span {
