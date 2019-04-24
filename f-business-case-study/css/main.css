@@ -18512,7 +18512,7 @@ button
 
 @media (min-width: 433px) {
     .case-study--business {
-        grid-template-areas: 't t t t t t t t t t t t' '. . m m m m m m m m . .' 'c c c c c c c c c c c c' 'r r r r r r r r r r r r';
+        grid-template-areas: 't t t t t t t t t t t t' 'm m m m m m m m m m m m' 'c c c c c c c c c c c c' 'r r r r r r r r r r r r';
     }
 }
 
@@ -18646,6 +18646,11 @@ button
     padding-top: 1.25rem;
 }
 
+.case-study--business .overview__main__details__result p {
+    float: left;
+    margin-right: 0.4rem;
+}
+
 .case-study--business .overview__main__details a {
     color: #8a8a8a;
     border-bottom-color: #8a8a8a;
@@ -18730,19 +18735,19 @@ button
 
 @media (max-width: 432px) {
     .case-study--business .wrap-content {
-        grid-template-areas: 'c c c c c c';
+        grid-template-areas: 's s s s s s' 'c c c c c c';
     }
 }
 
 @media (min-width: 433px) {
     .case-study--business .wrap-content {
-        grid-template-areas: '. . c c c c c c c c . .';
+        grid-template-areas: '. . s s s s s s s s . .' '. . c c c c c c c c . .';
     }
 }
 
 @media (min-width: 901px) {
     .case-study--business .wrap-content {
-        grid-template-areas: '. . . . . c c c c c c c c . . . . social';
+        grid-template-areas: '. . . . . c c c c c c c c . . . . s';
     }
 }
 
@@ -18751,7 +18756,7 @@ button
 }
 
 .case-study--business .social-icons {
-    grid-area: social;
+    grid-area: s;
 }
 
 .leading-section-separator {
