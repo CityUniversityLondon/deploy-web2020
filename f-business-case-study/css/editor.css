@@ -12334,7 +12334,8 @@ main table td em {
 @media screen and (hover: hover) {
     .theme--dark .cms-editor .cms-editor-warning-remover:hover {
         border-bottom-color: #6894c0;
-        color: #1e1e1e;
+        background: #6894c0;
+        color: #ffffff;
     }
 }
 
