@@ -5755,11 +5755,57 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2018
  */
 const className = 'slider';
-let sliderElement = document.getElementsByClassName('slider')[0],
-    sliderElementChildNodes = sliderElement.children;
+let slidesCollection = document.getElementsByClassName('slider__slides')[0].children,
+    sliderCollectionLength = slidesCollection.length,
+    slideIndex = 1,
+    sliderNext = document.getElementsByClassName('slider__arrow-next')[0],
+    sliderPrev = document.getElementsByClassName('slider__arrow-prev')[0];
+sliderNext.addEventListener('click', handleSlideChange);
+sliderPrev.addEventListener('click', handleSlideChange);
 
 function slider() {
-  sliderElementChildNodes[0].classList.add('slider__slide--active');
+  slidesCollection[0].classList.add('slider__slide--active');
+}
+
+function handleSlideChange(e) {
+  let activeSlide = document.getElementsByClassName('slider__slide--active')[0];
+
+  if (e.target.classList.contains('slider__arrow-next')) {
+    if (slideIndex !== sliderCollectionLength) {
+      handleNextSlideChange(activeSlide);
+      configureButtons();
+    }
+  } else {
+    handlePrevSlideChange(activeSlide);
+    configureButtons();
+  }
+}
+
+function configureButtons() {
+  //console.log(slideIndex, sliderCollectionLength);
+  if (slideIndex > 1) {
+    sliderPrev.removeAttribute('disabled');
+  } else {
+    sliderPrev.setAttribute('disabled', 'true');
+  }
+
+  if (slideIndex == sliderCollectionLength) {
+    sliderNext.setAttribute('disabled', 'true');
+  } else {
+    sliderNext.removeAttribute('disabled');
+  }
+}
+
+function handleNextSlideChange(activeSlide) {
+  slideIndex++;
+  activeSlide.classList.remove('slider__slide--active');
+  activeSlide.nextElementSibling.classList.add('slider__slide--active');
+}
+
+function handlePrevSlideChange(activeSlide) {
+  slideIndex--;
+  activeSlide.classList.remove('slider__slide--active');
+  activeSlide.previousElementSibling.classList.add('slider__slide--active');
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({

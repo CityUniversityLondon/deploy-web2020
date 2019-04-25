@@ -17433,6 +17433,7 @@ blockquote footer {
 
 .slider {
     width: 100%;
+    position: relative;
 }
 
 .slider__slide {
@@ -17445,6 +17446,62 @@ blockquote footer {
 
 .card--testimonial--photo.slider__slide--active {
     display: grid;
+}
+
+.slider__buttons {
+    float: right;
+}
+
+.slider__arrow-prev,
+.slider__arrow-next {
+    border: 0.25rem solid #3e1031;
+    padding: 0.5rem;
+    background: #ffffff;
+    width: 3rem;
+    color: #1e1e1e;
+    font-size: 1.424rem;
+    line-height: 1.25;
+    letter-spacing: -0.013em;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .slider__arrow-prev,
+    .slider__arrow-next {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .slider__arrow-prev,
+    .slider__arrow-next {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .slider__arrow-prev,
+    .slider__arrow-next {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .slider__arrow-prev,
+    .slider__arrow-next {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .slider__arrow-prev,
+    .slider__arrow-next {
+        letter-spacing: -0.017em;
+    }
+}
+
+.slider__arrow-prev:disabled,
+.slider__arrow-next:disabled {
+    opacity: 0.3;
 }
 
 @media print {
