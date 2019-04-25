@@ -3793,11 +3793,23 @@ const className = 'accordion',
       scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : 999,
       scrollTo = false;
 /**
+ * Calculate height of body element associated to accordion heading.
+ *
+ * @param {HTMLElement} heading - An accordion heading.
+ */
+
+function calcBodyHeight(heading) {
+  let bodyHeight = heading.nextElementSibling.scrollHeight;
+  let bodyHeightRem = Object(_util__WEBPACK_IMPORTED_MODULE_3__["pxToRem"])(bodyHeight);
+  heading.nextElementSibling.style.maxHeight = parseInt(bodyHeightRem + 5) + 'rem';
+}
+/**
  * Sets a heading and the button nested within to be open or closed.
  *
  * @param {HTMLElement} heading - An accordion heading.
  * @param {boolean} open - Set this section to be open?
  */
+
 
 function setSection(heading, open) {
   heading.dataset.open = open;
@@ -3805,15 +3817,16 @@ function setSection(heading, open) {
   heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, open);
   let bodyLinks = heading.nextElementSibling.getElementsByTagName('a');
 
+  for (const bodyLink of bodyLinks) {
+    bodyLink.setAttribute('tabindex', '1');
+  }
+
   if (open) {
     heading.nextElementSibling.classList.add('active');
-    let bodyHeight = heading.nextElementSibling.scrollHeight;
-    let bodyHeightRem = Object(_util__WEBPACK_IMPORTED_MODULE_3__["pxToRem"])(bodyHeight);
-    heading.nextElementSibling.style.maxHeight = parseInt(bodyHeightRem + 5) + 'rem';
-
-    for (const bodyLink of bodyLinks) {
-      bodyLink.setAttribute('tabindex', '1');
-    }
+    calcBodyHeight(heading);
+    window.addEventListener('resize', () => {
+      calcBodyHeight(heading);
+    });
   } else {
     heading.nextElementSibling.classList.remove('active');
     heading.nextElementSibling.style.maxHeight = null;
@@ -3909,26 +3922,33 @@ function launchAccordion(accordion) {
     return;
   }
 
-  headings.forEach(heading => {
-    const content = heading.nextElementSibling,
-          button = buttonFromHeading(heading);
-    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].labelledBy, heading.id);
-    content.setAttribute('role', 'region');
-    heading.replaceChild(button, heading.firstChild);
-    /**
-     * if the location hash matches the heading's ID, we'll open that
-     * instead of the first section, or instead of leaving everything
-     * closed.
-     */
+  const build = () => {
+    headings.forEach(heading => {
+      const content = heading.nextElementSibling,
+            button = buttonFromHeading(heading);
+      content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].labelledBy, heading.id);
+      content.setAttribute('role', 'region');
+      heading.replaceChild(button, heading.firstChild);
+      /**
+       * if the location hash matches the heading's ID, we'll open that
+       * instead of the first section, or instead of leaving everything
+       * closed.
+       */
 
-    if (locationHash === heading.id) {
-      idLinked = true;
-      setSection(heading, true);
-    } else {
-      setSection(heading, false);
-    }
+      if (locationHash === heading.id) {
+        idLinked = true;
+        setSection(heading, true);
+      } else {
+        setSection(heading, false);
+      }
 
-    button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
+      button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
+      window.addEventListener('resize', function () {});
+    });
+  };
+
+  window.addEventListener('load', function () {
+    build();
   });
 
   if (defaultOpen && !idLinked) {
