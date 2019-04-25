@@ -5759,16 +5759,17 @@ const className = 'slider',
       activeSlideClass = 'slider__slide--active',
       sliderArrowNextClass = 'slider__arrow-next',
       sliderArrowPrevClass = 'slider__arrow-prev';
-let slidesCollection = document.getElementsByClassName(slidesCollectionClass)[0].children,
-    sliderCollectionLength = slidesCollection.length,
-    slideIndex = 1,
-    sliderNext = document.getElementsByClassName(sliderArrowNextClass)[0],
-    sliderPrev = document.getElementsByClassName(sliderArrowPrevClass)[0];
-sliderNext.addEventListener('click', handleSlideChange);
-sliderPrev.addEventListener('click', handleSlideChange);
+let slidesCollection, sliderCollectionLength, slideIndex, sliderNext, sliderPrev;
 
 function slider() {
+  slidesCollection = document.getElementsByClassName(slidesCollectionClass)[0].children;
+  sliderCollectionLength = slidesCollection.length;
+  slideIndex = 1;
+  sliderNext = document.getElementsByClassName(sliderArrowNextClass)[0];
+  sliderPrev = document.getElementsByClassName(sliderArrowPrevClass)[0];
   slidesCollection[0].classList.add(activeSlideClass);
+  sliderNext.addEventListener('click', handleSlideChange);
+  sliderPrev.addEventListener('click', handleSlideChange);
 }
 
 function handleSlideChange(e) {
