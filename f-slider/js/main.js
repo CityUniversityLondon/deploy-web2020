@@ -5754,58 +5754,55 @@ __webpack_require__.r(__webpack_exports__);
  * @author Daniel Miller <daniel.miller@city.ac.uk>
  * @copyright City, University of London 2018
  */
-const className = 'slider';
-let slidesCollection = document.getElementsByClassName('slider__slides')[0].children,
+const className = 'slider',
+      slidesCollectionClass = 'slider__slides',
+      activeSlideClass = 'slider__slide--active',
+      sliderArrowNextClass = 'slider__arrow-next',
+      sliderArrowPrevClass = 'slider__arrow-prev';
+let slidesCollection = document.getElementsByClassName(slidesCollectionClass)[0].children,
     sliderCollectionLength = slidesCollection.length,
     slideIndex = 1,
-    sliderNext = document.getElementsByClassName('slider__arrow-next')[0],
-    sliderPrev = document.getElementsByClassName('slider__arrow-prev')[0];
+    sliderNext = document.getElementsByClassName(sliderArrowNextClass)[0],
+    sliderPrev = document.getElementsByClassName(sliderArrowPrevClass)[0];
 sliderNext.addEventListener('click', handleSlideChange);
 sliderPrev.addEventListener('click', handleSlideChange);
 
 function slider() {
-  slidesCollection[0].classList.add('slider__slide--active');
+  slidesCollection[0].classList.add(activeSlideClass);
 }
 
 function handleSlideChange(e) {
-  let activeSlide = document.getElementsByClassName('slider__slide--active')[0];
+  let activeSlide = document.getElementsByClassName(activeSlideClass)[0];
 
-  if (e.target.classList.contains('slider__arrow-next')) {
+  if (e.target.classList.contains(sliderArrowNextClass)) {
     if (slideIndex !== sliderCollectionLength) {
-      handleNextSlideChange(activeSlide);
-      configureButtons();
+      slideIndex++;
+      activeSlide.classList.remove(activeSlideClass);
+      activeSlide.nextElementSibling.classList.add(activeSlideClass);
     }
   } else {
-    handlePrevSlideChange(activeSlide);
-    configureButtons();
+    if (slideIndex !== 1) {
+      slideIndex--;
+      activeSlide.classList.remove(activeSlideClass);
+      activeSlide.previousElementSibling.classList.add(activeSlideClass);
+    }
   }
+
+  configureButtons();
 }
 
 function configureButtons() {
-  //console.log(slideIndex, sliderCollectionLength);
   if (slideIndex > 1) {
     sliderPrev.removeAttribute('disabled');
   } else {
-    sliderPrev.setAttribute('disabled', 'true');
+    sliderPrev.setAttribute('disabled', '');
   }
 
   if (slideIndex == sliderCollectionLength) {
-    sliderNext.setAttribute('disabled', 'true');
+    sliderNext.setAttribute('disabled', '');
   } else {
     sliderNext.removeAttribute('disabled');
   }
-}
-
-function handleNextSlideChange(activeSlide) {
-  slideIndex++;
-  activeSlide.classList.remove('slider__slide--active');
-  activeSlide.nextElementSibling.classList.add('slider__slide--active');
-}
-
-function handlePrevSlideChange(activeSlide) {
-  slideIndex--;
-  activeSlide.classList.remove('slider__slide--active');
-  activeSlide.previousElementSibling.classList.add('slider__slide--active');
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
