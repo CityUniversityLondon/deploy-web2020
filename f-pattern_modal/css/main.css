@@ -17367,9 +17367,7 @@ body.modal--in .modal__background {
     pointer-events: none;
     background: #ffffff;
     border: none;
-    max-height: 75vh;
-    overflow: scroll;
-    padding: 0.5rem 2.5rem 0;
+    padding: 0.5rem 2.5rem 3rem;
     position: relative;
 }
 
@@ -17524,10 +17522,6 @@ a.modal__close:active, a.modal__close:focus {
 
 .modal__body-copy {
     margin-top: 1rem;
-}
-
-.modal__buttons {
-    margin-bottom: 3rem;
 }
 
 @media (min-width: 769px) {
