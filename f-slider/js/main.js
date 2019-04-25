@@ -5793,17 +5793,8 @@ function handleSlideChange(e) {
 }
 
 function configureButtons() {
-  if (slideIndex > 1) {
-    sliderPrev.removeAttribute('disabled');
-  } else {
-    sliderPrev.setAttribute('disabled', '');
-  }
-
-  if (slideIndex == sliderCollectionLength) {
-    sliderNext.setAttribute('disabled', '');
-  } else {
-    sliderNext.removeAttribute('disabled');
-  }
+  slideIndex > 1 ? sliderPrev.removeAttribute('disabled') : sliderPrev.setAttribute('disabled', '');
+  slideIndex == sliderCollectionLength ? sliderNext.setAttribute('disabled', '') : sliderNext.removeAttribute('disabled');
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
