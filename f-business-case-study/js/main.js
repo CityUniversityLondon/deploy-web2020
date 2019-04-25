@@ -3724,6 +3724,182 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /***/ }),
 
+/***/ "./src/paint-layouts/case-study-transition-effects/content-paragraphs.js":
+/*!*******************************************************************************!*\
+  !*** ./src/paint-layouts/case-study-transition-effects/content-paragraphs.js ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+
+
+
+
+/**
+ * Leading separator transition
+ *
+ * @module patterns/external-link-finder/external-link-finder
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+/**
+ *  Animates paragraphs inside content area to fade in on scroll
+ *
+ * Requirements:
+ * template have to contain paragraph elements inside the content element
+ */
+const className = 'case-study';
+
+function contentParagraphsTransition() {
+  document.getElementsByClassName('back-to-top')[0].querySelectorAll('a')[0];
+  const paragraphs = document.getElementsByClassName('content')[0].querySelectorAll('p');
+  const viewPortHeight = window.innerHeight; // calculates viewport height
+
+  paragraphs.forEach(function (i) {
+    i.classList.add('paragraph-fadein-start');
+  });
+  window.addEventListener('scroll', function () {
+    paragraphs.forEach(function (i) {
+      const elemOffset = i.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      if (screenPos > elemOffset - viewPortHeight + 10) {
+        i.classList.add('paragraph-fadein-complete');
+      }
+    });
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: contentParagraphsTransition,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/paint-layouts/case-study-transition-effects/leading-separator.js":
+/*!******************************************************************************!*\
+  !*** ./src/paint-layouts/case-study-transition-effects/leading-separator.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+
+
+
+
+/**
+ * Leading separator transition
+ *
+ * @module patterns/external-link-finder/external-link-finder
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+/**
+ *  Animates leading section separator on scroll
+ *
+ *  * Requirements:
+ * the animation effect require the following 2 classes:
+ * 'leading-section-separator'
+ * 'leading-section-separator--transition-complete'
+ */
+const className = 'leading-section-separator';
+
+function leadingSectionSeparatorTransition() {
+  const leadingSectionSeparators = document.querySelectorAll('.leading-section-separator');
+  const viewPortHeight = window.innerHeight; // calculates viewport height
+
+  leadingSectionSeparators.forEach(function (i) {
+    i.classList.add('leading-section-separator--transition-start');
+  });
+  window.addEventListener('scroll', function () {
+    leadingSectionSeparators.forEach(function (i) {
+      const elemOffset = i.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      if (screenPos > elemOffset - viewPortHeight + 20) {
+        i.classList.add('leading-section-separator--transition-complete');
+      }
+    });
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: leadingSectionSeparatorTransition,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/paint-layouts/case-study-transition-effects/multimedia-banner.js":
+/*!******************************************************************************!*\
+  !*** ./src/paint-layouts/case-study-transition-effects/multimedia-banner.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+
+
+
+
+/**
+ * Leading separator transition
+ *
+ * @module patterns/external-link-finder/external-link-finder
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+/**
+ *  Animates the video / image banner to fade en an scale in size on scroll
+ *
+ * Requirements:
+ * the animation effect require the following 2 classes:
+ * 'overview__multimedia-banner--transition-start'
+ * 'overview__multimedia-banner--transition-complete'
+ */
+const className = 'overview__multimedia-banner';
+
+function multimediaBannerTransition() {
+  const multimediaBanner = document.querySelectorAll('.overview__multimedia-banner');
+  const viewPortHeight = window.innerHeight; // calculates viewport height
+
+  multimediaBanner.forEach(function (bannerItem) {
+    bannerItem.classList.add('overview__multimedia-banner--transition-start');
+  });
+  window.addEventListener('scroll', function () {
+    multimediaBanner.forEach(function (bannerItem) {
+      const elemOffset = bannerItem.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      if (screenPos > elemOffset - viewPortHeight + 100) {
+        bannerItem.classList.add('overview__multimedia-banner--transition-complete');
+      }
+    });
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: multimediaBannerTransition,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
 /***/ "./src/patterns.js":
 /*!*************************!*\
   !*** ./src/patterns.js ***!
@@ -3746,6 +3922,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
 /* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
 /* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
+/* harmony import */ var _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/leading-separator */ "./src/paint-layouts/case-study-transition-effects/leading-separator.js");
+/* harmony import */ var _paint_layouts_case_study_transition_effects_multimedia_banner__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/multimedia-banner */ "./src/paint-layouts/case-study-transition-effects/multimedia-banner.js");
+/* harmony import */ var _paint_layouts_case_study_transition_effects_content_paragraphs__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/content-paragraphs */ "./src/paint-layouts/case-study-transition-effects/content-paragraphs.js");
 
 
 /**
@@ -3770,7 +3949,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"]]);
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_13__["default"], _paint_layouts_case_study_transition_effects_multimedia_banner__WEBPACK_IMPORTED_MODULE_14__["default"], _paint_layouts_case_study_transition_effects_content_paragraphs__WEBPACK_IMPORTED_MODULE_15__["default"]]);
 
 /***/ }),
 
