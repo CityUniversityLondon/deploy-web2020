@@ -334,6 +334,14 @@
     background-color: #8a8a8a;
 }
 
+.color--gray13 {
+    color: #28211f;
+}
+
+.background--gray13 {
+    background-color: #28211f;
+}
+
 .color--red10 {
     color: #f7d2d5;
 }
@@ -12444,7 +12452,7 @@ main table td em {
 
 .card--contact {
     background: #ffffff;
-    box-shadow: 0 0 10px 0 rgba(12, 12, 14, 0.15);
+    box-shadow: 0 0 0.75rem 0 rgba(40, 33, 31, 0.15);
     padding: 1.75rem;
 }
 
@@ -12458,7 +12466,7 @@ main table td em {
     font-family: "Plex Sans", sans-serif;
     margin-top: 0;
     color: #696969;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 0.0625rem solid #e5e5e5;
     padding-bottom: 0.5rem;
 }
 

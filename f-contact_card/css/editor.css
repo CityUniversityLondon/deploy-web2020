@@ -334,6 +334,14 @@
     background-color: #8a8a8a;
 }
 
+.color--gray13 {
+    color: #28211f;
+}
+
+.background--gray13 {
+    background-color: #28211f;
+}
+
 .color--red10 {
     color: #f7d2d5;
 }
