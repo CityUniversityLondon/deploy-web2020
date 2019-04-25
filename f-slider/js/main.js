@@ -5757,8 +5757,8 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'slider',
       slidesCollectionClass = 'slider__slides',
       activeSlideClass = 'slider__slide--active',
-      sliderArrowNextClass = 'slider__arrow-next',
-      sliderArrowPrevClass = 'slider__arrow-prev';
+      sliderArrowNextClass = 'arrow-right--btn-next',
+      sliderArrowPrevClass = 'arrow-left--btn-prev';
 let slidesCollection, sliderCollectionLength, slideIndex, sliderNext, sliderPrev;
 
 function slider() {
