@@ -17388,11 +17388,12 @@ body.modal--in .modal__background {
 }
 
 .modal__reveal--fromtop {
-    transform-origin: 50% 0;
+    transform-origin: 0 0;
 }
 
 .modal__reveal--frombottom {
-    transform-origin: 50% 100%;
+    transform-origin: 0 100%;
+    bottom: -1px;
 }
 
 .modal__popup--transitioning-in .modal__reveal--fromtop,
