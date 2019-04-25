@@ -3922,7 +3922,7 @@ function launchAccordion(accordion) {
     return;
   }
 
-  const build = () => {
+  const buildHeadings = () => {
     headings.forEach(heading => {
       const content = heading.nextElementSibling,
             button = buttonFromHeading(heading);
@@ -3943,12 +3943,15 @@ function launchAccordion(accordion) {
       }
 
       button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
-      window.addEventListener('resize', function () {});
     });
   };
+  /**
+   * DOM must be fully loaded to accurately calculate body heights across browsers
+   */
+
 
   window.addEventListener('load', function () {
-    build();
+    buildHeadings();
   });
 
   if (defaultOpen && !idLinked) {
