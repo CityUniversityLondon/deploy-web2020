@@ -5761,7 +5761,8 @@ const className = 'slider',
       sliderArrowNextClass = 'arrow-right--btn-next',
       sliderArrowPrevClass = 'arrow-left--btn-prev',
       numberedIndicatorTotalSlides = 'slider__numbered-position-indicator__total-slides',
-      numberedIndicatorActiveSlide = 'slider__numbered-position-indicator__active-slide'; // global vars, set in main function, used in other functions
+      numberedIndicatorActiveSlide = 'slider__numbered-position-indicator__active-slide',
+      progressIndicatorProgress = 'slider__progress-position-indicator__progress'; // global vars, set in main function, used in other functions
 
 let slidesCollection, sliderCollectionLength, slideIndex, sliderNext, sliderPrev;
 
@@ -5772,13 +5773,14 @@ function slider() {
   sliderNext = document.getElementsByClassName(sliderArrowNextClass)[0];
   sliderPrev = document.getElementsByClassName(sliderArrowPrevClass)[0]; // add action class to first element on load
 
-  slidesCollection[0].classList.add(activeSlideClass); // set total/active slides indicator
-
-  setTotalSlidesIndicator();
-  setActiveSlideIndicator(); // configure click handlers for next/prev
+  slidesCollection[0].classList.add(activeSlideClass); // configure click handlers for next/prev
 
   sliderNext.addEventListener('click', handleSlideChange);
-  sliderPrev.addEventListener('click', handleSlideChange);
+  sliderPrev.addEventListener('click', handleSlideChange); // set total/active/progress attributes
+
+  setTotalSlidesIndicator();
+  setActiveSlideIndicator();
+  setProgressIndicator();
 }
 
 function handleSlideChange(e) {
@@ -5801,6 +5803,7 @@ function handleSlideChange(e) {
   setButtonAttributes();
   setTotalSlidesIndicator();
   setActiveSlideIndicator();
+  setProgressIndicator();
 }
 
 function setTotalSlidesIndicator() {
@@ -5811,6 +5814,23 @@ function setTotalSlidesIndicator() {
 function setActiveSlideIndicator() {
   let activeSlideIndicator = document.getElementsByClassName(numberedIndicatorActiveSlide)[0];
   activeSlideIndicator.textContent = slideIndex;
+}
+
+function setProgressIndicator() {
+  let percentageProgress = getPercentageProgress();
+  let progressIndicator = document.getElementsByClassName(progressIndicatorProgress)[0];
+  progressIndicator.setAttribute('style', 'width: ' + percentageProgress + '%');
+}
+
+function getPercentageProgress() {
+  let percentageProgress = Math.round(100 / sliderCollectionLength);
+  percentageProgress = slideIndex * percentageProgress;
+
+  if (slideIndex == sliderCollectionLength) {
+    return 100;
+  } else {
+    return percentageProgress;
+  }
 }
 
 function setButtonAttributes() {

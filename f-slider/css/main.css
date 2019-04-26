@@ -17533,7 +17533,7 @@ blockquote footer {
 
 .slider__progress-position-indicator__progress {
     background: #7c2062;
-    width: 30%;
+    width: 0;
     position: absolute;
     height: 100%;
     top: 0;
