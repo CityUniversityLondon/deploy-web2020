@@ -5762,7 +5762,7 @@ const className = 'slider',
       sliderArrowPrevClass = 'arrow-left--btn-prev',
       numberedIndicatorTotalSlides = 'slider__numbered-position-indicator__total-slides',
       numberedIndicatorActiveSlide = 'slider__numbered-position-indicator__active-slide',
-      progressIndicatorProgress = 'slider__progress-position-indicator__progress'; // global vars, set in main function, used in other functions
+      progressIndicatorProgress = 'slider__progress-position-indicator__progress'; // global vars, set in entry function, used in other functions
 
 let slidesCollection, sliderCollectionLength, slideIndex, sliderNext, sliderPrev;
 
