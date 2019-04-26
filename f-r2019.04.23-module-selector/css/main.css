@@ -18916,6 +18916,11 @@ button
     color: #cbcbcb;
 }
 
+.module-selector__content__moduleLink a:focus {
+    color: #cbcbcb;
+    border-bottom-color: #cbcbcb;
+}
+
 .module-selector__content__moduleLink a:active {
     color: #ffffff;
     border-color: #ffffff;
