@@ -5759,7 +5759,9 @@ const className = 'slider',
       slidesCollectionClass = 'slider__slides',
       activeSlideClass = 'slider__slide--active',
       sliderArrowNextClass = 'arrow-right--btn-next',
-      sliderArrowPrevClass = 'arrow-left--btn-prev'; // global vars, set in main function
+      sliderArrowPrevClass = 'arrow-left--btn-prev',
+      numberedIndicatorTotalSlides = 'slider__numbered-position-indicator__total-slides',
+      numberedIndicatorActiveSlide = 'slider__numbered-position-indicator__active-slide'; // global vars, set in main function, used in other functions
 
 let slidesCollection, sliderCollectionLength, slideIndex, sliderNext, sliderPrev;
 
@@ -5773,7 +5775,7 @@ function slider() {
   slidesCollection[0].classList.add(activeSlideClass); // set total/active slides indicator
 
   setTotalSlidesIndicator();
-  setActiveIndicator(); // configure click handlers for next/prev
+  setActiveSlideIndicator(); // configure click handlers for next/prev
 
   sliderNext.addEventListener('click', handleSlideChange);
   sliderPrev.addEventListener('click', handleSlideChange);
@@ -5798,16 +5800,16 @@ function handleSlideChange(e) {
 
   setButtonAttributes();
   setTotalSlidesIndicator();
-  setActiveIndicator();
+  setActiveSlideIndicator();
 }
 
 function setTotalSlidesIndicator() {
-  let totalSlidesIndicator = document.getElementsByClassName('slider__position-indicator__total-slides')[0];
+  let totalSlidesIndicator = document.getElementsByClassName(numberedIndicatorTotalSlides)[0];
   totalSlidesIndicator.textContent = sliderCollectionLength;
 }
 
-function setActiveIndicator() {
-  let activeSlideIndicator = document.getElementsByClassName('slider__position-indicator__active-slide')[0];
+function setActiveSlideIndicator() {
+  let activeSlideIndicator = document.getElementsByClassName(numberedIndicatorActiveSlide)[0];
   activeSlideIndicator.textContent = slideIndex;
 }
 
