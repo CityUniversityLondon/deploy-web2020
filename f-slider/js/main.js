@@ -5823,12 +5823,11 @@ function setProgressIndicator() {
 }
 
 function getPercentageProgress() {
-  let percentageProgress = Math.round(100 / sliderCollectionLength);
-  percentageProgress = slideIndex * percentageProgress;
-
   if (slideIndex == sliderCollectionLength) {
     return 100;
   } else {
+    let percentageProgress = Math.round(100 / sliderCollectionLength);
+    percentageProgress = slideIndex * percentageProgress;
     return percentageProgress;
   }
 }
