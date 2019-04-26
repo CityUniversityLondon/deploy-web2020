@@ -17526,7 +17526,7 @@ blockquote footer {
 .slider__progress-position-indicator {
     margin: 1.25rem 0 1rem;
     height: 0.1875rem;
-    width: 250px;
+    width: 60%;
     background: #8a8a8a;
     position: relative;
 }
