@@ -17528,14 +17528,6 @@ ul.slider__slides {
     left: 0;
 }
 
-.slider__controls--progress-bar .slider__numbered-position-indicator {
-    display: none;
-}
-
-.slider__controls--numbered-position-indicator .slider__progress-position-indicator {
-    display: none;
-}
-
 .slider--testimonial .slider__controls {
     display: flex;
     justify-content: flex-end;

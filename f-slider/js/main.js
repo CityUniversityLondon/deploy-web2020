@@ -5756,35 +5756,42 @@ __webpack_require__.r(__webpack_exports__);
  */
 // const class names
 const className = 'slider',
-      slidesCollectionClass = 'slider__slides',
+      slidesContainerClass = '.slider__slides',
       activeSlideClass = 'slider__slide--active',
       sliderArrowNextClass = 'arrow-right--btn-next',
-      sliderArrowPrevClass = 'arrow-left--btn-prev',
-      numberedIndicatorTotalSlides = 'slider__numbered-position-indicator__total-slides',
-      numberedIndicatorActiveSlide = 'slider__numbered-position-indicator__active-slide',
-      progressIndicatorProgress = 'slider__progress-position-indicator__progress'; // global vars, set in entry function, used in other functions
+      //sliderArrowPrevClass = 'arrow-left--btn-prev',
+numberedIndicatorTotalSlides = '.slider__numbered-position-indicator__total-slides',
+      //numberedIndicatorActiveSlide =
+//'.slider__numbered-position-indicator__active-slide',
+//progressIndicatorProgress =
+//'.slider__progress-position-indicator__progress',
+sliderTargetAttr = 'slider-target'; // global vars, set in entry function, used in other functions
 
-let slidesCollection, sliderCollectionLength, slideIndex, sliderNext, sliderPrev;
+let slidesCollection,
+    sliderCollectionLength,
+    slideIndex = 1; //sliderNext,
+//sliderPrev;
 
 function slider() {
-  slidesCollection = document.getElementsByClassName(slidesCollectionClass)[0].children;
-  sliderCollectionLength = slidesCollection.length;
-  slideIndex = 1;
-  sliderNext = document.getElementsByClassName(sliderArrowNextClass)[0];
-  sliderPrev = document.getElementsByClassName(sliderArrowPrevClass)[0]; // add action class to first element on load
+  let sliderArrows = document.querySelectorAll('.slider-arrow'); // configure click handlers for allnext/prev
 
-  slidesCollection[0].classList.add(activeSlideClass); // configure click handlers for next/prev
-
-  sliderNext.addEventListener('click', handleSlideChange);
-  sliderPrev.addEventListener('click', handleSlideChange); // set total/active/progress attributes
-
-  setTotalSlidesIndicator();
-  setActiveSlideIndicator();
-  setProgressIndicator();
+  sliderArrows.forEach(function (sliderArrow) {
+    sliderArrow.addEventListener('click', handleSlideChange, false);
+  }); //sliderPrev = document.getElementsByClassName(sliderArrowPrevClass)[0];
+  // add action class to first element on load
+  //slidesCollection[0].classList.add(activeSlideClass);
+  // set total/active/progress attributes
+  //setTotalSlidesIndicator();
+  //setActiveSlideIndicator();
+  //setProgressIndicator();
 }
 
 function handleSlideChange(e) {
-  let activeSlide = document.getElementsByClassName(activeSlideClass)[0];
+  let activeSliderTargetAttr = e.target.getAttribute(sliderTargetAttr);
+  let activeSlidesContainerClassText = activeSliderTargetAttr + ' ' + slidesContainerClass;
+  let activeSlide = document.querySelector('.' + activeSlideClass);
+  slidesCollection = document.querySelector(activeSlidesContainerClassText).children;
+  sliderCollectionLength = slidesCollection.length;
 
   if (e.target.classList.contains(sliderArrowNextClass)) {
     if (slideIndex !== sliderCollectionLength) {
@@ -5800,41 +5807,64 @@ function handleSlideChange(e) {
     }
   }
 
-  setButtonAttributes();
-  setTotalSlidesIndicator();
+  setButtonAttributes(e.target);
+  setTotalSlidesIndicator(activeSliderTargetAttr);
+  /*
   setActiveSlideIndicator();
   setProgressIndicator();
+  */
 }
 
-function setTotalSlidesIndicator() {
-  let totalSlidesIndicator = document.getElementsByClassName(numberedIndicatorTotalSlides)[0];
+function setTotalSlidesIndicator(activeSliderTargetAttr) {
+  let totalSlidesIndicatorClass = activeSliderTargetAttr + ' ' + numberedIndicatorTotalSlides;
+  let totalSlidesIndicator = document.querySelector(totalSlidesIndicatorClass); //console.log(activeSliderTargetAttr, numberedIndicatorTotalSlides);
+
   totalSlidesIndicator.textContent = sliderCollectionLength;
 }
-
+/*
 function setActiveSlideIndicator() {
-  let activeSlideIndicator = document.getElementsByClassName(numberedIndicatorActiveSlide)[0];
-  activeSlideIndicator.textContent = slideIndex;
+    let activeSlideIndicator = document.getElementsByClassName(
+        numberedIndicatorActiveSlide
+    )[0];
+    activeSlideIndicator.textContent = slideIndex;
 }
 
 function setProgressIndicator() {
-  let percentageProgress = getPercentageProgress();
-  let progressIndicator = document.getElementsByClassName(progressIndicatorProgress)[0];
-  progressIndicator.setAttribute('style', 'width: ' + percentageProgress + '%');
+    let percentageProgress = getPercentageProgress();
+    let progressIndicator = document.getElementsByClassName(
+        progressIndicatorProgress
+    )[0];
+    progressIndicator.setAttribute(
+        'style',
+        'width: ' + percentageProgress + '%'
+    );
 }
+
 
 function getPercentageProgress() {
-  if (slideIndex == sliderCollectionLength) {
-    return 100;
-  } else {
-    let percentageProgress = Math.round(100 / sliderCollectionLength);
-    percentageProgress = slideIndex * percentageProgress;
-    return percentageProgress;
-  }
+    if (slideIndex == sliderCollectionLength) {
+        return 100;
+    } else {
+        let percentageProgress = Math.round(100 / sliderCollectionLength);
+        percentageProgress = slideIndex * percentageProgress;
+        return percentageProgress;
+    }
 }
+*/
 
-function setButtonAttributes() {
-  slideIndex > 1 ? sliderPrev.removeAttribute('disabled') : sliderPrev.setAttribute('disabled', '');
-  slideIndex == sliderCollectionLength ? sliderNext.setAttribute('disabled', '') : sliderNext.removeAttribute('disabled');
+
+function setButtonAttributes(buttonTarget) {
+  if (buttonTarget.classList.contains(sliderArrowNextClass)) {
+    // if at the end of the slides, disable
+    slideIndex == sliderCollectionLength ? buttonTarget.setAttribute('disabled', '') : // else enable next button
+    buttonTarget.removeAttribute('disabled');
+    slideIndex > 1 ? // if past the first slide, remove prev disabled
+    buttonTarget.previousElementSibling.removeAttribute('disabled') : // else add disabled
+    buttonTarget.previousElementSibling.setAttribute('disabled', '');
+  } else {
+    // if prev last click to first slide, disable it
+    slideIndex > 1 ? buttonTarget.removeAttribute('disabled') : buttonTarget.setAttribute('disabled', '');
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
