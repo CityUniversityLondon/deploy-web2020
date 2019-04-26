@@ -5754,11 +5754,13 @@ __webpack_require__.r(__webpack_exports__);
  * @author Daniel Miller <daniel.miller@city.ac.uk>
  * @copyright City, University of London 2018
  */
+// const class names
 const className = 'slider',
       slidesCollectionClass = 'slider__slides',
       activeSlideClass = 'slider__slide--active',
       sliderArrowNextClass = 'arrow-right--btn-next',
-      sliderArrowPrevClass = 'arrow-left--btn-prev';
+      sliderArrowPrevClass = 'arrow-left--btn-prev'; // global vars, set in main function
+
 let slidesCollection, sliderCollectionLength, slideIndex, sliderNext, sliderPrev;
 
 function slider() {
@@ -5766,8 +5768,13 @@ function slider() {
   sliderCollectionLength = slidesCollection.length;
   slideIndex = 1;
   sliderNext = document.getElementsByClassName(sliderArrowNextClass)[0];
-  sliderPrev = document.getElementsByClassName(sliderArrowPrevClass)[0];
-  slidesCollection[0].classList.add(activeSlideClass);
+  sliderPrev = document.getElementsByClassName(sliderArrowPrevClass)[0]; // add action class to first element on load
+
+  slidesCollection[0].classList.add(activeSlideClass); // set total/active slides indicator
+
+  setTotalSlidesIndicator();
+  setActiveIndicator(); // configure click handlers for next/prev
+
   sliderNext.addEventListener('click', handleSlideChange);
   sliderPrev.addEventListener('click', handleSlideChange);
 }
@@ -5789,10 +5796,22 @@ function handleSlideChange(e) {
     }
   }
 
-  configureButtons();
+  setButtonAttributes();
+  setTotalSlidesIndicator();
+  setActiveIndicator();
 }
 
-function configureButtons() {
+function setTotalSlidesIndicator() {
+  let totalSlidesIndicator = document.getElementsByClassName('slider__position-indicator__total-slides')[0];
+  totalSlidesIndicator.textContent = sliderCollectionLength;
+}
+
+function setActiveIndicator() {
+  let activeSlideIndicator = document.getElementsByClassName('slider__position-indicator__active-slide')[0];
+  activeSlideIndicator.textContent = slideIndex;
+}
+
+function setButtonAttributes() {
   slideIndex > 1 ? sliderPrev.removeAttribute('disabled') : sliderPrev.setAttribute('disabled', '');
   slideIndex == sliderCollectionLength ? sliderNext.setAttribute('disabled', '') : sliderNext.removeAttribute('disabled');
 }

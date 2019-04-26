@@ -17439,18 +17439,6 @@ blockquote footer {
     display: none;
 }
 
-.card--testimonial.slider__slide--active {
-    display: block;
-}
-
-.card--testimonial--photo.slider__slide--active {
-    display: grid;
-}
-
-.slider__buttons {
-    float: right;
-}
-
 .slider__buttons .arrow-left--btn-prev,
 .slider__buttons .arrow-right--btn-next {
     border: 0.25rem solid #3e1031;
@@ -17501,6 +17489,28 @@ blockquote footer {
 .slider__buttons .arrow-left--btn-prev:disabled,
 .slider__buttons .arrow-right--btn-next:disabled {
     opacity: 0.3;
+}
+
+.slider__controls {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.slider__position-indicator {
+    padding: 1rem 1.5rem 1rem;
+    color: #8a8a8a;
+}
+
+.slider__position-indicator__active-slide {
+    color: #7c2062;
+}
+
+.card--testimonial.slider__slide--active {
+    display: block;
+}
+
+.card--testimonial--photo.slider__slide--active {
+    display: grid;
 }
 
 @media print {
