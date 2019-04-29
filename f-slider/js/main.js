@@ -5760,9 +5760,8 @@ const className = 'slider',
       activeSlideClass = 'slider__slide--active',
       sliderArrowNextClass = 'arrow-right--btn-next',
       //sliderArrowPrevClass = 'arrow-left--btn-prev',
-//numberedIndicatorTotalSlides =
-//'.slider__numbered-position-indicator__total-slides',
-numberedIndicatorActiveSlide = '.slider__numbered-position-indicator__active-slide',
+numberedIndicatorTotalSlides = '.slider__numbered-position-indicator__total-slides',
+      numberedIndicatorActiveSlide = '.slider__numbered-position-indicator__active-slide',
       //progressIndicatorProgress =
 //'.slider__progress-position-indicator__progress',
 sliderTargetAttr = 'slider-target';
@@ -5777,9 +5776,9 @@ function slider() {
   setTotalSlidesIndicator(); //setProgressIndicator();
 }
 
-function getActiveSliderChildren(activeSliderTargetAttr) {
+function getActiveSliderChildren(activeSliderClass) {
   // combine target with container so we can target the container itself
-  let activeSlidesContainerClassText = activeSliderTargetAttr + ' ' + slidesContainerClass; // get the node collection
+  let activeSlidesContainerClassText = activeSliderClass + ' ' + slidesContainerClass; // get the node collection
 
   let slidesCollection = document.querySelector(activeSlidesContainerClassText).children;
   return slidesCollection;
@@ -5814,19 +5813,19 @@ function getActiveSlide(activeSliderTargetAttr) {
 }
 
 function handleSlideChange(e) {
-  let activeSliderTargetAttr, slidesCollection, sliderCollectionLength, currentSlideIndexElement, slideIndex, activeSlide; // get slider target attr - e.g '.slider--testimonial'
+  let activeSliderClass, slidesCollection, sliderCollectionLength, currentSlideIndexElement, slideIndex, activeSlide; // get slider target attr - e.g '.slider--testimonial'
 
-  activeSliderTargetAttr = e.target.getAttribute(sliderTargetAttr); // get children of active slider
+  activeSliderClass = e.target.getAttribute(sliderTargetAttr); // get children of active slider
 
-  slidesCollection = getActiveSliderChildren(activeSliderTargetAttr); // get the length of this slider's children
+  slidesCollection = getActiveSliderChildren(activeSliderClass); // get the length of this slider's children
 
   sliderCollectionLength = getSliderCollectionLength(slidesCollection); // get current index element
 
-  currentSlideIndexElement = getCurrentSlideIndexElement(activeSliderTargetAttr); // get the index as an int
+  currentSlideIndexElement = getCurrentSlideIndexElement(activeSliderClass); // get the index as an int
 
   slideIndex = getCurrentSlideIndex(currentSlideIndexElement); // get active slide for this slider
 
-  activeSlide = getActiveSlide(activeSliderTargetAttr); // toggle next/prev sibling and maintain index
+  activeSlide = getActiveSlide(activeSliderClass); // toggle next/prev sibling and maintain index
 
   if (e.target.classList.contains(sliderArrowNextClass)) {
     if (slideIndex !== sliderCollectionLength) {
@@ -5851,15 +5850,13 @@ function setTotalSlidesIndicator() {
   let allSliders = document.querySelectorAll('.slider'); // target each slider and get children collection
 
   allSliders.forEach(function (slider) {
-    let sliderSlidesCollectionText, slidesCollection, slidesCollectionLength, totalSlidesIndicatorClassText, totalSlidesIndicator; // set the slides container class text
+    let slidesCollection, slidesCollectionLength, totalSlidesIndicatorClassText, totalSlidesIndicator; // get the children
 
-    sliderSlidesCollectionText = '.' + slider.classList[1] + ' .slider__slides'; // get the children
+    slidesCollection = getActiveSliderChildren('.' + slider.classList[1]); // get the length of this slider's children
 
-    slidesCollection = document.querySelector(sliderSlidesCollectionText).children; // set the collection length
+    slidesCollectionLength = getSliderCollectionLength(slidesCollection); // set class text to target element
 
-    slidesCollectionLength = slidesCollection.length; // set class text to target element
-
-    totalSlidesIndicatorClassText = '.' + slider.classList[1] + ' .slider__numbered-position-indicator__total-slides'; // get the element
+    totalSlidesIndicatorClassText = '.' + slider.classList[1] + ' ' + numberedIndicatorTotalSlides; // get the element
 
     totalSlidesIndicator = document.querySelector(totalSlidesIndicatorClassText); // set the length text
 
