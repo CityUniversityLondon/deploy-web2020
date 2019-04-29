@@ -5784,13 +5784,16 @@ function setUniformSlideHeight() {
   let slidesCollection;
   allSliders.forEach(function (slider) {
     // get the children
-    slidesCollection = getActiveSliderChildren('.' + slider.classList[1]);
-    let tallestElement = getTallestElement(slidesCollection);
+    slidesCollection = getActiveSliderChildren('.' + slider.classList[1]); // get tallest element
+
+    let tallestElement = getTallestElement(slidesCollection); // set inline styles
+
     setMinElementHeights(tallestElement);
   });
 }
 
-function setMinElementHeights() {}
+function setMinElementHeights() {// add a min height inline style
+}
 
 function getTallestElement(collection) {
   let elementHeights = [];
