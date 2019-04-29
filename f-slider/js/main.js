@@ -5760,38 +5760,73 @@ const className = 'slider',
       activeSlideClass = 'slider__slide--active',
       sliderArrowNextClass = 'arrow-right--btn-next',
       //sliderArrowPrevClass = 'arrow-left--btn-prev',
-numberedIndicatorTotalSlides = '.slider__numbered-position-indicator__total-slides',
-      //numberedIndicatorActiveSlide =
-//'.slider__numbered-position-indicator__active-slide',
-//progressIndicatorProgress =
+//numberedIndicatorTotalSlides =
+//'.slider__numbered-position-indicator__total-slides',
+numberedIndicatorActiveSlide = '.slider__numbered-position-indicator__active-slide',
+      //progressIndicatorProgress =
 //'.slider__progress-position-indicator__progress',
-sliderTargetAttr = 'slider-target'; // global vars, set in entry function, used in other functions
-
-let slidesCollection,
-    sliderCollectionLength,
-    slideIndex = 1; //sliderNext,
-//sliderPrev;
+sliderTargetAttr = 'slider-target';
 
 function slider() {
-  let sliderArrows = document.querySelectorAll('.slider-arrow'); // configure click handlers for allnext/prev
+  // get all nav arrows
+  let sliderArrows = document.querySelectorAll('.slider-arrow'); // configure click handlers for all next/prev
 
   sliderArrows.forEach(function (sliderArrow) {
     sliderArrow.addEventListener('click', handleSlideChange, false);
-  }); //sliderPrev = document.getElementsByClassName(sliderArrowPrevClass)[0];
-  // add action class to first element on load
-  //slidesCollection[0].classList.add(activeSlideClass);
-  // set total/active/progress attributes
-  //setTotalSlidesIndicator();
-  //setActiveSlideIndicator();
-  //setProgressIndicator();
+  });
+  setTotalSlidesIndicator(); //setProgressIndicator();
+}
+
+function getActiveSliderChildren(activeSliderTargetAttr) {
+  // combine target with container so we can target the container itself
+  let activeSlidesContainerClassText = activeSliderTargetAttr + ' ' + slidesContainerClass; // get the node collection
+
+  let slidesCollection = document.querySelector(activeSlidesContainerClassText).children;
+  return slidesCollection;
+}
+
+function getSliderCollectionLength(slidesCollection) {
+  // set length for use later
+  let sliderCollectionLength = slidesCollection.length;
+  return sliderCollectionLength;
+}
+
+function getCurrentSlideIndex(currentSlideIndexElement) {
+  // convert to number string to int
+  let slideIndex = parseInt(currentSlideIndexElement.textContent);
+  return slideIndex;
+}
+
+function getCurrentSlideIndexElement(activeSliderTargetAttr) {
+  // build the class name of slide index element
+  let currentSlideIndexClassText = activeSliderTargetAttr + ' ' + numberedIndicatorActiveSlide; // get the element
+
+  let currentSlideIndexElement = document.querySelector(currentSlideIndexClassText);
+  return currentSlideIndexElement;
+}
+
+function getActiveSlide(activeSliderTargetAttr) {
+  // get active slide text
+  let activeSlideClassText = activeSliderTargetAttr + ' .' + activeSlideClass; // get the active slide of this slider
+
+  let activeSlide = document.querySelector(activeSlideClassText);
+  return activeSlide;
 }
 
 function handleSlideChange(e) {
-  let activeSliderTargetAttr = e.target.getAttribute(sliderTargetAttr);
-  let activeSlidesContainerClassText = activeSliderTargetAttr + ' ' + slidesContainerClass;
-  let activeSlide = document.querySelector('.' + activeSlideClass);
-  slidesCollection = document.querySelector(activeSlidesContainerClassText).children;
-  sliderCollectionLength = slidesCollection.length;
+  let activeSliderTargetAttr, slidesCollection, sliderCollectionLength, currentSlideIndexElement, slideIndex, activeSlide; // get slider target attr - e.g '.slider--testimonial'
+
+  activeSliderTargetAttr = e.target.getAttribute(sliderTargetAttr); // get children of active slider
+
+  slidesCollection = getActiveSliderChildren(activeSliderTargetAttr); // get the length of this slider's children
+
+  sliderCollectionLength = getSliderCollectionLength(slidesCollection); // get current index element
+
+  currentSlideIndexElement = getCurrentSlideIndexElement(activeSliderTargetAttr); // get the index as an int
+
+  slideIndex = getCurrentSlideIndex(currentSlideIndexElement); // get active slide for this slider
+
+  activeSlide = getActiveSlide(activeSliderTargetAttr); // toggle next/prev sibling and maintain index
 
   if (e.target.classList.contains(sliderArrowNextClass)) {
     if (slideIndex !== sliderCollectionLength) {
@@ -5807,27 +5842,35 @@ function handleSlideChange(e) {
     }
   }
 
-  setButtonAttributes(e.target);
-  setTotalSlidesIndicator(activeSliderTargetAttr);
-  /*
-  setActiveSlideIndicator();
-  setProgressIndicator();
-  */
+  setButtonAttributes(e.target, sliderCollectionLength, slideIndex);
+  setActiveSlideIndex(currentSlideIndexElement, slideIndex); // setProgressIndicator();
 }
 
-function setTotalSlidesIndicator(activeSliderTargetAttr) {
-  let totalSlidesIndicatorClass = activeSliderTargetAttr + ' ' + numberedIndicatorTotalSlides;
-  let totalSlidesIndicator = document.querySelector(totalSlidesIndicatorClass); //console.log(activeSliderTargetAttr, numberedIndicatorTotalSlides);
+function setTotalSlidesIndicator() {
+  // get all sliders
+  let allSliders = document.querySelectorAll('.slider'); // target each slider and get children collection
 
-  totalSlidesIndicator.textContent = sliderCollectionLength;
+  allSliders.forEach(function (slider) {
+    let sliderSlidesCollectionText, slidesCollection, slidesCollectionLength, totalSlidesIndicatorClassText, totalSlidesIndicator; // set the slides container class text
+
+    sliderSlidesCollectionText = '.' + slider.classList[1] + ' .slider__slides'; // get the children
+
+    slidesCollection = document.querySelector(sliderSlidesCollectionText).children; // set the collection length
+
+    slidesCollectionLength = slidesCollection.length; // set class text to target element
+
+    totalSlidesIndicatorClassText = '.' + slider.classList[1] + ' .slider__numbered-position-indicator__total-slides'; // get the element
+
+    totalSlidesIndicator = document.querySelector(totalSlidesIndicatorClassText); // set the length text
+
+    totalSlidesIndicator.textContent = slidesCollectionLength;
+  });
+}
+
+function setActiveSlideIndex(currentSlideIndexElement, slideIndex) {
+  currentSlideIndexElement.textContent = slideIndex;
 }
 /*
-function setActiveSlideIndicator() {
-    let activeSlideIndicator = document.getElementsByClassName(
-        numberedIndicatorActiveSlide
-    )[0];
-    activeSlideIndicator.textContent = slideIndex;
-}
 
 function setProgressIndicator() {
     let percentageProgress = getPercentageProgress();
@@ -5853,7 +5896,7 @@ function getPercentageProgress() {
 */
 
 
-function setButtonAttributes(buttonTarget) {
+function setButtonAttributes(buttonTarget, sliderCollectionLength, slideIndex) {
   if (buttonTarget.classList.contains(sliderArrowNextClass)) {
     // if at the end of the slides, disable
     slideIndex == sliderCollectionLength ? buttonTarget.setAttribute('disabled', '') : // else enable next button
@@ -5863,7 +5906,9 @@ function setButtonAttributes(buttonTarget) {
     buttonTarget.previousElementSibling.setAttribute('disabled', '');
   } else {
     // if prev last click to first slide, disable it
-    slideIndex > 1 ? buttonTarget.removeAttribute('disabled') : buttonTarget.setAttribute('disabled', '');
+    slideIndex > 1 ? buttonTarget.removeAttribute('disabled') : buttonTarget.setAttribute('disabled', ''); // if not at the end of collection, enable next
+
+    slideIndex !== sliderCollectionLength ? buttonTarget.nextElementSibling.removeAttribute('disabled') : buttonTarget.nextElementSibling.setAttribute('disabled', '');
   }
 }
 
