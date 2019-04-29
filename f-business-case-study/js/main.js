@@ -3871,14 +3871,14 @@ __webpack_require__.r(__webpack_exports__);
  * 'overview__multimedia-banner--transition-start'
  * 'overview__multimedia-banner--transition-complete'
  */
-const className = 'overview__multimedia-banner';
+const className = 'case-study__overview__multimedia-banner';
 
 function multimediaBannerTransition() {
-  const multimediaBanner = document.querySelectorAll('.overview__multimedia-banner');
+  const multimediaBanner = document.querySelectorAll('.case-study__overview__multimedia-banner');
   const viewPortHeight = window.innerHeight; // calculates viewport height
 
   multimediaBanner.forEach(function (bannerItem) {
-    bannerItem.classList.add('overview__multimedia-banner--transition-start');
+    bannerItem.classList.add('case-study__overview__multimedia-banner--transition-start');
   });
   window.addEventListener('scroll', function () {
     multimediaBanner.forEach(function (bannerItem) {
@@ -3886,7 +3886,7 @@ function multimediaBannerTransition() {
       const screenPos = window.pageYOffset; // calculates scroll position
 
       if (screenPos > elemOffset - viewPortHeight + 100) {
-        bannerItem.classList.add('overview__multimedia-banner--transition-complete');
+        bannerItem.classList.add('case-study__overview__multimedia-banner--transition-complete');
       }
     });
   });

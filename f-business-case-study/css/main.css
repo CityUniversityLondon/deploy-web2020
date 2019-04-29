@@ -18519,40 +18519,40 @@ TO BE DELETED
     }
 }
 */
-.case-study--business {
+.case-study {
     display: grid;
     grid-row-gap: 0;
     grid-template-rows: auto;
 }
 
 @media (max-width: 432px) {
-    .case-study--business {
+    .case-study {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
-    .case-study--business {
+    .case-study {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
 @media (min-width: 901px) {
-    .case-study--business {
+    .case-study {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
     }
 }
 
-.case-study--business .wrap-overview {
+.case-study__overview__wrap {
     grid-column: 1 / -1;
     background: #1e1e1e;
     color: white;
 }
 
-.case-study--business .overview {
+.case-study__overview {
     max-width: 80rem;
     display: grid;
     grid-row-gap: 0;
@@ -18560,61 +18560,61 @@ TO BE DELETED
 }
 
 @media (max-width: 1440px) {
-    .case-study--business .overview {
+    .case-study__overview {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 1441px) {
-    .case-study--business .overview {
+    .case-study__overview {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (max-width: 432px) {
-    .case-study--business .overview {
+    .case-study__overview {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
-    .case-study--business .overview {
+    .case-study__overview {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
 @media (min-width: 901px) {
-    .case-study--business .overview {
+    .case-study__overview {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
     }
 }
 
-.case-study--business .overview .banner {
+.case-study__overview .banner {
     grid-column: 1 / -1;
 }
 
 /*
-.case-study--business .overview header .label {
+.case-study .overview header .label {
     color: $color-red50;
     font-size: $font-size--beta;
 }
 
-.case-study--business .overview header .label .separator {
+.case-study .overview header .label .separator {
     color: $color-purewhite;
     font-size: $font-size--alpha;
     padding: 0 $measure--small1 0 $measure--small1;
 }
-.case-study--business .overview header h1 {
+.case-study .overview header h1 {
     padding-bottom: $measure--medium5;
 }
 
 */
-.case-study--business .overview .overview__main {
+.case-study__overview__main {
     grid-column: 1 / -1;
     display: grid;
     grid-row-gap: 0;
@@ -18622,48 +18622,48 @@ TO BE DELETED
 }
 
 @media (max-width: 432px) {
-    .case-study--business .overview .overview__main {
+    .case-study__overview__main {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
-    .case-study--business .overview .overview__main {
+    .case-study__overview__main {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
 @media (min-width: 901px) {
-    .case-study--business .overview .overview__main {
+    .case-study__overview__main {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
     }
 }
 
-.case-study--business .overview__main__standfirst {
+.case-study__overview__main__standfirst {
     grid-column: 1 / -1;
     margin-bottom: 6rem;
 }
 
-.case-study--business .overview__main__logos {
+.case-study__overview__main__logos {
     grid-column: 1 / 6;
 }
 
 @media (max-width: 432px) {
-    .case-study--business .overview__main__logos {
+    .case-study__overview__main__logos {
         grid-column: 1 / -1;
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
-    .case-study--business .overview__main__logos {
+    .case-study__overview__main__logos {
         grid-column: 1 / 3;
     }
 }
 
-.case-study--business .overview__main__logos figure {
+.case-study__overview__main__logos figure {
     display: inline-block;
     margin-right: 5%;
     width: 40%;
@@ -18673,14 +18673,14 @@ TO BE DELETED
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
-    .case-study--business .overview__main__logos figure {
+    .case-study__overview__main__logos figure {
         grid-column: 2 / 12;
         width: 100%;
         padding-top: 40.62%;
     }
 }
 
-.case-study--business .overview__main__logos img {
+.case-study__overview__main__logos img {
     border: 0.125rem solid #e5e5e5;
     position: absolute;
     top: 0;
@@ -18692,32 +18692,32 @@ TO BE DELETED
     margin: 5%;
 }
 
-.case-study--business .overview__main__details {
+.case-study__overview__main__details {
     grid-column: 6 / 14;
 }
 
 @media (max-width: 432px) {
-    .case-study--business .overview__main__details {
+    .case-study__overview__main__details {
         grid-column: 1 / -1;
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
-    .case-study--business .overview__main__details {
+    .case-study__overview__main__details {
         grid-column: 3 / 11;
     }
 }
 
-.case-study--business .overview__main__details .label {
+.case-study__overview__main__details .label {
     font-weight: 600;
 }
 
-.case-study--business .overview__main__details__result p {
+.case-study__overview__main__details__result p {
     float: left;
     margin-right: 0.4rem;
 }
 
-.case-study--business .overview__main__details a {
+.case-study__overview__main__details a {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -18752,7 +18752,7 @@ TO BE DELETED
 }
 
 @media (hover: hover) {
-    .case-study--business .overview__main__details a:hover {
+    .case-study__overview__main__details a:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -18767,7 +18767,7 @@ TO BE DELETED
     }
 }
 
-.case-study--business .overview__main__details a:focus, .case-study--business .overview__main__details a:active {
+.case-study__overview__main__details a:focus, .case-study__overview__main__details a:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -18782,24 +18782,24 @@ TO BE DELETED
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .case-study--business .overview__main__details a {
+    .case-study__overview__main__details a {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .case-study--business .overview__main__details a:hover {
+    .case-study__overview__main__details a:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.case-study--business .overview__main__details a:visited {
+.case-study__overview__main__details a:visited {
     border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
-.case-study--business .overview__main__details a:focus {
+.case-study__overview__main__details a:focus {
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -18811,7 +18811,7 @@ TO BE DELETED
 }
 
 @media (hover: hover) {
-    .case-study--business .overview__main__details a:hover {
+    .case-study__overview__main__details a:hover {
         border-bottom-color: #006bbd;
         border-bottom-width: 0.125rem;
         border-bottom-style: solid;
@@ -18819,7 +18819,7 @@ TO BE DELETED
     }
 }
 
-.case-study--business .overview__main__details a:active {
+.case-study__overview__main__details a:active {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -18832,45 +18832,45 @@ TO BE DELETED
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .case-study--business .overview__main__details a {
+    .case-study__overview__main__details a {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .case-study--business .overview__main__details a:hover {
+    .case-study__overview__main__details a:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.case-study--business .overview__main__details a:visited {
+.case-study__overview__main__details a:visited {
     border-bottom-color: #9b7ed9;
     color: #9b7ed9;
 }
 
-.case-study--business .overview__main__details a:focus {
+.case-study__overview__main__details a:focus {
     color: #6894c0;
     border-bottom-color: #6894c0;
     outline-color: #ffffff;
 }
 
 @media (hover: hover) {
-    .case-study--business .overview__main__details a:hover {
+    .case-study__overview__main__details a:hover {
         border-bottom-color: #6894c0;
         background: #6894c0;
         color: #ffffff;
     }
 }
 
-.case-study--business .overview__main__details a:active {
+.case-study__overview__main__details a:active {
     background-color: #6894c0;
     border-bottom-color: #6894c0;
     color: #1e1e1e;
     outline-color: #ffffff;
 }
 
-.case-study--business .overview__multimedia-banner {
+.case-study__overview__multimedia-banner {
     grid-column: 1 / -1;
     display: grid;
     grid-row-gap: 0;
@@ -18878,72 +18878,72 @@ TO BE DELETED
 }
 
 @media (max-width: 432px) {
-    .case-study--business .overview__multimedia-banner {
+    .case-study__overview__multimedia-banner {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
-    .case-study--business .overview__multimedia-banner {
+    .case-study__overview__multimedia-banner {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
 @media (min-width: 901px) {
-    .case-study--business .overview__multimedia-banner {
+    .case-study__overview__multimedia-banner {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
     }
 }
 
-.case-study--business .overview__multimedia-banner--transition-start {
+.case-study__overview__multimedia-banner--transition-start {
     opacity: 0.5;
     transform: scale(0.5, 0.5);
     transition: all ease 2s;
 }
 
-.case-study--business .overview__multimedia-banner--transition-complete {
+.case-study__overview__multimedia-banner--transition-complete {
     opacity: 1;
     transform: scale(1, 1);
 }
 
-.case-study--business .overview__multimedia-banner__video {
+.case-study__overview__multimedia-banner__video {
     grid-column: 4 / 16;
     text-align: center;
 }
 
 @media (max-width: 432px) {
-    .case-study--business .overview__multimedia-banner__video {
+    .case-study__overview__multimedia-banner__video {
         grid-column: 1 / -1;
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
-    .case-study--business .overview__multimedia-banner__video {
+    .case-study__overview__multimedia-banner__video {
         grid-column: 2 / 12;
     }
 }
 
-.case-study--business .overview__multimedia-banner__video figcaption {
+.case-study__overview__multimedia-banner__video figcaption {
     display: inline-block;
     color: #cbcbcb;
 }
 
-.case-study--business .overview__multimedia-banner__video figcaption time {
+.case-study__overview__multimedia-banner__video figcaption time {
     float: left;
 }
 
-.case-study--business .overview__multimedia-banner__video .embedded-video {
+.case-study__overview__multimedia-banner__video .embedded-video {
     padding-bottom: 0;
 }
 
-.case-study--business .overview__multimedia-banner__image {
+.case-study__overview__multimedia-banner__image {
     grid-column: 1 / -1;
 }
 
-.case-study--business .wrap-content {
+.case-study .wrap-content {
     max-width: 80rem;
     display: grid;
     grid-row-gap: 0;
@@ -18951,59 +18951,59 @@ TO BE DELETED
 }
 
 @media (max-width: 1440px) {
-    .case-study--business .wrap-content {
+    .case-study .wrap-content {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 1441px) {
-    .case-study--business .wrap-content {
+    .case-study .wrap-content {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (max-width: 432px) {
-    .case-study--business .wrap-content {
+    .case-study .wrap-content {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
-    .case-study--business .wrap-content {
+    .case-study .wrap-content {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
 @media (min-width: 901px) {
-    .case-study--business .wrap-content {
+    .case-study .wrap-content {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
     }
 }
 
 @media (max-width: 432px) {
-    .case-study--business .wrap-content {
+    .case-study .wrap-content {
         grid-template-areas: 's s s s s s' 'c c c c c c';
     }
 }
 
 @media (min-width: 433px) {
-    .case-study--business .wrap-content {
+    .case-study .wrap-content {
         grid-template-areas: '. . s s s s s s s s . .' '. . c c c c c c c c . .';
     }
 }
 
 @media (min-width: 901px) {
-    .case-study--business .wrap-content {
+    .case-study .wrap-content {
         grid-template-areas: '. . . . . c c c c c c c c . . . . s';
     }
 }
 
-.case-study--business .wrap-content .content {
+.case-study .wrap-content .content {
     grid-area: c;
 }
 
@@ -19016,11 +19016,11 @@ TO BE DELETED
     opacity: 1;
 }
 
-.case-study--business .social-icons {
+.case-study .social-icons {
     grid-area: s;
 }
 
-.leading-section-separator {
+.case-study .leading-section-separator {
     height: 0.3rem;
     display: block;
     background: #dd0036;
@@ -19028,57 +19028,107 @@ TO BE DELETED
     transition: width ease 0.5s;
 }
 
-.leading-section-separator--transition-start {
+.case-study .leading-section-separator--transition-start {
     width: 20%;
 }
 
-.leading-section-separator--transition-complete {
+.case-study .leading-section-separator--transition-complete {
     width: 100%;
 }
 
-.wrap-contact-details {
+.case-study .wrap-contact-details {
     background: #f2f2f2;
     grid-column: 1 / -1;
 }
 
-.contact-details {
+.case-study .contact-details {
     max-width: 80rem;
 }
 
 @media (max-width: 1440px) {
-    .contact-details {
+    .case-study .contact-details {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 1441px) {
-    .contact-details {
+    .case-study .contact-details {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-.wrap-related-case-studies {
+.case-study .wrap-related-case-studies {
     grid-column: 1 / -1;
 }
 
-.related-case-studies {
+.case-study .related-case-studies {
     max-width: 80rem;
 }
 
 @media (max-width: 1440px) {
-    .related-case-studies {
+    .case-study .related-case-studies {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 1441px) {
-    .related-case-studies {
+    .case-study .related-case-studies {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.case-study--research__details__wrap {
+    background: #f2f2f2;
+    grid-column: 1 / -1;
+}
+
+.case-study--research__details__wrap__container {
+    max-width: 80rem;
+    display: grid;
+    grid-row-gap: 0;
+}
+
+@media (max-width: 1440px) {
+    .case-study--research__details__wrap__container {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    .case-study--research__details__wrap__container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 432px) {
+    .case-study--research__details__wrap__container {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .case-study--research__details__wrap__container {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .case-study--research__details__wrap__container {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+.case-study--research__details {
+    grid-column: 6 / 14;
 }
 
 .content-hub {
