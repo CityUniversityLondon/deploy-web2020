@@ -18546,7 +18546,7 @@ TO BE DELETED
     }
 }
 
-.case-study--business .wrap-overview {
+.case-study .wrap-overview {
     grid-column: 1 / -1;
     background: #1e1e1e;
     color: white;
