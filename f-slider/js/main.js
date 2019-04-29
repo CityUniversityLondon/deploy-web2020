@@ -5756,18 +5756,20 @@ __webpack_require__.r(__webpack_exports__);
  */
 // const class names
 const className = 'slider',
-      sliderClass = '.slider',
+      sliderClass = '.slider--city-slider',
       slidesContainerClass = '.slider__slides',
       activeSlideClass = 'slider__slide--active',
+      sliderArrowClass = '.slider-arrow',
       sliderArrowNextClass = 'arrow-right--btn-next',
       numberedIndicatorTotalSlides = '.slider__controls__numbered-indicator__total-slides',
       numberedIndicatorActiveSlide = '.slider__controls__numbered-indicator__active-slide',
       progressIndicatorProgress = '.slider__controls__progress-indicator__progress',
-      sliderTargetAttr = 'slider-target';
+      sliderTargetAttr = 'slider-target',
+      allSliders = document.querySelectorAll(sliderClass);
 
 function slider() {
   // get all nav arrows
-  let sliderArrows = document.querySelectorAll('.slider-arrow'); // configure click handlers for all next/prev
+  let sliderArrows = document.querySelectorAll(sliderArrowClass); // configure click handlers for all next/prev
 
   sliderArrows.forEach(function (sliderArrow) {
     sliderArrow.addEventListener('click', handleSlideChange, false);
@@ -5778,14 +5780,12 @@ function slider() {
 }
 
 function setDisplayClasses() {
-  // get all sliders
-  let allSliders = document.querySelectorAll(sliderClass);
   allSliders.forEach(function (slider) {
     let slidesCollection, sliderCollectionLength; // get the children
 
     slidesCollection = getActiveSliderChildren('.' + slider.classList[1]); // get the length of this slider's children
 
-    sliderCollectionLength = getSliderCollectionLength(slidesCollection);
+    sliderCollectionLength = getSliderCollectionLength(slidesCollection); // if > 7, show numbered indicator
 
     if (sliderCollectionLength > 7) {
       let activeSlider = document.querySelector('.' + slider.classList[1]);
@@ -5865,8 +5865,6 @@ function handleSlideChange(e) {
 }
 
 function setTotalSlidesIndicator() {
-  // get all sliders
-  let allSliders = document.querySelectorAll(sliderClass);
   allSliders.forEach(function (slider) {
     let slidesCollection, sliderCollectionLength, totalSlidesIndicatorClassText, totalSlidesIndicator; // get the children
 
