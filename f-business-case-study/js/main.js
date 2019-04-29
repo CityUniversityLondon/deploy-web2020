@@ -3756,7 +3756,7 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'case-study';
 
 function contentParagraphsTransition() {
-  const paragraphs = document.getElementsByClassName('content')[0].querySelectorAll('p');
+  const paragraphs = document.getElementsByClassName('case-study__content')[0].querySelectorAll('p');
   const viewPortHeight = window.innerHeight; // calculates viewport height
 
   paragraphs.forEach(function (i) {
