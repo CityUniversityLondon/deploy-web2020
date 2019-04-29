@@ -5762,9 +5762,8 @@ const className = 'slider',
       //sliderArrowPrevClass = 'arrow-left--btn-prev',
 numberedIndicatorTotalSlides = '.slider__numbered-position-indicator__total-slides',
       numberedIndicatorActiveSlide = '.slider__numbered-position-indicator__active-slide',
-      //progressIndicatorProgress =
-//'.slider__progress-position-indicator__progress',
-sliderTargetAttr = 'slider-target';
+      progressIndicatorProgress = '.slider__progress-position-indicator__progress',
+      sliderTargetAttr = 'slider-target';
 
 function slider() {
   // get all nav arrows
@@ -5773,7 +5772,8 @@ function slider() {
   sliderArrows.forEach(function (sliderArrow) {
     sliderArrow.addEventListener('click', handleSlideChange, false);
   });
-  setTotalSlidesIndicator(); //setProgressIndicator();
+  setTotalSlidesIndicator();
+  setInitialProgressIndicator();
 }
 
 function getActiveSliderChildren(activeSliderClass) {
@@ -5796,9 +5796,9 @@ function getCurrentSlideIndex(currentSlideIndexElement) {
   return slideIndex;
 }
 
-function getCurrentSlideIndexElement(activeSliderTargetAttr) {
+function getCurrentSlideIndexElement(activeSliderClass) {
   // build the class name of slide index element
-  let currentSlideIndexClassText = activeSliderTargetAttr + ' ' + numberedIndicatorActiveSlide; // get the element
+  let currentSlideIndexClassText = activeSliderClass + ' ' + numberedIndicatorActiveSlide; // get the element
 
   let currentSlideIndexElement = document.querySelector(currentSlideIndexClassText);
   return currentSlideIndexElement;
@@ -5842,7 +5842,8 @@ function handleSlideChange(e) {
   }
 
   setButtonAttributes(e.target, sliderCollectionLength, slideIndex);
-  setActiveSlideIndex(currentSlideIndexElement, slideIndex); // setProgressIndicator();
+  setActiveSlideIndex(currentSlideIndexElement, slideIndex);
+  setProgressIndicator(activeSliderClass, slideIndex, sliderCollectionLength);
 }
 
 function setTotalSlidesIndicator() {
@@ -5850,48 +5851,52 @@ function setTotalSlidesIndicator() {
   let allSliders = document.querySelectorAll('.slider'); // target each slider and get children collection
 
   allSliders.forEach(function (slider) {
-    let slidesCollection, slidesCollectionLength, totalSlidesIndicatorClassText, totalSlidesIndicator; // get the children
+    let slidesCollection, sliderCollectionLength, totalSlidesIndicatorClassText, totalSlidesIndicator; // get the children
 
     slidesCollection = getActiveSliderChildren('.' + slider.classList[1]); // get the length of this slider's children
 
-    slidesCollectionLength = getSliderCollectionLength(slidesCollection); // set class text to target element
+    sliderCollectionLength = getSliderCollectionLength(slidesCollection); // set class text to target element
 
     totalSlidesIndicatorClassText = '.' + slider.classList[1] + ' ' + numberedIndicatorTotalSlides; // get the element
 
     totalSlidesIndicator = document.querySelector(totalSlidesIndicatorClassText); // set the length text
 
-    totalSlidesIndicator.textContent = slidesCollectionLength;
+    totalSlidesIndicator.textContent = sliderCollectionLength;
+  });
+}
+
+function setInitialProgressIndicator() {
+  let allSliders, slidesCollection, sliderCollectionLength;
+  const slideIndex = 1;
+  allSliders = document.querySelectorAll('.slider');
+  allSliders.forEach(function (slider) {
+    let sliderClass = '.' + slider.classList[1];
+    slidesCollection = getActiveSliderChildren(sliderClass);
+    sliderCollectionLength = getSliderCollectionLength(slidesCollection);
+    setProgressIndicator(sliderClass, slideIndex, sliderCollectionLength);
   });
 }
 
 function setActiveSlideIndex(currentSlideIndexElement, slideIndex) {
   currentSlideIndexElement.textContent = slideIndex;
 }
-/*
 
-function setProgressIndicator() {
-    let percentageProgress = getPercentageProgress();
-    let progressIndicator = document.getElementsByClassName(
-        progressIndicatorProgress
-    )[0];
-    progressIndicator.setAttribute(
-        'style',
-        'width: ' + percentageProgress + '%'
-    );
+function setProgressIndicator(activeSliderClass, slideIndex, sliderCollectionLength) {
+  let progressIndicatorClassText = activeSliderClass + ' ' + progressIndicatorProgress;
+  let progressIndicatorElement = document.querySelector(progressIndicatorClassText);
+  let percentageProgress = getPercentageProgress(slideIndex, sliderCollectionLength);
+  progressIndicatorElement.setAttribute('style', 'width: ' + percentageProgress + '%');
 }
 
-
-function getPercentageProgress() {
-    if (slideIndex == sliderCollectionLength) {
-        return 100;
-    } else {
-        let percentageProgress = Math.round(100 / sliderCollectionLength);
-        percentageProgress = slideIndex * percentageProgress;
-        return percentageProgress;
-    }
+function getPercentageProgress(slideIndex, sliderCollectionLength) {
+  if (slideIndex == sliderCollectionLength) {
+    return 100;
+  } else {
+    let percentageProgress = Math.round(100 / sliderCollectionLength);
+    percentageProgress = slideIndex * percentageProgress;
+    return percentageProgress;
+  }
 }
-*/
-
 
 function setButtonAttributes(buttonTarget, sliderCollectionLength, slideIndex) {
   if (buttonTarget.classList.contains(sliderArrowNextClass)) {
