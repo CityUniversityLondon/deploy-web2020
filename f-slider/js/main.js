@@ -5756,13 +5756,13 @@ __webpack_require__.r(__webpack_exports__);
  */
 // const class names
 const className = 'slider',
+      sliderClass = '.slider',
       slidesContainerClass = '.slider__slides',
       activeSlideClass = 'slider__slide--active',
       sliderArrowNextClass = 'arrow-right--btn-next',
-      //sliderArrowPrevClass = 'arrow-left--btn-prev',
-numberedIndicatorTotalSlides = '.slider__numbered-position-indicator__total-slides',
-      numberedIndicatorActiveSlide = '.slider__numbered-position-indicator__active-slide',
-      progressIndicatorProgress = '.slider__progress-position-indicator__progress',
+      numberedIndicatorTotalSlides = '.slider__controls__numbered-indicator__total-slides',
+      numberedIndicatorActiveSlide = '.slider__controls__numbered-indicator__active-slide',
+      progressIndicatorProgress = '.slider__progress-indicator__progress',
       sliderTargetAttr = 'slider-target';
 
 function slider() {
@@ -5848,7 +5848,7 @@ function handleSlideChange(e) {
 
 function setTotalSlidesIndicator() {
   // get all sliders
-  let allSliders = document.querySelectorAll('.slider'); // target each slider and get children collection
+  let allSliders = document.querySelectorAll(sliderClass); // target each slider and get children collection
 
   allSliders.forEach(function (slider) {
     let slidesCollection, sliderCollectionLength, totalSlidesIndicatorClassText, totalSlidesIndicator; // get the children
@@ -5868,7 +5868,7 @@ function setTotalSlidesIndicator() {
 function setInitialProgressIndicator() {
   let allSliders, slidesCollection, sliderCollectionLength;
   const slideIndex = 1;
-  allSliders = document.querySelectorAll('.slider');
+  allSliders = document.querySelectorAll(sliderClass);
   allSliders.forEach(function (slider) {
     let sliderClass = '.' + slider.classList[1];
     slidesCollection = getActiveSliderChildren(sliderClass);

@@ -17484,12 +17484,12 @@ ul.slider__slides {
     min-height: 265px;
 }
 
-.slider__numbered-position-indicator {
+.slider__controls__numbered-indicator {
     padding: 1rem 0 1rem;
     color: #8a8a8a;
 }
 
-.slider__numbered-position-indicator__active-slide {
+.slider__controls__numbered-indicator__active-slide {
     color: #7c2062;
 }
 
@@ -17505,7 +17505,7 @@ ul.slider__slides {
     display: grid;
 }
 
-.slider__progress-position-indicator {
+.slider__controls__progress-indicator {
     margin: 1.25rem 0 1rem;
     height: 0.1875rem;
     width: 50%;
@@ -17514,12 +17514,12 @@ ul.slider__slides {
 }
 
 @media (min-width: 769px) {
-    .slider__progress-position-indicator {
+    .slider__controls__progress-indicator {
         width: 60%;
     }
 }
 
-.slider__progress-position-indicator__progress {
+.slider__controls__progress-indicator__progress {
     background: #7c2062;
     width: 0;
     position: absolute;
@@ -17736,7 +17736,7 @@ ul.slider__slides {
     margin-top: 1.5rem;
 }
 
-.slider--key-info .slider__progress-position-indicator {
+.slider--key-info .slider__controls__progress-indicator {
     margin: auto;
     width: 80%;
 }
