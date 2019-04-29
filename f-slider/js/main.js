@@ -5762,7 +5762,7 @@ const className = 'slider',
       sliderArrowNextClass = 'arrow-right--btn-next',
       numberedIndicatorTotalSlides = '.slider__controls__numbered-indicator__total-slides',
       numberedIndicatorActiveSlide = '.slider__controls__numbered-indicator__active-slide',
-      progressIndicatorProgress = '.slider__progress-indicator__progress',
+      progressIndicatorProgress = '.slider__controls__progress-indicator__progress',
       sliderTargetAttr = 'slider-target';
 
 function slider() {
@@ -5774,6 +5774,24 @@ function slider() {
   });
   setTotalSlidesIndicator();
   setInitialProgressIndicator();
+  setDisplayClasses();
+}
+
+function setDisplayClasses() {
+  // get all sliders
+  let allSliders = document.querySelectorAll(sliderClass);
+  allSliders.forEach(function (slider) {
+    let slidesCollection, sliderCollectionLength; // get the children
+
+    slidesCollection = getActiveSliderChildren('.' + slider.classList[1]); // get the length of this slider's children
+
+    sliderCollectionLength = getSliderCollectionLength(slidesCollection);
+
+    if (sliderCollectionLength > 7) {
+      let activeSlider = document.querySelector('.' + slider.classList[1]);
+      activeSlider.classList.add(slider.classList[1] + '--numbered-indicator');
+    }
+  });
 }
 
 function getActiveSliderChildren(activeSliderClass) {
@@ -5848,8 +5866,7 @@ function handleSlideChange(e) {
 
 function setTotalSlidesIndicator() {
   // get all sliders
-  let allSliders = document.querySelectorAll(sliderClass); // target each slider and get children collection
-
+  let allSliders = document.querySelectorAll(sliderClass);
   allSliders.forEach(function (slider) {
     let slidesCollection, sliderCollectionLength, totalSlidesIndicatorClassText, totalSlidesIndicator; // get the children
 

@@ -17481,7 +17481,6 @@ ul.slider__slides {
 
 .slider__slide {
     display: none;
-    min-height: 265px;
 }
 
 .slider__controls__numbered-indicator {
@@ -17506,7 +17505,7 @@ ul.slider__slides {
 }
 
 .slider__controls__progress-indicator {
-    margin: 1.25rem 0 1rem;
+    margin: 1.5rem 0 1rem;
     height: 0.1875rem;
     width: 50%;
     background: #8a8a8a;
@@ -17526,6 +17525,18 @@ ul.slider__slides {
     height: 100%;
     top: 0;
     left: 0;
+}
+
+.slider__controls__numbered-indicator {
+    display: none;
+}
+
+.slider--testimonial--numbered-indicator .slider__controls__numbered-indicator {
+    display: block;
+}
+
+.slider--testimonial--numbered-indicator .slider__controls__progress-indicator {
+    display: none;
 }
 
 .slider--testimonial .slider__controls {
@@ -17730,6 +17741,10 @@ ul.slider__slides {
 
 .slider--key-info .arrow-right--btn-next {
     margin-left: 1rem;
+}
+
+.slider--key-info .slider__controls {
+    margin-top: 1.25rem;
 }
 
 .slider--key-info .slider__controls--progress-bar {
