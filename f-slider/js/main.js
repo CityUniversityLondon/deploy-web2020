@@ -5779,6 +5779,34 @@ function slider() {
   setDisplayClasses();
 }
 
+function setTotalSlidesIndicator() {
+  allSliders.forEach(function (slider) {
+    let slidesCollection, sliderCollectionLength, totalSlidesIndicatorClassText, totalSlidesIndicator; // get the children
+
+    slidesCollection = getActiveSliderChildren('.' + slider.classList[1]); // get the length of this slider's children
+
+    sliderCollectionLength = getSliderCollectionLength(slidesCollection); // set class text to target element
+
+    totalSlidesIndicatorClassText = '.' + slider.classList[1] + ' ' + numberedIndicatorTotalSlides; // get the element
+
+    totalSlidesIndicator = document.querySelector(totalSlidesIndicatorClassText); // set the length text
+
+    totalSlidesIndicator.textContent = sliderCollectionLength;
+  });
+}
+
+function setInitialProgressIndicator() {
+  let allSliders, slidesCollection, sliderCollectionLength;
+  const slideIndex = 1;
+  allSliders = document.querySelectorAll(sliderClass);
+  allSliders.forEach(function (slider) {
+    let sliderClass = '.' + slider.classList[1];
+    slidesCollection = getActiveSliderChildren(sliderClass);
+    sliderCollectionLength = getSliderCollectionLength(slidesCollection);
+    setProgressIndicator(sliderClass, slideIndex, sliderCollectionLength);
+  });
+}
+
 function setDisplayClasses() {
   allSliders.forEach(function (slider) {
     let slidesCollection, sliderCollectionLength; // get the children
@@ -5808,12 +5836,6 @@ function getSliderCollectionLength(slidesCollection) {
   return sliderCollectionLength;
 }
 
-function getCurrentSlideIndex(currentSlideIndexElement) {
-  // convert to number string to int
-  let slideIndex = parseInt(currentSlideIndexElement.textContent);
-  return slideIndex;
-}
-
 function getCurrentSlideIndexElement(activeSliderClass) {
   // build the class name of slide index element
   let currentSlideIndexClassText = activeSliderClass + ' ' + numberedIndicatorActiveSlide; // get the element
@@ -5822,9 +5844,15 @@ function getCurrentSlideIndexElement(activeSliderClass) {
   return currentSlideIndexElement;
 }
 
-function getActiveSlide(activeSliderTargetAttr) {
+function getCurrentSlideIndex(currentSlideIndexElement) {
+  // convert to number string to int
+  let slideIndex = parseInt(currentSlideIndexElement.textContent);
+  return slideIndex;
+}
+
+function getActiveSlide(activeSliderClass) {
   // get active slide text
-  let activeSlideClassText = activeSliderTargetAttr + ' .' + activeSlideClass; // get the active slide of this slider
+  let activeSlideClassText = activeSliderClass + ' .' + activeSlideClass; // get the active slide of this slider
 
   let activeSlide = document.querySelector(activeSlideClassText);
   return activeSlide;
@@ -5864,32 +5892,20 @@ function handleSlideChange(e) {
   setProgressIndicator(activeSliderClass, slideIndex, sliderCollectionLength);
 }
 
-function setTotalSlidesIndicator() {
-  allSliders.forEach(function (slider) {
-    let slidesCollection, sliderCollectionLength, totalSlidesIndicatorClassText, totalSlidesIndicator; // get the children
+function setButtonAttributes(buttonTarget, sliderCollectionLength, slideIndex) {
+  if (buttonTarget.classList.contains(sliderArrowNextClass)) {
+    // if at the end of the slides, disable
+    slideIndex == sliderCollectionLength ? buttonTarget.setAttribute('disabled', '') : // else enable next button
+    buttonTarget.removeAttribute('disabled');
+    slideIndex > 1 ? // if past the first slide, remove prev disabled
+    buttonTarget.previousElementSibling.removeAttribute('disabled') : // else add disabled
+    buttonTarget.previousElementSibling.setAttribute('disabled', '');
+  } else {
+    // if prev last click to first slide, disable it
+    slideIndex > 1 ? buttonTarget.removeAttribute('disabled') : buttonTarget.setAttribute('disabled', ''); // if not at the end of collection, enable next
 
-    slidesCollection = getActiveSliderChildren('.' + slider.classList[1]); // get the length of this slider's children
-
-    sliderCollectionLength = getSliderCollectionLength(slidesCollection); // set class text to target element
-
-    totalSlidesIndicatorClassText = '.' + slider.classList[1] + ' ' + numberedIndicatorTotalSlides; // get the element
-
-    totalSlidesIndicator = document.querySelector(totalSlidesIndicatorClassText); // set the length text
-
-    totalSlidesIndicator.textContent = sliderCollectionLength;
-  });
-}
-
-function setInitialProgressIndicator() {
-  let allSliders, slidesCollection, sliderCollectionLength;
-  const slideIndex = 1;
-  allSliders = document.querySelectorAll(sliderClass);
-  allSliders.forEach(function (slider) {
-    let sliderClass = '.' + slider.classList[1];
-    slidesCollection = getActiveSliderChildren(sliderClass);
-    sliderCollectionLength = getSliderCollectionLength(slidesCollection);
-    setProgressIndicator(sliderClass, slideIndex, sliderCollectionLength);
-  });
+    slideIndex !== sliderCollectionLength ? buttonTarget.nextElementSibling.removeAttribute('disabled') : buttonTarget.nextElementSibling.setAttribute('disabled', '');
+  }
 }
 
 function setActiveSlideIndex(currentSlideIndexElement, slideIndex) {
@@ -5910,22 +5926,6 @@ function getPercentageProgress(slideIndex, sliderCollectionLength) {
     let percentageProgress = Math.round(100 / sliderCollectionLength);
     percentageProgress = slideIndex * percentageProgress;
     return percentageProgress;
-  }
-}
-
-function setButtonAttributes(buttonTarget, sliderCollectionLength, slideIndex) {
-  if (buttonTarget.classList.contains(sliderArrowNextClass)) {
-    // if at the end of the slides, disable
-    slideIndex == sliderCollectionLength ? buttonTarget.setAttribute('disabled', '') : // else enable next button
-    buttonTarget.removeAttribute('disabled');
-    slideIndex > 1 ? // if past the first slide, remove prev disabled
-    buttonTarget.previousElementSibling.removeAttribute('disabled') : // else add disabled
-    buttonTarget.previousElementSibling.setAttribute('disabled', '');
-  } else {
-    // if prev last click to first slide, disable it
-    slideIndex > 1 ? buttonTarget.removeAttribute('disabled') : buttonTarget.setAttribute('disabled', ''); // if not at the end of collection, enable next
-
-    slideIndex !== sliderCollectionLength ? buttonTarget.nextElementSibling.removeAttribute('disabled') : buttonTarget.nextElementSibling.setAttribute('disabled', '');
   }
 }
 
