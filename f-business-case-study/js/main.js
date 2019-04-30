@@ -3724,6 +3724,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /***/ }),
 
+/***/ "./src/paint-layouts/case-study-transition-effects/background-slideup.js":
+/*!*******************************************************************************!*\
+  !*** ./src/paint-layouts/case-study-transition-effects/background-slideup.js ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+
+
+
+
+/**
+ * Background slideup transition
+ *
+ * @module patterns/external-link-finder/external-link-finder
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+/**
+ *  Animates by dfault a grey background sliding up behind content text it's wrapping
+ *
+ * Requirements:
+ * a div element with class name 'background-slideup' to wrap content it's suppose to appear behind. Then applies class 'background-slideup--transition-start' on page load and class 'background-slideup--transition-end' when close to element to create animation
+ */
+const className = 'background-slideup';
+
+function backgroundTransition() {
+  let backgrounds = document.querySelectorAll('.background-slideup');
+  const viewPortHeight = window.innerHeight; // calculates viewport height
+
+  backgrounds.forEach(function (i) {
+    i.classList.add('background-slideup--transition-start');
+  });
+  window.addEventListener('scroll', function () {
+    for (let i of backgrounds) {
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      const elemOffsetTop = i.offsetTop; // calculates element offset from top to the page
+
+      if (screenPos > elemOffsetTop - viewPortHeight + 10 && !i.className.includes('background-slideup--transition-end')) {
+        i.classList.add('background-slideup--transition-end');
+      }
+    }
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: backgroundTransition,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
 /***/ "./src/paint-layouts/case-study-transition-effects/content-paragraphs.js":
 /*!*******************************************************************************!*\
   !*** ./src/paint-layouts/case-study-transition-effects/content-paragraphs.js ***!
@@ -3767,7 +3825,7 @@ function contentParagraphsTransition() {
       const elemOffset = i.offsetTop;
       const screenPos = window.pageYOffset; // calculates scroll position
 
-      if (screenPos > elemOffset - viewPortHeight + 10) {
+      if (screenPos > elemOffset - viewPortHeight + 10 && !i.className.includes('paragraph-fadein-complete')) {
         i.classList.add('paragraph-fadein-complete');
       }
     });
@@ -3826,7 +3884,7 @@ function leadingSectionSeparatorTransition() {
       const elemOffset = i.offsetTop;
       const screenPos = window.pageYOffset; // calculates scroll position
 
-      if (screenPos > elemOffset - viewPortHeight + 20) {
+      if (screenPos > elemOffset - viewPortHeight + 20 && !i.className.includes('leading-section-separator--transition-complete')) {
         i.classList.add('leading-section-separator--transition-complete');
       }
     });
@@ -3885,7 +3943,7 @@ function multimediaBannerTransition() {
       const elemOffset = bannerItem.offsetTop;
       const screenPos = window.pageYOffset; // calculates scroll position
 
-      if (screenPos > elemOffset - viewPortHeight + 100) {
+      if (screenPos > elemOffset - viewPortHeight + 100 && !bannerItem.className.includes('case-study__overview__multimedia-banner--transition-complete')) {
         bannerItem.classList.add('case-study__overview__multimedia-banner--transition-complete');
       }
     });
@@ -3924,6 +3982,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/leading-separator */ "./src/paint-layouts/case-study-transition-effects/leading-separator.js");
 /* harmony import */ var _paint_layouts_case_study_transition_effects_multimedia_banner__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/multimedia-banner */ "./src/paint-layouts/case-study-transition-effects/multimedia-banner.js");
 /* harmony import */ var _paint_layouts_case_study_transition_effects_content_paragraphs__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/content-paragraphs */ "./src/paint-layouts/case-study-transition-effects/content-paragraphs.js");
+/* harmony import */ var _paint_layouts_case_study_transition_effects_background_slideup__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/background-slideup */ "./src/paint-layouts/case-study-transition-effects/background-slideup.js");
 
 
 /**
@@ -3951,7 +4010,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_13__["default"], _paint_layouts_case_study_transition_effects_multimedia_banner__WEBPACK_IMPORTED_MODULE_14__["default"], _paint_layouts_case_study_transition_effects_content_paragraphs__WEBPACK_IMPORTED_MODULE_15__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_13__["default"], _paint_layouts_case_study_transition_effects_multimedia_banner__WEBPACK_IMPORTED_MODULE_14__["default"], _paint_layouts_case_study_transition_effects_content_paragraphs__WEBPACK_IMPORTED_MODULE_15__["default"], _paint_layouts_case_study_transition_effects_background_slideup__WEBPACK_IMPORTED_MODULE_16__["default"]]);
 
 /***/ }),
 

@@ -18523,7 +18523,7 @@ button
 .case-study__overview__wrap {
     grid-column: 1 / -1;
     background: #1e1e1e;
-    color: white;
+    color: #ffffff;
 }
 
 .case-study__overview {
@@ -19004,8 +19004,8 @@ button
 }
 
 .case-study--research__details__wrap {
-    background: #f2f2f2;
     grid-column: 1 / -1;
+    overflow: hidden;
 }
 
 .case-study--research__details__wrap__container {
@@ -19051,13 +19051,33 @@ button
 
 .case-study--research__details {
     grid-column: 6 / 14;
+    padding-bottom: 3.25rem;
+}
+
+.case-study--research__details h2 {
+    margin: 3.25rem 0;
+}
+
+.case-study--research__details__section {
+    background: #ffffff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.case-study--research__details__section .label {
+    color: #696969;
+}
+
+.case-study--research__details__section__detail .icon-school {
+    color: #dd0036;
+    margin-right: 0.5rem;
 }
 
 .case-study .leading-section-separator {
     height: 0.3rem;
     display: block;
     background: #dd0036;
-    margin-top: 3.25rem;
+    margin: 3.25rem 0;
     transition: width ease 0.5s;
 }
 
@@ -19082,11 +19102,30 @@ button
 
 .paragraph-fadein-start {
     opacity: 0;
-    transition: all ease 1s;
+    transition: opacity ease 1s;
 }
 
 .paragraph-fadein-complete {
     opacity: 1;
+}
+
+.case-study--research .background-slideup {
+    background: #f2f2f2;
+    height: 100%;
+    width: 100%;
+}
+
+.case-study--research .background-slideup--transition-start {
+    background: #ffffff;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(50%, #f2f2f2), color-stop(50%, #f2f2f2), color-stop(100%, #f2f2f2));
+    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #f2f2f2 50%, #f2f2f2 50%, #f2f2f2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c2c2c2', GradientType=0 );
+    background-size: 100% 200%;
+    transition: all ease 2s;
+}
+
+.case-study--research .background-slideup--transition-end {
+    background-position: 0px 100%;
 }
 
 .content-hub {
