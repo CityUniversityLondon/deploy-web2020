@@ -5768,8 +5768,7 @@ const className = 'slider',
       allSliders = document.querySelectorAll(sliderClass);
 
 function slider() {
-  window.addEventListener('load', setUniformSlideHeight); // get all nav arrows
-
+  // get all nav arrows
   let sliderArrows = document.querySelectorAll(sliderArrowClass); // configure click handlers for all next/prev
 
   sliderArrows.forEach(function (sliderArrow) {
@@ -5778,31 +5777,6 @@ function slider() {
   setTotalSlidesIndicator();
   setInitialProgressIndicator();
   setDisplayClasses();
-}
-
-function setUniformSlideHeight() {
-  let slidesCollection;
-  allSliders.forEach(function (slider) {
-    // get the children
-    slidesCollection = getActiveSliderChildren('.' + slider.classList[1]); // get tallest element
-
-    let tallestElement = getTallestElement(slidesCollection); // set inline styles
-
-    setMinElementHeights(tallestElement);
-  });
-}
-
-function setMinElementHeights() {// add a min height inline style
-}
-
-function getTallestElement(collection) {
-  let elementHeights = [];
-
-  for (let i = 0; i < collection.length; i++) {
-    elementHeights[i] = collection[i].clientHeight;
-  }
-
-  return Math.max(...elementHeights);
 }
 
 function setDisplayClasses() {

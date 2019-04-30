@@ -17479,6 +17479,11 @@ ul.slider__slides {
     margin: 0;
 }
 
+.slider__slide {
+    display: none;
+    min-height: 250px;
+}
+
 .slider__controls__numbered-indicator {
     padding: 1rem 0 1rem;
     color: #8a8a8a;
