@@ -5888,7 +5888,7 @@ function handleSlideChange(e) {
   }
 
   setButtonAttributes(e.target, sliderCollectionLength, slideIndex);
-  setActiveSlideIndex(currentSlideIndexElement, slideIndex);
+  setActiveSlideIndexText(currentSlideIndexElement, slideIndex);
   setProgressIndicator(activeSliderClass, slideIndex, sliderCollectionLength);
 }
 
@@ -5908,7 +5908,7 @@ function setButtonAttributes(buttonTarget, sliderCollectionLength, slideIndex) {
   }
 }
 
-function setActiveSlideIndex(currentSlideIndexElement, slideIndex) {
+function setActiveSlideIndexText(currentSlideIndexElement, slideIndex) {
   currentSlideIndexElement.textContent = slideIndex;
 }
 
