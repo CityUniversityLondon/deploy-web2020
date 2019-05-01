@@ -18949,7 +18949,7 @@ button
 .banner__group__overlay__heading {
     display: grid;
     grid-row-gap: 0;
-    grid-template-areas: '. . h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 . . .';
+    grid-template-areas: 'h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 . . .';
     position: absolute;
     bottom: 3.25rem;
 }
@@ -18985,7 +18985,7 @@ button
 
 @media (max-width: 1279px) {
     .banner__group__overlay__heading {
-        grid-template-areas: '. h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 .';
+        grid-template-areas: 'h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1';
     }
 }
 
