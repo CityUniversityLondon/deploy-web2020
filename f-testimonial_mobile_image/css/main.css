@@ -12647,7 +12647,7 @@ main table td em {
 }
 
 .card--testimonial--photo .card--testimonial__author__photo {
-    margin: 0.5rem 0 0 1rem;
+    margin-left: 1rem;
 }
 
 .card--testimonial--photo .card--testimonial__photo {
