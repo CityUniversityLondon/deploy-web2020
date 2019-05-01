@@ -18350,7 +18350,7 @@ button
 .banner__content {
     display: grid;
     grid-row-gap: 0;
-    grid-template-areas: '. l l l l l l l l l l l l l l l . .' '. h h h h h h h h h h h h h h h . .';
+    grid-template-areas: 'l l l l l l l l l l l l l l l l . .' 'h h h h h h h h h h h h h h h h . .';
     padding: 3.25rem 0;
 }
 
@@ -18377,14 +18377,14 @@ button
 
 @media (max-width: 1279px) {
     .banner__content {
-        grid-template-areas: '. l l l l l l l l l l l .' '. h h h h h h h h h h .';
+        grid-template-areas: 'l l l l l l l l l l l l' 'h h h h h h h h h h h h';
     }
 }
 
 @media (max-width: 432px) {
     .banner__content {
         grid-template-areas: 'l l l l l l' 'h h h h h h';
-        padding: 2rem 0.5rem;
+        padding: 2rem 0;
     }
 }
 
