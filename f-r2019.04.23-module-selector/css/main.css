@@ -18655,7 +18655,7 @@ button
 .module-selector {
     display: grid;
     grid-row-gap: 0;
-    grid-template-areas: '. . heading heading heading heading heading . . . . . . . . . . .' '. . c c c c c c c c c c c c c c . .';
+    grid-template-areas: 'heading heading heading heading heading heading heading . . . . . . . . . . .' 'c c c c c c c c c c c c c c c c . .';
     position: relative;
     color: #ffffff;
     background: #015a79;
@@ -18685,7 +18685,7 @@ button
 
 @media (max-width: 900px) and (min-width: 433px) {
     .module-selector {
-        grid-template-areas: '. heading heading heading heading heading heading . . . . .' '. c c c c c c c c c c .';
+        grid-template-areas: 'heading heading heading heading heading heading heading . . . . .' 'c c c c c c c c c c c .';
     }
 }
 
