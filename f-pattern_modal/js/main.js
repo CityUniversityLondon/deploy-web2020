@@ -4887,14 +4887,16 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 /**
-   <div class="modal__popup modal__popup--hidden">
-        <dialog aria-labelledby="modal__heading" aria-modal="true">
+    <div class="modal__popup modal__popup--hidden" data-title="Hong Kong">
+        <div role="modal" aria-labelledby="modal__heading" aria-modal="true">
             <div class="modal__reveal modal__reveal--fromtop"></div>
             <div class="modal__reveal modal__reveal--frombottom"></div>
             <div class="modal__content">
                 <a href="#" class="modal__close fas fa-times"></a>
-
                 ....
+            </div>
+        </div>
+    </div>
 **/
 
 const className = 'modal-group',
