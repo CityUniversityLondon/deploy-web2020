@@ -5784,34 +5784,37 @@ function showSliderControls() {
     let sliderTarget = slider.getAttribute('slider-target'),
         buttonElements = buildButtons(sliderTarget),
         sliderButtonContainer = sliderTarget + ' .slider__buttons',
-        x;
+        b;
     sliderButtonContainer = document.querySelector(sliderButtonContainer);
 
-    for (x in buttonElements) {
-      sliderButtonContainer.appendChild(buttonElements[x]);
+    for (b in buttonElements) {
+      sliderButtonContainer.appendChild(buttonElements[b]);
     }
   });
 }
 
 function buildButtons(sliderTarget) {
-  let buttonElements = []; // build the button html with addition of slider target attr
+  let buttonElements = [],
+      obj;
 
-  sliderButtons.map(function (button, index) {
-    let buttonElement = document.createElement(button.type);
-    buttonElement.setAttribute('class', button.class);
-    buttonElement.setAttribute('aria-label', button.ariaLabel);
+  for (obj in sliderButtons) {
+    let buttonElement = document.createElement(sliderButtons[obj].type);
+    buttonElement.setAttribute('class', sliderButtons[obj].class);
+    buttonElement.setAttribute('aria-label', sliderButtons[obj].ariaLabel);
     buttonElement.setAttribute('slider-target', sliderTarget);
 
-    if (button.hasOwnProperty('disabled')) {
-      buttonElement.setAttribute('disabled', button.disabled);
+    if (sliderButtons[obj].hasOwnProperty('disabled')) {
+      buttonElement.setAttribute('disabled', sliderButtons[obj].disabled);
     }
 
-    buttonElements[index] = buttonElement;
-  });
+    buttonElements[obj] = buttonElement;
+  }
+
   return buttonElements;
 }
 
 function slider() {
+  // show initial controls
   showSliderControls(); // get all nav arrows
 
   let sliderArrows = document.querySelectorAll(sliderArrowClass); // configure click handlers for all next/prev
