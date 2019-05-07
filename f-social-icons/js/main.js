@@ -5361,14 +5361,14 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'fa-link';
 
 function copyIconToClipboard(elem) {
-  let copy = elem;
+  const copy = elem;
   copy.addEventListener('mouseover', () => {
-    var t = document.createElement('div');
-    var link = document.createElement('span');
+    let t = document.createElement('div');
+    let link = document.createElement('span');
     t.className = 'tooltip';
     link.className = 'link-copy';
-    var textlink = document.createTextNode('http://google.com');
-    var textnode = document.createTextNode('Copy link');
+    let textlink = document.createTextNode('http://google.com');
+    let textnode = document.createTextNode('Copy link');
     t.appendChild(textnode);
     link.appendChild(textlink);
     t.appendChild(link);
@@ -5376,15 +5376,15 @@ function copyIconToClipboard(elem) {
   });
   copy.addEventListener('click', e => {
     e.preventDefault();
-    var text = document.querySelector('.link-copy');
-    var range = document.createRange();
+    let text = document.querySelector('.link-copy');
+    let range = document.createRange();
     range.selectNode(text);
     window.getSelection().addRange(range);
 
     try {
       // Now that we've selected the anchor text, execute the copy command
-      var successful = document.execCommand('copy');
-      var msg = successful ? 'successful' : 'unsuccessful';
+      let successful = document.execCommand('copy');
+      let msg = successful ? 'successful' : 'unsuccessful';
       document.querySelector('.tooltip').textContent = 'Link Copied';
       document.querySelector('.tooltip').classList.add(msg);
     } catch (err) {

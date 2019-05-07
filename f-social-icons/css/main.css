@@ -17335,8 +17335,8 @@ article .social-icon {
     background-color: #0c0c0e;
     color: #ffffff;
     border-radius: 50%;
-    transition: background-color 0.6s, transform 0.6s;
     border-style: none;
+    transition: background-color 0.6s, transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -17401,6 +17401,7 @@ article .social-icon:focus:focus, article .social-icon:focus:active, article .so
         transform: scale(1.2);
         background-color: #dd0036;
         color: #ffffff;
+        background-image: none;
     }
 }
 
@@ -17410,10 +17411,6 @@ article .social-icon:visited {
 
 article .social-icon:active, article .social-icon:hover, article .social-icon:focus, article .social-icon:visited {
     border-bottom-style: none;
-}
-
-article .social-icon:hover, article .social-icon:active {
-    background-image: none;
 }
 
 .tooltip {
