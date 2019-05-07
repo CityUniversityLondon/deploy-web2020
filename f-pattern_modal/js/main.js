@@ -4898,28 +4898,49 @@ __webpack_require__.r(__webpack_exports__);
 **/
 
 const className = 'modal-group',
+      modalPopupClass = '.modal__popup',
       modalHiddenClass = 'modal__popup--hidden',
       modalShowClass = 'modal__popup--show',
       modalShowContentClass = 'modal__popup--show-content',
       modalTransitioningInClass = 'modal__popup--transitioning-in',
       modalTransitioningOutClass = 'modal__popup--transitioning-out',
       modalRevealFromTop = 'modal__reveal--fromtop',
+      modalTriggerClass = 'a.modal__trigger',
       modalRevealFromBottom = 'modal__reveal--frombottom',
+      modalBackgroundClass = 'modal__background',
+      bodyModalInClass = 'modal--in',
+      modalCloseClass = 'a.modal__close',
       modalBackground = document.createElement('div');
-let windowWidth = window.innerWidth;
-modalBackground.setAttribute('class', 'modal__background');
-window.addEventListener('resize', getWindowWidth);
+let windowWidth = window.innerWidth; // set class attr of modal background ready to be inserted later
 
-function getWindowWidth() {
+modalBackground.setAttribute('class', modalBackgroundClass); // always reconfigure if window resized
+
+window.addEventListener('resize', setWindowWidth);
+
+function setWindowWidth() {
   // reassign new width
   windowWidth = window.innerWidth;
 }
 
 function launchModal() {
-  let modalOpenTriggers = document.querySelectorAll('a.modal__trigger'),
-      modalCloseTriggers = document.querySelectorAll('a.modal__close'),
+  let modalPopups = document.querySelectorAll(modalPopupClass),
+      modalCloseTriggers = document.querySelectorAll(modalCloseClass),
       modalInReveals = document.querySelectorAll('div.modal__reveal--fromtop'),
       modalOutReveals = document.querySelectorAll('div.modal__reveal--frombottom');
+  /**
+   * Add adjacent link to each modal
+   */
+
+  modalPopups.forEach(function (popup) {
+    let anchorTitle = popup.getAttribute('data-title');
+    let modalAnchor = document.createElement('a');
+    modalAnchor.setAttribute('class', 'modal__trigger');
+    modalAnchor.href = '#';
+    modalAnchor.innerHTML = anchorTitle;
+    popup.parentNode.insertBefore(modalAnchor, popup);
+  }); // after links inserted, then get them all in an array
+
+  let modalOpenTriggers = document.querySelectorAll(modalTriggerClass);
   /**
    * Add click listeners to open and close triggers
    */
@@ -4995,7 +5016,7 @@ const openModal = modalPopup => {
   } // fade background in
 
 
-  document.body.classList.add('modal--in');
+  document.body.classList.add(bodyModalInClass);
 
   if (windowWidth >= 768) {
     // show the modal, but keep the content div hidden
@@ -5018,7 +5039,7 @@ const closeModal = (modalPopup, escCloseModal) => {
     // if escape close, just close
     modalPopup.classList.remove(modalShowClass);
     modalPopup.classList.add(modalHiddenClass);
-    document.body.classList.remove('modal--in');
+    document.body.classList.remove(bodyModalInClass);
   }
 
   if (windowWidth >= 768) {
@@ -5028,7 +5049,7 @@ const closeModal = (modalPopup, escCloseModal) => {
     modalPopup.classList.remove(modalShowClass);
     modalPopup.classList.add(modalHiddenClass);
     modalPopup.classList.remove(modalShowContentClass);
-    document.body.classList.remove('modal--in');
+    document.body.classList.remove(bodyModalInClass);
   }
 };
 
@@ -5071,7 +5092,7 @@ const transitionOutEnded = e => {
 
     modalPopup.classList.remove(modalShowClass);
     modalPopup.classList.add(modalHiddenClass);
-    document.body.classList.remove('modal--in');
+    document.body.classList.remove(bodyModalInClass);
   }, 500);
 };
 
