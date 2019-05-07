@@ -18890,6 +18890,10 @@ button
     grid-column: 1 / -1;
 }
 
+.case-study__overview__multimedia-banner__image img {
+    width: 100%;
+}
+
 .case-study__content__wrap {
     max-width: 80rem;
     display: grid;
