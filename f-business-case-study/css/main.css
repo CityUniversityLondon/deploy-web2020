@@ -19003,9 +19003,15 @@ button
     }
 }
 
+.case-study--research .case-study__overview__main__standfirst {
+    grid-column: 1 / 6;
+    margin-bottom: 6rem;
+}
+
 .case-study--research__details__wrap {
     grid-column: 1 / -1;
     overflow: hidden;
+    background: #f2f2f2;
 }
 
 .case-study--research__details__wrap__container {
@@ -19089,13 +19095,13 @@ button
     width: 100%;
 }
 
-.case-study__overview__multimedia-banner--transition-start {
+.case-study__overview__multimedia-banner__image--transition-start {
     opacity: 0.5;
     transform: scale(0.5, 0.5);
     transition: all ease 2s;
 }
 
-.case-study__overview__multimedia-banner--transition-complete {
+.case-study__overview__multimedia-banner__image--transition-complete {
     opacity: 1;
     transform: scale(1, 1);
 }
@@ -19109,23 +19115,17 @@ button
     opacity: 1;
 }
 
-.case-study--research .background-slideup {
-    background: #f2f2f2;
-    height: 100%;
-    width: 100%;
+.transition-content-slideup {
+    position: relative;
 }
 
-.case-study--research .background-slideup--transition-start {
-    background: #ffffff;
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffffff), color-stop(50%, #ffffff), color-stop(50%, #f2f2f2), color-stop(50%, #f2f2f2), color-stop(100%, #f2f2f2));
-    background: linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #f2f2f2 50%, #f2f2f2 50%, #f2f2f2 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c2c2c2', GradientType=0 );
-    background-size: 100% 200%;
-    transition: all ease 2s;
+.transition-content-slideup-start {
+    top: 70%;
+    transition: top ease 1.5s;
 }
 
-.case-study--research .background-slideup--transition-end {
-    background-position: 0px 100%;
+.transition-content-slideup-end {
+    top: 0;
 }
 
 .content-hub {

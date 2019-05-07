@@ -3724,64 +3724,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /***/ }),
 
-/***/ "./src/paint-layouts/case-study-transition-effects/background-slideup.js":
-/*!*******************************************************************************!*\
-  !*** ./src/paint-layouts/case-study-transition-effects/background-slideup.js ***!
-  \*******************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
-
-
-
-
-/**
- * Background slideup transition
- *
- * @module patterns/external-link-finder/external-link-finder
- * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
- */
-
-/**
- *  Animates by dfault a grey background sliding up behind content text it's wrapping
- *
- * Requirements:
- * a div element with class name 'background-slideup' to wrap content it's suppose to appear behind. Then applies class 'background-slideup--transition-start' on page load and class 'background-slideup--transition-end' when close to element to create animation
- */
-const className = 'background-slideup';
-
-function backgroundTransition() {
-  let backgrounds = document.querySelectorAll('.background-slideup');
-  const viewPortHeight = window.innerHeight; // calculates viewport height
-
-  backgrounds.forEach(function (i) {
-    i.classList.add('background-slideup--transition-start');
-  });
-  window.addEventListener('scroll', function () {
-    for (let i of backgrounds) {
-      const screenPos = window.pageYOffset; // calculates scroll position
-
-      const elemOffsetTop = i.offsetTop; // calculates element offset from top to the page
-
-      if (screenPos > elemOffsetTop - viewPortHeight + 10 && !i.className.includes('background-slideup--transition-end')) {
-        i.classList.add('background-slideup--transition-end');
-      }
-    }
-  });
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: backgroundTransition,
-  launchQuery: `.${className}`
-});
-
-/***/ }),
-
 /***/ "./src/paint-layouts/case-study-transition-effects/content-paragraphs.js":
 /*!*******************************************************************************!*\
   !*** ./src/paint-layouts/case-study-transition-effects/content-paragraphs.js ***!
@@ -3798,7 +3740,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Leading separator transition
+ * Case study paragraph transitions
  *
  * @module patterns/external-link-finder/external-link-finder
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
@@ -3806,7 +3748,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 /**
- *  Animates paragraphs inside content area to fade in on scroll
+ * Animates paragraphs inside content area to fade in on scroll
  *
  * Requirements:
  * template have to contain paragraph elements inside the content element
@@ -3834,6 +3776,125 @@ function contentParagraphsTransition() {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: contentParagraphsTransition,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/paint-layouts/case-study-transition-effects/content-slideup.js":
+/*!****************************************************************************!*\
+  !*** ./src/paint-layouts/case-study-transition-effects/content-slideup.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+
+
+
+
+/**
+ * Background slideup transition
+ *
+ * @module patterns/external-link-finder/external-link-finder
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+/**
+ *  Animates by dfault a grey background sliding up behind content text it's wrapping
+ *
+ * Requirements:
+ * a div element with class name 'background-slideup' to wrap content it's suppose to appear behind. Then applies class 'background-slideup--transition-start' on page load and class 'background-slideup--transition-end' when close to element to create animation
+ */
+const className = 'transition-content-slideup';
+
+function backgroundTransition() {
+  let backgrounds = document.querySelectorAll('.transition-content-slideup');
+  const viewPortHeight = window.innerHeight; // calculates viewport height
+
+  backgrounds.forEach(function (i) {
+    i.classList.add('transition-content-slideup-start');
+  });
+  window.addEventListener('scroll', function () {
+    for (let i of backgrounds) {
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      const elemOffsetTop = i.offsetTop; // calculates element offset from top to the page
+
+      const parentElemHeight = i.parentElement.offsetHeight - parseInt(window.getComputedStyle(i.parentElement, null).getPropertyValue('padding-bottom')) - parseInt(window.getComputedStyle(i.parentElement, null).getPropertyValue('padding-top'));
+
+      if (screenPos > elemOffsetTop - viewPortHeight - parentElemHeight * 70 / 100 && !i.className.includes('transition-content-slideup-end')) {
+        i.classList.add('transition-content-slideup-end');
+      }
+    }
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: backgroundTransition,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/paint-layouts/case-study-transition-effects/image-banner.js":
+/*!*************************************************************************!*\
+  !*** ./src/paint-layouts/case-study-transition-effects/image-banner.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
+/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
+
+
+
+
+/**
+ * Image banner transition
+ *
+ * @module patterns/external-link-finder/external-link-finder
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+/**
+ *  Animates the video / image banner to fade en an scale in size on scroll
+ *
+ * Requirements:
+ * the animation effect require the following 2 classes:
+ * 'overview__multimedia-banner--transition-start'
+ * 'overview__multimedia-banner--transition-complete'
+ */
+const className = 'case-study__overview__multimedia-banner__image';
+
+function multimediaBannerTransition() {
+  const multimediaBanner = document.querySelectorAll('.case-study__overview__multimedia-banner');
+  const viewPortHeight = window.innerHeight; // calculates viewport height
+
+  multimediaBanner.forEach(function (bannerItem) {
+    bannerItem.classList.add('case-study__overview__multimedia-banner__image--transition-start');
+  });
+  window.addEventListener('scroll', function () {
+    multimediaBanner.forEach(function (bannerItem) {
+      const elemOffset = bannerItem.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      if (screenPos > elemOffset - viewPortHeight + 100 && !bannerItem.className.includes('case-study__overview__multimedia-banner__image--transition-complete')) {
+        bannerItem.classList.add('case-study__overview__multimedia-banner__image--transition-complete');
+      }
+    });
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: multimediaBannerTransition,
   launchQuery: `.${className}`
 });
 
@@ -3898,65 +3959,6 @@ function leadingSectionSeparatorTransition() {
 
 /***/ }),
 
-/***/ "./src/paint-layouts/case-study-transition-effects/multimedia-banner.js":
-/*!******************************************************************************!*\
-  !*** ./src/paint-layouts/case-study-transition-effects/multimedia-banner.js ***!
-  \******************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
-/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
-
-
-
-
-/**
- * Leading separator transition
- *
- * @module patterns/external-link-finder/external-link-finder
- * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
- */
-
-/**
- *  Animates the video / image banner to fade en an scale in size on scroll
- *
- * Requirements:
- * the animation effect require the following 2 classes:
- * 'overview__multimedia-banner--transition-start'
- * 'overview__multimedia-banner--transition-complete'
- */
-const className = 'case-study__overview__multimedia-banner';
-
-function multimediaBannerTransition() {
-  const multimediaBanner = document.querySelectorAll('.case-study__overview__multimedia-banner');
-  const viewPortHeight = window.innerHeight; // calculates viewport height
-
-  multimediaBanner.forEach(function (bannerItem) {
-    bannerItem.classList.add('case-study__overview__multimedia-banner--transition-start');
-  });
-  window.addEventListener('scroll', function () {
-    multimediaBanner.forEach(function (bannerItem) {
-      const elemOffset = bannerItem.offsetTop;
-      const screenPos = window.pageYOffset; // calculates scroll position
-
-      if (screenPos > elemOffset - viewPortHeight + 100 && !bannerItem.className.includes('case-study__overview__multimedia-banner--transition-complete')) {
-        bannerItem.classList.add('case-study__overview__multimedia-banner--transition-complete');
-      }
-    });
-  });
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: multimediaBannerTransition,
-  launchQuery: `.${className}`
-});
-
-/***/ }),
-
 /***/ "./src/patterns.js":
 /*!*************************!*\
   !*** ./src/patterns.js ***!
@@ -3980,9 +3982,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
 /* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
 /* harmony import */ var _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/leading-separator */ "./src/paint-layouts/case-study-transition-effects/leading-separator.js");
-/* harmony import */ var _paint_layouts_case_study_transition_effects_multimedia_banner__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/multimedia-banner */ "./src/paint-layouts/case-study-transition-effects/multimedia-banner.js");
+/* harmony import */ var _paint_layouts_case_study_transition_effects_image_banner__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/image-banner */ "./src/paint-layouts/case-study-transition-effects/image-banner.js");
 /* harmony import */ var _paint_layouts_case_study_transition_effects_content_paragraphs__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/content-paragraphs */ "./src/paint-layouts/case-study-transition-effects/content-paragraphs.js");
-/* harmony import */ var _paint_layouts_case_study_transition_effects_background_slideup__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/background-slideup */ "./src/paint-layouts/case-study-transition-effects/background-slideup.js");
+/* harmony import */ var _paint_layouts_case_study_transition_effects_content_slideup__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/content-slideup */ "./src/paint-layouts/case-study-transition-effects/content-slideup.js");
 
 
 /**
@@ -4011,7 +4013,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_13__["default"], _paint_layouts_case_study_transition_effects_multimedia_banner__WEBPACK_IMPORTED_MODULE_14__["default"], _paint_layouts_case_study_transition_effects_content_paragraphs__WEBPACK_IMPORTED_MODULE_15__["default"], _paint_layouts_case_study_transition_effects_background_slideup__WEBPACK_IMPORTED_MODULE_16__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_13__["default"], _paint_layouts_case_study_transition_effects_image_banner__WEBPACK_IMPORTED_MODULE_14__["default"], _paint_layouts_case_study_transition_effects_content_paragraphs__WEBPACK_IMPORTED_MODULE_15__["default"], _paint_layouts_case_study_transition_effects_content_slideup__WEBPACK_IMPORTED_MODULE_16__["default"]]);
 
 /***/ }),
 
