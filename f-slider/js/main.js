@@ -5766,9 +5766,54 @@ const className = 'slider',
       progressIndicatorProgress = '.slider__controls__progress-indicator__progress',
       sliderTargetAttr = 'slider-target',
       allSliders = document.querySelectorAll(sliderClass);
+const sliderButtons = [{
+  name: 'prevButton',
+  type: 'button',
+  class: 'fas fa-arrow-left slider-arrow arrow-left--btn-prev',
+  ariaLabel: 'Previous item',
+  disabled: 'true'
+}, {
+  name: 'nextButton',
+  type: 'button',
+  class: 'fas fa-arrow-right slider-arrow arrow-right--btn-next',
+  ariaLabel: 'Next item'
+}];
+
+function showSliderControls() {
+  allSliders.forEach(function (slider) {
+    let sliderTarget = slider.getAttribute('slider-target'),
+        buttonElements = buildButtons(sliderTarget),
+        sliderButtonContainer = sliderTarget + ' .slider__buttons',
+        x;
+    sliderButtonContainer = document.querySelector(sliderButtonContainer);
+
+    for (x in buttonElements) {
+      sliderButtonContainer.appendChild(buttonElements[x]);
+    }
+  });
+}
+
+function buildButtons(sliderTarget) {
+  let buttonElements = []; // build the button html with addition of slider target attr
+
+  sliderButtons.map(function (button, index) {
+    let buttonElement = document.createElement(button.type);
+    buttonElement.setAttribute('class', button.class);
+    buttonElement.setAttribute('aria-label', button.ariaLabel);
+    buttonElement.setAttribute('slider-target', sliderTarget);
+
+    if (button.hasOwnProperty('disabled')) {
+      buttonElement.setAttribute('disabled', button.disabled);
+    }
+
+    buttonElements[index] = buttonElement;
+  });
+  return buttonElements;
+}
 
 function slider() {
-  // get all nav arrows
+  showSliderControls(); // get all nav arrows
+
   let sliderArrows = document.querySelectorAll(sliderArrowClass); // configure click handlers for all next/prev
 
   sliderArrows.forEach(function (sliderArrow) {
