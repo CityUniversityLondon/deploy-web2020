@@ -4907,8 +4907,8 @@ const className = 'modal-group',
       modalTransitioningInClass = 'modal__popup--transitioning-in',
       modalTransitioningOutClass = 'modal__popup--transitioning-out',
       modalRevealFromTop = 'modal__reveal--fromtop',
-      modalTriggerClass = 'a.modal__trigger',
       modalRevealFromBottom = 'modal__reveal--frombottom',
+      modalTriggerClass = 'a.modal__trigger',
       modalBackgroundClass = 'modal__background',
       bodyModalInClass = 'modal--in',
       modalCloseClass = 'a.modal__close',
@@ -4927,8 +4927,8 @@ function setWindowWidth() {
 function launchModal() {
   let modalPopups = document.querySelectorAll(modalPopupClass),
       modalCloseTriggers = document.querySelectorAll(modalCloseClass),
-      modalInReveals = document.querySelectorAll('div.modal__reveal--fromtop'),
-      modalOutReveals = document.querySelectorAll('div.modal__reveal--frombottom');
+      modalInReveals = document.querySelectorAll('div.' + modalRevealFromTop),
+      modalOutReveals = document.querySelectorAll('div.' + modalRevealFromBottom);
   /**
    * Add adjacent link to each modal
    */
