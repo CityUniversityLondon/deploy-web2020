@@ -1070,6 +1070,20 @@
     background-color: #ffffff;
 }
 
+/* Icon positioning
+
+Demo HTML
+<div class="key-info__icon--left">
+    <span class="fas fa-envelope"></span>
+    <div>Text relating to icon</div>
+</div>
+
+Demo SCSS
+.key-info__icon--left {
+    @include key-info-icon(left, $color-pink90);
+}
+
+*/
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
@@ -1358,6 +1372,10 @@ readers do not read off random characters that represent icons */
 
 .fa-air-freshener:before {
     content: "\f5d0";
+}
+
+.fa-airbnb:before {
+    content: "\f834";
 }
 
 .fa-alarm-clock:before {
@@ -1928,6 +1946,10 @@ readers do not read off random characters that represent icons */
     content: "\f241";
 }
 
+.fa-battle-net:before {
+    content: "\f835";
+}
+
 .fa-bed:before {
     content: "\f236";
 }
@@ -2128,6 +2150,10 @@ readers do not read off random characters that represent icons */
     content: "\f734";
 }
 
+.fa-bootstrap:before {
+    content: "\f836";
+}
+
 .fa-bow-arrow:before {
     content: "\f6b9";
 }
@@ -2242,6 +2268,10 @@ readers do not read off random characters that represent icons */
 
 .fa-btc:before {
     content: "\f15a";
+}
+
+.fa-buffer:before {
+    content: "\f837";
 }
 
 .fa-bug:before {
@@ -2782,6 +2812,10 @@ readers do not read off random characters that represent icons */
 
 .fa-chrome:before {
     content: "\f268";
+}
+
+.fa-chromecast:before {
+    content: "\f838";
 }
 
 .fa-church:before {
@@ -3830,6 +3864,10 @@ readers do not read off random characters that represent icons */
 
 .fa-euro-sign:before {
     content: "\f153";
+}
+
+.fa-evernote:before {
+    content: "\f839";
 }
 
 .fa-exchange:before {
@@ -5266,6 +5304,10 @@ readers do not read off random characters that represent icons */
 
 .fa-italic:before {
     content: "\f033";
+}
+
+.fa-itch-io:before {
+    content: "\f83a";
 }
 
 .fa-itunes:before {
@@ -7032,6 +7074,10 @@ readers do not read off random characters that represent icons */
     content: "\f81e";
 }
 
+.fa-salesforce:before {
+    content: "\f83b";
+}
+
 .fa-sandwich:before {
     content: "\f81f";
 }
@@ -7612,6 +7658,10 @@ readers do not read off random characters that represent icons */
     content: "\f3f3";
 }
 
+.fa-speaker-deck:before {
+    content: "\f83c";
+}
+
 .fa-spider:before {
     content: "\f717";
 }
@@ -7914,6 +7964,10 @@ readers do not read off random characters that represent icons */
 
 .fa-swords:before {
     content: "\f71d";
+}
+
+.fa-symfony:before {
+    content: "\f83d";
 }
 
 .fa-synagogue:before {
@@ -8944,6 +8998,14 @@ readers do not read off random characters that represent icons */
     content: "\f775";
 }
 
+.fa-wave-square:before {
+    content: "\f83e";
+}
+
+.fa-waze:before {
+    content: "\f83f";
+}
+
 .fa-webcam:before {
     content: "\f832";
 }
@@ -9142,6 +9204,10 @@ readers do not read off random characters that represent icons */
 
 .fa-yahoo:before {
     content: "\f19e";
+}
+
+.fa-yammer:before {
+    content: "\f840";
 }
 
 .fa-yandex:before {
@@ -9961,6 +10027,78 @@ readers do not read off random characters that represent icons */
 @media (min-width: 7680px) {
     .zeta-type {
         letter-spacing: -0.017em;
+    }
+}
+
+.eta-type {
+    font-size: 2.027rem;
+    line-height: 1.25;
+    letter-spacing: -0.016em;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .eta-type {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .eta-type {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .eta-type {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .eta-type {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .eta-type {
+        letter-spacing: -0.017em;
+    }
+}
+
+.theta-type {
+    font-size: 2.28rem;
+    line-height: 1.25;
+    letter-spacing: -0.017em;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .theta-type {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .theta-type {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .theta-type {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .theta-type {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .theta-type {
+        letter-spacing: -0.027em;
     }
 }
 
@@ -10923,6 +11061,94 @@ h1 u,
     }
 }
 
+@media (min-width: 768px) and (max-width: 900px) {
+    h1,
+    .h1-style {
+        font-size: 2.027rem;
+        line-height: 1.25;
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 433px) and (max-width: 768px) {
+    h1,
+    .h1-style {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 769px) and (max-width: 1919px) {
+    h1,
+    .h1-style {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 1920px) and (max-width: 3839px) {
+    h1,
+    .h1-style {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 3840px) and (max-width: 7679px) {
+    h1,
+    .h1-style {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 7680px) {
+    h1,
+    .h1-style {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) {
+    h1,
+    .h1-style {
+        font-size: 2.28rem;
+        line-height: 1.25;
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 433px) and (max-width: 768px) {
+    h1,
+    .h1-style {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 769px) and (max-width: 1919px) {
+    h1,
+    .h1-style {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 1920px) and (max-width: 3839px) {
+    h1,
+    .h1-style {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 3840px) and (max-width: 7679px) {
+    h1,
+    .h1-style {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 7680px) {
+    h1,
+    .h1-style {
+        letter-spacing: -0.027em;
+    }
+}
+
 h1 b,
 h1 strong,
 .h1-style b,
@@ -11738,6 +11964,10 @@ main table td em {
 
 .documentation .content-wrapper > .content {
     grid-area: main;
+}
+
+.documentation--fullwidth .content-wrapper {
+    display: block;
 }
 
 .persona {
