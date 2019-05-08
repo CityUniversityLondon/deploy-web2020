@@ -5765,8 +5765,8 @@ const className = 'slider',
       numberedIndicatorActiveSlide = '.slider__controls__numbered-indicator__active-slide',
       progressIndicatorProgress = '.slider__controls__progress-indicator__progress',
       sliderTargetAttr = 'slider-target',
-      allSliders = document.querySelectorAll(sliderClass);
-const sliderButtons = [{
+      allSliders = document.querySelectorAll(sliderClass),
+      sliderButtons = [{
   name: 'prevButton',
   type: 'button',
   class: 'fas fa-arrow-left slider-arrow arrow-left--btn-prev',
@@ -5792,6 +5792,12 @@ function showSliderControls() {
     }
   });
 }
+/**
+ * Build buttons: build the buttons for each slider
+ *
+ * @param {string} sliderTarget - used to target the slider's class
+ */
+
 
 function buildButtons(sliderTarget) {
   let buttonElements = [],
@@ -5869,6 +5875,12 @@ function setDisplayClasses() {
     }
   });
 }
+/**
+ * Get active slider children: get slider's children
+ *
+ * @param {string} activeSliderClass - a string repesenting the slider's class
+ */
+
 
 function getActiveSliderChildren(activeSliderClass) {
   // combine target with container so we can target the container itself
@@ -5877,26 +5889,50 @@ function getActiveSliderChildren(activeSliderClass) {
   let slidesCollection = document.querySelector(activeSlidesContainerClassText).children;
   return slidesCollection;
 }
+/**
+ * Get slider collection length: simple gets and returns the length
+ *
+ * @param {object} slidesCollection - object array of slider children
+ */
+
 
 function getSliderCollectionLength(slidesCollection) {
   // set length for use later
   let sliderCollectionLength = slidesCollection.length;
   return sliderCollectionLength;
 }
+/**
+ * Get active numbered indicator element: gets the numbered indicator span
+ *
+ * @param {string} activeSliderClass - class name of active slider
+ */
 
-function getCurrentSlideIndexElement(activeSliderClass) {
+
+function getActiveNumberedIndicatorElement(activeSliderClass) {
   // build the class name of slide index element
   let currentSlideIndexClassText = activeSliderClass + ' ' + numberedIndicatorActiveSlide; // get the element
 
   let currentSlideIndexElement = document.querySelector(currentSlideIndexClassText);
   return currentSlideIndexElement;
 }
+/**
+ * Get current slider index: get and return the current slide index string
+ *
+ * @param {HTMLElement} currentSlideIndexElement -
+ */
 
-function getCurrentSlideIndex(currentSlideIndexElement) {
+
+function getCurrentSlideIndex(currentNumberedIndicatorElement) {
   // convert to number string to int
-  let slideIndex = parseInt(currentSlideIndexElement.textContent);
+  let slideIndex = parseInt(currentNumberedIndicatorElement.textContent);
   return slideIndex;
 }
+/**
+ * Get active slide: gets the active slide of this slider
+ *
+ * @param {string} activeSliderClass - string class name of active slider
+ */
+
 
 function getActiveSlide(activeSliderClass) {
   // get active slide text
@@ -5907,17 +5943,17 @@ function getActiveSlide(activeSliderClass) {
 }
 
 function handleSlideChange(e) {
-  let activeSliderClass, slidesCollection, sliderCollectionLength, currentSlideIndexElement, slideIndex, activeSlide; // get slider target attr - e.g '.slider--testimonial'
+  let activeSliderClass, slidesCollection, sliderCollectionLength, currentNumberedIndicatorElement, slideIndex, activeSlide; // get slider target attr - e.g '.slider--testimonial'
 
   activeSliderClass = e.target.getAttribute(sliderTargetAttr); // get children of active slider
 
   slidesCollection = getActiveSliderChildren(activeSliderClass); // get the length of this slider's children
 
-  sliderCollectionLength = getSliderCollectionLength(slidesCollection); // get current index element
+  sliderCollectionLength = getSliderCollectionLength(slidesCollection); // get current numbered indicator element
 
-  currentSlideIndexElement = getCurrentSlideIndexElement(activeSliderClass); // get the index as an int
+  currentNumberedIndicatorElement = getActiveNumberedIndicatorElement(activeSliderClass); // get the index as an int
 
-  slideIndex = getCurrentSlideIndex(currentSlideIndexElement); // get active slide for this slider
+  slideIndex = getCurrentSlideIndex(currentNumberedIndicatorElement); // get active slide for this slider
 
   activeSlide = getActiveSlide(activeSliderClass); // toggle next/prev sibling and maintain index
 
@@ -5936,9 +5972,18 @@ function handleSlideChange(e) {
   }
 
   setButtonAttributes(e.target, sliderCollectionLength, slideIndex);
-  setActiveSlideIndexText(currentSlideIndexElement, slideIndex);
+  setActiveNumberedIndicatorText(currentNumberedIndicatorElement, slideIndex);
   setProgressIndicator(activeSliderClass, slideIndex, sliderCollectionLength);
 }
+/**
+ * Set button attributes: enables/disables buttons based on args
+ *
+ * @param {HTMLElement} buttonTarget
+ * @param {integer} sliderCollectionLength
+ * @param {integer} slideIndex
+ *
+ */
+
 
 function setButtonAttributes(buttonTarget, sliderCollectionLength, slideIndex) {
   if (buttonTarget.classList.contains(sliderArrowNextClass)) {
@@ -5955,10 +6000,27 @@ function setButtonAttributes(buttonTarget, sliderCollectionLength, slideIndex) {
     slideIndex !== sliderCollectionLength ? buttonTarget.nextElementSibling.removeAttribute('disabled') : buttonTarget.nextElementSibling.setAttribute('disabled', '');
   }
 }
+/**
+ * Set active numbered indicator text: sets text of the indicator
+ *
+ * @param {HTMLElement} currentSlideIndexElement
+ * @param {integer} slideIndex
+ *
+ */
 
-function setActiveSlideIndexText(currentSlideIndexElement, slideIndex) {
+
+function setActiveNumberedIndicatorText(currentSlideIndexElement, slideIndex) {
   currentSlideIndexElement.textContent = slideIndex;
 }
+/**
+ * Set progress indicator: set percentage width of indicator
+ *
+ * @param {string} activeSliderClass - e.g '.slider--testimonial'
+ * @param {integer} slideIndex
+ * @param {integer} sliderCollectionLength
+ *
+ */
+
 
 function setProgressIndicator(activeSliderClass, slideIndex, sliderCollectionLength) {
   let progressIndicatorClassText = activeSliderClass + ' ' + progressIndicatorProgress;
@@ -5966,6 +6028,14 @@ function setProgressIndicator(activeSliderClass, slideIndex, sliderCollectionLen
   let percentageProgress = getPercentageProgress(slideIndex, sliderCollectionLength);
   progressIndicatorElement.setAttribute('style', 'width: ' + percentageProgress + '%');
 }
+/**
+ * Get percentage progress: calculate the percentage width
+ *
+ * @param {integer} slideIndex
+ * @param {integer} sliderCollectionLength
+ *
+ */
+
 
 function getPercentageProgress(slideIndex, sliderCollectionLength) {
   if (slideIndex == sliderCollectionLength) {
