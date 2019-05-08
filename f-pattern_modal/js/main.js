@@ -4873,7 +4873,8 @@ function launchMenu(menu) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
 /* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
@@ -5002,7 +5003,10 @@ const handleTriggerOpen = e => {
   e.preventDefault();
   let modalPopup = e.target.nextElementSibling;
   openModal(modalPopup);
-  Object(_util__WEBPACK_IMPORTED_MODULE_1__["trapElementFocus"])(modalPopup);
+  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalPopup, {
+    clickOutsideDeactivates: true
+  });
+  trap.activate();
 };
 
 const handleTriggerClose = e => {
@@ -5985,7 +5989,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, trapElementFocus */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5999,7 +6003,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gaEvent", function() { return gaEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendAll", function() { return appendAll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pxToRem", function() { return pxToRem; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "trapElementFocus", function() { return trapElementFocus; });
 /* harmony import */ var core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es7.symbol.async-iterator */ "./node_modules/core-js/modules/es7.symbol.async-iterator.js");
 /* harmony import */ var core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es7_symbol_async_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es6_symbol__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.symbol */ "./node_modules/core-js/modules/es6.symbol.js");
@@ -6167,37 +6170,6 @@ function pxToRem(pxValue) {
   browserWidth > 768 ? fontBase = 18 : fontBase = 16;
   let remValue = pxValue / fontBase;
   return remValue;
-}
-/**
- * Trap the focus to any element - modals, dialogs, etc
- *
- * @param {HTMLElement} element
- */
-
-function trapElementFocus(element) {
-  let focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])'),
-      firstFocusableEl = focusableEls[0],
-      lastFocusableEl = focusableEls[focusableEls.length - 1],
-      KEYCODE_TAB = 9;
-  element.addEventListener('keydown', function (e) {
-    var isTabPressed = e.key === 'Tab' || e.keyCode === KEYCODE_TAB;
-    if (!isTabPressed) return;
-
-    if (e.shiftKey) {
-      /* shift + tab */
-      if (document.activeElement === firstFocusableEl) {
-        lastFocusableEl.focus();
-        e.preventDefault();
-      }
-    }
-    /* tab */
-    else {
-        if (document.activeElement === lastFocusableEl) {
-          firstFocusableEl.focus();
-          e.preventDefault();
-        }
-      }
-  });
 }
 
 /***/ }),
