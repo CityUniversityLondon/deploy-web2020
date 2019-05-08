@@ -4941,7 +4941,10 @@ function launchModal() {
     modalAnchor.href = '#';
     modalAnchor.innerHTML = anchorTitle;
     popup.parentNode.insertBefore(modalAnchor, popup);
-  }); // after links inserted, then get them all in an array
+  });
+  /**
+   * after links inserted, then get them all in an array
+   */
 
   let modalOpenTriggers = document.querySelectorAll(modalTriggerClass);
   /**
@@ -5003,9 +5006,7 @@ const handleTriggerOpen = e => {
   e.preventDefault();
   let modalPopup = e.target.nextElementSibling;
   openModal(modalPopup);
-  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalPopup, {
-    clickOutsideDeactivates: true
-  });
+  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalPopup, {});
   trap.activate();
 };
 
@@ -5014,6 +5015,12 @@ const handleTriggerClose = e => {
   let modalPopup = e.target.parentNode.parentNode.parentNode;
   closeModal(modalPopup);
 };
+/**
+ * Open modal: used to show the modal
+ *
+ * @param {HTMLElement} modalPopup - the modal div to be displayed
+ */
+
 
 const openModal = modalPopup => {
   // add background div to src if not present
@@ -5039,15 +5046,14 @@ const openModal = modalPopup => {
     modalPopup.classList.add(modalShowContentClass);
   }
 };
+/**
+ * Close modal: closes the active modal
+ *
+ * @param {HTMLElement} modalPopup - the modal div to be hidden
+ */
 
-const closeModal = (modalPopup, escCloseModal) => {
-  if (escCloseModal) {
-    // if escape close, just close
-    modalPopup.classList.remove(modalShowClass);
-    modalPopup.classList.add(modalHiddenClass);
-    document.body.classList.remove(bodyModalInClass);
-  }
 
+const closeModal = modalPopup => {
   if (windowWidth >= 768) {
     // trigger transition, callback handles the closing
     modalPopup.classList.add(modalTransitioningOutClass);
@@ -5058,6 +5064,12 @@ const closeModal = (modalPopup, escCloseModal) => {
     document.body.classList.remove(bodyModalInClass);
   }
 };
+/**
+ * Transition in ended: after the transition has ended, do stuff
+ *
+ * @param {e} event - used to target elements
+ */
+
 
 const transitionInEnded = e => {
   let modalPopup = e.target.parentNode.parentNode;
@@ -5078,6 +5090,12 @@ const transitionInEnded = e => {
     modalPopup.classList.remove(modalTransitioningInClass);
   }, 300);
 };
+/**
+ * Transition out ended: after the transition has ended, do stuff
+ *
+ * @param {e} event - used to target elements
+ */
+
 
 const transitionOutEnded = e => {
   let modalPopup = e.target.parentNode.parentNode;
