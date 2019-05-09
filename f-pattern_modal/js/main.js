@@ -4914,7 +4914,10 @@ const className = 'modal__popup',
       modalBackgroundClass = 'modal__background',
       bodyModalInClass = 'modal--in',
       modalCloseClass = 'a.modal__close',
-      modalBackground = document.createElement('div');
+      modalCloseClassList = 'modal__close fas fa-times',
+      modalBackground = document.createElement('div'),
+      modalPopups = document.querySelectorAll(modalPopupClass),
+      modalPopupsLength = modalPopups.length;
 let windowWidth = window.innerWidth,
     counter = 1; // set class attr of modal background ready to be inserted later
 
@@ -4951,7 +4954,7 @@ function addModalLink(modal) {
 function addModalClose(modal) {
   let modalCloseAnchor, modalHeading;
   modalCloseAnchor = document.createElement('a');
-  modalCloseAnchor.setAttribute('class', 'modal__close fas fa-times');
+  modalCloseAnchor.setAttribute('class', modalCloseClassList);
   modalCloseAnchor.href = '#';
   modalHeading = modal.querySelector(modalHeadingClass);
   modalHeading.parentNode.insertBefore(modalCloseAnchor, modalHeading);
@@ -4969,8 +4972,6 @@ function launchModal(modal) {
    */
   addModalLink(modal);
   addModalClose(modal);
-  let modalPopups = document.querySelectorAll(modalPopupClass);
-  let modalPopupsLength = modalPopups.length;
   /**
    * Events need to be added, but just once for all
    */
@@ -5000,7 +5001,7 @@ const createEventListeners = modalPopupsLength => {
      */
 
     document.addEventListener('keydown', e => {
-      let keyCode = e.keyCode; // there'll only be one active at any one time, so get the first active class
+      let keyCode = e.keyCode; // get the only active modal
 
       let activeModal = document.getElementsByClassName(modalShowClass)[0];
 
@@ -5015,7 +5016,7 @@ const createEventListeners = modalPopupsLength => {
     document.addEventListener('click', e => {
       e.target.classList.forEach(className => {
         if (className === modalShowClass) {
-          // there'll only be one active at any one time, so get the first active class
+          // get the only active modal
           let activeModal = document.getElementsByClassName(modalShowClass)[0];
           closeModal(activeModal);
           return;
@@ -5055,7 +5056,9 @@ const handleTriggerOpen = e => {
   let modalPopup = e.target.nextElementSibling;
   openModal(modalPopup); // activate focus trap
 
-  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalPopup, {});
+  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalPopup, {
+    clickOutsideDeactivates: true
+  });
   trap.activate();
 };
 /**
