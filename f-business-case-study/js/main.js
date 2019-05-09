@@ -3716,6 +3716,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _content_slideup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./content-slideup */ "./src/paint-layouts/case-study-transition-effects/content-slideup.js");
 
 
 /**
@@ -3734,25 +3735,28 @@ __webpack_require__.r(__webpack_exports__);
  * 'overview__multimedia-banner--transition-start'
  * 'overview__multimedia-banner--transition-complete'
  */
-const className = '-case-study__overview__multimedia-banner__image';
+
+const className = 'case-study__overview__multimedia-banner__image';
 
 function multimediaBannerTransition() {
-  const multimediaBanner = document.querySelectorAll('.case-study__overview__multimedia-banner');
-  const viewPortHeight = window.innerHeight; // calculates viewport height
+  if (Object(_content_slideup__WEBPACK_IMPORTED_MODULE_0__["isNotMobile"])()) {
+    const multimediaBanner = document.querySelectorAll('.case-study__overview__multimedia-banner');
+    const viewPortHeight = window.innerHeight; // calculates viewport height
 
-  multimediaBanner.forEach(function (bannerItem) {
-    bannerItem.classList.add('case-study__overview__multimedia-banner__image--transition-start');
-  });
-  window.addEventListener('scroll', function () {
     multimediaBanner.forEach(function (bannerItem) {
-      const elemOffset = bannerItem.offsetTop;
-      const screenPos = window.pageYOffset; // calculates scroll position
-
-      if (screenPos > elemOffset - viewPortHeight + 100 && !bannerItem.className.includes('case-study__overview__multimedia-banner__image--transition-complete')) {
-        bannerItem.classList.add('case-study__overview__multimedia-banner__image--transition-complete');
-      }
+      bannerItem.classList.add('case-study__overview__multimedia-banner__image--transition-start');
     });
-  });
+    window.addEventListener('scroll', function () {
+      multimediaBanner.forEach(function (bannerItem) {
+        const elemOffset = bannerItem.offsetTop;
+        const screenPos = window.pageYOffset; // calculates scroll position
+
+        if (screenPos > elemOffset - viewPortHeight + 100 && !bannerItem.className.includes('case-study__overview__multimedia-banner__image--transition-complete')) {
+          bannerItem.classList.add('case-study__overview__multimedia-banner__image--transition-complete');
+        }
+      });
+    });
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3771,6 +3775,7 @@ function multimediaBannerTransition() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _content_slideup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./content-slideup */ "./src/paint-layouts/case-study-transition-effects/content-slideup.js");
 
 
 /**
@@ -3787,20 +3792,23 @@ __webpack_require__.r(__webpack_exports__);
  * Requirements:
  * template have to contain paragraph elements inside the content element
  */
+
 const className = 'content-fadein';
 
 function contentParagraphsTransition(contentFadein) {
   const viewPortHeight = window.innerHeight; // calculates viewport height
 
-  contentFadein.classList.add('paragraph-fadein-start');
-  window.addEventListener('scroll', function () {
-    const elemOffset = contentFadein.offsetTop;
-    const screenPos = window.pageYOffset; // calculates scroll position
+  if (_content_slideup__WEBPACK_IMPORTED_MODULE_0__["isNotMobile"]) {
+    contentFadein.classList.add('paragraph-fadein-start');
+    window.addEventListener('scroll', function () {
+      const elemOffset = contentFadein.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
 
-    if (screenPos > elemOffset - viewPortHeight + 10 && !contentFadein.className.includes('paragraph-fadein-complete')) {
-      contentFadein.classList.add('paragraph-fadein-complete');
-    }
-  });
+      if (screenPos > elemOffset - viewPortHeight + 10 && !contentFadein.className.includes('paragraph-fadein-complete')) {
+        contentFadein.classList.add('paragraph-fadein-complete');
+      }
+    });
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3844,11 +3852,12 @@ function contentParagraphsTransition() {
 /*!****************************************************************************!*\
   !*** ./src/paint-layouts/case-study-transition-effects/content-slideup.js ***!
   \****************************************************************************/
-/*! exports provided: default */
+/*! exports provided: isNotMobile, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNotMobile", function() { return isNotMobile; });
 
 
 /**
@@ -3867,27 +3876,40 @@ __webpack_require__.r(__webpack_exports__);
  */
 const className = 'transition-content-slideup';
 
+function isNotMobile() {
+  const viewPortWidth = window.innerWidth; // calculates viewport width to determinte if using mobile
+
+  const mobileScreen = 432;
+
+  if (viewPortWidth > mobileScreen) {
+    return true;
+  }
+}
+
 function backgroundTransition() {
   let backgrounds = document.querySelectorAll('.transition-content-slideup');
   const viewPortHeight = window.innerHeight; // calculates viewport height
 
-  backgrounds.forEach(function (i) {
-    i.classList.add('transition-content-slideup-start');
-  });
-  window.addEventListener('scroll', function () {
-    for (let i of backgrounds) {
-      const screenPos = window.pageYOffset; // calculates scroll position
+  if (isNotMobile()) {
+    backgrounds.forEach(function (i) {
+      i.classList.add('transition-content-slideup-start');
+    });
+    window.addEventListener('scroll', function () {
+      for (let i of backgrounds) {
+        const screenPos = window.pageYOffset; // calculates scroll position
 
-      const elemOffsetTop = i.offsetTop; // calculates element offset from top to the page
+        const elemOffsetTop = i.offsetTop; // calculates element offset from top to the page
 
-      const parentElemHeight = i.parentElement.offsetHeight - parseInt(window.getComputedStyle(i.parentElement, null).getPropertyValue('padding-bottom')) - parseInt(window.getComputedStyle(i.parentElement, null).getPropertyValue('padding-top'));
+        const parentElemHeight = i.parentElement.offsetHeight - parseInt(window.getComputedStyle(i.parentElement, null).getPropertyValue('padding-bottom')) - parseInt(window.getComputedStyle(i.parentElement, null).getPropertyValue('padding-top'));
 
-      if (screenPos > elemOffsetTop - viewPortHeight - parentElemHeight * 70 / 100 && !i.className.includes('transition-content-slideup-end')) {
-        i.classList.add('transition-content-slideup-end');
+        if (screenPos > elemOffsetTop - viewPortHeight - parentElemHeight * 70 / 100 && !i.className.includes('transition-content-slideup-end')) {
+          i.classList.add('transition-content-slideup-end');
+        }
       }
-    }
-  });
+    });
+  }
 }
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: backgroundTransition,
@@ -3905,6 +3927,7 @@ function backgroundTransition() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _content_slideup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./content-slideup */ "./src/paint-layouts/case-study-transition-effects/content-slideup.js");
 
 
 /**
@@ -3923,25 +3946,28 @@ __webpack_require__.r(__webpack_exports__);
  * 'leading-section-separator'
  * 'leading-section-separator--transition-complete'
  */
+
 const className = 'leading-section-separator';
 
 function leadingSectionSeparatorTransition() {
   const leadingSectionSeparators = document.querySelectorAll('.leading-section-separator');
   const viewPortHeight = window.innerHeight; // calculates viewport height
 
-  leadingSectionSeparators.forEach(function (i) {
-    i.classList.add('leading-section-separator--transition-start');
-  });
-  window.addEventListener('scroll', function () {
+  if (_content_slideup__WEBPACK_IMPORTED_MODULE_0__["isNotMobile"]) {
     leadingSectionSeparators.forEach(function (i) {
-      const elemOffset = i.offsetTop;
-      const screenPos = window.pageYOffset; // calculates scroll position
-
-      if (screenPos > elemOffset - viewPortHeight + 20 && !i.className.includes('leading-section-separator--transition-complete')) {
-        i.classList.add('leading-section-separator--transition-complete');
-      }
+      i.classList.add('leading-section-separator--transition-start');
     });
-  });
+    window.addEventListener('scroll', function () {
+      leadingSectionSeparators.forEach(function (i) {
+        const elemOffset = i.offsetTop;
+        const screenPos = window.pageYOffset; // calculates scroll position
+
+        if (screenPos > elemOffset - viewPortHeight + 20 && !i.className.includes('leading-section-separator--transition-complete')) {
+          i.classList.add('leading-section-separator--transition-complete');
+        }
+      });
+    });
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
