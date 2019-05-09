@@ -3707,10 +3707,65 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /***/ }),
 
-/***/ "./src/paint-layouts/case-study-transition-effects/content-paragraphs.js":
-/*!*******************************************************************************!*\
-  !*** ./src/paint-layouts/case-study-transition-effects/content-paragraphs.js ***!
-  \*******************************************************************************/
+/***/ "./src/paint-layouts/case-study-transition-effects/banner-image.js":
+/*!*************************************************************************!*\
+  !*** ./src/paint-layouts/case-study-transition-effects/banner-image.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+/**
+ * Image banner transition
+ *
+ * @module patterns/external-link-finder/external-link-finder
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+/**
+ *  Animates the video / image banner to fade en an scale in size on scroll
+ *
+ * Requirements:
+ * the animation effect require the following 2 classes:
+ * 'overview__multimedia-banner--transition-start'
+ * 'overview__multimedia-banner--transition-complete'
+ */
+const className = '-case-study__overview__multimedia-banner__image';
+
+function multimediaBannerTransition() {
+  const multimediaBanner = document.querySelectorAll('.case-study__overview__multimedia-banner');
+  const viewPortHeight = window.innerHeight; // calculates viewport height
+
+  multimediaBanner.forEach(function (bannerItem) {
+    bannerItem.classList.add('case-study__overview__multimedia-banner__image--transition-start');
+  });
+  window.addEventListener('scroll', function () {
+    multimediaBanner.forEach(function (bannerItem) {
+      const elemOffset = bannerItem.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      if (screenPos > elemOffset - viewPortHeight + 100 && !bannerItem.className.includes('case-study__overview__multimedia-banner__image--transition-complete')) {
+        bannerItem.classList.add('case-study__overview__multimedia-banner__image--transition-complete');
+      }
+    });
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: multimediaBannerTransition,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/paint-layouts/case-study-transition-effects/content-sections.js":
+/*!*****************************************************************************!*\
+  !*** ./src/paint-layouts/case-study-transition-effects/content-sections.js ***!
+  \*****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3732,24 +3787,19 @@ __webpack_require__.r(__webpack_exports__);
  * Requirements:
  * template have to contain paragraph elements inside the content element
  */
-const className = 'case-study';
+const className = 'content-fadein';
 
-function contentParagraphsTransition() {
-  const paragraphs = document.getElementsByClassName('case-study__content')[0].querySelectorAll('p');
+function contentParagraphsTransition(contentFadein) {
   const viewPortHeight = window.innerHeight; // calculates viewport height
 
-  paragraphs.forEach(function (i) {
-    i.classList.add('paragraph-fadein-start');
-  });
+  contentFadein.classList.add('paragraph-fadein-start');
   window.addEventListener('scroll', function () {
-    paragraphs.forEach(function (i) {
-      const elemOffset = i.offsetTop;
-      const screenPos = window.pageYOffset; // calculates scroll position
+    const elemOffset = contentFadein.offsetTop;
+    const screenPos = window.pageYOffset; // calculates scroll position
 
-      if (screenPos > elemOffset - viewPortHeight + 10 && !i.className.includes('paragraph-fadein-complete')) {
-        i.classList.add('paragraph-fadein-complete');
-      }
-    });
+    if (screenPos > elemOffset - viewPortHeight + 10 && !contentFadein.className.includes('paragraph-fadein-complete')) {
+      contentFadein.classList.add('paragraph-fadein-complete');
+    }
   });
 }
 
@@ -3757,6 +3807,36 @@ function contentParagraphsTransition() {
   launchFn: contentParagraphsTransition,
   launchQuery: ".".concat(className)
 });
+/*
+
+BACKUP
+
+function contentParagraphsTransition() {
+    const paragraphs = document
+        .getElementsByClassName('case-study__content')[0]
+        .querySelectorAll('p');
+
+    const viewPortHeight = window.innerHeight; // calculates viewport height
+
+    paragraphs.forEach(function(i) {
+        i.classList.add('paragraph-fadein-start');
+    });
+
+    window.addEventListener('scroll', function() {
+        paragraphs.forEach(function(i) {
+            const elemOffset = i.offsetTop;
+            const screenPos = window.pageYOffset; // calculates scroll position
+
+            if (
+                screenPos > elemOffset - viewPortHeight + 10 &&
+                !i.className.includes('paragraph-fadein-complete')
+            ) {
+                i.classList.add('paragraph-fadein-complete');
+            }
+        });
+    });
+}
+*/
 
 /***/ }),
 
@@ -3811,61 +3891,6 @@ function backgroundTransition() {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: backgroundTransition,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
-/***/ "./src/paint-layouts/case-study-transition-effects/image-banner.js":
-/*!*************************************************************************!*\
-  !*** ./src/paint-layouts/case-study-transition-effects/image-banner.js ***!
-  \*************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-
-/**
- * Image banner transition
- *
- * @module patterns/external-link-finder/external-link-finder
- * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
- */
-
-/**
- *  Animates the video / image banner to fade en an scale in size on scroll
- *
- * Requirements:
- * the animation effect require the following 2 classes:
- * 'overview__multimedia-banner--transition-start'
- * 'overview__multimedia-banner--transition-complete'
- */
-const className = 'case-study__overview__multimedia-banner__image';
-
-function multimediaBannerTransition() {
-  const multimediaBanner = document.querySelectorAll('.case-study__overview__multimedia-banner');
-  const viewPortHeight = window.innerHeight; // calculates viewport height
-
-  multimediaBanner.forEach(function (bannerItem) {
-    bannerItem.classList.add('case-study__overview__multimedia-banner__image--transition-start');
-  });
-  window.addEventListener('scroll', function () {
-    multimediaBanner.forEach(function (bannerItem) {
-      const elemOffset = bannerItem.offsetTop;
-      const screenPos = window.pageYOffset; // calculates scroll position
-
-      if (screenPos > elemOffset - viewPortHeight + 100 && !bannerItem.className.includes('case-study__overview__multimedia-banner__image--transition-complete')) {
-        bannerItem.classList.add('case-study__overview__multimedia-banner__image--transition-complete');
-      }
-    });
-  });
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: multimediaBannerTransition,
   launchQuery: ".".concat(className)
 });
 
@@ -3950,8 +3975,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
 /* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
 /* harmony import */ var _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/leading-separator */ "./src/paint-layouts/case-study-transition-effects/leading-separator.js");
-/* harmony import */ var _paint_layouts_case_study_transition_effects_image_banner__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/image-banner */ "./src/paint-layouts/case-study-transition-effects/image-banner.js");
-/* harmony import */ var _paint_layouts_case_study_transition_effects_content_paragraphs__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/content-paragraphs */ "./src/paint-layouts/case-study-transition-effects/content-paragraphs.js");
+/* harmony import */ var _paint_layouts_case_study_transition_effects_banner_image__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/banner-image */ "./src/paint-layouts/case-study-transition-effects/banner-image.js");
+/* harmony import */ var _paint_layouts_case_study_transition_effects_content_sections__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/content-sections */ "./src/paint-layouts/case-study-transition-effects/content-sections.js");
 /* harmony import */ var _paint_layouts_case_study_transition_effects_content_slideup__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/content-slideup */ "./src/paint-layouts/case-study-transition-effects/content-slideup.js");
 
 
@@ -3982,7 +4007,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_14__["default"], _paint_layouts_case_study_transition_effects_image_banner__WEBPACK_IMPORTED_MODULE_15__["default"], _paint_layouts_case_study_transition_effects_content_paragraphs__WEBPACK_IMPORTED_MODULE_16__["default"], _paint_layouts_case_study_transition_effects_content_slideup__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_14__["default"], _paint_layouts_case_study_transition_effects_banner_image__WEBPACK_IMPORTED_MODULE_15__["default"], _paint_layouts_case_study_transition_effects_content_sections__WEBPACK_IMPORTED_MODULE_16__["default"], _paint_layouts_case_study_transition_effects_content_slideup__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__["default"]]);
 
 /***/ }),
 

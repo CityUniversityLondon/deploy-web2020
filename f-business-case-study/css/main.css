@@ -19333,9 +19333,9 @@ article .social-icon .link-copy {
     }
 }
 
-@media (min-width: 433px) and (max-width: 900px) {
+@media (max-width: 899px) {
     .case-study__overview__main__logos {
-        grid-column: 1 / 3;
+        grid-column: 1 / -1;
     }
 }
 
@@ -19849,11 +19849,16 @@ article .social-icon .link-copy {
 
 .case-study--research__details__section .label {
     color: #696969;
+    font-weight: 600;
 }
 
 .case-study--research__details__section__detail .icon-school {
     color: #dd0036;
     margin-right: 0.5rem;
+}
+
+.case-study--research__details__wrap {
+    margin-top: 3.25rem;
 }
 
 .case-study--research__details {
@@ -19907,11 +19912,13 @@ article .social-icon .link-copy {
 
 .paragraph-fadein-start {
     opacity: 0;
-    transition: opacity ease 1s;
+    margin-top: 1.5rem;
+    transition: margin-top ease 1s, opacity ease 1.5s;
 }
 
 .paragraph-fadein-complete {
     opacity: 1;
+    margin-top: 0;
 }
 
 .transition-content-slideup {
