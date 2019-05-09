@@ -334,14 +334,6 @@
     background-color: #8a8a8a;
 }
 
-.color--gray13 {
-    color: #28211f;
-}
-
-.background--gray13 {
-    background-color: #28211f;
-}
-
 .color--red10 {
     color: #f7d2d5;
 }
@@ -1078,20 +1070,6 @@
     background-color: #ffffff;
 }
 
-/* Icon positioning
-
-Demo HTML
-<div class="key-info__icon--left">
-    <span class="fas fa-envelope"></span>
-    <div>Text relating to icon</div>
-</div>
-
-Demo SCSS
-.key-info__icon--left {
-    @include key-info-icon(left, $color-pink90);
-}
-
-*/
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
