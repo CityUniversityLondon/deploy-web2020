@@ -17622,10 +17622,6 @@ a.modal__close:active, a.modal__close:focus {
     position: initial;
 }
 
-.no-js .modal__trigger {
-    display: none;
-}
-
 .no-js .modal__popup--hidden {
     display: block;
 }
@@ -17635,14 +17631,6 @@ a.modal__close:active, a.modal__close:focus {
     opacity: 1;
     padding: 0;
     pointer-events: auto;
-}
-
-.no-js .modal__close {
-    display: none;
-}
-
-.no-js .modal__reveal {
-    display: none;
 }
 
 .generic {
