@@ -4900,7 +4900,7 @@ __webpack_require__.r(__webpack_exports__);
     </div>
 **/
 
-const className = 'modal-group',
+const className = 'modal__popup',
       modalPopupClass = '.modal__popup',
       modalHiddenClass = 'modal__popup--hidden',
       modalShowClass = 'modal__popup--show',
@@ -4908,13 +4908,15 @@ const className = 'modal-group',
       modalTransitioningInClass = 'modal__popup--transitioning-in',
       modalTransitioningOutClass = 'modal__popup--transitioning-out',
       modalRevealFromTop = 'modal__reveal--fromtop',
+      modalHeadingClass = '.modal__heading',
       modalRevealFromBottom = 'modal__reveal--frombottom',
       modalTriggerClass = 'a.modal__trigger',
       modalBackgroundClass = 'modal__background',
       bodyModalInClass = 'modal--in',
       modalCloseClass = 'a.modal__close',
       modalBackground = document.createElement('div');
-let windowWidth = window.innerWidth; // set class attr of modal background ready to be inserted later
+let windowWidth = window.innerWidth,
+    counter = 1; // set class attr of modal background ready to be inserted later
 
 modalBackground.setAttribute('class', modalBackgroundClass); // always reconfigure if window resized
 
@@ -4924,95 +4926,148 @@ function setWindowWidth() {
   // reassign new width
   windowWidth = window.innerWidth;
 }
+/**
+ * Add modal link: add link in the parent element to modal
+ *
+ * @param {HTMLElement} modal - the modal element
+ */
 
-function launchModal() {
-  let modalPopups = document.querySelectorAll(modalPopupClass),
-      modalCloseTriggers = document.querySelectorAll(modalCloseClass),
-      modalInReveals = document.querySelectorAll('div.' + modalRevealFromTop),
-      modalOutReveals = document.querySelectorAll('div.' + modalRevealFromBottom);
+
+function addModalLink(modal) {
+  let modalAnchor;
+  modalAnchor = document.createElement('a');
+  modalAnchor.setAttribute('class', 'modal__trigger');
+  modalAnchor.href = '#';
+  modalAnchor.innerHTML = modal.getAttribute('data-title');
+  modal.parentNode.insertBefore(modalAnchor, modal);
+}
+/**
+ * Add modal close: add a clsoe link within the modal
+ *
+ * @param {HTMLElement} modal - the modal element
+ */
+
+
+function addModalClose(modal) {
+  let modalCloseAnchor, modalHeading;
+  modalCloseAnchor = document.createElement('a');
+  modalCloseAnchor.setAttribute('class', 'modal__close fas fa-times');
+  modalCloseAnchor.href = '#';
+  modalHeading = modal.querySelector(modalHeadingClass);
+  modalHeading.parentNode.insertBefore(modalCloseAnchor, modalHeading);
+}
+/**
+ * Launch modal: entry function
+ *
+ * @param {HTMLElement} modal - the modal element
+ */
+
+
+function launchModal(modal) {
   /**
-   * Add adjacent link to each modal
+   * Add modal link and close link inside modal
+   */
+  addModalLink(modal);
+  addModalClose(modal);
+  let modalPopups = document.querySelectorAll(modalPopupClass);
+  let modalPopupsLength = modalPopups.length;
+  /**
+   * Events need to be added, but just once for all
    */
 
-  modalPopups.forEach(function (popup) {
-    let anchorTitle = popup.getAttribute('data-title');
-    let modalAnchor = document.createElement('a');
-    modalAnchor.setAttribute('class', 'modal__trigger');
-    modalAnchor.href = '#';
-    modalAnchor.innerHTML = anchorTitle;
-    popup.parentNode.insertBefore(modalAnchor, popup);
-  });
-  /**
-   * after links inserted, then get them all in an array
-   */
+  createEventListeners(modalPopupsLength);
+}
 
-  let modalOpenTriggers = document.querySelectorAll(modalTriggerClass);
-  /**
-   * Add click listeners to open and close triggers
-   */
+const createEventListeners = modalPopupsLength => {
+  if (counter == modalPopupsLength) {
+    let modalCloseTriggers, modalInReveals, modalOutReveals, modalOpenTriggers;
+    modalOpenTriggers = document.querySelectorAll(modalTriggerClass);
+    modalCloseTriggers = document.querySelectorAll(modalCloseClass);
+    modalInReveals = document.querySelectorAll('.' + modalRevealFromTop);
+    modalOutReveals = document.querySelectorAll('.' + modalRevealFromBottom);
+    /**
+     * Add click listeners to open and close triggers
+     */
 
-  modalOpenTriggers.forEach(trigger => {
-    trigger.addEventListener('click', handleTriggerOpen, false);
-  });
-  modalCloseTriggers.forEach(trigger => {
-    trigger.addEventListener('click', handleTriggerClose, false);
-  });
-  /**
-   * Listen for escape key press and exit the active modal
-   */
+    modalOpenTriggers.forEach(trigger => {
+      trigger.addEventListener('click', handleTriggerOpen, false);
+    });
+    modalCloseTriggers.forEach(trigger => {
+      trigger.addEventListener('click', handleTriggerClose, false);
+    });
+    /**
+     * Listen for escape key press and exit the active modal
+     */
 
-  document.addEventListener('keydown', e => {
-    let keyCode = e.keyCode;
-    let activeModal = document.getElementsByClassName(modalShowClass)[0];
+    document.addEventListener('keydown', e => {
+      let keyCode = e.keyCode; // there'll only be one active at any one time, so get the first active class
 
-    if (keyCode === 27) {
-      let escCloseModal = true;
-      closeModal(activeModal, escCloseModal);
-    }
-  });
-  /**
-   * Listen for a click anywhere outside the modal and close active modal
-   */
+      let activeModal = document.getElementsByClassName(modalShowClass)[0];
 
-  document.addEventListener('click', e => {
-    e.target.classList.forEach(className => {
-      if (className === modalShowClass) {
-        let activeModal = document.getElementsByClassName(modalShowClass)[0];
+      if (keyCode === 27) {
         closeModal(activeModal);
-        return;
       }
     });
-  });
-  /**
-   * Listen for when reveal in/out transition over
-   */
+    /**
+     * Listen for a click anywhere outside the modal and close active modal
+     */
 
-  modalInReveals.forEach(elem => {
-    // chrome & safari
-    elem.addEventListener('webkitTransitionEnd', transitionInEnded, false); // standard
+    document.addEventListener('click', e => {
+      e.target.classList.forEach(className => {
+        if (className === modalShowClass) {
+          // there'll only be one active at any one time, so get the first active class
+          let activeModal = document.getElementsByClassName(modalShowClass)[0];
+          closeModal(activeModal);
+          return;
+        }
+      });
+    });
+    /**
+     * Listen for when reveal in/out transition over
+     */
 
-    elem.addEventListener('transitionend', transitionInEnded, false); // moz
+    modalInReveals.forEach(elem => {
+      // chrome & safari
+      elem.addEventListener('webkitTransitionEnd', transitionInEnded, false); // standard
 
-    elem.addEventListener('mozTransitionEnd', transitionInEnded, false);
-  });
-  modalOutReveals.forEach(elem => {
-    elem.addEventListener('webkitTransitionEnd', transitionOutEnded, false);
-    elem.addEventListener('transitionend', transitionOutEnded, false);
-    elem.addEventListener('mozTransitionEnd', transitionOutEnded, false);
-  });
-}
+      elem.addEventListener('transitionend', transitionInEnded, false); // moz
+
+      elem.addEventListener('mozTransitionEnd', transitionInEnded, false);
+    });
+    modalOutReveals.forEach(elem => {
+      elem.addEventListener('webkitTransitionEnd', transitionOutEnded, false);
+      elem.addEventListener('transitionend', transitionOutEnded, false);
+      elem.addEventListener('mozTransitionEnd', transitionOutEnded, false);
+    });
+  }
+
+  counter++;
+};
+/**
+ * Handle trigger open: handles the modal open
+ *
+ * @param {event} e - the event
+ */
+
 
 const handleTriggerOpen = e => {
   e.preventDefault();
   let modalPopup = e.target.nextElementSibling;
-  openModal(modalPopup);
+  openModal(modalPopup); // activate focus trap
+
   const trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalPopup, {});
   trap.activate();
 };
+/**
+ * Handle trigger close: handles the modal open
+ *
+ * @param {event} e - the event
+ */
+
 
 const handleTriggerClose = e => {
   e.preventDefault();
-  let modalPopup = e.target.parentNode.parentNode.parentNode;
+  let modalPopup = document.querySelector('.' + modalShowClass);
   closeModal(modalPopup);
 };
 /**
@@ -5072,7 +5127,6 @@ const closeModal = modalPopup => {
 
 
 const transitionInEnded = e => {
-  let modalPopup = e.target.parentNode.parentNode;
   let modalReveal = e.target; // switch classes to reverse transition or reset for next transition
 
   if (modalReveal.classList.contains(modalRevealFromTop)) {
@@ -5081,8 +5135,9 @@ const transitionInEnded = e => {
   } else {
     modalReveal.classList.remove(modalRevealFromBottom);
     modalReveal.classList.add(modalRevealFromTop);
-  } // show the content so it's revealed on transition
+  }
 
+  let modalPopup = document.querySelector('.' + modalShowClass); // show the content so it's revealed on transition
 
   modalPopup.classList.add(modalShowContentClass); // trigger the second transition - delay slightly
 
@@ -5098,7 +5153,7 @@ const transitionInEnded = e => {
 
 
 const transitionOutEnded = e => {
-  let modalPopup = e.target.parentNode.parentNode;
+  let modalPopup = document.querySelector('.' + modalShowClass);
   let modalReveal = e.target; // after first transition, remove the content underneath the background
 
   modalPopup.classList.remove(modalShowContentClass); // switch these so the transition direction changes
