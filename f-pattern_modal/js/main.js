@@ -4914,6 +4914,7 @@ const className = 'modal__popup',
       modalBackgroundClass = 'modal__background',
       bodyModalInClass = 'modal--in',
       modalCloseClass = '.modal__close',
+      modalContentClass = '.modal__content',
       modalCloseClassList = 'modal__close fas fa-times',
       modalBackground = document.createElement('div'),
       modalPopups = document.querySelectorAll(modalPopupClass),
@@ -4961,6 +4962,23 @@ function addModalClose(modal) {
   modalHeading.parentNode.insertBefore(modalCloseAnchor, modalHeading);
 }
 /**
+ * Add modal reveals: add the divs that create the "curtain" effect
+ *
+ * @param {HTMLElement} modal - the modal element
+ */
+
+
+function addModalReveals(modal) {
+  let revealFromTop, revealFromBottom, modalContent;
+  revealFromTop = document.createElement('div');
+  revealFromBottom = document.createElement('div');
+  revealFromTop.setAttribute('class', 'modal__reveal ' + modalRevealFromTop);
+  revealFromBottom.setAttribute('class', 'modal__reveal ' + modalRevealFromBottom);
+  modalContent = modal.querySelector(modalContentClass);
+  modalContent.parentNode.insertBefore(revealFromTop, modalContent);
+  modalContent.parentNode.insertBefore(revealFromBottom, modalContent);
+}
+/**
  * Launch modal: entry function
  *
  * @param {HTMLElement} modal - the modal element
@@ -4973,6 +4991,7 @@ function launchModal(modal) {
    */
   addModalLink(modal);
   addModalClose(modal);
+  addModalReveals(modal);
   /**
    * Events need to be added, but just once for all
    */
