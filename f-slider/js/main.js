@@ -1834,6 +1834,136 @@ __webpack_require__(/*! ./_fix-re-wks */ "./node_modules/core-js/modules/_fix-re
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/es6.regexp.replace.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/modules/es6.regexp.replace.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/core-js/modules/_an-object.js");
+var toObject = __webpack_require__(/*! ./_to-object */ "./node_modules/core-js/modules/_to-object.js");
+var toLength = __webpack_require__(/*! ./_to-length */ "./node_modules/core-js/modules/_to-length.js");
+var toInteger = __webpack_require__(/*! ./_to-integer */ "./node_modules/core-js/modules/_to-integer.js");
+var advanceStringIndex = __webpack_require__(/*! ./_advance-string-index */ "./node_modules/core-js/modules/_advance-string-index.js");
+var regExpExec = __webpack_require__(/*! ./_regexp-exec-abstract */ "./node_modules/core-js/modules/_regexp-exec-abstract.js");
+var max = Math.max;
+var min = Math.min;
+var floor = Math.floor;
+var SUBSTITUTION_SYMBOLS = /\$([$&`']|\d\d?|<[^>]*>)/g;
+var SUBSTITUTION_SYMBOLS_NO_NAMED = /\$([$&`']|\d\d?)/g;
+
+var maybeToString = function (it) {
+  return it === undefined ? it : String(it);
+};
+
+// @@replace logic
+__webpack_require__(/*! ./_fix-re-wks */ "./node_modules/core-js/modules/_fix-re-wks.js")('replace', 2, function (defined, REPLACE, $replace, maybeCallNative) {
+  return [
+    // `String.prototype.replace` method
+    // https://tc39.github.io/ecma262/#sec-string.prototype.replace
+    function replace(searchValue, replaceValue) {
+      var O = defined(this);
+      var fn = searchValue == undefined ? undefined : searchValue[REPLACE];
+      return fn !== undefined
+        ? fn.call(searchValue, O, replaceValue)
+        : $replace.call(String(O), searchValue, replaceValue);
+    },
+    // `RegExp.prototype[@@replace]` method
+    // https://tc39.github.io/ecma262/#sec-regexp.prototype-@@replace
+    function (regexp, replaceValue) {
+      var res = maybeCallNative($replace, regexp, this, replaceValue);
+      if (res.done) return res.value;
+
+      var rx = anObject(regexp);
+      var S = String(this);
+      var functionalReplace = typeof replaceValue === 'function';
+      if (!functionalReplace) replaceValue = String(replaceValue);
+      var global = rx.global;
+      if (global) {
+        var fullUnicode = rx.unicode;
+        rx.lastIndex = 0;
+      }
+      var results = [];
+      while (true) {
+        var result = regExpExec(rx, S);
+        if (result === null) break;
+        results.push(result);
+        if (!global) break;
+        var matchStr = String(result[0]);
+        if (matchStr === '') rx.lastIndex = advanceStringIndex(S, toLength(rx.lastIndex), fullUnicode);
+      }
+      var accumulatedResult = '';
+      var nextSourcePosition = 0;
+      for (var i = 0; i < results.length; i++) {
+        result = results[i];
+        var matched = String(result[0]);
+        var position = max(min(toInteger(result.index), S.length), 0);
+        var captures = [];
+        // NOTE: This is equivalent to
+        //   captures = result.slice(1).map(maybeToString)
+        // but for some reason `nativeSlice.call(result, 1, result.length)` (called in
+        // the slice polyfill when slicing native arrays) "doesn't work" in safari 9 and
+        // causes a crash (https://pastebin.com/N21QzeQA) when trying to debug it.
+        for (var j = 1; j < result.length; j++) captures.push(maybeToString(result[j]));
+        var namedCaptures = result.groups;
+        if (functionalReplace) {
+          var replacerArgs = [matched].concat(captures, position, S);
+          if (namedCaptures !== undefined) replacerArgs.push(namedCaptures);
+          var replacement = String(replaceValue.apply(undefined, replacerArgs));
+        } else {
+          replacement = getSubstitution(matched, S, position, captures, namedCaptures, replaceValue);
+        }
+        if (position >= nextSourcePosition) {
+          accumulatedResult += S.slice(nextSourcePosition, position) + replacement;
+          nextSourcePosition = position + matched.length;
+        }
+      }
+      return accumulatedResult + S.slice(nextSourcePosition);
+    }
+  ];
+
+    // https://tc39.github.io/ecma262/#sec-getsubstitution
+  function getSubstitution(matched, str, position, captures, namedCaptures, replacement) {
+    var tailPos = position + matched.length;
+    var m = captures.length;
+    var symbols = SUBSTITUTION_SYMBOLS_NO_NAMED;
+    if (namedCaptures !== undefined) {
+      namedCaptures = toObject(namedCaptures);
+      symbols = SUBSTITUTION_SYMBOLS;
+    }
+    return $replace.call(replacement, symbols, function (match, ch) {
+      var capture;
+      switch (ch.charAt(0)) {
+        case '$': return '$';
+        case '&': return matched;
+        case '`': return str.slice(0, position);
+        case "'": return str.slice(tailPos);
+        case '<':
+          capture = namedCaptures[ch.slice(1, -1)];
+          break;
+        default: // \d\d?
+          var n = +ch;
+          if (n === 0) return match;
+          if (n > m) {
+            var f = floor(n / 10);
+            if (f === 0) return match;
+            if (f <= m) return captures[f - 1] === undefined ? ch.charAt(1) : captures[f - 1] + ch.charAt(1);
+            return match;
+          }
+          capture = captures[n - 1];
+      }
+      return capture === undefined ? '' : capture;
+    });
+  }
+});
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/es6.regexp.search.js":
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.regexp.search.js ***!
@@ -5745,6 +5875,10 @@ function addPagination(elem, itemCount) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.regexp.replace */ "./node_modules/core-js/modules/es6.regexp.replace.js");
+/* harmony import */ var core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_replace__WEBPACK_IMPORTED_MODULE_0__);
+
+
 
 
 /**
@@ -5754,10 +5888,9 @@ __webpack_require__.r(__webpack_exports__);
  * @author Daniel Miller <daniel.miller@city.ac.uk>
  * @copyright City, University of London 2018
  */
-// const class names
-const className = 'slider',
-      sliderClass = '.slider--city-slider',
+const className = 'slider--city-slider',
       slidesContainerClass = '.slider__slides',
+      sliderButtonsClass = '.slider__buttons',
       activeSlideClass = 'slider__slide--active',
       sliderArrowClass = '.slider-arrow',
       sliderArrowNextClass = 'arrow-right--btn-next',
@@ -5765,7 +5898,6 @@ const className = 'slider',
       numberedIndicatorActiveSlide = '.slider__controls__numbered-indicator__active-slide',
       progressIndicatorProgress = '.slider__controls__progress-indicator__progress',
       sliderTargetAttr = 'slider-target',
-      allSliders = document.querySelectorAll(sliderClass),
       sliderButtons = [{
   name: 'prevButton',
   type: 'button',
@@ -5778,119 +5910,172 @@ const className = 'slider',
   class: 'fas fa-arrow-right slider-arrow arrow-right--btn-next',
   ariaLabel: 'Next item'
 }];
+/**
+ * Configure slider controls - setup the controls ready for display
+ *
+ * @param {HTMLElement} sliderElement - the slider element
+ */
 
-function showSliderControls() {
-  allSliders.forEach(function (slider) {
-    let sliderTarget = slider.getAttribute('slider-target'),
-        buttonElements = buildButtons(sliderTarget),
-        sliderButtonContainer = sliderTarget + ' .slider__buttons',
-        b;
-    sliderButtonContainer = document.querySelector(sliderButtonContainer);
+function configureSliderControls(sliderElement) {
+  let sliderTarget, sliderControls, sliderButtonContainer;
+  sliderTarget = sliderElement.getAttribute('slider-target');
+  sliderControls = buildControls(sliderTarget);
+  sliderButtonContainer = sliderElement.querySelector(sliderButtonsClass);
+  displayControls(sliderControls, sliderButtonContainer);
+}
+/**
+ * Display controls: append the buttons to the slider
+ *
+ * @param {HTMLElement} sliderControls - array of buttons
+ * @param {HTMLElement} sliderButtonContainer - container element
+ */
 
-    for (b in buttonElements) {
-      sliderButtonContainer.appendChild(buttonElements[b]);
-    }
-  });
+
+function displayControls(sliderControls, sliderButtonContainer) {
+  for (let b in sliderControls) {
+    sliderButtonContainer.appendChild(sliderControls[b]);
+  }
 }
 /**
  * Build buttons: build the buttons for each slider
  *
- * @param {string} sliderTarget - used to target the slider's class
+ * @param {string} sliderTarget - string of slider class
  */
 
 
-function buildButtons(sliderTarget) {
-  let buttonElements = [],
-      obj;
+function buildControls(sliderTarget) {
+  let buttonElements = [];
 
-  for (obj in sliderButtons) {
-    let buttonElement = document.createElement(sliderButtons[obj].type);
-    buttonElement.setAttribute('class', sliderButtons[obj].class);
-    buttonElement.setAttribute('aria-label', sliderButtons[obj].ariaLabel);
-    buttonElement.setAttribute('slider-target', sliderTarget);
+  for (let obj in sliderButtons) {
+    // create a button for each object
+    buttonElements[obj] = document.createElement(sliderButtons[obj].type); // set its attributes
 
-    if (sliderButtons[obj].hasOwnProperty('disabled')) {
-      buttonElement.setAttribute('disabled', sliderButtons[obj].disabled);
-    }
-
-    buttonElements[obj] = buttonElement;
+    setAttributes(sliderButtons[obj], buttonElements[obj], sliderTarget);
   }
 
   return buttonElements;
 }
+/**
+ * Set attributes: loop through and set button attributes
+ *
+ * @param {object} obj - the json obj
+ * @param {string} element - the element
+ * @param {string} target - target class
+ */
 
-function slider() {
+
+function setAttributes(obj, element, target) {
+  // loop through values and set attrs
+  for (let key in obj) {
+    if (key === 'ariaLabel') {
+      element.setAttribute('aria-label', obj[key]);
+    } else {
+      element.setAttribute(key, obj[key]);
+    }
+  } // set the slider target attr
+
+
+  element.setAttribute(sliderTargetAttr, target);
+}
+/**
+ * Entry function - sets up initial elements and adds listeners
+ *
+ * @param {HTMLElement} sliderElement - the slider element
+ */
+
+
+function slider(sliderElement) {
   // show initial controls
-  showSliderControls(); // get all nav arrows
+  configureSliderControls(sliderElement); // get all nav arrows
 
   let sliderArrows = document.querySelectorAll(sliderArrowClass); // configure click handlers for all next/prev
 
   sliderArrows.forEach(function (sliderArrow) {
     sliderArrow.addEventListener('click', handleSlideChange, false);
   });
-  setTotalSlidesIndicator();
-  setInitialProgressIndicator();
-  setDisplayClasses();
+  setupTotalSlidesIndicator(sliderElement);
+  setupInitialProgressIndicator(sliderElement);
+  setDisplayClasses(sliderElement);
 }
+/**
+ * Setup total slides indicator: gets requisites to set total count text
+ *
+ * @param {HTMLElement} sliderElement - the slider element
+ */
 
-function setTotalSlidesIndicator() {
-  allSliders.forEach(function (slider) {
-    let slidesCollection, sliderCollectionLength, totalSlidesIndicatorClassText, totalSlidesIndicator; // get the children
 
-    slidesCollection = getActiveSliderChildren('.' + slider.classList[1]); // get the length of this slider's children
+function setupTotalSlidesIndicator(sliderElement) {
+  let slidesCollection, sliderCollectionLength, totalSlidesIndicator; // get the children
 
-    sliderCollectionLength = getSliderCollectionLength(slidesCollection); // set class text to target element
+  slidesCollection = getActiveSliderChildren(sliderElement); // get the length of this slider's children
 
-    totalSlidesIndicatorClassText = '.' + slider.classList[1] + ' ' + numberedIndicatorTotalSlides; // get the element
+  sliderCollectionLength = getSliderCollectionLength(slidesCollection); // get the total slides indicator element
 
-    totalSlidesIndicator = document.querySelector(totalSlidesIndicatorClassText); // set the length text
+  totalSlidesIndicator = sliderElement.querySelector(numberedIndicatorTotalSlides); // set the text length
 
-    totalSlidesIndicator.textContent = sliderCollectionLength;
-  });
+  setTotalSlidesIndicatorText(totalSlidesIndicator, sliderCollectionLength);
 }
+/**
+ * Set total slides indicator text: simply sets the text of the element
+ *
+ * @param {HTMLElement} totalSlidesIndicator - the total slides element
+ * @param {integer} sliderCollectionLength - length of collection
+ */
 
-function setInitialProgressIndicator() {
-  let allSliders, slidesCollection, sliderCollectionLength;
+
+function setTotalSlidesIndicatorText(totalSlidesIndicator, sliderCollectionLength) {
+  // set the length text
+  totalSlidesIndicator.textContent = sliderCollectionLength;
+}
+/**
+ * Set initial progress indicator: prepare values to set the indicator
+ *
+ * @param {HTMLElement} sliderElement - the slider object
+ */
+
+
+function setupInitialProgressIndicator(sliderElement) {
+  let slidesCollection, sliderCollectionLength;
   const slideIndex = 1;
-  allSliders = document.querySelectorAll(sliderClass);
-  allSliders.forEach(function (slider) {
-    let sliderClass = '.' + slider.classList[1];
-    slidesCollection = getActiveSliderChildren(sliderClass);
-    sliderCollectionLength = getSliderCollectionLength(slidesCollection);
-    setProgressIndicator(sliderClass, slideIndex, sliderCollectionLength);
-  });
+  slidesCollection = getActiveSliderChildren(sliderElement);
+  sliderCollectionLength = getSliderCollectionLength(slidesCollection);
+  setProgressIndicator(sliderElement, slideIndex, sliderCollectionLength);
 }
+/**
+ * Set display class: decides whether to use numbered/progress indicator
+ *
+ * @param {HTMLElement} sliderElement - the slider object
+ */
 
-function setDisplayClasses() {
-  allSliders.forEach(function (slider) {
-    let slidesCollection, sliderCollectionLength; // get the children
 
-    slidesCollection = getActiveSliderChildren('.' + slider.classList[1]); // get the length of this slider's children
+function setDisplayClasses(sliderElement) {
+  let slidesCollection, sliderCollectionLength, sliderTarget; // get the children
 
-    sliderCollectionLength = getSliderCollectionLength(slidesCollection); // if > 7, show numbered indicator
+  slidesCollection = getActiveSliderChildren(sliderElement); // get the length of this slider's children
 
-    if (sliderCollectionLength > 7) {
-      let activeSlider = document.querySelector('.' + slider.classList[1]);
-      activeSlider.classList.add(slider.classList[1] + '--numbered-indicator');
-    }
-  });
+  sliderCollectionLength = getSliderCollectionLength(slidesCollection); // get the target class to set class name below
+
+  sliderTarget = sliderElement.getAttribute('slider-target'); // if > 7, show numbered indicator using class addition
+
+  if (sliderCollectionLength > 7) {
+    sliderTarget = sliderTarget.replace('.', '');
+    sliderElement.classList.add(sliderTarget + '--numbered-indicator');
+  }
 }
 /**
  * Get active slider children: get slider's children
  *
- * @param {string} activeSliderClass - a string repesenting the slider's class
+ * @param {HTMLElement} sliderElement - the slider object
  */
 
 
-function getActiveSliderChildren(activeSliderClass) {
-  // combine target with container so we can target the container itself
-  let activeSlidesContainerClassText = activeSliderClass + ' ' + slidesContainerClass; // get the node collection
-
-  let slidesCollection = document.querySelector(activeSlidesContainerClassText).children;
+function getActiveSliderChildren(sliderElement) {
+  // get the node collection
+  let slidesCollection = sliderElement.querySelector(slidesContainerClass).children;
   return slidesCollection;
 }
 /**
- * Get slider collection length: simple gets and returns the length
+ * Get slider collection length: simply gets and returns the length
  *
  * @param {object} slidesCollection - object array of slider children
  */
@@ -5904,21 +6089,19 @@ function getSliderCollectionLength(slidesCollection) {
 /**
  * Get active numbered indicator element: gets the numbered indicator span
  *
- * @param {string} activeSliderClass - class name of active slider
+ * @param {HTMLElement} sliderElement - the slider object
  */
 
 
-function getActiveNumberedIndicatorElement(activeSliderClass) {
-  // build the class name of slide index element
-  let currentSlideIndexClassText = activeSliderClass + ' ' + numberedIndicatorActiveSlide; // get the element
-
-  let currentSlideIndexElement = document.querySelector(currentSlideIndexClassText);
+function getActiveNumberedIndicatorElement(sliderElement) {
+  // get the element
+  let currentSlideIndexElement = sliderElement.querySelector(numberedIndicatorActiveSlide);
   return currentSlideIndexElement;
 }
 /**
  * Get current slider index: get and return the current slide index string
  *
- * @param {HTMLElement} currentSlideIndexElement -
+ * @param {HTMLElement} currentSlideIndexElement - the element that contains the current slider number string
  */
 
 
@@ -5930,32 +6113,38 @@ function getCurrentSlideIndex(currentNumberedIndicatorElement) {
 /**
  * Get active slide: gets the active slide of this slider
  *
- * @param {string} activeSliderClass - string class name of active slider
+ * @param {HTMLElement} sliderElement - the active slider element
  */
 
 
-function getActiveSlide(activeSliderClass) {
-  // get active slide text
-  let activeSlideClassText = activeSliderClass + ' .' + activeSlideClass; // get the active slide of this slider
-
-  let activeSlide = document.querySelector(activeSlideClassText);
+function getActiveSlide(sliderElement) {
+  // get the active slide of this slider
+  let activeSlide = sliderElement.querySelector('.' + activeSlideClass);
   return activeSlide;
 }
+/**
+ * Handle slide change: the main function that handles the click events
+ *
+ * @param {e} event - the button click event
+ */
+
 
 function handleSlideChange(e) {
-  let activeSliderClass, slidesCollection, sliderCollectionLength, currentNumberedIndicatorElement, slideIndex, activeSlide; // get slider target attr - e.g '.slider--testimonial'
+  let sliderTarget, sliderElement, slidesCollection, sliderCollectionLength, currentNumberedIndicatorElement, slideIndex, activeSlide; // get slider target attr - e.g '.slider--testimonial'
 
-  activeSliderClass = e.target.getAttribute(sliderTargetAttr); // get children of active slider
+  sliderTarget = e.target.getAttribute(sliderTargetAttr); // get the slider element
 
-  slidesCollection = getActiveSliderChildren(activeSliderClass); // get the length of this slider's children
+  sliderElement = document.querySelector(sliderTarget); // get children of active slider
 
-  sliderCollectionLength = getSliderCollectionLength(slidesCollection); // get current numbered indicator element
+  slidesCollection = getActiveSliderChildren(sliderElement); // get the length of this slider's children
 
-  currentNumberedIndicatorElement = getActiveNumberedIndicatorElement(activeSliderClass); // get the index as an int
+  sliderCollectionLength = getSliderCollectionLength(slidesCollection); // get the element
+
+  currentNumberedIndicatorElement = getActiveNumberedIndicatorElement(sliderElement); // get the index as an int
 
   slideIndex = getCurrentSlideIndex(currentNumberedIndicatorElement); // get active slide for this slider
 
-  activeSlide = getActiveSlide(activeSliderClass); // toggle next/prev sibling and maintain index
+  activeSlide = getActiveSlide(sliderElement); // toggle next/prev sibling and maintain index
 
   if (e.target.classList.contains(sliderArrowNextClass)) {
     if (slideIndex !== sliderCollectionLength) {
@@ -5973,14 +6162,14 @@ function handleSlideChange(e) {
 
   setButtonAttributes(e.target, sliderCollectionLength, slideIndex);
   setActiveNumberedIndicatorText(currentNumberedIndicatorElement, slideIndex);
-  setProgressIndicator(activeSliderClass, slideIndex, sliderCollectionLength);
+  setProgressIndicator(sliderElement, slideIndex, sliderCollectionLength);
 }
 /**
  * Set button attributes: enables/disables buttons based on args
  *
- * @param {HTMLElement} buttonTarget
- * @param {integer} sliderCollectionLength
- * @param {integer} slideIndex
+ * @param {HTMLElement} buttonTarget - the event target button
+ * @param {integer} sliderCollectionLength - integer collection length
+ * @param {integer} slideIndex - integer index of current slide
  *
  */
 
@@ -6015,24 +6204,23 @@ function setActiveNumberedIndicatorText(currentSlideIndexElement, slideIndex) {
 /**
  * Set progress indicator: set percentage width of indicator
  *
- * @param {string} activeSliderClass - e.g '.slider--testimonial'
- * @param {integer} slideIndex
- * @param {integer} sliderCollectionLength
+ * @param {HTMLElement} sliderElement - the slider object element
+ * @param {integer} slideIndex - integer of the current slide index
+ * @param {integer} sliderCollectionLength - the numbers of slides
  *
  */
 
 
-function setProgressIndicator(activeSliderClass, slideIndex, sliderCollectionLength) {
-  let progressIndicatorClassText = activeSliderClass + ' ' + progressIndicatorProgress;
-  let progressIndicatorElement = document.querySelector(progressIndicatorClassText);
+function setProgressIndicator(sliderElement, slideIndex, sliderCollectionLength) {
+  let progressIndicatorElement = sliderElement.querySelector(progressIndicatorProgress);
   let percentageProgress = getPercentageProgress(slideIndex, sliderCollectionLength);
   progressIndicatorElement.setAttribute('style', 'width: ' + percentageProgress + '%');
 }
 /**
  * Get percentage progress: calculate the percentage width
  *
- * @param {integer} slideIndex
- * @param {integer} sliderCollectionLength
+ * @param {integer} slideIndex - current slide index
+ * @param {integer} sliderCollectionLength - length of slides collection
  *
  */
 
