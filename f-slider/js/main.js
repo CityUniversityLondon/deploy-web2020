@@ -5993,8 +5993,8 @@ function slider(sliderElement) {
   sliderArrows.forEach(function (sliderArrow) {
     sliderArrow.addEventListener('click', handleSlideChange, false);
   });
-  setupTotalSlidesIndicator(sliderElement);
-  setupInitialProgressIndicator(sliderElement);
+  configureTotalSlidesIndicator(sliderElement);
+  configureInitialProgressIndicator(sliderElement);
   setDisplayClasses(sliderElement);
 }
 /**
@@ -6004,7 +6004,7 @@ function slider(sliderElement) {
  */
 
 
-function setupTotalSlidesIndicator(sliderElement) {
+function configureTotalSlidesIndicator(sliderElement) {
   let slidesCollection, sliderCollectionLength, totalSlidesIndicator; // get the children
 
   slidesCollection = getActiveSliderChildren(sliderElement); // get the length of this slider's children
@@ -6034,7 +6034,7 @@ function setTotalSlidesIndicatorText(totalSlidesIndicator, sliderCollectionLengt
  */
 
 
-function setupInitialProgressIndicator(sliderElement) {
+function configureInitialProgressIndicator(sliderElement) {
   let slidesCollection, sliderCollectionLength;
   const slideIndex = 1;
   slidesCollection = getActiveSliderChildren(sliderElement);
