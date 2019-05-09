@@ -4910,10 +4910,10 @@ const className = 'modal__popup',
       modalRevealFromTop = 'modal__reveal--fromtop',
       modalHeadingClass = '.modal__heading',
       modalRevealFromBottom = 'modal__reveal--frombottom',
-      modalTriggerClass = 'a.modal__trigger',
+      modalTriggerClass = '.modal__trigger',
       modalBackgroundClass = 'modal__background',
       bodyModalInClass = 'modal--in',
-      modalCloseClass = 'a.modal__close',
+      modalCloseClass = '.modal__close',
       modalCloseClassList = 'modal__close fas fa-times',
       modalBackground = document.createElement('div'),
       modalPopups = document.querySelectorAll(modalPopupClass),
@@ -4937,9 +4937,10 @@ function setWindowWidth() {
 
 
 function addModalLink(modal) {
-  let modalAnchor;
+  let modalAnchor,
+      modalTriggerClassText = modalTriggerClass.replace('.', '');
   modalAnchor = document.createElement('a');
-  modalAnchor.setAttribute('class', 'modal__trigger');
+  modalAnchor.setAttribute('class', modalTriggerClassText);
   modalAnchor.href = '#';
   modalAnchor.innerHTML = modal.getAttribute('data-title');
   modal.parentNode.insertBefore(modalAnchor, modal);
