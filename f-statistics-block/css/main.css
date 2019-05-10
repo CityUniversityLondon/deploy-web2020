@@ -19613,6 +19613,7 @@ article .social-icon .link-copy {
 .ksp__items .ksp__item {
     background: #eee;
     padding: 1rem;
+    margin: 1rem 0;
 }
 
 .ksp__items .ksp__item__overline {
@@ -19641,7 +19642,7 @@ article .social-icon .link-copy {
 
 .ksp__items.ksp__items--2 {
     grid-template-columns: repeat(18, 1fr);
-    grid-template-areas: '. . a a a a a a . . b b b b b b . .';
+    grid-template-areas: '. . . . . a a a a b b b b . . . . .';
 }
 
 .ksp__items.ksp__items--2 .ksp__item:nth-child(1) {
@@ -19650,6 +19651,44 @@ article .social-icon .link-copy {
 
 .ksp__items.ksp__items--2 .ksp__item:nth-child(2) {
     grid-area: b;
+}
+
+.ksp__items.ksp__items--3 {
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-areas: '. . . a a a a b b b b c c c c . . .';
+}
+
+.ksp__items.ksp__items--3 .ksp__item:nth-child(1) {
+    grid-area: a;
+}
+
+.ksp__items.ksp__items--3 .ksp__item:nth-child(2) {
+    grid-area: b;
+}
+
+.ksp__items.ksp__items--3 .ksp__item:nth-child(3) {
+    grid-area: c;
+}
+
+.ksp__items.ksp__items--4 {
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-areas: '. a a a a b b b b c c c c d d d d .';
+}
+
+.ksp__items.ksp__items--4 .ksp__item:nth-child(1) {
+    grid-area: a;
+}
+
+.ksp__items.ksp__items--4 .ksp__item:nth-child(2) {
+    grid-area: b;
+}
+
+.ksp__items.ksp__items--4 .ksp__item:nth-child(3) {
+    grid-area: c;
+}
+
+.ksp__items.ksp__items--4 .ksp__item:nth-child(4) {
+    grid-area: d;
 }
 
 .generic {
