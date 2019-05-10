@@ -4901,23 +4901,20 @@ __webpack_require__.r(__webpack_exports__);
 **/
 
 const className = 'modal__popup',
-      modalPopupClass = '.modal__popup',
       modalHiddenClass = 'modal__popup--hidden',
       modalShowClass = 'modal__popup--show',
       modalShowContentClass = 'modal__popup--show-content',
       modalTransitioningInClass = 'modal__popup--transitioning-in',
       modalTransitioningOutClass = 'modal__popup--transitioning-out',
       modalHeadingClass = '.modal__heading',
+      modalInnerClass = '.modal__inner',
       modalTriggerClass = '.modal__trigger',
       modalBackgroundClass = 'modal__background',
       bodyModalInClass = 'modal--in',
       modalCloseClass = '.modal__close',
       modalCloseClassList = 'modal__close fas fa-times',
-      modalBackground = document.createElement('div'),
-      modalPopups = document.querySelectorAll(modalPopupClass),
-      modalPopupsLength = modalPopups.length;
-let windowWidth = window.innerWidth,
-    counter = 1; // set class attr of modal background ready to be inserted later
+      modalBackground = document.createElement('div');
+let windowWidth = window.innerWidth; // set class attr of modal background ready to be inserted later
 
 modalBackground.setAttribute('class', modalBackgroundClass); // always reconfigure if window resized
 
@@ -4928,11 +4925,38 @@ function setWindowWidth() {
   windowWidth = window.innerWidth;
 }
 /**
+ * Global listener for escape key press and exit the active modal
+ */
+
+
+document.addEventListener('keydown', e => {
+  let keyCode = e.keyCode; // get the only active modal
+
+  let activeModal = document.getElementsByClassName(modalShowClass)[0];
+
+  if (keyCode === 27) {
+    closeModal(activeModal);
+  }
+});
+/**
+ * Global listener for a click anywhere outside the modal
+ */
+
+document.addEventListener('click', e => {
+  e.target.classList.forEach(className => {
+    if (className === modalShowClass) {
+      // get the only active modal
+      let activeModal = document.getElementsByClassName(modalShowClass)[0];
+      closeModal(activeModal);
+      return;
+    }
+  });
+});
+/**
  * Add modal link: add link in the parent element to modal
  *
  * @param {HTMLElement} modal - the modal element
  */
-
 
 function addModalLink(modal) {
   let modalAnchor,
@@ -4959,6 +4983,21 @@ function addModalClose(modal) {
   modalHeading.parentNode.insertBefore(modalCloseAnchor, modalHeading);
 }
 /**
+ * Set trigger listeners: add listeners to open/close links
+ *
+ * @param {HTMLElement} anchorTriggerSibling - the modal open anchor
+ * @param {HTMLElement} modalCloseTrigger - the modal close trigger
+ */
+
+
+function setTriggerListeners(anchorTriggerSibling, modalCloseTrigger) {
+  /*
+   * Add click listeners to open and close triggers
+   */
+  anchorTriggerSibling.addEventListener('click', handleTriggerOpen, false);
+  modalCloseTrigger.addEventListener('click', handleTriggerClose, false);
+}
+/**
  * Launch modal: entry function
  *
  * @param {HTMLElement} modal - the modal element
@@ -4966,74 +5005,40 @@ function addModalClose(modal) {
 
 
 function launchModal(modal) {
+  let modalInner, anchorTriggerSibling, modalCloseTrigger;
   /**
    * Add modal link and close link inside modal
    */
+
   addModalLink(modal);
-  addModalClose(modal); //addModalReveals(modal);
+  addModalClose(modal); // get the anchor trigger sibling
 
-  /**
-   * Events need to be added, but just once for all
-   */
+  anchorTriggerSibling = modal.previousElementSibling; // get the modal's close trigger
 
-  createEventListeners(modal, modalPopupsLength);
+  modalCloseTrigger = modal.querySelector(modalCloseClass); // set listeners for the anchors
+
+  setTriggerListeners(anchorTriggerSibling, modalCloseTrigger); // before/after transition event listener bubbles to parent, so get parent
+
+  modalInner = modal.querySelector(modalInnerClass); // then add the transition listeners
+
+  setTransitionListeners(modalInner, modal);
 }
+/**
+ * Set transition listeners: adds the listeners to the modal links
+ *
+ * @param {HTMLElement} modalInner - the modalInner element
+ */
 
-const createEventListeners = (modal, modalPopupsLength) => {
-  if (counter == modalPopupsLength) {
-    let modalCloseTriggers, modalOpenTriggers;
-    modalOpenTriggers = document.querySelectorAll(modalTriggerClass);
-    modalCloseTriggers = document.querySelectorAll(modalCloseClass);
-    /**
-     * Add click listeners to open and close triggers
-     */
 
-    modalOpenTriggers.forEach(trigger => {
-      trigger.addEventListener('click', handleTriggerOpen, false);
-    });
-    modalCloseTriggers.forEach(trigger => {
-      trigger.addEventListener('click', handleTriggerClose, false);
-    });
-    /**
-     * Listen for escape key press and exit the active modal
-     */
-
-    document.addEventListener('keydown', e => {
-      let keyCode = e.keyCode; // get the only active modal
-
-      let activeModal = document.getElementsByClassName(modalShowClass)[0];
-
-      if (keyCode === 27) {
-        closeModal(activeModal);
-      }
-    });
-    /**
-     * Listen for a click anywhere outside the modal and close active modal
-     */
-
-    document.addEventListener('click', e => {
-      e.target.classList.forEach(className => {
-        if (className === modalShowClass) {
-          // get the only active modal
-          let activeModal = document.getElementsByClassName(modalShowClass)[0];
-          closeModal(activeModal);
-          return;
-        }
-      });
-    }); // before/after transition event listern bubbles to parent
-
-    let modalInner = modal.querySelector('.modal__inner');
-    modalInner.addEventListener('webkitTransitionEnd', function () {
-      if (modal.hasAttribute('data-open')) {
-        closeTransition(modal);
-      } else {
-        openTransition(modal);
-      }
-    }, false);
-  }
-
-  counter++;
-};
+function setTransitionListeners(modalInner, modal) {
+  modalInner.addEventListener('webkitTransitionEnd', () => {
+    if (modal.hasAttribute('data-open')) {
+      closeTransition(modal);
+    } else {
+      openTransition(modal);
+    }
+  }, false);
+}
 /**
  * Handle trigger open: handles the modal open
  *
@@ -5088,6 +5093,11 @@ const openModal = modal => {
     modal.classList.add(modalShowContentClass);
   }
 };
+/**
+ * Add background fade: adds background element and fades it in
+ *
+ */
+
 
 const addBackgroundFade = () => {
   // add background div to src if not present
@@ -5116,6 +5126,12 @@ const closeModal = modal => {
     document.body.classList.remove(bodyModalInClass);
   }
 };
+/**
+ * Close transition: handles the close transition and modal hide
+ *
+ * @param {HTMLElement} modal - the modal div
+ */
+
 
 const closeTransition = modal => {
   // after first transition, remove the content underneath the background
@@ -5132,6 +5148,12 @@ const closeTransition = modal => {
     document.body.classList.remove(bodyModalInClass);
   }, 600);
 };
+/**
+ * Open transition: handles the open transition and modal show
+ *
+ * @param {HTMLElement} modal - the modal div
+ */
+
 
 const openTransition = modal => {
   // show the content so it's revealed on transition
