@@ -22104,7 +22104,8 @@ article .social-icon .link-copy {
 }
 
 @media screen {
-    .js .short-course .modal__content {
+    .js .short-course .modal__content,
+    .js .short-course .modal__content a:not(:hover):not(:active) {
         color: #1e1e1e;
     }
     .js .short-course .modal__trigger {
