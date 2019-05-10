@@ -19641,6 +19641,11 @@ article .social-icon .link-copy {
     margin: 1rem 0;
 }
 
+.ksp__items .ksp__item__icon {
+    width: 2.28rem;
+    margin: 0 auto;
+}
+
 @media (max-width: 431px) {
     .ksp__items.ksp__items--2 {
         grid-template-rows: repeat(2, auto);
