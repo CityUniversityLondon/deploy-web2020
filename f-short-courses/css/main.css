@@ -22121,9 +22121,9 @@ article .social-icon .link-copy {
         background: #dd0036;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
-        background-color: #3e1031;
-        border-color: #3e1031;
-        color: #ffffff;
+        background-color: #d8d8d8;
+        border-color: #d8d8d8;
+        color: #1e1e1e;
     }
 }
 
@@ -22241,34 +22241,34 @@ article .social-icon .link-copy {
         transition: none;
     }
     .js .short-course .modal__trigger:visited {
-        border-color: #3e1031;
-        color: #ffffff;
+        border-color: #d8d8d8;
+        color: #1e1e1e;
     }
     .js .short-course .modal__trigger:after {
         content: '';
     }
     .js .short-course .modal__trigger:focus, .js .short-course .modal__trigger:active {
-        background-color: #3e1031;
-        border-color: #3e1031;
-        color: #ffffff;
+        background-color: #d8d8d8;
+        border-color: #d8d8d8;
+        color: #1e1e1e;
     }
 }
 
 @media screen and (hover: hover) {
     .js .short-course .modal__trigger:hover {
-        background-color: #150611;
-        border-color: #150611;
-        color: #ffffff;
+        background-color: #bfbfbf;
+        border-color: #bfbfbf;
+        color: #1e1e1e;
     }
 }
 
 @media screen {
     .js .short-course .modal__trigger:active {
-        background-color: #150611;
-        border-color: #150611;
+        background-color: #bfbfbf;
+        border-color: #bfbfbf;
     }
     .js .short-course .modal__trigger:disabled {
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(30, 30, 30, 0.7);
     }
     .js .short-course .modal__trigger:active span, .js .short-course .modal__trigger:focus span, .js .short-course .modal__trigger:hover span {
         transform: none;
