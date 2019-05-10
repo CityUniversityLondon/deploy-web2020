@@ -12437,6 +12437,531 @@ main table td em {
     list-style-type: none;
 }
 
+.card--course {
+    list-style: none;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.card--course:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--course:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--course:hover:after {
+        background-color: #f2f2f2;
+        transform: scale(1.03);
+    }
+}
+
+.card--course p {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    color: #1e1e1e;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--course p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--course p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--course p {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--course p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--course p {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--course__type {
+    color: #dd0036;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    margin-top: 1rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--course__type {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--course__type {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--course__type {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--course__type {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--course__type {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--course__key-info {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    color: #696969;
+    margin-top: 0.25rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--course__key-info {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--course__key-info {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--course__key-info {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--course__key-info {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--course__key-info {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--course__key-info .icon {
+    color: #dd0036;
+    margin-right: 0.5rem;
+}
+
+.card--related-course a {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    transition: none;
+    padding: 1rem;
+}
+
+@media (hover: hover) {
+    .card--related-course a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card--related-course a:focus, .card--related-course a:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.card--related-course a:focus .card--related-course__title {
+    background-size: 100% 0.25rem;
+}
+
+@media (hover: hover) {
+    .card--related-course a:hover {
+        background-image: none;
+    }
+    .card--related-course a:hover .card--related-course__title {
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 0.25rem;
+        color: #1e1e1e;
+    }
+    .card--related-course a:hover img {
+        transform: scale(1.04);
+    }
+    .card--related-course a:hover .card--related-course__image-container:after {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.card--related-course a:focus:after, .card--related-course a:active:after {
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+.card--related-course a:visited .title {
+    color: #4c2c92;
+}
+
+.card--related-course a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--related-course a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--related-course a:hover:after {
+        background-color: #f2f2f2;
+        transform: scale(1.03);
+    }
+}
+
+.card--related-course a .card--related-course__image-container {
+    height: 4.75rem;
+    width: 4.75rem;
+    margin-right: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--related-course a .card--related-course__image-container {
+        transition: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .card--related-course a .card--related-course__image-container {
+        height: 8.5rem;
+        width: 8.5rem;
+    }
+}
+
+.card--related-course a .card--related-course__image-container:after {
+    background-color: transparent;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: background-color 0.3s ease-in;
+    width: 100%;
+}
+
+.card--related-course a .card--related-course__image-container img {
+    height: 100%;
+    width: 100%;
+    transition: transform 0.3s ease-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--related-course a .card--related-course__image-container img {
+        transition: none;
+    }
+}
+
+.card--related-course a .card--related-course__title {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.424rem;
+    line-height: 1.25;
+    letter-spacing: -0.013em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.25rem;
+    color: #696969;
+    padding-bottom: 0.25rem;
+    transition: background-size 0.6s ease-in;
+    display: inline;
+}
+
+.card--related-course a .card--related-course__title i,
+.card--related-course a .card--related-course__title em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.card--related-course a .card--related-course__title b,
+.card--related-course a .card--related-course__title strong {
+    font-weight: inherit;
+}
+
+.card--related-course a .card--related-course__title i,
+.card--related-course a .card--related-course__title em {
+    font-style: italic;
+}
+
+.card--related-course a .card--related-course__title u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--related-course a .card--related-course__title {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--related-course a .card--related-course__title {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--related-course a .card--related-course__title {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--related-course a .card--related-course__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--related-course a .card--related-course__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--related-course a .card--related-course__title b,
+.card--related-course a .card--related-course__title strong {
+    font-weight: 600;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--related-course a .card--related-course__title {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--related-course a .card--related-course__title {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--related-course a .card--related-course__title {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--related-course a .card--related-course__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--related-course a .card--related-course__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--related-course a .card--related-course__type {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    color: #dd0036;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--related-course a .card--related-course__type {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--related-course a .card--related-course__type {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--related-course a .card--related-course__type {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--related-course a .card--related-course__type {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--related-course a .card--related-course__type {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--related-course a p {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    color: #1e1e1e;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--related-course a p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--related-course a p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--related-course a p {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--related-course a p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--related-course a p {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--related-course a .card--related-course__key-info {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    color: #696969;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--related-course a .card--related-course__key-info {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--related-course a .card--related-course__key-info {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--related-course a .card--related-course__key-info {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--related-course a .card--related-course__key-info {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--related-course a .card--related-course__key-info {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--related-course a .card--related-course__key-info .icon {
+    color: #dd0036;
+    margin-right: 0.5rem;
+}
+
 .card--profile {
     border-top: 0.0625rem dotted #cbcbcb;
     padding: 2rem 0;
@@ -13613,9 +14138,8 @@ main table td em {
 .outline-cta-arrow--bright:active {
     background: #0c0c0e;
     border-color: #0c0c0e;
-    color: #ffffff;
-    border-color: #0c0c0e;
     box-shadow: none;
+    color: #ffffff;
 }
 
 .outline-cta-arrow--bright:active:focus, .outline-cta-arrow--bright:active:active {
@@ -13732,9 +14256,8 @@ main table td em {
 .outline-cta--bright:active {
     background: #0c0c0e;
     border-color: #0c0c0e;
-    color: #ffffff;
-    border-color: #0c0c0e;
     box-shadow: none;
+    color: #ffffff;
 }
 
 .outline-cta--bright:active:focus, .outline-cta--bright:active:active {
@@ -17197,10 +17720,10 @@ article figure figcaption a:active {
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
         font-weight: 700;
-        outline-color: #1e1e1e;
-        outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-color: #0c0c0e;
         outline-width: 0.125rem;
+        outline-style: dotted;
+        outline-offset: 0.1875rem;
     }
 }
 
@@ -17220,10 +17743,10 @@ article figure figcaption a:active {
         border-bottom-width: 0.125rem;
         color: #ffffff;
         font-weight: 700;
-        outline-color: #1e1e1e;
-        outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-color: #0c0c0e;
         outline-width: 0.125rem;
+        outline-style: dotted;
+        outline-offset: 0.1875rem;
     }
     .js .pagination__wrapper .pagination__controls button:disabled {
         background-color: transparent;
@@ -22846,10 +23369,10 @@ article .social-icon .link-copy {
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
         font-weight: 700;
-        outline-color: #1e1e1e;
-        outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-color: #0c0c0e;
         outline-width: 0.125rem;
+        outline-style: dotted;
+        outline-offset: 0.1875rem;
     }
 }
 
@@ -22869,10 +23392,10 @@ article .social-icon .link-copy {
         border-bottom-width: 0.125rem;
         color: #ffffff;
         font-weight: 700;
-        outline-color: #1e1e1e;
-        outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-color: #0c0c0e;
         outline-width: 0.125rem;
+        outline-style: dotted;
+        outline-offset: 0.1875rem;
     }
     .theme--dark.js .pagination__controls button:disabled {
         background-color: transparent;
