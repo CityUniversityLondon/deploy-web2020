@@ -19912,11 +19912,13 @@ body.modal--in .modal__background {
 }
 
 .modal__content {
-    opacity: 0;
-    pointer-events: none;
     background: #ffffff;
     border: none;
+    max-height: 80vh;
+    opacity: 0;
+    overflow-y: scroll;
     padding: 0.5rem 2.5rem 3rem;
+    pointer-events: none;
     position: relative;
 }
 
@@ -20159,12 +20161,6 @@ a.modal__close:active, a.modal__close:focus {
 
 .modal__buttons a:active span:before {
     content: '\f274';
-}
-
-.modal__buttons a span {
-    bottom: 1rem;
-    position: absolute;
-    right: 1rem;
 }
 
 .no-js .modal__popup {
@@ -22108,6 +22104,175 @@ article .social-icon .link-copy {
 }
 
 @media screen {
+    .js .short-course .modal__content {
+        color: #1e1e1e;
+    }
+    .js .short-course .modal__trigger {
+        background: initial;
+        border-radius: 0.25rem;
+        border: none;
+        color: initial;
+        display: inline-flex;
+        font-weight: 600;
+        padding: 0.5rem 1.5rem;
+        position: relative;
+        transition: background-color 0.6s, transform 0.6s;
+        box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+        background: #dd0036;
+        border: 0.125rem solid #dd0036;
+        color: #ffffff;
+        background-color: #3e1031;
+        border-color: #3e1031;
+        color: #ffffff;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .js .short-course .modal__trigger {
+        transition: none;
+    }
+}
+
+@media screen and (max-width: 432px) {
+    .js .short-course .modal__trigger {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media screen {
+    .js .short-course .modal__trigger span {
+        transition: transform 0.6s;
+    }
+    .js .short-course .modal__trigger:after {
+        content: '\f061';
+        font-family: 'Font Awesome';
+        font-style: normal;
+        font-weight: normal;
+        opacity: 0;
+        position: absolute;
+        right: 1.5rem;
+        text-decoration: inherit;
+        transform: translateX(-0.75rem);
+        transition: background-color 0.6s, transform 0.6s;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .js .short-course .modal__trigger:after {
+        transition: none;
+    }
+}
+
+@media screen {
+    .js .short-course .modal__trigger:focus, .js .short-course .modal__trigger:active {
+        background-color: transparent;
+        border: 0.125rem solid #dd0036;
+        color: #ffffff;
+    }
+    .js .short-course .modal__trigger:focus span, .js .short-course .modal__trigger:active span {
+        transform: translateX(-0.75rem);
+    }
+    .js .short-course .modal__trigger:focus:after, .js .short-course .modal__trigger:active:after {
+        opacity: 1;
+        transform: translateX(0.75rem);
+    }
+}
+
+@media screen and (hover: hover) {
+    .js .short-course .modal__trigger:hover {
+        background-color: transparent;
+        border: 0.125rem solid #dd0036;
+        color: #ffffff;
+    }
+    .js .short-course .modal__trigger:hover span {
+        transform: translateX(-0.75rem);
+    }
+    .js .short-course .modal__trigger:hover:after {
+        opacity: 1;
+        transform: translateX(0.75rem);
+    }
+}
+
+@media screen {
+    .js .short-course .modal__trigger:visited {
+        border-color: #dd0036;
+        color: #ffffff;
+    }
+    .js .short-course .modal__trigger:focus {
+        background: #dd0036;
+        border-color: #dd0036;
+        color: #ffffff;
+    }
+    .js .short-course .modal__trigger:focus:focus, .js .short-course .modal__trigger:focus:active {
+        outline-color: #ffffff;
+        outline-width: 0.125rem;
+        outline-style: dotted;
+        outline-offset: 0.1875rem;
+    }
+}
+
+@media screen and (hover: hover) {
+    .js .short-course .modal__trigger:hover {
+        background: #ffffff;
+        border-color: #dd0036;
+        color: #dd0036;
+    }
+}
+
+@media screen {
+    .js .short-course .modal__trigger:active {
+        border-color: #dd0036;
+        box-shadow: none;
+        color: #dd0036;
+        background: transparent;
+    }
+    .js .short-course .modal__trigger:active:focus, .js .short-course .modal__trigger:active:active {
+        outline-color: #ffffff;
+        outline-width: 0.125rem;
+        outline-style: dotted;
+        outline-offset: 0.1875rem;
+    }
+    .js .short-course .modal__trigger:disabled {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .js .short-course .modal__trigger span {
+        transition: none;
+    }
+    .js .short-course .modal__trigger:visited {
+        border-color: #3e1031;
+        color: #ffffff;
+    }
+    .js .short-course .modal__trigger:after {
+        content: '';
+    }
+    .js .short-course .modal__trigger:focus, .js .short-course .modal__trigger:active {
+        background-color: #3e1031;
+        border-color: #3e1031;
+        color: #ffffff;
+    }
+}
+
+@media screen and (hover: hover) {
+    .js .short-course .modal__trigger:hover {
+        background-color: #150611;
+        border-color: #150611;
+        color: #ffffff;
+    }
+}
+
+@media screen {
+    .js .short-course .modal__trigger:active {
+        background-color: #150611;
+        border-color: #150611;
+    }
+    .js .short-course .modal__trigger:disabled {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .js .short-course .modal__trigger:active span, .js .short-course .modal__trigger:focus span, .js .short-course .modal__trigger:hover span {
+        transform: none;
+    }
     .js .short-course__content .tabs__links {
         max-width: 80rem;
     }
