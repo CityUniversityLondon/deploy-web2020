@@ -4996,7 +4996,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
 /* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
 /* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
-/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
+/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
+/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
 
 
 /**
@@ -5022,7 +5023,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_14__["default"]]);
 
 /***/ }),
 
@@ -6593,6 +6595,249 @@ function launchMenu(menu) {
 
 /***/ }),
 
+/***/ "./src/patterns/modal/modal.js":
+/*!*************************************!*\
+  !*** ./src/patterns/modal/modal.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+
+
+/**
+ * modal
+ *
+ * @module patterns/modal/modal
+ * @author Daniel Miller <daniel.miller@city.ac.uk>
+ * @copyright City, University of London 2018
+ */
+
+/**
+    <div class="modal__popup modal__popup--hidden" data-title="Hong Kong">
+        <div role="modal" aria-labelledby="modal__heading" aria-modal="true">
+            <div class="modal__reveal modal__reveal--fromtop"></div>
+            <div class="modal__reveal modal__reveal--frombottom"></div>
+            <div class="modal__content">
+                <a href="#" class="modal__close fas fa-times"></a>
+                ....
+            </div>
+        </div>
+    </div>
+**/
+
+const className = 'modal-group',
+      modalPopupClass = '.modal__popup',
+      modalHiddenClass = 'modal__popup--hidden',
+      modalShowClass = 'modal__popup--show',
+      modalShowContentClass = 'modal__popup--show-content',
+      modalTransitioningInClass = 'modal__popup--transitioning-in',
+      modalTransitioningOutClass = 'modal__popup--transitioning-out',
+      modalRevealFromTop = 'modal__reveal--fromtop',
+      modalRevealFromBottom = 'modal__reveal--frombottom',
+      modalTriggerClass = 'a.modal__trigger',
+      modalBackgroundClass = 'modal__background',
+      bodyModalInClass = 'modal--in',
+      modalCloseClass = 'a.modal__close',
+      modalBackground = document.createElement('div');
+let windowWidth = window.innerWidth; // set class attr of modal background ready to be inserted later
+
+modalBackground.setAttribute('class', modalBackgroundClass); // always reconfigure if window resized
+
+window.addEventListener('resize', setWindowWidth);
+
+function setWindowWidth() {
+  // reassign new width
+  windowWidth = window.innerWidth;
+}
+
+function launchModal() {
+  let modalPopups = document.querySelectorAll(modalPopupClass),
+      modalCloseTriggers = document.querySelectorAll(modalCloseClass),
+      modalInReveals = document.querySelectorAll('div.' + modalRevealFromTop),
+      modalOutReveals = document.querySelectorAll('div.' + modalRevealFromBottom);
+  /**
+   * Add adjacent link to each modal
+   */
+
+  modalPopups.forEach(function (popup) {
+    let anchorTitle = popup.getAttribute('data-title');
+    let modalAnchor = document.createElement('a');
+    modalAnchor.setAttribute('class', 'modal__trigger');
+    modalAnchor.href = '#';
+    modalAnchor.innerHTML = anchorTitle;
+    popup.parentNode.insertBefore(modalAnchor, popup);
+  }); // after links inserted, then get them all in an array
+
+  let modalOpenTriggers = document.querySelectorAll(modalTriggerClass);
+  /**
+   * Add click listeners to open and close triggers
+   */
+
+  modalOpenTriggers.forEach(trigger => {
+    trigger.addEventListener('click', handleTriggerOpen, false);
+  });
+  modalCloseTriggers.forEach(trigger => {
+    trigger.addEventListener('click', handleTriggerClose, false);
+  });
+  /**
+   * Listen for escape key press and exit the active modal
+   */
+
+  document.addEventListener('keydown', e => {
+    let keyCode = e.keyCode;
+    let activeModal = document.getElementsByClassName(modalShowClass)[0];
+
+    if (keyCode === 27) {
+      let escCloseModal = true;
+      closeModal(activeModal, escCloseModal);
+    }
+  });
+  /**
+   * Listen for a click anywhere outside the modal and close active modal
+   */
+
+  document.addEventListener('click', e => {
+    e.target.classList.forEach(className => {
+      if (className === modalShowClass) {
+        let activeModal = document.getElementsByClassName(modalShowClass)[0];
+        closeModal(activeModal);
+        return;
+      }
+    });
+  });
+  /**
+   * Listen for when reveal in/out transition over
+   */
+
+  modalInReveals.forEach(elem => {
+    // chrome & safari
+    elem.addEventListener('webkitTransitionEnd', transitionInEnded, false); // standard
+
+    elem.addEventListener('transitionend', transitionInEnded, false); // moz
+
+    elem.addEventListener('mozTransitionEnd', transitionInEnded, false);
+  });
+  modalOutReveals.forEach(elem => {
+    elem.addEventListener('webkitTransitionEnd', transitionOutEnded, false);
+    elem.addEventListener('transitionend', transitionOutEnded, false);
+    elem.addEventListener('mozTransitionEnd', transitionOutEnded, false);
+  });
+}
+
+const handleTriggerOpen = e => {
+  e.preventDefault();
+  let modalPopup = e.target.nextElementSibling;
+  openModal(modalPopup);
+  Object(_util__WEBPACK_IMPORTED_MODULE_1__["trapElementFocus"])(modalPopup);
+};
+
+const handleTriggerClose = e => {
+  e.preventDefault();
+  let modalPopup = e.target.parentNode.parentNode.parentNode;
+  closeModal(modalPopup);
+};
+
+const openModal = modalPopup => {
+  // add background div to src if not present
+  if (!document.body.contains(modalBackground)) {
+    document.body.appendChild(modalBackground);
+  } // fade background in
+
+
+  document.body.classList.add(bodyModalInClass);
+
+  if (windowWidth >= 768) {
+    // show the modal, but keep the content div hidden
+    modalPopup.classList.remove(modalHiddenClass);
+    modalPopup.classList.add(modalShowClass); // trigger the first transition after the container displayed
+
+    setTimeout(function () {
+      modalPopup.classList.add(modalTransitioningInClass);
+    }, 50);
+  } else {
+    // show the modal, skip transition
+    modalPopup.classList.remove(modalHiddenClass);
+    modalPopup.classList.add(modalShowClass);
+    modalPopup.classList.add(modalShowContentClass);
+  }
+};
+
+const closeModal = (modalPopup, escCloseModal) => {
+  if (escCloseModal) {
+    // if escape close, just close
+    modalPopup.classList.remove(modalShowClass);
+    modalPopup.classList.add(modalHiddenClass);
+    document.body.classList.remove(bodyModalInClass);
+  }
+
+  if (windowWidth >= 768) {
+    // trigger transition, callback handles the closing
+    modalPopup.classList.add(modalTransitioningOutClass);
+  } else {
+    modalPopup.classList.remove(modalShowClass);
+    modalPopup.classList.add(modalHiddenClass);
+    modalPopup.classList.remove(modalShowContentClass);
+    document.body.classList.remove(bodyModalInClass);
+  }
+};
+
+const transitionInEnded = e => {
+  let modalPopup = e.target.parentNode.parentNode;
+  let modalReveal = e.target; // switch classes to reverse transition or reset for next transition
+
+  if (modalReveal.classList.contains(modalRevealFromTop)) {
+    modalReveal.classList.remove(modalRevealFromTop);
+    modalReveal.classList.add(modalRevealFromBottom);
+  } else {
+    modalReveal.classList.remove(modalRevealFromBottom);
+    modalReveal.classList.add(modalRevealFromTop);
+  } // show the content so it's revealed on transition
+
+
+  modalPopup.classList.add(modalShowContentClass); // trigger the second transition - delay slightly
+
+  setTimeout(function () {
+    modalPopup.classList.remove(modalTransitioningInClass);
+  }, 300);
+};
+
+const transitionOutEnded = e => {
+  let modalPopup = e.target.parentNode.parentNode;
+  let modalReveal = e.target; // after first transition, remove the content underneath the background
+
+  modalPopup.classList.remove(modalShowContentClass); // switch these so the transition direction changes
+
+  modalReveal.classList.remove(modalRevealFromBottom);
+  modalReveal.classList.add(modalRevealFromTop); // trigger the second transition - delay slightly
+
+  setTimeout(function () {
+    modalPopup.classList.remove(modalTransitioningOutClass);
+  }, 300);
+  setTimeout(function () {
+    // switch these classes back for next transition
+    modalReveal.classList.remove(modalRevealFromTop);
+    modalReveal.classList.add(modalRevealFromBottom); // finally, remove the modal popup and background
+
+    modalPopup.classList.remove(modalShowClass);
+    modalPopup.classList.add(modalHiddenClass);
+    document.body.classList.remove(bodyModalInClass);
+  }, 500);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchModal,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
 /***/ "./src/patterns/paginated-list/paginated-list.js":
 /*!*******************************************************!*\
   !*** ./src/patterns/paginated-list/paginated-list.js ***!
@@ -7543,7 +7788,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, trapElementFocus */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7557,6 +7802,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gaEvent", function() { return gaEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendAll", function() { return appendAll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pxToRem", function() { return pxToRem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "trapElementFocus", function() { return trapElementFocus; });
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol.description */ "./node_modules/core-js/modules/es.symbol.description.js");
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
@@ -7727,6 +7973,37 @@ function pxToRem(pxValue) {
   browserWidth > 768 ? fontBase = 18 : fontBase = 16;
   let remValue = pxValue / fontBase;
   return remValue;
+}
+/**
+ * Trap the focus to any element - modals, dialogs, etc
+ *
+ * @param {HTMLElement} element
+ */
+
+function trapElementFocus(element) {
+  let focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])'),
+      firstFocusableEl = focusableEls[0],
+      lastFocusableEl = focusableEls[focusableEls.length - 1],
+      KEYCODE_TAB = 9;
+  element.addEventListener('keydown', function (e) {
+    var isTabPressed = e.key === 'Tab' || e.keyCode === KEYCODE_TAB;
+    if (!isTabPressed) return;
+
+    if (e.shiftKey) {
+      /* shift + tab */
+      if (document.activeElement === firstFocusableEl) {
+        lastFocusableEl.focus();
+        e.preventDefault();
+      }
+    }
+    /* tab */
+    else {
+        if (document.activeElement === lastFocusableEl) {
+          firstFocusableEl.focus();
+          e.preventDefault();
+        }
+      }
+  });
 }
 
 /***/ }),
