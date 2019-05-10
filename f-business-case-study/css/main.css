@@ -19853,12 +19853,14 @@ article .social-icon .link-copy {
 @media (max-width: 432px) {
     .case-study__overview__main__logos {
         grid-column: 1 / -1;
+        margin-bottom: 1.5rem;
     }
 }
 
-@media (max-width: 899px) {
+@media (min-width: 433px) and (max-width: 899px) {
     .case-study__overview__main__logos {
-        grid-column: 1 / -1;
+        grid-column: 1 / 11;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -19873,9 +19875,16 @@ article .social-icon .link-copy {
 
 @media (min-width: 433px) and (max-width: 900px) {
     .case-study__overview__main__logos figure {
-        grid-column: 2 / 12;
-        width: 100%;
-        padding-top: 40.62%;
+        width: 7.75rem;
+        padding-top: 3.2rem;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1279px) {
+    .case-study__overview__main__logos figure {
+        display: block;
+        width: 7.75rem;
+        padding-top: 3.2rem;
     }
 }
 
@@ -20097,6 +20106,12 @@ article .social-icon .link-copy {
     }
 }
 
+@media (max-width: 900px) {
+    .case-study__overview__multimedia-banner {
+        padding-bottom: 1.5rem;
+    }
+}
+
 .case-study__overview__multimedia-banner__video {
     grid-column: 4 / 16;
     text-align: center;
@@ -20117,6 +20132,7 @@ article .social-icon .link-copy {
 .case-study__overview__multimedia-banner__video figcaption {
     display: inline-block;
     color: #cbcbcb;
+    margin-bottom: 0;
 }
 
 .case-study__overview__multimedia-banner__video figcaption time {
@@ -20129,6 +20145,10 @@ article .social-icon .link-copy {
 
 .case-study__overview__multimedia-banner__image {
     grid-column: 1 / -1;
+}
+
+.case-study__overview__multimedia-banner__image figure {
+    margin-top: 0;
 }
 
 .case-study__overview__multimedia-banner__image img {
@@ -20205,9 +20225,16 @@ article .social-icon .link-copy {
     flex-direction: row-reverse;
 }
 
+@media (max-width: 899px) {
+    .case-study__content__share-icons {
+        margin-top: 1.5rem;
+    }
+}
+
 .case-study__content__share-icons ul {
     list-style-type: none;
     margin-left: 0px;
+    margin-top: 0;
 }
 
 @media (max-width: 899px) {
@@ -20221,6 +20248,7 @@ article .social-icon .link-copy {
 @media (max-width: 899px) {
     .case-study__content__share-icons ul li {
         margin-right: 0.75rem;
+        margin-top: 0;
     }
 }
 
@@ -20229,21 +20257,62 @@ article .social-icon .link-copy {
     grid-column: 1 / -1;
 }
 
-.case-study__contact-details {
+.case-study__contact-details__wrap__container {
     max-width: 80rem;
+    display: grid;
+    grid-row-gap: 0;
 }
 
 @media (max-width: 1440px) {
-    .case-study__contact-details {
+    .case-study__contact-details__wrap__container {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 1441px) {
-    .case-study__contact-details {
+    .case-study__contact-details__wrap__container {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media (max-width: 432px) {
+    .case-study__contact-details__wrap__container {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .case-study__contact-details__wrap__container {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .case-study__contact-details__wrap__container {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (max-width: 432px) {
+    .case-study__contact-details {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 433px) {
+    .case-study__contact-details {
+        grid-column: 3/ 11;
+    }
+}
+
+@media (min-width: 901px) {
+    .case-study__contact-details {
+        grid-column: 6 / 14;
     }
 }
 
@@ -20318,6 +20387,12 @@ article .social-icon .link-copy {
 
 .case-study--research .case-study__overview__main {
     margin-bottom: 6rem;
+}
+
+@media (max-width: 899px) {
+    .case-study--research .case-study__overview__main {
+        margin-bottom: 1.5rem;
+    }
 }
 
 .case-study--research .case-study__overview__main__standfirst {
