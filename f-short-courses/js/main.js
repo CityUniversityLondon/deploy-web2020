@@ -3301,6 +3301,147 @@ __webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "./no
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/es.string.replace.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/core-js/modules/es.string.replace.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
+var toObject = __webpack_require__(/*! ../internals/to-object */ "./node_modules/core-js/internals/to-object.js");
+var toLength = __webpack_require__(/*! ../internals/to-length */ "./node_modules/core-js/internals/to-length.js");
+var toInteger = __webpack_require__(/*! ../internals/to-integer */ "./node_modules/core-js/internals/to-integer.js");
+var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "./node_modules/core-js/internals/require-object-coercible.js");
+var advanceStringIndex = __webpack_require__(/*! ../internals/advance-string-index */ "./node_modules/core-js/internals/advance-string-index.js");
+var regExpExec = __webpack_require__(/*! ../internals/regexp-exec-abstract */ "./node_modules/core-js/internals/regexp-exec-abstract.js");
+var max = Math.max;
+var min = Math.min;
+var floor = Math.floor;
+var SUBSTITUTION_SYMBOLS = /\$([$&`']|\d\d?|<[^>]*>)/g;
+var SUBSTITUTION_SYMBOLS_NO_NAMED = /\$([$&`']|\d\d?)/g;
+
+var maybeToString = function (it) {
+  return it === undefined ? it : String(it);
+};
+
+// @@replace logic
+__webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "./node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js")(
+  'replace',
+  2,
+  function (REPLACE, nativeReplace, maybeCallNative) {
+    return [
+      // `String.prototype.replace` method
+      // https://tc39.github.io/ecma262/#sec-string.prototype.replace
+      function replace(searchValue, replaceValue) {
+        var O = requireObjectCoercible(this);
+        var replacer = searchValue == undefined ? undefined : searchValue[REPLACE];
+        return replacer !== undefined
+          ? replacer.call(searchValue, O, replaceValue)
+          : nativeReplace.call(String(O), searchValue, replaceValue);
+      },
+      // `RegExp.prototype[@@replace]` method
+      // https://tc39.github.io/ecma262/#sec-regexp.prototype-@@replace
+      function (regexp, replaceValue) {
+        var res = maybeCallNative(nativeReplace, regexp, this, replaceValue);
+        if (res.done) return res.value;
+
+        var rx = anObject(regexp);
+        var S = String(this);
+
+        var functionalReplace = typeof replaceValue === 'function';
+        if (!functionalReplace) replaceValue = String(replaceValue);
+
+        var global = rx.global;
+        if (global) {
+          var fullUnicode = rx.unicode;
+          rx.lastIndex = 0;
+        }
+        var results = [];
+        while (true) {
+          var result = regExpExec(rx, S);
+          if (result === null) break;
+
+          results.push(result);
+          if (!global) break;
+
+          var matchStr = String(result[0]);
+          if (matchStr === '') rx.lastIndex = advanceStringIndex(S, toLength(rx.lastIndex), fullUnicode);
+        }
+
+        var accumulatedResult = '';
+        var nextSourcePosition = 0;
+        for (var i = 0; i < results.length; i++) {
+          result = results[i];
+
+          var matched = String(result[0]);
+          var position = max(min(toInteger(result.index), S.length), 0);
+          var captures = [];
+          // NOTE: This is equivalent to
+          //   captures = result.slice(1).map(maybeToString)
+          // but for some reason `nativeSlice.call(result, 1, result.length)` (called in
+          // the slice polyfill when slicing native arrays) "doesn't work" in safari 9 and
+          // causes a crash (https://pastebin.com/N21QzeQA) when trying to debug it.
+          for (var j = 1; j < result.length; j++) captures.push(maybeToString(result[j]));
+          var namedCaptures = result.groups;
+          if (functionalReplace) {
+            var replacerArgs = [matched].concat(captures, position, S);
+            if (namedCaptures !== undefined) replacerArgs.push(namedCaptures);
+            var replacement = String(replaceValue.apply(undefined, replacerArgs));
+          } else {
+            replacement = getSubstitution(matched, S, position, captures, namedCaptures, replaceValue);
+          }
+          if (position >= nextSourcePosition) {
+            accumulatedResult += S.slice(nextSourcePosition, position) + replacement;
+            nextSourcePosition = position + matched.length;
+          }
+        }
+        return accumulatedResult + S.slice(nextSourcePosition);
+      }
+    ];
+
+    // https://tc39.github.io/ecma262/#sec-getsubstitution
+    function getSubstitution(matched, str, position, captures, namedCaptures, replacement) {
+      var tailPos = position + matched.length;
+      var m = captures.length;
+      var symbols = SUBSTITUTION_SYMBOLS_NO_NAMED;
+      if (namedCaptures !== undefined) {
+        namedCaptures = toObject(namedCaptures);
+        symbols = SUBSTITUTION_SYMBOLS;
+      }
+      return nativeReplace.call(replacement, symbols, function (match, ch) {
+        var capture;
+        switch (ch.charAt(0)) {
+          case '$': return '$';
+          case '&': return matched;
+          case '`': return str.slice(0, position);
+          case "'": return str.slice(tailPos);
+          case '<':
+            capture = namedCaptures[ch.slice(1, -1)];
+            break;
+          default: // \d\d?
+            var n = +ch;
+            if (n === 0) return match;
+            if (n > m) {
+              var f = floor(n / 10);
+              if (f === 0) return match;
+              if (f <= m) return captures[f - 1] === undefined ? ch.charAt(1) : captures[f - 1] + ch.charAt(1);
+              return match;
+            }
+            capture = captures[n - 1];
+        }
+        return capture === undefined ? '' : capture;
+      });
+    }
+  }
+);
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/es.string.search.js":
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es.string.search.js ***!
@@ -6604,9 +6745,13 @@ function launchMenu(menu) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -6632,7 +6777,7 @@ __webpack_require__.r(__webpack_exports__);
     </div>
 **/
 
-const className = 'modal-group',
+const className = 'modal__popup',
       modalPopupClass = '.modal__popup',
       modalHiddenClass = 'modal__popup--hidden',
       modalShowClass = 'modal__popup--show',
@@ -6640,13 +6785,19 @@ const className = 'modal-group',
       modalTransitioningInClass = 'modal__popup--transitioning-in',
       modalTransitioningOutClass = 'modal__popup--transitioning-out',
       modalRevealFromTop = 'modal__reveal--fromtop',
+      modalHeadingClass = '.modal__heading',
       modalRevealFromBottom = 'modal__reveal--frombottom',
-      modalTriggerClass = 'a.modal__trigger',
+      modalTriggerClass = '.modal__trigger',
       modalBackgroundClass = 'modal__background',
       bodyModalInClass = 'modal--in',
-      modalCloseClass = 'a.modal__close',
-      modalBackground = document.createElement('div');
-let windowWidth = window.innerWidth; // set class attr of modal background ready to be inserted later
+      modalCloseClass = '.modal__close',
+      modalContentClass = '.modal__content',
+      modalCloseClassList = 'modal__close fas fa-times',
+      modalBackground = document.createElement('div'),
+      modalPopups = document.querySelectorAll(modalPopupClass),
+      modalPopupsLength = modalPopups.length;
+let windowWidth = window.innerWidth,
+    counter = 1; // set class attr of modal background ready to be inserted later
 
 modalBackground.setAttribute('class', modalBackgroundClass); // always reconfigure if window resized
 
@@ -6656,93 +6807,175 @@ function setWindowWidth() {
   // reassign new width
   windowWidth = window.innerWidth;
 }
+/**
+ * Add modal link: add link in the parent element to modal
+ *
+ * @param {HTMLElement} modal - the modal element
+ */
 
-function launchModal() {
-  let modalPopups = document.querySelectorAll(modalPopupClass),
-      modalCloseTriggers = document.querySelectorAll(modalCloseClass),
-      modalInReveals = document.querySelectorAll('div.' + modalRevealFromTop),
-      modalOutReveals = document.querySelectorAll('div.' + modalRevealFromBottom);
+
+function addModalLink(modal) {
+  let modalAnchor,
+      modalTriggerClassText = modalTriggerClass.replace('.', '');
+  modalAnchor = document.createElement('a');
+  modalAnchor.setAttribute('class', modalTriggerClassText);
+  modalAnchor.href = '#';
+  modalAnchor.innerHTML = modal.getAttribute('data-title');
+  modal.parentNode.insertBefore(modalAnchor, modal);
+}
+/**
+ * Add modal close: add a clsoe link within the modal
+ *
+ * @param {HTMLElement} modal - the modal element
+ */
+
+
+function addModalClose(modal) {
+  let modalCloseAnchor, modalHeading;
+  modalCloseAnchor = document.createElement('a');
+  modalCloseAnchor.setAttribute('class', modalCloseClassList);
+  modalCloseAnchor.href = '#';
+  modalHeading = modal.querySelector(modalHeadingClass);
+  modalHeading.parentNode.insertBefore(modalCloseAnchor, modalHeading);
+}
+/**
+ * Add modal reveals: add the divs that create the "curtain" effect
+ *
+ * @param {HTMLElement} modal - the modal element
+ */
+
+
+function addModalReveals(modal) {
+  let revealFromTop, revealFromBottom, modalContent;
+  revealFromTop = document.createElement('div');
+  revealFromBottom = document.createElement('div');
+  revealFromTop.setAttribute('class', 'modal__reveal ' + modalRevealFromTop);
+  revealFromBottom.setAttribute('class', 'modal__reveal ' + modalRevealFromBottom);
+  modalContent = modal.querySelector(modalContentClass);
+  modalContent.parentNode.insertBefore(revealFromTop, modalContent);
+  modalContent.parentNode.insertBefore(revealFromBottom, modalContent);
+}
+/**
+ * Launch modal: entry function
+ *
+ * @param {HTMLElement} modal - the modal element
+ */
+
+
+function launchModal(modal) {
   /**
-   * Add adjacent link to each modal
+   * Add modal link and close link inside modal
+   */
+  addModalLink(modal);
+  addModalClose(modal);
+  addModalReveals(modal);
+  /**
+   * Events need to be added, but just once for all
    */
 
-  modalPopups.forEach(function (popup) {
-    let anchorTitle = popup.getAttribute('data-title');
-    let modalAnchor = document.createElement('a');
-    modalAnchor.setAttribute('class', 'modal__trigger');
-    modalAnchor.href = '#';
-    modalAnchor.innerHTML = anchorTitle;
-    popup.parentNode.insertBefore(modalAnchor, popup);
-  }); // after links inserted, then get them all in an array
+  createEventListeners(modalPopupsLength);
+}
 
-  let modalOpenTriggers = document.querySelectorAll(modalTriggerClass);
-  /**
-   * Add click listeners to open and close triggers
-   */
+const createEventListeners = modalPopupsLength => {
+  if (counter == modalPopupsLength) {
+    let modalCloseTriggers, modalInReveals, modalOutReveals, modalOpenTriggers;
+    modalOpenTriggers = document.querySelectorAll(modalTriggerClass);
+    modalCloseTriggers = document.querySelectorAll(modalCloseClass);
+    modalInReveals = document.querySelectorAll('.' + modalRevealFromTop);
+    modalOutReveals = document.querySelectorAll('.' + modalRevealFromBottom);
+    /**
+     * Add click listeners to open and close triggers
+     */
 
-  modalOpenTriggers.forEach(trigger => {
-    trigger.addEventListener('click', handleTriggerOpen, false);
-  });
-  modalCloseTriggers.forEach(trigger => {
-    trigger.addEventListener('click', handleTriggerClose, false);
-  });
-  /**
-   * Listen for escape key press and exit the active modal
-   */
+    modalOpenTriggers.forEach(trigger => {
+      trigger.addEventListener('click', handleTriggerOpen, false);
+    });
+    modalCloseTriggers.forEach(trigger => {
+      trigger.addEventListener('click', handleTriggerClose, false);
+    });
+    /**
+     * Listen for escape key press and exit the active modal
+     */
 
-  document.addEventListener('keydown', e => {
-    let keyCode = e.keyCode;
-    let activeModal = document.getElementsByClassName(modalShowClass)[0];
+    document.addEventListener('keydown', e => {
+      let keyCode = e.keyCode; // get the only active modal
 
-    if (keyCode === 27) {
-      let escCloseModal = true;
-      closeModal(activeModal, escCloseModal);
-    }
-  });
-  /**
-   * Listen for a click anywhere outside the modal and close active modal
-   */
+      let activeModal = document.getElementsByClassName(modalShowClass)[0];
 
-  document.addEventListener('click', e => {
-    e.target.classList.forEach(className => {
-      if (className === modalShowClass) {
-        let activeModal = document.getElementsByClassName(modalShowClass)[0];
+      if (keyCode === 27) {
         closeModal(activeModal);
-        return;
       }
     });
-  });
-  /**
-   * Listen for when reveal in/out transition over
-   */
+    /**
+     * Listen for a click anywhere outside the modal and close active modal
+     */
 
-  modalInReveals.forEach(elem => {
-    // chrome & safari
-    elem.addEventListener('webkitTransitionEnd', transitionInEnded, false); // standard
+    document.addEventListener('click', e => {
+      e.target.classList.forEach(className => {
+        if (className === modalShowClass) {
+          // get the only active modal
+          let activeModal = document.getElementsByClassName(modalShowClass)[0];
+          closeModal(activeModal);
+          return;
+        }
+      });
+    });
+    /**
+     * Listen for when reveal in/out transition over
+     */
 
-    elem.addEventListener('transitionend', transitionInEnded, false); // moz
+    modalInReveals.forEach(elem => {
+      // chrome & safari
+      elem.addEventListener('webkitTransitionEnd', transitionInEnded, false); // standard
 
-    elem.addEventListener('mozTransitionEnd', transitionInEnded, false);
-  });
-  modalOutReveals.forEach(elem => {
-    elem.addEventListener('webkitTransitionEnd', transitionOutEnded, false);
-    elem.addEventListener('transitionend', transitionOutEnded, false);
-    elem.addEventListener('mozTransitionEnd', transitionOutEnded, false);
-  });
-}
+      elem.addEventListener('transitionend', transitionInEnded, false); // moz
+
+      elem.addEventListener('mozTransitionEnd', transitionInEnded, false);
+    });
+    modalOutReveals.forEach(elem => {
+      elem.addEventListener('webkitTransitionEnd', transitionOutEnded, false);
+      elem.addEventListener('transitionend', transitionOutEnded, false);
+      elem.addEventListener('mozTransitionEnd', transitionOutEnded, false);
+    });
+  }
+
+  counter++;
+};
+/**
+ * Handle trigger open: handles the modal open
+ *
+ * @param {event} e - the event
+ */
+
 
 const handleTriggerOpen = e => {
   e.preventDefault();
   let modalPopup = e.target.nextElementSibling;
-  openModal(modalPopup);
-  Object(_util__WEBPACK_IMPORTED_MODULE_1__["trapElementFocus"])(modalPopup);
+  openModal(modalPopup); // activate focus trap
+
+  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_2___default()(modalPopup, {
+    clickOutsideDeactivates: true
+  });
+  trap.activate();
 };
+/**
+ * Handle trigger close: handles the modal open
+ *
+ * @param {event} e - the event
+ */
+
 
 const handleTriggerClose = e => {
   e.preventDefault();
-  let modalPopup = e.target.parentNode.parentNode.parentNode;
+  let modalPopup = document.querySelector('.' + modalShowClass);
   closeModal(modalPopup);
 };
+/**
+ * Open modal: used to show the modal
+ *
+ * @param {HTMLElement} modalPopup - the modal div to be displayed
+ */
+
 
 const openModal = modalPopup => {
   // add background div to src if not present
@@ -6768,15 +7001,14 @@ const openModal = modalPopup => {
     modalPopup.classList.add(modalShowContentClass);
   }
 };
+/**
+ * Close modal: closes the active modal
+ *
+ * @param {HTMLElement} modalPopup - the modal div to be hidden
+ */
 
-const closeModal = (modalPopup, escCloseModal) => {
-  if (escCloseModal) {
-    // if escape close, just close
-    modalPopup.classList.remove(modalShowClass);
-    modalPopup.classList.add(modalHiddenClass);
-    document.body.classList.remove(bodyModalInClass);
-  }
 
+const closeModal = modalPopup => {
   if (windowWidth >= 768) {
     // trigger transition, callback handles the closing
     modalPopup.classList.add(modalTransitioningOutClass);
@@ -6787,9 +7019,14 @@ const closeModal = (modalPopup, escCloseModal) => {
     document.body.classList.remove(bodyModalInClass);
   }
 };
+/**
+ * Transition in ended: after the transition has ended, do stuff
+ *
+ * @param {e} event - used to target elements
+ */
+
 
 const transitionInEnded = e => {
-  let modalPopup = e.target.parentNode.parentNode;
   let modalReveal = e.target; // switch classes to reverse transition or reset for next transition
 
   if (modalReveal.classList.contains(modalRevealFromTop)) {
@@ -6798,8 +7035,9 @@ const transitionInEnded = e => {
   } else {
     modalReveal.classList.remove(modalRevealFromBottom);
     modalReveal.classList.add(modalRevealFromTop);
-  } // show the content so it's revealed on transition
+  }
 
+  let modalPopup = document.querySelector('.' + modalShowClass); // show the content so it's revealed on transition
 
   modalPopup.classList.add(modalShowContentClass); // trigger the second transition - delay slightly
 
@@ -6807,9 +7045,15 @@ const transitionInEnded = e => {
     modalPopup.classList.remove(modalTransitioningInClass);
   }, 300);
 };
+/**
+ * Transition out ended: after the transition has ended, do stuff
+ *
+ * @param {e} event - used to target elements
+ */
+
 
 const transitionOutEnded = e => {
-  let modalPopup = e.target.parentNode.parentNode;
+  let modalPopup = document.querySelector('.' + modalShowClass);
   let modalReveal = e.target; // after first transition, remove the content underneath the background
 
   modalPopup.classList.remove(modalShowContentClass); // switch these so the transition direction changes
@@ -7788,7 +8032,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, trapElementFocus */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7802,7 +8046,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gaEvent", function() { return gaEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendAll", function() { return appendAll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pxToRem", function() { return pxToRem; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "trapElementFocus", function() { return trapElementFocus; });
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol.description */ "./node_modules/core-js/modules/es.symbol.description.js");
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
@@ -7973,37 +8216,6 @@ function pxToRem(pxValue) {
   browserWidth > 768 ? fontBase = 18 : fontBase = 16;
   let remValue = pxValue / fontBase;
   return remValue;
-}
-/**
- * Trap the focus to any element - modals, dialogs, etc
- *
- * @param {HTMLElement} element
- */
-
-function trapElementFocus(element) {
-  let focusableEls = element.querySelectorAll('a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])'),
-      firstFocusableEl = focusableEls[0],
-      lastFocusableEl = focusableEls[focusableEls.length - 1],
-      KEYCODE_TAB = 9;
-  element.addEventListener('keydown', function (e) {
-    var isTabPressed = e.key === 'Tab' || e.keyCode === KEYCODE_TAB;
-    if (!isTabPressed) return;
-
-    if (e.shiftKey) {
-      /* shift + tab */
-      if (document.activeElement === firstFocusableEl) {
-        lastFocusableEl.focus();
-        e.preventDefault();
-      }
-    }
-    /* tab */
-    else {
-        if (document.activeElement === lastFocusableEl) {
-          firstFocusableEl.focus();
-          e.preventDefault();
-        }
-      }
-  });
 }
 
 /***/ }),
