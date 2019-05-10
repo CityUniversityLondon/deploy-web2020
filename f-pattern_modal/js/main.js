@@ -4939,7 +4939,7 @@ function addModalLink(modal) {
       modalTriggerClassText = modalTriggerClass.replace('.', '');
   modalAnchor = document.createElement('a');
   modalAnchor.setAttribute('class', modalTriggerClassText);
-  modalAnchor.href = '#';
+  modalAnchor.setAttribute('href', '#');
   modalAnchor.innerHTML = modal.getAttribute('data-title');
   modal.parentNode.insertBefore(modalAnchor, modal);
 }
@@ -4954,7 +4954,7 @@ function addModalClose(modal) {
   let modalCloseAnchor, modalHeading;
   modalCloseAnchor = document.createElement('a');
   modalCloseAnchor.setAttribute('class', modalCloseClassList);
-  modalCloseAnchor.href = '#';
+  modalCloseAnchor.setAttribute('href', '#');
   modalHeading = modal.querySelector(modalHeadingClass);
   modalHeading.parentNode.insertBefore(modalCloseAnchor, modalHeading);
 }
@@ -5080,7 +5080,7 @@ const openModal = modal => {
 
     setTimeout(function () {
       modal.classList.add(modalTransitioningInClass);
-    }, 300);
+    }, 200);
   } else {
     // show the modal, skip transition
     modal.classList.remove(modalHiddenClass);
@@ -5123,7 +5123,7 @@ const closeTransition = modal => {
 
   setTimeout(function () {
     modal.classList.remove(modalTransitioningOutClass);
-  }, 100);
+  }, 50);
   setTimeout(function () {
     // finally, remove the modal popup and background
     modal.classList.remove(modalShowClass);
@@ -5139,7 +5139,7 @@ const openTransition = modal => {
 
   setTimeout(function () {
     modal.classList.remove(modalTransitioningInClass);
-  }, 100);
+  }, 50);
   setTimeout(function () {
     // required delay so close transition not
     modal.setAttribute('data-open', true);
