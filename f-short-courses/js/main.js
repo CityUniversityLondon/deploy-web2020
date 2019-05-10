@@ -2760,31 +2760,6 @@ module.exports = '\u0009\u000A\u000B\u000C\u000D\u0020\u00A0\u1680\u2000\u2001\u
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/es.array.includes.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/core-js/modules/es.array.includes.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var internalIncludes = __webpack_require__(/*! ../internals/array-includes */ "./node_modules/core-js/internals/array-includes.js")(true);
-
-// `Array.prototype.includes` method
-// https://tc39.github.io/ecma262/#sec-array.prototype.includes
-__webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js")({ target: 'Array', proto: true }, {
-  includes: function includes(el /* , fromIndex = 0 */) {
-    return internalIncludes(this, el, arguments.length > 1 ? arguments[1] : undefined);
-  }
-});
-
-// https://tc39.github.io/ecma262/#sec-array.prototype-@@unscopables
-__webpack_require__(/*! ../internals/add-to-unscopables */ "./node_modules/core-js/internals/add-to-unscopables.js")('includes');
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/modules/es.array.iterator.js":
 /*!***********************************************************!*\
   !*** ./node_modules/core-js/modules/es.array.iterator.js ***!
@@ -5021,6 +4996,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
 /* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
 /* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
+/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
 
 
 /**
@@ -5045,7 +5021,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__["default"]]);
 
 /***/ }),
 
@@ -5094,11 +5071,23 @@ const className = 'accordion',
       scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_6__["reduceMotion"])() ? 0 : 999,
       scrollTo = false;
 /**
+ * Calculate height of body element associated to accordion heading.
+ *
+ * @param {HTMLElement} heading - An accordion heading.
+ */
+
+function calcBodyHeight(heading) {
+  let bodyHeight = heading.nextElementSibling.scrollHeight;
+  let bodyHeightRem = Object(_util__WEBPACK_IMPORTED_MODULE_6__["pxToRem"])(bodyHeight);
+  heading.nextElementSibling.style.maxHeight = parseInt(bodyHeightRem + 5) + 'rem';
+}
+/**
  * Sets a heading and the button nested within to be open or closed.
  *
  * @param {HTMLElement} heading - An accordion heading.
  * @param {boolean} open - Set this section to be open?
  */
+
 
 function setSection(heading, open) {
   heading.dataset.open = open;
@@ -5106,15 +5095,16 @@ function setSection(heading, open) {
   heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].expanded, open);
   let bodyLinks = heading.nextElementSibling.getElementsByTagName('a');
 
+  for (const bodyLink of bodyLinks) {
+    bodyLink.setAttribute('tabindex', '1');
+  }
+
   if (open) {
     heading.nextElementSibling.classList.add('active');
-    let bodyHeight = heading.nextElementSibling.scrollHeight;
-    let bodyHeightRem = Object(_util__WEBPACK_IMPORTED_MODULE_6__["pxToRem"])(bodyHeight);
-    heading.nextElementSibling.style.maxHeight = parseInt(bodyHeightRem + 5) + 'rem';
-
-    for (const bodyLink of bodyLinks) {
-      bodyLink.setAttribute('tabindex', '1');
-    }
+    calcBodyHeight(heading);
+    window.addEventListener('resize', () => {
+      calcBodyHeight(heading);
+    });
   } else {
     heading.nextElementSibling.classList.remove('active');
     heading.nextElementSibling.style.maxHeight = null;
@@ -5210,26 +5200,36 @@ function launchAccordion(accordion) {
     return;
   }
 
-  headings.forEach(heading => {
-    const content = heading.nextElementSibling,
-          button = buttonFromHeading(heading);
-    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].labelledBy, heading.id);
-    content.setAttribute('role', 'region');
-    heading.replaceChild(button, heading.firstChild);
-    /**
-     * if the location hash matches the heading's ID, we'll open that
-     * instead of the first section, or instead of leaving everything
-     * closed.
-     */
+  const buildHeadings = () => {
+    headings.forEach(heading => {
+      const content = heading.nextElementSibling,
+            button = buttonFromHeading(heading);
+      content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].labelledBy, heading.id);
+      content.setAttribute('role', 'region');
+      heading.replaceChild(button, heading.firstChild);
+      /**
+       * if the location hash matches the heading's ID, we'll open that
+       * instead of the first section, or instead of leaving everything
+       * closed.
+       */
 
-    if (locationHash === heading.id) {
-      idLinked = true;
-      setSection(heading, true);
-    } else {
-      setSection(heading, false);
-    }
+      if (locationHash === heading.id) {
+        idLinked = true;
+        setSection(heading, true);
+      } else {
+        setSection(heading, false);
+      }
 
-    button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
+      button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
+    });
+  };
+  /**
+   * DOM must be fully loaded to accurately calculate body heights across browsers
+   */
+
+
+  window.addEventListener('load', function () {
+    buildHeadings();
   });
 
   if (defaultOpen && !idLinked) {
@@ -5326,7 +5326,7 @@ function scrollButtonShow() {
 
 function updateProgress() {
   // Setting up SVG animation
-  const progressPath = document.querySelector('path');
+  const progressPath = document.getElementsByClassName('back-to-top')[0].querySelector('path');
   const pathLength = progressPath.getTotalLength();
   progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
   progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
@@ -5546,13 +5546,10 @@ function devcorate(elem, param, value) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.includes */ "./node_modules/core-js/modules/es.array.includes.js");
-/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
@@ -5563,31 +5560,43 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/external-link-finder/external-link-finder
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
+ * @copyright City, University of London 2019
  */
 
 /**
  *  Finds external links and adds font awesome icon to indicate external link
- *
  */
 const className = 'content';
+/**
+ * List areas below where external links should be found.
+ */
+
+const containerAnchors = document.getElementsByClassName('container')[0].querySelectorAll('a');
 
 function findExternalLink() {
-  var anchors = document.getElementsByClassName('content')[0].querySelectorAll('a');
-  anchors.forEach(function (i) {
-    /** checks if anchors links are :
-     * external
-     * not an image
-     * not contain font awesome icon already
-     * not a CTA
-     * not an email or telephone hyperlink
-     */
-    if (i.origin !== window.location.origin && i.querySelectorAll('img').length < 1 && i.querySelectorAll('.fa-external-link').length < 1 && !i.parentElement.className.includes('cta-block') && i.href.indexOf('mailto:') && i.href.indexOf('tel:')) {
-      // adds font awesome external link icon after completing checks
-      var node = document.createElement('span');
-      node.className = 'fal fa-external-link inline-external-link ';
-      node.setAttribute('aria-label', 'External link');
-      i.appendChild(node);
+  const anchorsAreas = [containerAnchors];
+  anchorsAreas.forEach(function (anchorsCount) {
+    if (anchorsCount.length > 0) {
+      anchorsCount.forEach(function (anchor) {
+        /** checks if anchors links are :
+         * external
+         * not an image
+         * not contain font awesome external link icon already
+         * fab for social icons
+         * is not a social icon
+         * not a CTA
+         * not an email or telephone hyperlink
+         * not a telephone number link
+         * has to contain a href value
+         */
+        if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && anchor.querySelectorAll('.fab').length < 1 && anchor.className !== 'social-icon' && !anchor.parentElement.className.includes('cta-block') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
+          // adds font awesome external link icon after completing checks
+          let node = document.createElement('span');
+          node.className = 'fa fa-external-link inline-external-link ';
+          node.setAttribute('aria-hidden', 'true');
+          anchor.appendChild(node);
+        }
+      });
     }
   });
 }
@@ -7064,6 +7073,67 @@ function addPagination(elem, itemCount) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: addPagination,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/social-icon/social-icon.js":
+/*!*************************************************!*\
+  !*** ./src/patterns/social-icon/social-icon.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+const className = 'fa-link';
+
+function copyIconToClipboard(elem) {
+  const copy = elem;
+  copy.addEventListener('mouseover', () => {
+    let t = document.createElement('div');
+    let link = document.createElement('span');
+    t.className = 'tooltip';
+    link.className = 'link-copy';
+    let textlink = document.createTextNode('http://google.com');
+    let textnode = document.createTextNode('Copy link');
+    t.appendChild(textnode);
+    link.appendChild(textlink);
+    t.appendChild(link);
+    document.querySelector('.fa-link').appendChild(t);
+  });
+  copy.addEventListener('click', e => {
+    e.preventDefault();
+    let text = document.querySelector('.link-copy');
+    let range = document.createRange();
+    range.selectNode(text);
+    window.getSelection().addRange(range);
+
+    try {
+      // Now that we've selected the anchor text, execute the copy command
+      let successful = document.execCommand('copy');
+      let msg = successful ? 'successful' : 'unsuccessful';
+      document.querySelector('.tooltip').textContent = 'Link Copied';
+      document.querySelector('.tooltip').classList.add(msg);
+    } catch (err) {
+      throw new Error(e);
+    } // Remove the selections - NOTE: Should use
+    // removeRange(range) when it is supported
+
+
+    window.getSelection().removeAllRanges();
+  });
+  copy.addEventListener('mouseout', e => {
+    //remove element from mouseover
+    e.target.childNodes[0].remove();
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: copyIconToClipboard,
   launchQuery: ".".concat(className)
 });
 
