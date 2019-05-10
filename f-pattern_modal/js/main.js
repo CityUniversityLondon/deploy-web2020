@@ -4960,13 +4960,10 @@ document.addEventListener('click', e => {
  */
 
 function addModalLink(modal) {
-  let modalAnchor,
-      modalTriggerClassText = modalTriggerClass.replace('.', '');
-  modalAnchor = document.createElement('a');
-  modalAnchor.setAttribute('class', modalTriggerClassText);
-  modalAnchor.setAttribute('href', '#');
-  modalAnchor.innerHTML = modal.getAttribute('data-title');
-  modal.parentNode.insertBefore(modalAnchor, modal);
+  let modalTriggerClassText, innerHTML;
+  modalTriggerClassText = modalTriggerClass.replace('.', '');
+  innerHTML = modal.getAttribute('data-title');
+  insertElement(modal, 'a', modalTriggerClassText, '#', innerHTML);
 }
 /**
  * Add modal close: add a close link within the modal
@@ -4976,12 +4973,30 @@ function addModalLink(modal) {
 
 
 function addModalClose(modal) {
-  let modalCloseAnchor, modalHeading;
-  modalCloseAnchor = document.createElement('a');
-  modalCloseAnchor.setAttribute('class', modalCloseClassList);
-  modalCloseAnchor.setAttribute('href', '#');
-  modalHeading = modal.querySelector(modalHeadingClass);
-  modalHeading.parentNode.insertBefore(modalCloseAnchor, modalHeading);
+  let modalHeading = modal.querySelector(modalHeadingClass);
+  insertElement(modalHeading, 'a', modalCloseClassList);
+}
+/**
+ * Insert element: helper function to insert element to source
+ *
+ * @param {HTMLElement} targetParent - the parent to target
+ * @param {string} type - the type of element to create
+ * @param {string} classList - the class list
+ * @param {string} href - the href to add
+ * @param {string} innerHTML - any text to add
+ */
+
+
+function insertElement(targetParent, type, classList, href, innerHTML) {
+  let element = document.createElement(type);
+  element.setAttribute('class', classList);
+  element.setAttribute('href', href);
+
+  if (innerHTML) {
+    element.innerHTML = innerHTML;
+  }
+
+  targetParent.parentNode.insertBefore(element, targetParent);
 }
 /**
  * Set trigger listeners: add listeners to open/close links
