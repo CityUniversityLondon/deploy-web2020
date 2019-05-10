@@ -4913,7 +4913,8 @@ const className = 'modal__popup',
       bodyModalInClass = 'modal--in',
       modalCloseClass = '.modal__close',
       modalCloseClassList = 'modal__close fas fa-times',
-      modalBackground = document.createElement('div');
+      modalBackground = document.createElement('div'),
+      eventListeners = ['webkitTransitionEnd', 'transitionend', 'mozTransitionEnd', 'oTransitionEnd'];
 let windowWidth = window.innerWidth; // set class attr of modal background ready to be inserted later
 
 modalBackground.setAttribute('class', modalBackgroundClass); // always reconfigure if window resized
@@ -5027,17 +5028,30 @@ function launchModal(modal) {
  * Set transition listeners: adds the listeners to the modal links
  *
  * @param {HTMLElement} modalInner - the modalInner element
+ * @param {HTMLElement} modal - the modal
  */
 
 
 function setTransitionListeners(modalInner, modal) {
-  modalInner.addEventListener('webkitTransitionEnd', () => {
-    if (modal.hasAttribute('data-open')) {
-      closeTransition(modal);
-    } else {
-      openTransition(modal);
-    }
-  }, false);
+  for (let listener in eventListeners) {
+    modalInner.addEventListener(eventListeners[listener], () => {
+      setOpenOrCloseFunction(modal);
+    }, false);
+  }
+}
+/**
+ * Set open or close function: decides if open/close needed
+ *
+ * @param {HTMLElement} modal - the modal
+ */
+
+
+function setOpenOrCloseFunction(modal) {
+  if (modal.hasAttribute('data-open')) {
+    closeTransition(modal);
+  } else {
+    openTransition(modal);
+  }
 }
 /**
  * Handle trigger open: handles the modal open
