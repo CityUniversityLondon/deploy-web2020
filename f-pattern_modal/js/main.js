@@ -4907,14 +4907,11 @@ const className = 'modal__popup',
       modalShowContentClass = 'modal__popup--show-content',
       modalTransitioningInClass = 'modal__popup--transitioning-in',
       modalTransitioningOutClass = 'modal__popup--transitioning-out',
-      modalRevealFromTop = 'modal__reveal--fromtop',
       modalHeadingClass = '.modal__heading',
-      modalRevealFromBottom = 'modal__reveal--frombottom',
       modalTriggerClass = '.modal__trigger',
       modalBackgroundClass = 'modal__background',
       bodyModalInClass = 'modal--in',
       modalCloseClass = '.modal__close',
-      modalContentClass = '.modal__content',
       modalCloseClassList = 'modal__close fas fa-times',
       modalBackground = document.createElement('div'),
       modalPopups = document.querySelectorAll(modalPopupClass),
@@ -4947,7 +4944,7 @@ function addModalLink(modal) {
   modal.parentNode.insertBefore(modalAnchor, modal);
 }
 /**
- * Add modal close: add a clsoe link within the modal
+ * Add modal close: add a close link within the modal
  *
  * @param {HTMLElement} modal - the modal element
  */
@@ -4962,23 +4959,6 @@ function addModalClose(modal) {
   modalHeading.parentNode.insertBefore(modalCloseAnchor, modalHeading);
 }
 /**
- * Add modal reveals: add the divs that create the "curtain" effect
- *
- * @param {HTMLElement} modal - the modal element
- */
-
-
-function addModalReveals(modal) {
-  let revealFromTop, revealFromBottom, modalContent;
-  revealFromTop = document.createElement('div');
-  revealFromBottom = document.createElement('div');
-  revealFromTop.setAttribute('class', 'modal__reveal ' + modalRevealFromTop);
-  revealFromBottom.setAttribute('class', 'modal__reveal ' + modalRevealFromBottom);
-  modalContent = modal.querySelector(modalContentClass);
-  modalContent.parentNode.insertBefore(revealFromTop, modalContent);
-  modalContent.parentNode.insertBefore(revealFromBottom, modalContent);
-}
-/**
  * Launch modal: entry function
  *
  * @param {HTMLElement} modal - the modal element
@@ -4990,22 +4970,20 @@ function launchModal(modal) {
    * Add modal link and close link inside modal
    */
   addModalLink(modal);
-  addModalClose(modal);
-  addModalReveals(modal);
+  addModalClose(modal); //addModalReveals(modal);
+
   /**
    * Events need to be added, but just once for all
    */
 
-  createEventListeners(modalPopupsLength);
+  createEventListeners(modal, modalPopupsLength);
 }
 
-const createEventListeners = modalPopupsLength => {
+const createEventListeners = (modal, modalPopupsLength) => {
   if (counter == modalPopupsLength) {
-    let modalCloseTriggers, modalInReveals, modalOutReveals, modalOpenTriggers;
+    let modalCloseTriggers, modalOpenTriggers;
     modalOpenTriggers = document.querySelectorAll(modalTriggerClass);
     modalCloseTriggers = document.querySelectorAll(modalCloseClass);
-    modalInReveals = document.querySelectorAll('.' + modalRevealFromTop);
-    modalOutReveals = document.querySelectorAll('.' + modalRevealFromBottom);
     /**
      * Add click listeners to open and close triggers
      */
@@ -5042,24 +5020,16 @@ const createEventListeners = modalPopupsLength => {
           return;
         }
       });
-    });
-    /**
-     * Listen for when reveal in/out transition over
-     */
+    }); // before/after transition event listern bubbles to parent
 
-    modalInReveals.forEach(elem => {
-      // chrome & safari
-      elem.addEventListener('webkitTransitionEnd', transitionInEnded, false); // standard
-
-      elem.addEventListener('transitionend', transitionInEnded, false); // moz
-
-      elem.addEventListener('mozTransitionEnd', transitionInEnded, false);
-    });
-    modalOutReveals.forEach(elem => {
-      elem.addEventListener('webkitTransitionEnd', transitionOutEnded, false);
-      elem.addEventListener('transitionend', transitionOutEnded, false);
-      elem.addEventListener('mozTransitionEnd', transitionOutEnded, false);
-    });
+    let modalInner = modal.querySelector('.modal__inner');
+    modalInner.addEventListener('webkitTransitionEnd', function () {
+      if (modal.hasAttribute('data-open')) {
+        closeTransition(modal);
+      } else {
+        openTransition(modal);
+      }
+    }, false);
   }
 
   counter++;
@@ -5073,10 +5043,10 @@ const createEventListeners = modalPopupsLength => {
 
 const handleTriggerOpen = e => {
   e.preventDefault();
-  let modalPopup = e.target.nextElementSibling;
-  openModal(modalPopup); // activate focus trap
+  let modal = e.target.nextElementSibling;
+  openModal(modal); // activate focus trap
 
-  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalPopup, {
+  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modal, {
     clickOutsideDeactivates: true
   });
   trap.activate();
@@ -5090,8 +5060,8 @@ const handleTriggerOpen = e => {
 
 const handleTriggerClose = e => {
   e.preventDefault();
-  let modalPopup = document.querySelector('.' + modalShowClass);
-  closeModal(modalPopup);
+  let modal = document.querySelector('.' + modalShowClass);
+  closeModal(modal);
 };
 /**
  * Open modal: used to show the modal
@@ -5100,7 +5070,26 @@ const handleTriggerClose = e => {
  */
 
 
-const openModal = modalPopup => {
+const openModal = modal => {
+  addBackgroundFade();
+
+  if (windowWidth >= 768) {
+    // show the modal, but keep the content div hidden
+    modal.classList.remove(modalHiddenClass);
+    modal.classList.add(modalShowClass); // trigger the first transition
+
+    setTimeout(function () {
+      modal.classList.add(modalTransitioningInClass);
+    }, 300);
+  } else {
+    // show the modal, skip transition
+    modal.classList.remove(modalHiddenClass);
+    modal.classList.add(modalShowClass);
+    modal.classList.add(modalShowContentClass);
+  }
+};
+
+const addBackgroundFade = () => {
   // add background div to src if not present
   if (!document.body.contains(modalBackground)) {
     document.body.appendChild(modalBackground);
@@ -5108,21 +5097,6 @@ const openModal = modalPopup => {
 
 
   document.body.classList.add(bodyModalInClass);
-
-  if (windowWidth >= 768) {
-    // show the modal, but keep the content div hidden
-    modalPopup.classList.remove(modalHiddenClass);
-    modalPopup.classList.add(modalShowClass); // trigger the first transition after the container displayed
-
-    setTimeout(function () {
-      modalPopup.classList.add(modalTransitioningInClass);
-    }, 50);
-  } else {
-    // show the modal, skip transition
-    modalPopup.classList.remove(modalHiddenClass);
-    modalPopup.classList.add(modalShowClass);
-    modalPopup.classList.add(modalShowContentClass);
-  }
 };
 /**
  * Close modal: closes the active modal
@@ -5131,71 +5105,45 @@ const openModal = modalPopup => {
  */
 
 
-const closeModal = modalPopup => {
+const closeModal = modal => {
   if (windowWidth >= 768) {
     // trigger transition, callback handles the closing
-    modalPopup.classList.add(modalTransitioningOutClass);
+    modal.classList.add(modalTransitioningOutClass);
   } else {
-    modalPopup.classList.remove(modalShowClass);
-    modalPopup.classList.add(modalHiddenClass);
-    modalPopup.classList.remove(modalShowContentClass);
+    modal.classList.remove(modalShowClass);
+    modal.classList.add(modalHiddenClass);
+    modal.classList.remove(modalShowContentClass);
     document.body.classList.remove(bodyModalInClass);
   }
 };
-/**
- * Transition in ended: after the transition has ended, do stuff
- *
- * @param {e} event - used to target elements
- */
 
-
-const transitionInEnded = e => {
-  let modalReveal = e.target; // switch classes to reverse transition or reset for next transition
-
-  if (modalReveal.classList.contains(modalRevealFromTop)) {
-    modalReveal.classList.remove(modalRevealFromTop);
-    modalReveal.classList.add(modalRevealFromBottom);
-  } else {
-    modalReveal.classList.remove(modalRevealFromBottom);
-    modalReveal.classList.add(modalRevealFromTop);
-  }
-
-  let modalPopup = document.querySelector('.' + modalShowClass); // show the content so it's revealed on transition
-
-  modalPopup.classList.add(modalShowContentClass); // trigger the second transition - delay slightly
+const closeTransition = modal => {
+  // after first transition, remove the content underneath the background
+  modal.classList.remove(modalShowContentClass); // trigger the second transition
 
   setTimeout(function () {
-    modalPopup.classList.remove(modalTransitioningInClass);
-  }, 300);
-};
-/**
- * Transition out ended: after the transition has ended, do stuff
- *
- * @param {e} event - used to target elements
- */
-
-
-const transitionOutEnded = e => {
-  let modalPopup = document.querySelector('.' + modalShowClass);
-  let modalReveal = e.target; // after first transition, remove the content underneath the background
-
-  modalPopup.classList.remove(modalShowContentClass); // switch these so the transition direction changes
-
-  modalReveal.classList.remove(modalRevealFromBottom);
-  modalReveal.classList.add(modalRevealFromTop); // trigger the second transition - delay slightly
-
+    modal.classList.remove(modalTransitioningOutClass);
+  }, 100);
   setTimeout(function () {
-    modalPopup.classList.remove(modalTransitioningOutClass);
-  }, 300);
-  setTimeout(function () {
-    // switch these classes back for next transition
-    modalReveal.classList.remove(modalRevealFromTop);
-    modalReveal.classList.add(modalRevealFromBottom); // finally, remove the modal popup and background
-
-    modalPopup.classList.remove(modalShowClass);
-    modalPopup.classList.add(modalHiddenClass);
+    // finally, remove the modal popup and background
+    modal.classList.remove(modalShowClass);
+    modal.classList.add(modalHiddenClass);
+    modal.removeAttribute('data-open');
     document.body.classList.remove(bodyModalInClass);
-  }, 500);
+  }, 600);
+};
+
+const openTransition = modal => {
+  // show the content so it's revealed on transition
+  modal.classList.add(modalShowContentClass); // trigger the second transition
+
+  setTimeout(function () {
+    modal.classList.remove(modalTransitioningInClass);
+  }, 100);
+  setTimeout(function () {
+    // required delay so close transition not
+    modal.setAttribute('data-open', true);
+  }, 600);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = ({

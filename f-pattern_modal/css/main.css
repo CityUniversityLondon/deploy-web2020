@@ -17350,8 +17350,39 @@ body.modal--in .modal__background {
     z-index: 4;
 }
 
-.modal__popup div[role='modal'] {
+.modal__inner {
     position: relative;
+}
+
+.modal__inner:before, .modal__inner:after {
+    content: '';
+    display: block;
+    background: #015a79;
+    position: absolute;
+    height: 100%;
+    width: 100.5%;
+    z-index: 1;
+    transition: transform 0.35s cubic-bezier(0.53, 0.745, 1, 0.83);
+    transform: scaleY(0);
+}
+
+.modal__inner:before {
+    transform-origin: 0 bottom;
+}
+
+.modal__inner:after {
+    transform-origin: 0 top;
+    bottom: -1px;
+}
+
+.modal__popup--transitioning-in .modal__inner:before {
+    transform-origin: 0 top;
+    background: #3e1031;
+}
+
+.modal__popup--transitioning-out .modal__inner:after {
+    transform-origin: 0 bottom;
+    background: #3e1031;
 }
 
 .modal__popup--hidden {
@@ -17371,31 +17402,8 @@ body.modal--in .modal__background {
     position: relative;
 }
 
-.modal__reveal {
-    background: #015a79;
-    position: absolute;
-    height: 100%;
-    width: 100.5%;
-    z-index: 1;
-    transition: transform 0.35s cubic-bezier(0.53, 0.745, 1, 0.83);
-    transform: scaleY(0);
-}
-
-.modal__reveal:nth-child(2) {
-    background: #3e1031;
-}
-
-.modal__reveal--fromtop {
-    transform-origin: 0 0;
-}
-
-.modal__reveal--frombottom {
-    transform-origin: 0 100%;
-    bottom: -1px;
-}
-
-.modal__popup--transitioning-in .modal__reveal--fromtop,
-.modal__popup--transitioning-out .modal__reveal--frombottom {
+.modal__popup--transitioning-in .modal__inner:before,
+.modal__popup--transitioning-out .modal__inner:after {
     transform: scaleY(1);
 }
 
