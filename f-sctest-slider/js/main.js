@@ -3301,6 +3301,147 @@ __webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "./no
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/es.string.replace.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/core-js/modules/es.string.replace.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
+var toObject = __webpack_require__(/*! ../internals/to-object */ "./node_modules/core-js/internals/to-object.js");
+var toLength = __webpack_require__(/*! ../internals/to-length */ "./node_modules/core-js/internals/to-length.js");
+var toInteger = __webpack_require__(/*! ../internals/to-integer */ "./node_modules/core-js/internals/to-integer.js");
+var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "./node_modules/core-js/internals/require-object-coercible.js");
+var advanceStringIndex = __webpack_require__(/*! ../internals/advance-string-index */ "./node_modules/core-js/internals/advance-string-index.js");
+var regExpExec = __webpack_require__(/*! ../internals/regexp-exec-abstract */ "./node_modules/core-js/internals/regexp-exec-abstract.js");
+var max = Math.max;
+var min = Math.min;
+var floor = Math.floor;
+var SUBSTITUTION_SYMBOLS = /\$([$&`']|\d\d?|<[^>]*>)/g;
+var SUBSTITUTION_SYMBOLS_NO_NAMED = /\$([$&`']|\d\d?)/g;
+
+var maybeToString = function (it) {
+  return it === undefined ? it : String(it);
+};
+
+// @@replace logic
+__webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "./node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js")(
+  'replace',
+  2,
+  function (REPLACE, nativeReplace, maybeCallNative) {
+    return [
+      // `String.prototype.replace` method
+      // https://tc39.github.io/ecma262/#sec-string.prototype.replace
+      function replace(searchValue, replaceValue) {
+        var O = requireObjectCoercible(this);
+        var replacer = searchValue == undefined ? undefined : searchValue[REPLACE];
+        return replacer !== undefined
+          ? replacer.call(searchValue, O, replaceValue)
+          : nativeReplace.call(String(O), searchValue, replaceValue);
+      },
+      // `RegExp.prototype[@@replace]` method
+      // https://tc39.github.io/ecma262/#sec-regexp.prototype-@@replace
+      function (regexp, replaceValue) {
+        var res = maybeCallNative(nativeReplace, regexp, this, replaceValue);
+        if (res.done) return res.value;
+
+        var rx = anObject(regexp);
+        var S = String(this);
+
+        var functionalReplace = typeof replaceValue === 'function';
+        if (!functionalReplace) replaceValue = String(replaceValue);
+
+        var global = rx.global;
+        if (global) {
+          var fullUnicode = rx.unicode;
+          rx.lastIndex = 0;
+        }
+        var results = [];
+        while (true) {
+          var result = regExpExec(rx, S);
+          if (result === null) break;
+
+          results.push(result);
+          if (!global) break;
+
+          var matchStr = String(result[0]);
+          if (matchStr === '') rx.lastIndex = advanceStringIndex(S, toLength(rx.lastIndex), fullUnicode);
+        }
+
+        var accumulatedResult = '';
+        var nextSourcePosition = 0;
+        for (var i = 0; i < results.length; i++) {
+          result = results[i];
+
+          var matched = String(result[0]);
+          var position = max(min(toInteger(result.index), S.length), 0);
+          var captures = [];
+          // NOTE: This is equivalent to
+          //   captures = result.slice(1).map(maybeToString)
+          // but for some reason `nativeSlice.call(result, 1, result.length)` (called in
+          // the slice polyfill when slicing native arrays) "doesn't work" in safari 9 and
+          // causes a crash (https://pastebin.com/N21QzeQA) when trying to debug it.
+          for (var j = 1; j < result.length; j++) captures.push(maybeToString(result[j]));
+          var namedCaptures = result.groups;
+          if (functionalReplace) {
+            var replacerArgs = [matched].concat(captures, position, S);
+            if (namedCaptures !== undefined) replacerArgs.push(namedCaptures);
+            var replacement = String(replaceValue.apply(undefined, replacerArgs));
+          } else {
+            replacement = getSubstitution(matched, S, position, captures, namedCaptures, replaceValue);
+          }
+          if (position >= nextSourcePosition) {
+            accumulatedResult += S.slice(nextSourcePosition, position) + replacement;
+            nextSourcePosition = position + matched.length;
+          }
+        }
+        return accumulatedResult + S.slice(nextSourcePosition);
+      }
+    ];
+
+    // https://tc39.github.io/ecma262/#sec-getsubstitution
+    function getSubstitution(matched, str, position, captures, namedCaptures, replacement) {
+      var tailPos = position + matched.length;
+      var m = captures.length;
+      var symbols = SUBSTITUTION_SYMBOLS_NO_NAMED;
+      if (namedCaptures !== undefined) {
+        namedCaptures = toObject(namedCaptures);
+        symbols = SUBSTITUTION_SYMBOLS;
+      }
+      return nativeReplace.call(replacement, symbols, function (match, ch) {
+        var capture;
+        switch (ch.charAt(0)) {
+          case '$': return '$';
+          case '&': return matched;
+          case '`': return str.slice(0, position);
+          case "'": return str.slice(tailPos);
+          case '<':
+            capture = namedCaptures[ch.slice(1, -1)];
+            break;
+          default: // \d\d?
+            var n = +ch;
+            if (n === 0) return match;
+            if (n > m) {
+              var f = floor(n / 10);
+              if (f === 0) return match;
+              if (f <= m) return captures[f - 1] === undefined ? ch.charAt(1) : captures[f - 1] + ch.charAt(1);
+              return match;
+            }
+            capture = captures[n - 1];
+        }
+        return capture === undefined ? '' : capture;
+      });
+    }
+  }
+);
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/es.string.search.js":
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es.string.search.js ***!
@@ -4996,7 +5137,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
 /* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
 /* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
-/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
+/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
+/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
 
 
 /**
@@ -5022,7 +5164,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_14__["default"]]);
 
 /***/ }),
 
@@ -6588,6 +6731,352 @@ function launchMenu(menu) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchMenu,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/modal/modal.js":
+/*!*************************************!*\
+  !*** ./src/patterns/modal/modal.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+
+/**
+ * modal
+ *
+ * @module patterns/modal/modal
+ * @author Daniel Miller <daniel.miller@city.ac.uk>
+ * @copyright City, University of London 2018
+ */
+
+/**
+    <div class="modal__popup modal__popup--hidden" data-title="Hong Kong">
+        <div role="modal" aria-labelledby="modal__heading" aria-modal="true">
+            <div class="modal__reveal modal__reveal--fromtop"></div>
+            <div class="modal__reveal modal__reveal--frombottom"></div>
+            <div class="modal__content">
+                <a href="#" class="modal__close fas fa-times"></a>
+                ....
+            </div>
+        </div>
+    </div>
+**/
+
+const className = 'modal__popup',
+      modalPopupClass = '.modal__popup',
+      modalHiddenClass = 'modal__popup--hidden',
+      modalShowClass = 'modal__popup--show',
+      modalShowContentClass = 'modal__popup--show-content',
+      modalTransitioningInClass = 'modal__popup--transitioning-in',
+      modalTransitioningOutClass = 'modal__popup--transitioning-out',
+      modalRevealFromTop = 'modal__reveal--fromtop',
+      modalHeadingClass = '.modal__heading',
+      modalRevealFromBottom = 'modal__reveal--frombottom',
+      modalTriggerClass = '.modal__trigger',
+      modalBackgroundClass = 'modal__background',
+      bodyModalInClass = 'modal--in',
+      modalCloseClass = '.modal__close',
+      modalContentClass = '.modal__content',
+      modalCloseClassList = 'modal__close fas fa-times',
+      modalBackground = document.createElement('div'),
+      modalPopups = document.querySelectorAll(modalPopupClass),
+      modalPopupsLength = modalPopups.length;
+let windowWidth = window.innerWidth,
+    counter = 1; // set class attr of modal background ready to be inserted later
+
+modalBackground.setAttribute('class', modalBackgroundClass); // always reconfigure if window resized
+
+window.addEventListener('resize', setWindowWidth);
+
+function setWindowWidth() {
+  // reassign new width
+  windowWidth = window.innerWidth;
+}
+/**
+ * Add modal link: add link in the parent element to modal
+ *
+ * @param {HTMLElement} modal - the modal element
+ */
+
+
+function addModalLink(modal) {
+  let modalAnchor,
+      modalTriggerClassText = modalTriggerClass.replace('.', '');
+  modalAnchor = document.createElement('a');
+  modalAnchor.setAttribute('class', modalTriggerClassText);
+  modalAnchor.href = '#';
+  modalAnchor.innerHTML = modal.getAttribute('data-title');
+  modal.parentNode.insertBefore(modalAnchor, modal);
+}
+/**
+ * Add modal close: add a clsoe link within the modal
+ *
+ * @param {HTMLElement} modal - the modal element
+ */
+
+
+function addModalClose(modal) {
+  let modalCloseAnchor, modalHeading;
+  modalCloseAnchor = document.createElement('a');
+  modalCloseAnchor.setAttribute('class', modalCloseClassList);
+  modalCloseAnchor.href = '#';
+  modalHeading = modal.querySelector(modalHeadingClass);
+  modalHeading.parentNode.insertBefore(modalCloseAnchor, modalHeading);
+}
+/**
+ * Add modal reveals: add the divs that create the "curtain" effect
+ *
+ * @param {HTMLElement} modal - the modal element
+ */
+
+
+function addModalReveals(modal) {
+  let revealFromTop, revealFromBottom, modalContent;
+  revealFromTop = document.createElement('div');
+  revealFromBottom = document.createElement('div');
+  revealFromTop.setAttribute('class', 'modal__reveal ' + modalRevealFromTop);
+  revealFromBottom.setAttribute('class', 'modal__reveal ' + modalRevealFromBottom);
+  modalContent = modal.querySelector(modalContentClass);
+  modalContent.parentNode.insertBefore(revealFromTop, modalContent);
+  modalContent.parentNode.insertBefore(revealFromBottom, modalContent);
+}
+/**
+ * Launch modal: entry function
+ *
+ * @param {HTMLElement} modal - the modal element
+ */
+
+
+function launchModal(modal) {
+  /**
+   * Add modal link and close link inside modal
+   */
+  addModalLink(modal);
+  addModalClose(modal);
+  addModalReveals(modal);
+  /**
+   * Events need to be added, but just once for all
+   */
+
+  createEventListeners(modalPopupsLength);
+}
+
+const createEventListeners = modalPopupsLength => {
+  if (counter == modalPopupsLength) {
+    let modalCloseTriggers, modalInReveals, modalOutReveals, modalOpenTriggers;
+    modalOpenTriggers = document.querySelectorAll(modalTriggerClass);
+    modalCloseTriggers = document.querySelectorAll(modalCloseClass);
+    modalInReveals = document.querySelectorAll('.' + modalRevealFromTop);
+    modalOutReveals = document.querySelectorAll('.' + modalRevealFromBottom);
+    /**
+     * Add click listeners to open and close triggers
+     */
+
+    modalOpenTriggers.forEach(trigger => {
+      trigger.addEventListener('click', handleTriggerOpen, false);
+    });
+    modalCloseTriggers.forEach(trigger => {
+      trigger.addEventListener('click', handleTriggerClose, false);
+    });
+    /**
+     * Listen for escape key press and exit the active modal
+     */
+
+    document.addEventListener('keydown', e => {
+      let keyCode = e.keyCode; // get the only active modal
+
+      let activeModal = document.getElementsByClassName(modalShowClass)[0];
+
+      if (keyCode === 27) {
+        closeModal(activeModal);
+      }
+    });
+    /**
+     * Listen for a click anywhere outside the modal and close active modal
+     */
+
+    document.addEventListener('click', e => {
+      e.target.classList.forEach(className => {
+        if (className === modalShowClass) {
+          // get the only active modal
+          let activeModal = document.getElementsByClassName(modalShowClass)[0];
+          closeModal(activeModal);
+          return;
+        }
+      });
+    });
+    /**
+     * Listen for when reveal in/out transition over
+     */
+
+    modalInReveals.forEach(elem => {
+      // chrome & safari
+      elem.addEventListener('webkitTransitionEnd', transitionInEnded, false); // standard
+
+      elem.addEventListener('transitionend', transitionInEnded, false); // moz
+
+      elem.addEventListener('mozTransitionEnd', transitionInEnded, false);
+    });
+    modalOutReveals.forEach(elem => {
+      elem.addEventListener('webkitTransitionEnd', transitionOutEnded, false);
+      elem.addEventListener('transitionend', transitionOutEnded, false);
+      elem.addEventListener('mozTransitionEnd', transitionOutEnded, false);
+    });
+  }
+
+  counter++;
+};
+/**
+ * Handle trigger open: handles the modal open
+ *
+ * @param {event} e - the event
+ */
+
+
+const handleTriggerOpen = e => {
+  e.preventDefault();
+  let modalPopup = e.target.nextElementSibling;
+  openModal(modalPopup); // activate focus trap
+
+  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_2___default()(modalPopup, {
+    clickOutsideDeactivates: true
+  });
+  trap.activate();
+};
+/**
+ * Handle trigger close: handles the modal open
+ *
+ * @param {event} e - the event
+ */
+
+
+const handleTriggerClose = e => {
+  e.preventDefault();
+  let modalPopup = document.querySelector('.' + modalShowClass);
+  closeModal(modalPopup);
+};
+/**
+ * Open modal: used to show the modal
+ *
+ * @param {HTMLElement} modalPopup - the modal div to be displayed
+ */
+
+
+const openModal = modalPopup => {
+  // add background div to src if not present
+  if (!document.body.contains(modalBackground)) {
+    document.body.appendChild(modalBackground);
+  } // fade background in
+
+
+  document.body.classList.add(bodyModalInClass);
+
+  if (windowWidth >= 768) {
+    // show the modal, but keep the content div hidden
+    modalPopup.classList.remove(modalHiddenClass);
+    modalPopup.classList.add(modalShowClass); // trigger the first transition after the container displayed
+
+    setTimeout(function () {
+      modalPopup.classList.add(modalTransitioningInClass);
+    }, 50);
+  } else {
+    // show the modal, skip transition
+    modalPopup.classList.remove(modalHiddenClass);
+    modalPopup.classList.add(modalShowClass);
+    modalPopup.classList.add(modalShowContentClass);
+  }
+};
+/**
+ * Close modal: closes the active modal
+ *
+ * @param {HTMLElement} modalPopup - the modal div to be hidden
+ */
+
+
+const closeModal = modalPopup => {
+  if (windowWidth >= 768) {
+    // trigger transition, callback handles the closing
+    modalPopup.classList.add(modalTransitioningOutClass);
+  } else {
+    modalPopup.classList.remove(modalShowClass);
+    modalPopup.classList.add(modalHiddenClass);
+    modalPopup.classList.remove(modalShowContentClass);
+    document.body.classList.remove(bodyModalInClass);
+  }
+};
+/**
+ * Transition in ended: after the transition has ended, do stuff
+ *
+ * @param {e} event - used to target elements
+ */
+
+
+const transitionInEnded = e => {
+  let modalReveal = e.target; // switch classes to reverse transition or reset for next transition
+
+  if (modalReveal.classList.contains(modalRevealFromTop)) {
+    modalReveal.classList.remove(modalRevealFromTop);
+    modalReveal.classList.add(modalRevealFromBottom);
+  } else {
+    modalReveal.classList.remove(modalRevealFromBottom);
+    modalReveal.classList.add(modalRevealFromTop);
+  }
+
+  let modalPopup = document.querySelector('.' + modalShowClass); // show the content so it's revealed on transition
+
+  modalPopup.classList.add(modalShowContentClass); // trigger the second transition - delay slightly
+
+  setTimeout(function () {
+    modalPopup.classList.remove(modalTransitioningInClass);
+  }, 300);
+};
+/**
+ * Transition out ended: after the transition has ended, do stuff
+ *
+ * @param {e} event - used to target elements
+ */
+
+
+const transitionOutEnded = e => {
+  let modalPopup = document.querySelector('.' + modalShowClass);
+  let modalReveal = e.target; // after first transition, remove the content underneath the background
+
+  modalPopup.classList.remove(modalShowContentClass); // switch these so the transition direction changes
+
+  modalReveal.classList.remove(modalRevealFromBottom);
+  modalReveal.classList.add(modalRevealFromTop); // trigger the second transition - delay slightly
+
+  setTimeout(function () {
+    modalPopup.classList.remove(modalTransitioningOutClass);
+  }, 300);
+  setTimeout(function () {
+    // switch these classes back for next transition
+    modalReveal.classList.remove(modalRevealFromTop);
+    modalReveal.classList.add(modalRevealFromBottom); // finally, remove the modal popup and background
+
+    modalPopup.classList.remove(modalShowClass);
+    modalPopup.classList.add(modalHiddenClass);
+    document.body.classList.remove(bodyModalInClass);
+  }, 500);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchModal,
   launchQuery: ".".concat(className)
 });
 
