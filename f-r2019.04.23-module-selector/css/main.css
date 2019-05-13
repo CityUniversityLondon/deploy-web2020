@@ -19647,13 +19647,15 @@ article .social-icon .link-copy {
     border-bottom-color: #cbcbcb;
 }
 
-.module-selector__content__moduleLink a:active {
-    color: #ffffff;
-    border-color: #ffffff;
-    background-image: none;
+@media (hover: hover) {
+    .module-selector__content__moduleLink a:hover {
+        color: #ffffff;
+        border-color: #ffffff;
+        background-image: none;
+    }
 }
 
-.module-selector__content__moduleLink a:hover {
+.module-selector__content__moduleLink a:active {
     color: #ffffff;
     border-color: #ffffff;
     background-image: none;
