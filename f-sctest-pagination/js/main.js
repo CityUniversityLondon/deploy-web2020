@@ -7894,10 +7894,10 @@ function launchTabs(tabs) {
 
   if (!idLinked) {
     toggleLink(linkItems[0].firstElementChild, true);
-    panels[0].setAttribute('hidden', 'false');
+    panels[0].removeAttribute('hidden');
   } else {
     const selectedTab = tabs.querySelector(idLinked);
-    selectedTab.setAttribute('hidden', 'false');
+    selectedTab.removeAttribute('hidden');
   }
   /**
    * Enable keyboard access to tabs with the cursor keys.
