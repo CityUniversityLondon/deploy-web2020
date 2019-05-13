@@ -6344,7 +6344,7 @@ function prepareSubMenu(menuItem, subMenu) {
         iconSpan = document.createElement('span'),
         textSpan = document.createElement('span');
   menuItemBtn.setAttribute('type', 'button');
-  iconSpan.toggleAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, true);
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
   iconSpan.className = "".concat(buttonIconClassName, " fal fa-fw");
   textSpan.className = "".concat(buttonTextClassName);
   Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(menuItemBtn, [iconSpan, textSpan]);
@@ -6690,7 +6690,7 @@ function launchMenu(menu) {
   columns[0].appendChild(menuList);
   createMenuToggle(label, button, setMenu);
   veil.className = veilClassName;
-  veil.toggleAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, true);
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   setMenu(false);
   menus.forEach(menu => appendMenu(menu, columns));
@@ -7168,7 +7168,7 @@ function launchPaginatedList(list) {
         newList.setAttribute('start', pageSize * pageNumber + start);
       } else {
         newList.setAttribute('start', start - pageSize * pageNumber);
-        newList.toggleAttribute('reversed', true);
+        newList.setAttribute('reversed', 'true');
       }
     }
     /* move this page of items into the page and inner list */
@@ -7262,8 +7262,8 @@ function createToggleNextPrev(next, prev, pageCount) {
    * @param {number} pageNumber - The current page number.
    */
   const toggleNextPrev = pageNumber => {
-    pageCount === pageNumber ? next.toggleAttribute('disabled', true) : next.toggleAttribute('disabled', false);
-    1 === pageNumber ? prev.toggleAttribute('disabled', true) : prev.toggleAttribute('disabled', false);
+    pageCount === pageNumber ? next.setAttribute('disabled', 'true') : next.removeAttribute('disabled');
+    1 === pageNumber ? prev.setAttribute('disabled', 'true') : prev.removeAttribute('disabled');
   };
 
   return toggleNextPrev;
@@ -7297,7 +7297,7 @@ function setProximity(pageCount, controls, pageNumber) {
 
 function toggleButton(button, selected) {
   button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, selected);
-  button.toggleAttribute('disabled', selected);
+  selected ? button.setAttribute('disabled', 'true') : button.removeAttribute('disabled');
   selected ? button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'page') : button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current);
 }
 /**
@@ -7686,13 +7686,13 @@ function selectTab(newTab) {
   linkItems.forEach(linkItem => {
     toggleLink(linkItem.firstElementChild, false);
   });
-  panels.forEach(panel => panel.toggleAttribute('hidden', true));
+  panels.forEach(panel => panel.setAttribute('hidden', 'true'));
   /**
    * Select the requested tab.
    */
 
   toggleLink(newTab, true);
-  tabs.querySelector(newTab.hash).toggleAttribute('hidden', false);
+  tabs.querySelector(newTab.hash).removeAttribute('hidden');
   history.pushState(null, null, newTab.hash);
   /**
    * Move focus to the section and optionally scroll it into view.
@@ -7804,7 +7804,7 @@ function preparePanels(panels) {
     panel.appendChild(wrapper);
     panel.setAttribute('role', 'tabpanel');
     panel.setAttribute('tabindex', 0);
-    panel.toggleAttribute('hidden', true);
+    panel.setAttribute('hidden', 'true');
   });
 }
 /**
@@ -7868,7 +7868,8 @@ function accordionize(tabs) {
 function launchTabs(tabs) {
   const controls = tabs.querySelector(".".concat(linksClassName)),
         linkItems = Array.from(controls.querySelectorAll('li')),
-        panels = Array.from(tabs.querySelectorAll(".".concat(panelClassName)));
+        panels = Array.from(tabs.querySelectorAll(".".concat(panelClassName))),
+        numberOfTabs = Number.parseInt(tabs.dataset.mobiletabs);
 
   if (linkItems.length === 1) {
     /**
@@ -7878,15 +7879,11 @@ function launchTabs(tabs) {
     return;
   }
 
-  controls.setAttribute('role', 'tablist'); // zero by passes by not using CSS styling on the tabs
-
-  if (tabs.getAttribute('data-mobiletabs') > 0) {
-    preparePanels(panels);
-  }
-
+  controls.setAttribute('role', 'tablist');
+  preparePanels(panels);
   const idLinked = prepareLinks(linkItems);
 
-  if (linkItems.length > Number.parseInt(tabs.dataset.mobiletabs)) {
+  if (linkItems.length > numberOfTabs) {
     accordionize(tabs);
   }
   /**
@@ -7897,10 +7894,10 @@ function launchTabs(tabs) {
 
   if (!idLinked) {
     toggleLink(linkItems[0].firstElementChild, true);
-    panels[0].toggleAttribute('hidden', false);
+    panels[0].setAttribute('hidden', 'false');
   } else {
     const selectedTab = tabs.querySelector(idLinked);
-    selectedTab.toggleAttribute('hidden', false);
+    selectedTab.setAttribute('hidden', 'false');
   }
   /**
    * Enable keyboard access to tabs with the cursor keys.
