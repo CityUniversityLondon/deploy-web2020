@@ -5947,7 +5947,7 @@ function defaultListingsDisplay() {
 function launchKeyInfo(batchQuantity) {
   dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
 
-  if (browserWidth > 768) {
+  if (browserWidth >= 768) {
     if (Array.from(listings.children).length > batchQuantity) {
       listingDisplay();
       defaultListingsDisplay();
