@@ -12399,7 +12399,7 @@ main table td em {
     .theme--dark .cms-editor .cms-editor-warning-remover:active {
         background-color: #6894c0;
         border-bottom-color: #6894c0;
-        color: #1e1e1e;
+        color: #ffffff;
         outline-color: #ffffff;
     }
 }

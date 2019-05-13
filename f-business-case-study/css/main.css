@@ -19846,6 +19846,12 @@ article .social-icon .link-copy {
     }
 }
 
+@media (max-width: 1279px) {
+    .case-study__overview__main {
+        margin-bottom: 3rem;
+    }
+}
+
 .case-study__overview__main__standfirst {
     grid-column: 1 / -1;
     margin-bottom: 6rem;
@@ -19931,7 +19937,154 @@ article .social-icon .link-copy {
 }
 
 .case-study__overview__main__details a {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.3s ease;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.3s ease;
+    background-image: linear-gradient(120deg, #6894c0 0%, #6894c0 100%);
+    border-bottom-color: #6894c0;
+    color: #6894c0;
     transition: color 0.3s ease;
+}
+
+@media (hover: hover) {
+    .case-study__overview__main__details a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.case-study__overview__main__details a:focus, .case-study__overview__main__details a:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .case-study__overview__main__details a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .case-study__overview__main__details a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.case-study__overview__main__details a:visited {
+    border-bottom-color: #4c2c92;
+    color: #4c2c92;
+}
+
+.case-study__overview__main__details a:focus {
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+@media (hover: hover) {
+    .case-study__overview__main__details a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-width: 0.125rem;
+        border-bottom-style: solid;
+        color: #ffffff;
+    }
+}
+
+.case-study__overview__main__details a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .case-study__overview__main__details a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .case-study__overview__main__details a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.case-study__overview__main__details a:visited {
+    border-bottom-color: #9b7ed9;
+    color: #9b7ed9;
+}
+
+.case-study__overview__main__details a:focus {
+    color: #6894c0;
+    border-bottom-color: #6894c0;
+    outline-color: #ffffff;
+}
+
+@media (hover: hover) {
+    .case-study__overview__main__details a:hover {
+        border-bottom-color: #6894c0;
+        background: #6894c0;
+        color: #ffffff;
+    }
+}
+
+.case-study__overview__main__details a:active {
+    background-color: #6894c0;
+    border-bottom-color: #6894c0;
+    color: #ffffff;
+    outline-color: #ffffff;
 }
 
 .case-study__overview__multimedia-banner {
@@ -19982,6 +20135,10 @@ article .social-icon .link-copy {
     .case-study__overview__multimedia-banner__video {
         grid-column: 2 / 12;
     }
+}
+
+.case-study__overview__multimedia-banner__video .youtube-video {
+    padding: 0;
 }
 
 .case-study__overview__multimedia-banner__video figcaption {
@@ -20055,19 +20212,19 @@ article .social-icon .link-copy {
 
 @media (max-width: 432px) {
     .case-study__content__wrap {
-        grid-template-areas: 's s s s s s' 'c c c c c c';
+        grid-template-areas: 'c c c c c c';
     }
 }
 
 @media (min-width: 433px) {
     .case-study__content__wrap {
-        grid-template-areas: '. . s s s s s s s s . .' '. . c c c c c c c c . .';
+        grid-template-areas: '. c c c c c c c c c c .';
     }
 }
 
 @media (min-width: 901px) {
     .case-study__content__wrap {
-        grid-template-areas: '. . . . . c c c c c c c c . . . s s';
+        grid-template-areas: '. . . . . c c c c c c c c . . . . .';
     }
 }
 
@@ -20080,37 +20237,27 @@ article .social-icon .link-copy {
     margin-top: 1.5rem;
 }
 
-.case-study__content__share-icons {
-    grid-area: s;
-    display: flex;
-    flex-direction: row-reverse;
+.case-study__content__share-icons__wrap {
+    grid-column: 1 / -1;
 }
 
-@media (max-width: 899px) {
-    .case-study__content__share-icons {
-        margin-top: 1.5rem;
-    }
+.case-study__content__share-icons {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .case-study__content__share-icons ul {
     list-style-type: none;
     margin-left: 0px;
-    margin-top: 1.75rem;
+    margin: 1.75rem 0;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@media (max-width: 899px) {
-    .case-study__content__share-icons ul {
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 899px) {
-    .case-study__content__share-icons ul li {
-        margin-right: 0.75rem;
-        margin-top: 0;
-    }
+.case-study__content__share-icons ul li {
+    margin-right: 0.75rem;
+    margin-top: 0;
 }
 
 .case-study__contact-details__wrap {
@@ -20255,7 +20402,7 @@ article .social-icon .link-copy {
 @media (max-width: 899px) {
     .case-study--research .case-study__overview__main__standfirst {
         grid-column: 1 / -1;
-        border-bottom: 0.125rem solid #696969;
+        border-bottom: 0.05rem solid #696969;
         border-right: none;
         padding-bottom: 1.5rem;
         margin-bottom: 1.5rem;
@@ -20314,7 +20461,7 @@ article .social-icon .link-copy {
 
 @media (min-width: 433px) {
     .case-study--research__details {
-        grid-column: 3/ 11;
+        grid-column: 2/ 12;
     }
 }
 
@@ -21384,7 +21531,7 @@ article .social-icon .link-copy {
     .theme--dark article a:active {
         background-color: #6894c0;
         border-bottom-color: #6894c0;
-        color: #1e1e1e;
+        color: #ffffff;
         outline-color: #ffffff;
     }
     .theme--dark .skip-link:focus {
@@ -22390,7 +22537,7 @@ article .social-icon .link-copy {
 .theme--dark .feedback .feedback__form-link a:active {
     background-color: #6894c0;
     border-bottom-color: #6894c0;
-    color: #1e1e1e;
+    color: #ffffff;
     outline-color: #ffffff;
 }
 
@@ -22540,7 +22687,7 @@ article .social-icon .link-copy {
 .theme--dark .feedback .feedback__direct button:active {
     background-color: #6894c0;
     border-bottom-color: #6894c0;
-    color: #1e1e1e;
+    color: #ffffff;
     outline-color: #ffffff;
 }
 
@@ -23868,7 +24015,7 @@ article .social-icon .link-copy {
     .theme--dark.js .theme-switcher__option button:active {
         background-color: #6894c0;
         border-bottom-color: #6894c0;
-        color: #1e1e1e;
+        color: #ffffff;
         outline-color: #ffffff;
     }
 }
