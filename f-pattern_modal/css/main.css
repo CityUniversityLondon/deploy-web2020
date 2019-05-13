@@ -17362,7 +17362,7 @@ body.modal--in .modal__background {
     height: 100%;
     width: 100.5%;
     z-index: 1;
-    transition: transform 0.35s cubic-bezier(0.53, 0.745, 1, 0.83);
+    transition: transform 0.4s cubic-bezier(0.53, 0.745, 1, 0.83);
     transform: scaleY(0);
 }
 

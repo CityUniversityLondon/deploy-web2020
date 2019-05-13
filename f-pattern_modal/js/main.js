@@ -4974,12 +4974,12 @@ function addModalLink(modal) {
 
 function addModalClose(modal) {
   let modalHeading = modal.querySelector(modalHeadingClass);
-  insertElement(modalHeading, 'a', modalCloseClassList);
+  insertElement(modalHeading, 'a', modalCloseClassList, '#');
 }
 /**
  * Insert element: helper function to insert element to source
  *
- * @param {HTMLElement} targetParent - the parent to target
+ * @param {HTMLElement} targetParent - the parent of target
  * @param {string} type - the type of element to create
  * @param {string} classList - the class list
  * @param {string} href - the href to add
@@ -5040,7 +5040,9 @@ function launchModal(modal) {
   setTransitionListeners(modalInner, modal);
 }
 /**
- * Set transition listeners: adds the listeners to the modal links
+ * Set transition listeners: add transition finished listeners.
+ * The transition event actually occurs on the :before and :after
+ * but bubbles up to parent
  *
  * @param {HTMLElement} modalInner - the modalInner element
  * @param {HTMLElement} modal - the modal
@@ -5049,8 +5051,8 @@ function launchModal(modal) {
 
 function setTransitionListeners(modalInner, modal) {
   for (let listener in eventListeners) {
-    modalInner.addEventListener(eventListeners[listener], () => {
-      setOpenOrCloseFunction(modal);
+    modalInner.addEventListener(eventListeners[listener], e => {
+      setOpenOrCloseFunction(modal, e);
     }, false);
   }
 }
@@ -5061,11 +5063,20 @@ function setTransitionListeners(modalInner, modal) {
  */
 
 
-function setOpenOrCloseFunction(modal) {
-  if (modal.hasAttribute('data-open')) {
-    closeTransition(modal);
-  } else {
-    openTransition(modal);
+function setOpenOrCloseFunction(modal, e) {
+  let modalInnerClassText = modalInnerClass.replace('.', '');
+  /**
+   * Other events bubble (e.g anchor hover) so make sure it's the
+   * modal__inner class that the event is on
+   *
+   */
+
+  if (e.target.classList[0] == modalInnerClassText) {
+    if (modal.hasAttribute('data-open')) {
+      closeTransition(modal);
+    } else {
+      openTransition(modal);
+    }
   }
 }
 /**
@@ -5075,7 +5086,7 @@ function setOpenOrCloseFunction(modal) {
  */
 
 
-const handleTriggerOpen = e => {
+function handleTriggerOpen(e) {
   e.preventDefault();
   let modal = e.target.nextElementSibling;
   openModal(modal); // activate focus trap
@@ -5084,7 +5095,7 @@ const handleTriggerOpen = e => {
     clickOutsideDeactivates: true
   });
   trap.activate();
-};
+}
 /**
  * Handle trigger close: handles the modal open
  *
@@ -5092,11 +5103,11 @@ const handleTriggerOpen = e => {
  */
 
 
-const handleTriggerClose = e => {
+function handleTriggerClose(e) {
   e.preventDefault();
   let modal = document.querySelector('.' + modalShowClass);
   closeModal(modal);
-};
+}
 /**
  * Open modal: used to show the modal
  *
@@ -5104,7 +5115,7 @@ const handleTriggerClose = e => {
  */
 
 
-const openModal = modal => {
+function openModal(modal) {
   addBackgroundFade();
 
   if (windowWidth >= 768) {
@@ -5121,14 +5132,14 @@ const openModal = modal => {
     modal.classList.add(modalShowClass);
     modal.classList.add(modalShowContentClass);
   }
-};
+}
 /**
  * Add background fade: adds background element and fades it in
  *
  */
 
 
-const addBackgroundFade = () => {
+function addBackgroundFade() {
   // add background div to src if not present
   if (!document.body.contains(modalBackground)) {
     document.body.appendChild(modalBackground);
@@ -5136,15 +5147,15 @@ const addBackgroundFade = () => {
 
 
   document.body.classList.add(bodyModalInClass);
-};
+}
 /**
  * Close modal: closes the active modal
  *
- * @param {HTMLElement} modalPopup - the modal div to be hidden
+ * @param {HTMLElement} modal - the modal div to be hidden
  */
 
 
-const closeModal = modal => {
+function closeModal(modal) {
   if (windowWidth >= 768) {
     // trigger transition, callback handles the closing
     modal.classList.add(modalTransitioningOutClass);
@@ -5154,7 +5165,7 @@ const closeModal = modal => {
     modal.classList.remove(modalShowContentClass);
     document.body.classList.remove(bodyModalInClass);
   }
-};
+}
 /**
  * Close transition: handles the close transition and modal hide
  *
@@ -5162,7 +5173,7 @@ const closeModal = modal => {
  */
 
 
-const closeTransition = modal => {
+function closeTransition(modal) {
   // after first transition, remove the content underneath the background
   modal.classList.remove(modalShowContentClass); // trigger the second transition
 
@@ -5175,8 +5186,8 @@ const closeTransition = modal => {
     modal.classList.add(modalHiddenClass);
     modal.removeAttribute('data-open');
     document.body.classList.remove(bodyModalInClass);
-  }, 600);
-};
+  }, 700);
+}
 /**
  * Open transition: handles the open transition and modal show
  *
@@ -5184,7 +5195,7 @@ const closeTransition = modal => {
  */
 
 
-const openTransition = modal => {
+function openTransition(modal) {
   // show the content so it's revealed on transition
   modal.classList.add(modalShowContentClass); // trigger the second transition
 
@@ -5195,7 +5206,7 @@ const openTransition = modal => {
     // required delay so close transition not
     modal.setAttribute('data-open', true);
   }, 600);
-};
+}
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchModal,
