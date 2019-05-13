@@ -5566,40 +5566,35 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  *  Finds external links and adds font awesome icon to indicate external link
+ * Instructions: add external-link-finder class to templates in article container element
  */
-const className = 'content';
-/**
- * List areas below where external links should be found.
- */
+const className = 'external-link-finder';
 
-const containerAnchors = document.getElementsByClassName('container')[0].querySelectorAll('a');
+function findExternalLink(anchorsArea) {
+  const anchors = anchorsArea.querySelectorAll('a');
 
-function findExternalLink() {
-  const anchorsAreas = [containerAnchors];
-  anchorsAreas.forEach(function (anchorsCount) {
-    if (anchorsCount.length > 0) {
-      anchorsCount.forEach(function (anchor) {
-        /** checks if anchors links are :
-         * external
-         * not an image
-         * not contain font awesome external link icon already
-         * fab for social icons
-         * is not a social icon
-         * not a CTA
-         * not an email hyperlink
-         * not a telephone number link
-         * has to contain a href value
-         */
-        if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && anchor.querySelectorAll('.fab').length < 1 && anchor.className !== 'social-icon' && !anchor.parentElement.className.includes('cta-block') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
-          // adds font awesome external link icon after completing checks
-          let node = document.createElement('span');
-          node.className = 'fa fa-external-link inline-external-link ';
-          node.setAttribute('aria-hidden', 'true');
-          anchor.appendChild(node);
-        }
-      });
-    }
-  });
+  if (anchors.length > 0) {
+    anchors.forEach(function (anchor) {
+      /** checks if anchors links are :
+       * external
+       * not an image
+       * not contain font awesome external link icon already
+       * fab for social icons
+       * is not a social icon
+       * not a CTA
+       * not an email hyperlink
+       * not a telephone number link
+       * has to contain a href value
+       */
+      if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && anchor.querySelectorAll('.fab').length < 1 && anchor.className !== 'social-icon' && !anchor.parentElement.className.includes('cta-block') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
+        // adds font awesome external link icon after completing checks
+        let node = document.createElement('span');
+        node.className = 'fa fa-external-link inline-external-link ';
+        node.setAttribute('aria-hidden', 'true');
+        anchor.appendChild(node);
+      }
+    });
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
