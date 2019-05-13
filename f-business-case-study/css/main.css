@@ -19923,7 +19923,7 @@ article .social-icon .link-copy {
 
 @media (min-width: 433px) and (max-width: 900px) {
     .case-study__overview__main__details {
-        grid-column: 3 / 11;
+        grid-column: 2/ 12;
     }
 }
 
@@ -20133,7 +20133,7 @@ article .social-icon .link-copy {
 
 @media (min-width: 433px) and (max-width: 900px) {
     .case-study__overview__multimedia-banner__video {
-        grid-column: 2 / 12;
+        grid-column: 1 / -1;
     }
 }
 
