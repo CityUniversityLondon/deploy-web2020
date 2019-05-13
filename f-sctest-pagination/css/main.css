@@ -17201,7 +17201,7 @@ article figure figcaption a:active {
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .key-information--short-course__controls .content-slider .arrow-left--btn-prev,
     .key-information--short-course__controls .content-slider .arrow-right--btn-next {
         display: none;
@@ -17469,7 +17469,7 @@ article figure figcaption a:active {
     color: #ffffff;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .key-information--short-course__controls .content-toggle button {
         display: inline-block;
         grid-area: m;
