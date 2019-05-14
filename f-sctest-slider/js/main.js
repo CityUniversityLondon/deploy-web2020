@@ -5901,7 +5901,7 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2018
  */
 
-const className = 'key-information--short-course';
+const className = 'key-information--short-course--disable';
 let listings = document.querySelector('.key-information--short-course > ul'),
     batchQuantity = 3,
     contentToggles = Array.from(document.querySelectorAll('.content-toggle button')),
@@ -6044,11 +6044,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.promise */ "./node_modules/core-js/modules/es.promise.js");
 /* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
 
 
 
@@ -6064,76 +6067,44 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-const className = 'key-info-slider';
-let listings = document.querySelectorAll('.key-info__listing'),
+const className = 'key-information--short-course';
+let listings = document.querySelector('.key-information--short-course > ul'),
     batchQuantity = 3,
-    contentToggles = document.querySelectorAll('.content-toggle'),
+    contentToggles = Array.from(document.querySelectorAll('.content-toggle button')),
     contentSliders = document.querySelectorAll('.content-slider'),
     browserWidth = document.documentElement.scrollWidth,
     prevBtn = document.getElementById('key-info-previous-item'),
     nextBtn = document.getElementById('key-info-next-item'),
     listingHeight = '',
-    listingDates = document.querySelectorAll('.key-info__date'),
+    listingDates = document.querySelectorAll('.key-information--short-course > ul > li'),
     listingsVisible = [],
-    listingsLength = [],
     defaultDuration = 2000,
     edgeOffset = 100; // Zen scroll setup
 
-zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
+zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
 
 function dateTabIndex() {
   for (const listingDate of listingDates) {
     listingDate.setAttribute('tabindex', '-1');
-  }
-} // Initial listings display
-
-
-function defaultListingsDisplay() {
-  listingsLength = [];
-
-  for (const listing of listings.entries()) {
-    listingsLength.push(listings.length);
-    listing[0] > batchQuantity - 1 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
   }
 } // Visible listings: needed to decide if more content still to be loaded.
 
 
 function calculateVisibleListings() {
   listingsVisible = [];
-
-  for (const listing of listings) {
-    if (!listing.classList.contains('hide')) {
-      listingsVisible.push(listing);
+  Array.from(listings.children).forEach(elem => {
+    if (!elem.classList.contains('hide')) {
+      listingsVisible.push(elem);
     }
-  }
-} // Show number of listings in data set
+  });
+} // Initial listings display
 
 
-function listingsQuantity() {
-  const listingsNumber = [];
-
-  for (const listing of listings.entries()) {
-    listingsNumber.push(listing.length);
-  }
-
-  let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
-
-  for (const datesQuantity of datesQuantities) {
-    let date;
-    listingsNumber.length == 1 ? date = 'date' : date = 'dates';
-    let iconWrapper = document.createElement('div');
-    iconWrapper.classList.add('key-info__icon--left');
-    datesQuantity.appendChild(iconWrapper);
-    let calendarIcon = document.createElement('span');
-    calendarIcon.classList.add('fas');
-    calendarIcon.classList.add('fa-calendar-day');
-    iconWrapper.appendChild(calendarIcon);
-    let iconTextDiv = document.createElement('div');
-    iconWrapper.appendChild(iconTextDiv);
-    let iconTextP = document.createElement('p');
-    iconTextP.appendChild(document.createTextNode(listingsNumber.length + ' available start ' + date));
-    iconTextDiv.appendChild(iconTextP);
-  }
+function defaultListingsDisplay() {
+  const listElements = Array.from(listings.children);
+  listElements.forEach((elem, i) => {
+    i > batchQuantity - 1 ? elem.classList.add('hide') : elem.style.display = 'grid';
+  });
 }
 /**
  * Launches Key Info slider pattern. Pass in how many listings should display per batch,
@@ -6145,100 +6116,109 @@ function launchKeyInfo(batchQuantity) {
   let counter = 0; // Mobile: Show listing entry based on navigation button clicks
 
   function listingDisplay() {
-    for (const listing of listings.entries()) {
-      if (browserWidth < 768 && listings.length > 1) {
-        listing[0] == counter ? listing[1].style.display = 'block' : listing[1].style.display = 'none';
+    Array.from(listings.children).forEach((listing, i) => {
+      if (browserWidth < 768 && Array.from(listings.children).length > 1) {
+        i === counter ? listing.style.display = 'block' : listing.style.display = 'none';
       }
 
-      listing[1].setAttribute('data-id', "listing-".concat(listing[0]));
-    }
+      listing.setAttribute('data-id', "listing-".concat(i));
+    });
   } // Mobile: Enable/disable navigation buttons based on position of listing in collection
 
 
   function navBtnState() {
-    for (const contentSlider of contentSliders) {
-      contentSlider.style.display = 'block';
+    if (counter === 0) {
+      prevBtn.setAttribute('disabled', true);
+      nextBtn.removeAttribute('disabled');
+    } else if (counter > 0 && counter < Array.from(listings.children).length - 1) {
+      prevBtn.removeAttribute('disabled');
+      nextBtn.removeAttribute('disabled');
+    } else {
+      nextBtn.setAttribute('disabled', true);
+      prevBtn.removeAttribute('disabled');
     }
-
-    let listingsLength = listings.length - 1;
-    counter == 0 ? (prevBtn.setAttribute('disabled', true), nextBtn.removeAttribute('disabled')) : counter > 0 && counter < listingsLength ? (prevBtn.removeAttribute('disabled'), nextBtn.removeAttribute('disabled')) : (nextBtn.setAttribute('disabled', true), prevBtn.removeAttribute('disabled'));
-  } // Mobile: Set mobile listings navigation buttons to correct position based on listing height
+  } // // Mobile: Set mobile listings navigation buttons to correct position based on listing height
 
 
   function navBtnPosition() {
-    for (const listing of listings.entries()) {
-      if (counter == listing[0]) {
-        listingHeight = listing[1].getAttribute('data-height');
-        prevBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_4__["pxToRem"])("-".concat(listingHeight))) + Object(_util__WEBPACK_IMPORTED_MODULE_4__["pxToRem"])(100) + 'rem';
-        nextBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_4__["pxToRem"])("-".concat(listingHeight))) + Object(_util__WEBPACK_IMPORTED_MODULE_4__["pxToRem"])(100) + 'rem';
+    Array.from(listings.children).forEach((listing, i) => {
+      if (counter === i) {
+        listingHeight = listing.dataset.height;
+        prevBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_5__["pxToRem"])("-".concat(listingHeight))) + Object(_util__WEBPACK_IMPORTED_MODULE_5__["pxToRem"])(100) + 'rem';
+        nextBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_5__["pxToRem"])("-".concat(listingHeight))) + Object(_util__WEBPACK_IMPORTED_MODULE_5__["pxToRem"])(100) + 'rem';
       }
-    }
+    });
   } // Run regardless of viewport size
 
 
   dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
 
-  if (browserWidth > 768) {
-    if (listings.length > batchQuantity) {
+  if (browserWidth >= 768) {
+    if (Array.from(listings.children).length > batchQuantity) {
       listingDisplay();
       defaultListingsDisplay();
       calculateVisibleListings();
-
-      for (const contentToggle of contentToggles) {
+      contentToggles.forEach(contentToggle => {
         contentToggle.addEventListener('click', e => {
           // This will increase with each 'Load more' click, so visible listings
           // must be captured before any further listings are made visible
           let preExpandListingsVisible = listingsVisible.length;
           e.preventDefault();
 
-          if (preExpandListingsVisible < listings.length) {
-            for (const listing of listings.entries()) {
+          if (preExpandListingsVisible < Array.from(listings.children).length) {
+            Array.from(listings.children).forEach((elem, i) => {
               let targetListing = document.querySelector("[data-id='listing-".concat(preExpandListingsVisible, "']"));
-              let listingsVisibleLength = parseInt(listingsVisible.length);
-              listingsLength = parseInt(listingsLength);
+              let listingsVisibleLength = parseInt(listingsVisible.length) + batchQuantity;
+              const listingsLength = Array.from(listings.children).length;
               let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
 
-              zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(targetListing, 200);
-              let targetListingDate = targetListing.querySelectorAll('.key-info__date'); // Final batch of listings, zen scroll to 'load more' button and offset
+              zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(targetListing, 200); // let targetListingDate = targetListing.querySelectorAll(
+              //     '.key-info__date'
+              // );
+              // Final batch of listings, zen scroll to 'load more' button and offset
 
-              if (remainingItems <= batchQuantity) {
-                zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(contentToggle, 0);
-                contentToggles[0].style.display = 'none';
-              }
+              if (remainingItems <= 0) {
+                zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(contentToggle, 200);
+                contentToggle.style.display = 'none';
+              } // targetListingDate[0].focus();
+              // Bring in newly visible listings in two phases to allow for opacity transition
 
-              targetListingDate[0].focus(); // Bring in newly visible listings in two phases to allow for opacity transition
 
-              if (listing[0] < preExpandListingsVisible + batchQuantity) {
+              if (i < preExpandListingsVisible + batchQuantity) {
                 const promise = new Promise(resolve => {
-                  resolve(listing[1].style.display = 'grid');
+                  resolve(elem.style.display = 'grid');
                 });
                 promise.then(() => {
-                  listing[1].classList.remove('hide');
+                  elem.classList.remove('hide');
                 }); // Calculating visible listings must run here after display properties are updated
 
                 promise.then(() => {
                   calculateVisibleListings();
                 });
               }
-            }
+            });
           }
         }, false);
-      }
+      });
     } else {
-      contentToggles[0].style.display = 'none';
+      contentToggles.forEach(elem => {
+        elem.style.display = 'none';
+      });
     } // Mobile: one listing visible at a time
 
-  } else if (browserWidth < 768 && listings.length > 1) {
-    for (const listing of listings.entries()) {
+  } else if (browserWidth < 768 && Array.from(listings.children).length > 1) {
+    Array.from(listings.children).forEach((listing, i) => {
       // Capture listing height and set to data attribute
-      listing[1].style.display = 'block';
-      listing[1].setAttribute('data-height', listing[1].offsetHeight);
-      listing[1].style.display = 'none'; // On load, set mobile navigation buttons at correct height
+      listing.style.display = 'block';
+      listing.dataset.height = listing.offsetHeight;
+      listing.style.display = 'none'; // On load, set mobile navigation buttons at correct height
 
-      counter == 0 && listing[0] == 0 ? navBtnPosition() : null;
-      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
-    }
-
+      counter === 0 && i === 0 ? navBtnPosition() : null;
+      i > 0 ? listing.style.display = 'none' : listing.style.display = 'block';
+    });
+    Array.from(contentSliders).forEach(contentSlider => {
+      contentSlider.style.display = 'block';
+    });
     navBtnState();
     prevBtn.addEventListener('click', () => {
       counter = counter - 1;
@@ -6252,15 +6232,14 @@ function launchKeyInfo(batchQuantity) {
       navBtnPosition();
       listingDisplay();
     });
-  } else if (browserWidth < 768 && listings.length == 1) {
-    for (const listing of listings.entries()) {
-      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
-    }
+  } else if (browserWidth < 768 && Array.from(listings.children).length === 1) {
+    Array.from(listings.children).forEach((listing, i) => {
+      i > 0 ? listing.style.display = 'none' : listing.style.display = 'block';
+    });
   }
 }
 
 function launchKeyInfoSlider() {
-  listingsQuantity();
   launchKeyInfo(batchQuantity);
 }
 

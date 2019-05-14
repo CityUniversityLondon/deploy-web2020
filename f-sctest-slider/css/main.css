@@ -16954,11 +16954,15 @@ article figure figcaption a:active {
 .key-information--short-course > ul > li {
     display: grid;
     padding-bottom: 1rem;
-    border-bottom: 0.0625rem solid #a1a1a1;
 }
 
-.key-information--short-course > ul > li:last-of-type {
-    border-bottom: none;
+@media (min-width: 768px) {
+    .key-information--short-course > ul > li {
+        border-bottom: 0.0625rem solid #a1a1a1;
+    }
+    .key-information--short-course > ul > li:last-of-type {
+        border-bottom: none;
+    }
 }
 
 @media (max-width: 432px) {
@@ -16999,6 +17003,13 @@ article figure figcaption a:active {
 
 .key-information--short-course > ul > li > h3 {
     grid-area: heading;
+}
+
+@media (max-width: 767px) {
+    .key-information--short-course > ul > li > ul {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
 }
 
 .key-information--short-course > ul > li > ul:nth-of-type(1) {
@@ -17214,11 +17225,11 @@ article figure figcaption a:active {
 }
 
 .key-information--short-course__controls .content-slider .arrow-left--btn-prev {
-    left: -2.5rem;
+    left: -1.5rem;
 }
 
 .key-information--short-course__controls .content-slider .arrow-right--btn-next {
-    right: -2.5rem;
+    right: -1.5rem;
 }
 
 .key-information--short-course__controls .content-toggle {
