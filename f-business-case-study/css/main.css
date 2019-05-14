@@ -20490,12 +20490,12 @@ article .social-icon .link-copy {
 .case-study__overview__multimedia-banner__image--transition-start {
     opacity: 0.5;
     transform: scale(0.92, 0.92);
-    transition: all ease 2s;
 }
 
 .case-study__overview__multimedia-banner__image--transition-complete {
     opacity: 1;
     transform: scale(1, 1);
+    transition: all ease 2s;
 }
 
 .paragraph-fadein-start {
