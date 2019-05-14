@@ -20476,7 +20476,6 @@ article .social-icon .link-copy {
     display: block;
     background: #dd0036;
     margin: 2.25rem 0;
-    transition: width ease 0.5s;
 }
 
 .case-study .leading-section-separator--transition-start {
@@ -20485,6 +20484,7 @@ article .social-icon .link-copy {
 
 .case-study .leading-section-separator--transition-complete {
     width: 100%;
+    transition: width ease 0.5s;
 }
 
 .case-study__overview__multimedia-banner__image--transition-start {
@@ -20498,15 +20498,15 @@ article .social-icon .link-copy {
     transition: all ease 2s;
 }
 
-.paragraph-fadein-start {
+.content-fadein-start {
     opacity: 0;
     margin-top: 1.5rem;
-    transition: margin-top ease 1s, opacity ease 1.5s;
 }
 
-.paragraph-fadein-complete {
+.content-fadein-complete {
     opacity: 1;
     margin-top: 0;
+    transition: margin-top ease 1s, opacity ease 1.5s;
 }
 
 .transition-content-slideup {
@@ -20515,11 +20515,11 @@ article .social-icon .link-copy {
 
 .transition-content-slideup-start {
     top: 70%;
-    transition: top ease 1.5s;
 }
 
 .transition-content-slideup-end {
     top: 0;
+    transition: top ease 1.5s;
 }
 
 .content-hub {

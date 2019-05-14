@@ -4993,13 +4993,13 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Image banner transition
  *
- * @module patterns/external-link-finder/external-link-finder
+ * @module paint-layouts/case-study-transition-effects/banner-image
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
  * @copyright City, University of London 2019!
  */
 
 /**
- *  Animates the video / image banner to fade en an scale in size on scroll
+ *  Animates the image banner to fade in and scale in size on down scroll
  *
  * Requirements:
  * the animation effect require the following 2 classes:
@@ -5051,16 +5051,14 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Case study paragraph transitions
  *
- * @module patterns/external-link-finder/external-link-finder
+ * @module paint-layouts/case-study-transition-effects/content-section
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
  * @copyright City, University of London 2019!
  */
 
 /**
- * Animates paragraphs inside content area to fade in on scroll
+ * Animates content section to fade in and upwards on  down scroll
  *
- * Requirements:
- * template have to contain paragraph elements inside the content element
  */
 
 const className = 'content-fadein';
@@ -5069,13 +5067,13 @@ function contentParagraphsTransition(contentFadein) {
   const viewPortHeight = window.innerHeight; // calculates viewport height
 
   if (Object(_content_slideup__WEBPACK_IMPORTED_MODULE_1__["isNotMobile"])()) {
-    contentFadein.classList.add('paragraph-fadein-start');
+    contentFadein.classList.add('content-fadein-start');
     window.addEventListener('scroll', function () {
       const elemOffset = contentFadein.offsetTop;
       const screenPos = window.pageYOffset; // calculates scroll position
 
-      if (screenPos > elemOffset - viewPortHeight + 10 && !contentFadein.className.includes('paragraph-fadein-complete')) {
-        contentFadein.classList.add('paragraph-fadein-complete');
+      if (screenPos > elemOffset - viewPortHeight + 10 && !contentFadein.className.includes('content-fadein-complete')) {
+        contentFadein.classList.add('content-fadein-complete');
       }
     });
   }
@@ -5085,36 +5083,6 @@ function contentParagraphsTransition(contentFadein) {
   launchFn: contentParagraphsTransition,
   launchQuery: ".".concat(className)
 });
-/*
-
-BACKUP
-
-function contentParagraphsTransition() {
-    const paragraphs = document
-        .getElementsByClassName('case-study__content')[0]
-        .querySelectorAll('p');
-
-    const viewPortHeight = window.innerHeight; // calculates viewport height
-
-    paragraphs.forEach(function(i) {
-        i.classList.add('paragraph-fadein-start');
-    });
-
-    window.addEventListener('scroll', function() {
-        paragraphs.forEach(function(i) {
-            const elemOffset = i.offsetTop;
-            const screenPos = window.pageYOffset; // calculates scroll position
-
-            if (
-                screenPos > elemOffset - viewPortHeight + 10 &&
-                !i.className.includes('paragraph-fadein-complete')
-            ) {
-                i.classList.add('paragraph-fadein-complete');
-            }
-        });
-    });
-}
-*/
 
 /***/ }),
 
@@ -5137,16 +5105,14 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Background slideup transition
  *
- * @module patterns/external-link-finder/external-link-finder
+ * @module paint-layouts/case-study-transition-effects/content-slideup
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
  * @copyright City, University of London 2019!
  */
 
 /**
- *  Animates by dfault a grey background sliding up behind content text it's wrapping
+ *  Animates content to slide up on down scroll
  *
- * Requirements:
- * a div element with class name 'background-slideup' to wrap content it's suppose to appear behind. Then applies class 'background-slideup--transition-start' on page load and class 'background-slideup--transition-end' when close to element to create animation
  */
 const className = 'transition-content-slideup';
 
@@ -5206,7 +5172,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Leading separator transition
  *
- * @module patterns/external-link-finder/external-link-finder
+ * @module paint-layouts/case-study-transition-effects/leading-separator
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
  * @copyright City, University of London 2019!
  */
