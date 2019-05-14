@@ -18328,10 +18328,6 @@ ul.slider__slides {
     display: block;
 }
 
-.no-js .slider__controls {
-    display: none;
-}
-
 @media print {
     .js .tabs .tabs__links,
     .js .tabs--accordion .accordion {

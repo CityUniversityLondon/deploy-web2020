@@ -7251,9 +7251,9 @@ const className = 'slider--city-slider',
       activeSlideClass = 'slider__slide--active',
       sliderArrowClass = '.slider-arrow',
       sliderArrowNextClass = 'arrow-right--btn-next',
-      numberedIndicatorTotalSlides = '.slider__controls__numbered-indicator__total-slides',
-      numberedIndicatorActiveSlide = '.slider__controls__numbered-indicator__active-slide',
-      progressIndicatorProgress = '.slider__controls__progress-indicator__progress',
+      numberedIndicatorTotalSlidesClass = '.slider__controls__numbered-indicator__total-slides',
+      numberedIndicatorActiveSlideClass = '.slider__controls__numbered-indicator__active-slide',
+      progressIndicatorProgressClass = '.slider__controls__progress-indicator__progress',
       progressIndicatorContainerClass = 'slider__controls__progress-indicator',
       numberedIndicatorContainerClass = 'slider__controls__numbered-indicator',
       sliderTargetAttr = 'slider-target',
@@ -7332,7 +7332,7 @@ function addNumberedIndicator(sliderElement) {
 
 
 function addNumberedIndicatorElements(sliderElement) {
-  let htmlElements = []; // go through object and create the elements
+  let htmlElements = []; // go through sliderNumberedIndicators object and create the elements
 
   for (let i = 0; i < sliderNumberedIndicators.length; i++) {
     htmlElements[i] = document.createElement(sliderNumberedIndicators[i].type);
@@ -7341,7 +7341,7 @@ function addNumberedIndicatorElements(sliderElement) {
   } // get the container ready to add the elements
 
 
-  let numberedIndicatorContainer = sliderElement.querySelector('.' + numberedIndicatorContainerClass); // append each button to container
+  let numberedIndicatorContainer = sliderElement.querySelector('.' + numberedIndicatorContainerClass); // append each element to container
 
   htmlElements.forEach(function (el) {
     numberedIndicatorContainer.appendChild(el);
@@ -7510,7 +7510,7 @@ function configureTotalSlidesIndicator(sliderElement) {
 
   sliderCollectionLength = getSliderCollectionLength(slidesCollection); // get the total slides indicator element
 
-  totalSlidesIndicator = sliderElement.querySelector(numberedIndicatorTotalSlides); // set the text length
+  totalSlidesIndicator = sliderElement.querySelector(numberedIndicatorTotalSlidesClass); // set the text length
 
   setTotalSlidesIndicatorText(totalSlidesIndicator, sliderCollectionLength);
 }
@@ -7594,7 +7594,7 @@ function getSliderCollectionLength(slidesCollection) {
 
 function getActiveNumberedIndicatorElement(sliderElement) {
   // get the element
-  let currentSlideIndexElement = sliderElement.querySelector(numberedIndicatorActiveSlide);
+  let currentSlideIndexElement = sliderElement.querySelector(numberedIndicatorActiveSlideClass);
   return currentSlideIndexElement;
 }
 /**
@@ -7711,7 +7711,7 @@ function setActiveNumberedIndicatorText(currentSlideIndexElement, slideIndex) {
 
 
 function setProgressIndicator(sliderElement, slideIndex, sliderCollectionLength) {
-  let progressIndicatorElement = sliderElement.querySelector(progressIndicatorProgress);
+  let progressIndicatorElement = sliderElement.querySelector(progressIndicatorProgressClass);
   let percentageProgress = getPercentageProgress(slideIndex, sliderCollectionLength);
   progressIndicatorElement.setAttribute('style', 'width: ' + percentageProgress + '%');
 }
