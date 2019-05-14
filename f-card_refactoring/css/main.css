@@ -13528,11 +13528,13 @@ main table td em {
     }
 }
 
+.card--testimonial__column:first-child {
+    margin-right: 1.5rem;
+}
+
 @media (min-width: 769px) {
     .card--testimonial--photo {
-        display: grid;
-        grid-template-columns: 8rem auto;
-        grid-column-gap: 1.5rem;
+        display: flex;
     }
 }
 
