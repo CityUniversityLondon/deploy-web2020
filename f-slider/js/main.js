@@ -7335,10 +7335,10 @@ function addNumberedIndicator(sliderElement) {
 function addNumberedIndicatorElements(sliderElement) {
   let htmlElements = []; // go through sliderNumberedIndicators object and create the elements
 
-  for (let i = 0; i < sliderNumberedIndicators.length; i++) {
-    htmlElements[i] = document.createElement(sliderNumberedIndicators[i].type);
-    htmlElements[i].setAttribute('class', sliderNumberedIndicators[i].class);
-    htmlElements[i].innerHTML = sliderNumberedIndicators[i].content;
+  for (let key in sliderNumberedIndicators) {
+    htmlElements[key] = document.createElement(sliderNumberedIndicators[key].type);
+    htmlElements[key].setAttribute('class', sliderNumberedIndicators[key].class);
+    htmlElements[key].innerHTML = sliderNumberedIndicators[key].content;
   } // get the container ready to add the elements
 
 
@@ -7375,7 +7375,7 @@ function addProgressIndicator(sliderElement) {
   addProgressIndicatorBar(sliderElement);
 }
 /**
- * Add progress indicator bar: add the bad that provides progress
+ * Add progress indicator bar: add the bar that provides progress
  * feedback
  *
  * @param {HTMLElement} sliderElement - the slider element
@@ -7449,7 +7449,7 @@ function buildButtons(sliderTarget) {
     // create a button for each object
     htmlElements[key] = document.createElement(sliderButtons[key].type); // set its attributes - second arg is return val from setAttributes()
 
-    setAttributes(sliderButtons[key], htmlElements[key], sliderTarget);
+    setButtonAttributes(sliderButtons[key], htmlElements[key], sliderTarget);
   }
 
   return htmlElements;
@@ -7457,25 +7457,25 @@ function buildButtons(sliderTarget) {
 /**
  * Set attributes: loop through and set button attributes
  *
- * @param {object} obj - the json obj
- * @param {string} element - the element
- * @param {string} target - target class
+ * @param {object} buttonObject - the button json obj
+ * @param {string} htmlElement - the element
+ * @param {string} sliderTarget - slider target class
  */
 
 
-function setAttributes(obj, element, target) {
+function setButtonAttributes(buttonObject, htmlElement, sliderTarget) {
   // loop through values and set attrs
-  for (let key in obj) {
+  for (let key in buttonObject) {
     if (key === 'ariaLabel') {
-      element.setAttribute('aria-label', obj[key]);
+      htmlElement.setAttribute('aria-label', buttonObject[key]);
     } else {
-      element.setAttribute(key, obj[key]);
+      htmlElement.setAttribute(key, buttonObject[key]);
     }
   } // set the slider target attr
 
 
-  element.setAttribute(sliderTargetAttr, target);
-  return element;
+  htmlElement.setAttribute(sliderTargetAttr, sliderTarget);
+  return htmlElement;
 }
 /**
  * Entry function - sets up initial elements and adds listeners
@@ -7660,7 +7660,7 @@ function handleSlideChange(e) {
     }
   }
 
-  setButtonAttributes(e.target, sliderCollectionLength, slideIndex);
+  setDisabledAttribute(e.target, sliderCollectionLength, slideIndex);
   setActiveNumberedIndicatorText(currentNumberedIndicatorElement, slideIndex);
   setProgressIndicator(sliderElement, slideIndex, sliderCollectionLength);
 }
@@ -7674,7 +7674,7 @@ function handleSlideChange(e) {
  */
 
 
-function setButtonAttributes(buttonTarget, sliderCollectionLength, slideIndex) {
+function setDisabledAttribute(buttonTarget, sliderCollectionLength, slideIndex) {
   if (buttonTarget.classList.contains(sliderArrowNextClass)) {
     // if at the end of the slides, disable
     slideIndex == sliderCollectionLength ? buttonTarget.setAttribute('disabled', '') : // else enable next button
