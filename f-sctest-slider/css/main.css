@@ -16721,6 +16721,230 @@ article figure figcaption a:active {
     outline-offset: 0.1875rem;
 }
 
+.key-information--short-course .short-course__start-date__cta {
+    max-width: unset;
+}
+
+@media (max-width: 900px) {
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button {
+    background: initial;
+    border-radius: 0.25rem;
+    border: none;
+    color: initial;
+    display: inline-flex;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    transition: background-color 0.6s, transform 0.6s;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+    background: #dd0036;
+    border: 0.125rem solid #dd0036;
+    color: #ffffff;
+    background-color: #3e1031;
+    border-color: #3e1031;
+    color: #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta a,
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta button {
+        transition: none;
+    }
+}
+
+@media (max-width: 432px) {
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta a,
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta button {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a span,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button span {
+    transition: transform 0.6s;
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:after,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:after {
+    content: '\f061';
+    font-family: 'Font Awesome';
+    font-style: normal;
+    font-weight: normal;
+    opacity: 0;
+    position: absolute;
+    right: 1.5rem;
+    text-decoration: inherit;
+    transform: translateX(-0.75rem);
+    transition: background-color 0.6s, transform 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta a:after,
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta button:after {
+        transition: none;
+    }
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:focus, .key-information--short-course .short-course__start-date__cta .cta-block__cta a:active,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:focus,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:active {
+    background-color: transparent;
+    border: 0.125rem solid #dd0036;
+    color: #ffffff;
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:focus span, .key-information--short-course .short-course__start-date__cta .cta-block__cta a:active span,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:focus span,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:active span {
+    transform: translateX(-0.75rem);
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:focus:after, .key-information--short-course .short-course__start-date__cta .cta-block__cta a:active:after,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:focus:after,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:active:after {
+    opacity: 1;
+    transform: translateX(0.75rem);
+}
+
+@media (hover: hover) {
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta a:hover,
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta button:hover {
+        background-color: transparent;
+        border: 0.125rem solid #dd0036;
+        color: #ffffff;
+    }
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta a:hover span,
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta button:hover span {
+        transform: translateX(-0.75rem);
+    }
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta a:hover:after,
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta button:hover:after {
+        opacity: 1;
+        transform: translateX(0.75rem);
+    }
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:visited,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:visited {
+    border-color: #dd0036;
+    color: #ffffff;
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:focus,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:focus {
+    background: #dd0036;
+    border-color: #dd0036;
+    color: #ffffff;
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:focus:focus, .key-information--short-course .short-course__start-date__cta .cta-block__cta a:focus:active,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:focus:focus,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:focus:active {
+    outline-color: #ffffff;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+@media (hover: hover) {
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta a:hover,
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta button:hover {
+        background: #ffffff;
+        border-color: #dd0036;
+        color: #dd0036;
+    }
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:active,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:active {
+    border-color: #dd0036;
+    box-shadow: none;
+    color: #dd0036;
+    background: transparent;
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:active:focus, .key-information--short-course .short-course__start-date__cta .cta-block__cta a:active:active,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:active:focus,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:active:active {
+    outline-color: #ffffff;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:disabled,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:disabled {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a span,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button span {
+    transition: none;
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:visited,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:visited {
+    border-color: #3e1031;
+    color: #ffffff;
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:after,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:after {
+    content: '';
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:focus, .key-information--short-course .short-course__start-date__cta .cta-block__cta a:active,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:focus,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:active {
+    background-color: #3e1031;
+    border-color: #3e1031;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta a:hover,
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta button:hover {
+        background-color: #150611;
+        border-color: #150611;
+        color: #ffffff;
+    }
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:active,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:active {
+    background-color: #150611;
+    border-color: #150611;
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:disabled,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:disabled {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.key-information--short-course .short-course__start-date__cta .cta-block__cta a:active span, .key-information--short-course .short-course__start-date__cta .cta-block__cta a:focus span, .key-information--short-course .short-course__start-date__cta .cta-block__cta a:hover span,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:active span,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:focus span,
+.key-information--short-course .short-course__start-date__cta .cta-block__cta button:hover span {
+    transform: none;
+}
+
+@media (max-width: 900px) {
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta a,
+    .key-information--short-course .short-course__start-date__cta .cta-block__cta button {
+        justify-content: center;
+    }
+}
+
 .key-information--short-course ul {
     list-style-type: none;
     margin-left: 0;
@@ -16729,6 +16953,12 @@ article figure figcaption a:active {
 
 .key-information--short-course > ul > li {
     display: grid;
+    padding-bottom: 1rem;
+    border-bottom: 0.0625rem solid #a1a1a1;
+}
+
+.key-information--short-course > ul > li:last-of-type {
+    border-bottom: none;
 }
 
 @media (max-width: 432px) {
@@ -16783,230 +17013,6 @@ article figure figcaption a:active {
     grid-area: button;
 }
 
-.key-information--short-course > ul > li .short-course__start-date__cta {
-    max-width: unset;
-}
-
-@media (max-width: 900px) {
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta {
-        display: flex;
-        flex-direction: column;
-        margin-top: 2rem;
-    }
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button {
-    background: initial;
-    border-radius: 0.25rem;
-    border: none;
-    color: initial;
-    display: inline-flex;
-    font-weight: 600;
-    padding: 0.5rem 1.5rem;
-    position: relative;
-    transition: background-color 0.6s, transform 0.6s;
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
-    color: #ffffff;
-    background-color: #3e1031;
-    border-color: #3e1031;
-    color: #ffffff;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a,
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button {
-        transition: none;
-    }
-}
-
-@media (max-width: 432px) {
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a,
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a span,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button span {
-    transition: transform 0.6s;
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:after,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:after {
-    content: '\f061';
-    font-family: 'Font Awesome';
-    font-style: normal;
-    font-weight: normal;
-    opacity: 0;
-    position: absolute;
-    right: 1.5rem;
-    text-decoration: inherit;
-    transform: translateX(-0.75rem);
-    transition: background-color 0.6s, transform 0.6s;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:after,
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:after {
-        transition: none;
-    }
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:focus, .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:active,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:focus,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:active {
-    background-color: transparent;
-    border: 0.125rem solid #dd0036;
-    color: #ffffff;
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:focus span, .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:active span,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:focus span,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:active span {
-    transform: translateX(-0.75rem);
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:focus:after, .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:active:after,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:focus:after,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:active:after {
-    opacity: 1;
-    transform: translateX(0.75rem);
-}
-
-@media (hover: hover) {
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:hover,
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:hover {
-        background-color: transparent;
-        border: 0.125rem solid #dd0036;
-        color: #ffffff;
-    }
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:hover span,
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:hover span {
-        transform: translateX(-0.75rem);
-    }
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:hover:after,
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:hover:after {
-        opacity: 1;
-        transform: translateX(0.75rem);
-    }
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:visited,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:visited {
-    border-color: #dd0036;
-    color: #ffffff;
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:focus,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:focus {
-    background: #dd0036;
-    border-color: #dd0036;
-    color: #ffffff;
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:focus:focus, .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:focus:active,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:focus:focus,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:focus:active {
-    outline-color: #ffffff;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-}
-
-@media (hover: hover) {
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:hover,
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:hover {
-        background: #ffffff;
-        border-color: #dd0036;
-        color: #dd0036;
-    }
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:active,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:active {
-    border-color: #dd0036;
-    box-shadow: none;
-    color: #dd0036;
-    background: transparent;
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:active:focus, .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:active:active,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:active:focus,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:active:active {
-    outline-color: #ffffff;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:disabled,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:disabled {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a span,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button span {
-    transition: none;
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:visited,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:visited {
-    border-color: #3e1031;
-    color: #ffffff;
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:after,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:after {
-    content: '';
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:focus, .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:active,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:focus,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:active {
-    background-color: #3e1031;
-    border-color: #3e1031;
-    color: #ffffff;
-}
-
-@media (hover: hover) {
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:hover,
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:hover {
-        background-color: #150611;
-        border-color: #150611;
-        color: #ffffff;
-    }
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:active,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:active {
-    background-color: #150611;
-    border-color: #150611;
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:disabled,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:disabled {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:active span, .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:focus span, .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a:hover span,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:active span,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:focus span,
-.key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button:hover span {
-    transform: none;
-}
-
-@media (max-width: 900px) {
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta a,
-    .key-information--short-course > ul > li .short-course__start-date__cta .cta-block__cta button {
-        justify-content: center;
-    }
-}
-
 .key-info {
     max-width: 80rem;
 }
@@ -17050,53 +17056,6 @@ article figure figcaption a:active {
     }
 }
 
-.key-info__icon--left {
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .key-info__icon--left {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .key-info__icon--left {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .key-info__icon--left {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .key-info__icon--left {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .key-info__icon--left {
-        letter-spacing: -0.017em;
-    }
-}
-
-.key-info__icon--left span {
-    float: left;
-    color: #3e1031;
-    margin: 0.25rem 0;
-    line-height: inherit;
-}
-
-.key-info__icon--left div {
-    margin: 0 0 0 1.5rem;
-}
-
 .key-info__data-item--centered {
     text-align: center;
 }
@@ -17106,6 +17065,11 @@ article figure figcaption a:active {
     color: #3e1031;
     border-bottom: 0.0625rem solid #a1a1a1;
     font-size: 0.889rem;
+}
+
+.key-information--short-course > ul .hide {
+    opacity: 0;
+    display: none;
 }
 
 .key-info__listing {
@@ -17183,13 +17147,13 @@ article figure figcaption a:active {
     display: block;
 }
 
-.key-info__content-control .content-slider {
+.key-information--short-course__controls .content-slider {
     position: relative;
     display: none;
 }
 
-.key-info__content-control .content-slider .arrow-left--btn-prev,
-.key-info__content-control .content-slider .arrow-right--btn-next {
+.key-information--short-course__controls .content-slider .arrow-left--btn-prev,
+.key-information--short-course__controls .content-slider .arrow-right--btn-next {
     top: 45%;
     position: absolute;
     border: 0.25rem solid #3e1031;
@@ -17203,69 +17167,69 @@ article figure figcaption a:active {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .key-info__content-control .content-slider .arrow-left--btn-prev,
-    .key-info__content-control .content-slider .arrow-right--btn-next {
+    .key-information--short-course__controls .content-slider .arrow-left--btn-prev,
+    .key-information--short-course__controls .content-slider .arrow-right--btn-next {
         letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .key-info__content-control .content-slider .arrow-left--btn-prev,
-    .key-info__content-control .content-slider .arrow-right--btn-next {
+    .key-information--short-course__controls .content-slider .arrow-left--btn-prev,
+    .key-information--short-course__controls .content-slider .arrow-right--btn-next {
         letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .key-info__content-control .content-slider .arrow-left--btn-prev,
-    .key-info__content-control .content-slider .arrow-right--btn-next {
+    .key-information--short-course__controls .content-slider .arrow-left--btn-prev,
+    .key-information--short-course__controls .content-slider .arrow-right--btn-next {
         letter-spacing: -0.016em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .key-info__content-control .content-slider .arrow-left--btn-prev,
-    .key-info__content-control .content-slider .arrow-right--btn-next {
+    .key-information--short-course__controls .content-slider .arrow-left--btn-prev,
+    .key-information--short-course__controls .content-slider .arrow-right--btn-next {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .key-info__content-control .content-slider .arrow-left--btn-prev,
-    .key-info__content-control .content-slider .arrow-right--btn-next {
+    .key-information--short-course__controls .content-slider .arrow-left--btn-prev,
+    .key-information--short-course__controls .content-slider .arrow-right--btn-next {
         letter-spacing: -0.017em;
     }
 }
 
-@media (min-width: 769px) {
-    .key-info__content-control .content-slider .arrow-left--btn-prev,
-    .key-info__content-control .content-slider .arrow-right--btn-next {
+@media (min-width: 768px) {
+    .key-information--short-course__controls .content-slider .arrow-left--btn-prev,
+    .key-information--short-course__controls .content-slider .arrow-right--btn-next {
         display: none;
     }
 }
 
-.key-info__content-control .content-slider .arrow-left--btn-prev:disabled,
-.key-info__content-control .content-slider .arrow-right--btn-next:disabled {
+.key-information--short-course__controls .content-slider .arrow-left--btn-prev:disabled,
+.key-information--short-course__controls .content-slider .arrow-right--btn-next:disabled {
     opacity: 0.3;
 }
 
-.key-info__content-control .content-slider .arrow-left--btn-prev {
+.key-information--short-course__controls .content-slider .arrow-left--btn-prev {
     left: -2.5rem;
 }
 
-.key-info__content-control .content-slider .arrow-right--btn-next {
+.key-information--short-course__controls .content-slider .arrow-right--btn-next {
     right: -2.5rem;
 }
 
-.key-info__content-control .content-toggle {
+.key-information--short-course__controls .content-toggle {
     text-align: center;
 }
 
-.key-info__content-control .content-toggle button {
+.key-information--short-course__controls .content-toggle button {
     display: none;
 }
 
-.key-info__content-control .content-toggle button .fa-plus-circle {
+.key-information--short-course__controls .content-toggle button .fa-plus-circle {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -17291,7 +17255,7 @@ article figure figcaption a:active {
 }
 
 @media (hover: hover) {
-    .key-info__content-control .content-toggle button .fa-plus-circle:hover {
+    .key-information--short-course__controls .content-toggle button .fa-plus-circle:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -17306,7 +17270,7 @@ article figure figcaption a:active {
     }
 }
 
-.key-info__content-control .content-toggle button .fa-plus-circle:focus, .key-info__content-control .content-toggle button .fa-plus-circle:active {
+.key-information--short-course__controls .content-toggle button .fa-plus-circle:focus, .key-information--short-course__controls .content-toggle button .fa-plus-circle:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -17321,24 +17285,24 @@ article figure figcaption a:active {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .key-info__content-control .content-toggle button .fa-plus-circle {
+    .key-information--short-course__controls .content-toggle button .fa-plus-circle {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .key-info__content-control .content-toggle button .fa-plus-circle:hover {
+    .key-information--short-course__controls .content-toggle button .fa-plus-circle:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.key-info__content-control .content-toggle button .fa-plus-circle:visited {
+.key-information--short-course__controls .content-toggle button .fa-plus-circle:visited {
     border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
-.key-info__content-control .content-toggle button .fa-plus-circle:focus {
+.key-information--short-course__controls .content-toggle button .fa-plus-circle:focus {
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -17350,7 +17314,7 @@ article figure figcaption a:active {
 }
 
 @media (hover: hover) {
-    .key-info__content-control .content-toggle button .fa-plus-circle:hover {
+    .key-information--short-course__controls .content-toggle button .fa-plus-circle:hover {
         border-bottom-color: #006bbd;
         border-bottom-width: 0.125rem;
         border-bottom-style: solid;
@@ -17358,7 +17322,7 @@ article figure figcaption a:active {
     }
 }
 
-.key-info__content-control .content-toggle button .fa-plus-circle:active {
+.key-information--short-course__controls .content-toggle button .fa-plus-circle:active {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -17370,26 +17334,26 @@ article figure figcaption a:active {
     outline-offset: 0.1875rem;
 }
 
-.key-info__content-control .content-toggle button .fa-plus-circle:visited {
+.key-information--short-course__controls .content-toggle button .fa-plus-circle:visited {
     border-bottom-color: #006bbd;
     color: #006bbd;
 }
 
-.key-info__content-control .content-toggle button .fa-plus-circle:hover {
+.key-information--short-course__controls .content-toggle button .fa-plus-circle:hover {
     color: #ffffff;
 }
 
-.key-info__content-control .content-toggle button .fa-plus-circle:active {
+.key-information--short-course__controls .content-toggle button .fa-plus-circle:active {
     color: #ffffff;
 }
 
-.key-info__content-control .content-toggle button .fa-plus-circle:hover {
+.key-information--short-course__controls .content-toggle button .fa-plus-circle:hover {
     border: 0;
     color: #006bbd;
     background-size: 0% 0%;
 }
 
-.key-info__content-control .content-toggle button .label {
+.key-information--short-course__controls .content-toggle button .label {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -17413,7 +17377,7 @@ article figure figcaption a:active {
 }
 
 @media (hover: hover) {
-    .key-info__content-control .content-toggle button .label:hover {
+    .key-information--short-course__controls .content-toggle button .label:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -17428,7 +17392,7 @@ article figure figcaption a:active {
     }
 }
 
-.key-info__content-control .content-toggle button .label:focus, .key-info__content-control .content-toggle button .label:active {
+.key-information--short-course__controls .content-toggle button .label:focus, .key-information--short-course__controls .content-toggle button .label:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -17443,24 +17407,24 @@ article figure figcaption a:active {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .key-info__content-control .content-toggle button .label {
+    .key-information--short-course__controls .content-toggle button .label {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .key-info__content-control .content-toggle button .label:hover {
+    .key-information--short-course__controls .content-toggle button .label:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.key-info__content-control .content-toggle button .label:visited {
+.key-information--short-course__controls .content-toggle button .label:visited {
     border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
-.key-info__content-control .content-toggle button .label:focus {
+.key-information--short-course__controls .content-toggle button .label:focus {
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -17472,7 +17436,7 @@ article figure figcaption a:active {
 }
 
 @media (hover: hover) {
-    .key-info__content-control .content-toggle button .label:hover {
+    .key-information--short-course__controls .content-toggle button .label:hover {
         border-bottom-color: #006bbd;
         border-bottom-width: 0.125rem;
         border-bottom-style: solid;
@@ -17480,7 +17444,7 @@ article figure figcaption a:active {
     }
 }
 
-.key-info__content-control .content-toggle button .label:active {
+.key-information--short-course__controls .content-toggle button .label:active {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -17492,21 +17456,21 @@ article figure figcaption a:active {
     outline-offset: 0.1875rem;
 }
 
-.key-info__content-control .content-toggle button .label:visited {
+.key-information--short-course__controls .content-toggle button .label:visited {
     border-bottom-color: #006bbd;
     color: #006bbd;
 }
 
-.key-info__content-control .content-toggle button .label:hover {
+.key-information--short-course__controls .content-toggle button .label:hover {
     color: #ffffff;
 }
 
-.key-info__content-control .content-toggle button .label:active {
+.key-information--short-course__controls .content-toggle button .label:active {
     color: #ffffff;
 }
 
-@media (min-width: 769px) {
-    .key-info__content-control .content-toggle button {
+@media (min-width: 768px) {
+    .key-information--short-course__controls .content-toggle button {
         display: inline-block;
         grid-area: m;
         margin: 1.75rem;
@@ -21835,19 +21799,19 @@ article .social-icon .link-copy {
 
 @media (max-width: 432px) {
     .short-course--short-course .key-information--short-course {
-        grid-template-areas: 'heading heading heading heading heading heading' 'dates dates dates dates dates dates';
+        grid-template-areas: 'heading heading heading heading heading heading' 'dates dates dates dates dates dates' 'controls controls controls controls controls controls';
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
     .short-course--short-course .key-information--short-course {
-        grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading' 'dates dates dates dates dates dates dates dates dates dates dates dates';
+        grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading' 'dates dates dates dates dates dates dates dates dates dates dates dates' 'controls controls controls controls controls controls controls controls controls controls controls controls';
     }
 }
 
 @media (min-width: 901px) {
     .short-course--short-course .key-information--short-course {
-        grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading' 'dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates';
+        grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading' 'dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates' 'controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls';
     }
 }
 
@@ -21860,9 +21824,14 @@ article .social-icon .link-copy {
     margin-right: 1rem;
 }
 
-.short-course--short-course .key-information--short-course > ul {
+.short-course--short-course .key-information--short-course > ul,
+.short-course--short-course .key-information--short-course > .pagination__wrapper {
     grid-area: dates;
     max-width: unset;
+}
+
+.short-course--short-course .key-information--short-course > .key-information--short-course__controls {
+    grid-area: controls;
 }
 
 .short-course--short-course .short-course__start-date__cta {
@@ -22107,6 +22076,11 @@ article .social-icon .link-copy {
     .js .short-course .modal__content,
     .js .short-course .modal__content a:not(:hover):not(:active) {
         color: #1e1e1e;
+    }
+    .js .short-course .paginated-list .page ul,
+    .js .short-course .paginated-list .page ol {
+        list-style-type: none;
+        margin-left: 0;
     }
     .js .short-course .modal__trigger {
         background: initial;

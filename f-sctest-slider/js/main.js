@@ -5880,10 +5880,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.promise */ "./node_modules/core-js/modules/es.promise.js");
 /* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -5898,18 +5901,17 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2018
  */
 
-const className = 'key-info-paginated';
-let listings = document.querySelectorAll('.key-info__listing'),
+const className = 'key-information--short-course';
+let listings = document.querySelector('.key-information--short-course > ul'),
     batchQuantity = 3,
-    contentToggles = document.querySelectorAll('.content-toggle'),
+    contentToggles = Array.from(document.querySelectorAll('.content-toggle button')),
     browserWidth = document.documentElement.scrollWidth,
-    listingDates = document.querySelectorAll('.key-info__date'),
+    listingDates = document.querySelectorAll('.key-information--short-course > ul > li'),
     listingsVisible = [],
-    listingsLength = [],
     defaultDuration = 2000,
     edgeOffset = 100; // Zen scroll setup
 
-zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
+zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
 
 function dateTabIndex() {
   for (const listingDate of listingDates) {
@@ -5920,136 +5922,105 @@ function dateTabIndex() {
 
 function calculateVisibleListings() {
   listingsVisible = [];
-
-  for (const listing of listings) {
-    if (!listing.classList.contains('hide')) {
-      listingsVisible.push(listing);
+  Array.from(listings.children).forEach(elem => {
+    if (!elem.classList.contains('hide')) {
+      listingsVisible.push(elem);
     }
-  }
+  });
 } // Mobile: Show listing entry based on navigation button clicks
 
 
 function listingDisplay() {
-  for (const listing of listings.entries()) {
-    listing[1].setAttribute('data-id', "listing-".concat(listing[0]));
-  }
+  Array.from(listings.children).forEach((elem, i) => {
+    elem.dataset.id = "listing-".concat(i);
+  });
 } // Initial listings display
 
 
 function defaultListingsDisplay() {
-  listingsLength = [];
-
-  for (const listing of listings.entries()) {
-    listingsLength.push(listings.length);
-    listing[0] > batchQuantity - 1 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
-  }
-} // Show number of available starting dates.
-
-
-function listingsQuantity() {
-  const listingsNumber = [];
-
-  for (const listing of listings.entries()) {
-    listingsNumber.push(listing.length);
-  }
-
-  let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
-
-  for (const datesQuantity of datesQuantities) {
-    let date;
-    listingsNumber.length == 1 ? date = 'date' : date = 'dates';
-    let iconWrapper = document.createElement('div');
-    iconWrapper.classList.add('key-info__icon--left');
-    datesQuantity.appendChild(iconWrapper);
-    let calendarIcon = document.createElement('span');
-    calendarIcon.classList.add('fas');
-    calendarIcon.classList.add('fa-calendar-day');
-    iconWrapper.appendChild(calendarIcon);
-    let iconTextDiv = document.createElement('div');
-    iconWrapper.appendChild(iconTextDiv);
-    let iconTextP = document.createElement('p');
-    iconTextP.appendChild(document.createTextNode(listingsNumber.length + ' available start ' + date));
-    iconTextDiv.appendChild(iconTextP);
-  }
+  const listElements = Array.from(listings.children);
+  listElements.forEach((elem, i) => {
+    i > batchQuantity - 1 ? elem.classList.add('hide') : elem.style.display = 'grid';
+  });
 }
 
 function launchKeyInfo(batchQuantity) {
   dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
 
-  if (browserWidth > 768) {
-    if (listings.length > batchQuantity) {
+  if (browserWidth >= 768) {
+    if (Array.from(listings.children).length > batchQuantity) {
       listingDisplay();
       defaultListingsDisplay();
       calculateVisibleListings();
-
-      for (const contentToggle of contentToggles) {
+      contentToggles.forEach(contentToggle => {
         contentToggle.addEventListener('click', e => {
           // This will increase with each 'Load more' click, so visible listings
           // must be captured before any further listings are made visible
           let preExpandListingsVisible = listingsVisible.length;
           e.preventDefault();
 
-          if (preExpandListingsVisible < listings.length) {
-            for (const listing of listings.entries()) {
+          if (preExpandListingsVisible < Array.from(listings.children).length) {
+            Array.from(listings.children).forEach((elem, i) => {
               let targetListing = document.querySelector("[data-id='listing-".concat(preExpandListingsVisible, "']"));
-              let listingsVisibleLength = parseInt(listingsVisible.length);
-              listingsLength = parseInt(listingsLength);
+              let listingsVisibleLength = parseInt(listingsVisible.length) + batchQuantity;
+              const listingsLength = Array.from(listings.children).length;
               let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
 
-              zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(targetListing, 200);
-              let targetListingDate = targetListing.querySelectorAll('.key-info__date'); // Final batch of listings, zen scroll to 'load more' button and offset
+              zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(targetListing, 200); // let targetListingDate = targetListing.querySelector(
+              //     `[data-id='listing-${preExpandListingsVisible}']`
+              // );
+              // // Final batch of listings, zen scroll to 'load more' button and offset
 
-              if (remainingItems <= batchQuantity) {
-                zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(contentToggle, 200);
-                contentToggles[0].style.display = 'none';
-              }
+              if (remainingItems <= 0) {
+                zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(contentToggle, 200);
+                contentToggle.style.display = 'none';
+              } // targetListingDate.focus();
+              // Bring in newly visible listings in two phases to allow for opacity transition
 
-              targetListingDate[0].focus(); // Bring in newly visible listings in two phases to allow for opacity transition
 
-              if (listing[0] < preExpandListingsVisible + batchQuantity) {
+              if (i < preExpandListingsVisible + batchQuantity) {
                 const promise = new Promise(resolve => {
-                  resolve(listing[1].style.display = 'grid');
+                  resolve(elem.style.display = 'grid');
                 });
                 promise.then(() => {
-                  listing[1].classList.remove('hide');
+                  elem.classList.remove('hide');
                 }); // Calculating visible listings must run here after display properties are updated
 
                 promise.then(() => {
                   calculateVisibleListings();
                 });
               }
-            }
+            });
           }
         }, false);
-      }
+      });
     } else {
-      contentToggles[0].style.display = 'none';
+      contentToggles.forEach(elem => {
+        elem.style.display = 'none';
+      });
     } // Mobile: one listing visible at a time
 
-  } else if (browserWidth < 768 && listings.length > 1) {
-    let listWrapper = document.getElementById('short-course-key-info-listings');
-    listWrapper.classList.add('paginated-list'); // Scroll to top of listings after each paginated index click
+  } else if (browserWidth < 768 && Array.from(listings.children).length > 1) {
+    let listWrapper = document.querySelector('.key-information--short-course > ul');
+    listWrapper.classList.add('paginated-list');
+    listWrapper.dataset.pagesize = 1; // Scroll to top of listings after each paginated index click
 
     let paginationControls = document.querySelectorAll('.pagination__controls > button');
 
     for (const paginationControl of paginationControls) {
       paginationControl.addEventListener('click', () => {
-        let listingsTop = document.getElementById('short-course-key-info-listings');
+        let listingsTop = document.querySelector('.key-information--short-course > ul');
 
         if (paginationControl.getAttribute('aria-expanded') !== true) {
-          zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(listingsTop, 0);
+          zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(listingsTop, 0);
         }
       });
-    }
-  } else if (browserWidth < 768 && listings.length == 1) {
-    for (const listing of listings.entries()) {
-      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
     }
   }
 }
 
 function launchKeyInfoPaginated() {
-  listingsQuantity();
+  // listingsQuantity();
   launchKeyInfo(batchQuantity);
 }
 
@@ -6373,7 +6344,7 @@ function prepareSubMenu(menuItem, subMenu) {
         iconSpan = document.createElement('span'),
         textSpan = document.createElement('span');
   menuItemBtn.setAttribute('type', 'button');
-  iconSpan.toggleAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, true);
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
   iconSpan.className = "".concat(buttonIconClassName, " fal fa-fw");
   textSpan.className = "".concat(buttonTextClassName);
   Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(menuItemBtn, [iconSpan, textSpan]);
@@ -6719,7 +6690,7 @@ function launchMenu(menu) {
   columns[0].appendChild(menuList);
   createMenuToggle(label, button, setMenu);
   veil.className = veilClassName;
-  veil.toggleAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, true);
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   setMenu(false);
   menus.forEach(menu => appendMenu(menu, columns));
@@ -7111,7 +7082,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const className = 'paginated-list',
-      minimumPage = 4,
+      minimumPage = 1,
       defaultPage = 8,
       maximumPage = 12;
 /**
@@ -7152,7 +7123,7 @@ function launchPaginatedList(list) {
   }
 
   const pageSizeSetting = Number.parseInt(list.dataset.pagesize) ? Number.parseInt(list.dataset.pagesize) : defaultPage,
-        listItems = Array.from(list.querySelectorAll('li')),
+        listItems = Array.from(list.children),
         pageSize = setPageSize(pageSizeSetting);
 
   if (listItems.length <= pageSize) {
@@ -7197,7 +7168,7 @@ function launchPaginatedList(list) {
         newList.setAttribute('start', pageSize * pageNumber + start);
       } else {
         newList.setAttribute('start', start - pageSize * pageNumber);
-        newList.toggleAttribute('reversed', true);
+        newList.setAttribute('reversed', 'true');
       }
     }
     /* move this page of items into the page and inner list */
@@ -7291,8 +7262,8 @@ function createToggleNextPrev(next, prev, pageCount) {
    * @param {number} pageNumber - The current page number.
    */
   const toggleNextPrev = pageNumber => {
-    pageCount === pageNumber ? next.toggleAttribute('disabled', true) : next.toggleAttribute('disabled', false);
-    1 === pageNumber ? prev.toggleAttribute('disabled', true) : prev.toggleAttribute('disabled', false);
+    pageCount === pageNumber ? next.setAttribute('disabled', 'true') : next.removeAttribute('disabled');
+    1 === pageNumber ? prev.setAttribute('disabled', 'true') : prev.removeAttribute('disabled');
   };
 
   return toggleNextPrev;
@@ -7326,7 +7297,7 @@ function setProximity(pageCount, controls, pageNumber) {
 
 function toggleButton(button, selected) {
   button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, selected);
-  button.toggleAttribute('disabled', selected);
+  selected ? button.setAttribute('disabled', 'true') : button.removeAttribute('disabled');
   selected ? button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'page') : button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current);
 }
 /**
@@ -7715,13 +7686,13 @@ function selectTab(newTab) {
   linkItems.forEach(linkItem => {
     toggleLink(linkItem.firstElementChild, false);
   });
-  panels.forEach(panel => panel.toggleAttribute('hidden', true));
+  panels.forEach(panel => panel.setAttribute('hidden', 'true'));
   /**
    * Select the requested tab.
    */
 
   toggleLink(newTab, true);
-  tabs.querySelector(newTab.hash).toggleAttribute('hidden', false);
+  tabs.querySelector(newTab.hash).removeAttribute('hidden');
   history.pushState(null, null, newTab.hash);
   /**
    * Move focus to the section and optionally scroll it into view.
@@ -7833,7 +7804,7 @@ function preparePanels(panels) {
     panel.appendChild(wrapper);
     panel.setAttribute('role', 'tabpanel');
     panel.setAttribute('tabindex', 0);
-    panel.toggleAttribute('hidden', true);
+    panel.setAttribute('hidden', 'true');
   });
 }
 /**
@@ -7897,7 +7868,8 @@ function accordionize(tabs) {
 function launchTabs(tabs) {
   const controls = tabs.querySelector(".".concat(linksClassName)),
         linkItems = Array.from(controls.querySelectorAll('li')),
-        panels = Array.from(tabs.querySelectorAll(".".concat(panelClassName)));
+        panels = Array.from(tabs.querySelectorAll(".".concat(panelClassName))),
+        numberOfTabs = Number.parseInt(tabs.dataset.mobiletabs);
 
   if (linkItems.length === 1) {
     /**
@@ -7907,15 +7879,11 @@ function launchTabs(tabs) {
     return;
   }
 
-  controls.setAttribute('role', 'tablist'); // zero by passes by not using CSS styling on the tabs
-
-  if (tabs.getAttribute('data-mobiletabs') > 0) {
-    preparePanels(panels);
-  }
-
+  controls.setAttribute('role', 'tablist');
+  preparePanels(panels);
   const idLinked = prepareLinks(linkItems);
 
-  if (linkItems.length > Number.parseInt(tabs.dataset.mobiletabs)) {
+  if (linkItems.length > numberOfTabs) {
     accordionize(tabs);
   }
   /**
@@ -7926,10 +7894,10 @@ function launchTabs(tabs) {
 
   if (!idLinked) {
     toggleLink(linkItems[0].firstElementChild, true);
-    panels[0].toggleAttribute('hidden', false);
+    panels[0].removeAttribute('hidden');
   } else {
     const selectedTab = tabs.querySelector(idLinked);
-    selectedTab.toggleAttribute('hidden', false);
+    selectedTab.removeAttribute('hidden');
   }
   /**
    * Enable keyboard access to tabs with the cursor keys.
