@@ -7248,14 +7248,37 @@ __webpack_require__.r(__webpack_exports__);
  */
 const className = 'slider--city-slider',
       slidesContainerClass = '.slider__slides',
-      sliderButtonsClass = '.slider__buttons',
       activeSlideClass = 'slider__slide--active',
       sliderArrowClass = '.slider-arrow',
       sliderArrowNextClass = 'arrow-right--btn-next',
       numberedIndicatorTotalSlides = '.slider__controls__numbered-indicator__total-slides',
       numberedIndicatorActiveSlide = '.slider__controls__numbered-indicator__active-slide',
       progressIndicatorProgress = '.slider__controls__progress-indicator__progress',
+      progressIndicatorContainerClass = 'slider__controls__progress-indicator',
+      numberedIndicatorContainerClass = 'slider__controls__numbered-indicator',
       sliderTargetAttr = 'slider-target',
+      buttonContainerClass = 'slider__buttons',
+      sliderControlsClass = 'slider__controls',
+      sliderNumberedIndicators = [{
+  name: 'activeSlide',
+  type: 'span',
+  class: 'slider__controls__numbered-indicator__active-slide',
+  content: '1'
+}, {
+  name: 'separator',
+  type: 'span',
+  class: 'slider__controls__numbered-indicator__separator',
+  content: '/'
+}, {
+  name: 'totalSlides',
+  type: 'span',
+  class: 'slider__controls__numbered-indicator__total-slides',
+  content: ''
+}],
+      sliderProgressIndicator = {
+  type: 'div',
+  class: 'slider__controls__progress-indicator__progress'
+},
       sliderButtons = [{
   name: 'prevButton',
   type: 'button',
@@ -7275,24 +7298,141 @@ const className = 'slider--city-slider',
  */
 
 function configureSliderControls(sliderElement) {
-  let sliderTarget, sliderControls, sliderButtonContainer;
-  sliderTarget = sliderElement.getAttribute('slider-target');
-  sliderControls = buildControls(sliderTarget);
-  sliderButtonContainer = sliderElement.querySelector(sliderButtonsClass);
-  displayControls(sliderControls, sliderButtonContainer);
+  let sliderTarget, buttonElements;
+  addSliderControlsContainer(sliderElement); // get slider target attr - something like: '.slider--testimonial'
+
+  sliderTarget = sliderElement.getAttribute('slider-target'); // generate the controls - pass target to be added as button attr
+
+  buttonElements = buildButtons(sliderTarget); // add the numbered indicator
+
+  addNumberedIndicator(sliderElement); // add the progress indicator
+
+  addProgressIndicator(sliderElement); // combine the HTML and display
+
+  displayButtons(sliderElement, buttonElements);
+}
+/**
+ * Add numbered indicator: adds the '1/4' display
+ *
+ * @param {HTMLElement} sliderElement - the slider element
+ */
+
+
+function addNumberedIndicator(sliderElement) {
+  // add the container
+  addNumberedIndicatorContainer(sliderElement); // add the span elements
+
+  addNumberedIndicatorElements(sliderElement);
+}
+/**
+ * Add numbered indicator elements: add the spans
+ *
+ * @param {HTMLElement} sliderElement - the slider element
+ */
+
+
+function addNumberedIndicatorElements(sliderElement) {
+  let htmlElements = []; // go through object and create the elements
+
+  for (let i = 0; i < sliderNumberedIndicators.length; i++) {
+    htmlElements[i] = document.createElement(sliderNumberedIndicators[i].type);
+    htmlElements[i].setAttribute('class', sliderNumberedIndicators[i].class);
+    htmlElements[i].innerHTML = sliderNumberedIndicators[i].content;
+  } // get the container ready to add the elements
+
+
+  let numberedIndicatorContainer = sliderElement.querySelector('.' + numberedIndicatorContainerClass); // append each button to container
+
+  htmlElements.forEach(function (el) {
+    numberedIndicatorContainer.appendChild(el);
+  });
+}
+/**
+ * Add numbered indicator container: add the container
+ *
+ * @param {HTMLElement} sliderElement - the slider element
+ */
+
+
+function addNumberedIndicatorContainer(sliderElement) {
+  let numberedIndicatorContainer = document.createElement('div');
+  numberedIndicatorContainer.setAttribute('class', numberedIndicatorContainerClass);
+  let sliderControlsContainer = sliderElement.querySelector('.' + sliderControlsClass);
+  sliderControlsContainer.appendChild(numberedIndicatorContainer);
+}
+/**
+ * Add progress inidcator container and bar itself
+ *
+ * @param {HTMLElement} sliderElement - the slider element
+ */
+
+
+function addProgressIndicator(sliderElement) {
+  // add the container first
+  addProgressIndicatorContainer(sliderElement); // then add indicator bar
+
+  addProgressIndicatorBar(sliderElement);
+}
+/**
+ * Add progress indicator bar: add the bad that provides progress
+ * feedback
+ *
+ * @param {HTMLElement} sliderElement - the slider element
+ */
+
+
+function addProgressIndicatorBar(sliderElement) {
+  let progressIndicator = document.createElement(sliderProgressIndicator.type);
+  progressIndicator.setAttribute('class', sliderProgressIndicator.class);
+  let progressIndicatorContainer = sliderElement.querySelector('.' + progressIndicatorContainerClass);
+  progressIndicatorContainer.appendChild(progressIndicator);
+}
+/**
+ * Add progress indcator container: add the container for the progress
+ * bar
+ *
+ * @param {HTMLElement} sliderElement - the slider element
+ */
+
+
+function addProgressIndicatorContainer(sliderElement) {
+  // add the progress indicator container
+  let progressIndicatorContainer = document.createElement('div');
+  progressIndicatorContainer.setAttribute('class', progressIndicatorContainerClass);
+  let sliderControlsContainer = sliderElement.querySelector('.' + sliderControlsClass);
+  sliderControlsContainer.appendChild(progressIndicatorContainer);
+}
+/**
+ * Add slider controls container: add the container for buttons,
+ * progress bar, etc
+ *
+ * @param {HTMLElement} sliderElement - the slider element
+ */
+
+
+function addSliderControlsContainer(sliderElement) {
+  let sliderControlsContainer = document.createElement('div');
+  sliderControlsContainer.setAttribute('class', sliderControlsClass);
+  sliderElement.appendChild(sliderControlsContainer);
 }
 /**
  * Display controls: append the buttons to the slider
  *
- * @param {HTMLElement} sliderControls - array of buttons
- * @param {HTMLElement} sliderButtonContainer - container element
+ * @param {HTMLElement} controls - array of buttons
+ * @param {HTMLElement} elementParents - array of parent elements
  */
 
 
-function displayControls(sliderControls, sliderButtonContainer) {
-  for (let b in sliderControls) {
-    sliderButtonContainer.appendChild(sliderControls[b]);
-  }
+function displayButtons(sliderElement, buttonElements) {
+  let sliderControlsElement = sliderElement.querySelector('.' + sliderControlsClass); // add button container to source
+
+  let buttonContainer = document.createElement('div');
+  buttonContainer.setAttribute('class', buttonContainerClass);
+  sliderControlsElement.appendChild(buttonContainer); // append each button to container
+
+  buttonElements.forEach(function (el) {
+    buttonContainer.appendChild(el);
+  });
 }
 /**
  * Build buttons: build the buttons for each slider
@@ -7301,17 +7441,17 @@ function displayControls(sliderControls, sliderButtonContainer) {
  */
 
 
-function buildControls(sliderTarget) {
-  let buttonElements = [];
+function buildButtons(sliderTarget) {
+  let htmlElements = []; // loop through each obj, create an element for each and set its attrs
 
-  for (let obj in sliderButtons) {
+  for (let key in sliderButtons) {
     // create a button for each object
-    buttonElements[obj] = document.createElement(sliderButtons[obj].type); // set its attributes
+    htmlElements[key] = document.createElement(sliderButtons[key].type); // set its attributes - second arg is return val from setAttributes()
 
-    setAttributes(sliderButtons[obj], buttonElements[obj], sliderTarget);
+    setAttributes(sliderButtons[key], htmlElements[key], sliderTarget);
   }
 
-  return buttonElements;
+  return htmlElements;
 }
 /**
  * Set attributes: loop through and set button attributes
@@ -7334,6 +7474,7 @@ function setAttributes(obj, element, target) {
 
 
   element.setAttribute(sliderTargetAttr, target);
+  return element;
 }
 /**
  * Entry function - sets up initial elements and adds listeners
@@ -7344,9 +7485,9 @@ function setAttributes(obj, element, target) {
 
 function slider(sliderElement) {
   // show initial controls
-  configureSliderControls(sliderElement); // get all nav arrows
+  configureSliderControls(sliderElement); // get all nav arrows in this slider
 
-  let sliderArrows = document.querySelectorAll(sliderArrowClass); // configure click handlers for all next/prev
+  let sliderArrows = sliderElement.querySelectorAll(sliderArrowClass); // configure click handlers for the arrows
 
   sliderArrows.forEach(function (sliderArrow) {
     sliderArrow.addEventListener('click', handleSlideChange, false);
