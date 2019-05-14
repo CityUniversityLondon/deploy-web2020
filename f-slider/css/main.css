@@ -18071,6 +18071,10 @@ ul.slider__slides {
     }
 }
 
+.slider__controls__numbered-indicator__separator {
+    margin: 0 0.25rem;
+}
+
 .slider__controls__progress-indicator__progress {
     background: #7c2062;
     width: 0;

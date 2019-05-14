@@ -7298,16 +7298,17 @@ const className = 'slider--city-slider',
  */
 
 function configureSliderControls(sliderElement) {
-  let sliderTarget, buttonElements;
-  addSliderControlsContainer(sliderElement); // get slider target attr - something like: '.slider--testimonial'
+  let sliderTarget, buttonElements; // add the container for all controls
 
-  sliderTarget = sliderElement.getAttribute('slider-target'); // generate the controls - pass target to be added as button attr
-
-  buttonElements = buildButtons(sliderTarget); // add the numbered indicator
+  addSliderControlsContainer(sliderElement); // add the numbered indicator
 
   addNumberedIndicator(sliderElement); // add the progress indicator
 
-  addProgressIndicator(sliderElement); // combine the HTML and display
+  addProgressIndicator(sliderElement); // get slider target attr - something like: '.slider--testimonial'
+
+  sliderTarget = sliderElement.getAttribute('slider-target'); // generate the controls - pass target to be added as button attr
+
+  buttonElements = buildButtons(sliderTarget); // combine the HTML and display
 
   displayButtons(sliderElement, buttonElements);
 }
