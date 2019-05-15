@@ -7651,7 +7651,8 @@ function suggestionInit() {
   autocomplete_js__WEBPACK_IMPORTED_MODULE_0___default()({
     EmptyMessage: 'No item found',
     Url: 'https://web2020.city.ac.uk/fb/suggest.json?collection=web2020&fmt=json',
-    QueryArg: 'partial_query'
+    QueryArg: 'partial_query',
+    MinChars: 2
   }, '#search-query');
 }
 
