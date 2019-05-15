@@ -19617,6 +19617,12 @@ article .social-icon .link-copy {
     margin: 0.5rem 0;
 }
 
+@media (max-width: 431px) {
+    .ksp__items .ksp__item br {
+        display: none;
+    }
+}
+
 .ksp__items .ksp__item__overline {
     font-family: "Plex Sans", sans-serif;
     font-weight: 500;
@@ -19642,8 +19648,12 @@ article .social-icon .link-copy {
 }
 
 .ksp__items .ksp__item__icon {
-    width: 2.28rem;
+    width: 52px;
     margin: 0 auto;
+}
+
+.ksp__items .ksp__item__heading--top-padding {
+    padding-top: 2.1rem;
 }
 
 @media (max-width: 431px) {
