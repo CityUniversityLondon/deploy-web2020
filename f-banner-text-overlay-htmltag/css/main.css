@@ -18976,11 +18976,147 @@ button
 }
 
 .banner__group__overlay__heading h1 {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.802rem;
+    line-height: 1.25;
+    letter-spacing: -0.016em;
+    font-style: normal;
+    font-weight: 600;
     grid-area: h1;
     color: #ffffff;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     width: 54ch;
-    font-size: 2.5rem;
+}
+
+.banner__group__overlay__heading h1 i,
+.banner__group__overlay__heading h1 em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.banner__group__overlay__heading h1 b,
+.banner__group__overlay__heading h1 strong {
+    font-weight: inherit;
+}
+
+.banner__group__overlay__heading h1 i,
+.banner__group__overlay__heading h1 em {
+    font-style: italic;
+}
+
+.banner__group__overlay__heading h1 u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .banner__group__overlay__heading h1 {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .banner__group__overlay__heading h1 {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .banner__group__overlay__heading h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .banner__group__overlay__heading h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .banner__group__overlay__heading h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .banner__group__overlay__heading h1 {
+        font-size: 2.027rem;
+        line-height: 1.25;
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 433px) and (max-width: 768px) {
+    .banner__group__overlay__heading h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 769px) and (max-width: 1919px) {
+    .banner__group__overlay__heading h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 1920px) and (max-width: 3839px) {
+    .banner__group__overlay__heading h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 3840px) and (max-width: 7679px) {
+    .banner__group__overlay__heading h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 7680px) {
+    .banner__group__overlay__heading h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) {
+    .banner__group__overlay__heading h1 {
+        font-size: 2.28rem;
+        line-height: 1.25;
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 433px) and (max-width: 768px) {
+    .banner__group__overlay__heading h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 769px) and (max-width: 1919px) {
+    .banner__group__overlay__heading h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 1920px) and (max-width: 3839px) {
+    .banner__group__overlay__heading h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 3840px) and (max-width: 7679px) {
+    .banner__group__overlay__heading h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 7680px) {
+    .banner__group__overlay__heading h1 {
+        letter-spacing: -0.027em;
+    }
+}
+
+.banner__group__overlay__heading h1 b,
+.banner__group__overlay__heading h1 strong {
+    font-weight: 600;
 }
 
 @media (max-width: 1279px) {
@@ -19000,7 +19136,6 @@ button
         bottom: 1.25rem;
     }
     .banner__group__overlay__heading h1 {
-        font-size: 1.75em;
         width: 100%;
     }
 }
@@ -19010,9 +19145,6 @@ button
         margin: 0 2rem;
         grid-template-areas: 'h1 h1 h1 h1 h1 h1';
         bottom: 1.25rem;
-    }
-    .banner__group__overlay__heading h1 {
-        font-size: 1.5em;
     }
 }
 
