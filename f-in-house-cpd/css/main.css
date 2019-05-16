@@ -22718,6 +22718,7 @@ article .social-icon .link-copy {
     .js .short-course__content > div:not(.tabs):not(.tabs--accordion) .tabs__panel {
         background-color: #ffffff;
         border-top: 0;
+        padding: 0;
     }
     .js .short-course__content > div:not(.tabs):not(.tabs--accordion) .tabs__panel[hidden] {
         display: block;
@@ -22820,6 +22821,7 @@ article .social-icon .link-copy {
     .js .short-course--in-house-cpd .tabs .tabs__panel {
         background-color: #ffffff;
         border-top: 0;
+        padding: 0;
     }
     .js .short-course--in-house-cpd .tabs .tabs__panel[hidden] {
         display: block;
