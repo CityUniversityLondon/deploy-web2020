@@ -18920,6 +18920,7 @@ button
 
 .banner__group__image {
     height: 100%;
+    max-height: 480px;
 }
 
 .banner__group__image .hero-image {
@@ -18930,6 +18931,12 @@ button
 
 .banner__group__image .hero-image img {
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .banner__group__image {
+        max-height: 320px;
+    }
 }
 
 .banner__group__overlay {
