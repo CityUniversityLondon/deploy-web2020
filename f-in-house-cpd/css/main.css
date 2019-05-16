@@ -21950,7 +21950,7 @@ article .social-icon .link-copy {
 
 @media (min-width: 769px) and (max-width: 900px) {
     .key-information--in-house-cpd .key-information--in-house-cpd__contact {
-        grid-template-areas: 'header header header header header header header header header header header header' 'location location location location location contact contact contact contact contact links links';
+        grid-template-areas: 'header header header header header header header header header header header header' 'location location location location contact contact contact contact links links links links';
     }
 }
 
