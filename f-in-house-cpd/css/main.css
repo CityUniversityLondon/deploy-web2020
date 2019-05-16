@@ -21765,23 +21765,6 @@ article .social-icon .link-copy {
     padding-top: 4.25rem;
 }
 
-.short-course--short-course .short-course__testimonials h2,
-.short-course--in-house-cpd .short-course__testimonials h2 {
-    text-align: center;
-}
-
-.short-course--short-course .short-course__testimonials h2:after,
-.short-course--in-house-cpd .short-course__testimonials h2:after {
-    background-color: #3e1031;
-    content: '';
-    display: block;
-    height: 0.25rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0.5rem;
-    width: 6rem;
-}
-
 .short-course--short-course .short-course__testimonials .related-content,
 .short-course--in-house-cpd .short-course__testimonials .related-content {
     max-width: 80rem;
@@ -21803,6 +21786,23 @@ article .social-icon .link-copy {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
+}
+
+.short-course--short-course .short-course__testimonials h2,
+.short-course--in-house-cpd .short-course__testimonials h2 {
+    text-align: center;
+}
+
+.short-course--short-course .short-course__testimonials h2:after,
+.short-course--in-house-cpd .short-course__testimonials h2:after {
+    background-color: #3e1031;
+    content: '';
+    display: block;
+    height: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    width: 6rem;
 }
 
 .short-course--short-course .short-course__related-courses,
@@ -21886,25 +21886,6 @@ article .social-icon .link-copy {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
-}
-
-.short-course--in-house-cpd header {
-    background-color: #00393f;
-}
-
-.short-course--in-house-cpd .short-course__related-courses h2 {
-    text-align: center;
-}
-
-.short-course--in-house-cpd .short-course__related-courses h2:after {
-    background-color: #00393f;
-    content: '';
-    display: block;
-    height: 0.25rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0.5rem;
-    width: 6rem;
 }
 
 .key-information--in-house-cpd {
@@ -21996,7 +21977,7 @@ article .social-icon .link-copy {
 }
 
 .key-information--in-house-cpd .key-information--in-house-cpd__contact .key-information--in-house-cpd__contact__details .icon {
-    color: #00393f;
+    color: #3e1031;
 }
 
 .key-information--in-house-cpd .key-information--in-house-cpd__contact .key-information--in-house-cpd__contact__related-links {
@@ -22030,8 +22011,8 @@ article .social-icon .link-copy {
     background: #dd0036;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    background-color: #00393f;
-    border-color: #00393f;
+    background-color: #3e1031;
+    border-color: #3e1031;
     color: #ffffff;
 }
 
@@ -22176,7 +22157,7 @@ article .social-icon .link-copy {
 
 .key-information--in-house-cpd .key-information--in-house-cpd__contact .key-information--in-house-cpd__contact__related-links .cta-block__cta a:visited,
 .key-information--in-house-cpd .key-information--in-house-cpd__contact .key-information--in-house-cpd__contact__related-links .cta-block__cta button:visited {
-    border-color: #00393f;
+    border-color: #3e1031;
     color: #ffffff;
 }
 
@@ -22188,24 +22169,24 @@ article .social-icon .link-copy {
 .key-information--in-house-cpd .key-information--in-house-cpd__contact .key-information--in-house-cpd__contact__related-links .cta-block__cta a:focus, .key-information--in-house-cpd .key-information--in-house-cpd__contact .key-information--in-house-cpd__contact__related-links .cta-block__cta a:active,
 .key-information--in-house-cpd .key-information--in-house-cpd__contact .key-information--in-house-cpd__contact__related-links .cta-block__cta button:focus,
 .key-information--in-house-cpd .key-information--in-house-cpd__contact .key-information--in-house-cpd__contact__related-links .cta-block__cta button:active {
-    background-color: #00393f;
-    border-color: #00393f;
+    background-color: #3e1031;
+    border-color: #3e1031;
     color: #ffffff;
 }
 
 @media (hover: hover) {
     .key-information--in-house-cpd .key-information--in-house-cpd__contact .key-information--in-house-cpd__contact__related-links .cta-block__cta a:hover,
     .key-information--in-house-cpd .key-information--in-house-cpd__contact .key-information--in-house-cpd__contact__related-links .cta-block__cta button:hover {
-        background-color: #000b0c;
-        border-color: #000b0c;
+        background-color: #150611;
+        border-color: #150611;
         color: #ffffff;
     }
 }
 
 .key-information--in-house-cpd .key-information--in-house-cpd__contact .key-information--in-house-cpd__contact__related-links .cta-block__cta a:active,
 .key-information--in-house-cpd .key-information--in-house-cpd__contact .key-information--in-house-cpd__contact__related-links .cta-block__cta button:active {
-    background-color: #000b0c;
-    border-color: #000b0c;
+    background-color: #150611;
+    border-color: #150611;
 }
 
 .key-information--in-house-cpd .key-information--in-house-cpd__contact .key-information--in-house-cpd__contact__related-links .cta-block__cta a:disabled,
@@ -22711,15 +22692,6 @@ article .social-icon .link-copy {
 }
 
 @media screen {
-    .js
-.short-course--in-house-cpd
-.tabs
-.tabs__links
-li
-a[aria-selected='true']
-span {
-        border-bottom-color: #00393f;
-    }
     .js .short-course__content > div:not(.tabs):not(.tabs--accordion) {
         max-width: 80rem;
         padding-top: 2rem;
@@ -22807,7 +22779,7 @@ span {
         grid-area: heading;
     }
     .js .short-course__content > div:not(.tabs):not(.tabs--accordion) .tabs__panel__content .tabs__panel__heading:after {
-        background-color: #00393f;
+        background-color: #3e1031;
         content: '';
         display: block;
         height: 0.25rem;
@@ -22909,7 +22881,7 @@ span {
         grid-area: heading;
     }
     .js .short-course--in-house-cpd .tabs .tabs__panel__content .tabs__panel__heading:after {
-        background-color: #00393f;
+        background-color: #3e1031;
         content: '';
         display: block;
         height: 0.25rem;
