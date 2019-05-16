@@ -19652,7 +19652,8 @@ article .social-icon .link-copy {
     margin: 0 auto;
 }
 
-.ksp__items .ksp__item__heading--top-padding {
+.ksp__items .ksp__item__heading--top-padding,
+.ksp__items .ksp__item__icon--top-padding {
     padding-top: 2.1rem;
 }
 
@@ -19698,7 +19699,7 @@ article .social-icon .link-copy {
     .ksp__items.ksp__items--3 {
         grid-template-rows: repeat(2, auto);
         grid-template-columns: repeat(12, 1fr);
-        grid-template-areas: '. . a a a a b b b b . .' '. . . . c c c c . . . .';
+        grid-template-areas: '. a a a a a b b b b b .' '. . . c c c c c c . . .';
     }
 }
 
