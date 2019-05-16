@@ -21907,16 +21907,10 @@ article .social-icon .link-copy {
     }
 }
 
-.key-information--in-house-cpd .key-information--in-house-cpd__explanation {
-    padding-bottom: 1rem;
-}
-
 .key-information--in-house-cpd .key-information--in-house-cpd__contact {
     grid-row-gap: 0;
     display: grid;
-    border-top: 0.125rem solid #d8d8d8;
-    grid-template-rows: repeat(1, auto);
-    padding-top: 1rem;
+    grid-template-rows: repeat(2, auto);
 }
 
 @media (max-width: 432px) {
@@ -21942,28 +21936,33 @@ article .social-icon .link-copy {
 
 @media (max-width: 432px) {
     .key-information--in-house-cpd .key-information--in-house-cpd__contact {
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas: 'location location location location location location' 'contact contact contact contact contact contact' 'links links links links links links';
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 'header header header header header header' 'location location location location location location' 'contact contact contact contact contact contact' 'links links links links links links';
     }
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
     .key-information--in-house-cpd .key-information--in-house-cpd__contact {
         grid-template-rows: repeat(3, auto);
-        grid-template-areas: 'location location location location location location location location location location location location' 'contact contact contact contact contact contact contact contact contact contact contact contact' 'links links links links links links links links links links links links';
+        grid-template-areas: 'header header header header header header header header header header header header' 'location location location location location location location location location location location location' 'contact contact contact contact contact contact contact contact contact contact contact contact' 'links links links links links links links links links links links links';
     }
 }
 
 @media (min-width: 769px) and (max-width: 900px) {
     .key-information--in-house-cpd .key-information--in-house-cpd__contact {
-        grid-template-areas: 'location location location location location contact contact contact contact contact links links';
+        grid-template-areas: 'header header header header header header header header header header header header' 'location location location location location contact contact contact contact contact links links';
     }
 }
 
 @media (min-width: 901px) {
     .key-information--in-house-cpd .key-information--in-house-cpd__contact {
-        grid-template-areas: 'location location location location location location contact contact contact contact contact contact links links links links links links';
+        grid-template-areas: 'header header header header header header header header header header header header header header header header header header' 'location location location location location location contact contact contact contact contact contact links links links links links links';
     }
+}
+
+.key-information--in-house-cpd .key-information--in-house-cpd__contact .key-information--in-house-cpd__contact__header {
+    color: #3e1031;
+    grid-area: header;
 }
 
 .key-information--in-house-cpd .key-information--in-house-cpd__contact .key-information--in-house-cpd__contact__location {
