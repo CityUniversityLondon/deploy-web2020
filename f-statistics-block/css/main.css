@@ -19587,7 +19587,7 @@ article .social-icon .link-copy {
 .ksp__items {
     display: grid;
     grid-row-gap: 0;
-    margin: 0 1.5rem;
+    margin: 1rem 1.5rem;
 }
 
 @media (max-width: 432px) {
@@ -19612,15 +19612,13 @@ article .social-icon .link-copy {
 }
 
 .ksp__items .ksp__item {
-    background: #eee;
     padding: 1rem;
     margin: 0.5rem 0;
+    border-right: 0.125rem solid #f2f2f2;
 }
 
-@media (max-width: 431px) {
-    .ksp__items .ksp__item br {
-        display: none;
-    }
+.ksp__items .ksp__item:last-of-type {
+    border-right: 0;
 }
 
 .ksp__items .ksp__item__overline {
@@ -19657,7 +19655,7 @@ article .social-icon .link-copy {
     padding-top: 2.1rem;
 }
 
-@media (max-width: 431px) {
+@media (max-width: 767px) {
     .ksp__items.ksp__items--2 {
         grid-template-rows: repeat(2, auto);
         grid-template-columns: repeat(6, 1fr);
@@ -19665,7 +19663,7 @@ article .social-icon .link-copy {
     }
 }
 
-@media (min-width: 433px) and (max-width: 1280px) {
+@media (min-width: 769px) and (max-width: 1280px) {
     .ksp__items.ksp__items--2 {
         grid-template-columns: repeat(12, 1fr);
         grid-template-areas: '. a a a a a b b b b b .';
@@ -19687,7 +19685,7 @@ article .social-icon .link-copy {
     grid-area: b;
 }
 
-@media (max-width: 431px) {
+@media (max-width: 767px) {
     .ksp__items.ksp__items--3 {
         grid-template-rows: repeat(3, auto);
         grid-template-columns: repeat(6, 1fr);
@@ -19695,7 +19693,7 @@ article .social-icon .link-copy {
     }
 }
 
-@media (min-width: 433px) and (max-width: 1280px) {
+@media (min-width: 769px) and (max-width: 1280px) {
     .ksp__items.ksp__items--3 {
         grid-template-rows: repeat(2, auto);
         grid-template-columns: repeat(12, 1fr);
@@ -19722,7 +19720,7 @@ article .social-icon .link-copy {
     grid-area: c;
 }
 
-@media (max-width: 431px) {
+@media (max-width: 767px) {
     .ksp__items.ksp__items--4 {
         grid-template-rows: repeat(4, auto);
         grid-template-columns: repeat(6, 1fr);
@@ -19730,7 +19728,7 @@ article .social-icon .link-copy {
     }
 }
 
-@media (min-width: 433px) and (max-width: 1280px) {
+@media (min-width: 769px) and (max-width: 1280px) {
     .ksp__items.ksp__items--4 {
         grid-template-rows: repeat(2, auto);
         grid-template-columns: repeat(12, 1fr);
