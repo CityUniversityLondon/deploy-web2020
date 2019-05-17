@@ -7247,18 +7247,6 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2018
  */
 const className = 'slider--city-slider',
-      slidesContainerClass = '.slider__slides',
-      activeSlideClass = 'slider__slide--active',
-      sliderArrowClass = '.slider-arrow',
-      sliderArrowNextClass = 'arrow-right--btn-next',
-      numberedIndicatorTotalSlidesClass = '.slider__controls__numbered-indicator__total-slides',
-      numberedIndicatorActiveSlideClass = '.slider__controls__numbered-indicator__active-slide',
-      progressIndicatorProgressClass = '.slider__controls__progress-indicator__progress',
-      progressIndicatorContainerClass = 'slider__controls__progress-indicator',
-      numberedIndicatorContainerClass = 'slider__controls__numbered-indicator',
-      sliderTargetAttr = 'slider-target',
-      buttonContainerClass = 'slider__buttons',
-      sliderControlsClass = 'slider__controls',
       sliderNumberedIndicators = [{
   name: 'activeSlide',
   type: 'span',
@@ -7275,10 +7263,6 @@ const className = 'slider--city-slider',
   class: 'slider__controls__numbered-indicator__total-slides',
   content: ''
 }],
-      sliderProgressIndicator = {
-  type: 'div',
-  class: 'slider__controls__progress-indicator__progress'
-},
       sliderButtons = [{
   name: 'prevButton',
   type: 'button',
@@ -7290,26 +7274,83 @@ const className = 'slider--city-slider',
   type: 'button',
   class: 'fas fa-arrow-right slider-arrow arrow-right--btn-next',
   ariaLabel: 'Next item'
+}],
+      carouselButtons = [{
+  name: 'prevButton',
+  type: 'button',
+  class: 'fas fa-arrow-left slider-arrow arrow-left--btn-prev',
+  ariaLabel: 'Previous item'
+}, {
+  name: 'nextButton',
+  type: 'button',
+  class: 'fas fa-arrow-right slider-arrow arrow-right--btn-next',
+  ariaLabel: 'Next item'
 }];
+let slideIndex = 0,
+    slideIndexDisplay = 1;
+/**
+ * Entry function - sets up initial elements and adds listeners
+ *
+ * @param {HTMLElement} sliderElement - the slider element
+ */
+
+function slider(sliderElement) {
+  configureSliderControls(sliderElement);
+  let sliderArrowPrev = sliderElement.querySelector('.arrow-left--btn-prev');
+  let sliderArrowNext = sliderElement.querySelector('.arrow-right--btn-next'); // -1 is left direction
+
+  sliderArrowPrev.addEventListener('click', function (e) {
+    handleSlideChange(e, -1);
+  }); // 1 is right direction
+
+  sliderArrowNext.addEventListener('click', function (e) {
+    handleSlideChange(e, 1);
+  });
+  setTotalSlidesIndicator(sliderElement);
+  configureInitialProgressIndicator(sliderElement);
+  setDisplayClasses(sliderElement);
+}
+/**
+ * Handle slide change: the main function that handles the click events
+ *
+ * @param {e} event - the button click event
+ * @param {integer} navDirection - slide left or right
+ */
+
+
+function handleSlideChange(e, navDirection) {
+  let sliderTarget = e.target.getAttribute('slider-target');
+  let sliderElement = document.querySelector(sliderTarget);
+  let sliderCollection = getActiveSliderCollection(sliderElement);
+  let sliderCollectionLength = getSliderCollectionLength(sliderCollection);
+  let currentSlideIndexElement = sliderElement.querySelector('.slider__controls__numbered-indicator__active-slide');
+  slideIndex += navDirection;
+
+  if (navDirection == -1) {
+    slideIndexDisplay--;
+  } else {
+    slideIndexDisplay++;
+  }
+
+  setDisabledAttribute(e.target, sliderCollectionLength);
+  configureActiveSlide(sliderElement, sliderCollection, slideIndex);
+  setActiveNumberedIndicatorText(currentSlideIndexElement);
+  setProgressIndicator(sliderElement, sliderCollectionLength);
+}
 /**
  * Configure slider controls - setup the controls ready for display
  *
  * @param {HTMLElement} sliderElement - the slider element
  */
 
+
 function configureSliderControls(sliderElement) {
-  let sliderTarget, buttonElements; // add the container for all controls
-
-  addSliderControlsContainer(sliderElement); // add the numbered indicator
-
-  addNumberedIndicator(sliderElement); // add the progress indicator
-
-  addProgressIndicator(sliderElement); // get slider target attr - something like: '.slider--testimonial'
-
-  sliderTarget = sliderElement.getAttribute('slider-target'); // generate the controls - pass target to be added as button attr
-
-  buttonElements = buildButtons(sliderTarget); // combine the HTML and display
-
+  let sliderTarget, buttonElements;
+  addSliderControlsContainer(sliderElement);
+  addNumberedIndicator(sliderElement);
+  addProgressIndicator(sliderElement);
+  sliderTarget = sliderElement.getAttribute('slider-target');
+  buttonElements = buildButtons(sliderTarget);
   displayButtons(sliderElement, buttonElements);
 }
 /**
@@ -7320,88 +7361,38 @@ function configureSliderControls(sliderElement) {
 
 
 function addNumberedIndicator(sliderElement) {
-  // add the container
-  addNumberedIndicatorContainer(sliderElement); // add the span elements
-
-  addNumberedIndicatorElements(sliderElement);
-}
-/**
- * Add numbered indicator elements: add the spans
- *
- * @param {HTMLElement} sliderElement - the slider element
- */
-
-
-function addNumberedIndicatorElements(sliderElement) {
-  let htmlElements = []; // go through sliderNumberedIndicators object and create the elements
+  let numberedIndicatorContainer = document.createElement('div');
+  numberedIndicatorContainer.setAttribute('class', 'slider__controls__numbered-indicator');
+  let sliderControlsContainer = sliderElement.querySelector('.slider__controls');
+  sliderControlsContainer.appendChild(numberedIndicatorContainer);
+  let htmlElements = [];
 
   for (let key in sliderNumberedIndicators) {
     htmlElements[key] = document.createElement(sliderNumberedIndicators[key].type);
     htmlElements[key].setAttribute('class', sliderNumberedIndicators[key].class);
-    htmlElements[key].innerHTML = sliderNumberedIndicators[key].content;
-  } // get the container ready to add the elements
-
-
-  let numberedIndicatorContainer = sliderElement.querySelector('.' + numberedIndicatorContainerClass); // append each element to container
+    htmlElements[key].textContent = sliderNumberedIndicators[key].content;
+  }
 
   htmlElements.forEach(function (el) {
     numberedIndicatorContainer.appendChild(el);
   });
 }
 /**
- * Add numbered indicator container: add the container
- *
- * @param {HTMLElement} sliderElement - the slider element
- */
-
-
-function addNumberedIndicatorContainer(sliderElement) {
-  let numberedIndicatorContainer = document.createElement('div');
-  numberedIndicatorContainer.setAttribute('class', numberedIndicatorContainerClass);
-  let sliderControlsContainer = sliderElement.querySelector('.' + sliderControlsClass);
-  sliderControlsContainer.appendChild(numberedIndicatorContainer);
-}
-/**
- * Add progress inidcator container and bar itself
- *
- * @param {HTMLElement} sliderElement - the slider element
- */
-
-
-function addProgressIndicator(sliderElement) {
-  // add the container first
-  addProgressIndicatorContainer(sliderElement); // then add indicator bar
-
-  addProgressIndicatorBar(sliderElement);
-}
-/**
- * Add progress indicator bar: add the bar that provides progress
+ * Add progress indicator: adds the bars that provides progress
  * feedback
  *
  * @param {HTMLElement} sliderElement - the slider element
  */
 
 
-function addProgressIndicatorBar(sliderElement) {
-  let progressIndicator = document.createElement(sliderProgressIndicator.type);
-  progressIndicator.setAttribute('class', sliderProgressIndicator.class);
-  let progressIndicatorContainer = sliderElement.querySelector('.' + progressIndicatorContainerClass);
-  progressIndicatorContainer.appendChild(progressIndicator);
-}
-/**
- * Add progress indcator container: add the container for the progress
- * bar
- *
- * @param {HTMLElement} sliderElement - the slider element
- */
-
-
-function addProgressIndicatorContainer(sliderElement) {
-  // add the progress indicator container
+function addProgressIndicator(sliderElement) {
   let progressIndicatorContainer = document.createElement('div');
-  progressIndicatorContainer.setAttribute('class', progressIndicatorContainerClass);
-  let sliderControlsContainer = sliderElement.querySelector('.' + sliderControlsClass);
+  progressIndicatorContainer.setAttribute('class', 'slider__controls__progress-indicator');
+  let sliderControlsContainer = sliderElement.querySelector('.slider__controls');
   sliderControlsContainer.appendChild(progressIndicatorContainer);
+  let progressIndicator = document.createElement('div');
+  progressIndicator.setAttribute('class', 'slider__controls__progress-indicator__progress');
+  progressIndicatorContainer.appendChild(progressIndicator);
 }
 /**
  * Add slider controls container: add the container for buttons,
@@ -7413,11 +7404,11 @@ function addProgressIndicatorContainer(sliderElement) {
 
 function addSliderControlsContainer(sliderElement) {
   let sliderControlsContainer = document.createElement('div');
-  sliderControlsContainer.setAttribute('class', sliderControlsClass);
+  sliderControlsContainer.setAttribute('class', 'slider__controls');
   sliderElement.appendChild(sliderControlsContainer);
 }
 /**
- * Display controls: append the buttons to the slider
+ * Display buttons: append the buttons to the slider
  *
  * @param {HTMLElement} controls - array of buttons
  * @param {HTMLElement} elementParents - array of parent elements
@@ -7425,12 +7416,10 @@ function addSliderControlsContainer(sliderElement) {
 
 
 function displayButtons(sliderElement, buttonElements) {
-  let sliderControlsElement = sliderElement.querySelector('.' + sliderControlsClass); // add button container to source
-
+  let sliderControlsElement = sliderElement.querySelector('.slider__controls');
   let buttonContainer = document.createElement('div');
-  buttonContainer.setAttribute('class', buttonContainerClass);
-  sliderControlsElement.appendChild(buttonContainer); // append each button to container
-
+  buttonContainer.setAttribute('class', 'slider__buttons');
+  sliderControlsElement.appendChild(buttonContainer);
   buttonElements.forEach(function (el) {
     buttonContainer.appendChild(el);
   });
@@ -7439,92 +7428,57 @@ function displayButtons(sliderElement, buttonElements) {
  * Build buttons: build the buttons for each slider
  *
  * @param {string} sliderTarget - string of slider class
+ * @returns {array} htmlElements
+ *
  */
 
 
 function buildButtons(sliderTarget) {
-  let htmlElements = []; // loop through each obj, create an element for each and set its attrs
+  let htmlElements = [];
+  let targetArray;
+  sliderTarget === '.slider--image-carousel' ? targetArray = carouselButtons : targetArray = sliderButtons;
 
-  for (let key in sliderButtons) {
-    // create a button for each object
-    htmlElements[key] = document.createElement(sliderButtons[key].type); // set its attributes - second arg is return val from setAttributes()
-
-    setButtonAttributes(sliderButtons[key], htmlElements[key], sliderTarget);
+  for (let key in targetArray) {
+    htmlElements[key] = document.createElement(targetArray[key].type);
+    setButtonAttributes(targetArray[key], htmlElements[key], sliderTarget);
   }
 
   return htmlElements;
 }
 /**
- * Set attributes: loop through and set button attributes
+ * Set button attributes: loop through and set button attributes
  *
  * @param {object} buttonObject - the button json obj
  * @param {string} htmlElement - the element
  * @param {string} sliderTarget - slider target class
+ * @returns {HTMLElement} htmlElement
  */
 
 
 function setButtonAttributes(buttonObject, htmlElement, sliderTarget) {
-  // loop through values and set attrs
   for (let key in buttonObject) {
     if (key === 'ariaLabel') {
       htmlElement.setAttribute('aria-label', buttonObject[key]);
     } else {
       htmlElement.setAttribute(key, buttonObject[key]);
     }
-  } // set the slider target attr
+  }
 
-
-  htmlElement.setAttribute(sliderTargetAttr, sliderTarget);
+  htmlElement.setAttribute('slider-target', sliderTarget);
   return htmlElement;
 }
 /**
- * Entry function - sets up initial elements and adds listeners
+ * Set total slides indicator: sets total count text
  *
  * @param {HTMLElement} sliderElement - the slider element
  */
 
 
-function slider(sliderElement) {
-  // show initial controls
-  configureSliderControls(sliderElement); // get all nav arrows in this slider
-
-  let sliderArrows = sliderElement.querySelectorAll(sliderArrowClass); // configure click handlers for the arrows
-
-  sliderArrows.forEach(function (sliderArrow) {
-    sliderArrow.addEventListener('click', handleSlideChange, false);
-  });
-  configureTotalSlidesIndicator(sliderElement);
-  configureInitialProgressIndicator(sliderElement);
-  setDisplayClasses(sliderElement);
-}
-/**
- * Setup total slides indicator: gets requisites to set total count text
- *
- * @param {HTMLElement} sliderElement - the slider element
- */
-
-
-function configureTotalSlidesIndicator(sliderElement) {
-  let slidesCollection, sliderCollectionLength, totalSlidesIndicator; // get the children
-
-  slidesCollection = getActiveSliderChildren(sliderElement); // get the length of this slider's children
-
-  sliderCollectionLength = getSliderCollectionLength(slidesCollection); // get the total slides indicator element
-
-  totalSlidesIndicator = sliderElement.querySelector(numberedIndicatorTotalSlidesClass); // set the text length
-
-  setTotalSlidesIndicatorText(totalSlidesIndicator, sliderCollectionLength);
-}
-/**
- * Set total slides indicator text: simply sets the text of the element
- *
- * @param {HTMLElement} totalSlidesIndicator - the total slides element
- * @param {integer} sliderCollectionLength - length of collection
- */
-
-
-function setTotalSlidesIndicatorText(totalSlidesIndicator, sliderCollectionLength) {
-  // set the length text
+function setTotalSlidesIndicator(sliderElement) {
+  let slidesCollection, sliderCollectionLength, totalSlidesIndicator;
+  slidesCollection = getActiveSliderCollection(sliderElement);
+  sliderCollectionLength = getSliderCollectionLength(slidesCollection);
+  totalSlidesIndicator = sliderElement.querySelector('.slider__controls__numbered-indicator__total-slides');
   totalSlidesIndicator.textContent = sliderCollectionLength;
 }
 /**
@@ -7535,10 +7489,10 @@ function setTotalSlidesIndicatorText(totalSlidesIndicator, sliderCollectionLengt
 
 
 function configureInitialProgressIndicator(sliderElement) {
-  let slidesCollection, sliderCollectionLength;
+  let sliderCollection, sliderCollectionLength;
   const slideIndex = 1;
-  slidesCollection = getActiveSliderChildren(sliderElement);
-  sliderCollectionLength = getSliderCollectionLength(slidesCollection);
+  sliderCollection = getActiveSliderCollection(sliderElement);
+  sliderCollectionLength = getSliderCollectionLength(sliderCollection);
   setProgressIndicator(sliderElement, slideIndex, sliderCollectionLength);
 }
 /**
@@ -7549,13 +7503,10 @@ function configureInitialProgressIndicator(sliderElement) {
 
 
 function setDisplayClasses(sliderElement) {
-  let slidesCollection, sliderCollectionLength, sliderTarget; // get the children
-
-  slidesCollection = getActiveSliderChildren(sliderElement); // get the length of this slider's children
-
-  sliderCollectionLength = getSliderCollectionLength(slidesCollection); // get the target class to set class name below
-
-  sliderTarget = sliderElement.getAttribute('slider-target'); // if > 7, show numbered indicator using class addition
+  let slidesCollection, sliderCollectionLength, sliderTarget;
+  slidesCollection = getActiveSliderCollection(sliderElement);
+  sliderCollectionLength = getSliderCollectionLength(slidesCollection);
+  sliderTarget = sliderElement.getAttribute('slider-target');
 
   if (sliderCollectionLength > 7) {
     sliderTarget = sliderTarget.replace('.', '');
@@ -7566,171 +7517,116 @@ function setDisplayClasses(sliderElement) {
  * Get active slider children: get slider's children
  *
  * @param {HTMLElement} sliderElement - the slider object
+ * @returns {array} slidesCollection - collection of children
+ *
  */
 
 
-function getActiveSliderChildren(sliderElement) {
-  // get the node collection
-  let slidesCollection = sliderElement.querySelector(slidesContainerClass).children;
+function getActiveSliderCollection(sliderElement) {
+  let slidesCollection = sliderElement.querySelector('.slider__slides').children;
   return slidesCollection;
 }
 /**
  * Get slider collection length: simply gets and returns the length
  *
  * @param {object} slidesCollection - object array of slider children
+ * @returns {integer} sliderCollectionLength
+ *
  */
 
 
 function getSliderCollectionLength(slidesCollection) {
-  // set length for use later
   let sliderCollectionLength = slidesCollection.length;
   return sliderCollectionLength;
-}
-/**
- * Get active numbered indicator element: gets the numbered indicator span
- *
- * @param {HTMLElement} sliderElement - the slider object
- */
-
-
-function getActiveNumberedIndicatorElement(sliderElement) {
-  // get the element
-  let currentSlideIndexElement = sliderElement.querySelector(numberedIndicatorActiveSlideClass);
-  return currentSlideIndexElement;
-}
-/**
- * Get current slider index: get and return the current slide index string
- *
- * @param {HTMLElement} currentSlideIndexElement - the element that contains the current slider number string
- */
-
-
-function getCurrentSlideIndex(currentNumberedIndicatorElement) {
-  // convert to number string to int
-  let slideIndex = parseInt(currentNumberedIndicatorElement.textContent);
-  return slideIndex;
 }
 /**
  * Get active slide: gets the active slide of this slider
  *
  * @param {HTMLElement} sliderElement - the active slider element
+ * @returns {HTMLElement} activeSlide
+ *
  */
 
 
 function getActiveSlide(sliderElement) {
-  // get the active slide of this slider
-  let activeSlide = sliderElement.querySelector('.' + activeSlideClass);
+  let activeSlide = sliderElement.querySelector('.slider__slide--active');
   return activeSlide;
 }
 /**
- * Handle slide change: the main function that handles the click events
+ * Get active slide: gets the active slide of this slider
  *
- * @param {e} event - the button click event
+ * @param {HTMLElement} sliderElement - the active slider element
+ * @param {array} sliderCollection
+ * @param {integer} slideIndex
+ *
  */
 
 
-function handleSlideChange(e) {
-  let sliderTarget, sliderElement, slidesCollection, sliderCollectionLength, currentNumberedIndicatorElement, slideIndex, activeSlide; // get slider target attr - e.g '.slider--testimonial'
-
-  sliderTarget = e.target.getAttribute(sliderTargetAttr); // get the slider element
-
-  sliderElement = document.querySelector(sliderTarget); // get children of active slider
-
-  slidesCollection = getActiveSliderChildren(sliderElement); // get the length of this slider's children
-
-  sliderCollectionLength = getSliderCollectionLength(slidesCollection); // get the element
-
-  currentNumberedIndicatorElement = getActiveNumberedIndicatorElement(sliderElement); // get the index as an int
-
-  slideIndex = getCurrentSlideIndex(currentNumberedIndicatorElement); // get active slide for this slider
-
-  activeSlide = getActiveSlide(sliderElement); // toggle next/prev sibling and maintain index
-
-  if (e.target.classList.contains(sliderArrowNextClass)) {
-    if (slideIndex !== sliderCollectionLength) {
-      slideIndex++;
-      activeSlide.classList.remove(activeSlideClass);
-      activeSlide.nextElementSibling.classList.add(activeSlideClass);
-    }
-  } else {
-    if (slideIndex !== 1) {
-      slideIndex--;
-      activeSlide.classList.remove(activeSlideClass);
-      activeSlide.previousElementSibling.classList.add(activeSlideClass);
-    }
-  }
-
-  setDisabledAttribute(e.target, sliderCollectionLength, slideIndex);
-  setActiveNumberedIndicatorText(currentNumberedIndicatorElement, slideIndex);
-  setProgressIndicator(sliderElement, slideIndex, sliderCollectionLength);
+function configureActiveSlide(sliderElement, sliderCollection, slideIndex) {
+  let activeSlide = getActiveSlide(sliderElement);
+  activeSlide.classList.remove('slider__slide--active');
+  let currentSlide = sliderCollection[slideIndex];
+  currentSlide.classList.add('slider__slide--active');
 }
 /**
  * Set button attributes: enables/disables buttons based on args
  *
  * @param {HTMLElement} buttonTarget - the event target button
  * @param {integer} sliderCollectionLength - integer collection length
- * @param {integer} slideIndex - integer index of current slide
  *
  */
 
 
-function setDisabledAttribute(buttonTarget, sliderCollectionLength, slideIndex) {
-  if (buttonTarget.classList.contains(sliderArrowNextClass)) {
-    // if at the end of the slides, disable
-    slideIndex == sliderCollectionLength ? buttonTarget.setAttribute('disabled', '') : // else enable next button
-    buttonTarget.removeAttribute('disabled');
-    slideIndex > 1 ? // if past the first slide, remove prev disabled
-    buttonTarget.previousElementSibling.removeAttribute('disabled') : // else add disabled
-    buttonTarget.previousElementSibling.setAttribute('disabled', '');
+function setDisabledAttribute(buttonTarget, sliderCollectionLength) {
+  if (buttonTarget.classList.contains('arrow-right--btn-next')) {
+    slideIndexDisplay == sliderCollectionLength ? buttonTarget.setAttribute('disabled', '') : buttonTarget.removeAttribute('disabled');
+    slideIndexDisplay > 1 ? buttonTarget.previousElementSibling.removeAttribute('disabled') : buttonTarget.previousElementSibling.setAttribute('disabled', '');
   } else {
-    // if prev last click to first slide, disable it
-    slideIndex > 1 ? buttonTarget.removeAttribute('disabled') : buttonTarget.setAttribute('disabled', ''); // if not at the end of collection, enable next
-
-    slideIndex !== sliderCollectionLength ? buttonTarget.nextElementSibling.removeAttribute('disabled') : buttonTarget.nextElementSibling.setAttribute('disabled', '');
+    slideIndexDisplay > 1 ? buttonTarget.removeAttribute('disabled') : buttonTarget.setAttribute('disabled', '');
+    slideIndexDisplay !== sliderCollectionLength ? buttonTarget.nextElementSibling.removeAttribute('disabled') : buttonTarget.nextElementSibling.setAttribute('disabled', '');
   }
 }
 /**
  * Set active numbered indicator text: sets text of the indicator
  *
  * @param {HTMLElement} currentSlideIndexElement
- * @param {integer} slideIndex
  *
  */
 
 
-function setActiveNumberedIndicatorText(currentSlideIndexElement, slideIndex) {
-  currentSlideIndexElement.textContent = slideIndex;
+function setActiveNumberedIndicatorText(currentSlideIndexElement) {
+  currentSlideIndexElement.textContent = slideIndexDisplay;
 }
 /**
  * Set progress indicator: set percentage width of indicator
  *
  * @param {HTMLElement} sliderElement - the slider object element
- * @param {integer} slideIndex - integer of the current slide index
  * @param {integer} sliderCollectionLength - the numbers of slides
  *
  */
 
 
-function setProgressIndicator(sliderElement, slideIndex, sliderCollectionLength) {
-  let progressIndicatorElement = sliderElement.querySelector(progressIndicatorProgressClass);
-  let percentageProgress = getPercentageProgress(slideIndex, sliderCollectionLength);
+function setProgressIndicator(sliderElement, sliderCollectionLength) {
+  let progressIndicatorElement = sliderElement.querySelector('.slider__controls__progress-indicator__progress');
+  let percentageProgress = getPercentageProgress(sliderCollectionLength);
   progressIndicatorElement.setAttribute('style', 'width: ' + percentageProgress + '%');
 }
 /**
  * Get percentage progress: calculate the percentage width
- *
+ *a
  * @param {integer} slideIndex - current slide index
  * @param {integer} sliderCollectionLength - length of slides collection
+ * @returns {integer} percentageProgress
  *
  */
 
 
-function getPercentageProgress(slideIndex, sliderCollectionLength) {
-  if (slideIndex == sliderCollectionLength) {
+function getPercentageProgress(sliderCollectionLength) {
+  if (slideIndexDisplay == sliderCollectionLength) {
     return 100;
   } else {
     let percentageProgress = Math.round(100 / sliderCollectionLength);
-    percentageProgress = slideIndex * percentageProgress;
+    percentageProgress = slideIndexDisplay * percentageProgress;
     return percentageProgress;
   }
 }

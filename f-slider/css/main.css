@@ -18033,6 +18033,7 @@ ul.slider__slides {
 }
 
 .slider__slide {
+    list-style: none;
     display: none;
 }
 
