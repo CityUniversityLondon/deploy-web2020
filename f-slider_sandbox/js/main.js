@@ -7311,9 +7311,9 @@ function handleSlideChange(e, navDirection) {
   let sliderElement = document.querySelector(sliderTarget);
   let sliderChildren = getActiveSliderChildren(sliderElement);
   let sliderChildrenLength = getSliderCollectionLength(sliderChildren);
-  let currentNumberedIndicatorElement = getActiveNumberedIndicatorElement(sliderElement);
+  let currentSlideIndexElement = sliderElement.querySelector('.slider__controls__numbered-indicator__active-slide');
   slideIndex += navDirection;
-  setSlideIndex(navDirection, sliderChildrenLength);
+  setSlideIndexes(navDirection, sliderChildrenLength);
 
   if (sliderTarget !== '.slider--image-carousel') {
     setDisabledAttribute(e.target, sliderChildrenLength);
@@ -7322,7 +7322,7 @@ function handleSlideChange(e, navDirection) {
   }
 
   configureActiveSlide(sliderTarget, sliderChildren, slideIndex);
-  setActiveNumberedIndicatorText(currentNumberedIndicatorElement);
+  setActiveNumberedIndicatorText(currentSlideIndexElement);
   setProgressIndicator(sliderElement, slideIndexDisplay, sliderChildrenLength);
 }
 
@@ -7337,30 +7337,21 @@ function configureSliderControls(sliderElement) {
 }
 
 function addNumberedIndicator(sliderElement) {
-  addNumberedIndicatorContainer(sliderElement);
-  addNumberedIndicatorElements(sliderElement);
-}
-
-function addNumberedIndicatorElements(sliderElement) {
+  let numberedIndicatorContainer = document.createElement('div');
+  numberedIndicatorContainer.setAttribute('class', 'slider__controls__numbered-indicator');
+  let sliderControlsContainer = sliderElement.querySelector('.slider__controls');
+  sliderControlsContainer.appendChild(numberedIndicatorContainer);
   let htmlElements = [];
 
   for (let key in sliderNumberedIndicators) {
     htmlElements[key] = document.createElement(sliderNumberedIndicators[key].type);
     htmlElements[key].setAttribute('class', sliderNumberedIndicators[key].class);
-    htmlElements[key].innerHTML = sliderNumberedIndicators[key].content;
+    htmlElements[key].textContent = sliderNumberedIndicators[key].content;
   }
 
-  let numberedIndicatorContainer = sliderElement.querySelector('.slider__controls__numbered-indicator');
   htmlElements.forEach(function (el) {
     numberedIndicatorContainer.appendChild(el);
   });
-}
-
-function addNumberedIndicatorContainer(sliderElement) {
-  let numberedIndicatorContainer = document.createElement('div');
-  numberedIndicatorContainer.setAttribute('class', 'slider__controls__numbered-indicator');
-  let sliderControlsContainer = sliderElement.querySelector('.slider__controls');
-  sliderControlsContainer.appendChild(numberedIndicatorContainer);
 }
 
 function addProgressIndicator(sliderElement) {
@@ -7457,11 +7448,6 @@ function getSliderCollectionLength(slidesCollection) {
   return sliderCollectionLength;
 }
 
-function getActiveNumberedIndicatorElement(sliderElement) {
-  let currentSlideIndexElement = sliderElement.querySelector('.slider__controls__numbered-indicator__active-slide');
-  return currentSlideIndexElement;
-}
-
 function getActiveSlide(sliderElement) {
   let activeSlide = sliderElement.querySelector('.slider__slide--active');
   return activeSlide;
@@ -7485,7 +7471,7 @@ function configureActiveSlide(sliderTarget, slidesCollection, slideIndex) {
   }
 }
 
-function setSlideIndex(navDirection, sliderCollectionLength) {
+function setSlideIndexes(navDirection, sliderCollectionLength) {
   if (navDirection == -1) {
     if (slideIndex < 0) {
       slideIndex = sliderCollectionLength - 1;
