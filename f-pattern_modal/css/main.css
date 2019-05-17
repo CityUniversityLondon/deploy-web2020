@@ -17317,39 +17317,11 @@ button
     margin-left: 0.5rem;
 }
 
-.modal__background {
-    background: #0c0c0e;
-    pointer-events: none;
-    height: 100%;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    position: fixed;
-    transition: opacity 0.35s ease;
-    width: 100%;
-    z-index: 3;
-}
-
-body.modal--in {
-    position: fixed;
-    width: 100%;
-}
-
-body.modal--in .modal__background {
-    opacity: 0.7;
-}
-
-.modal__popup {
-    align-items: center;
-    height: 100%;
-    justify-content: center;
-    top: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
-    z-index: 4;
-}
-
+/**
+*
+* Modal animation styles
+*
+**/
 .modal__inner {
     position: relative;
 }
@@ -17377,19 +17349,64 @@ body.modal--in .modal__background {
 
 .modal__popup--transitioning-in .modal__inner:before {
     transform-origin: 0 top;
-    background: #3e1031;
 }
 
 .modal__popup--transitioning-out .modal__inner:after {
     transform-origin: 0 bottom;
+}
+
+.modal__popup--transitioning-in .modal__inner:before,
+.modal__popup--transitioning-out .modal__inner:after {
+    transform: scaleY(1);
     background: #3e1031;
 }
 
+/**
+*
+* End of modal animation styles
+*
+**/
+.modal__background {
+    background: #0c0c0e;
+    pointer-events: none;
+    height: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    transition: opacity 0.35s ease;
+    width: 100%;
+    z-index: 3;
+}
+
+body.modal--in.no-scroll {
+    position: fixed;
+    width: 100%;
+}
+
+body.modal--in.no-scroll .modal__background {
+    opacity: 0.7;
+}
+
+.modal__popup {
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+}
+
 .modal__popup--hidden {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .modal__popup--show {
+    opacity: 1;
+    pointer-events: auto;
     display: flex;
 }
 
@@ -17400,11 +17417,6 @@ body.modal--in .modal__background {
     border: none;
     padding: 0.5rem 2.5rem 3rem;
     position: relative;
-}
-
-.modal__popup--transitioning-in .modal__inner:before,
-.modal__popup--transitioning-out .modal__inner:after {
-    transform: scaleY(1);
 }
 
 .modal__popup--show-content .modal__content {

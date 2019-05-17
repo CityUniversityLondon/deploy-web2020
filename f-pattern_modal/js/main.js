@@ -4873,8 +4873,7 @@ function launchMenu(menu) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ "./node_modules/core-js/modules/web.dom.iterable.js");
 /* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modal_animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal_animation */ "./src/patterns/modal/modal_animation.js");
 
 
 
@@ -4887,156 +4886,105 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2018
  */
 
-/**
-    <div class="modal__popup modal__popup--hidden" data-title="Hong Kong">
-        <div role="modal" aria-labelledby="modal__heading" aria-modal="true">
-            <div class="modal__reveal modal__reveal--fromtop"></div>
-            <div class="modal__reveal modal__reveal--frombottom"></div>
-            <div class="modal__content">
-                <a href="#" class="modal__close fas fa-times"></a>
-                ....
-            </div>
-        </div>
-    </div>
-**/
-
 const className = 'modal__popup',
-      modalHiddenClass = 'modal__popup--hidden',
-      modalShowClass = 'modal__popup--show',
-      modalShowContentClass = 'modal__popup--show-content',
-      modalTransitioningInClass = 'modal__popup--transitioning-in',
-      modalTransitioningOutClass = 'modal__popup--transitioning-out',
-      modalHeadingClass = '.modal__heading',
-      modalInnerClass = '.modal__inner',
-      modalTriggerClass = '.modal__trigger',
-      modalBackgroundClass = 'modal__background',
-      bodyModalInClass = 'modal--in',
-      modalCloseClass = '.modal__close',
-      modalCloseClassList = 'modal__close fas fa-times',
-      modalBackground = document.createElement('div'),
-      eventListeners = ['webkitTransitionEnd', 'transitionend', 'mozTransitionEnd', 'oTransitionEnd'];
-let windowWidth = window.innerWidth; // set class attr of modal background ready to be inserted later
+      modalBackground = document.createElement('div');
 
-modalBackground.setAttribute('class', modalBackgroundClass); // always reconfigure if window resized
-
-window.addEventListener('resize', setWindowWidth);
-
-function setWindowWidth() {
-  // reassign new width
-  windowWidth = window.innerWidth;
-}
-/**
- * Global listener for escape key press and exit the active modal
- */
-
-
-document.addEventListener('keydown', e => {
-  let keyCode = e.keyCode; // get the only active modal
-
-  let activeModal = document.getElementsByClassName(modalShowClass)[0];
-
-  if (keyCode === 27) {
-    closeModal(activeModal);
-  }
-});
-/**
- * Global listener for a click anywhere outside the modal
- */
-
-document.addEventListener('click', e => {
-  e.target.classList.forEach(className => {
-    if (className === modalShowClass) {
-      // get the only active modal
-      let activeModal = document.getElementsByClassName(modalShowClass)[0];
-      closeModal(activeModal);
-      return;
+function launchModal(modal) {
+  let modalInner = modal.querySelector('.modal__inner');
+  let modalHeading = modal.querySelector('.modal__heading');
+  let modalDataTitle = modal.getAttribute('data-title');
+  insertElement('a', modal, 'modal__trigger', '#', modalDataTitle);
+  insertElement('a', modalHeading, 'modal__close fas fa-times', '#');
+  Object(_modal_animation__WEBPACK_IMPORTED_MODULE_1__["default"])(modalInner, modal);
+  let anchorTriggerSibling = modal.previousElementSibling;
+  let modalCloseTrigger = modal.querySelector('.modal__close');
+  anchorTriggerSibling.addEventListener('click', handleTriggerOpen, false);
+  modalCloseTrigger.addEventListener('click', handleTriggerClose, false);
+  modal.addEventListener('keydown', e => {
+    if (e.keyCode === 27) {
+      modal.classList.add('modal__popup--transitioning-out');
     }
   });
-});
-/**
- * Add modal link: add link in the parent element to modal
- *
- * @param {HTMLElement} modal - the modal element
- */
-
-function addModalLink(modal) {
-  let modalTriggerClassText, innerHTML;
-  modalTriggerClassText = modalTriggerClass.replace('.', '');
-  innerHTML = modal.getAttribute('data-title');
-  insertElement(modal, 'a', modalTriggerClassText, '#', innerHTML);
+  modal.addEventListener('click', e => {
+    e.target.classList.forEach(className => {
+      if (className === 'modal__popup--show') {
+        modal.classList.add('modal__popup--transitioning-out');
+      }
+    });
+  });
 }
-/**
- * Add modal close: add a close link within the modal
- *
- * @param {HTMLElement} modal - the modal element
- */
 
-
-function addModalClose(modal) {
-  let modalHeading = modal.querySelector(modalHeadingClass);
-  insertElement(modalHeading, 'a', modalCloseClassList, '#');
+function handleTriggerOpen(e) {
+  e.preventDefault();
+  let modal = e.target.nextElementSibling;
+  openModal(modal);
 }
-/**
- * Insert element: helper function to insert element to source
- *
- * @param {HTMLElement} targetParent - the parent of target
- * @param {string} type - the type of element to create
- * @param {string} classList - the class list
- * @param {string} href - the href to add
- * @param {string} innerHTML - any text to add
- */
 
+function handleTriggerClose(e) {
+  e.preventDefault();
+  let modal = document.querySelector('.modal__popup--show');
+  modal.classList.add('modal__popup--transitioning-out');
+}
 
-function insertElement(targetParent, type, classList, href, innerHTML) {
+function openModal(modal) {
+  modal.classList.remove('modal__popup--hidden');
+  modal.classList.add('modal__popup--show');
+  addBackgroundFade();
+  setTimeout(function () {
+    modal.classList.add('modal__popup--transitioning-in');
+  }, 200);
+}
+
+function addBackgroundFade() {
+  if (!document.body.contains(modalBackground)) {
+    modalBackground.setAttribute('class', 'modal__background');
+    document.body.appendChild(modalBackground);
+  }
+
+  document.body.classList.add('modal--in');
+  document.body.classList.add('no-scroll');
+}
+
+function insertElement(type, targetParent, classList, href, text) {
   let element = document.createElement(type);
   element.setAttribute('class', classList);
   element.setAttribute('href', href);
-
-  if (innerHTML) {
-    element.innerHTML = innerHTML;
-  }
-
+  if (text) element.textContent = text;
   targetParent.parentNode.insertBefore(element, targetParent);
 }
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchModal,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/modal/modal_animation.js":
+/*!***********************************************!*\
+  !*** ./src/patterns/modal/modal_animation.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return addModalAnimation; });
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_0__);
+
+
 /**
- * Set trigger listeners: add listeners to open/close links
+ * modal animation
  *
- * @param {HTMLElement} anchorTriggerSibling - the modal open anchor
- * @param {HTMLElement} modalCloseTrigger - the modal close trigger
+ * @module patterns/modal/modal_animation
+ * @author Daniel Miller <daniel.miller@city.ac.uk>
+ * @copyright City, University of London 2018
+ *
  */
 
-
-function setTriggerListeners(anchorTriggerSibling, modalCloseTrigger) {
-  /*
-   * Add click listeners to open and close triggers
-   */
-  anchorTriggerSibling.addEventListener('click', handleTriggerOpen, false);
-  modalCloseTrigger.addEventListener('click', handleTriggerClose, false);
-}
-/**
- * Launch modal: entry function
- *
- * @param {HTMLElement} modal - the modal element
- */
-
-
-function launchModal(modal) {
-  let modalInner, anchorTriggerSibling, modalCloseTrigger;
-  /**
-   * Add modal link and close link inside modal
-   */
-
-  addModalLink(modal);
-  addModalClose(modal); // get the anchor trigger sibling
-
-  anchorTriggerSibling = modal.previousElementSibling; // get the modal's close trigger
-
-  modalCloseTrigger = modal.querySelector(modalCloseClass); // set listeners for the anchors
-
-  setTriggerListeners(anchorTriggerSibling, modalCloseTrigger); // before/after transition event listener bubbles to parent, so get parent
-
-  modalInner = modal.querySelector(modalInnerClass); // then add the transition listeners
-
+const eventListeners = ['webkitTransitionEnd', 'transitionend', 'mozTransitionEnd', 'oTransitionEnd'];
+function addModalAnimation(modalInner, modal) {
   setTransitionListeners(modalInner, modal);
 }
 /**
@@ -5047,7 +4995,6 @@ function launchModal(modal) {
  * @param {HTMLElement} modalInner - the modalInner element
  * @param {HTMLElement} modal - the modal
  */
-
 
 function setTransitionListeners(modalInner, modal) {
   for (let listener in eventListeners) {
@@ -5064,106 +5011,12 @@ function setTransitionListeners(modalInner, modal) {
 
 
 function setOpenOrCloseFunction(modal, e) {
-  let modalInnerClassText = modalInnerClass.replace('.', '');
-  /**
-   * Other events bubble (e.g anchor hover) so make sure it's the
-   * modal__inner class that the event is on
-   *
-   */
-
-  if (e.target.classList[0] == modalInnerClassText) {
+  if (e.target.classList[0] == 'modal__inner') {
     if (modal.hasAttribute('data-open')) {
       closeTransition(modal);
     } else {
       openTransition(modal);
     }
-  }
-}
-/**
- * Handle trigger open: handles the modal open
- *
- * @param {event} e - the event
- */
-
-
-function handleTriggerOpen(e) {
-  e.preventDefault();
-  let modal = e.target.nextElementSibling;
-  openModal(modal); // activate focus trap
-
-  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modal, {
-    clickOutsideDeactivates: true
-  });
-  trap.activate();
-}
-/**
- * Handle trigger close: handles the modal open
- *
- * @param {event} e - the event
- */
-
-
-function handleTriggerClose(e) {
-  e.preventDefault();
-  let modal = document.querySelector('.' + modalShowClass);
-  closeModal(modal);
-}
-/**
- * Open modal: used to show the modal
- *
- * @param {HTMLElement} modalPopup - the modal div to be displayed
- */
-
-
-function openModal(modal) {
-  addBackgroundFade();
-
-  if (windowWidth >= 768) {
-    // show the modal, but keep the content div hidden
-    modal.classList.remove(modalHiddenClass);
-    modal.classList.add(modalShowClass); // trigger the first transition
-
-    setTimeout(function () {
-      modal.classList.add(modalTransitioningInClass);
-    }, 200);
-  } else {
-    // show the modal, skip transition
-    modal.classList.remove(modalHiddenClass);
-    modal.classList.add(modalShowClass);
-    modal.classList.add(modalShowContentClass);
-  }
-}
-/**
- * Add background fade: adds background element and fades it in
- *
- */
-
-
-function addBackgroundFade() {
-  // add background div to src if not present
-  if (!document.body.contains(modalBackground)) {
-    document.body.appendChild(modalBackground);
-  } // fade background in
-
-
-  document.body.classList.add(bodyModalInClass);
-}
-/**
- * Close modal: closes the active modal
- *
- * @param {HTMLElement} modal - the modal div to be hidden
- */
-
-
-function closeModal(modal) {
-  if (windowWidth >= 768) {
-    // trigger transition, callback handles the closing
-    modal.classList.add(modalTransitioningOutClass);
-  } else {
-    modal.classList.remove(modalShowClass);
-    modal.classList.add(modalHiddenClass);
-    modal.classList.remove(modalShowContentClass);
-    document.body.classList.remove(bodyModalInClass);
   }
 }
 /**
@@ -5174,18 +5027,16 @@ function closeModal(modal) {
 
 
 function closeTransition(modal) {
-  // after first transition, remove the content underneath the background
-  modal.classList.remove(modalShowContentClass); // trigger the second transition
-
+  modal.classList.remove('modal__popup--show-content');
   setTimeout(function () {
-    modal.classList.remove(modalTransitioningOutClass);
+    modal.classList.remove('modal__popup--transitioning-out');
   }, 50);
   setTimeout(function () {
-    // finally, remove the modal popup and background
-    modal.classList.remove(modalShowClass);
-    modal.classList.add(modalHiddenClass);
     modal.removeAttribute('data-open');
-    document.body.classList.remove(bodyModalInClass);
+    document.body.classList.remove('modal--in');
+    document.body.classList.remove('no-scroll');
+    modal.classList.remove('modal__popup--show');
+    modal.classList.add('modal__popup--hidden');
   }, 700);
 }
 /**
@@ -5196,22 +5047,22 @@ function closeTransition(modal) {
 
 
 function openTransition(modal) {
-  // show the content so it's revealed on transition
-  modal.classList.add(modalShowContentClass); // trigger the second transition
-
+  modal.classList.add('modal__popup--show-content');
   setTimeout(function () {
-    modal.classList.remove(modalTransitioningInClass);
+    modal.classList.remove('modal__popup--transitioning-in');
   }, 50);
   setTimeout(function () {
-    // required delay so close transition not
     modal.setAttribute('data-open', true);
+    trapFocus(modal);
   }, 600);
 }
 
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchModal,
-  launchQuery: `.${className}`
-});
+function trapFocus(modal) {
+  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_0___default()(modal, {
+    clickOutsideDeactivates: true
+  });
+  trap.activate();
+}
 
 /***/ }),
 
