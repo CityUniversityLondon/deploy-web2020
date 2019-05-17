@@ -7292,11 +7292,11 @@ let slideIndex = 0,
 function slider(sliderElement) {
   configureSliderControls(sliderElement);
   let sliderArrowPrev = sliderElement.querySelector('.arrow-left--btn-prev');
-  let sliderArrowNext = sliderElement.querySelector('.arrow-right--btn-next'); // configure click handlers for the arrows, -1 is left direction
+  let sliderArrowNext = sliderElement.querySelector('.arrow-right--btn-next'); // -1 is left direction
 
   sliderArrowPrev.addEventListener('click', function (e) {
     handleSlideChange(e, -1);
-  }); // configure click handler for arrow, 1 is right direction
+  }); // 1 is right direction
 
   sliderArrowNext.addEventListener('click', function (e) {
     handleSlideChange(e, 1);
@@ -7311,12 +7311,12 @@ function handleSlideChange(e, navDirection) {
   let sliderElement = document.querySelector(sliderTarget);
   let sliderChildren = getActiveSliderChildren(sliderElement);
   let sliderChildrenLength = getSliderCollectionLength(sliderChildren);
-  slideIndex += navDirection;
   let currentNumberedIndicatorElement = getActiveNumberedIndicatorElement(sliderElement);
+  slideIndex += navDirection;
   setSlideIndex(navDirection, sliderChildrenLength);
 
   if (sliderTarget !== '.slider--image-carousel') {
-    setDisabledAttribute(e.target, sliderChildrenLength, slideIndexDisplay);
+    setDisabledAttribute(e.target, sliderChildrenLength);
     let activeSlide = getActiveSlide(sliderElement);
     activeSlide.classList.remove('slider__slide--active');
   }
@@ -7486,20 +7486,24 @@ function configureActiveSlide(sliderTarget, slidesCollection, slideIndex) {
 }
 
 function setSlideIndex(navDirection, sliderCollectionLength) {
-  if (navDirection === -1 && slideIndex < 0) {
-    slideIndex = sliderCollectionLength - 1;
-    slideIndexDisplay = sliderCollectionLength - 1;
-  } else if (navDirection === 1 && slideIndex == sliderCollectionLength) {
-    slideIndex = 0;
-    slideIndexDisplay = 1;
-  } else if (navDirection == -1) {
-    slideIndexDisplay--;
+  if (navDirection == -1) {
+    if (slideIndex < 0) {
+      slideIndex = sliderCollectionLength - 1;
+      slideIndexDisplay = sliderCollectionLength;
+    } else {
+      slideIndexDisplay--;
+    }
   } else if (navDirection === 1) {
-    slideIndexDisplay++;
+    if (slideIndex == sliderCollectionLength) {
+      slideIndex = 0;
+      slideIndexDisplay = 1;
+    } else {
+      slideIndexDisplay++;
+    }
   }
 }
 
-function setDisabledAttribute(buttonTarget, sliderCollectionLength, slideIndexDisplay) {
+function setDisabledAttribute(buttonTarget, sliderCollectionLength) {
   if (buttonTarget.classList.contains('arrow-right--btn-next')) {
     slideIndexDisplay == sliderCollectionLength ? buttonTarget.setAttribute('disabled', '') : buttonTarget.removeAttribute('disabled');
     slideIndexDisplay > 1 ? buttonTarget.previousElementSibling.removeAttribute('disabled') : buttonTarget.previousElementSibling.setAttribute('disabled', '');
