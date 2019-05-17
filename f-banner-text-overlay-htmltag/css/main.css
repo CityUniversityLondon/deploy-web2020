@@ -18939,6 +18939,12 @@ button
     }
 }
 
+@media (min-width: 1441px) {
+    .banner__group__image {
+        max-height: none;
+    }
+}
+
 .banner__group__overlay {
     background: linear-gradient(to top, #303030, transparent 100%);
     position: absolute;
