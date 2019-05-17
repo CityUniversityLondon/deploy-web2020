@@ -7286,8 +7286,6 @@ const className = 'slider--city-slider',
   class: 'fas fa-arrow-right slider-arrow arrow-right--btn-next',
   ariaLabel: 'Next item'
 }];
-let slideIndex = 0,
-    slideIndexDisplay = 1;
 /**
  * Entry function - sets up initial elements and adds listeners
  *
@@ -7324,18 +7322,12 @@ function handleSlideChange(e, navDirection) {
   let sliderCollection = getActiveSliderCollection(sliderElement);
   let sliderCollectionLength = getSliderCollectionLength(sliderCollection);
   let currentSlideIndexElement = sliderElement.querySelector('.slider__controls__numbered-indicator__active-slide');
+  let slideIndex = parseInt(currentSlideIndexElement.textContent);
   slideIndex += navDirection;
-
-  if (navDirection == -1) {
-    slideIndexDisplay--;
-  } else {
-    slideIndexDisplay++;
-  }
-
-  setDisabledAttribute(e.target, sliderCollectionLength);
-  configureActiveSlide(sliderElement, sliderCollection, slideIndex);
-  setActiveNumberedIndicatorText(currentSlideIndexElement);
-  setProgressIndicator(sliderElement, sliderCollectionLength);
+  setDisabledAttribute(e.target, slideIndex, sliderCollectionLength);
+  configureActiveSlide(sliderElement, slideIndex, sliderCollection);
+  setActiveNumberedIndicatorText(currentSlideIndexElement, slideIndex);
+  setProgressIndicator(sliderElement, slideIndex, sliderCollectionLength);
 }
 /**
  * Configure slider controls - setup the controls ready for display
@@ -7557,12 +7549,12 @@ function getActiveSlide(sliderElement) {
  *
  * @param {HTMLElement} sliderElement - the active slider element
  * @param {array} sliderCollection
- * @param {integer} slideIndex
  *
  */
 
 
-function configureActiveSlide(sliderElement, sliderCollection, slideIndex) {
+function configureActiveSlide(sliderElement, slideIndex, sliderCollection) {
+  slideIndex--;
   let activeSlide = getActiveSlide(sliderElement);
   activeSlide.classList.remove('slider__slide--active');
   let currentSlide = sliderCollection[slideIndex];
@@ -7577,13 +7569,13 @@ function configureActiveSlide(sliderElement, sliderCollection, slideIndex) {
  */
 
 
-function setDisabledAttribute(buttonTarget, sliderCollectionLength) {
+function setDisabledAttribute(buttonTarget, slideIndex, sliderCollectionLength) {
   if (buttonTarget.classList.contains('arrow-right--btn-next')) {
-    slideIndexDisplay == sliderCollectionLength ? buttonTarget.setAttribute('disabled', '') : buttonTarget.removeAttribute('disabled');
-    slideIndexDisplay > 1 ? buttonTarget.previousElementSibling.removeAttribute('disabled') : buttonTarget.previousElementSibling.setAttribute('disabled', '');
+    slideIndex == sliderCollectionLength ? buttonTarget.setAttribute('disabled', '') : buttonTarget.removeAttribute('disabled');
+    slideIndex > 1 ? buttonTarget.previousElementSibling.removeAttribute('disabled') : buttonTarget.previousElementSibling.setAttribute('disabled', '');
   } else {
-    slideIndexDisplay > 1 ? buttonTarget.removeAttribute('disabled') : buttonTarget.setAttribute('disabled', '');
-    slideIndexDisplay !== sliderCollectionLength ? buttonTarget.nextElementSibling.removeAttribute('disabled') : buttonTarget.nextElementSibling.setAttribute('disabled', '');
+    slideIndex > 1 ? buttonTarget.removeAttribute('disabled') : buttonTarget.setAttribute('disabled', '');
+    slideIndex !== sliderCollectionLength ? buttonTarget.nextElementSibling.removeAttribute('disabled') : buttonTarget.nextElementSibling.setAttribute('disabled', '');
   }
 }
 /**
@@ -7594,8 +7586,8 @@ function setDisabledAttribute(buttonTarget, sliderCollectionLength) {
  */
 
 
-function setActiveNumberedIndicatorText(currentSlideIndexElement) {
-  currentSlideIndexElement.textContent = slideIndexDisplay;
+function setActiveNumberedIndicatorText(currentSlideIndexElement, slideIndex) {
+  currentSlideIndexElement.textContent = slideIndex;
 }
 /**
  * Set progress indicator: set percentage width of indicator
@@ -7606,9 +7598,9 @@ function setActiveNumberedIndicatorText(currentSlideIndexElement) {
  */
 
 
-function setProgressIndicator(sliderElement, sliderCollectionLength) {
+function setProgressIndicator(sliderElement, slideIndex, sliderCollectionLength) {
   let progressIndicatorElement = sliderElement.querySelector('.slider__controls__progress-indicator__progress');
-  let percentageProgress = getPercentageProgress(sliderCollectionLength);
+  let percentageProgress = getPercentageProgress(sliderCollectionLength, slideIndex);
   progressIndicatorElement.setAttribute('style', 'width: ' + percentageProgress + '%');
 }
 /**
@@ -7621,12 +7613,14 @@ function setProgressIndicator(sliderElement, sliderCollectionLength) {
  */
 
 
-function getPercentageProgress(sliderCollectionLength) {
-  if (slideIndexDisplay == sliderCollectionLength) {
+function getPercentageProgress(sliderCollectionLength, slideIndex) {
+  slideIndex++;
+
+  if (slideIndex == sliderCollectionLength) {
     return 100;
   } else {
     let percentageProgress = Math.round(100 / sliderCollectionLength);
-    percentageProgress = slideIndexDisplay * percentageProgress;
+    percentageProgress = slideIndex * percentageProgress;
     return percentageProgress;
   }
 }
