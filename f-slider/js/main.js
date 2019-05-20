@@ -7307,6 +7307,7 @@ function slider(sliderElement) {
   setTotalSlidesIndicator(sliderElement);
   configureInitialProgressIndicator(sliderElement);
   setDisplayClasses(sliderElement);
+  setFirstSlideActive(sliderElement);
 }
 /**
  * Handle slide change: the main function that handles the click events
@@ -7328,6 +7329,17 @@ function handleSlideChange(e, navDirection) {
   configureActiveSlide(sliderElement, slideIndex, sliderCollection);
   setActiveNumberedIndicatorText(currentSlideIndexElement, slideIndex);
   setProgressIndicator(sliderElement, slideIndex, sliderCollectionLength);
+}
+/**
+ * Set first slide active - add active class to first slide
+ *
+ * @param {HTMLElement} sliderElement - the slider element
+ */
+
+
+function setFirstSlideActive(sliderElement) {
+  let slidesCollection = getActiveSliderCollection(sliderElement);
+  slidesCollection[0].classList.add('slider__slide--active');
 }
 /**
  * Configure slider controls - setup the controls ready for display
