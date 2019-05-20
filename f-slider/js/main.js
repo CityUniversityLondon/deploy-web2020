@@ -7274,18 +7274,6 @@ const className = 'slider--city-slider',
   type: 'button',
   class: 'fas fa-arrow-right slider-arrow arrow-right--btn-next',
   ariaLabel: 'Next item'
-}],
-      carouselButtons = [{
-  name: 'prevButton',
-  type: 'button',
-  class: 'fas fa-arrow-left slider-arrow arrow-left--btn-prev',
-  ariaLabel: 'Previous item',
-  disabled: 'true'
-}, {
-  name: 'nextButton',
-  type: 'button',
-  class: 'fas fa-arrow-right slider-arrow arrow-right--btn-next',
-  ariaLabel: 'Next item'
 }];
 /**
  * Entry function - sets up initial elements and adds listeners
@@ -7440,12 +7428,10 @@ function addButtons(sliderElement, buttonElements) {
 
 function buildButtons(sliderTarget) {
   let htmlElements = [];
-  let targetArray;
-  sliderTarget === '.slider--image-carousel' ? targetArray = carouselButtons : targetArray = sliderButtons;
 
-  for (let key in targetArray) {
-    htmlElements[key] = document.createElement(targetArray[key].type);
-    setButtonAttributes(targetArray[key], htmlElements[key], sliderTarget);
+  for (let key in sliderButtons) {
+    htmlElements[key] = document.createElement(sliderButtons[key].type);
+    setButtonAttributes(sliderButtons[key], htmlElements[key], sliderTarget);
   }
 
   return htmlElements;
