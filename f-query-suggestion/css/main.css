@@ -19584,6 +19584,36 @@ article .social-icon .link-copy {
     }
 }
 
+.query-search {
+    position: relative;
+}
+
+.autocomplete {
+    position: absolute;
+    max-height: 0;
+    overflow-y: hidden;
+    background: white;
+}
+
+.autocomplete.open {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.autocomplete.open ul {
+    list-style: none;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.autocomplete.open ul li {
+    padding: 0.5rem;
+}
+
+.autocomplete.open .active {
+    background: red;
+}
+
 .generic {
     display: grid;
     grid-row-gap: 0;
