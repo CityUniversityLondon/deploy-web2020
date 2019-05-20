@@ -7401,10 +7401,11 @@ function addSliderControlsContainer(sliderElement) {
   sliderElement.appendChild(sliderControlsContainer);
 }
 /**
- * Display buttons: append the buttons to the slider
+ * Add buttons: append the buttons to the slider
  *
- * @param {HTMLElement} controls - array of buttons
- * @param {HTMLElement} elementParents - array of parent elements
+ * @param {HTMLElement} sliderElement - the slider element
+ * @param {HTMLElement} buttonElements - array of buttons
+ *
  */
 
 
@@ -7473,7 +7474,7 @@ function setTotalSlidesIndicator(sliderElement) {
   totalSlidesIndicator.textContent = sliderCollectionLength;
 }
 /**
- * Set initial progress indicator: prepare values to set the indicator
+ * Configure initial progress indicator: prepare values to set the indicator
  *
  * @param {HTMLElement} sliderElement - the slider object
  */
@@ -7544,10 +7545,11 @@ function getActiveSlide(sliderElement) {
   return activeSlide;
 }
 /**
- * Get active slide: gets the active slide of this slider
+ * Configure active slide: configures the active slide
  *
  * @param {HTMLElement} sliderElement - the active slider element
- * @param {array} sliderCollection
+ * @param {integer} slideIndex - the slide index number
+ * @param {array} sliderCollection - array of HTML objects
  *
  */
 
@@ -7560,9 +7562,10 @@ function configureActiveSlide(sliderElement, slideIndex, sliderCollection) {
   currentSlide.classList.add('slider__slide--active');
 }
 /**
- * Set button attributes: enables/disables buttons based on args
+ * Set disabled attribute: enables/disables buttons based on args
  *
  * @param {HTMLElement} buttonTarget - the event target button
+ * @param {integer} slideIndex - the slide index number
  * @param {integer} sliderCollectionLength - integer collection length
  *
  */
@@ -7581,6 +7584,7 @@ function setDisabledAttribute(buttonTarget, slideIndex, sliderCollectionLength) 
  * Set active numbered indicator text: sets text of the indicator
  *
  * @param {HTMLElement} currentSlideIndexElement
+ * @param {integer} slideIndex - the slide index number
  *
  */
 
@@ -7592,6 +7596,7 @@ function setActiveNumberedIndicatorText(currentSlideIndexElement, slideIndex) {
  * Set progress indicator: set percentage width of indicator
  *
  * @param {HTMLElement} sliderElement - the slider object element
+ * @param {integer} slideIndex - the slide index number
  * @param {integer} sliderCollectionLength - the numbers of slides
  *
  */
@@ -7604,9 +7609,10 @@ function setProgressIndicator(sliderElement, slideIndex, sliderCollectionLength)
 }
 /**
  * Get percentage progress: calculate the percentage width
- *a
- * @param {integer} slideIndex - current slide index
+ *
  * @param {integer} sliderCollectionLength - length of slides collection
+ * @param {integer} slideIndex - current slide index
+ *
  * @returns {integer} percentageProgress
  *
  */
