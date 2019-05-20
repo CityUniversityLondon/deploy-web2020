@@ -7343,7 +7343,7 @@ function configureSliderControls(sliderElement) {
   addProgressIndicator(sliderElement);
   sliderTarget = sliderElement.getAttribute('slider-target');
   buttonElements = buildButtons(sliderTarget);
-  displayButtons(sliderElement, buttonElements);
+  addButtons(sliderElement, buttonElements);
 }
 /**
  * Add numbered indicator: adds the '1/4' display
@@ -7407,7 +7407,7 @@ function addSliderControlsContainer(sliderElement) {
  */
 
 
-function displayButtons(sliderElement, buttonElements) {
+function addButtons(sliderElement, buttonElements) {
   let sliderControlsElement = sliderElement.querySelector('.slider__controls');
   let buttonContainer = document.createElement('div');
   buttonContainer.setAttribute('class', 'slider__buttons');
@@ -7614,8 +7614,6 @@ function setProgressIndicator(sliderElement, slideIndex, sliderCollectionLength)
 
 
 function getPercentageProgress(sliderCollectionLength, slideIndex) {
-  slideIndex++;
-
   if (slideIndex == sliderCollectionLength) {
     return 100;
   } else {
