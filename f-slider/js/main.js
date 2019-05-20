@@ -7279,7 +7279,8 @@ const className = 'slider--city-slider',
   name: 'prevButton',
   type: 'button',
   class: 'fas fa-arrow-left slider-arrow arrow-left--btn-prev',
-  ariaLabel: 'Previous item'
+  ariaLabel: 'Previous item',
+  disabled: 'true'
 }, {
   name: 'nextButton',
   type: 'button',
