@@ -19826,8 +19826,8 @@ article .social-icon .link-copy {
 .banner__group__overlay__heading h1 {
     grid-area: h1;
     color: #ffffff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     width: 54ch;
+    text-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 1279px) {
