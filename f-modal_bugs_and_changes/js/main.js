@@ -6676,10 +6676,10 @@ function handleTriggerClose(e) {
   closeModal(modal);
 }
 
-function setTabIndexes(modal, setTabIndex) {
+function setTabIndexes(modal, removeFromTabIndex) {
   let elements = modal.querySelectorAll('a');
   elements.forEach(function (el) {
-    if (setTabIndex) {
+    if (removeFromTabIndex) {
       el.setAttribute('tabindex', '-1');
     } else {
       el.removeAttribute('tabindex');
