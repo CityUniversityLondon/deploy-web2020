@@ -5233,11 +5233,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
 /* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
 /* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
-/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
-/* harmony import */ var _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/leading-separator */ "./src/paint-layouts/case-study-transition-effects/leading-separator.js");
-/* harmony import */ var _paint_layouts_case_study_transition_effects_banner_image__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/banner-image */ "./src/paint-layouts/case-study-transition-effects/banner-image.js");
-/* harmony import */ var _paint_layouts_case_study_transition_effects_content_sections__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/content-sections */ "./src/paint-layouts/case-study-transition-effects/content-sections.js");
-/* harmony import */ var _paint_layouts_case_study_transition_effects_content_slideup__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/content-slideup */ "./src/paint-layouts/case-study-transition-effects/content-slideup.js");
+/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
+/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
+/* harmony import */ var _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/leading-separator */ "./src/paint-layouts/case-study-transition-effects/leading-separator.js");
+/* harmony import */ var _paint_layouts_case_study_transition_effects_banner_image__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/banner-image */ "./src/paint-layouts/case-study-transition-effects/banner-image.js");
+/* harmony import */ var _paint_layouts_case_study_transition_effects_content_sections__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/content-sections */ "./src/paint-layouts/case-study-transition-effects/content-sections.js");
+/* harmony import */ var _paint_layouts_case_study_transition_effects_content_slideup__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/content-slideup */ "./src/paint-layouts/case-study-transition-effects/content-slideup.js");
 
 
 /**
@@ -5267,7 +5268,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_14__["default"], _paint_layouts_case_study_transition_effects_banner_image__WEBPACK_IMPORTED_MODULE_15__["default"], _paint_layouts_case_study_transition_effects_content_sections__WEBPACK_IMPORTED_MODULE_16__["default"], _paint_layouts_case_study_transition_effects_content_slideup__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_13__["default"], _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_15__["default"], _paint_layouts_case_study_transition_effects_banner_image__WEBPACK_IMPORTED_MODULE_16__["default"], _paint_layouts_case_study_transition_effects_content_sections__WEBPACK_IMPORTED_MODULE_17__["default"], _paint_layouts_case_study_transition_effects_content_slideup__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_14__["default"]]);
 
 /***/ }),
 
@@ -5336,12 +5338,12 @@ function calcBodyHeight(heading) {
 
 function setSection(heading, open) {
   heading.dataset.open = open;
-  heading.setAttribute('tabindex', '1');
+  heading.setAttribute('tabindex', '-1');
   heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].expanded, open);
   let bodyLinks = heading.nextElementSibling.getElementsByTagName('a');
 
   for (const bodyLink of bodyLinks) {
-    bodyLink.setAttribute('tabindex', '1');
+    bodyLink.setAttribute('tabindex', '0');
   }
 
   if (open) {
@@ -5466,6 +5468,11 @@ function launchAccordion(accordion) {
       }
 
       button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
+      /* Show first item of accordion if accordion set to default open */
+
+      if (defaultOpen && !idLinked) {
+        setSection(headings[0], true);
+      }
     });
   };
   /**
@@ -5475,11 +5482,11 @@ function launchAccordion(accordion) {
 
   window.addEventListener('load', function () {
     buildHeadings();
-  });
 
-  if (defaultOpen && !idLinked) {
-    setSection(headings[0], true);
-  }
+    if (defaultOpen && !idLinked) {
+      setSection(headings[0], true);
+    }
+  });
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -5810,40 +5817,35 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  *  Finds external links and adds font awesome icon to indicate external link
+ * Instructions: add external-link-finder class to templates in article container element
  */
-const className = 'content';
-/**
- * List areas below where external links should be found.
- */
+const className = 'external-link-finder';
 
-const containerAnchors = document.getElementsByClassName('container')[0].querySelectorAll('a');
+function findExternalLink(anchorsArea) {
+  const anchors = anchorsArea.querySelectorAll('a');
 
-function findExternalLink() {
-  const anchorsAreas = [containerAnchors];
-  anchorsAreas.forEach(function (anchorsCount) {
-    if (anchorsCount.length > 0) {
-      anchorsCount.forEach(function (anchor) {
-        /** checks if anchors links are :
-         * external
-         * not an image
-         * not contain font awesome external link icon already
-         * fab for social icons
-         * is not a social icon
-         * not a CTA
-         * not an email hyperlink
-         * not a telephone number link
-         * has to contain a href value
-         */
-        if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && anchor.querySelectorAll('.fab').length < 1 && anchor.className !== 'social-icon' && !anchor.parentElement.className.includes('cta-block') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
-          // adds font awesome external link icon after completing checks
-          let node = document.createElement('span');
-          node.className = 'fa fa-external-link inline-external-link ';
-          node.setAttribute('aria-hidden', 'true');
-          anchor.appendChild(node);
-        }
-      });
-    }
-  });
+  if (anchors.length > 0) {
+    anchors.forEach(function (anchor) {
+      /** checks if anchors links are :
+       * external
+       * not an image
+       * not contain font awesome external link icon already
+       * fab for social icons
+       * is not a social icon
+       * not a CTA
+       * not an email hyperlink
+       * not a telephone number link
+       * has to contain a href value
+       */
+      if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && anchor.querySelectorAll('.fab').length < 1 && anchor.className !== 'social-icon' && !anchor.parentElement.className.includes('cta-block') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
+        // adds font awesome external link icon after completing checks
+        let node = document.createElement('span');
+        node.className = 'fa fa-external-link inline-external-link ';
+        node.setAttribute('aria-hidden', 'true');
+        anchor.appendChild(node);
+      }
+    });
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -6835,6 +6837,210 @@ function launchMenu(menu) {
   launchFn: launchMenu,
   launchQuery: ".".concat(className)
 });
+
+/***/ }),
+
+/***/ "./src/patterns/modal/modal.js":
+/*!*************************************!*\
+  !*** ./src/patterns/modal/modal.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modal_animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal_animation */ "./src/patterns/modal/modal_animation.js");
+
+
+
+
+/**
+ * modal
+ *
+ * @module patterns/modal/modal
+ * @author Daniel Miller <daniel.miller@city.ac.uk>
+ * @copyright City, University of London 2018
+ */
+
+const className = 'modal__popup',
+      modalBackground = document.createElement('div');
+
+function launchModal(modal) {
+  let modalInner = modal.querySelector('.modal__inner');
+  let modalHeading = modal.querySelector('.modal__heading');
+  let modalDataTitle = modal.getAttribute('data-title');
+  insertElement('a', modal, 'modal__trigger', '#', modalDataTitle);
+  insertElement('a', modalHeading, 'modal__close fas fa-times', '#');
+  Object(_modal_animation__WEBPACK_IMPORTED_MODULE_1__["default"])(modalInner, modal);
+  let anchorTriggerSibling = modal.previousElementSibling;
+  let modalCloseTrigger = modal.querySelector('.modal__close');
+  anchorTriggerSibling.addEventListener('click', handleTriggerOpen, false);
+  modalCloseTrigger.addEventListener('click', handleTriggerClose, false);
+  modal.addEventListener('keydown', e => {
+    if (e.keyCode === 27) {
+      modal.classList.add('modal__popup--transitioning-out');
+    }
+  });
+  modal.addEventListener('click', e => {
+    e.target.classList.forEach(className => {
+      if (className === 'modal__popup--show') {
+        modal.classList.add('modal__popup--transitioning-out');
+      }
+    });
+  });
+}
+
+function handleTriggerOpen(e) {
+  e.preventDefault();
+  let modal = e.target.nextElementSibling;
+  openModal(modal);
+}
+
+function handleTriggerClose(e) {
+  e.preventDefault();
+  let modal = document.querySelector('.modal__popup--show');
+  modal.classList.add('modal__popup--transitioning-out');
+}
+
+function openModal(modal) {
+  modal.classList.remove('modal__popup--hidden');
+  modal.classList.add('modal__popup--show');
+  addBackgroundFade();
+  setTimeout(function () {
+    modal.classList.add('modal__popup--transitioning-in');
+  }, 200);
+}
+
+function addBackgroundFade() {
+  if (!document.body.contains(modalBackground)) {
+    modalBackground.setAttribute('class', 'modal__background');
+    document.body.appendChild(modalBackground);
+  }
+
+  document.body.classList.add('modal--in');
+  document.body.classList.add('no-scroll');
+}
+
+function insertElement(type, targetParent, classList, href, text) {
+  let element = document.createElement(type);
+  element.setAttribute('class', classList);
+  element.setAttribute('href', href);
+  if (text) element.textContent = text;
+  targetParent.parentNode.insertBefore(element, targetParent);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchModal,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/modal/modal_animation.js":
+/*!***********************************************!*\
+  !*** ./src/patterns/modal/modal_animation.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return addModalAnimation; });
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/**
+ * modal animation
+ *
+ * @module patterns/modal/modal_animation
+ * @author Daniel Miller <daniel.miller@city.ac.uk>
+ * @copyright City, University of London 2018
+ *
+ */
+
+const eventListeners = ['webkitTransitionEnd', 'transitionend', 'mozTransitionEnd', 'oTransitionEnd'];
+function addModalAnimation(modalInner, modal) {
+  setTransitionListeners(modalInner, modal);
+}
+/**
+ * Set transition listeners: add transition finished listeners.
+ * The transition event actually occurs on the :before and :after
+ * but bubbles up to parent
+ *
+ * @param {HTMLElement} modalInner - the modalInner element
+ * @param {HTMLElement} modal - the modal
+ */
+
+function setTransitionListeners(modalInner, modal) {
+  for (let listener in eventListeners) {
+    modalInner.addEventListener(eventListeners[listener], e => {
+      setOpenOrCloseFunction(modal, e);
+    }, false);
+  }
+}
+/**
+ * Set open or close function: decides if open/close needed
+ *
+ * @param {HTMLElement} modal - the modal
+ */
+
+
+function setOpenOrCloseFunction(modal, e) {
+  if (e.target.classList[0] == 'modal__inner') {
+    if (modal.hasAttribute('data-open')) {
+      closeTransition(modal);
+    } else {
+      openTransition(modal);
+    }
+  }
+}
+/**
+ * Close transition: handles the close transition and modal hide
+ *
+ * @param {HTMLElement} modal - the modal div
+ */
+
+
+function closeTransition(modal) {
+  modal.classList.remove('modal__popup--show-content');
+  setTimeout(function () {
+    modal.classList.remove('modal__popup--transitioning-out');
+  }, 50);
+  setTimeout(function () {
+    modal.removeAttribute('data-open');
+    document.body.classList.remove('modal--in');
+    document.body.classList.remove('no-scroll');
+    modal.classList.remove('modal__popup--show');
+    modal.classList.add('modal__popup--hidden');
+  }, 700);
+}
+/**
+ * Open transition: handles the open transition and modal show
+ *
+ * @param {HTMLElement} modal - the modal div
+ */
+
+
+function openTransition(modal) {
+  modal.classList.add('modal__popup--show-content');
+  setTimeout(function () {
+    modal.classList.remove('modal__popup--transitioning-in');
+  }, 50);
+  setTimeout(function () {
+    modal.setAttribute('data-open', true);
+    trapFocus(modal);
+  }, 600);
+}
+
+function trapFocus(modal) {
+  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_0___default()(modal, {
+    clickOutsideDeactivates: true
+  });
+  trap.activate();
+}
 
 /***/ }),
 
