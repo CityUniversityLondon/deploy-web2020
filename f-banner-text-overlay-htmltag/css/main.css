@@ -18911,6 +18911,8 @@ button
 }
 
 .banner {
+    background: initial;
+    position: relative;
     position: relative;
 }
 
@@ -19025,6 +19027,8 @@ button
 }
 
 .banner {
+    background: initial;
+    position: relative;
     background: #1e1e1e;
 }
 
