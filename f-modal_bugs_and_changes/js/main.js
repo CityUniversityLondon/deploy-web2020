@@ -6635,14 +6635,11 @@ function setWindowWidth() {
 function launchModal(modal) {
   let modalHeading = modal.querySelector('.modal__heading');
   let modalDataTitle = modal.getAttribute('data-title');
+  let modalInner = modal.querySelector('.modal__inner');
   insertElement('a', modal, 'modal__trigger', '#', modalDataTitle);
   insertElement('a', modalHeading, 'modal__close fas fa-times', '#');
   addEventListeners(modal);
-
-  if (windowWidth >= 768) {
-    let modalInner = modal.querySelector('.modal__inner');
-    Object(_modal_animation__WEBPACK_IMPORTED_MODULE_1__["default"])(modalInner, modal);
-  }
+  Object(_modal_animation__WEBPACK_IMPORTED_MODULE_1__["default"])(modalInner, modal);
 }
 
 function addEventListeners(modal) {
