@@ -36093,26 +36093,70 @@ function copyIconToClipboard(elem) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
+
+
+
 
 
 const className = 'statistics-block';
 
+function unfade(element) {
+  var op = 0.1; // initial opacity
+
+  element.style.display = 'inline';
+  var timer = setInterval(function () {
+    if (op >= 1) {
+      clearInterval(timer);
+    }
+
+    element.style.opacity = op;
+    element.style.filter = 'alpha(opacity=' + op * 100 + ')';
+    op += op * 0.1;
+  }, 10);
+}
 
 function launchStats(e) {
-  let endNumber = e.querySelector('.animate--number__number');
-  let startNumber = endNumber.getAttribute('data-number-start');
-  endNumber = parseInt(endNumber.innerHTML);
-  var format = d3__WEBPACK_IMPORTED_MODULE_0__["format"](',d');
-  d3__WEBPACK_IMPORTED_MODULE_0__["selectAll"]('.animate--number__number').transition().duration(2500).on('start', function () {
-    d3__WEBPACK_IMPORTED_MODULE_0__["active"](this).tween('text', function () {
-      var that = d3__WEBPACK_IMPORTED_MODULE_0__["select"](this),
-          i = d3__WEBPACK_IMPORTED_MODULE_0__["interpolateNumber"](startNumber, endNumber);
-      return function (t) {
-        that.text(format(i(t)));
-      };
-    }).transition().delay(1500).on('start');
-  });
+  let endNumbers = e.querySelectorAll('.animate--number__number');
+  const viewPortHeight = window.innerHeight; // Viewport height
+
+  for (const endNumber of endNumbers) {
+    const elemOffset = endNumber.offsetTop; // Target element y-position
+
+    let animationComplete = false;
+    window.addEventListener('scroll', function () {
+      const screenPos = window.pageYOffset; // Screen y-position
+
+      if (screenPos > elemOffset - viewPortHeight + 60 && !animationComplete) {
+        let startNumber = endNumber.getAttribute('data-number-start');
+        let endNumberFormatted = parseInt(endNumber.innerHTML);
+        let format = d3__WEBPACK_IMPORTED_MODULE_2__["format"](',d'); // Target each number element using D3 selector
+
+        d3__WEBPACK_IMPORTED_MODULE_2__["select"](endNumber).transition().duration(2000).on('start', function () {
+          d3__WEBPACK_IMPORTED_MODULE_2__["active"](this).tween('text', function () {
+            var that = d3__WEBPACK_IMPORTED_MODULE_2__["select"](this),
+                i = d3__WEBPACK_IMPORTED_MODULE_2__["interpolateNumber"](startNumber, endNumberFormatted);
+            return function (t) {
+              that.text(format(i(t)));
+            };
+          }).transition().delay(1500).on('start');
+        });
+        animationComplete = true; // Ensure function only runs once (when scrolled into view)
+
+        let units = e.querySelectorAll('.animate--number__unit');
+
+        for (const unit of units) {
+          setTimeout(() => {
+            unfade(unit);
+          }, 1500);
+        }
+      }
+    });
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({

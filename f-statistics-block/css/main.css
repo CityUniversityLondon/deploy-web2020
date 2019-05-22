@@ -19795,6 +19795,7 @@ article .social-icon .link-copy {
 .ksp__items .ksp__item__icon {
     width: 52px;
     margin: 0 auto;
+    display: block;
 }
 
 .ksp__items .ksp__item__heading--top-padding,
