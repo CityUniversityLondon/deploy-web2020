@@ -19803,6 +19803,15 @@ article .social-icon .link-copy {
     padding-top: 2.1rem;
 }
 
+.ksp__items .animation-incomplete {
+    opacity: 0;
+}
+
+.ksp__items .animation-incomplete.animation-complete {
+    opacity: 1;
+    transition: opacity 1500ms;
+}
+
 @media (max-width: 767px) {
     .ksp__items.ksp__items--2 {
         grid-template-rows: repeat(2, auto);
