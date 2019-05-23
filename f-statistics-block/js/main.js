@@ -36100,6 +36100,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
 
 
 
@@ -36107,34 +36109,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const className = 'statistics-block';
+const duration = 2000;
 
 function launchStats(e) {
-  let units = e.querySelectorAll('.animate--number__unit');
+  let units = e.querySelectorAll('.animate--number__unit'); // Give class to elements immediately either side of number. Needed for fade-in animation.
 
   for (const unit of units) {
     unit.classList.add('animation-incomplete');
-  }
+  } // Called 'final' to define final value that is visible after animation is complete.
 
-  let endNumbers = e.querySelectorAll('.animate--number__number');
-  const viewPortHeight = window.innerHeight; // Viewport height
 
-  for (const endNumber of endNumbers) {
-    const elemOffset = endNumber.offsetTop; // Target element y-position
+  let finalNumbers = e.querySelectorAll('.animate--number__number');
+
+  for (const finalNumber of finalNumbers) {
+    const elemOffset = finalNumber.offsetTop; // Number y-position
 
     let animationComplete = false;
     window.addEventListener('scroll', function () {
       const screenPos = window.pageYOffset; // Screen y-position
+      // When element scrolls into view, run animation (once).
 
-      if (screenPos > elemOffset - viewPortHeight + 60 && !animationComplete) {
-        let startNumber = endNumber.getAttribute('data-number-start');
-        let endNumberFormatted = parseInt(endNumber.innerHTML);
+      if (screenPos > elemOffset - _util__WEBPACK_IMPORTED_MODULE_4__["viewportHeight"] + 60 && !animationComplete) {
+        let startNumber = finalNumber.getAttribute('data-number-start');
+        let finalNumberFormatted = parseInt(finalNumber.innerHTML);
         let format = d3__WEBPACK_IMPORTED_MODULE_3__["format"](',d'); // Target each number element using D3 selector
 
         let promise1 = new Promise((resolve, reject) => {
-          d3__WEBPACK_IMPORTED_MODULE_3__["select"](endNumber).transition().duration(2000).on('start', function () {
+          d3__WEBPACK_IMPORTED_MODULE_3__["select"](finalNumber).transition().duration(duration).on('start', function () {
             d3__WEBPACK_IMPORTED_MODULE_3__["active"](this).tween('text', function () {
               var that = d3__WEBPACK_IMPORTED_MODULE_3__["select"](this),
-                  i = d3__WEBPACK_IMPORTED_MODULE_3__["interpolateNumber"](startNumber, endNumberFormatted);
+                  i = d3__WEBPACK_IMPORTED_MODULE_3__["interpolateNumber"](startNumber, finalNumberFormatted);
               return function (t) {
                 that.text(format(i(t)));
               };
@@ -36147,13 +36151,14 @@ function launchStats(e) {
           } else {
             reject('not complete');
           }
-        });
+        }); // After number animation finished, fade in units
+
         promise1.then(() => {
           setTimeout(function () {
             for (const unit of units) {
               unit.classList.add('animation-complete');
             }
-          }, 3000);
+          }, duration);
         }).catch();
       }
     });
@@ -36565,7 +36570,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, default */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, viewportHeight */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36579,7 +36584,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gaEvent", function() { return gaEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendAll", function() { return appendAll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pxToRem", function() { return pxToRem; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return requestAnimFrame; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "viewportHeight", function() { return viewportHeight; });
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol.description */ "./node_modules/core-js/modules/es.symbol.description.js");
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
@@ -36750,12 +36755,9 @@ function pxToRem(pxValue) {
   browserWidth > 768 ? fontBase = 18 : fontBase = 16;
   let remValue = pxValue / fontBase;
   return remValue;
-}
-function requestAnimFrame() {
-  return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {
-    window.setTimeout(callback, 1000 / 60);
-  };
-}
+} // Browser scrolling variables
+
+const viewportHeight = window.innerHeight;
 
 /***/ }),
 
