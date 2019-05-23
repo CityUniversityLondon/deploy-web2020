@@ -14077,8 +14077,10 @@ main table td em {
 }
 
 @media (hover: hover) {
-    .js .cookie-notice button:hover {
+    .js .cookie-notice button:hover, .js .cookie-notice button:active {
         border-color: #dd0036;
+        background-image: none;
+        background: transparent;
     }
 }
 
@@ -14415,6 +14417,7 @@ main table td em {
     .primary-cta--bright:hover {
         background: transparent;
         border-color: #dd0036;
+        color: #dd0036;
     }
 }
 
@@ -14551,8 +14554,10 @@ main table td em {
 }
 
 @media (hover: hover) {
-    .primary-cta-arrow--dark:hover {
+    .primary-cta-arrow--dark:hover, .primary-cta-arrow--dark:active {
         border-color: #dd0036;
+        background-image: none;
+        background: transparent;
     }
 }
 
@@ -14681,8 +14686,10 @@ main table td em {
 }
 
 @media (hover: hover) {
-    .primary-cta--dark:hover {
+    .primary-cta--dark:hover, .primary-cta--dark:active {
         border-color: #dd0036;
+        background-image: none;
+        background: transparent;
     }
 }
 
@@ -14835,14 +14842,6 @@ main table td em {
     color: #0c0c0e;
 }
 
-@media (hover: hover) {
-    .outline-cta-arrow--bright:hover {
-        background: #0c0c0e;
-        border-color: #0c0c0e;
-        color: #ffffff;
-    }
-}
-
 .outline-cta-arrow--bright:focus {
     background: #ffffff;
     color: #0c0c0e;
@@ -14854,6 +14853,14 @@ main table td em {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+}
+
+@media (hover: hover) {
+    .outline-cta-arrow--bright:hover {
+        background: #0c0c0e;
+        border-color: #0c0c0e;
+        color: #ffffff;
+    }
 }
 
 .outline-cta-arrow--bright:active {
@@ -14977,14 +14984,6 @@ main table td em {
     color: #0c0c0e;
 }
 
-@media (hover: hover) {
-    .outline-cta--bright:hover {
-        background: #0c0c0e;
-        border-color: #0c0c0e;
-        color: #ffffff;
-    }
-}
-
 .outline-cta--bright:focus {
     background: #ffffff;
     color: #0c0c0e;
@@ -14996,6 +14995,14 @@ main table td em {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+}
+
+@media (hover: hover) {
+    .outline-cta--bright:hover {
+        background: #0c0c0e;
+        border-color: #0c0c0e;
+        color: #ffffff;
+    }
 }
 
 .outline-cta--bright:active {
@@ -16193,8 +16200,10 @@ main table td em {
 }
 
 @media (hover: hover) {
-    .primary-cta--grey--bright:hover {
+    .primary-cta--grey--bright:hover, .primary-cta--grey--bright:active {
         border-color: #dd0036;
+        background-image: none;
+        background: transparent;
     }
 }
 
@@ -22712,8 +22721,10 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 @media (hover: hover) {
-    .theme--dark .cta-block li:nth-child(1) a:hover {
+    .theme--dark .cta-block li:nth-child(1) a:hover, .theme--dark .cta-block li:nth-child(1) a:active {
         border-color: #dd0036;
+        background-image: none;
+        background: transparent;
     }
 }
 
