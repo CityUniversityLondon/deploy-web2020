@@ -19977,10 +19977,6 @@ body.modal--in.no-scroll .modal__background {
     opacity: 0.7;
 }
 
-body.no-click {
-    pointer-events: none;
-}
-
 .modal__background {
     background: #0c0c0e;
     pointer-events: none;
@@ -20251,6 +20247,10 @@ a.modal__close:active, a.modal__close:focus {
     bottom: 1rem;
     position: absolute;
     right: 1rem;
+}
+
+.no-click {
+    pointer-events: none;
 }
 
 .no-js .modal__popup {

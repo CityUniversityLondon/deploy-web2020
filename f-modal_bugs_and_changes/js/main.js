@@ -6619,6 +6619,7 @@ __webpack_require__.r(__webpack_exports__);
  * @module patterns/modal/modal
  * @author Daniel Miller <daniel.miller@city.ac.uk>
  * @copyright City, University of London 2018
+ *
  */
 
 
@@ -6647,11 +6648,19 @@ function addEventListeners(modal) {
   let modalCloseTrigger = modal.querySelector('.modal__close');
   anchorTriggerSibling.addEventListener('click', handleTriggerOpen, false);
   modalCloseTrigger.addEventListener('click', handleTriggerClose, false);
+  /*
+   * listen for escape key press and close
+   */
+
   modal.addEventListener('keydown', e => {
     if (e.keyCode === 27 && modal.hasAttribute('data-open')) {
       closeModal(modal);
     }
   });
+  /*
+   * listen for a click outside of modal inner and close
+   */
+
   modal.addEventListener('click', e => {
     e.target.classList.forEach(className => {
       if (className === 'modal__popup--show' && modal.hasAttribute('data-open')) {
@@ -6672,6 +6681,16 @@ function handleTriggerClose(e) {
   let modal = document.querySelector('.modal__popup--show');
   closeModal(modal);
 }
+/**
+ * Set tab indexes: when the modal is closed, the anchors
+ * lose their tab indexes, when the modal is open, the
+ * attr is removed so the user can tab through them
+ *
+ * @param {HTMLElement} modal - the modal
+ * @param {boolean} removeTabIndex - no index or remove
+ *
+ */
+
 
 function setTabIndexes(modal, removeTabIndex) {
   let elements = modal.querySelectorAll('a');
@@ -6685,10 +6704,18 @@ function setTabIndexes(modal, removeTabIndex) {
 }
 
 function openModal(modal) {
-  modal.classList.remove('modal__popup--hidden');
+  document.body.classList.add('modal--in');
+  document.body.classList.add('no-scroll');
+  modal.classList.add('no-click');
   modal.classList.add('modal__popup--show');
+  modal.classList.remove('modal__popup--hidden');
   addBackgroundFade();
   setTabIndexes(modal, false);
+  /*
+      if tablet or above, trigger first transition. Rest of animation
+      and opening of modal handled in modal_animation.js. Otherwise,
+      just display the modal with no effects.
+  */
 
   if (windowWidth >= 768) {
     setTimeout(function () {
@@ -6702,6 +6729,8 @@ function openModal(modal) {
 }
 
 function closeModal(modal) {
+  modal.classList.add('no-click');
+
   if (windowWidth >= 768) {
     modal.classList.add('modal__popup--transitioning-out');
   } else {
@@ -6719,14 +6748,17 @@ function setOpenAttributes(modal) {
   modal.classList.add('modal__popup--show');
   modal.classList.remove('modal__popup--hidden');
   modal.classList.add('modal__popup--show-content');
+  modal.classList.remove('no-click');
 }
 
 function setCloseAttributes(modal) {
   modal.removeAttribute('data-open');
   document.body.classList.remove('modal--in');
-  modal.classList.remove('modal__popup--show');
+  document.body.classList.remove('no-scroll');
   modal.classList.add('modal__popup--hidden');
+  modal.classList.remove('modal__popup--show');
   modal.classList.remove('modal__popup--show-content');
+  modal.classList.remove('no-click');
 }
 
 function addBackgroundFade() {
@@ -6734,10 +6766,20 @@ function addBackgroundFade() {
     modalBackground.setAttribute('class', 'modal__background');
     document.body.appendChild(modalBackground);
   }
-
-  document.body.classList.add('modal--in');
-  document.body.classList.add('no-scroll');
 }
+/**
+ *
+ * Insert element: helper function to insert elements
+ * to the html
+ *
+ * @param {type} string - the element type
+ * @param {targetParent} HTMLElement - the element to append to
+ * @param {classList} string - the class list
+ * @param {href} string - the href
+ * @param {text} text - optional text content
+ *
+ */
+
 
 function insertElement(type, targetParent, classList, href, text) {
   let element = document.createElement(type);
@@ -6819,7 +6861,8 @@ function setOpenOrCloseFunction(modal, e) {
   }
 }
 /**
- * Open transition: handles the open transition and modal show
+ * Open transition: handles the open transition and modal show.
+ * Conditional statements ensure the code doesn't run twice.
  *
  * @param {HTMLElement} modal - the modal div
  */
@@ -6833,6 +6876,7 @@ function openTransition(modal) {
     }, 50);
     setTimeout(function () {
       modal.setAttribute('data-open', true);
+      modal.classList.remove('no-click');
     }, 600);
   }
 }
@@ -6850,11 +6894,12 @@ function closeTransition(modal) {
       modal.classList.remove('modal__popup--transitioning-out');
     }, 50);
     setTimeout(function () {
-      modal.removeAttribute('data-open');
       document.body.classList.remove('modal--in');
       document.body.classList.remove('no-scroll');
+      modal.removeAttribute('data-open');
       modal.classList.remove('modal__popup--show');
       modal.classList.add('modal__popup--hidden');
+      modal.classList.remove('no-click');
     }, 700);
   }
 }
