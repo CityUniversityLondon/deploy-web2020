@@ -20534,6 +20534,7 @@ article .social-icon .link-copy {
         height: 100%;
         justify-content: center;
         left: -1.25rem;
+        font-weight: 300;
     }
 }
 
@@ -20544,6 +20545,52 @@ article .social-icon .link-copy {
 
 .banner__content__text {
     grid-area: c;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.625;
+    margin-top: 0.5rem;
+    max-width: 55ch;
+    max-width: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .banner__content__text {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .banner__content__text {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .banner__content__text {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .banner__content__text {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .banner__content__text {
+        letter-spacing: -0.017em;
+    }
+}
+
+.banner__content__text i,
+.banner__content__text em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
 }
 
 .banner__content__text p {
