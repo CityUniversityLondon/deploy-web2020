@@ -36100,8 +36100,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
 
 
 
@@ -36109,19 +36107,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const className = 'statistics-block';
+const viewportHeight = window.innerHeight;
 const duration = 2000;
 
 function launchStats(e) {
-  let units = e.querySelectorAll('.animate--number__unit'); // Give class to elements immediately either side of number. Needed for fade-in animation.
-
-  for (const unit of units) {
-    unit.classList.add('animation-incomplete');
-  } // Called 'final' to define final value that is visible after animation is complete.
-
+  let units = e.querySelectorAll('.animate--number__unit'); // Called 'final' to define final value that is visible after animation is complete.
 
   let finalNumbers = e.querySelectorAll('.animate--number__number');
 
   for (const finalNumber of finalNumbers) {
+    // Give class to elements immediately either side of number. Needed for fade-in animation.
+    for (const unit of units) {
+      unit.classList.add('animation-incomplete');
+    }
+
     const elemOffset = finalNumber.offsetTop; // Number y-position
 
     let animationComplete = false;
@@ -36129,7 +36128,7 @@ function launchStats(e) {
       const screenPos = window.pageYOffset; // Screen y-position
       // When element scrolls into view, run animation (once).
 
-      if (screenPos > elemOffset - _util__WEBPACK_IMPORTED_MODULE_4__["viewportHeight"] + 60 && !animationComplete) {
+      if (screenPos > elemOffset - viewportHeight + 60 && !animationComplete) {
         let startNumber = finalNumber.getAttribute('data-number-start');
         let finalNumberFormatted = parseInt(finalNumber.innerHTML);
         let format = d3__WEBPACK_IMPORTED_MODULE_3__["format"](',d'); // Target each number element using D3 selector
@@ -36137,10 +36136,10 @@ function launchStats(e) {
         let promise1 = new Promise((resolve, reject) => {
           d3__WEBPACK_IMPORTED_MODULE_3__["select"](finalNumber).transition().duration(duration).on('start', function () {
             d3__WEBPACK_IMPORTED_MODULE_3__["active"](this).tween('text', function () {
-              var that = d3__WEBPACK_IMPORTED_MODULE_3__["select"](this),
+              var targetNumber = d3__WEBPACK_IMPORTED_MODULE_3__["select"](this),
                   i = d3__WEBPACK_IMPORTED_MODULE_3__["interpolateNumber"](startNumber, finalNumberFormatted);
               return function (t) {
-                that.text(format(i(t)));
+                targetNumber.text(format(i(t)));
               };
             }).transition().delay(1500).on('start');
           });
@@ -36570,7 +36569,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, viewportHeight */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -36584,7 +36583,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gaEvent", function() { return gaEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendAll", function() { return appendAll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pxToRem", function() { return pxToRem; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "viewportHeight", function() { return viewportHeight; });
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol.description */ "./node_modules/core-js/modules/es.symbol.description.js");
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
@@ -36755,9 +36753,7 @@ function pxToRem(pxValue) {
   browserWidth > 768 ? fontBase = 18 : fontBase = 16;
   let remValue = pxValue / fontBase;
   return remValue;
-} // Browser scrolling variables
-
-const viewportHeight = window.innerHeight;
+}
 
 /***/ }),
 
