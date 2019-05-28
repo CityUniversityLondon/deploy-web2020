@@ -5269,22 +5269,17 @@ function launchAccordion(accordion) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
 /* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _is_mobile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../is-mobile */ "./src/patterns/animation/is-mobile.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
 
 
 
 
 /**
- * Case study paragraph transitions
+ *  Animates content section to fade in and upwards on down scroll
  *
  * @module paint-layouts/case-study-transition-effects/content-section
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
  * @copyright City, University of London 2019!
- */
-
-/**
- * Animates content section to fade in and upwards on  down scroll
- *
  */
 
 const className = 'content-fade-in';
@@ -5292,7 +5287,7 @@ const className = 'content-fade-in';
 function contentFadeIn(contentFadein) {
   const viewPortHeight = window.innerHeight; // calculates viewport height
 
-  if (!Object(_is_mobile__WEBPACK_IMPORTED_MODULE_1__["default"])()) {
+  if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
     window.addEventListener('scroll', function () {
       const elemOffset = contentFadein.offsetTop;
       const screenPos = window.pageYOffset; // calculates scroll position
@@ -5322,7 +5317,7 @@ function contentFadeIn(contentFadein) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
 /* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _is_mobile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../is-mobile */ "./src/patterns/animation/is-mobile.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
 
 
 
@@ -5348,7 +5343,7 @@ function contentSeparator(contentSeparatorContainer) {
 
   let el = insertElement(contentSeparatorContainer);
 
-  if (!Object(_is_mobile__WEBPACK_IMPORTED_MODULE_1__["default"])()) {
+  if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
     window.addEventListener('scroll', function () {
       const elemOffset = el.offsetTop;
       const screenPos = window.pageYOffset; // calculates scroll position
@@ -5394,22 +5389,17 @@ function insertElement(contentSeparatorContainer) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
 /* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _is_mobile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../is-mobile */ "./src/patterns/animation/is-mobile.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
 
 
 
 
 /**
- * Background slideup transition
+ * Background slideup transition, Animates content to slide up on down scroll
  *
  * @module paint-layouts/case-study-transition-effects/content-slideup
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
  * @copyright City, University of London 2019!
- */
-
-/**
- *  Animates content to slide up on down scroll
- *
  */
 
 const className = 'content-slide-up';
@@ -5417,7 +5407,7 @@ const className = 'content-slide-up';
 function contentSlideUp(contentSlideup) {
   const viewPortHeight = window.innerHeight; // calculates viewport height
 
-  if (!Object(_is_mobile__WEBPACK_IMPORTED_MODULE_1__["default"])()) {
+  if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
     window.addEventListener('scroll', function () {
       const screenPos = window.pageYOffset; // calculates scroll position
 
@@ -5450,13 +5440,13 @@ function contentSlideUp(contentSlideup) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
 /* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _is_mobile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../is-mobile */ "./src/patterns/animation/is-mobile.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
 
 
 
 
 /**
- * Image banner transition
+ * Image transition
  *
  * @module paint-layouts/case-study-transition-effects/banner-image
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
@@ -5465,16 +5455,16 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'image-expand';
 
-function imageExpand(imageBanner) {
-  if (!Object(_is_mobile__WEBPACK_IMPORTED_MODULE_1__["default"])()) {
+function imageExpand(image) {
+  if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
     const viewPortHeight = window.innerHeight; // calculates viewport height
 
     window.addEventListener('scroll', function () {
-      const elemOffset = imageBanner.offsetTop;
+      const elemOffset = image.offsetTop;
       const screenPos = window.pageYOffset; // calculates scroll position
 
-      if (screenPos > elemOffset - viewPortHeight + 100 && !imageBanner.className.includes('image-expand--complete')) {
-        imageBanner.classList.add('image-expand--complete');
+      if (screenPos > elemOffset - viewPortHeight + 100 && !image.className.includes('image-expand--complete')) {
+        image.classList.add('image-expand--complete');
       }
     });
   }
@@ -5484,30 +5474,6 @@ function imageExpand(imageBanner) {
   launchFn: imageExpand,
   launchQuery: ".".concat(className)
 });
-
-/***/ }),
-
-/***/ "./src/patterns/animation/is-mobile.js":
-/*!*********************************************!*\
-  !*** ./src/patterns/animation/is-mobile.js ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return isMobile; });
-
-
-function isMobile() {
-  const viewPortWidth = window.innerWidth; // calculates viewport width to determinte if using mobile
-
-  const mobileScreen = 432;
-
-  if (viewPortWidth > mobileScreen) {
-    return false;
-  }
-}
 
 /***/ }),
 
@@ -7799,7 +7765,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, isMobile */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7813,6 +7779,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gaEvent", function() { return gaEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendAll", function() { return appendAll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pxToRem", function() { return pxToRem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMobile", function() { return isMobile; });
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol.description */ "./node_modules/core-js/modules/es.symbol.description.js");
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
@@ -7983,6 +7950,21 @@ function pxToRem(pxValue) {
   browserWidth > 768 ? fontBase = 18 : fontBase = 16;
   let remValue = pxValue / fontBase;
   return remValue;
+}
+/**
+ * Calculates viewport width to determinte if using mobile
+ * @param {number} number - width of screen, with default value = 432.
+ *
+ */
+
+function isMobile() {
+  let screen = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 432;
+  const viewPortWidth = window.innerWidth;
+  const mobileScreen = screen;
+
+  if (viewPortWidth > mobileScreen) {
+    return false;
+  }
 }
 
 /***/ }),
