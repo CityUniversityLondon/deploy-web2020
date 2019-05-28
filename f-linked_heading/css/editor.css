@@ -10297,7 +10297,7 @@ article a {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
@@ -10353,7 +10353,7 @@ article a:visited {
 
 article a:focus {
     color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
@@ -10364,16 +10364,16 @@ article a:focus {
 
 @media (hover: hover) {
     article a:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-width: 0.125rem;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
     }
 }
 
 article a:active {
     background-color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
@@ -11761,7 +11761,7 @@ main table td em {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
@@ -11850,7 +11850,7 @@ main table td em {
 
 .cms-editor .cms-editor-warning-remover:focus {
     color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
@@ -11861,16 +11861,16 @@ main table td em {
 
 @media (hover: hover) {
     .cms-editor .cms-editor-warning-remover:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-width: 0.125rem;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
     }
 }
 
 .cms-editor .cms-editor-warning-remover:active {
     background-color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
@@ -12262,7 +12262,7 @@ main table td em {
         background-size: 100% 0;
         background-position: 0 100%;
         transition: background-size 0.3s ease;
-        border-bottom-color: #006bbd;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #006bbd;
@@ -12329,7 +12329,7 @@ main table td em {
     }
     .theme--dark .cms-editor .cms-editor-warning-remover:focus {
         color: #006bbd;
-        border-bottom-color: #006bbd;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         outline-color: #0c0c0e;
@@ -12341,9 +12341,9 @@ main table td em {
 
 @media screen and (hover: hover) {
     .theme--dark .cms-editor .cms-editor-warning-remover:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-width: 0.125rem;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
     }
 }
@@ -12351,7 +12351,7 @@ main table td em {
 @media screen {
     .theme--dark .cms-editor .cms-editor-warning-remover:active {
         background-color: #006bbd;
-        border-bottom-color: #006bbd;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #ffffff;

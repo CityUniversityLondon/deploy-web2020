@@ -10443,7 +10443,7 @@ article a {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
@@ -10499,7 +10499,7 @@ article a:visited {
 
 article a:focus {
     color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
@@ -10510,16 +10510,16 @@ article a:focus {
 
 @media (hover: hover) {
     article a:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-width: 0.125rem;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
     }
 }
 
 article a:active {
     background-color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
@@ -13797,7 +13797,7 @@ main table td em {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
@@ -13857,7 +13857,7 @@ main table td em {
 
 .js .cookie-notice a:focus {
     color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
@@ -13868,16 +13868,16 @@ main table td em {
 
 @media (hover: hover) {
     .js .cookie-notice a:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-width: 0.125rem;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
     }
 }
 
 .js .cookie-notice a:active {
     background-color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
@@ -16342,7 +16342,7 @@ main table td em {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
@@ -16398,7 +16398,7 @@ main table td em {
 
 .feedback .feedback__form-link a:focus {
     color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
@@ -16409,16 +16409,16 @@ main table td em {
 
 @media (hover: hover) {
     .feedback .feedback__form-link a:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-width: 0.125rem;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
     }
 }
 
 .feedback .feedback__form-link a:active {
     background-color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
@@ -16506,7 +16506,7 @@ main table td em {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
@@ -16563,7 +16563,7 @@ main table td em {
 
 .feedback .feedback__direct button:focus {
     color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
@@ -16574,16 +16574,16 @@ main table td em {
 
 @media (hover: hover) {
     .feedback .feedback__direct button:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-width: 0.125rem;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
     }
 }
 
 .feedback .feedback__direct button:active {
     background-color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
@@ -17481,7 +17481,7 @@ article figure figcaption a:active {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
@@ -17539,7 +17539,7 @@ article figure figcaption a:active {
 
 .key-info__content-control .content-toggle button .fa-plus-circle:focus {
     color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
@@ -17550,16 +17550,16 @@ article figure figcaption a:active {
 
 @media (hover: hover) {
     .key-info__content-control .content-toggle button .fa-plus-circle:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-width: 0.125rem;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
     }
 }
 
 .key-info__content-control .content-toggle button .fa-plus-circle:active {
     background-color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
@@ -17605,7 +17605,7 @@ article figure figcaption a:active {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
@@ -17661,7 +17661,7 @@ article figure figcaption a:active {
 
 .key-info__content-control .content-toggle button .label:focus {
     color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
@@ -17672,16 +17672,16 @@ article figure figcaption a:active {
 
 @media (hover: hover) {
     .key-info__content-control .content-toggle button .label:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-width: 0.125rem;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
     }
 }
 
 .key-info__content-control .content-toggle button .label:active {
     background-color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
@@ -19412,7 +19412,7 @@ button
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
@@ -19468,7 +19468,7 @@ button
 
 .theme-switcher__option button:focus {
     color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
@@ -19479,16 +19479,16 @@ button
 
 @media (hover: hover) {
     .theme-switcher__option button:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-width: 0.125rem;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
     }
 }
 
 .theme-switcher__option button:active {
     background-color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
@@ -20323,7 +20323,7 @@ article .social-icon .link-copy {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
@@ -20384,7 +20384,7 @@ article .social-icon .link-copy {
 
 .module-selector__content__moduleLink a:focus {
     color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
@@ -20395,16 +20395,16 @@ article .social-icon .link-copy {
 
 @media (hover: hover) {
     .module-selector__content__moduleLink a:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-width: 0.125rem;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
     }
 }
 
 .module-selector__content__moduleLink a:active {
     background-color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
@@ -20912,28 +20912,30 @@ article .social-icon .link-copy {
     opacity: 1;
 }
 
-.linked-heading:hover .linked-heading__text {
-    border-bottom: solid 0.1875rem #dd0036;
+.linked-heading:hover .linked-heading__text:before {
+    opacity: 1;
+    width: 100%;
 }
 
-.linked-heading:focus .linked-heading__text {
-    border-bottom: solid 0.1875rem #0c0c0e;
+.linked-heading:active .linked-heading__text:before {
+    opacity: 1;
+    width: 100%;
 }
 
-.linked-heading:active .linked-heading__text {
-    border-bottom: solid 0.1875rem #dd0036;
+.linked-heading:active .linked-heading__icon-background span:nth-child(1) {
+    opacity: 0;
 }
 
-.linked-heading:visited {
-    color: #0c0c0e;
-}
-
-.linked-heading:visited .linked-heading__text {
-    border-bottom: solid 0.1875rem #0c0c0e;
+.linked-heading:active .linked-heading__icon-background span:nth-child(2) {
+    opacity: 1;
 }
 
 .linked-heading:focus, .linked-heading:active {
     outline-color: #0c0c0e;
+}
+
+.linked-heading:visited {
+    color: #0c0c0e;
 }
 
 .linked-heading .linked-heading__icon-background {
@@ -20968,7 +20970,6 @@ article .social-icon .link-copy {
 }
 
 .linked-heading__text {
-    border-bottom: solid 0.1875rem #0c0c0e;
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
     font-size: 1.602rem;
@@ -20979,6 +20980,11 @@ article .social-icon .link-copy {
     margin-top: 1rem;
     color: #0c0c0e;
     padding-bottom: 0.25rem;
+    position: relative;
+    color: #1e1e1e;
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
 }
 
 .linked-heading__text i,
@@ -21033,6 +21039,25 @@ article .social-icon .link-copy {
 .linked-heading__text b,
 .linked-heading__text strong {
     font-weight: 600;
+}
+
+.linked-heading__text:before {
+    background: #dd0036;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s ease, width 0.6s ease;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .linked-heading__text:before {
+        transition: none;
+    }
 }
 
 /**
@@ -22371,7 +22396,7 @@ a.modal__close:active, a.modal__close:focus {
         background-size: 100% 0;
         background-position: 0 100%;
         transition: background-size 0.3s ease;
-        border-bottom-color: #006bbd;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #006bbd;
@@ -22438,7 +22463,7 @@ a.modal__close:active, a.modal__close:focus {
     }
     .theme--dark article a:focus {
         color: #006bbd;
-        border-bottom-color: #006bbd;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         outline-color: #0c0c0e;
@@ -22450,9 +22475,9 @@ a.modal__close:active, a.modal__close:focus {
 
 @media screen and (hover: hover) {
     .theme--dark article a:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-width: 0.125rem;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
     }
 }
@@ -22460,7 +22485,7 @@ a.modal__close:active, a.modal__close:focus {
 @media screen {
     .theme--dark article a:active {
         background-color: #006bbd;
-        border-bottom-color: #006bbd;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #ffffff;
@@ -23473,7 +23498,7 @@ a.modal__close:active, a.modal__close:focus {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
@@ -23537,7 +23562,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .theme--dark .feedback .feedback__form-link a:focus {
     color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
@@ -23548,16 +23573,16 @@ a.modal__close:active, a.modal__close:focus {
 
 @media (hover: hover) {
     .theme--dark .feedback .feedback__form-link a:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-width: 0.125rem;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
     }
 }
 
 .theme--dark .feedback .feedback__form-link a:active {
     background-color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
@@ -23622,7 +23647,7 @@ a.modal__close:active, a.modal__close:focus {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
@@ -23686,7 +23711,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .theme--dark .feedback .feedback__direct button:focus {
     color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     outline-color: #0c0c0e;
@@ -23697,16 +23722,16 @@ a.modal__close:active, a.modal__close:focus {
 
 @media (hover: hover) {
     .theme--dark .feedback .feedback__direct button:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-width: 0.125rem;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
     }
 }
 
 .theme--dark .feedback .feedback__direct button:active {
     background-color: #006bbd;
-    border-bottom-color: #006bbd;
+    border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
@@ -24939,7 +24964,7 @@ a.modal__close:active, a.modal__close:focus {
         background-size: 100% 0;
         background-position: 0 100%;
         transition: background-size 0.3s ease;
-        border-bottom-color: #006bbd;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #006bbd;
@@ -25006,7 +25031,7 @@ a.modal__close:active, a.modal__close:focus {
     }
     .theme--dark.js .theme-switcher__option button:focus {
         color: #006bbd;
-        border-bottom-color: #006bbd;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         outline-color: #0c0c0e;
@@ -25018,9 +25043,9 @@ a.modal__close:active, a.modal__close:focus {
 
 @media screen and (hover: hover) {
     .theme--dark.js .theme-switcher__option button:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-width: 0.125rem;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
         color: #ffffff;
     }
 }
@@ -25028,7 +25053,7 @@ a.modal__close:active, a.modal__close:focus {
 @media screen {
     .theme--dark.js .theme-switcher__option button:active {
         background-color: #006bbd;
-        border-bottom-color: #006bbd;
+        border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #ffffff;
