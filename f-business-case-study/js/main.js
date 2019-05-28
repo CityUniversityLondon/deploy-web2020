@@ -4974,243 +4974,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /***/ }),
 
-/***/ "./src/paint-layouts/case-study-transition-effects/banner-image.js":
-/*!*************************************************************************!*\
-  !*** ./src/paint-layouts/case-study-transition-effects/banner-image.js ***!
-  \*************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _content_slideup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./content-slideup */ "./src/paint-layouts/case-study-transition-effects/content-slideup.js");
-
-
-
-
-/**
- * Image banner transition
- *
- * @module paint-layouts/case-study-transition-effects/banner-image
- * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
- */
-
-/**
- *  Animates the image banner to fade in and scale in size on down scroll
- *
- * Requirements:
- * the animation effect require the following 2 classes:
- * 'overview__multimedia-banner--transition-start'
- * 'overview__multimedia-banner--transition-complete'
- */
-
-const className = 'case-study__overview__multimedia-banner__image';
-
-function multimediaBannerTransition(imageBanner) {
-  if (Object(_content_slideup__WEBPACK_IMPORTED_MODULE_1__["isNotMobile"])()) {
-    const viewPortHeight = window.innerHeight; // calculates viewport height
-
-    imageBanner.classList.add('case-study__overview__multimedia-banner__image--transition-start');
-    window.addEventListener('scroll', function () {
-      const elemOffset = imageBanner.offsetTop;
-      const screenPos = window.pageYOffset; // calculates scroll position
-
-      if (screenPos > elemOffset - viewPortHeight + 100 && !imageBanner.className.includes('case-study__overview__multimedia-banner__image--transition-complete')) {
-        imageBanner.classList.add('case-study__overview__multimedia-banner__image--transition-complete');
-      }
-    });
-  }
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: multimediaBannerTransition,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
-/***/ "./src/paint-layouts/case-study-transition-effects/content-sections.js":
-/*!*****************************************************************************!*\
-  !*** ./src/paint-layouts/case-study-transition-effects/content-sections.js ***!
-  \*****************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _content_slideup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./content-slideup */ "./src/paint-layouts/case-study-transition-effects/content-slideup.js");
-
-
-
-
-/**
- * Case study paragraph transitions
- *
- * @module paint-layouts/case-study-transition-effects/content-section
- * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
- */
-
-/**
- * Animates content section to fade in and upwards on  down scroll
- *
- */
-
-const className = 'content-fadein';
-
-function contentParagraphsTransition(contentFadein) {
-  const viewPortHeight = window.innerHeight; // calculates viewport height
-
-  if (Object(_content_slideup__WEBPACK_IMPORTED_MODULE_1__["isNotMobile"])()) {
-    contentFadein.classList.add('content-fadein-start');
-    window.addEventListener('scroll', function () {
-      const elemOffset = contentFadein.offsetTop;
-      const screenPos = window.pageYOffset; // calculates scroll position
-
-      if (screenPos > elemOffset - viewPortHeight + 10 && !contentFadein.className.includes('content-fadein-complete')) {
-        contentFadein.classList.add('content-fadein-complete');
-      }
-    });
-  }
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: contentParagraphsTransition,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
-/***/ "./src/paint-layouts/case-study-transition-effects/content-slideup.js":
-/*!****************************************************************************!*\
-  !*** ./src/paint-layouts/case-study-transition-effects/content-slideup.js ***!
-  \****************************************************************************/
-/*! exports provided: isNotMobile, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNotMobile", function() { return isNotMobile; });
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
-
-
-
-
-/**
- * Background slideup transition
- *
- * @module paint-layouts/case-study-transition-effects/content-slideup
- * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
- */
-
-/**
- *  Animates content to slide up on down scroll
- *
- */
-const className = 'transition-content-slideup';
-
-function isNotMobile() {
-  const viewPortWidth = window.innerWidth; // calculates viewport width to determinte if using mobile
-
-  const mobileScreen = 432;
-
-  if (viewPortWidth > mobileScreen) {
-    return true;
-  }
-}
-
-function contentSlideupTransition(contentSlideup) {
-  const viewPortHeight = window.innerHeight; // calculates viewport height
-
-  if (isNotMobile()) {
-    contentSlideup.classList.add('transition-content-slideup-start');
-    window.addEventListener('scroll', function () {
-      const screenPos = window.pageYOffset; // calculates scroll position
-
-      const elemOffsetTop = contentSlideup.offsetTop; // calculates element offset from top to the page
-
-      const parentElemHeight = contentSlideup.parentElement.offsetHeight - parseInt(window.getComputedStyle(contentSlideup.parentElement, null).getPropertyValue('padding-bottom')) - parseInt(window.getComputedStyle(contentSlideup.parentElement, null).getPropertyValue('padding-top'));
-
-      if (screenPos > elemOffsetTop - viewPortHeight - parentElemHeight * 70 / 100 && !contentSlideup.className.includes('transition-content-slideup-end')) {
-        contentSlideup.classList.add('transition-content-slideup-end');
-      }
-    });
-  }
-}
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: contentSlideupTransition,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
-/***/ "./src/paint-layouts/case-study-transition-effects/leading-separator.js":
-/*!******************************************************************************!*\
-  !*** ./src/paint-layouts/case-study-transition-effects/leading-separator.js ***!
-  \******************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _content_slideup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./content-slideup */ "./src/paint-layouts/case-study-transition-effects/content-slideup.js");
-
-
-
-
-/**
- * Leading separator transition
- *
- * @module paint-layouts/case-study-transition-effects/leading-separator
- * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
- */
-
-/**
- *  Animates leading section separator on scroll
- *
- *  * Requirements:
- * the animation effect require the following 2 classes:
- * 'leading-section-separator'
- * 'leading-section-separator--transition-complete'
- */
-
-const className = 'leading-section-separator';
-
-function leadingSectionSeparatorTransition(leadingSectionSeparators) {
-  const viewPortHeight = window.innerHeight; // calculates viewport height
-
-  if (Object(_content_slideup__WEBPACK_IMPORTED_MODULE_1__["isNotMobile"])()) {
-    leadingSectionSeparators.classList.add('leading-section-separator--transition-start');
-    window.addEventListener('scroll', function () {
-      const elemOffset = leadingSectionSeparators.offsetTop;
-      const screenPos = window.pageYOffset; // calculates scroll position
-
-      if (screenPos > elemOffset - viewPortHeight + 20 && !leadingSectionSeparators.className.includes('leading-section-separator--transition-complete')) {
-        leadingSectionSeparators.classList.add('leading-section-separator--transition-complete');
-      }
-    });
-  }
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: leadingSectionSeparatorTransition,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
 /***/ "./src/patterns.js":
 /*!*************************!*\
   !*** ./src/patterns.js ***!
@@ -5234,10 +4997,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
 /* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
 /* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
-/* harmony import */ var _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/leading-separator */ "./src/paint-layouts/case-study-transition-effects/leading-separator.js");
-/* harmony import */ var _paint_layouts_case_study_transition_effects_banner_image__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/banner-image */ "./src/paint-layouts/case-study-transition-effects/banner-image.js");
-/* harmony import */ var _paint_layouts_case_study_transition_effects_content_sections__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/content-sections */ "./src/paint-layouts/case-study-transition-effects/content-sections.js");
-/* harmony import */ var _paint_layouts_case_study_transition_effects_content_slideup__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./paint-layouts/case-study-transition-effects/content-slideup */ "./src/paint-layouts/case-study-transition-effects/content-slideup.js");
+/* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
+/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
+/* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
+/* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
 
 
 /**
@@ -5268,7 +5031,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _paint_layouts_case_study_transition_effects_leading_separator__WEBPACK_IMPORTED_MODULE_14__["default"], _paint_layouts_case_study_transition_effects_banner_image__WEBPACK_IMPORTED_MODULE_15__["default"], _paint_layouts_case_study_transition_effects_content_sections__WEBPACK_IMPORTED_MODULE_16__["default"], _paint_layouts_case_study_transition_effects_content_slideup__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__["default"]]);
 
 /***/ }),
 
@@ -5490,6 +5253,225 @@ function launchAccordion(accordion) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchAccordion,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/animation/content-fade-in/content-fade-in.js":
+/*!*******************************************************************!*\
+  !*** ./src/patterns/animation/content-fade-in/content-fade-in.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+
+
+
+
+/**
+ *  Animates content section to fade in and upwards on down scroll
+ *
+ * @module paint-layouts/case-study-transition-effects/content-section
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+const className = 'content-fade-in';
+
+function contentFadeIn(contentFadein) {
+  const viewPortHeight = window.innerHeight; // calculates viewport height
+
+  if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
+    window.addEventListener('scroll', function () {
+      const elemOffset = contentFadein.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      if (screenPos > elemOffset - viewPortHeight + 10 && !contentFadein.className.includes('content-fade-in--complete')) {
+        contentFadein.classList.add('content-fade-in--complete');
+      }
+    });
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: contentFadeIn,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/animation/content-separator/content-separator.js":
+/*!***********************************************************************!*\
+  !*** ./src/patterns/animation/content-separator/content-separator.js ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+
+
+
+
+/**
+ * Leading separator transition
+ *
+ * @module paint-layouts/case-study-transition-effects/leading-separator
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+const className = 'content-separator-container';
+/**
+ *
+ * @param {HTMLElement} contentSeparatorContainer: the separator is the
+ * first child of this container
+ *
+ */
+
+function contentSeparator(contentSeparatorContainer) {
+  const viewPortHeight = window.innerHeight; // calculates viewport height
+
+  let el = insertElement(contentSeparatorContainer);
+
+  if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
+    window.addEventListener('scroll', function () {
+      const elemOffset = el.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      if (screenPos > elemOffset - viewPortHeight + 20 && !el.className.includes('content-separator--transition-complete')) {
+        el.classList.add('content-separator--transition-complete');
+      }
+    });
+  }
+}
+/**
+ *
+ * @param {HTMLElement} contentSeparatorContainer: the separator is the
+ * first child of this container
+ *
+ * @returns {HTMLElement} el: the element that has the transition
+ *
+ */
+
+
+function insertElement(contentSeparatorContainer) {
+  let el = document.createElement('div');
+  el.setAttribute('class', 'content-separator');
+  contentSeparatorContainer.prepend(el);
+  return el;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: contentSeparator,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/animation/content-slide-up/content-slide-up.js":
+/*!*********************************************************************!*\
+  !*** ./src/patterns/animation/content-slide-up/content-slide-up.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+
+
+
+
+/**
+ * Background slideup transition, Animates content to slide up on down scroll
+ *
+ * @module paint-layouts/case-study-transition-effects/content-slideup
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+const className = 'content-slide-up';
+
+function contentSlideUp(contentSlideup) {
+  const viewPortHeight = window.innerHeight; // calculates viewport height
+
+  if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
+    window.addEventListener('scroll', function () {
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      const elemOffsetTop = contentSlideup.offsetTop; // calculates element offset from top to the page
+
+      const parentElemHeight = contentSlideup.parentElement.offsetHeight - parseInt(window.getComputedStyle(contentSlideup.parentElement, null).getPropertyValue('padding-bottom')) - parseInt(window.getComputedStyle(contentSlideup.parentElement, null).getPropertyValue('padding-top'));
+
+      if (screenPos > elemOffsetTop - viewPortHeight - parentElemHeight * 70 / 100 && !contentSlideup.className.includes('content-slideup--end')) {
+        contentSlideup.classList.add('content-slideup--end');
+      }
+    });
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: contentSlideUp,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/animation/image-expand/image-expand.js":
+/*!*************************************************************!*\
+  !*** ./src/patterns/animation/image-expand/image-expand.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+
+
+
+
+/**
+ * Image transition
+ *
+ * @module paint-layouts/case-study-transition-effects/banner-image
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+const className = 'image-expand';
+
+function imageExpand(image) {
+  if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
+    const viewPortHeight = window.innerHeight; // calculates viewport height
+
+    window.addEventListener('scroll', function () {
+      const elemOffset = image.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      if (screenPos > elemOffset - viewPortHeight + 100 && !image.className.includes('image-expand--complete')) {
+        image.classList.add('image-expand--complete');
+      }
+    });
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: imageExpand,
   launchQuery: ".".concat(className)
 });
 
@@ -7783,7 +7765,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, isMobile */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7797,6 +7779,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gaEvent", function() { return gaEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendAll", function() { return appendAll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pxToRem", function() { return pxToRem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMobile", function() { return isMobile; });
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol.description */ "./node_modules/core-js/modules/es.symbol.description.js");
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
@@ -7967,6 +7950,21 @@ function pxToRem(pxValue) {
   browserWidth > 768 ? fontBase = 18 : fontBase = 16;
   let remValue = pxValue / fontBase;
   return remValue;
+}
+/**
+ * Calculates viewport width to determinte if using mobile
+ * @param {number} number - width of screen, with default value = 432.
+ *
+ */
+
+function isMobile() {
+  let screen = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 432;
+  const viewPortWidth = window.innerWidth;
+  const mobileScreen = screen;
+
+  if (viewPortWidth > mobileScreen) {
+    return false;
+  }
 }
 
 /***/ }),

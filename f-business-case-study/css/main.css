@@ -21003,6 +21003,51 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
+.content-fade-in {
+    opacity: 0;
+    margin-top: 1.5rem;
+}
+
+.content-fade-in--complete {
+    opacity: 1;
+    margin-top: 0;
+    transition: margin-top ease 1s, opacity ease 1.5s;
+}
+
+.content-separator {
+    height: 0.3rem;
+    display: block;
+    background: #dd0036;
+    margin: 2.25rem 0;
+    transition: width ease 0.5s;
+    width: 20%;
+}
+
+.content-separator--transition-complete {
+    width: 100%;
+}
+
+.content-slide-up {
+    position: relative;
+    top: 70%;
+    transition: top ease 1.5s;
+}
+
+.content-slideup--end {
+    top: 0;
+}
+
+.image-expand {
+    opacity: 0.5;
+    transform: scale(0.92, 0.92);
+}
+
+.image-expand--complete {
+    opacity: 1;
+    transform: scale(1, 1);
+    transition: all ease 2s;
+}
+
 .case-study {
     display: grid;
     grid-row-gap: 0;
@@ -21738,57 +21783,6 @@ a.modal__close:active, a.modal__close:focus {
     .case-study--research__details {
         grid-column: 6 / 14;
     }
-}
-
-.case-study .leading-section-separator {
-    height: 0.3rem;
-    display: block;
-    background: #dd0036;
-    margin: 2.25rem 0;
-}
-
-.case-study .leading-section-separator--transition-start {
-    width: 20%;
-}
-
-.case-study .leading-section-separator--transition-complete {
-    width: 100%;
-    transition: width ease 0.5s;
-}
-
-.case-study__overview__multimedia-banner__image--transition-start {
-    opacity: 0.5;
-    transform: scale(0.92, 0.92);
-}
-
-.case-study__overview__multimedia-banner__image--transition-complete {
-    opacity: 1;
-    transform: scale(1, 1);
-    transition: all ease 2s;
-}
-
-.content-fadein-start {
-    opacity: 0;
-    margin-top: 1.5rem;
-}
-
-.content-fadein-complete {
-    opacity: 1;
-    margin-top: 0;
-    transition: margin-top ease 1s, opacity ease 1.5s;
-}
-
-.transition-content-slideup {
-    position: relative;
-}
-
-.transition-content-slideup-start {
-    top: 70%;
-}
-
-.transition-content-slideup-end {
-    top: 0;
-    transition: top ease 1.5s;
 }
 
 .content-hub {
