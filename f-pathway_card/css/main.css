@@ -894,6 +894,14 @@
     background-color: #250020;
 }
 
+.color--licac1 {
+    color: #b382ec;
+}
+
+.background--lilac1 {
+    background-color: #b382ec;
+}
+
 .color--teal10 {
     color: #b2e6eb;
 }
@@ -12588,12 +12596,12 @@ main table td em {
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 0.25rem;
-    transition: background-size 0.6s ease-in;
+    transition: background-size 0.3s ease-in;
     /**
             Needs to be inline else underline transition 
             stretches beyond the element
         **/
-    display: inline-block;
+    display: inline;
 }
 
 .card--casestudy a:focus .underline-transition__title {
@@ -13229,12 +13237,12 @@ main table td em {
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 0.25rem;
-    transition: background-size 0.6s ease-in;
+    transition: background-size 0.3s ease-in;
     /**
             Needs to be inline else underline transition 
             stretches beyond the element
         **/
-    display: inline-block;
+    display: inline;
 }
 
 .card--related-course a:focus .underline-transition__title {
@@ -13597,6 +13605,12 @@ main table td em {
     max-height: 7rem;
 }
 
+@media (min-width: 901px) {
+    .flex-container {
+        display: flex;
+    }
+}
+
 .card--pathway {
     background-color: initial;
     border-bottom-color: initial;
@@ -13612,9 +13626,9 @@ main table td em {
     position: relative;
     transition: none;
     padding: 1rem;
-    border: 0.0625rem solid #e5e5e5;
     display: inline-block;
     padding-top: 0;
+    margin: 0 1rem 1rem 0;
 }
 
 @media (hover: hover) {
@@ -13659,12 +13673,12 @@ main table td em {
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 0.15rem;
-    transition: background-size 0.6s ease-in;
+    transition: background-size 0.3s ease-in;
     /**
             Needs to be inline else underline transition 
             stretches beyond the element
         **/
-    display: inline-block;
+    display: inline;
 }
 
 .card--pathway:focus .underline-transition__title {
@@ -13833,25 +13847,124 @@ main table td em {
     }
 }
 
-.card--pathway:before {
-    content: '';
-    height: 0.25rem;
-    background: #99fffe;
-    width: 100%;
-    display: block;
-}
-
-.card--pathway:visited {
-    border: 0.0625rem solid #e5e5e5;
-}
-
-.card--pathway:hover {
-    border: 0.0625rem solid #e5e5e5;
+@media (min-width: 901px) {
+    .card--pathway {
+        margin-bottom: 0;
+        height: 41vh;
+    }
 }
 
 .card--pathway .card__title {
     padding-bottom: 0;
     margin-top: 1rem;
+}
+
+.card--pathway:before {
+    content: '';
+    height: 0.25rem;
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.card--pathway:after {
+    border: 0.0625rem solid #e5e5e5;
+}
+
+.card--pathway:focus, .card--pathway:active {
+    outline: none;
+}
+
+.card--pathway:hover:after {
+    border: none;
+}
+
+.card--pathway:last-child {
+    margin-right: 0;
+}
+
+.card--pathway--blue:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--blue:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--blue:hover:after {
+        background-color: #5fd8fe;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--blue:before, .card--pathway--blue:hover {
+    background: #5fd8fe;
+}
+
+.card--pathway--lilac:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--lilac:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--lilac:hover:after {
+        background-color: #b382ec;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--lilac:before, .card--pathway--lilac:hover {
+    background: #b382ec;
+}
+
+.card--pathway--pink:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--pink:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--pink:hover:after {
+        background-color: #ebb1da;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--pink:before, .card--pathway--pink:hover {
+    background: #ebb1da;
 }
 
 .card--testimonial {
