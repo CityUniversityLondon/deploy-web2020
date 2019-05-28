@@ -21489,6 +21489,14 @@ a.modal__close:active, a.modal__close:focus {
 
 @media (max-width: 900px) {
     .case-study__content__share-icons:before, .case-study__content__share-icons:after {
+        width: 75vw;
+        left: 0vw;
+    }
+}
+
+@media (max-width: 432px) {
+    .case-study__content__share-icons:before, .case-study__content__share-icons:after {
+        width: 85vw;
         left: 0vw;
     }
 }
