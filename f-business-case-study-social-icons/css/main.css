@@ -21473,10 +21473,6 @@ a.modal__close:active, a.modal__close:focus {
     position: relative;
 }
 
-.case-study__content__share-icons ul {
-    margin: 1.5rem 0;
-}
-
 .case-study__content__share-icons:before, .case-study__content__share-icons:after {
     content: '';
     position: absolute;
@@ -21501,6 +21497,7 @@ a.modal__close:active, a.modal__close:focus {
     list-style-type: none;
     margin-left: 0px;
     display: flex;
+    margin-bottom: 1.5rem;
 }
 
 .case-study__content__share-icons ul li {
