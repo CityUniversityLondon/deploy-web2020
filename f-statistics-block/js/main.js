@@ -36129,7 +36129,7 @@ function launchStats(e) {
       const screenPos = window.pageYOffset; // Screen y-position
       // When element scrolls into view, run animation (once).
 
-      if (screenPos > elemOffset - viewportHeight + 60 && !animationComplete) {
+      if (screenPos > elemOffset - viewportHeight + 20 && !animationComplete) {
         let startNumber = finalNumber.getAttribute('data-number-start');
         let finalNumberFormatted = parseInt(finalNumber.innerHTML);
         let format = d3__WEBPACK_IMPORTED_MODULE_3__["format"](',d'); // Target each number element using D3 selector
