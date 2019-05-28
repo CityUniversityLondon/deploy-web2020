@@ -894,14 +894,6 @@
     background-color: #250020;
 }
 
-.color--licac1 {
-    color: #b382ec;
-}
-
-.background--lilac1 {
-    background-color: #b382ec;
-}
-
 .color--teal10 {
     color: #b2e6eb;
 }
@@ -12596,7 +12588,7 @@ main table td em {
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 0.25rem;
-    transition: background-size 0.3s ease-in;
+    transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition 
             stretches beyond the element
@@ -13237,7 +13229,7 @@ main table td em {
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 0.25rem;
-    transition: background-size 0.3s ease-in;
+    transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition 
             stretches beyond the element
@@ -13673,7 +13665,7 @@ main table td em {
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 0.15rem;
-    transition: background-size 0.3s ease-in;
+    transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition 
             stretches beyond the element
@@ -13911,7 +13903,7 @@ main table td em {
     background: #5fd8fe;
 }
 
-.card--pathway--lilac:after {
+.card--pathway--purple:after {
     content: '';
     position: absolute;
     top: 0;
@@ -13923,19 +13915,19 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .card--pathway--lilac:after {
+    .card--pathway--purple:after {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .card--pathway--lilac:hover:after {
+    .card--pathway--purple:hover:after {
         background-color: #b382ec;
         transform: scale(1.05);
     }
 }
 
-.card--pathway--lilac:before, .card--pathway--lilac:hover {
+.card--pathway--purple:before, .card--pathway--purple:hover {
     background: #b382ec;
 }
 
@@ -13958,13 +13950,13 @@ main table td em {
 
 @media (hover: hover) {
     .card--pathway--pink:hover:after {
-        background-color: #ebb1da;
+        background-color: #df82c4;
         transform: scale(1.05);
     }
 }
 
 .card--pathway--pink:before, .card--pathway--pink:hover {
-    background: #ebb1da;
+    background: #df82c4;
 }
 
 .card--testimonial {
