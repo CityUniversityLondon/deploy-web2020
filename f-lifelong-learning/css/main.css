@@ -18174,6 +18174,10 @@ article figure figcaption a:active {
     }
 }
 
+.key-information--lifelong-learning__controls .content-slider[hidden] .key-information--lifelong-learning__current {
+    display: none;
+}
+
 .key-information--lifelong-learning__controls .content-slider .key-information--lifelong-learning__current__digit {
     border-bottom: 0.125rem solid #5d184a;
     color: #5d184a;
