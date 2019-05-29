@@ -21478,7 +21478,7 @@ a.modal__close:active, a.modal__close:focus {
     position: absolute;
     width: 70vw;
     left: -30vw;
-    border-top: 1px solid #e5e5e5;
+    border-top: 0.125rem solid #e5e5e5;
 }
 
 @media (max-width: 1440px) {
@@ -21503,7 +21503,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .case-study__content__share-icons ul {
     list-style-type: none;
-    margin-left: 0px;
+    margin-left: 0;
     display: flex;
     margin-bottom: 1.5rem;
 }
