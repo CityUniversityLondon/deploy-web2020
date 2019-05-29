@@ -14172,6 +14172,10 @@ main table td em {
     color: #ffffff;
 }
 
+.js .cookie-notice button:disabled {
+    cursor: default;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .js .cookie-notice button {
         transition: none;
@@ -14314,6 +14318,10 @@ main table td em {
     background: #dd0036;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
+}
+
+.primary-cta-arrow--bright:disabled {
+    cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14459,6 +14467,10 @@ main table td em {
     border-color: #dd0036;
     background: #dd0036;
     color: #ffffff;
+}
+
+.primary-cta--bright:disabled {
+    cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14649,6 +14661,10 @@ main table td em {
     color: #ffffff;
 }
 
+.primary-cta-arrow--dark:disabled {
+    cursor: default;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .primary-cta-arrow--dark {
         transition: none;
@@ -14779,6 +14795,10 @@ main table td em {
     border-color: #dd0036;
     background: #dd0036;
     color: #ffffff;
+}
+
+.primary-cta--dark:disabled {
+    cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14954,6 +14974,10 @@ main table td em {
     color: #0c0c0e;
 }
 
+.outline-cta-arrow--bright:disabled {
+    cursor: default;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .outline-cta-arrow--bright {
         transition: none;
@@ -15094,6 +15118,10 @@ main table td em {
     background: transparent;
     border: 0.125rem solid #0c0c0e;
     color: #0c0c0e;
+}
+
+.outline-cta--bright:disabled {
+    cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -15249,6 +15277,10 @@ main table td em {
     color: #ffffff;
 }
 
+.outline-cta-arrow--dark:disabled {
+    cursor: default;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .outline-cta-arrow--dark {
         transition: none;
@@ -15389,6 +15421,10 @@ main table td em {
     background: transparent;
     border: 0.125rem solid #ffffff;
     color: #ffffff;
+}
+
+.outline-cta--dark:disabled {
+    cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -15547,6 +15583,10 @@ main table td em {
     background-color: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
+}
+
+.basic-cta--bright:disabled {
+    cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -15737,6 +15777,10 @@ main table td em {
     background-color: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
+}
+
+.basic-cta--dark:disabled {
+    cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -15966,6 +16010,10 @@ main table td em {
     color: #0c0c0e;
 }
 
+.primary-cta--grey--bright:disabled {
+    cursor: default;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .primary-cta--grey--bright {
         transition: none;
@@ -16159,6 +16207,10 @@ main table td em {
     color: #ffffff;
 }
 
+.basic-cta--lifelong-learning-primary:disabled {
+    cursor: default;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .basic-cta--lifelong-learning-primary {
         transition: none;
@@ -16302,6 +16354,10 @@ main table td em {
     background-color: #3e1031;
     border-color: #3e1031;
     color: #ffffff;
+}
+
+.basic-cta--lifelong-learning-secondary:disabled {
+    cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -16488,6 +16544,10 @@ main table td em {
     border-color: #d8d8d8;
     background: #d8d8d8;
     color: #0c0c0e;
+}
+
+.primary-cta--grey--bright:disabled {
+    cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -17625,9 +17685,14 @@ article figure figcaption a:active {
     background: #dd0036;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
-    background-color: #3e1031;
-    border-color: #3e1031;
+    background-color: #5d184a;
+    border-color: #5d184a;
     color: #ffffff;
+}
+
+.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:disabled,
+.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:disabled {
+    cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -17789,7 +17854,7 @@ article figure figcaption a:active {
 
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:visited,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:visited {
-    border-color: #3e1031;
+    border-color: #5d184a;
     color: #ffffff;
 }
 
@@ -17801,31 +17866,31 @@ article figure figcaption a:active {
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:focus, .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:active,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:focus,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active {
-    background-color: #3e1031;
-    border-color: #3e1031;
+    background-color: #5d184a;
+    border-color: #5d184a;
     color: #ffffff;
 }
 
 @media (hover: hover) {
     .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:hover,
     .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:hover {
-        background-color: #150611;
-        border-color: #150611;
+        background-color: #340e2a;
+        border-color: #340e2a;
         color: #ffffff;
     }
 }
 
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:active,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active {
-    background-color: #150611;
-    border-color: #150611;
+    background-color: #340e2a;
+    border-color: #340e2a;
 }
 
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:disabled,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:disabled {
     color: #ffffff;
-    background: #3e1031;
-    border-color: #3e1031;
+    background: #5d184a;
+    border-color: #5d184a;
 }
 
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:active span, .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:focus span, .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:hover span,
@@ -23080,6 +23145,11 @@ article .social-icon .link-copy {
     color: #ffffff;
 }
 
+.key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta a:disabled,
+.key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta button:disabled {
+    cursor: default;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta a,
     .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta button {
@@ -23414,6 +23484,10 @@ article .social-icon .link-copy {
     justify-content: center;
 }
 
+.lifelong-learning__contact .cta-block li a:disabled {
+    cursor: default;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .lifelong-learning__contact .cta-block li a {
         transition: none;
@@ -23635,6 +23709,9 @@ article .social-icon .link-copy {
         background-color: #d8d8d8;
         border-color: #d8d8d8;
         color: #1e1e1e;
+    }
+    .js .lifelong-learning .modal__trigger:disabled {
+        cursor: default;
     }
 }
 
@@ -24800,6 +24877,10 @@ article .social-icon .link-copy {
     color: #ffffff;
 }
 
+.theme--dark .cta-block li:nth-child(1) a:disabled {
+    cursor: default;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .theme--dark .cta-block li:nth-child(1) a {
         transition: none;
@@ -24972,6 +25053,10 @@ article .social-icon .link-copy {
     color: #ffffff;
 }
 
+.theme--dark .cta-block li:nth-child(2) a:disabled {
+    cursor: default;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .theme--dark .cta-block li:nth-child(2) a {
         transition: none;
@@ -25131,6 +25216,10 @@ article .social-icon .link-copy {
     background-color: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
+}
+
+.theme--dark .cta-block li:nth-child(3) a:disabled {
+    cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
