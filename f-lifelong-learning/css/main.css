@@ -18183,6 +18183,10 @@ article figure figcaption a:active {
     color: #5d184a;
 }
 
+.key-information--lifelong-learning__controls .content-slider .key-information--lifelong-learning__current__digit__total {
+    border-bottom: 0.125rem solid transparent;
+}
+
 .key-information--lifelong-learning__controls .content-slider .arrow-left--btn-prev,
 .key-information--lifelong-learning__controls .content-slider .arrow-right--btn-next {
     font-size: 1.424rem;
