@@ -5909,7 +5909,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -5924,7 +5923,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Mark Skinsley <mark.skinsley@city.ac.uk>
  * @copyright City, University of London 2019
  */
-
+ // import { pxToRem } from '../../util';
 
 const className = 'key-information--lifelong-learning';
 let listings = document.querySelector('.key-information--lifelong-learning > ul'),
@@ -5934,8 +5933,8 @@ let listings = document.querySelector('.key-information--lifelong-learning > ul'
     browserWidth = document.documentElement.scrollWidth,
     prevBtn = document.getElementById('key-info-previous-item'),
     nextBtn = document.getElementById('key-info-next-item'),
-    listingHeight = '',
-    listingDates = document.querySelectorAll('.key-information--lifelong-learning > ul > li'),
+    // listingHeight = '',
+listingDates = document.querySelectorAll('.key-information--lifelong-learning > ul > li'),
     listingsVisible = [],
     defaultDuration = 2000,
     edgeOffset = 100; // Zen scroll setup
@@ -5972,6 +5971,7 @@ function defaultListingsDisplay() {
 
 
 function launchKeyInfo(batchQuantity) {
+  const digit = document.querySelector('.key-information--lifelong-learning__current__digit');
   let counter = 0; // Mobile: Show listing entry based on navigation button clicks
 
   function listingDisplay() {
@@ -5997,17 +5997,14 @@ function launchKeyInfo(batchQuantity) {
       prevBtn.removeAttribute('disabled');
     }
   } // // Mobile: Set mobile listings navigation buttons to correct position based on listing height
-
-
-  function navBtnPosition() {
-    Array.from(listings.children).forEach((listing, i) => {
-      if (counter === i) {
-        listingHeight = listing.dataset.height;
-        prevBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_5__["pxToRem"])("-".concat(listingHeight))) + Object(_util__WEBPACK_IMPORTED_MODULE_5__["pxToRem"])(100) + 'rem';
-        nextBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_5__["pxToRem"])("-".concat(listingHeight))) + Object(_util__WEBPACK_IMPORTED_MODULE_5__["pxToRem"])(100) + 'rem';
-      }
-    });
-  } // Run regardless of viewport size
+  // function navBtnPosition() {
+  //     Array.from(listings.children).forEach((listing, i) => {
+  //         if (counter === i) {
+  //             listingHeight = listing.dataset.height;
+  //         }
+  //     });
+  // }
+  // Run regardless of viewport size
 
 
   dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
@@ -6071,25 +6068,27 @@ function launchKeyInfo(batchQuantity) {
       listing.style.display = 'block';
       listing.dataset.height = listing.offsetHeight;
       listing.style.display = 'none'; // On load, set mobile navigation buttons at correct height
+      // counter === 0 && i === 0 ? navBtnPosition() : null;
 
-      counter === 0 && i === 0 ? navBtnPosition() : null;
       i > 0 ? listing.style.display = 'none' : listing.style.display = 'block';
     });
     Array.from(contentSliders).forEach(contentSlider => {
-      contentSlider.style.display = 'block';
+      contentSlider.removeAttribute('hidden');
     });
     navBtnState();
     prevBtn.addEventListener('click', () => {
       counter = counter - 1;
-      navBtnState();
-      navBtnPosition();
+      navBtnState(); // navBtnPosition();
+
       listingDisplay();
+      digit.innerText = counter + 1;
     });
     nextBtn.addEventListener('click', () => {
       counter = counter + 1;
-      navBtnState();
-      navBtnPosition();
+      navBtnState(); // navBtnPosition();
+
       listingDisplay();
+      digit.innerText = counter + 1;
     });
   } else if (browserWidth < 768 && Array.from(listings.children).length === 1) {
     Array.from(listings.children).forEach((listing, i) => {
