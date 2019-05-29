@@ -18174,7 +18174,9 @@ article figure figcaption a:active {
     }
 }
 
-.key-information--lifelong-learning__controls .content-slider[hidden] .key-information--lifelong-learning__current {
+.key-information--lifelong-learning__controls .content-slider[hidden] .key-information--lifelong-learning__current,
+.key-information--lifelong-learning__controls .content-slider[hidden] .arrow-left--btn-prev,
+.key-information--lifelong-learning__controls .content-slider[hidden] .arrow-left--btn-next {
     display: none;
 }
 
