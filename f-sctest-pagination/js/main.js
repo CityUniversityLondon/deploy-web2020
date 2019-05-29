@@ -3301,147 +3301,6 @@ __webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "./no
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/es.string.replace.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/core-js/modules/es.string.replace.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
-var toObject = __webpack_require__(/*! ../internals/to-object */ "./node_modules/core-js/internals/to-object.js");
-var toLength = __webpack_require__(/*! ../internals/to-length */ "./node_modules/core-js/internals/to-length.js");
-var toInteger = __webpack_require__(/*! ../internals/to-integer */ "./node_modules/core-js/internals/to-integer.js");
-var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "./node_modules/core-js/internals/require-object-coercible.js");
-var advanceStringIndex = __webpack_require__(/*! ../internals/advance-string-index */ "./node_modules/core-js/internals/advance-string-index.js");
-var regExpExec = __webpack_require__(/*! ../internals/regexp-exec-abstract */ "./node_modules/core-js/internals/regexp-exec-abstract.js");
-var max = Math.max;
-var min = Math.min;
-var floor = Math.floor;
-var SUBSTITUTION_SYMBOLS = /\$([$&`']|\d\d?|<[^>]*>)/g;
-var SUBSTITUTION_SYMBOLS_NO_NAMED = /\$([$&`']|\d\d?)/g;
-
-var maybeToString = function (it) {
-  return it === undefined ? it : String(it);
-};
-
-// @@replace logic
-__webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "./node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js")(
-  'replace',
-  2,
-  function (REPLACE, nativeReplace, maybeCallNative) {
-    return [
-      // `String.prototype.replace` method
-      // https://tc39.github.io/ecma262/#sec-string.prototype.replace
-      function replace(searchValue, replaceValue) {
-        var O = requireObjectCoercible(this);
-        var replacer = searchValue == undefined ? undefined : searchValue[REPLACE];
-        return replacer !== undefined
-          ? replacer.call(searchValue, O, replaceValue)
-          : nativeReplace.call(String(O), searchValue, replaceValue);
-      },
-      // `RegExp.prototype[@@replace]` method
-      // https://tc39.github.io/ecma262/#sec-regexp.prototype-@@replace
-      function (regexp, replaceValue) {
-        var res = maybeCallNative(nativeReplace, regexp, this, replaceValue);
-        if (res.done) return res.value;
-
-        var rx = anObject(regexp);
-        var S = String(this);
-
-        var functionalReplace = typeof replaceValue === 'function';
-        if (!functionalReplace) replaceValue = String(replaceValue);
-
-        var global = rx.global;
-        if (global) {
-          var fullUnicode = rx.unicode;
-          rx.lastIndex = 0;
-        }
-        var results = [];
-        while (true) {
-          var result = regExpExec(rx, S);
-          if (result === null) break;
-
-          results.push(result);
-          if (!global) break;
-
-          var matchStr = String(result[0]);
-          if (matchStr === '') rx.lastIndex = advanceStringIndex(S, toLength(rx.lastIndex), fullUnicode);
-        }
-
-        var accumulatedResult = '';
-        var nextSourcePosition = 0;
-        for (var i = 0; i < results.length; i++) {
-          result = results[i];
-
-          var matched = String(result[0]);
-          var position = max(min(toInteger(result.index), S.length), 0);
-          var captures = [];
-          // NOTE: This is equivalent to
-          //   captures = result.slice(1).map(maybeToString)
-          // but for some reason `nativeSlice.call(result, 1, result.length)` (called in
-          // the slice polyfill when slicing native arrays) "doesn't work" in safari 9 and
-          // causes a crash (https://pastebin.com/N21QzeQA) when trying to debug it.
-          for (var j = 1; j < result.length; j++) captures.push(maybeToString(result[j]));
-          var namedCaptures = result.groups;
-          if (functionalReplace) {
-            var replacerArgs = [matched].concat(captures, position, S);
-            if (namedCaptures !== undefined) replacerArgs.push(namedCaptures);
-            var replacement = String(replaceValue.apply(undefined, replacerArgs));
-          } else {
-            replacement = getSubstitution(matched, S, position, captures, namedCaptures, replaceValue);
-          }
-          if (position >= nextSourcePosition) {
-            accumulatedResult += S.slice(nextSourcePosition, position) + replacement;
-            nextSourcePosition = position + matched.length;
-          }
-        }
-        return accumulatedResult + S.slice(nextSourcePosition);
-      }
-    ];
-
-    // https://tc39.github.io/ecma262/#sec-getsubstitution
-    function getSubstitution(matched, str, position, captures, namedCaptures, replacement) {
-      var tailPos = position + matched.length;
-      var m = captures.length;
-      var symbols = SUBSTITUTION_SYMBOLS_NO_NAMED;
-      if (namedCaptures !== undefined) {
-        namedCaptures = toObject(namedCaptures);
-        symbols = SUBSTITUTION_SYMBOLS;
-      }
-      return nativeReplace.call(replacement, symbols, function (match, ch) {
-        var capture;
-        switch (ch.charAt(0)) {
-          case '$': return '$';
-          case '&': return matched;
-          case '`': return str.slice(0, position);
-          case "'": return str.slice(tailPos);
-          case '<':
-            capture = namedCaptures[ch.slice(1, -1)];
-            break;
-          default: // \d\d?
-            var n = +ch;
-            if (n === 0) return match;
-            if (n > m) {
-              var f = floor(n / 10);
-              if (f === 0) return match;
-              if (f <= m) return captures[f - 1] === undefined ? ch.charAt(1) : captures[f - 1] + ch.charAt(1);
-              return match;
-            }
-            capture = captures[n - 1];
-        }
-        return capture === undefined ? '' : capture;
-      });
-    }
-  }
-);
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/modules/es.string.search.js":
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es.string.search.js ***!
@@ -5072,6 +4931,7 @@ function tryCatch(f) {
   try {
     f();
   } catch (e) {
+    // console.log(e);
     Object(_util__WEBPACK_IMPORTED_MODULE_4__["gaEvent"])('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "Pattern launch ".concat(e.fileName, " (").concat(window.location, ")"), true);
   }
 }
@@ -5234,20 +5094,19 @@ function calcBodyHeight(heading) {
 
 function setSection(heading, open) {
   heading.dataset.open = open;
-  heading.setAttribute('tabindex', '1');
+  heading.setAttribute('tabindex', '-1');
   heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].expanded, open);
   let bodyLinks = heading.nextElementSibling.getElementsByTagName('a');
 
   for (const bodyLink of bodyLinks) {
-    bodyLink.setAttribute('tabindex', '1');
+    bodyLink.setAttribute('tabindex', '0');
   }
 
   if (open) {
     heading.nextElementSibling.classList.add('active');
-    calcBodyHeight(heading);
-    window.addEventListener('resize', () => {
-      calcBodyHeight(heading);
-    });
+    calcBodyHeight(heading); // window.addEventListener('resize', () => {
+    //     calcBodyHeight(heading);
+    // });
   } else {
     heading.nextElementSibling.classList.remove('active');
     heading.nextElementSibling.style.maxHeight = null;
@@ -5364,6 +5223,11 @@ function launchAccordion(accordion) {
       }
 
       button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
+      /* Show first item of accordion if accordion set to default open */
+
+      if (defaultOpen && !idLinked) {
+        setSection(headings[0], true);
+      }
     });
   };
   /**
@@ -5373,11 +5237,11 @@ function launchAccordion(accordion) {
 
   window.addEventListener('load', function () {
     buildHeadings();
-  });
 
-  if (defaultOpen && !idLinked) {
-    setSection(headings[0], true);
-  }
+    if (defaultOpen && !idLinked) {
+      setSection(headings[0], true);
+    }
+  });
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -5708,40 +5572,35 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  *  Finds external links and adds font awesome icon to indicate external link
+ * Instructions: add external-link-finder class to templates in article container element
  */
-const className = 'content';
-/**
- * List areas below where external links should be found.
- */
+const className = 'external-link-finder';
 
-const containerAnchors = document.getElementsByClassName('container')[0].querySelectorAll('a');
+function findExternalLink(anchorsArea) {
+  const anchors = anchorsArea.querySelectorAll('a');
 
-function findExternalLink() {
-  const anchorsAreas = [containerAnchors];
-  anchorsAreas.forEach(function (anchorsCount) {
-    if (anchorsCount.length > 0) {
-      anchorsCount.forEach(function (anchor) {
-        /** checks if anchors links are :
-         * external
-         * not an image
-         * not contain font awesome external link icon already
-         * fab for social icons
-         * is not a social icon
-         * not a CTA
-         * not an email or telephone hyperlink
-         * not a telephone number link
-         * has to contain a href value
-         */
-        if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && anchor.querySelectorAll('.fab').length < 1 && anchor.className !== 'social-icon' && !anchor.parentElement.className.includes('cta-block') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
-          // adds font awesome external link icon after completing checks
-          let node = document.createElement('span');
-          node.className = 'fa fa-external-link inline-external-link ';
-          node.setAttribute('aria-hidden', 'true');
-          anchor.appendChild(node);
-        }
-      });
-    }
-  });
+  if (anchors.length > 0) {
+    anchors.forEach(function (anchor) {
+      /** checks if anchors links are :
+       * external
+       * not an image
+       * not contain font awesome external link icon already
+       * fab for social icons
+       * is not a social icon
+       * not a CTA
+       * not an email hyperlink
+       * not a telephone number link
+       * has to contain a href value
+       */
+      if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && anchor.querySelectorAll('.fab').length < 1 && anchor.className !== 'social-icon' && !anchor.parentElement.className.includes('cta-block') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
+        // adds font awesome external link icon after completing checks
+        let node = document.createElement('span');
+        node.className = 'fa fa-external-link inline-external-link ';
+        node.setAttribute('aria-hidden', 'true');
+        anchor.appendChild(node);
+      }
+    });
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -5901,12 +5760,12 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2018
  */
 
-const className = 'key-information--short-course';
-let listings = document.querySelector('.key-information--short-course > ul'),
+const className = 'key-information--lifelong-learning--disable';
+let listings = document.querySelector('.key-information--lifelong-learning > ul'),
     batchQuantity = 3,
     contentToggles = Array.from(document.querySelectorAll('.content-toggle button')),
     browserWidth = document.documentElement.scrollWidth,
-    listingDates = document.querySelectorAll('.key-information--short-course > ul > li'),
+    listingDates = document.querySelectorAll('.key-information--lifelong-learning > ul > li'),
     listingsVisible = [],
     defaultDuration = 2000,
     edgeOffset = 100; // Zen scroll setup
@@ -6001,7 +5860,7 @@ function launchKeyInfo(batchQuantity) {
     } // Mobile: one listing visible at a time
 
   } else if (browserWidth < 768 && Array.from(listings.children).length > 1) {
-    let listWrapper = document.querySelector('.key-information--short-course > ul');
+    let listWrapper = document.querySelector('.key-information--lifelong-learning > ul');
     listWrapper.classList.add('paginated-list');
     listWrapper.dataset.pagesize = 1; // Scroll to top of listings after each paginated index click
 
@@ -6009,7 +5868,7 @@ function launchKeyInfo(batchQuantity) {
 
     for (const paginationControl of paginationControls) {
       paginationControl.addEventListener('click', () => {
-        let listingsTop = document.querySelector('.key-information--short-course > ul');
+        let listingsTop = document.querySelector('.key-information--lifelong-learning > ul');
 
         if (paginationControl.getAttribute('aria-expanded') !== true) {
           zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(listingsTop, 0);
@@ -6044,11 +5903,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.promise */ "./node_modules/core-js/modules/es.promise.js");
 /* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
 
 
 
@@ -6064,76 +5926,44 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-const className = 'key-info-slider';
-let listings = document.querySelectorAll('.key-info__listing'),
+const className = 'key-information--lifelong-learning';
+let listings = document.querySelector('.key-information--lifelong-learning > ul'),
     batchQuantity = 3,
-    contentToggles = document.querySelectorAll('.content-toggle'),
+    contentToggles = Array.from(document.querySelectorAll('.content-toggle button')),
     contentSliders = document.querySelectorAll('.content-slider'),
     browserWidth = document.documentElement.scrollWidth,
     prevBtn = document.getElementById('key-info-previous-item'),
     nextBtn = document.getElementById('key-info-next-item'),
     listingHeight = '',
-    listingDates = document.querySelectorAll('.key-info__date'),
+    listingDates = document.querySelectorAll('.key-information--lifelong-learning > ul > li'),
     listingsVisible = [],
-    listingsLength = [],
     defaultDuration = 2000,
     edgeOffset = 100; // Zen scroll setup
 
-zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
+zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
 
 function dateTabIndex() {
   for (const listingDate of listingDates) {
     listingDate.setAttribute('tabindex', '-1');
-  }
-} // Initial listings display
-
-
-function defaultListingsDisplay() {
-  listingsLength = [];
-
-  for (const listing of listings.entries()) {
-    listingsLength.push(listings.length);
-    listing[0] > batchQuantity - 1 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
   }
 } // Visible listings: needed to decide if more content still to be loaded.
 
 
 function calculateVisibleListings() {
   listingsVisible = [];
-
-  for (const listing of listings) {
-    if (!listing.classList.contains('hide')) {
-      listingsVisible.push(listing);
+  Array.from(listings.children).forEach(elem => {
+    if (!elem.classList.contains('hide')) {
+      listingsVisible.push(elem);
     }
-  }
-} // Show number of listings in data set
+  });
+} // Initial listings display
 
 
-function listingsQuantity() {
-  const listingsNumber = [];
-
-  for (const listing of listings.entries()) {
-    listingsNumber.push(listing.length);
-  }
-
-  let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
-
-  for (const datesQuantity of datesQuantities) {
-    let date;
-    listingsNumber.length == 1 ? date = 'date' : date = 'dates';
-    let iconWrapper = document.createElement('div');
-    iconWrapper.classList.add('key-info__icon--left');
-    datesQuantity.appendChild(iconWrapper);
-    let calendarIcon = document.createElement('span');
-    calendarIcon.classList.add('fas');
-    calendarIcon.classList.add('fa-calendar-day');
-    iconWrapper.appendChild(calendarIcon);
-    let iconTextDiv = document.createElement('div');
-    iconWrapper.appendChild(iconTextDiv);
-    let iconTextP = document.createElement('p');
-    iconTextP.appendChild(document.createTextNode(listingsNumber.length + ' available start ' + date));
-    iconTextDiv.appendChild(iconTextP);
-  }
+function defaultListingsDisplay() {
+  const listElements = Array.from(listings.children);
+  listElements.forEach((elem, i) => {
+    i > batchQuantity - 1 ? elem.classList.add('hide') : elem.style.display = 'grid';
+  });
 }
 /**
  * Launches Key Info slider pattern. Pass in how many listings should display per batch,
@@ -6145,100 +5975,109 @@ function launchKeyInfo(batchQuantity) {
   let counter = 0; // Mobile: Show listing entry based on navigation button clicks
 
   function listingDisplay() {
-    for (const listing of listings.entries()) {
-      if (browserWidth < 768 && listings.length > 1) {
-        listing[0] == counter ? listing[1].style.display = 'block' : listing[1].style.display = 'none';
+    Array.from(listings.children).forEach((listing, i) => {
+      if (browserWidth < 768 && Array.from(listings.children).length > 1) {
+        i === counter ? listing.style.display = 'block' : listing.style.display = 'none';
       }
 
-      listing[1].setAttribute('data-id', "listing-".concat(listing[0]));
-    }
+      listing.setAttribute('data-id', "listing-".concat(i));
+    });
   } // Mobile: Enable/disable navigation buttons based on position of listing in collection
 
 
   function navBtnState() {
-    for (const contentSlider of contentSliders) {
-      contentSlider.style.display = 'block';
+    if (counter === 0) {
+      prevBtn.setAttribute('disabled', true);
+      nextBtn.removeAttribute('disabled');
+    } else if (counter > 0 && counter < Array.from(listings.children).length - 1) {
+      prevBtn.removeAttribute('disabled');
+      nextBtn.removeAttribute('disabled');
+    } else {
+      nextBtn.setAttribute('disabled', true);
+      prevBtn.removeAttribute('disabled');
     }
-
-    let listingsLength = listings.length - 1;
-    counter == 0 ? (prevBtn.setAttribute('disabled', true), nextBtn.removeAttribute('disabled')) : counter > 0 && counter < listingsLength ? (prevBtn.removeAttribute('disabled'), nextBtn.removeAttribute('disabled')) : (nextBtn.setAttribute('disabled', true), prevBtn.removeAttribute('disabled'));
-  } // Mobile: Set mobile listings navigation buttons to correct position based on listing height
+  } // // Mobile: Set mobile listings navigation buttons to correct position based on listing height
 
 
   function navBtnPosition() {
-    for (const listing of listings.entries()) {
-      if (counter == listing[0]) {
-        listingHeight = listing[1].getAttribute('data-height');
-        prevBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_4__["pxToRem"])("-".concat(listingHeight))) + Object(_util__WEBPACK_IMPORTED_MODULE_4__["pxToRem"])(100) + 'rem';
-        nextBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_4__["pxToRem"])("-".concat(listingHeight))) + Object(_util__WEBPACK_IMPORTED_MODULE_4__["pxToRem"])(100) + 'rem';
+    Array.from(listings.children).forEach((listing, i) => {
+      if (counter === i) {
+        listingHeight = listing.dataset.height;
+        prevBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_5__["pxToRem"])("-".concat(listingHeight))) + Object(_util__WEBPACK_IMPORTED_MODULE_5__["pxToRem"])(100) + 'rem';
+        nextBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_5__["pxToRem"])("-".concat(listingHeight))) + Object(_util__WEBPACK_IMPORTED_MODULE_5__["pxToRem"])(100) + 'rem';
       }
-    }
+    });
   } // Run regardless of viewport size
 
 
   dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
 
-  if (browserWidth > 768) {
-    if (listings.length > batchQuantity) {
+  if (browserWidth >= 768) {
+    if (Array.from(listings.children).length > batchQuantity) {
       listingDisplay();
       defaultListingsDisplay();
       calculateVisibleListings();
-
-      for (const contentToggle of contentToggles) {
+      contentToggles.forEach(contentToggle => {
         contentToggle.addEventListener('click', e => {
           // This will increase with each 'Load more' click, so visible listings
           // must be captured before any further listings are made visible
           let preExpandListingsVisible = listingsVisible.length;
           e.preventDefault();
 
-          if (preExpandListingsVisible < listings.length) {
-            for (const listing of listings.entries()) {
+          if (preExpandListingsVisible < Array.from(listings.children).length) {
+            Array.from(listings.children).forEach((elem, i) => {
               let targetListing = document.querySelector("[data-id='listing-".concat(preExpandListingsVisible, "']"));
-              let listingsVisibleLength = parseInt(listingsVisible.length);
-              listingsLength = parseInt(listingsLength);
+              let listingsVisibleLength = parseInt(listingsVisible.length) + batchQuantity;
+              const listingsLength = Array.from(listings.children).length;
               let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
 
-              zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(targetListing, 200);
-              let targetListingDate = targetListing.querySelectorAll('.key-info__date'); // Final batch of listings, zen scroll to 'load more' button and offset
+              zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(targetListing, 200); // let targetListingDate = targetListing.querySelectorAll(
+              //     '.key-info__date'
+              // );
+              // Final batch of listings, zen scroll to 'load more' button and offset
 
-              if (remainingItems <= batchQuantity) {
-                zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(contentToggle, 0);
-                contentToggles[0].style.display = 'none';
-              }
+              if (remainingItems <= 0) {
+                zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(contentToggle, 200);
+                contentToggle.style.display = 'none';
+              } // targetListingDate[0].focus();
+              // Bring in newly visible listings in two phases to allow for opacity transition
 
-              targetListingDate[0].focus(); // Bring in newly visible listings in two phases to allow for opacity transition
 
-              if (listing[0] < preExpandListingsVisible + batchQuantity) {
+              if (i < preExpandListingsVisible + batchQuantity) {
                 const promise = new Promise(resolve => {
-                  resolve(listing[1].style.display = 'grid');
+                  resolve(elem.style.display = 'grid');
                 });
                 promise.then(() => {
-                  listing[1].classList.remove('hide');
+                  elem.classList.remove('hide');
                 }); // Calculating visible listings must run here after display properties are updated
 
                 promise.then(() => {
                   calculateVisibleListings();
                 });
               }
-            }
+            });
           }
         }, false);
-      }
+      });
     } else {
-      contentToggles[0].style.display = 'none';
+      contentToggles.forEach(elem => {
+        elem.style.display = 'none';
+      });
     } // Mobile: one listing visible at a time
 
-  } else if (browserWidth < 768 && listings.length > 1) {
-    for (const listing of listings.entries()) {
+  } else if (browserWidth < 768 && Array.from(listings.children).length > 1) {
+    Array.from(listings.children).forEach((listing, i) => {
       // Capture listing height and set to data attribute
-      listing[1].style.display = 'block';
-      listing[1].setAttribute('data-height', listing[1].offsetHeight);
-      listing[1].style.display = 'none'; // On load, set mobile navigation buttons at correct height
+      listing.style.display = 'block';
+      listing.dataset.height = listing.offsetHeight;
+      listing.style.display = 'none'; // On load, set mobile navigation buttons at correct height
 
-      counter == 0 && listing[0] == 0 ? navBtnPosition() : null;
-      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
-    }
-
+      counter === 0 && i === 0 ? navBtnPosition() : null;
+      i > 0 ? listing.style.display = 'none' : listing.style.display = 'block';
+    });
+    Array.from(contentSliders).forEach(contentSlider => {
+      contentSlider.style.display = 'block';
+    });
     navBtnState();
     prevBtn.addEventListener('click', () => {
       counter = counter - 1;
@@ -6252,15 +6091,14 @@ function launchKeyInfo(batchQuantity) {
       navBtnPosition();
       listingDisplay();
     });
-  } else if (browserWidth < 768 && listings.length == 1) {
-    for (const listing of listings.entries()) {
-      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
-    }
+  } else if (browserWidth < 768 && Array.from(listings.children).length === 1) {
+    Array.from(listings.children).forEach((listing, i) => {
+      i > 0 ? listing.style.display = 'none' : listing.style.display = 'block';
+    });
   }
 }
 
 function launchKeyInfoSlider() {
-  listingsQuantity();
   launchKeyInfo(batchQuantity);
 }
 
@@ -6716,13 +6554,9 @@ function launchMenu(menu) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_2__);
-
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modal_animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal_animation */ "./src/patterns/modal/modal_animation.js");
 
 
 
@@ -6735,321 +6569,183 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2018
  */
 
-/**
-    <div class="modal__popup modal__popup--hidden" data-title="Hong Kong">
-        <div role="modal" aria-labelledby="modal__heading" aria-modal="true">
-            <div class="modal__reveal modal__reveal--fromtop"></div>
-            <div class="modal__reveal modal__reveal--frombottom"></div>
-            <div class="modal__content">
-                <a href="#" class="modal__close fas fa-times"></a>
-                ....
-            </div>
-        </div>
-    </div>
-**/
-
 const className = 'modal__popup',
-      modalPopupClass = '.modal__popup',
-      modalHiddenClass = 'modal__popup--hidden',
-      modalShowClass = 'modal__popup--show',
-      modalShowContentClass = 'modal__popup--show-content',
-      modalTransitioningInClass = 'modal__popup--transitioning-in',
-      modalTransitioningOutClass = 'modal__popup--transitioning-out',
-      modalRevealFromTop = 'modal__reveal--fromtop',
-      modalHeadingClass = '.modal__heading',
-      modalRevealFromBottom = 'modal__reveal--frombottom',
-      modalTriggerClass = '.modal__trigger',
-      modalBackgroundClass = 'modal__background',
-      bodyModalInClass = 'modal--in',
-      modalCloseClass = '.modal__close',
-      modalContentClass = '.modal__content',
-      modalCloseClassList = 'modal__close fas fa-times',
-      modalBackground = document.createElement('div'),
-      modalPopups = document.querySelectorAll(modalPopupClass),
-      modalPopupsLength = modalPopups.length;
-let windowWidth = window.innerWidth,
-    counter = 1; // set class attr of modal background ready to be inserted later
-
-modalBackground.setAttribute('class', modalBackgroundClass); // always reconfigure if window resized
-
-window.addEventListener('resize', setWindowWidth);
-
-function setWindowWidth() {
-  // reassign new width
-  windowWidth = window.innerWidth;
-}
-/**
- * Add modal link: add link in the parent element to modal
- *
- * @param {HTMLElement} modal - the modal element
- */
-
-
-function addModalLink(modal) {
-  let modalAnchor,
-      modalTriggerClassText = modalTriggerClass.replace('.', '');
-  modalAnchor = document.createElement('a');
-  modalAnchor.setAttribute('class', modalTriggerClassText);
-  modalAnchor.href = '#';
-  modalAnchor.innerHTML = modal.getAttribute('data-title');
-  modal.parentNode.insertBefore(modalAnchor, modal);
-}
-/**
- * Add modal close: add a clsoe link within the modal
- *
- * @param {HTMLElement} modal - the modal element
- */
-
-
-function addModalClose(modal) {
-  let modalCloseAnchor, modalHeading;
-  modalCloseAnchor = document.createElement('a');
-  modalCloseAnchor.setAttribute('class', modalCloseClassList);
-  modalCloseAnchor.href = '#';
-  modalHeading = modal.querySelector(modalHeadingClass);
-  modalHeading.parentNode.insertBefore(modalCloseAnchor, modalHeading);
-}
-/**
- * Add modal reveals: add the divs that create the "curtain" effect
- *
- * @param {HTMLElement} modal - the modal element
- */
-
-
-function addModalReveals(modal) {
-  let revealFromTop, revealFromBottom, modalContent;
-  revealFromTop = document.createElement('div');
-  revealFromBottom = document.createElement('div');
-  revealFromTop.setAttribute('class', 'modal__reveal ' + modalRevealFromTop);
-  revealFromBottom.setAttribute('class', 'modal__reveal ' + modalRevealFromBottom);
-  modalContent = modal.querySelector(modalContentClass);
-  modalContent.parentNode.insertBefore(revealFromTop, modalContent);
-  modalContent.parentNode.insertBefore(revealFromBottom, modalContent);
-}
-/**
- * Launch modal: entry function
- *
- * @param {HTMLElement} modal - the modal element
- */
-
+      modalBackground = document.createElement('div');
 
 function launchModal(modal) {
-  /**
-   * Add modal link and close link inside modal
-   */
-  addModalLink(modal);
-  addModalClose(modal);
-  addModalReveals(modal);
-  /**
-   * Events need to be added, but just once for all
-   */
-
-  createEventListeners(modalPopupsLength);
-}
-
-const createEventListeners = modalPopupsLength => {
-  if (counter == modalPopupsLength) {
-    let modalCloseTriggers, modalInReveals, modalOutReveals, modalOpenTriggers;
-    modalOpenTriggers = document.querySelectorAll(modalTriggerClass);
-    modalCloseTriggers = document.querySelectorAll(modalCloseClass);
-    modalInReveals = document.querySelectorAll('.' + modalRevealFromTop);
-    modalOutReveals = document.querySelectorAll('.' + modalRevealFromBottom);
-    /**
-     * Add click listeners to open and close triggers
-     */
-
-    modalOpenTriggers.forEach(trigger => {
-      trigger.addEventListener('click', handleTriggerOpen, false);
-    });
-    modalCloseTriggers.forEach(trigger => {
-      trigger.addEventListener('click', handleTriggerClose, false);
-    });
-    /**
-     * Listen for escape key press and exit the active modal
-     */
-
-    document.addEventListener('keydown', e => {
-      let keyCode = e.keyCode; // get the only active modal
-
-      let activeModal = document.getElementsByClassName(modalShowClass)[0];
-
-      if (keyCode === 27) {
-        closeModal(activeModal);
+  let modalInner = modal.querySelector('.modal__inner');
+  let modalHeading = modal.querySelector('.modal__heading');
+  let modalDataTitle = modal.getAttribute('data-title');
+  insertElement('a', modal, 'modal__trigger', '#', modalDataTitle);
+  insertElement('a', modalHeading, 'modal__close fas fa-times', '#');
+  Object(_modal_animation__WEBPACK_IMPORTED_MODULE_1__["default"])(modalInner, modal);
+  let anchorTriggerSibling = modal.previousElementSibling;
+  let modalCloseTrigger = modal.querySelector('.modal__close');
+  anchorTriggerSibling.addEventListener('click', handleTriggerOpen, false);
+  modalCloseTrigger.addEventListener('click', handleTriggerClose, false);
+  modal.addEventListener('keydown', e => {
+    if (e.keyCode === 27) {
+      modal.classList.add('modal__popup--transitioning-out');
+    }
+  });
+  modal.addEventListener('click', e => {
+    e.target.classList.forEach(className => {
+      if (className === 'modal__popup--show') {
+        modal.classList.add('modal__popup--transitioning-out');
       }
     });
-    /**
-     * Listen for a click anywhere outside the modal and close active modal
-     */
-
-    document.addEventListener('click', e => {
-      e.target.classList.forEach(className => {
-        if (className === modalShowClass) {
-          // get the only active modal
-          let activeModal = document.getElementsByClassName(modalShowClass)[0];
-          closeModal(activeModal);
-          return;
-        }
-      });
-    });
-    /**
-     * Listen for when reveal in/out transition over
-     */
-
-    modalInReveals.forEach(elem => {
-      // chrome & safari
-      elem.addEventListener('webkitTransitionEnd', transitionInEnded, false); // standard
-
-      elem.addEventListener('transitionend', transitionInEnded, false); // moz
-
-      elem.addEventListener('mozTransitionEnd', transitionInEnded, false);
-    });
-    modalOutReveals.forEach(elem => {
-      elem.addEventListener('webkitTransitionEnd', transitionOutEnded, false);
-      elem.addEventListener('transitionend', transitionOutEnded, false);
-      elem.addEventListener('mozTransitionEnd', transitionOutEnded, false);
-    });
-  }
-
-  counter++;
-};
-/**
- * Handle trigger open: handles the modal open
- *
- * @param {event} e - the event
- */
-
-
-const handleTriggerOpen = e => {
-  e.preventDefault();
-  let modalPopup = e.target.nextElementSibling;
-  openModal(modalPopup); // activate focus trap
-
-  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_2___default()(modalPopup, {
-    clickOutsideDeactivates: true
   });
-  trap.activate();
-};
-/**
- * Handle trigger close: handles the modal open
- *
- * @param {event} e - the event
- */
+}
 
-
-const handleTriggerClose = e => {
+function handleTriggerOpen(e) {
   e.preventDefault();
-  let modalPopup = document.querySelector('.' + modalShowClass);
-  closeModal(modalPopup);
-};
-/**
- * Open modal: used to show the modal
- *
- * @param {HTMLElement} modalPopup - the modal div to be displayed
- */
+  let modal = e.target.nextElementSibling;
+  openModal(modal);
+}
 
+function handleTriggerClose(e) {
+  e.preventDefault();
+  let modal = document.querySelector('.modal__popup--show');
+  modal.classList.add('modal__popup--transitioning-out');
+}
 
-const openModal = modalPopup => {
-  // add background div to src if not present
+function openModal(modal) {
+  modal.classList.remove('modal__popup--hidden');
+  modal.classList.add('modal__popup--show');
+  addBackgroundFade();
+  setTimeout(function () {
+    modal.classList.add('modal__popup--transitioning-in');
+  }, 200);
+}
+
+function addBackgroundFade() {
   if (!document.body.contains(modalBackground)) {
+    modalBackground.setAttribute('class', 'modal__background');
     document.body.appendChild(modalBackground);
-  } // fade background in
-
-
-  document.body.classList.add(bodyModalInClass);
-
-  if (windowWidth >= 768) {
-    // show the modal, but keep the content div hidden
-    modalPopup.classList.remove(modalHiddenClass);
-    modalPopup.classList.add(modalShowClass); // trigger the first transition after the container displayed
-
-    setTimeout(function () {
-      modalPopup.classList.add(modalTransitioningInClass);
-    }, 50);
-  } else {
-    // show the modal, skip transition
-    modalPopup.classList.remove(modalHiddenClass);
-    modalPopup.classList.add(modalShowClass);
-    modalPopup.classList.add(modalShowContentClass);
-  }
-};
-/**
- * Close modal: closes the active modal
- *
- * @param {HTMLElement} modalPopup - the modal div to be hidden
- */
-
-
-const closeModal = modalPopup => {
-  if (windowWidth >= 768) {
-    // trigger transition, callback handles the closing
-    modalPopup.classList.add(modalTransitioningOutClass);
-  } else {
-    modalPopup.classList.remove(modalShowClass);
-    modalPopup.classList.add(modalHiddenClass);
-    modalPopup.classList.remove(modalShowContentClass);
-    document.body.classList.remove(bodyModalInClass);
-  }
-};
-/**
- * Transition in ended: after the transition has ended, do stuff
- *
- * @param {e} event - used to target elements
- */
-
-
-const transitionInEnded = e => {
-  let modalReveal = e.target; // switch classes to reverse transition or reset for next transition
-
-  if (modalReveal.classList.contains(modalRevealFromTop)) {
-    modalReveal.classList.remove(modalRevealFromTop);
-    modalReveal.classList.add(modalRevealFromBottom);
-  } else {
-    modalReveal.classList.remove(modalRevealFromBottom);
-    modalReveal.classList.add(modalRevealFromTop);
   }
 
-  let modalPopup = document.querySelector('.' + modalShowClass); // show the content so it's revealed on transition
+  document.body.classList.add('modal--in');
+  document.body.classList.add('no-scroll');
+}
 
-  modalPopup.classList.add(modalShowContentClass); // trigger the second transition - delay slightly
-
-  setTimeout(function () {
-    modalPopup.classList.remove(modalTransitioningInClass);
-  }, 300);
-};
-/**
- * Transition out ended: after the transition has ended, do stuff
- *
- * @param {e} event - used to target elements
- */
-
-
-const transitionOutEnded = e => {
-  let modalPopup = document.querySelector('.' + modalShowClass);
-  let modalReveal = e.target; // after first transition, remove the content underneath the background
-
-  modalPopup.classList.remove(modalShowContentClass); // switch these so the transition direction changes
-
-  modalReveal.classList.remove(modalRevealFromBottom);
-  modalReveal.classList.add(modalRevealFromTop); // trigger the second transition - delay slightly
-
-  setTimeout(function () {
-    modalPopup.classList.remove(modalTransitioningOutClass);
-  }, 300);
-  setTimeout(function () {
-    // switch these classes back for next transition
-    modalReveal.classList.remove(modalRevealFromTop);
-    modalReveal.classList.add(modalRevealFromBottom); // finally, remove the modal popup and background
-
-    modalPopup.classList.remove(modalShowClass);
-    modalPopup.classList.add(modalHiddenClass);
-    document.body.classList.remove(bodyModalInClass);
-  }, 500);
-};
+function insertElement(type, targetParent, classList, href, text) {
+  let element = document.createElement(type);
+  element.setAttribute('class', classList);
+  element.setAttribute('href', href);
+  if (text) element.textContent = text;
+  targetParent.parentNode.insertBefore(element, targetParent);
+}
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchModal,
   launchQuery: ".".concat(className)
 });
+
+/***/ }),
+
+/***/ "./src/patterns/modal/modal_animation.js":
+/*!***********************************************!*\
+  !*** ./src/patterns/modal/modal_animation.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return addModalAnimation; });
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/**
+ * modal animation
+ *
+ * @module patterns/modal/modal_animation
+ * @author Daniel Miller <daniel.miller@city.ac.uk>
+ * @copyright City, University of London 2018
+ *
+ */
+
+const eventListeners = ['webkitTransitionEnd', 'transitionend', 'mozTransitionEnd', 'oTransitionEnd'];
+function addModalAnimation(modalInner, modal) {
+  setTransitionListeners(modalInner, modal);
+}
+/**
+ * Set transition listeners: add transition finished listeners.
+ * The transition event actually occurs on the :before and :after
+ * but bubbles up to parent
+ *
+ * @param {HTMLElement} modalInner - the modalInner element
+ * @param {HTMLElement} modal - the modal
+ */
+
+function setTransitionListeners(modalInner, modal) {
+  for (let listener in eventListeners) {
+    modalInner.addEventListener(eventListeners[listener], e => {
+      setOpenOrCloseFunction(modal, e);
+    }, false);
+  }
+}
+/**
+ * Set open or close function: decides if open/close needed
+ *
+ * @param {HTMLElement} modal - the modal
+ */
+
+
+function setOpenOrCloseFunction(modal, e) {
+  if (e.target.classList[0] == 'modal__inner') {
+    if (modal.hasAttribute('data-open')) {
+      closeTransition(modal);
+    } else {
+      openTransition(modal);
+    }
+  }
+}
+/**
+ * Close transition: handles the close transition and modal hide
+ *
+ * @param {HTMLElement} modal - the modal div
+ */
+
+
+function closeTransition(modal) {
+  modal.classList.remove('modal__popup--show-content');
+  setTimeout(function () {
+    modal.classList.remove('modal__popup--transitioning-out');
+  }, 50);
+  setTimeout(function () {
+    modal.removeAttribute('data-open');
+    document.body.classList.remove('modal--in');
+    document.body.classList.remove('no-scroll');
+    modal.classList.remove('modal__popup--show');
+    modal.classList.add('modal__popup--hidden');
+  }, 700);
+}
+/**
+ * Open transition: handles the open transition and modal show
+ *
+ * @param {HTMLElement} modal - the modal div
+ */
+
+
+function openTransition(modal) {
+  modal.classList.add('modal__popup--show-content');
+  setTimeout(function () {
+    modal.classList.remove('modal__popup--transitioning-in');
+  }, 50);
+  setTimeout(function () {
+    modal.setAttribute('data-open', true);
+    trapFocus(modal);
+  }, 600);
+}
+
+function trapFocus(modal) {
+  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_0___default()(modal, {
+    clickOutsideDeactivates: true
+  });
+  trap.activate();
+}
 
 /***/ }),
 
@@ -7883,7 +7579,7 @@ function launchTabs(tabs) {
   preparePanels(panels);
   const idLinked = prepareLinks(linkItems);
 
-  if (linkItems.length > numberOfTabs) {
+  if (linkItems.length > numberOfTabs && (!tabs.dataset.neveraccordion || !tabs.dataset.neveraccordion === 'true')) {
     accordionize(tabs);
   }
   /**
