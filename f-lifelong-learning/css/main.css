@@ -18176,7 +18176,7 @@ article figure figcaption a:active {
 
 .key-information--lifelong-learning__controls .content-slider[hidden] .key-information--lifelong-learning__current,
 .key-information--lifelong-learning__controls .content-slider[hidden] .arrow-left--btn-prev,
-.key-information--lifelong-learning__controls .content-slider[hidden] .arrow-left--btn-next {
+.key-information--lifelong-learning__controls .content-slider[hidden] .arrow-right--btn-next {
     display: none;
 }
 
