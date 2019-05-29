@@ -13727,80 +13727,13 @@ main table td em {
     padding: 2rem 0;
 }
 
-.card--profile .card__content {
-    display: flex;
-    flex-direction: column;
-}
-
 .card--profile:first-child {
     border-top: none;
     padding-top: 0;
 }
 
 .card--profile__name {
-    font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
-    font-size: 1.424rem;
-    line-height: 1.25;
-    letter-spacing: -0.013em;
-    font-style: normal;
-    font-weight: 600;
-    margin-top: 1rem;
     color: #1e1e1e;
-}
-
-.card--profile__name i,
-.card--profile__name em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
-}
-
-.card--profile__name b,
-.card--profile__name strong {
-    font-weight: inherit;
-}
-
-.card--profile__name i,
-.card--profile__name em {
-    font-style: italic;
-}
-
-.card--profile__name u {
-    text-decoration: none;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--profile__name {
-        letter-spacing: -0.015em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--profile__name {
-        letter-spacing: -0.015em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--profile__name {
-        letter-spacing: -0.016em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--profile__name {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--profile__name {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--profile__name b,
-.card--profile__name strong {
-    font-weight: 600;
 }
 
 .card--profile__jobtitle {
@@ -13808,7 +13741,6 @@ main table td em {
     line-height: 1.625;
     letter-spacing: 0em;
     color: #696969;
-    margin-top: 0.25rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -13841,25 +13773,14 @@ main table td em {
     }
 }
 
-.card--profile__thumbnail__description {
-    max-width: 55ch;
-}
-
 .card--profile__thumbnail {
-    margin-top: 0.5rem;
-}
-
-@media (min-width: 769px) {
-    .card--profile__thumbnail {
-        display: grid;
-        grid-template-columns: 7rem auto;
-    }
-}
-
-.card--profile__thumbnail img {
     border-radius: 100%;
-    max-width: 7rem;
+    float: left;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
     max-height: 7rem;
+    max-width: 7rem;
 }
 
 .card--testimonial {
