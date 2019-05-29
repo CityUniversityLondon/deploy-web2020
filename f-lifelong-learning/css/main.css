@@ -19873,8 +19873,11 @@ blockquote footer {
         text-decoration: none;
     }
     .js .tabs .tabs__links li a span {
+        height: 100%;
+        padding-bottom: 0.5rem;
         padding-left: 2rem;
         padding-right: 2rem;
+        padding-top: 0.5rem;
     }
     .js .tabs .tabs__links li a span::before {
         transform: translateX(105%);
@@ -19948,7 +19951,7 @@ blockquote footer {
         margin-top: 1rem;
         border-bottom: none;
         display: block;
-        line-height: 2.75rem;
+        line-height: 1.625;
         margin-top: 0;
     }
     .js .tabs .tabs__links li a span i,
@@ -20007,6 +20010,10 @@ blockquote footer {
         padding: 0.75rem 0.5rem 0.5rem 0.5rem;
         background: #f2f2f2;
         border-top: 0.125rem solid #d8d8d8;
+    }
+    .js .tabs .tabs__panel__content {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
     }
     .js .tabs .tabs__panel__heading {
         margin-top: 0;
