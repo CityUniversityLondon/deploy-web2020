@@ -12030,7 +12030,7 @@ main table td em {
     .js .accordion > .accordion__heading {
         border-bottom: 0.0625rem solid #e5e5e5;
         margin-top: 0;
-        border: 1px solid blue;
+        border: 1px solid green;
     }
     .js .accordion > .accordion__heading:focus {
         outline: 0.125rem dotted #0c0c0e;

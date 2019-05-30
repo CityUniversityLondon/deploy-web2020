@@ -5262,6 +5262,7 @@ function launchAccordion(accordion) {
 
       button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
       accordion.addEventListener('touchMove', () => {
+        alert('swipe');
         return;
       });
       /* Show first item of accordion if accordion set to default open */
