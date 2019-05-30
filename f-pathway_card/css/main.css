@@ -13618,9 +13618,10 @@ main table td em {
     position: relative;
     transition: none;
     padding: 1rem;
-    display: inline-block;
-    padding-top: 0;
-    margin: 0 1rem 1rem 0;
+    display: block;
+    padding: 0 1rem 1rem 1rem;
+    margin-bottom: 1.5rem;
+    background: #ffffff;
 }
 
 @media (hover: hover) {
@@ -13841,8 +13842,7 @@ main table td em {
 
 @media (min-width: 901px) {
     .card--pathway {
-        margin-bottom: 0;
-        height: 41vh;
+        margin: 0 1.5rem 0 0;
     }
 }
 
@@ -13875,6 +13875,14 @@ main table td em {
     margin-right: 0;
 }
 
+.card--pathway p {
+    margin-top: 1rem;
+}
+
+.card--pathway--blue {
+    z-index: 1;
+}
+
 .card--pathway--blue:after {
     content: '';
     position: absolute;
@@ -13901,6 +13909,10 @@ main table td em {
 
 .card--pathway--blue:before, .card--pathway--blue:hover {
     background: #5fd8fe;
+}
+
+.card--pathway--purple {
+    z-index: 1;
 }
 
 .card--pathway--purple:after {
@@ -13931,6 +13943,10 @@ main table td em {
     background: #b382ec;
 }
 
+.card--pathway--pink {
+    z-index: 1;
+}
+
 .card--pathway--pink:after {
     content: '';
     position: absolute;
@@ -13957,6 +13973,166 @@ main table td em {
 
 .card--pathway--pink:before, .card--pathway--pink:hover {
     background: #df82c4;
+}
+
+.card--pathway--green {
+    z-index: 1;
+}
+
+.card--pathway--green:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--green:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--green:hover:after {
+        background-color: #b9d698;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--green:before, .card--pathway--green:hover {
+    background: #b9d698;
+}
+
+.card--pathway--purple {
+    z-index: 1;
+}
+
+.card--pathway--purple:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--purple:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--purple:hover:after {
+        background-color: #b382ec;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--purple:before, .card--pathway--purple:hover {
+    background: #b382ec;
+}
+
+.card--pathway--pink {
+    z-index: 1;
+}
+
+.card--pathway--pink:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--pink:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--pink:hover:after {
+        background-color: #df82c4;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--pink:before, .card--pathway--pink:hover {
+    background: #df82c4;
+}
+
+.card--pathway--teal {
+    z-index: 1;
+}
+
+.card--pathway--teal:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--teal:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--teal:hover:after {
+        background-color: #7fd6df;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--teal:before, .card--pathway--teal:hover {
+    background: #7fd6df;
+}
+
+.card--pathway--yellow {
+    z-index: 1;
+}
+
+.card--pathway--yellow:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--yellow:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--yellow:hover:after {
+        background-color: #ffef2b;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--yellow:before, .card--pathway--yellow:hover {
+    background: #ffef2b;
 }
 
 .card--testimonial {
