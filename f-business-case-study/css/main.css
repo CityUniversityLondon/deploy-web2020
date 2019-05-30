@@ -21758,9 +21758,8 @@ a.modal__close:active, a.modal__close:focus {
     font-weight: 600;
 }
 
-.case-study--research__details__section__detail .icon-school {
+.case-study--research__details .icon {
     color: #dd0036;
-    margin-right: 0.5rem;
 }
 
 .case-study--research__details {
