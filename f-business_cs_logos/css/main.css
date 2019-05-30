@@ -21132,9 +21132,9 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .case-study__overview__main {
-    grid-column: 1 / -1;
     display: grid;
     grid-row-gap: 0;
+    grid-column: 1 / -1;
     grid-template-columns: repeat(18, 1fr);
     margin-bottom: 6rem;
 }
@@ -21171,37 +21171,24 @@ a.modal__close:active, a.modal__close:focus {
     margin-bottom: 6rem;
 }
 
+.case-study__overview__main__details__logos {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 1.75rem;
+}
+
+.case-study__overview__main__details__logos .figure--image {
+    height: 4.5rem;
+}
+
+.case-study__overview__main__details__logos .figure--image:last-child {
+    margin-right: 0;
+}
+
 .case-study__overview__main__details__logos img {
-    border: 0.125rem solid #e5e5e5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 80%;
-    width: 90%;
-}
-
-.case-study__overview__main__details__logos figure {
-    display: inline-block;
-    width: 40%;
-    position: relative;
-    padding-top: 16.25%;
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .case-study__overview__main__details__logos figure {
-        width: 7.75rem;
-        padding-top: 3.2rem;
-    }
-}
-
-@media (min-width: 901px) and (max-width: 1279px) {
-    .case-study__overview__main__details__logos figure {
-        display: block;
-        width: 7.75rem;
-        padding-top: 3.2rem;
-    }
+    height: 100%;
+    width: auto;
 }
 
 .case-study__overview__main__details {
@@ -21225,8 +21212,7 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .case-study__overview__main__details__result p {
-    float: left;
-    margin-right: 0.4rem;
+    margin-right: 0.5rem;
 }
 
 .case-study__overview__main__details a {
@@ -21440,10 +21426,6 @@ a.modal__close:active, a.modal__close:focus {
     margin-bottom: 0;
 }
 
-.case-study__overview__multimedia-banner__video figcaption time {
-    float: left;
-}
-
 .case-study__overview__multimedia-banner__video .embedded-video {
     padding-bottom: 0;
     padding-top: 0;
@@ -21541,7 +21523,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .case-study__content__share-icons ul {
     list-style-type: none;
-    margin-left: 0px;
+    margin-left: 0;
     margin: 1.75rem 0;
     display: flex;
     margin-left: auto;
