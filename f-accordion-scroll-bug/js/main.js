@@ -5103,9 +5103,6 @@ function setSection(heading, open) {
   if (open) {
     heading.nextElementSibling.classList.add('active');
     calcBodyHeight(heading);
-    window.addEventListener('resize', () => {
-      calcBodyHeight(heading);
-    });
   } else {
     heading.nextElementSibling.classList.remove('active');
     heading.nextElementSibling.style.maxHeight = null;
@@ -5141,45 +5138,6 @@ function buttonClick(button, headings, toggleOpen) {
     history.pushState(null, null, '#' + heading.id);
   }
 }
-/**
- * scroll bug fix
- * @param {*} heading
- */
-// let difference = (a, b) => {
-//     return Math.abs(a - b);
-// };
-// let strTouchY;
-// let endTouchY;
-// let strClickY;
-// let endClickY;
-// let drag;
-// document.addEventListener('touchstart', function(e) {
-//     strTouchY = e.touches[0].clientY;
-//     return strTouchY;
-// });
-// document.addEventListener('touchend', function(e) {
-//     endTouchY = e.touches[0].clientY;
-//     return endTouchY;
-// });
-// document.addEventListener('mousedown', function(e) {
-//     strClickY = e.clientY;
-//     return strClickY;
-// });
-// document.addEventListener('mouseup', function(e) {
-//     endClickY = e.clientY;
-//     if (difference(strClickY,endClickY) > 5) {
-//         drag = true;
-//         // console.log(drag);
-//         return drag;
-//     }
-// });
-// console.log(drag);
-// if ((difference(strClickY,endClickY) > 5)) {
-//     console.log('swipe');
-// } else {
-//     console.log('not swipe');
-// }
-
 /**
  * Create a button from the text content of a heading.
  *
@@ -5261,10 +5219,6 @@ function launchAccordion(accordion) {
       }
 
       button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
-      accordion.addEventListener('touchMove', () => {
-        alert('swipe');
-        return;
-      });
       /* Show first item of accordion if accordion set to default open */
 
       if (defaultOpen && !idLinked) {
