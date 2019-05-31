@@ -16836,9 +16836,15 @@ article figure figcaption a:active {
 .finder__wrapper {
     grid-area: w;
     display: grid;
-    grid-template-areas: ' l l l l t t t t t t t s ';
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: ' . . . . t t t t t t t . ' ' l l l l i i i i i i i s ';
     grid-column-gap: 1rem;
     grid-template-columns: repeat(12, 1fr);
+}
+
+.finder__title {
+    grid-area: t;
+    margin-bottom: 1.25rem;
 }
 
 .finder__level {
@@ -16960,7 +16966,7 @@ article figure figcaption a:active {
 }
 
 .finder__input-text {
-    grid-area: t;
+    grid-area: i;
     display: flex;
     padding-top: 0.5rem;
     background: linear-gradient(45deg, #3e1031, #dd0036);
