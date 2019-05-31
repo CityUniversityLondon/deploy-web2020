@@ -16808,7 +16808,6 @@ article figure figcaption a:active {
 .finder {
     display: grid;
     grid-row-gap: 0;
-    grid-column-gap: 1.5rem;
     grid-template-columns: repeat(18, 1fr);
     grid-template-areas: ' . . . w w w w w w w w w w w w . . . ';
 }
@@ -16836,23 +16835,278 @@ article figure figcaption a:active {
 
 .finder__wrapper {
     grid-area: w;
-    background: #f2f2f2;
-    padding: 1rem;
     display: grid;
-    grid-template-areas: ' l l l t t t t t t t t s ';
+    grid-template-areas: ' l l l l t t t t t t t s ';
     grid-column-gap: 1rem;
     grid-template-columns: repeat(12, 1fr);
 }
 
-.finder__wrapper__level {
+.finder__level {
+    position: relative;
     grid-area: l;
+    padding-top: 0.5rem;
+    border: 0.1875rem solid #3e1031;
+    padding: 0.25rem 1.25rem 0 1.25rem;
 }
 
-.finder__wrapper__text {
+.finder__level select {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-weight: 600;
+    color: #1e1e1e;
+    width: 100%;
+    border: 0;
+    background: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -ms-expand: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__level select {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__level select {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__level select {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__level select {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__level select {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__level select:focus {
+    outline: 0;
+}
+
+.finder__level:after {
+    font-family: "Font Awesome";
+    font-size: 0.875em;
+    content: '\f078';
+    font-weight: 300;
+    margin-top: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    z-index: -1;
+}
+
+.finder__level:focus-within {
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+.finder__level__overline {
+    font-size: 0.79rem;
+    line-height: 1.625;
+    letter-spacing: 0.005em;
+    grid-area: overline;
+    color: #dd0036;
+    font-weight: 400;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__level__overline {
+        letter-spacing: 0em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__level__overline {
+        letter-spacing: 0em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__level__overline {
+        letter-spacing: -0.007em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__level__overline {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__level__overline {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__input-text {
     grid-area: t;
+    display: flex;
+    padding-top: 0.5rem;
+    background: linear-gradient(45deg, #3e1031, #dd0036);
+    padding: 0.1875rem;
+    position: relative;
 }
 
-.finder__wrapper__search {
+.finder__input-text .fal.fa-search {
+    background: #ffffff;
+    flex: 0;
+    font-weight: 400;
+    color: #696969;
+    margin: auto 1.25rem;
+}
+
+.finder__input-text input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.finder__input-text input::-webkit-input-placeholder {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: italic;
+    color: #696969;
+}
+
+.finder__input-text input::-moz-placeholder {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: italic;
+    color: #696969;
+}
+
+.finder__input-text input::-ms-input-placeholder {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: italic;
+    color: #696969;
+}
+
+.finder__input-text input::placeholder {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: italic;
+    color: #696969;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__input-text input::-webkit-input-placeholder {
+        letter-spacing: -0.008em;
+    }
+    .finder__input-text input::-moz-placeholder {
+        letter-spacing: -0.008em;
+    }
+    .finder__input-text input::-ms-input-placeholder {
+        letter-spacing: -0.008em;
+    }
+    .finder__input-text input::placeholder {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__input-text input::-webkit-input-placeholder {
+        letter-spacing: -0.008em;
+    }
+    .finder__input-text input::-moz-placeholder {
+        letter-spacing: -0.008em;
+    }
+    .finder__input-text input::-ms-input-placeholder {
+        letter-spacing: -0.008em;
+    }
+    .finder__input-text input::placeholder {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__input-text input::-webkit-input-placeholder {
+        letter-spacing: -0.013em;
+    }
+    .finder__input-text input::-moz-placeholder {
+        letter-spacing: -0.013em;
+    }
+    .finder__input-text input::-ms-input-placeholder {
+        letter-spacing: -0.013em;
+    }
+    .finder__input-text input::placeholder {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__input-text input::-webkit-input-placeholder {
+        letter-spacing: -0.017em;
+    }
+    .finder__input-text input::-moz-placeholder {
+        letter-spacing: -0.017em;
+    }
+    .finder__input-text input::-ms-input-placeholder {
+        letter-spacing: -0.017em;
+    }
+    .finder__input-text input::placeholder {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__input-text input::-webkit-input-placeholder {
+        letter-spacing: -0.017em;
+    }
+    .finder__input-text input::-moz-placeholder {
+        letter-spacing: -0.017em;
+    }
+    .finder__input-text input::-ms-input-placeholder {
+        letter-spacing: -0.017em;
+    }
+    .finder__input-text input::placeholder {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__input-text input:focus {
+    outline: 0;
+}
+
+.finder__input-text:focus-within {
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+.finder__input-text__wrapper {
+    display: flex;
+    flex: 1;
+    background: #ffffff;
+}
+
+.finder__cta-search {
     grid-area: s;
 }
 
