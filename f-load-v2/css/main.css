@@ -17395,7 +17395,7 @@ article figure figcaption a:active {
     outline-color: #0c0c0e;
 }
 
-.key-info__content-control .content-toggle button .label {
+.key-info__content-control .content-toggle button .load-more__label {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -20579,7 +20579,7 @@ article .social-icon .link-copy {
     outline-color: #0c0c0e;
 }
 
-.load-more__button .label {
+.load-more__button .load-more__label {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;

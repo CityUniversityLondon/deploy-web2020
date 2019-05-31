@@ -6421,6 +6421,7 @@ const createButton = (wrapper, increment) => {
   btn.classList.add('load-more__button');
   btnIcon.classList.add('far');
   btnIcon.classList.add('fa-plus-circle');
+  btnLabel.classList.add('load-more__label');
   btnLabel.textContent = 'Load more';
   btn.appendChild(btnIcon);
   btnIcon.append(btnLabel);
