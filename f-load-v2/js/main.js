@@ -6324,20 +6324,45 @@ function launchKeyInfoSlider() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
 /* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
-// import scroll from 'zenscroll';
- // missing: scroll
-// missing: last item focus;
 
-const className = 'load-more';
+/**
+ * Load more
+ *
+ * required HTML elements
+ * <parent
+ *  class="load-more"
+ *  id="loadmoreASSETID"
+ *  data-showing="NUMBER_VISIBLE_ONLOAD"
+ *  data-inc="INCREMENT-BY">
+ *     <child class="load-more__item"> xxx </child>
+ * </parent>
+ *
+ * @module patterns/load-more/load-more
+ * @author Mark Skinsley <mark.skinsley@city.ac.uk>
+ * @author Anett Soos anett.soos@city.ac.uk
+ * @copyright City, University of London 2018
+ */
+
+
+const className = 'load-more',
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : 999,
+      scrollTo = false;
 let locationHash = window.location.hash.substr(1),
     pathArray = locationHash.split('-'),
     hashId = pathArray[0],
-    newActiveNumber = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_1__["numberFromString"])(pathArray[1])),
+    newActiveNumber = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_2__["numberFromString"])(pathArray[1])),
     visibleItems;
+/**
+ * Initial launch function, triggers showItems() and createButton()
+ *
+ * @param {HTMLElement} e - wrapper of items requires the load-more functionality
+ */
 
 const launchLoadMore = e => {
   const increment = parseInt(e.dataset.inc),
@@ -6346,33 +6371,50 @@ const launchLoadMore = e => {
   let activeNumber = parseInt(e.dataset.showing);
 
   if (locationHash && wrapperId == hashId) {
-    showItems(newActiveNumber, items, true);
-    if (newActiveNumber < items.length) createButtonMore(e, increment);
+    showItems(newActiveNumber, items, increment, true);
+    if (newActiveNumber < items.length) createButton(e, increment);
   } else {
-    showItems(activeNumber, items, false);
-    if (activeNumber < items.length) createButtonMore(e, increment);
+    showItems(activeNumber, items, increment, false);
+    if (activeNumber < items.length) createButton(e, increment);
   }
 };
+/**
+ * Elements set to be hidden get an attribute data-hidden=true
+ *
+ * @param {number} activeNumber - items that will be visible
+ * @param {NodeList} items - direct child element and its sibling elements of main wrapper
+ * @param {number} increment - it is used to calculate element position with focus in case of location.hash
+ * @param {boolean} focus - ture if page has location.hash
+ */
 
-const showItems = (activeNumber, items, focus) => {
+
+const showItems = (activeNumber, items, increment, focus) => {
   if (activeNumber < items.length) {
     for (let i = 0; i < items.length; i++) {
+      items[i].setAttribute('tabindex', '-1');
+
       if (i < activeNumber) {
         items[i].setAttribute('data-hidden', 'false');
-        items[i].setAttribute('tabindex', '-1');
       } else {
         items[i].setAttribute('data-hidden', 'true');
-        items[i].setAttribute('tabindex', '-1');
       }
     }
 
     if (focus) {
-      items[activeNumber - 1].focus();
+      let focusElementPosition = activeNumber - increment;
+      items[focusElementPosition].focus();
     }
   }
 };
+/**
+ * Creates load-more button
+ *
+ * @param {HTMLElement} wrapper - wrapper of load-more items, button appends to it
+ * @param {number} increment - passed as param to click-event
+ */
 
-const createButtonMore = (wrapper, increment) => {
+
+const createButton = (wrapper, increment) => {
   const btn = document.createElement('button'),
         btnIcon = document.createElement('span'),
         btnLabel = document.createElement('span');
@@ -6383,7 +6425,6 @@ const createButtonMore = (wrapper, increment) => {
   btn.appendChild(btnIcon);
   btnIcon.append(btnLabel);
   btn.addEventListener('click', () => {
-    // updateStatus(wrapper, increment);
     updateVisible(wrapper, increment);
   });
   wrapper.appendChild(btn);
@@ -6392,6 +6433,15 @@ const createButtonMore = (wrapper, increment) => {
 const updateHashURL = (id, showElements) => {
   history.pushState('', '', "#".concat(id, "-").concat(showElements));
 };
+/**
+ * This is called on button click event, changes visibility of next increment-number of hidden items
+ * if increment is more or eq to the hidden items, the load-more button is removed from current wrapper
+ * updateHashURL() is also called which updates location.hash
+ *
+ * @param {HTMLElement} wrapper - wrapper of load-more items
+ * @param {number} increment - if it
+ */
+
 
 const updateVisible = (wrapper, increment) => {
   const hiddenElements = wrapper.querySelectorAll('[data-hidden=true]');
@@ -6408,6 +6458,11 @@ const updateVisible = (wrapper, increment) => {
 
   for (let i = 0; i < itemsToShow; i++) {
     hiddenElements[i].setAttribute('data-hidden', 'false');
+
+    if (hiddenElements[0]) {
+      scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(hiddenElements[0], scrollDuration);
+      hiddenElements[0].focus();
+    }
   }
 
   visibleItems = wrapper.querySelectorAll('[data-hidden=false]');
@@ -7997,8 +8052,12 @@ function pxToRem(pxValue) {
  */
 
 function numberFromString(string) {
-  let number = string.replace(/\D/g, '');
-  return number;
+  if (string) {
+    let number = string.replace(/\D/g, '');
+    return number;
+  }
+
+  return true;
 }
 
 /***/ }),

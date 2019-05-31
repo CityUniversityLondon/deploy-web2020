@@ -1070,20 +1070,6 @@
     background-color: #ffffff;
 }
 
-/* Icon positioning
-
-Demo HTML
-<div class="key-info__icon--left">
-    <span class="fas fa-envelope"></span>
-    <div>Text relating to icon</div>
-</div>
-
-Demo SCSS
-.key-info__icon--left {
-    @include key-info-icon(left, $color-pink90);
-}
-
-*/
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
@@ -17306,7 +17292,6 @@ article figure figcaption a:active {
 }
 
 .key-info__content-control .content-toggle button {
-    padding: 0.25rem;
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -17324,6 +17309,7 @@ article figure figcaption a:active {
     background-position: 0 100%;
     transition: background-size 0.3s ease;
     color: #006bbd;
+    padding: 0.25rem;
 }
 
 @media (hover: hover) {
@@ -20487,6 +20473,124 @@ article .social-icon .link-copy {
     grid-area: h;
     color: #ffffff;
     margin-bottom: 3rem;
+}
+
+.load-more__button {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.3s ease;
+    color: #006bbd;
+    padding: 0.25rem;
+}
+
+@media (hover: hover) {
+    .load-more__button:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.load-more__button:focus, .load-more__button:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .load-more__button {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .load-more__button:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.load-more__button:visited {
+    color: #4c2c92;
+}
+
+.load-more__button:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .load-more__button:hover {
+        color: #ffffff;
+    }
+}
+
+.load-more__button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.load-more__button:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .load-more__button:hover {
+        color: #ffffff;
+    }
+}
+
+.load-more__button:active {
+    color: #ffffff;
+}
+
+.load-more__button:focus, .load-more__button:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.load-more__button .label {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.load-more__button .fa-plus-circle {
+    padding: 0.0625rem 0.25rem 0 0;
+}
+
+.load-more__item[data-hidden='true'] {
+    display: none;
 }
 
 /**
