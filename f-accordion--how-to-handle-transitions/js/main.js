@@ -7397,14 +7397,17 @@ function accordionize(tabs) {
     const heading = panel.querySelector(".".concat(panelClassName, "__heading")),
           body = panel.querySelector(".".concat(panelClassName, "__body")),
           accordionHeading = document.createElement("h".concat(accordion.dataset.level)),
-          accordionSection = document.createElement('div');
+          accordionSection = document.createElement('div'),
+          accordionWrapper = document.createElement('div');
     accordionHeading.className = 'accordion__heading';
     accordionHeading.id = "accordion".concat(tabs.dataset.assetid, "-header").concat(panel.dataset.assetid);
     accordionHeading.dataset.tabid = panel.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].labelledBy);
     accordionHeading.innerText = heading.innerText.trim();
     accordionSection.className = 'accordion__body';
     accordionSection.id = "accordion".concat(tabs.dataset.assetid, "-body").concat(panel.dataset.assetid);
-    accordionSection.innerHTML = body.innerHTML;
+    accordionWrapper.className = 'wrapper--accordion__body__content';
+    accordionWrapper.innerHTML = body.innerHTML;
+    accordionSection.appendChild(accordionWrapper);
     Object(_util__WEBPACK_IMPORTED_MODULE_4__["appendAll"])(accordion, [accordionHeading, accordionSection]);
   });
   tabs.parentNode.insertBefore(wrapper, tabs);
