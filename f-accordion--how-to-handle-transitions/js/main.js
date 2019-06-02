@@ -5090,22 +5090,23 @@ function setSection(heading, open) {
 function calculateAccordionBodyHeight(heading) {
   const section = heading.nextElementSibling;
   setSection(heading, true);
-  section.style.display = null;
+  section.dataset.closed = 'false';
   const height = section.offsetHeight + 'px';
   setSection(heading, false);
-  section.style.display = 'none';
+  section.dataset.closed = 'true';
   return height;
 }
 /**
+ * Set style properties for transition.
  *
  * @param {HTMLElement} element - The section to transition.
- * @param {string} initialHeight -
+ * @param {string} initialHeight - The initial height from which to transition.
  */
 
 
 function setupTransition(element, initialHeight) {
   element.style.height = initialHeight;
-  element.style.display = null;
+  element.dataset.closed = 'false';
   return true;
 }
 /**
@@ -5118,7 +5119,7 @@ function setupTransition(element, initialHeight) {
 function cleanupTransition(section) {
   const open = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(section.previousElementSibling.dataset.open);
   section.style.height = null;
-  section.style.display = open ? null : 'none';
+  section.dataset.closed = open ? 'false' : 'true';
 }
 /**
  * Respond to button clicks - open if closed, close if open.
@@ -5176,7 +5177,7 @@ function buttonClick(button, headings, toggleOpen) {
       const sections = Array.from(document.querySelectorAll("#".concat(heading.parentElement.id, " > .").concat(bodyClassName)));
       headings.forEach(heading => setSection(heading, false));
       sections.filter(section => section.id !== accordionSection.id).forEach(section => {
-        section.style.display = 'none';
+        section.dataset.closed = 'true';
       });
     }
 
@@ -5261,7 +5262,7 @@ function launchAccordion(accordion) {
       setSection(heading, true);
     } else {
       setSection(heading, false);
-      heading.nextElementSibling.style.display = 'none';
+      heading.nextElementSibling.dataset.closed = 'true';
     }
 
     button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
@@ -5271,7 +5272,7 @@ function launchAccordion(accordion) {
 
   if (defaultOpen && !idLinked) {
     setSection(headings[0], true);
-    headings[0].nextElementSibling.style.display = null;
+    headings[0].nextElementSibling.dataset.closed = 'false';
   }
 }
 

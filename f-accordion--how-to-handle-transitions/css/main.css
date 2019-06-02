@@ -12191,6 +12191,9 @@ main table td em {
         transition-property: height;
         transition-timing-function: ease-in-out;
     }
+    .js .accordion > .accordion__heading + .accordion__body[data-closed='true'] {
+        display: none;
+    }
 }
 
 .breadcrumbs {
