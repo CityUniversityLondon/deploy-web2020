@@ -5173,7 +5173,7 @@ function buttonClick(button, headings, toggleOpen) {
     }
 
     if (toggleOpen) {
-      const sections = Array.from(heading.parentElement.querySelectorAll(".".concat(bodyClassName)));
+      const sections = Array.from(document.querySelectorAll("#".concat(heading.parentElement.id, " > .").concat(bodyClassName)));
       headings.forEach(heading => setSection(heading, false));
       sections.filter(section => section.id !== accordionSection.id).forEach(section => {
         section.style.display = 'none';
@@ -5233,7 +5233,7 @@ function launchAccordion(accordion) {
         toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.toggleopen),
         defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.defaultopen),
         allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.allowsingle),
-        headings = Array.from(accordion.querySelectorAll(".".concat(headingClassName)));
+        headings = Array.from(document.querySelectorAll("#".concat(accordion.id, " > .").concat(headingClassName)));
   let idLinked = false;
 
   if (!(allowSingle || headings.length > 1)) {
