@@ -12185,7 +12185,6 @@ main table td em {
         margin-bottom: 1rem;
     }
     .js .accordion > .accordion__heading + .accordion__body {
-        padding: 1rem;
         overflow-y: hidden;
         transition-duration: 0.2s;
         transition-property: height;
@@ -12193,6 +12192,9 @@ main table td em {
     }
     .js .accordion > .accordion__heading + .accordion__body[data-closed='true'] {
         display: none;
+    }
+    .js .accordion .wrapper--accordion__body__content {
+        padding: 1rem;
     }
 }
 
