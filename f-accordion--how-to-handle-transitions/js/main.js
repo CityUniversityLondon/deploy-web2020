@@ -5065,7 +5065,7 @@ const className = 'accordion',
       headingIconClassName = headingClassName + '__indicator fal',
       bodyClassName = className + '__body',
       scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_4__["reduceMotion"])() ? 0 : 999,
-      scrollTo = false;
+      scrollTo = true;
 /**
  * Sets a heading and the button nested within to be open or closed.
  *
@@ -5182,7 +5182,10 @@ function buttonClick(button, headings, toggleOpen) {
     }
 
     setSection(heading, true);
-    scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
+
+    if (scrollTo && !(Object(_util__WEBPACK_IMPORTED_MODULE_4__["verticallyInWindow"])(heading) && Object(_util__WEBPACK_IMPORTED_MODULE_4__["verticallyInWindow"])(accordionSection))) {
+      zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
+    }
   }
 }
 /**
