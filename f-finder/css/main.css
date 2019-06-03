@@ -16986,6 +16986,7 @@ article figure figcaption a:active {
     width: 100%;
     height: 100%;
     border: 0;
+    padding-top: 0.25rem;
 }
 
 .finder__input-text input::-webkit-input-placeholder {
@@ -17112,8 +17113,217 @@ article figure figcaption a:active {
     background: #ffffff;
 }
 
-.finder__cta-search {
+.finder__search {
     grid-area: s;
+    background: initial;
+    border-radius: 0.25rem;
+    border: none;
+    color: initial;
+    display: inline-flex;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    transition: background-color 0.6s, transform 0.6s;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+    background: #dd0036;
+    border: 0.125rem solid #dd0036;
+    color: #ffffff;
+    background: #dd0036;
+    border-color: #dd0036;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__search {
+        transition: none;
+    }
+}
+
+@media (max-width: 432px) {
+    .finder__search {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.finder__search span {
+    transition: transform 0.6s;
+}
+
+.finder__search:after {
+    content: '\f061';
+    font-family: 'Font Awesome';
+    font-style: normal;
+    font-weight: normal;
+    opacity: 0;
+    position: absolute;
+    right: 1.5rem;
+    text-decoration: inherit;
+    transform: translateX(-0.75rem);
+    transition: background-color 0.6s, transform 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__search:after {
+        transition: none;
+    }
+}
+
+.finder__search:focus, .finder__search:active {
+    background-color: transparent;
+    border: 0.125rem solid #dd0036;
+    color: #ffffff;
+}
+
+.finder__search:focus span, .finder__search:active span {
+    transform: translateX(-0.75rem);
+}
+
+.finder__search:focus:after, .finder__search:active:after {
+    opacity: 1;
+    transform: translateX(0.75rem);
+}
+
+@media (hover: hover) {
+    .finder__search:hover {
+        background-color: transparent;
+        border: 0.125rem solid #dd0036;
+        color: #ffffff;
+    }
+    .finder__search:hover span {
+        transform: translateX(-0.75rem);
+    }
+    .finder__search:hover:after {
+        opacity: 1;
+        transform: translateX(0.75rem);
+    }
+}
+
+.finder__search:disabled {
+    opacity: 0.7;
+}
+
+.finder__search:disabled span {
+    transform: none;
+}
+
+.finder__search:disabled:after {
+    opacity: 0;
+    transform: none;
+}
+
+.finder__search:visited {
+    border-color: #dd0036;
+    color: #ffffff;
+}
+
+.finder__search:focus {
+    background: #dd0036;
+    border-color: #dd0036;
+    color: #ffffff;
+}
+
+.finder__search:focus:focus, .finder__search:focus:active {
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+@media (hover: hover) {
+    .finder__search:hover {
+        background: #ffffff;
+        border-color: #dd0036;
+        color: #dd0036;
+    }
+}
+
+.finder__search:active {
+    border-color: #dd0036;
+    box-shadow: none;
+    color: #dd0036;
+    background: transparent;
+}
+
+.finder__search:active:focus, .finder__search:active:active {
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+}
+
+.finder__search:disabled {
+    color: #ffffff;
+    background: #dd0036;
+    border: 0.125rem solid #dd0036;
+}
+
+.finder__search span {
+    transition: none;
+}
+
+.finder__search:visited {
+    border-color: #dd0036;
+    color: #ffffff;
+}
+
+.finder__search:after {
+    content: '';
+}
+
+.finder__search:focus, .finder__search:active {
+    background: #dd0036;
+    border-color: #dd0036;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .finder__search:hover {
+        background: #aa002a;
+        border-color: #aa002a;
+        color: #ffffff;
+    }
+}
+
+.finder__search:active {
+    background: #aa002a;
+    border-color: #aa002a;
+}
+
+.finder__search:disabled {
+    color: #ffffff;
+    background: #dd0036;
+    border-color: #dd0036;
+}
+
+.finder__search:active span, .finder__search:focus span, .finder__search:hover span {
+    transform: none;
+}
+
+.finder__search a {
+    color: #ffffff;
+    margin: auto;
+    border: 0;
+}
+
+.finder__search a:hover {
+    background: transparent;
+    border: 0;
+}
+
+.finder__search a:focus {
+    color: #ffffff;
+    border: 0;
+    outline: 0;
+}
+
+.finder__search:focus-within {
+    outline-color: #0c0c0e;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
 }
 
 .global-footer {
