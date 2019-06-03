@@ -19936,6 +19936,12 @@ article .social-icon:active, article .social-icon:hover, article .social-icon:fo
     justify-content: center;
 }
 
+@media (max-width: 431px) {
+    .tooltip {
+        width: 7ch;
+    }
+}
+
 article .link-copy {
     position: absolute;
     left: -30000px;
