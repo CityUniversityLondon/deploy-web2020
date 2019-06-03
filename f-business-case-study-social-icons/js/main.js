@@ -7333,6 +7333,7 @@ function copyIconToClipboard(elem) {
     link.appendChild(textlink);
     t.appendChild(link);
     e.target.parentElement.parentElement.appendChild(t);
+    e.target.parentElement.parentElement.classList.add('copyLink');
   });
   copy.addEventListener('click', e => {
     e.preventDefault();
