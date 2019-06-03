@@ -16974,130 +16974,70 @@ article figure figcaption a:active {
     position: relative;
 }
 
-.finder__input-text .fal.fa-search {
-    background: #ffffff;
-    flex: 0;
-    font-weight: 400;
-    color: #696969;
-    margin: auto 1.25rem;
-}
-
 .finder__input-text input {
     width: 100%;
     height: 100%;
     border: 0;
     padding-top: 0.25rem;
-}
-
-.finder__input-text input::-webkit-input-placeholder {
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
-    font-style: italic;
-    color: #696969;
-}
-
-.finder__input-text input::-moz-placeholder {
-    font-size: 1rem;
-    line-height: 1.625;
-    letter-spacing: -0.005em;
-    font-style: italic;
-    color: #696969;
-}
-
-.finder__input-text input::-ms-input-placeholder {
-    font-size: 1rem;
-    line-height: 1.625;
-    letter-spacing: -0.005em;
-    font-style: italic;
-    color: #696969;
-}
-
-.finder__input-text input::placeholder {
-    font-size: 1rem;
-    line-height: 1.625;
-    letter-spacing: -0.005em;
-    font-style: italic;
-    color: #696969;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .finder__input-text input::-webkit-input-placeholder {
-        letter-spacing: -0.008em;
-    }
-    .finder__input-text input::-moz-placeholder {
-        letter-spacing: -0.008em;
-    }
-    .finder__input-text input::-ms-input-placeholder {
-        letter-spacing: -0.008em;
-    }
-    .finder__input-text input::placeholder {
+    .finder__input-text input {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .finder__input-text input::-webkit-input-placeholder {
-        letter-spacing: -0.008em;
-    }
-    .finder__input-text input::-moz-placeholder {
-        letter-spacing: -0.008em;
-    }
-    .finder__input-text input::-ms-input-placeholder {
-        letter-spacing: -0.008em;
-    }
-    .finder__input-text input::placeholder {
+    .finder__input-text input {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .finder__input-text input::-webkit-input-placeholder {
-        letter-spacing: -0.013em;
-    }
-    .finder__input-text input::-moz-placeholder {
-        letter-spacing: -0.013em;
-    }
-    .finder__input-text input::-ms-input-placeholder {
-        letter-spacing: -0.013em;
-    }
-    .finder__input-text input::placeholder {
+    .finder__input-text input {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .finder__input-text input::-webkit-input-placeholder {
-        letter-spacing: -0.017em;
-    }
-    .finder__input-text input::-moz-placeholder {
-        letter-spacing: -0.017em;
-    }
-    .finder__input-text input::-ms-input-placeholder {
-        letter-spacing: -0.017em;
-    }
-    .finder__input-text input::placeholder {
+    .finder__input-text input {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .finder__input-text input::-webkit-input-placeholder {
-        letter-spacing: -0.017em;
-    }
-    .finder__input-text input::-moz-placeholder {
-        letter-spacing: -0.017em;
-    }
-    .finder__input-text input::-ms-input-placeholder {
-        letter-spacing: -0.017em;
-    }
-    .finder__input-text input::placeholder {
+    .finder__input-text input {
         letter-spacing: -0.017em;
     }
 }
 
+.finder__input-text input::-webkit-input-placeholder {
+    font-style: italic;
+    color: #696969;
+}
+
+.finder__input-text input::-moz-placeholder {
+    font-style: italic;
+    color: #696969;
+}
+
+.finder__input-text input::-ms-input-placeholder {
+    font-style: italic;
+    color: #696969;
+}
+
+.finder__input-text input::placeholder {
+    font-style: italic;
+    color: #696969;
+}
+
 .finder__input-text input:focus {
     outline: 0;
+    font-weight: 700;
+    color: #1e1e1e;
 }
 
 .finder__input-text:focus-within {
@@ -17111,6 +17051,14 @@ article figure figcaption a:active {
     display: flex;
     flex: 1;
     background: #ffffff;
+}
+
+.finder__icon {
+    background: #ffffff;
+    flex: 0;
+    font-weight: 400;
+    color: #696969;
+    margin: auto 1.25rem;
 }
 
 .finder__search {
