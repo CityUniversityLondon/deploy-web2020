@@ -5749,9 +5749,12 @@ const className = 'finder';
 
 function addCloseIcon(finder) {
   let closeIconSpan = document.createElement('span'),
-      inputWrapper = finder.querySelector('.finder__input-text__wrapper');
-  closeIconSpan.className = 'finder__icon finder__icon--close fal fa-times-circle';
-  inputWrapper.appendChild(closeIconSpan);
+      inputWrapper = finder.querySelector('.finder__input-text__wrapper'),
+      closeIconWrapper = document.createElement('div');
+  closeIconWrapper.className = 'circle';
+  closeIconWrapper.appendChild(closeIconSpan);
+  closeIconSpan.className = 'finder__icon finder__icon--close far fa-times';
+  inputWrapper.appendChild(closeIconWrapper);
 }
 
 function removeCloseIcon(finder) {
