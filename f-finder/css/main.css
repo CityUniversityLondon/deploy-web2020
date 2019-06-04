@@ -16808,8 +16808,8 @@ article figure figcaption a:active {
 .finder {
     display: grid;
     grid-row-gap: 0;
-    grid-template-columns: repeat(18, 1fr);
-    grid-template-areas: ' . . . w w w w w w w w w w w w . . . ';
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: ' w w w w w w w w w w w w ';
 }
 
 @media (max-width: 432px) {
@@ -16833,13 +16833,27 @@ article figure figcaption a:active {
     }
 }
 
+@media (min-width: 769px) {
+    .finder {
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-areas: ' . . . w w w w w w w w w w w w . . . ';
+    }
+}
+
 .finder__wrapper {
     grid-area: w;
     display: grid;
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: ' . . . . t t t t t t t . ' ' l l l l i i i i i i i s ';
-    grid-column-gap: 1rem;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 1rem;
+    grid-template-areas: ' t t t t t t t t t t t t ' ' l l l l l l l l l l l l ' ' i i i i i i i i i i i s ';
+}
+
+@media (min-width: 769px) {
+    .finder__wrapper {
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: ' . . . . t t t t t t t . ' ' l l l l i i i i i i i s ';
+    }
 }
 
 .finder__title {
@@ -16924,6 +16938,12 @@ article figure figcaption a:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+}
+
+@media (max-width: 767px) {
+    .finder__level {
+        margin-bottom: 0.5rem;
+    }
 }
 
 .finder__level__overline {
@@ -17045,6 +17065,10 @@ article figure figcaption a:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+}
+
+.finder__input-text:focus-within .finder__icon--search {
+    color: #1e1e1e;
 }
 
 .finder__input-text__wrapper {
@@ -17267,11 +17291,30 @@ article figure figcaption a:active {
     outline: 0;
 }
 
+.finder__search a:visited {
+    color: #ffffff;
+}
+
 .finder__search:focus-within {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    background: #aa002a;
+    border-color: #aa002a;
+}
+
+.finder__search.finder__search--mobile {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .finder__search.finder__search--desktop {
+        display: none;
+    }
+    .finder__search.finder__search--mobile {
+        display: block;
+    }
 }
 
 .global-footer {
