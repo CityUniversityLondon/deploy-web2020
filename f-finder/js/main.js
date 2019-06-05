@@ -5746,34 +5746,78 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 const className = 'finder';
+let iconShow = false;
+/**
+ * Create close icon and append to text input. Used when user begins typing to text input.
+ *
+ * @param {HTMLElement} finder - An HTML element with the finder class.
+ */
 
 function addCloseIcon(finder) {
+  // Create elements
   let closeIconSpan = document.createElement('span'),
-      inputWrapper = finder.querySelector('.finder__input-text__wrapper'),
-      closeIconWrapper = document.createElement('div');
-  closeIconWrapper.className = 'circle';
-  closeIconWrapper.appendChild(closeIconSpan);
-  closeIconSpan.className = 'finder__icon finder__icon--close far fa-times';
-  inputWrapper.appendChild(closeIconWrapper);
+      closeIconCircle = document.createElement('div'),
+      closeIconWrapper = document.createElement('div'); // Add class names
+
+  closeIconWrapper.className = 'finder__icon--close__wrapper';
+  closeIconCircle.className = 'circle';
+  closeIconSpan.className = 'finder__icon finder__icon--close far fa-times'; // Add to DOM
+
+  closeIconCircle.appendChild(closeIconSpan);
+  closeIconWrapper.appendChild(closeIconCircle);
+  let inputWrapper = finder.querySelector('.finder__input-text__wrapper');
+  inputWrapper.appendChild(closeIconWrapper); // Remove icon and clear input text
+
+  closeIconCircle.addEventListener('click', () => {
+    removeCloseIcon(finder);
+  });
 }
+/**
+ * Remove close icon from text input.
+ *
+ * @param {HTMLElement} finder - An HTML element with the finder class.
+ */
+
 
 function removeCloseIcon(finder) {
-  let closeIcon = finder.querySelector('.finder__icon--close');
+  let closeIcon = finder.querySelector('.finder__icon--close__wrapper');
+  let textInput = finder.querySelector('.finder__input-text__input');
 
   if (closeIcon) {
     let closeIconParent = closeIcon.parentNode;
     closeIconParent.removeChild(closeIcon);
+    textInput.value = '';
+    iconShow = false;
   }
 }
+/**
+ * Make text input nested inside finder class dynamic. When user types into input, generate close icon so user
+ * has the option to remove all text, resetting this element.
+ *
+ * e.g.
+ *
+ * <div class="finder">
+ *   ...
+ * <div class="finder__input-text">
+ * <div class="finder__input-text__wrapper">
+ * <span class="finder__icon finder__icon--search fal fa-search"></span>
+ * <input type="text" class="finder__input-text__input" name="courses-search" placeholder="Search courses" onfocus="this.placeholder=''" />
+ * </div>
+ * </div>
+
+ *
+ * @param {HTMLElement} accordion - An HTML element with the accordion class.
+ */
+
 
 function launchFinder(finder) {
   let input = finder.getElementsByTagName('input')[0];
-  let iconShow = false;
-  input.addEventListener('keydown', e => {
+  iconShow = false;
+  input.addEventListener('keyup', e => {
     // Input note empty, not currently visible and last key press is not backspace
-    if (input.value.length >= 0 && iconShow == false && e.which !== 8) {
+    if (input.value.length > 0 && iconShow == false && e.which !== 8) {
       addCloseIcon(finder);
-      iconShow = true; // Input empty and last key press is backspace => remove close icon
+      iconShow = true; // Remove close icon if input is empty and last key press is backspace
     } else if (input.value.length <= 1 && e.which == 8) {
       removeCloseIcon(finder);
       iconShow = false;

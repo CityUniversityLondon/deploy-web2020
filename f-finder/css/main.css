@@ -17322,9 +17322,34 @@ article figure figcaption a:active {
     }
 }
 
+.finder .finder__icon--close__wrapper {
+    font-weight: 400;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    max-height: -webkit-fit-content;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+}
+
 .finder .circle {
     border-radius: 50%;
     background: #f2f2f2;
+    color: #696969;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .finder .circle:hover {
+        cursor: pointer;
+    }
+}
+
+.finder .finder__icon--close {
+    background: transparent;
+    position: relative;
+    top: 0.5rem;
+    right: 0.5rem;
 }
 
 .global-footer {
