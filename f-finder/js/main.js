@@ -5749,7 +5749,7 @@ const className = 'finder';
 let iconShow = false,
     inputPlaceholder;
 /**
- * Create close icon and append to text input. Used when user begins typing to text input.
+ * Create close icon and append to text input. Appears when user begins typing into input.
  *
  * @param {HTMLElement} finder - An HTML element with the finder class.
  */
@@ -5788,28 +5788,27 @@ function removeCloseIcon(finder) {
     let closeIconParent = closeIcon.parentNode;
     closeIconParent.removeChild(closeIcon);
     textInput.value = '';
-    textInput.placeholder = inputPlaceholder; // textInput.placeholder.style.fontWeidth = '100';
-
+    textInput.placeholder = inputPlaceholder;
     iconShow = false;
   }
 }
 /**
  * Make text input nested inside finder class dynamic. When user types into input, generate close icon so user
- * has the option to remove all text, resetting this element.
+ * has the option to remove all text, resetting this element to its placeholder value.
  *
  * e.g.
  *
  * <div class="finder">
  *   ...
  * <div class="finder__input-text">
- * <div class="finder__input-text__wrapper">
+ * <div class="finder__input-text__wrapper" aria-labelledby="search-courses">
  * <span class="finder__icon finder__icon--search fal fa-search"></span>
- * <input type="text" class="finder__input-text__input" name="courses-search" placeholder="Search courses" onfocus="this.placeholder=''" />
+ * <input type="text" class="finder__input-text__input" id="search-courses" aria-label="Enter search terms" name="search-courses" placeholder="Search courses" onfocus="this.placeholder=''" />
  * </div>
  * </div>
 
  *
- * @param {HTMLElement} accordion - An HTML element with the accordion class.
+ * @param {HTMLElement} finder - An HTML element with the finder class.
  */
 
 
@@ -5818,7 +5817,12 @@ function launchFinder(finder) {
   inputPlaceholder = input.placeholder;
   iconShow = false;
   input.addEventListener('keyup', e => {
-    // Input note empty, not currently visible and last key press is not backspace
+    /**
+     * Display close icon if:
+     * 1) input not empty
+     * 2) close icon not already visible
+     * 3) last key press is not backspace
+     **/
     if (input.value.length > 0 && iconShow == false && e.which !== 8) {
       addCloseIcon(finder);
       iconShow = true; // Remove close icon if input is empty and last key press is backspace
