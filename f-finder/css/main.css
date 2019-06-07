@@ -16963,9 +16963,9 @@ article figure figcaption a:active {
     position: relative;
     bottom: 0.25rem;
     font-weight: 600;
-    padding: 0 1rem 0 0;
+    padding: 0 2rem 0 0;
     color: #1e1e1e;
-    width: 100%;
+    width: 95%;
     border: 0;
     background: none;
     -webkit-appearance: none;
@@ -17172,6 +17172,10 @@ article figure figcaption a:active {
     flex: 1;
     background: #ffffff;
     padding: 0.5rem 0.75rem 0.25rem 0.25rem;
+}
+
+.finder__input-text__label {
+    display: none;
 }
 
 .finder__icon {
