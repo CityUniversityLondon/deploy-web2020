@@ -16840,7 +16840,7 @@ article figure figcaption a:active {
     }
 }
 
-.finder .finder__wrapper {
+.finder__wrapper {
     grid-area: w;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -16850,30 +16850,34 @@ article figure figcaption a:active {
 }
 
 @media (min-width: 769px) {
-    .finder .finder__wrapper {
+    .finder__wrapper {
         grid-template-rows: repeat(2, auto);
-        grid-template-areas: ' . . . . t t t t t t t . ' ' l l l l i i i i i i i s ';
+        grid-template-areas: ' t t t t t t t t t t t t ' ' l l l l i i i i i i i s ';
     }
 }
 
-.finder .finder__title {
+.finder__title {
     grid-area: t;
     margin-bottom: 1.25rem;
+    text-align: center;
 }
 
-.finder .finder__level {
+.finder__level {
     position: relative;
     grid-area: l;
     padding-top: 0.5rem;
     border: 0.1875rem solid #3e1031;
-    padding: 0.25rem 1.25rem 0 1.25rem;
+    padding: 0.25rem 1.25rem 0 0.75rem;
 }
 
-.finder .finder__level select {
+.finder__level select {
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
+    position: relative;
+    bottom: 0.25rem;
     font-weight: 600;
+    padding: 0 1rem 0 0;
     color: #1e1e1e;
     width: 100%;
     border: 0;
@@ -16885,40 +16889,40 @@ article figure figcaption a:active {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .finder .finder__level select {
+    .finder__level select {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .finder .finder__level select {
+    .finder__level select {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .finder .finder__level select {
+    .finder__level select {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .finder .finder__level select {
+    .finder__level select {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .finder .finder__level select {
+    .finder__level select {
         letter-spacing: -0.017em;
     }
 }
 
-.finder .finder__level select:focus {
+.finder__level select:focus {
     outline: 0;
 }
 
-.finder .finder__level:after {
+.finder__level:after {
     font-family: "Font Awesome";
     font-size: 0.875em;
     content: '\f078';
@@ -16928,12 +16932,11 @@ article figure figcaption a:active {
     vertical-align: middle;
     line-height: normal;
     position: absolute;
-    top: 30%;
-    right: 10%;
-    z-index: -1;
+    top: 0.75rem;
+    right: 1rem;
 }
 
-.finder .finder__level:focus-within {
+.finder__level:focus-within {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
@@ -16941,12 +16944,12 @@ article figure figcaption a:active {
 }
 
 @media (max-width: 767px) {
-    .finder .finder__level {
+    .finder__level {
         margin-bottom: 0.5rem;
     }
 }
 
-.finder .finder__level__overline {
+.finder__level__overline {
     font-size: 0.79rem;
     line-height: 1.625;
     letter-spacing: 0.005em;
@@ -16956,36 +16959,36 @@ article figure figcaption a:active {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .finder .finder__level__overline {
+    .finder__level__overline {
         letter-spacing: 0em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .finder .finder__level__overline {
+    .finder__level__overline {
         letter-spacing: 0em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .finder .finder__level__overline {
+    .finder__level__overline {
         letter-spacing: -0.007em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .finder .finder__level__overline {
+    .finder__level__overline {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .finder .finder__level__overline {
+    .finder__level__overline {
         letter-spacing: -0.017em;
     }
 }
 
-.finder .finder__input-text {
+.finder__input-text {
     grid-area: i;
     display: flex;
     padding-top: 0.5rem;
@@ -16994,103 +16997,108 @@ article figure figcaption a:active {
     position: relative;
 }
 
-.finder .finder__input-text input {
+.finder__input-text input {
     width: 100%;
     height: 100%;
     border: 0;
-    padding-top: 0.25rem;
+    padding: 0.25rem 0.25rem 0.25rem 0;
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .finder .finder__input-text input {
+    .finder__input-text input {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .finder .finder__input-text input {
+    .finder__input-text input {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .finder .finder__input-text input {
+    .finder__input-text input {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .finder .finder__input-text input {
+    .finder__input-text input {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .finder .finder__input-text input {
+    .finder__input-text input {
         letter-spacing: -0.017em;
     }
 }
 
-.finder .finder__input-text input::-webkit-input-placeholder {
+.finder__input-text input::-webkit-input-placeholder {
     font-style: italic;
     color: #696969;
+    font-weight: 400;
 }
 
-.finder .finder__input-text input::-moz-placeholder {
+.finder__input-text input::-moz-placeholder {
     font-style: italic;
     color: #696969;
+    font-weight: 400;
 }
 
-.finder .finder__input-text input::-ms-input-placeholder {
+.finder__input-text input::-ms-input-placeholder {
     font-style: italic;
     color: #696969;
+    font-weight: 400;
 }
 
-.finder .finder__input-text input::placeholder {
+.finder__input-text input::placeholder {
     font-style: italic;
     color: #696969;
+    font-weight: 400;
 }
 
-.finder .finder__input-text input:focus {
+.finder__input-text input:focus {
     outline: 0;
     font-weight: 700;
     color: #1e1e1e;
 }
 
-.finder .finder__input-text:focus-within {
+.finder__input-text:focus-within {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.finder .finder__input-text:focus-within .finder__icon--search {
+.finder__input-text:focus-within .finder__icon--search {
     color: #1e1e1e;
 }
 
-.finder .finder__input-text__wrapper {
+.finder__input-text__wrapper {
     display: flex;
     flex: 1;
     background: #ffffff;
+    padding: 0.5rem 0.75rem 0.25rem 0.25rem;
 }
 
-.finder .finder__icon {
+.finder__icon {
     background: #ffffff;
     flex: 0;
     font-weight: 400;
     color: #696969;
-    margin: auto 1.25rem;
+    margin: auto 0.5rem;
 }
 
-.finder .finder__icon--close {
+.finder__icon--close {
     color: #1e1e1e;
     background: #f2f2f2;
 }
 
-.finder .finder__search {
+.finder__search {
     grid-area: s;
     background: initial;
     border-radius: 0.25rem;
@@ -17108,28 +17116,29 @@ article figure figcaption a:active {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
+    padding: 0.5rem 1rem;
     box-shadow: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .finder .finder__search {
+    .finder__search {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .finder .finder__search {
+    .finder__search {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.finder .finder__search span {
+.finder__search span {
     transition: transform 0.6s;
 }
 
-.finder .finder__search:after {
+.finder__search:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -17143,66 +17152,66 @@ article figure figcaption a:active {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .finder .finder__search:after {
+    .finder__search:after {
         transition: none;
     }
 }
 
-.finder .finder__search:focus, .finder .finder__search:active {
+.finder__search:focus, .finder__search:active {
     background-color: transparent;
     border: 0.125rem solid #dd0036;
     color: #ffffff;
 }
 
-.finder .finder__search:focus span, .finder .finder__search:active span {
+.finder__search:focus span, .finder__search:active span {
     transform: translateX(-0.75rem);
 }
 
-.finder .finder__search:focus:after, .finder .finder__search:active:after {
+.finder__search:focus:after, .finder__search:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .finder .finder__search:hover {
+    .finder__search:hover {
         background-color: transparent;
         border: 0.125rem solid #dd0036;
         color: #ffffff;
     }
-    .finder .finder__search:hover span {
+    .finder__search:hover span {
         transform: translateX(-0.75rem);
     }
-    .finder .finder__search:hover:after {
+    .finder__search:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.finder .finder__search:disabled {
+.finder__search:disabled {
     opacity: 0.7;
 }
 
-.finder .finder__search:disabled span {
+.finder__search:disabled span {
     transform: none;
 }
 
-.finder .finder__search:disabled:after {
+.finder__search:disabled:after {
     opacity: 0;
     transform: none;
 }
 
-.finder .finder__search:visited {
+.finder__search:visited {
     border-color: #dd0036;
     color: #ffffff;
 }
 
-.finder .finder__search:focus {
+.finder__search:focus {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
 }
 
-.finder .finder__search:focus:focus, .finder .finder__search:focus:active {
+.finder__search:focus:focus, .finder__search:focus:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
@@ -17210,97 +17219,97 @@ article figure figcaption a:active {
 }
 
 @media (hover: hover) {
-    .finder .finder__search:hover {
+    .finder__search:hover {
         background: #ffffff;
         border-color: #dd0036;
         color: #dd0036;
     }
 }
 
-.finder .finder__search:active {
+.finder__search:active {
     border-color: #dd0036;
     box-shadow: none;
     color: #dd0036;
     background: transparent;
 }
 
-.finder .finder__search:active:focus, .finder .finder__search:active:active {
+.finder__search:active:focus, .finder__search:active:active {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
 }
 
-.finder .finder__search:disabled {
+.finder__search:disabled {
     color: #ffffff;
     background: #dd0036;
     border: 0.125rem solid #dd0036;
 }
 
-.finder .finder__search span {
+.finder__search span {
     transition: none;
 }
 
-.finder .finder__search:visited {
+.finder__search:visited {
     border-color: #dd0036;
     color: #ffffff;
 }
 
-.finder .finder__search:after {
+.finder__search:after {
     content: '';
 }
 
-.finder .finder__search:focus, .finder .finder__search:active {
+.finder__search:focus, .finder__search:active {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
 }
 
 @media (hover: hover) {
-    .finder .finder__search:hover {
+    .finder__search:hover {
         background: #aa002a;
         border-color: #aa002a;
         color: #ffffff;
     }
 }
 
-.finder .finder__search:active {
+.finder__search:active {
     background: #aa002a;
     border-color: #aa002a;
 }
 
-.finder .finder__search:disabled {
+.finder__search:disabled {
     color: #ffffff;
     background: #dd0036;
     border-color: #dd0036;
 }
 
-.finder .finder__search:active span, .finder .finder__search:focus span, .finder .finder__search:hover span {
+.finder__search:active span, .finder__search:focus span, .finder__search:hover span {
     transform: none;
 }
 
-.finder .finder__search a {
+.finder__search button {
     color: #ffffff;
     margin: auto;
     border: 0;
 }
 
-.finder .finder__search a:hover {
+.finder__search button:hover {
     background: transparent;
     border: 0;
 }
 
-.finder .finder__search a:focus {
+.finder__search button:focus {
     color: #ffffff;
     border: 0;
     outline: 0;
 }
 
-.finder .finder__search a:visited {
+.finder__search button:visited {
     color: #ffffff;
 }
 
-.finder .finder__search:focus-within {
+.finder__search:focus-within {
     outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
@@ -17309,28 +17318,32 @@ article figure figcaption a:active {
     border-color: #aa002a;
 }
 
-.finder .finder__search.finder__search--mobile {
+.finder__search.finder__search--mobile {
     display: none;
 }
 
 @media (max-width: 767px) {
-    .finder .finder__search.finder__search--desktop {
+    .finder__search.finder__search--desktop {
         display: none;
     }
-    .finder .finder__search.finder__search--mobile {
+    .finder__search.finder__search--mobile {
         display: block;
+    }
+    .finder__search.finder__search--mobile button {
+        padding-top: 0.25rem;
+        font-weight: 900;
     }
 }
 
-.finder .finder__icon--close__wrapper {
+.finder__icon--close__wrapper {
     font-weight: 400;
-    margin: 0.5rem 0.5rem 0.5rem 0;
+    margin: 0;
     max-height: -webkit-fit-content;
     max-height: -moz-fit-content;
     max-height: fit-content;
 }
 
-.finder .circle {
+.circle {
     border-radius: 50%;
     background: #f2f2f2;
     color: #696969;
@@ -17340,16 +17353,30 @@ article figure figcaption a:active {
 }
 
 @media (hover: hover) {
-    .finder .circle:hover {
+    .circle:hover {
         cursor: pointer;
     }
 }
 
-.finder .finder__icon--close {
+@media (max-width: 767px) {
+    .circle {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+.finder__icon--close {
     background: transparent;
     position: relative;
     top: 0.5rem;
-    right: 0.5rem;
+    left: 0.25rem;
+}
+
+@media (max-width: 767px) {
+    .finder__icon--close {
+        top: 0.25rem;
+        left: 0;
+    }
 }
 
 .global-footer {

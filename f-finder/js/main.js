@@ -5746,7 +5746,8 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 const className = 'finder';
-let iconShow = false;
+let iconShow = false,
+    inputPlaceholder;
 /**
  * Create close icon and append to text input. Used when user begins typing to text input.
  *
@@ -5787,6 +5788,8 @@ function removeCloseIcon(finder) {
     let closeIconParent = closeIcon.parentNode;
     closeIconParent.removeChild(closeIcon);
     textInput.value = '';
+    textInput.placeholder = inputPlaceholder; // textInput.placeholder.style.fontWeidth = '100';
+
     iconShow = false;
   }
 }
@@ -5812,6 +5815,7 @@ function removeCloseIcon(finder) {
 
 function launchFinder(finder) {
   let input = finder.getElementsByTagName('input')[0];
+  inputPlaceholder = input.placeholder;
   iconShow = false;
   input.addEventListener('keyup', e => {
     // Input note empty, not currently visible and last key press is not backspace
