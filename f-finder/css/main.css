@@ -1514,6 +1514,18 @@ readers do not read off random characters that represent icons */
     content: "\f34e";
 }
 
+.fa-alarm-exclamation:before {
+    content: "\f843";
+}
+
+.fa-alarm-plus:before {
+    content: "\f844";
+}
+
+.fa-alarm-snooze:before {
+    content: "\f845";
+}
+
 .fa-algolia:before {
     content: "\f36c";
 }
@@ -1536,6 +1548,10 @@ readers do not read off random characters that represent icons */
 
 .fa-align-right:before {
     content: "\f038";
+}
+
+.fa-align-slash:before {
+    content: "\f846";
 }
 
 .fa-alipay:before {
@@ -1970,6 +1986,10 @@ readers do not read off random characters that represent icons */
     content: "\f6b4";
 }
 
+.fa-bags-shopping:before {
+    content: "\f847";
+}
+
 .fa-balance-scale:before {
     content: "\f24e";
 }
@@ -2102,6 +2122,14 @@ readers do not read off random characters that represent icons */
     content: "\f0f3";
 }
 
+.fa-bell-exclamation:before {
+    content: "\f848";
+}
+
+.fa-bell-plus:before {
+    content: "\f849";
+}
+
 .fa-bell-school:before {
     content: "\f5d5";
 }
@@ -2128,6 +2156,14 @@ readers do not read off random characters that represent icons */
 
 .fa-bicycle:before {
     content: "\f206";
+}
+
+.fa-biking:before {
+    content: "\f84a";
+}
+
+.fa-biking-mountain:before {
+    content: "\f84b";
 }
 
 .fa-bimobject:before {
@@ -2286,6 +2322,46 @@ readers do not read off random characters that represent icons */
     content: "\f836";
 }
 
+.fa-border-all:before {
+    content: "\f84c";
+}
+
+.fa-border-bottom:before {
+    content: "\f84d";
+}
+
+.fa-border-inner:before {
+    content: "\f84e";
+}
+
+.fa-border-left:before {
+    content: "\f84f";
+}
+
+.fa-border-none:before {
+    content: "\f850";
+}
+
+.fa-border-outer:before {
+    content: "\f851";
+}
+
+.fa-border-right:before {
+    content: "\f852";
+}
+
+.fa-border-style:before {
+    content: "\f853";
+}
+
+.fa-border-style-alt:before {
+    content: "\f854";
+}
+
+.fa-border-top:before {
+    content: "\f855";
+}
+
 .fa-bow-arrow:before {
     content: "\f6b9";
 }
@@ -2382,6 +2458,14 @@ readers do not read off random characters that represent icons */
     content: "\f469";
 }
 
+.fa-bring-forward:before {
+    content: "\f856";
+}
+
+.fa-bring-front:before {
+    content: "\f857";
+}
+
 .fa-broadcast-tower:before {
     content: "\f519";
 }
@@ -2428,6 +2512,10 @@ readers do not read off random characters that represent icons */
 
 .fa-bullseye-pointer:before {
     content: "\f649";
+}
+
+.fa-burger-soda:before {
+    content: "\f858";
 }
 
 .fa-burn:before {
@@ -2574,8 +2662,16 @@ readers do not read off random characters that represent icons */
     content: "\f5df";
 }
 
+.fa-car-building:before {
+    content: "\f859";
+}
+
 .fa-car-bump:before {
     content: "\f5e0";
+}
+
+.fa-car-bus:before {
+    content: "\f85a";
 }
 
 .fa-car-crash:before {
@@ -2652,6 +2748,10 @@ readers do not read off random characters that represent icons */
 
 .fa-carrot:before {
     content: "\f787";
+}
+
+.fa-cars:before {
+    content: "\f85b";
 }
 
 .fa-cart-arrow-down:before {
@@ -3162,6 +3262,10 @@ readers do not read off random characters that represent icons */
     content: "\f085";
 }
 
+.fa-coin:before {
+    content: "\f85c";
+}
+
 .fa-coins:before {
     content: "\f51e";
 }
@@ -3328,6 +3432,10 @@ readers do not read off random characters that represent icons */
 
 .fa-connectdevelop:before {
     content: "\f20e";
+}
+
+.fa-construction:before {
+    content: "\f85d";
 }
 
 .fa-container-storage:before {
@@ -3666,6 +3774,10 @@ readers do not read off random characters that represent icons */
     content: "\f1a6";
 }
 
+.fa-digging:before {
+    content: "\f85e";
+}
+
 .fa-digital-ocean:before {
     content: "\f391";
 }
@@ -3810,6 +3922,14 @@ readers do not read off random characters that represent icons */
     content: "\f397";
 }
 
+.fa-drone:before {
+    content: "\f85f";
+}
+
+.fa-drone-alt:before {
+    content: "\f860";
+}
+
 .fa-dropbox:before {
     content: "\f16b";
 }
@@ -3832,6 +3952,14 @@ readers do not read off random characters that represent icons */
 
 .fa-drupal:before {
     content: "\f1a9";
+}
+
+.fa-dryer:before {
+    content: "\f861";
+}
+
+.fa-dryer-alt:before {
+    content: "\f862";
 }
 
 .fa-duck:before {
@@ -4098,8 +4226,16 @@ readers do not read off random characters that represent icons */
     content: "\f082";
 }
 
+.fa-fan:before {
+    content: "\f863";
+}
+
 .fa-fantasy-flight-games:before {
     content: "\f6dc";
+}
+
+.fa-farm:before {
+    content: "\f864";
 }
 
 .fa-fast-backward:before {
@@ -4252,6 +4388,10 @@ readers do not read off random characters that represent icons */
 
 .fa-file-prescription:before {
     content: "\f572";
+}
+
+.fa-file-search:before {
+    content: "\f865";
 }
 
 .fa-file-signature:before {
@@ -4474,6 +4614,10 @@ readers do not read off random characters that represent icons */
     content: "\f4e6";
 }
 
+.fa-font-case:before {
+    content: "\f866";
+}
+
 .fa-fonticons:before {
     content: "\f280";
 }
@@ -4570,6 +4714,14 @@ readers do not read off random characters that represent icons */
     content: "\f50d";
 }
 
+.fa-game-board:before {
+    content: "\f867";
+}
+
+.fa-game-board-alt:before {
+    content: "\f868";
+}
+
 .fa-gamepad:before {
     content: "\f11b";
 }
@@ -4630,6 +4782,10 @@ readers do not read off random characters that represent icons */
     content: "\f1d3";
 }
 
+.fa-git-alt:before {
+    content: "\f841";
+}
+
 .fa-git-square:before {
     content: "\f1d2";
 }
@@ -4668,6 +4824,10 @@ readers do not read off random characters that represent icons */
 
 .fa-glass-cheers:before {
     content: "\f79f";
+}
+
+.fa-glass-citrus:before {
+    content: "\f869";
 }
 
 .fa-glass-martini:before {
@@ -4906,6 +5066,10 @@ readers do not read off random characters that represent icons */
     content: "\f315";
 }
 
+.fa-h4:before {
+    content: "\f86a";
+}
+
 .fa-hacker-news:before {
     content: "\f1d4";
 }
@@ -5052,6 +5216,10 @@ readers do not read off random characters that represent icons */
 
 .fa-hashtag:before {
     content: "\f292";
+}
+
+.fa-hat-chef:before {
+    content: "\f86b";
 }
 
 .fa-hat-santa:before {
@@ -5214,6 +5382,10 @@ readers do not read off random characters that represent icons */
     content: "\f427";
 }
 
+.fa-horizontal-rule:before {
+    content: "\f86c";
+}
+
 .fa-hornbill:before {
     content: "\f592";
 }
@@ -5324,6 +5496,14 @@ readers do not read off random characters that represent icons */
 
 .fa-icicles:before {
     content: "\f7ad";
+}
+
+.fa-icons:before {
+    content: "\f86d";
+}
+
+.fa-icons-alt:before {
+    content: "\f86e";
 }
 
 .fa-id-badge:before {
@@ -5508,6 +5688,10 @@ readers do not read off random characters that represent icons */
 
 .fa-kaggle:before {
     content: "\f5fa";
+}
+
+.fa-kerning:before {
+    content: "\f86f";
 }
 
 .fa-key:before {
@@ -5732,6 +5916,14 @@ readers do not read off random characters that represent icons */
 
 .fa-line:before {
     content: "\f3c0";
+}
+
+.fa-line-columns:before {
+    content: "\f870";
+}
+
+.fa-line-height:before {
+    content: "\f871";
 }
 
 .fa-link:before {
@@ -6206,6 +6398,14 @@ readers do not read off random characters that represent icons */
     content: "\f53d";
 }
 
+.fa-money-check-edit:before {
+    content: "\f872";
+}
+
+.fa-money-check-edit-alt:before {
+    content: "\f873";
+}
+
 .fa-monitor-heart-rate:before {
     content: "\f611";
 }
@@ -6254,12 +6454,20 @@ readers do not read off random characters that represent icons */
     content: "\f245";
 }
 
+.fa-mug:before {
+    content: "\f874";
+}
+
 .fa-mug-hot:before {
     content: "\f7b6";
 }
 
 .fa-mug-marshmallows:before {
     content: "\f7b7";
+}
+
+.fa-mug-tea:before {
+    content: "\f875";
 }
 
 .fa-music:before {
@@ -6292,10 +6500,6 @@ readers do not read off random characters that represent icons */
 
 .fa-nimblr:before {
     content: "\f5a8";
-}
-
-.fa-nintendo-switch:before {
-    content: "\f418";
 }
 
 .fa-node:before {
@@ -6398,6 +6602,14 @@ readers do not read off random characters that represent icons */
     content: "\f03b";
 }
 
+.fa-overline:before {
+    content: "\f876";
+}
+
+.fa-page-break:before {
+    content: "\f877";
+}
+
 .fa-page4:before {
     content: "\f3d7";
 }
@@ -6452,6 +6664,10 @@ readers do not read off random characters that represent icons */
 
 .fa-paragraph:before {
     content: "\f1dd";
+}
+
+.fa-paragraph-rtl:before {
+    content: "\f878";
 }
 
 .fa-parking:before {
@@ -6618,6 +6834,14 @@ readers do not read off random characters that represent icons */
     content: "\f095";
 }
 
+.fa-phone-alt:before {
+    content: "\f879";
+}
+
+.fa-phone-laptop:before {
+    content: "\f87a";
+}
+
 .fa-phone-office:before {
     content: "\f67d";
 }
@@ -6634,8 +6858,16 @@ readers do not read off random characters that represent icons */
     content: "\f098";
 }
 
+.fa-phone-square-alt:before {
+    content: "\f87b";
+}
+
 .fa-phone-volume:before {
     content: "\f2a0";
+}
+
+.fa-photo-video:before {
+    content: "\f87c";
 }
 
 .fa-php:before {
@@ -7034,6 +7266,10 @@ readers do not read off random characters that represent icons */
     content: "\f25d";
 }
 
+.fa-remove-format:before {
+    content: "\f87d";
+}
+
 .fa-renren:before {
     content: "\f18b";
 }
@@ -7332,6 +7568,14 @@ readers do not read off random characters that represent icons */
 
 .fa-sellsy:before {
     content: "\f213";
+}
+
+.fa-send-back:before {
+    content: "\f87e";
+}
+
+.fa-send-backward:before {
+    content: "\f87f";
 }
 
 .fa-server:before {
@@ -7690,6 +7934,10 @@ readers do not read off random characters that represent icons */
     content: "\f2ad";
 }
 
+.fa-snooze:before {
+    content: "\f880";
+}
+
 .fa-snow-blowing:before {
     content: "\f761";
 }
@@ -7734,16 +7982,36 @@ readers do not read off random characters that represent icons */
     content: "\f15d";
 }
 
+.fa-sort-alpha-down-alt:before {
+    content: "\f881";
+}
+
 .fa-sort-alpha-up:before {
     content: "\f15e";
+}
+
+.fa-sort-alpha-up-alt:before {
+    content: "\f882";
+}
+
+.fa-sort-alt:before {
+    content: "\f883";
 }
 
 .fa-sort-amount-down:before {
     content: "\f160";
 }
 
+.fa-sort-amount-down-alt:before {
+    content: "\f884";
+}
+
 .fa-sort-amount-up:before {
     content: "\f161";
+}
+
+.fa-sort-amount-up-alt:before {
+    content: "\f885";
 }
 
 .fa-sort-down:before {
@@ -7754,8 +8022,48 @@ readers do not read off random characters that represent icons */
     content: "\f162";
 }
 
+.fa-sort-numeric-down-alt:before {
+    content: "\f886";
+}
+
 .fa-sort-numeric-up:before {
     content: "\f163";
+}
+
+.fa-sort-numeric-up-alt:before {
+    content: "\f887";
+}
+
+.fa-sort-shapes-down:before {
+    content: "\f888";
+}
+
+.fa-sort-shapes-down-alt:before {
+    content: "\f889";
+}
+
+.fa-sort-shapes-up:before {
+    content: "\f88a";
+}
+
+.fa-sort-shapes-up-alt:before {
+    content: "\f88b";
+}
+
+.fa-sort-size-down:before {
+    content: "\f88c";
+}
+
+.fa-sort-size-down-alt:before {
+    content: "\f88d";
+}
+
+.fa-sort-size-up:before {
+    content: "\f88e";
+}
+
+.fa-sort-size-up-alt:before {
+    content: "\f88f";
 }
 
 .fa-sort-up:before {
@@ -7786,12 +8094,20 @@ readers do not read off random characters that represent icons */
     content: "\f2f4";
 }
 
+.fa-sparkles:before {
+    content: "\f890";
+}
+
 .fa-speakap:before {
     content: "\f3f3";
 }
 
 .fa-speaker-deck:before {
     content: "\f83c";
+}
+
+.fa-spell-check:before {
+    content: "\f891";
 }
 
 .fa-spider:before {
@@ -7856,6 +8172,10 @@ readers do not read off random characters that represent icons */
 
 .fa-stack-overflow:before {
     content: "\f16c";
+}
+
+.fa-stackpath:before {
+    content: "\f842";
 }
 
 .fa-staff:before {
@@ -8048,6 +8368,10 @@ readers do not read off random characters that represent icons */
 
 .fa-sun-haze:before {
     content: "\f765";
+}
+
+.fa-sunglasses:before {
+    content: "\f892";
 }
 
 .fa-sunrise:before {
@@ -8286,8 +8610,16 @@ readers do not read off random characters that represent icons */
     content: "\f120";
 }
 
+.fa-text:before {
+    content: "\f893";
+}
+
 .fa-text-height:before {
     content: "\f034";
+}
+
+.fa-text-size:before {
+    content: "\f894";
 }
 
 .fa-text-width:before {
@@ -8556,6 +8888,14 @@ readers do not read off random characters that represent icons */
 
 .fa-trash-restore-alt:before {
     content: "\f82a";
+}
+
+.fa-trash-undo:before {
+    content: "\f895";
+}
+
+.fa-trash-undo-alt:before {
+    content: "\f896";
 }
 
 .fa-treasure-chest:before {
@@ -9034,6 +9374,10 @@ readers do not read off random characters that represent icons */
     content: "\f40b";
 }
 
+.fa-voicemail:before {
+    content: "\f897";
+}
+
 .fa-volcano:before {
     content: "\f770";
 }
@@ -9110,6 +9454,10 @@ readers do not read off random characters that represent icons */
     content: "\f495";
 }
 
+.fa-washer:before {
+    content: "\f898";
+}
+
 .fa-watch:before {
     content: "\f2e1";
 }
@@ -9130,8 +9478,16 @@ readers do not read off random characters that represent icons */
     content: "\f775";
 }
 
+.fa-wave-sine:before {
+    content: "\f899";
+}
+
 .fa-wave-square:before {
     content: "\f83e";
+}
+
+.fa-wave-triangle:before {
+    content: "\f89a";
 }
 
 .fa-waze:before {
@@ -9216,6 +9572,10 @@ readers do not read off random characters that represent icons */
 
 .fa-wind:before {
     content: "\f72e";
+}
+
+.fa-wind-turbine:before {
+    content: "\f89b";
 }
 
 .fa-wind-warning:before {
@@ -12007,7 +12367,6 @@ main table td em {
 }
 
 .icon {
-    margin-right: 0.5rem;
     line-height: inherit;
 }
 
@@ -16930,9 +17289,7 @@ article figure figcaption a:active {
     line-height: 1.25;
     letter-spacing: -0.011em;
     flex-grow: 1;
-    font-style: normal;
-    font-weight: 450;
-    padding: 0.5rem;
+    position: relative;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -16963,6 +17320,58 @@ article figure figcaption a:active {
     .finder__query__input {
         letter-spacing: -0.017em;
     }
+}
+
+.finder__query__input input {
+    font-family: "Plex Sans", sans-serif;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    font-style: normal;
+    font-weight: 450;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 3.5rem;
+    padding-top: 0.5rem;
+    width: 100%;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__query__input input {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__query__input input {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__query__input input {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__query__input input {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__query__input input {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__query__input .finder__clear {
+    height: 100%;
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    width: 2rem;
 }
 
 .finder__query__submit {
@@ -17154,7 +17563,7 @@ article figure figcaption a:active {
 }
 
 .finder__query__suggestions {
-    background-color: rgba(30, 30, 30, 0.7);
+    background-color: rgba(30, 30, 30, 0.9);
     color: #ffffff;
     font-weight: 700;
     left: 0;
@@ -17162,7 +17571,7 @@ article figure figcaption a:active {
     margin-left: 0;
     max-width: unset;
     position: absolute;
-    top: 2.25rem;
+    top: 2.5rem;
     width: 100%;
     z-index: 1;
 }
@@ -17218,6 +17627,47 @@ article figure figcaption a:active {
     max-width: unset;
 }
 
+.finder__results__updating {
+    font-size: 1.602rem;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    margin-top: 1rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__updating {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__updating {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__updating {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__updating {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__updating {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__updating .icon {
+    color: #dd0036;
+}
+
 .finder__results__card {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -17238,6 +17688,7 @@ article figure figcaption a:active {
     position: relative;
     transition: none;
     padding: 1rem;
+    color: #1e1e1e;
     display: flex;
     flex-direction: column;
 }
@@ -21714,9 +22165,7 @@ article .social-icon .link-copy {
     line-height: 1.25;
     letter-spacing: -0.011em;
     flex-grow: 1;
-    font-style: normal;
-    font-weight: 450;
-    padding: 0.5rem;
+    position: relative;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -21747,6 +22196,58 @@ article .social-icon .link-copy {
     .finder__query__input {
         letter-spacing: -0.017em;
     }
+}
+
+.finder__query__input input {
+    font-family: "Plex Sans", sans-serif;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    font-style: normal;
+    font-weight: 450;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 3.5rem;
+    padding-top: 0.5rem;
+    width: 100%;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__query__input input {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__query__input input {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__query__input input {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__query__input input {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__query__input input {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__query__input .finder__clear {
+    height: 100%;
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    width: 2rem;
 }
 
 .finder__query__submit {
@@ -21938,7 +22439,7 @@ article .social-icon .link-copy {
 }
 
 .finder__query__suggestions {
-    background-color: rgba(30, 30, 30, 0.7);
+    background-color: rgba(30, 30, 30, 0.9);
     color: #ffffff;
     font-weight: 700;
     left: 0;
@@ -21946,7 +22447,7 @@ article .social-icon .link-copy {
     margin-left: 0;
     max-width: unset;
     position: absolute;
-    top: 2.25rem;
+    top: 2.5rem;
     width: 100%;
     z-index: 1;
 }
@@ -22002,6 +22503,47 @@ article .social-icon .link-copy {
     max-width: unset;
 }
 
+.finder__results__updating {
+    font-size: 1.602rem;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    margin-top: 1rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__updating {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__updating {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__updating {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__updating {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__updating {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__updating .icon {
+    color: #dd0036;
+}
+
 .finder__results__card {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -22022,6 +22564,7 @@ article .social-icon .link-copy {
     position: relative;
     transition: none;
     padding: 1rem;
+    color: #1e1e1e;
     display: flex;
     flex-direction: column;
 }
