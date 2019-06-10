@@ -18613,7 +18613,7 @@ article figure figcaption a:active {
 
 .finder__mobilefilters[data-open='true'] {
     background: #ffffff;
-    height: 100vh;
+    min-height: 100vh;
     left: 0;
     overflow-y: scroll;
     position: fixed;
@@ -24547,7 +24547,7 @@ article .social-icon .link-copy {
 
 .finder__mobilefilters[data-open='true'] {
     background: #ffffff;
-    height: 100vh;
+    min-height: 100vh;
     left: 0;
     overflow-y: scroll;
     position: fixed;
