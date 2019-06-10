@@ -18625,7 +18625,6 @@ article figure figcaption a:active {
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
-    min-height: 100%;
     position: relative;
 }
 
@@ -18637,14 +18636,14 @@ article figure figcaption a:active {
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply {
     background-color: #dd0036;
     border: 0;
+    bottom: 0;
     color: #ffffff;
     margin-top: 1rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    width: 100%;
     position: -webkit-sticky;
     position: sticky;
-    bottom: 0;
+    width: 100%;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply > span {
@@ -24565,7 +24564,6 @@ article .social-icon .link-copy {
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
-    min-height: 100%;
     position: relative;
 }
 
@@ -24577,14 +24575,14 @@ article .social-icon .link-copy {
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply {
     background-color: #dd0036;
     border: 0;
+    bottom: 0;
     color: #ffffff;
     margin-top: 1rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    width: 100%;
     position: -webkit-sticky;
     position: sticky;
-    bottom: 0;
+    width: 100%;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply > span {
