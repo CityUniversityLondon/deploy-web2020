@@ -21249,6 +21249,29 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
+/*
+Normally two logos will be displayed. However, given small logo sizes, each logo should be 1/3 of parent container.
+If >2 logos, each row to contain three logos, before wrapping to the next row.
+*/
+.case-study__overview__main__details__logos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.case-study__overview__main__details__logos figure {
+    position: relative;
+    margin-right: 1rem;
+    background: #ffffff;
+    width: calc(100% * (1 / 3) - 1rem);
+}
+
+.case-study__overview__main__details__logos img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
 .case-study__overview__main__details .label {
     font-weight: 600;
 }
