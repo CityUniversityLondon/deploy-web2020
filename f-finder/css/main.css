@@ -18612,10 +18612,11 @@ article figure figcaption a:active {
 }
 
 .finder__mobilefilters[data-open='true'] {
+    -webkit-overflow-scrolling: touch;
     background: #ffffff;
     bottom: 0;
-    left: 0;
     height: 100vh;
+    left: 0;
     overflow-y: scroll;
     position: fixed;
     right: 0;
@@ -18628,6 +18629,7 @@ article figure figcaption a:active {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    max-height: 10000vh;
     position: relative;
     width: 100%;
 }
@@ -24552,10 +24554,11 @@ article .social-icon .link-copy {
 }
 
 .finder__mobilefilters[data-open='true'] {
+    -webkit-overflow-scrolling: touch;
     background: #ffffff;
     bottom: 0;
-    left: 0;
     height: 100vh;
+    left: 0;
     overflow-y: scroll;
     position: fixed;
     right: 0;
@@ -24568,6 +24571,7 @@ article .social-icon .link-copy {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    max-height: 10000vh;
     position: relative;
     width: 100%;
 }
