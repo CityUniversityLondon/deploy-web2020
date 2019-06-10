@@ -7321,21 +7321,24 @@ const className = 'fa-link';
 
 function copyIconToClipboard(elem) {
   const copy = elem;
-  copy.addEventListener('mouseover', () => {
+  copy.parentNode.parentNode.style.position = 'relative';
+  copy.addEventListener('mouseover', e => {
     let t = document.createElement('div');
     let link = document.createElement('span');
+    let url = window.location.href;
     t.className = 'tooltip';
     link.className = 'link-copy';
-    let textlink = document.createTextNode('http://google.com');
+    let textlink = document.createTextNode(url);
     let textnode = document.createTextNode('Copy link');
     t.appendChild(textnode);
     link.appendChild(textlink);
     t.appendChild(link);
-    document.querySelector('.fa-link').appendChild(t);
+    e.target.parentElement.parentElement.appendChild(t);
+    e.target.parentElement.parentElement.classList.add('copyLink');
   });
   copy.addEventListener('click', e => {
     e.preventDefault();
-    let text = document.querySelector('.link-copy');
+    let text = e.target.parentElement.parentElement.querySelector('.link-copy');
     let range = document.createRange();
     range.selectNode(text);
     window.getSelection().addRange(range);
@@ -7344,8 +7347,8 @@ function copyIconToClipboard(elem) {
       // Now that we've selected the anchor text, execute the copy command
       let successful = document.execCommand('copy');
       let msg = successful ? 'successful' : 'unsuccessful';
-      document.querySelector('.tooltip').textContent = 'Link Copied';
-      document.querySelector('.tooltip').classList.add(msg);
+      e.target.parentElement.parentElement.querySelector('.tooltip').textContent = 'Link Copied';
+      e.target.parentElement.parentElement.querySelector('.tooltip').classList.add(msg);
     } catch (err) {
       throw new Error(e);
     } // Remove the selections - NOTE: Should use
@@ -7356,7 +7359,7 @@ function copyIconToClipboard(elem) {
   });
   copy.addEventListener('mouseout', e => {
     //remove element from mouseover
-    e.target.childNodes[0].remove();
+    e.target.parentElement.parentElement.querySelector('.tooltip').remove();
   });
 }
 
