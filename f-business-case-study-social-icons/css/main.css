@@ -19923,7 +19923,7 @@ article .social-icon:active, article .social-icon:hover, article .social-icon:fo
 .tooltip {
     font-family: "Plex Sans", sans-serif;
     color: #696969;
-    border: 0.062rem solid #e5e5e5;
+    border: 0.0625rem solid #e5e5e5;
     border-radius: 0.1rem;
     padding: 0.25rem 0.25rem;
     background-color: #e5e5e5;
@@ -21632,8 +21632,8 @@ a.modal__close:active, a.modal__close:focus {
 .case-study__content__share-icons {
     grid-area: s;
     position: relative;
-    border-bottom: 0.062rem solid #e5e5e5;
-    border-top: 0.062rem solid #e5e5e5;
+    border-bottom: 0.0625rem solid #e5e5e5;
+    border-top: 0.0625rem solid #e5e5e5;
     max-width: 80rem;
     display: grid;
     grid-row-gap: 0;
