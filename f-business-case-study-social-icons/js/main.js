@@ -7325,9 +7325,10 @@ function copyIconToClipboard(elem) {
   copy.addEventListener('mouseover', e => {
     let t = document.createElement('div');
     let link = document.createElement('span');
+    let url = window.location.href;
     t.className = 'tooltip';
     link.className = 'link-copy';
-    let textlink = document.createTextNode('http://google.com');
+    let textlink = document.createTextNode(url);
     let textnode = document.createTextNode('Copy link');
     t.appendChild(textnode);
     link.appendChild(textlink);
