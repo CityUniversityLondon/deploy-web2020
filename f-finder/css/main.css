@@ -18616,7 +18616,6 @@ article figure figcaption a:active {
     bottom: 0;
     height: 100vh;
     left: 0;
-    overflow-y: scroll;
     position: fixed;
     right: 0;
     top: 0;
@@ -18625,6 +18624,7 @@ article figure figcaption a:active {
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
+    overflow-y: scroll;
     position: relative;
 }
 
@@ -18636,13 +18636,10 @@ article figure figcaption a:active {
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply {
     background-color: #dd0036;
     border: 0;
-    bottom: 0;
     color: #ffffff;
     margin-top: 1rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    position: -webkit-sticky;
-    position: sticky;
     width: 100%;
 }
 
@@ -24555,7 +24552,6 @@ article .social-icon .link-copy {
     bottom: 0;
     height: 100vh;
     left: 0;
-    overflow-y: scroll;
     position: fixed;
     right: 0;
     top: 0;
@@ -24564,6 +24560,7 @@ article .social-icon .link-copy {
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
+    overflow-y: scroll;
     position: relative;
 }
 
@@ -24575,13 +24572,10 @@ article .social-icon .link-copy {
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply {
     background-color: #dd0036;
     border: 0;
-    bottom: 0;
     color: #ffffff;
     margin-top: 1rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    position: -webkit-sticky;
-    position: sticky;
     width: 100%;
 }
 
