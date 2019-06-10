@@ -18642,10 +18642,13 @@ article figure figcaption a:active {
     padding-bottom: 1rem;
     padding-top: 1rem;
     width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply > span {
-    border-bottom: 0.125rem 0.125rem #ffffff;
+    border-bottom: 0.125rem solid #ffffff;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__filters,
@@ -24579,10 +24582,13 @@ article .social-icon .link-copy {
     padding-bottom: 1rem;
     padding-top: 1rem;
     width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply > span {
-    border-bottom: 0.125rem 0.125rem #ffffff;
+    border-bottom: 0.125rem solid #ffffff;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__filters,
