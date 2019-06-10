@@ -18255,7 +18255,6 @@ article figure figcaption a:active {
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
-    box-shadow: 0 -0.25rem 1rem 0.5rem rgba(30, 30, 30, 0.75);
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -18612,21 +18611,25 @@ article figure figcaption a:active {
     }
 }
 
-.finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
+.finder__mobilefilters[data-open='true'] {
     background: #ffffff;
-    display: flex;
-    flex-direction: column;
+    bottom: 0;
     height: 100vh;
     left: 0;
+    overflow-y: scroll;
     position: fixed;
+    right: 0;
     top: 0;
     width: 100vw;
     z-index: 2;
 }
 
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
+    min-height: 100%;
+    position: relative;
+}
+
 .finder__mobilefilters[data-open='true'] .finder__filters {
-    flex-grow: 1;
-    overflow-y: scroll;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
@@ -18635,11 +18638,10 @@ article figure figcaption a:active {
     background-color: #dd0036;
     border: 0;
     color: #ffffff;
-    flex-grow: 0;
-    flex-shrink: 0;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
+    width: 100%;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply > span {
@@ -24190,7 +24192,6 @@ article .social-icon .link-copy {
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
-    box-shadow: 0 -0.25rem 1rem 0.5rem rgba(30, 30, 30, 0.75);
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -24547,21 +24548,25 @@ article .social-icon .link-copy {
     }
 }
 
-.finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
+.finder__mobilefilters[data-open='true'] {
     background: #ffffff;
-    display: flex;
-    flex-direction: column;
+    bottom: 0;
     height: 100vh;
     left: 0;
+    overflow-y: scroll;
     position: fixed;
+    right: 0;
     top: 0;
     width: 100vw;
     z-index: 2;
 }
 
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
+    min-height: 100%;
+    position: relative;
+}
+
 .finder__mobilefilters[data-open='true'] .finder__filters {
-    flex-grow: 1;
-    overflow-y: scroll;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
@@ -24570,11 +24575,10 @@ article .social-icon .link-copy {
     background-color: #dd0036;
     border: 0;
     color: #ffffff;
-    flex-grow: 0;
-    flex-shrink: 0;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
+    width: 100%;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply > span {
