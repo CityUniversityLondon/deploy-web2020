@@ -18613,17 +18613,23 @@ article figure figcaption a:active {
 
 .finder__mobilefilters[data-open='true'] {
     background: #ffffff;
-    min-height: 100vh;
+    bottom: 0;
     left: 0;
+    height: 100vh;
     overflow-y: scroll;
     position: fixed;
+    right: 0;
     top: 0;
     width: 100vw;
-    z-index: 4;
+    z-index: 2;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     position: relative;
+    width: 100%;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__filters {
@@ -24547,17 +24553,23 @@ article .social-icon .link-copy {
 
 .finder__mobilefilters[data-open='true'] {
     background: #ffffff;
-    min-height: 100vh;
+    bottom: 0;
     left: 0;
+    height: 100vh;
     overflow-y: scroll;
     position: fixed;
+    right: 0;
     top: 0;
     width: 100vw;
-    z-index: 4;
+    z-index: 2;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     position: relative;
+    width: 100%;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__filters {
