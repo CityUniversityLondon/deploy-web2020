@@ -17259,14 +17259,14 @@ article figure figcaption a:active {
 @media (min-width: 769px) {
     .finder {
         grid-template-rows: 2;
-        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters . results results results results results results results results';
+        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters filters results results results results results results results results';
     }
 }
 
 @media (min-width: 901px) {
     .finder {
         grid-template-rows: 2;
-        grid-template-areas: 'query query query query query query query query query query query query query query query query query query' 'filters filters filters filters  . results results results results results results results results results results results results results';
+        grid-template-areas: 'query query query query query query query query query query query query query query query query query query' 'filters filters filters filters filters results results results results results results results results results results results results results';
     }
 }
 
@@ -23199,14 +23199,14 @@ article .social-icon .link-copy {
 @media (min-width: 769px) {
     .finder {
         grid-template-rows: 2;
-        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters . results results results results results results results results';
+        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters filters results results results results results results results results';
     }
 }
 
 @media (min-width: 901px) {
     .finder {
         grid-template-rows: 2;
-        grid-template-areas: 'query query query query query query query query query query query query query query query query query query' 'filters filters filters filters  . results results results results results results results results results results results results results';
+        grid-template-areas: 'query query query query query query query query query query query query query query query query query query' 'filters filters filters filters filters results results results results results results results results results results results results results';
     }
 }
 
