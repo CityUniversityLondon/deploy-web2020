@@ -1150,8 +1150,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const maximumSuggestions = 5,
-      //[keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40],
-keyCodeEscape = 27;
+      [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40];
 
 function finder__query(props) {
   const [partialQuery, setPartialQuery] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(props.query.query);
@@ -1209,6 +1208,35 @@ function finder__query(props) {
       setPartialQuery(suggestion);
       setSuggestions([]);
       focusInput();
+    },
+    onKeyDown: e => {
+      switch (e.keyCode) {
+        case keyCodeEscape:
+          e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
+          setSuggestions([]);
+          break;
+
+        case keyCodeUp:
+          if (e.target.parentNode.previousElementSibling && e.target.parentNode.previousElementSibling.querySelector('button')) {
+            e.preventDefault();
+            e.target.parentNode.previousElementSibling.querySelector('button').focus();
+          } else {
+            e.preventDefault();
+            e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
+          }
+
+          break;
+
+        case keyCodeDown:
+          e.preventDefault();
+
+          if (e.target.parentNode.nextElementSibling && e.target.parentNode.nextElementSibling.querySelector('button')) {
+            e.preventDefault();
+            e.target.parentNode.nextElementSibling.querySelector('button').focus();
+          }
+
+          break;
+      }
     }
   }, suggestion))));
   const input = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
@@ -1230,6 +1258,14 @@ function finder__query(props) {
       switch (e.keyCode) {
         case keyCodeEscape:
           clearQuery();
+          break;
+
+        case keyCodeDown:
+          if (suggestions && suggestions.length > 0) {
+            e.preventDefault();
+            e.target.parentNode.querySelector('.finder__query__suggestions button').focus();
+          }
+
           break;
       }
     },
