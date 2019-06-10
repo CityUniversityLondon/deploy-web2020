@@ -1935,9 +1935,7 @@ function finder__mobilefilters(props) {
       Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__["enableBodyScroll"])(getFilters());
     }
   }, [display]);
-  {
-    props.response.summary && props.response.summary.totalMatching === 1 ? "View 1 ".concat(props.config.summariseAs.singular) : "View ".concat(props.response.summary && props.response.summary.totalMatching, " ").concat(props.config.summariseAs.plural);
-  }
+  const totalMatchingMessage = props.response && props.response.summary && props.response.summary.totalMatching === 1 ? "View 1 ".concat(props.config.summariseAs.singular) : "View ".concat(props.response && props.response.summary && props.response.summary.totalMatching, " ").concat(props.config.summariseAs.plural);
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "finder__mobilefilters",
     "data-open": display
@@ -1971,7 +1969,7 @@ function finder__mobilefilters(props) {
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.updating ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-spinner fa-pulse icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Updating results\u2026")) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null)))))));
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Updating results\u2026")) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, totalMatchingMessage)))))));
 }
 
 finder__mobilefilters.propTypes = {
