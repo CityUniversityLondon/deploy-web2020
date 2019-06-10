@@ -1921,7 +1921,10 @@ function finder__mobilefilters(props) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
     if (!focusTrap.activate) {
-      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_5___default()(getFilters()));
+      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_5___default()(getFilters(), {
+        onDeactivate: () => setDisplay(false),
+        clickOutsideDeactivates: true
+      }));
     }
 
     if (display) {
