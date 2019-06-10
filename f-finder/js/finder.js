@@ -726,6 +726,36 @@ finder__appliedfilters.propTypes = {
 
 /***/ }),
 
+/***/ "./src/patterns/finder/components/finder__checkbox.js":
+/*!************************************************************!*\
+  !*** ./src/patterns/finder/components/finder__checkbox.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
+
+
+// import React from 'react';
+
+
+function finder__checkbox() {
+  return null;
+}
+
+finder__checkbox.propTypes = {
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (finder__checkbox);
+
+/***/ }),
+
 /***/ "./src/patterns/finder/components/finder__clear.js":
 /*!*********************************************************!*\
   !*** ./src/patterns/finder/components/finder__clear.js ***!
@@ -824,20 +854,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _finder_radio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finder__radio */ "./src/patterns/finder/components/finder__radio.js");
+/* harmony import */ var _finder_checkbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__checkbox */ "./src/patterns/finder/components/finder__checkbox.js");
 
 
 
- // import RadioFilter from './finder__radio';
-// import CheckboxFilter from './finder__checkbox';
+
+
+
 
 function finder__filters(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "finder__filters"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Filter ".concat(props.summariseAs.plural)));
+  if (props.config.facetLabels.length > 0) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "finder__filters"
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Filter ".concat(props.config.summariseAs.plural)), props.config.facetLabels.map(facet => {
+      switch (facet.type) {
+        case 'radio':
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_radio__WEBPACK_IMPORTED_MODULE_2__["default"], {
+            key: facet.meta,
+            facet: facet,
+            query: props.query,
+            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
+            update: props.update
+          });
+
+        case 'checkbox':
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_checkbox__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            key: facet.meta,
+            facet: facet,
+            query: props.query,
+            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
+            update: props.query
+          });
+      }
+    }));
+  } else {
+    return null;
+  }
 }
 
 finder__filters.propTypes = {
-  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+  config: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  response: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__filters);
 
@@ -1127,6 +1187,109 @@ finder__query.propTypes = {
 
 /***/ }),
 
+/***/ "./src/patterns/finder/components/finder__radio.js":
+/*!*********************************************************!*\
+  !*** ./src/patterns/finder/components/finder__radio.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+
+
+function finder__radio(props) {
+  const [open, setOpen] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(props.facet.defaultOpen),
+        currentValue = props.query.facets[props.facet.meta] || '';
+  const responseFacets = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values ? props.responseFacet[0].categories[0].values.reduce((acc, data) => {
+    return [...acc, data.data.toLowerCase()];
+  }, []) : [];
+  const allFacets = props.facet.values.reduce((acc, data) => {
+    return [...acc, data.data.replace(/^"/, '').replace(/"$/, '')];
+  }, []);
+  const hiddenFacets = allFacets.filter(facet => responseFacets.indexOf(facet) < 0).length;
+
+  const setFacet = e => {
+    const newQuery = props.query,
+          newValue = e.target.value;
+    newValue ? newQuery.facets[props.facet.meta] = newValue : delete newQuery.facets[props.facet.meta];
+    newQuery.startRank = 1;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("fieldset", {
+    className: "finder__filter finder__radio"
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("legend", {
+    "data-open": open ? 'true' : 'false'
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    type: "button",
+    "aria-expanded": open ? 'true' : 'false',
+    onClick: () => setOpen(!open)
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.facet.name), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    className: open ? 'fal fa-minus icon' : 'fal fa-plus icon',
+    "aria-label": open ? 'Close filter' : 'Open filter'
+  })))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+    role: "presentation"
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+    key: 'all'
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    checked: currentValue === '',
+    id: "meta".concat(props.facet.meta, "all"),
+    name: "meta_".concat(props.facet.meta, "_orsand"),
+    type: "radio",
+    value: "",
+    onChange: e => setFacet(e)
+  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    htmlFor: "meta".concat(props.facet.meta, "all")
+  }, props.facet.noSelection, hiddenFacets > 0 && " (".concat(hiddenFacets, " hidden)"))), props.facet.values.map((value, i) => {
+    const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.replace(/^"/, '').replace(/"$/, ''));
+
+    if (responseFacetDetails && responseFacetDetails[0] || currentValue === value.data) {
+      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+        key: i
+      }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+        checked: currentValue === value.data,
+        id: "meta".concat(props.facet.meta).concat(i),
+        name: "meta_".concat(props.facet.meta, "_orsand"),
+        type: "radio",
+        value: value.data,
+        onChange: e => setFacet(e)
+      }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+        htmlFor: "meta".concat(props.facet.meta).concat(i)
+      }, value.label, " (", responseFacetDetails && responseFacetDetails[0] ? responseFacetDetails[0].count : 0, ")"));
+    } else {
+      return null;
+    }
+  })));
+}
+
+finder__radio.propTypes = {
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (finder__radio);
+
+/***/ }),
+
 /***/ "./src/patterns/finder/components/finder__results.js":
 /*!***********************************************************!*\
   !*** ./src/patterns/finder/components/finder__results.js ***!
@@ -1335,6 +1498,7 @@ function Finder(props) {
   };
   const initialResponse = {
     bestBets: [],
+    facets: [],
     results: [],
     spell: null,
     summary: {
@@ -1361,15 +1525,16 @@ function Finder(props) {
     currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
     props.config.facetLabels.forEach(facet => {
       if (currFacets[facet.meta]) {
-        params.set("meta_".concat(facet, "_orsand"), currFacets[facet.meta]);
+        params.set("meta_".concat(facet.meta, "_orsand"), currFacets[facet.meta]);
       } else {
-        params.delete("meta_".concat(facet, "_orsand"));
+        params.delete("meta_".concat(facet.meta, "_orsand"));
       }
     });
     window.history.replaceState({}, '', window.location.pathname + '?' + params.toString());
   };
 
   Object(react__WEBPACK_IMPORTED_MODULE_7__["useEffect"])(() => {
+    replaceHistory(query.query, query.startRank, query.facets);
     setUpdating(true);
     call.cancel();
     const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_9__["find"])(query.collection, query.fixedFacets, query.query, query.sortBy, query.sortDirection, query.startRank, query.numRanks, query.facets);
@@ -1379,7 +1544,6 @@ function Finder(props) {
       }
     });
     request.then(data => {
-      replaceHistory(query.query, query.startRank, query.facets);
       setResponse(data);
       setUpdating(false);
     }).catch(() => {
@@ -1388,7 +1552,7 @@ function Finder(props) {
     });
   }, [update]);
   return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
-    className: "finder",
+    className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
     onSubmit: e => {
       e.preventDefault();
     }
@@ -1402,7 +1566,14 @@ function Finder(props) {
     },
     updating: updating
   }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_finder_filters__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    summariseAs: props.config.summariseAs
+    config: props.config,
+    query: query,
+    response: funnelbackResponse,
+    update: {
+      query: newQuery => setQuery(newQuery),
+      results: newUpdate => setUpdate(newUpdate),
+      updateState: update
+    }
   }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_finder_results__WEBPACK_IMPORTED_MODULE_12__["default"], {
     query: query,
     response: funnelbackResponse,
