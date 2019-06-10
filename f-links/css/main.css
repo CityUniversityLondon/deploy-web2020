@@ -12314,6 +12314,7 @@ main table td em {
     border-bottom-width: 0.125rem;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
 }
 
 @media (hover: hover) {
@@ -12408,6 +12409,12 @@ main table td em {
 
 .breadcrumbs a:active {
     color: #1e1e1e;
+}
+
+@media (hover: hover) {
+    .breadcrumbs a:hover {
+        background-image: none;
+    }
 }
 
 .breadcrumbs ol {
@@ -16809,6 +16816,7 @@ article figure figcaption a {
     border-bottom-width: 0.125rem;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
 }
 
 @media (hover: hover) {
@@ -16903,6 +16911,12 @@ article figure figcaption a:focus {
 
 article figure figcaption a:active {
     color: #1e1e1e;
+}
+
+@media (hover: hover) {
+    article figure figcaption a:hover {
+        background-image: none;
+    }
 }
 
 .figcaption__credit {
@@ -17752,6 +17766,7 @@ article figure figcaption a:active {
     border-bottom-width: 0.125rem;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
     border-bottom-color: transparent;
 }
 
@@ -17847,6 +17862,12 @@ article figure figcaption a:active {
 
 .menu li a:active {
     color: #1e1e1e;
+}
+
+@media (hover: hover) {
+    .menu li a:hover {
+        background-image: none;
+    }
 }
 
 .menu li a:focus {
@@ -20872,6 +20893,172 @@ article .social-icon .link-copy {
     }
 }
 
+.linked-heading {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: none;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .linked-heading:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.linked-heading:focus, .linked-heading:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.linked-heading:focus, .linked-heading:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.linked-heading div:first-child {
+    display: flex;
+}
+
+.linked-heading div:first-child span:first-child {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #1e1e1e;
+    position: relative;
+    margin-right: 1rem;
+}
+
+.linked-heading div:first-child span:first-child:before {
+    background: #dd0036;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s ease, width 0.6s ease;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .linked-heading div:first-child span:first-child:before {
+        transition: none;
+    }
+}
+
+.linked-heading div:first-child span:first-child:focus {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .linked-heading div:first-child span:first-child:hover {
+        border-bottom-color: #1e1e1e;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+    .linked-heading div:first-child span:first-child:hover:before {
+        opacity: 1;
+        width: 100%;
+    }
+}
+
+.linked-heading div:first-child span:first-child:active {
+    border-bottom-color: #dd0036;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.linked-heading div:first-child span:first-child:focus {
+    color: #1e1e1e;
+}
+
+@media (hover: hover) {
+    .linked-heading div:first-child span:first-child:hover {
+        color: #1e1e1e;
+    }
+}
+
+.linked-heading div:first-child span:first-child:active {
+    color: #1e1e1e;
+}
+
+@media (hover: hover) {
+    .linked-heading:hover {
+        background-image: none;
+    }
+}
+
+.linked-heading:hover .linked-heading__icons__icon {
+    opacity: 0;
+}
+
+.linked-heading:hover .linked-heading__icons__icon--hover {
+    opacity: 1;
+}
+
+.linked-heading:active .linked-heading__icons__icon {
+    opacity: 0;
+}
+
+.linked-heading:active .linked-heading__icons__icon--hover {
+    opacity: 1;
+}
+
+.linked-heading__icons {
+    display: inline-block;
+    background: #dd0036;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    border-bottom-width: 0.125rem;
+    border-bottom-color: transparent;
+}
+
+.linked-heading__icons .linked-heading__icons__icon {
+    opacity: 1;
+    transition: opacity 0.55s ease-in-out;
+    transform: translateX(-0.75rem);
+}
+
+.linked-heading__icons .linked-heading__icons__icon--hover {
+    opacity: 0;
+}
+
 /**
 *
 * Modal animation styles
@@ -22628,6 +22815,7 @@ a.modal__close:active, a.modal__close:focus {
     border-bottom-width: 0.125rem;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
     border-bottom-color: #ffffff;
     color: #ffffff;
 }
@@ -22724,6 +22912,12 @@ a.modal__close:active, a.modal__close:focus {
 
 .theme--dark .breadcrumbs a:active {
     color: #1e1e1e;
+}
+
+@media (hover: hover) {
+    .theme--dark .breadcrumbs a:hover {
+        background-image: none;
+    }
 }
 
 .theme--dark .breadcrumbs a:focus {
@@ -23732,6 +23926,7 @@ a.modal__close:active, a.modal__close:focus {
     border-bottom-width: 0.125rem;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
     border-bottom-color: #ffffff;
     color: #ffffff;
 }
@@ -23828,6 +24023,12 @@ a.modal__close:active, a.modal__close:focus {
 
 .theme--dark article figure figcaption a:active {
     color: #1e1e1e;
+}
+
+@media (hover: hover) {
+    .theme--dark article figure figcaption a:hover {
+        background-image: none;
+    }
 }
 
 .theme--dark article figure figcaption a:focus {
@@ -23985,6 +24186,7 @@ a.modal__close:active, a.modal__close:focus {
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
         position: relative;
+        background-image: none;
         border-bottom-color: #ffffff;
         color: #ffffff;
         border-bottom-color: transparent;
@@ -24088,6 +24290,15 @@ a.modal__close:active, a.modal__close:focus {
     .theme--dark.js .menu li a:active {
         color: #1e1e1e;
     }
+}
+
+@media screen and (hover: hover) {
+    .theme--dark.js .menu li a:hover {
+        background-image: none;
+    }
+}
+
+@media screen {
     .theme--dark.js .menu li a:focus {
         color: #ffffff;
         border-bottom-color: #ffffff;
