@@ -18612,12 +18612,10 @@ article figure figcaption a:active {
 }
 
 .finder__mobilefilters[data-open='true'] {
-    -webkit-overflow-scrolling: touch;
     background: #ffffff;
     bottom: 0;
     height: 100vh;
     left: 0;
-    overflow-y: scroll;
     position: fixed;
     right: 0;
     top: 0;
@@ -18626,12 +18624,15 @@ article figure figcaption a:active {
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    max-height: 10000vh;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+    overflow-y: scroll;
     position: relative;
-    width: 100%;
+    width: 100vw;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters__content {
+    padding-bottom: 4.5rem;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__filters {
@@ -24554,12 +24555,10 @@ article .social-icon .link-copy {
 }
 
 .finder__mobilefilters[data-open='true'] {
-    -webkit-overflow-scrolling: touch;
     background: #ffffff;
     bottom: 0;
     height: 100vh;
     left: 0;
-    overflow-y: scroll;
     position: fixed;
     right: 0;
     top: 0;
@@ -24568,12 +24567,15 @@ article .social-icon .link-copy {
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    max-height: 10000vh;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+    overflow-y: scroll;
     position: relative;
-    width: 100%;
+    width: 100vw;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters__content {
+    padding-bottom: 4.5rem;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__filters {
