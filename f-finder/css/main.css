@@ -18613,18 +18613,16 @@ article figure figcaption a:active {
 
 .finder__mobilefilters[data-open='true'] {
     background: #ffffff;
-    bottom: 0;
     height: 100vh;
     left: 0;
+    overflow-y: scroll;
     position: fixed;
-    right: 0;
     top: 0;
     width: 100vw;
     z-index: 2;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
-    overflow-y: scroll;
     position: relative;
 }
 
@@ -24549,18 +24547,16 @@ article .social-icon .link-copy {
 
 .finder__mobilefilters[data-open='true'] {
     background: #ffffff;
-    bottom: 0;
     height: 100vh;
     left: 0;
+    overflow-y: scroll;
     position: fixed;
-    right: 0;
     top: 0;
     width: 100vw;
     z-index: 2;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
-    overflow-y: scroll;
     position: relative;
 }
 
