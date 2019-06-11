@@ -772,34 +772,61 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Components to update facet values in the query.
+ * Predicate for whether a facet should be displayed, if it's dependent on
+ * another facet being set.
+ *
+ * @param {object} facet The facet to potentially display.
+ * @param {object} facetMap The facets currently set on the query.
+ * @return {bool} - Has any dependency been met
+ */
+
+function dependencyMet(facet, facetMap) {
+  const setFacets = Object.keys(facetMap);
+
+  if (!facet.dependency || setFacets.indexOf(facet.meta) >= 0) {
+    return true;
+  } else {
+    if (setFacets.indexOf(facet.dependency) >= 0 && facetMap[facet.dependency] !== '') {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+/**
+ * Component to update facet values in the query.
  *
  * @param {object} props React props.
  * @returns {object} - React component.
  */
 
+
 function finder__filters(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Filter ".concat(props.config.summariseAs.plural)), props.config.facetLabels.map(facet => {
-    switch (facet.type) {
-      case 'radio':
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_radio__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          key: facet.meta,
-          facet: facet,
-          query: props.query,
-          responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
-          update: props.update
-        });
+    if (dependencyMet(facet, props.query.facets)) {
+      switch (facet.type) {
+        case 'radio':
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_radio__WEBPACK_IMPORTED_MODULE_2__["default"], {
+            key: facet.meta,
+            facet: facet,
+            query: props.query,
+            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
+            update: props.update
+          });
 
-      case 'checkbox':
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_checkbox__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          key: facet.meta,
-          facet: facet,
-          query: props.query,
-          responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
-          update: props.query
-        });
+        case 'checkbox':
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_checkbox__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            key: facet.meta,
+            facet: facet,
+            query: props.query,
+            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
+            update: props.query
+          });
+      }
+    } else {
+      return null;
     }
   }));
 }
