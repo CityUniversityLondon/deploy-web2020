@@ -3301,6 +3301,147 @@ __webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "./no
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/es.string.replace.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/core-js/modules/es.string.replace.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
+var toObject = __webpack_require__(/*! ../internals/to-object */ "./node_modules/core-js/internals/to-object.js");
+var toLength = __webpack_require__(/*! ../internals/to-length */ "./node_modules/core-js/internals/to-length.js");
+var toInteger = __webpack_require__(/*! ../internals/to-integer */ "./node_modules/core-js/internals/to-integer.js");
+var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "./node_modules/core-js/internals/require-object-coercible.js");
+var advanceStringIndex = __webpack_require__(/*! ../internals/advance-string-index */ "./node_modules/core-js/internals/advance-string-index.js");
+var regExpExec = __webpack_require__(/*! ../internals/regexp-exec-abstract */ "./node_modules/core-js/internals/regexp-exec-abstract.js");
+var max = Math.max;
+var min = Math.min;
+var floor = Math.floor;
+var SUBSTITUTION_SYMBOLS = /\$([$&`']|\d\d?|<[^>]*>)/g;
+var SUBSTITUTION_SYMBOLS_NO_NAMED = /\$([$&`']|\d\d?)/g;
+
+var maybeToString = function (it) {
+  return it === undefined ? it : String(it);
+};
+
+// @@replace logic
+__webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "./node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js")(
+  'replace',
+  2,
+  function (REPLACE, nativeReplace, maybeCallNative) {
+    return [
+      // `String.prototype.replace` method
+      // https://tc39.github.io/ecma262/#sec-string.prototype.replace
+      function replace(searchValue, replaceValue) {
+        var O = requireObjectCoercible(this);
+        var replacer = searchValue == undefined ? undefined : searchValue[REPLACE];
+        return replacer !== undefined
+          ? replacer.call(searchValue, O, replaceValue)
+          : nativeReplace.call(String(O), searchValue, replaceValue);
+      },
+      // `RegExp.prototype[@@replace]` method
+      // https://tc39.github.io/ecma262/#sec-regexp.prototype-@@replace
+      function (regexp, replaceValue) {
+        var res = maybeCallNative(nativeReplace, regexp, this, replaceValue);
+        if (res.done) return res.value;
+
+        var rx = anObject(regexp);
+        var S = String(this);
+
+        var functionalReplace = typeof replaceValue === 'function';
+        if (!functionalReplace) replaceValue = String(replaceValue);
+
+        var global = rx.global;
+        if (global) {
+          var fullUnicode = rx.unicode;
+          rx.lastIndex = 0;
+        }
+        var results = [];
+        while (true) {
+          var result = regExpExec(rx, S);
+          if (result === null) break;
+
+          results.push(result);
+          if (!global) break;
+
+          var matchStr = String(result[0]);
+          if (matchStr === '') rx.lastIndex = advanceStringIndex(S, toLength(rx.lastIndex), fullUnicode);
+        }
+
+        var accumulatedResult = '';
+        var nextSourcePosition = 0;
+        for (var i = 0; i < results.length; i++) {
+          result = results[i];
+
+          var matched = String(result[0]);
+          var position = max(min(toInteger(result.index), S.length), 0);
+          var captures = [];
+          // NOTE: This is equivalent to
+          //   captures = result.slice(1).map(maybeToString)
+          // but for some reason `nativeSlice.call(result, 1, result.length)` (called in
+          // the slice polyfill when slicing native arrays) "doesn't work" in safari 9 and
+          // causes a crash (https://pastebin.com/N21QzeQA) when trying to debug it.
+          for (var j = 1; j < result.length; j++) captures.push(maybeToString(result[j]));
+          var namedCaptures = result.groups;
+          if (functionalReplace) {
+            var replacerArgs = [matched].concat(captures, position, S);
+            if (namedCaptures !== undefined) replacerArgs.push(namedCaptures);
+            var replacement = String(replaceValue.apply(undefined, replacerArgs));
+          } else {
+            replacement = getSubstitution(matched, S, position, captures, namedCaptures, replaceValue);
+          }
+          if (position >= nextSourcePosition) {
+            accumulatedResult += S.slice(nextSourcePosition, position) + replacement;
+            nextSourcePosition = position + matched.length;
+          }
+        }
+        return accumulatedResult + S.slice(nextSourcePosition);
+      }
+    ];
+
+    // https://tc39.github.io/ecma262/#sec-getsubstitution
+    function getSubstitution(matched, str, position, captures, namedCaptures, replacement) {
+      var tailPos = position + matched.length;
+      var m = captures.length;
+      var symbols = SUBSTITUTION_SYMBOLS_NO_NAMED;
+      if (namedCaptures !== undefined) {
+        namedCaptures = toObject(namedCaptures);
+        symbols = SUBSTITUTION_SYMBOLS;
+      }
+      return nativeReplace.call(replacement, symbols, function (match, ch) {
+        var capture;
+        switch (ch.charAt(0)) {
+          case '$': return '$';
+          case '&': return matched;
+          case '`': return str.slice(0, position);
+          case "'": return str.slice(tailPos);
+          case '<':
+            capture = namedCaptures[ch.slice(1, -1)];
+            break;
+          default: // \d\d?
+            var n = +ch;
+            if (n === 0) return match;
+            if (n > m) {
+              var f = floor(n / 10);
+              if (f === 0) return match;
+              if (f <= m) return captures[f - 1] === undefined ? ch.charAt(1) : captures[f - 1] + ch.charAt(1);
+              return match;
+            }
+            capture = captures[n - 1];
+        }
+        return capture === undefined ? '' : capture;
+      });
+    }
+  }
+);
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/es.string.search.js":
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es.string.search.js ***!
@@ -4988,7 +5129,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns/cms-editor-warning/cms-editor-warning */ "./src/patterns/cms-editor-warning/cms-editor-warning.js");
 /* harmony import */ var _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/cookie-notice/cookie-notice */ "./src/patterns/cookie-notice/cookie-notice.js");
 /* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
-/* harmony import */ var _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-paginated */ "./src/patterns/key-info-box/key-info-paginated.js");
+/* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
 /* harmony import */ var _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-slider */ "./src/patterns/key-info-box/key-info-slider.js");
 /* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
 /* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
@@ -5025,7 +5166,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_14__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_14__["default"]]);
 
 /***/ }),
 
@@ -5726,170 +5867,6 @@ function launchFeedback(elem) {
 
 /***/ }),
 
-/***/ "./src/patterns/key-info-box/key-info-paginated.js":
-/*!*********************************************************!*\
-  !*** ./src/patterns/key-info-box/key-info-paginated.js ***!
-  \*********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.promise */ "./node_modules/core-js/modules/es.promise.js");
-/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
-
-
-/**
- * Key information box
- *
- * @module patterns/key-info-box/key-info-box
- * @author Mark Skinsley <mark.skinsley@city.ac.uk>
- * @copyright City, University of London 2018
- */
-
-const className = 'key-information--lifelong-learning--disable';
-let listings = document.querySelector('.key-information--lifelong-learning > ul'),
-    batchQuantity = 3,
-    contentToggles = Array.from(document.querySelectorAll('.content-toggle button')),
-    browserWidth = document.documentElement.scrollWidth,
-    listingDates = document.querySelectorAll('.key-information--lifelong-learning > ul > li'),
-    listingsVisible = [],
-    defaultDuration = 2000,
-    edgeOffset = 100; // Zen scroll setup
-
-zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
-
-function dateTabIndex() {
-  for (const listingDate of listingDates) {
-    listingDate.setAttribute('tabindex', '-1');
-  }
-} // Visible listings: needed to decide if more content still to be loaded.
-
-
-function calculateVisibleListings() {
-  listingsVisible = [];
-  Array.from(listings.children).forEach(elem => {
-    if (!elem.classList.contains('hide')) {
-      listingsVisible.push(elem);
-    }
-  });
-} // Mobile: Show listing entry based on navigation button clicks
-
-
-function listingDisplay() {
-  Array.from(listings.children).forEach((elem, i) => {
-    elem.dataset.id = "listing-".concat(i);
-  });
-} // Initial listings display
-
-
-function defaultListingsDisplay() {
-  const listElements = Array.from(listings.children);
-  listElements.forEach((elem, i) => {
-    i > batchQuantity - 1 ? elem.classList.add('hide') : elem.style.display = 'grid';
-  });
-}
-
-function launchKeyInfo(batchQuantity) {
-  dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
-
-  if (browserWidth >= 768) {
-    if (Array.from(listings.children).length > batchQuantity) {
-      listingDisplay();
-      defaultListingsDisplay();
-      calculateVisibleListings();
-      contentToggles.forEach(contentToggle => {
-        contentToggle.addEventListener('click', e => {
-          // This will increase with each 'Load more' click, so visible listings
-          // must be captured before any further listings are made visible
-          let preExpandListingsVisible = listingsVisible.length;
-          e.preventDefault();
-
-          if (preExpandListingsVisible < Array.from(listings.children).length) {
-            Array.from(listings.children).forEach((elem, i) => {
-              let targetListing = document.querySelector("[data-id='listing-".concat(preExpandListingsVisible, "']"));
-              let listingsVisibleLength = parseInt(listingsVisible.length) + batchQuantity;
-              const listingsLength = Array.from(listings.children).length;
-              let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
-
-              zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(targetListing, 200); // let targetListingDate = targetListing.querySelector(
-              //     `[data-id='listing-${preExpandListingsVisible}']`
-              // );
-              // // Final batch of listings, zen scroll to 'load more' button and offset
-
-              if (remainingItems <= 0) {
-                zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(contentToggle, 200);
-                contentToggle.style.display = 'none';
-              } // targetListingDate.focus();
-              // Bring in newly visible listings in two phases to allow for opacity transition
-
-
-              if (i < preExpandListingsVisible + batchQuantity) {
-                const promise = new Promise(resolve => {
-                  resolve(elem.style.display = 'grid');
-                });
-                promise.then(() => {
-                  elem.classList.remove('hide');
-                }); // Calculating visible listings must run here after display properties are updated
-
-                promise.then(() => {
-                  calculateVisibleListings();
-                });
-              }
-            });
-          }
-        }, false);
-      });
-    } else {
-      contentToggles.forEach(elem => {
-        elem.style.display = 'none';
-      });
-    } // Mobile: one listing visible at a time
-
-  } else if (browserWidth < 768 && Array.from(listings.children).length > 1) {
-    let listWrapper = document.querySelector('.key-information--lifelong-learning > ul');
-    listWrapper.classList.add('paginated-list');
-    listWrapper.dataset.pagesize = 1; // Scroll to top of listings after each paginated index click
-
-    let paginationControls = document.querySelectorAll('.pagination__controls > button');
-
-    for (const paginationControl of paginationControls) {
-      paginationControl.addEventListener('click', () => {
-        let listingsTop = document.querySelector('.key-information--lifelong-learning > ul');
-
-        if (paginationControl.getAttribute('aria-expanded') !== true) {
-          zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(listingsTop, 0);
-        }
-      });
-    }
-  }
-}
-
-function launchKeyInfoPaginated() {
-  // listingsQuantity();
-  launchKeyInfo(batchQuantity);
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchKeyInfoPaginated,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
 /***/ "./src/patterns/key-info-box/key-info-slider.js":
 /*!******************************************************!*\
   !*** ./src/patterns/key-info-box/key-info-slider.js ***!
@@ -6103,6 +6080,193 @@ function launchKeyInfoSlider() {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchKeyInfoSlider,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/load-more/load-more.js":
+/*!*********************************************!*\
+  !*** ./src/patterns/load-more/load-more.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+/**
+ * Load more - show additional items on 'Load more' button click. Update URL to illustrate where user is in item set.
+ *
+ * @module patterns/load-more/load-more
+ * @author Mark Skinsley <mark.skinsley@city.ac.uk>
+ * @copyright City, University of London 2019
+ */
+
+
+const className = 'load-more';
+let hashedUrl = window.location.hash,
+    loadMoreId;
+/**
+ * Control what items will display based on wrapper's 'data-listings-show' data attribute.
+ *
+ * @param {HTMLElements} [items] - Elements controlled by 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {HTMLElement} loadMoreBtn - Button controlling particular item group.
+ */
+
+function itemsDisplay(items, visibleItems, loadMoreBtn) {
+  for (const item of items.entries()) {
+    item[1].setAttribute('tabindex', '-1');
+
+    if (item[0] >= visibleItems) {
+      item[1].classList.add('hide');
+      item[1].style.display = 'none';
+    } else {
+      item[1].classList.remove('hide');
+      item[1].style.display = 'grid';
+    }
+  } // Hide 'load more' button when reached end of listings
+
+
+  if (visibleItems > items.length) {
+    loadMoreBtn.classList.add('hide');
+  } else {
+    loadMoreBtn.classList.remove('hide');
+  }
+}
+/**
+ * Scroll to, and focus first listing of newly visible items batch.
+ *
+ * @param {HTMLElement} [items] - Elements controlled by 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {number} itemsIncrement - Number of additional items shown when 'Load more' button is clicked.
+ */
+
+
+function scrollToItem(items, visibleItems, itemsIncrement) {
+  let targetItem = visibleItems - itemsIncrement;
+
+  for (const item of items.entries()) {
+    if (item[0] == targetItem) {
+      item[1].focus();
+      zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(item[1]);
+    } else if (visibleItems == itemsIncrement) {
+      if (item[0] == 0) {
+        item[1].focus();
+        zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(item[1]);
+      }
+    }
+  }
+}
+/**
+ * Push state to URL: used to build initial hash after first 'Load more' click.
+ *
+ * @param {string} parentType - Data attribute describing parent group.
+ * @param {string} childrenType - Data attribute describing child items.
+ * @param {HTMLElement} wrapperId - Parent element wrapping items and 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
+ */
+
+
+function pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
+  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
+  history.pushState('', '', "#".concat(parentType).concat(wrapperId, "-").concat(childrenType).concat(targetListingUrlParam));
+}
+/**
+ * Replace URL state: used to swap existing hash
+ *
+ * @param {string} parentType - Data attribute describing parent group.
+ * @param {string} childrenType - Data attribute describing child items.
+ * @param {HTMLElement} wrapperId - Parent element wrapping items and 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
+ */
+
+
+function replaceUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
+  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
+  history.replaceState('', '', "#".concat(parentType).concat(wrapperId, "-").concat(childrenType).concat(targetListingUrlParam));
+}
+
+function launchLoadMore(e) {
+  let wrapperId = e.getAttribute('id'),
+      items = e.querySelectorAll('.item'),
+      itemsIncrement = parseInt(e.dataset.increment),
+      loadMoreBtn = e.querySelector('.content-toggle button'),
+      parentType = e.getAttribute('data-item-parent'),
+      childrenType = e.getAttribute('data-item-children');
+  /**
+   * Give wrapper a numeric data attribute. As this changes, so
+   * will the number of visible items.
+   */
+
+  e.setAttribute('data-items-visible', itemsIncrement);
+  let visibleItems = parseInt(e.getAttribute('data-items-visible')); // Load correct number of items based on URL hash
+
+  if (hashedUrl) {
+    let hashedUrlParts = hashedUrl.split('-');
+    let activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[1]));
+    visibleItems = activeItem + (itemsIncrement - 1);
+    e.setAttribute('data-items-visible', visibleItems);
+    itemsDisplay(items, visibleItems, loadMoreBtn);
+    scrollToItem(items, visibleItems, itemsIncrement);
+  } else {
+    itemsDisplay(items, visibleItems, loadMoreBtn);
+  } // Run on every 'load more' click: increase listings by batch number
+
+
+  loadMoreBtn.addEventListener('click', () => {
+    visibleItems += itemsIncrement;
+    e.setAttribute('data-items-visible', visibleItems);
+    itemsDisplay(items, visibleItems, loadMoreBtn);
+    scrollToItem(items, visibleItems, itemsIncrement);
+    hashedUrl = window.location.hash;
+    hashedUrl ? replaceUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) : pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement);
+    loadMoreId = e.id;
+  }); // Back/forward browser clicks.
+
+  window.onpopstate = () => {
+    let loadMoreIdElement = document.getElementById(loadMoreId); // Must re-assign variable on pop state change
+
+    hashedUrl = window.location.hash;
+
+    if (hashedUrl) {
+      // Capture latest hash
+      let updatedUrlParts = window.location.hash.split('-');
+      let currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(updatedUrlParts[1]));
+      currentItem = currentItem + (itemsIncrement - 1);
+      visibleItems = currentItem;
+      e.setAttribute('data-items-visible', visibleItems);
+      itemsDisplay(items, visibleItems, loadMoreBtn);
+      scrollToItem(items, visibleItems, itemsIncrement);
+    } else {
+      let relatedItems = loadMoreIdElement.querySelectorAll('.item');
+      visibleItems = itemsIncrement;
+      itemsDisplay(items, visibleItems, loadMoreBtn);
+      e.setAttribute('data-items-visible', itemsIncrement);
+      scrollToItem(relatedItems, visibleItems, itemsIncrement);
+    }
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchLoadMore,
   launchQuery: ".".concat(className)
 });
 
@@ -7695,7 +7859,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7709,16 +7873,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gaEvent", function() { return gaEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendAll", function() { return appendAll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pxToRem", function() { return pxToRem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "numberFromString", function() { return numberFromString; });
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol.description */ "./node_modules/core-js/modules/es.symbol.description.js");
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -7879,6 +8047,16 @@ function pxToRem(pxValue) {
   browserWidth > 768 ? fontBase = 18 : fontBase = 16;
   let remValue = pxValue / fontBase;
   return remValue;
+}
+/**
+ * Extract number from string, e.g. return '123' from string 'a1b2c3'.
+ *
+ * @param {string} string - String
+ */
+
+function numberFromString(string) {
+  let number = string.replace(/\D/g, '');
+  return number;
 }
 
 /***/ }),
