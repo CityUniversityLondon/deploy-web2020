@@ -13598,7 +13598,7 @@ main table td em {
 }
 
 @media (min-width: 901px) {
-    .flex-container {
+    .card--pathway__block {
         display: flex;
     }
 }
