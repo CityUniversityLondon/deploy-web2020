@@ -3301,6 +3301,147 @@ __webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "./no
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/es.string.replace.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/core-js/modules/es.string.replace.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
+var toObject = __webpack_require__(/*! ../internals/to-object */ "./node_modules/core-js/internals/to-object.js");
+var toLength = __webpack_require__(/*! ../internals/to-length */ "./node_modules/core-js/internals/to-length.js");
+var toInteger = __webpack_require__(/*! ../internals/to-integer */ "./node_modules/core-js/internals/to-integer.js");
+var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "./node_modules/core-js/internals/require-object-coercible.js");
+var advanceStringIndex = __webpack_require__(/*! ../internals/advance-string-index */ "./node_modules/core-js/internals/advance-string-index.js");
+var regExpExec = __webpack_require__(/*! ../internals/regexp-exec-abstract */ "./node_modules/core-js/internals/regexp-exec-abstract.js");
+var max = Math.max;
+var min = Math.min;
+var floor = Math.floor;
+var SUBSTITUTION_SYMBOLS = /\$([$&`']|\d\d?|<[^>]*>)/g;
+var SUBSTITUTION_SYMBOLS_NO_NAMED = /\$([$&`']|\d\d?)/g;
+
+var maybeToString = function (it) {
+  return it === undefined ? it : String(it);
+};
+
+// @@replace logic
+__webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "./node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js")(
+  'replace',
+  2,
+  function (REPLACE, nativeReplace, maybeCallNative) {
+    return [
+      // `String.prototype.replace` method
+      // https://tc39.github.io/ecma262/#sec-string.prototype.replace
+      function replace(searchValue, replaceValue) {
+        var O = requireObjectCoercible(this);
+        var replacer = searchValue == undefined ? undefined : searchValue[REPLACE];
+        return replacer !== undefined
+          ? replacer.call(searchValue, O, replaceValue)
+          : nativeReplace.call(String(O), searchValue, replaceValue);
+      },
+      // `RegExp.prototype[@@replace]` method
+      // https://tc39.github.io/ecma262/#sec-regexp.prototype-@@replace
+      function (regexp, replaceValue) {
+        var res = maybeCallNative(nativeReplace, regexp, this, replaceValue);
+        if (res.done) return res.value;
+
+        var rx = anObject(regexp);
+        var S = String(this);
+
+        var functionalReplace = typeof replaceValue === 'function';
+        if (!functionalReplace) replaceValue = String(replaceValue);
+
+        var global = rx.global;
+        if (global) {
+          var fullUnicode = rx.unicode;
+          rx.lastIndex = 0;
+        }
+        var results = [];
+        while (true) {
+          var result = regExpExec(rx, S);
+          if (result === null) break;
+
+          results.push(result);
+          if (!global) break;
+
+          var matchStr = String(result[0]);
+          if (matchStr === '') rx.lastIndex = advanceStringIndex(S, toLength(rx.lastIndex), fullUnicode);
+        }
+
+        var accumulatedResult = '';
+        var nextSourcePosition = 0;
+        for (var i = 0; i < results.length; i++) {
+          result = results[i];
+
+          var matched = String(result[0]);
+          var position = max(min(toInteger(result.index), S.length), 0);
+          var captures = [];
+          // NOTE: This is equivalent to
+          //   captures = result.slice(1).map(maybeToString)
+          // but for some reason `nativeSlice.call(result, 1, result.length)` (called in
+          // the slice polyfill when slicing native arrays) "doesn't work" in safari 9 and
+          // causes a crash (https://pastebin.com/N21QzeQA) when trying to debug it.
+          for (var j = 1; j < result.length; j++) captures.push(maybeToString(result[j]));
+          var namedCaptures = result.groups;
+          if (functionalReplace) {
+            var replacerArgs = [matched].concat(captures, position, S);
+            if (namedCaptures !== undefined) replacerArgs.push(namedCaptures);
+            var replacement = String(replaceValue.apply(undefined, replacerArgs));
+          } else {
+            replacement = getSubstitution(matched, S, position, captures, namedCaptures, replaceValue);
+          }
+          if (position >= nextSourcePosition) {
+            accumulatedResult += S.slice(nextSourcePosition, position) + replacement;
+            nextSourcePosition = position + matched.length;
+          }
+        }
+        return accumulatedResult + S.slice(nextSourcePosition);
+      }
+    ];
+
+    // https://tc39.github.io/ecma262/#sec-getsubstitution
+    function getSubstitution(matched, str, position, captures, namedCaptures, replacement) {
+      var tailPos = position + matched.length;
+      var m = captures.length;
+      var symbols = SUBSTITUTION_SYMBOLS_NO_NAMED;
+      if (namedCaptures !== undefined) {
+        namedCaptures = toObject(namedCaptures);
+        symbols = SUBSTITUTION_SYMBOLS;
+      }
+      return nativeReplace.call(replacement, symbols, function (match, ch) {
+        var capture;
+        switch (ch.charAt(0)) {
+          case '$': return '$';
+          case '&': return matched;
+          case '`': return str.slice(0, position);
+          case "'": return str.slice(tailPos);
+          case '<':
+            capture = namedCaptures[ch.slice(1, -1)];
+            break;
+          default: // \d\d?
+            var n = +ch;
+            if (n === 0) return match;
+            if (n > m) {
+              var f = floor(n / 10);
+              if (f === 0) return match;
+              if (f <= m) return captures[f - 1] === undefined ? ch.charAt(1) : captures[f - 1] + ch.charAt(1);
+              return match;
+            }
+            capture = captures[n - 1];
+        }
+        return capture === undefined ? '' : capture;
+      });
+    }
+  }
+);
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/es.string.search.js":
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es.string.search.js ***!
@@ -4931,6 +5072,7 @@ function tryCatch(f) {
   try {
     f();
   } catch (e) {
+    // console.log(e);
     Object(_util__WEBPACK_IMPORTED_MODULE_4__["gaEvent"])('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "Pattern launch ".concat(e.fileName, " (").concat(window.location, ")"), true);
   }
 }
@@ -4987,7 +5129,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns/cms-editor-warning/cms-editor-warning */ "./src/patterns/cms-editor-warning/cms-editor-warning.js");
 /* harmony import */ var _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/cookie-notice/cookie-notice */ "./src/patterns/cookie-notice/cookie-notice.js");
 /* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
-/* harmony import */ var _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-paginated */ "./src/patterns/key-info-box/key-info-paginated.js");
+/* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
 /* harmony import */ var _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-slider */ "./src/patterns/key-info-box/key-info-slider.js");
 /* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
 /* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
@@ -4996,7 +5138,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
 /* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
 /* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
-/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
+/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
+/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
+/* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
+/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
+/* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
+/* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
 
 
 /**
@@ -5020,10 +5167,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // import modal from './patterns/modal/modal';
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_paginated__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_13__["default"]]);
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_14__["default"]]);
 
 /***/ }),
 
@@ -5102,10 +5253,9 @@ function setSection(heading, open) {
 
   if (open) {
     heading.nextElementSibling.classList.add('active');
-    calcBodyHeight(heading);
-    window.addEventListener('resize', () => {
-      calcBodyHeight(heading);
-    });
+    calcBodyHeight(heading); // window.addEventListener('resize', () => {
+    //     calcBodyHeight(heading);
+    // });
   } else {
     heading.nextElementSibling.classList.remove('active');
     heading.nextElementSibling.style.maxHeight = null;
@@ -5245,6 +5395,225 @@ function launchAccordion(accordion) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchAccordion,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/animation/content-fade-in/content-fade-in.js":
+/*!*******************************************************************!*\
+  !*** ./src/patterns/animation/content-fade-in/content-fade-in.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+
+
+
+
+/**
+ *  Animates content section to fade in and upwards on down scroll
+ *
+ * @module paint-layouts/case-study-transition-effects/content-section
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+const className = 'content-fade-in';
+
+function contentFadeIn(contentFadein) {
+  const viewPortHeight = window.innerHeight; // calculates viewport height
+
+  if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
+    window.addEventListener('scroll', function () {
+      const elemOffset = contentFadein.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      if (screenPos > elemOffset - viewPortHeight + 10 && !contentFadein.className.includes('content-fade-in--complete')) {
+        contentFadein.classList.add('content-fade-in--complete');
+      }
+    });
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: contentFadeIn,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/animation/content-separator/content-separator.js":
+/*!***********************************************************************!*\
+  !*** ./src/patterns/animation/content-separator/content-separator.js ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+
+
+
+
+/**
+ * Leading separator transition
+ *
+ * @module paint-layouts/case-study-transition-effects/leading-separator
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+const className = 'content-separator-container';
+/**
+ *
+ * @param {HTMLElement} contentSeparatorContainer: the separator is the
+ * first child of this container
+ *
+ */
+
+function contentSeparator(contentSeparatorContainer) {
+  const viewPortHeight = window.innerHeight; // calculates viewport height
+
+  let el = insertElement(contentSeparatorContainer);
+
+  if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
+    window.addEventListener('scroll', function () {
+      const elemOffset = el.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      if (screenPos > elemOffset - viewPortHeight + 20 && !el.className.includes('content-separator--transition-complete')) {
+        el.classList.add('content-separator--transition-complete');
+      }
+    });
+  }
+}
+/**
+ *
+ * @param {HTMLElement} contentSeparatorContainer: the separator is the
+ * first child of this container
+ *
+ * @returns {HTMLElement} el: the element that has the transition
+ *
+ */
+
+
+function insertElement(contentSeparatorContainer) {
+  let el = document.createElement('div');
+  el.setAttribute('class', 'content-separator');
+  contentSeparatorContainer.prepend(el);
+  return el;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: contentSeparator,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/animation/content-slide-up/content-slide-up.js":
+/*!*********************************************************************!*\
+  !*** ./src/patterns/animation/content-slide-up/content-slide-up.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+
+
+
+
+/**
+ * Background slideup transition, Animates content to slide up on down scroll
+ *
+ * @module paint-layouts/case-study-transition-effects/content-slideup
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+const className = 'content-slide-up';
+
+function contentSlideUp(contentSlideup) {
+  const viewPortHeight = window.innerHeight; // calculates viewport height
+
+  if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
+    window.addEventListener('scroll', function () {
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      const elemOffsetTop = contentSlideup.offsetTop; // calculates element offset from top to the page
+
+      const parentElemHeight = contentSlideup.parentElement.offsetHeight - parseInt(window.getComputedStyle(contentSlideup.parentElement, null).getPropertyValue('padding-bottom')) - parseInt(window.getComputedStyle(contentSlideup.parentElement, null).getPropertyValue('padding-top'));
+
+      if (screenPos > elemOffsetTop - viewPortHeight - parentElemHeight * 70 / 100 && !contentSlideup.className.includes('content-slideup--end')) {
+        contentSlideup.classList.add('content-slideup--end');
+      }
+    });
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: contentSlideUp,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/animation/image-expand/image-expand.js":
+/*!*************************************************************!*\
+  !*** ./src/patterns/animation/image-expand/image-expand.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+
+
+
+
+/**
+ * Image transition
+ *
+ * @module paint-layouts/case-study-transition-effects/banner-image
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019!
+ */
+
+const className = 'image-expand';
+
+function imageExpand(image) {
+  if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
+    const viewPortHeight = window.innerHeight; // calculates viewport height
+
+    window.addEventListener('scroll', function () {
+      const elemOffset = image.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      if (screenPos > elemOffset - viewPortHeight + 100 && !image.className.includes('image-expand--complete')) {
+        image.classList.add('image-expand--complete');
+      }
+    });
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: imageExpand,
   launchQuery: ".".concat(className)
 });
 
@@ -5566,7 +5935,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/external-link-finder/external-link-finder
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
+ * @copyright City, University of London 2019
  */
 
 /**
@@ -5725,199 +6094,6 @@ function launchFeedback(elem) {
 
 /***/ }),
 
-/***/ "./src/patterns/key-info-box/key-info-paginated.js":
-/*!*********************************************************!*\
-  !*** ./src/patterns/key-info-box/key-info-paginated.js ***!
-  \*********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.promise */ "./node_modules/core-js/modules/es.promise.js");
-/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-
-
-/**
- * Key information box
- *
- * @module patterns/key-info-box/key-info-box
- * @author Mark Skinsley <mark.skinsley@city.ac.uk>
- * @copyright City, University of London 2018
- */
-
-const className = 'key-info-paginated';
-let listings = document.querySelectorAll('.key-info__listing'),
-    batchQuantity = 3,
-    contentToggles = document.querySelectorAll('.content-toggle'),
-    browserWidth = document.documentElement.scrollWidth,
-    listingDates = document.querySelectorAll('.key-info__date'),
-    listingsVisible = [],
-    listingsLength = [],
-    defaultDuration = 2000,
-    edgeOffset = 100; // Zen scroll setup
-
-zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
-
-function dateTabIndex() {
-  for (const listingDate of listingDates) {
-    listingDate.setAttribute('tabindex', '-1');
-  }
-} // Visible listings: needed to decide if more content still to be loaded.
-
-
-function calculateVisibleListings() {
-  listingsVisible = [];
-
-  for (const listing of listings) {
-    if (!listing.classList.contains('hide')) {
-      listingsVisible.push(listing);
-    }
-  }
-} // Mobile: Show listing entry based on navigation button clicks
-
-
-function listingDisplay() {
-  for (const listing of listings.entries()) {
-    listing[1].setAttribute('data-id', "listing-".concat(listing[0]));
-  }
-} // Initial listings display
-
-
-function defaultListingsDisplay() {
-  listingsLength = [];
-
-  for (const listing of listings.entries()) {
-    listingsLength.push(listings.length);
-    listing[0] > batchQuantity - 1 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
-  }
-} // Show number of available starting dates.
-
-
-function listingsQuantity() {
-  const listingsNumber = [];
-
-  for (const listing of listings.entries()) {
-    listingsNumber.push(listing.length);
-  }
-
-  let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
-
-  for (const datesQuantity of datesQuantities) {
-    let date;
-    listingsNumber.length == 1 ? date = 'date' : date = 'dates';
-    let iconWrapper = document.createElement('div');
-    iconWrapper.classList.add('key-info__icon--left');
-    datesQuantity.appendChild(iconWrapper);
-    let calendarIcon = document.createElement('span');
-    calendarIcon.classList.add('fas');
-    calendarIcon.classList.add('fa-calendar-day');
-    iconWrapper.appendChild(calendarIcon);
-    let iconTextDiv = document.createElement('div');
-    iconWrapper.appendChild(iconTextDiv);
-    let iconTextP = document.createElement('p');
-    iconTextP.appendChild(document.createTextNode(listingsNumber.length + ' available start ' + date));
-    iconTextDiv.appendChild(iconTextP);
-  }
-}
-
-function launchKeyInfo(batchQuantity) {
-  dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
-
-  if (browserWidth > 768) {
-    if (listings.length > batchQuantity) {
-      listingDisplay();
-      defaultListingsDisplay();
-      calculateVisibleListings();
-
-      for (const contentToggle of contentToggles) {
-        contentToggle.addEventListener('click', e => {
-          // This will increase with each 'Load more' click, so visible listings
-          // must be captured before any further listings are made visible
-          let preExpandListingsVisible = listingsVisible.length;
-          e.preventDefault();
-
-          if (preExpandListingsVisible < listings.length) {
-            for (const listing of listings.entries()) {
-              let targetListing = document.querySelector("[data-id='listing-".concat(preExpandListingsVisible, "']"));
-              let listingsVisibleLength = parseInt(listingsVisible.length);
-              listingsLength = parseInt(listingsLength);
-              let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
-
-              zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(targetListing, 200);
-              let targetListingDate = targetListing.querySelectorAll('.key-info__date'); // Final batch of listings, zen scroll to 'load more' button and offset
-
-              if (remainingItems <= batchQuantity) {
-                zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(contentToggle, 200);
-                contentToggles[0].style.display = 'none';
-              }
-
-              targetListingDate[0].focus(); // Bring in newly visible listings in two phases to allow for opacity transition
-
-              if (listing[0] < preExpandListingsVisible + batchQuantity) {
-                const promise = new Promise(resolve => {
-                  resolve(listing[1].style.display = 'grid');
-                });
-                promise.then(() => {
-                  listing[1].classList.remove('hide');
-                }); // Calculating visible listings must run here after display properties are updated
-
-                promise.then(() => {
-                  calculateVisibleListings();
-                });
-              }
-            }
-          }
-        }, false);
-      }
-    } else {
-      contentToggles[0].style.display = 'none';
-    } // Mobile: one listing visible at a time
-
-  } else if (browserWidth < 768 && listings.length > 1) {
-    let listWrapper = document.getElementById('short-course-key-info-listings');
-    listWrapper.classList.add('paginated-list'); // Scroll to top of listings after each paginated index click
-
-    let paginationControls = document.querySelectorAll('.pagination__controls > button');
-
-    for (const paginationControl of paginationControls) {
-      paginationControl.addEventListener('click', () => {
-        let listingsTop = document.getElementById('short-course-key-info-listings');
-
-        if (paginationControl.getAttribute('aria-expanded') !== true) {
-          zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(listingsTop, 0);
-        }
-      });
-    }
-  } else if (browserWidth < 768 && listings.length == 1) {
-    for (const listing of listings.entries()) {
-      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
-    }
-  }
-}
-
-function launchKeyInfoPaginated() {
-  listingsQuantity();
-  launchKeyInfo(batchQuantity);
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchKeyInfoPaginated,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
 /***/ "./src/patterns/key-info-box/key-info-slider.js":
 /*!******************************************************!*\
   !*** ./src/patterns/key-info-box/key-info-slider.js ***!
@@ -5931,11 +6107,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.promise */ "./node_modules/core-js/modules/es.promise.js");
 /* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -5949,78 +6127,46 @@ __webpack_require__.r(__webpack_exports__);
  * @author Mark Skinsley <mark.skinsley@city.ac.uk>
  * @copyright City, University of London 2019
  */
+ // import { pxToRem } from '../../util';
 
-
-const className = 'key-info-slider';
-let listings = document.querySelectorAll('.key-info__listing'),
+const className = 'key-information--lifelong-learning';
+let listings = document.querySelector('.key-information--lifelong-learning > ul'),
     batchQuantity = 3,
-    contentToggles = document.querySelectorAll('.content-toggle'),
+    contentToggles = Array.from(document.querySelectorAll('.content-toggle button')),
     contentSliders = document.querySelectorAll('.content-slider'),
     browserWidth = document.documentElement.scrollWidth,
     prevBtn = document.getElementById('key-info-previous-item'),
     nextBtn = document.getElementById('key-info-next-item'),
-    listingHeight = '',
-    listingDates = document.querySelectorAll('.key-info__date'),
+    // listingHeight = '',
+listingDates = document.querySelectorAll('.key-information--lifelong-learning > ul > li'),
     listingsVisible = [],
-    listingsLength = [],
     defaultDuration = 2000,
     edgeOffset = 100; // Zen scroll setup
 
-zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
+zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
 
 function dateTabIndex() {
   for (const listingDate of listingDates) {
     listingDate.setAttribute('tabindex', '-1');
-  }
-} // Initial listings display
-
-
-function defaultListingsDisplay() {
-  listingsLength = [];
-
-  for (const listing of listings.entries()) {
-    listingsLength.push(listings.length);
-    listing[0] > batchQuantity - 1 ? listing[1].classList.add('hide') : listing[1].style.display = 'grid';
   }
 } // Visible listings: needed to decide if more content still to be loaded.
 
 
 function calculateVisibleListings() {
   listingsVisible = [];
-
-  for (const listing of listings) {
-    if (!listing.classList.contains('hide')) {
-      listingsVisible.push(listing);
+  Array.from(listings.children).forEach(elem => {
+    if (!elem.classList.contains('hide')) {
+      listingsVisible.push(elem);
     }
-  }
-} // Show number of listings in data set
+  });
+} // Initial listings display
 
 
-function listingsQuantity() {
-  const listingsNumber = [];
-
-  for (const listing of listings.entries()) {
-    listingsNumber.push(listing.length);
-  }
-
-  let datesQuantities = document.querySelectorAll('.key-info__dates-quantity');
-
-  for (const datesQuantity of datesQuantities) {
-    let date;
-    listingsNumber.length == 1 ? date = 'date' : date = 'dates';
-    let iconWrapper = document.createElement('div');
-    iconWrapper.classList.add('key-info__icon--left');
-    datesQuantity.appendChild(iconWrapper);
-    let calendarIcon = document.createElement('span');
-    calendarIcon.classList.add('fas');
-    calendarIcon.classList.add('fa-calendar-day');
-    iconWrapper.appendChild(calendarIcon);
-    let iconTextDiv = document.createElement('div');
-    iconWrapper.appendChild(iconTextDiv);
-    let iconTextP = document.createElement('p');
-    iconTextP.appendChild(document.createTextNode(listingsNumber.length + ' available start ' + date));
-    iconTextDiv.appendChild(iconTextP);
-  }
+function defaultListingsDisplay() {
+  const listElements = Array.from(listings.children);
+  listElements.forEach((elem, i) => {
+    i > batchQuantity - 1 ? elem.classList.add('hide') : elem.style.display = 'grid';
+  });
 }
 /**
  * Launches Key Info slider pattern. Pass in how many listings should display per batch,
@@ -6029,130 +6175,325 @@ function listingsQuantity() {
 
 
 function launchKeyInfo(batchQuantity) {
+  const digit = document.querySelector('.key-information--lifelong-learning__current__digit');
   let counter = 0; // Mobile: Show listing entry based on navigation button clicks
 
   function listingDisplay() {
-    for (const listing of listings.entries()) {
-      if (browserWidth < 768 && listings.length > 1) {
-        listing[0] == counter ? listing[1].style.display = 'block' : listing[1].style.display = 'none';
+    Array.from(listings.children).forEach((listing, i) => {
+      if (browserWidth < 768 && Array.from(listings.children).length > 1) {
+        i === counter ? listing.style.display = 'block' : listing.style.display = 'none';
       }
 
-      listing[1].setAttribute('data-id', "listing-".concat(listing[0]));
-    }
+      listing.setAttribute('data-id', "listing-".concat(i));
+    });
   } // Mobile: Enable/disable navigation buttons based on position of listing in collection
 
 
   function navBtnState() {
-    for (const contentSlider of contentSliders) {
-      contentSlider.style.display = 'block';
+    if (counter === 0) {
+      prevBtn.setAttribute('disabled', true);
+      nextBtn.removeAttribute('disabled');
+    } else if (counter > 0 && counter < Array.from(listings.children).length - 1) {
+      prevBtn.removeAttribute('disabled');
+      nextBtn.removeAttribute('disabled');
+    } else {
+      nextBtn.setAttribute('disabled', true);
+      prevBtn.removeAttribute('disabled');
     }
-
-    let listingsLength = listings.length - 1;
-    counter == 0 ? (prevBtn.setAttribute('disabled', true), nextBtn.removeAttribute('disabled')) : counter > 0 && counter < listingsLength ? (prevBtn.removeAttribute('disabled'), nextBtn.removeAttribute('disabled')) : (nextBtn.setAttribute('disabled', true), prevBtn.removeAttribute('disabled'));
-  } // Mobile: Set mobile listings navigation buttons to correct position based on listing height
-
-
-  function navBtnPosition() {
-    for (const listing of listings.entries()) {
-      if (counter == listing[0]) {
-        listingHeight = listing[1].getAttribute('data-height');
-        prevBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_4__["pxToRem"])("-".concat(listingHeight))) + Object(_util__WEBPACK_IMPORTED_MODULE_4__["pxToRem"])(100) + 'rem';
-        nextBtn.style.top = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_4__["pxToRem"])("-".concat(listingHeight))) + Object(_util__WEBPACK_IMPORTED_MODULE_4__["pxToRem"])(100) + 'rem';
-      }
-    }
-  } // Run regardless of viewport size
+  } // // Mobile: Set mobile listings navigation buttons to correct position based on listing height
+  // function navBtnPosition() {
+  //     Array.from(listings.children).forEach((listing, i) => {
+  //         if (counter === i) {
+  //             listingHeight = listing.dataset.height;
+  //         }
+  //     });
+  // }
+  // Run regardless of viewport size
 
 
   dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
 
-  if (browserWidth > 768) {
-    if (listings.length > batchQuantity) {
+  if (browserWidth >= 768) {
+    if (Array.from(listings.children).length > batchQuantity) {
       listingDisplay();
       defaultListingsDisplay();
       calculateVisibleListings();
-
-      for (const contentToggle of contentToggles) {
+      contentToggles.forEach(contentToggle => {
         contentToggle.addEventListener('click', e => {
           // This will increase with each 'Load more' click, so visible listings
           // must be captured before any further listings are made visible
           let preExpandListingsVisible = listingsVisible.length;
           e.preventDefault();
 
-          if (preExpandListingsVisible < listings.length) {
-            for (const listing of listings.entries()) {
+          if (preExpandListingsVisible < Array.from(listings.children).length) {
+            Array.from(listings.children).forEach((elem, i) => {
               let targetListing = document.querySelector("[data-id='listing-".concat(preExpandListingsVisible, "']"));
-              let listingsVisibleLength = parseInt(listingsVisible.length);
-              listingsLength = parseInt(listingsLength);
+              let listingsVisibleLength = parseInt(listingsVisible.length) + batchQuantity;
+              const listingsLength = Array.from(listings.children).length;
               let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
 
-              zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(targetListing, 200);
-              let targetListingDate = targetListing.querySelectorAll('.key-info__date'); // Final batch of listings, zen scroll to 'load more' button and offset
+              zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(targetListing, 200); // let targetListingDate = targetListing.querySelectorAll(
+              //     '.key-info__date'
+              // );
+              // Final batch of listings, zen scroll to 'load more' button and offset
 
-              if (remainingItems <= batchQuantity) {
-                zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(contentToggle, 0);
-                contentToggles[0].style.display = 'none';
-              }
+              if (remainingItems <= 0) {
+                zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(contentToggle, 200);
+                contentToggle.style.display = 'none';
+              } // targetListingDate[0].focus();
+              // Bring in newly visible listings in two phases to allow for opacity transition
 
-              targetListingDate[0].focus(); // Bring in newly visible listings in two phases to allow for opacity transition
 
-              if (listing[0] < preExpandListingsVisible + batchQuantity) {
+              if (i < preExpandListingsVisible + batchQuantity) {
                 const promise = new Promise(resolve => {
-                  resolve(listing[1].style.display = 'grid');
+                  resolve(elem.style.display = 'grid');
                 });
                 promise.then(() => {
-                  listing[1].classList.remove('hide');
+                  elem.classList.remove('hide');
                 }); // Calculating visible listings must run here after display properties are updated
 
                 promise.then(() => {
                   calculateVisibleListings();
                 });
               }
-            }
+            });
           }
         }, false);
-      }
+      });
     } else {
-      contentToggles[0].style.display = 'none';
+      contentToggles.forEach(elem => {
+        elem.style.display = 'none';
+      });
     } // Mobile: one listing visible at a time
 
-  } else if (browserWidth < 768 && listings.length > 1) {
-    for (const listing of listings.entries()) {
+  } else if (browserWidth < 768 && Array.from(listings.children).length > 1) {
+    Array.from(listings.children).forEach((listing, i) => {
       // Capture listing height and set to data attribute
-      listing[1].style.display = 'block';
-      listing[1].setAttribute('data-height', listing[1].offsetHeight);
-      listing[1].style.display = 'none'; // On load, set mobile navigation buttons at correct height
+      listing.style.display = 'block';
+      listing.dataset.height = listing.offsetHeight;
+      listing.style.display = 'none'; // On load, set mobile navigation buttons at correct height
+      // counter === 0 && i === 0 ? navBtnPosition() : null;
 
-      counter == 0 && listing[0] == 0 ? navBtnPosition() : null;
-      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
-    }
-
+      i > 0 ? listing.style.display = 'none' : listing.style.display = 'block';
+    });
+    Array.from(contentSliders).forEach(contentSlider => {
+      contentSlider.removeAttribute('hidden');
+    });
     navBtnState();
     prevBtn.addEventListener('click', () => {
       counter = counter - 1;
-      navBtnState();
-      navBtnPosition();
+      navBtnState(); // navBtnPosition();
+
       listingDisplay();
+      digit.innerText = counter + 1;
     });
     nextBtn.addEventListener('click', () => {
       counter = counter + 1;
-      navBtnState();
-      navBtnPosition();
+      navBtnState(); // navBtnPosition();
+
       listingDisplay();
+      digit.innerText = counter + 1;
     });
-  } else if (browserWidth < 768 && listings.length == 1) {
-    for (const listing of listings.entries()) {
-      listing[0] > 0 ? listing[1].style.display = 'none' : listing[1].style.display = 'block';
-    }
+  } else if (browserWidth < 768 && Array.from(listings.children).length === 1) {
+    Array.from(listings.children).forEach((listing, i) => {
+      i > 0 ? listing.style.display = 'none' : listing.style.display = 'block';
+    });
   }
 }
 
 function launchKeyInfoSlider() {
-  listingsQuantity();
   launchKeyInfo(batchQuantity);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchKeyInfoSlider,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/load-more/load-more.js":
+/*!*********************************************!*\
+  !*** ./src/patterns/load-more/load-more.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+/**
+ * Load more - show additional items on 'Load more' button click. Update URL to illustrate where user is in item set.
+ *
+ * @module patterns/load-more/load-more
+ * @author Mark Skinsley <mark.skinsley@city.ac.uk>
+ * @copyright City, University of London 2019
+ */
+
+
+const className = 'load-more';
+let hashedUrl = window.location.hash,
+    loadMoreId;
+/**
+ * Control what items will display based on wrapper's 'data-listings-show' data attribute.
+ *
+ * @param {HTMLElements} [items] - Elements controlled by 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {HTMLElement} loadMoreBtn - Button controlling particular item group.
+ */
+
+function itemsDisplay(items, visibleItems, loadMoreBtn) {
+  for (const item of items.entries()) {
+    item[1].setAttribute('tabindex', '-1');
+
+    if (item[0] >= visibleItems) {
+      item[1].classList.add('hide');
+      item[1].style.display = 'none';
+    } else {
+      item[1].classList.remove('hide');
+      item[1].style.display = 'grid';
+    }
+  } // Hide 'load more' button when reached end of listings
+
+
+  if (visibleItems > items.length) {
+    loadMoreBtn.classList.add('hide');
+  } else {
+    loadMoreBtn.classList.remove('hide');
+  }
+}
+/**
+ * Scroll to, and focus first listing of newly visible items batch.
+ *
+ * @param {HTMLElement} [items] - Elements controlled by 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {number} itemsIncrement - Number of additional items shown when 'Load more' button is clicked.
+ */
+
+
+function scrollToItem(items, visibleItems, itemsIncrement) {
+  let targetItem = visibleItems - itemsIncrement;
+
+  for (const item of items.entries()) {
+    if (item[0] == targetItem) {
+      item[1].focus();
+      zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(item[1]);
+    } else if (visibleItems == itemsIncrement) {
+      if (item[0] == 0) {
+        item[1].focus();
+        zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(item[1]);
+      }
+    }
+  }
+}
+/**
+ * Push state to URL: used to build initial hash after first 'Load more' click.
+ *
+ * @param {string} parentType - Data attribute describing parent group.
+ * @param {string} childrenType - Data attribute describing child items.
+ * @param {HTMLElement} wrapperId - Parent element wrapping items and 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
+ */
+
+
+function pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
+  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
+  history.pushState('', '', "#".concat(parentType).concat(wrapperId, "-").concat(childrenType).concat(targetListingUrlParam));
+}
+/**
+ * Replace URL state: used to swap existing hash
+ *
+ * @param {string} parentType - Data attribute describing parent group.
+ * @param {string} childrenType - Data attribute describing child items.
+ * @param {HTMLElement} wrapperId - Parent element wrapping items and 'Load more' button.
+ * @param {number} visibleItems - Number of items visible at any one time.
+ * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
+ */
+
+
+function replaceUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
+  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
+  history.replaceState('', '', "#".concat(parentType).concat(wrapperId, "-").concat(childrenType).concat(targetListingUrlParam));
+}
+
+function launchLoadMore(e) {
+  let wrapperId = e.getAttribute('id'),
+      items = e.querySelectorAll('.item'),
+      itemsIncrement = parseInt(e.dataset.increment),
+      loadMoreBtn = e.querySelector('.content-toggle button'),
+      parentType = e.getAttribute('data-item-parent'),
+      childrenType = e.getAttribute('data-item-children');
+  /**
+   * Give wrapper a numeric data attribute. As this changes, so
+   * will the number of visible items.
+   */
+
+  e.setAttribute('data-items-visible', itemsIncrement);
+  let visibleItems = parseInt(e.getAttribute('data-items-visible')); // Load correct number of items based on URL hash
+
+  if (hashedUrl) {
+    let hashedUrlParts = hashedUrl.split('-');
+    let activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[1]));
+    visibleItems = activeItem + (itemsIncrement - 1);
+    e.setAttribute('data-items-visible', visibleItems);
+    itemsDisplay(items, visibleItems, loadMoreBtn);
+    scrollToItem(items, visibleItems, itemsIncrement);
+  } else {
+    itemsDisplay(items, visibleItems, loadMoreBtn);
+  } // Run on every 'load more' click: increase listings by batch number
+
+
+  loadMoreBtn.addEventListener('click', () => {
+    visibleItems += itemsIncrement;
+    e.setAttribute('data-items-visible', visibleItems);
+    itemsDisplay(items, visibleItems, loadMoreBtn);
+    scrollToItem(items, visibleItems, itemsIncrement);
+    hashedUrl = window.location.hash;
+    hashedUrl ? replaceUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) : pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement);
+    loadMoreId = e.id;
+  }); // Back/forward browser clicks.
+
+  window.onpopstate = () => {
+    let loadMoreIdElement = document.getElementById(loadMoreId); // Must re-assign variable on pop state change
+
+    hashedUrl = window.location.hash;
+
+    if (hashedUrl) {
+      // Capture latest hash
+      let updatedUrlParts = window.location.hash.split('-');
+      let currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(updatedUrlParts[1]));
+      currentItem = currentItem + (itemsIncrement - 1);
+      visibleItems = currentItem;
+      e.setAttribute('data-items-visible', visibleItems);
+      itemsDisplay(items, visibleItems, loadMoreBtn);
+      scrollToItem(items, visibleItems, itemsIncrement);
+    } else {
+      let relatedItems = loadMoreIdElement.querySelectorAll('.item');
+      visibleItems = itemsIncrement;
+      itemsDisplay(items, visibleItems, loadMoreBtn);
+      e.setAttribute('data-items-visible', itemsIncrement);
+      scrollToItem(relatedItems, visibleItems, itemsIncrement);
+    }
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchLoadMore,
   launchQuery: ".".concat(className)
 });
 
@@ -6231,7 +6572,7 @@ function prepareSubMenu(menuItem, subMenu) {
         iconSpan = document.createElement('span'),
         textSpan = document.createElement('span');
   menuItemBtn.setAttribute('type', 'button');
-  iconSpan.toggleAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, true);
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
   iconSpan.className = "".concat(buttonIconClassName, " fal fa-fw");
   textSpan.className = "".concat(buttonTextClassName);
   Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(menuItemBtn, [iconSpan, textSpan]);
@@ -6577,7 +6918,7 @@ function launchMenu(menu) {
   columns[0].appendChild(menuList);
   createMenuToggle(label, button, setMenu);
   veil.className = veilClassName;
-  veil.toggleAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, true);
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   setMenu(false);
   menus.forEach(menu => appendMenu(menu, columns));
@@ -6591,6 +6932,210 @@ function launchMenu(menu) {
   launchFn: launchMenu,
   launchQuery: ".".concat(className)
 });
+
+/***/ }),
+
+/***/ "./src/patterns/modal/modal.js":
+/*!*************************************!*\
+  !*** ./src/patterns/modal/modal.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modal_animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal_animation */ "./src/patterns/modal/modal_animation.js");
+
+
+
+
+/**
+ * modal
+ *
+ * @module patterns/modal/modal
+ * @author Daniel Miller <daniel.miller@city.ac.uk>
+ * @copyright City, University of London 2018
+ */
+
+const className = 'modal__popup',
+      modalBackground = document.createElement('div');
+
+function launchModal(modal) {
+  let modalInner = modal.querySelector('.modal__inner');
+  let modalHeading = modal.querySelector('.modal__heading');
+  let modalDataTitle = modal.getAttribute('data-title');
+  insertElement('a', modal, 'modal__trigger', '#', modalDataTitle);
+  insertElement('a', modalHeading, 'modal__close fas fa-times', '#');
+  Object(_modal_animation__WEBPACK_IMPORTED_MODULE_1__["default"])(modalInner, modal);
+  let anchorTriggerSibling = modal.previousElementSibling;
+  let modalCloseTrigger = modal.querySelector('.modal__close');
+  anchorTriggerSibling.addEventListener('click', handleTriggerOpen, false);
+  modalCloseTrigger.addEventListener('click', handleTriggerClose, false);
+  modal.addEventListener('keydown', e => {
+    if (e.keyCode === 27) {
+      modal.classList.add('modal__popup--transitioning-out');
+    }
+  });
+  modal.addEventListener('click', e => {
+    e.target.classList.forEach(className => {
+      if (className === 'modal__popup--show') {
+        modal.classList.add('modal__popup--transitioning-out');
+      }
+    });
+  });
+}
+
+function handleTriggerOpen(e) {
+  e.preventDefault();
+  let modal = e.target.nextElementSibling;
+  openModal(modal);
+}
+
+function handleTriggerClose(e) {
+  e.preventDefault();
+  let modal = document.querySelector('.modal__popup--show');
+  modal.classList.add('modal__popup--transitioning-out');
+}
+
+function openModal(modal) {
+  modal.classList.remove('modal__popup--hidden');
+  modal.classList.add('modal__popup--show');
+  addBackgroundFade();
+  setTimeout(function () {
+    modal.classList.add('modal__popup--transitioning-in');
+  }, 200);
+}
+
+function addBackgroundFade() {
+  if (!document.body.contains(modalBackground)) {
+    modalBackground.setAttribute('class', 'modal__background');
+    document.body.appendChild(modalBackground);
+  }
+
+  document.body.classList.add('modal--in');
+  document.body.classList.add('no-scroll');
+}
+
+function insertElement(type, targetParent, classList, href, text) {
+  let element = document.createElement(type);
+  element.setAttribute('class', classList);
+  element.setAttribute('href', href);
+  if (text) element.textContent = text;
+  targetParent.parentNode.insertBefore(element, targetParent);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchModal,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/modal/modal_animation.js":
+/*!***********************************************!*\
+  !*** ./src/patterns/modal/modal_animation.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return addModalAnimation; });
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/**
+ * modal animation
+ *
+ * @module patterns/modal/modal_animation
+ * @author Daniel Miller <daniel.miller@city.ac.uk>
+ * @copyright City, University of London 2018
+ *
+ */
+
+const eventListeners = ['webkitTransitionEnd', 'transitionend', 'mozTransitionEnd', 'oTransitionEnd'];
+function addModalAnimation(modalInner, modal) {
+  setTransitionListeners(modalInner, modal);
+}
+/**
+ * Set transition listeners: add transition finished listeners.
+ * The transition event actually occurs on the :before and :after
+ * but bubbles up to parent
+ *
+ * @param {HTMLElement} modalInner - the modalInner element
+ * @param {HTMLElement} modal - the modal
+ */
+
+function setTransitionListeners(modalInner, modal) {
+  for (let listener in eventListeners) {
+    modalInner.addEventListener(eventListeners[listener], e => {
+      setOpenOrCloseFunction(modal, e);
+    }, false);
+  }
+}
+/**
+ * Set open or close function: decides if open/close needed
+ *
+ * @param {HTMLElement} modal - the modal
+ */
+
+
+function setOpenOrCloseFunction(modal, e) {
+  if (e.target.classList[0] == 'modal__inner') {
+    if (modal.hasAttribute('data-open')) {
+      closeTransition(modal);
+    } else {
+      openTransition(modal);
+    }
+  }
+}
+/**
+ * Close transition: handles the close transition and modal hide
+ *
+ * @param {HTMLElement} modal - the modal div
+ */
+
+
+function closeTransition(modal) {
+  modal.classList.remove('modal__popup--show-content');
+  setTimeout(function () {
+    modal.classList.remove('modal__popup--transitioning-out');
+  }, 50);
+  setTimeout(function () {
+    modal.removeAttribute('data-open');
+    document.body.classList.remove('modal--in');
+    document.body.classList.remove('no-scroll');
+    modal.classList.remove('modal__popup--show');
+    modal.classList.add('modal__popup--hidden');
+  }, 700);
+}
+/**
+ * Open transition: handles the open transition and modal show
+ *
+ * @param {HTMLElement} modal - the modal div
+ */
+
+
+function openTransition(modal) {
+  modal.classList.add('modal__popup--show-content');
+  setTimeout(function () {
+    modal.classList.remove('modal__popup--transitioning-in');
+  }, 50);
+  setTimeout(function () {
+    modal.setAttribute('data-open', true);
+    trapFocus(modal);
+  }, 600);
+}
+
+function trapFocus(modal) {
+  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_0___default()(modal, {
+    clickOutsideDeactivates: true
+  });
+  trap.activate();
+}
 
 /***/ }),
 
@@ -6623,7 +7168,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const className = 'paginated-list',
-      minimumPage = 4,
+      minimumPage = 1,
       defaultPage = 8,
       maximumPage = 12;
 /**
@@ -6664,7 +7209,7 @@ function launchPaginatedList(list) {
   }
 
   const pageSizeSetting = Number.parseInt(list.dataset.pagesize) ? Number.parseInt(list.dataset.pagesize) : defaultPage,
-        listItems = Array.from(list.querySelectorAll('li')),
+        listItems = Array.from(list.children),
         pageSize = setPageSize(pageSizeSetting);
 
   if (listItems.length <= pageSize) {
@@ -6709,7 +7254,7 @@ function launchPaginatedList(list) {
         newList.setAttribute('start', pageSize * pageNumber + start);
       } else {
         newList.setAttribute('start', start - pageSize * pageNumber);
-        newList.toggleAttribute('reversed', true);
+        newList.setAttribute('reversed', 'true');
       }
     }
     /* move this page of items into the page and inner list */
@@ -6803,8 +7348,8 @@ function createToggleNextPrev(next, prev, pageCount) {
    * @param {number} pageNumber - The current page number.
    */
   const toggleNextPrev = pageNumber => {
-    pageCount === pageNumber ? next.toggleAttribute('disabled', true) : next.toggleAttribute('disabled', false);
-    1 === pageNumber ? prev.toggleAttribute('disabled', true) : prev.toggleAttribute('disabled', false);
+    pageCount === pageNumber ? next.setAttribute('disabled', 'true') : next.removeAttribute('disabled');
+    1 === pageNumber ? prev.setAttribute('disabled', 'true') : prev.removeAttribute('disabled');
   };
 
   return toggleNextPrev;
@@ -6838,7 +7383,7 @@ function setProximity(pageCount, controls, pageNumber) {
 
 function toggleButton(button, selected) {
   button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, selected);
-  button.toggleAttribute('disabled', selected);
+  selected ? button.setAttribute('disabled', 'true') : button.removeAttribute('disabled');
   selected ? button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'page') : button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current);
 }
 /**
@@ -7094,21 +7639,24 @@ const className = 'fa-link';
 
 function copyIconToClipboard(elem) {
   const copy = elem;
-  copy.addEventListener('mouseover', () => {
+  copy.parentNode.parentNode.style.position = 'relative';
+  copy.addEventListener('mouseover', e => {
     let t = document.createElement('div');
     let link = document.createElement('span');
+    let url = window.location.href;
     t.className = 'tooltip';
     link.className = 'link-copy';
-    let textlink = document.createTextNode('http://google.com');
+    let textlink = document.createTextNode(url);
     let textnode = document.createTextNode('Copy link');
     t.appendChild(textnode);
     link.appendChild(textlink);
     t.appendChild(link);
-    document.querySelector('.fa-link').appendChild(t);
+    e.target.parentElement.parentElement.appendChild(t);
+    e.target.parentElement.parentElement.classList.add('copyLink');
   });
   copy.addEventListener('click', e => {
     e.preventDefault();
-    let text = document.querySelector('.link-copy');
+    let text = e.target.parentElement.parentElement.querySelector('.link-copy');
     let range = document.createRange();
     range.selectNode(text);
     window.getSelection().addRange(range);
@@ -7117,8 +7665,8 @@ function copyIconToClipboard(elem) {
       // Now that we've selected the anchor text, execute the copy command
       let successful = document.execCommand('copy');
       let msg = successful ? 'successful' : 'unsuccessful';
-      document.querySelector('.tooltip').textContent = 'Link Copied';
-      document.querySelector('.tooltip').classList.add(msg);
+      e.target.parentElement.parentElement.querySelector('.tooltip').textContent = 'Link Copied';
+      e.target.parentElement.parentElement.querySelector('.tooltip').classList.add(msg);
     } catch (err) {
       throw new Error(e);
     } // Remove the selections - NOTE: Should use
@@ -7129,7 +7677,7 @@ function copyIconToClipboard(elem) {
   });
   copy.addEventListener('mouseout', e => {
     //remove element from mouseover
-    e.target.childNodes[0].remove();
+    e.target.parentElement.parentElement.querySelector('.tooltip').remove();
   });
 }
 
@@ -7178,6 +7726,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'tabs',
       panelClassName = className + '__panel',
+      contentClassName = panelClassName + '__content',
       linksClassName = className + '__links',
       endKey = 35,
       homeKey = 36,
@@ -7226,13 +7775,13 @@ function selectTab(newTab) {
   linkItems.forEach(linkItem => {
     toggleLink(linkItem.firstElementChild, false);
   });
-  panels.forEach(panel => panel.toggleAttribute('hidden', true));
+  panels.forEach(panel => panel.setAttribute('hidden', 'true'));
   /**
    * Select the requested tab.
    */
 
   toggleLink(newTab, true);
-  tabs.querySelector(newTab.hash).toggleAttribute('hidden', false);
+  tabs.querySelector(newTab.hash).removeAttribute('hidden');
   history.pushState(null, null, newTab.hash);
   /**
    * Move focus to the section and optionally scroll it into view.
@@ -7337,9 +7886,14 @@ function prepareLinks(linkItems) {
 
 function preparePanels(panels) {
   panels.forEach(panel => {
+    const wrapper = document.createElement('div'),
+          panelElements = Array.from(panel.children);
+    wrapper.className = contentClassName;
+    panelElements.forEach(element => wrapper.appendChild(element));
+    panel.appendChild(wrapper);
     panel.setAttribute('role', 'tabpanel');
     panel.setAttribute('tabindex', 0);
-    panel.toggleAttribute('hidden', true);
+    panel.setAttribute('hidden', 'true');
   });
 }
 /**
@@ -7403,7 +7957,8 @@ function accordionize(tabs) {
 function launchTabs(tabs) {
   const controls = tabs.querySelector(".".concat(linksClassName)),
         linkItems = Array.from(controls.querySelectorAll('li')),
-        panels = Array.from(tabs.querySelectorAll(".".concat(panelClassName)));
+        panels = Array.from(tabs.querySelectorAll(".".concat(panelClassName))),
+        numberOfTabs = Number.parseInt(tabs.dataset.mobiletabs);
 
   if (linkItems.length === 1) {
     /**
@@ -7413,15 +7968,11 @@ function launchTabs(tabs) {
     return;
   }
 
-  controls.setAttribute('role', 'tablist'); // zero by passes by not using CSS styling on the tabs
-
-  if (tabs.getAttribute('data-mobiletabs') > 0) {
-    preparePanels(panels);
-  }
-
+  controls.setAttribute('role', 'tablist');
+  preparePanels(panels);
   const idLinked = prepareLinks(linkItems);
 
-  if (linkItems.length > Number.parseInt(tabs.dataset.mobiletabs)) {
+  if (linkItems.length > numberOfTabs && (!tabs.dataset.neveraccordion || !tabs.dataset.neveraccordion === 'true')) {
     accordionize(tabs);
   }
   /**
@@ -7432,10 +7983,10 @@ function launchTabs(tabs) {
 
   if (!idLinked) {
     toggleLink(linkItems[0].firstElementChild, true);
-    panels[0].toggleAttribute('hidden', false);
+    panels[0].removeAttribute('hidden');
   } else {
     const selectedTab = tabs.querySelector(idLinked);
-    selectedTab.toggleAttribute('hidden', false);
+    selectedTab.removeAttribute('hidden');
   }
   /**
    * Enable keyboard access to tabs with the cursor keys.
@@ -7538,7 +8089,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7552,16 +8103,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gaEvent", function() { return gaEvent; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "appendAll", function() { return appendAll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pxToRem", function() { return pxToRem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "numberFromString", function() { return numberFromString; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMobile", function() { return isMobile; });
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol.description */ "./node_modules/core-js/modules/es.symbol.description.js");
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -7722,6 +8278,31 @@ function pxToRem(pxValue) {
   browserWidth > 768 ? fontBase = 18 : fontBase = 16;
   let remValue = pxValue / fontBase;
   return remValue;
+}
+/**
+ * Extract number from string, e.g. return '123' from string 'a1b2c3'.
+ *
+ * @param {string} string - String
+ */
+
+function numberFromString(string) {
+  let number = string.replace(/\D/g, '');
+  return number;
+}
+/**
+ * Calculates viewport width to determinte if using mobile
+ * @param {number} number - width of screen, with default value = 432.
+ *
+ */
+
+function isMobile() {
+  let screen = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 432;
+  const viewPortWidth = window.innerWidth;
+  const mobileScreen = screen;
+
+  if (viewPortWidth > mobileScreen) {
+    return false;
+  }
 }
 
 /***/ }),
