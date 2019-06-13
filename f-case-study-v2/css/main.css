@@ -12542,6 +12542,7 @@ main table td em {
     position: relative;
     transition: none;
     padding: 1rem;
+    max-width: 50%;
 }
 
 @media (hover: hover) {
@@ -23972,7 +23973,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .case-study__grey__wrap {
     background: #f2f2f2;
-    padding-bottom: 5rem;
+    padding: 1.25rem 0 5rem;
     grid-row-gap: 0;
     display: grid;
     grid-column: 1 / -1;
@@ -24038,6 +24039,11 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .case-study__related-case-studies__wrap {
     grid-column: 1 / -1;
+}
+
+.case-study__related-case-studies__wrap h2,
+.case-study__related-case-studies__wrap h3 {
+    text-align: center;
 }
 
 .case-study__related-case-studies {
