@@ -12542,7 +12542,6 @@ main table td em {
     position: relative;
     transition: none;
     padding: 1rem;
-    max-width: 50%;
 }
 
 @media (hover: hover) {
@@ -12850,6 +12849,12 @@ main table td em {
 @media (min-width: 433px) {
     .card--casestudy a > :nth-child(2) {
         margin-top: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .card--casestudy a {
+        max-width: 50%;
     }
 }
 
