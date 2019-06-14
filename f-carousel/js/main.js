@@ -6040,7 +6040,12 @@ function lock(e) {
 
 function drag(e) {
   e.preventDefault();
-  if (locked) e.target.style.setProperty('--tx', "".concat(Math.round(unify(e).clientX - x0), "px"));
+
+  if (i !== e.target.children.length - 1 && i !== 0) {
+    if (locked) {
+      e.target.style.setProperty('--tx', "".concat(Math.round(unify(e).clientX - x0), "px"));
+    }
+  }
 }
 
 function move(e) {

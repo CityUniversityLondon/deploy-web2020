@@ -21996,10 +21996,19 @@ article .social-icon .link-copy {
     }
 }
 
+.swiper-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.swiper-container {
+    position: relative;
+}
+
 @media (min-width: 901px) {
     .swiper-container {
         width: 50%;
-        margin-left: 15rem;
+        margin-left: 25%;
     }
 }
 
@@ -22061,6 +22070,22 @@ article .social-icon .link-copy {
         margin-left: 1rem;
         padding: 1rem;
     }
+}
+
+.swiper-indicator {
+    position: absolute;
+    bottom: 2rem;
+    right: 1rem;
+    font-size: 0.889rem;
+    font-weight: 700;
+}
+
+.swiper-indicator__active-slider {
+    color: #dd0036;
+}
+
+.swiper-indicator__slider-length {
+    color: #696969;
 }
 
 .smooth {
