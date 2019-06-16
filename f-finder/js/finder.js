@@ -1309,7 +1309,7 @@ function finder__query(props) {
     const newQuery = props.query;
     newQuery.query = partialQuery ? partialQuery : '';
     newQuery.startRank = 1;
-    newQuery.sortBy = null;
+    newQuery.sortBy = partialQuery ? null : props.config.sort;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
   };
