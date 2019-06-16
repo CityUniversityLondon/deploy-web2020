@@ -2278,20 +2278,17 @@ function finder__query(props) {
     newQuery.sortBy = props.config.sort;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
-  }; // if they've typed something, search for it
-
+  };
 
   const submitForm = () => {
-    if (partialQuery) {
-      call.cancel();
-      setSuggestions([]);
-      const newQuery = props.query;
-      newQuery.query = partialQuery;
-      newQuery.startRank = 1;
-      newQuery.sortBy = null;
-      props.update.query(newQuery);
-      props.update.results(!props.update.updateState);
-    }
+    call.cancel();
+    setSuggestions([]);
+    const newQuery = props.query;
+    newQuery.query = partialQuery ? partialQuery : '';
+    newQuery.startRank = 1;
+    newQuery.sortBy = null;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
   };
 
   const clear = partialQuery && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -2651,7 +2648,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function finder__results(props) {
   const updating = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__updating"
+    className: "finder__results__updating",
+    "aria-live": "polite"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-spinner fa-pulse icon",
     "aria-hidden": "true"
@@ -2746,7 +2744,9 @@ __webpack_require__.r(__webpack_exports__);
 
 function finder__results__summary(props) {
   const result = props.totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, props.totalMatching > props.numRanks && "".concat(props.currStart, "\u2013").concat(props.currEnd, " of "), props.totalMatching, " ", props.query && 'matching ', result, props.query && " for \u201C".concat(props.query, "\u201D"));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    "aria-live": "polite"
+  }, props.totalMatching > props.numRanks && "".concat(props.currStart, "\u2013").concat(props.currEnd, " of "), props.totalMatching, " ", props.query && 'matching ', result, props.query && " for \u201C".concat(props.query, "\u201D"));
 }
 
 finder__results__summary.propTypes = {
