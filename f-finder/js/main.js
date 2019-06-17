@@ -1985,7 +1985,8 @@ __webpack_require__.r(__webpack_exports__);
 function finder__radio(props) {
   // Radio facets can be toggled open and closed
   // default state on load is defined in config
-  const [open, setOpen] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(props.facet.defaultOpen),
+  // Always open on load if facet set.
+  const [open, setOpen] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(props.query.facets[props.facet.meta] !== undefined ? true : props.facet.defaultOpen),
         currentValue = props.query.facets[props.facet.meta] || ''; // reduce the facet configuration to an array of all possible values for
   // the facet
 

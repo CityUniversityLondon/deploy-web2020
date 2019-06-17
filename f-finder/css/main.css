@@ -17288,11 +17288,25 @@ article figure figcaption a:active {
 
 .finder__query__input {
     font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
     flex-grow: 1;
     position: relative;
+}
+
+.finder__query__input i,
+.finder__query__input em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -17327,6 +17341,15 @@ article figure figcaption a:active {
 
 .finder__query__input input {
     font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
@@ -17337,6 +17360,11 @@ article figure figcaption a:active {
     padding-right: 3.5rem;
     padding-top: 0.5rem;
     width: 100%;
+}
+
+.finder__query__input input i,
+.finder__query__input input em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -23231,11 +23259,25 @@ article .social-icon .link-copy {
 
 .finder__query__input {
     font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
     flex-grow: 1;
     position: relative;
+}
+
+.finder__query__input i,
+.finder__query__input em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -23270,6 +23312,15 @@ article .social-icon .link-copy {
 
 .finder__query__input input {
     font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
@@ -23280,6 +23331,11 @@ article .social-icon .link-copy {
     padding-right: 3.5rem;
     padding-top: 0.5rem;
     width: 100%;
+}
+
+.finder__query__input input i,
+.finder__query__input input em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
