@@ -946,7 +946,9 @@ function finder__mobilefilters(props) {
     "aria-expanded": display,
     onClick: () => setDisplay(!display),
     disabled: props.updating
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.updating ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    "aria-live": "polite"
+  }, props.updating ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-spinner fa-pulse icon",
     "aria-hidden": "true"
   }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Updating results\u2026")) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, totalMatchingMessage)))))));
