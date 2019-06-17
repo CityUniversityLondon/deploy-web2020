@@ -1140,7 +1140,9 @@ function finder__appliedfilters(props) {
   const facetKeys = Object.keys(props.query.facets);
 
   if (facetKeys.length) {
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
+      className: "sr-only"
+    }, "Applied filters"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
       className: "finder__appliedfilters"
     }, facetKeys.map(facet => {
       const labels = props.config.facetLabels.filter(facetLabel => facetLabel.meta === facet)[0],
@@ -1155,7 +1157,7 @@ function finder__appliedfilters(props) {
         className: "fal fa-times icon",
         "aria-label": "Remove filter"
       }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "".concat(labels.name, ": ").concat(label.label))));
-    }));
+    })));
   } else {
     return null;
   }
