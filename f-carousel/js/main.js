@@ -5986,7 +5986,7 @@ function tooglePrevBtn(index, length, e) {
 
 function next(e) {
   e.preventDefault();
-  const sl = e.target.parentElement.parentElement.querySelector('.swiper-wrapper');
+  const sl = e.target.parentElement.parentElement.parentElement.querySelector('.swiper-wrapper');
 
   if (sl.classList.contains('smooth')) {
     sl.classList.toggle('smooth');
@@ -6008,7 +6008,7 @@ function next(e) {
 
 function previous(e) {
   e.preventDefault();
-  const psl = e.target.parentElement.parentElement.querySelector('.swiper-wrapper');
+  const psl = e.target.parentElement.parentElement.parentElement.querySelector('.swiper-wrapper');
 
   if (psl.classList.contains('smooth')) {
     psl.classList.toggle('smooth');
@@ -6081,13 +6081,13 @@ function move(e) {
 function checkEventType(e) {
   switch (e.type) {
     case 'mouseup':
-      return e.target.parentElement;
+      return e.target.parentElement.parentElement;
 
     case 'touchend':
-      return e.target.parentElement;
+      return e.target.parentElement.parentElement;
 
     default:
-      return e.target.parentElement.parentElement;
+      return e.target.parentElement.parentElement.parentElement;
   }
 }
 

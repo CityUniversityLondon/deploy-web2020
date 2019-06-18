@@ -22024,7 +22024,7 @@ article .social-icon .link-copy {
     transform: translate(calc(var(--tx, 0px) + var(--i, 0) / var(--n) * -100%));
 }
 
-@media (max-width: 432px) {
+@media (max-width: 900px) {
     .swiper-wrapper {
         height: inherit;
         max-height: 350px;
@@ -22069,7 +22069,7 @@ article .social-icon .link-copy {
     pointer-events: auto;
 }
 
-@media (max-width: 432px) {
+@media (max-width: 900px) {
     .swiper-slide__text {
         margin-right: none;
         margin-left: 1rem;
@@ -22098,6 +22098,21 @@ article .social-icon .link-copy {
 
 .swiper-indicator__slider-length {
     color: #696969;
+}
+
+.swiper-buttons-wrap {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.swiper-slider-arrow {
+    color: #dd0036;
+    border: 1px solid #dd0036;
+    padding: 0.75rem;
+}
+
+.swiper-button-prev {
+    margin-right: 1rem;
 }
 
 .smooth {
