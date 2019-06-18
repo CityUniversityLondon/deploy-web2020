@@ -22103,12 +22103,38 @@ article .social-icon .link-copy {
 .swiper-buttons-wrap {
     display: flex;
     margin-bottom: 1rem;
+    padding: 0.3rem;
 }
 
 .swiper-slider-arrow {
     color: #dd0036;
     border: 1px solid #dd0036;
     padding: 0.75rem;
+}
+
+.swiper-slider-arrow:hover {
+    color: #ffffff;
+    background: #dd0036;
+}
+
+.swiper-slider-arrow:focus, .swiper-slider-arrow:active {
+    color: #ffffff;
+    background: #dd0036;
+    font-weight: 400;
+}
+
+.swiper-slider-arrow:focus:focus, .swiper-slider-arrow:focus:active, .swiper-slider-arrow:active:focus, .swiper-slider-arrow:active:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.swiper-slider-arrow:disabled {
+    color: #696969;
+    background: #ffffff;
+    border: none;
+    opacity: 0.7;
 }
 
 .swiper-button-prev {
