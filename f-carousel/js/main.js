@@ -5884,15 +5884,18 @@ function launchFeedback(elem) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
 
 
 
 
 const className = 'swiper-container';
-const ie = Object(_util__WEBPACK_IMPORTED_MODULE_1__["detectIE"])();
+const ie = Object(_util__WEBPACK_IMPORTED_MODULE_2__["detectIE"])();
 let i = 0,
     x0 = null,
     locked = false,
@@ -5947,7 +5950,7 @@ function numIndicator(index, e) {
 }
 
 function activeSlider(index, sliders) {
-  let a = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toArray"])(sliders.querySelectorAll('.swiper-slide'));
+  let a = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toArray"])(sliders.querySelectorAll('.swiper-slide'));
   a.forEach(e => {
     e.classList.remove('active');
   });
@@ -6052,11 +6055,12 @@ function move(e) {
   if (locked) {
     let dx = unify(e).clientX - x0,
         //dx is value calculate by using clientX mousedown and after value
-    s = Math.sign(dx); //check if swipe is left or right by checking value is negative ot positive
-    //tx = getComputedStyle(e.target).getPropertyValue('--tx');
-    //p = parseInt(tx.replace(/\D/g, '')); // MAY use the drag length as a condition to move slider
+    s = Math.sign(dx),
+        //check if swipe is left or right by checking value is negative ot positive
+    tx = getComputedStyle(e.target).getPropertyValue('--tx'),
+        p = parseInt(tx.replace(/\D/g, '')); // MAY use the drag length as a condition to move slider
 
-    if ((i > 0 || s < 0) && (i < e.target.children.length - 1 || s > 0)) {
+    if ((i > 0 || s < 0) && (i < e.target.children.length - 1 || s > 0) && (p > 30 || i === 0 || i === e.target.children.length - 1)) {
       if (!ie) {
         e.target.style.setProperty('--i', i -= s); //increment i (i repersent the slider)
 
@@ -6089,10 +6093,11 @@ function checkEventType(e) {
     default:
       return e.target.parentElement.parentElement.parentElement;
   }
-}
+} //edge fall back cannot use CSS var inside a cal()
+
 
 function totalSliderWidth(e) {
-  const sliders = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toArray"])(checkEventType(e).querySelectorAll('.swiper-slide'));
+  const sliders = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toArray"])(checkEventType(e).querySelectorAll('.swiper-slide'));
   let totalWidth = 0;
   sliders.forEach(s => {
     let style = window.getComputedStyle ? getComputedStyle(s, null) : s.currentStyle;

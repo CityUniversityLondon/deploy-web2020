@@ -22014,6 +22014,7 @@ article .social-icon .link-copy {
 
 .swiper-wrapper {
     --n: 1;
+    --tx: 0px;
     display: flex;
     align-items: center;
     overflow-y: hidden;
