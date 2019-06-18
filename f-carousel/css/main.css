@@ -22054,6 +22054,7 @@ article .social-icon .link-copy {
 }
 
 .swiper-slide__text {
+    z-index: 99999;
     position: relative;
     top: -2rem;
     padding: 1.5rem;
@@ -22064,11 +22065,22 @@ article .social-icon .link-copy {
     margin-left: auto;
 }
 
+.swiper-slide__text a {
+    pointer-events: auto;
+}
+
 @media (max-width: 432px) {
     .swiper-slide__text {
         margin-right: none;
         margin-left: 1rem;
         padding: 1rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .swiper-slide__image-wrapper {
+        overflow: hidden;
+        max-height: 350px;
     }
 }
 

@@ -5105,8 +5105,14 @@ document.addEventListener('DOMContentLoaded', () => {
   //     }, false);
   // }
   Array.from(document.getElementsByTagName('html')).forEach(html => {
+    let ie = Object(_util__WEBPACK_IMPORTED_MODULE_4__["detectIE"])();
     Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(html, 'no-js', false);
-    html.className = (html.className + ' js').trim();
+
+    if (ie >= 12) {
+      html.className = (html.className + ' js ' + 'edge').trim();
+    } else {
+      html.className = (html.className + ' js').trim();
+    }
   });
   _patterns__WEBPACK_IMPORTED_MODULE_3__["default"].forEach(launchPattern);
   const parameters = Object(_util__WEBPACK_IMPORTED_MODULE_4__["parametersToObject"])(location.search);
@@ -5886,10 +5892,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const className = 'swiper-container';
+const ie = Object(_util__WEBPACK_IMPORTED_MODULE_1__["detectIE"])();
 let i = 0,
     x0 = null,
     locked = false,
-    config = {};
+    config = {},
+    sliderTranslateCoOr = 0;
 
 function init(elem) {
   const _C = elem.querySelector('.swiper-wrapper'),
@@ -5898,7 +5906,8 @@ function init(elem) {
         numInd = document.createElement('div'),
         numIndActiveSl = document.createElement('span'),
         numIndSeparator = document.createElement('span'),
-        numbIndSlLength = document.createElement('span');
+        numbIndSlLength = document.createElement('span'); //perpare the indicators to append to html
+
 
   numInd.className = 'swiper-indicator';
   numIndActiveSl.className = 'swiper-indicator__active-slider';
@@ -5946,20 +5955,7 @@ function activeSlider(index, sliders) {
 }
 
 function toogleNextBtn(index, length, e) {
-  let nextBtn;
-
-  switch (e.type) {
-    case 'mouseup':
-      nextBtn = e.target.parentElement;
-      break;
-
-    case 'touchend':
-      nextBtn = e.target.parentElement;
-      break;
-
-    default:
-      nextBtn = e.target.parentElement.parentElement;
-  }
+  let nextBtn = checkEventType(e);
 
   if (index + 1 === length) {
     nextBtn.querySelector('.swiper-button-next button').disabled = true;
@@ -5974,20 +5970,7 @@ function toogleNextBtn(index, length, e) {
 }
 
 function tooglePrevBtn(index, length, e) {
-  let prevBtn;
-
-  switch (e.type) {
-    case 'mouseup':
-      prevBtn = e.target.parentElement;
-      break;
-
-    case 'touchend':
-      prevBtn = e.target.parentElement;
-      break;
-
-    default:
-      prevBtn = e.target.parentElement.parentElement;
-  }
+  let prevBtn = checkEventType(e);
 
   if (index + 1 === 1) {
     prevBtn.querySelector('.swiper-button-prev button').disabled = true;
@@ -6009,9 +5992,18 @@ function next(e) {
     sl.classList.toggle('smooth');
   }
 
-  sl.style.setProperty('--i', i != 0 ? i += 1 : i = 1);
-  sl.classList.toggle('smooth');
-  toogleNextBtn(i, sl.children.length, e);
+  if (!ie) {
+    sl.style.setProperty('--i', i != 0 ? i += 1 : i = 1);
+    sl.classList.toggle('smooth');
+    toogleNextBtn(i, sl.children.length, e);
+  } else {
+    let sliderWidth = totalSliderWidth(e) / sl.children.length;
+    sliderTranslateCoOr -= sliderWidth;
+    sl.style.setProperty('transform', 'translate(' + sliderTranslateCoOr + 'px)');
+    sl.classList.toggle('smooth');
+    i != 0 ? i += 1 : i = 1;
+    toogleNextBtn(i, sl.children.length, e);
+  }
 }
 
 function previous(e) {
@@ -6022,9 +6014,18 @@ function previous(e) {
     psl.classList.toggle('smooth');
   }
 
-  psl.style.setProperty('--i', i ? i -= 1 : i = 0);
-  psl.classList.toggle('smooth');
-  tooglePrevBtn(i, psl.children.length, e);
+  if (!ie) {
+    psl.style.setProperty('--i', i ? i -= 1 : i = 0);
+    psl.classList.toggle('smooth');
+    tooglePrevBtn(i, psl.children.length, e);
+  } else {
+    let sliderWidth = totalSliderWidth(e) / psl.children.length;
+    sliderTranslateCoOr += sliderWidth;
+    psl.style.setProperty('transform', 'translate(' + sliderTranslateCoOr + 'px)');
+    psl.classList.toggle('smooth');
+    i ? i -= 1 : i = 0;
+    tooglePrevBtn(i, psl.children.length, e);
+  }
 }
 
 function unify(e) {
@@ -6039,8 +6040,7 @@ function lock(e) {
 }
 
 function drag(e) {
-  e.preventDefault();
-
+  //e.preventDefault();
   if (i !== e.target.children.length - 1 && i !== 0) {
     if (locked) {
       e.target.style.setProperty('--tx', "".concat(Math.round(unify(e).clientX - x0), "px"));
@@ -6053,22 +6053,60 @@ function move(e) {
     let dx = unify(e).clientX - x0,
         //dx is value calculate by using clientX mousedown and after value
     s = Math.sign(dx); //check if swipe is left or right by checking value is negative ot positive
+    //tx = getComputedStyle(e.target).getPropertyValue('--tx');
+    //p = parseInt(tx.replace(/\D/g, '')); // MAY use the drag length as a condition to move slider
 
     if ((i > 0 || s < 0) && (i < e.target.children.length - 1 || s > 0)) {
-      e.target.style.setProperty('--i', i -= s); //increment i (i repersent the slider)
+      if (!ie) {
+        e.target.style.setProperty('--i', i -= s); //increment i (i repersent the slider)
 
-      e.target.style.setProperty('--tx', '0px'); //reset touch x value
+        e.target.style.setProperty('--tx', '0px'); //reset touch x value
 
-      e.target.classList.toggle('smooth', !(locked = false));
-      x0 = null;
+        e.target.classList.toggle('smooth', !(locked = false));
+        x0 = null;
 
-      if (s === -1) {
-        toogleNextBtn(i, e.target.children.length, e);
+        if (s === -1) {
+          toogleNextBtn(i, e.target.children.length, e);
+        } else {
+          tooglePrevBtn(i, e.target.children.length, e);
+        }
       } else {
-        tooglePrevBtn(i, e.target.children.length, e);
+        animateSlider(e, s);
+        s ? toogleNextBtn(i, e.target.children.length, e) : tooglePrevBtn(i, e.target.children.length, e);
       }
     }
   }
+}
+
+function checkEventType(e) {
+  switch (e.type) {
+    case 'mouseup':
+      return e.target.parentElement;
+
+    case 'touchend':
+      return e.target.parentElement;
+
+    default:
+      return e.target.parentElement.parentElement;
+  }
+}
+
+function totalSliderWidth(e) {
+  const sliders = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toArray"])(checkEventType(e).querySelectorAll('.swiper-slide'));
+  let totalWidth = 0;
+  sliders.forEach(s => {
+    let style = window.getComputedStyle ? getComputedStyle(s, null) : s.currentStyle;
+    totalWidth += s.offsetWidth + parseInt(style.marginRight) || 0;
+  });
+  return totalWidth;
+}
+
+function animateSlider(e, lr) {
+  let sliderWidth = totalSliderWidth(e) / e.target.children.length;
+  lr === -1 ? sliderTranslateCoOr -= sliderWidth : sliderTranslateCoOr += sliderWidth;
+  e.target.style.setProperty('transform', 'translate(' + sliderTranslateCoOr + 'px)');
+  e.target.classList.toggle('smooth');
+  i -= lr;
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -8070,7 +8108,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, toArray */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, toArray, detectIE */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8086,6 +8124,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pxToRem", function() { return pxToRem; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "numberFromString", function() { return numberFromString; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toArray", function() { return toArray; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detectIE", function() { return detectIE; });
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol.description */ "./node_modules/core-js/modules/es.symbol.description.js");
 /* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
@@ -8278,13 +8317,46 @@ function numberFromString(string) {
  */
 
 function toArray(obj) {
-  var array = []; // iterate backwards ensuring that length is an UInt32
+  let array = []; // iterate backwards ensuring that length is an UInt32
 
-  for (var i = obj.length >>> 0; i--;) {
+  for (let i = obj.length >>> 0; i--;) {
     array[i] = obj[i];
   }
 
   return array;
+}
+/**
+ *
+ * Check browser user agent is IE or edge and return version number
+ *
+ */
+
+function detectIE() {
+  let ua = window.navigator.userAgent;
+  let msie = ua.indexOf('MSIE ');
+
+  if (msie > 0) {
+    // IE 10 or older => return version number
+    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+  }
+
+  let trident = ua.indexOf('Trident/');
+
+  if (trident > 0) {
+    // IE 11 => return version number
+    let rv = ua.indexOf('rv:');
+    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+  }
+
+  let edge = ua.indexOf('Edge/');
+
+  if (edge > 0) {
+    // Edge (IE 12+) => return version number
+    return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+  } // other browser
+
+
+  return false;
 }
 
 /***/ }),
