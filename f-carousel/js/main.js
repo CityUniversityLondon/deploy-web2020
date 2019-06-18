@@ -5903,6 +5903,25 @@ let i = 0,
     sliderTranslateCoOr = 0;
 
 function init(elem) {
+  const lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
+
+  if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
+    let lazyImageObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.classList.remove('lazy');
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+    lazyImages.forEach(function (lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  } //lazy load images
+
+
   const _C = elem.querySelector('.swiper-wrapper'),
         nb = elem.querySelector('.swiper-button-next').firstElementChild,
         pb = elem.querySelector('.swiper-button-prev').firstElementChild,
