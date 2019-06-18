@@ -20966,7 +20966,8 @@ article .social-icon .link-copy {
 }
 
 .linked-heading .linked-heading__icons i:nth-child(2) {
-    font-size: 1rem;
+    font-size: 22px;
+    font-weight: 300;
     display: none;
     opacity: 0;
     visibility: hidden;
