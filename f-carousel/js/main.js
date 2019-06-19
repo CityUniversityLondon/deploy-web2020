@@ -5903,6 +5903,8 @@ let i = 0,
     sliderTranslateCoOr = 0;
 
 function init(elem) {
+  //inital setup
+  //lazy load images
   const lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
 
   if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
@@ -5919,17 +5921,39 @@ function init(elem) {
     lazyImages.forEach(function (lazyImage) {
       lazyImageObserver.observe(lazyImage);
     });
-  } //lazy load images
-
+  }
 
   const _C = elem.querySelector('.swiper-wrapper'),
-        nb = elem.querySelector('.swiper-button-next').firstElementChild,
-        pb = elem.querySelector('.swiper-button-prev').firstElementChild,
         numInd = document.createElement('div'),
         numIndActiveSl = document.createElement('span'),
         numIndSeparator = document.createElement('span'),
-        numbIndSlLength = document.createElement('span'); //perpare the indicators to append to html
+        numbIndSlLength = document.createElement('span'),
+        buttonsWrap = document.createElement('div'),
+        prevBtnWrap = document.createElement('div'),
+        nextBtnWrap = document.createElement('div'),
+        nextBtn = document.createElement('BUTTON'),
+        prevBtn = document.createElement('BUTTON'); //setup carousel buttons
 
+
+  buttonsWrap.className = 'swiper-buttons-wrap';
+  prevBtnWrap.className = 'swiper-button-prev';
+  nextBtnWrap.className = 'swiper-button-next';
+  nextBtn.name = 'nextButton';
+  nextBtn.type = 'button';
+  nextBtn.className = 'fas fa-arrow-right swiper-slider-arrow arrow-right--btn-next';
+  nextBtn.setAttribute('aria-label', 'Next slider');
+  nextBtn.addEventListener('click', next, false);
+  prevBtn.name = 'prevButton';
+  prevBtn.type = 'button';
+  prevBtn.className = 'fas fa-arrow-left swiper-slider-arrow arrow-left--btn-prev';
+  prevBtn.setAttribute('aria-label', 'Previous slider');
+  prevBtn.addEventListener('click', previous, false);
+  prevBtn.disabled = true;
+  nextBtnWrap.appendChild(nextBtn);
+  prevBtnWrap.appendChild(prevBtn);
+  buttonsWrap.appendChild(prevBtnWrap);
+  buttonsWrap.appendChild(nextBtnWrap);
+  elem.insertBefore(buttonsWrap, elem.childNodes[0]); //perpare the indicators to append to html
 
   numInd.className = 'swiper-indicator';
   numIndActiveSl.className = 'swiper-indicator__active-slider';
@@ -5943,7 +5967,8 @@ function init(elem) {
   elem.appendChild(numInd);
   config.sliderLength = _C.children.length;
 
-  _C.style.setProperty('--n', config.sliderLength);
+  _C.style.setProperty('--n', config.sliderLength); //add event listeners
+
 
   _C.addEventListener('mousedown', lock, false);
 
@@ -5956,10 +5981,6 @@ function init(elem) {
   _C.addEventListener('mouseup', move, false);
 
   _C.addEventListener('touchend', move, false);
-
-  nb.addEventListener('click', next, false);
-  pb.addEventListener('click', previous, false);
-  pb.disabled = true;
 
   _C.firstElementChild.classList.toggle('active');
 
@@ -6083,25 +6104,26 @@ function move(e) {
     tx = getComputedStyle(e.target).getPropertyValue('--tx'),
         p = parseInt(tx.replace(/\D/g, '')); // MAY use the drag length as a condition to move slider
 
-    if ((i > 0 || s < 0) && (i < e.target.children.length - 1 || s > 0) && (p > 30 || i === 0 || i === e.target.children.length - 1)) {
-      if (!ie) {
-        e.target.style.setProperty('--i', i -= s); //increment i (i repersent the slider)
+    if ((i > 0 || s < 0) && (i < e.target.children.length - 1 || s > 0) && (p > 30 || i === 0 || i === e.target.children.length - 1) //conditions to swip to slider
+    ) {
+        if (!ie) {
+          e.target.style.setProperty('--i', i -= s); //increment i (i repersent the slider)
 
-        e.target.style.setProperty('--tx', '0px'); //reset touch x value
+          e.target.style.setProperty('--tx', '0px'); //reset touch x value
 
-        e.target.classList.toggle('smooth', !(locked = false));
-        x0 = null;
+          e.target.classList.toggle('smooth', !(locked = false));
+          x0 = null;
 
-        if (s === -1) {
-          toogleNextBtn(i, e.target.children.length, e);
+          if (s === -1) {
+            toogleNextBtn(i, e.target.children.length, e);
+          } else {
+            tooglePrevBtn(i, e.target.children.length, e);
+          }
         } else {
-          tooglePrevBtn(i, e.target.children.length, e);
+          animateSlider(e, s);
+          s ? toogleNextBtn(i, e.target.children.length, e) : tooglePrevBtn(i, e.target.children.length, e);
         }
-      } else {
-        animateSlider(e, s);
-        s ? toogleNextBtn(i, e.target.children.length, e) : tooglePrevBtn(i, e.target.children.length, e);
       }
-    }
   }
 }
 
