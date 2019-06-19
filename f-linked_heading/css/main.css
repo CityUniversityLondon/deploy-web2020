@@ -20859,6 +20859,9 @@ article .social-icon .link-copy {
     position: relative;
     padding-right: 2.5rem;
     display: inline-block;
+    transition: none;
+    background-image: none;
+    background-size: 0;
 }
 
 @media (hover: hover) {
