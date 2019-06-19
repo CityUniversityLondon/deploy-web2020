@@ -5962,6 +5962,8 @@ function init(elem) {
   pb.disabled = true;
 
   _C.firstElementChild.classList.toggle('active');
+
+  activeSlider(i, _C);
 }
 
 function numIndicator(index, e) {
@@ -5972,8 +5974,10 @@ function activeSlider(index, sliders) {
   let a = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toArray"])(sliders.querySelectorAll('.swiper-slide'));
   a.forEach(e => {
     e.classList.remove('active');
+    e.querySelectorAll('a').forEach(a => a.tabIndex = -1); // disable focus on non active slider with hyperlinks
   });
   a[index].classList.toggle('active');
+  a[index].querySelectorAll('a').forEach(a => a.tabIndex = 0);
 }
 
 function toogleNextBtn(index, length, e) {

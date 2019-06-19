@@ -22020,8 +22020,6 @@ article .social-icon .link-copy {
     overflow-y: hidden;
     width: 100%;
     width: calc(var(--n) * 100%);
-    height: 50vw;
-    max-height: 100vh;
     transform: translate(calc(var(--tx, 0px) + var(--i, 0) / var(--n) * -100%));
 }
 
@@ -22091,6 +22089,12 @@ article .social-icon .link-copy {
     right: 1rem;
     font-size: 0.889rem;
     font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .swiper-indicator {
+        bottom: 0;
+    }
 }
 
 .swiper-indicator__active-slider {
