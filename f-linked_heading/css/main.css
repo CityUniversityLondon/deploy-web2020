@@ -20902,7 +20902,6 @@ article .social-icon .link-copy {
     transition: none;
     background-image: none;
     background-size: 0;
-    outline-offset: 0.3rem;
 }
 
 .linked-heading:hover .linked-heading__text:before {
@@ -20924,10 +20923,6 @@ article .social-icon .link-copy {
     animation: slide-left-in 600ms;
 }
 
-.linked-heading:active {
-    outline-offset: 0.3rem;
-}
-
 .linked-heading:active .linked-heading__text:before {
     opacity: 1;
     width: 100%;
@@ -20941,37 +20936,45 @@ article .social-icon .link-copy {
     color: #0c0c0e;
 }
 
-.linked-heading .linked-heading__icons {
+.linked-heading__icons {
     background: #dd0036;
     color: #ffffff;
     position: absolute;
     right: 0;
     top: 0;
     background: #dd0036;
-    border-radius: 50%;
-    width: 16%;
-    height: 100%;
+    border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.linked-heading .linked-heading__icons i {
+.linked-heading__icons i {
     position: absolute;
     font-weight: 400;
 }
 
-.linked-heading .linked-heading__icons i:nth-child(1) {
+.linked-heading__icons i:nth-child(1) {
     font-size: 16px;
 }
 
-.linked-heading .linked-heading__icons i:nth-child(2) {
+.linked-heading__icons i:nth-child(2) {
     font-size: 22px;
     font-weight: 300;
     display: none;
     opacity: 0;
     visibility: hidden;
     animation: slide-right-out 600ms;
+}
+
+h2 .linked-heading__icons {
+    height: 2rem;
+    width: 2rem;
+}
+
+h3 .linked-heading__icons {
+    height: 1.8rem;
+    width: 1.8rem;
 }
 
 .linked-heading__text {
