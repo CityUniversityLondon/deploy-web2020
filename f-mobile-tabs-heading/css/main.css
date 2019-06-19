@@ -20075,9 +20075,17 @@ blockquote footer {
         border-top: 0.125rem solid #d8d8d8;
     }
     .js .tabs .tabs__panel__content {
-        padding-bottom: 1rem;
-        padding-top: 2rem;
+        padding: 2rem 0;
     }
+}
+
+@media screen and (max-width: 767px) {
+    .js .tabs .tabs__panel__content {
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen {
     .js .tabs .tabs__panel__heading {
         margin-top: 0;
     }
