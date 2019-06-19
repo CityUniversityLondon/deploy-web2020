@@ -334,6 +334,14 @@
     background-color: #8a8a8a;
 }
 
+.color--gray13 {
+    color: #e7ebed;
+}
+
+.background--gray13 {
+    background-color: #e7ebed;
+}
+
 .color--red10 {
     color: #f7d2d5;
 }
@@ -1070,20 +1078,6 @@
     background-color: #ffffff;
 }
 
-/* Icon positioning
-
-Demo HTML
-<div class="key-info__icon--left">
-    <span class="fas fa-envelope"></span>
-    <div>Text relating to icon</div>
-</div>
-
-Demo SCSS
-.key-info__icon--left {
-    @include key-info-icon(left, $color-pink90);
-}
-
-*/
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
@@ -10588,6 +10582,77 @@ u {
     font-style: italic;
 }
 
+code,
+pre {
+    font-family: "Plex Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 450;
+    max-width: 55ch;
+    font-family: "Plex Mono", monospace;
+    letter-spacing: 0;
+    max-width: unset;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    code,
+    pre {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    code,
+    pre {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    code,
+    pre {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    code,
+    pre {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    code,
+    pre {
+        letter-spacing: -0.017em;
+    }
+}
+
+code b,
+code strong,
+pre b,
+pre strong {
+    font-weight: 700;
+}
+
+code i,
+code em,
+pre i,
+pre em {
+    font-style: italic;
+}
+
+p code {
+    background: #303030;
+    border-radius: 0.25rem;
+    color: #ffffff;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
 h6,
 .h6-style {
     font-family: "Meta Sans", sans-serif;
@@ -11904,22 +11969,22 @@ main table td em {
 
 .documentation .content-wrapper {
     max-width: 80rem;
-    display: grid;
     grid-row-gap: 0;
+    display: grid;
     grid-template-rows: auto;
-}
-
-@media (max-width: 1440px) {
-    .documentation .content-wrapper {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
 }
 
 @media (min-width: 1441px) {
     .documentation .content-wrapper {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .documentation .content-wrapper {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
@@ -11972,21 +12037,21 @@ main table td em {
 
 .persona {
     max-width: 80rem;
-    display: grid;
     grid-row-gap: 0;
-}
-
-@media (max-width: 1440px) {
-    .persona {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
+    display: grid;
 }
 
 @media (min-width: 1441px) {
     .persona {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .persona {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
@@ -12095,8 +12160,8 @@ main table td em {
 }
 
 .user-journey .content-wrapper {
-    display: grid;
     grid-row-gap: 0;
+    display: grid;
     grid-template-rows: auto;
 }
 
@@ -12144,17 +12209,17 @@ main table td em {
     grid-area: main;
 }
 
-@media (max-width: 1440px) {
-    .user-journey .content-wrapper > .content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
 @media (min-width: 1441px) {
     .user-journey .content-wrapper > .content {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .user-journey .content-wrapper > .content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
