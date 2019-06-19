@@ -10291,10 +10291,10 @@ article a {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
+    color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #006bbd;
 }
 
 @media (hover: hover) {
@@ -10341,19 +10341,32 @@ article a:focus, article a:active {
 }
 
 article a:visited {
-    border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
 article a:focus {
     color: #006bbd;
+}
+
+@media (hover: hover) {
+    article a:hover {
+        color: #ffffff;
+    }
+}
+
+article a:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+article a:visited {
+    border-bottom-color: #4c2c92;
+}
+
+article a:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
@@ -10361,20 +10374,20 @@ article a:focus {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
     }
 }
 
 article a:active {
-    background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #ffffff;
-    outline-color: #0c0c0e;
+}
+
+article a:focus, article a:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 u {
@@ -11826,10 +11839,10 @@ main table td em {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
+    color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #006bbd;
     position: absolute;
     right: 0;
     margin-bottom: 1rem;
@@ -11909,19 +11922,32 @@ main table td em {
 }
 
 .cms-editor .cms-editor-warning-remover:visited {
-    border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
 .cms-editor .cms-editor-warning-remover:focus {
     color: #006bbd;
+}
+
+@media (hover: hover) {
+    .cms-editor .cms-editor-warning-remover:hover {
+        color: #ffffff;
+    }
+}
+
+.cms-editor .cms-editor-warning-remover:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.cms-editor .cms-editor-warning-remover:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.cms-editor .cms-editor-warning-remover:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
@@ -11929,20 +11955,20 @@ main table td em {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
     }
 }
 
 .cms-editor .cms-editor-warning-remover:active {
-    background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #ffffff;
-    outline-color: #0c0c0e;
+}
+
+.cms-editor .cms-editor-warning-remover:focus, .cms-editor .cms-editor-warning-remover:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .ux-personas {
@@ -12327,10 +12353,10 @@ main table td em {
         background-size: 100% 0;
         background-position: 0 100%;
         transition: background-size 0.3s ease;
+        color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #006bbd;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
@@ -12389,18 +12415,31 @@ main table td em {
 
 @media screen {
     .theme--dark .cms-editor .cms-editor-warning-remover:visited {
-        border-bottom-color: #4c2c92;
         color: #4c2c92;
     }
     .theme--dark .cms-editor .cms-editor-warning-remover:focus {
         color: #006bbd;
+    }
+}
+
+@media screen and (hover: hover) {
+    .theme--dark .cms-editor .cms-editor-warning-remover:hover {
+        color: #ffffff;
+    }
+}
+
+@media screen {
+    .theme--dark .cms-editor .cms-editor-warning-remover:active {
+        color: #ffffff;
+        background-color: #006bbd;
+    }
+    .theme--dark .cms-editor .cms-editor-warning-remover:visited {
+        border-bottom-color: #4c2c92;
+    }
+    .theme--dark .cms-editor .cms-editor-warning-remover:focus {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        outline-color: #0c0c0e;
-        outline-width: 0.125rem;
-        outline-style: dotted;
-        outline-offset: 0.1875rem;
     }
 }
 
@@ -12409,21 +12448,20 @@ main table td em {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
     }
 }
 
 @media screen {
     .theme--dark .cms-editor .cms-editor-warning-remover:active {
-        background-color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
-        outline-color: #0c0c0e;
+    }
+    .theme--dark .cms-editor .cms-editor-warning-remover:focus, .theme--dark .cms-editor .cms-editor-warning-remover:active {
         outline-width: 0.125rem;
         outline-style: dotted;
         outline-offset: 0.1875rem;
+        outline-color: #0c0c0e;
     }
 }
 
@@ -12455,7 +12493,8 @@ main table td em {
 @media screen and (hover: hover) {
     .theme--dark .cms-editor .cms-editor-warning-remover:hover {
         border-bottom-color: #6894c0;
-        color: #1e1e1e;
+        background: #6894c0;
+        color: #ffffff;
     }
 }
 
@@ -12463,7 +12502,7 @@ main table td em {
     .theme--dark .cms-editor .cms-editor-warning-remover:active {
         background-color: #6894c0;
         border-bottom-color: #6894c0;
-        color: #1e1e1e;
+        color: #ffffff;
         outline-color: #ffffff;
     }
 }

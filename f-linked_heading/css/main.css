@@ -10437,10 +10437,10 @@ article a {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
+    color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #006bbd;
 }
 
 @media (hover: hover) {
@@ -10487,19 +10487,32 @@ article a:focus, article a:active {
 }
 
 article a:visited {
-    border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
 article a:focus {
     color: #006bbd;
+}
+
+@media (hover: hover) {
+    article a:hover {
+        color: #ffffff;
+    }
+}
+
+article a:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+article a:visited {
+    border-bottom-color: #4c2c92;
+}
+
+article a:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
@@ -10507,20 +10520,20 @@ article a:focus {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
     }
 }
 
 article a:active {
-    background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #ffffff;
-    outline-color: #0c0c0e;
+}
+
+article a:focus, article a:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 u {
@@ -12399,10 +12412,10 @@ main table td em {
 }
 
 .breadcrumbs a:focus, .breadcrumbs a:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .breadcrumbs a:before {
@@ -12676,10 +12689,10 @@ main table td em {
 }
 
 .card--casestudy a:focus:after, .card--casestudy a:active:after {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .card--casestudy a:visited .title {
@@ -13338,10 +13351,10 @@ main table td em {
 }
 
 .card--related-course a:focus:after, .card--related-course a:active:after {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .card--related-course a:visited .title {
@@ -13889,10 +13902,10 @@ main table td em {
 }
 
 .card--pathway:focus, .card--pathway:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .card--pathway .underline-transition__title {
@@ -13927,10 +13940,10 @@ main table td em {
 }
 
 .card--pathway:focus:after, .card--pathway:active:after {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .card--pathway:visited .title {
@@ -14580,10 +14593,10 @@ main table td em {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
+    color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #006bbd;
     background: none;
     border-bottom-color: #8a8a8a;
     color: #8a8a8a;
@@ -14634,19 +14647,32 @@ main table td em {
 }
 
 .js .cookie-notice a:visited {
-    border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
 .js .cookie-notice a:focus {
     color: #006bbd;
+}
+
+@media (hover: hover) {
+    .js .cookie-notice a:hover {
+        color: #ffffff;
+    }
+}
+
+.js .cookie-notice a:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.js .cookie-notice a:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.js .cookie-notice a:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
@@ -14654,20 +14680,20 @@ main table td em {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
     }
 }
 
 .js .cookie-notice a:active {
-    background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #ffffff;
-    outline-color: #0c0c0e;
+}
+
+.js .cookie-notice a:focus, .js .cookie-notice a:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .js .cookie-notice a:visited {
@@ -14857,10 +14883,11 @@ main table td em {
 }
 
 .js .cookie-notice button:active:focus, .js .cookie-notice button:active:active, .js .cookie-notice button:focus:focus, .js .cookie-notice button:focus:active {
-    outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-color: #ffffff;
 }
 
 @media (hover: hover) {
@@ -15002,10 +15029,10 @@ main table td em {
 }
 
 .primary-cta-arrow--bright:focus:focus, .primary-cta-arrow--bright:focus:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (hover: hover) {
@@ -15024,10 +15051,10 @@ main table td em {
 }
 
 .primary-cta-arrow--bright:active:focus, .primary-cta-arrow--bright:active:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .primary-cta-arrow--bright:disabled {
@@ -15151,10 +15178,10 @@ main table td em {
 }
 
 .primary-cta--bright:focus:focus, .primary-cta--bright:focus:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (hover: hover) {
@@ -15173,10 +15200,10 @@ main table td em {
 }
 
 .primary-cta--bright:active:focus, .primary-cta--bright:active:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .primary-cta--bright:disabled {
@@ -15346,10 +15373,11 @@ main table td em {
 }
 
 .primary-cta-arrow--dark:active:focus, .primary-cta-arrow--dark:active:active, .primary-cta-arrow--dark:focus:focus, .primary-cta-arrow--dark:focus:active {
-    outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-color: #ffffff;
 }
 
 @media (hover: hover) {
@@ -15482,10 +15510,11 @@ main table td em {
 }
 
 .primary-cta--dark:active:focus, .primary-cta--dark:active:active, .primary-cta--dark:focus:focus, .primary-cta--dark:focus:active {
-    outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-color: #ffffff;
 }
 
 @media (hover: hover) {
@@ -15656,10 +15685,10 @@ main table td em {
 }
 
 .outline-cta-arrow--bright:focus:focus, .outline-cta-arrow--bright:focus:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (hover: hover) {
@@ -15678,10 +15707,10 @@ main table td em {
 }
 
 .outline-cta-arrow--bright:active:focus, .outline-cta-arrow--bright:active:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .outline-cta-arrow--bright:disabled {
@@ -15802,10 +15831,10 @@ main table td em {
 }
 
 .outline-cta--bright:focus:focus, .outline-cta--bright:focus:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (hover: hover) {
@@ -15824,10 +15853,10 @@ main table td em {
 }
 
 .outline-cta--bright:active:focus, .outline-cta--bright:active:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .outline-cta--bright:disabled {
@@ -15971,10 +16000,11 @@ main table td em {
 }
 
 .outline-cta-arrow--dark:focus:focus, .outline-cta-arrow--dark:focus:active {
-    outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-color: #ffffff;
 }
 
 .outline-cta-arrow--dark:active {
@@ -15982,10 +16012,11 @@ main table td em {
 }
 
 .outline-cta-arrow--dark:active:focus, .outline-cta-arrow--dark:active:active {
-    outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-color: #ffffff;
 }
 
 .outline-cta-arrow--dark:disabled {
@@ -16117,10 +16148,11 @@ main table td em {
 }
 
 .outline-cta--dark:focus:focus, .outline-cta--dark:focus:active {
-    outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-color: #ffffff;
 }
 
 .outline-cta--dark:active {
@@ -16128,10 +16160,11 @@ main table td em {
 }
 
 .outline-cta--dark:active:focus, .outline-cta--dark:active:active {
-    outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-color: #ffffff;
 }
 
 .outline-cta--dark:disabled {
@@ -16267,10 +16300,10 @@ main table td em {
 }
 
 .basic-cta--bright:focus:focus, .basic-cta--bright:focus:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (hover: hover) {
@@ -16289,10 +16322,10 @@ main table td em {
 }
 
 .basic-cta--bright:active:focus, .basic-cta--bright:active:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .basic-cta--bright:disabled {
@@ -16461,10 +16494,10 @@ main table td em {
 }
 
 .basic-cta--dark:focus:focus, .basic-cta--dark:focus:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (hover: hover) {
@@ -16483,10 +16516,10 @@ main table td em {
 }
 
 .basic-cta--dark:active:focus, .basic-cta--dark:active:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .basic-cta--dark:disabled {
@@ -16565,10 +16598,11 @@ main table td em {
 }
 
 .basic-cta--dark:focus:focus, .basic-cta--dark:focus:active, .basic-cta--dark:active:focus, .basic-cta--dark:active:active {
-    outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-color: #ffffff;
 }
 
 .basic-cta--dark:disabled {
@@ -16692,10 +16726,10 @@ main table td em {
 }
 
 .primary-cta--grey--bright:focus:focus, .primary-cta--grey--bright:focus:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (hover: hover) {
@@ -16714,10 +16748,10 @@ main table td em {
 }
 
 .primary-cta--grey--bright:active:focus, .primary-cta--grey--bright:active:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .primary-cta--grey--bright:disabled {
@@ -16889,10 +16923,10 @@ main table td em {
 }
 
 .basic-cta--lifelong-learning-primary:focus:focus, .basic-cta--lifelong-learning-primary:focus:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (hover: hover) {
@@ -16911,10 +16945,10 @@ main table td em {
 }
 
 .basic-cta--lifelong-learning-primary:active:focus, .basic-cta--lifelong-learning-primary:active:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .basic-cta--lifelong-learning-primary:disabled {
@@ -17038,10 +17072,10 @@ main table td em {
 }
 
 .basic-cta--lifelong-learning-secondary:focus:focus, .basic-cta--lifelong-learning-secondary:focus:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (hover: hover) {
@@ -17060,10 +17094,10 @@ main table td em {
 }
 
 .basic-cta--lifelong-learning-secondary:active:focus, .basic-cta--lifelong-learning-secondary:active:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .basic-cta--lifelong-learning-secondary:disabled {
@@ -17231,10 +17265,11 @@ main table td em {
 }
 
 .primary-cta--grey--bright:active:focus, .primary-cta--grey--bright:active:active, .primary-cta--grey--bright:focus:focus, .primary-cta--grey--bright:focus:active {
-    outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-color: #ffffff;
 }
 
 @media (hover: hover) {
@@ -17380,6 +17415,7 @@ main table td em {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
+    color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -17430,19 +17466,32 @@ main table td em {
 }
 
 .feedback .feedback__form-link a:visited {
-    border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
 .feedback .feedback__form-link a:focus {
     color: #006bbd;
+}
+
+@media (hover: hover) {
+    .feedback .feedback__form-link a:hover {
+        color: #ffffff;
+    }
+}
+
+.feedback .feedback__form-link a:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.feedback .feedback__form-link a:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.feedback .feedback__form-link a:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
@@ -17450,33 +17499,57 @@ main table td em {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
+    }
+}
+
+.feedback .feedback__form-link a:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.feedback .feedback__form-link a:focus, .feedback .feedback__form-link a:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.feedback .feedback__form-link a:visited {
+    color: #4c2c92;
+}
+
+.feedback .feedback__form-link a:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .feedback .feedback__form-link a:hover {
         color: #ffffff;
     }
 }
 
 .feedback .feedback__form-link a:active {
-    background-color: #006bbd;
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
     color: #ffffff;
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
+    background-color: #006bbd;
 }
 
 .feedback .feedback__form-link a:visited {
-    border-bottom-color: #006bbd;
     color: #006bbd;
 }
 
-.feedback .feedback__form-link a:hover {
-    color: #ffffff;
+@media (hover: hover) {
+    .feedback .feedback__form-link a:hover {
+        color: #ffffff;
+    }
 }
 
 .feedback .feedback__form-link a:active {
     color: #ffffff;
+}
+
+.feedback .feedback__form-link a:visited {
+    border-bottom-color: #006bbd;
 }
 
 .feedback .feedback__direct {
@@ -17544,10 +17617,10 @@ main table td em {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
+    color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #006bbd;
     margin-left: 1rem;
 }
 
@@ -17595,19 +17668,32 @@ main table td em {
 }
 
 .feedback .feedback__direct button:visited {
-    border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
 .feedback .feedback__direct button:focus {
     color: #006bbd;
+}
+
+@media (hover: hover) {
+    .feedback .feedback__direct button:hover {
+        color: #ffffff;
+    }
+}
+
+.feedback .feedback__direct button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.feedback .feedback__direct button:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.feedback .feedback__direct button:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
@@ -17615,20 +17701,20 @@ main table td em {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
     }
 }
 
 .feedback .feedback__direct button:active {
-    background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #ffffff;
-    outline-color: #0c0c0e;
+}
+
+.feedback .feedback__direct button:focus, .feedback .feedback__direct button:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 article figure a {
@@ -17676,17 +17762,17 @@ article figure a:focus, article figure a:active {
 }
 
 article figure a:focus {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 article figure a:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 article figure figcaption {
@@ -17780,10 +17866,10 @@ article figure figcaption a:focus, article figure figcaption a:active {
 }
 
 article figure figcaption a:focus, article figure figcaption a:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 article figure figcaption a:before {
@@ -18063,17 +18149,17 @@ article figure figcaption a:active {
 }
 
 .global-footer .footer-logo a:focus {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .global-footer .footer-logo a:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .global-header {
@@ -18231,17 +18317,17 @@ article figure figcaption a:active {
 }
 
 .global-header .header-logo a:focus {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .global-header .header-logo a:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .key-information--lifelong-learning .lifelong-learning__start-date__cta {
@@ -18394,10 +18480,10 @@ article figure figcaption a:active {
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:focus:focus, .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:focus:active,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:focus:focus,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:focus:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (hover: hover) {
@@ -18420,10 +18506,10 @@ article figure figcaption a:active {
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:active:focus, .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:active:active,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active:focus,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:disabled,
@@ -18945,10 +19031,10 @@ article figure figcaption a:active {
 }
 
 .key-information--lifelong-learning__controls .content-toggle button:focus, .key-information--lifelong-learning__controls .content-toggle button:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .key-information--lifelong-learning__controls .content-toggle button .label {
@@ -19062,10 +19148,10 @@ article figure figcaption a:active {
 }
 
 .menu li a:focus, .menu li a:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .menu li a:before {
@@ -19940,10 +20026,10 @@ article figure figcaption a:active {
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
         font-weight: 700;
-        outline-color: #0c0c0e;
         outline-width: 0.125rem;
         outline-style: dotted;
         outline-offset: 0.1875rem;
+        outline-color: #0c0c0e;
     }
 }
 
@@ -19963,10 +20049,10 @@ article figure figcaption a:active {
         border-bottom-width: 0.125rem;
         color: #ffffff;
         font-weight: 700;
-        outline-color: #0c0c0e;
         outline-width: 0.125rem;
         outline-style: dotted;
         outline-offset: 0.1875rem;
+        outline-color: #0c0c0e;
     }
     .js .pagination__wrapper .pagination__controls button:disabled {
         background-color: transparent;
@@ -20411,7 +20497,7 @@ blockquote footer {
         transform: translateX(105%);
         animation: slide-right-out 0.2s ease 0s both normal;
         position: absolute;
-        bottom: 0px;
+        bottom: 0;
         left: 0;
         content: '';
         opacity: 0;
@@ -20692,10 +20778,10 @@ button
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
+    color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #006bbd;
 }
 
 @media (hover: hover) {
@@ -20742,19 +20828,32 @@ button
 }
 
 .theme-switcher__option button:visited {
-    border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
 .theme-switcher__option button:focus {
     color: #006bbd;
+}
+
+@media (hover: hover) {
+    .theme-switcher__option button:hover {
+        color: #ffffff;
+    }
+}
+
+.theme-switcher__option button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.theme-switcher__option button:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.theme-switcher__option button:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
@@ -20762,20 +20861,20 @@ button
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
     }
 }
 
 .theme-switcher__option button:active {
-    background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #ffffff;
-    outline-color: #0c0c0e;
+}
+
+.theme-switcher__option button:focus, .theme-switcher__option button:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .theme-switcher__option--clear {
@@ -21523,10 +21622,10 @@ a.modal__close {
 }
 
 a.modal__close:focus, a.modal__close:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 a.modal__close:hover {
@@ -21602,10 +21701,10 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .modal__buttons a:focus, .modal__buttons a:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .modal__buttons a:visited {
@@ -21746,10 +21845,10 @@ article .social-icon:focus {
 }
 
 article .social-icon:focus:focus, article .social-icon:focus:active, article .social-icon:active:focus, article .social-icon:active:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (hover: hover) {
@@ -21964,10 +22063,10 @@ article .link-copy {
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
+    color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #006bbd;
     background: none;
     border-bottom-color: #8a8a8a;
     color: #8a8a8a;
@@ -22019,19 +22118,32 @@ article .link-copy {
 }
 
 .module-selector__content__moduleLink a:visited {
-    border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
 .module-selector__content__moduleLink a:focus {
     color: #006bbd;
+}
+
+@media (hover: hover) {
+    .module-selector__content__moduleLink a:hover {
+        color: #ffffff;
+    }
+}
+
+.module-selector__content__moduleLink a:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.module-selector__content__moduleLink a:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.module-selector__content__moduleLink a:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
@@ -22039,20 +22151,20 @@ article .link-copy {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
     }
 }
 
 .module-selector__content__moduleLink a:active {
-    background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #ffffff;
-    outline-color: #0c0c0e;
+}
+
+.module-selector__content__moduleLink a:focus, .module-selector__content__moduleLink a:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .module-selector__content__moduleLink a:visited {
@@ -22941,10 +23053,10 @@ article .link-copy {
 }
 
 .linked-heading:focus, .linked-heading:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .linked-heading:hover {
@@ -23235,10 +23347,10 @@ a.modal__close {
 }
 
 a.modal__close:focus, a.modal__close:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 a.modal__close:hover {
@@ -23314,10 +23426,10 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .modal__buttons a:focus, .modal__buttons a:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .modal__buttons a:visited {
@@ -25550,10 +25662,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta a:focus:focus, .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta a:focus:active,
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta button:focus:focus,
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta button:focus:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (hover: hover) {
@@ -25576,10 +25688,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta a:active:focus, .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta a:active:active,
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta button:active:focus,
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta button:active:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta a:disabled,
@@ -25867,10 +25979,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .lifelong-learning__contact .cta-block li a:focus:focus, .lifelong-learning__contact .cta-block li a:focus:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (hover: hover) {
@@ -25889,10 +26001,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .lifelong-learning__contact .cta-block li a:active:focus, .lifelong-learning__contact .cta-block li a:active:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .lifelong-learning__contact .cta-block li a:disabled {
@@ -26091,10 +26203,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         color: #ffffff;
     }
     .js .lifelong-learning .modal__trigger:focus:focus, .js .lifelong-learning .modal__trigger:focus:active {
-        outline-color: #0c0c0e;
         outline-width: 0.125rem;
         outline-style: dotted;
         outline-offset: 0.1875rem;
+        outline-color: #0c0c0e;
     }
 }
 
@@ -26114,10 +26226,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         background: transparent;
     }
     .js .lifelong-learning .modal__trigger:active:focus, .js .lifelong-learning .modal__trigger:active:active {
-        outline-color: #0c0c0e;
         outline-width: 0.125rem;
         outline-style: dotted;
         outline-offset: 0.1875rem;
+        outline-color: #0c0c0e;
     }
     .js .lifelong-learning .modal__trigger:disabled {
         color: #ffffff;
@@ -26621,10 +26733,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         background-size: 100% 0;
         background-position: 0 100%;
         transition: background-size 0.3s ease;
+        color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #006bbd;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
@@ -26683,18 +26795,31 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media screen {
     .theme--dark article a:visited {
-        border-bottom-color: #4c2c92;
         color: #4c2c92;
     }
     .theme--dark article a:focus {
         color: #006bbd;
+    }
+}
+
+@media screen and (hover: hover) {
+    .theme--dark article a:hover {
+        color: #ffffff;
+    }
+}
+
+@media screen {
+    .theme--dark article a:active {
+        color: #ffffff;
+        background-color: #006bbd;
+    }
+    .theme--dark article a:visited {
+        border-bottom-color: #4c2c92;
+    }
+    .theme--dark article a:focus {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        outline-color: #0c0c0e;
-        outline-width: 0.125rem;
-        outline-style: dotted;
-        outline-offset: 0.1875rem;
     }
 }
 
@@ -26703,21 +26828,20 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
     }
 }
 
 @media screen {
     .theme--dark article a:active {
-        background-color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
-        outline-color: #0c0c0e;
+    }
+    .theme--dark article a:focus, .theme--dark article a:active {
         outline-width: 0.125rem;
         outline-style: dotted;
         outline-offset: 0.1875rem;
+        outline-color: #0c0c0e;
     }
 }
 
@@ -26749,7 +26873,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media screen and (hover: hover) {
     .theme--dark article a:hover {
         border-bottom-color: #6894c0;
-        color: #1e1e1e;
+        background: #6894c0;
+        color: #ffffff;
     }
 }
 
@@ -26757,7 +26882,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     .theme--dark article a:active {
         background-color: #6894c0;
         border-bottom-color: #6894c0;
-        color: #1e1e1e;
+        color: #ffffff;
         outline-color: #ffffff;
     }
     .theme--dark .skip-link:focus {
@@ -26924,16 +27049,16 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         text-decoration: none;
     }
     .theme--dark .global-header .header-logo a:focus {
-        outline-color: #0c0c0e;
         outline-width: 0.125rem;
         outline-style: dotted;
         outline-offset: 0.1875rem;
+        outline-color: #0c0c0e;
     }
     .theme--dark .global-header .header-logo a:active {
-        outline-color: #0c0c0e;
         outline-width: 0.125rem;
         outline-style: dotted;
         outline-offset: 0.1875rem;
+        outline-color: #0c0c0e;
     }
     .theme--dark .global-header .header-logo a:focus {
         outline-color: #ffffff;
@@ -26993,16 +27118,16 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         text-decoration: none;
     }
     .theme--dark .global-footer .footer-logo a:focus {
-        outline-color: #0c0c0e;
         outline-width: 0.125rem;
         outline-style: dotted;
         outline-offset: 0.1875rem;
+        outline-color: #0c0c0e;
     }
     .theme--dark .global-footer .footer-logo a:active {
-        outline-color: #0c0c0e;
         outline-width: 0.125rem;
         outline-style: dotted;
         outline-offset: 0.1875rem;
+        outline-color: #0c0c0e;
     }
     .theme--dark .global-footer .footer-logo a:focus {
         outline-color: #ffffff;
@@ -27064,10 +27189,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .breadcrumbs a:focus, .theme--dark .breadcrumbs a:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .theme--dark .breadcrumbs a:before {
@@ -27131,6 +27256,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .theme--dark .breadcrumbs a:active {
     border-bottom-color: #dd0036;
     outline-color: #ffffff;
+    color: #ffffff;
 }
 
 .theme--dark .breadcrumbs ol li {
@@ -27263,10 +27389,11 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .cta-block li:nth-child(1) a:active:focus, .theme--dark .cta-block li:nth-child(1) a:active:active, .theme--dark .cta-block li:nth-child(1) a:focus:focus, .theme--dark .cta-block li:nth-child(1) a:focus:active {
-    outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-color: #ffffff;
 }
 
 @media (hover: hover) {
@@ -27448,10 +27575,11 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .cta-block li:nth-child(2) a:focus:focus, .theme--dark .cta-block li:nth-child(2) a:focus:active {
-    outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-color: #ffffff;
 }
 
 .theme--dark .cta-block li:nth-child(2) a:active {
@@ -27459,10 +27587,11 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .cta-block li:nth-child(2) a:active:focus, .theme--dark .cta-block li:nth-child(2) a:active:active {
-    outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-color: #ffffff;
 }
 
 .theme--dark .cta-block li:nth-child(2) a:disabled {
@@ -27601,10 +27730,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .cta-block li:nth-child(3) a:focus:focus, .theme--dark .cta-block li:nth-child(3) a:focus:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (hover: hover) {
@@ -27623,10 +27752,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .cta-block li:nth-child(3) a:active:focus, .theme--dark .cta-block li:nth-child(3) a:active:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .theme--dark .cta-block li:nth-child(3) a:disabled {
@@ -27705,10 +27834,11 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .cta-block li:nth-child(3) a:focus:focus, .theme--dark .cta-block li:nth-child(3) a:focus:active, .theme--dark .cta-block li:nth-child(3) a:active:focus, .theme--dark .cta-block li:nth-child(3) a:active:active {
-    outline-color: #ffffff;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-color: #ffffff;
 }
 
 .theme--dark .cta-block li:nth-child(3) a:disabled {
@@ -27734,10 +27864,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
+    color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #006bbd;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -27792,19 +27922,32 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .feedback .feedback__form-link a:visited {
-    border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
 .theme--dark .feedback .feedback__form-link a:focus {
     color: #006bbd;
+}
+
+@media (hover: hover) {
+    .theme--dark .feedback .feedback__form-link a:hover {
+        color: #ffffff;
+    }
+}
+
+.theme--dark .feedback .feedback__form-link a:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.theme--dark .feedback .feedback__form-link a:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.theme--dark .feedback .feedback__form-link a:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
@@ -27812,20 +27955,20 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
     }
 }
 
 .theme--dark .feedback .feedback__form-link a:active {
-    background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #ffffff;
-    outline-color: #0c0c0e;
+}
+
+.theme--dark .feedback .feedback__form-link a:focus, .theme--dark .feedback .feedback__form-link a:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -27855,14 +27998,15 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media (hover: hover) {
     .theme--dark .feedback .feedback__form-link a:hover {
         border-bottom-color: #6894c0;
-        color: #1e1e1e;
+        background: #6894c0;
+        color: #ffffff;
     }
 }
 
 .theme--dark .feedback .feedback__form-link a:active {
     background-color: #6894c0;
     border-bottom-color: #6894c0;
-    color: #1e1e1e;
+    color: #ffffff;
     outline-color: #ffffff;
 }
 
@@ -27883,10 +28027,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     background-size: 100% 0;
     background-position: 0 100%;
     transition: background-size 0.3s ease;
+    color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #006bbd;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     background-repeat: no-repeat;
     background-size: 100% 0;
@@ -27941,19 +28085,32 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .feedback .feedback__direct button:visited {
-    border-bottom-color: #4c2c92;
     color: #4c2c92;
 }
 
 .theme--dark .feedback .feedback__direct button:focus {
     color: #006bbd;
+}
+
+@media (hover: hover) {
+    .theme--dark .feedback .feedback__direct button:hover {
+        color: #ffffff;
+    }
+}
+
+.theme--dark .feedback .feedback__direct button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.theme--dark .feedback .feedback__direct button:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.theme--dark .feedback .feedback__direct button:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
 }
 
 @media (hover: hover) {
@@ -27961,20 +28118,20 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
     }
 }
 
 .theme--dark .feedback .feedback__direct button:active {
-    background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #ffffff;
-    outline-color: #0c0c0e;
+}
+
+.theme--dark .feedback .feedback__direct button:focus, .theme--dark .feedback .feedback__direct button:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -28004,14 +28161,15 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media (hover: hover) {
     .theme--dark .feedback .feedback__direct button:hover {
         border-bottom-color: #6894c0;
-        color: #1e1e1e;
+        background: #6894c0;
+        color: #ffffff;
     }
 }
 
 .theme--dark .feedback .feedback__direct button:active {
     background-color: #6894c0;
     border-bottom-color: #6894c0;
-    color: #1e1e1e;
+    color: #ffffff;
     outline-color: #ffffff;
 }
 
@@ -28060,17 +28218,17 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark article figure a:focus {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .theme--dark article figure a:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .theme--dark article figure a:focus {
@@ -28137,10 +28295,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark article figure figcaption a:focus, .theme--dark article figure figcaption a:active {
-    outline-color: #0c0c0e;
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .theme--dark article figure figcaption a:before {
@@ -28204,6 +28362,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .theme--dark article figure figcaption a:active {
     border-bottom-color: #dd0036;
     outline-color: #ffffff;
+    color: #ffffff;
 }
 
 .theme--dark blockquote .blockquote__body {
@@ -28380,10 +28539,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         text-decoration: none;
     }
     .theme--dark.js .menu li a:focus, .theme--dark.js .menu li a:active {
-        outline-color: #0c0c0e;
         outline-width: 0.125rem;
         outline-style: dotted;
         outline-offset: 0.1875rem;
+        outline-color: #0c0c0e;
     }
     .theme--dark.js .menu li a:before {
         background: #dd0036;
@@ -28451,6 +28610,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     .theme--dark.js .menu li a:active {
         border-bottom-color: #dd0036;
         outline-color: #ffffff;
+        color: #ffffff;
     }
     .theme--dark.js .menu li a:focus {
         border-bottom-color: transparent;
@@ -28756,10 +28916,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
         font-weight: 700;
-        outline-color: #0c0c0e;
         outline-width: 0.125rem;
         outline-style: dotted;
         outline-offset: 0.1875rem;
+        outline-color: #0c0c0e;
     }
 }
 
@@ -28779,10 +28939,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         border-bottom-width: 0.125rem;
         color: #ffffff;
         font-weight: 700;
-        outline-color: #0c0c0e;
         outline-width: 0.125rem;
         outline-style: dotted;
         outline-offset: 0.1875rem;
+        outline-color: #0c0c0e;
     }
     .theme--dark.js .pagination__controls button:disabled {
         background-color: transparent;
@@ -29200,10 +29360,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         background-size: 100% 0;
         background-position: 0 100%;
         transition: background-size 0.3s ease;
+        color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #006bbd;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
@@ -29262,18 +29422,31 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media screen {
     .theme--dark.js .theme-switcher__option button:visited {
-        border-bottom-color: #4c2c92;
         color: #4c2c92;
     }
     .theme--dark.js .theme-switcher__option button:focus {
         color: #006bbd;
+    }
+}
+
+@media screen and (hover: hover) {
+    .theme--dark.js .theme-switcher__option button:hover {
+        color: #ffffff;
+    }
+}
+
+@media screen {
+    .theme--dark.js .theme-switcher__option button:active {
+        color: #ffffff;
+        background-color: #006bbd;
+    }
+    .theme--dark.js .theme-switcher__option button:visited {
+        border-bottom-color: #4c2c92;
+    }
+    .theme--dark.js .theme-switcher__option button:focus {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        outline-color: #0c0c0e;
-        outline-width: 0.125rem;
-        outline-style: dotted;
-        outline-offset: 0.1875rem;
     }
 }
 
@@ -29282,21 +29455,20 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
     }
 }
 
 @media screen {
     .theme--dark.js .theme-switcher__option button:active {
-        background-color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
-        outline-color: #0c0c0e;
+    }
+    .theme--dark.js .theme-switcher__option button:focus, .theme--dark.js .theme-switcher__option button:active {
         outline-width: 0.125rem;
         outline-style: dotted;
         outline-offset: 0.1875rem;
+        outline-color: #0c0c0e;
     }
 }
 
@@ -29328,7 +29500,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media screen and (hover: hover) {
     .theme--dark.js .theme-switcher__option button:hover {
         border-bottom-color: #6894c0;
-        color: #1e1e1e;
+        background: #6894c0;
+        color: #ffffff;
     }
 }
 
@@ -29336,7 +29509,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     .theme--dark.js .theme-switcher__option button:active {
         background-color: #6894c0;
         border-bottom-color: #6894c0;
-        color: #1e1e1e;
+        color: #ffffff;
         outline-color: #ffffff;
     }
 }
