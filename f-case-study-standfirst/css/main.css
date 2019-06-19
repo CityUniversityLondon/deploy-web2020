@@ -24156,7 +24156,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media (min-width: 901px) {
     .case-study--research .case-study__overview__main__details {
-        grid-column: 9 / -1;
+        grid-column: 6 / 14;
     }
 }
 
