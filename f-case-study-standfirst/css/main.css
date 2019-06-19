@@ -22942,10 +22942,6 @@ article .link-copy {
     text-align: center;
 }
 
-.banner__content__header .standfirst {
-    max-width: none;
-}
-
 .banner__content__text {
     grid-area: c;
     font-size: 1.266rem;
@@ -23524,6 +23520,10 @@ a.modal__close:active, a.modal__close:focus {
 
 .case-study__overview .banner {
     grid-column: 1 / -1;
+}
+
+.case-study__overview .standfirst {
+    max-width: none;
 }
 
 .case-study__overview .banner__content__header {
