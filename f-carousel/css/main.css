@@ -22058,9 +22058,6 @@ article .social-icon .link-copy {
 }
 
 .swiper-slide__text {
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
     position: relative;
     top: -2rem;
     padding: 1.5rem;
@@ -22074,32 +22071,40 @@ article .social-icon .link-copy {
     transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
+.swiper-slide__text p {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    font-weight: 500;
+    line-height: 1.25rem;
+}
+
 @media (min-width: 433px) and (max-width: 768px) {
-    .swiper-slide__text {
+    .swiper-slide__text p {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .swiper-slide__text {
+    .swiper-slide__text p {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .swiper-slide__text {
+    .swiper-slide__text p {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .swiper-slide__text {
+    .swiper-slide__text p {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .swiper-slide__text {
+    .swiper-slide__text p {
         letter-spacing: -0.017em;
     }
 }
@@ -22254,6 +22259,10 @@ article .social-icon .link-copy {
     border-color: #8a8a8a;
 }
 
+.swiper-slide__text a:hover {
+    background: none;
+}
+
 @media (max-width: 900px) {
     .swiper-slide__text {
         margin-right: none;
@@ -22274,7 +22283,7 @@ article .social-icon .link-copy {
     bottom: 2rem;
     right: 1rem;
     font-size: 0.889rem;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 @media (max-width: 900px) {
@@ -22288,7 +22297,7 @@ article .social-icon .link-copy {
 }
 
 .swiper-indicator__slider-length {
-    color: #696969;
+    color: #8a8a8a;
 }
 
 .swiper-buttons-wrap {

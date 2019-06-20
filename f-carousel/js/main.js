@@ -6104,7 +6104,7 @@ function move(e) {
     tx = getComputedStyle(e.target).getPropertyValue('--tx'),
         p = parseInt(tx.replace(/\D/g, '')); // MAY use the drag length as a condition to move slider
 
-    if ((i > 0 || s < 0) && (i < e.target.children.length - 1 || s > 0) && (p > 30 || i === 0 || i === e.target.children.length - 1) //conditions to swip to slider
+    if ((i > 0 || s < 0) && (i < e.target.children.length - 1 || s > 0) && (p > 100 || i === 0 || i === e.target.children.length - 1) //conditions to swip to slider
     ) {
         if (!ie) {
           e.target.style.setProperty('--i', i -= s); //increment i (i repersent the slider)
@@ -6121,7 +6121,7 @@ function move(e) {
           }
         } else {
           animateSlider(e, s);
-          s ? toogleNextBtn(i, e.target.children.length, e) : tooglePrevBtn(i, e.target.children.length, e);
+          s === -1 ? toogleNextBtn(i, e.target.children.length, e) : tooglePrevBtn(i, e.target.children.length, e);
         }
       }
   }
