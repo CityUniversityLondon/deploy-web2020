@@ -34166,7 +34166,7 @@ const className = 'accordion',
       headingTextClassName = headingClassName + '__text',
       headingIconClassName = headingClassName + '__indicator fal',
       scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_6__["reduceMotion"])() ? 0 : 999,
-      scrollTo = false;
+      scrollTo = true;
 /**
  * Calculate height of body element associated to accordion heading.
  *
@@ -34223,15 +34223,19 @@ function setSection(heading, open) {
  */
 
 
-function buttonClick(button, headings, toggleOpen) {
+function buttonClick(button) {
   const heading = button.parentNode;
 
   if (Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].expanded))) {
     setSection(heading, false);
     history.pushState(null, null, "".concat(window.location.pathname).concat(window.location.search));
   } else {
-    toggleOpen && headings.forEach(heading => setSection(heading, false));
-    setSection(heading, true);
+    /*
+        don't close them, all - allow user to do it
+        toggleOpen && headings.forEach(heading => setSection(heading, false));
+    */
+    setSection(heading, true); // scrollto enabled
+
     scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(heading, scrollDuration);
     history.pushState(null, null, '#' + heading.id);
   }
