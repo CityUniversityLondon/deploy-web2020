@@ -21916,6 +21916,8 @@ article .link-copy {
 
 .module-selector {
     max-width: 80rem;
+    background: -5% -1px no-repeat url(https://web2020.city.ac.uk/_media/web2020/images/short-courses/module_selector_bg.png);
+    background-size: cover;
     position: relative;
     padding: 0 1rem 1rem 1rem;
     border: 0.75rem solid;
@@ -21938,24 +21940,80 @@ article .link-copy {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 901px) {
     .module-selector {
-        padding-bottom: 0;
+        background: right -1px no-repeat url(https://web2020.city.ac.uk/_media/web2020/images/short-courses/module_selector_bg.png);
+        background-size: auto;
     }
+}
+
+.module-selector h2 {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.424rem;
+    line-height: 1.25;
+    letter-spacing: -0.013em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.module-selector h2 i,
+.module-selector h2 em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.module-selector h2 b,
+.module-selector h2 strong {
+    font-weight: inherit;
+}
+
+.module-selector h2 i,
+.module-selector h2 em {
+    font-style: italic;
+}
+
+.module-selector h2 u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .module-selector h2 {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .module-selector h2 {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .module-selector h2 {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .module-selector h2 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .module-selector h2 {
+        letter-spacing: -0.017em;
+    }
+}
+
+.module-selector h2 b,
+.module-selector h2 strong {
+    font-weight: 600;
 }
 
 .module-selector__heading-text {
     color: #696969;
-}
-
-.module-selector__paths-svg {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.module-selector__paths-svg svg {
-    width: 4.5rem;
 }
 
 .module-selector__heading {
@@ -22014,8 +22072,10 @@ article .link-copy {
     font-style: italic;
 }
 
-.module-selector__content p {
-    margin-top: 0;
+@media (max-width: 767px) {
+    .module-selector__content {
+        text-align: center;
+    }
 }
 
 @media (min-width: 768px) {
@@ -22029,6 +22089,10 @@ article .link-copy {
     .module-selector__content {
         flex-wrap: wrap;
     }
+}
+
+.module-selector__content__text {
+    text-align: left;
 }
 
 @media (min-width: 901px) {
@@ -22053,8 +22117,12 @@ article .link-copy {
 @media (max-width: 1279px) and (min-width: 768px) {
     .module-selector__content__text {
         position: relative;
-        width: 27%;
+        width: 33%;
     }
+}
+
+.module-selector__content__moduleLink {
+    text-align: left;
 }
 
 @media (min-width: 901px) {
@@ -22067,7 +22135,7 @@ article .link-copy {
 @media (max-width: 1279px) and (min-width: 768px) {
     .module-selector__content__moduleLink {
         position: relative;
-        width: 27%;
+        width: 33%;
     }
 }
 
@@ -22128,11 +22196,9 @@ article .link-copy {
     justify-content: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1279px) {
     .module-selector__button {
-        display: flex;
-        flex-direction: column;
-        margin-top: 2rem;
+        margin: 2rem auto 0 auto;
     }
 }
 
