@@ -13820,32 +13820,37 @@ main table td em {
     }
 }
 
+.card--profile__description {
+    margin-top: 0.5rem;
+}
+
 @media (min-width: 1281px) {
-    .card--profile__description {
+    .card--profile__description--thumbnail {
         display: flex;
     }
 }
 
-.card--profile__description > :nth-child(2) {
+.card--profile__description--thumbnail > :nth-child(2) {
     margin-top: 1rem;
 }
 
 @media (min-width: 1281px) {
-    .card--profile__description > :nth-child(2) {
+    .card--profile__description--thumbnail > :nth-child(2) {
         margin-top: 0;
     }
 }
 
 .card--profile__thumbnail {
     border-radius: 100%;
-    float: left;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-    margin-top: 0.5rem;
-    margin-right: 1rem;
-    border-radius: 100%;
     max-width: 7rem;
     max-height: 6rem;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .card--profile__thumbnail {
+        margin: 0.5rem 1rem 1rem 0;
+    }
 }
 
 @media (min-width: 901px) {
