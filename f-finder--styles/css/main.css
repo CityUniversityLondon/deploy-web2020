@@ -17448,8 +17448,7 @@ article figure figcaption a:active {
     color: #ffffff;
     flex-shrink: 0;
     margin-left: 2rem;
-    color: #ffffff;
-    margin: auto;
+    box-shadow: none;
     border: 0;
 }
 
@@ -17779,11 +17778,6 @@ article figure figcaption a:active {
 
 .finder__query__submit:active span, .finder__query__submit:focus span, .finder__query__submit:hover span {
     transform: none;
-}
-
-.finder__query__submit:hover {
-    background: transparent;
-    border: 0;
 }
 
 .finder__query__submit:focus {
@@ -24197,8 +24191,7 @@ article .social-icon .link-copy {
     color: #ffffff;
     flex-shrink: 0;
     margin-left: 2rem;
-    color: #ffffff;
-    margin: auto;
+    box-shadow: none;
     border: 0;
 }
 
@@ -24528,11 +24521,6 @@ article .social-icon .link-copy {
 
 .finder__query__submit:active span, .finder__query__submit:focus span, .finder__query__submit:hover span {
     transform: none;
-}
-
-.finder__query__submit:hover {
-    background: transparent;
-    border: 0;
 }
 
 .finder__query__submit:focus {
