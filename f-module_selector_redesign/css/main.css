@@ -22091,14 +22091,16 @@ article .link-copy {
     }
 }
 
-.module-selector__content__text {
-    text-align: left;
-}
-
 @media (min-width: 901px) {
     .module-selector__content__text {
         position: relative;
         margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .module-selector__content__text {
+        text-align: left;
     }
 }
 
@@ -22121,8 +22123,10 @@ article .link-copy {
     }
 }
 
-.module-selector__content__moduleLink {
-    text-align: left;
+@media (min-width: 769px) {
+    .module-selector__content__moduleLink {
+        text-align: left;
+    }
 }
 
 @media (min-width: 901px) {
