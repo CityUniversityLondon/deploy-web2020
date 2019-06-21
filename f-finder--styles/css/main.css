@@ -17339,6 +17339,13 @@ article figure figcaption a:active {
     }
 }
 
+.finder__query__input:focus-within {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
 .finder__query__input input {
     font-family: "Plex Sans", sans-serif;
     /**
@@ -24080,6 +24087,13 @@ article .social-icon .link-copy {
     .finder__query__input {
         letter-spacing: -0.017em;
     }
+}
+
+.finder__query__input:focus-within {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .finder__query__input input {
