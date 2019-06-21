@@ -17300,6 +17300,8 @@ article figure figcaption a:active {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
+    background: linear-gradient(45deg, #3e1031, #dd0036);
+    padding: 0.1875rem;
     flex-grow: 1;
     position: relative;
 }
@@ -24050,6 +24052,8 @@ article .social-icon .link-copy {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
+    background: linear-gradient(45deg, #3e1031, #dd0036);
+    padding: 0.1875rem;
     flex-grow: 1;
     position: relative;
 }
