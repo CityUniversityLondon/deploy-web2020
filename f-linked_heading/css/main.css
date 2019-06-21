@@ -23002,6 +23002,20 @@ article .link-copy {
     }
 }
 
+/*
+    21/6/2019 
+    General Usage:
+
+    <h2 / h3>
+        <a href="#" class="linked-heading">
+            <span class="linked-heading__text">Anchor text</span>
+            <span class="linked-heading__icons">
+                <i class="fas fa-chevron-right"></i>
+                <i class="fas fa-long-arrow-right"></i>
+            </span>
+        </a>
+    </h2 / h3> 
+*/
 .linked-heading {
     background-color: initial;
     border-bottom-color: initial;
