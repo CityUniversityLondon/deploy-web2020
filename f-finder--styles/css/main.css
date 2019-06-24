@@ -17436,6 +17436,11 @@ article figure figcaption a:active {
     }
 }
 
+.finder__query__input .finder__clear .icon:before {
+    position: relative;
+    top: 0.25rem;
+}
+
 .finder__query__input .finder__clear .finder__icon--close {
     background: transparent;
     position: relative;
@@ -24186,6 +24191,11 @@ article .social-icon .link-copy {
         width: 1.5rem;
         height: 1.5rem;
     }
+}
+
+.finder__query__input .finder__clear .icon:before {
+    position: relative;
+    top: 0.25rem;
 }
 
 .finder__query__input .finder__clear .finder__icon--close {
