@@ -19942,6 +19942,7 @@ article figure figcaption a:active {
 .finder__search button:hover {
     background: transparent;
     border: 0;
+    padding: 0.5rem 1.375rem;
 }
 
 .finder__search button:focus {
@@ -26699,6 +26700,7 @@ article .social-icon .link-copy {
 .finder__search button:hover {
     background: transparent;
     border: 0;
+    padding: 0.5rem 1.375rem;
 }
 
 .finder__search button:focus {
