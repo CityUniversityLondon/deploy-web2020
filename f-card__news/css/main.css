@@ -13865,6 +13865,7 @@ main table td em {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
+    font-weight: 600;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -13926,6 +13927,40 @@ main table td em {
 .card--news__button i {
     position: absolute;
     right: 1rem;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    font-weight: 600;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--news__button i {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--news__button i {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--news__button i {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--news__button i {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--news__button i {
+        letter-spacing: -0.017em;
+    }
 }
 
 .card--news__button i:nth-child(2) {
