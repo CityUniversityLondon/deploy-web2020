@@ -12668,6 +12668,7 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
+    padding-bottom: 0.25rem;
 }
 
 .card--casestudy a:focus .underline-transition__title {
@@ -13330,6 +13331,7 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
+    padding-bottom: 0.25rem;
 }
 
 .card--related-course a:focus .underline-transition__title {
@@ -13769,19 +13771,26 @@ main table td em {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
+.card--news a,
+.card--news a:hover,
+.card--news a:active,
+.card--news a:focus {
+    border-bottom: none;
+}
+
 @media (hover: hover) {
-    .card--news:hover {
+    .card--news__image-container:hover {
         background-image: none;
     }
-    .card--news:hover img {
+    .card--news__image-container:hover img {
         transform: scale(1.04);
     }
-    .card--news:hover .thumbnail__image-container:after {
+    .card--news__image-container:hover .thumbnail__image-container:after {
         background-color: rgba(0, 0, 0, 0.1);
     }
 }
 
-.card--news .thumbnail__image-container {
+.card--news__image-container .thumbnail__image-container {
     height: 4.75rem;
     width: 4.75rem;
     margin-right: 1.5rem;
@@ -13791,19 +13800,19 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .card--news .thumbnail__image-container {
+    .card--news__image-container .thumbnail__image-container {
         transition: none;
     }
 }
 
 @media (min-width: 768px) {
-    .card--news .thumbnail__image-container {
+    .card--news__image-container .thumbnail__image-container {
         height: 8rem;
         width: 8rem;
     }
 }
 
-.card--news .thumbnail__image-container:after {
+.card--news__image-container .thumbnail__image-container:after {
     background-color: transparent;
     content: '';
     display: block;
@@ -13815,7 +13824,7 @@ main table td em {
     width: 100%;
 }
 
-.card--news .thumbnail__image-container img {
+.card--news__image-container .thumbnail__image-container img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -13823,59 +13832,230 @@ main table td em {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .card--news .thumbnail__image-container img {
+    .card--news__image-container .thumbnail__image-container img {
         transition: none;
     }
 }
 
-.card--news .thumbnail__image-container {
-    height: auto;
+.card--news__image-container a:first-child {
+    display: block;
+}
+
+.card--news__image-container .thumbnail__image-container {
+    height: 10rem;
     width: 100%;
 }
 
 @media (min-width: 768px) {
-    .card--news .thumbnail__image-container {
-        height: auto;
+    .card--news__image-container .thumbnail__image-container {
+        height: 250px;
         width: 100%;
     }
 }
 
-.card--news__title-link {
+.card--news__button {
+    display: inline-flex;
+    position: relative;
+    top: -22px;
+    left: 1.75rem;
+    align-items: center;
     color: #ffffff;
     background: #dd0036;
+    padding: 0.5rem 3rem 0.5rem 1rem;
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--news__title-link {
+    .card--news__button {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--news__title-link {
+    .card--news__button {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--news__title-link {
+    .card--news__button {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--news__title-link {
+    .card--news__button {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--news__title-link {
+    .card--news__button {
         letter-spacing: -0.017em;
     }
+}
+
+.card--news__button:visited {
+    color: #ffffff;
+}
+
+.card--news__button:active, .card--news__button:focus {
+    background: #c21d2c;
+}
+
+.card--news__button:hover {
+    background: #c21d2c;
+}
+
+.card--news__button:hover i:nth-child(1) {
+    animation: slide-right-out 600ms;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.card--news__button:hover i:nth-child(2) {
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+    animation: slide-left-in 600ms;
+}
+
+.card--news__button i {
+    position: absolute;
+    right: 1rem;
+}
+
+.card--news__button i:nth-child(2) {
+    animation: slide-right-out 600ms;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card--news__title-link .underline-transition__title {
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.25rem;
+    transition: background-size 0.6s ease-in;
+    /**
+            Needs to be inline else underline transition 
+            stretches beyond the element
+        **/
+    display: inline;
+    padding-bottom: 0.25rem;
+}
+
+.card--news__title-link:focus .underline-transition__title {
+    background-size: 100% 0.25rem;
+}
+
+@media (hover: hover) {
+    .card--news__title-link:hover .underline-transition__title {
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 0.25rem;
+        color: #1e1e1e;
+    }
+}
+
+.card--news__title-link a {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: #696969;
+}
+
+.card--news__title-link a i,
+.card--news__title-link a em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.card--news__title-link a b,
+.card--news__title-link a strong {
+    font-weight: inherit;
+}
+
+.card--news__title-link a i,
+.card--news__title-link a em {
+    font-style: italic;
+}
+
+.card--news__title-link a u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--news__title-link a {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--news__title-link a {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--news__title-link a {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--news__title-link a {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--news__title-link a {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--news__title-link a b,
+.card--news__title-link a strong {
+    font-weight: 600;
+}
+
+.card--news__title-link a:visited {
+    color: #696969;
+}
+
+.card--news__title-link a:active {
+    background-color: transparent;
+}
+
+.card--news__title-link a:hover {
+    color: #1e1e1e;
+}
+
+.card--news__content {
+    padding: 0 1.75rem 1.75rem 1.75rem;
+}
+
+.card--news__date {
+    font-family: "Plex Sans", sans-serif;
+    font-size: 0.79rem;
+    color: #1e1e1e;
+    margin: 1.5rem 0;
+}
+
+.card--news__category {
+    padding-top: 1.5rem;
+    font-size: 0.889rem;
+    color: #dd0036;
+    border-top: solid 0.125rem #d8d8d8;
+    font-style: italic;
 }
 
 .card--profile {
@@ -14032,6 +14212,7 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
+    padding-bottom: 0.25rem;
 }
 
 .card--pathway:focus .underline-transition__title {
