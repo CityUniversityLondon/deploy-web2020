@@ -2413,10 +2413,12 @@ function finder__query(props) {
     type: "submit",
     className: "finder__query__submit",
     onClick: () => submitForm()
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
-    className: "fal fa-search",
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
+    className: "fal fa-search finder__query__submit__icon",
     "aria-hidden": "true"
-  }), ' ', "Find"))), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
+    className: "finder__query__submit__text"
+  }, "Find"))), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_8__["default"], {
     config: props.config,
     query: props.query,
     update: props.update
