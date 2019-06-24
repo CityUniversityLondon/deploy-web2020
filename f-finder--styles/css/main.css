@@ -17830,6 +17830,15 @@ article figure figcaption a:active {
     transform: none;
 }
 
+@media (max-width: 768px) {
+    .finder__query__submit span {
+        display: none;
+    }
+    .finder__query__submit span.fal .fa-search {
+        display: block;
+    }
+}
+
 .finder__query__submit:focus {
     color: #ffffff;
     border: 0;
@@ -19942,7 +19951,7 @@ article figure figcaption a:active {
 .finder__search button:hover {
     background: transparent;
     border: 0;
-    padding: 0.5rem 1.375rem;
+    padding: 0.5rem 1.25rem + 0.125rem;
 }
 
 .finder__search button:focus {
@@ -24588,6 +24597,15 @@ article .social-icon .link-copy {
     transform: none;
 }
 
+@media (max-width: 768px) {
+    .finder__query__submit span {
+        display: none;
+    }
+    .finder__query__submit span.fal .fa-search {
+        display: block;
+    }
+}
+
 .finder__query__submit:focus {
     color: #ffffff;
     border: 0;
@@ -26700,7 +26718,7 @@ article .social-icon .link-copy {
 .finder__search button:hover {
     background: transparent;
     border: 0;
-    padding: 0.5rem 1.375rem;
+    padding: 0.5rem 1.25rem + 0.125rem;
 }
 
 .finder__search button:focus {
