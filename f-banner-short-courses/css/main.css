@@ -24906,6 +24906,13 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .lifelong-learning header {
     background-color: #5d184a;
     color: #ffffff;
+    padding-top: 8.5rem;
+    padding-bottom: 3rem;
+}
+
+.lifelong-learning header.banner {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .lifelong-learning header .header__content {
