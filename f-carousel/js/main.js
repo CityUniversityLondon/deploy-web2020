@@ -5960,7 +5960,7 @@ function init(elem) {
   numbIndSlLength.className = 'swiper-indicator__slider-length';
   numIndActiveSl.innerText = i + 1;
   numbIndSlLength.innerText = _C.children.length;
-  numIndSeparator.innerText = '/';
+  numIndSeparator.innerText = ' / ';
   numInd.appendChild(numIndActiveSl);
   numInd.appendChild(numIndSeparator);
   numInd.appendChild(numbIndSlLength);

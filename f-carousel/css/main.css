@@ -21999,7 +21999,6 @@ article .social-icon .link-copy {
 .swiper-viewport {
     grid-row-gap: 0;
     display: grid;
-    grid-template-areas: '. . . . . slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container';
     overflow: hidden;
     width: 100%;
 }
@@ -22022,6 +22021,24 @@ article .social-icon .link-copy {
     .swiper-viewport {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .swiper-viewport {
+        grid-template-areas: '. . . . . slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container';
+    }
+}
+
+@media (max-width: 900px) {
+    .swiper-viewport {
+        grid-template-areas: 'slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container';
+    }
+}
+
+@media (max-width: 432px) {
+    .swiper-viewport {
+        grid-template-areas: 'slider-container slider-container slider-container slider-container slider-container slider-container';
     }
 }
 
@@ -22050,7 +22067,7 @@ article .social-icon .link-copy {
 @media (max-width: 900px) {
     .swiper-wrapper {
         height: inherit;
-        max-height: 22rem;
+        max-height: 25rem;
     }
 }
 
@@ -22294,11 +22311,21 @@ article .social-icon .link-copy {
     }
 }
 
+.swiper-slide__image-wrapper {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
 @media (max-width: 900px) {
     .swiper-slide__image-wrapper {
         overflow: hidden;
         max-height: 350px;
     }
+}
+
+.swiper-slide__image-wrapper img {
+    max-height: 17rem;
 }
 
 .swiper-indicator {
@@ -22307,6 +22334,7 @@ article .social-icon .link-copy {
     right: 1rem;
     font-size: 0.889rem;
     font-weight: 500;
+    color: #8a8a8a;
 }
 
 @media (max-width: 900px) {
