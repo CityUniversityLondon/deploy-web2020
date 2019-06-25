@@ -1371,6 +1371,7 @@ function finder__query(props) {
       }
     }
   }, suggestion))));
+  let body = document.getElementsByTagName('body');
   const input = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "finder__query__input"
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
@@ -1400,6 +1401,12 @@ function finder__query(props) {
 
           break;
       }
+    },
+    onBlur: () => {
+      body[0].style.backgroundColor = '#ffffff';
+    },
+    onFocus: () => {
+      body[0].style.backgroundColor = '#e5e5e5';
     },
     onChange: e => {
       // keep  what they're typing
