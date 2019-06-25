@@ -22324,8 +22324,16 @@ article .social-icon .link-copy {
     }
 }
 
-.swiper-slide__image-wrapper img {
-    max-height: 17rem;
+@media (max-width: 1279px) {
+    .swiper-slide__image-wrapper img {
+        max-height: 17rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .swiper-slide__image-wrapper img {
+        max-height: 25rem;
+    }
 }
 
 .swiper-indicator {
