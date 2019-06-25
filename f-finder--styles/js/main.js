@@ -2249,7 +2249,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const maximumSuggestions = 5,
-      [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40];
+      [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40],
+      body = document.getElementsByTagName('body'),
+      backgroundFill = body[0].querySelectorAll('.background-fill');
 /**
  * Search input field and autocomplete.
  *
@@ -2350,7 +2352,6 @@ function finder__query(props) {
       }
     }
   }, suggestion))));
-  let body = document.getElementsByTagName('body');
   const input = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "finder__query__input"
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
@@ -2382,19 +2383,26 @@ function finder__query(props) {
       }
     },
     onBlur: () => {
-      body[0].style.backgroundColor = '#ffffff';
+      backgroundFill[0].classList.remove('background-fill--grey');
     },
     onFocus: () => {
-      body[0].style.backgroundColor = '#e5e5e5';
+      backgroundFill[0].classList.add('background-fill--grey');
     },
     onChange: e => {
       // keep  what they're typing
       setPartialQuery(e.target.value);
+      let sugs = document.querySelectorAll('.finder__query__suggestions li button'); // let inputVal = e.target.value;
+      // let inputValLength = inputVal.length;
+
+      for (const sug of sugs) {
+        sug.style.fontWeight = '900';
+      }
       /**
        * if we have a request to the suggestions service in progress,
        * cancel it. Stops old suggestions overwriting new ones because
        * the requests can't keep up with fast typing.
        */
+
 
       call.cancel();
 

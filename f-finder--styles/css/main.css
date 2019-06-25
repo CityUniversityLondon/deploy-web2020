@@ -17302,6 +17302,7 @@ article figure figcaption a:active {
     letter-spacing: -0.011em;
     background: linear-gradient(45deg, #3e1031, #dd0036);
     padding: 0.1875rem;
+    z-index: 2;
     flex-grow: 1;
     position: relative;
 }
@@ -17510,6 +17511,7 @@ article figure figcaption a:active {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
+    z-index: 2;
     flex-shrink: 0;
     margin-left: 2rem;
     box-shadow: none;
@@ -18506,6 +18508,7 @@ article figure figcaption a:active {
 
 .finder__query__suggestions li {
     margin-top: 0;
+    font-weight: 400;
 }
 
 .finder__query__suggestions li button {
@@ -20008,6 +20011,22 @@ article figure figcaption a:active {
 
 .finder__icon--close__wrapper {
     font-weight: 400;
+}
+
+.background-fill {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: transparent;
+    opacity: 0.6;
+    transition: background-color 1s;
+}
+
+.background-fill--grey {
+    background-color: #e5e5e5;
 }
 
 .global-footer {
@@ -24085,6 +24104,7 @@ article .social-icon .link-copy {
     letter-spacing: -0.011em;
     background: linear-gradient(45deg, #3e1031, #dd0036);
     padding: 0.1875rem;
+    z-index: 2;
     flex-grow: 1;
     position: relative;
 }
@@ -24293,6 +24313,7 @@ article .social-icon .link-copy {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
+    z-index: 2;
     flex-shrink: 0;
     margin-left: 2rem;
     box-shadow: none;
@@ -25289,6 +25310,7 @@ article .social-icon .link-copy {
 
 .finder__query__suggestions li {
     margin-top: 0;
+    font-weight: 400;
 }
 
 .finder__query__suggestions li button {
@@ -26791,6 +26813,22 @@ article .social-icon .link-copy {
 
 .finder__icon--close__wrapper {
     font-weight: 400;
+}
+
+.background-fill {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: transparent;
+    opacity: 0.6;
+    transition: background-color 1s;
+}
+
+.background-fill--grey {
+    background-color: #e5e5e5;
 }
 
 /**
