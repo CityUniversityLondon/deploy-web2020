@@ -20016,7 +20016,7 @@ article figure figcaption a:active {
 .background-fill {
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 0;
     left: 0;
     top: 0;
     z-index: 1;
@@ -20027,6 +20027,7 @@ article figure figcaption a:active {
 
 .background-fill--grey {
     background-color: #e5e5e5;
+    height: 100%;
 }
 
 .global-footer {
@@ -26818,7 +26819,7 @@ article .social-icon .link-copy {
 .background-fill {
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 0;
     left: 0;
     top: 0;
     z-index: 1;
@@ -26829,6 +26830,7 @@ article .social-icon .link-copy {
 
 .background-fill--grey {
     background-color: #e5e5e5;
+    height: 100%;
 }
 
 /**
