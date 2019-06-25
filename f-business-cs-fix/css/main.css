@@ -23414,7 +23414,7 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
-.content-fade-in {
+.content-fade-in--start {
     opacity: 0;
     margin-top: 1.5rem;
 }
@@ -23430,16 +23430,22 @@ a.modal__close:active, a.modal__close:focus {
     display: block;
     background: #d61726;
     margin: 2.25rem 0;
-    transition: width ease 0.5s;
+}
+
+.content-separator--transition-start {
     width: 20%;
 }
 
 .content-separator--transition-complete {
     width: 100%;
+    transition: width ease 0.5s;
 }
 
 .content-slide-up {
     position: relative;
+}
+
+.content-slideup--start {
     top: 70%;
     transition: top ease 1.5s;
 }
@@ -23448,7 +23454,7 @@ a.modal__close:active, a.modal__close:focus {
     top: 0;
 }
 
-.image-expand {
+.image-expand--start {
     opacity: 0.5;
     transform: scale(0.92, 0.92);
 }

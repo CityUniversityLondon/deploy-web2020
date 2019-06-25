@@ -34375,6 +34375,7 @@ function contentFadeIn(contentFadein) {
   const viewPortHeight = window.innerHeight; // calculates viewport height
 
   if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
+    contentFadein.classList.add('content-fade-in--start');
     window.addEventListener('scroll', function () {
       const elemOffset = contentFadein.offsetTop;
       const screenPos = window.pageYOffset; // calculates scroll position
@@ -34431,6 +34432,7 @@ function contentSeparator(contentSeparatorContainer) {
   let el = insertElement(contentSeparatorContainer);
 
   if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
+    el.classList.add('content-separator--transition-start');
     window.addEventListener('scroll', function () {
       const elemOffset = el.offsetTop;
       const screenPos = window.pageYOffset; // calculates scroll position
@@ -34495,6 +34497,7 @@ function contentSlideUp(contentSlideup) {
   const viewPortHeight = window.innerHeight; // calculates viewport height
 
   if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
+    contentSlideup.classList.add('content-slideup--start');
     window.addEventListener('scroll', function () {
       const screenPos = window.pageYOffset; // calculates scroll position
 
@@ -34546,6 +34549,7 @@ function imageExpand(image) {
   if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
     const viewPortHeight = window.innerHeight; // calculates viewport height
 
+    image.classList.add('image-expand--start');
     window.addEventListener('scroll', function () {
       const elemOffset = image.offsetTop;
       const screenPos = window.pageYOffset; // calculates scroll position
@@ -37332,8 +37336,8 @@ function isMobile() {
   const viewPortWidth = window.innerWidth;
   const mobileScreen = screen;
 
-  if (viewPortWidth > mobileScreen) {
-    return false;
+  if (viewPortWidth < mobileScreen) {
+    return true;
   }
 }
 
