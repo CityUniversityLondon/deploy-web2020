@@ -2394,25 +2394,29 @@ function finder__query(props) {
     onChange: e => {
       // keep  what they're typing
       setPartialQuery(e.target.value);
-      let sugs = document.querySelectorAll('.finder__query__suggestions li button');
+      let suggestedResults = document.querySelectorAll('.finder__query__suggestions li button');
       let inputVal = e.target.value;
-      let inputValLength = inputVal.length;
 
-      for (const sug of sugs.entries()) {
-        let suggestedText = sug[1].innerHTML;
-        let updated = suggestedText.replace(inputVal, '<strong>' + inputVal + '</strong>');
-        sug[1].innerHTML = updated;
-        let firstThreeChars = suggestedText.substring(0, inputValLength); // var el = document.createElement('span');
-        // var text = document.createTextNode('test');
+      for (const suggestedResult of suggestedResults.entries()) {
+        let suggestedText = suggestedResult[1].innerHTML;
+        /**
+         * Attempt at using appendChild. Error message => can't append (not node)
+         */
+        // var el = document.createElement('strong');
+        // var text = document.createTextNode(inputVal);
         // el.appendChild(text);
-        // sug[1].appendChild(el);
-        // console.log(sug[1]);
-        // let targetChar = suggestedText.charAt(inputValLength);
-        // console.log(targetChar);
-        // targetChar.style.fontWeight = '900';
+        // let updated = suggestedText.replace(
+        //     inputVal, el);
+        // suggestedResult[1].appendChild(updated);
 
-        if (firstThreeChars == inputVal) {// firstThreeChars.replace(suggestedText, '<span>test</span>');
-        }
+        /**
+         * This works but uses .innerHTML. See log for updated HTML. However, DOM doesn't always update correctly.
+         */
+
+        let updated = '';
+        updated += suggestedText.replace(inputVal, "<strong>".concat(inputVal, "</strong>")); // console.log(updated);
+
+        suggestedResult[1].innerHTML = updated;
       }
       /**
        * if we have a request to the suggestions service in progress,
