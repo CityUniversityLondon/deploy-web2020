@@ -22315,6 +22315,7 @@ article .social-icon .link-copy {
     display: flex;
     justify-content: center;
     overflow: hidden;
+    background-color: #e5e5e5;
 }
 
 @media (max-width: 900px) {
@@ -22322,6 +22323,11 @@ article .social-icon .link-copy {
         overflow: hidden;
         max-height: 350px;
     }
+}
+
+.swiper-slide__image-wrapper img {
+    object-fit: cover;
+    width: 100%;
 }
 
 @media (max-width: 1279px) {
@@ -22340,7 +22346,7 @@ article .social-icon .link-copy {
     position: absolute;
     bottom: 2rem;
     right: 1rem;
-    font-size: 0.889rem;
+    font-size: 0.79rem;
     font-weight: 500;
     color: #8a8a8a;
 }

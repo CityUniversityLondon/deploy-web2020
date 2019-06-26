@@ -5911,15 +5911,15 @@ function init(elem) {
     let lazyImageObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          let lazyImage = entry.target;
+          let lazyImage = entry.target.firstElementChild;
           lazyImage.src = lazyImage.dataset.src;
           lazyImage.classList.remove('lazy');
-          lazyImageObserver.unobserve(lazyImage);
+          lazyImageObserver.unobserve(entry.target);
         }
       });
     });
     lazyImages.forEach(function (lazyImage) {
-      lazyImageObserver.observe(lazyImage);
+      lazyImageObserver.observe(lazyImage.parentNode);
     });
   }
 
@@ -5960,7 +5960,7 @@ function init(elem) {
   numbIndSlLength.className = 'swiper-indicator__slider-length';
   numIndActiveSl.innerText = i + 1;
   numbIndSlLength.innerText = _C.children.length;
-  numIndSeparator.innerText = ' / ';
+  numIndSeparator.innerText = ' /';
   numInd.appendChild(numIndActiveSl);
   numInd.appendChild(numIndSeparator);
   numInd.appendChild(numbIndSlLength);
