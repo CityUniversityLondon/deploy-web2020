@@ -5911,15 +5911,17 @@ function init(elem) {
     let lazyImageObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          let lazyImage = entry.target.firstElementChild;
+          let lazyImage = entry.target.parentNode.nextSibling.firstElementChild.firstElementChild;
           lazyImage.src = lazyImage.dataset.src;
           lazyImage.classList.remove('lazy');
           lazyImageObserver.unobserve(entry.target);
         }
       });
     });
-    lazyImages.forEach(function (lazyImage) {
-      lazyImageObserver.observe(lazyImage.parentNode);
+    lazyImages.forEach(function (lazyImage, i, a) {
+      if (i !== a.length - 1) {
+        lazyImageObserver.observe(lazyImage.parentNode);
+      }
     });
   }
 
