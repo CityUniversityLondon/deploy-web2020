@@ -34132,20 +34132,14 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
-
+/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
+/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -34156,7 +34150,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/accordion/accordion
  * @author Tom Waddington <tom.waddington.1@city.ac.uk>
- * @copyright City, University of London 2018
+ * @copyright City, University of London 2018-2019
  */
 
 
@@ -34165,50 +34159,63 @@ const className = 'accordion',
       headingClassName = className + '__heading',
       headingTextClassName = headingClassName + '__text',
       headingIconClassName = headingClassName + '__indicator fal',
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_6__["reduceMotion"])() ? 0 : 999,
-      scrollTo = false;
-/**
- * Calculate height of body element associated to accordion heading.
- *
- * @param {HTMLElement} heading - An accordion heading.
- */
-
-function calcBodyHeight(heading) {
-  let bodyHeight = heading.nextElementSibling.scrollHeight;
-  let bodyHeightRem = Object(_util__WEBPACK_IMPORTED_MODULE_6__["pxToRem"])(bodyHeight);
-  heading.nextElementSibling.style.maxHeight = parseInt(bodyHeightRem + 5) + 'rem';
-}
+      bodyClassName = className + '__body',
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_4__["reduceMotion"])() ? 0 : 999,
+      scrollTo = true;
 /**
  * Sets a heading and the button nested within to be open or closed.
  *
- * @param {HTMLElement} heading - An accordion heading.
+ * @param {HTMLHeadingElement} heading - An accordion heading.
  * @param {boolean} open - Set this section to be open?
  */
 
-
 function setSection(heading, open) {
   heading.dataset.open = open;
-  heading.setAttribute('tabindex', '-1');
-  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].expanded, open);
-  let bodyLinks = heading.nextElementSibling.getElementsByTagName('a');
+  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+}
+/**
+ * Open a section, calculate its height, then close it again.
+ *
+ * With no transition, this is essentially invisible to the user.
+ *
+ * @param {HTMLHeadingElement} heading - An accordion heading.
+ * @return {string} The pixel height of the section when open.
+ */
 
-  for (const bodyLink of bodyLinks) {
-    bodyLink.setAttribute('tabindex', '0');
-  }
 
-  if (open) {
-    heading.nextElementSibling.classList.add('active');
-    calcBodyHeight(heading); // window.addEventListener('resize', () => {
-    //     calcBodyHeight(heading);
-    // });
-  } else {
-    heading.nextElementSibling.classList.remove('active');
-    heading.nextElementSibling.style.maxHeight = null;
+function calculateAccordionBodyHeight(heading) {
+  const section = heading.nextElementSibling;
+  setSection(heading, true);
+  section.dataset.closed = 'false';
+  const height = section.offsetHeight + 'px';
+  setSection(heading, false);
+  section.dataset.closed = 'true';
+  return height;
+}
+/**
+ * Set style properties for transition.
+ *
+ * @param {HTMLElement} element - The section to transition.
+ * @param {string} initialHeight - The initial height from which to transition.
+ */
 
-    for (const bodyLink of bodyLinks) {
-      bodyLink.setAttribute('tabindex', '-1');
-    }
-  }
+
+function setupTransition(element, initialHeight) {
+  element.style.height = initialHeight;
+  element.dataset.closed = 'false';
+  return true;
+}
+/**
+ * Cleanup after transition.
+ *
+ * @param {HTMLElement} accordionSection - The section that transitioned.
+ */
+
+
+function cleanupTransition(section) {
+  const open = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(section.previousElementSibling.dataset.open);
+  section.style.height = null;
+  section.dataset.closed = open ? 'false' : 'true';
 }
 /**
  * Respond to button clicks - open if closed, close if open.
@@ -34224,16 +34231,57 @@ function setSection(heading, open) {
 
 
 function buttonClick(button, headings, toggleOpen) {
-  const heading = button.parentNode;
+  const heading = button.parentNode,
+        accordionSection = heading.nextElementSibling;
+  /**
+   * After we've transitioned the opening/closing, we want to revert to
+   * letting the CSS size the element. Add a listener to do this that will
+   * self-destruct after running.
+   */
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].expanded))) {
-    setSection(heading, false);
+  accordionSection.addEventListener('transitionend', () => cleanupTransition(accordionSection), {
+    capture: true,
+    once: true
+  });
+
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded))) {
+    // Starting height is the current height
+    setupTransition(accordionSection, accordionSection.offsetHeight + 'px'); // setTimeout lets the DOM recalculate before we continue, so the transition will fire
+
+    setTimeout(() => {
+      accordionSection.style.height = '0px';
+    }, 0);
     history.pushState(null, null, "".concat(window.location.pathname).concat(window.location.search));
+    setSection(heading, false);
   } else {
-    toggleOpen && headings.forEach(heading => setSection(heading, false));
+    // Calclulate and save how big we're transitioning to
+    const sectionHeight = calculateAccordionBodyHeight(heading); // Starting height is 0
+
+    setupTransition(accordionSection, '0px'); // setTimeout lets the DOM recalculate before we continue, so the transition will fire
+
+    setTimeout(() => {
+      accordionSection.style.height = sectionHeight;
+    }, 0); // If we already have history, replace it rather than adding to it.
+
+    if (window.location.hash) {
+      history.replaceState(null, null, '#' + heading.id);
+    } else {
+      history.pushState(null, null, '#' + heading.id);
+    }
+
+    if (toggleOpen) {
+      const sections = Array.from(document.querySelectorAll("#".concat(heading.parentElement.id, " > .").concat(bodyClassName)));
+      headings.forEach(heading => setSection(heading, false));
+      sections.filter(section => section.id !== accordionSection.id).forEach(section => {
+        section.dataset.closed = 'true';
+      });
+    }
+
     setSection(heading, true);
-    scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(heading, scrollDuration);
-    history.pushState(null, null, '#' + heading.id);
+
+    if (scrollTo && !(Object(_util__WEBPACK_IMPORTED_MODULE_4__["verticallyInWindow"])(heading) && Object(_util__WEBPACK_IMPORTED_MODULE_4__["verticallyInWindow"])(accordionSection))) {
+      zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
+    }
   }
 }
 /**
@@ -34252,10 +34300,10 @@ function buttonFromHeading(heading) {
         iconSpan = document.createElement('span');
   textSpan.className = headingTextClassName;
   iconSpan.className = headingIconClassName;
-  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].hidden, true);
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, true);
   button.setAttribute('type', 'button');
   textSpan.appendChild(document.createTextNode(heading.textContent));
-  Object(_util__WEBPACK_IMPORTED_MODULE_6__["appendAll"])(wrapper, [textSpan, iconSpan]);
+  Object(_util__WEBPACK_IMPORTED_MODULE_4__["appendAll"])(wrapper, [textSpan, iconSpan]);
   button.appendChild(wrapper);
   return button;
 }
@@ -34282,60 +34330,49 @@ function buttonFromHeading(heading) {
 
 function launchAccordion(accordion) {
   const locationHash = window.location.hash.substr(1),
-        toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(accordion.dataset.toggleopen),
-        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(accordion.dataset.defaultopen),
-        allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(accordion.dataset.allowsingle),
-        headings = Array.from(accordion.querySelectorAll(".".concat(headingClassName)));
+        toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.toggleopen),
+        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.defaultopen),
+        allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.allowsingle),
+        headings = Array.from(document.querySelectorAll("#".concat(accordion.id, " > .").concat(headingClassName)));
   let idLinked = false;
 
   if (!(allowSingle || headings.length > 1)) {
     /**
      * not enough content to accordion
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_6__["removeClass"])(accordion, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(accordion, className, false);
     return;
   }
 
-  const buildHeadings = () => {
-    headings.forEach(heading => {
-      const content = heading.nextElementSibling,
-            button = buttonFromHeading(heading);
-      content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].labelledBy, heading.id);
-      content.setAttribute('role', 'region');
-      heading.replaceChild(button, heading.firstChild);
-      /**
-       * if the location hash matches the heading's ID, we'll open that
-       * instead of the first section, or instead of leaving everything
-       * closed.
-       */
+  headings.forEach(heading => {
+    const content = heading.nextElementSibling,
+          button = buttonFromHeading(heading);
+    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].labelledBy, heading.id);
+    content.setAttribute('role', 'region');
+    heading.replaceChild(button, heading.firstChild);
+    /**
+     * if the location hash matches the heading's ID, we'll open that
+     * instead of the first section, or instead of leaving everything
+     * closed.
+     */
 
-      if (locationHash === heading.id) {
-        idLinked = true;
-        setSection(heading, true);
-      } else {
-        setSection(heading, false);
-      }
-
-      button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
-      /* Show first item of accordion if accordion set to default open */
-
-      if (defaultOpen && !idLinked) {
-        setSection(headings[0], true);
-      }
-    });
-  };
-  /**
-   * DOM must be fully loaded to accurately calculate body heights across browsers
-   */
-
-
-  window.addEventListener('load', function () {
-    buildHeadings();
-
-    if (defaultOpen && !idLinked) {
-      setSection(headings[0], true);
+    if (locationHash === heading.id) {
+      idLinked = true;
+      setSection(heading, true);
+    } else {
+      setSection(heading, false);
+      heading.nextElementSibling.dataset.closed = 'true';
     }
+
+    button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
   });
+  /* Show first item of accordion, if accordion is set to default open,
+         and we haven't linked to a specific section */
+
+  if (defaultOpen && !idLinked) {
+    setSection(headings[0], true);
+    headings[0].nextElementSibling.dataset.closed = 'false';
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -34375,6 +34412,7 @@ function contentFadeIn(contentFadein) {
   const viewPortHeight = window.innerHeight; // calculates viewport height
 
   if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
+    contentFadein.classList.add('content-fade-in--start');
     window.addEventListener('scroll', function () {
       const elemOffset = contentFadein.offsetTop;
       const screenPos = window.pageYOffset; // calculates scroll position
@@ -34431,6 +34469,7 @@ function contentSeparator(contentSeparatorContainer) {
   let el = insertElement(contentSeparatorContainer);
 
   if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
+    el.classList.add('content-separator--transition-start');
     window.addEventListener('scroll', function () {
       const elemOffset = el.offsetTop;
       const screenPos = window.pageYOffset; // calculates scroll position
@@ -34495,6 +34534,7 @@ function contentSlideUp(contentSlideup) {
   const viewPortHeight = window.innerHeight; // calculates viewport height
 
   if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
+    contentSlideup.classList.add('content-slideup--start');
     window.addEventListener('scroll', function () {
       const screenPos = window.pageYOffset; // calculates scroll position
 
@@ -34546,6 +34586,7 @@ function imageExpand(image) {
   if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
     const viewPortHeight = window.innerHeight; // calculates viewport height
 
+    image.classList.add('image-expand--start');
     window.addEventListener('scroll', function () {
       const elemOffset = image.offsetTop;
       const screenPos = window.pageYOffset; // calculates scroll position
@@ -36950,14 +36991,17 @@ function accordionize(tabs) {
     const heading = panel.querySelector(".".concat(panelClassName, "__heading")),
           body = panel.querySelector(".".concat(panelClassName, "__body")),
           accordionHeading = document.createElement("h".concat(accordion.dataset.level)),
-          accordionSection = document.createElement('div');
+          accordionSection = document.createElement('div'),
+          accordionWrapper = document.createElement('div');
     accordionHeading.className = 'accordion__heading';
     accordionHeading.id = "accordion".concat(tabs.dataset.assetid, "-header").concat(panel.dataset.assetid);
     accordionHeading.dataset.tabid = panel.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].labelledBy);
     accordionHeading.innerText = heading.innerText.trim();
     accordionSection.className = 'accordion__body';
     accordionSection.id = "accordion".concat(tabs.dataset.assetid, "-body").concat(panel.dataset.assetid);
-    accordionSection.innerHTML = body.innerHTML;
+    accordionWrapper.className = 'wrapper--accordion__body__content';
+    accordionWrapper.innerHTML = body.innerHTML;
+    accordionSection.appendChild(accordionWrapper);
     Object(_util__WEBPACK_IMPORTED_MODULE_4__["appendAll"])(accordion, [accordionHeading, accordionSection]);
   });
   tabs.parentNode.insertBefore(wrapper, tabs);
@@ -37121,7 +37165,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -37130,6 +37174,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "removeClass", function() { return removeClass; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reduceMotion", function() { return reduceMotion; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isVisible", function() { return isVisible; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "verticallyInWindow", function() { return verticallyInWindow; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "parametersToObject", function() { return parametersToObject; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "objectToParameters", function() { return objectToParameters; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "gaEvent", function() { return gaEvent; });
@@ -37227,6 +37272,17 @@ function isVisible(elem) {
   return elem.offsetHeight !== 0 && elem.offsetWidth !== 0 ? true : false;
 }
 /**
+ * Predicate testing whether an element is positioned in the window.
+ *
+ *
+ * @param {HTMLElement} elem - An HTML element.
+ * @returns {boolean} - Is it onscreen?
+ */
+
+function verticallyInWindow(elem) {
+  return elem.getBoundingClientRect().top >= 0 && elem.getBoundingClientRect().top <= window.innerHeight ? true : false;
+}
+/**
  * Turn a query string into an object.
  *
  * @param {string} parameterString - An HTML query string.
@@ -37301,6 +37357,11 @@ function appendAll(elem, children) {
 /**
  * Convert a pixel value to equivalent REM value.
  *
+ * @deprecated Don’t complect style and functionality like this.
+ *
+ * The JS should never need long-term knowlege of dimensions such that
+ * converting to rem is worthwhile.
+ *
  * @param {number} pxValue - Value in pixels.
  */
 
@@ -37332,8 +37393,8 @@ function isMobile() {
   const viewPortWidth = window.innerWidth;
   const mobileScreen = screen;
 
-  if (viewPortWidth > mobileScreen) {
-    return false;
+  if (viewPortWidth < mobileScreen) {
+    return true;
   }
 }
 
