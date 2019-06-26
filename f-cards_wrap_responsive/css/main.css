@@ -342,84 +342,92 @@
     background-color: #e7ebed;
 }
 
+.color--red5 {
+    color: #fdf0ed;
+}
+
+.background--red5 {
+    background-color: #fdf0ed;
+}
+
 .color--red10 {
-    color: #f7d2d5;
+    color: #fec2c3;
 }
 
 .background--red10 {
-    background-color: #f7d2d5;
+    background-color: #fec2c3;
 }
 
 .color--red20 {
-    color: #efa6ac;
+    color: #fe8f91;
 }
 
 .background--red20 {
-    background-color: #efa6ac;
+    background-color: #fe8f91;
 }
 
 .color--red30 {
-    color: #e77983;
+    color: #f56067;
 }
 
 .background--red30 {
-    background-color: #e77983;
+    background-color: #f56067;
 }
 
 .color--red40 {
-    color: #df4d5a;
+    color: #e93745;
 }
 
 .background--red40 {
-    background-color: #df4d5a;
+    background-color: #e93745;
 }
 
 .color--red50 {
-    color: #dd0036;
+    color: #d61726;
 }
 
 .background--red50 {
-    background-color: #dd0036;
+    background-color: #d61726;
 }
 
 .color--red60 {
-    color: #c21d2c;
+    color: #b91924;
 }
 
 .background--red60 {
-    background-color: #c21d2c;
+    background-color: #b91924;
 }
 
 .color--red70 {
-    color: #ac1a27;
+    color: #9e111c;
 }
 
 .background--red70 {
-    background-color: #ac1a27;
+    background-color: #9e111c;
 }
 
 .color--red80 {
-    color: #81131d;
+    color: #790b21;
 }
 
 .background--red80 {
-    background-color: #81131d;
+    background-color: #790b21;
 }
 
 .color--red90 {
-    color: #560d13;
+    color: #5b0b1b;
 }
 
 .background--red90 {
-    background-color: #560d13;
+    background-color: #5b0b1b;
 }
 
 .color--red100 {
-    color: #2b0609;
+    color: #370612;
 }
 
 .background--red100 {
-    background-color: #2b0609;
+    background-color: #370612;
 }
 
 .color--purple10 {
@@ -10440,7 +10448,7 @@ article a {
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.3s ease;
+    transition: background-size 0.2s ease-in-out;
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -11927,7 +11935,7 @@ main table td em {
 
 .form fieldset .form__label--required:after {
     content: ' *';
-    color: #dd0036;
+    color: #d61726;
 }
 
 .form input,
@@ -12086,7 +12094,7 @@ main table td em {
 }
 
 .form .form__required-note--marker {
-    color: #dd0036;
+    color: #d61726;
 }
 
 .icon {
@@ -12100,14 +12108,7 @@ main table td em {
 
 @media screen {
     .js .accordion > .accordion__body {
-        max-height: 0;
-        overflow: hidden;
         background-color: #f2f2f2;
-        transition: max-height 0.2s ease-out;
-        padding: 0 1rem;
-    }
-    .js .accordion > .accordion__body.active {
-        margin-bottom: 1rem;
     }
     .js .accordion > .accordion__heading {
         border-bottom: 0.0625rem solid #e5e5e5;
@@ -12263,12 +12264,6 @@ main table td em {
         border-left: 0.125rem dotted #0c0c0e;
         border-right: 0.125rem dotted #0c0c0e;
         border-bottom: 0.125rem dotted #0c0c0e;
-        padding: 1rem;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        min-height: -webkit-fit-content;
-        min-height: -moz-fit-content;
-        min-height: fit-content;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body p {
         margin: 1rem 0;
@@ -12290,13 +12285,20 @@ main table td em {
     .js .accordion > .accordion__heading[data-open='true'] button {
         background: #f2f2f2;
     }
-    .js .accordion.accordion-button--blue-red-test .accordion__heading[data-open='true'] .accordion__heading__text {
-        background: blue;
-        color: white;
+    .js .accordion > .accordion__heading[data-open='true'] + .accordion__body {
+        margin-bottom: 1rem;
     }
-    .js .accordion.accordion-button--blue-red-test .accordion__heading[data-open='true'] .accordion__heading__indicator {
-        background: red;
-        color: white;
+    .js .accordion > .accordion__heading + .accordion__body {
+        overflow-y: hidden;
+        transition-duration: 0.2s;
+        transition-property: height;
+        transition-timing-function: ease-in-out;
+    }
+    .js .accordion > .accordion__heading + .accordion__body[data-closed='true'] {
+        display: none;
+    }
+    .js .accordion .wrapper--accordion__body__content {
+        padding: 1rem;
     }
 }
 
@@ -12423,7 +12425,7 @@ main table td em {
 }
 
 .breadcrumbs a:before {
-    background: #dd0036;
+    background: #d61726;
     bottom: -0.125rem;
     content: '';
     display: block;
@@ -12431,7 +12433,7 @@ main table td em {
     left: 0;
     opacity: 0;
     position: absolute;
-    transition: opacity 0.3s ease, width 0.6s ease;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     width: 0;
 }
 
@@ -12462,7 +12464,7 @@ main table td em {
 }
 
 .breadcrumbs a:active {
-    border-bottom-color: #dd0036;
+    border-bottom-color: #d61726;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
@@ -12596,7 +12598,7 @@ main table td em {
     margin-right: 1.5rem;
     overflow: hidden;
     position: relative;
-    transition: transform 0.3s ease-in;
+    transition: transform 0.2s ease-in;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12620,7 +12622,7 @@ main table td em {
     left: 0;
     position: absolute;
     top: 0;
-    transition: background-color 0.3s ease-in;
+    transition: background-color 0.2s ease-in;
     width: 100%;
 }
 
@@ -12628,7 +12630,7 @@ main table td em {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease-in;
+    transition: transform 0.2s ease-in;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12645,7 +12647,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12668,7 +12670,7 @@ main table td em {
     background-size: 0% 0.25rem;
     transition: background-size 0.6s ease-in;
     /**
-            Needs to be inline else underline transition 
+            Needs to be inline else underline transition
             stretches beyond the element
         **/
     display: inline;
@@ -13040,7 +13042,7 @@ main table td em {
 }
 
 .card--contact__key-info .icon {
-    color: #dd0036;
+    color: #d61726;
 }
 
 .card--course {
@@ -13058,7 +13060,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13113,7 +13115,7 @@ main table td em {
 }
 
 .card--course__type {
-    color: #dd0036;
+    color: #d61726;
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
@@ -13189,7 +13191,7 @@ main table td em {
 }
 
 .card--course__key-info .icon {
-    color: #dd0036;
+    color: #d61726;
     margin-right: 0.5rem;
 }
 
@@ -13258,7 +13260,7 @@ main table td em {
     margin-right: 1.5rem;
     overflow: hidden;
     position: relative;
-    transition: transform 0.3s ease-in;
+    transition: transform 0.2s ease-in;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13282,7 +13284,7 @@ main table td em {
     left: 0;
     position: absolute;
     top: 0;
-    transition: background-color 0.3s ease-in;
+    transition: background-color 0.2s ease-in;
     width: 100%;
 }
 
@@ -13290,7 +13292,7 @@ main table td em {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease-in;
+    transition: transform 0.2s ease-in;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13307,7 +13309,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13330,7 +13332,7 @@ main table td em {
     background-size: 0% 0.25rem;
     transition: background-size 0.6s ease-in;
     /**
-            Needs to be inline else underline transition 
+            Needs to be inline else underline transition
             stretches beyond the element
         **/
     display: inline;
@@ -13526,14 +13528,14 @@ main table td em {
     left: 0;
     position: absolute;
     top: 0;
-    transition: background-color 0.3s ease-in;
+    transition: background-color 0.2s ease-in;
     width: 100%;
 }
 
 .card--related-course a img {
     height: 100%;
     width: 100%;
-    transition: transform 0.3s ease-in;
+    transition: transform 0.2s ease-in;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13655,7 +13657,7 @@ main table td em {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    color: #dd0036;
+    color: #d61726;
     margin-top: 0.5rem;
 }
 
@@ -13765,7 +13767,7 @@ main table td em {
 }
 
 .card--related-course .card--related-course__key-info .icon {
-    color: #dd0036;
+    color: #d61726;
     margin-right: 0.5rem;
 }
 
@@ -13924,7 +13926,7 @@ main table td em {
     background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
-            Needs to be inline else underline transition 
+            Needs to be inline else underline transition
             stretches beyond the element
         **/
     display: inline;
@@ -14147,7 +14149,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14179,7 +14181,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14211,7 +14213,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14243,7 +14245,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14275,7 +14277,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14307,7 +14309,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14339,7 +14341,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14371,7 +14373,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14601,7 +14603,7 @@ main table td em {
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.3s ease;
+    transition: background-size 0.2s ease-in-out;
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -14788,8 +14790,8 @@ main table td em {
     padding: 0.5rem 1.5rem;
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
-    border: 0.125rem solid #dd0036;
-    background: #dd0036;
+    border: 0.125rem solid #d61726;
+    background: #d61726;
     color: #ffffff;
 }
 
@@ -14836,7 +14838,7 @@ main table td em {
 
 .js .cookie-notice button:focus, .js .cookie-notice button:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -14852,7 +14854,7 @@ main table td em {
 @media (hover: hover) {
     .js .cookie-notice button:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .js .cookie-notice button:hover span {
@@ -14879,16 +14881,16 @@ main table td em {
 
 .js .cookie-notice button:visited {
     color: #ffffff;
-    border-color: #dd0036;
+    border-color: #d61726;
 }
 
 .js .cookie-notice button:focus {
-    background: #dd0036;
+    background: #d61726;
     color: #ffffff;
 }
 
 .js .cookie-notice button:active, .js .cookie-notice button:focus {
-    border-color: #dd0036;
+    border-color: #d61726;
 }
 
 .js .cookie-notice button:active:focus, .js .cookie-notice button:active:active, .js .cookie-notice button:focus:focus, .js .cookie-notice button:focus:active {
@@ -14901,15 +14903,15 @@ main table td em {
 
 @media (hover: hover) {
     .js .cookie-notice button:hover, .js .cookie-notice button:active {
-        border-color: #dd0036;
+        border-color: #d61726;
         background-image: none;
         background: transparent;
     }
 }
 
 .js .cookie-notice button:disabled {
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 @media (max-width: 767px) {
@@ -14937,8 +14939,8 @@ main table td em {
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -14985,7 +14987,7 @@ main table td em {
 
 .primary-cta-arrow--bright:focus, .primary-cta-arrow--bright:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -15001,7 +15003,7 @@ main table td em {
 @media (hover: hover) {
     .primary-cta-arrow--bright:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .primary-cta-arrow--bright:hover span {
@@ -15027,13 +15029,13 @@ main table td em {
 }
 
 .primary-cta-arrow--bright:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
 .primary-cta-arrow--bright:focus {
-    background: #dd0036;
-    border-color: #dd0036;
+    background: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -15047,15 +15049,15 @@ main table td em {
 @media (hover: hover) {
     .primary-cta-arrow--bright:hover {
         background: #ffffff;
-        border-color: #dd0036;
-        color: #dd0036;
+        border-color: #d61726;
+        color: #d61726;
     }
 }
 
 .primary-cta-arrow--bright:active {
-    border-color: #dd0036;
+    border-color: #d61726;
     box-shadow: none;
-    color: #dd0036;
+    color: #d61726;
     background: transparent;
 }
 
@@ -15068,8 +15070,8 @@ main table td em {
 
 .primary-cta-arrow--bright:disabled {
     color: #ffffff;
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .primary-cta--bright {
@@ -15083,11 +15085,11 @@ main table td em {
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
-    border-color: #dd0036;
-    background: #dd0036;
+    border-color: #d61726;
+    background: #d61726;
     color: #ffffff;
 }
 
@@ -15134,7 +15136,7 @@ main table td em {
 
 .primary-cta--bright:focus, .primary-cta--bright:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -15150,7 +15152,7 @@ main table td em {
 @media (hover: hover) {
     .primary-cta--bright:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .primary-cta--bright:hover span {
@@ -15176,13 +15178,13 @@ main table td em {
 }
 
 .primary-cta--bright:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
 .primary-cta--bright:focus {
-    background: #dd0036;
-    border-color: #dd0036;
+    background: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -15196,15 +15198,15 @@ main table td em {
 @media (hover: hover) {
     .primary-cta--bright:hover {
         background: #ffffff;
-        border-color: #dd0036;
-        color: #dd0036;
+        border-color: #d61726;
+        color: #d61726;
     }
 }
 
 .primary-cta--bright:active {
-    border-color: #dd0036;
+    border-color: #d61726;
     box-shadow: none;
-    color: #dd0036;
+    color: #d61726;
     background: transparent;
 }
 
@@ -15217,8 +15219,8 @@ main table td em {
 
 .primary-cta--bright:disabled {
     color: #ffffff;
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .primary-cta--bright span {
@@ -15226,7 +15228,7 @@ main table td em {
 }
 
 .primary-cta--bright:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -15235,26 +15237,26 @@ main table td em {
 }
 
 .primary-cta--bright:focus, .primary-cta--bright:active {
-    color: #dd0036;
+    color: #d61726;
 }
 
 .primary-cta--bright:focus {
-    border-color: #dd0036;
-    background: #dd0036;
+    border-color: #d61726;
+    background: #d61726;
     color: #ffffff;
 }
 
 @media (hover: hover) {
     .primary-cta--bright:hover {
         background: transparent;
-        border-color: #dd0036;
-        color: #dd0036;
+        border-color: #d61726;
+        color: #d61726;
     }
 }
 
 .primary-cta--bright:active {
-    color: #dd0036;
-    border-color: #dd0036;
+    color: #d61726;
+    border-color: #d61726;
     background: transparent;
 }
 
@@ -15263,8 +15265,8 @@ main table td em {
 }
 
 .primary-cta--bright:disabled {
-    border-color: #dd0036;
-    background: #dd0036;
+    border-color: #d61726;
+    background: #d61726;
     color: #ffffff;
 }
 
@@ -15278,8 +15280,8 @@ main table td em {
     padding: 0.5rem 1.5rem;
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
-    border: 0.125rem solid #dd0036;
-    background: #dd0036;
+    border: 0.125rem solid #d61726;
+    background: #d61726;
     color: #ffffff;
 }
 
@@ -15326,7 +15328,7 @@ main table td em {
 
 .primary-cta-arrow--dark:focus, .primary-cta-arrow--dark:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -15342,7 +15344,7 @@ main table td em {
 @media (hover: hover) {
     .primary-cta-arrow--dark:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .primary-cta-arrow--dark:hover span {
@@ -15369,16 +15371,16 @@ main table td em {
 
 .primary-cta-arrow--dark:visited {
     color: #ffffff;
-    border-color: #dd0036;
+    border-color: #d61726;
 }
 
 .primary-cta-arrow--dark:focus {
-    background: #dd0036;
+    background: #d61726;
     color: #ffffff;
 }
 
 .primary-cta-arrow--dark:active, .primary-cta-arrow--dark:focus {
-    border-color: #dd0036;
+    border-color: #d61726;
 }
 
 .primary-cta-arrow--dark:active:focus, .primary-cta-arrow--dark:active:active, .primary-cta-arrow--dark:focus:focus, .primary-cta-arrow--dark:focus:active {
@@ -15391,15 +15393,15 @@ main table td em {
 
 @media (hover: hover) {
     .primary-cta-arrow--dark:hover, .primary-cta-arrow--dark:active {
-        border-color: #dd0036;
+        border-color: #d61726;
         background-image: none;
         background: transparent;
     }
 }
 
 .primary-cta-arrow--dark:disabled {
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .primary-cta--dark {
@@ -15412,11 +15414,11 @@ main table td em {
     padding: 0.5rem 1.5rem;
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
-    border: 0.125rem solid #dd0036;
-    background: #dd0036;
+    border: 0.125rem solid #d61726;
+    background: #d61726;
     color: #ffffff;
-    border-color: #dd0036;
-    background: #dd0036;
+    border-color: #d61726;
+    background: #d61726;
     color: #ffffff;
 }
 
@@ -15463,7 +15465,7 @@ main table td em {
 
 .primary-cta--dark:focus, .primary-cta--dark:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -15479,7 +15481,7 @@ main table td em {
 @media (hover: hover) {
     .primary-cta--dark:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .primary-cta--dark:hover span {
@@ -15506,16 +15508,16 @@ main table td em {
 
 .primary-cta--dark:visited {
     color: #ffffff;
-    border-color: #dd0036;
+    border-color: #d61726;
 }
 
 .primary-cta--dark:focus {
-    background: #dd0036;
+    background: #d61726;
     color: #ffffff;
 }
 
 .primary-cta--dark:active, .primary-cta--dark:focus {
-    border-color: #dd0036;
+    border-color: #d61726;
 }
 
 .primary-cta--dark:active:focus, .primary-cta--dark:active:active, .primary-cta--dark:focus:focus, .primary-cta--dark:focus:active {
@@ -15528,15 +15530,15 @@ main table td em {
 
 @media (hover: hover) {
     .primary-cta--dark:hover, .primary-cta--dark:active {
-        border-color: #dd0036;
+        border-color: #d61726;
         background-image: none;
         background: transparent;
     }
 }
 
 .primary-cta--dark:disabled {
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .primary-cta--dark span {
@@ -15545,7 +15547,7 @@ main table td em {
 
 .primary-cta--dark:visited {
     color: #ffffff;
-    border-color: #dd0036;
+    border-color: #d61726;
 }
 
 .primary-cta--dark:after {
@@ -15553,23 +15555,23 @@ main table td em {
 }
 
 .primary-cta--dark:focus {
-    border-color: #dd0036;
-    background: #dd0036;
+    border-color: #d61726;
+    background: #d61726;
     color: #ffffff;
 }
 
 @media (hover: hover) {
     .primary-cta--dark:hover {
         background: transparent;
-        color: #dd0036;
-        border-color: #dd0036;
+        color: #d61726;
+        border-color: #d61726;
     }
 }
 
 .primary-cta--dark:active {
     background: transparent;
-    border-color: #dd0036;
-    color: #dd0036;
+    border-color: #d61726;
+    color: #d61726;
 }
 
 .primary-cta--dark:active span, .primary-cta--dark:focus span, .primary-cta--dark:hover span {
@@ -15577,8 +15579,8 @@ main table td em {
 }
 
 .primary-cta--dark:disabled {
-    border-color: #dd0036;
-    background: #dd0036;
+    border-color: #d61726;
+    background: #d61726;
     color: #ffffff;
 }
 
@@ -15641,7 +15643,7 @@ main table td em {
 
 .outline-cta-arrow--bright:focus, .outline-cta-arrow--bright:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -15657,7 +15659,7 @@ main table td em {
 @media (hover: hover) {
     .outline-cta-arrow--bright:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .outline-cta-arrow--bright:hover span {
@@ -15787,7 +15789,7 @@ main table td em {
 
 .outline-cta--bright:focus, .outline-cta--bright:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -15803,7 +15805,7 @@ main table td em {
 @media (hover: hover) {
     .outline-cta--bright:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .outline-cta--bright:hover span {
@@ -15944,7 +15946,7 @@ main table td em {
 
 .outline-cta-arrow--dark:focus, .outline-cta-arrow--dark:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -15960,7 +15962,7 @@ main table td em {
 @media (hover: hover) {
     .outline-cta-arrow--dark:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .outline-cta-arrow--dark:hover span {
@@ -16092,7 +16094,7 @@ main table td em {
 
 .outline-cta--dark:focus, .outline-cta--dark:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -16108,7 +16110,7 @@ main table td em {
 @media (hover: hover) {
     .outline-cta--dark:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .outline-cta--dark:hover span {
@@ -16205,11 +16207,11 @@ main table td em {
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
-    background-color: #dd0036;
-    border-color: #dd0036;
+    background-color: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -16256,7 +16258,7 @@ main table td em {
 
 .basic-cta--bright:focus, .basic-cta--bright:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -16272,7 +16274,7 @@ main table td em {
 @media (hover: hover) {
     .basic-cta--bright:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .basic-cta--bright:hover span {
@@ -16298,13 +16300,13 @@ main table td em {
 }
 
 .basic-cta--bright:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
 .basic-cta--bright:focus {
-    background: #dd0036;
-    border-color: #dd0036;
+    background: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -16318,15 +16320,15 @@ main table td em {
 @media (hover: hover) {
     .basic-cta--bright:hover {
         background: #ffffff;
-        border-color: #dd0036;
-        color: #dd0036;
+        border-color: #d61726;
+        color: #d61726;
     }
 }
 
 .basic-cta--bright:active {
-    border-color: #dd0036;
+    border-color: #d61726;
     box-shadow: none;
-    color: #dd0036;
+    color: #d61726;
     background: transparent;
 }
 
@@ -16339,8 +16341,8 @@ main table td em {
 
 .basic-cta--bright:disabled {
     color: #ffffff;
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .basic-cta--bright span {
@@ -16348,7 +16350,7 @@ main table td em {
 }
 
 .basic-cta--bright:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -16357,28 +16359,28 @@ main table td em {
 }
 
 .basic-cta--bright:focus, .basic-cta--bright:active {
-    background-color: #dd0036;
-    border-color: #dd0036;
+    background-color: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
 @media (hover: hover) {
     .basic-cta--bright:hover {
-        background-color: #aa002a;
-        border-color: #aa002a;
+        background-color: #a8121e;
+        border-color: #a8121e;
         color: #ffffff;
     }
 }
 
 .basic-cta--bright:active {
-    background-color: #aa002a;
-    border-color: #aa002a;
+    background-color: #a8121e;
+    border-color: #a8121e;
 }
 
 .basic-cta--bright:disabled {
     color: #ffffff;
-    background: #dd0036;
-    border-color: #dd0036;
+    background: #d61726;
+    border-color: #d61726;
 }
 
 .basic-cta--bright:active span, .basic-cta--bright:focus span, .basic-cta--bright:hover span {
@@ -16396,14 +16398,14 @@ main table td em {
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
-    background-color: #dd0036;
-    border-color: #dd0036;
+    background-color: #d61726;
+    border-color: #d61726;
     color: #ffffff;
-    background-color: #dd0036;
-    border-color: #dd0036;
+    background-color: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -16450,7 +16452,7 @@ main table td em {
 
 .basic-cta--dark:focus, .basic-cta--dark:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -16466,7 +16468,7 @@ main table td em {
 @media (hover: hover) {
     .basic-cta--dark:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .basic-cta--dark:hover span {
@@ -16492,13 +16494,13 @@ main table td em {
 }
 
 .basic-cta--dark:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
 .basic-cta--dark:focus {
-    background: #dd0036;
-    border-color: #dd0036;
+    background: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -16512,15 +16514,15 @@ main table td em {
 @media (hover: hover) {
     .basic-cta--dark:hover {
         background: #ffffff;
-        border-color: #dd0036;
-        color: #dd0036;
+        border-color: #d61726;
+        color: #d61726;
     }
 }
 
 .basic-cta--dark:active {
-    border-color: #dd0036;
+    border-color: #d61726;
     box-shadow: none;
-    color: #dd0036;
+    color: #d61726;
     background: transparent;
 }
 
@@ -16533,8 +16535,8 @@ main table td em {
 
 .basic-cta--dark:disabled {
     color: #ffffff;
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .basic-cta--dark span {
@@ -16542,7 +16544,7 @@ main table td em {
 }
 
 .basic-cta--dark:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -16551,28 +16553,28 @@ main table td em {
 }
 
 .basic-cta--dark:focus, .basic-cta--dark:active {
-    background-color: #dd0036;
-    border-color: #dd0036;
+    background-color: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
 @media (hover: hover) {
     .basic-cta--dark:hover {
-        background-color: #aa002a;
-        border-color: #aa002a;
+        background-color: #a8121e;
+        border-color: #a8121e;
         color: #ffffff;
     }
 }
 
 .basic-cta--dark:active {
-    background-color: #aa002a;
-    border-color: #aa002a;
+    background-color: #a8121e;
+    border-color: #a8121e;
 }
 
 .basic-cta--dark:disabled {
     color: #ffffff;
-    background: #dd0036;
-    border-color: #dd0036;
+    background: #d61726;
+    border-color: #d61726;
 }
 
 .basic-cta--dark:active span, .basic-cta--dark:focus span, .basic-cta--dark:hover span {
@@ -16580,7 +16582,7 @@ main table td em {
 }
 
 .basic-cta--dark:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -16589,21 +16591,21 @@ main table td em {
 }
 
 .basic-cta--dark:focus, .basic-cta--dark:active {
-    background-color: #dd0036;
-    border-color: #dd0036;
+    background-color: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
 @media (hover: hover) {
     .basic-cta--dark:hover {
-        background-color: #aa002a;
-        border-color: #dd0036;
+        background-color: #a8121e;
+        border-color: #d61726;
         color: #ffffff;
     }
 }
 
 .basic-cta--dark:active {
-    background-color: #aa002a;
+    background-color: #a8121e;
 }
 
 .basic-cta--dark:focus:focus, .basic-cta--dark:focus:active, .basic-cta--dark:active:focus, .basic-cta--dark:active:active {
@@ -16616,8 +16618,8 @@ main table td em {
 
 .basic-cta--dark:disabled {
     color: #ffffff;
-    background: #dd0036;
-    border-color: #dd0036;
+    background: #d61726;
+    border-color: #d61726;
 }
 
 .primary-cta--grey--bright {
@@ -16631,8 +16633,8 @@ main table td em {
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
     border-color: #d8d8d8;
     background: #d8d8d8;
@@ -16682,7 +16684,7 @@ main table td em {
 
 .primary-cta--grey--bright:focus, .primary-cta--grey--bright:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -16698,7 +16700,7 @@ main table td em {
 @media (hover: hover) {
     .primary-cta--grey--bright:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .primary-cta--grey--bright:hover span {
@@ -16724,13 +16726,13 @@ main table td em {
 }
 
 .primary-cta--grey--bright:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
 .primary-cta--grey--bright:focus {
-    background: #dd0036;
-    border-color: #dd0036;
+    background: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -16744,15 +16746,15 @@ main table td em {
 @media (hover: hover) {
     .primary-cta--grey--bright:hover {
         background: #ffffff;
-        border-color: #dd0036;
-        color: #dd0036;
+        border-color: #d61726;
+        color: #d61726;
     }
 }
 
 .primary-cta--grey--bright:active {
-    border-color: #dd0036;
+    border-color: #d61726;
     box-shadow: none;
-    color: #dd0036;
+    color: #d61726;
     background: transparent;
 }
 
@@ -16765,8 +16767,8 @@ main table td em {
 
 .primary-cta--grey--bright:disabled {
     color: #ffffff;
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .primary-cta--grey--bright span {
@@ -16879,7 +16881,7 @@ main table td em {
 
 .basic-cta--lifelong-learning-primary:focus, .basic-cta--lifelong-learning-primary:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -16895,7 +16897,7 @@ main table td em {
 @media (hover: hover) {
     .basic-cta--lifelong-learning-primary:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .basic-cta--lifelong-learning-primary:hover span {
@@ -16977,8 +16979,8 @@ main table td em {
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
     background-color: #3e1031;
     border-color: #3e1031;
@@ -17028,7 +17030,7 @@ main table td em {
 
 .basic-cta--lifelong-learning-secondary:focus, .basic-cta--lifelong-learning-secondary:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -17044,7 +17046,7 @@ main table td em {
 @media (hover: hover) {
     .basic-cta--lifelong-learning-secondary:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .basic-cta--lifelong-learning-secondary:hover span {
@@ -17070,13 +17072,13 @@ main table td em {
 }
 
 .basic-cta--lifelong-learning-secondary:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
 .basic-cta--lifelong-learning-secondary:focus {
-    background: #dd0036;
-    border-color: #dd0036;
+    background: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -17090,15 +17092,15 @@ main table td em {
 @media (hover: hover) {
     .basic-cta--lifelong-learning-secondary:hover {
         background: #ffffff;
-        border-color: #dd0036;
-        color: #dd0036;
+        border-color: #d61726;
+        color: #d61726;
     }
 }
 
 .basic-cta--lifelong-learning-secondary:active {
-    border-color: #dd0036;
+    border-color: #d61726;
     box-shadow: none;
-    color: #dd0036;
+    color: #d61726;
     background: transparent;
 }
 
@@ -17111,8 +17113,8 @@ main table td em {
 
 .basic-cta--lifelong-learning-secondary:disabled {
     color: #ffffff;
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .basic-cta--lifelong-learning-secondary span {
@@ -17167,8 +17169,8 @@ main table td em {
     padding: 0.5rem 1.5rem;
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
-    border: 0.125rem solid #dd0036;
-    background: #dd0036;
+    border: 0.125rem solid #d61726;
+    background: #d61726;
     color: #ffffff;
     border-color: #d8d8d8;
     background: #d8d8d8;
@@ -17218,7 +17220,7 @@ main table td em {
 
 .primary-cta--grey--bright:focus, .primary-cta--grey--bright:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -17234,7 +17236,7 @@ main table td em {
 @media (hover: hover) {
     .primary-cta--grey--bright:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .primary-cta--grey--bright:hover span {
@@ -17261,16 +17263,16 @@ main table td em {
 
 .primary-cta--grey--bright:visited {
     color: #ffffff;
-    border-color: #dd0036;
+    border-color: #d61726;
 }
 
 .primary-cta--grey--bright:focus {
-    background: #dd0036;
+    background: #d61726;
     color: #ffffff;
 }
 
 .primary-cta--grey--bright:active, .primary-cta--grey--bright:focus {
-    border-color: #dd0036;
+    border-color: #d61726;
 }
 
 .primary-cta--grey--bright:active:focus, .primary-cta--grey--bright:active:active, .primary-cta--grey--bright:focus:focus, .primary-cta--grey--bright:focus:active {
@@ -17283,15 +17285,15 @@ main table td em {
 
 @media (hover: hover) {
     .primary-cta--grey--bright:hover, .primary-cta--grey--bright:active {
-        border-color: #dd0036;
+        border-color: #d61726;
         background-image: none;
         background: transparent;
     }
 }
 
 .primary-cta--grey--bright:disabled {
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .primary-cta--grey--bright span {
@@ -17423,7 +17425,7 @@ main table td em {
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.3s ease;
+    transition: background-size 0.2s ease-in-out;
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -17625,7 +17627,7 @@ main table td em {
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.3s ease;
+    transition: background-size 0.2s ease-in-out;
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -17882,7 +17884,7 @@ article figure figcaption a:focus, article figure figcaption a:active {
 }
 
 article figure figcaption a:before {
-    background: #dd0036;
+    background: #d61726;
     bottom: -0.125rem;
     content: '';
     display: block;
@@ -17890,7 +17892,7 @@ article figure figcaption a:before {
     left: 0;
     opacity: 0;
     position: absolute;
-    transition: opacity 0.3s ease, width 0.6s ease;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     width: 0;
 }
 
@@ -17921,7 +17923,7 @@ article figure figcaption a:focus {
 }
 
 article figure figcaption a:active {
-    border-bottom-color: #dd0036;
+    border-bottom-color: #d61726;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
@@ -18363,8 +18365,8 @@ article figure figcaption a:active {
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
     background-color: #5d184a;
     border-color: #5d184a;
@@ -18422,7 +18424,7 @@ article figure figcaption a:active {
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:focus,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -18443,7 +18445,7 @@ article figure figcaption a:active {
     .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:hover,
     .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:hover span,
@@ -18475,14 +18477,14 @@ article figure figcaption a:active {
 
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:visited,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:focus,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:focus {
-    background: #dd0036;
-    border-color: #dd0036;
+    background: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -18499,16 +18501,16 @@ article figure figcaption a:active {
     .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:hover,
     .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:hover {
         background: #ffffff;
-        border-color: #dd0036;
-        color: #dd0036;
+        border-color: #d61726;
+        color: #d61726;
     }
 }
 
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:active,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active {
-    border-color: #dd0036;
+    border-color: #d61726;
     box-shadow: none;
-    color: #dd0036;
+    color: #d61726;
     background: transparent;
 }
 
@@ -18524,8 +18526,8 @@ article figure figcaption a:active {
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:disabled,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:disabled {
     color: #ffffff;
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a span,
@@ -18959,7 +18961,7 @@ article figure figcaption a:active {
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.3s ease;
+    transition: background-size 0.2s ease-in-out;
     color: #006bbd;
 }
 
@@ -19164,7 +19166,7 @@ article figure figcaption a:active {
 }
 
 .menu li a:before {
-    background: #dd0036;
+    background: #d61726;
     bottom: -0.125rem;
     content: '';
     display: block;
@@ -19172,7 +19174,7 @@ article figure figcaption a:active {
     left: 0;
     opacity: 0;
     position: absolute;
-    transition: opacity 0.3s ease, width 0.6s ease;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     width: 0;
 }
 
@@ -19203,7 +19205,7 @@ article figure figcaption a:active {
 }
 
 .menu li a:active {
-    border-bottom-color: #dd0036;
+    border-bottom-color: #d61726;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
@@ -19967,11 +19969,11 @@ article figure figcaption a:active {
         outline-width: 0;
         text-decoration: none;
         background-color: #ffffff;
-        background-image: linear-gradient(120deg, #dd0036 0%, #dd0036 100%);
+        background-image: linear-gradient(120deg, #d61726 0%, #d61726 100%);
         background-position: 0 100%;
         background-repeat: no-repeat;
         background-size: 100% 0;
-        border-bottom-color: #dd0036;
+        border-bottom-color: #d61726;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         border-left-color: #cbcbcb;
@@ -19985,7 +19987,7 @@ article figure figcaption a:active {
         border-top-width: 0.0625rem;
         color: #1e1e1e;
         font-weight: 450;
-        transition: background-size 0.3s ease;
+        transition: background-size 0.2s ease-in-out;
     }
 }
 
@@ -20030,7 +20032,7 @@ article figure figcaption a:active {
 @media screen {
     .js .pagination__wrapper .pagination__controls button:focus {
         background-color: #ffffff;
-        border-bottom-color: #dd0036;
+        border-bottom-color: #d61726;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
@@ -20053,7 +20055,7 @@ article figure figcaption a:active {
 @media screen {
     .js .pagination__wrapper .pagination__controls button:active {
         background-size: 100% 100%;
-        border-bottom-color: #dd0036;
+        border-bottom-color: #d61726;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #ffffff;
@@ -20285,7 +20287,7 @@ article figure figcaption a:active {
 }
 
 .blockquote__body .svg--red {
-    fill: #dd0036;
+    fill: #d61726;
 }
 
 .blockquote__body .svg--black {
@@ -20357,7 +20359,7 @@ blockquote footer {
         background-repeat: no-repeat;
         background-size: 100% 0;
         background-position: 0 100%;
-        transition: background-size 0.3s ease;
+        transition: background-size 0.2s ease-in-out;
         color: #006bbd;
         background-color: initial;
         border-bottom-color: initial;
@@ -20635,9 +20637,17 @@ blockquote footer {
         border-top: 0.125rem solid #d8d8d8;
     }
     .js .tabs .tabs__panel__content {
-        padding-bottom: 2rem;
-        padding-top: 2rem;
+        padding: 2rem 0;
     }
+}
+
+@media screen and (max-width: 767px) {
+    .js .tabs .tabs__panel__content {
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen {
     .js .tabs .tabs__panel__heading {
         margin-top: 0;
     }
@@ -20786,7 +20796,7 @@ button
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.3s ease;
+    transition: background-size 0.2s ease-in-out;
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -21863,7 +21873,7 @@ article .social-icon:focus:focus, article .social-icon:focus:active, article .so
 @media (hover: hover) {
     article .social-icon:hover, article .social-icon:active {
         transform: scale(1.2);
-        background-color: #dd0036;
+        background-color: #d61726;
         color: #ffffff;
         background-image: none;
     }
@@ -22071,7 +22081,7 @@ article .link-copy {
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.3s ease;
+    transition: background-size 0.2s ease-in-out;
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -22552,7 +22562,7 @@ article .link-copy {
     font-family: "Meta Sans", sans-serif;
     font-weight: 300;
     display: inline;
-    color: #dd0036;
+    color: #d61726;
 }
 
 .statistics-block .ksp__items .ksp__item__text {
@@ -22750,7 +22760,7 @@ article .link-copy {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 70%;
+    height: 100%;
 }
 
 @media (max-width: 767px) {
@@ -22760,45 +22770,32 @@ article .link-copy {
 }
 
 .banner__group__overlay__heading {
-    grid-row-gap: 0;
-    display: grid;
-    grid-template-areas: 'h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 . . .';
-    position: absolute;
-    bottom: 3.25rem;
+    max-width: 80rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
 }
 
-@media (max-width: 432px) {
+@media (min-width: 1441px) {
     .banner__group__overlay__heading {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-@media (min-width: 433px) and (max-width: 900px) {
+@media (max-width: 1440px) {
     .banner__group__overlay__heading {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .banner__group__overlay__heading {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
 .banner__group__overlay__heading h1 {
-    grid-area: h1;
     color: #ffffff;
     width: 54ch;
     text-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.3);
-}
-
-@media (max-width: 1279px) {
-    .banner__group__overlay__heading {
-        grid-template-areas: 'h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1 h1';
-    }
 }
 
 @media (max-width: 1439px) {
@@ -22819,7 +22816,6 @@ article .link-copy {
 @media (max-width: 431px) {
     .banner__group__overlay__heading {
         margin: 0 2rem;
-        grid-template-areas: 'h1 h1 h1 h1 h1 h1';
         bottom: 1.25rem;
     }
 }
@@ -22912,7 +22908,7 @@ article .link-copy {
 }
 
 .banner__content__labels li {
-    color: #dd0036;
+    color: #d61726;
     margin-top: 0;
 }
 
@@ -23008,6 +23004,183 @@ article .link-copy {
 @media (min-width: 433px) {
     .banner__content__text {
         text-align: center;
+    }
+}
+
+/*
+    21/6/2019 
+    General Usage:
+
+    <h2 / h3>
+        <a href="#" class="linked-heading">
+            <span class="linked-heading__text">Anchor text</span>
+            <span class="linked-heading__icons">
+                <i class="fas fa-chevron-right"></i>
+                <i class="fas fa-long-arrow-right"></i>
+            </span>
+        </a>
+    </h2 / h3> 
+*/
+.linked-heading {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    position: relative;
+    padding-right: 2.5rem;
+    display: inline-block;
+    transition: none;
+    background-image: none;
+    background-size: 0;
+}
+
+@media (hover: hover) {
+    .linked-heading:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.linked-heading:focus, .linked-heading:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.linked-heading:focus, .linked-heading:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.linked-heading:hover {
+    transition: none;
+    background-image: none;
+    background-size: 0;
+}
+
+.linked-heading:hover .linked-heading__text:before {
+    opacity: 1;
+    width: 100%;
+}
+
+.linked-heading:hover .linked-heading__icons i:nth-child(1) {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    animation: slide-right-out 600ms;
+}
+
+.linked-heading:hover .linked-heading__icons i:nth-child(2) {
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+    animation: slide-left-in 600ms;
+}
+
+.linked-heading:active .linked-heading__text:before {
+    opacity: 1;
+    width: 100%;
+}
+
+.linked-heading:focus, .linked-heading:active {
+    outline-color: #0c0c0e;
+}
+
+.linked-heading:visited {
+    color: #0c0c0e;
+}
+
+.linked-heading__icons {
+    background: #d61726;
+    color: #ffffff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #d61726;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linked-heading__icons i {
+    position: absolute;
+    font-weight: 400;
+}
+
+.linked-heading__icons i:nth-child(1) {
+    font-size: 16px;
+}
+
+.linked-heading__icons i:nth-child(2) {
+    font-size: 22px;
+    font-weight: 300;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    animation: slide-right-out 600ms;
+}
+
+h2 .linked-heading__icons {
+    height: 2rem;
+    width: 2rem;
+}
+
+h3 .linked-heading__icons {
+    height: 1.8rem;
+    width: 1.8rem;
+}
+
+.linked-heading__text {
+    color: #0c0c0e;
+    position: relative;
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.linked-heading__text:before {
+    background: #d61726;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .linked-heading__text:before {
+        transition: none;
     }
 }
 
@@ -23407,7 +23580,7 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
-.content-fade-in {
+.content-fade-in--start {
     opacity: 0;
     margin-top: 1.5rem;
 }
@@ -23421,18 +23594,24 @@ a.modal__close:active, a.modal__close:focus {
 .content-separator {
     height: 0.3rem;
     display: block;
-    background: #dd0036;
+    background: #d61726;
     margin: 2.25rem 0;
-    transition: width ease 0.5s;
+}
+
+.content-separator--transition-start {
     width: 20%;
 }
 
 .content-separator--transition-complete {
     width: 100%;
+    transition: width ease 0.5s;
 }
 
 .content-slide-up {
     position: relative;
+}
+
+.content-slideup--start {
     top: 70%;
     transition: top ease 1.5s;
 }
@@ -23441,7 +23620,7 @@ a.modal__close:active, a.modal__close:focus {
     top: 0;
 }
 
-.image-expand {
+.image-expand--start {
     opacity: 0.5;
     transform: scale(0.92, 0.92);
 }
@@ -23531,6 +23710,10 @@ a.modal__close:active, a.modal__close:focus {
     grid-column: 1 / -1;
 }
 
+.case-study__overview .standfirst {
+    max-width: none;
+}
+
 .case-study__overview .banner__content__header {
     margin-bottom: 0;
 }
@@ -23575,60 +23758,6 @@ a.modal__close:active, a.modal__close:focus {
     margin-bottom: 6rem;
 }
 
-.case-study__overview__main__logos {
-    grid-column: 1 / 6;
-}
-
-@media (max-width: 432px) {
-    .case-study__overview__main__logos {
-        grid-column: 1 / -1;
-        margin-bottom: 1.5rem;
-    }
-}
-
-@media (min-width: 433px) and (max-width: 899px) {
-    .case-study__overview__main__logos {
-        grid-column: 1 / 11;
-        margin-bottom: 1.5rem;
-    }
-}
-
-.case-study__overview__main__logos figure {
-    display: inline-block;
-    margin-right: 5%;
-    width: 40%;
-    background: #ffffff;
-    position: relative;
-    padding-top: 16.25%;
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .case-study__overview__main__logos figure {
-        width: 7.75rem;
-        padding-top: 3.2rem;
-    }
-}
-
-@media (min-width: 901px) and (max-width: 1279px) {
-    .case-study__overview__main__logos figure {
-        display: block;
-        width: 7.75rem;
-        padding-top: 3.2rem;
-    }
-}
-
-.case-study__overview__main__logos img {
-    border: 0.125rem solid #e5e5e5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 80%;
-    width: 90%;
-    margin: 5%;
-}
-
 .case-study__overview__main__details {
     grid-column: 6 / 14;
 }
@@ -23667,6 +23796,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+    max-height: 100%;
+    width: auto;
 }
 
 .case-study__overview__main__details .label {
@@ -23759,61 +23890,65 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .case-study__content__wrap {
-    max-width: 80rem;
-    grid-row-gap: 0;
-    display: grid;
     grid-column: 1 / -1;
 }
 
-@media (min-width: 1441px) {
-    .case-study__content__wrap {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .case-study__content__wrap {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
+.case-study__content__container {
+    grid-row-gap: 0;
+    display: grid;
+    max-width: 80rem;
+    max-width: 80rem;
 }
 
 @media (max-width: 432px) {
-    .case-study__content__wrap {
+    .case-study__content__container {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
-    .case-study__content__wrap {
+    .case-study__content__container {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
 @media (min-width: 901px) {
-    .case-study__content__wrap {
+    .case-study__content__container {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
     }
 }
 
+@media (min-width: 1441px) {
+    .case-study__content__container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .case-study__content__container {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
 @media (max-width: 432px) {
-    .case-study__content__wrap {
+    .case-study__content__container {
         grid-template-areas: 'c c c c c c';
     }
 }
 
 @media (min-width: 433px) {
-    .case-study__content__wrap {
+    .case-study__content__container {
         grid-template-areas: '. c c c c c c c c c c .';
     }
 }
 
 @media (min-width: 901px) {
-    .case-study__content__wrap {
+    .case-study__content__container {
         grid-template-areas: '. . . . . c c c c c c c c . . . . .';
     }
 }
@@ -23893,24 +24028,9 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     position: relative;
     border-bottom: 0.0625rem solid #e5e5e5;
     border-top: 0.0625rem solid #e5e5e5;
-    max-width: 80rem;
     grid-row-gap: 0;
     display: grid;
     grid-column: 1 / -1;
-}
-
-@media (min-width: 1441px) {
-    .case-study__content__share-icons {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .case-study__content__share-icons {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
 }
 
 @media (max-width: 432px) {
@@ -23988,53 +24108,13 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .case-study__grey__wrap {
     background: #f2f2f2;
     padding: 1.25rem 0 5rem;
-    grid-row-gap: 0;
-    display: grid;
     grid-column: 1 / -1;
-}
-
-@media (max-width: 432px) {
-    .case-study__grey__wrap {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .case-study__grey__wrap {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .case-study__grey__wrap {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
-}
-
-@media (max-width: 432px) {
-    .case-study__grey__wrap {
-        grid-template-areas: 'c c c c c c';
-    }
-}
-
-@media (min-width: 433px) {
-    .case-study__grey__wrap {
-        grid-template-areas: '. c c c c c c c c c c .';
-    }
-}
-
-@media (min-width: 901px) {
-    .case-study__grey__wrap {
-        grid-template-areas: '. . . . . c c c c c c c c . . . . .';
-    }
 }
 
 .case-study__grey__wrap__container {
     max-width: 80rem;
-    grid-area: c;
+    grid-row-gap: 0;
+    display: grid;
 }
 
 @media (min-width: 1441px) {
@@ -24049,6 +24129,49 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
+}
+
+@media (max-width: 432px) {
+    .case-study__grey__wrap__container {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .case-study__grey__wrap__container {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .case-study__grey__wrap__container {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (max-width: 432px) {
+    .case-study__grey__wrap__container {
+        grid-template-areas: 'c c c c c c';
+    }
+}
+
+@media (min-width: 433px) {
+    .case-study__grey__wrap__container {
+        grid-template-areas: '. c c c c c c c c c c .';
+    }
+}
+
+@media (min-width: 901px) {
+    .case-study__grey__wrap__container {
+        grid-template-areas: '. . . . . c c c c c c c c . . . . .';
+    }
+}
+
+.case-study__grey__wrap__container__content {
+    grid-area: c;
 }
 
 .case-study__related-case-studies__wrap {
@@ -24161,7 +24284,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media (min-width: 901px) {
     .case-study--research .case-study__overview__main__details {
-        grid-column: 9 / -1;
+        grid-column: 6 / 14;
     }
 }
 
@@ -24177,7 +24300,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .case-study--research__details .icon {
-    color: #dd0036;
+    color: #d61726;
 }
 
 .case-study--research__details {
@@ -24913,6 +25036,11 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     padding-bottom: 3rem;
 }
 
+.lifelong-learning header.banner {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .lifelong-learning header .header__content {
     max-width: 80rem;
 }
@@ -24939,6 +25067,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .lifelong-learning header .header__content p {
     grid-area: type;
     max-width: 80rem;
+}
+
+.lifelong-learning .banner__group__overlay {
+    background: linear-gradient(to top, #5d184a, transparent 100%);
 }
 
 .lifelong-learning .wrapper--key-information--lifelong-learning {
@@ -25382,8 +25514,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
     background-color: #5d184a;
     border-color: #5d184a;
@@ -25441,7 +25573,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta button:focus,
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta button:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -25462,7 +25594,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta a:hover,
     .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta button:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta a:hover span,
@@ -25494,14 +25626,14 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta a:visited,
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta button:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta a:focus,
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta button:focus {
-    background: #dd0036;
-    border-color: #dd0036;
+    background: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -25518,16 +25650,16 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta a:hover,
     .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta button:hover {
         background: #ffffff;
-        border-color: #dd0036;
-        color: #dd0036;
+        border-color: #d61726;
+        color: #d61726;
     }
 }
 
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta a:active,
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta button:active {
-    border-color: #dd0036;
+    border-color: #d61726;
     box-shadow: none;
-    color: #dd0036;
+    color: #d61726;
     background: transparent;
 }
 
@@ -25543,8 +25675,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta a:disabled,
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta button:disabled {
     color: #ffffff;
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta a span,
@@ -25718,8 +25850,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
     background-color: #d8d8d8;
     border-color: #d8d8d8;
@@ -25772,7 +25904,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .lifelong-learning__contact .cta-block li a:focus, .lifelong-learning__contact .cta-block li a:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -25788,7 +25920,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media (hover: hover) {
     .lifelong-learning__contact .cta-block li a:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .lifelong-learning__contact .cta-block li a:hover span {
@@ -25814,13 +25946,13 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .lifelong-learning__contact .cta-block li a:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
 .lifelong-learning__contact .cta-block li a:focus {
-    background: #dd0036;
-    border-color: #dd0036;
+    background: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -25834,15 +25966,15 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media (hover: hover) {
     .lifelong-learning__contact .cta-block li a:hover {
         background: #ffffff;
-        border-color: #dd0036;
-        color: #dd0036;
+        border-color: #d61726;
+        color: #d61726;
     }
 }
 
 .lifelong-learning__contact .cta-block li a:active {
-    border-color: #dd0036;
+    border-color: #d61726;
     box-shadow: none;
-    color: #dd0036;
+    color: #d61726;
     background: transparent;
 }
 
@@ -25855,8 +25987,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .lifelong-learning__contact .cta-block li a:disabled {
     color: #ffffff;
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .lifelong-learning__contact .cta-block li a span {
@@ -25948,8 +26080,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         position: relative;
         transition: background-color 0.6s, transform 0.6s;
         box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-        background: #dd0036;
-        border: 0.125rem solid #dd0036;
+        background: #d61726;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
         background-color: #d8d8d8;
         border-color: #d8d8d8;
@@ -26001,7 +26133,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media screen {
     .js .lifelong-learning .modal__trigger:focus, .js .lifelong-learning .modal__trigger:active {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .js .lifelong-learning .modal__trigger:focus span, .js .lifelong-learning .modal__trigger:active span {
@@ -26016,7 +26148,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media screen and (hover: hover) {
     .js .lifelong-learning .modal__trigger:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .js .lifelong-learning .modal__trigger:hover span {
@@ -26040,12 +26172,12 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         transform: none;
     }
     .js .lifelong-learning .modal__trigger:visited {
-        border-color: #dd0036;
+        border-color: #d61726;
         color: #ffffff;
     }
     .js .lifelong-learning .modal__trigger:focus {
-        background: #dd0036;
-        border-color: #dd0036;
+        background: #d61726;
+        border-color: #d61726;
         color: #ffffff;
     }
     .js .lifelong-learning .modal__trigger:focus:focus, .js .lifelong-learning .modal__trigger:focus:active {
@@ -26059,16 +26191,16 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media screen and (hover: hover) {
     .js .lifelong-learning .modal__trigger:hover {
         background: #ffffff;
-        border-color: #dd0036;
-        color: #dd0036;
+        border-color: #d61726;
+        color: #d61726;
     }
 }
 
 @media screen {
     .js .lifelong-learning .modal__trigger:active {
-        border-color: #dd0036;
+        border-color: #d61726;
         box-shadow: none;
-        color: #dd0036;
+        color: #d61726;
         background: transparent;
     }
     .js .lifelong-learning .modal__trigger:active:focus, .js .lifelong-learning .modal__trigger:active:active {
@@ -26079,8 +26211,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
     .js .lifelong-learning .modal__trigger:disabled {
         color: #ffffff;
-        background: #dd0036;
-        border: 0.125rem solid #dd0036;
+        background: #d61726;
+        border: 0.125rem solid #d61726;
     }
     .js .lifelong-learning .modal__trigger span {
         transition: none;
@@ -26578,7 +26710,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         background-repeat: no-repeat;
         background-size: 100% 0;
         background-position: 0 100%;
-        transition: background-size 0.3s ease;
+        transition: background-size 0.2s ease-in-out;
         color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
@@ -26587,7 +26719,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         background-repeat: no-repeat;
         background-size: 100% 0;
         background-position: 0 100%;
-        transition: background-size 0.3s ease;
+        transition: background-size 0.2s ease-in-out;
         background-image: linear-gradient(120deg, #6894c0 0%, #6894c0 100%);
         border-bottom-color: #6894c0;
         color: #6894c0;
@@ -27042,7 +27174,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .breadcrumbs a:before {
-    background: #dd0036;
+    background: #d61726;
     bottom: -0.125rem;
     content: '';
     display: block;
@@ -27050,7 +27182,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     left: 0;
     opacity: 0;
     position: absolute;
-    transition: opacity 0.3s ease, width 0.6s ease;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     width: 0;
 }
 
@@ -27081,7 +27213,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .breadcrumbs a:active {
-    border-bottom-color: #dd0036;
+    border-bottom-color: #d61726;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
@@ -27100,7 +27232,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .breadcrumbs a:active {
-    border-bottom-color: #dd0036;
+    border-bottom-color: #d61726;
     outline-color: #ffffff;
     color: #ffffff;
 }
@@ -27128,11 +27260,11 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     padding: 0.5rem 1.5rem;
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
-    border: 0.125rem solid #dd0036;
-    background: #dd0036;
+    border: 0.125rem solid #d61726;
+    background: #d61726;
     color: #ffffff;
-    border-color: #dd0036;
-    background: #dd0036;
+    border-color: #d61726;
+    background: #d61726;
     color: #ffffff;
 }
 
@@ -27179,7 +27311,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .theme--dark .cta-block li:nth-child(1) a:focus, .theme--dark .cta-block li:nth-child(1) a:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -27195,7 +27327,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media (hover: hover) {
     .theme--dark .cta-block li:nth-child(1) a:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .theme--dark .cta-block li:nth-child(1) a:hover span {
@@ -27222,16 +27354,16 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .theme--dark .cta-block li:nth-child(1) a:visited {
     color: #ffffff;
-    border-color: #dd0036;
+    border-color: #d61726;
 }
 
 .theme--dark .cta-block li:nth-child(1) a:focus {
-    background: #dd0036;
+    background: #d61726;
     color: #ffffff;
 }
 
 .theme--dark .cta-block li:nth-child(1) a:active, .theme--dark .cta-block li:nth-child(1) a:focus {
-    border-color: #dd0036;
+    border-color: #d61726;
 }
 
 .theme--dark .cta-block li:nth-child(1) a:active:focus, .theme--dark .cta-block li:nth-child(1) a:active:active, .theme--dark .cta-block li:nth-child(1) a:focus:focus, .theme--dark .cta-block li:nth-child(1) a:focus:active {
@@ -27244,15 +27376,15 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media (hover: hover) {
     .theme--dark .cta-block li:nth-child(1) a:hover, .theme--dark .cta-block li:nth-child(1) a:active {
-        border-color: #dd0036;
+        border-color: #d61726;
         background-image: none;
         background: transparent;
     }
 }
 
 .theme--dark .cta-block li:nth-child(1) a:disabled {
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .theme--dark .cta-block li:nth-child(1) a span {
@@ -27261,7 +27393,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .theme--dark .cta-block li:nth-child(1) a:visited {
     color: #ffffff;
-    border-color: #dd0036;
+    border-color: #d61726;
 }
 
 .theme--dark .cta-block li:nth-child(1) a:after {
@@ -27269,23 +27401,23 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .cta-block li:nth-child(1) a:focus {
-    border-color: #dd0036;
-    background: #dd0036;
+    border-color: #d61726;
+    background: #d61726;
     color: #ffffff;
 }
 
 @media (hover: hover) {
     .theme--dark .cta-block li:nth-child(1) a:hover {
         background: transparent;
-        color: #dd0036;
-        border-color: #dd0036;
+        color: #d61726;
+        border-color: #d61726;
     }
 }
 
 .theme--dark .cta-block li:nth-child(1) a:active {
     background: transparent;
-    border-color: #dd0036;
-    color: #dd0036;
+    border-color: #d61726;
+    color: #d61726;
 }
 
 .theme--dark .cta-block li:nth-child(1) a:active span, .theme--dark .cta-block li:nth-child(1) a:focus span, .theme--dark .cta-block li:nth-child(1) a:hover span {
@@ -27293,8 +27425,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .cta-block li:nth-child(1) a:disabled {
-    border-color: #dd0036;
-    background: #dd0036;
+    border-color: #d61726;
+    background: #d61726;
     color: #ffffff;
 }
 
@@ -27356,7 +27488,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .theme--dark .cta-block li:nth-child(2) a:focus, .theme--dark .cta-block li:nth-child(2) a:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -27372,7 +27504,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media (hover: hover) {
     .theme--dark .cta-block li:nth-child(2) a:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .theme--dark .cta-block li:nth-child(2) a:hover span {
@@ -27469,14 +27601,14 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
-    background-color: #dd0036;
-    border-color: #dd0036;
+    background-color: #d61726;
+    border-color: #d61726;
     color: #ffffff;
-    background-color: #dd0036;
-    border-color: #dd0036;
+    background-color: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -27523,7 +27655,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .theme--dark .cta-block li:nth-child(3) a:focus, .theme--dark .cta-block li:nth-child(3) a:active {
     background-color: transparent;
-    border: 0.125rem solid #dd0036;
+    border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
@@ -27539,7 +27671,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media (hover: hover) {
     .theme--dark .cta-block li:nth-child(3) a:hover {
         background-color: transparent;
-        border: 0.125rem solid #dd0036;
+        border: 0.125rem solid #d61726;
         color: #ffffff;
     }
     .theme--dark .cta-block li:nth-child(3) a:hover span {
@@ -27565,13 +27697,13 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .cta-block li:nth-child(3) a:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
 .theme--dark .cta-block li:nth-child(3) a:focus {
-    background: #dd0036;
-    border-color: #dd0036;
+    background: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -27585,15 +27717,15 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media (hover: hover) {
     .theme--dark .cta-block li:nth-child(3) a:hover {
         background: #ffffff;
-        border-color: #dd0036;
-        color: #dd0036;
+        border-color: #d61726;
+        color: #d61726;
     }
 }
 
 .theme--dark .cta-block li:nth-child(3) a:active {
-    border-color: #dd0036;
+    border-color: #d61726;
     box-shadow: none;
-    color: #dd0036;
+    color: #d61726;
     background: transparent;
 }
 
@@ -27606,8 +27738,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .theme--dark .cta-block li:nth-child(3) a:disabled {
     color: #ffffff;
-    background: #dd0036;
-    border: 0.125rem solid #dd0036;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .theme--dark .cta-block li:nth-child(3) a span {
@@ -27615,7 +27747,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .cta-block li:nth-child(3) a:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -27624,28 +27756,28 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .cta-block li:nth-child(3) a:focus, .theme--dark .cta-block li:nth-child(3) a:active {
-    background-color: #dd0036;
-    border-color: #dd0036;
+    background-color: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
 @media (hover: hover) {
     .theme--dark .cta-block li:nth-child(3) a:hover {
-        background-color: #aa002a;
-        border-color: #aa002a;
+        background-color: #a8121e;
+        border-color: #a8121e;
         color: #ffffff;
     }
 }
 
 .theme--dark .cta-block li:nth-child(3) a:active {
-    background-color: #aa002a;
-    border-color: #aa002a;
+    background-color: #a8121e;
+    border-color: #a8121e;
 }
 
 .theme--dark .cta-block li:nth-child(3) a:disabled {
     color: #ffffff;
-    background: #dd0036;
-    border-color: #dd0036;
+    background: #d61726;
+    border-color: #d61726;
 }
 
 .theme--dark .cta-block li:nth-child(3) a:active span, .theme--dark .cta-block li:nth-child(3) a:focus span, .theme--dark .cta-block li:nth-child(3) a:hover span {
@@ -27653,7 +27785,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .cta-block li:nth-child(3) a:visited {
-    border-color: #dd0036;
+    border-color: #d61726;
     color: #ffffff;
 }
 
@@ -27662,21 +27794,21 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark .cta-block li:nth-child(3) a:focus, .theme--dark .cta-block li:nth-child(3) a:active {
-    background-color: #dd0036;
-    border-color: #dd0036;
+    background-color: #d61726;
+    border-color: #d61726;
     color: #ffffff;
 }
 
 @media (hover: hover) {
     .theme--dark .cta-block li:nth-child(3) a:hover {
-        background-color: #aa002a;
-        border-color: #dd0036;
+        background-color: #a8121e;
+        border-color: #d61726;
         color: #ffffff;
     }
 }
 
 .theme--dark .cta-block li:nth-child(3) a:active {
-    background-color: #aa002a;
+    background-color: #a8121e;
 }
 
 .theme--dark .cta-block li:nth-child(3) a:focus:focus, .theme--dark .cta-block li:nth-child(3) a:focus:active, .theme--dark .cta-block li:nth-child(3) a:active:focus, .theme--dark .cta-block li:nth-child(3) a:active:active {
@@ -27689,8 +27821,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .theme--dark .cta-block li:nth-child(3) a:disabled {
     color: #ffffff;
-    background: #dd0036;
-    border-color: #dd0036;
+    background: #d61726;
+    border-color: #d61726;
 }
 
 .theme--dark .feedback .feedback__form-link a {
@@ -27709,7 +27841,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.3s ease;
+    transition: background-size 0.2s ease-in-out;
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -27718,7 +27850,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.3s ease;
+    transition: background-size 0.2s ease-in-out;
     background-image: linear-gradient(120deg, #6894c0 0%, #6894c0 100%);
     border-bottom-color: #6894c0;
     color: #6894c0;
@@ -27872,7 +28004,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.3s ease;
+    transition: background-size 0.2s ease-in-out;
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -27881,7 +28013,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.3s ease;
+    transition: background-size 0.2s ease-in-out;
     background-image: linear-gradient(120deg, #6894c0 0%, #6894c0 100%);
     border-bottom-color: #6894c0;
     color: #6894c0;
@@ -28148,7 +28280,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark article figure figcaption a:before {
-    background: #dd0036;
+    background: #d61726;
     bottom: -0.125rem;
     content: '';
     display: block;
@@ -28156,7 +28288,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     left: 0;
     opacity: 0;
     position: absolute;
-    transition: opacity 0.3s ease, width 0.6s ease;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     width: 0;
 }
 
@@ -28187,7 +28319,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark article figure figcaption a:active {
-    border-bottom-color: #dd0036;
+    border-bottom-color: #d61726;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
@@ -28206,7 +28338,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .theme--dark article figure figcaption a:active {
-    border-bottom-color: #dd0036;
+    border-bottom-color: #d61726;
     outline-color: #ffffff;
     color: #ffffff;
 }
@@ -28391,7 +28523,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         outline-color: #0c0c0e;
     }
     .theme--dark.js .menu li a:before {
-        background: #dd0036;
+        background: #d61726;
         bottom: -0.125rem;
         content: '';
         display: block;
@@ -28399,7 +28531,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         left: 0;
         opacity: 0;
         position: absolute;
-        transition: opacity 0.3s ease, width 0.6s ease;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
         width: 0;
     }
 }
@@ -28434,7 +28566,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media screen {
     .theme--dark.js .menu li a:active {
-        border-bottom-color: #dd0036;
+        border-bottom-color: #d61726;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
     }
@@ -28454,7 +28586,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media screen {
     .theme--dark.js .menu li a:active {
-        border-bottom-color: #dd0036;
+        border-bottom-color: #d61726;
         outline-color: #ffffff;
         color: #ffffff;
     }
@@ -28689,11 +28821,11 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         outline-width: 0;
         text-decoration: none;
         background-color: #ffffff;
-        background-image: linear-gradient(120deg, #dd0036 0%, #dd0036 100%);
+        background-image: linear-gradient(120deg, #d61726 0%, #d61726 100%);
         background-position: 0 100%;
         background-repeat: no-repeat;
         background-size: 100% 0;
-        border-bottom-color: #dd0036;
+        border-bottom-color: #d61726;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         border-left-color: #cbcbcb;
@@ -28707,7 +28839,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         border-top-width: 0.0625rem;
         color: #1e1e1e;
         font-weight: 450;
-        transition: background-size 0.3s ease;
+        transition: background-size 0.2s ease-in-out;
         background-color: #1e1e1e;
         border-left-color: #494949;
         border-right-color: #494949;
@@ -28757,7 +28889,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media screen {
     .theme--dark.js .pagination__controls button:focus {
         background-color: #ffffff;
-        border-bottom-color: #dd0036;
+        border-bottom-color: #d61726;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
@@ -28780,7 +28912,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media screen {
     .theme--dark.js .pagination__controls button:active {
         background-size: 100% 100%;
-        border-bottom-color: #dd0036;
+        border-bottom-color: #d61726;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #ffffff;
@@ -28866,13 +28998,13 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         background-repeat: no-repeat;
         background-size: 100% 0;
         background-position: 0 100%;
-        transition: background-size 0.3s ease;
+        transition: background-size 0.2s ease-in-out;
         color: #006bbd;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
         background-position: 0 100%;
-        transition: background-size 0.3s ease;
+        transition: background-size 0.2s ease-in-out;
         background-image: linear-gradient(120deg, #6894c0 0%, #6894c0 100%);
         color: #6894c0;
     }
@@ -29037,13 +29169,13 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         background-repeat: no-repeat;
         background-size: 100% 0;
         background-position: 0 100%;
-        transition: background-size 0.3s ease;
+        transition: background-size 0.2s ease-in-out;
         color: #006bbd;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
         background-repeat: no-repeat;
         background-size: 100% 0;
         background-position: 0 100%;
-        transition: background-size 0.3s ease;
+        transition: background-size 0.2s ease-in-out;
         background-image: linear-gradient(120deg, #6894c0 0%, #6894c0 100%);
         color: #6894c0;
     }
@@ -29205,7 +29337,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         background-repeat: no-repeat;
         background-size: 100% 0;
         background-position: 0 100%;
-        transition: background-size 0.3s ease;
+        transition: background-size 0.2s ease-in-out;
         color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
@@ -29214,7 +29346,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         background-repeat: no-repeat;
         background-size: 100% 0;
         background-position: 0 100%;
-        transition: background-size 0.3s ease;
+        transition: background-size 0.2s ease-in-out;
         background-image: linear-gradient(120deg, #6894c0 0%, #6894c0 100%);
         border-bottom-color: #6894c0;
         color: #6894c0;
