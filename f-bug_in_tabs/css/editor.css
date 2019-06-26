@@ -342,84 +342,92 @@
     background-color: #e7ebed;
 }
 
+.color--red5 {
+    color: #fdf0ed;
+}
+
+.background--red5 {
+    background-color: #fdf0ed;
+}
+
 .color--red10 {
-    color: #f7d2d5;
+    color: #fec2c3;
 }
 
 .background--red10 {
-    background-color: #f7d2d5;
+    background-color: #fec2c3;
 }
 
 .color--red20 {
-    color: #efa6ac;
+    color: #fe8f91;
 }
 
 .background--red20 {
-    background-color: #efa6ac;
+    background-color: #fe8f91;
 }
 
 .color--red30 {
-    color: #e77983;
+    color: #f56067;
 }
 
 .background--red30 {
-    background-color: #e77983;
+    background-color: #f56067;
 }
 
 .color--red40 {
-    color: #df4d5a;
+    color: #e93745;
 }
 
 .background--red40 {
-    background-color: #df4d5a;
+    background-color: #e93745;
 }
 
 .color--red50 {
-    color: #dd0036;
+    color: #d61726;
 }
 
 .background--red50 {
-    background-color: #dd0036;
+    background-color: #d61726;
 }
 
 .color--red60 {
-    color: #c21d2c;
+    color: #b91924;
 }
 
 .background--red60 {
-    background-color: #c21d2c;
+    background-color: #b91924;
 }
 
 .color--red70 {
-    color: #ac1a27;
+    color: #9e111c;
 }
 
 .background--red70 {
-    background-color: #ac1a27;
+    background-color: #9e111c;
 }
 
 .color--red80 {
-    color: #81131d;
+    color: #790b21;
 }
 
 .background--red80 {
-    background-color: #81131d;
+    background-color: #790b21;
 }
 
 .color--red90 {
-    color: #560d13;
+    color: #5b0b1b;
 }
 
 .background--red90 {
-    background-color: #560d13;
+    background-color: #5b0b1b;
 }
 
 .color--red100 {
-    color: #2b0609;
+    color: #370612;
 }
 
 .background--red100 {
-    background-color: #2b0609;
+    background-color: #370612;
 }
 
 .color--purple10 {
@@ -1078,6 +1086,10 @@
     background-color: #ffffff;
 }
 
+/**
+    Used where card has two divs, one most likely
+    being a thumbnail.
+**/
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
@@ -10290,7 +10302,7 @@ article a {
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.3s ease;
+    transition: background-size 0.2s ease-in-out;
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -11726,7 +11738,7 @@ main table td em {
 }
 
 .cms-editor div.cms-editor-warning p {
-    background-color: #81131d;
+    background-color: #790b21;
     color: #ffffff;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -11812,7 +11824,7 @@ main table td em {
 }
 
 .cms-editor span.cms-editor-warning {
-    background-color: #81131d;
+    background-color: #790b21;
     color: #ffffff;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -11838,7 +11850,7 @@ main table td em {
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    transition: background-size 0.3s ease;
+    transition: background-size 0.2s ease-in-out;
     color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -12352,7 +12364,7 @@ main table td em {
         background-repeat: no-repeat;
         background-size: 100% 0;
         background-position: 0 100%;
-        transition: background-size 0.3s ease;
+        transition: background-size 0.2s ease-in-out;
         color: #006bbd;
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
@@ -12361,7 +12373,7 @@ main table td em {
         background-repeat: no-repeat;
         background-size: 100% 0;
         background-position: 0 100%;
-        transition: background-size 0.3s ease;
+        transition: background-size 0.2s ease-in-out;
         background-image: linear-gradient(120deg, #6894c0 0%, #6894c0 100%);
         border-bottom-color: #6894c0;
         color: #6894c0;
