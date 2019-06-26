@@ -22326,11 +22326,6 @@ article .social-icon .link-copy {
     }
 }
 
-.swiper-slide__image-wrapper img {
-    object-fit: cover;
-    width: 100%;
-}
-
 @media (max-width: 1279px) {
     .swiper-slide__image-wrapper img {
         max-height: 17rem;
@@ -22339,7 +22334,7 @@ article .social-icon .link-copy {
 
 @media (min-width: 1280px) {
     .swiper-slide__image-wrapper img {
-        max-height: 25rem;
+        max-height: 26rem;
     }
 }
 
