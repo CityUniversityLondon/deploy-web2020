@@ -17368,6 +17368,7 @@ article figure figcaption a:active {
     padding: 0.5rem;
     width: 100%;
     height: 100%;
+    grid-area: input;
 }
 
 .finder__query__input input i,
@@ -17844,6 +17845,10 @@ article figure figcaption a:active {
     transform: none;
 }
 
+.finder__query__submit span {
+    margin: auto;
+}
+
 @media (max-width: 768px) {
     .finder__query__submit .finder__query__submit__text {
         display: none;
@@ -17851,7 +17856,6 @@ article figure figcaption a:active {
 }
 
 .finder__query__submit .finder__query__submit__icon {
-    margin: auto;
     padding: 0 0.5rem 0 0;
 }
 
@@ -19485,6 +19489,7 @@ article figure figcaption a:active {
 }
 
 .finder__level {
+    grid-area: select;
     position: relative;
     padding-top: 0.5rem;
     border: 0.1875rem solid #3e1031;
@@ -19871,6 +19876,18 @@ article figure figcaption a:active {
 
 .background-fill--grey {
     background-color: #e5e5e5;
+}
+
+@-moz-document url-prefix() {
+    .finder__query__submit:hover {
+        padding: 0.5rem 1.405rem;
+    }
+}
+
+_::-webkit-full-page-media .finder__query__submit:hover,
+_:future .finder__query__submit:hover,
+:root .safari_only .finder__query__submit:hover {
+    padding: 0.5rem 1.405rem;
 }
 
 .global-footer {
@@ -24014,6 +24031,7 @@ article .social-icon .link-copy {
     padding: 0.5rem;
     width: 100%;
     height: 100%;
+    grid-area: input;
 }
 
 .finder__query__input input i,
@@ -24490,6 +24508,10 @@ article .social-icon .link-copy {
     transform: none;
 }
 
+.finder__query__submit span {
+    margin: auto;
+}
+
 @media (max-width: 768px) {
     .finder__query__submit .finder__query__submit__text {
         display: none;
@@ -24497,7 +24519,6 @@ article .social-icon .link-copy {
 }
 
 .finder__query__submit .finder__query__submit__icon {
-    margin: auto;
     padding: 0 0.5rem 0 0;
 }
 
@@ -26131,6 +26152,7 @@ article .social-icon .link-copy {
 }
 
 .finder__level {
+    grid-area: select;
     position: relative;
     padding-top: 0.5rem;
     border: 0.1875rem solid #3e1031;
@@ -26517,6 +26539,18 @@ article .social-icon .link-copy {
 
 .background-fill--grey {
     background-color: #e5e5e5;
+}
+
+@-moz-document url-prefix() {
+    .finder__query__submit:hover {
+        padding: 0.5rem 1.405rem;
+    }
+}
+
+_::-webkit-full-page-media .finder__query__submit:hover,
+_:future .finder__query__submit:hover,
+:root .safari_only .finder__query__submit:hover {
+    padding: 0.5rem 1.405rem;
 }
 
 /**
