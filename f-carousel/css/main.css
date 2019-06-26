@@ -22045,6 +22045,7 @@ article .social-icon .link-copy {
 .swiper-container {
     grid-area: slider-container;
     position: relative;
+    width: 100%;
 }
 
 @media (min-width: 901px) {
