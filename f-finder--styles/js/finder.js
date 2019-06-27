@@ -760,7 +760,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _finder_radio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finder__radio */ "./src/patterns/finder/components/filters/finder__radio.js");
 /* harmony import */ var _finder_checkbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__checkbox */ "./src/patterns/finder/components/filters/finder__checkbox.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './finder__select'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 /**
@@ -768,7 +767,6 @@ __webpack_require__.r(__webpack_exports__);
  * @author Tom Waddington <tom.waddington.1@city.ac.uk>
  * @copyright City, University of London 2019
  */
-
 
 
 
@@ -825,15 +823,6 @@ function finder__filters(props) {
             query: props.query,
             responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
             update: props.query
-          });
-
-        case 'select':
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(!(function webpackMissingModule() { var e = new Error("Cannot find module './finder__select'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {
-            key: facet.meta,
-            facet: facet,
-            query: props.query,
-            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
-            update: props.update
           });
       }
     } else {
@@ -1103,6 +1092,54 @@ finder__radio.propTypes = {
   update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__radio);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/components/filters/finder__select.js":
+/*!******************************************************************!*\
+  !*** ./src/patterns/finder/components/filters/finder__select.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/finder/components/finder__select
+ * @author Mark Skinsley <mark.skinsley@city.ac.uk>
+ * @copyright City, University of London 2019
+ */
+
+
+/**
+ * Render select facet.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function finder__select() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "finder__select finder__select--level"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "finder__select__overline",
+    htmlFor: "study-level"
+  }, "Level"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Undergraduate"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Postgraduate")));
+}
+
+finder__select.propTypes = {
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (finder__select);
 
 /***/ }),
 
@@ -1874,7 +1911,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/filters/finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
 /* harmony import */ var _components_filters_finder_mobilefilters__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/filters/finder__mobilefilters */ "./src/patterns/finder/components/filters/finder__mobilefilters.js");
 /* harmony import */ var _components_results_finder_results__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/results/finder__results */ "./src/patterns/finder/components/results/finder__results.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './components/filters/finder__select'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _components_filters_finder_select__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/filters/finder__select */ "./src/patterns/finder/components/filters/finder__select.js");
 
 
 
@@ -2046,7 +2083,7 @@ function Finder(props) {
       onSubmit: e => {
         e.preventDefault();
       }
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(!(function webpackMissingModule() { var e = new Error("Cannot find module './components/filters/finder__select'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_filters_finder_select__WEBPACK_IMPORTED_MODULE_14__["default"], null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_10__["default"], {
       config: props.config,
       query: query,
       update: updater,
