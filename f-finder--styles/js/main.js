@@ -2403,7 +2403,11 @@ function finder__query(props) {
   }, suggestion))));
   const input = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
     className: "finder__query__input"
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+    className: "finder__query__icon--wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    className: "finder__icon fal fa-search"
+  })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
     className: "sr-only",
     htmlFor: inputId
   }, "Search ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {

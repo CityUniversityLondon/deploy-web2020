@@ -17312,6 +17312,7 @@ article figure figcaption a:active {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    height: 100%;
 }
 
 @media (max-width: 767px) {
@@ -17342,6 +17343,7 @@ article figure figcaption a:active {
     padding: 0.1875rem;
     z-index: 2;
     grid-area: b;
+    display: flex;
     flex-grow: 1;
     position: relative;
 }
@@ -17408,6 +17410,7 @@ article figure figcaption a:active {
     width: 100%;
     height: 100%;
     grid-area: input;
+    border: 0.0625rem solid transparent;
 }
 
 .finder__query__input input i,
@@ -17506,6 +17509,11 @@ article figure figcaption a:active {
         top: 0.25rem;
         left: 0;
     }
+}
+
+.finder__query__icon--wrapper {
+    background: #ffffff;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 
 .finder__query__submit {
@@ -19534,7 +19542,7 @@ article figure figcaption a:active {
 }
 
 .finder__select {
-    height: 73%;
+    height: auto;
     margin-top: 1rem;
     position: relative;
     padding-top: 0.5rem;
@@ -19680,7 +19688,7 @@ article figure figcaption a:active {
     background: #ffffff;
     font-weight: 400;
     color: #696969;
-    margin: auto 0.5rem;
+    margin-top: 50%;
 }
 
 .finder__icon--close {
@@ -24025,6 +24033,7 @@ article .social-icon .link-copy {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    height: 100%;
 }
 
 @media (max-width: 767px) {
@@ -24055,6 +24064,7 @@ article .social-icon .link-copy {
     padding: 0.1875rem;
     z-index: 2;
     grid-area: b;
+    display: flex;
     flex-grow: 1;
     position: relative;
 }
@@ -24121,6 +24131,7 @@ article .social-icon .link-copy {
     width: 100%;
     height: 100%;
     grid-area: input;
+    border: 0.0625rem solid transparent;
 }
 
 .finder__query__input input i,
@@ -24219,6 +24230,11 @@ article .social-icon .link-copy {
         top: 0.25rem;
         left: 0;
     }
+}
+
+.finder__query__icon--wrapper {
+    background: #ffffff;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 
 .finder__query__submit {
@@ -26247,7 +26263,7 @@ article .social-icon .link-copy {
 }
 
 .finder__select {
-    height: 73%;
+    height: auto;
     margin-top: 1rem;
     position: relative;
     padding-top: 0.5rem;
@@ -26393,7 +26409,7 @@ article .social-icon .link-copy {
     background: #ffffff;
     font-weight: 400;
     color: #696969;
-    margin: auto 0.5rem;
+    margin-top: 50%;
 }
 
 .finder__icon--close {
