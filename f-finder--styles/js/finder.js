@@ -760,6 +760,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _finder_radio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finder__radio */ "./src/patterns/finder/components/filters/finder__radio.js");
 /* harmony import */ var _finder_checkbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__checkbox */ "./src/patterns/finder/components/filters/finder__checkbox.js");
+!(function webpackMissingModule() { var e = new Error("Cannot find module './finder__select'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 /**
@@ -767,6 +768,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Tom Waddington <tom.waddington.1@city.ac.uk>
  * @copyright City, University of London 2019
  */
+
 
 
 
@@ -823,6 +825,15 @@ function finder__filters(props) {
             query: props.query,
             responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
             update: props.query
+          });
+
+        case 'select':
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(!(function webpackMissingModule() { var e = new Error("Cannot find module './finder__select'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {
+            key: facet.meta,
+            facet: facet,
+            query: props.query,
+            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
+            update: props.update
           });
       }
     } else {
@@ -1479,7 +1490,7 @@ function finder__query(props) {
     config: props.config,
     query: props.query,
     update: props.update
-  }));
+  })); //  }
 }
 
 finder__query.propTypes = {
@@ -1863,6 +1874,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/filters/finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
 /* harmony import */ var _components_filters_finder_mobilefilters__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/filters/finder__mobilefilters */ "./src/patterns/finder/components/filters/finder__mobilefilters.js");
 /* harmony import */ var _components_results_finder_results__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/results/finder__results */ "./src/patterns/finder/components/results/finder__results.js");
+!(function webpackMissingModule() { var e = new Error("Cannot find module './components/filters/finder__select'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 
@@ -1882,6 +1894,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Tom Waddington <tom.waddington.1@city.ac.uk>
  * @copyright City, University of London 2019
  */
+
 
 
 
@@ -2024,6 +2037,30 @@ function Finder(props) {
     results: newUpdate => setUpdate(newUpdate),
     updateState: update
   };
+  let hub = document.getElementsByClassName('wrapper--finder--hub');
+  hub = hub[0];
+
+  if (hub) {
+    return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
+      className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
+      onSubmit: e => {
+        e.preventDefault();
+      }
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(!(function webpackMissingModule() { var e = new Error("Cannot find module './components/filters/finder__select'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      config: props.config,
+      query: query,
+      update: updater,
+      updating: updating
+    }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_results_finder_results__WEBPACK_IMPORTED_MODULE_13__["default"], {
+      query: query,
+      response: funnelbackResponse,
+      summariseAs: props.config.summariseAs,
+      type: props.config.resultCard,
+      update: updater,
+      updating: updating
+    }));
+  }
+
   return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
     className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
     onSubmit: e => {

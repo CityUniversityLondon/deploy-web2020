@@ -17216,6 +17216,34 @@ article figure figcaption a:active {
     }
 }
 
+@media (max-width: 432px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'a a a a a a' 'query query query query query query' 'results results results results results results';
+    }
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'a a a a a a a a a a a a' 'query query query query query query query query query query query query' 'results results results results results results results results results results results results';
+    }
+}
+
+@media (min-width: 769px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 2;
+        grid-template-areas: 'a a a a query query query query query query query query' '. . . . results results results results results results results results';
+    }
+}
+
+@media (min-width: 901px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 2;
+        grid-template-areas: 'a a a a query query query query query query query query query query query query query query' '. . . . results results results results results results results results results results results results . .';
+    }
+}
+
 .finder {
     display: grid;
     grid-row-gap: 0;
@@ -17859,7 +17887,10 @@ article figure figcaption a:active {
 
 @media (max-width: 767px) {
     .finder__query__submit {
-        padding: 1rem;
+        padding: 1rem 1.25rem;
+    }
+    .finder__query__submit:hover {
+        padding: 1rem 1.125rem;
     }
 }
 
@@ -17894,10 +17925,6 @@ article figure figcaption a:active {
     color: #ffffff;
     border: 0;
     outline: 0;
-}
-
-.finder__query__submit:hover {
-    padding: 0.5rem 1.375rem;
 }
 
 .finder__query__submit:visited {
@@ -19507,11 +19534,12 @@ article figure figcaption a:active {
 }
 
 .finder__select {
+    height: 73%;
+    margin-top: 1rem;
     position: relative;
     padding-top: 0.5rem;
     border: 0.1875rem solid #3e1031;
     padding: 0.25rem 0.25rem 0 0.75rem;
-    margin-right: 2rem;
 }
 
 .finder__select select {
@@ -19604,6 +19632,7 @@ article figure figcaption a:active {
     letter-spacing: 0.005em;
     color: #dd0036;
     font-weight: 400;
+    display: block;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -23900,6 +23929,34 @@ article .social-icon .link-copy {
     }
 }
 
+@media (max-width: 432px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'a a a a a a' 'query query query query query query' 'results results results results results results';
+    }
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'a a a a a a a a a a a a' 'query query query query query query query query query query query query' 'results results results results results results results results results results results results';
+    }
+}
+
+@media (min-width: 769px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 2;
+        grid-template-areas: 'a a a a query query query query query query query query' '. . . . results results results results results results results results';
+    }
+}
+
+@media (min-width: 901px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 2;
+        grid-template-areas: 'a a a a query query query query query query query query query query query query query query' '. . . . results results results results results results results results results results results results . .';
+    }
+}
+
 .finder {
     display: grid;
     grid-row-gap: 0;
@@ -24543,7 +24600,10 @@ article .social-icon .link-copy {
 
 @media (max-width: 767px) {
     .finder__query__submit {
-        padding: 1rem;
+        padding: 1rem 1.25rem;
+    }
+    .finder__query__submit:hover {
+        padding: 1rem 1.125rem;
     }
 }
 
@@ -24578,10 +24638,6 @@ article .social-icon .link-copy {
     color: #ffffff;
     border: 0;
     outline: 0;
-}
-
-.finder__query__submit:hover {
-    padding: 0.5rem 1.375rem;
 }
 
 .finder__query__submit:visited {
@@ -26191,11 +26247,12 @@ article .social-icon .link-copy {
 }
 
 .finder__select {
+    height: 73%;
+    margin-top: 1rem;
     position: relative;
     padding-top: 0.5rem;
     border: 0.1875rem solid #3e1031;
     padding: 0.25rem 0.25rem 0 0.75rem;
-    margin-right: 2rem;
 }
 
 .finder__select select {
@@ -26288,6 +26345,7 @@ article .social-icon .link-copy {
     letter-spacing: 0.005em;
     color: #dd0036;
     font-weight: 400;
+    display: block;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
