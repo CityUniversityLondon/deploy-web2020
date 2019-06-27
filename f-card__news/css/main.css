@@ -13778,6 +13778,28 @@ main table td em {
     border-bottom: none;
 }
 
+.card--news:hover {
+    /* 
+            Trigger thumbnail transition - note the following
+            values should match the mixin call:
+
+            - scale value
+            - background opacity
+
+            Mixin: thumbnail-gradient-scale
+        */
+    /* 
+            Trigger underline transition - note the following
+            values should match the mixin call:
+
+            - background image gradients
+            - background sizem, 2nd val
+            - color
+
+            Mixin:  underline-transition-title
+        */
+}
+
 .card--news:hover .thumbnail__image-container img {
     transform: scale(1.04);
 }
