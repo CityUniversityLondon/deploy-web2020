@@ -13778,6 +13778,20 @@ main table td em {
     border-bottom: none;
 }
 
+.card--news:hover .thumbnail__image-container img {
+    transform: scale(1.04);
+}
+
+.card--news:hover .thumbnail__image-container:after {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card--news:hover .underline-transition__title {
+    background-image: linear-gradient(#1e1e1e, #1e1e1e);
+    background-size: 100% 0.25rem;
+    color: #1e1e1e;
+}
+
 @media (hover: hover) {
     .card--news__image-container:hover {
         background-image: none;
