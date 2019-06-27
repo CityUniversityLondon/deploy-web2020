@@ -12548,6 +12548,7 @@ main table td em {
     position: relative;
     transition: none;
     padding: 1rem;
+    display: block;
 }
 
 @media (hover: hover) {
@@ -12842,7 +12843,7 @@ main table td em {
     }
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 768px) {
     .card--casestudy a {
         display: flex;
     }
@@ -13210,6 +13211,7 @@ main table td em {
     position: relative;
     transition: none;
     padding: 1rem;
+    display: block;
 }
 
 @media (hover: hover) {
@@ -13504,7 +13506,7 @@ main table td em {
     }
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 768px) {
     .card--related-course a {
         display: flex;
     }
@@ -13826,7 +13828,11 @@ main table td em {
     margin-top: 0.5rem;
 }
 
-@media (min-width: 1281px) {
+.card--profile__description--thumbnail {
+    display: block;
+}
+
+@media (min-width: 768px) {
     .card--profile__description--thumbnail {
         display: flex;
     }
