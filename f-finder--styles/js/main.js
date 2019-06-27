@@ -2448,7 +2448,8 @@ function finder__query(props) {
       let inputVal = e.target.value;
 
       for (const suggestedResult of suggestedResults.entries()) {
-        let suggestedText = suggestedResult[1].innerHTML;
+        let suggestedText = suggestedResult[1].innerHTML; // console.log(suggestedText);
+
         /**
          * Attempt at using appendChild. Error message => can't append (not node)
          */
@@ -2464,9 +2465,9 @@ function finder__query(props) {
          */
 
         let updated = '';
-        updated += suggestedText.replace(inputVal, "<strong>".concat(inputVal, "</strong>")); // console.log(updated);
+        updated = suggestedText.replace(inputVal, "<span class='test'>".concat(inputVal, "</span>")); // console.log(updated);
 
-        suggestedResult[1].innerHTML = updated;
+        suggestedResult[1].innerHTML = updated; // console.log(updated);
       }
       /**
        * if we have a request to the suggestions service in progress,

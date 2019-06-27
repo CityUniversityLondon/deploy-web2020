@@ -17219,28 +17219,28 @@ article figure figcaption a:active {
 @media (max-width: 432px) {
     .wrapper--finder--hub .finder {
         grid-template-rows: 3;
-        grid-template-areas: 'a a a a a a' 'query query query query query query' 'results results results results results results';
+        grid-template-areas: 'select select select select select select' 'query query query query query query' 'results results results results results results';
     }
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
     .wrapper--finder--hub .finder {
         grid-template-rows: 3;
-        grid-template-areas: 'a a a a a a a a a a a a' 'query query query query query query query query query query query query' 'results results results results results results results results results results results results';
+        grid-template-areas: 'select select select select select select' 'query query query query query query query query query query query query' 'results results results results results results results results results results results results';
     }
 }
 
 @media (min-width: 769px) {
     .wrapper--finder--hub .finder {
         grid-template-rows: 2;
-        grid-template-areas: 'a a a a query query query query query query query query' '. . . . results results results results results results results results';
+        grid-template-areas: 'select select select select query query query query query query query query' '. . . . results results results results results results results results';
     }
 }
 
 @media (min-width: 901px) {
     .wrapper--finder--hub .finder {
         grid-template-rows: 2;
-        grid-template-areas: 'a a a a query query query query query query query query query query query query query query' '. . . . results results results results results results results results results results results results . .';
+        grid-template-areas: 'select select select select query query query query query query query query query query query query query query' '. . . . results results results results results results results results results results results results . .';
     }
 }
 
@@ -17315,16 +17315,6 @@ article figure figcaption a:active {
     height: 100%;
 }
 
-@media (max-width: 767px) {
-    .finder__query--global > div {
-        display: grid;
-        grid-template-areas: 'a a a a a a' 'b b b b b c';
-    }
-    .finder__query--global .finder__select--level {
-        margin-right: 0;
-    }
-}
-
 .finder__query__input {
     font-family: "Plex Sans", sans-serif;
     /**
@@ -17342,7 +17332,6 @@ article figure figcaption a:active {
     background: linear-gradient(45deg, #3e1031, #dd0036);
     padding: 0.1875rem;
     z-index: 2;
-    grid-area: b;
     display: flex;
     flex-grow: 1;
     position: relative;
@@ -17559,7 +17548,6 @@ article figure figcaption a:active {
     border-color: #dd0036;
     color: #ffffff;
     z-index: 2;
-    grid-area: c;
     flex-shrink: 0;
     margin-left: 2rem;
     box-shadow: none;
@@ -17892,6 +17880,10 @@ article figure figcaption a:active {
 
 .finder__query__submit:active span, .finder__query__submit:focus span, .finder__query__submit:hover span {
     transform: none;
+}
+
+.finder__query__submit:hover {
+    cursor: pointer;
 }
 
 @media (max-width: 767px) {
@@ -19642,7 +19634,7 @@ article figure figcaption a:active {
 }
 
 .finder__select--level {
-    grid-area: a;
+    grid-area: select;
 }
 
 .finder__select__overline {
@@ -19945,6 +19937,10 @@ article figure figcaption a:active {
 
 .background-fill--grey {
     background-color: #e5e5e5;
+}
+
+.test {
+    font-weight: 900;
 }
 
 .global-footer {
@@ -23939,28 +23935,28 @@ article .social-icon .link-copy {
 @media (max-width: 432px) {
     .wrapper--finder--hub .finder {
         grid-template-rows: 3;
-        grid-template-areas: 'a a a a a a' 'query query query query query query' 'results results results results results results';
+        grid-template-areas: 'select select select select select select' 'query query query query query query' 'results results results results results results';
     }
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
     .wrapper--finder--hub .finder {
         grid-template-rows: 3;
-        grid-template-areas: 'a a a a a a a a a a a a' 'query query query query query query query query query query query query' 'results results results results results results results results results results results results';
+        grid-template-areas: 'select select select select select select' 'query query query query query query query query query query query query' 'results results results results results results results results results results results results';
     }
 }
 
 @media (min-width: 769px) {
     .wrapper--finder--hub .finder {
         grid-template-rows: 2;
-        grid-template-areas: 'a a a a query query query query query query query query' '. . . . results results results results results results results results';
+        grid-template-areas: 'select select select select query query query query query query query query' '. . . . results results results results results results results results';
     }
 }
 
 @media (min-width: 901px) {
     .wrapper--finder--hub .finder {
         grid-template-rows: 2;
-        grid-template-areas: 'a a a a query query query query query query query query query query query query query query' '. . . . results results results results results results results results results results results results . .';
+        grid-template-areas: 'select select select select query query query query query query query query query query query query query query' '. . . . results results results results results results results results results results results results . .';
     }
 }
 
@@ -24035,16 +24031,6 @@ article .social-icon .link-copy {
     height: 100%;
 }
 
-@media (max-width: 767px) {
-    .finder__query--global > div {
-        display: grid;
-        grid-template-areas: 'a a a a a a' 'b b b b b c';
-    }
-    .finder__query--global .finder__select--level {
-        margin-right: 0;
-    }
-}
-
 .finder__query__input {
     font-family: "Plex Sans", sans-serif;
     /**
@@ -24062,7 +24048,6 @@ article .social-icon .link-copy {
     background: linear-gradient(45deg, #3e1031, #dd0036);
     padding: 0.1875rem;
     z-index: 2;
-    grid-area: b;
     display: flex;
     flex-grow: 1;
     position: relative;
@@ -24279,7 +24264,6 @@ article .social-icon .link-copy {
     border-color: #dd0036;
     color: #ffffff;
     z-index: 2;
-    grid-area: c;
     flex-shrink: 0;
     margin-left: 2rem;
     box-shadow: none;
@@ -24612,6 +24596,10 @@ article .social-icon .link-copy {
 
 .finder__query__submit:active span, .finder__query__submit:focus span, .finder__query__submit:hover span {
     transform: none;
+}
+
+.finder__query__submit:hover {
+    cursor: pointer;
 }
 
 @media (max-width: 767px) {
@@ -26362,7 +26350,7 @@ article .social-icon .link-copy {
 }
 
 .finder__select--level {
-    grid-area: a;
+    grid-area: select;
 }
 
 .finder__select__overline {
@@ -26665,6 +26653,10 @@ article .social-icon .link-copy {
 
 .background-fill--grey {
     background-color: #e5e5e5;
+}
+
+.test {
+    font-weight: 900;
 }
 
 /**
