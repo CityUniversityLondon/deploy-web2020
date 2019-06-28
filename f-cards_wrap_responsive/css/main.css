@@ -12664,8 +12664,9 @@ main table td em {
     }
 }
 
-.card--casestudy a div {
+.card--casestudy a .card__inner {
     z-index: 2;
+    position: relative;
 }
 
 .card--casestudy a .underline-transition__title {
@@ -13081,8 +13082,9 @@ main table td em {
     }
 }
 
-.card--course div {
+.card--course .card__inner {
     z-index: 2;
+    position: relative;
 }
 
 .card--course p {
@@ -13348,8 +13350,9 @@ main table td em {
     }
 }
 
-.card--related-course a div {
+.card--related-course a .card__inner {
     z-index: 2;
+    position: relative;
 }
 
 .card--related-course a .underline-transition__title {
@@ -14194,16 +14197,13 @@ main table td em {
     }
 }
 
-.card--pathway--blue div {
+.card--pathway--blue .card__inner {
     z-index: 2;
+    position: relative;
 }
 
 .card--pathway--blue:before {
     background: #5fd8fe;
-}
-
-.card--pathway--blue:after {
-    z-index: -1;
 }
 
 .card--pathway--purple {
@@ -14244,16 +14244,13 @@ main table td em {
     }
 }
 
-.card--pathway--purple div {
+.card--pathway--purple .card__inner {
     z-index: 2;
+    position: relative;
 }
 
 .card--pathway--purple:before {
     background: #b382ec;
-}
-
-.card--pathway--purple:after {
-    z-index: -1;
 }
 
 .card--pathway--pink {
@@ -14294,16 +14291,13 @@ main table td em {
     }
 }
 
-.card--pathway--pink div {
+.card--pathway--pink .card__inner {
     z-index: 2;
+    position: relative;
 }
 
 .card--pathway--pink:before {
     background: #df82c4;
-}
-
-.card--pathway--pink:after {
-    z-index: -1;
 }
 
 .card--pathway--green {
@@ -14344,16 +14338,13 @@ main table td em {
     }
 }
 
-.card--pathway--green div {
+.card--pathway--green .card__inner {
     z-index: 2;
+    position: relative;
 }
 
 .card--pathway--green:before {
     background: #b9d698;
-}
-
-.card--pathway--green:after {
-    z-index: -1;
 }
 
 .card--pathway--purple {
@@ -14394,16 +14385,13 @@ main table td em {
     }
 }
 
-.card--pathway--purple div {
+.card--pathway--purple .card__inner {
     z-index: 2;
+    position: relative;
 }
 
 .card--pathway--purple:before {
     background: #b382ec;
-}
-
-.card--pathway--purple:after {
-    z-index: -1;
 }
 
 .card--pathway--pink {
@@ -14444,16 +14432,13 @@ main table td em {
     }
 }
 
-.card--pathway--pink div {
+.card--pathway--pink .card__inner {
     z-index: 2;
+    position: relative;
 }
 
 .card--pathway--pink:before {
     background: #df82c4;
-}
-
-.card--pathway--pink:after {
-    z-index: -1;
 }
 
 .card--pathway--teal {
@@ -14494,16 +14479,13 @@ main table td em {
     }
 }
 
-.card--pathway--teal div {
+.card--pathway--teal .card__inner {
     z-index: 2;
+    position: relative;
 }
 
 .card--pathway--teal:before {
     background: #7fd6df;
-}
-
-.card--pathway--teal:after {
-    z-index: -1;
 }
 
 .card--pathway--yellow {
@@ -14544,16 +14526,13 @@ main table td em {
     }
 }
 
-.card--pathway--yellow div {
+.card--pathway--yellow .card__inner {
     z-index: 2;
+    position: relative;
 }
 
 .card--pathway--yellow:before {
     background: #ffef2b;
-}
-
-.card--pathway--yellow:after {
-    z-index: -1;
 }
 
 .card--testimonial {
