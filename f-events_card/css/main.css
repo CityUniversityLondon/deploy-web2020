@@ -13814,6 +13814,12 @@ main table td em {
     color: #1e1e1e;
 }
 
+.card--event .icon {
+    color: #dd0036;
+    width: 1rem;
+    font-size: 1rem;
+}
+
 @media (hover: hover) {
     .card--event__image-container:hover {
         background-image: none;
@@ -13890,6 +13896,9 @@ main table td em {
 }
 
 .card--event__date-highlight {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
     display: inline-flex;
     position: relative;
     top: -22px;
@@ -13897,11 +13906,8 @@ main table td em {
     align-items: center;
     color: #ffffff;
     background: #dd0036;
-    padding: 0.5rem;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    font-weight: 600;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    font-weight: 700;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -13932,6 +13938,10 @@ main table td em {
     .card--event__date-highlight {
         letter-spacing: -0.017em;
     }
+}
+
+.card--event__date-highlight span {
+    font-weight: 300;
 }
 
 .card--event__title-link .underline-transition__title {
@@ -14044,17 +14054,38 @@ main table td em {
 
 .card--event__date-time-text {
     font-family: "Plex Sans", sans-serif;
-    font-size: 0.79rem;
     color: #1e1e1e;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
+    width: 70%;
 }
 
 .card--event__category {
+    margin-top: 2rem;
     padding-top: 1rem;
     font-size: 0.889rem;
-    color: #dd0036;
+    color: #00294a;
     border-top: solid 0.125rem #d8d8d8;
     font-style: italic;
+}
+
+.card--event__location {
+    margin-bottom: 1rem;
+}
+
+.card--event__type {
+    position: relative;
+}
+
+.card--event__type span {
+    color: #dd0036;
+}
+
+.card--event__price {
+    border: 0.1875rem solid #dd0036;
+    position: absolute;
+    padding: 1rem;
+    right: 0;
+    bottom: 0;
 }
 
 .card--profile {
