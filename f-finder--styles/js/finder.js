@@ -1130,7 +1130,7 @@ function finder__select() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "finder__select__overline",
     htmlFor: "study-level"
-  }, "Level"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Undergraduate"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Postgraduate")));
+  }, "Level"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "All levels"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Undergraduate"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Postgraduate")));
 }
 
 finder__select.propTypes = {
@@ -1324,6 +1324,7 @@ const maximumSuggestions = 5,
       [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40],
       body = document.getElementsByTagName('body'),
       backgroundFill = body[0].querySelectorAll('.background-fill');
+let updated;
 /**
  * Search input field and autocomplete.
  *
@@ -1487,10 +1488,10 @@ function finder__query(props) {
          * This works but uses .innerHTML. See log for updated HTML. However, DOM doesn't always update correctly.
          */
 
-        let updated = '';
-        updated = suggestedText.replace(inputVal, "<span class='test'>".concat(inputVal, "</span>")); // console.log(updated);
+        updated = '';
+        updated = suggestedText.replace(inputVal, "<strong>".concat(inputVal, "</span>")); // console.log(updated);
 
-        suggestedResult[1].innerHTML = updated; // console.log(updated);
+        suggestedResult[1].innerHTML = updated;
       }
       /**
        * if we have a request to the suggestions service in progress,

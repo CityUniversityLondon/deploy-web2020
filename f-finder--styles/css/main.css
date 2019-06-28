@@ -17448,6 +17448,14 @@ article figure figcaption a:active {
     font-style: normal;
 }
 
+.finder__query__input input:focus::-ms-input-placeholder, .finder__query__input input:focus::-ms-input-placeholder {
+    opacity: 0;
+}
+
+.finder__query__input input:focus::placeholder, .finder__query__input input:focus::-ms-input-placeholder {
+    opacity: 0;
+}
+
 .finder__query__input input:not(:placeholder-shown) {
     font-style: normal;
 }
@@ -17562,7 +17570,6 @@ article figure figcaption a:active {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
-    border: 0.0625rem solid #3e1031;
     z-index: 2;
     flex-shrink: 0;
     margin-left: 2rem;
@@ -17922,6 +17929,7 @@ article figure figcaption a:active {
 
 .finder__query__submit .finder__query__submit__icon {
     padding: 0 0.5rem 0 0;
+    font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -17935,24 +17943,6 @@ article figure figcaption a:active {
     .finder__query__submit {
         margin-left: 1rem;
     }
-}
-
-.finder__query__submit:focus {
-    color: #ffffff;
-    border: 0.0625rem solid #3e1031;
-    outline: 0;
-}
-
-.finder__query__submit:active {
-    border: 0.0625rem solid #3e1031;
-}
-
-.finder__query__submit:hover {
-    border: 0.0625rem solid #3e1031;
-}
-
-.finder__query__submit:visited {
-    color: #ffffff;
 }
 
 .finder__didyoumean__button {
@@ -18564,7 +18554,11 @@ article figure figcaption a:active {
 }
 
 .finder__query__suggestions {
-    background-color: rgba(105, 105, 105, 0.9);
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1rem 2.25rem;
+    border: 0.0625rem solid #e5e5e5;
+    border-top: 0;
+    border-radius: 0 0 0.5rem 0.5rem;
     color: #ffffff;
     font-weight: 700;
     left: 0;
@@ -18587,18 +18581,29 @@ article figure figcaption a:active {
     padding: 0.5rem 2rem 0.5rem 2rem;
     text-align: left;
     width: 100%;
+    color: #1e1e1e;
 }
 
 .finder__query__suggestions li button:focus {
-    outline-color: #ffffff;
+    outline-color: #0c0c0e;
     outline-offset: -0.125rem;
     outline-style: dotted;
     outline-width: 0.125rem;
+    text-decoration: underline;
 }
 
-.finder__query__suggestions li button:focus, .finder__query__suggestions li button:hover {
-    background-color: #00294a;
+.finder__query__suggestions li button:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-offset: 0;
+}
+
+.finder__query__suggestions li button:hover {
+    background-color: #006bbd;
     text-decoration: underline;
+    color: #ffffff;
 }
 
 .finder__filters {
@@ -19561,19 +19566,17 @@ article figure figcaption a:active {
     height: auto;
     margin-top: 1rem;
     position: relative;
-    padding-top: 0.5rem;
     border: 0.1875rem solid #3e1031;
-    padding: 0.25rem 0.25rem 0 0.75rem;
 }
 
 .finder__select select {
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
+    padding: 0.25rem 0.25rem 0 0.75rem;
     position: relative;
     bottom: 0.25rem;
     font-weight: 600;
-    padding: 0 2rem 0 0;
     color: #1e1e1e;
     width: 100%;
     border: 0;
@@ -19622,7 +19625,7 @@ article figure figcaption a:active {
     font-family: "Font Awesome";
     font-size: 0.875em;
     content: '\f078';
-    font-weight: 300;
+    font-weight: 600;
     margin-top: 1rem;
     display: inline-block;
     vertical-align: middle;
@@ -19663,6 +19666,7 @@ article figure figcaption a:active {
     color: #dd0036;
     font-weight: 400;
     display: block;
+    padding: 0.25rem 0.25rem 0 0.75rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -19731,15 +19735,11 @@ article figure figcaption a:active {
     z-index: -1;
     background-color: #ffffff;
     opacity: 0.6;
-    transition: background-color 1s linear;
+    transition: background-color 0.2s linear;
 }
 
 .background-fill--grey {
     background-color: #e5e5e5;
-}
-
-.test {
-    font-weight: 900;
 }
 
 .global-footer {
@@ -23963,6 +23963,14 @@ article .social-icon .link-copy {
     font-style: normal;
 }
 
+.finder__query__input input:focus::-ms-input-placeholder, .finder__query__input input:focus::-ms-input-placeholder {
+    opacity: 0;
+}
+
+.finder__query__input input:focus::placeholder, .finder__query__input input:focus::-ms-input-placeholder {
+    opacity: 0;
+}
+
 .finder__query__input input:not(:placeholder-shown) {
     font-style: normal;
 }
@@ -24077,7 +24085,6 @@ article .social-icon .link-copy {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
-    border: 0.0625rem solid #3e1031;
     z-index: 2;
     flex-shrink: 0;
     margin-left: 2rem;
@@ -24437,6 +24444,7 @@ article .social-icon .link-copy {
 
 .finder__query__submit .finder__query__submit__icon {
     padding: 0 0.5rem 0 0;
+    font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -24450,24 +24458,6 @@ article .social-icon .link-copy {
     .finder__query__submit {
         margin-left: 1rem;
     }
-}
-
-.finder__query__submit:focus {
-    color: #ffffff;
-    border: 0.0625rem solid #3e1031;
-    outline: 0;
-}
-
-.finder__query__submit:active {
-    border: 0.0625rem solid #3e1031;
-}
-
-.finder__query__submit:hover {
-    border: 0.0625rem solid #3e1031;
-}
-
-.finder__query__submit:visited {
-    color: #ffffff;
 }
 
 .finder__didyoumean__button {
@@ -25079,7 +25069,11 @@ article .social-icon .link-copy {
 }
 
 .finder__query__suggestions {
-    background-color: rgba(105, 105, 105, 0.9);
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1rem 2.25rem;
+    border: 0.0625rem solid #e5e5e5;
+    border-top: 0;
+    border-radius: 0 0 0.5rem 0.5rem;
     color: #ffffff;
     font-weight: 700;
     left: 0;
@@ -25102,18 +25096,29 @@ article .social-icon .link-copy {
     padding: 0.5rem 2rem 0.5rem 2rem;
     text-align: left;
     width: 100%;
+    color: #1e1e1e;
 }
 
 .finder__query__suggestions li button:focus {
-    outline-color: #ffffff;
+    outline-color: #0c0c0e;
     outline-offset: -0.125rem;
     outline-style: dotted;
     outline-width: 0.125rem;
+    text-decoration: underline;
 }
 
-.finder__query__suggestions li button:focus, .finder__query__suggestions li button:hover {
-    background-color: #00294a;
+.finder__query__suggestions li button:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-offset: 0;
+}
+
+.finder__query__suggestions li button:hover {
+    background-color: #006bbd;
     text-decoration: underline;
+    color: #ffffff;
 }
 
 .finder__filters {
@@ -26076,19 +26081,17 @@ article .social-icon .link-copy {
     height: auto;
     margin-top: 1rem;
     position: relative;
-    padding-top: 0.5rem;
     border: 0.1875rem solid #3e1031;
-    padding: 0.25rem 0.25rem 0 0.75rem;
 }
 
 .finder__select select {
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
+    padding: 0.25rem 0.25rem 0 0.75rem;
     position: relative;
     bottom: 0.25rem;
     font-weight: 600;
-    padding: 0 2rem 0 0;
     color: #1e1e1e;
     width: 100%;
     border: 0;
@@ -26137,7 +26140,7 @@ article .social-icon .link-copy {
     font-family: "Font Awesome";
     font-size: 0.875em;
     content: '\f078';
-    font-weight: 300;
+    font-weight: 600;
     margin-top: 1rem;
     display: inline-block;
     vertical-align: middle;
@@ -26178,6 +26181,7 @@ article .social-icon .link-copy {
     color: #dd0036;
     font-weight: 400;
     display: block;
+    padding: 0.25rem 0.25rem 0 0.75rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -26246,15 +26250,11 @@ article .social-icon .link-copy {
     z-index: -1;
     background-color: #ffffff;
     opacity: 0.6;
-    transition: background-color 1s linear;
+    transition: background-color 0.2s linear;
 }
 
 .background-fill--grey {
     background-color: #e5e5e5;
-}
-
-.test {
-    font-weight: 900;
 }
 
 /**
