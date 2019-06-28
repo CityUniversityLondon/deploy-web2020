@@ -327,11 +327,11 @@
 }
 
 .color--gray12 {
-    color: #8a8a8a;
+    color: #919191;
 }
 
 .background--gray12 {
-    background-color: #8a8a8a;
+    background-color: #919191;
 }
 
 .color--gray13 {
@@ -14609,8 +14609,8 @@ main table td em {
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     background: none;
-    border-bottom-color: #8a8a8a;
-    color: #8a8a8a;
+    border-bottom-color: #919191;
+    color: #919191;
     transition: color 0.3s ease;
 }
 
@@ -14713,8 +14713,8 @@ main table td em {
 }
 
 .js .cookie-notice a:focus {
-    color: #8a8a8a;
-    border-bottom-color: #8a8a8a;
+    color: #919191;
+    border-bottom-color: #919191;
     outline-color: #ffffff;
 }
 
@@ -22100,8 +22100,8 @@ article .link-copy {
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     background: none;
-    border-bottom-color: #8a8a8a;
-    color: #8a8a8a;
+    border-bottom-color: #919191;
+    color: #919191;
     color: #cbcbcb;
     border-bottom-color: #cbcbcb;
 }
@@ -22205,8 +22205,8 @@ article .link-copy {
 }
 
 .module-selector__content__moduleLink a:focus {
-    color: #8a8a8a;
-    border-bottom-color: #8a8a8a;
+    color: #919191;
+    border-bottom-color: #919191;
     outline-color: #ffffff;
 }
 
