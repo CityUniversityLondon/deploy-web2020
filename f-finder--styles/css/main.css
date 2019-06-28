@@ -17393,7 +17393,6 @@ article figure figcaption a:active {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
-    font-style: normal;
     font-weight: 450;
     padding: 0.5rem;
     width: 100%;
@@ -17401,6 +17400,7 @@ article figure figcaption a:active {
     height: 100%;
     grid-area: input;
     border: 0.0625rem solid transparent;
+    font-style: normal;
 }
 
 .finder__query__input input i,
@@ -17440,6 +17440,16 @@ article figure figcaption a:active {
 
 .finder__query__input input:focus {
     outline: 0;
+    font-style: normal;
+}
+
+.finder__query__input input:not(:placeholder-shown) {
+    font-style: normal;
+}
+
+.finder__query__input input:placeholder-shown {
+    color: #696969;
+    font-style: italic;
 }
 
 .finder__query__input .finder__clear {
@@ -17547,7 +17557,7 @@ article figure figcaption a:active {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
-    border: 0.0625rem solid green;
+    border: 0.0625rem solid #3e1031;
     z-index: 2;
     flex-shrink: 0;
     margin-left: 2rem;
@@ -17905,6 +17915,10 @@ article figure figcaption a:active {
     }
 }
 
+.finder__query__submit .finder__query__submit__icon {
+    padding: 0 0.5rem 0 0;
+}
+
 @media (max-width: 768px) {
     .finder__query__submit .finder__query__submit__icon {
         display: block;
@@ -17920,16 +17934,16 @@ article figure figcaption a:active {
 
 .finder__query__submit:focus {
     color: #ffffff;
-    border: 0.0625rem dotted blue;
+    border: 0.0625rem solid #3e1031;
     outline: 0;
 }
 
 .finder__query__submit:active {
-    border: 0.0625rem solid blue;
+    border: 0.0625rem solid #3e1031;
 }
 
 .finder__query__submit:hover {
-    border: 0.0625rem solid blue;
+    border: 0.0625rem solid #3e1031;
 }
 
 .finder__query__submit:visited {
@@ -19556,7 +19570,7 @@ article figure figcaption a:active {
     font-weight: 600;
     padding: 0 2rem 0 0;
     color: #1e1e1e;
-    width: 95%;
+    width: 100%;
     border: 0;
     background: none;
     -webkit-appearance: none;
@@ -23883,7 +23897,6 @@ article .social-icon .link-copy {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
-    font-style: normal;
     font-weight: 450;
     padding: 0.5rem;
     width: 100%;
@@ -23891,6 +23904,7 @@ article .social-icon .link-copy {
     height: 100%;
     grid-area: input;
     border: 0.0625rem solid transparent;
+    font-style: normal;
 }
 
 .finder__query__input input i,
@@ -23930,6 +23944,16 @@ article .social-icon .link-copy {
 
 .finder__query__input input:focus {
     outline: 0;
+    font-style: normal;
+}
+
+.finder__query__input input:not(:placeholder-shown) {
+    font-style: normal;
+}
+
+.finder__query__input input:placeholder-shown {
+    color: #696969;
+    font-style: italic;
 }
 
 .finder__query__input .finder__clear {
@@ -24037,7 +24061,7 @@ article .social-icon .link-copy {
     background: #dd0036;
     border-color: #dd0036;
     color: #ffffff;
-    border: 0.0625rem solid green;
+    border: 0.0625rem solid #3e1031;
     z-index: 2;
     flex-shrink: 0;
     margin-left: 2rem;
@@ -24395,6 +24419,10 @@ article .social-icon .link-copy {
     }
 }
 
+.finder__query__submit .finder__query__submit__icon {
+    padding: 0 0.5rem 0 0;
+}
+
 @media (max-width: 768px) {
     .finder__query__submit .finder__query__submit__icon {
         display: block;
@@ -24410,16 +24438,16 @@ article .social-icon .link-copy {
 
 .finder__query__submit:focus {
     color: #ffffff;
-    border: 0.0625rem dotted blue;
+    border: 0.0625rem solid #3e1031;
     outline: 0;
 }
 
 .finder__query__submit:active {
-    border: 0.0625rem solid blue;
+    border: 0.0625rem solid #3e1031;
 }
 
 .finder__query__submit:hover {
-    border: 0.0625rem solid blue;
+    border: 0.0625rem solid #3e1031;
 }
 
 .finder__query__submit:visited {
@@ -26046,7 +26074,7 @@ article .social-icon .link-copy {
     font-weight: 600;
     padding: 0 2rem 0 0;
     color: #1e1e1e;
-    width: 95%;
+    width: 100%;
     border: 0;
     background: none;
     -webkit-appearance: none;
