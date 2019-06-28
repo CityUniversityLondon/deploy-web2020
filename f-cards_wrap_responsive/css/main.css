@@ -12647,7 +12647,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -12662,6 +12662,10 @@ main table td em {
         background-color: #f2f2f2;
         transform: scale(1.03);
     }
+}
+
+.card--casestudy a div {
+    z-index: 2;
 }
 
 .card--casestudy a .underline-transition__title {
@@ -13060,7 +13064,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -13075,6 +13079,10 @@ main table td em {
         background-color: #f2f2f2;
         transform: scale(1.03);
     }
+}
+
+.card--course div {
+    z-index: 2;
 }
 
 .card--course p {
@@ -13212,6 +13220,19 @@ main table td em {
     transition: none;
     padding: 1rem;
     display: block;
+    /*
+        &:after {
+            background-color: transparent;
+            content: '';
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            transition: background-color $transition-duration ease-in;
+            width: 100%;
+        }
+        */
 }
 
 @media (hover: hover) {
@@ -13310,7 +13331,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -13325,6 +13346,10 @@ main table td em {
         background-color: #f2f2f2;
         transform: scale(1.03);
     }
+}
+
+.card--related-course a div {
+    z-index: 2;
 }
 
 .card--related-course a .underline-transition__title {
@@ -13520,18 +13545,6 @@ main table td em {
     .card--related-course a > :nth-child(2) {
         margin-top: 0;
     }
-}
-
-.card--related-course a:after {
-    background-color: transparent;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    transition: background-color 0.2s ease-in;
-    width: 100%;
 }
 
 .card--related-course a img {
@@ -14144,7 +14157,17 @@ main table td em {
 }
 
 .card--pathway--blue {
-    z-index: 1;
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
 }
 
 .card--pathway--blue:after {
@@ -14154,7 +14177,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -14171,12 +14194,30 @@ main table td em {
     }
 }
 
-.card--pathway--blue:before, .card--pathway--blue:hover {
+.card--pathway--blue div {
+    z-index: 2;
+}
+
+.card--pathway--blue:before {
     background: #5fd8fe;
 }
 
+.card--pathway--blue:after {
+    z-index: -1;
+}
+
 .card--pathway--purple {
-    z-index: 1;
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
 }
 
 .card--pathway--purple:after {
@@ -14186,7 +14227,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -14203,12 +14244,30 @@ main table td em {
     }
 }
 
-.card--pathway--purple:before, .card--pathway--purple:hover {
+.card--pathway--purple div {
+    z-index: 2;
+}
+
+.card--pathway--purple:before {
     background: #b382ec;
 }
 
+.card--pathway--purple:after {
+    z-index: -1;
+}
+
 .card--pathway--pink {
-    z-index: 1;
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
 }
 
 .card--pathway--pink:after {
@@ -14218,7 +14277,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -14235,12 +14294,30 @@ main table td em {
     }
 }
 
-.card--pathway--pink:before, .card--pathway--pink:hover {
+.card--pathway--pink div {
+    z-index: 2;
+}
+
+.card--pathway--pink:before {
     background: #df82c4;
 }
 
+.card--pathway--pink:after {
+    z-index: -1;
+}
+
 .card--pathway--green {
-    z-index: 1;
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
 }
 
 .card--pathway--green:after {
@@ -14250,7 +14327,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -14267,12 +14344,30 @@ main table td em {
     }
 }
 
-.card--pathway--green:before, .card--pathway--green:hover {
+.card--pathway--green div {
+    z-index: 2;
+}
+
+.card--pathway--green:before {
     background: #b9d698;
 }
 
+.card--pathway--green:after {
+    z-index: -1;
+}
+
 .card--pathway--purple {
-    z-index: 1;
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
 }
 
 .card--pathway--purple:after {
@@ -14282,7 +14377,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -14299,12 +14394,30 @@ main table td em {
     }
 }
 
-.card--pathway--purple:before, .card--pathway--purple:hover {
+.card--pathway--purple div {
+    z-index: 2;
+}
+
+.card--pathway--purple:before {
     background: #b382ec;
 }
 
+.card--pathway--purple:after {
+    z-index: -1;
+}
+
 .card--pathway--pink {
-    z-index: 1;
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
 }
 
 .card--pathway--pink:after {
@@ -14314,7 +14427,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -14331,12 +14444,30 @@ main table td em {
     }
 }
 
-.card--pathway--pink:before, .card--pathway--pink:hover {
+.card--pathway--pink div {
+    z-index: 2;
+}
+
+.card--pathway--pink:before {
     background: #df82c4;
 }
 
+.card--pathway--pink:after {
+    z-index: -1;
+}
+
 .card--pathway--teal {
-    z-index: 1;
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
 }
 
 .card--pathway--teal:after {
@@ -14346,7 +14477,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -14363,12 +14494,30 @@ main table td em {
     }
 }
 
-.card--pathway--teal:before, .card--pathway--teal:hover {
+.card--pathway--teal div {
+    z-index: 2;
+}
+
+.card--pathway--teal:before {
     background: #7fd6df;
 }
 
+.card--pathway--teal:after {
+    z-index: -1;
+}
+
 .card--pathway--yellow {
-    z-index: 1;
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
 }
 
 .card--pathway--yellow:after {
@@ -14378,7 +14527,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -14395,8 +14544,16 @@ main table td em {
     }
 }
 
-.card--pathway--yellow:before, .card--pathway--yellow:hover {
+.card--pathway--yellow div {
+    z-index: 2;
+}
+
+.card--pathway--yellow:before {
     background: #ffef2b;
+}
+
+.card--pathway--yellow:after {
+    z-index: -1;
 }
 
 .card--testimonial {
