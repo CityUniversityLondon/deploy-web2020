@@ -3065,7 +3065,9 @@ function Finder(props) {
       onSubmit: e => {
         e.preventDefault();
       }
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_filters_finder_select__WEBPACK_IMPORTED_MODULE_14__["default"], null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
+      className: "finder__title"
+    }, "Find ", props.config.facetLabels[2].funnelbackName, " courses"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_filters_finder_select__WEBPACK_IMPORTED_MODULE_14__["default"], null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_10__["default"], {
       config: props.config,
       query: query,
       update: updater,

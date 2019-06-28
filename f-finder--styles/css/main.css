@@ -17218,29 +17218,29 @@ article figure figcaption a:active {
 
 @media (max-width: 432px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 3;
-        grid-template-areas: 'select select select select select select' 'query query query query query query' 'results results results results results results';
+        grid-template-rows: 4;
+        grid-template-areas: 'title title title title title title' 'select select select select select select' 'query query query query query query' 'results results results results results results';
     }
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 3;
-        grid-template-areas: 'select select select select select select' 'query query query query query query query query query query query query' 'results results results results results results results results results results results results';
+        grid-template-rows: 4;
+        grid-template-areas: 'title title title title title title title title title title title title' 'select select select select select select select select select select select select' 'query query query query query query query query query query query query' 'results results results results results results results results results results results results';
     }
 }
 
 @media (min-width: 769px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 2;
-        grid-template-areas: 'select select select select query query query query query query query query' '. . . . results results results results results results results results';
+        grid-template-rows: 3;
+        grid-template-areas: '. . . . title title title title title title title title' 'select select select select query query query query query query query query' '. . . . results results results results results results results results';
     }
 }
 
 @media (min-width: 901px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 2;
-        grid-template-areas: 'select select select select query query query query query query query query query query query query query query' '. . . . results results results results results results results results results results results results . .';
+        grid-template-rows: 3;
+        grid-template-areas: '. . . . title title title title title title title title title title title title . .' 'select select select select query query query query query query query query query query query query query query' '. . . . results results results results results results results results results results results results . .';
     }
 }
 
@@ -17300,6 +17300,11 @@ article figure figcaption a:active {
 
 .finder > .content {
     grid-area: main;
+}
+
+.finder__title {
+    grid-area: title;
+    text-align: center;
 }
 
 .finder__query {
@@ -19638,6 +19643,12 @@ article figure figcaption a:active {
 @media (max-width: 767px) {
     .finder__select {
         margin-bottom: 0.5rem;
+    }
+}
+
+@-moz-document url-prefix() {
+    .finder__select select {
+        margin-left: -0.25rem;
     }
 }
 
@@ -23722,29 +23733,29 @@ article .social-icon .link-copy {
 
 @media (max-width: 432px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 3;
-        grid-template-areas: 'select select select select select select' 'query query query query query query' 'results results results results results results';
+        grid-template-rows: 4;
+        grid-template-areas: 'title title title title title title' 'select select select select select select' 'query query query query query query' 'results results results results results results';
     }
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 3;
-        grid-template-areas: 'select select select select select select' 'query query query query query query query query query query query query' 'results results results results results results results results results results results results';
+        grid-template-rows: 4;
+        grid-template-areas: 'title title title title title title title title title title title title' 'select select select select select select select select select select select select' 'query query query query query query query query query query query query' 'results results results results results results results results results results results results';
     }
 }
 
 @media (min-width: 769px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 2;
-        grid-template-areas: 'select select select select query query query query query query query query' '. . . . results results results results results results results results';
+        grid-template-rows: 3;
+        grid-template-areas: '. . . . title title title title title title title title' 'select select select select query query query query query query query query' '. . . . results results results results results results results results';
     }
 }
 
 @media (min-width: 901px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 2;
-        grid-template-areas: 'select select select select query query query query query query query query query query query query query query' '. . . . results results results results results results results results results results results results . .';
+        grid-template-rows: 3;
+        grid-template-areas: '. . . . title title title title title title title title title title title title . .' 'select select select select query query query query query query query query query query query query query query' '. . . . results results results results results results results results results results results results . .';
     }
 }
 
@@ -23804,6 +23815,11 @@ article .social-icon .link-copy {
 
 .finder > .content {
     grid-area: main;
+}
+
+.finder__title {
+    grid-area: title;
+    text-align: center;
 }
 
 .finder__query {
@@ -26142,6 +26158,12 @@ article .social-icon .link-copy {
 @media (max-width: 767px) {
     .finder__select {
         margin-bottom: 0.5rem;
+    }
+}
+
+@-moz-document url-prefix() {
+    .finder__select select {
+        margin-left: -0.25rem;
     }
 }
 
