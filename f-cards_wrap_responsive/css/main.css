@@ -12862,7 +12862,7 @@ main table td em {
     margin-top: 1rem;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 769px) {
     .card--casestudy a .card__inner > :nth-child(2) {
         margin-top: 0;
     }
@@ -13588,7 +13588,7 @@ main table td em {
     margin-top: 1rem;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 769px) {
     .card--related-course .card__inner > :nth-child(2) {
         margin-top: 0;
     }
@@ -13853,7 +13853,7 @@ main table td em {
     margin-top: 1rem;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 769px) {
     .card--profile__description--thumbnail > :nth-child(2) {
         margin-top: 0;
     }
