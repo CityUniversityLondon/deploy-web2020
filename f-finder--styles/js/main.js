@@ -2277,8 +2277,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
 /* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -2307,9 +2307,8 @@ __webpack_require__.r(__webpack_exports__);
 const maximumSuggestions = 5,
       [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40],
       body = document.getElementsByTagName('body'),
-      backgroundFill = body[0].querySelectorAll('.background-fill'),
-      suggestedResults = body[0].querySelectorAll('.finder__query__suggestions li button');
-let updated = '';
+      backgroundFill = body[0].querySelectorAll('.background-fill');
+let suggestedResults = body[0].querySelectorAll('.finder__query__suggestions li button');
 /**
  * Search input field and autocomplete.
  *
@@ -2448,7 +2447,7 @@ function finder__query(props) {
       backgroundFill[0].classList.remove('background-fill--grey');
       e.target.placeholder = props.config.placeholder;
       e.target.value = '';
-      let suggestedResults = document.querySelector('.finder__query__suggestions');
+      suggestedResults = document.querySelector('.finder__query__suggestions');
 
       if (suggestedResults) {
         suggestedResults.style.display = 'none';
@@ -2457,14 +2456,21 @@ function finder__query(props) {
     onFocus: e => {
       backgroundFill[0].classList.add('background-fill--grey');
       e.target.placeholder = '';
+      suggestedResults = document.querySelector('.finder__query__suggestions');
+
+      if (suggestedResults) {
+        suggestedResults.style.display = 'none';
+      }
     },
     onChange: e => {
       // keep  what they're typing
       setPartialQuery(e.target.value);
-      let inputVal = e.target.value;
+      let suggestedResultsButtons = document.querySelectorAll('.finder__query__suggestions li button');
+      let inputVal = e.target.value; // log(inputVal);
 
-      for (const suggestedResult of suggestedResults.entries()) {
-        let suggestedText = suggestedResult[1].innerHTML;
+      for (const suggestedResultsButton of suggestedResultsButtons.entries()) {
+        // console.log(suggestedResultsButton[1]);
+
         /**
          * Attempt at using appendChild. Error message => can't append (not node)
          */
@@ -2478,11 +2484,13 @@ function finder__query(props) {
         /**
          * This works but uses .innerHTML. See log for updated HTML. However, DOM doesn't always update correctly.
          */
+        let suggestedText = suggestedResultsButton[1].innerHTML;
+        let suggestedTextArray = suggestedText.split(inputVal); // let suggestedTextFirst = suggestedTextArray[0];
 
-        updated = '';
-        updated = suggestedText.replace(inputVal, "<strong>".concat(inputVal, "</span>")); // console.log(updated);
-
-        suggestedResult[1].innerHTML = updated;
+        let suggestedTextSecond = suggestedTextArray[1];
+        !suggestedTextSecond ? suggestedTextSecond = '' : null;
+        let update = "<strong>".concat(inputVal, "</strong>").concat(suggestedTextSecond);
+        suggestedResultsButton[1].innerHTML = update;
       }
       /**
        * if we have a request to the suggestions service in progress,
