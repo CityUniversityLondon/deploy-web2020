@@ -2304,8 +2304,9 @@ __webpack_require__.r(__webpack_exports__);
 const maximumSuggestions = 5,
       [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40],
       body = document.getElementsByTagName('body'),
-      backgroundFill = body[0].querySelectorAll('.background-fill');
-let updated;
+      backgroundFill = body[0].querySelectorAll('.background-fill'),
+      suggestedResults = body[0].querySelectorAll('.finder__query__suggestions li button');
+let updated = '';
 /**
  * Search input field and autocomplete.
  *
@@ -2443,6 +2444,9 @@ function finder__query(props) {
     onBlur: e => {
       backgroundFill[0].classList.remove('background-fill--grey');
       e.target.placeholder = props.config.placeholder;
+      e.target.value = '';
+      let suggestedResults = document.querySelector('.finder__query__suggestions');
+      suggestedResults.style.display = 'none';
     },
     onFocus: e => {
       backgroundFill[0].classList.add('background-fill--grey');
@@ -2451,12 +2455,10 @@ function finder__query(props) {
     onChange: e => {
       // keep  what they're typing
       setPartialQuery(e.target.value);
-      let suggestedResults = document.querySelectorAll('.finder__query__suggestions li button');
       let inputVal = e.target.value;
 
       for (const suggestedResult of suggestedResults.entries()) {
-        let suggestedText = suggestedResult[1].innerHTML; // console.log(suggestedText);
-
+        let suggestedText = suggestedResult[1].innerHTML;
         /**
          * Attempt at using appendChild. Error message => can't append (not node)
          */
