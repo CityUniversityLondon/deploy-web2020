@@ -17244,6 +17244,12 @@ article figure figcaption a:active {
     }
 }
 
+@media (min-width: 769px) and (max-width: 900px) {
+    .wrapper--finder--hub .finder .finder__results {
+        margin-left: 0;
+    }
+}
+
 .finder {
     display: grid;
     grid-row-gap: 0;
@@ -17287,14 +17293,14 @@ article figure figcaption a:active {
 @media (min-width: 769px) {
     .finder {
         grid-template-rows: 2;
-        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters filters results results results results results results results results';
+        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters results results results results results results results results results';
     }
 }
 
 @media (min-width: 901px) {
     .finder {
         grid-template-rows: 2;
-        grid-template-areas: 'query query query query query query query query query query query query query query query query query query' 'filters filters filters filters filters results results results results results results results results results results results results results';
+        grid-template-areas: 'query query query query query query query query query query query query query query query query query query' 'filters filters filters filters filters . results results results results results results results results results results results results';
     }
 }
 
@@ -18373,6 +18379,7 @@ article figure figcaption a:active {
 }
 
 .finder__appliedfilters {
+    grid-area: appliedFilters;
     display: none;
     flex-direction: row;
     flex-wrap: wrap;
@@ -18417,6 +18424,7 @@ article figure figcaption a:active {
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
+    text-align: left;
 }
 
 @media (hover: hover) {
@@ -18549,8 +18557,20 @@ article figure figcaption a:active {
     border-bottom-color: #006bbd;
 }
 
+.finder__appliedfilters button span:first-of-type {
+    display: flex;
+}
+
 .finder__appliedfilters button .icon {
     margin-right: 0.5rem;
+}
+
+.finder__appliedfilters .finder__appliedfilters__facet-value-wrapper {
+    display: flex;
+}
+
+.finder__appliedfilters .finder__appliedfilters__facet-value-wrapper span {
+    display: inline-flex;
 }
 
 .finder__query__suggestions {
@@ -19070,6 +19090,12 @@ article figure figcaption a:active {
 
 .finder .finder__results {
     grid-area: results;
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+    .finder .finder__results {
+        margin-left: 3rem;
+    }
 }
 
 .finder .finder__results .pagination__wrapper {
@@ -23759,6 +23785,12 @@ article .social-icon .link-copy {
     }
 }
 
+@media (min-width: 769px) and (max-width: 900px) {
+    .wrapper--finder--hub .finder .finder__results {
+        margin-left: 0;
+    }
+}
+
 .finder {
     display: grid;
     grid-row-gap: 0;
@@ -23802,14 +23834,14 @@ article .social-icon .link-copy {
 @media (min-width: 769px) {
     .finder {
         grid-template-rows: 2;
-        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters filters results results results results results results results results';
+        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters results results results results results results results results results';
     }
 }
 
 @media (min-width: 901px) {
     .finder {
         grid-template-rows: 2;
-        grid-template-areas: 'query query query query query query query query query query query query query query query query query query' 'filters filters filters filters filters results results results results results results results results results results results results results';
+        grid-template-areas: 'query query query query query query query query query query query query query query query query query query' 'filters filters filters filters filters . results results results results results results results results results results results results';
     }
 }
 
@@ -24888,6 +24920,7 @@ article .social-icon .link-copy {
 }
 
 .finder__appliedfilters {
+    grid-area: appliedFilters;
     display: none;
     flex-direction: row;
     flex-wrap: wrap;
@@ -24932,6 +24965,7 @@ article .social-icon .link-copy {
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
+    text-align: left;
 }
 
 @media (hover: hover) {
@@ -25064,8 +25098,20 @@ article .social-icon .link-copy {
     border-bottom-color: #006bbd;
 }
 
+.finder__appliedfilters button span:first-of-type {
+    display: flex;
+}
+
 .finder__appliedfilters button .icon {
     margin-right: 0.5rem;
+}
+
+.finder__appliedfilters .finder__appliedfilters__facet-value-wrapper {
+    display: flex;
+}
+
+.finder__appliedfilters .finder__appliedfilters__facet-value-wrapper span {
+    display: inline-flex;
 }
 
 .finder__query__suggestions {
@@ -25585,6 +25631,12 @@ article .social-icon .link-copy {
 
 .finder .finder__results {
     grid-area: results;
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+    .finder .finder__results {
+        margin-left: 3rem;
+    }
 }
 
 .finder .finder__results .pagination__wrapper {

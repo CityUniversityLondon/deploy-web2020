@@ -2191,10 +2191,12 @@ function finder__appliedfilters(props) {
         className: "fal fa-times icon",
         "aria-label": "Remove filter"
       }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+        className: "finder__appliedfilters__facet-value-wrapper"
+      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
         className: "finder__appliedfilters__facet"
-      }, labels.name, ":"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      }, labels.name, ":\xA0"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
         className: "finder__appliedfilters__value"
-      }, label.label))));
+      }, label.label)))));
     })));
   } else {
     return null;
