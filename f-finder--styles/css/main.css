@@ -18565,14 +18565,6 @@ article figure figcaption a:active {
     margin-right: 0.5rem;
 }
 
-.finder__appliedfilters .finder__appliedfilters__facet-value-wrapper {
-    display: flex;
-}
-
-.finder__appliedfilters .finder__appliedfilters__facet-value-wrapper span {
-    display: inline-flex;
-}
-
 .finder__query__suggestions {
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 1rem 2.25rem;
@@ -25104,14 +25096,6 @@ article .social-icon .link-copy {
 
 .finder__appliedfilters button .icon {
     margin-right: 0.5rem;
-}
-
-.finder__appliedfilters .finder__appliedfilters__facet-value-wrapper {
-    display: flex;
-}
-
-.finder__appliedfilters .finder__appliedfilters__facet-value-wrapper span {
-    display: inline-flex;
 }
 
 .finder__query__suggestions {

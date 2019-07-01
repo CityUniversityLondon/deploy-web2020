@@ -1213,13 +1213,7 @@ function finder__appliedfilters(props) {
       }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
         className: "fal fa-times icon",
         "aria-label": "Remove filter"
-      }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-        className: "finder__appliedfilters__facet-value-wrapper"
-      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-        className: "finder__appliedfilters__facet"
-      }, labels.name, ":\xA0"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-        className: "finder__appliedfilters__value"
-      }, label.label)))));
+      }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, labels.name, ":\xA0", label.label))));
     })));
   } else {
     return null;
