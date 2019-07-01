@@ -17218,30 +17218,34 @@ article figure figcaption a:active {
 
 @media (max-width: 432px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 4;
-        grid-template-areas: 'title title title title title title' 'select select select select select select' 'query query query query query query' 'results results results results results results';
+        grid-template-rows: 3;
+        grid-template-areas: 'title title title title title title' 'select select select select select select' 'query query query query query query';
     }
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 4;
-        grid-template-areas: 'title title title title title title title title title title title title' 'select select select select select select select select select select select select' 'query query query query query query query query query query query query' 'results results results results results results results results results results results results';
+        grid-template-rows: 3;
+        grid-template-areas: 'title title title title title title title title title title title title' 'select select select select select select select select select select select select' 'query query query query query query query query query query query query';
     }
 }
 
 @media (min-width: 769px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 3;
-        grid-template-areas: '. . . . title title title title title title title title' 'select select select select query query query query query query query query' '. . . . results results results results results results results results';
+        grid-template-rows: 2;
+        grid-template-areas: '. . . . title title title title title title title title' 'select select select select query query query query query query query query';
     }
 }
 
 @media (min-width: 901px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 3;
-        grid-template-areas: '. . . . title title title title title title title title title title title title . .' 'select select select select query query query query query query query query query query query query query query' '. . . . results results results results results results results results results results results results . .';
+        grid-template-rows: 2;
+        grid-template-areas: '. . . . title title title title title title title title title title title title . .' 'select select select select query query query query query query query query query query query query query query';
     }
+}
+
+.wrapper--finder--hub .finder .finder__results {
+    display: none;
 }
 
 @media (min-width: 769px) and (max-width: 900px) {
@@ -23751,30 +23755,34 @@ article .social-icon .link-copy {
 
 @media (max-width: 432px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 4;
-        grid-template-areas: 'title title title title title title' 'select select select select select select' 'query query query query query query' 'results results results results results results';
+        grid-template-rows: 3;
+        grid-template-areas: 'title title title title title title' 'select select select select select select' 'query query query query query query';
     }
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 4;
-        grid-template-areas: 'title title title title title title title title title title title title' 'select select select select select select select select select select select select' 'query query query query query query query query query query query query' 'results results results results results results results results results results results results';
+        grid-template-rows: 3;
+        grid-template-areas: 'title title title title title title title title title title title title' 'select select select select select select select select select select select select' 'query query query query query query query query query query query query';
     }
 }
 
 @media (min-width: 769px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 3;
-        grid-template-areas: '. . . . title title title title title title title title' 'select select select select query query query query query query query query' '. . . . results results results results results results results results';
+        grid-template-rows: 2;
+        grid-template-areas: '. . . . title title title title title title title title' 'select select select select query query query query query query query query';
     }
 }
 
 @media (min-width: 901px) {
     .wrapper--finder--hub .finder {
-        grid-template-rows: 3;
-        grid-template-areas: '. . . . title title title title title title title title title title title title . .' 'select select select select query query query query query query query query query query query query query query' '. . . . results results results results results results results results results results results results . .';
+        grid-template-rows: 2;
+        grid-template-areas: '. . . . title title title title title title title title title title title title . .' 'select select select select query query query query query query query query query query query query query query';
     }
+}
+
+.wrapper--finder--hub .finder .finder__results {
+    display: none;
 }
 
 @media (min-width: 769px) and (max-width: 900px) {

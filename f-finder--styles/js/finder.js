@@ -1465,7 +1465,10 @@ function finder__query(props) {
       e.target.placeholder = props.config.placeholder;
       e.target.value = '';
       let suggestedResults = document.querySelector('.finder__query__suggestions');
-      suggestedResults.style.display = 'none';
+
+      if (suggestedResults) {
+        suggestedResults.style.display = 'none';
+      }
     },
     onFocus: e => {
       backgroundFill[0].classList.add('background-fill--grey');
