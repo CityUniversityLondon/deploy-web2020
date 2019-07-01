@@ -1781,13 +1781,20 @@ function dependencyMet(facet, facetMap) {
 
 
 function finder__filters(props) {
+  let appliedFilters;
+  let appliedFiltersObject = props.query.facets;
+
+  if (Object.getOwnPropertyNames(appliedFiltersObject).length > 0) {
+    appliedFilters = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Applied filters"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      config: props.config,
+      query: props.query,
+      update: props.update
+    }));
+  }
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Applied filters"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    config: props.config,
-    query: props.query,
-    update: props.update
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Filter ".concat(props.config.summariseAs.plural)), props.config.facetLabels.map(facet => {
+  }, appliedFilters, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Filter ".concat(props.config.summariseAs.plural)), props.config.facetLabels.map(facet => {
     if (dependencyMet(facet, props.query.facets)) {
       switch (facet.type) {
         case 'radio':
@@ -2173,7 +2180,7 @@ function finder__appliedfilters(props) {
 
   const facetKeys = Object.keys(props.query.facets);
 
-  if (facetKeys.length) {
+  if (facetKeys.length > 0) {
     return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
       className: "sr-only"
     }, "Applied filters"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
