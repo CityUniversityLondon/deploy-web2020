@@ -12661,7 +12661,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.25rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition 
@@ -12672,13 +12672,13 @@ main table td em {
 }
 
 .card--casestudy a:focus .underline-transition__title {
-    background-size: 100% 0.25rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .card--casestudy a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.25rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
 }
@@ -13324,7 +13324,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.25rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition 
@@ -13335,13 +13335,13 @@ main table td em {
 }
 
 .card--related-course a:focus .underline-transition__title {
-    background-size: 100% 0.25rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .card--related-course a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.25rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
 }
@@ -14050,7 +14050,7 @@ main table td em {
 
 @media (min-width: 769px) {
     .card--event__price span {
-        padding: 1rem;
+        padding: 0.75rem 1rem;
     }
 }
 
@@ -14063,11 +14063,9 @@ main table td em {
     /* 
           Trigger underline transition on hover of the
           card - note the following
-          values should match the mixin call:
+          value should match the mixin call:
 
-          - background image gradients
-          - background sizem, 2nd val
-          - color
+          - background size
 
           Mixin:  underline-transition-title
       */
@@ -14075,7 +14073,7 @@ main table td em {
 
 .card--event--portrait:hover .underline-transition__title {
     background-image: linear-gradient(#1e1e1e, #1e1e1e);
-    background-size: 100% 0.25rem;
+    background-size: 100% 0.19rem;
     color: #1e1e1e;
 }
 
@@ -14096,7 +14094,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.25rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition 
@@ -14107,13 +14105,13 @@ main table td em {
 }
 
 .card--event--portrait .card--event__title-link:focus .underline-transition__title {
-    background-size: 100% 0.25rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .card--event--portrait .card--event__title-link:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.25rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
 }
@@ -14180,8 +14178,7 @@ main table td em {
 
 @media (min-width: 769px) {
     .card--event--landscape .card--event__price {
-        right: 0;
-        top: 0;
+        top: 1.5rem;
         bottom: initial;
     }
 }
