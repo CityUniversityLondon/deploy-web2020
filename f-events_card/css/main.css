@@ -13767,6 +13767,7 @@ main table td em {
     margin-right: 0.5rem;
 }
 
+/* -- General event card styles applied to all -- */
 .card--event {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
@@ -13780,23 +13781,14 @@ main table td em {
 
 .card--event:hover {
     /* 
-          Trigger thumbnail transition - note the following
+          Trigger thumbnail transition on hover of
+          the card - note the following
           values should match the mixin call:
 
           - scale value
           - background opacity
 
           Mixin: thumbnail-gradient-scale
-      */
-    /* 
-          Trigger underline transition - note the following
-          values should match the mixin call:
-
-          - background image gradients
-          - background sizem, 2nd val
-          - color
-
-          Mixin:  underline-transition-title
       */
 }
 
@@ -13808,16 +13800,15 @@ main table td em {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.card--event:hover .underline-transition__title {
-    background-image: linear-gradient(#1e1e1e, #1e1e1e);
-    background-size: 100% 0.25rem;
-    color: #1e1e1e;
+.card--event .underline-transition__title {
+    line-height: 1.6;
 }
 
-.card--event .icon {
+.card--event__icon {
     color: #dd0036;
     width: 1rem;
     font-size: 1rem;
+    margin-right: 0.5rem;
 }
 
 @media (hover: hover) {
@@ -13888,98 +13879,22 @@ main table td em {
     width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .card--event__image-container .thumbnail__image-container {
         height: 300px;
         width: 100%;
     }
 }
 
-.card--event__date-highlight {
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    display: inline-flex;
-    position: relative;
-    top: -22px;
-    left: 1.75rem;
-    align-items: center;
-    color: #ffffff;
-    background: #dd0036;
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-    font-weight: 700;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--event__date-highlight {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--event__date-highlight {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--event__date-highlight {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--event__date-highlight {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--event__date-highlight {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--event__date-highlight span {
-    font-weight: 300;
-}
-
-.card--event__title-link .underline-transition__title {
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.25rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition 
-            stretches beyond the element
-        **/
-    display: inline;
-    padding-bottom: 0.25rem;
-}
-
-.card--event__title-link:focus .underline-transition__title {
-    background-size: 100% 0.25rem;
-}
-
-@media (hover: hover) {
-    .card--event__title-link:hover .underline-transition__title {
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.25rem;
-        color: #1e1e1e;
-    }
-}
-
 .card--event__title-link a {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
-    font-size: 1.125rem;
+    font-size: 1.266rem;
     line-height: 1.25;
-    letter-spacing: -0.008em;
+    letter-spacing: -0.011em;
     font-style: normal;
     font-weight: 600;
     margin-top: 1rem;
-    color: #696969;
 }
 
 .card--event__title-link a i,
@@ -14003,19 +13918,19 @@ main table td em {
 
 @media (min-width: 433px) and (max-width: 768px) {
     .card--event__title-link a {
-        letter-spacing: -0.011em;
+        letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .card--event__title-link a {
-        letter-spacing: -0.011em;
+        letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .card--event__title-link a {
-        letter-spacing: -0.014em;
+        letter-spacing: -0.015em;
     }
 }
 
@@ -14036,36 +13951,80 @@ main table td em {
     font-weight: 600;
 }
 
-.card--event__title-link a:visited {
-    color: #696969;
+.card--event__date--highlight,
+.card--event__date {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    color: #ffffff;
+    background: #dd0036;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    font-weight: 700;
 }
 
-.card--event__title-link a:active {
-    background-color: transparent;
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--event__date--highlight,
+    .card--event__date {
+        letter-spacing: -0.005em;
+    }
 }
 
-.card--event__title-link a:hover {
-    color: #1e1e1e;
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--event__date--highlight,
+    .card--event__date {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--event__date--highlight,
+    .card--event__date {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--event__date--highlight,
+    .card--event__date {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--event__date--highlight,
+    .card--event__date {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--event__date--highlight span,
+.card--event__date span {
+    font-weight: 300;
 }
 
 .card--event__content {
     padding: 0 1.75rem 1.75rem 1.75rem;
+    position: relative;
 }
 
 .card--event__date-time-text {
     font-family: "Plex Sans", sans-serif;
     color: #1e1e1e;
-    margin: 1rem 0;
-    width: 70%;
+}
+
+@media (min-width: 769px) {
+    .card--event__date-time-text {
+        width: 70%;
+    }
 }
 
 .card--event__category {
-    margin-top: 2rem;
     padding-top: 1rem;
     font-size: 0.889rem;
     color: #00294a;
     border-top: solid 0.125rem #d8d8d8;
     font-style: italic;
+    margin: 0 1.75rem 0 1.75rem;
 }
 
 .card--event__location {
@@ -14081,11 +14040,176 @@ main table td em {
 }
 
 .card--event__price {
-    border: 0.1875rem solid #dd0036;
     position: absolute;
-    padding: 1rem;
+}
+
+.card--event__price span {
+    border: 0.1875rem solid #dd0036;
+    padding: 0.5rem;
+}
+
+@media (min-width: 769px) {
+    .card--event__price span {
+        padding: 1rem;
+    }
+}
+
+/* -- Variation specific styles -- */
+.card--event--portrait {
+    padding-bottom: 1.75rem;
+}
+
+.card--event--portrait:hover {
+    /* 
+          Trigger underline transition on hover of the
+          card - note the following
+          values should match the mixin call:
+
+          - background image gradients
+          - background sizem, 2nd val
+          - color
+
+          Mixin:  underline-transition-title
+      */
+}
+
+.card--event--portrait:hover .underline-transition__title {
+    background-image: linear-gradient(#1e1e1e, #1e1e1e);
+    background-size: 100% 0.25rem;
+    color: #1e1e1e;
+}
+
+.card--event--portrait .card--event__date--highlight {
+    display: inline-flex;
+    position: relative;
+    top: -22px;
+    left: 1.75rem;
+    align-items: center;
+}
+
+.card--event--portrait .card--event__price {
+    right: 2rem;
+    bottom: 2.5rem;
+}
+
+.card--event--portrait .card--event__title-link .underline-transition__title {
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.25rem;
+    transition: background-size 0.6s ease-in;
+    /**
+            Needs to be inline else underline transition 
+            stretches beyond the element
+        **/
+    display: inline;
+    padding-bottom: 0.25rem;
+}
+
+.card--event--portrait .card--event__title-link:focus .underline-transition__title {
+    background-size: 100% 0.25rem;
+}
+
+@media (hover: hover) {
+    .card--event--portrait .card--event__title-link:hover .underline-transition__title {
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 0.25rem;
+        color: #1e1e1e;
+    }
+}
+
+.card--event--portrait .card--event__title-link a {
+    color: #696969;
+}
+
+.card--event--portrait .card--event__title-link a:visited {
+    color: #696969;
+}
+
+.card--event--portrait .card--event__title-link a:active {
+    background-color: transparent;
+}
+
+.card--event--portrait .card--event__title-link a:hover {
+    color: #1e1e1e;
+}
+
+.card--event--portrait .card--event__date-time-text {
+    margin: 1rem 0;
+}
+
+@media (min-width: 769px) {
+    .card--event--landscape {
+        display: flex;
+        width: 1000px;
+    }
+}
+
+.card--event--landscape .thumbnail__image-container {
+    height: 100%;
+}
+
+.card--event--landscape .card--event__image-container {
+    position: relative;
+}
+
+@media (min-width: 769px) {
+    .card--event--landscape .card--event__image-container {
+        width: 400px;
+    }
+}
+
+.card--event--landscape .card--event__date--highlight {
+    position: absolute;
     right: 0;
-    bottom: 0;
+    top: 2rem;
+}
+
+.card--event--landscape .card--event__date-time-text {
+    margin-bottom: 1rem;
+}
+
+.card--event--landscape .card--event__content {
+    margin-top: 2rem;
+}
+
+.card--event--landscape .card--event__price {
+    right: 1.5rem;
+    bottom: 2.5rem;
+}
+
+@media (min-width: 769px) {
+    .card--event--landscape .card--event__price {
+        right: 0;
+        top: 0;
+        bottom: initial;
+    }
+}
+
+@media (min-width: 769px) {
+    .card--event--landscape .card--event__inner {
+        display: flex;
+        margin-top: 3rem;
+    }
+}
+
+.card--event--landscape .card--event__inner div:nth-child(2) {
+    margin-top: 1rem;
+}
+
+@media (min-width: 769px) {
+    .card--event--landscape .card--event__inner div:nth-child(2) {
+        margin-top: 0;
+    }
+}
+
+.card--event--landscape .card--event__date {
+    margin-top: 2rem;
+}
+
+.card--event--transparent {
+    box-shadow: none;
+    background: transparent;
 }
 
 .card--profile {
