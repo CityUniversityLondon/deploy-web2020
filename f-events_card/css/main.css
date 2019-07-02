@@ -13768,10 +13768,6 @@ main table td em {
 }
 
 /* -- General event card styles applied to all -- */
-.card--event {
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-}
-
 .card--event a,
 .card--event a:hover,
 .card--event a:active,
@@ -13789,7 +13785,7 @@ main table td em {
           - background opacity
 
           Mixin: thumbnail-gradient-scale
-      */
+        */
 }
 
 .card--event:hover .thumbnail__image-container img {
@@ -13953,48 +13949,11 @@ main table td em {
 
 .card--event__date--highlight,
 .card--event__date {
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
+    font-size: 1.125rem;
     color: #ffffff;
     background: #dd0036;
     padding: 0.5rem 0.75rem 0.5rem 0.75rem;
     font-weight: 700;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--event__date--highlight,
-    .card--event__date {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--event__date--highlight,
-    .card--event__date {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--event__date--highlight,
-    .card--event__date {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--event__date--highlight,
-    .card--event__date {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--event__date--highlight,
-    .card--event__date {
-        letter-spacing: -0.017em;
-    }
 }
 
 .card--event__date--highlight span,
@@ -14039,10 +13998,6 @@ main table td em {
     color: #dd0036;
 }
 
-.card--event__price {
-    position: absolute;
-}
-
 .card--event__price span {
     border: 0.1875rem solid #dd0036;
     padding: 0.5rem;
@@ -14056,6 +14011,7 @@ main table td em {
 
 /* -- Variation specific styles -- */
 .card--event--portrait {
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     padding-bottom: 1.75rem;
 }
 
@@ -14071,7 +14027,7 @@ main table td em {
       */
 }
 
-.card--event--portrait:hover .underline-transition__title {
+.card--event--portrait:hover .card--event__title-link .underline-transition__title {
     background-image: linear-gradient(#1e1e1e, #1e1e1e);
     background-size: 100% 0.19rem;
     color: #1e1e1e;
@@ -14086,8 +14042,7 @@ main table td em {
 }
 
 .card--event--portrait .card--event__price {
-    right: 2rem;
-    bottom: 2.5rem;
+    text-align: right;
 }
 
 .card--event--portrait .card--event__title-link .underline-transition__title {
@@ -14136,6 +14091,35 @@ main table td em {
     margin: 1rem 0;
 }
 
+.card--event--landscape {
+    padding: 1rem;
+    position: relative;
+}
+
+.card--event--landscape:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--event--landscape:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--event--landscape:hover:after {
+        background-color: #f2f2f2;
+        transform: scale(1.03);
+    }
+}
+
 @media (min-width: 769px) {
     .card--event--landscape {
         display: flex;
@@ -14172,6 +14156,7 @@ main table td em {
 }
 
 .card--event--landscape .card--event__price {
+    position: absolute;
     right: 1.5rem;
     bottom: 2.5rem;
 }
