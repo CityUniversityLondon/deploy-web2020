@@ -29079,27 +29079,45 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media (min-width: 901px) {
     .content-hub {
-        grid-template-areas: '. . . . . main main main main main main main main . . . . .';
+        grid-template-areas: 'main main main main main main main main main main main main main main main main main main';
     }
 }
 
 .content-hub > .content {
-    max-width: 80rem;
+    grid-row-gap: 0;
+    display: grid;
     grid-area: main;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-areas: ' . . . . video video video video video video video video video video video . . . . ';
 }
 
-@media (min-width: 1441px) {
+@media (max-width: 432px) {
     .content-hub > .content {
-        margin-left: auto;
-        margin-right: auto;
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
     }
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 433px) and (max-width: 900px) {
     .content-hub > .content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
     }
+}
+
+@media (min-width: 901px) {
+    .content-hub > .content {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+.content-hub .embedded-video {
+    grid-area: video;
+    display: block;
+    padding-left: 0;
 }
 
 .course {
