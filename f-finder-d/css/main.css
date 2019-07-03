@@ -18265,8 +18265,10 @@ article figure figcaption a:active {
     }
 }
 
-.finder__results {
-    margin-top: 1rem;
+@media (min-width: 769px) {
+    .finder__results {
+        margin-top: 1rem;
+    }
 }
 
 .finder__filters {
@@ -18741,6 +18743,8 @@ article figure figcaption a:active {
     padding-bottom: 1rem;
     padding-top: 1rem;
     width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply > span {
@@ -24323,8 +24327,10 @@ article .social-icon .link-copy {
     }
 }
 
-.finder__results {
-    margin-top: 1rem;
+@media (min-width: 769px) {
+    .finder__results {
+        margin-top: 1rem;
+    }
 }
 
 .finder__filters {
@@ -24799,6 +24805,8 @@ article .social-icon .link-copy {
     padding-bottom: 1rem;
     padding-top: 1rem;
     width: 100%;
+    position: fixed;
+    bottom: 0;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply > span {
