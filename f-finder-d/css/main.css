@@ -18813,6 +18813,10 @@ article figure figcaption a:active {
     max-width: unset;
 }
 
+.highlightText {
+    background-color: #f7d2d5;
+}
+
 .finder__results__updating {
     font-size: 1.602rem;
     line-height: 1.25;
@@ -24873,6 +24877,10 @@ article .social-icon .link-copy {
     list-style-type: none;
     margin-left: 0;
     max-width: unset;
+}
+
+.highlightText {
+    background-color: #f7d2d5;
 }
 
 .finder__results__updating {
