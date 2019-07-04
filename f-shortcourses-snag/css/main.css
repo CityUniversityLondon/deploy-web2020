@@ -1534,6 +1534,18 @@ readers do not read off random characters that represent icons */
     content: "\f34e";
 }
 
+.fa-alarm-exclamation:before {
+    content: "\f843";
+}
+
+.fa-alarm-plus:before {
+    content: "\f844";
+}
+
+.fa-alarm-snooze:before {
+    content: "\f845";
+}
+
 .fa-algolia:before {
     content: "\f36c";
 }
@@ -1556,6 +1568,10 @@ readers do not read off random characters that represent icons */
 
 .fa-align-right:before {
     content: "\f038";
+}
+
+.fa-align-slash:before {
+    content: "\f846";
 }
 
 .fa-alipay:before {
@@ -1990,6 +2006,10 @@ readers do not read off random characters that represent icons */
     content: "\f6b4";
 }
 
+.fa-bags-shopping:before {
+    content: "\f847";
+}
+
 .fa-balance-scale:before {
     content: "\f24e";
 }
@@ -2122,6 +2142,14 @@ readers do not read off random characters that represent icons */
     content: "\f0f3";
 }
 
+.fa-bell-exclamation:before {
+    content: "\f848";
+}
+
+.fa-bell-plus:before {
+    content: "\f849";
+}
+
 .fa-bell-school:before {
     content: "\f5d5";
 }
@@ -2148,6 +2176,14 @@ readers do not read off random characters that represent icons */
 
 .fa-bicycle:before {
     content: "\f206";
+}
+
+.fa-biking:before {
+    content: "\f84a";
+}
+
+.fa-biking-mountain:before {
+    content: "\f84b";
 }
 
 .fa-bimobject:before {
@@ -2306,6 +2342,46 @@ readers do not read off random characters that represent icons */
     content: "\f836";
 }
 
+.fa-border-all:before {
+    content: "\f84c";
+}
+
+.fa-border-bottom:before {
+    content: "\f84d";
+}
+
+.fa-border-inner:before {
+    content: "\f84e";
+}
+
+.fa-border-left:before {
+    content: "\f84f";
+}
+
+.fa-border-none:before {
+    content: "\f850";
+}
+
+.fa-border-outer:before {
+    content: "\f851";
+}
+
+.fa-border-right:before {
+    content: "\f852";
+}
+
+.fa-border-style:before {
+    content: "\f853";
+}
+
+.fa-border-style-alt:before {
+    content: "\f854";
+}
+
+.fa-border-top:before {
+    content: "\f855";
+}
+
 .fa-bow-arrow:before {
     content: "\f6b9";
 }
@@ -2402,6 +2478,14 @@ readers do not read off random characters that represent icons */
     content: "\f469";
 }
 
+.fa-bring-forward:before {
+    content: "\f856";
+}
+
+.fa-bring-front:before {
+    content: "\f857";
+}
+
 .fa-broadcast-tower:before {
     content: "\f519";
 }
@@ -2448,6 +2532,10 @@ readers do not read off random characters that represent icons */
 
 .fa-bullseye-pointer:before {
     content: "\f649";
+}
+
+.fa-burger-soda:before {
+    content: "\f858";
 }
 
 .fa-burn:before {
@@ -2594,8 +2682,16 @@ readers do not read off random characters that represent icons */
     content: "\f5df";
 }
 
+.fa-car-building:before {
+    content: "\f859";
+}
+
 .fa-car-bump:before {
     content: "\f5e0";
+}
+
+.fa-car-bus:before {
+    content: "\f85a";
 }
 
 .fa-car-crash:before {
@@ -2672,6 +2768,10 @@ readers do not read off random characters that represent icons */
 
 .fa-carrot:before {
     content: "\f787";
+}
+
+.fa-cars:before {
+    content: "\f85b";
 }
 
 .fa-cart-arrow-down:before {
@@ -3182,6 +3282,10 @@ readers do not read off random characters that represent icons */
     content: "\f085";
 }
 
+.fa-coin:before {
+    content: "\f85c";
+}
+
 .fa-coins:before {
     content: "\f51e";
 }
@@ -3348,6 +3452,10 @@ readers do not read off random characters that represent icons */
 
 .fa-connectdevelop:before {
     content: "\f20e";
+}
+
+.fa-construction:before {
+    content: "\f85d";
 }
 
 .fa-container-storage:before {
@@ -3686,6 +3794,10 @@ readers do not read off random characters that represent icons */
     content: "\f1a6";
 }
 
+.fa-digging:before {
+    content: "\f85e";
+}
+
 .fa-digital-ocean:before {
     content: "\f391";
 }
@@ -3830,6 +3942,14 @@ readers do not read off random characters that represent icons */
     content: "\f397";
 }
 
+.fa-drone:before {
+    content: "\f85f";
+}
+
+.fa-drone-alt:before {
+    content: "\f860";
+}
+
 .fa-dropbox:before {
     content: "\f16b";
 }
@@ -3852,6 +3972,14 @@ readers do not read off random characters that represent icons */
 
 .fa-drupal:before {
     content: "\f1a9";
+}
+
+.fa-dryer:before {
+    content: "\f861";
+}
+
+.fa-dryer-alt:before {
+    content: "\f862";
 }
 
 .fa-duck:before {
@@ -4118,8 +4246,16 @@ readers do not read off random characters that represent icons */
     content: "\f082";
 }
 
+.fa-fan:before {
+    content: "\f863";
+}
+
 .fa-fantasy-flight-games:before {
     content: "\f6dc";
+}
+
+.fa-farm:before {
+    content: "\f864";
 }
 
 .fa-fast-backward:before {
@@ -4272,6 +4408,10 @@ readers do not read off random characters that represent icons */
 
 .fa-file-prescription:before {
     content: "\f572";
+}
+
+.fa-file-search:before {
+    content: "\f865";
 }
 
 .fa-file-signature:before {
@@ -4494,6 +4634,10 @@ readers do not read off random characters that represent icons */
     content: "\f4e6";
 }
 
+.fa-font-case:before {
+    content: "\f866";
+}
+
 .fa-fonticons:before {
     content: "\f280";
 }
@@ -4590,6 +4734,14 @@ readers do not read off random characters that represent icons */
     content: "\f50d";
 }
 
+.fa-game-board:before {
+    content: "\f867";
+}
+
+.fa-game-board-alt:before {
+    content: "\f868";
+}
+
 .fa-gamepad:before {
     content: "\f11b";
 }
@@ -4650,6 +4802,10 @@ readers do not read off random characters that represent icons */
     content: "\f1d3";
 }
 
+.fa-git-alt:before {
+    content: "\f841";
+}
+
 .fa-git-square:before {
     content: "\f1d2";
 }
@@ -4688,6 +4844,10 @@ readers do not read off random characters that represent icons */
 
 .fa-glass-cheers:before {
     content: "\f79f";
+}
+
+.fa-glass-citrus:before {
+    content: "\f869";
 }
 
 .fa-glass-martini:before {
@@ -4926,6 +5086,10 @@ readers do not read off random characters that represent icons */
     content: "\f315";
 }
 
+.fa-h4:before {
+    content: "\f86a";
+}
+
 .fa-hacker-news:before {
     content: "\f1d4";
 }
@@ -5072,6 +5236,10 @@ readers do not read off random characters that represent icons */
 
 .fa-hashtag:before {
     content: "\f292";
+}
+
+.fa-hat-chef:before {
+    content: "\f86b";
 }
 
 .fa-hat-santa:before {
@@ -5234,6 +5402,10 @@ readers do not read off random characters that represent icons */
     content: "\f427";
 }
 
+.fa-horizontal-rule:before {
+    content: "\f86c";
+}
+
 .fa-hornbill:before {
     content: "\f592";
 }
@@ -5344,6 +5516,14 @@ readers do not read off random characters that represent icons */
 
 .fa-icicles:before {
     content: "\f7ad";
+}
+
+.fa-icons:before {
+    content: "\f86d";
+}
+
+.fa-icons-alt:before {
+    content: "\f86e";
 }
 
 .fa-id-badge:before {
@@ -5528,6 +5708,10 @@ readers do not read off random characters that represent icons */
 
 .fa-kaggle:before {
     content: "\f5fa";
+}
+
+.fa-kerning:before {
+    content: "\f86f";
 }
 
 .fa-key:before {
@@ -5752,6 +5936,14 @@ readers do not read off random characters that represent icons */
 
 .fa-line:before {
     content: "\f3c0";
+}
+
+.fa-line-columns:before {
+    content: "\f870";
+}
+
+.fa-line-height:before {
+    content: "\f871";
 }
 
 .fa-link:before {
@@ -6226,6 +6418,14 @@ readers do not read off random characters that represent icons */
     content: "\f53d";
 }
 
+.fa-money-check-edit:before {
+    content: "\f872";
+}
+
+.fa-money-check-edit-alt:before {
+    content: "\f873";
+}
+
 .fa-monitor-heart-rate:before {
     content: "\f611";
 }
@@ -6274,12 +6474,20 @@ readers do not read off random characters that represent icons */
     content: "\f245";
 }
 
+.fa-mug:before {
+    content: "\f874";
+}
+
 .fa-mug-hot:before {
     content: "\f7b6";
 }
 
 .fa-mug-marshmallows:before {
     content: "\f7b7";
+}
+
+.fa-mug-tea:before {
+    content: "\f875";
 }
 
 .fa-music:before {
@@ -6312,10 +6520,6 @@ readers do not read off random characters that represent icons */
 
 .fa-nimblr:before {
     content: "\f5a8";
-}
-
-.fa-nintendo-switch:before {
-    content: "\f418";
 }
 
 .fa-node:before {
@@ -6418,6 +6622,14 @@ readers do not read off random characters that represent icons */
     content: "\f03b";
 }
 
+.fa-overline:before {
+    content: "\f876";
+}
+
+.fa-page-break:before {
+    content: "\f877";
+}
+
 .fa-page4:before {
     content: "\f3d7";
 }
@@ -6472,6 +6684,10 @@ readers do not read off random characters that represent icons */
 
 .fa-paragraph:before {
     content: "\f1dd";
+}
+
+.fa-paragraph-rtl:before {
+    content: "\f878";
 }
 
 .fa-parking:before {
@@ -6638,6 +6854,14 @@ readers do not read off random characters that represent icons */
     content: "\f095";
 }
 
+.fa-phone-alt:before {
+    content: "\f879";
+}
+
+.fa-phone-laptop:before {
+    content: "\f87a";
+}
+
 .fa-phone-office:before {
     content: "\f67d";
 }
@@ -6654,8 +6878,16 @@ readers do not read off random characters that represent icons */
     content: "\f098";
 }
 
+.fa-phone-square-alt:before {
+    content: "\f87b";
+}
+
 .fa-phone-volume:before {
     content: "\f2a0";
+}
+
+.fa-photo-video:before {
+    content: "\f87c";
 }
 
 .fa-php:before {
@@ -7054,6 +7286,10 @@ readers do not read off random characters that represent icons */
     content: "\f25d";
 }
 
+.fa-remove-format:before {
+    content: "\f87d";
+}
+
 .fa-renren:before {
     content: "\f18b";
 }
@@ -7352,6 +7588,14 @@ readers do not read off random characters that represent icons */
 
 .fa-sellsy:before {
     content: "\f213";
+}
+
+.fa-send-back:before {
+    content: "\f87e";
+}
+
+.fa-send-backward:before {
+    content: "\f87f";
 }
 
 .fa-server:before {
@@ -7710,6 +7954,10 @@ readers do not read off random characters that represent icons */
     content: "\f2ad";
 }
 
+.fa-snooze:before {
+    content: "\f880";
+}
+
 .fa-snow-blowing:before {
     content: "\f761";
 }
@@ -7754,16 +8002,36 @@ readers do not read off random characters that represent icons */
     content: "\f15d";
 }
 
+.fa-sort-alpha-down-alt:before {
+    content: "\f881";
+}
+
 .fa-sort-alpha-up:before {
     content: "\f15e";
+}
+
+.fa-sort-alpha-up-alt:before {
+    content: "\f882";
+}
+
+.fa-sort-alt:before {
+    content: "\f883";
 }
 
 .fa-sort-amount-down:before {
     content: "\f160";
 }
 
+.fa-sort-amount-down-alt:before {
+    content: "\f884";
+}
+
 .fa-sort-amount-up:before {
     content: "\f161";
+}
+
+.fa-sort-amount-up-alt:before {
+    content: "\f885";
 }
 
 .fa-sort-down:before {
@@ -7774,8 +8042,48 @@ readers do not read off random characters that represent icons */
     content: "\f162";
 }
 
+.fa-sort-numeric-down-alt:before {
+    content: "\f886";
+}
+
 .fa-sort-numeric-up:before {
     content: "\f163";
+}
+
+.fa-sort-numeric-up-alt:before {
+    content: "\f887";
+}
+
+.fa-sort-shapes-down:before {
+    content: "\f888";
+}
+
+.fa-sort-shapes-down-alt:before {
+    content: "\f889";
+}
+
+.fa-sort-shapes-up:before {
+    content: "\f88a";
+}
+
+.fa-sort-shapes-up-alt:before {
+    content: "\f88b";
+}
+
+.fa-sort-size-down:before {
+    content: "\f88c";
+}
+
+.fa-sort-size-down-alt:before {
+    content: "\f88d";
+}
+
+.fa-sort-size-up:before {
+    content: "\f88e";
+}
+
+.fa-sort-size-up-alt:before {
+    content: "\f88f";
 }
 
 .fa-sort-up:before {
@@ -7806,12 +8114,20 @@ readers do not read off random characters that represent icons */
     content: "\f2f4";
 }
 
+.fa-sparkles:before {
+    content: "\f890";
+}
+
 .fa-speakap:before {
     content: "\f3f3";
 }
 
 .fa-speaker-deck:before {
     content: "\f83c";
+}
+
+.fa-spell-check:before {
+    content: "\f891";
 }
 
 .fa-spider:before {
@@ -7876,6 +8192,10 @@ readers do not read off random characters that represent icons */
 
 .fa-stack-overflow:before {
     content: "\f16c";
+}
+
+.fa-stackpath:before {
+    content: "\f842";
 }
 
 .fa-staff:before {
@@ -8068,6 +8388,10 @@ readers do not read off random characters that represent icons */
 
 .fa-sun-haze:before {
     content: "\f765";
+}
+
+.fa-sunglasses:before {
+    content: "\f892";
 }
 
 .fa-sunrise:before {
@@ -8306,8 +8630,16 @@ readers do not read off random characters that represent icons */
     content: "\f120";
 }
 
+.fa-text:before {
+    content: "\f893";
+}
+
 .fa-text-height:before {
     content: "\f034";
+}
+
+.fa-text-size:before {
+    content: "\f894";
 }
 
 .fa-text-width:before {
@@ -8576,6 +8908,14 @@ readers do not read off random characters that represent icons */
 
 .fa-trash-restore-alt:before {
     content: "\f82a";
+}
+
+.fa-trash-undo:before {
+    content: "\f895";
+}
+
+.fa-trash-undo-alt:before {
+    content: "\f896";
 }
 
 .fa-treasure-chest:before {
@@ -9054,6 +9394,10 @@ readers do not read off random characters that represent icons */
     content: "\f40b";
 }
 
+.fa-voicemail:before {
+    content: "\f897";
+}
+
 .fa-volcano:before {
     content: "\f770";
 }
@@ -9130,6 +9474,10 @@ readers do not read off random characters that represent icons */
     content: "\f495";
 }
 
+.fa-washer:before {
+    content: "\f898";
+}
+
 .fa-watch:before {
     content: "\f2e1";
 }
@@ -9150,8 +9498,16 @@ readers do not read off random characters that represent icons */
     content: "\f775";
 }
 
+.fa-wave-sine:before {
+    content: "\f899";
+}
+
 .fa-wave-square:before {
     content: "\f83e";
+}
+
+.fa-wave-triangle:before {
+    content: "\f89a";
 }
 
 .fa-waze:before {
@@ -9236,6 +9592,10 @@ readers do not read off random characters that represent icons */
 
 .fa-wind:before {
     content: "\f72e";
+}
+
+.fa-wind-turbine:before {
+    content: "\f89b";
 }
 
 .fa-wind-warning:before {
@@ -12098,7 +12458,6 @@ main table td em {
 }
 
 .icon {
-    margin-right: 0.5rem;
     line-height: inherit;
 }
 
@@ -12594,8 +12953,8 @@ main table td em {
 }
 
 .card--casestudy a .thumbnail__image-container {
-    height: 4.75rem;
-    width: 4.75rem;
+    flex-shrink: 0;
+    max-width: 8rem;
     margin-right: 1.5rem;
     overflow: hidden;
     position: relative;
@@ -12605,13 +12964,6 @@ main table td em {
 @media (prefers-reduced-motion: reduce) {
     .card--casestudy a .thumbnail__image-container {
         transition: none;
-    }
-}
-
-@media (min-width: 768px) {
-    .card--casestudy a .thumbnail__image-container {
-        height: 8rem;
-        width: 8rem;
     }
 }
 
@@ -12628,9 +12980,6 @@ main table td em {
 }
 
 .card--casestudy a .thumbnail__image-container img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
     transition: transform 0.2s ease-in;
 }
 
@@ -12862,7 +13211,7 @@ main table td em {
     margin-top: 1rem;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 769px) {
     .card--casestudy a .card__inner > :nth-child(2) {
         margin-top: 0;
     }
@@ -13271,8 +13620,8 @@ main table td em {
 }
 
 .card--related-course a .thumbnail__image-container {
-    height: 4.75rem;
-    width: 4.75rem;
+    flex-shrink: 0;
+    max-width: 8rem;
     margin-right: 1.5rem;
     overflow: hidden;
     position: relative;
@@ -13282,13 +13631,6 @@ main table td em {
 @media (prefers-reduced-motion: reduce) {
     .card--related-course a .thumbnail__image-container {
         transition: none;
-    }
-}
-
-@media (min-width: 768px) {
-    .card--related-course a .thumbnail__image-container {
-        height: 8rem;
-        width: 8rem;
     }
 }
 
@@ -13305,9 +13647,6 @@ main table td em {
 }
 
 .card--related-course a .thumbnail__image-container img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
     transition: transform 0.2s ease-in;
 }
 
@@ -13588,7 +13927,7 @@ main table td em {
     margin-top: 1rem;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 769px) {
     .card--related-course .card__inner > :nth-child(2) {
         margin-top: 0;
     }
@@ -13853,7 +14192,7 @@ main table td em {
     margin-top: 1rem;
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 769px) {
     .card--profile__description--thumbnail > :nth-child(2) {
         margin-top: 0;
     }
@@ -18075,6 +18414,2246 @@ article figure figcaption a:active {
     }
 }
 
+.listing {
+    background-image: linear-gradient(#f2f2f2, #e5e5e5);
+}
+
+.finder {
+    grid-row-gap: 0;
+    display: grid;
+}
+
+@media (max-width: 432px) {
+    .finder {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .finder {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .finder {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (max-width: 432px) {
+    .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'query query query query query query' 'filters filters filters filters filters filters' 'results results results results results results';
+    }
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters filters filters filters filters filters filters filters filters filters' 'results results results results results results results results results results results results';
+    }
+}
+
+@media (min-width: 769px) {
+    .finder {
+        grid-template-rows: 2;
+        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters filters results results results results results results results results';
+    }
+}
+
+@media (min-width: 901px) {
+    .finder {
+        grid-template-rows: 2;
+        grid-template-areas: 'query query query query query query query query query query query query query query query query query query' 'filters filters filters filters filters filters . results results results results results results results results results results results';
+    }
+}
+
+.finder > .content {
+    grid-area: main;
+}
+
+.finder__query {
+    grid-area: query;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.finder__query > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.finder__query__input {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    flex-grow: 1;
+    position: relative;
+}
+
+.finder__query__input i,
+.finder__query__input em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__query__input {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__query__input {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__query__input {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__query__input {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__query__input {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__query__input input {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    font-style: normal;
+    font-weight: 450;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 3.5rem;
+    padding-top: 0.5rem;
+    width: 100%;
+}
+
+.finder__query__input input i,
+.finder__query__input input em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__query__input input {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__query__input input {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__query__input input {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__query__input input {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__query__input input {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__query__input .finder__clear {
+    height: 100%;
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    width: 2rem;
+}
+
+.finder__query__submit {
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+    flex-shrink: 0;
+    margin-left: 2rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__query__submit {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__query__submit {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__query__submit {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__query__submit {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__query__submit {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__query__submit:focus, .finder__query__submit:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__query__submit {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.finder__query__submit:visited {
+    color: #4c2c92;
+}
+
+.finder__query__submit:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__query__submit:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__query__submit:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__query__submit:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__query__submit:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__query__submit:focus, .finder__query__submit:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__query__submit:visited {
+    color: #4c2c92;
+}
+
+.finder__query__submit:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__query__submit:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__query__submit:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__query__submit:active {
+    color: #ffffff;
+}
+
+.finder__query__submit:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__didyoumean__button {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__didyoumean__button:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__didyoumean__button:focus, .finder__didyoumean__button:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__didyoumean__button {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__didyoumean__button:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.finder__didyoumean__button:visited {
+    color: #4c2c92;
+}
+
+.finder__didyoumean__button:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__didyoumean__button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__didyoumean__button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__didyoumean__button:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__didyoumean__button:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__didyoumean__button:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__didyoumean__button:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__didyoumean__button:focus, .finder__didyoumean__button:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__didyoumean__button:visited {
+    color: #4c2c92;
+}
+
+.finder__didyoumean__button:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__didyoumean__button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__didyoumean__button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__didyoumean__button:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__didyoumean__button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__didyoumean__button:active {
+    color: #ffffff;
+}
+
+.finder__didyoumean__button:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__filter {
+    margin-bottom: 0.25rem;
+}
+
+.finder__filter legend {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.424rem;
+    line-height: 1.25;
+    letter-spacing: -0.013em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0;
+}
+
+.finder__filter legend i,
+.finder__filter legend em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.finder__filter legend b,
+.finder__filter legend strong {
+    font-weight: inherit;
+}
+
+.finder__filter legend i,
+.finder__filter legend em {
+    font-style: italic;
+}
+
+.finder__filter legend u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__filter legend {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__filter legend {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__filter legend {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__filter legend {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__filter legend {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__filter legend b,
+.finder__filter legend strong {
+    font-weight: 600;
+}
+
+.finder__filter legend button {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+    border-bottom-color: #ffffff;
+    width: 100%;
+    background-image: none;
+    padding: 0.75rem 1.5rem;
+}
+
+@media (hover: hover) {
+    .finder__filter legend button:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__filter legend button:focus, .finder__filter legend button:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__filter legend button {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__filter legend button:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.finder__filter legend button:visited {
+    color: #4c2c92;
+}
+
+.finder__filter legend button:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__filter legend button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__filter legend button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__filter legend button:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__filter legend button:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__filter legend button:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__filter legend button:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__filter legend button:focus, .finder__filter legend button:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__filter legend button:visited {
+    color: #4c2c92;
+}
+
+.finder__filter legend button:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__filter legend button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__filter legend button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__filter legend button:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__filter legend button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__filter legend button:active {
+    color: #ffffff;
+}
+
+.finder__filter legend button:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__filter legend button:active, .finder__filter legend button:focus {
+    outline-offset: -0.25rem;
+}
+
+.finder__filter legend button > span {
+    color: #0c0c0e;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.finder__filter label {
+    width: 100%;
+    cursor: pointer;
+}
+
+.finder__filter input:not(:disabled) {
+    cursor: pointer;
+}
+
+.finder__filter input[type='radio'] {
+    align-self: flex-start;
+    display: block;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+.finder__filter legend[data-open='true'] + ul {
+    display: block;
+}
+
+.finder__filter legend[data-open='false'] + ul {
+    display: none;
+}
+
+.finder__filter ul {
+    list-style-type: none;
+    margin-left: 0;
+    max-width: unset;
+    background-color: #ffffff;
+    margin-top: 0;
+    padding: 0.75rem 1.5rem;
+    border-top: 0.125rem solid #0c0c0e;
+}
+
+.finder__filter li {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+}
+
+.finder__appliedfilters {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-left: 0;
+    max-width: unset;
+}
+
+@media (min-width: 769px) {
+    .finder__appliedfilters {
+        display: block;
+    }
+}
+
+.finder__appliedfilters li {
+    margin-right: 2rem;
+}
+
+.finder__appliedfilters li:last-of-type {
+    margin-right: 0;
+}
+
+.finder__appliedfilters button {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__appliedfilters button {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.finder__appliedfilters button:visited {
+    color: #4c2c92;
+}
+
+.finder__appliedfilters button:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__appliedfilters button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__appliedfilters button:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__appliedfilters button:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__appliedfilters button:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__appliedfilters button:visited {
+    color: #4c2c92;
+}
+
+.finder__appliedfilters button:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__appliedfilters button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__appliedfilters button:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__appliedfilters button:active {
+    color: #ffffff;
+}
+
+.finder__appliedfilters button:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__appliedfilters button .icon {
+    margin-right: 0.5rem;
+}
+
+.finder__query__suggestions {
+    background-color: rgba(30, 30, 30, 0.9);
+    color: #ffffff;
+    font-weight: 700;
+    left: 0;
+    list-style: none;
+    margin-left: 0;
+    max-width: unset;
+    position: absolute;
+    top: 2.5rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.finder__query__suggestions li {
+    margin-top: 0;
+}
+
+.finder__query__suggestions li button {
+    height: 100%;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+.finder__query__suggestions li button:focus {
+    outline-color: #ffffff;
+    outline-offset: -0.125rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.finder__query__suggestions li button:focus, .finder__query__suggestions li button:hover {
+    background-color: #0c0c0e;
+    text-decoration: underline;
+}
+
+@media (min-width: 769px) {
+    .finder__filters {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .finder__filters {
+        background-color: #d8d8d8;
+    }
+}
+
+@media (min-width: 769px) {
+    .finder__results {
+        margin-top: 1rem;
+    }
+}
+
+.finder__filters {
+    grid-area: filters;
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .finder__filters {
+        display: block;
+    }
+}
+
+.finder__filters__heading {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d8d8d8;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.424rem;
+}
+
+.finder__filters__heading h2 {
+    margin-top: 0;
+    font-size: 1.424rem;
+}
+
+.finder__filters__heading .fa-sliders-h {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.finder__filters__heading .finder__clear {
+    font-size: 1rem;
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__filters__heading .finder__clear:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__filters__heading .finder__clear:focus, .finder__filters__heading .finder__clear:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__filters__heading .finder__clear {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__filters__heading .finder__clear:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.finder__filters__heading .finder__clear:visited {
+    color: #4c2c92;
+}
+
+.finder__filters__heading .finder__clear:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__filters__heading .finder__clear:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__filters__heading .finder__clear:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__filters__heading .finder__clear:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__filters__heading .finder__clear:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__filters__heading .finder__clear:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__filters__heading .finder__clear:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__filters__heading .finder__clear:focus, .finder__filters__heading .finder__clear:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__filters__heading .finder__clear:visited {
+    color: #4c2c92;
+}
+
+.finder__filters__heading .finder__clear:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__filters__heading .finder__clear:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__filters__heading .finder__clear:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__filters__heading .finder__clear:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__filters__heading .finder__clear:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__filters__heading .finder__clear:active {
+    color: #ffffff;
+}
+
+.finder__filters__heading .finder__clear:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__mobilefilters {
+    grid-area: filters;
+    display: block;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply {
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__mobilefilters .finder__mobilefilters__apply {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__mobilefilters .finder__mobilefilters__apply {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__mobilefilters .finder__mobilefilters__apply {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__mobilefilters .finder__mobilefilters__apply {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__mobilefilters .finder__mobilefilters__apply {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__apply:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:focus, .finder__mobilefilters .finder__mobilefilters__apply:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__mobilefilters .finder__mobilefilters__apply {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__apply:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:visited {
+    color: #4c2c92;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__apply:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__apply:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:focus, .finder__mobilefilters .finder__mobilefilters__apply:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:visited {
+    color: #4c2c92;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__apply:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__apply:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:active {
+    color: #ffffff;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle {
+    padding: 0.5rem;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+    margin-top: 1rem;
+    background-color: #ffffff;
+    border: 0.125rem solid #696969;
+    color: #0c0c0e;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__mobilefilters .finder__mobilefilters__toggle {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__mobilefilters .finder__mobilefilters__toggle {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__mobilefilters .finder__mobilefilters__toggle {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__mobilefilters .finder__mobilefilters__toggle {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__mobilefilters .finder__mobilefilters__toggle {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__toggle:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:focus, .finder__mobilefilters .finder__mobilefilters__toggle:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__mobilefilters .finder__mobilefilters__toggle {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__toggle:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:visited {
+    color: #4c2c92;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__toggle:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__toggle:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:focus, .finder__mobilefilters .finder__mobilefilters__toggle:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:visited {
+    color: #4c2c92;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__toggle:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__toggle:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:active {
+    color: #ffffff;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:focus {
+    border: 0.125rem solid #696969;
+    color: #0c0c0e;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle[data-filters-applied='true'] {
+    border-color: #d61726;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle[data-filters-applied='true'] .finder__mobilefilters__toggle__filterNo {
+    color: #d61726;
+}
+
+.finder__mobilefilters .finder__results__summary__heading-wrap {
+    display: inline;
+    float: left;
+}
+
+@media (min-width: 769px) {
+    .finder__mobilefilters {
+        display: none;
+    }
+}
+
+.finder__mobilefilters[data-open='true'] {
+    background: #ffffff;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 3;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+    overflow-y: scroll;
+    position: relative;
+    width: 100vw;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters__content {
+    padding-bottom: 4.5rem;
+}
+
+@media (min-width: 769px) {
+    .finder__mobilefilters[data-open='true'] .finder__filters {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply {
+    background-color: #d61726;
+    border: 0;
+    color: #ffffff;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply > span {
+    border-bottom: 0.125rem solid #ffffff;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__filters,
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply {
+    display: block;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__toggle {
+    display: none;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__results__summary__heading-wrap {
+    display: none;
+}
+
+.finder__mobilefilters[data-open='false'] {
+    text-align: right;
+}
+
+.finder__mobilefilters[data-open='false'] .finder__filters,
+.finder__mobilefilters[data-open='false'] .finder__mobilefilters__apply {
+    display: none;
+}
+
+.finder__mobilefilters[data-open='false'] .finder__mobilefilters__toggle {
+    display: inline-block;
+}
+
+.finder .finder__results {
+    grid-area: results;
+}
+
+.finder .finder__results .pagination__wrapper {
+    max-width: unset;
+}
+
+.finder .finder__results .pagination__controls {
+    justify-content: center;
+}
+
+.finder__results .finder__results__summary__heading-wrap {
+    font-size: 1.424rem;
+}
+
+.finder__results__list {
+    list-style-type: none;
+    margin-left: 0;
+    max-width: unset;
+}
+
+.highlightText {
+    background-color: #fec2c3;
+}
+
+.finder__results__updating {
+    font-size: 1.602rem;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    margin-top: 1rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__updating {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__updating {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__updating {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__updating {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__updating {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__updating .icon {
+    color: #d61726;
+}
+
+.finder__results__card {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.finder__results__card a {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    position: relative;
+    transition: none;
+    padding: 1rem;
+    color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (hover: hover) {
+    .finder__results__card a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__results__card a:focus, .finder__results__card a:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (hover: hover) {
+    .finder__results__card a:hover {
+        background-image: none;
+    }
+    .finder__results__card a:hover img {
+        transform: scale(1.04);
+    }
+    .finder__results__card a:hover .thumbnail__image-container:after {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.finder__results__card a .thumbnail__image-container {
+    flex-shrink: 0;
+    max-width: 8rem;
+    margin-right: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__results__card a .thumbnail__image-container {
+        transition: none;
+    }
+}
+
+.finder__results__card a .thumbnail__image-container:after {
+    background-color: transparent;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: background-color 0.2s ease-in;
+    width: 100%;
+}
+
+.finder__results__card a .thumbnail__image-container img {
+    transition: transform 0.2s ease-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__results__card a .thumbnail__image-container img {
+        transition: none;
+    }
+}
+
+.finder__results__card a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__results__card a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__results__card a:hover:after {
+        background-color: #f2f2f2;
+        transform: scale(1.03);
+    }
+}
+
+.finder__results__card a .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.finder__results__card a .underline-transition__title {
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.25rem;
+    transition: background-size 0.6s ease-in;
+    /**
+            Needs to be inline else underline transition
+            stretches beyond the element
+        **/
+    display: inline;
+}
+
+.finder__results__card a:focus .underline-transition__title {
+    background-size: 100% 0.25rem;
+}
+
+@media (hover: hover) {
+    .finder__results__card a:hover .underline-transition__title {
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 0.25rem;
+        color: #1e1e1e;
+    }
+}
+
+@media (hover: hover) {
+    .finder__results__card a:hover {
+        background-image: none;
+    }
+}
+
+.finder__results__card a:focus:after, .finder__results__card a:active:after {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__results__card a:visited .title {
+    color: #4c2c92;
+}
+
+.finder__results__card a .card__title {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.424rem;
+    line-height: 1.25;
+    letter-spacing: -0.013em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    color: #696969;
+    padding-bottom: 0.25rem;
+}
+
+.finder__results__card a .card__title i,
+.finder__results__card a .card__title em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.finder__results__card a .card__title b,
+.finder__results__card a .card__title strong {
+    font-weight: inherit;
+}
+
+.finder__results__card a .card__title i,
+.finder__results__card a .card__title em {
+    font-style: italic;
+}
+
+.finder__results__card a .card__title u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card a .card__title b,
+.finder__results__card a .card__title strong {
+    font-weight: 600;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card a p {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    color: #1e1e1e;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__card a p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__card a p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card a p {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card a p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card a p {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card a:hover:after {
+    background-color: #ffffff;
+}
+
+.finder__results__card a .finder__results__card__details {
+    z-index: 2;
+}
+
+@media (min-width: 768px) {
+    .finder__results__card a {
+        flex-direction: row;
+    }
+}
+
+.finder__results__card a .finder__results__card__description {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    color: #d61726;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__card a .finder__results__card__description {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__card a .finder__results__card__description {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card a .finder__results__card__description {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card a .finder__results__card__description {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card a .finder__results__card__description {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card a p {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    color: #1e1e1e;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__card a p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__card a p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card a p {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card a p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card a p {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card a .finder__results__card__tag {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    color: #696969;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__card a .finder__results__card__tag {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__card a .finder__results__card__tag {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card a .finder__results__card__tag {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card a .finder__results__card__tag {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card a .finder__results__card__tag {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card a .finder__results__card__tag .icon {
+    color: #d61726;
+    margin-right: 0.5rem;
+}
+
+.finder__results__bestbet a .finder__results__card__description {
+    color: #1e1e1e;
+}
+
 .global-footer {
     grid-row-gap: 0;
     display: grid;
@@ -19087,8 +21666,11 @@ article figure figcaption a:active {
     text-align: center;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button {
-    padding: 0.25rem;
+.key-information--lifelong-learning__controls .content-toggle button .fa-plus-circle {
+    margin-right: 0.25rem;
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -19106,10 +21688,14 @@ article figure figcaption a:active {
     background-position: 0 100%;
     transition: background-size 0.2s ease-in-out;
     color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button:hover {
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -19124,7 +21710,7 @@ article figure figcaption a:active {
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:focus, .key-information--lifelong-learning__controls .content-toggle button:active {
+.key-information--lifelong-learning__controls .content-toggle button .label:focus, .key-information--lifelong-learning__controls .content-toggle button .label:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -19139,66 +21725,103 @@ article figure figcaption a:active {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .key-information--lifelong-learning__controls .content-toggle button {
+    .key-information--lifelong-learning__controls .content-toggle button .label {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button:hover {
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:visited {
+.key-information--lifelong-learning__controls .content-toggle button .label:visited {
     color: #4c2c92;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:focus {
+.key-information--lifelong-learning__controls .content-toggle button .label:focus {
     color: #006bbd;
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button:hover {
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
         color: #ffffff;
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:active {
+.key-information--lifelong-learning__controls .content-toggle button .label:active {
     color: #ffffff;
     background-color: #006bbd;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:visited {
-    color: #006bbd;
+.key-information--lifelong-learning__controls .content-toggle button .label:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button:hover {
-        color: #ffffff;
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:active {
-    color: #ffffff;
+.key-information--lifelong-learning__controls .content-toggle button .label:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:focus, .key-information--lifelong-learning__controls .content-toggle button:active {
+.key-information--lifelong-learning__controls .content-toggle button .label:focus, .key-information--lifelong-learning__controls .content-toggle button .label:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button .label {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
+.key-information--lifelong-learning__controls .content-toggle button .label:visited {
+    color: #4c2c92;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button .fa-plus-circle {
-    padding: 0.0625rem 0.25rem 0 0;
+.key-information--lifelong-learning__controls .content-toggle button .label:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
+        color: #ffffff;
+    }
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
+        color: #ffffff;
+    }
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label:active {
+    color: #ffffff;
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label:visited {
+    border-bottom-color: #006bbd;
 }
 
 @media (min-width: 768px) {
@@ -23165,6 +25788,2246 @@ article .link-copy {
     }
 }
 
+.listing {
+    background-image: linear-gradient(#f2f2f2, #e5e5e5);
+}
+
+.finder {
+    grid-row-gap: 0;
+    display: grid;
+}
+
+@media (max-width: 432px) {
+    .finder {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .finder {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .finder {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (max-width: 432px) {
+    .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'query query query query query query' 'filters filters filters filters filters filters' 'results results results results results results';
+    }
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters filters filters filters filters filters filters filters filters filters' 'results results results results results results results results results results results results';
+    }
+}
+
+@media (min-width: 769px) {
+    .finder {
+        grid-template-rows: 2;
+        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters filters results results results results results results results results';
+    }
+}
+
+@media (min-width: 901px) {
+    .finder {
+        grid-template-rows: 2;
+        grid-template-areas: 'query query query query query query query query query query query query query query query query query query' 'filters filters filters filters filters filters . results results results results results results results results results results results';
+    }
+}
+
+.finder > .content {
+    grid-area: main;
+}
+
+.finder__query {
+    grid-area: query;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.finder__query > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.finder__query__input {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    flex-grow: 1;
+    position: relative;
+}
+
+.finder__query__input i,
+.finder__query__input em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__query__input {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__query__input {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__query__input {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__query__input {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__query__input {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__query__input input {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    font-style: normal;
+    font-weight: 450;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 3.5rem;
+    padding-top: 0.5rem;
+    width: 100%;
+}
+
+.finder__query__input input i,
+.finder__query__input input em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__query__input input {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__query__input input {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__query__input input {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__query__input input {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__query__input input {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__query__input .finder__clear {
+    height: 100%;
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    width: 2rem;
+}
+
+.finder__query__submit {
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+    flex-shrink: 0;
+    margin-left: 2rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__query__submit {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__query__submit {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__query__submit {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__query__submit {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__query__submit {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__query__submit:focus, .finder__query__submit:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__query__submit {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.finder__query__submit:visited {
+    color: #4c2c92;
+}
+
+.finder__query__submit:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__query__submit:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__query__submit:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__query__submit:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__query__submit:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__query__submit:focus, .finder__query__submit:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__query__submit:visited {
+    color: #4c2c92;
+}
+
+.finder__query__submit:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__query__submit:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__query__submit:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__query__submit:active {
+    color: #ffffff;
+}
+
+.finder__query__submit:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__didyoumean__button {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__didyoumean__button:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__didyoumean__button:focus, .finder__didyoumean__button:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__didyoumean__button {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__didyoumean__button:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.finder__didyoumean__button:visited {
+    color: #4c2c92;
+}
+
+.finder__didyoumean__button:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__didyoumean__button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__didyoumean__button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__didyoumean__button:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__didyoumean__button:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__didyoumean__button:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__didyoumean__button:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__didyoumean__button:focus, .finder__didyoumean__button:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__didyoumean__button:visited {
+    color: #4c2c92;
+}
+
+.finder__didyoumean__button:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__didyoumean__button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__didyoumean__button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__didyoumean__button:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__didyoumean__button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__didyoumean__button:active {
+    color: #ffffff;
+}
+
+.finder__didyoumean__button:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__filter {
+    margin-bottom: 0.25rem;
+}
+
+.finder__filter legend {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.424rem;
+    line-height: 1.25;
+    letter-spacing: -0.013em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0;
+}
+
+.finder__filter legend i,
+.finder__filter legend em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.finder__filter legend b,
+.finder__filter legend strong {
+    font-weight: inherit;
+}
+
+.finder__filter legend i,
+.finder__filter legend em {
+    font-style: italic;
+}
+
+.finder__filter legend u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__filter legend {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__filter legend {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__filter legend {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__filter legend {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__filter legend {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__filter legend b,
+.finder__filter legend strong {
+    font-weight: 600;
+}
+
+.finder__filter legend button {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+    border-bottom-color: #ffffff;
+    width: 100%;
+    background-image: none;
+    padding: 0.75rem 1.5rem;
+}
+
+@media (hover: hover) {
+    .finder__filter legend button:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__filter legend button:focus, .finder__filter legend button:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__filter legend button {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__filter legend button:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.finder__filter legend button:visited {
+    color: #4c2c92;
+}
+
+.finder__filter legend button:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__filter legend button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__filter legend button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__filter legend button:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__filter legend button:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__filter legend button:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__filter legend button:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__filter legend button:focus, .finder__filter legend button:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__filter legend button:visited {
+    color: #4c2c92;
+}
+
+.finder__filter legend button:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__filter legend button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__filter legend button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__filter legend button:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__filter legend button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__filter legend button:active {
+    color: #ffffff;
+}
+
+.finder__filter legend button:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__filter legend button:active, .finder__filter legend button:focus {
+    outline-offset: -0.25rem;
+}
+
+.finder__filter legend button > span {
+    color: #0c0c0e;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.finder__filter label {
+    width: 100%;
+    cursor: pointer;
+}
+
+.finder__filter input:not(:disabled) {
+    cursor: pointer;
+}
+
+.finder__filter input[type='radio'] {
+    align-self: flex-start;
+    display: block;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+.finder__filter legend[data-open='true'] + ul {
+    display: block;
+}
+
+.finder__filter legend[data-open='false'] + ul {
+    display: none;
+}
+
+.finder__filter ul {
+    list-style-type: none;
+    margin-left: 0;
+    max-width: unset;
+    background-color: #ffffff;
+    margin-top: 0;
+    padding: 0.75rem 1.5rem;
+    border-top: 0.125rem solid #0c0c0e;
+}
+
+.finder__filter li {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+}
+
+.finder__appliedfilters {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-left: 0;
+    max-width: unset;
+}
+
+@media (min-width: 769px) {
+    .finder__appliedfilters {
+        display: block;
+    }
+}
+
+.finder__appliedfilters li {
+    margin-right: 2rem;
+}
+
+.finder__appliedfilters li:last-of-type {
+    margin-right: 0;
+}
+
+.finder__appliedfilters button {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__appliedfilters button {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.finder__appliedfilters button:visited {
+    color: #4c2c92;
+}
+
+.finder__appliedfilters button:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__appliedfilters button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__appliedfilters button:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__appliedfilters button:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__appliedfilters button:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__appliedfilters button:visited {
+    color: #4c2c92;
+}
+
+.finder__appliedfilters button:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__appliedfilters button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__appliedfilters button:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__appliedfilters button:active {
+    color: #ffffff;
+}
+
+.finder__appliedfilters button:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__appliedfilters button .icon {
+    margin-right: 0.5rem;
+}
+
+.finder__query__suggestions {
+    background-color: rgba(30, 30, 30, 0.9);
+    color: #ffffff;
+    font-weight: 700;
+    left: 0;
+    list-style: none;
+    margin-left: 0;
+    max-width: unset;
+    position: absolute;
+    top: 2.5rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.finder__query__suggestions li {
+    margin-top: 0;
+}
+
+.finder__query__suggestions li button {
+    height: 100%;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+.finder__query__suggestions li button:focus {
+    outline-color: #ffffff;
+    outline-offset: -0.125rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.finder__query__suggestions li button:focus, .finder__query__suggestions li button:hover {
+    background-color: #0c0c0e;
+    text-decoration: underline;
+}
+
+@media (min-width: 769px) {
+    .finder__filters {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .finder__filters {
+        background-color: #d8d8d8;
+    }
+}
+
+@media (min-width: 769px) {
+    .finder__results {
+        margin-top: 1rem;
+    }
+}
+
+.finder__filters {
+    grid-area: filters;
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .finder__filters {
+        display: block;
+    }
+}
+
+.finder__filters__heading {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d8d8d8;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.424rem;
+}
+
+.finder__filters__heading h2 {
+    margin-top: 0;
+    font-size: 1.424rem;
+}
+
+.finder__filters__heading .fa-sliders-h {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.finder__filters__heading .finder__clear {
+    font-size: 1rem;
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__filters__heading .finder__clear:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__filters__heading .finder__clear:focus, .finder__filters__heading .finder__clear:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__filters__heading .finder__clear {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__filters__heading .finder__clear:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.finder__filters__heading .finder__clear:visited {
+    color: #4c2c92;
+}
+
+.finder__filters__heading .finder__clear:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__filters__heading .finder__clear:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__filters__heading .finder__clear:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__filters__heading .finder__clear:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__filters__heading .finder__clear:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__filters__heading .finder__clear:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__filters__heading .finder__clear:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__filters__heading .finder__clear:focus, .finder__filters__heading .finder__clear:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__filters__heading .finder__clear:visited {
+    color: #4c2c92;
+}
+
+.finder__filters__heading .finder__clear:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__filters__heading .finder__clear:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__filters__heading .finder__clear:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__filters__heading .finder__clear:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__filters__heading .finder__clear:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__filters__heading .finder__clear:active {
+    color: #ffffff;
+}
+
+.finder__filters__heading .finder__clear:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__mobilefilters {
+    grid-area: filters;
+    display: block;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply {
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__mobilefilters .finder__mobilefilters__apply {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__mobilefilters .finder__mobilefilters__apply {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__mobilefilters .finder__mobilefilters__apply {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__mobilefilters .finder__mobilefilters__apply {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__mobilefilters .finder__mobilefilters__apply {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__apply:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:focus, .finder__mobilefilters .finder__mobilefilters__apply:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__mobilefilters .finder__mobilefilters__apply {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__apply:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:visited {
+    color: #4c2c92;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__apply:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__apply:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:focus, .finder__mobilefilters .finder__mobilefilters__apply:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:visited {
+    color: #4c2c92;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__apply:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__apply:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:active {
+    color: #ffffff;
+}
+
+.finder__mobilefilters .finder__mobilefilters__apply:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle {
+    padding: 0.5rem;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+    margin-top: 1rem;
+    background-color: #ffffff;
+    border: 0.125rem solid #696969;
+    color: #0c0c0e;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__mobilefilters .finder__mobilefilters__toggle {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__mobilefilters .finder__mobilefilters__toggle {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__mobilefilters .finder__mobilefilters__toggle {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__mobilefilters .finder__mobilefilters__toggle {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__mobilefilters .finder__mobilefilters__toggle {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__toggle:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:focus, .finder__mobilefilters .finder__mobilefilters__toggle:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__mobilefilters .finder__mobilefilters__toggle {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__toggle:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:visited {
+    color: #4c2c92;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__toggle:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__toggle:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:focus, .finder__mobilefilters .finder__mobilefilters__toggle:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:visited {
+    color: #4c2c92;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__toggle:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__mobilefilters .finder__mobilefilters__toggle:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:active {
+    color: #ffffff;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle:focus {
+    border: 0.125rem solid #696969;
+    color: #0c0c0e;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle[data-filters-applied='true'] {
+    border-color: #d61726;
+}
+
+.finder__mobilefilters .finder__mobilefilters__toggle[data-filters-applied='true'] .finder__mobilefilters__toggle__filterNo {
+    color: #d61726;
+}
+
+.finder__mobilefilters .finder__results__summary__heading-wrap {
+    display: inline;
+    float: left;
+}
+
+@media (min-width: 769px) {
+    .finder__mobilefilters {
+        display: none;
+    }
+}
+
+.finder__mobilefilters[data-open='true'] {
+    background: #ffffff;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 3;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+    overflow-y: scroll;
+    position: relative;
+    width: 100vw;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters__content {
+    padding-bottom: 4.5rem;
+}
+
+@media (min-width: 769px) {
+    .finder__mobilefilters[data-open='true'] .finder__filters {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply {
+    background-color: #d61726;
+    border: 0;
+    color: #ffffff;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply > span {
+    border-bottom: 0.125rem solid #ffffff;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__filters,
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply {
+    display: block;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__toggle {
+    display: none;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__results__summary__heading-wrap {
+    display: none;
+}
+
+.finder__mobilefilters[data-open='false'] {
+    text-align: right;
+}
+
+.finder__mobilefilters[data-open='false'] .finder__filters,
+.finder__mobilefilters[data-open='false'] .finder__mobilefilters__apply {
+    display: none;
+}
+
+.finder__mobilefilters[data-open='false'] .finder__mobilefilters__toggle {
+    display: inline-block;
+}
+
+.finder .finder__results {
+    grid-area: results;
+}
+
+.finder .finder__results .pagination__wrapper {
+    max-width: unset;
+}
+
+.finder .finder__results .pagination__controls {
+    justify-content: center;
+}
+
+.finder__results .finder__results__summary__heading-wrap {
+    font-size: 1.424rem;
+}
+
+.finder__results__list {
+    list-style-type: none;
+    margin-left: 0;
+    max-width: unset;
+}
+
+.highlightText {
+    background-color: #fec2c3;
+}
+
+.finder__results__updating {
+    font-size: 1.602rem;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    margin-top: 1rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__updating {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__updating {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__updating {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__updating {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__updating {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__updating .icon {
+    color: #d61726;
+}
+
+.finder__results__card {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.finder__results__card a {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    position: relative;
+    transition: none;
+    padding: 1rem;
+    color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (hover: hover) {
+    .finder__results__card a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__results__card a:focus, .finder__results__card a:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (hover: hover) {
+    .finder__results__card a:hover {
+        background-image: none;
+    }
+    .finder__results__card a:hover img {
+        transform: scale(1.04);
+    }
+    .finder__results__card a:hover .thumbnail__image-container:after {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.finder__results__card a .thumbnail__image-container {
+    flex-shrink: 0;
+    max-width: 8rem;
+    margin-right: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__results__card a .thumbnail__image-container {
+        transition: none;
+    }
+}
+
+.finder__results__card a .thumbnail__image-container:after {
+    background-color: transparent;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: background-color 0.2s ease-in;
+    width: 100%;
+}
+
+.finder__results__card a .thumbnail__image-container img {
+    transition: transform 0.2s ease-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__results__card a .thumbnail__image-container img {
+        transition: none;
+    }
+}
+
+.finder__results__card a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__results__card a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__results__card a:hover:after {
+        background-color: #f2f2f2;
+        transform: scale(1.03);
+    }
+}
+
+.finder__results__card a .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.finder__results__card a .underline-transition__title {
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.25rem;
+    transition: background-size 0.6s ease-in;
+    /**
+            Needs to be inline else underline transition
+            stretches beyond the element
+        **/
+    display: inline;
+}
+
+.finder__results__card a:focus .underline-transition__title {
+    background-size: 100% 0.25rem;
+}
+
+@media (hover: hover) {
+    .finder__results__card a:hover .underline-transition__title {
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 0.25rem;
+        color: #1e1e1e;
+    }
+}
+
+@media (hover: hover) {
+    .finder__results__card a:hover {
+        background-image: none;
+    }
+}
+
+.finder__results__card a:focus:after, .finder__results__card a:active:after {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__results__card a:visited .title {
+    color: #4c2c92;
+}
+
+.finder__results__card a .card__title {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.424rem;
+    line-height: 1.25;
+    letter-spacing: -0.013em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    color: #696969;
+    padding-bottom: 0.25rem;
+}
+
+.finder__results__card a .card__title i,
+.finder__results__card a .card__title em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.finder__results__card a .card__title b,
+.finder__results__card a .card__title strong {
+    font-weight: inherit;
+}
+
+.finder__results__card a .card__title i,
+.finder__results__card a .card__title em {
+    font-style: italic;
+}
+
+.finder__results__card a .card__title u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card a .card__title b,
+.finder__results__card a .card__title strong {
+    font-weight: 600;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card a .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card a p {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    color: #1e1e1e;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__card a p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__card a p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card a p {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card a p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card a p {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card a:hover:after {
+    background-color: #ffffff;
+}
+
+.finder__results__card a .finder__results__card__details {
+    z-index: 2;
+}
+
+@media (min-width: 768px) {
+    .finder__results__card a {
+        flex-direction: row;
+    }
+}
+
+.finder__results__card a .finder__results__card__description {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    color: #d61726;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__card a .finder__results__card__description {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__card a .finder__results__card__description {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card a .finder__results__card__description {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card a .finder__results__card__description {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card a .finder__results__card__description {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card a p {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    color: #1e1e1e;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__card a p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__card a p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card a p {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card a p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card a p {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card a .finder__results__card__tag {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    color: #696969;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__results__card a .finder__results__card__tag {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__results__card a .finder__results__card__tag {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card a .finder__results__card__tag {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card a .finder__results__card__tag {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card a .finder__results__card__tag {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card a .finder__results__card__tag .icon {
+    color: #d61726;
+    margin-right: 0.5rem;
+}
+
+.finder__results__bestbet a .finder__results__card__description {
+    color: #1e1e1e;
+}
+
 /*
     21/6/2019 
     General Usage:
@@ -24880,54 +29743,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-.listing {
-    grid-row-gap: 0;
-    display: grid;
-    grid-template-rows: auto;
-}
-
-@media (max-width: 432px) {
-    .listing {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .listing {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .listing {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
-}
-
-@media (max-width: 432px) {
-    .listing {
-        grid-template-areas: 'main main main main main main';
-    }
-}
-
-@media (min-width: 433px) {
-    .listing {
-        grid-template-areas: '. . main main main main main main main main . .';
-    }
-}
-
-@media (min-width: 901px) {
-    .listing {
-        grid-template-areas: '. . . . . main main main main main main main main . . . . .';
-    }
-}
-
 .listing > .content {
     max-width: 80rem;
-    grid-area: main;
 }
 
 @media (min-width: 1441px) {
@@ -25330,8 +30147,13 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .lifelong-learning .key-information--lifelong-learning > ul > li {
     background-color: #ffffff;
-    border: 0.125rem solid #a1a1a1;
+    border: 0.0625rem solid #d8d8d8;
     padding: 0 1rem 1rem 1rem;
+}
+
+.lifelong-learning .key-information--lifelong-learning > ul > li > ul {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .lifelong-learning .lifelong-learning__start-date__cta {
@@ -25572,19 +30394,21 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-.lifelong-learning .tabs .tabs__panel {
-    max-width: 80rem;
-    border: 0.125rem solid #d8d8d8;
+@media (min-width: 768px) {
+    .lifelong-learning .tabs .tabs__panel {
+        max-width: 80rem;
+        border: 0.125rem solid #d8d8d8;
+    }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 768px) and (min-width: 1441px) {
     .lifelong-learning .tabs .tabs__panel {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 768px) and (max-width: 1440px) {
     .lifelong-learning .tabs .tabs__panel {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -25664,7 +30488,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__header {
-    color: #5d184a;
+    color: #0c0c0e;
     grid-area: header;
 }
 
@@ -26561,7 +31385,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media screen and (min-width: 433px) {
     .js .lifelong-learning__content > div:not(.tabs):not(.tabs--accordion) .tabs__panel__content {
-        grid-template-areas: '. . heading heading heading heading heading heading heading heading . .' '. . content content content content content content content content . .';
+        grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading' 'content content content content content content content content content content content content';
     }
 }
 
@@ -26664,7 +31488,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media screen and (max-width: 767px) and (min-width: 433px) {
     .js .lifelong-learning--bespoke .tabs .tabs__panel__content {
-        grid-template-areas: '. . heading heading heading heading heading heading heading heading . .' '. . content content content content content content content content . .';
+        grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading' 'content content content content content content content content content content content content';
     }
 }
 
