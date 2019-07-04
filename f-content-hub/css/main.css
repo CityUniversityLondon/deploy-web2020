@@ -29089,8 +29089,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-area: main;
     margin: 0;
     display: grid;
-    grid-template-rows: 1;
-    grid-template-areas: ' . . . . video video video video video video video video video video video . . . . ';
+    grid-template-rows: auto;
+    grid-template-areas: ' . . . . video video video video video video video video video video . . . . ' ' . . . finder finder finder finder finder finder finder finder finder finder finder finder . . .' ' . careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers .';
 }
 
 @media (max-width: 432px) {
@@ -29116,8 +29116,45 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .content-hub .embedded-video {
     grid-area: video;
-    display: block;
-    padding-left: 0;
+}
+
+.content-hub .finder {
+    grid-area: finder;
+}
+
+.content-hub .careers {
+    grid-area: careers;
+    grid-template-columns: repeat(16, 1fr);
+    grid-column-gap: 1.5rem;
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-areas: 'careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro . careers-images careers-images careers-images careers-images careers-images careers-images careers-images .';
+}
+
+.content-hub .careers .intro {
+    grid-area: careers-intro;
+}
+
+.content-hub .careers .images {
+    grid-area: careers-images;
+    grid-template-columns: repeat(9, 1fr);
+    grid-column-gap: 1.5rem;
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-areas: 'primary primary primary primary primary primary . . .' '. . . . secondary secondary secondary secondary .';
+}
+
+.content-hub .careers .images .primary {
+    grid-area: primary;
+}
+
+.content-hub .careers .images .secondary {
+    grid-area: secondary;
+}
+
+.content-hub p {
+    margin-right: 0;
+    max-width: 100%;
 }
 
 .course {
