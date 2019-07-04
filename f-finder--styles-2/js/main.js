@@ -2662,7 +2662,12 @@ const maximumSuggestions = 5,
       body = document.getElementsByTagName('body'),
       backgroundFill = body[0].querySelectorAll('.background-fill'),
       suggestedResults = body[0].querySelectorAll('.finder__query__suggestions li button');
-let updated = '';
+let updated = ''; // if (suggestedResults) {
+//     suggestedResults.addEventListener('click', function() {
+//         console.log('clicked on suggested result');
+//     });
+// }
+
 /**
  * Search input field and autocomplete.
  *
@@ -2814,10 +2819,15 @@ function finder__query(props) {
       e.target.placeholder = props.config.placeholder;
       e.target.value = '';
       let suggestedResults = document.querySelector('.finder__query__suggestions');
+      document.addEventListener('click', function (event) {
+        let classList = event.target.classList;
 
-      if (suggestedResults) {
-        suggestedResults.style.display = 'none';
-      }
+        if (classList.contains('finder__query__suggestions')) {
+          suggestedResults.style.display = 'block';
+        } else {
+          suggestedResults.style.display = 'none';
+        }
+      });
     },
     onFocus: e => {
       backgroundFill[0].classList.add('background-fill--grey');
