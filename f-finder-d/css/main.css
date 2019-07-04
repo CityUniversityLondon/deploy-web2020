@@ -20058,6 +20058,7 @@ article figure figcaption a:active {
 .finder__mobilefilters .finder__results__summary__heading-wrap {
     display: inline;
     float: left;
+    font-size: 1.424rem;
 }
 
 @media (min-width: 769px) {
@@ -20153,6 +20154,12 @@ article figure figcaption a:active {
 
 .finder__results .finder__results__summary__heading-wrap {
     font-size: 1.424rem;
+}
+
+@media (max-width: 768px) {
+    .finder__results .finder__results__summary__heading-wrap {
+        display: none;
+    }
 }
 
 .finder__results__list {
@@ -27426,6 +27433,7 @@ article .link-copy {
 .finder__mobilefilters .finder__results__summary__heading-wrap {
     display: inline;
     float: left;
+    font-size: 1.424rem;
 }
 
 @media (min-width: 769px) {
@@ -27521,6 +27529,12 @@ article .link-copy {
 
 .finder__results .finder__results__summary__heading-wrap {
     font-size: 1.424rem;
+}
+
+@media (max-width: 768px) {
+    .finder__results .finder__results__summary__heading-wrap {
+        display: none;
+    }
 }
 
 .finder__results__list {
