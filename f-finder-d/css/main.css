@@ -20075,7 +20075,7 @@ article figure figcaption a:active {
     right: 0;
     top: 0;
     width: 100vw;
-    z-index: 2;
+    z-index: 3;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
@@ -20153,20 +20153,6 @@ article figure figcaption a:active {
 
 .finder__results .finder__results__summary__heading-wrap {
     font-size: 1.424rem;
-}
-
-@media (max-width: 768px) {
-    .finder__results .finder__results__summary__heading-wrap {
-        display: none;
-    }
-}
-
-.finder__results .finder__results__card a {
-    z-index: 1;
-}
-
-.finder__results .finder__results__card a:hover:after {
-    background-color: #ffffff;
 }
 
 .finder__results__list {
@@ -20322,6 +20308,35 @@ article figure figcaption a:active {
     .finder__results__card a .thumbnail__image-container img {
         transition: none;
     }
+}
+
+.finder__results__card a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__results__card a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__results__card a:hover:after {
+        background-color: #f2f2f2;
+        transform: scale(1.03);
+    }
+}
+
+.finder__results__card a .card__inner {
+    z-index: 2;
+    position: relative;
 }
 
 .finder__results__card a .underline-transition__title {
@@ -20501,6 +20516,14 @@ article figure figcaption a:active {
     .finder__results__card a p {
         letter-spacing: -0.017em;
     }
+}
+
+.finder__results__card a:hover:after {
+    background-color: #ffffff;
+}
+
+.finder__results__card a .finder__results__card__details {
+    z-index: 2;
 }
 
 @media (min-width: 768px) {
@@ -27420,7 +27443,7 @@ article .link-copy {
     right: 0;
     top: 0;
     width: 100vw;
-    z-index: 2;
+    z-index: 3;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
@@ -27498,20 +27521,6 @@ article .link-copy {
 
 .finder__results .finder__results__summary__heading-wrap {
     font-size: 1.424rem;
-}
-
-@media (max-width: 768px) {
-    .finder__results .finder__results__summary__heading-wrap {
-        display: none;
-    }
-}
-
-.finder__results .finder__results__card a {
-    z-index: 1;
-}
-
-.finder__results .finder__results__card a:hover:after {
-    background-color: #ffffff;
 }
 
 .finder__results__list {
@@ -27667,6 +27676,35 @@ article .link-copy {
     .finder__results__card a .thumbnail__image-container img {
         transition: none;
     }
+}
+
+.finder__results__card a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__results__card a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .finder__results__card a:hover:after {
+        background-color: #f2f2f2;
+        transform: scale(1.03);
+    }
+}
+
+.finder__results__card a .card__inner {
+    z-index: 2;
+    position: relative;
 }
 
 .finder__results__card a .underline-transition__title {
@@ -27846,6 +27884,14 @@ article .link-copy {
     .finder__results__card a p {
         letter-spacing: -0.017em;
     }
+}
+
+.finder__results__card a:hover:after {
+    background-color: #ffffff;
+}
+
+.finder__results__card a .finder__results__card__details {
+    z-index: 2;
 }
 
 @media (min-width: 768px) {

@@ -1022,7 +1022,7 @@ function finder__mobilefilters(props) {
     "aria-hidden": "true"
   }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     dangerouslySetInnerHTML: {
-      __html: Object.keys(props.query.facets).length > 0 ? " Filters (<span class=\"finder__mobilefilters__toggle__filterNo\">".concat(Object.keys(props.query.facets).length, "</span>)") : 'Filter'
+      __html: Object.keys(props.query.facets).length > 0 ? " Filters <span class=\"finder__mobilefilters__toggle__filterNo\">(".concat(Object.keys(props.query.facets).length, ")</span>") : 'Filter'
     }
   }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "finder__mobilefilters__filters",
