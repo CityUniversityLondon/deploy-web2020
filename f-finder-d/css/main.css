@@ -19430,6 +19430,12 @@ article figure figcaption a:active {
     }
 }
 
+@media (max-width: 768px) {
+    .finder__filters__heading .finder__clear {
+        display: block;
+    }
+}
+
 .finder__clear {
     font-size: 1rem;
     background: initial;
@@ -26784,6 +26790,12 @@ article .link-copy {
 @media (min-width: 769px) {
     .finder__filters__heading .finder__clear {
         display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .finder__filters__heading .finder__clear {
+        display: block;
     }
 }
 
