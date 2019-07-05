@@ -18461,7 +18461,7 @@ article figure figcaption a:active {
 @media (min-width: 769px) {
     .finder {
         grid-template-rows: 2;
-        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters filters results results results results results results results results';
+        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters filters filters results results results results results results results';
     }
 }
 
@@ -18963,6 +18963,7 @@ article figure figcaption a:active {
     font-style: normal;
     font-weight: 600;
     margin-top: 1rem;
+    position: relative;
     display: block;
     width: 100%;
     background-color: #ffffff;
@@ -19041,31 +19042,6 @@ article figure figcaption a:active {
     outline-offset: -0.25rem;
 }
 
-.finder__filter legend button .underline-transition__title {
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.25rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition
-            stretches beyond the element
-        **/
-    display: inline;
-}
-
-.finder__filter legend button:focus .underline-transition__title {
-    background-size: 100% 0.25rem;
-}
-
-@media (hover: hover) {
-    .finder__filter legend button:hover .underline-transition__title {
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.25rem;
-        color: #1e1e1e;
-    }
-}
-
 .finder__filter legend button:hover .icon {
     color: #d61726;
     transition: color 0.6s;
@@ -19099,6 +19075,15 @@ article figure figcaption a:active {
     margin-top: 0.5rem;
 }
 
+.finder__filter legend[data-open='true']:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 3rem);
+    border-top: 0.0625rem solid #a1a1a1;
+    left: 1.5rem;
+    bottom: 0;
+}
+
 .finder__filter legend[data-open='true'] + ul {
     display: block;
 }
@@ -19117,22 +19102,16 @@ article figure figcaption a:active {
     padding: 0.75rem 1.5rem;
 }
 
-.finder__filter ul:before {
-    content: '';
-    position: absolute;
-    width: calc(100% - 3rem);
-    border-top: 0.125rem solid #a1a1a1;
-}
-
 .finder__filter li {
     align-items: center;
     display: flex;
     flex-direction: row;
-    margin-top: 0;
 }
 
-.finder__filter li:nth-child(1) {
-    margin-top: 0.5rem;
+.underline-transition__title:hover, .underline-transition__title:active {
+    border-bottom: 0.0625rem solid #a1a1a1;
+    transition: border-bottom 0.6s;
+    box-sizing: border-box;
 }
 
 .finder__appliedfilters {
@@ -19141,6 +19120,7 @@ article figure figcaption a:active {
     flex-wrap: wrap;
     list-style-type: none;
     margin-left: 0;
+    margin-bottom: 1rem;
     max-width: unset;
 }
 
@@ -19159,57 +19139,26 @@ article figure figcaption a:active {
 }
 
 .finder__appliedfilters button {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
+    background: initial;
+    border-radius: 0.25rem;
+    border: none;
     color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    transition: background-size 0.2s ease-in-out;
-    color: #006bbd;
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
+    display: inline-flex;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    transition: background-color 0.6s, transform 0.6s;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+    background: #d61726;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+    background-color: #d61726;
+    border-color: #d61726;
+    color: #ffffff;
 }
 
-@media (hover: hover) {
-    .finder__appliedfilters button:hover {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
+.finder__appliedfilters button:disabled {
+    cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -19218,98 +19167,166 @@ article figure figcaption a:active {
     }
 }
 
-@media (hover: hover) {
-    .finder__appliedfilters button:hover {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+@media (max-width: 432px) {
+    .finder__appliedfilters button {
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 }
 
-.finder__appliedfilters button:visited {
-    color: #4c2c92;
+.finder__appliedfilters button span {
+    transition: transform 0.6s;
 }
 
-.finder__appliedfilters button:focus {
-    color: #006bbd;
+.finder__appliedfilters button:after {
+    content: '\f061';
+    font-family: 'Font Awesome';
+    font-style: normal;
+    font-weight: normal;
+    opacity: 0;
+    position: absolute;
+    right: 1.5rem;
+    text-decoration: inherit;
+    transform: translateX(-0.75rem);
+    transition: background-color 0.6s, transform 0.6s;
 }
 
-@media (hover: hover) {
-    .finder__appliedfilters button:hover {
-        color: #ffffff;
+@media (prefers-reduced-motion: reduce) {
+    .finder__appliedfilters button:after {
+        transition: none;
     }
-}
-
-.finder__appliedfilters button:active {
-    color: #ffffff;
-    background-color: #006bbd;
-}
-
-.finder__appliedfilters button:visited {
-    border-bottom-color: #4c2c92;
-}
-
-.finder__appliedfilters button:focus {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-}
-
-@media (hover: hover) {
-    .finder__appliedfilters button:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-    }
-}
-
-.finder__appliedfilters button:active {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
 }
 
 .finder__appliedfilters button:focus, .finder__appliedfilters button:active {
+    background-color: transparent;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+}
+
+.finder__appliedfilters button:focus span, .finder__appliedfilters button:active span {
+    transform: translateX(-0.75rem);
+}
+
+.finder__appliedfilters button:focus:after, .finder__appliedfilters button:active:after {
+    opacity: 1;
+    transform: translateX(0.75rem);
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        background-color: transparent;
+        border: 0.125rem solid #d61726;
+        color: #ffffff;
+    }
+    .finder__appliedfilters button:hover span {
+        transform: translateX(-0.75rem);
+    }
+    .finder__appliedfilters button:hover:after {
+        opacity: 1;
+        transform: translateX(0.75rem);
+    }
+}
+
+.finder__appliedfilters button:disabled {
+    opacity: 0.7;
+}
+
+.finder__appliedfilters button:disabled span {
+    transform: none;
+}
+
+.finder__appliedfilters button:disabled:after {
+    opacity: 0;
+    transform: none;
+}
+
+.finder__appliedfilters button:visited {
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+.finder__appliedfilters button:focus {
+    background: #d61726;
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+.finder__appliedfilters button:focus:focus, .finder__appliedfilters button:focus:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.finder__appliedfilters button:visited {
-    color: #4c2c92;
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        background: #ffffff;
+        border-color: #d61726;
+        color: #d61726;
+    }
 }
 
-.finder__appliedfilters button:focus {
-    color: #006bbd;
+.finder__appliedfilters button:active {
+    border-color: #d61726;
+    box-shadow: none;
+    color: #d61726;
+    background: transparent;
+}
+
+.finder__appliedfilters button:active:focus, .finder__appliedfilters button:active:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__appliedfilters button:disabled {
+    color: #ffffff;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
+}
+
+.finder__appliedfilters button span {
+    transition: none;
+}
+
+.finder__appliedfilters button:visited {
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+.finder__appliedfilters button:after {
+    content: '';
+}
+
+.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
+    background-color: #d61726;
+    border-color: #d61726;
+    color: #ffffff;
 }
 
 @media (hover: hover) {
     .finder__appliedfilters button:hover {
+        background-color: #a8121e;
+        border-color: #a8121e;
         color: #ffffff;
     }
 }
 
 .finder__appliedfilters button:active {
+    background-color: #a8121e;
+    border-color: #a8121e;
+}
+
+.finder__appliedfilters button:disabled {
     color: #ffffff;
-    background-color: #006bbd;
+    background: #d61726;
+    border-color: #d61726;
 }
 
-.finder__appliedfilters button:visited {
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .finder__appliedfilters button:hover {
-        color: #ffffff;
-    }
-}
-
-.finder__appliedfilters button:active {
-    color: #ffffff;
-}
-
-.finder__appliedfilters button:visited {
-    border-bottom-color: #006bbd;
+.finder__appliedfilters button:active span, .finder__appliedfilters button:focus span, .finder__appliedfilters button:hover span {
+    transform: none;
 }
 
 .finder__appliedfilters button .icon {
@@ -19366,6 +19383,9 @@ article figure figcaption a:active {
     .finder__filters {
         background-color: #d8d8d8;
     }
+    .finder__filters .finder__clear {
+        display: none;
+    }
 }
 
 @media (min-width: 769px) {
@@ -19404,7 +19424,13 @@ article figure figcaption a:active {
     justify-content: center;
 }
 
-.finder__filters__heading .finder__clear {
+@media (min-width: 769px) {
+    .finder__filters__heading .finder__clear {
+        display: none;
+    }
+}
+
+.finder__clear {
     font-size: 1rem;
     background: initial;
     border-radius: 0.25rem;
@@ -19423,31 +19449,32 @@ article figure figcaption a:active {
     border-color: #d61726;
     color: #d61726;
     margin-right: 1rem;
+    background-color: #ffffff;
 }
 
-.finder__filters__heading .finder__clear:disabled {
+.finder__clear:disabled {
     cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .finder__filters__heading .finder__clear {
+    .finder__clear {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .finder__filters__heading .finder__clear {
+    .finder__clear {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.finder__filters__heading .finder__clear span {
+.finder__clear span {
     transition: transform 0.6s;
 }
 
-.finder__filters__heading .finder__clear:after {
+.finder__clear:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -19461,66 +19488,66 @@ article figure figcaption a:active {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .finder__filters__heading .finder__clear:after {
+    .finder__clear:after {
         transition: none;
     }
 }
 
-.finder__filters__heading .finder__clear:focus, .finder__filters__heading .finder__clear:active {
+.finder__clear:focus, .finder__clear:active {
     background-color: transparent;
     border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
-.finder__filters__heading .finder__clear:focus span, .finder__filters__heading .finder__clear:active span {
+.finder__clear:focus span, .finder__clear:active span {
     transform: translateX(-0.75rem);
 }
 
-.finder__filters__heading .finder__clear:focus:after, .finder__filters__heading .finder__clear:active:after {
+.finder__clear:focus:after, .finder__clear:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .finder__filters__heading .finder__clear:hover {
+    .finder__clear:hover {
         background-color: transparent;
         border: 0.125rem solid #d61726;
         color: #ffffff;
     }
-    .finder__filters__heading .finder__clear:hover span {
+    .finder__clear:hover span {
         transform: translateX(-0.75rem);
     }
-    .finder__filters__heading .finder__clear:hover:after {
+    .finder__clear:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.finder__filters__heading .finder__clear:disabled {
+.finder__clear:disabled {
     opacity: 0.7;
 }
 
-.finder__filters__heading .finder__clear:disabled span {
+.finder__clear:disabled span {
     transform: none;
 }
 
-.finder__filters__heading .finder__clear:disabled:after {
+.finder__clear:disabled:after {
     opacity: 0;
     transform: none;
 }
 
-.finder__filters__heading .finder__clear:visited {
+.finder__clear:visited {
     border-color: #0c0c0e;
     color: #0c0c0e;
 }
 
-.finder__filters__heading .finder__clear:focus {
+.finder__clear:focus {
     background: #ffffff;
     color: #0c0c0e;
     border-color: #0c0c0e;
 }
 
-.finder__filters__heading .finder__clear:focus:focus, .finder__filters__heading .finder__clear:focus:active {
+.finder__clear:focus:focus, .finder__clear:focus:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
@@ -19528,50 +19555,56 @@ article figure figcaption a:active {
 }
 
 @media (hover: hover) {
-    .finder__filters__heading .finder__clear:hover {
+    .finder__clear:hover {
         background: #0c0c0e;
         border-color: #0c0c0e;
         color: #ffffff;
     }
 }
 
-.finder__filters__heading .finder__clear:active {
+.finder__clear:active {
     background: #0c0c0e;
     border-color: #0c0c0e;
     box-shadow: none;
     color: #ffffff;
 }
 
-.finder__filters__heading .finder__clear:active:focus, .finder__filters__heading .finder__clear:active:active {
+.finder__clear:active:focus, .finder__clear:active:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.finder__filters__heading .finder__clear:disabled {
+.finder__clear:disabled {
     color: #0c0c0e;
     background: transparent;
     border: 0.125rem solid #0c0c0e;
 }
 
-.finder__filters__heading .finder__clear span {
+.finder__clear span {
     transition: none;
 }
 
-.finder__filters__heading .finder__clear:after {
+.finder__clear:after {
     content: '';
 }
 
-.finder__filters__heading .finder__clear:active span, .finder__filters__heading .finder__clear:focus span, .finder__filters__heading .finder__clear:hover span {
+.finder__clear:active span, .finder__clear:focus span, .finder__clear:hover span {
     transform: none;
 }
 
-.finder__filters__heading .finder__clear .fa-times {
+.finder__clear .fa-times {
     margin-right: 0.25rem;
 }
 
-.finder__filters__heading .finder__clear:hover, .finder__filters__heading .finder__clear:active {
+.finder__clear:focus {
+    background-color: #ffffff;
+    color: #d61726;
+    border-color: #d61726;
+}
+
+.finder__clear:hover, .finder__clear:active {
     color: #ffffff;
     background-color: #d61726;
     border-color: #d61726;
@@ -19988,6 +20021,7 @@ article figure figcaption a:active {
     display: inline;
     float: left;
     font-size: 1.424rem;
+    margin-top: 1.5rem;
 }
 
 @media (min-width: 769px) {
@@ -20037,6 +20071,24 @@ article figure figcaption a:active {
     width: 100%;
     position: fixed;
     bottom: 0;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply:hover, .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply:active {
+    background: #9e111c;
+    outline-color: #ffffff;
+    outline-offset: -0.1875rem;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply:focus {
+    outline-color: #ffffff;
+    outline-offset: -0.1875rem;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply .fa-chevron-left {
+    position: absolute;
+    left: 1rem;
+    padding: 0.25rem 0;
+    border-bottom: none;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply > span {
@@ -20548,7 +20600,7 @@ article figure figcaption a:active {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    color: #696969;
+    color: #494949;
     margin-top: 0.5rem;
 }
 
@@ -25766,7 +25818,7 @@ article .link-copy {
 @media (min-width: 769px) {
     .finder {
         grid-template-rows: 2;
-        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters filters results results results results results results results results';
+        grid-template-areas: 'query query query query query query query query query query query query' 'filters filters filters filters filters results results results results results results results';
     }
 }
 
@@ -26268,6 +26320,7 @@ article .link-copy {
     font-style: normal;
     font-weight: 600;
     margin-top: 1rem;
+    position: relative;
     display: block;
     width: 100%;
     background-color: #ffffff;
@@ -26346,31 +26399,6 @@ article .link-copy {
     outline-offset: -0.25rem;
 }
 
-.finder__filter legend button .underline-transition__title {
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.25rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition
-            stretches beyond the element
-        **/
-    display: inline;
-}
-
-.finder__filter legend button:focus .underline-transition__title {
-    background-size: 100% 0.25rem;
-}
-
-@media (hover: hover) {
-    .finder__filter legend button:hover .underline-transition__title {
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.25rem;
-        color: #1e1e1e;
-    }
-}
-
 .finder__filter legend button:hover .icon {
     color: #d61726;
     transition: color 0.6s;
@@ -26404,6 +26432,15 @@ article .link-copy {
     margin-top: 0.5rem;
 }
 
+.finder__filter legend[data-open='true']:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 3rem);
+    border-top: 0.0625rem solid #a1a1a1;
+    left: 1.5rem;
+    bottom: 0;
+}
+
 .finder__filter legend[data-open='true'] + ul {
     display: block;
 }
@@ -26422,22 +26459,16 @@ article .link-copy {
     padding: 0.75rem 1.5rem;
 }
 
-.finder__filter ul:before {
-    content: '';
-    position: absolute;
-    width: calc(100% - 3rem);
-    border-top: 0.125rem solid #a1a1a1;
-}
-
 .finder__filter li {
     align-items: center;
     display: flex;
     flex-direction: row;
-    margin-top: 0;
 }
 
-.finder__filter li:nth-child(1) {
-    margin-top: 0.5rem;
+.underline-transition__title:hover, .underline-transition__title:active {
+    border-bottom: 0.0625rem solid #a1a1a1;
+    transition: border-bottom 0.6s;
+    box-sizing: border-box;
 }
 
 .finder__appliedfilters {
@@ -26446,6 +26477,7 @@ article .link-copy {
     flex-wrap: wrap;
     list-style-type: none;
     margin-left: 0;
+    margin-bottom: 1rem;
     max-width: unset;
 }
 
@@ -26464,57 +26496,26 @@ article .link-copy {
 }
 
 .finder__appliedfilters button {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
+    background: initial;
+    border-radius: 0.25rem;
+    border: none;
     color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    transition: background-size 0.2s ease-in-out;
-    color: #006bbd;
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
+    display: inline-flex;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    transition: background-color 0.6s, transform 0.6s;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+    background: #d61726;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+    background-color: #d61726;
+    border-color: #d61726;
+    color: #ffffff;
 }
 
-@media (hover: hover) {
-    .finder__appliedfilters button:hover {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
+.finder__appliedfilters button:disabled {
+    cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -26523,98 +26524,166 @@ article .link-copy {
     }
 }
 
-@media (hover: hover) {
-    .finder__appliedfilters button:hover {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+@media (max-width: 432px) {
+    .finder__appliedfilters button {
+        display: flex;
+        justify-content: center;
+        text-align: center;
     }
 }
 
-.finder__appliedfilters button:visited {
-    color: #4c2c92;
+.finder__appliedfilters button span {
+    transition: transform 0.6s;
 }
 
-.finder__appliedfilters button:focus {
-    color: #006bbd;
+.finder__appliedfilters button:after {
+    content: '\f061';
+    font-family: 'Font Awesome';
+    font-style: normal;
+    font-weight: normal;
+    opacity: 0;
+    position: absolute;
+    right: 1.5rem;
+    text-decoration: inherit;
+    transform: translateX(-0.75rem);
+    transition: background-color 0.6s, transform 0.6s;
 }
 
-@media (hover: hover) {
-    .finder__appliedfilters button:hover {
-        color: #ffffff;
+@media (prefers-reduced-motion: reduce) {
+    .finder__appliedfilters button:after {
+        transition: none;
     }
-}
-
-.finder__appliedfilters button:active {
-    color: #ffffff;
-    background-color: #006bbd;
-}
-
-.finder__appliedfilters button:visited {
-    border-bottom-color: #4c2c92;
-}
-
-.finder__appliedfilters button:focus {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-}
-
-@media (hover: hover) {
-    .finder__appliedfilters button:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-    }
-}
-
-.finder__appliedfilters button:active {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
 }
 
 .finder__appliedfilters button:focus, .finder__appliedfilters button:active {
+    background-color: transparent;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+}
+
+.finder__appliedfilters button:focus span, .finder__appliedfilters button:active span {
+    transform: translateX(-0.75rem);
+}
+
+.finder__appliedfilters button:focus:after, .finder__appliedfilters button:active:after {
+    opacity: 1;
+    transform: translateX(0.75rem);
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        background-color: transparent;
+        border: 0.125rem solid #d61726;
+        color: #ffffff;
+    }
+    .finder__appliedfilters button:hover span {
+        transform: translateX(-0.75rem);
+    }
+    .finder__appliedfilters button:hover:after {
+        opacity: 1;
+        transform: translateX(0.75rem);
+    }
+}
+
+.finder__appliedfilters button:disabled {
+    opacity: 0.7;
+}
+
+.finder__appliedfilters button:disabled span {
+    transform: none;
+}
+
+.finder__appliedfilters button:disabled:after {
+    opacity: 0;
+    transform: none;
+}
+
+.finder__appliedfilters button:visited {
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+.finder__appliedfilters button:focus {
+    background: #d61726;
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+.finder__appliedfilters button:focus:focus, .finder__appliedfilters button:focus:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.finder__appliedfilters button:visited {
-    color: #4c2c92;
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        background: #ffffff;
+        border-color: #d61726;
+        color: #d61726;
+    }
 }
 
-.finder__appliedfilters button:focus {
-    color: #006bbd;
+.finder__appliedfilters button:active {
+    border-color: #d61726;
+    box-shadow: none;
+    color: #d61726;
+    background: transparent;
+}
+
+.finder__appliedfilters button:active:focus, .finder__appliedfilters button:active:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__appliedfilters button:disabled {
+    color: #ffffff;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
+}
+
+.finder__appliedfilters button span {
+    transition: none;
+}
+
+.finder__appliedfilters button:visited {
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+.finder__appliedfilters button:after {
+    content: '';
+}
+
+.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
+    background-color: #d61726;
+    border-color: #d61726;
+    color: #ffffff;
 }
 
 @media (hover: hover) {
     .finder__appliedfilters button:hover {
+        background-color: #a8121e;
+        border-color: #a8121e;
         color: #ffffff;
     }
 }
 
 .finder__appliedfilters button:active {
+    background-color: #a8121e;
+    border-color: #a8121e;
+}
+
+.finder__appliedfilters button:disabled {
     color: #ffffff;
-    background-color: #006bbd;
+    background: #d61726;
+    border-color: #d61726;
 }
 
-.finder__appliedfilters button:visited {
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .finder__appliedfilters button:hover {
-        color: #ffffff;
-    }
-}
-
-.finder__appliedfilters button:active {
-    color: #ffffff;
-}
-
-.finder__appliedfilters button:visited {
-    border-bottom-color: #006bbd;
+.finder__appliedfilters button:active span, .finder__appliedfilters button:focus span, .finder__appliedfilters button:hover span {
+    transform: none;
 }
 
 .finder__appliedfilters button .icon {
@@ -26671,6 +26740,9 @@ article .link-copy {
     .finder__filters {
         background-color: #d8d8d8;
     }
+    .finder__filters .finder__clear {
+        display: none;
+    }
 }
 
 @media (min-width: 769px) {
@@ -26709,7 +26781,13 @@ article .link-copy {
     justify-content: center;
 }
 
-.finder__filters__heading .finder__clear {
+@media (min-width: 769px) {
+    .finder__filters__heading .finder__clear {
+        display: none;
+    }
+}
+
+.finder__clear {
     font-size: 1rem;
     background: initial;
     border-radius: 0.25rem;
@@ -26728,31 +26806,32 @@ article .link-copy {
     border-color: #d61726;
     color: #d61726;
     margin-right: 1rem;
+    background-color: #ffffff;
 }
 
-.finder__filters__heading .finder__clear:disabled {
+.finder__clear:disabled {
     cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .finder__filters__heading .finder__clear {
+    .finder__clear {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .finder__filters__heading .finder__clear {
+    .finder__clear {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.finder__filters__heading .finder__clear span {
+.finder__clear span {
     transition: transform 0.6s;
 }
 
-.finder__filters__heading .finder__clear:after {
+.finder__clear:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -26766,66 +26845,66 @@ article .link-copy {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .finder__filters__heading .finder__clear:after {
+    .finder__clear:after {
         transition: none;
     }
 }
 
-.finder__filters__heading .finder__clear:focus, .finder__filters__heading .finder__clear:active {
+.finder__clear:focus, .finder__clear:active {
     background-color: transparent;
     border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
-.finder__filters__heading .finder__clear:focus span, .finder__filters__heading .finder__clear:active span {
+.finder__clear:focus span, .finder__clear:active span {
     transform: translateX(-0.75rem);
 }
 
-.finder__filters__heading .finder__clear:focus:after, .finder__filters__heading .finder__clear:active:after {
+.finder__clear:focus:after, .finder__clear:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .finder__filters__heading .finder__clear:hover {
+    .finder__clear:hover {
         background-color: transparent;
         border: 0.125rem solid #d61726;
         color: #ffffff;
     }
-    .finder__filters__heading .finder__clear:hover span {
+    .finder__clear:hover span {
         transform: translateX(-0.75rem);
     }
-    .finder__filters__heading .finder__clear:hover:after {
+    .finder__clear:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.finder__filters__heading .finder__clear:disabled {
+.finder__clear:disabled {
     opacity: 0.7;
 }
 
-.finder__filters__heading .finder__clear:disabled span {
+.finder__clear:disabled span {
     transform: none;
 }
 
-.finder__filters__heading .finder__clear:disabled:after {
+.finder__clear:disabled:after {
     opacity: 0;
     transform: none;
 }
 
-.finder__filters__heading .finder__clear:visited {
+.finder__clear:visited {
     border-color: #0c0c0e;
     color: #0c0c0e;
 }
 
-.finder__filters__heading .finder__clear:focus {
+.finder__clear:focus {
     background: #ffffff;
     color: #0c0c0e;
     border-color: #0c0c0e;
 }
 
-.finder__filters__heading .finder__clear:focus:focus, .finder__filters__heading .finder__clear:focus:active {
+.finder__clear:focus:focus, .finder__clear:focus:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
@@ -26833,50 +26912,56 @@ article .link-copy {
 }
 
 @media (hover: hover) {
-    .finder__filters__heading .finder__clear:hover {
+    .finder__clear:hover {
         background: #0c0c0e;
         border-color: #0c0c0e;
         color: #ffffff;
     }
 }
 
-.finder__filters__heading .finder__clear:active {
+.finder__clear:active {
     background: #0c0c0e;
     border-color: #0c0c0e;
     box-shadow: none;
     color: #ffffff;
 }
 
-.finder__filters__heading .finder__clear:active:focus, .finder__filters__heading .finder__clear:active:active {
+.finder__clear:active:focus, .finder__clear:active:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.finder__filters__heading .finder__clear:disabled {
+.finder__clear:disabled {
     color: #0c0c0e;
     background: transparent;
     border: 0.125rem solid #0c0c0e;
 }
 
-.finder__filters__heading .finder__clear span {
+.finder__clear span {
     transition: none;
 }
 
-.finder__filters__heading .finder__clear:after {
+.finder__clear:after {
     content: '';
 }
 
-.finder__filters__heading .finder__clear:active span, .finder__filters__heading .finder__clear:focus span, .finder__filters__heading .finder__clear:hover span {
+.finder__clear:active span, .finder__clear:focus span, .finder__clear:hover span {
     transform: none;
 }
 
-.finder__filters__heading .finder__clear .fa-times {
+.finder__clear .fa-times {
     margin-right: 0.25rem;
 }
 
-.finder__filters__heading .finder__clear:hover, .finder__filters__heading .finder__clear:active {
+.finder__clear:focus {
+    background-color: #ffffff;
+    color: #d61726;
+    border-color: #d61726;
+}
+
+.finder__clear:hover, .finder__clear:active {
     color: #ffffff;
     background-color: #d61726;
     border-color: #d61726;
@@ -27293,6 +27378,7 @@ article .link-copy {
     display: inline;
     float: left;
     font-size: 1.424rem;
+    margin-top: 1.5rem;
 }
 
 @media (min-width: 769px) {
@@ -27342,6 +27428,24 @@ article .link-copy {
     width: 100%;
     position: fixed;
     bottom: 0;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply:hover, .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply:active {
+    background: #9e111c;
+    outline-color: #ffffff;
+    outline-offset: -0.1875rem;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply:focus {
+    outline-color: #ffffff;
+    outline-offset: -0.1875rem;
+}
+
+.finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply .fa-chevron-left {
+    position: absolute;
+    left: 1rem;
+    padding: 0.25rem 0;
+    border-bottom: none;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__apply > span {
@@ -27853,7 +27957,7 @@ article .link-copy {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    color: #696969;
+    color: #494949;
     margin-top: 0.5rem;
 }
 
