@@ -18509,7 +18509,7 @@ article figure figcaption a:active {
     line-height: 1.25;
     letter-spacing: -0.011em;
     background: linear-gradient(45deg, #3e1031, #d61726);
-    padding: 0.1875rem;
+    padding: 0.1875rem 0.1875rem 0.125rem 0.1875rem;
     z-index: 3;
     display: flex;
     flex-grow: 1;
@@ -18556,6 +18556,10 @@ article figure figcaption a:active {
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
+}
+
+.finder__query__input:focus-within .finder__clear {
+    display: block;
 }
 
 .finder__query__input input {
@@ -18631,15 +18635,31 @@ article figure figcaption a:active {
 }
 
 .finder__query__input input:not(:placeholder-shown) {
-    font-style: normal;
+    font-style: 400;
+}
+
+.finder__query__input input::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+.finder__query__input input::-moz-placeholder {
+    font-style: italic;
+}
+
+.finder__query__input input::-ms-input-placeholder {
+    font-style: italic;
+}
+
+.finder__query__input input::placeholder {
+    font-style: italic;
 }
 
 .finder__query__input input:placeholder-shown {
     color: #696969;
-    font-style: italic;
 }
 
 .finder__query__input .finder__clear {
+    display: none;
     height: 100%;
     position: absolute;
     right: 1rem;
@@ -18675,7 +18695,7 @@ article figure figcaption a:active {
 
 .finder__query__input .finder__clear .icon:before {
     position: relative;
-    top: 0.25rem;
+    top: 0.3125rem;
 }
 
 @media (max-width: 768px) {
@@ -18700,7 +18720,7 @@ article figure figcaption a:active {
 
 .finder__query__icon--wrapper {
     background: #ffffff;
-    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    padding: 0.3125rem 0.5rem 0.5rem 1rem;
 }
 
 .finder__query__submit {
@@ -26409,7 +26429,7 @@ article .link-copy {
     line-height: 1.25;
     letter-spacing: -0.011em;
     background: linear-gradient(45deg, #3e1031, #d61726);
-    padding: 0.1875rem;
+    padding: 0.1875rem 0.1875rem 0.125rem 0.1875rem;
     z-index: 3;
     display: flex;
     flex-grow: 1;
@@ -26456,6 +26476,10 @@ article .link-copy {
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
+}
+
+.finder__query__input:focus-within .finder__clear {
+    display: block;
 }
 
 .finder__query__input input {
@@ -26531,15 +26555,31 @@ article .link-copy {
 }
 
 .finder__query__input input:not(:placeholder-shown) {
-    font-style: normal;
+    font-style: 400;
+}
+
+.finder__query__input input::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+.finder__query__input input::-moz-placeholder {
+    font-style: italic;
+}
+
+.finder__query__input input::-ms-input-placeholder {
+    font-style: italic;
+}
+
+.finder__query__input input::placeholder {
+    font-style: italic;
 }
 
 .finder__query__input input:placeholder-shown {
     color: #696969;
-    font-style: italic;
 }
 
 .finder__query__input .finder__clear {
+    display: none;
     height: 100%;
     position: absolute;
     right: 1rem;
@@ -26575,7 +26615,7 @@ article .link-copy {
 
 .finder__query__input .finder__clear .icon:before {
     position: relative;
-    top: 0.25rem;
+    top: 0.3125rem;
 }
 
 @media (max-width: 768px) {
@@ -26600,7 +26640,7 @@ article .link-copy {
 
 .finder__query__icon--wrapper {
     background: #ffffff;
-    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    padding: 0.3125rem 0.5rem 0.5rem 1rem;
 }
 
 .finder__query__submit {

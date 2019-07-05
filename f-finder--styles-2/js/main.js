@@ -2660,14 +2660,7 @@ __webpack_require__.r(__webpack_exports__);
 const maximumSuggestions = 5,
       [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40],
       body = document.getElementsByTagName('body'),
-      backgroundFill = body[0].querySelectorAll('.background-fill'),
-      suggestedResults = body[0].querySelectorAll('.finder__query__suggestions li button');
-let updated = ''; // if (suggestedResults) {
-//     suggestedResults.addEventListener('click', function() {
-//         console.log('clicked on suggested result');
-//     });
-// }
-
+      backgroundFill = body[0].querySelectorAll('.background-fill');
 /**
  * Search input field and autocomplete.
  *
@@ -2838,35 +2831,11 @@ function finder__query(props) {
       setSuggestions([]); // keep  what they're typing
 
       setPartialQuery(e.target.value);
-      let inputVal = e.target.value;
-
-      for (const suggestedResult of suggestedResults.entries()) {
-        let suggestedText = suggestedResult[1].innerHTML;
-        /**
-         * Attempt at using appendChild. Error message => can't append (not node)
-         */
-        // var el = document.createElement('strong');
-        // var text = document.createTextNode(inputVal);
-        // el.appendChild(text);
-        // let updated = suggestedText.replace(
-        //     inputVal, el);
-        // suggestedResult[1].appendChild(updated);
-
-        /**
-         * This works but uses .innerHTML. See log for updated HTML. However, DOM doesn't always update correctly.
-         */
-
-        updated = '';
-        updated = suggestedText.replace(inputVal, "<strong>".concat(inputVal, "</span>")); // console.log(updated);
-
-        suggestedResult[1].innerHTML = updated;
-      }
       /**
        * if we have a request to the suggestions service in progress,
        * cancel it. Stops old suggestions overwriting new ones because
        * the requests can't keep up with fast typing.
        */
-
 
       call.cancel();
 
@@ -2897,7 +2866,7 @@ function finder__query(props) {
     "aria-hidden": "true"
   }), ' ', react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
     className: "finder__query__submit__text"
-  }, "Find")))); //  }
+  }, "Find"))));
 }
 
 finder__query.propTypes = {
