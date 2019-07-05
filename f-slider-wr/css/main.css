@@ -23066,6 +23066,128 @@ blockquote footer {
     max-width: unset;
 }
 
+ul.slider__slides {
+    margin: 0;
+}
+
+.slider__slide {
+    list-style: none;
+    display: none;
+}
+
+.slider__controls__numbered-indicator {
+    padding: 1rem 0 1rem;
+    color: #8a8a8a;
+}
+
+.slider__controls__numbered-indicator__active-slide {
+    color: #7c2062;
+}
+
+.slider__slide--active {
+    display: block;
+}
+
+.card--testimonial.slider__slide--active {
+    display: block;
+}
+
+.card--testimonial--photo.slider__slide--active {
+    display: grid;
+}
+
+.slider__controls__progress-indicator {
+    margin: 1.5rem 0 1rem;
+    height: 0.1875rem;
+    width: 50%;
+    background: #d8d8d8;
+    position: relative;
+}
+
+@media (min-width: 769px) {
+    .slider__controls__progress-indicator {
+        width: 60%;
+    }
+}
+
+.slider__controls__numbered-indicator__separator {
+    margin: 0 0.25rem;
+}
+
+.slider__controls__progress-indicator__progress {
+    background: #7c2062;
+    width: 0;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.slider__controls__numbered-indicator {
+    display: none;
+}
+
+.slider--show-numbered-indicator .slider__controls__numbered-indicator {
+    display: block;
+}
+
+.slider--show-numbered-indicator .slider__controls__progress-indicator {
+    display: none;
+}
+
+.slider--control__layout1 .slider__controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+@media (min-width: 769px) {
+    .slider--control__layout1 .slider__controls {
+        margin-top: 0;
+    }
+}
+
+.slider--control__layout1 .slider__buttons {
+    margin-left: 2rem;
+}
+
+.slider--control__layout2 {
+    position: relative;
+    background-color: #f2f2f2;
+    padding-bottom: 2.5rem;
+}
+
+.slider--control__layout2 .slider__controls {
+    margin-top: 1.25rem;
+}
+
+.slider--control__layout2 .slider__controls--progress-bar {
+    margin-top: 1.5rem;
+}
+
+.slider--control__layout2 .slider__controls__progress-indicator {
+    margin: auto;
+    width: 80%;
+}
+
+.slider--control__layout2 .arrow-left--btn-prev,
+.slider--control__layout2 .arrow-right--btn-next {
+    position: absolute;
+    top: 45%;
+}
+
+.slider--control__layout2 .arrow-left--btn-prev {
+    left: 0;
+}
+
+.slider--control__layout2 .arrow-right--btn-next {
+    right: 0;
+}
+
+.no-js .slider__slide {
+    display: block;
+}
+
 @media print {
     .js .tabs .tabs__links,
     .js .tabs--accordion .accordion {
