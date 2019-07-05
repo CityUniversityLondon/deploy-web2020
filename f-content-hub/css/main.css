@@ -29118,7 +29118,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-area: video;
 }
 
-.content-hub .finder {
+.content-hub .wrapper--finder {
     grid-area: finder;
 }
 
@@ -29128,14 +29128,14 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-column-gap: 1.5rem;
     display: grid;
     grid-template-rows: 2;
-    grid-template-areas: 'careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro . careers-images careers-images careers-images careers-images careers-images careers-images careers-images .';
+    grid-template-areas: 'careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro . careers-images careers-images careers-images careers-images careers-images careers-images careers-images' 'job-title job-title job-title job-title job-title job-title job-title job-title employer employer employer employer employer employer employer employer ';
 }
 
-.content-hub .careers .intro {
+.content-hub .careers__intro {
     grid-area: careers-intro;
 }
 
-.content-hub .careers .images {
+.content-hub .careers__images {
     grid-area: careers-images;
     grid-template-columns: repeat(9, 1fr);
     grid-column-gap: 1.5rem;
@@ -29144,12 +29144,26 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-template-areas: 'primary primary primary primary primary primary . . .' '. . . . secondary secondary secondary secondary .';
 }
 
-.content-hub .careers .images .primary {
+.content-hub .careers__images--primary {
     grid-area: primary;
 }
 
-.content-hub .careers .images .secondary {
+.content-hub .careers__images--secondary {
     grid-area: secondary;
+    margin-top: -6rem;
+}
+
+.content-hub .careers__job-titles {
+    grid-area: job-title;
+}
+
+.content-hub .careers__job-titles ul {
+    -moz-columns: 2;
+         columns: 2;
+}
+
+.content-hub .careers__job-locations {
+    grid-area: employer;
 }
 
 .content-hub p {
