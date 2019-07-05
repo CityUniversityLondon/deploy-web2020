@@ -19616,6 +19616,12 @@ article figure figcaption a:active {
     border-color: #d61726;
 }
 
+@media (max-width: 767px) {
+    .finder__filters .finder__clear {
+        display: none;
+    }
+}
+
 .finder__filters__heading__btn-icon {
     display: flex;
 }
@@ -26977,6 +26983,12 @@ article .link-copy {
     color: #ffffff;
     background-color: #d61726;
     border-color: #d61726;
+}
+
+@media (max-width: 767px) {
+    .finder__filters .finder__clear {
+        display: none;
+    }
 }
 
 .finder__filters__heading__btn-icon {
