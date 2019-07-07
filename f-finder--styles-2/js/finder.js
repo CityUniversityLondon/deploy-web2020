@@ -1194,54 +1194,6 @@ finder__radio.propTypes = {
 
 /***/ }),
 
-/***/ "./src/patterns/finder/components/filters/finder__select.js":
-/*!******************************************************************!*\
-  !*** ./src/patterns/finder/components/filters/finder__select.js ***!
-  \******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/**
- * @module patterns/finder/components/finder__select
- * @author Mark Skinsley <mark.skinsley@city.ac.uk>
- * @copyright City, University of London 2019
- */
-
-
-/**
- * Render select facet.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__select() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "finder__select finder__select--level"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "finder__select__overline",
-    htmlFor: "study-level"
-  }, "Level"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "All levels"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Undergraduate"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", null, "Postgraduate")));
-}
-
-finder__select.propTypes = {
-  facet: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object),
-  update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__select);
-
-/***/ }),
-
 /***/ "./src/patterns/finder/components/query/finder__appliedfilters.js":
 /*!************************************************************************!*\
   !*** ./src/patterns/finder/components/query/finder__appliedfilters.js ***!
@@ -1611,6 +1563,46 @@ function finder__query(props) {
       }
     }
   }), suggestionsList, clear);
+  let hub = document.getElementsByClassName('wrapper--finder--hub');
+  hub = hub[0];
+
+  if (hub) {
+    /**
+     * Build URL taking users from content hub to listing page with selected results.
+     */
+    const finderRedirect = () => {
+      let levelParam, queryParam;
+      let levelSelect = document.getElementById('level-select');
+
+      if (levelSelect) {
+        levelParam = levelSelect.value.replace(/\s+/g, '-').toLowerCase();
+        levelParam = "meta_L_orsand=".concat(levelParam);
+      }
+
+      let queryValue = document.getElementById(inputId);
+
+      if (queryValue) {
+        queryParam = queryValue.value.replace(/\s+/g, '+').toLowerCase();
+        queryParam = "query=".concat(queryParam);
+      }
+
+      window.location.href = "https://web2020.city.ac.uk/documentation/paint-layouts/listing/courses?".concat(levelParam, "&").concat(queryParam);
+    };
+
+    return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("fieldset", {
+      className: "finder__query"
+    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+      type: "submit",
+      className: "finder__query__submit finder__query__submit--redirect",
+      onClick: () => finderRedirect()
+    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+      className: "fal fa-search finder__query__submit__icon",
+      "aria-hidden": "true"
+    }), ' ', react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+      className: "finder__query__submit__text"
+    }, "Find"))));
+  }
+
   return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("fieldset", {
     className: "finder__query"
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
@@ -2054,7 +2046,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/filters/finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
 /* harmony import */ var _components_filters_finder_mobilefilters__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/filters/finder__mobilefilters */ "./src/patterns/finder/components/filters/finder__mobilefilters.js");
 /* harmony import */ var _components_results_finder_results__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/results/finder__results */ "./src/patterns/finder/components/results/finder__results.js");
-/* harmony import */ var _components_filters_finder_select__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/filters/finder__select */ "./src/patterns/finder/components/filters/finder__select.js");
 
 
 
@@ -2074,7 +2065,6 @@ __webpack_require__.r(__webpack_exports__);
  * @author Tom Waddington <tom.waddington.1@city.ac.uk>
  * @copyright City, University of London 2019
  */
-
 
 
 
@@ -2236,16 +2226,16 @@ function Finder(props) {
       }
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
       className: "finder__title"
-    }, "Find ", props.config.facetLabels[2].funnelbackName, " courses"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_filters_finder_select__WEBPACK_IMPORTED_MODULE_14__["default"], null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    }, "Find ", props.config.facetLabels[2].funnelbackName, " courses"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      className: "finder__select finder__select--level"
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+      className: "finder__select__overline",
+      htmlFor: "study-level"
+    }, "Level"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
+      id: "level-select"
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "Undergraduate"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "Postgraduate"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_10__["default"], {
       config: props.config,
       query: query,
-      update: updater,
-      updating: updating
-    }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_results_finder_results__WEBPACK_IMPORTED_MODULE_13__["default"], {
-      query: query,
-      response: funnelbackResponse,
-      summariseAs: props.config.summariseAs,
-      type: props.config.resultCard,
       update: updater,
       updating: updating
     }));

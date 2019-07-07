@@ -18476,6 +18476,34 @@ article figure figcaption a:active {
     grid-area: main;
 }
 
+@media (max-width: 432px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 4;
+        grid-template-areas: 'title title title title title title' 'query query query query query query' 'select select select select select select' 'results results results results results results';
+    }
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 4;
+        grid-template-areas: 'title title title title title title title title title title title title' 'query query query query query query query query query query query query' 'select select select select select select select select select select select select' 'results results results results results results results results results results results results';
+    }
+}
+
+@media (min-width: 769px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'title title title title title title title title title title title title' 'select select select select query query query query query query query query' '. . . results results results results results results results results results';
+    }
+}
+
+@media (min-width: 901px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'title title title title title title title title title title title title title title title title title title' 'select select select select select query query query query query query query query query query query query query' '. . . . . results results results results results results results results results results results results results';
+    }
+}
+
 .finder__title {
     grid-area: title;
     text-align: center;
@@ -18492,6 +18520,10 @@ article figure figcaption a:active {
     flex-direction: row;
     flex-wrap: nowrap;
     height: 100%;
+}
+
+.wrapper--finder--hub .finder__query__input {
+    padding: 0.1875rem 0.1275rem 0.1875rem 0.1875rem;
 }
 
 .finder__query__input {
@@ -18576,6 +18608,7 @@ article figure figcaption a:active {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
+    font-family: "Plex Sans", sans-serif;
     font-weight: 450;
     padding: 0.5rem;
     width: 100%;
@@ -18624,6 +18657,8 @@ article figure figcaption a:active {
 .finder__query__input input:focus {
     outline: 0;
     font-style: normal;
+    font-weight: 700;
+    color: #1e1e1e;
 }
 
 .finder__query__input input:focus::-ms-input-placeholder, .finder__query__input input:focus::-ms-input-placeholder {
@@ -18632,10 +18667,6 @@ article figure figcaption a:active {
 
 .finder__query__input input:focus::placeholder, .finder__query__input input:focus::-ms-input-placeholder {
     opacity: 0;
-}
-
-.finder__query__input input:not(:placeholder-shown) {
-    font-style: 400;
 }
 
 .finder__query__input input::-webkit-input-placeholder {
@@ -18721,6 +18752,10 @@ article figure figcaption a:active {
 .finder__query__icon--wrapper {
     background: #ffffff;
     padding: 0.3125rem 0.5rem 0.5rem 1rem;
+}
+
+.wrapper--finder--hub .finder__query__icon--wrapper {
+    padding-top: 0.5625rem;
 }
 
 .finder__query__submit {
@@ -26396,6 +26431,34 @@ article .link-copy {
     grid-area: main;
 }
 
+@media (max-width: 432px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 4;
+        grid-template-areas: 'title title title title title title' 'query query query query query query' 'select select select select select select' 'results results results results results results';
+    }
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 4;
+        grid-template-areas: 'title title title title title title title title title title title title' 'query query query query query query query query query query query query' 'select select select select select select select select select select select select' 'results results results results results results results results results results results results';
+    }
+}
+
+@media (min-width: 769px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'title title title title title title title title title title title title' 'select select select select query query query query query query query query' '. . . results results results results results results results results results';
+    }
+}
+
+@media (min-width: 901px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'title title title title title title title title title title title title title title title title title title' 'select select select select select query query query query query query query query query query query query query' '. . . . . results results results results results results results results results results results results results';
+    }
+}
+
 .finder__title {
     grid-area: title;
     text-align: center;
@@ -26412,6 +26475,10 @@ article .link-copy {
     flex-direction: row;
     flex-wrap: nowrap;
     height: 100%;
+}
+
+.wrapper--finder--hub .finder__query__input {
+    padding: 0.1875rem 0.1275rem 0.1875rem 0.1875rem;
 }
 
 .finder__query__input {
@@ -26496,6 +26563,7 @@ article .link-copy {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
+    font-family: "Plex Sans", sans-serif;
     font-weight: 450;
     padding: 0.5rem;
     width: 100%;
@@ -26544,6 +26612,8 @@ article .link-copy {
 .finder__query__input input:focus {
     outline: 0;
     font-style: normal;
+    font-weight: 700;
+    color: #1e1e1e;
 }
 
 .finder__query__input input:focus::-ms-input-placeholder, .finder__query__input input:focus::-ms-input-placeholder {
@@ -26552,10 +26622,6 @@ article .link-copy {
 
 .finder__query__input input:focus::placeholder, .finder__query__input input:focus::-ms-input-placeholder {
     opacity: 0;
-}
-
-.finder__query__input input:not(:placeholder-shown) {
-    font-style: 400;
 }
 
 .finder__query__input input::-webkit-input-placeholder {
@@ -26641,6 +26707,10 @@ article .link-copy {
 .finder__query__icon--wrapper {
     background: #ffffff;
     padding: 0.3125rem 0.5rem 0.5rem 1rem;
+}
+
+.wrapper--finder--hub .finder__query__icon--wrapper {
+    padding-top: 0.5625rem;
 }
 
 .finder__query__submit {
