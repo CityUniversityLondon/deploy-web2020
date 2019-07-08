@@ -23093,13 +23093,19 @@ blockquote footer {
 }
 
 .slider__active-slide {
-    display: block;
+    display: flex;
     grid-column: 6 / 14;
+}
+
+@media (max-width: 1280px) {
+    .slider__active-slide {
+        grid-column: 3 / 17;
+    }
 }
 
 @media (max-width: 900px) {
     .slider__active-slide {
-        grid-column: 3 / 11;
+        grid-column: 2 / 12;
     }
 }
 
@@ -23119,9 +23125,15 @@ blockquote footer {
     flex-direction: row-reverse;
 }
 
+@media (max-width: 1280px) {
+    .slider__controls__wrap {
+        grid-column: 3 / 17;
+    }
+}
+
 @media (max-width: 900px) {
     .slider__controls__wrap {
-        grid-column: 3 / 11;
+        grid-column: 2 / 12;
     }
 }
 
