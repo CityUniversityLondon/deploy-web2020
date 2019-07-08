@@ -5258,6 +5258,7 @@ function initSlider(slider) {
       } else {
         // only displays first slide and hides rest
         item.classList.add('slider__slide');
+        slider.style.display = 'grid';
         /* generates controls */
 
         let sliderControlsWrap = createElement('div', null, null, 'slider__controls__wrap');

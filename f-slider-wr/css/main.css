@@ -23067,7 +23067,6 @@ blockquote footer {
 }
 
 .slider {
-    display: grid !important;
     grid-row-gap: 0;
     display: grid;
 }
