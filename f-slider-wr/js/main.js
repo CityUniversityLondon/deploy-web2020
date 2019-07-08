@@ -5254,12 +5254,13 @@ function initSlider(slider) {
   if (sliderCollectionLength > 1) {
     sliderCollection.forEach(function (item, i) {
       if (i < 1) {
-        item.classList.add('slide__active-slide');
+        item.classList.add('slider__active-slide');
       } else {
         // only displays first slide and hides rest
-        item.style.display = 'none';
+        item.classList.add('slider__slide');
         /* generates controls */
 
+        let sliderControlsWrap = createElement('div', null, null, 'slider__controls__wrap');
         let sliderControls = createElement('div', null, null, 'slider__controls');
         let sliderProgress = createElement('div', null, null, 'slider__controls__progress');
         let sliderButtons = createElement('div', null, null, 'slider__controls__buttons'); // generates progress
@@ -5267,11 +5268,13 @@ function initSlider(slider) {
         sliderProgress.appendChild(createElement('span', '1', null, 'slide__controls__progress__active'));
         sliderProgress.appendChild(createElement('span', '/', null, 'slide__controls__progress__separator'));
         sliderProgress.appendChild(createElement('span', sliderCollectionLength, null, 'slide__controls__progress__total'));
-        slider.appendChild(sliderControls).appendChild(sliderProgress); // generates buttons
+        sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
+        slider.appendChild(sliderControlsWrap); // generates buttons
 
         sliderButtons.appendChild(createElement('button', null, 'Previous item', 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev'));
         sliderButtons.appendChild(createElement('button', null, 'Next item', 'fas', 'fa-arrow-right', 'slider__controls__buttons__next'));
-        slider.appendChild(sliderControls).appendChild(sliderButtons); // Adds event listener to buttons
+        sliderControls.appendChild(sliderButtons);
+        slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
 
         slider.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
           handleSlideChange(-1, slider);
@@ -5286,27 +5289,11 @@ function initSlider(slider) {
 
 function createElement(type, content, arialabel, className1, className2, className3) {
   let el = document.createElement(type);
-
-  if (content) {
-    el.appendChild(document.createTextNode(content));
-  }
-
-  if (className1) {
-    el.classList.add(className1);
-  }
-
-  if (className2) {
-    el.classList.add(className2);
-  }
-
-  if (className3) {
-    el.classList.add(className3);
-  }
-
-  if (arialabel) {
-    el.setAttribute('aria-label', arialabel);
-  }
-
+  content ? el.appendChild(document.createTextNode(content)) : null;
+  className1 ? el.classList.add(className1) : null;
+  className2 ? el.classList.add(className2) : null;
+  className3 ? el.classList.add(className3) : null;
+  arialabel ? el.setAttribute('aria-label', arialabel) : null;
   return el;
 }
 
@@ -5317,16 +5304,21 @@ function handleSlideChange(direction, slider) {
   let sliderCollection = slider.querySelectorAll('li'); // ensures you don't slide past first and last slide
 
   if (newSlide !== 0 && !(newSlide > sliderCollectionLength)) {
-    // udpate progress
+    // udpates progress
     slider.querySelectorAll('.slide__controls__progress__active')[0].innerHTML = newSlide;
     sliderCollection.forEach(function (item, i) {
       //displays new slide
       if (i == newSlide - 1) {
-        item.style.display = 'block';
+        item.classList.remove('slider__slide');
+        item.classList.add('slider__active-slide');
       } else {
-        item.style.display = 'none';
+        item.classList.remove('slider__active-slide');
+        item.classList.add('slider__slide');
       }
-    });
+    }); // disables next & prev buttons when reaching beginning or end of slides
+
+    newSlide == 1 ? slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled') : slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.remove('slider__controls__buttons__disabled');
+    newSlide == sliderCollectionLength ? slider.querySelectorAll('.slider__controls__buttons__next')[0].classList.add('slider__controls__buttons__disabled') : slider.querySelectorAll('.slider__controls__buttons__next')[0].classList.remove('slider__controls__buttons__disabled');
   }
 }
 
