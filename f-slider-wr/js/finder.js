@@ -882,19 +882,24 @@ function dependencyMet(facet, facetMap) {
 function finder__filters(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_clear_filter__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    clear: props.clear,
+    query: props.query
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_4__["default"], {
     config: props.config,
     query: props.query,
     update: props.update
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__heading"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Filter ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_clear_filter__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Filter ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "finder__filters__heading__btn-icon"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_clear_filter__WEBPACK_IMPORTED_MODULE_5__["default"], {
     clear: props.clear,
     query: props.query
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "far fa-sliders-h icon",
     "aria-hidden": "true"
-  })), props.config.facetLabels.map(facet => {
+  }))), props.config.facetLabels.map(facet => {
     if (dependencyMet(facet, props.query.facets)) {
       switch (facet.type) {
         case 'radio':
@@ -950,10 +955,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _finder_filters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js");
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _results_finder_results_summary__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../results/finder__results__summary */ "./src/patterns/finder/components/results/finder__results__summary.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js");
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -964,6 +970,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Tom Waddington <tom.waddington.1@city.ac.uk>
  * @copyright City, University of London 2019
  */
+
 
 
 
@@ -991,7 +998,7 @@ function finder__mobilefilters(props) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
     if (!focusTrap.activate) {
-      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_5___default()(getFilters(), {
+      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_6___default()(getFilters(), {
         onDeactivate: () => setDisplay(false),
         clickOutsideDeactivates: true
       }));
@@ -999,18 +1006,28 @@ function finder__mobilefilters(props) {
 
     if (display) {
       focusTrap.activate && focusTrap.activate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__["disableBodyScroll"])(getFilters());
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["disableBodyScroll"])(getFilters());
     } else {
       focusTrap.deactivate && focusTrap.deactivate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__["enableBodyScroll"])(getFilters());
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["enableBodyScroll"])(getFilters());
     }
   }, [display]);
   const totalMatching = props.response && props.response.summary && props.response.summary.totalMatching;
   const totalMatchingMessage = totalMatching === 1 ? 'Show 1 results' : totalMatching ? "Show ".concat(totalMatching, " results") : 'Close';
+  const summary = totalMatching >= 1 ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_results_finder_results_summary__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    currEnd: props.response.summary.currEnd,
+    currStart: props.response.summary.currStart,
+    query: props.response.query,
+    numRanks: props.response.summary.numRanks,
+    summariseAs: props.summariseAs,
+    totalMatching: props.response.summary.totalMatching
+  }) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
+    className: "finder__results__summary__heading-wrap"
+  }, "No results");
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "finder__mobilefilters",
     "data-open": display
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, summary, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     type: "button",
     className: "finder__mobilefilters__toggle",
     "aria-haspopup": true,
@@ -1043,7 +1060,9 @@ function finder__mobilefilters(props) {
     "aria-expanded": display,
     onClick: () => setDisplay(!display),
     disabled: props.updating
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, Object.keys(props.query.facets).length === 0 ? null : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "far fa-chevron-left"
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     "aria-live": "polite"
   }, props.updating ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-spinner fa-pulse icon",
@@ -1146,7 +1165,9 @@ function finder__radio(props) {
     type: "button",
     "aria-expanded": open ? 'true' : 'false',
     onClick: () => setOpen(!open)
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, props.facet.name), ' ', react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
+    className: "underline-transition__title"
+  }, props.facet.name), ' ', react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
     className: open ? 'fal fa-minus icon' : 'fal fa-plus icon',
     "aria-label": open ? 'Close filter' : 'Open filter'
   })))), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("ul", {
@@ -2339,7 +2360,7 @@ function finderConfig(url) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2356,6 +2377,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pxToRem", function() { return pxToRem; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "numberFromString", function() { return numberFromString; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMobile", function() { return isMobile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toArray", function() { return toArray; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detectIE", function() { return detectIE; });
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
@@ -2516,11 +2539,6 @@ function appendAll(elem, children) {
 /**
  * Convert a pixel value to equivalent REM value.
  *
- * @deprecated Don’t complect style and functionality like this.
- *
- * The JS should never need long-term knowlege of dimensions such that
- * converting to rem is worthwhile.
- *
  * @param {number} pxValue - Value in pixels.
  */
 
@@ -2555,6 +2573,55 @@ function isMobile() {
   if (viewPortWidth < mobileScreen) {
     return true;
   }
+}
+/**
+ *
+ * Turn DOM elements to array e.g return [li, li, li] from DOM element selecting 'li' <ul><li></li><li></li><li></li></ul>
+ *
+ * @param {object} object - Object
+ */
+
+function toArray(obj) {
+  let array = []; // iterate backwards ensuring that length is an UInt32
+
+  for (let i = obj.length >>> 0; i--;) {
+    array[i] = obj[i];
+  }
+
+  return array;
+}
+/**
+ *
+ * Check browser user agent is IE or edge and return version number
+ *
+ */
+
+function detectIE() {
+  let ua = window.navigator.userAgent;
+  let msie = ua.indexOf('MSIE ');
+
+  if (msie > 0) {
+    // IE 10 or older => return version number
+    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+  }
+
+  let trident = ua.indexOf('Trident/');
+
+  if (trident > 0) {
+    // IE 11 => return version number
+    let rv = ua.indexOf('rv:');
+    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+  }
+
+  let edge = ua.indexOf('Edge/');
+
+  if (edge > 0) {
+    // Edge (IE 12+) => return version number
+    return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+  } // other browser
+
+
+  return false;
 }
 
 /***/ }),
