@@ -15059,6 +15059,7 @@ main table td em {
     margin-top: 2rem;
     grid-row-gap: 0;
     display: grid;
+    position: relative;
 }
 
 @media (max-width: 432px) {
@@ -15091,15 +15092,23 @@ main table td em {
 }
 
 .card--testimonial-feature__details__wrap {
-    grid-column: 11 / 18;
+    grid-column: 9 / 18;
+    position: absolute;
+    display: grid;
+    grid-column-gap: 1.5rem;
+    grid-template-columns: repeat(9, 1fr);
+}
+
+.card--testimonial-feature__details__title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    grid-column: 3 / -1;
 }
 
 .card--testimonial-feature__details {
-    left: -30%;
-    position: relative;
     background: #ffffff;
-    width: 130%;
     padding-bottom: 2rem;
+    grid-column: 1 / -1;
 }
 
 .card--testimonial-feature__details:before {
@@ -15118,8 +15127,11 @@ main table td em {
     margin-right: 3.25rem;
 }
 
-/*======================================*/
-.card--testimonial-feature__quote {
+.card--testimonial-feature__details__column:first-child {
+    margin-right: 1.5rem;
+}
+
+.card--testimonial-feature__details__quote {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
@@ -15135,41 +15147,41 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--testimonial-feature__quote {
+    .card--testimonial-feature__details__quote {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--testimonial-feature__quote {
+    .card--testimonial-feature__details__quote {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--testimonial-feature__quote {
+    .card--testimonial-feature__details__quote {
         letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--testimonial-feature__quote {
+    .card--testimonial-feature__details__quote {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--testimonial-feature__quote {
+    .card--testimonial-feature__details__quote {
         letter-spacing: -0.017em;
     }
 }
 
-.card--testimonial-feature__quote i,
-.card--testimonial-feature__quote em {
+.card--testimonial-feature__details__quote i,
+.card--testimonial-feature__details__quote em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
 }
 
-.card--testimonial-feature__quote-marks {
+.card--testimonial-feature__details__quote-marks {
     font-size: 1.802rem;
     line-height: 1.25;
     letter-spacing: -0.016em;
@@ -15178,40 +15190,40 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--testimonial-feature__quote-marks {
+    .card--testimonial-feature__details__quote-marks {
         letter-spacing: -0.016em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--testimonial-feature__quote-marks {
+    .card--testimonial-feature__details__quote-marks {
         letter-spacing: -0.016em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--testimonial-feature__quote-marks {
+    .card--testimonial-feature__details__quote-marks {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--testimonial-feature__quote-marks {
+    .card--testimonial-feature__details__quote-marks {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--testimonial-feature__quote-marks {
+    .card--testimonial-feature__details__quote-marks {
         letter-spacing: -0.017em;
     }
 }
 
-.card--testimonial-feature__author {
+.card--testimonial-feature__details__author {
     margin-top: 2rem;
 }
 
-.card--testimonial-feature__author p {
+.card--testimonial-feature__details__author p {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
@@ -15221,37 +15233,33 @@ main table td em {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--testimonial-feature__author p {
+    .card--testimonial-feature__details__author p {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--testimonial-feature__author p {
+    .card--testimonial-feature__details__author p {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--testimonial-feature__author p {
+    .card--testimonial-feature__details__author p {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--testimonial-feature__author p {
+    .card--testimonial-feature__details__author p {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--testimonial-feature__author p {
+    .card--testimonial-feature__details__author p {
         letter-spacing: -0.017em;
     }
-}
-
-.card--testimonial-feature__column:first-child {
-    margin-right: 1.5rem;
 }
 
 @media (min-width: 769px) {
@@ -15260,21 +15268,13 @@ main table td em {
     }
 }
 
-.card--testimonial-feature--photo .card--testimonial-feature__author {
-    display: flex;
-}
-
-.card--testimonial-feature--photo .card--testimonial-feature__author__photo {
-    margin-left: 1rem;
-}
-
 @media (min-width: 769px) {
-    .card--testimonial-feature--photo .card--testimonial-feature__photo {
+    .card--testimonial-feature--photo .card--testimonial-feature__details__photo {
         margin-bottom: 0;
     }
 }
 
-.card--testimonial-feature--photo .card--testimonial-feature__photo--large {
+.card--testimonial-feature--photo .card--testimonial-feature__details__photo--large {
     margin-bottom: 2rem;
     max-width: 8rem;
     display: none;
@@ -15282,17 +15282,25 @@ main table td em {
 }
 
 @media (min-width: 769px) {
-    .card--testimonial-feature--photo .card--testimonial-feature__photo--large {
+    .card--testimonial-feature--photo .card--testimonial-feature__details__photo--large {
         display: block;
     }
 }
 
-.card--testimonial-feature--photo .card--testimonial-feature__photo--small {
+.card--testimonial-feature--photo .card--testimonial-feature__details__author {
+    display: flex;
+}
+
+.card--testimonial-feature--photo .card--testimonial-feature__details__author__photo {
+    margin-left: 1rem;
+}
+
+.card--testimonial-feature--photo .card--testimonial-feature__details__photo--small {
     max-width: 3rem;
 }
 
 @media (min-width: 769px) {
-    .card--testimonial-feature--photo .card--testimonial-feature__photo--small {
+    .card--testimonial-feature--photo .card--testimonial-feature__details__photo--small {
         display: none;
     }
 }
