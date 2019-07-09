@@ -2780,14 +2780,7 @@ function finder__query(props) {
       e.target.placeholder = '';
     },
     onChange: e => {
-      let queryValue = document.getElementById(inputId);
-
-      if (queryValue) {
-        queryParam = queryValue.value.replace(/\s+/g, '+').toLowerCase();
-        queryParam = "query=".concat(queryParam);
-      } //clear old suggestions
-
-
+      //clear old suggestions
       setSuggestions([]); // keep  what they're typing
 
       setPartialQuery(e.target.value);
@@ -2812,6 +2805,14 @@ function finder__query(props) {
       } else {
         // input is empty, empty suggestions
         setSuggestions([]);
+      } // Build query param to pass to listing page
+
+
+      let queryValue = document.getElementById(inputId);
+
+      if (queryValue) {
+        queryParam = queryValue.value.replace(/\s+/g, '+').toLowerCase();
+        queryParam = "query=".concat(queryParam);
       }
     }
   }), suggestionsList, clear);
@@ -2829,13 +2830,6 @@ function finder__query(props) {
       if (levelSelect) {
         levelParam = levelSelect.value.replace(/\s+/g, '-').toLowerCase();
         levelParam = "meta_L_orsand=".concat(levelParam);
-      }
-
-      let queryValue = document.getElementById(inputId);
-
-      if (queryValue) {
-        queryParam = queryValue.value.replace(/\s+/g, '+').toLowerCase();
-        queryParam = "query=".concat(queryParam);
       }
 
       window.location.href = "https://web2020.city.ac.uk/prototype-1/prospective-students/courses?".concat(levelParam, "&").concat(queryParam);
