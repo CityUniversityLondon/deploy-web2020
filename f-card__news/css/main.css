@@ -13020,7 +13020,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.25rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -13031,13 +13031,13 @@ main table td em {
 }
 
 .card--casestudy a:focus .underline-transition__title {
-    background-size: 100% 0.25rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .card--casestudy a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.25rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
@@ -13687,7 +13687,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.25rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -13698,13 +13698,13 @@ main table td em {
 }
 
 .card--related-course a:focus .underline-transition__title {
-    background-size: 100% 0.25rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .card--related-course a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.25rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
@@ -14356,7 +14356,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.25rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -14367,13 +14367,13 @@ main table td em {
 }
 
 .card--news__title-link:focus .underline-transition__title {
-    background-size: 100% 0.25rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .card--news__title-link:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.25rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
@@ -20699,7 +20699,7 @@ article figure figcaption a:active {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.25rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -20710,13 +20710,13 @@ article figure figcaption a:active {
 }
 
 .finder__results__card a:focus .underline-transition__title {
-    background-size: 100% 0.25rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .finder__results__card a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.25rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
@@ -28670,7 +28670,7 @@ article .link-copy {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.25rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -28681,13 +28681,13 @@ article .link-copy {
 }
 
 .finder__results__card a:focus .underline-transition__title {
-    background-size: 100% 0.25rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .finder__results__card a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.25rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
