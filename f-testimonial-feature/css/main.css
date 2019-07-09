@@ -15090,10 +15090,35 @@ main table td em {
     width: 100%;
 }
 
-.card--testimonial-feature__details {
+.card--testimonial-feature__details__wrap {
     grid-column: 11 / 18;
 }
 
+.card--testimonial-feature__details {
+    left: -30%;
+    position: relative;
+    background: #ffffff;
+    width: 130%;
+    padding-bottom: 2rem;
+}
+
+.card--testimonial-feature__details:before {
+    content: '';
+    background: #d61726;
+    height: 0.75rem;
+    display: block;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.card--testimonial-feature__details__row {
+    display: flex;
+    margin-left: 3.25rem;
+    margin-right: 3.25rem;
+}
+
+/*======================================*/
 .card--testimonial-feature__quote {
     font-size: 1.266rem;
     line-height: 1.25;
@@ -15253,6 +15278,7 @@ main table td em {
     margin-bottom: 2rem;
     max-width: 8rem;
     display: none;
+    border-radius: 50%;
 }
 
 @media (min-width: 769px) {
