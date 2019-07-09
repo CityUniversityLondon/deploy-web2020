@@ -2613,6 +2613,7 @@ const maximumSuggestions = 5,
       [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40],
       body = document.getElementsByTagName('body'),
       backgroundFill = body[0].querySelectorAll('.background-fill');
+let queryParam;
 /**
  * Search input field and autocomplete.
  *
@@ -2779,7 +2780,14 @@ function finder__query(props) {
       e.target.placeholder = '';
     },
     onChange: e => {
-      //clear old suggestions
+      let queryValue = document.getElementById(inputId);
+
+      if (queryValue) {
+        queryParam = queryValue.value.replace(/\s+/g, '+').toLowerCase();
+        queryParam = "query=".concat(queryParam);
+      } //clear old suggestions
+
+
       setSuggestions([]); // keep  what they're typing
 
       setPartialQuery(e.target.value);
@@ -2815,7 +2823,7 @@ function finder__query(props) {
      * Build URL taking users from content hub to listing page with selected results.
      */
     const finderRedirect = () => {
-      let levelParam, queryParam;
+      let levelParam;
       let levelSelect = document.getElementById('level-select');
 
       if (levelSelect) {

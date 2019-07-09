@@ -30904,6 +30904,17 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-area: employer;
 }
 
+.content-hub .careers__job-locations-wrapper {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-column-gap: 1.5rem;
+    grid-template-areas: 'location1 location1 location1 location2 location2 location2 location3 location3 location3';
+}
+
+.content-hub .careers__job-locations h2 {
+    grid-area: a;
+}
+
 .content-hub p {
     margin-right: 0;
     max-width: 100%;
