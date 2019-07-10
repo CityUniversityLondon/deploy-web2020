@@ -15156,6 +15156,13 @@ main table td em {
     }
 }
 
+@media (max-width: 431px) {
+    .card--testimonial-feature__details__wrap {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
 .card--testimonial-feature__details__title {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -15215,6 +15222,12 @@ main table td em {
 @media (max-width: 1279px) {
     .card--testimonial-feature__details__column:first-child {
         margin-right: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .card--testimonial-feature__details__column:first-child {
+        margin-right: 0;
     }
 }
 
