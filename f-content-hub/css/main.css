@@ -32997,15 +32997,32 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
          columns: 2;
 }
 
-.content-hub .careers__job-locations {
+.content-hub .careers__employers {
     grid-area: employer;
 }
 
-.content-hub .careers__job-locations-wrapper {
+.content-hub .careers__employer-logos-wrapper {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-column-gap: 1.5rem;
-    grid-template-areas: 'location1 location1 location1 location2 location2 location2 location3 location3 location3';
+    grid-template-areas: 'employer1 employer1 employer1 employer2 employer2 employer2 employer3 employer3 employer3';
+    padding: 1rem 0;
+}
+
+.content-hub .careers__employer-logos-wrapper img {
+    max-height: 4rem;
+}
+
+.content-hub .careers__employer-logos-wrapper img:nth-of-type(1) {
+    grid-area: employer1;
+}
+
+.content-hub .careers__employer-logos-wrapper img:nth-of-type(2) {
+    grid-area: employer2;
+}
+
+.content-hub .careers__employer-logos-wrapper img:nth-of-type(3) {
+    grid-area: employer3;
 }
 
 .content-hub .careers__job-locations h2 {
