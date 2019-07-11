@@ -18929,6 +18929,664 @@ article figure figcaption a:active {
     }
 }
 
+@media (min-width: 901px) {
+    .card--pathway__block {
+        display: flex;
+    }
+}
+
+.card--pathway {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    position: relative;
+    transition: none;
+    padding: 1rem;
+    display: block;
+    padding: 0 1rem 1rem 1rem;
+    margin-bottom: 1.5rem;
+    background: #ffffff;
+}
+
+@media (hover: hover) {
+    .card--pathway:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card--pathway:focus, .card--pathway:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.card--pathway:focus, .card--pathway:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.card--pathway .underline-transition__title {
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.15rem;
+    transition: background-size 0.6s ease-in;
+    /**
+            Needs to be inline else underline transition
+            stretches beyond the element
+        **/
+    display: inline;
+}
+
+.card--pathway:focus .underline-transition__title {
+    background-size: 100% 0.15rem;
+}
+
+@media (hover: hover) {
+    .card--pathway:hover .underline-transition__title {
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 0.15rem;
+        color: #1e1e1e;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway:hover {
+        background-image: none;
+    }
+}
+
+.card--pathway:focus:after, .card--pathway:active:after {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.card--pathway:visited .title {
+    color: #4c2c92;
+}
+
+.card--pathway .card__title {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.424rem;
+    line-height: 1.25;
+    letter-spacing: -0.013em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    color: #696969;
+    padding-bottom: 0.25rem;
+}
+
+.card--pathway .card__title i,
+.card--pathway .card__title em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.card--pathway .card__title b,
+.card--pathway .card__title strong {
+    font-weight: inherit;
+}
+
+.card--pathway .card__title i,
+.card--pathway .card__title em {
+    font-style: italic;
+}
+
+.card--pathway .card__title u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--pathway .card__title b,
+.card--pathway .card__title strong {
+    font-weight: 600;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--pathway p {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    color: #1e1e1e;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--pathway p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--pathway p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--pathway p {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--pathway p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--pathway p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) {
+    .card--pathway {
+        margin: 0 1.5rem 0 0;
+    }
+}
+
+.card--pathway .card__title {
+    padding-bottom: 0;
+    margin-top: 1rem;
+}
+
+.card--pathway:before {
+    content: '';
+    height: 0.25rem;
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.card--pathway:after {
+    border: 0.0625rem solid #e5e5e5;
+}
+
+.card--pathway:focus, .card--pathway:active {
+    outline: none;
+}
+
+.card--pathway:hover:after {
+    border: none;
+}
+
+.card--pathway:last-child {
+    margin-right: 0;
+}
+
+.card--pathway p {
+    margin-top: 1rem;
+}
+
+.card--pathway--blue {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--blue:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--blue:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--blue:hover:after {
+        background-color: #5fd8fe;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--blue .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--blue:before {
+    background: #5fd8fe;
+}
+
+.card--pathway--purple {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--purple:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--purple:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--purple:hover:after {
+        background-color: #b382ec;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--purple .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--purple:before {
+    background: #b382ec;
+}
+
+.card--pathway--pink {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--pink:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--pink:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--pink:hover:after {
+        background-color: #df82c4;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--pink .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--pink:before {
+    background: #df82c4;
+}
+
+.card--pathway--green {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--green:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--green:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--green:hover:after {
+        background-color: #b9d698;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--green .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--green:before {
+    background: #b9d698;
+}
+
+.card--pathway--purple {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--purple:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--purple:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--purple:hover:after {
+        background-color: #b382ec;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--purple .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--purple:before {
+    background: #b382ec;
+}
+
+.card--pathway--pink {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--pink:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--pink:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--pink:hover:after {
+        background-color: #df82c4;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--pink .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--pink:before {
+    background: #df82c4;
+}
+
+.card--pathway--teal {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--teal:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--teal:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--teal:hover:after {
+        background-color: #7fd6df;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--teal .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--teal:before {
+    background: #7fd6df;
+}
+
+.card--pathway--yellow {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--yellow:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--yellow:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--yellow:hover:after {
+        background-color: #ffef2b;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--yellow .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--yellow:before {
+    background: #ffef2b;
+}
+
 .listing {
     background-image: linear-gradient(#f2f2f2, #e5e5e5);
 }
@@ -18991,6 +19649,39 @@ article figure figcaption a:active {
     grid-area: main;
 }
 
+@media (max-width: 432px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 4;
+        grid-template-areas: 'title title title title title title' 'query query query query query query' 'select select select select select select' 'results results results results results results';
+    }
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 4;
+        grid-template-areas: 'title title title title title title title title title title title title' 'query query query query query query query query query query query query' 'select select select select select select select select select select select select' 'results results results results results results results results results results results results';
+    }
+}
+
+@media (min-width: 769px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'title title title title title title title title title title title title' 'select select select select query query query query query query query query' '. . . results results results results results results results results results';
+    }
+}
+
+@media (min-width: 901px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'title title title title title title title title title title title title title title title title title title' 'select select select select select query query query query query query query query query query query query query' '. . . . . results results results results results results results results results results results results results';
+    }
+}
+
+.finder__title {
+    grid-area: title;
+    text-align: center;
+}
+
 .finder__query {
     grid-area: query;
     margin-top: 1rem;
@@ -19001,6 +19692,11 @@ article figure figcaption a:active {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    height: 100%;
+}
+
+.wrapper--finder--hub .finder__query__input {
+    padding: 0.1875rem 0.1275rem 0.1875rem 0.1875rem;
 }
 
 .finder__query__input {
@@ -19017,6 +19713,10 @@ article figure figcaption a:active {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
+    background: linear-gradient(45deg, #3e1031, #d61726);
+    padding: 0.1875rem 0.1875rem 0.125rem 0.1875rem;
+    z-index: 3;
+    display: flex;
     flex-grow: 1;
     position: relative;
 }
@@ -19056,6 +19756,17 @@ article figure figcaption a:active {
     }
 }
 
+.finder__query__input:focus-within {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__query__input:focus-within .finder__clear {
+    display: block;
+}
+
 .finder__query__input input {
     font-family: "Plex Sans", sans-serif;
     /**
@@ -19070,13 +19781,15 @@ article figure figcaption a:active {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
-    font-style: normal;
+    font-family: "Plex Sans", sans-serif;
     font-weight: 450;
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
-    padding-right: 3.5rem;
-    padding-top: 0.5rem;
+    padding: 0.5rem;
     width: 100%;
+    min-width: 0;
+    height: 100%;
+    grid-area: input;
+    border: 0.0625rem solid transparent;
+    font-style: normal;
 }
 
 .finder__query__input input i,
@@ -19114,12 +19827,108 @@ article figure figcaption a:active {
     }
 }
 
+.finder__query__input input:focus {
+    outline: 0;
+    font-style: normal;
+    font-weight: 700;
+    color: #1e1e1e;
+}
+
+.finder__query__input input:focus::-ms-input-placeholder, .finder__query__input input:focus::-ms-input-placeholder {
+    opacity: 0;
+}
+
+.finder__query__input input:focus::placeholder, .finder__query__input input:focus::-ms-input-placeholder {
+    opacity: 0;
+}
+
+.finder__query__input input::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+.finder__query__input input::-moz-placeholder {
+    font-style: italic;
+}
+
+.finder__query__input input::-ms-input-placeholder {
+    font-style: italic;
+}
+
+.finder__query__input input::placeholder {
+    font-style: italic;
+}
+
+.finder__query__input input:placeholder-shown {
+    color: #696969;
+}
+
 .finder__query__input .finder__clear {
+    display: none;
     height: 100%;
     position: absolute;
     right: 1rem;
     top: 0;
     width: 2rem;
+}
+
+.finder__query__input .finder__clear:focus {
+    outline: 0;
+}
+
+.finder__query__input .finder__clear .icon {
+    border-radius: 50%;
+    background: #f2f2f2;
+    color: #696969;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .finder__query__input .finder__clear .icon:hover {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 767px) {
+    .finder__query__input .finder__clear .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+.finder__query__input .finder__clear .icon:before {
+    position: relative;
+    top: 0.3125rem;
+}
+
+@media (max-width: 768px) {
+    .finder__query__input .finder__clear .icon:before {
+        top: 0;
+    }
+}
+
+.finder__query__input .finder__clear .finder__icon--close {
+    background: transparent;
+    position: relative;
+    top: 0.5rem;
+    left: 0.25rem;
+}
+
+@media (max-width: 767px) {
+    .finder__query__input .finder__clear .finder__icon--close {
+        top: 0.25rem;
+        left: 0;
+    }
+}
+
+.finder__query__icon--wrapper {
+    background: #ffffff;
+    padding: 0.3125rem 0.5rem 0.5rem 1rem;
+}
+
+.wrapper--finder--hub .finder__query__icon--wrapper {
+    padding-top: 0.5625rem;
 }
 
 .finder__query__submit {
@@ -19147,8 +19956,26 @@ article figure figcaption a:active {
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
+    background: initial;
+    border-radius: 0.25rem;
+    border: none;
+    color: initial;
+    display: inline-flex;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    transition: background-color 0.6s, transform 0.6s;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+    background: #d61726;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+    background-color: #d61726;
+    border-color: #d61726;
+    color: #ffffff;
+    z-index: 2;
     flex-shrink: 0;
     margin-left: 2rem;
+    box-shadow: none;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -19309,6 +20136,219 @@ article figure figcaption a:active {
 
 .finder__query__submit:visited {
     border-bottom-color: #006bbd;
+}
+
+.finder__query__submit:disabled {
+    cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__query__submit {
+        transition: none;
+    }
+}
+
+@media (max-width: 432px) {
+    .finder__query__submit {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.finder__query__submit span {
+    transition: transform 0.6s;
+}
+
+.finder__query__submit:after {
+    content: '\f061';
+    font-family: 'Font Awesome';
+    font-style: normal;
+    font-weight: normal;
+    opacity: 0;
+    position: absolute;
+    right: 1.5rem;
+    text-decoration: inherit;
+    transform: translateX(-0.75rem);
+    transition: background-color 0.6s, transform 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__query__submit:after {
+        transition: none;
+    }
+}
+
+.finder__query__submit:focus, .finder__query__submit:active {
+    background-color: transparent;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+}
+
+.finder__query__submit:focus span, .finder__query__submit:active span {
+    transform: translateX(-0.75rem);
+}
+
+.finder__query__submit:focus:after, .finder__query__submit:active:after {
+    opacity: 1;
+    transform: translateX(0.75rem);
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        background-color: transparent;
+        border: 0.125rem solid #d61726;
+        color: #ffffff;
+    }
+    .finder__query__submit:hover span {
+        transform: translateX(-0.75rem);
+    }
+    .finder__query__submit:hover:after {
+        opacity: 1;
+        transform: translateX(0.75rem);
+    }
+}
+
+.finder__query__submit:disabled {
+    opacity: 0.7;
+}
+
+.finder__query__submit:disabled span {
+    transform: none;
+}
+
+.finder__query__submit:disabled:after {
+    opacity: 0;
+    transform: none;
+}
+
+.finder__query__submit:visited {
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+.finder__query__submit:focus {
+    background: #d61726;
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+.finder__query__submit:focus:focus, .finder__query__submit:focus:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        background: #ffffff;
+        border-color: #d61726;
+        color: #d61726;
+    }
+}
+
+.finder__query__submit:active {
+    border-color: #d61726;
+    box-shadow: none;
+    color: #d61726;
+    background: transparent;
+}
+
+.finder__query__submit:active:focus, .finder__query__submit:active:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__query__submit:disabled {
+    color: #ffffff;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
+}
+
+.finder__query__submit span {
+    transition: none;
+}
+
+.finder__query__submit:visited {
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+.finder__query__submit:after {
+    content: '';
+}
+
+.finder__query__submit:focus, .finder__query__submit:active {
+    background-color: #d61726;
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        background-color: #a8121e;
+        border-color: #a8121e;
+        color: #ffffff;
+    }
+}
+
+.finder__query__submit:active {
+    background-color: #a8121e;
+    border-color: #a8121e;
+}
+
+.finder__query__submit:disabled {
+    color: #ffffff;
+    background: #d61726;
+    border-color: #d61726;
+}
+
+.finder__query__submit:active span, .finder__query__submit:focus span, .finder__query__submit:hover span {
+    transform: none;
+}
+
+.finder__query__submit:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .finder__query__submit {
+        padding: 1rem 1.25rem;
+    }
+    .finder__query__submit:hover {
+        padding: 1rem 1.25rem;
+    }
+}
+
+.finder__query__submit span {
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .finder__query__submit .finder__query__submit__text {
+        display: none;
+    }
+}
+
+.finder__query__submit .finder__query__submit__icon {
+    padding: 0 0.5rem 0 0;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .finder__query__submit .finder__query__submit__icon {
+        display: block;
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .finder__query__submit {
+        margin-left: 1rem;
+    }
 }
 
 .finder__didyoumean__button {
@@ -19630,6 +20670,7 @@ article figure figcaption a:active {
 }
 
 .finder__appliedfilters {
+    grid-area: appliedFilters;
     display: none;
     flex-direction: row;
     flex-wrap: wrap;
@@ -19654,194 +20695,162 @@ article figure figcaption a:active {
 }
 
 .finder__appliedfilters button {
-    background: initial;
-    border-radius: 0.25rem;
-    border: none;
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
     color: initial;
-    display: inline-flex;
-    font-weight: 600;
-    padding: 0.5rem 1.5rem;
-    position: relative;
-    transition: background-color 0.6s, transform 0.6s;
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: #d61726;
-    border: 0.125rem solid #d61726;
-    color: #ffffff;
-    background-color: #d61726;
-    border-color: #d61726;
-    color: #ffffff;
-}
-
-.finder__appliedfilters button:disabled {
-    cursor: default;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .finder__appliedfilters button {
-        transition: none;
-    }
-}
-
-@media (max-width: 432px) {
-    .finder__appliedfilters button {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-}
-
-.finder__appliedfilters button span {
-    transition: transform 0.6s;
-}
-
-.finder__appliedfilters button:after {
-    content: '\f061';
-    font-family: 'Font Awesome';
-    font-style: normal;
-    font-weight: normal;
-    opacity: 0;
-    position: absolute;
-    right: 1.5rem;
-    text-decoration: inherit;
-    transform: translateX(-0.75rem);
-    transition: background-color 0.6s, transform 0.6s;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .finder__appliedfilters button:after {
-        transition: none;
-    }
-}
-
-.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
-    background-color: transparent;
-    border: 0.125rem solid #d61726;
-    color: #ffffff;
-}
-
-.finder__appliedfilters button:focus span, .finder__appliedfilters button:active span {
-    transform: translateX(-0.75rem);
-}
-
-.finder__appliedfilters button:focus:after, .finder__appliedfilters button:active:after {
-    opacity: 1;
-    transform: translateX(0.75rem);
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+    text-align: left;
 }
 
 @media (hover: hover) {
     .finder__appliedfilters button:hover {
-        background-color: transparent;
-        border: 0.125rem solid #d61726;
-        color: #ffffff;
-    }
-    .finder__appliedfilters button:hover span {
-        transform: translateX(-0.75rem);
-    }
-    .finder__appliedfilters button:hover:after {
-        opacity: 1;
-        transform: translateX(0.75rem);
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
     }
 }
 
-.finder__appliedfilters button:disabled {
-    opacity: 0.7;
+.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
 }
 
-.finder__appliedfilters button:disabled span {
-    transform: none;
+@media (prefers-reduced-motion: reduce) {
+    .finder__appliedfilters button {
+        transition: none;
+    }
 }
 
-.finder__appliedfilters button:disabled:after {
-    opacity: 0;
-    transform: none;
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
 }
 
 .finder__appliedfilters button:visited {
-    border-color: #d61726;
-    color: #ffffff;
+    color: #4c2c92;
 }
 
 .finder__appliedfilters button:focus {
-    background: #d61726;
-    border-color: #d61726;
-    color: #ffffff;
-}
-
-.finder__appliedfilters button:focus:focus, .finder__appliedfilters button:focus:active {
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-    outline-color: #0c0c0e;
+    color: #006bbd;
 }
 
 @media (hover: hover) {
     .finder__appliedfilters button:hover {
-        background: #ffffff;
-        border-color: #d61726;
-        color: #d61726;
-    }
-}
-
-.finder__appliedfilters button:active {
-    border-color: #d61726;
-    box-shadow: none;
-    color: #d61726;
-    background: transparent;
-}
-
-.finder__appliedfilters button:active:focus, .finder__appliedfilters button:active:active {
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-    outline-color: #0c0c0e;
-}
-
-.finder__appliedfilters button:disabled {
-    color: #ffffff;
-    background: #d61726;
-    border: 0.125rem solid #d61726;
-}
-
-.finder__appliedfilters button span {
-    transition: none;
-}
-
-.finder__appliedfilters button:visited {
-    border-color: #d61726;
-    color: #ffffff;
-}
-
-.finder__appliedfilters button:after {
-    content: '';
-}
-
-.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
-    background-color: #d61726;
-    border-color: #d61726;
-    color: #ffffff;
-}
-
-@media (hover: hover) {
-    .finder__appliedfilters button:hover {
-        background-color: #a8121e;
-        border-color: #a8121e;
         color: #ffffff;
     }
 }
 
 .finder__appliedfilters button:active {
-    background-color: #a8121e;
-    border-color: #a8121e;
-}
-
-.finder__appliedfilters button:disabled {
     color: #ffffff;
-    background: #d61726;
-    border-color: #d61726;
+    background-color: #006bbd;
 }
 
-.finder__appliedfilters button:active span, .finder__appliedfilters button:focus span, .finder__appliedfilters button:hover span {
-    transform: none;
+.finder__appliedfilters button:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__appliedfilters button:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__appliedfilters button:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__appliedfilters button:visited {
+    color: #4c2c92;
+}
+
+.finder__appliedfilters button:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__appliedfilters button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__appliedfilters button:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__appliedfilters button:active {
+    color: #ffffff;
+}
+
+.finder__appliedfilters button:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__appliedfilters button span:first-of-type {
+    display: flex;
 }
 
 .finder__appliedfilters button .icon {
@@ -19849,7 +20858,11 @@ article figure figcaption a:active {
 }
 
 .finder__query__suggestions {
-    background-color: rgba(30, 30, 30, 0.9);
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1rem 2.25rem;
+    border: 0.0625rem solid #e5e5e5;
+    border-top: 0;
+    border-radius: 0 0 0.5rem 0.5rem;
     color: #ffffff;
     font-weight: 700;
     left: 0;
@@ -19864,28 +20877,37 @@ article figure figcaption a:active {
 
 .finder__query__suggestions li {
     margin-top: 0;
+    font-weight: 400;
 }
 
 .finder__query__suggestions li button {
     height: 100%;
-    padding-bottom: 0.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 0.5rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
     text-align: left;
     width: 100%;
+    color: #1e1e1e;
 }
 
 .finder__query__suggestions li button:focus {
-    outline-color: #ffffff;
+    outline-color: #0c0c0e;
     outline-offset: -0.125rem;
     outline-style: dotted;
     outline-width: 0.125rem;
+    text-decoration: underline;
 }
 
-.finder__query__suggestions li button:focus, .finder__query__suggestions li button:hover {
-    background-color: #0c0c0e;
+.finder__query__suggestions li button:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-offset: 0;
+}
+
+.finder__query__suggestions li button:hover {
+    background-color: #006bbd;
     text-decoration: underline;
+    color: #ffffff;
 }
 
 @media (min-width: 769px) {
@@ -20652,6 +21674,12 @@ article figure figcaption a:active {
     grid-area: results;
 }
 
+@media (min-width: 769px) and (max-width: 900px) {
+    .finder .finder__results {
+        margin-left: 3rem;
+    }
+}
+
 .finder .finder__results .pagination__wrapper {
     max-width: unset;
 }
@@ -21168,6 +22196,186 @@ article figure figcaption a:active {
 
 .finder__results__bestbet a .finder__results__card__description {
     color: #1e1e1e;
+}
+
+.finder__select {
+    height: auto;
+    margin-top: 1rem;
+    position: relative;
+    border: 0.1875rem solid #3e1031;
+}
+
+.finder__select select {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    padding: 0.25rem 0.25rem 0 0.75rem;
+    position: relative;
+    bottom: 0.25rem;
+    font-weight: 600;
+    color: #1e1e1e;
+    width: 100%;
+    border: 0;
+    background: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -ms-expand: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__select select {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__select select {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__select select {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__select select {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__select select {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__select select:focus {
+    outline: 0;
+}
+
+.finder__select:after {
+    font-family: "Font Awesome";
+    font-size: 0.875em;
+    content: '\f078';
+    font-weight: 600;
+    margin-top: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    z-index: -1;
+}
+
+.finder__select:focus-within {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+@media (max-width: 767px) {
+    .finder__select {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@-moz-document url-prefix() {
+    .finder__select select {
+        margin-left: -0.25rem;
+    }
+}
+
+.finder__select--level {
+    grid-area: select;
+}
+
+.finder__select__overline {
+    font-size: 0.79rem;
+    line-height: 1.625;
+    letter-spacing: 0.005em;
+    color: #d61726;
+    font-weight: 400;
+    display: block;
+    padding: 0.25rem 0.25rem 0 0.75rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__select__overline {
+        letter-spacing: 0em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__select__overline {
+        letter-spacing: 0em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__select__overline {
+        letter-spacing: -0.007em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__select__overline {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__select__overline {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__input-text__wrapper {
+    display: flex;
+    flex: 1;
+    background: #ffffff;
+    padding: 0.5rem 0.75rem 0.25rem 0.25rem;
+}
+
+.finder__input-text__label {
+    display: none;
+}
+
+.finder__icon {
+    background: #ffffff;
+    font-weight: 400;
+    color: #696969;
+    margin-top: 50%;
+}
+
+.finder__icon--close {
+    color: #1e1e1e;
+    background: #f2f2f2;
+}
+
+.finder__icon--close__wrapper {
+    font-weight: 400;
+}
+
+.background-fill {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-color: #ffffff;
+    opacity: 0.6;
+    transition: background-color 0.2s linear;
+}
+
+.background-fill--grey {
+    background-color: #e5e5e5;
 }
 
 .global-footer {
@@ -26249,6 +27457,8 @@ article .link-copy {
 
 .banner__group__overlay__heading {
     max-width: 80rem;
+    grid-row-gap: 0;
+    display: grid;
     padding-top: 2rem;
     padding-bottom: 2rem;
     display: flex;
@@ -26267,6 +27477,27 @@ article .link-copy {
     .banner__group__overlay__heading {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 432px) {
+    .banner__group__overlay__heading {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .banner__group__overlay__heading {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .banner__group__overlay__heading {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
     }
 }
 
@@ -26296,6 +27527,217 @@ article .link-copy {
         margin: 0 2rem;
         bottom: 1.25rem;
     }
+}
+
+.banner__group__overlay__heading--title-standfirst {
+    max-width: 80rem;
+    grid-row-gap: 0;
+    display: grid;
+    display: grid;
+}
+
+@media (min-width: 1441px) {
+    .banner__group__overlay__heading--title-standfirst {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .banner__group__overlay__heading--title-standfirst {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 432px) {
+    .banner__group__overlay__heading--title-standfirst {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .banner__group__overlay__heading--title-standfirst {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .banner__group__overlay__heading--title-standfirst {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (max-width: 431px) {
+    .banner__group__overlay__heading--title-standfirst {
+        grid-template-areas: 'standfirst standfirst standfirst standfirst standfirst standfirst' 'standfirst standfirst standfirst standfirst standfirst standfirst';
+    }
+}
+
+@media (min-width: 1281px) {
+    .banner__group__overlay__heading--title-standfirst {
+        grid-template-areas: '. . . standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst . . .' '. . . standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst . . .';
+        margin-top: -7rem;
+    }
+}
+
+.banner__group__overlay__heading--title-standfirst h1 {
+    color: #ffffff;
+    width: auto;
+    text-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.3);
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.802rem;
+    line-height: 1.25;
+    letter-spacing: -0.016em;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.banner__group__overlay__heading--title-standfirst h1 i,
+.banner__group__overlay__heading--title-standfirst h1 em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.banner__group__overlay__heading--title-standfirst h1 b,
+.banner__group__overlay__heading--title-standfirst h1 strong {
+    font-weight: inherit;
+}
+
+.banner__group__overlay__heading--title-standfirst h1 i,
+.banner__group__overlay__heading--title-standfirst h1 em {
+    font-style: italic;
+}
+
+.banner__group__overlay__heading--title-standfirst h1 u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        font-size: 2.027rem;
+        line-height: 1.25;
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 433px) and (max-width: 768px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 769px) and (max-width: 1919px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 1920px) and (max-width: 3839px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 3840px) and (max-width: 7679px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 7680px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        font-size: 2.28rem;
+        line-height: 1.25;
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 433px) and (max-width: 768px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 769px) and (max-width: 1919px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 1920px) and (max-width: 3839px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 3840px) and (max-width: 7679px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 7680px) {
+    .banner__group__overlay__heading--title-standfirst h1 {
+        letter-spacing: -0.027em;
+    }
+}
+
+.banner__group__overlay__heading--title-standfirst h1 b,
+.banner__group__overlay__heading--title-standfirst h1 strong {
+    font-weight: 600;
+}
+
+.banner__group__overlay__heading--title-standfirst .standfirst {
+    max-width: 100%;
+}
+
+.banner__group__overlay__title-standfirst-wrapper {
+    grid-template-rows: auto;
+    grid-area: standfirst;
+    background: #00294a;
+    color: #ffffff;
+    opacity: 0.9;
+    padding: 2rem;
 }
 
 .banner__content {
@@ -26900,6 +28342,664 @@ article .link-copy {
     transition: transform 0.5s ease-out;
 }
 
+@media (min-width: 901px) {
+    .card--pathway__block {
+        display: flex;
+    }
+}
+
+.card--pathway {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    position: relative;
+    transition: none;
+    padding: 1rem;
+    display: block;
+    padding: 0 1rem 1rem 1rem;
+    margin-bottom: 1.5rem;
+    background: #ffffff;
+}
+
+@media (hover: hover) {
+    .card--pathway:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card--pathway:focus, .card--pathway:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.card--pathway:focus, .card--pathway:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.card--pathway .underline-transition__title {
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.15rem;
+    transition: background-size 0.6s ease-in;
+    /**
+            Needs to be inline else underline transition
+            stretches beyond the element
+        **/
+    display: inline;
+}
+
+.card--pathway:focus .underline-transition__title {
+    background-size: 100% 0.15rem;
+}
+
+@media (hover: hover) {
+    .card--pathway:hover .underline-transition__title {
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 0.15rem;
+        color: #1e1e1e;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway:hover {
+        background-image: none;
+    }
+}
+
+.card--pathway:focus:after, .card--pathway:active:after {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.card--pathway:visited .title {
+    color: #4c2c92;
+}
+
+.card--pathway .card__title {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.424rem;
+    line-height: 1.25;
+    letter-spacing: -0.013em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    color: #696969;
+    padding-bottom: 0.25rem;
+}
+
+.card--pathway .card__title i,
+.card--pathway .card__title em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.card--pathway .card__title b,
+.card--pathway .card__title strong {
+    font-weight: inherit;
+}
+
+.card--pathway .card__title i,
+.card--pathway .card__title em {
+    font-style: italic;
+}
+
+.card--pathway .card__title u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--pathway .card__title b,
+.card--pathway .card__title strong {
+    font-weight: 600;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--pathway .card__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--pathway p {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    color: #1e1e1e;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--pathway p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--pathway p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--pathway p {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--pathway p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--pathway p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) {
+    .card--pathway {
+        margin: 0 1.5rem 0 0;
+    }
+}
+
+.card--pathway .card__title {
+    padding-bottom: 0;
+    margin-top: 1rem;
+}
+
+.card--pathway:before {
+    content: '';
+    height: 0.25rem;
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.card--pathway:after {
+    border: 0.0625rem solid #e5e5e5;
+}
+
+.card--pathway:focus, .card--pathway:active {
+    outline: none;
+}
+
+.card--pathway:hover:after {
+    border: none;
+}
+
+.card--pathway:last-child {
+    margin-right: 0;
+}
+
+.card--pathway p {
+    margin-top: 1rem;
+}
+
+.card--pathway--blue {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--blue:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--blue:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--blue:hover:after {
+        background-color: #5fd8fe;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--blue .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--blue:before {
+    background: #5fd8fe;
+}
+
+.card--pathway--purple {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--purple:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--purple:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--purple:hover:after {
+        background-color: #b382ec;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--purple .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--purple:before {
+    background: #b382ec;
+}
+
+.card--pathway--pink {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--pink:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--pink:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--pink:hover:after {
+        background-color: #df82c4;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--pink .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--pink:before {
+    background: #df82c4;
+}
+
+.card--pathway--green {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--green:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--green:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--green:hover:after {
+        background-color: #b9d698;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--green .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--green:before {
+    background: #b9d698;
+}
+
+.card--pathway--purple {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--purple:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--purple:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--purple:hover:after {
+        background-color: #b382ec;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--purple .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--purple:before {
+    background: #b382ec;
+}
+
+.card--pathway--pink {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--pink:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--pink:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--pink:hover:after {
+        background-color: #df82c4;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--pink .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--pink:before {
+    background: #df82c4;
+}
+
+.card--pathway--teal {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--teal:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--teal:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--teal:hover:after {
+        background-color: #7fd6df;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--teal .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--teal:before {
+    background: #7fd6df;
+}
+
+.card--pathway--yellow {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.card--pathway--yellow:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway--yellow:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway--yellow:hover:after {
+        background-color: #ffef2b;
+        transform: scale(1.05);
+    }
+}
+
+.card--pathway--yellow .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.card--pathway--yellow:before {
+    background: #ffef2b;
+}
+
 .listing {
     background-image: linear-gradient(#f2f2f2, #e5e5e5);
 }
@@ -26962,6 +29062,39 @@ article .link-copy {
     grid-area: main;
 }
 
+@media (max-width: 432px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 4;
+        grid-template-areas: 'title title title title title title' 'query query query query query query' 'select select select select select select' 'results results results results results results';
+    }
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 4;
+        grid-template-areas: 'title title title title title title title title title title title title' 'query query query query query query query query query query query query' 'select select select select select select select select select select select select' 'results results results results results results results results results results results results';
+    }
+}
+
+@media (min-width: 769px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'title title title title title title title title title title title title' 'select select select select query query query query query query query query' '. . . results results results results results results results results results';
+    }
+}
+
+@media (min-width: 901px) {
+    .wrapper--finder--hub .finder {
+        grid-template-rows: 3;
+        grid-template-areas: 'title title title title title title title title title title title title title title title title title title' 'select select select select select query query query query query query query query query query query query query' '. . . . . results results results results results results results results results results results results results';
+    }
+}
+
+.finder__title {
+    grid-area: title;
+    text-align: center;
+}
+
 .finder__query {
     grid-area: query;
     margin-top: 1rem;
@@ -26972,6 +29105,11 @@ article .link-copy {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    height: 100%;
+}
+
+.wrapper--finder--hub .finder__query__input {
+    padding: 0.1875rem 0.1275rem 0.1875rem 0.1875rem;
 }
 
 .finder__query__input {
@@ -26988,6 +29126,10 @@ article .link-copy {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
+    background: linear-gradient(45deg, #3e1031, #d61726);
+    padding: 0.1875rem 0.1875rem 0.125rem 0.1875rem;
+    z-index: 3;
+    display: flex;
     flex-grow: 1;
     position: relative;
 }
@@ -27027,6 +29169,17 @@ article .link-copy {
     }
 }
 
+.finder__query__input:focus-within {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__query__input:focus-within .finder__clear {
+    display: block;
+}
+
 .finder__query__input input {
     font-family: "Plex Sans", sans-serif;
     /**
@@ -27041,13 +29194,15 @@ article .link-copy {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
-    font-style: normal;
+    font-family: "Plex Sans", sans-serif;
     font-weight: 450;
-    padding-bottom: 0.5rem;
-    padding-left: 0.5rem;
-    padding-right: 3.5rem;
-    padding-top: 0.5rem;
+    padding: 0.5rem;
     width: 100%;
+    min-width: 0;
+    height: 100%;
+    grid-area: input;
+    border: 0.0625rem solid transparent;
+    font-style: normal;
 }
 
 .finder__query__input input i,
@@ -27085,12 +29240,108 @@ article .link-copy {
     }
 }
 
+.finder__query__input input:focus {
+    outline: 0;
+    font-style: normal;
+    font-weight: 700;
+    color: #1e1e1e;
+}
+
+.finder__query__input input:focus::-ms-input-placeholder, .finder__query__input input:focus::-ms-input-placeholder {
+    opacity: 0;
+}
+
+.finder__query__input input:focus::placeholder, .finder__query__input input:focus::-ms-input-placeholder {
+    opacity: 0;
+}
+
+.finder__query__input input::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+.finder__query__input input::-moz-placeholder {
+    font-style: italic;
+}
+
+.finder__query__input input::-ms-input-placeholder {
+    font-style: italic;
+}
+
+.finder__query__input input::placeholder {
+    font-style: italic;
+}
+
+.finder__query__input input:placeholder-shown {
+    color: #696969;
+}
+
 .finder__query__input .finder__clear {
+    display: none;
     height: 100%;
     position: absolute;
     right: 1rem;
     top: 0;
     width: 2rem;
+}
+
+.finder__query__input .finder__clear:focus {
+    outline: 0;
+}
+
+.finder__query__input .finder__clear .icon {
+    border-radius: 50%;
+    background: #f2f2f2;
+    color: #696969;
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .finder__query__input .finder__clear .icon:hover {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 767px) {
+    .finder__query__input .finder__clear .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+.finder__query__input .finder__clear .icon:before {
+    position: relative;
+    top: 0.3125rem;
+}
+
+@media (max-width: 768px) {
+    .finder__query__input .finder__clear .icon:before {
+        top: 0;
+    }
+}
+
+.finder__query__input .finder__clear .finder__icon--close {
+    background: transparent;
+    position: relative;
+    top: 0.5rem;
+    left: 0.25rem;
+}
+
+@media (max-width: 767px) {
+    .finder__query__input .finder__clear .finder__icon--close {
+        top: 0.25rem;
+        left: 0;
+    }
+}
+
+.finder__query__icon--wrapper {
+    background: #ffffff;
+    padding: 0.3125rem 0.5rem 0.5rem 1rem;
+}
+
+.wrapper--finder--hub .finder__query__icon--wrapper {
+    padding-top: 0.5625rem;
 }
 
 .finder__query__submit {
@@ -27118,8 +29369,26 @@ article .link-copy {
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
+    background: initial;
+    border-radius: 0.25rem;
+    border: none;
+    color: initial;
+    display: inline-flex;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    transition: background-color 0.6s, transform 0.6s;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+    background: #d61726;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+    background-color: #d61726;
+    border-color: #d61726;
+    color: #ffffff;
+    z-index: 2;
     flex-shrink: 0;
     margin-left: 2rem;
+    box-shadow: none;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -27280,6 +29549,219 @@ article .link-copy {
 
 .finder__query__submit:visited {
     border-bottom-color: #006bbd;
+}
+
+.finder__query__submit:disabled {
+    cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__query__submit {
+        transition: none;
+    }
+}
+
+@media (max-width: 432px) {
+    .finder__query__submit {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.finder__query__submit span {
+    transition: transform 0.6s;
+}
+
+.finder__query__submit:after {
+    content: '\f061';
+    font-family: 'Font Awesome';
+    font-style: normal;
+    font-weight: normal;
+    opacity: 0;
+    position: absolute;
+    right: 1.5rem;
+    text-decoration: inherit;
+    transform: translateX(-0.75rem);
+    transition: background-color 0.6s, transform 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .finder__query__submit:after {
+        transition: none;
+    }
+}
+
+.finder__query__submit:focus, .finder__query__submit:active {
+    background-color: transparent;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+}
+
+.finder__query__submit:focus span, .finder__query__submit:active span {
+    transform: translateX(-0.75rem);
+}
+
+.finder__query__submit:focus:after, .finder__query__submit:active:after {
+    opacity: 1;
+    transform: translateX(0.75rem);
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        background-color: transparent;
+        border: 0.125rem solid #d61726;
+        color: #ffffff;
+    }
+    .finder__query__submit:hover span {
+        transform: translateX(-0.75rem);
+    }
+    .finder__query__submit:hover:after {
+        opacity: 1;
+        transform: translateX(0.75rem);
+    }
+}
+
+.finder__query__submit:disabled {
+    opacity: 0.7;
+}
+
+.finder__query__submit:disabled span {
+    transform: none;
+}
+
+.finder__query__submit:disabled:after {
+    opacity: 0;
+    transform: none;
+}
+
+.finder__query__submit:visited {
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+.finder__query__submit:focus {
+    background: #d61726;
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+.finder__query__submit:focus:focus, .finder__query__submit:focus:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        background: #ffffff;
+        border-color: #d61726;
+        color: #d61726;
+    }
+}
+
+.finder__query__submit:active {
+    border-color: #d61726;
+    box-shadow: none;
+    color: #d61726;
+    background: transparent;
+}
+
+.finder__query__submit:active:focus, .finder__query__submit:active:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__query__submit:disabled {
+    color: #ffffff;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
+}
+
+.finder__query__submit span {
+    transition: none;
+}
+
+.finder__query__submit:visited {
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+.finder__query__submit:after {
+    content: '';
+}
+
+.finder__query__submit:focus, .finder__query__submit:active {
+    background-color: #d61726;
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .finder__query__submit:hover {
+        background-color: #a8121e;
+        border-color: #a8121e;
+        color: #ffffff;
+    }
+}
+
+.finder__query__submit:active {
+    background-color: #a8121e;
+    border-color: #a8121e;
+}
+
+.finder__query__submit:disabled {
+    color: #ffffff;
+    background: #d61726;
+    border-color: #d61726;
+}
+
+.finder__query__submit:active span, .finder__query__submit:focus span, .finder__query__submit:hover span {
+    transform: none;
+}
+
+.finder__query__submit:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .finder__query__submit {
+        padding: 1rem 1.25rem;
+    }
+    .finder__query__submit:hover {
+        padding: 1rem 1.25rem;
+    }
+}
+
+.finder__query__submit span {
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .finder__query__submit .finder__query__submit__text {
+        display: none;
+    }
+}
+
+.finder__query__submit .finder__query__submit__icon {
+    padding: 0 0.5rem 0 0;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .finder__query__submit .finder__query__submit__icon {
+        display: block;
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .finder__query__submit {
+        margin-left: 1rem;
+    }
 }
 
 .finder__didyoumean__button {
@@ -27601,6 +30083,7 @@ article .link-copy {
 }
 
 .finder__appliedfilters {
+    grid-area: appliedFilters;
     display: none;
     flex-direction: row;
     flex-wrap: wrap;
@@ -27625,194 +30108,162 @@ article .link-copy {
 }
 
 .finder__appliedfilters button {
-    background: initial;
-    border-radius: 0.25rem;
-    border: none;
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
     color: initial;
-    display: inline-flex;
-    font-weight: 600;
-    padding: 0.5rem 1.5rem;
-    position: relative;
-    transition: background-color 0.6s, transform 0.6s;
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: #d61726;
-    border: 0.125rem solid #d61726;
-    color: #ffffff;
-    background-color: #d61726;
-    border-color: #d61726;
-    color: #ffffff;
-}
-
-.finder__appliedfilters button:disabled {
-    cursor: default;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .finder__appliedfilters button {
-        transition: none;
-    }
-}
-
-@media (max-width: 432px) {
-    .finder__appliedfilters button {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-}
-
-.finder__appliedfilters button span {
-    transition: transform 0.6s;
-}
-
-.finder__appliedfilters button:after {
-    content: '\f061';
-    font-family: 'Font Awesome';
-    font-style: normal;
-    font-weight: normal;
-    opacity: 0;
-    position: absolute;
-    right: 1.5rem;
-    text-decoration: inherit;
-    transform: translateX(-0.75rem);
-    transition: background-color 0.6s, transform 0.6s;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .finder__appliedfilters button:after {
-        transition: none;
-    }
-}
-
-.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
-    background-color: transparent;
-    border: 0.125rem solid #d61726;
-    color: #ffffff;
-}
-
-.finder__appliedfilters button:focus span, .finder__appliedfilters button:active span {
-    transform: translateX(-0.75rem);
-}
-
-.finder__appliedfilters button:focus:after, .finder__appliedfilters button:active:after {
-    opacity: 1;
-    transform: translateX(0.75rem);
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+    text-align: left;
 }
 
 @media (hover: hover) {
     .finder__appliedfilters button:hover {
-        background-color: transparent;
-        border: 0.125rem solid #d61726;
-        color: #ffffff;
-    }
-    .finder__appliedfilters button:hover span {
-        transform: translateX(-0.75rem);
-    }
-    .finder__appliedfilters button:hover:after {
-        opacity: 1;
-        transform: translateX(0.75rem);
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
     }
 }
 
-.finder__appliedfilters button:disabled {
-    opacity: 0.7;
+.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
 }
 
-.finder__appliedfilters button:disabled span {
-    transform: none;
+@media (prefers-reduced-motion: reduce) {
+    .finder__appliedfilters button {
+        transition: none;
+    }
 }
 
-.finder__appliedfilters button:disabled:after {
-    opacity: 0;
-    transform: none;
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
 }
 
 .finder__appliedfilters button:visited {
-    border-color: #d61726;
-    color: #ffffff;
+    color: #4c2c92;
 }
 
 .finder__appliedfilters button:focus {
-    background: #d61726;
-    border-color: #d61726;
-    color: #ffffff;
-}
-
-.finder__appliedfilters button:focus:focus, .finder__appliedfilters button:focus:active {
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-    outline-color: #0c0c0e;
+    color: #006bbd;
 }
 
 @media (hover: hover) {
     .finder__appliedfilters button:hover {
-        background: #ffffff;
-        border-color: #d61726;
-        color: #d61726;
-    }
-}
-
-.finder__appliedfilters button:active {
-    border-color: #d61726;
-    box-shadow: none;
-    color: #d61726;
-    background: transparent;
-}
-
-.finder__appliedfilters button:active:focus, .finder__appliedfilters button:active:active {
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-    outline-color: #0c0c0e;
-}
-
-.finder__appliedfilters button:disabled {
-    color: #ffffff;
-    background: #d61726;
-    border: 0.125rem solid #d61726;
-}
-
-.finder__appliedfilters button span {
-    transition: none;
-}
-
-.finder__appliedfilters button:visited {
-    border-color: #d61726;
-    color: #ffffff;
-}
-
-.finder__appliedfilters button:after {
-    content: '';
-}
-
-.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
-    background-color: #d61726;
-    border-color: #d61726;
-    color: #ffffff;
-}
-
-@media (hover: hover) {
-    .finder__appliedfilters button:hover {
-        background-color: #a8121e;
-        border-color: #a8121e;
         color: #ffffff;
     }
 }
 
 .finder__appliedfilters button:active {
-    background-color: #a8121e;
-    border-color: #a8121e;
-}
-
-.finder__appliedfilters button:disabled {
     color: #ffffff;
-    background: #d61726;
-    border-color: #d61726;
+    background-color: #006bbd;
 }
 
-.finder__appliedfilters button:active span, .finder__appliedfilters button:focus span, .finder__appliedfilters button:hover span {
-    transform: none;
+.finder__appliedfilters button:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.finder__appliedfilters button:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.finder__appliedfilters button:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.finder__appliedfilters button:focus, .finder__appliedfilters button:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.finder__appliedfilters button:visited {
+    color: #4c2c92;
+}
+
+.finder__appliedfilters button:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__appliedfilters button:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.finder__appliedfilters button:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .finder__appliedfilters button:hover {
+        color: #ffffff;
+    }
+}
+
+.finder__appliedfilters button:active {
+    color: #ffffff;
+}
+
+.finder__appliedfilters button:visited {
+    border-bottom-color: #006bbd;
+}
+
+.finder__appliedfilters button span:first-of-type {
+    display: flex;
 }
 
 .finder__appliedfilters button .icon {
@@ -27820,7 +30271,11 @@ article .link-copy {
 }
 
 .finder__query__suggestions {
-    background-color: rgba(30, 30, 30, 0.9);
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 1rem 2.25rem;
+    border: 0.0625rem solid #e5e5e5;
+    border-top: 0;
+    border-radius: 0 0 0.5rem 0.5rem;
     color: #ffffff;
     font-weight: 700;
     left: 0;
@@ -27835,28 +30290,37 @@ article .link-copy {
 
 .finder__query__suggestions li {
     margin-top: 0;
+    font-weight: 400;
 }
 
 .finder__query__suggestions li button {
     height: 100%;
-    padding-bottom: 0.5rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 0.5rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
     text-align: left;
     width: 100%;
+    color: #1e1e1e;
 }
 
 .finder__query__suggestions li button:focus {
-    outline-color: #ffffff;
+    outline-color: #0c0c0e;
     outline-offset: -0.125rem;
     outline-style: dotted;
     outline-width: 0.125rem;
+    text-decoration: underline;
 }
 
-.finder__query__suggestions li button:focus, .finder__query__suggestions li button:hover {
-    background-color: #0c0c0e;
+.finder__query__suggestions li button:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-offset: 0;
+}
+
+.finder__query__suggestions li button:hover {
+    background-color: #006bbd;
     text-decoration: underline;
+    color: #ffffff;
 }
 
 @media (min-width: 769px) {
@@ -28623,6 +31087,12 @@ article .link-copy {
     grid-area: results;
 }
 
+@media (min-width: 769px) and (max-width: 900px) {
+    .finder .finder__results {
+        margin-left: 3rem;
+    }
+}
+
 .finder .finder__results .pagination__wrapper {
     max-width: unset;
 }
@@ -29139,6 +31609,186 @@ article .link-copy {
 
 .finder__results__bestbet a .finder__results__card__description {
     color: #1e1e1e;
+}
+
+.finder__select {
+    height: auto;
+    margin-top: 1rem;
+    position: relative;
+    border: 0.1875rem solid #3e1031;
+}
+
+.finder__select select {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    padding: 0.25rem 0.25rem 0 0.75rem;
+    position: relative;
+    bottom: 0.25rem;
+    font-weight: 600;
+    color: #1e1e1e;
+    width: 100%;
+    border: 0;
+    background: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    -ms-expand: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__select select {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__select select {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__select select {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__select select {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__select select {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__select select:focus {
+    outline: 0;
+}
+
+.finder__select:after {
+    font-family: "Font Awesome";
+    font-size: 0.875em;
+    content: '\f078';
+    font-weight: 600;
+    margin-top: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    z-index: -1;
+}
+
+.finder__select:focus-within {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+@media (max-width: 767px) {
+    .finder__select {
+        margin-bottom: 0.5rem;
+    }
+}
+
+@-moz-document url-prefix() {
+    .finder__select select {
+        margin-left: -0.25rem;
+    }
+}
+
+.finder__select--level {
+    grid-area: select;
+}
+
+.finder__select__overline {
+    font-size: 0.79rem;
+    line-height: 1.625;
+    letter-spacing: 0.005em;
+    color: #d61726;
+    font-weight: 400;
+    display: block;
+    padding: 0.25rem 0.25rem 0 0.75rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .finder__select__overline {
+        letter-spacing: 0em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .finder__select__overline {
+        letter-spacing: 0em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__select__overline {
+        letter-spacing: -0.007em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__select__overline {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__select__overline {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__input-text__wrapper {
+    display: flex;
+    flex: 1;
+    background: #ffffff;
+    padding: 0.5rem 0.75rem 0.25rem 0.25rem;
+}
+
+.finder__input-text__label {
+    display: none;
+}
+
+.finder__icon {
+    background: #ffffff;
+    font-weight: 400;
+    color: #696969;
+    margin-top: 50%;
+}
+
+.finder__icon--close {
+    color: #1e1e1e;
+    background: #f2f2f2;
+}
+
+.finder__icon--close__wrapper {
+    font-weight: 400;
+}
+
+.background-fill {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-color: #ffffff;
+    opacity: 0.6;
+    transition: background-color 0.2s linear;
+}
+
+.background-fill--grey {
+    background-color: #e5e5e5;
 }
 
 /*
@@ -30475,6 +33125,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .content-hub {
     grid-row-gap: 0;
     display: grid;
+    max-width: 80rem;
     grid-template-rows: auto;
 }
 
@@ -30499,6 +33150,20 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
+@media (min-width: 1441px) {
+    .content-hub {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .content-hub {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
 @media (max-width: 432px) {
     .content-hub {
         grid-template-areas: 'main main main main main main';
@@ -30513,27 +33178,274 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media (min-width: 901px) {
     .content-hub {
-        grid-template-areas: '. . . . . main main main main main main main main . . . . .';
+        grid-template-areas: 'main main main main main main main main main main main main main main main main main main';
     }
 }
 
 .content-hub > .content {
-    max-width: 80rem;
+    grid-row-gap: 0;
+    display: grid;
     grid-area: main;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas: ' . . . . video video video video video video video video video video . . . . ' ' . . . finder finder finder finder finder finder finder finder finder finder finder finder . . .' ' . careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers .' ' . pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway . ';
 }
 
-@media (min-width: 1441px) {
+@media (max-width: 432px) {
     .content-hub > .content {
-        margin-left: auto;
-        margin-right: auto;
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
     }
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 433px) and (max-width: 900px) {
     .content-hub > .content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
     }
+}
+
+@media (min-width: 901px) {
+    .content-hub > .content {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+.content-hub .embedded-video {
+    grid-area: video;
+}
+
+.content-hub .wrapper--finder {
+    grid-area: finder;
+}
+
+.content-hub .careers {
+    grid-area: careers;
+    grid-template-columns: repeat(16, 1fr);
+    grid-column-gap: 1.5rem;
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-areas: 'careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro . careers-images careers-images careers-images careers-images careers-images careers-images careers-images' 'job-title job-title job-title job-title job-title job-title job-title job-title employer employer employer employer employer employer employer employer ';
+}
+
+.content-hub .careers__intro {
+    grid-area: careers-intro;
+}
+
+.content-hub .careers__images {
+    grid-area: careers-images;
+    grid-template-columns: repeat(9, 1fr);
+    grid-column-gap: 1.5rem;
+    display: grid;
+    grid-template-rows: 2;
+    grid-template-areas: 'primary primary primary primary primary primary . . .' '. . . . secondary secondary secondary secondary .';
+}
+
+.content-hub .careers__images--primary {
+    grid-area: primary;
+}
+
+.content-hub .careers__images--secondary {
+    grid-area: secondary;
+    margin-top: -6rem;
+}
+
+.content-hub .careers__job-titles {
+    grid-area: job-title;
+}
+
+.content-hub .careers__job-titles ul {
+    -moz-columns: 2;
+         columns: 2;
+}
+
+.content-hub .careers__employers {
+    grid-area: employer;
+}
+
+.content-hub .careers__employer-logos-wrapper {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-column-gap: 1.5rem;
+    grid-template-areas: 'employer1 employer1 employer1 employer2 employer2 employer2 employer3 employer3 employer3';
+    padding: 1rem 0;
+}
+
+.content-hub .careers__employer-logos-wrapper img {
+    max-height: 4rem;
+}
+
+.content-hub .careers__employer-logos-wrapper img:nth-of-type(1) {
+    grid-area: employer1;
+}
+
+.content-hub .careers__employer-logos-wrapper img:nth-of-type(2) {
+    grid-area: employer2;
+}
+
+.content-hub .careers__employer-logos-wrapper img:nth-of-type(3) {
+    grid-area: employer3;
+}
+
+.content-hub .careers__job-locations h2 {
+    grid-area: a;
+}
+
+.content-hub .pathway-cards {
+    grid-area: pathway;
+    display: flex;
+}
+
+.content-hub p {
+    margin-right: 0;
+    max-width: 100%;
+}
+
+.content-hub .pathway-cards .card:nth-of-type(1) a {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.content-hub .pathway-cards .card:nth-of-type(1) a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .content-hub .pathway-cards .card:nth-of-type(1) a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .content-hub .pathway-cards .card:nth-of-type(1) a:hover:after {
+        background-color: #5fd8fe;
+        transform: scale(1.05);
+    }
+}
+
+.content-hub .pathway-cards .card:nth-of-type(1) a .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.content-hub .pathway-cards .card:nth-of-type(1) a:before {
+    background: #5fd8fe;
+}
+
+.content-hub .pathway-cards .card:nth-of-type(2) a {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.content-hub .pathway-cards .card:nth-of-type(2) a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .content-hub .pathway-cards .card:nth-of-type(2) a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .content-hub .pathway-cards .card:nth-of-type(2) a:hover:after {
+        background-color: #ffef2b;
+        transform: scale(1.05);
+    }
+}
+
+.content-hub .pathway-cards .card:nth-of-type(2) a .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.content-hub .pathway-cards .card:nth-of-type(2) a:before {
+    background: #ffef2b;
+}
+
+.content-hub .pathway-cards .card:nth-of-type(3) a {
+    /*
+        Pathway card uses same background
+        color and scale transition as 
+        other cards (course, related) but
+        the colours need to be overriden
+        due to all alternatives below. This
+        local mixin takes care of this.
+    */
+    /*
+        Sets top stripe color
+    */
+}
+
+.content-hub .pathway-cards .card:nth-of-type(3) a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .content-hub .pathway-cards .card:nth-of-type(3) a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .content-hub .pathway-cards .card:nth-of-type(3) a:hover:after {
+        background-color: #b382ec;
+        transform: scale(1.05);
+    }
+}
+
+.content-hub .pathway-cards .card:nth-of-type(3) a .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+.content-hub .pathway-cards .card:nth-of-type(3) a:before {
+    background: #b382ec;
+}
+
+.content-hub .pathway-cards .card:not(:last-child) {
+    padding-right: 1rem;
 }
 
 .course {
