@@ -3717,7 +3717,8 @@ function launchKeyInfo(batchQuantity) {
               const listingsLength = Array.from(listings.children).length;
               let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
 
-              zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(targetListing, 200); // let targetListingDate = targetListing.querySelectorAll(
+              zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(targetListing, 200);
+              targetListing.focus(); // let targetListingDate = targetListing.querySelectorAll(
               //     '.key-info__date'
               // );
               // Final batch of listings, zen scroll to 'load more' button and offset
