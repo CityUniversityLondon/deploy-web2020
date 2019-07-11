@@ -11785,6 +11785,10 @@ h6 + h6 {
     margin-top: 0;
 }
 
+main {
+    position: relative;
+}
+
 main p,
 main ol,
 main ul,
@@ -22721,7 +22725,7 @@ article figure figcaption a:active {
 }
 
 .background-fill {
-    position: fixed;
+    position: absolute;
     height: 100%;
     width: 100%;
     left: 0;
@@ -32137,7 +32141,7 @@ article .link-copy {
 }
 
 .background-fill {
-    position: fixed;
+    position: absolute;
     height: 100%;
     width: 100%;
     left: 0;

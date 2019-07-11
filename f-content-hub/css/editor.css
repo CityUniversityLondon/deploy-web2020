@@ -11639,6 +11639,10 @@ h6 + h6 {
     margin-top: 0;
 }
 
+main {
+    position: relative;
+}
+
 main p,
 main ol,
 main ul,
