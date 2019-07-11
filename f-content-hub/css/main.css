@@ -33189,7 +33189,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     margin: 0;
     display: grid;
     grid-template-rows: auto;
-    grid-template-areas: ' . . . . video video video video video video video video video video . . . . ' ' . . . finder finder finder finder finder finder finder finder finder finder finder finder . . .' ' . careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers .' ' . pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway . ';
+    grid-template-areas: ' . . . . video video video video video video video video video video . . . . ' ' . . . finder finder finder finder finder finder finder finder finder finder finder finder . . .' ' . careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers .' ' . pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway . ' ' . outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes . ';
 }
 
 @media (max-width: 432px) {
@@ -33446,6 +33446,14 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .content-hub .pathway-cards .card:not(:last-child) {
     padding-right: 1rem;
+}
+
+.content-hub .outcomes {
+    grid-area: outcomes;
+}
+
+.content-hub .outcomes h2:nth-of-type(1) {
+    text-align: center;
 }
 
 .course {
