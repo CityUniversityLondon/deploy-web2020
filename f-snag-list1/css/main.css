@@ -21691,11 +21691,8 @@ article figure figcaption a:active {
     text-align: center;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button .fa-plus-circle {
-    margin-right: 0.25rem;
-}
-
-.key-information--lifelong-learning__controls .content-toggle button .label {
+.key-information--lifelong-learning__controls .content-toggle button {
+    padding: 0.25rem;
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -21713,14 +21710,10 @@ article figure figcaption a:active {
     background-position: 0 100%;
     transition: background-size 0.2s ease-in-out;
     color: #006bbd;
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
+    .key-information--lifelong-learning__controls .content-toggle button:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -21735,7 +21728,7 @@ article figure figcaption a:active {
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button .label:focus, .key-information--lifelong-learning__controls .content-toggle button .label:active {
+.key-information--lifelong-learning__controls .content-toggle button:focus, .key-information--lifelong-learning__controls .content-toggle button:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -21750,103 +21743,66 @@ article figure figcaption a:active {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .key-information--lifelong-learning__controls .content-toggle button .label {
+    .key-information--lifelong-learning__controls .content-toggle button {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
+    .key-information--lifelong-learning__controls .content-toggle button:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button .label:visited {
+.key-information--lifelong-learning__controls .content-toggle button:visited {
     color: #4c2c92;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button .label:focus {
+.key-information--lifelong-learning__controls .content-toggle button:focus {
     color: #006bbd;
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
+    .key-information--lifelong-learning__controls .content-toggle button:hover {
         color: #ffffff;
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button .label:active {
+.key-information--lifelong-learning__controls .content-toggle button:active {
     color: #ffffff;
     background-color: #006bbd;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button .label:visited {
-    border-bottom-color: #4c2c92;
-}
-
-.key-information--lifelong-learning__controls .content-toggle button .label:focus {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
+.key-information--lifelong-learning__controls .content-toggle button:visited {
+    color: #006bbd;
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
+    .key-information--lifelong-learning__controls .content-toggle button:hover {
+        color: #ffffff;
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button .label:active {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
+.key-information--lifelong-learning__controls .content-toggle button:active {
+    color: #ffffff;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button .label:focus, .key-information--lifelong-learning__controls .content-toggle button .label:active {
+.key-information--lifelong-learning__controls .content-toggle button:focus, .key-information--lifelong-learning__controls .content-toggle button:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button .label:visited {
-    color: #4c2c92;
-}
-
-.key-information--lifelong-learning__controls .content-toggle button .label:focus {
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
-        color: #ffffff;
-    }
-}
-
-.key-information--lifelong-learning__controls .content-toggle button .label:active {
-    color: #ffffff;
-    background-color: #006bbd;
-}
-
-.key-information--lifelong-learning__controls .content-toggle button .label:visited {
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
-        color: #ffffff;
-    }
-}
-
-.key-information--lifelong-learning__controls .content-toggle button .label:active {
-    color: #ffffff;
-}
-
-.key-information--lifelong-learning__controls .content-toggle button .label:visited {
+.key-information--lifelong-learning__controls .content-toggle button .label {
     border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .fa-plus-circle {
+    padding: 0.0625rem 0.25rem 0 0;
 }
 
 @media (min-width: 768px) {
