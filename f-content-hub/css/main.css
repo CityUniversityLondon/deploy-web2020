@@ -33832,7 +33832,12 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
-    grid-template-areas: 'happening-col1 happening-col1 happening-col1 happening-col1 happening-col1 happening-col1 happening-col2 happening-col2 happening-col2 happening-col2 happening-col2 happening-col2 happening-col3 happening-col3 happening-col3 happening-col3 happening-col3 happening-col3 ';
+    grid-template-areas: 'happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title ' 'happening-col1 happening-col1 happening-col1 happening-col1 happening-col1 happening-col1 happening-col2 happening-col2 happening-col2 happening-col2 happening-col2 happening-col2 happening-col3 happening-col3 happening-col3 happening-col3 happening-col3 happening-col3 ';
+}
+
+.content-hub .happening h2:nth-of-type(1) {
+    grid-area: happening-title;
+    text-align: center;
 }
 
 .content-hub .happening__col1 {
