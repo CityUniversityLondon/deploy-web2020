@@ -13024,7 +13024,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -13035,13 +13035,13 @@ main table td em {
 }
 
 .card--casestudy a:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .card--casestudy a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
 }
@@ -13691,7 +13691,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -13702,13 +13702,13 @@ main table td em {
 }
 
 .card--related-course a:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .card--related-course a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
 }
@@ -14126,6 +14126,426 @@ main table td em {
     margin-right: 0.5rem;
 }
 
+/* -- General event card styles applied to all -- */
+.card--event a,
+.card--event a:hover,
+.card--event a:active,
+.card--event a:focus {
+    border-bottom: none;
+}
+
+.card--event:hover {
+    /* 
+          Trigger thumbnail transition on hover of
+          the card - note the following
+          values should match the mixin call:
+
+          - scale value
+          - background opacity
+
+          Mixin: thumbnail-gradient-scale
+        */
+}
+
+.card--event:hover .thumbnail__image-container img {
+    transform: scale(1.04);
+}
+
+.card--event:hover .thumbnail__image-container:after {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card--event .underline-transition__title {
+    line-height: 1.6;
+}
+
+.card--event__icon {
+    color: #d61726;
+    width: 1rem;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+@media (hover: hover) {
+    .card--event__image-container:hover {
+        background-image: none;
+    }
+    .card--event__image-container:hover img {
+        transform: scale(1.04);
+    }
+    .card--event__image-container:hover .thumbnail__image-container:after {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.card--event__image-container .thumbnail__image-container {
+    margin-right: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--event__image-container .thumbnail__image-container {
+        transition: none;
+    }
+}
+
+.card--event__image-container .thumbnail__image-container:after {
+    background-color: transparent;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: background-color 0.2s ease-in;
+    width: 100%;
+}
+
+.card--event__image-container .thumbnail__image-container img {
+    transition: transform 0.2s ease-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--event__image-container .thumbnail__image-container img {
+        transition: none;
+    }
+}
+
+.card--event__image-container a:first-child {
+    display: block;
+}
+
+.card--event__image-container .thumbnail__image-container {
+    height: 10rem;
+    width: 100%;
+}
+
+@media (min-width: 769px) {
+    .card--event__image-container .thumbnail__image-container {
+        height: 300px;
+        width: 100%;
+    }
+}
+
+.card--event__title-link a {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.card--event__title-link a i,
+.card--event__title-link a em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.card--event__title-link a b,
+.card--event__title-link a strong {
+    font-weight: inherit;
+}
+
+.card--event__title-link a i,
+.card--event__title-link a em {
+    font-style: italic;
+}
+
+.card--event__title-link a u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--event__title-link a {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--event__title-link a {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--event__title-link a {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--event__title-link a {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--event__title-link a {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--event__title-link a b,
+.card--event__title-link a strong {
+    font-weight: 600;
+}
+
+.card--event__date--highlight,
+.card--event__date {
+    font-size: 1.125rem;
+    color: #ffffff;
+    background: #d61726;
+    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+    font-weight: 700;
+}
+
+.card--event__date--highlight span,
+.card--event__date span {
+    font-weight: 300;
+}
+
+.card--event__content {
+    padding: 0 1.75rem 1.75rem 1.75rem;
+    position: relative;
+}
+
+.card--event__date-time-text {
+    font-family: "Plex Sans", sans-serif;
+    color: #1e1e1e;
+}
+
+@media (min-width: 769px) {
+    .card--event__date-time-text {
+        width: 70%;
+    }
+}
+
+.card--event__category {
+    padding-top: 1rem;
+    font-size: 0.889rem;
+    color: #00294a;
+    border-top: solid 0.125rem #d8d8d8;
+    font-style: italic;
+    margin: 0 1.75rem 0 1.75rem;
+}
+
+.card--event__location {
+    margin-bottom: 1rem;
+}
+
+.card--event__type {
+    position: relative;
+}
+
+.card--event__type span {
+    color: #d61726;
+}
+
+.card--event__price span {
+    border: 0.1875rem solid #d61726;
+    padding: 0.5rem;
+}
+
+@media (min-width: 769px) {
+    .card--event__price span {
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* -- Variation specific styles -- */
+.card--event--portrait {
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+    padding-bottom: 1.75rem;
+}
+
+.card--event--portrait:hover {
+    /* 
+          Trigger underline transition on hover of the
+          card - note the following
+          value should match the mixin call:
+
+          - background size
+
+          Mixin:  underline-transition-title
+      */
+}
+
+.card--event--portrait:hover .card--event__title-link .underline-transition__title {
+    background-image: linear-gradient(#1e1e1e, #1e1e1e);
+    background-size: 100% 0.19rem;
+    color: #1e1e1e;
+}
+
+.card--event--portrait .card--event__date--highlight {
+    display: inline-flex;
+    position: relative;
+    top: -22px;
+    left: 1.75rem;
+    align-items: center;
+}
+
+.card--event--portrait .card--event__price {
+    text-align: right;
+}
+
+.card--event--portrait .card--event__title-link .underline-transition__title {
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.19rem;
+    transition: background-size 0.6s ease-in;
+    /**
+            Needs to be inline else underline transition
+            stretches beyond the element
+        **/
+    display: inline;
+    padding-bottom: 0.25rem;
+}
+
+.card--event--portrait .card--event__title-link:focus .underline-transition__title {
+    background-size: 100% 0.19rem;
+}
+
+@media (hover: hover) {
+    .card--event--portrait .card--event__title-link:hover .underline-transition__title {
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 0.19rem;
+        color: #1e1e1e;
+    }
+}
+
+.card--event--portrait .card--event__title-link a {
+    color: #696969;
+}
+
+.card--event--portrait .card--event__title-link a:visited {
+    color: #696969;
+}
+
+.card--event--portrait .card--event__title-link a:active {
+    background-color: transparent;
+}
+
+.card--event--portrait .card--event__title-link a:hover {
+    color: #1e1e1e;
+}
+
+.card--event--portrait .card--event__date-time-text {
+    margin: 1rem 0;
+}
+
+.card--event--landscape {
+    padding: 1rem;
+    position: relative;
+}
+
+.card--event--landscape:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--event--landscape:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--event--landscape:hover:after {
+        background-color: #f2f2f2;
+        transform: scale(1.03);
+    }
+}
+
+.card--event--landscape .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
+@media (min-width: 769px) {
+    .card--event--landscape {
+        display: flex;
+        width: 1000px;
+    }
+}
+
+.card--event--landscape .thumbnail__image-container {
+    height: 100%;
+}
+
+.card--event--landscape .card--event__image-container {
+    position: relative;
+}
+
+@media (min-width: 769px) {
+    .card--event--landscape .card--event__image-container {
+        width: 400px;
+    }
+}
+
+.card--event--landscape .card--event__date--highlight {
+    position: absolute;
+    right: 0;
+    top: 2rem;
+}
+
+.card--event--landscape .card--event__date-time-text {
+    margin-bottom: 1rem;
+}
+
+.card--event--landscape .card--event__content {
+    margin-top: 2rem;
+}
+
+.card--event--landscape .card--event__price {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 2.5rem;
+}
+
+@media (min-width: 769px) {
+    .card--event--landscape .card--event__price {
+        top: 1.5rem;
+        bottom: initial;
+    }
+}
+
+@media (min-width: 769px) {
+    .card--event--landscape .card--event__inner {
+        display: flex;
+        margin-top: 3rem;
+    }
+}
+
+.card--event--landscape .card--event__inner div:nth-child(2) {
+    margin-top: 1rem;
+}
+
+@media (min-width: 769px) {
+    .card--event--landscape .card--event__inner div:nth-child(2) {
+        margin-top: 0;
+    }
+}
+
+.card--event--landscape .card--event__date {
+    margin-top: 2rem;
+}
+
+.card--event--transparent {
+    box-shadow: none;
+    background: transparent;
+}
+
 .card--news {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
@@ -14360,7 +14780,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -14371,13 +14791,13 @@ main table td em {
 }
 
 .card--news__title-link:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .card--news__title-link:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
 }
@@ -22248,7 +22668,7 @@ article figure figcaption a:active {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -22259,13 +22679,13 @@ article figure figcaption a:active {
 }
 
 .finder__results__card a:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .finder__results__card a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
 }
@@ -27935,7 +28355,9 @@ article .link-copy {
 
 @media (max-width: 431px) {
     .banner__group__overlay__heading--title-standfirst {
-        grid-template-areas: 'standfirst standfirst standfirst standfirst standfirst standfirst' 'standfirst standfirst standfirst standfirst standfirst standfirst';
+        grid-template-areas: 'standfirst standfirst standfirst standfirst standfirst standfirst';
+        margin: -0.125rem 0 0 0;
+        padding: 0;
     }
 }
 
@@ -31664,7 +32086,7 @@ article .link-copy {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -31675,13 +32097,13 @@ article .link-copy {
 }
 
 .finder__results__card a:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .finder__results__card a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
 }
@@ -33531,7 +33953,22 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media (max-width: 432px) {
     .content-hub {
+        max-width: 80rem;
         grid-template-areas: 'main main main main main main';
+    }
+}
+
+@media (max-width: 432px) and (min-width: 1441px) {
+    .content-hub {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 432px) and (max-width: 1440px) {
+    .content-hub {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
