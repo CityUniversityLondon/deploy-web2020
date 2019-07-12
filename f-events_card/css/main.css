@@ -1078,6 +1078,10 @@
     background-color: #ffffff;
 }
 
+/**
+    Used where card has two divs, one most likely
+    being a thumbnail.
+**/
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
@@ -12542,6 +12546,7 @@ main table td em {
     position: relative;
     transition: none;
     padding: 1rem;
+    display: block;
 }
 
 @media (hover: hover) {
@@ -12587,8 +12592,6 @@ main table td em {
 }
 
 .card--casestudy a .thumbnail__image-container {
-    height: 4.75rem;
-    width: 4.75rem;
     margin-right: 1.5rem;
     overflow: hidden;
     position: relative;
@@ -12598,13 +12601,6 @@ main table td em {
 @media (prefers-reduced-motion: reduce) {
     .card--casestudy a .thumbnail__image-container {
         transition: none;
-    }
-}
-
-@media (min-width: 768px) {
-    .card--casestudy a .thumbnail__image-container {
-        height: 8rem;
-        width: 8rem;
     }
 }
 
@@ -12621,9 +12617,6 @@ main table td em {
 }
 
 .card--casestudy a .thumbnail__image-container img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
     transition: transform 0.3s ease-in;
 }
 
@@ -12640,7 +12633,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -12657,28 +12650,33 @@ main table td em {
     }
 }
 
+.card--casestudy a .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
 .card--casestudy a .underline-transition__title {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.19rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
-            Needs to be inline else underline transition 
+            Needs to be inline else underline transition
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.09rem;
 }
 
 .card--casestudy a:focus .underline-transition__title {
-    background-size: 100% 0.19rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .card--casestudy a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.19rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
@@ -12837,7 +12835,7 @@ main table td em {
     }
 }
 
-@media (min-width: 433px) {
+@media (min-width: 768px) {
     .card--casestudy a {
         display: flex;
     }
@@ -13054,7 +13052,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -13069,6 +13067,11 @@ main table td em {
         background-color: #f2f2f2;
         transform: scale(1.03);
     }
+}
+
+.card--course .card__inner {
+    z-index: 2;
+    position: relative;
 }
 
 .card--course p {
@@ -13205,6 +13208,7 @@ main table td em {
     position: relative;
     transition: none;
     padding: 1rem;
+    display: block;
 }
 
 @media (hover: hover) {
@@ -13250,8 +13254,6 @@ main table td em {
 }
 
 .card--related-course a .thumbnail__image-container {
-    height: 4.75rem;
-    width: 4.75rem;
     margin-right: 1.5rem;
     overflow: hidden;
     position: relative;
@@ -13261,13 +13263,6 @@ main table td em {
 @media (prefers-reduced-motion: reduce) {
     .card--related-course a .thumbnail__image-container {
         transition: none;
-    }
-}
-
-@media (min-width: 768px) {
-    .card--related-course a .thumbnail__image-container {
-        height: 8rem;
-        width: 8rem;
     }
 }
 
@@ -13284,9 +13279,6 @@ main table td em {
 }
 
 .card--related-course a .thumbnail__image-container img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
     transition: transform 0.3s ease-in;
 }
 
@@ -13303,7 +13295,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -13320,28 +13312,33 @@ main table td em {
     }
 }
 
+.card--related-course a .card__inner {
+    z-index: 2;
+    position: relative;
+}
+
 .card--related-course a .underline-transition__title {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.19rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
-            Needs to be inline else underline transition 
+            Needs to be inline else underline transition
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.09rem;
 }
 
 .card--related-course a:focus .underline-transition__title {
-    background-size: 100% 0.19rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .card--related-course a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.19rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
@@ -13500,7 +13497,7 @@ main table td em {
     }
 }
 
-@media (min-width: 433px) {
+@media (min-width: 768px) {
     .card--related-course a {
         display: flex;
     }
@@ -13820,8 +13817,6 @@ main table td em {
 }
 
 .card--event__image-container .thumbnail__image-container {
-    height: 4.75rem;
-    width: 4.75rem;
     margin-right: 1.5rem;
     overflow: hidden;
     position: relative;
@@ -13831,13 +13826,6 @@ main table td em {
 @media (prefers-reduced-motion: reduce) {
     .card--event__image-container .thumbnail__image-container {
         transition: none;
-    }
-}
-
-@media (min-width: 768px) {
-    .card--event__image-container .thumbnail__image-container {
-        height: 8rem;
-        width: 8rem;
     }
 }
 
@@ -13854,9 +13842,6 @@ main table td em {
 }
 
 .card--event__image-container .thumbnail__image-container img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
     transition: transform 0.3s ease-in;
 }
 
@@ -14049,24 +14034,24 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.19rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
-            Needs to be inline else underline transition 
+            Needs to be inline else underline transition
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.09rem;
 }
 
 .card--event--portrait .card--event__title-link:focus .underline-transition__title {
-    background-size: 100% 0.19rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .card--event--portrait .card--event__title-link:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.19rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
@@ -14107,7 +14092,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -14122,6 +14107,11 @@ main table td em {
         background-color: #f2f2f2;
         transform: scale(1.03);
     }
+}
+
+.card--event--landscape .card__inner {
+    z-index: 2;
+    position: relative;
 }
 
 @media (min-width: 769px) {
@@ -14256,7 +14246,11 @@ main table td em {
     }
 }
 
-@media (min-width: 433px) {
+.card--profile__description {
+    display: block;
+}
+
+@media (min-width: 768px) {
     .card--profile__description {
         display: flex;
     }
@@ -14355,11 +14349,11 @@ main table td em {
     background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
-            Needs to be inline else underline transition 
+            Needs to be inline else underline transition
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
+    padding-bottom: 0.09rem;
 }
 
 .card--pathway:focus .underline-transition__title {
@@ -14578,7 +14572,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -14593,6 +14587,11 @@ main table td em {
         background-color: #5fd8fe;
         transform: scale(1.05);
     }
+}
+
+.card--pathway--blue .card__inner {
+    z-index: 2;
+    position: relative;
 }
 
 .card--pathway--blue:before, .card--pathway--blue:hover {
@@ -14610,7 +14609,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -14625,6 +14624,11 @@ main table td em {
         background-color: #b382ec;
         transform: scale(1.05);
     }
+}
+
+.card--pathway--purple .card__inner {
+    z-index: 2;
+    position: relative;
 }
 
 .card--pathway--purple:before, .card--pathway--purple:hover {
@@ -14642,7 +14646,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -14657,6 +14661,11 @@ main table td em {
         background-color: #df82c4;
         transform: scale(1.05);
     }
+}
+
+.card--pathway--pink .card__inner {
+    z-index: 2;
+    position: relative;
 }
 
 .card--pathway--pink:before, .card--pathway--pink:hover {
@@ -14674,7 +14683,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -14689,6 +14698,11 @@ main table td em {
         background-color: #b9d698;
         transform: scale(1.05);
     }
+}
+
+.card--pathway--green .card__inner {
+    z-index: 2;
+    position: relative;
 }
 
 .card--pathway--green:before, .card--pathway--green:hover {
@@ -14706,7 +14720,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -14721,6 +14735,11 @@ main table td em {
         background-color: #b382ec;
         transform: scale(1.05);
     }
+}
+
+.card--pathway--purple .card__inner {
+    z-index: 2;
+    position: relative;
 }
 
 .card--pathway--purple:before, .card--pathway--purple:hover {
@@ -14738,7 +14757,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -14753,6 +14772,11 @@ main table td em {
         background-color: #df82c4;
         transform: scale(1.05);
     }
+}
+
+.card--pathway--pink .card__inner {
+    z-index: 2;
+    position: relative;
 }
 
 .card--pathway--pink:before, .card--pathway--pink:hover {
@@ -14770,7 +14794,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -14785,6 +14809,11 @@ main table td em {
         background-color: #7fd6df;
         transform: scale(1.05);
     }
+}
+
+.card--pathway--teal .card__inner {
+    z-index: 2;
+    position: relative;
 }
 
 .card--pathway--teal:before, .card--pathway--teal:hover {
@@ -14802,7 +14831,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -14817,6 +14846,11 @@ main table td em {
         background-color: #ffef2b;
         transform: scale(1.05);
     }
+}
+
+.card--pathway--yellow .card__inner {
+    z-index: 2;
+    position: relative;
 }
 
 .card--pathway--yellow:before, .card--pathway--yellow:hover {
@@ -19374,8 +19408,11 @@ article figure figcaption a:active {
     text-align: center;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button {
-    padding: 0.25rem;
+.key-information--lifelong-learning__controls .content-toggle button .fa-plus-circle {
+    margin-right: 0.25rem;
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -19393,10 +19430,14 @@ article figure figcaption a:active {
     background-position: 0 100%;
     transition: background-size 0.3s ease;
     color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button:hover {
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -19411,7 +19452,7 @@ article figure figcaption a:active {
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:focus, .key-information--lifelong-learning__controls .content-toggle button:active {
+.key-information--lifelong-learning__controls .content-toggle button .label:focus, .key-information--lifelong-learning__controls .content-toggle button .label:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -19426,66 +19467,103 @@ article figure figcaption a:active {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .key-information--lifelong-learning__controls .content-toggle button {
+    .key-information--lifelong-learning__controls .content-toggle button .label {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button:hover {
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:visited {
+.key-information--lifelong-learning__controls .content-toggle button .label:visited {
     color: #4c2c92;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:focus {
+.key-information--lifelong-learning__controls .content-toggle button .label:focus {
     color: #006bbd;
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button:hover {
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
         color: #ffffff;
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:active {
+.key-information--lifelong-learning__controls .content-toggle button .label:active {
     color: #ffffff;
     background-color: #006bbd;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:visited {
-    color: #006bbd;
+.key-information--lifelong-learning__controls .content-toggle button .label:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button:hover {
-        color: #ffffff;
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:active {
-    color: #ffffff;
+.key-information--lifelong-learning__controls .content-toggle button .label:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:focus, .key-information--lifelong-learning__controls .content-toggle button:active {
+.key-information--lifelong-learning__controls .content-toggle button .label:focus, .key-information--lifelong-learning__controls .content-toggle button .label:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button .label {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
+.key-information--lifelong-learning__controls .content-toggle button .label:visited {
+    color: #4c2c92;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button .fa-plus-circle {
-    padding: 0.0625rem 0.25rem 0 0;
+.key-information--lifelong-learning__controls .content-toggle button .label:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
+        color: #ffffff;
+    }
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
+        color: #ffffff;
+    }
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label:active {
+    color: #ffffff;
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label:visited {
+    border-bottom-color: #006bbd;
 }
 
 @media (min-width: 768px) {

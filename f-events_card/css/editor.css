@@ -1078,6 +1078,10 @@
     background-color: #ffffff;
 }
 
+/**
+    Used where card has two divs, one most likely
+    being a thumbnail.
+**/
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
