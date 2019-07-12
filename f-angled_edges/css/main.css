@@ -1092,17 +1092,35 @@
 **/
 /* 
     USAGE:
-
-    .element {
-        @include angled-edge(
-            $background-color: $color-gray6, 
-            $pseudo: both | before | after, 
-            $skew: 1.5deg
-        );
-    }
-
-    Leave blank for defaults
 */
+.angled-edge {
+    position: relative;
+    padding-bottom: 6rem;
+}
+
+.angled-edge:before, .angled-edge:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    content: '';
+    display: block;
+    height: 48%;
+    background-color: #bebebe;
+}
+
+.angled-edge:before {
+    -webkit-clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 95%);
+            clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 95%);
+    top: 0;
+}
+
+.angled-edge:after {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 90%);
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 0 90%);
+    bottom: 0;
+}
+
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
