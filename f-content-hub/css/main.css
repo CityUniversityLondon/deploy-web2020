@@ -33991,7 +33991,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     margin: 0;
     display: grid;
     grid-template-rows: auto;
-    grid-template-areas: ' . . . . video video video video video video video video video video . . . . ' ' . . . finder finder finder finder finder finder finder finder finder finder finder finder . . .' ' . careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers .' ' . pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway . ' ' . outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes . ' ' . gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery ' ' . testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial . ' ' happening happening happening happening happening happening happening happening happening happening happening happening happening happening happening happening happening happening ';
+    grid-template-areas: ' . . . . video video video video video video video video video video . . . . ' ' . . . finder finder finder finder finder finder finder finder finder finder finder finder . . .' ' . careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers .' ' . pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway . ' ' . outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes . ' ' . gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery ' ' . testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial . ' ' news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events ';
 }
 
 @media (max-width: 432px) {
@@ -34015,8 +34015,16 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
+@media (max-width: 432px) {
+    .content-hub > .content {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: ' video video video video video video ' ' finder finder finder finder finder finder ' ' careers careers careers careers careers careers ' ' pathway pathway pathway pathway pathway pathway ' ' outcomes outcomes outcomes outcomes outcomes outcomes ' ' gallery gallery gallery gallery gallery gallery ' ' testimonial testimonial testimonial testimonial testimonial testimonial ' ' news-events news-events news-events news-events news-events news-events ';
+    }
+}
+
 .content-hub .embedded-video {
     grid-area: video;
+    padding-bottom: 0;
 }
 
 .content-hub .wrapper--finder {
@@ -34032,6 +34040,13 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-template-areas: 'careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro . careers-images careers-images careers-images careers-images careers-images careers-images careers-images' 'job-title job-title job-title job-title job-title job-title job-title job-title employer employer employer employer employer employer employer employer ';
 }
 
+@media (max-width: 432px) {
+    .content-hub .careers {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 'careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro' 'careers-images careers-images careers-images careers-images careers-images careers-images' 'job-title job-title job-title job-title job-title job-title' 'employer employer employer employer employer employer';
+    }
+}
+
 .content-hub .careers__intro {
     grid-area: careers-intro;
 }
@@ -34043,6 +34058,12 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     display: grid;
     grid-template-rows: 2;
     grid-template-areas: 'primary primary primary primary primary primary . . .' '. . . . secondary secondary secondary secondary .';
+}
+
+@media (max-width: 432px) {
+    .content-hub .careers__images {
+        display: none;
+    }
 }
 
 .content-hub .careers__images--primary {
@@ -34267,30 +34288,45 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-area: testimonial;
 }
 
-.content-hub .happening {
-    grid-area: happening;
+.content-hub .news-events {
+    grid-area: news-events;
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
-    grid-template-areas: 'happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title happening-title ' 'happening-col1 happening-col1 happening-col1 happening-col1 happening-col1 happening-col1 happening-col2 happening-col2 happening-col2 happening-col2 happening-col2 happening-col2 happening-col3 happening-col3 happening-col3 happening-col3 happening-col3 happening-col3 ';
+    grid-template-areas: 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title ' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 ';
 }
 
-.content-hub .happening h2:nth-of-type(1) {
-    grid-area: happening-title;
+@media (max-width: 432px) {
+    .content-hub .news-events {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1' 'news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2' 'news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3';
+    }
+}
+
+.content-hub .news-events h2:nth-of-type(1) {
+    grid-area: news-events-title;
     text-align: center;
 }
 
-.content-hub .happening__col1 {
-    grid-area: happening-col1;
+.content-hub .news-events__col1 {
+    grid-area: news-events-col1;
 }
 
-.content-hub .happening__col2 {
-    grid-area: happening-col2;
+.content-hub .news-events__col2 {
+    grid-area: news-events-col2;
 }
 
-.content-hub .happening__col3 {
-    grid-area: happening-col3;
+.content-hub .news-events__col3 {
+    grid-area: news-events-col3;
+}
+
+@media (max-width: 432px) {
+    .content-hub .card--news,
+    .content-hub .card--event {
+        box-shadow: none;
+        margin-bottom: 1rem;
+    }
 }
 
 .course {
