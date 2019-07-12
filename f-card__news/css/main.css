@@ -14224,6 +14224,10 @@ main table td em {
     width: 100%;
 }
 
+.card--news__image-container .thumbnail__image-container img {
+    height: 100%;
+}
+
 @media (min-width: 768px) {
     .card--news__image-container .thumbnail__image-container {
         height: 16.66rem;
