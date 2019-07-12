@@ -1090,6 +1090,19 @@
     Used where card has two divs, one most likely
     being a thumbnail.
 **/
+/* 
+    USAGE:
+
+    .element {
+        @include angled-edge(
+            $background-color: $color-gray6, 
+            $pseudo: both | before | after, 
+            $skew: 1.5deg
+        );
+    }
+
+    Leave blank for defaults
+*/
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
@@ -33912,7 +33925,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .content-hub {
     grid-row-gap: 0;
     display: grid;
-    max-width: 80rem;
     grid-template-rows: auto;
 }
 
@@ -33937,38 +33949,9 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-@media (min-width: 1441px) {
-    .content-hub {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .content-hub {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
 @media (max-width: 432px) {
     .content-hub {
-        max-width: 80rem;
         grid-template-areas: 'main main main main main main';
-    }
-}
-
-@media (max-width: 432px) and (min-width: 1441px) {
-    .content-hub {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 432px) and (max-width: 1440px) {
-    .content-hub {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
     }
 }
 
@@ -33985,34 +33968,11 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .content-hub > .content {
-    grid-row-gap: 0;
-    display: grid;
     grid-area: main;
     margin: 0;
     display: grid;
     grid-template-rows: auto;
     grid-template-areas: ' . . . . video video video video video video video video video video . . . . ' ' . . . finder finder finder finder finder finder finder finder finder finder finder finder . . .' ' . careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers .' ' . pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway . ' ' . outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes . ' ' . gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery ' ' . testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial . ' ' news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events ';
-}
-
-@media (max-width: 432px) {
-    .content-hub > .content {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .content-hub > .content {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .content-hub > .content {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
 }
 
 @media (max-width: 432px) {
@@ -34027,8 +33987,48 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     padding-bottom: 0;
 }
 
+@media (max-width: 432px) {
+    .content-hub .embedded-video {
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 432px) and (min-width: 1441px) {
+    .content-hub .embedded-video {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 432px) and (max-width: 1440px) {
+    .content-hub .embedded-video {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
 .content-hub .wrapper--finder {
     grid-area: finder;
+}
+
+@media (max-width: 432px) {
+    .content-hub .wrapper--finder {
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 432px) and (min-width: 1441px) {
+    .content-hub .wrapper--finder {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 432px) and (max-width: 1440px) {
+    .content-hub .wrapper--finder {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 .content-hub .careers {
@@ -34038,6 +34038,26 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     display: grid;
     grid-template-rows: 2;
     grid-template-areas: 'careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro . careers-images careers-images careers-images careers-images careers-images careers-images careers-images' 'job-title job-title job-title job-title job-title job-title job-title job-title employer employer employer employer employer employer employer employer ';
+}
+
+@media (max-width: 432px) {
+    .content-hub .careers {
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 432px) and (min-width: 1441px) {
+    .content-hub .careers {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 432px) and (max-width: 1440px) {
+    .content-hub .careers {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 @media (max-width: 432px) {
@@ -34119,6 +34139,26 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .content-hub .pathway-cards {
     grid-area: pathway;
     display: flex;
+}
+
+@media (max-width: 432px) {
+    .content-hub .pathway-cards {
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 432px) and (min-width: 1441px) {
+    .content-hub .pathway-cards {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 432px) and (max-width: 1440px) {
+    .content-hub .pathway-cards {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 .content-hub p {
@@ -34275,6 +34315,26 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-area: outcomes;
 }
 
+@media (max-width: 432px) {
+    .content-hub .outcomes {
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 432px) and (min-width: 1441px) {
+    .content-hub .outcomes {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 432px) and (max-width: 1440px) {
+    .content-hub .outcomes {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
 .content-hub .outcomes h2:nth-of-type(1) {
     text-align: center;
 }
@@ -34301,6 +34361,25 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     .content-hub .news-events {
         grid-template-columns: repeat(6, 1fr);
         grid-template-areas: 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1' 'news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2' 'news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3';
+        z-index: -1;
+        position: relative;
+    }
+    .content-hub .news-events:before, .content-hub .news-events:after {
+        background: #e5e5e5;
+        content: '';
+        display: block;
+        height: 110%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        z-index: -1;
+    }
+    .content-hub .news-events:before {
+        top: -5%;
+        transform: skewY(1.5deg);
+    }
+    .content-hub .news-events:after {
+        display: none;
     }
 }
 

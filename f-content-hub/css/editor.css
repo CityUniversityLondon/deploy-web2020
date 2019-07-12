@@ -1090,6 +1090,19 @@
     Used where card has two divs, one most likely
     being a thumbnail.
 **/
+/* 
+    USAGE:
+
+    .element {
+        @include angled-edge(
+            $background-color: $color-gray6, 
+            $pseudo: both | before | after, 
+            $skew: 1.5deg
+        );
+    }
+
+    Leave blank for defaults
+*/
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
