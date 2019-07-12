@@ -1103,31 +1103,6 @@
 
     Leave blank for defaults
 */
-.angled-edge {
-    z-index: -1;
-    position: relative;
-}
-
-.angled-edge:before, .angled-edge:after {
-    background: #cbcbcb;
-    content: '';
-    display: block;
-    height: 110%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: -1;
-}
-
-.angled-edge:before {
-    top: -5%;
-    transform: skewY(1.5deg);
-}
-
-.angled-edge:after {
-    display: none;
-}
-
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
