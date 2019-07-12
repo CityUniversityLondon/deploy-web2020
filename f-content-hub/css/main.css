@@ -33958,7 +33958,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media (min-width: 433px) {
     .content-hub {
-        grid-template-areas: '. . main main main main main main main main . .';
+        grid-template-areas: 'main main main main main main main main main main main main';
     }
 }
 
@@ -33973,13 +33973,48 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     margin: 0;
     display: grid;
     grid-template-rows: auto;
-    grid-template-areas: " vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap" " . careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers ." " . pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway . " " . outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes . " " . gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery " " . testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial . " " news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events ";
 }
 
 @media (max-width: 432px) {
     .content-hub > .content {
         grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: " vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap " " careers careers careers careers careers careers " " pathway pathway pathway pathway pathway pathway " " outcomes outcomes outcomes outcomes outcomes outcomes " " gallery gallery gallery gallery gallery gallery " " testimonial testimonial testimonial testimonial testimonial testimonial " " news-events news-events news-events news-events news-events news-events ";
+        grid-template-areas: ' vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap ' ' careers careers careers careers careers careers ' ' pathway pathway pathway pathway pathway pathway ' ' outcomes outcomes outcomes outcomes outcomes outcomes ' ' gallery gallery gallery gallery gallery gallery ' ' testimonial testimonial testimonial testimonial testimonial testimonial ' ' news-events news-events news-events news-events news-events news-events ';
+    }
+}
+
+@media (min-width: 433px) {
+    .content-hub > .content {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: ' vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap ' ' careers careers careers careers careers careers careers careers careers careers careers careers ' ' pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway ' ' outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes ' ' gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery ' ' testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial ' ' news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events ';
+    }
+}
+
+@media (min-width: 901px) {
+    .content-hub > .content {
+        grid-row-gap: 0;
+        display: grid;
+        grid-template-areas: ' vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap vf-wrap' ' . careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers careers .' ' . pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway . ' ' . outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes . ' ' . gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery ' ' . testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial testimonial . ' ' news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events news-events ';
+    }
+}
+
+@media (min-width: 901px) and (max-width: 432px) {
+    .content-hub > .content {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 901px) and (min-width: 433px) and (max-width: 900px) {
+    .content-hub > .content {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) and (min-width: 901px) {
+    .content-hub > .content {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
     }
 }
 
@@ -33989,9 +34024,9 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
-    grid-template-areas: ' . . . . video video video video video video video video video video . . . . ' ' . . . finder finder finder finder finder finder finder finder finder finder finder finder . . . ';
     z-index: -1;
     position: relative;
+    margin-bottom: 7rem;
 }
 
 .content-hub .video-finder-wrapper:before, .content-hub .video-finder-wrapper:after {
@@ -34014,10 +34049,28 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     bottom: -5%;
 }
 
+.content-hub .video-finder-wrapper:after {
+    margin-bottom: 0;
+}
+
 @media (max-width: 432px) {
     .content-hub .video-finder-wrapper {
         grid-template-columns: repeat(6, 1fr);
         grid-template-areas: 'video video video video video video' 'finder finder finder finder finder finder';
+    }
+}
+
+@media (min-width: 433px) {
+    .content-hub .video-finder-wrapper {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: 'video video video video video video video video video video video video' 'finder finder finder finder finder finder finder finder finder finder finder finder';
+    }
+}
+
+@media (min-width: 901px) {
+    .content-hub .video-finder-wrapper {
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-areas: ' . . . . video video video video video video video video video video . . . . ' ' . . . finder finder finder finder finder finder finder finder finder finder finder finder . . . ';
     }
 }
 
@@ -34073,11 +34126,9 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .content-hub .careers {
     grid-area: careers;
     max-width: 80rem;
-    grid-template-columns: repeat(16, 1fr);
     grid-column-gap: 1.5rem;
     display: grid;
-    grid-template-rows: 2;
-    grid-template-areas: 'careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro . careers-images careers-images careers-images careers-images careers-images careers-images careers-images' 'job-title job-title job-title job-title job-title job-title job-title job-title employer employer employer employer employer employer employer employer ';
+    grid-template-rows: auto;
 }
 
 @media (min-width: 1441px) {
@@ -34101,6 +34152,20 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
+@media (min-width: 433px) {
+    .content-hub .careers {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: 'careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro ' 'job-title job-title job-title job-title job-title job-title employer employer employer employer employer employer';
+    }
+}
+
+@media (min-width: 901px) {
+    .content-hub .careers {
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-areas: 'careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro . careers-images careers-images careers-images careers-images careers-images careers-images careers-images' 'job-title job-title job-title job-title job-title job-title job-title job-title employer employer employer employer employer employer employer employer ';
+    }
+}
+
 .content-hub .careers__intro {
     grid-area: careers-intro;
 }
@@ -34114,7 +34179,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-template-areas: 'primary primary primary primary primary primary . . .' '. . . . secondary secondary secondary secondary .';
 }
 
-@media (max-width: 432px) {
+@media (max-width: 900px) {
     .content-hub .careers__images {
         display: none;
     }
@@ -34421,6 +34486,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-template-areas: 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title ' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 ';
     z-index: -1;
     position: relative;
+    margin-bottom: 7rem;
 }
 
 @media (max-width: 432px) {
@@ -34448,6 +34514,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .content-hub .news-events:after {
     display: none;
+}
+
+.content-hub .news-events:after {
+    margin-bottom: 0;
 }
 
 .content-hub .news-events h2:nth-of-type(1) {
