@@ -6362,19 +6362,20 @@ function itemsDisplay(items, visibleItems, loadMoreBtn) {
     item[1].setAttribute('tabindex', '-1');
 
     if (item[0] >= visibleItems) {
-      item[1].classList.add('hide');
-      item[1].style.display = 'none';
+      item[1].classList.add('key-info__listing__hide');
     } else {
-      item[1].classList.remove('hide');
-      item[1].style.display = 'grid';
+      item[1].classList.add('key-info__listing__prep');
+      setTimeout(function () {
+        item[1].classList.add('key-info__listing__show');
+      }, 50);
     }
   } // Hide 'load more' button when reached end of listings
 
 
   if (visibleItems > items.length) {
-    loadMoreBtn.classList.add('hide');
+    loadMoreBtn.classList.add('key-info__listing__hide');
   } else {
-    loadMoreBtn.classList.remove('hide');
+    loadMoreBtn.classList.remove('key-info__listing__hide');
   }
 }
 /**

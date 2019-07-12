@@ -17152,6 +17152,11 @@ article figure figcaption a:active {
     font-size: 0.889rem;
 }
 
+.key-information--lifelong-learning > ul .hide {
+    opacity: 0;
+    display: none;
+}
+
 .key-info__listing {
     display: grid;
     opacity: 1;
@@ -17159,9 +17164,18 @@ article figure figcaption a:active {
     /* Content column grids */
 }
 
-.key-info__listing.hide {
+.key-info__listing__hide {
     opacity: 0;
     display: none;
+}
+
+.key-info__listing__prep {
+    display: grid;
+}
+
+.key-info__listing__show {
+    opacity: 1;
+    transition: opacity 2s;
 }
 
 @media (max-width: 767px) {
