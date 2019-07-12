@@ -13877,7 +13877,7 @@ main table td em {
 
 @media (min-width: 769px) {
     .card--event__image-container .thumbnail__image-container {
-        height: 300px;
+        height: 16.66rem;
         width: 100%;
     }
 }
@@ -14009,7 +14009,7 @@ main table td em {
     }
 }
 
-/* -- Variation specific styles -- */
+/* -- Portrait/landscape specific styles -- */
 .card--event--portrait {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     padding-bottom: 1.75rem;
@@ -14036,7 +14036,7 @@ main table td em {
 .card--event--portrait .card--event__date--highlight {
     display: inline-flex;
     position: relative;
-    top: -22px;
+    top: -1.22rem;
     left: 1.75rem;
     align-items: center;
 }
@@ -14069,6 +14069,10 @@ main table td em {
         background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
+}
+
+.card--event--portrait .card--event__title-link .underline-transition__title {
+    padding-bottom: 0;
 }
 
 .card--event--portrait .card--event__title-link a {
@@ -14123,7 +14127,14 @@ main table td em {
 @media (min-width: 769px) {
     .card--event--landscape {
         display: flex;
-        width: 1000px;
+        width: 55.55rem;
+        /* 
+            due to width of container and the
+            fact that the card is very wide,
+            the above width is needed to get
+            the card through testing. We 
+            can remove after
+        */
     }
 }
 
@@ -14137,7 +14148,7 @@ main table td em {
 
 @media (min-width: 769px) {
     .card--event--landscape .card--event__image-container {
-        width: 400px;
+        width: 22.22rem;
     }
 }
 
