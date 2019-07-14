@@ -20448,14 +20448,14 @@ article figure figcaption a:active {
 @media (max-width: 432px) {
     .wrapper--finder--hub .finder {
         grid-template-rows: 4;
-        grid-template-areas: 'title title title title title title' 'query query query query query query' 'select select select select select select' 'results results results results results results';
+        grid-template-areas: 'title title title title title title' 'select select select select select select' 'query query query query query query' 'results results results results results results';
     }
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
     .wrapper--finder--hub .finder {
         grid-template-rows: 4;
-        grid-template-areas: 'title title title title title title title title title title title title' 'query query query query query query query query query query query query' 'select select select select select select select select select select select select' 'results results results results results results results results results results results results';
+        grid-template-areas: 'title title title title title title title title title title title title' 'select select select select select select select select select select select select' 'query query query query query query query query query query query query' 'results results results results results results results results results results results results';
     }
 }
 
@@ -29877,14 +29877,14 @@ article .link-copy {
 @media (max-width: 432px) {
     .wrapper--finder--hub .finder {
         grid-template-rows: 4;
-        grid-template-areas: 'title title title title title title' 'query query query query query query' 'select select select select select select' 'results results results results results results';
+        grid-template-areas: 'title title title title title title' 'select select select select select select' 'query query query query query query' 'results results results results results results';
     }
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
     .wrapper--finder--hub .finder {
         grid-template-rows: 4;
-        grid-template-areas: 'title title title title title title title title title title title title' 'query query query query query query query query query query query query' 'select select select select select select select select select select select select' 'results results results results results results results results results results results results';
+        grid-template-areas: 'title title title title title title title title title title title title' 'select select select select select select select select select select select select' 'query query query query query query query query query query query query' 'results results results results results results results results results results results results';
     }
 }
 
@@ -34030,16 +34030,18 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .content-hub .video-finder-wrapper {
-    margin-top: -4rem;
-    padding-top: 4rem;
     grid-area: vf-wrap;
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     z-index: -1;
     position: relative;
     margin-bottom: 7rem;
+    margin-top: -4rem;
+    padding-top: 4rem;
 }
 
 .content-hub .video-finder-wrapper:before, .content-hub .video-finder-wrapper:after {
@@ -34062,6 +34064,14 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     bottom: -5%;
 }
 
+@media (max-width: 899px) {
+    .content-hub .video-finder-wrapper {
+        margin-bottom: 7rem;
+        margin-top: -4rem;
+        padding-top: 4rem;
+    }
+}
+
 .content-hub .video-finder-wrapper:after {
     margin-bottom: 0;
 }
@@ -34077,7 +34087,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     .content-hub .video-finder-wrapper {
         grid-template-columns: repeat(12, 1fr);
         grid-template-areas: 'video video video video video video video video video video video video' 'finder finder finder finder finder finder finder finder finder finder finder finder';
-        padding: 0 1.5rem;
     }
 }
 
@@ -34518,7 +34527,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     padding: 0 1.5rem;
     z-index: -1;
     position: relative;
-    margin-bottom: 7rem;
 }
 
 @media (max-width: 432px) {
@@ -34560,6 +34568,14 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .content-hub .news-events:after {
     display: none;
+}
+
+@media (max-width: 899px) {
+    .content-hub .news-events {
+        margin-bottom: 7rem;
+        margin-top: -4rem;
+        padding-top: 4rem;
+    }
 }
 
 .content-hub .news-events:after {
