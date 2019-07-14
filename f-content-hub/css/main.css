@@ -28366,9 +28366,19 @@ article .link-copy {
     }
 }
 
-@media (max-width: 431px) {
+@media (max-width: 432px) {
     .banner__group__overlay__heading--title-standfirst {
+        grid-template-columns: repeat(6, 1fr);
         grid-template-areas: 'standfirst standfirst standfirst standfirst standfirst standfirst';
+        margin: -0.125rem 0 0 0;
+        padding: 0;
+    }
+}
+
+@media (min-width: 433px) {
+    .banner__group__overlay__heading--title-standfirst {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: ' standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst ';
         margin: -0.125rem 0 0 0;
         padding: 0;
     }
@@ -28376,7 +28386,8 @@ article .link-copy {
 
 @media (min-width: 1281px) {
     .banner__group__overlay__heading--title-standfirst {
-        grid-template-areas: '. . . standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst . . .' '. . . standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst . . .';
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-areas: '. . . standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst . . .';
         margin-top: -7rem;
     }
 }
@@ -34019,6 +34030,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .content-hub .video-finder-wrapper {
+    margin-top: -4rem;
+    padding-top: 4rem;
     grid-area: vf-wrap;
     display: grid;
     grid-template-columns: repeat(18, 1fr);
@@ -34064,6 +34077,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     .content-hub .video-finder-wrapper {
         grid-template-columns: repeat(12, 1fr);
         grid-template-areas: 'video video video video video video video video video video video video' 'finder finder finder finder finder finder finder finder finder finder finder finder';
+        padding: 0 1.5rem;
     }
 }
 
@@ -34203,6 +34217,13 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
          columns: 2;
 }
 
+@media (max-width: 900px) {
+    .content-hub .careers__job-titles ul {
+        -moz-columns: 1;
+             columns: 1;
+    }
+}
+
 .content-hub .careers__employers {
     grid-area: employer;
 }
@@ -34237,27 +34258,56 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .content-hub .pathway-cards {
     grid-area: pathway;
-    display: flex;
+}
+
+.content-hub .pathway-cards .card--pathway__block {
+    display: grid;
+    grid-template-rows: auto;
     max-width: 80rem;
 }
 
 @media (min-width: 1441px) {
-    .content-hub .pathway-cards {
+    .content-hub .pathway-cards .card--pathway__block {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (max-width: 1440px) {
-    .content-hub .pathway-cards {
+    .content-hub .pathway-cards .card--pathway__block {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 432px) {
+    .content-hub .pathway-cards .card--pathway__block {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 'pathway1 pathway1 pathway1 pathway1 pathway1 pathway1 ' 'pathway2 pathway2 pathway2 pathway2 pathway2 pathway2 ' 'pathway3 pathway3 pathway3 pathway3 pathway3 pathway3 ';
+    }
+}
+
+@media (min-width: 433px) {
+    .content-hub .pathway-cards .card--pathway__block {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: 'pathway1 pathway1 pathway1 pathway1 pathway1 pathway1 pathway2 pathway2 pathway2 pathway2 pathway2 pathway2' '. . . pathway3 pathway3 pathway3 pathway3 pathway3 pathway3 . . .';
+    }
+}
+
+@media (min-width: 901px) {
+    .content-hub .pathway-cards .card--pathway__block {
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-areas: 'pathway1 pathway1 pathway1 pathway1 pathway1 pathway1 pathway2 pathway2 pathway2 pathway2 pathway2 pathway2 pathway3 pathway3 pathway3 pathway3 pathway3 pathway3';
     }
 }
 
 .content-hub p {
     margin-right: 0;
     max-width: 100%;
+}
+
+.content-hub .pathway-cards .card:nth-of-type(1) {
+    grid-area: pathway1;
 }
 
 .content-hub .pathway-cards .card:nth-of-type(1) a {
@@ -34307,6 +34357,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     background: #5fd8fe;
 }
 
+.content-hub .pathway-cards .card:nth-of-type(2) {
+    grid-area: pathway2;
+}
+
 .content-hub .pathway-cards .card:nth-of-type(2) a {
     /*
         Pathway card uses same background
@@ -34352,6 +34406,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .content-hub .pathway-cards .card:nth-of-type(2) a:before {
     background: #ffef2b;
+}
+
+.content-hub .pathway-cards .card:nth-of-type(3) {
+    grid-area: pathway3;
 }
 
 .content-hub .pathway-cards .card:nth-of-type(3) a {
@@ -34407,22 +34465,17 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .content-hub .outcomes {
     grid-area: outcomes;
+    max-width: 80rem;
 }
 
-@media (max-width: 432px) {
-    .content-hub .outcomes {
-        max-width: 80rem;
-    }
-}
-
-@media (max-width: 432px) and (min-width: 1441px) {
+@media (min-width: 1441px) {
     .content-hub .outcomes {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-@media (max-width: 432px) and (max-width: 1440px) {
+@media (max-width: 1440px) {
     .content-hub .outcomes {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -34436,26 +34489,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .content-hub .swiper-viewport {
     grid-area: gallery;
     grid-template-areas: 'slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container';
-}
-
-@media (min-width: 1280px) {
-    .content-hub .swiper-viewport {
-        max-width: 80rem;
-    }
-}
-
-@media (min-width: 1280px) and (min-width: 1441px) {
-    .content-hub .swiper-viewport {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (min-width: 1280px) and (max-width: 1440px) {
-    .content-hub .swiper-viewport {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
 }
 
 .content-hub .testimonial {
@@ -34480,10 +34513,9 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .content-hub .news-events {
     grid-area: news-events;
     display: grid;
-    grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
-    grid-template-areas: 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title ' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 ';
+    padding: 0 1.5rem;
     z-index: -1;
     position: relative;
     margin-bottom: 7rem;
@@ -34493,6 +34525,20 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     .content-hub .news-events {
         grid-template-columns: repeat(6, 1fr);
         grid-template-areas: 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1' 'news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2' 'news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3';
+    }
+}
+
+@media (min-width: 433px) {
+    .content-hub .news-events {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2' '. . . news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 . . . ';
+    }
+}
+
+@media (min-width: 901px) {
+    .content-hub .news-events {
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-areas: 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title ' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 ';
     }
 }
 
