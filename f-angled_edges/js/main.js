@@ -4159,7 +4159,8 @@ function launchKeyInfo(batchQuantity) {
               const listingsLength = Array.from(listings.children).length;
               let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
 
-              zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(targetListing, 200); // let targetListingDate = targetListing.querySelectorAll(
+              zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(targetListing, 200);
+              targetListing.focus(); // let targetListingDate = targetListing.querySelectorAll(
               //     '.key-info__date'
               // );
               // Final batch of listings, zen scroll to 'load more' button and offset
@@ -4891,8 +4892,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const className = 'modal__popup',
-      modalBackground = document.createElement('div'),
-      animationEnabled = false;
+      modalBackground = document.createElement('div');
 let windowWidth = window.innerWidth,
     trap;
 window.addEventListener('resize', setWindowWidth);
@@ -4904,14 +4904,12 @@ function setWindowWidth() {
 function launchModal(modal) {
   let modalHeading = modal.querySelector('.modal__heading');
   let modalDataTitle = modal.getAttribute('data-title');
+  let modalInner = modal.querySelector('.modal__inner');
   insertElement('a', modal, 'modal__trigger', '#', modalDataTitle);
-  insertElement('a', modalHeading, 'modal__close fas fa-times', '#');
+  insertElement('a', modalHeading, 'modal__close fas fa-times', '#', null, 'Close modal');
   addEventListeners(modal);
-
-  if (animationEnabled) {
-    let modalInner = modal.querySelector('.modal__inner');
-    Object(_modal_animation__WEBPACK_IMPORTED_MODULE_1__["default"])(modalInner, modal);
-  }
+  Object(_modal_animation__WEBPACK_IMPORTED_MODULE_1__["default"])(modalInner, modal);
+  setTabIndexes(modal, true);
 }
 
 function addEventListeners(modal) {
@@ -4988,7 +4986,7 @@ function openModal(modal) {
       just display the modal with no effects.
   */
 
-  if (windowWidth >= 768 && animationEnabled) {
+  if (windowWidth >= 768) {
     setTimeout(function () {
       modal.classList.add('modal__popup--transitioning-in');
     }, 200);
@@ -5002,7 +5000,7 @@ function openModal(modal) {
 function closeModal(modal) {
   modal.classList.add('no-click');
 
-  if (windowWidth >= 768 && animationEnabled) {
+  if (windowWidth >= 768) {
     modal.classList.add('modal__popup--transitioning-out');
   } else {
     setCloseAttributes(modal);
@@ -5052,11 +5050,12 @@ function addBackgroundFade() {
  */
 
 
-function insertElement(type, targetParent, classList, href, text) {
+function insertElement(type, targetParent, classList, href, text, ariaLabel) {
   let element = document.createElement(type);
   element.setAttribute('class', classList);
   element.setAttribute('href', href);
   if (text) element.textContent = text;
+  if (ariaLabel) element.setAttribute('aria-label', ariaLabel);
   targetParent.parentNode.insertBefore(element, targetParent);
 }
 
