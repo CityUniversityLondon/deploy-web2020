@@ -1095,15 +1095,11 @@
 
     $pseudo: both / before / after
     $background-color: any hex color
-
-    General padding has been applied
-    to make the background extend
-    beyond the container content. 
-    Override as needed.
+    $skew: a degree value
 */
 .angled-edge {
     position: relative;
-    padding: 3rem 0 5rem 0;
+    background: #bebebe;
 }
 
 .angled-edge:before, .angled-edge:after {
@@ -1114,20 +1110,17 @@
     content: '';
     display: none;
     background-color: #bebebe;
-    height: 51%;
+    height: 20%;
+    transform: skewY(4deg);
 }
 
 .angled-edge:before {
-    -webkit-clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 100%);
-            clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 100%);
-    top: 0;
+    top: -10%;
     display: block;
 }
 
 .angled-edge:after {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 90%);
-            clip-path: polygon(0 0, 100% 0, 100% 95%, 0 90%);
-    bottom: 0;
+    bottom: -10%;
     display: block;
 }
 
