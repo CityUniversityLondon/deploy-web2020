@@ -28268,9 +28268,57 @@ article .link-copy {
 
 .banner__group {
     overflow: hidden;
+    display: grid;
+    grid-row-gap: 0;
+    display: grid;
+    grid-column-gap: 1.5rem;
+    grid-template-rows: auto;
+}
+
+@media (max-width: 432px) {
+    .banner__group {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .banner__group {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .banner__group {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (max-width: 432px) {
+    .banner__group {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 'image image image image image image' 'sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap';
+    }
+}
+
+@media (min-width: 433px) {
+    .banner__group {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: 'image image image image image image image image image image image image' 'sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap';
+    }
+}
+
+@media (min-width: 1281px) {
+    .banner__group {
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-areas: 'image image image image image image image image image image image image image image image image image image' '. . . sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap . . .';
+    }
 }
 
 .banner__group__image {
+    grid-area: image;
     height: 100%;
     max-height: 480px;
 }
@@ -28386,6 +28434,7 @@ article .link-copy {
 }
 
 .banner__group__overlay__heading--title-standfirst {
+    grid-area: sf-wrap;
     max-width: 80rem;
     grid-row-gap: 0;
     display: grid;
@@ -28440,7 +28489,7 @@ article .link-copy {
     .banner__group__overlay__heading--title-standfirst {
         grid-template-columns: repeat(12, 1fr);
         grid-template-areas: ' standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst ';
-        margin: -0.125rem 0 0 0;
+        margin: -0.125rem auto 0 auto;
         padding: 0;
     }
 }
@@ -28448,7 +28497,7 @@ article .link-copy {
 @media (min-width: 1281px) {
     .banner__group__overlay__heading--title-standfirst {
         grid-template-columns: repeat(18, 1fr);
-        grid-template-areas: '. . . standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst . . .';
+        grid-template-areas: 'standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst standfirst';
         margin-top: -7rem;
     }
 }
@@ -34008,6 +34057,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .content-hub {
     grid-row-gap: 0;
     display: grid;
+    max-width: 80rem;
     grid-template-rows: auto;
 }
 
@@ -34029,6 +34079,20 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     .content-hub {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (min-width: 1441px) {
+    .content-hub {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .content-hub {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
@@ -34107,8 +34171,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
     margin-bottom: 7rem;
     margin-top: -4rem;
     padding-top: 4rem;
@@ -34158,6 +34220,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
+}
+
+.content-hub .embedded-video .youtube-video {
+    padding-left: 0;
 }
 
 .content-hub .wrapper--finder {
@@ -34564,7 +34630,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     display: grid;
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
-    padding: 0 1.5rem;
 }
 
 @media (max-width: 432px) {
