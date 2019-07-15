@@ -14172,29 +14172,29 @@ main table td em {
     border-bottom: none;
 }
 
-.card--event:hover {
-    /* 
-          Trigger thumbnail transition on hover of
-          the card - note the following
-          values should match the mixin call:
+@media (hover: hover) {
+    .card--event:hover {
+        /* 
+            Trigger thumbnail transition on hover of
+            the card - note the following
+            values should match the mixin call:
 
-          - scale value
-          - background opacity
+            - scale value
+            - background opacity
 
-          Mixin: thumbnail-gradient-scale
-        */
-}
-
-.card--event:hover .thumbnail__image-container img {
-    transform: scale(1.04);
-}
-
-.card--event:hover .thumbnail__image-container:after {
-    background-color: rgba(0, 0, 0, 0.1);
+            Mixin: thumbnail-gradient-scale
+            */
+    }
+    .card--event:hover .thumbnail__image-container img {
+        transform: scale(1.04);
+    }
+    .card--event:hover .thumbnail__image-container:after {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
 }
 
 .card--event .underline-transition__title {
-    line-height: 1.6;
+    line-height: 1.625;
 }
 
 .card--event__icon {
@@ -14413,28 +14413,29 @@ main table td em {
     padding-bottom: 1.75rem;
 }
 
-.card--event--portrait:hover {
-    /* 
-          Trigger underline transition on hover of the
-          card - note the following
-          value should match the mixin call:
+@media (hover: hover) {
+    .card--event--portrait:hover {
+        /* 
+            Trigger underline transition on hover of the
+            card - note the following
+            value should match the mixin call:
 
-          - background size
+            - background size
 
-          Mixin:  underline-transition-title
-      */
-}
-
-.card--event--portrait:hover .card--event__title-link .underline-transition__title {
-    background-image: linear-gradient(#1e1e1e, #1e1e1e);
-    background-size: 100% 0.19rem;
-    color: #1e1e1e;
+            Mixin:  underline-transition-title
+        */
+    }
+    .card--event--portrait:hover .card--event__title-link .underline-transition__title {
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 2rem;
+        color: #1e1e1e;
+    }
 }
 
 .card--event--portrait .card--event__date--highlight {
     display: inline-flex;
     position: relative;
-    top: -22px;
+    top: -1.25rem;
     left: 1.75rem;
     align-items: center;
 }
@@ -14526,7 +14527,6 @@ main table td em {
 @media (min-width: 769px) {
     .card--event--landscape {
         display: flex;
-        width: 1000px;
     }
 }
 
@@ -14714,7 +14714,7 @@ main table td em {
 
 @media (min-width: 768px) {
     .card--news__image-container .thumbnail__image-container {
-        height: 16.66rem;
+        height: 1.25rem;
         width: 100%;
     }
 }
@@ -14722,7 +14722,7 @@ main table td em {
 .card--news__button {
     display: inline-flex;
     position: relative;
-    top: -1.22rem;
+    top: -1.25rem;
     left: 1.75rem;
     align-items: center;
     color: #ffffff;
