@@ -14125,13 +14125,6 @@ main table td em {
 }
 
 /* -- General event card styles applied to all -- */
-.card--event a,
-.card--event a:hover,
-.card--event a:active,
-.card--event a:focus {
-    border-bottom: none;
-}
-
 .card--event:hover {
     /* 
         Trigger thumbnail transition on hover of
@@ -14364,6 +14357,13 @@ main table td em {
 .card--event--portrait {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     padding-bottom: 1.75rem;
+}
+
+.card--event--portrait a,
+.card--event--portrait a:hover,
+.card--event--portrait a:active,
+.card--event--portrait a:focus {
+    border-bottom: none;
 }
 
 .card--event--portrait:hover {
