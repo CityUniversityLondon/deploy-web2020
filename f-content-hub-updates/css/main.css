@@ -1093,16 +1093,39 @@
 /* 
     USAGE:
 
-    .element {
-        @include angled-edge(
-            $background-color: $color-gray6, 
-            $pseudo: both | before | after, 
-            $skew: 1.5deg
-        );
-    }
-
-    Leave blank for defaults
+    $pseudo: both / before / after
+    $background-color: any hex color
+    $skew: a degree value
+    
+    Background color must match background color of element mixin is applied to
 */
+.angled-edge {
+    position: relative;
+    background: #bebebe;
+}
+
+.angled-edge:before, .angled-edge:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    content: '';
+    display: none;
+    background-color: #bebebe;
+    height: 20%;
+    transform: skewY(4deg);
+}
+
+.angled-edge:before {
+    top: -10%;
+    display: block;
+}
+
+.angled-edge:after {
+    bottom: -10%;
+    display: block;
+}
+
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
@@ -12976,13 +12999,6 @@ main table td em {
     transition: transform 0.2s ease-in;
 }
 
-@media (min-width: 433px) {
-    .card--casestudy a .thumbnail__image-container {
-        width: 7.5rem;
-        height: 7.5rem;
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .card--casestudy a .thumbnail__image-container {
         transition: none;
@@ -13003,12 +13019,6 @@ main table td em {
 
 .card--casestudy a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
-}
-
-@media (min-width: 768px) {
-    .card--casestudy a .thumbnail__image-container img {
-        height: 100%;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13050,7 +13060,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -13061,13 +13071,13 @@ main table td em {
 }
 
 .card--casestudy a:focus .underline-transition__title {
-    background-size: 100% 0.1875rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .card--casestudy a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
@@ -13102,6 +13112,7 @@ main table td em {
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
+    padding-bottom: 0.25rem;
 }
 
 .card--casestudy a .card__title i,
@@ -13239,7 +13250,7 @@ main table td em {
     margin-top: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 433px) {
     .card--casestudy a .card__inner > :nth-child(2) {
         margin-top: 0;
     }
@@ -13653,13 +13664,6 @@ main table td em {
     transition: transform 0.2s ease-in;
 }
 
-@media (min-width: 433px) {
-    .card--related-course a .thumbnail__image-container {
-        width: 7.5rem;
-        height: 7.5rem;
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .card--related-course a .thumbnail__image-container {
         transition: none;
@@ -13680,12 +13684,6 @@ main table td em {
 
 .card--related-course a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
-}
-
-@media (min-width: 768px) {
-    .card--related-course a .thumbnail__image-container img {
-        height: 100%;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13727,7 +13725,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -13738,13 +13736,13 @@ main table td em {
 }
 
 .card--related-course a:focus .underline-transition__title {
-    background-size: 100% 0.1875rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .card--related-course a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
@@ -13779,6 +13777,7 @@ main table td em {
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
+    padding-bottom: 0.25rem;
 }
 
 .card--related-course a .card__title i,
@@ -13965,7 +13964,7 @@ main table td em {
     margin-top: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 433px) {
     .card--related-course .card__inner > :nth-child(2) {
         margin-top: 0;
     }
@@ -14159,6 +14158,10 @@ main table td em {
 }
 
 /* -- General event card styles applied to all -- */
+.card--event {
+    background: #ffffff;
+}
+
 .card--event a,
 .card--event a:hover,
 .card--event a:active,
@@ -14217,13 +14220,6 @@ main table td em {
     transition: transform 0.2s ease-in;
 }
 
-@media (min-width: 433px) {
-    .card--event__image-container .thumbnail__image-container {
-        width: 7.5rem;
-        height: 7.5rem;
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .card--event__image-container .thumbnail__image-container {
         transition: none;
@@ -14244,12 +14240,6 @@ main table td em {
 
 .card--event__image-container .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
-}
-
-@media (min-width: 768px) {
-    .card--event__image-container .thumbnail__image-container img {
-        height: 100%;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14442,7 +14432,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -14453,13 +14443,13 @@ main table td em {
 }
 
 .card--event--portrait .card--event__title-link:focus .underline-transition__title {
-    background-size: 100% 0.1875rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .card--event--portrait .card--event__title-link:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
@@ -14592,6 +14582,7 @@ main table td em {
 }
 
 .card--news {
+    background: #ffffff;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -14656,13 +14647,6 @@ main table td em {
     transition: transform 0.2s ease-in;
 }
 
-@media (min-width: 433px) {
-    .card--news__image-container .thumbnail__image-container {
-        width: 7.5rem;
-        height: 7.5rem;
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .card--news__image-container .thumbnail__image-container {
         transition: none;
@@ -14683,12 +14667,6 @@ main table td em {
 
 .card--news__image-container .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
-}
-
-@media (min-width: 768px) {
-    .card--news__image-container .thumbnail__image-container img {
-        height: 100%;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14838,7 +14816,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -14849,13 +14827,13 @@ main table td em {
 }
 
 .card--news__title-link:focus .underline-transition__title {
-    background-size: 100% 0.1875rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .card--news__title-link:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
@@ -15028,7 +15006,7 @@ main table td em {
     margin-top: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 433px) {
     .card--profile__description--thumbnail > :nth-child(2) {
         margin-top: 0;
     }
@@ -15167,6 +15145,7 @@ main table td em {
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
+    padding-bottom: 0.25rem;
 }
 
 .card--pathway .card__title i,
@@ -19887,6 +19866,7 @@ article figure figcaption a:active {
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
+    padding-bottom: 0.25rem;
 }
 
 .card--pathway .card__title i,
@@ -21450,7 +21430,7 @@ article figure figcaption a:active {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -21461,13 +21441,13 @@ article figure figcaption a:active {
 }
 
 .finder__filter legend button:focus .underline-transition__title {
-    background-size: 100% 0.1875rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .finder__filter legend button:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
@@ -22684,13 +22664,6 @@ article figure figcaption a:active {
     transition: transform 0.2s ease-in;
 }
 
-@media (min-width: 433px) {
-    .finder__results__card a .thumbnail__image-container {
-        width: 7.5rem;
-        height: 7.5rem;
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .finder__results__card a .thumbnail__image-container {
         transition: none;
@@ -22711,12 +22684,6 @@ article figure figcaption a:active {
 
 .finder__results__card a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
-}
-
-@media (min-width: 768px) {
-    .finder__results__card a .thumbnail__image-container img {
-        height: 100%;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22758,7 +22725,7 @@ article figure figcaption a:active {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -22769,13 +22736,13 @@ article figure figcaption a:active {
 }
 
 .finder__results__card a:focus .underline-transition__title {
-    background-size: 100% 0.1875rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .finder__results__card a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
@@ -22810,6 +22777,7 @@ article figure figcaption a:active {
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
+    padding-bottom: 0.25rem;
 }
 
 .finder__results__card a .card__title i,
@@ -23164,6 +23132,7 @@ article figure figcaption a:active {
 
 .finder__select--level {
     grid-area: select;
+    z-index: 1;
 }
 
 .finder__select__overline {
@@ -24261,8 +24230,11 @@ article figure figcaption a:active {
     text-align: center;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button {
-    padding: 0.25rem;
+.key-information--lifelong-learning__controls .content-toggle button .fa-plus-circle {
+    margin-right: 0.25rem;
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -24280,10 +24252,14 @@ article figure figcaption a:active {
     background-position: 0 100%;
     transition: background-size 0.2s ease-in-out;
     color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button:hover {
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -24298,7 +24274,7 @@ article figure figcaption a:active {
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:focus, .key-information--lifelong-learning__controls .content-toggle button:active {
+.key-information--lifelong-learning__controls .content-toggle button .label:focus, .key-information--lifelong-learning__controls .content-toggle button .label:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -24313,66 +24289,103 @@ article figure figcaption a:active {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .key-information--lifelong-learning__controls .content-toggle button {
+    .key-information--lifelong-learning__controls .content-toggle button .label {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button:hover {
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:visited {
+.key-information--lifelong-learning__controls .content-toggle button .label:visited {
     color: #4c2c92;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:focus {
+.key-information--lifelong-learning__controls .content-toggle button .label:focus {
     color: #006bbd;
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button:hover {
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
         color: #ffffff;
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:active {
+.key-information--lifelong-learning__controls .content-toggle button .label:active {
     color: #ffffff;
     background-color: #006bbd;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:visited {
-    color: #006bbd;
+.key-information--lifelong-learning__controls .content-toggle button .label:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning__controls .content-toggle button:hover {
-        color: #ffffff;
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
     }
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:active {
-    color: #ffffff;
+.key-information--lifelong-learning__controls .content-toggle button .label:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button:focus, .key-information--lifelong-learning__controls .content-toggle button:active {
+.key-information--lifelong-learning__controls .content-toggle button .label:focus, .key-information--lifelong-learning__controls .content-toggle button .label:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button .label {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
+.key-information--lifelong-learning__controls .content-toggle button .label:visited {
+    color: #4c2c92;
 }
 
-.key-information--lifelong-learning__controls .content-toggle button .fa-plus-circle {
-    padding: 0.0625rem 0.25rem 0 0;
+.key-information--lifelong-learning__controls .content-toggle button .label:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
+        color: #ffffff;
+    }
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .key-information--lifelong-learning__controls .content-toggle button .label:hover {
+        color: #ffffff;
+    }
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label:active {
+    color: #ffffff;
+}
+
+.key-information--lifelong-learning__controls .content-toggle button .label:visited {
+    border-bottom-color: #006bbd;
 }
 
 @media (min-width: 768px) {
@@ -28495,6 +28508,7 @@ article .link-copy {
     color: #ffffff;
     opacity: 0.9;
     padding: 2rem;
+    z-index: 1;
 }
 
 .banner__content {
@@ -29220,6 +29234,7 @@ article .link-copy {
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
+    padding-bottom: 0.25rem;
 }
 
 .card--pathway .card__title i,
@@ -30783,7 +30798,7 @@ article .link-copy {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -30794,13 +30809,13 @@ article .link-copy {
 }
 
 .finder__filter legend button:focus .underline-transition__title {
-    background-size: 100% 0.1875rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .finder__filter legend button:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
@@ -32017,13 +32032,6 @@ article .link-copy {
     transition: transform 0.2s ease-in;
 }
 
-@media (min-width: 433px) {
-    .finder__results__card a .thumbnail__image-container {
-        width: 7.5rem;
-        height: 7.5rem;
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .finder__results__card a .thumbnail__image-container {
         transition: none;
@@ -32044,12 +32052,6 @@ article .link-copy {
 
 .finder__results__card a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
-}
-
-@media (min-width: 768px) {
-    .finder__results__card a .thumbnail__image-container img {
-        height: 100%;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -32091,7 +32093,7 @@ article .link-copy {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
+    background-size: 0% 0.15rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -32102,13 +32104,13 @@ article .link-copy {
 }
 
 .finder__results__card a:focus .underline-transition__title {
-    background-size: 100% 0.1875rem;
+    background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .finder__results__card a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
+        background-size: 100% 0.15rem;
         color: #1e1e1e;
     }
 }
@@ -32143,6 +32145,7 @@ article .link-copy {
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
+    padding-bottom: 0.25rem;
 }
 
 .finder__results__card a .card__title i,
@@ -32497,6 +32500,7 @@ article .link-copy {
 
 .finder__select--level {
     grid-area: select;
+    z-index: 1;
 }
 
 .finder__select__overline {
@@ -34024,15 +34028,42 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
+.content-hub .section {
+    margin: 1.5rem;
+}
+
 .content-hub .video-finder-wrapper {
+    position: relative;
     grid-area: vf-wrap;
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
+    background-color: #e5e5e5;
     margin-bottom: 7rem;
     margin-top: -4rem;
     padding-top: 4rem;
+}
+
+.content-hub .video-finder-wrapper:before, .content-hub .video-finder-wrapper:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    content: '';
+    display: none;
+    background-color: #e5e5e5;
+    height: 20%;
+    transform: skewY(1.5deg);
+}
+
+.content-hub .video-finder-wrapper:before {
+    top: -10%;
+}
+
+.content-hub .video-finder-wrapper:after {
+    bottom: -10%;
+    display: block;
 }
 
 @media (max-width: 432px) {
@@ -34057,7 +34088,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .content-hub .wrapper--finder--hub .finder__query__input {
-    padding: 0.1875rem 0.1875rem 0.1875rem 0.1875rem;
+    padding: 0.25rem 0.1875rem 0.1875rem 0.1875rem;
 }
 
 .content-hub .embedded-video {
@@ -34205,14 +34236,13 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .content-hub .careers__employer-logos-wrapper {
-    display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-column-gap: 1.5rem;
     grid-template-areas: 'employer1 employer1 employer1 employer2 employer2 employer2 employer3 employer3 employer3';
 }
 
 .content-hub .careers__employer-logos-wrapper img {
-    margin: 1rem 0;
+    margin: 1rem 0 0 0;
     max-height: 4rem;
     padding: 0.5rem;
     border: 0.0625rem solid #e5e5e5;
@@ -34493,27 +34523,54 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     display: grid;
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
+    background: #e5e5e5;
+    position: relative;
 }
 
 @media (max-width: 432px) {
     .content-hub .news-events {
         grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1' 'news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2' 'news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3';
+        grid-template-areas: 'separator separator separator separator separator separator ' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1' 'news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2' 'news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3';
     }
 }
 
 @media (min-width: 433px) {
     .content-hub .news-events {
         grid-template-columns: repeat(12, 1fr);
-        grid-template-areas: 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2' '. . . news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 . . . ';
+        grid-template-areas: 'separator separator separator separator separator separator separator separator separator separator separator separator' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2' '. . . news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 . . . ';
     }
 }
 
 @media (min-width: 901px) {
     .content-hub .news-events {
         grid-template-columns: repeat(18, 1fr);
-        grid-template-areas: 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title ' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 ';
+        grid-template-areas: '. . . . separator separator separator separator separator separator separator separator separator separator . . . .' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title ' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 ';
     }
+}
+
+.content-hub .news-events:before, .content-hub .news-events:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    content: '';
+    display: none;
+    background-color: #e5e5e5;
+    height: 20%;
+    transform: skewY(1.5deg);
+}
+
+.content-hub .news-events:before {
+    top: -10%;
+    display: block;
+}
+
+.content-hub .news-events:after {
+    bottom: -10%;
+}
+
+.content-hub .news-events .content-separator {
+    grid-area: separator;
 }
 
 .content-hub .news-events h2:nth-of-type(1) {

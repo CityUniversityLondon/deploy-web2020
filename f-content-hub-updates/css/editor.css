@@ -1093,16 +1093,39 @@
 /* 
     USAGE:
 
-    .element {
-        @include angled-edge(
-            $background-color: $color-gray6, 
-            $pseudo: both | before | after, 
-            $skew: 1.5deg
-        );
-    }
-
-    Leave blank for defaults
+    $pseudo: both / before / after
+    $background-color: any hex color
+    $skew: a degree value
+    
+    Background color must match background color of element mixin is applied to
 */
+.angled-edge {
+    position: relative;
+    background: #bebebe;
+}
+
+.angled-edge:before, .angled-edge:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    content: '';
+    display: none;
+    background-color: #bebebe;
+    height: 20%;
+    transform: skewY(4deg);
+}
+
+.angled-edge:before {
+    top: -10%;
+    display: block;
+}
+
+.angled-edge:after {
+    bottom: -10%;
+    display: block;
+}
+
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
