@@ -14226,19 +14226,19 @@ main table td em {
 
 .card--news__image-container .thumbnail__image-container img {
     height: 100%;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
     .card--news__image-container .thumbnail__image-container {
         height: 16.66rem;
-        width: 100%;
     }
 }
 
 .card--news__button {
     display: inline-flex;
     position: relative;
-    top: -1.22rem;
+    top: -1.25rem;
     left: 1.75rem;
     align-items: center;
     color: #ffffff;
