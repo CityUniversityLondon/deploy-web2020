@@ -16020,6 +16020,7 @@ main table td em {
     background: #ffffff;
     padding-bottom: 2rem;
     grid-column: 1 / -1;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
 .card--testimonial-feature__details:before {
