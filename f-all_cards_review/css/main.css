@@ -13003,6 +13003,7 @@ main table td em {
 
 .card--casestudy a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+    object-fit: cover;
 }
 
 @media (min-width: 768px) {
@@ -13686,6 +13687,7 @@ main table td em {
 
 .card--related-course a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+    object-fit: cover;
 }
 
 @media (min-width: 768px) {
@@ -14250,6 +14252,7 @@ main table td em {
 
 .card--event__image-container .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+    object-fit: cover;
 }
 
 @media (min-width: 768px) {
@@ -14689,6 +14692,7 @@ main table td em {
 
 .card--news__image-container .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+    object-fit: cover;
 }
 
 @media (min-width: 768px) {
@@ -22696,6 +22700,7 @@ article figure figcaption a:active {
 
 .finder__results__card a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+    object-fit: cover;
 }
 
 @media (min-width: 768px) {
@@ -32136,6 +32141,7 @@ article .link-copy {
 
 .finder__results__card a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+    object-fit: cover;
 }
 
 @media (min-width: 768px) {
