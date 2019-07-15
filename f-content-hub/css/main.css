@@ -34037,43 +34037,9 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-template-rows: auto;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    z-index: -1;
-    position: relative;
     margin-bottom: 7rem;
     margin-top: -4rem;
     padding-top: 4rem;
-}
-
-.content-hub .video-finder-wrapper:before, .content-hub .video-finder-wrapper:after {
-    background: #e5e5e5;
-    content: '';
-    display: block;
-    height: 110%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: -1;
-}
-
-.content-hub .video-finder-wrapper:before {
-    display: none;
-}
-
-.content-hub .video-finder-wrapper:after {
-    transform: skewY(1.5deg);
-    bottom: -5%;
-}
-
-@media (max-width: 899px) {
-    .content-hub .video-finder-wrapper {
-        margin-bottom: 7rem;
-        margin-top: -4rem;
-        padding-top: 4rem;
-    }
-}
-
-.content-hub .video-finder-wrapper:after {
-    margin-bottom: 0;
 }
 
 @media (max-width: 432px) {
@@ -34247,6 +34213,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .content-hub .careers__employer-logos-wrapper img {
     max-height: 4rem;
+    padding: 0.5rem;
+    border: 0.0625rem solid #e5e5e5;
 }
 
 .content-hub .careers__employer-logos-wrapper img:nth-of-type(1) {
@@ -34525,8 +34493,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
     padding: 0 1.5rem;
-    z-index: -1;
-    position: relative;
 }
 
 @media (max-width: 432px) {
@@ -34548,38 +34514,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         grid-template-columns: repeat(18, 1fr);
         grid-template-areas: 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title ' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 ';
     }
-}
-
-.content-hub .news-events:before, .content-hub .news-events:after {
-    background: #e5e5e5;
-    content: '';
-    display: block;
-    height: 110%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    z-index: -1;
-}
-
-.content-hub .news-events:before {
-    top: -5%;
-    transform: skewY(1.5deg);
-}
-
-.content-hub .news-events:after {
-    display: none;
-}
-
-@media (max-width: 899px) {
-    .content-hub .news-events {
-        margin-bottom: 7rem;
-        margin-top: -4rem;
-        padding-top: 4rem;
-    }
-}
-
-.content-hub .news-events:after {
-    margin-bottom: 0;
 }
 
 .content-hub .news-events h2:nth-of-type(1) {
