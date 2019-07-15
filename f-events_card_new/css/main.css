@@ -14387,7 +14387,7 @@ main table td em {
 .card--event--portrait .card--event__date--highlight {
     display: inline-flex;
     position: relative;
-    top: -1.22rem;
+    top: -1.25rem;
     left: 1.75rem;
     align-items: center;
 }
