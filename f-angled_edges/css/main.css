@@ -1092,10 +1092,18 @@
 **/
 /* 
     USAGE:
+
+    $pseudo: both / before / after
+    $background-color: any hex color
+
+    General padding has been applied
+    to make the background extend
+    beyond the container content. 
+    Override as needed.
 */
 .angled-edge {
     position: relative;
-    padding-bottom: 6rem;
+    padding: 3rem 0 5rem 0;
 }
 
 .angled-edge:before, .angled-edge:after {
@@ -1104,21 +1112,23 @@
     right: 0;
     z-index: -1;
     content: '';
-    display: block;
-    height: 48%;
+    display: none;
     background-color: #bebebe;
+    height: 51%;
 }
 
 .angled-edge:before {
-    -webkit-clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 95%);
-            clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 95%);
+    -webkit-clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 100%);
+            clip-path: polygon(0% 0%, 100% 5%, 100% 100%, 0 100%);
     top: 0;
+    display: block;
 }
 
 .angled-edge:after {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 90%);
             clip-path: polygon(0 0, 100% 0, 100% 95%, 0 90%);
     bottom: 0;
+    display: block;
 }
 
 /* ghost animation - underline animation used on tab buttons */
