@@ -2516,7 +2516,7 @@ function finder__appliedfilters(props) {
 
   const facetKeys = Object.keys(props.query.facets);
 
-  if (facetKeys.length) {
+  if (facetKeys.length > 0) {
     return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
       className: "sr-only"
     }, "Applied filters"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
@@ -2533,11 +2533,7 @@ function finder__appliedfilters(props) {
       }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
         className: "fal fa-times icon",
         "aria-label": "Remove filter"
-      }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-        className: "finder__appliedfilters__facet"
-      }, labels.name, ":"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-        className: "finder__appliedfilters__value"
-      }, label.label))));
+      }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, labels.name, ":\xA0", label.label))));
     })));
   } else {
     return null;
@@ -2645,7 +2641,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const maximumSuggestions = 5,
-      [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40];
+      [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40],
+      body = document.getElementsByTagName('body'),
+      backgroundFill = body[0].querySelectorAll('.background-fill');
+let queryParam;
 /**
  * Search input field and autocomplete.
  *
@@ -2760,7 +2759,11 @@ function finder__query(props) {
   }))));
   const input = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
     className: "finder__query__input"
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+    className: "finder__query__icon--wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    className: "finder__icon fal fa-search"
+  })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
     className: "sr-only",
     htmlFor: inputId
   }, "Search ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
@@ -2788,6 +2791,25 @@ function finder__query(props) {
           break;
       }
     },
+    onBlur: e => {
+      backgroundFill[0].classList.remove('background-fill--grey');
+      e.target.placeholder = props.config.placeholder;
+      e.target.value = '';
+      let suggestedResults = document.querySelector('.finder__query__suggestions');
+      document.addEventListener('click', function (event) {
+        let classList = event.target.classList;
+
+        if (classList.contains('finder__query__suggestions')) {
+          suggestedResults.style.display = 'block';
+        } else {
+          suggestedResults.style.display = 'none';
+        }
+      });
+    },
+    onFocus: e => {
+      backgroundFill[0].classList.add('background-fill--grey');
+      e.target.placeholder = '';
+    },
     onChange: e => {
       //clear old suggestions
       setSuggestions([]); // keep  what they're typing
@@ -2814,19 +2836,83 @@ function finder__query(props) {
       } else {
         // input is empty, empty suggestions
         setSuggestions([]);
+      } // Build query param to pass to listing page
+
+
+      let queryValue = document.getElementById(inputId);
+
+      if (queryValue) {
+        queryParam = queryValue.value.replace(/\s+/g, '+').toLowerCase();
+
+        if (queryParam) {
+          queryParam = "query=".concat(queryParam);
+        } else {
+          queryParam = null;
+        }
       }
     }
   }), suggestionsList, clear);
+  let hub = document.getElementsByClassName('wrapper--finder--hub');
+  hub = hub[0];
+
+  if (hub) {
+    /**
+     * Build URL taking users from content hub to listing page with selected results.
+     */
+    const finderRedirect = () => {
+      let levelParam;
+      let levelSelect = document.getElementById('level-select');
+
+      if (levelSelect) {
+        levelParam = levelSelect.value.replace(/\s+/g, '-').toLowerCase();
+
+        if (levelParam !== 'all-levels') {
+          levelParam = "meta_L_orsand=".concat(levelParam);
+        } else {
+          levelParam = null;
+        }
+      } // Look to do switch statement later
+
+
+      const listingUrl = 'https://web2020.city.ac.uk/prototype-1/prospective-students/courses';
+
+      if (levelParam && queryParam) {
+        window.location.href = "".concat(listingUrl, "?").concat(levelParam, "&").concat(queryParam);
+      } else if (levelParam && !queryParam) {
+        window.location.href = "".concat(listingUrl, "?").concat(levelParam);
+      } else if (!levelParam && queryParam) {
+        window.location.href = "".concat(listingUrl, "?").concat(queryParam);
+      } else {
+        window.location.href = "".concat(listingUrl);
+      }
+    };
+
+    return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("fieldset", {
+      className: "finder__query"
+    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+      type: "submit",
+      className: "finder__query__submit finder__query__submit--redirect",
+      onClick: () => finderRedirect()
+    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+      className: "fal fa-search finder__query__submit__icon",
+      "aria-hidden": "true"
+    }), ' ', react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+      className: "finder__query__submit__text"
+    }, "Find"))));
+  }
+
   return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("fieldset", {
     className: "finder__query"
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
     type: "submit",
     className: "finder__query__submit",
     onClick: () => submitForm()
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-    className: "fal fa-search",
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    className: "fal fa-search finder__query__submit__icon",
     "aria-hidden": "true"
-  }), ' ', "Find"))));
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    className: "finder__query__submit__text"
+  }, "Find"))));
 }
 
 finder__query.propTypes = {
@@ -3201,11 +3287,17 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__summary(props) {
+  let searchHints;
   const result = props.totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+
+  if (props.totalMatching == 0) {
+    searchHints = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Your search"), " \"", props.query, "\u201C did not match any courses."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Suggestions:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Try different keywords"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Try more general keywords"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Try fewer keywords"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Try fewer filters"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Reset filters"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Reset search")));
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     "aria-live": "polite",
     className: "finder__results__summary__heading-wrap"
-  }, props.totalMatching > props.numRanks && "".concat(props.currStart, "\u2013").concat(props.currEnd, " of "), props.totalMatching, " ", props.query && 'matching ', result, props.query && " for \u201C".concat(props.query, "\u201D"));
+  }, props.totalMatching > props.numRanks && "".concat(props.currStart, "\u2013").concat(props.currEnd, " of "), props.totalMatching, " ", props.query && 'matching ', result, props.query && " for \u201C".concat(props.query, "\u201D")), searchHints);
 }
 
 finder__results__summary.propTypes = {
@@ -3420,6 +3512,32 @@ function Finder(props) {
     setQuery(clearQuery);
     setUpdate(!update);
   };
+
+  let hub = document.getElementsByClassName('wrapper--finder--hub');
+  hub = hub[0];
+
+  if (hub) {
+    return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
+      className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
+      onSubmit: e => {
+        e.preventDefault();
+      }
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
+      className: "finder__title"
+    }, "Find ", props.config.facetLabels[2].funnelbackName, " courses"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      className: "finder__select finder__select--level"
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+      className: "finder__select__overline",
+      htmlFor: "study-level"
+    }, "Level"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
+      id: "level-select"
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "All levels"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "Undergraduate"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "Postgraduate"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "Short course"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "CPD"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "CPPD"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      config: props.config,
+      query: query,
+      update: updater,
+      updating: updating
+    }));
+  }
 
   return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
     className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
