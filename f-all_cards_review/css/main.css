@@ -13004,6 +13004,7 @@ main table td em {
 .card--casestudy a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
     object-fit: cover;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -13058,7 +13059,6 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .card--casestudy a:focus .underline-transition__title {
@@ -13684,6 +13684,7 @@ main table td em {
 .card--related-course a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
     object-fit: cover;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -13738,7 +13739,6 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .card--related-course a:focus .underline-transition__title {
@@ -14249,6 +14249,7 @@ main table td em {
 .card--event__image-container .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
     object-fit: cover;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -14453,7 +14454,6 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .card--event--portrait .card--event__title-link:focus .underline-transition__title {
@@ -14637,7 +14637,7 @@ main table td em {
     }
     .card--news:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.25rem;
+        background-size: 100% 0.1875rem;
         color: #1e1e1e;
     }
 }
@@ -14689,6 +14689,7 @@ main table td em {
 .card--news__image-container .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
     object-fit: cover;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -14851,7 +14852,6 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .card--news__title-link:focus .underline-transition__title {
@@ -15128,7 +15128,6 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .card--pathway:focus .underline-transition__title {
@@ -19847,7 +19846,6 @@ article figure figcaption a:active {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .card--pathway:focus .underline-transition__title {
@@ -22697,6 +22695,7 @@ article figure figcaption a:active {
 .finder__results__card a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
     object-fit: cover;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -22751,7 +22750,6 @@ article figure figcaption a:active {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .finder__results__card a:focus .underline-transition__title {
@@ -29288,7 +29286,6 @@ article .link-copy {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .card--pathway:focus .underline-transition__title {
@@ -32138,6 +32135,7 @@ article .link-copy {
 .finder__results__card a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
     object-fit: cover;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -32192,7 +32190,6 @@ article .link-copy {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .finder__results__card a:focus .underline-transition__title {
