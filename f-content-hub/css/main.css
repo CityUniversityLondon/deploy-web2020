@@ -12976,6 +12976,13 @@ main table td em {
     transition: transform 0.2s ease-in;
 }
 
+@media (min-width: 433px) {
+    .card--casestudy a .thumbnail__image-container {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .card--casestudy a .thumbnail__image-container {
         transition: none;
@@ -12996,6 +13003,12 @@ main table td em {
 
 .card--casestudy a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+}
+
+@media (min-width: 768px) {
+    .card--casestudy a .thumbnail__image-container img {
+        height: 100%;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13037,7 +13050,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.19rem;
+    background-size: 0% 0.1875rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -13048,13 +13061,13 @@ main table td em {
 }
 
 .card--casestudy a:focus .underline-transition__title {
-    background-size: 100% 0.19rem;
+    background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
     .card--casestudy a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.19rem;
+        background-size: 100% 0.1875rem;
         color: #1e1e1e;
     }
 }
@@ -13089,7 +13102,6 @@ main table td em {
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
-    padding-bottom: 0.25rem;
 }
 
 .card--casestudy a .card__title i,
@@ -13227,10 +13239,14 @@ main table td em {
     margin-top: 1rem;
 }
 
-@media (min-width: 433px) {
+@media (min-width: 768px) {
     .card--casestudy a .card__inner > :nth-child(2) {
         margin-top: 0;
     }
+}
+
+.card--casestudy a .card--casestudy__thumbnail {
+    margin-right: 1.25rem;
 }
 
 @media (min-width: 768px) {
@@ -13643,6 +13659,13 @@ main table td em {
     transition: transform 0.2s ease-in;
 }
 
+@media (min-width: 433px) {
+    .card--related-course a .thumbnail__image-container {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .card--related-course a .thumbnail__image-container {
         transition: none;
@@ -13663,6 +13686,12 @@ main table td em {
 
 .card--related-course a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+}
+
+@media (min-width: 768px) {
+    .card--related-course a .thumbnail__image-container img {
+        height: 100%;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13704,7 +13733,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.19rem;
+    background-size: 0% 0.1875rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -13715,13 +13744,13 @@ main table td em {
 }
 
 .card--related-course a:focus .underline-transition__title {
-    background-size: 100% 0.19rem;
+    background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
     .card--related-course a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.19rem;
+        background-size: 100% 0.1875rem;
         color: #1e1e1e;
     }
 }
@@ -13756,7 +13785,6 @@ main table td em {
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
-    padding-bottom: 0.25rem;
 }
 
 .card--related-course a .card__title i,
@@ -13943,7 +13971,7 @@ main table td em {
     margin-top: 1rem;
 }
 
-@media (min-width: 433px) {
+@media (min-width: 768px) {
     .card--related-course .card__inner > :nth-child(2) {
         margin-top: 0;
     }
@@ -13965,13 +13993,6 @@ main table td em {
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.25rem;
-    color: #696969;
-    padding-bottom: 0.25rem;
-    transition: background-size 0.6s ease-in;
 }
 
 .card--related-course__title i,
@@ -14139,6 +14160,10 @@ main table td em {
     margin-right: 0.5rem;
 }
 
+.card--related-course__image {
+    margin-right: 1.25rem;
+}
+
 /* -- General event card styles applied to all -- */
 .card--event a,
 .card--event a:hover,
@@ -14198,6 +14223,13 @@ main table td em {
     transition: transform 0.2s ease-in;
 }
 
+@media (min-width: 433px) {
+    .card--event__image-container .thumbnail__image-container {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .card--event__image-container .thumbnail__image-container {
         transition: none;
@@ -14218,6 +14250,12 @@ main table td em {
 
 .card--event__image-container .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+}
+
+@media (min-width: 768px) {
+    .card--event__image-container .thumbnail__image-container img {
+        height: 100%;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14409,7 +14447,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.19rem;
+    background-size: 0% 0.1875rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -14420,13 +14458,13 @@ main table td em {
 }
 
 .card--event--portrait .card--event__title-link:focus .underline-transition__title {
-    background-size: 100% 0.19rem;
+    background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
     .card--event--portrait .card--event__title-link:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.19rem;
+        background-size: 100% 0.1875rem;
         color: #1e1e1e;
     }
 }
@@ -14624,6 +14662,13 @@ main table td em {
     transition: transform 0.2s ease-in;
 }
 
+@media (min-width: 433px) {
+    .card--news__image-container .thumbnail__image-container {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .card--news__image-container .thumbnail__image-container {
         transition: none;
@@ -14644,6 +14689,12 @@ main table td em {
 
 .card--news__image-container .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+}
+
+@media (min-width: 768px) {
+    .card--news__image-container .thumbnail__image-container img {
+        height: 100%;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14793,7 +14844,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.19rem;
+    background-size: 0% 0.1875rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -14804,13 +14855,13 @@ main table td em {
 }
 
 .card--news__title-link:focus .underline-transition__title {
-    background-size: 100% 0.19rem;
+    background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
     .card--news__title-link:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.19rem;
+        background-size: 100% 0.1875rem;
         color: #1e1e1e;
     }
 }
@@ -14983,7 +15034,7 @@ main table td em {
     margin-top: 1rem;
 }
 
-@media (min-width: 433px) {
+@media (min-width: 768px) {
     .card--profile__description--thumbnail > :nth-child(2) {
         margin-top: 0;
     }
@@ -15122,7 +15173,6 @@ main table td em {
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
-    padding-bottom: 0.25rem;
 }
 
 .card--pathway .card__title i,
@@ -19842,7 +19892,6 @@ article figure figcaption a:active {
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
-    padding-bottom: 0.25rem;
 }
 
 .card--pathway .card__title i,
@@ -22620,6 +22669,13 @@ article figure figcaption a:active {
     transition: transform 0.2s ease-in;
 }
 
+@media (min-width: 433px) {
+    .finder__results__card a .thumbnail__image-container {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .finder__results__card a .thumbnail__image-container {
         transition: none;
@@ -22640,6 +22696,12 @@ article figure figcaption a:active {
 
 .finder__results__card a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+}
+
+@media (min-width: 768px) {
+    .finder__results__card a .thumbnail__image-container img {
+        height: 100%;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22681,7 +22743,7 @@ article figure figcaption a:active {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.19rem;
+    background-size: 0% 0.1875rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -22692,13 +22754,13 @@ article figure figcaption a:active {
 }
 
 .finder__results__card a:focus .underline-transition__title {
-    background-size: 100% 0.19rem;
+    background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
     .finder__results__card a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.19rem;
+        background-size: 100% 0.1875rem;
         color: #1e1e1e;
     }
 }
@@ -22733,7 +22795,6 @@ article figure figcaption a:active {
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
-    padding-bottom: 0.25rem;
 }
 
 .finder__results__card a .card__title i,
@@ -29271,7 +29332,6 @@ article .link-copy {
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
-    padding-bottom: 0.25rem;
 }
 
 .card--pathway .card__title i,
@@ -32049,6 +32109,13 @@ article .link-copy {
     transition: transform 0.2s ease-in;
 }
 
+@media (min-width: 433px) {
+    .finder__results__card a .thumbnail__image-container {
+        width: 7.5rem;
+        height: 7.5rem;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .finder__results__card a .thumbnail__image-container {
         transition: none;
@@ -32069,6 +32136,12 @@ article .link-copy {
 
 .finder__results__card a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+}
+
+@media (min-width: 768px) {
+    .finder__results__card a .thumbnail__image-container img {
+        height: 100%;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -32110,7 +32183,7 @@ article .link-copy {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.19rem;
+    background-size: 0% 0.1875rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -32121,13 +32194,13 @@ article .link-copy {
 }
 
 .finder__results__card a:focus .underline-transition__title {
-    background-size: 100% 0.19rem;
+    background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
     .finder__results__card a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.19rem;
+        background-size: 100% 0.1875rem;
         color: #1e1e1e;
     }
 }
@@ -32162,7 +32235,6 @@ article .link-copy {
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
-    padding-bottom: 0.25rem;
 }
 
 .finder__results__card a .card__title i,
