@@ -12993,7 +12993,6 @@ main table td em {
 }
 
 .card--casestudy a .thumbnail__image-container {
-    margin-right: 1.5rem;
     overflow: hidden;
     position: relative;
     transition: transform 0.2s ease-in;
@@ -13019,6 +13018,9 @@ main table td em {
 
 .card--casestudy a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13034,7 +13036,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -13060,7 +13062,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -13071,13 +13073,13 @@ main table td em {
 }
 
 .card--casestudy a:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .card--casestudy a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
 }
@@ -13456,7 +13458,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -13658,7 +13660,6 @@ main table td em {
 }
 
 .card--related-course a .thumbnail__image-container {
-    margin-right: 1.5rem;
     overflow: hidden;
     position: relative;
     transition: transform 0.2s ease-in;
@@ -13684,6 +13685,9 @@ main table td em {
 
 .card--related-course a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -13699,7 +13703,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -13725,7 +13729,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -13736,13 +13740,13 @@ main table td em {
 }
 
 .card--related-course a:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .card--related-course a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
 }
@@ -14158,40 +14162,29 @@ main table td em {
 }
 
 /* -- General event card styles applied to all -- */
-.card--event {
-    background: #ffffff;
+.card--event:hover {
+    /* 
+        Trigger thumbnail transition on hover of
+        the card - note the following
+        values should match the mixin call:
+
+        - scale value
+        - background opacity
+
+        Mixin: thumbnail-gradient-scale
+      */
 }
 
-.card--event a,
-.card--event a:hover,
-.card--event a:active,
-.card--event a:focus {
-    border-bottom: none;
+.card--event:hover .thumbnail__image-container img {
+    transform: scale(1.04);
 }
 
-@media (hover: hover) {
-    .card--event:hover {
-        /* 
-            Trigger thumbnail transition on hover of
-            the card - note the following
-            values should match the mixin call:
-
-            - scale value
-            - background opacity
-
-            Mixin: thumbnail-gradient-scale
-            */
-    }
-    .card--event:hover .thumbnail__image-container img {
-        transform: scale(1.04);
-    }
-    .card--event:hover .thumbnail__image-container:after {
-        background-color: rgba(0, 0, 0, 0.1);
-    }
+.card--event:hover .thumbnail__image-container:after {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .card--event .underline-transition__title {
-    line-height: 1.625;
+    line-height: 1.6;
 }
 
 .card--event__icon {
@@ -14214,7 +14207,6 @@ main table td em {
 }
 
 .card--event__image-container .thumbnail__image-container {
-    margin-right: 1.5rem;
     overflow: hidden;
     position: relative;
     transition: transform 0.2s ease-in;
@@ -14240,6 +14232,9 @@ main table td em {
 
 .card--event__image-container .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14259,7 +14254,7 @@ main table td em {
 
 @media (min-width: 769px) {
     .card--event__image-container .thumbnail__image-container {
-        height: 300px;
+        height: 16.66rem;
         width: 100%;
     }
 }
@@ -14380,6 +14375,10 @@ main table td em {
     color: #d61726;
 }
 
+.card--event__price {
+    margin-bottom: 1rem;
+}
+
 .card--event__price span {
     border: 0.1875rem solid #d61726;
     padding: 0.5rem;
@@ -14391,29 +14390,35 @@ main table td em {
     }
 }
 
-/* -- Variation specific styles -- */
+/* -- Portrait/landscape specific styles -- */
 .card--event--portrait {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     padding-bottom: 1.75rem;
 }
 
-@media (hover: hover) {
-    .card--event--portrait:hover {
-        /* 
-            Trigger underline transition on hover of the
-            card - note the following
-            value should match the mixin call:
+.card--event--portrait a,
+.card--event--portrait a:hover,
+.card--event--portrait a:active,
+.card--event--portrait a:focus {
+    border-bottom: none;
+}
 
-            - background size
+.card--event--portrait:hover {
+    /* 
+        Trigger underline transition on hover of the
+        card - note the following
+        value should match the mixin call:
 
-            Mixin:  underline-transition-title
-        */
-    }
-    .card--event--portrait:hover .card--event__title-link .underline-transition__title {
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 2rem;
-        color: #1e1e1e;
-    }
+        - background size
+
+        Mixin:  underline-transition-title
+    */
+}
+
+.card--event--portrait:hover .card--event__title-link .underline-transition__title {
+    background-image: linear-gradient(#1e1e1e, #1e1e1e);
+    background-size: 100% 0.19rem;
+    color: #1e1e1e;
 }
 
 .card--event--portrait .card--event__date--highlight {
@@ -14432,7 +14437,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -14443,15 +14448,19 @@ main table td em {
 }
 
 .card--event--portrait .card--event__title-link:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .card--event--portrait .card--event__title-link:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
+}
+
+.card--event--portrait .card--event__title-link .underline-transition__title {
+    padding-bottom: 0;
 }
 
 .card--event--portrait .card--event__title-link a {
@@ -14486,7 +14495,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -14511,6 +14520,14 @@ main table td em {
 @media (min-width: 769px) {
     .card--event--landscape {
         display: flex;
+        width: 55.55rem;
+        /* 
+          due to width of container and the
+          fact that the card is very wide,
+          the above width is needed to get
+          the card through testing. We 
+          can remove after
+      */
     }
 }
 
@@ -14524,7 +14541,7 @@ main table td em {
 
 @media (min-width: 769px) {
     .card--event--landscape .card--event__image-container {
-        width: 400px;
+        width: 22.22rem;
     }
 }
 
@@ -14641,7 +14658,6 @@ main table td em {
 }
 
 .card--news__image-container .thumbnail__image-container {
-    margin-right: 1.5rem;
     overflow: hidden;
     position: relative;
     transition: transform 0.2s ease-in;
@@ -14667,6 +14683,9 @@ main table td em {
 
 .card--news__image-container .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -14684,10 +14703,14 @@ main table td em {
     width: 100%;
 }
 
+.card--news__image-container .thumbnail__image-container img {
+    height: 100%;
+    width: 100%;
+}
+
 @media (min-width: 768px) {
     .card--news__image-container .thumbnail__image-container {
-        height: 1.25rem;
-        width: 100%;
+        height: 16.66rem;
     }
 }
 
@@ -14816,7 +14839,7 @@ main table td em {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -14827,13 +14850,13 @@ main table td em {
 }
 
 .card--news__title-link:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .card--news__title-link:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
 }
@@ -15331,7 +15354,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -15378,7 +15401,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -15425,7 +15448,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -15472,7 +15495,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -15519,7 +15542,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -15566,7 +15589,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -15613,7 +15636,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -15660,7 +15683,7 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -20052,7 +20075,7 @@ article figure figcaption a:active {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -20099,7 +20122,7 @@ article figure figcaption a:active {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -20146,7 +20169,7 @@ article figure figcaption a:active {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -20193,7 +20216,7 @@ article figure figcaption a:active {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -20240,7 +20263,7 @@ article figure figcaption a:active {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -20287,7 +20310,7 @@ article figure figcaption a:active {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -20334,7 +20357,7 @@ article figure figcaption a:active {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -20381,7 +20404,7 @@ article figure figcaption a:active {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -21430,7 +21453,7 @@ article figure figcaption a:active {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -21441,13 +21464,13 @@ article figure figcaption a:active {
 }
 
 .finder__filter legend button:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .finder__filter legend button:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
 }
@@ -22658,7 +22681,6 @@ article figure figcaption a:active {
 }
 
 .finder__results__card a .thumbnail__image-container {
-    margin-right: 1.5rem;
     overflow: hidden;
     position: relative;
     transition: transform 0.2s ease-in;
@@ -22684,6 +22706,9 @@ article figure figcaption a:active {
 
 .finder__results__card a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22699,7 +22724,7 @@ article figure figcaption a:active {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -22725,7 +22750,7 @@ article figure figcaption a:active {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -22736,13 +22761,13 @@ article figure figcaption a:active {
 }
 
 .finder__results__card a:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .finder__results__card a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
 }
@@ -29420,7 +29445,7 @@ article .link-copy {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -29467,7 +29492,7 @@ article .link-copy {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -29514,7 +29539,7 @@ article .link-copy {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -29561,7 +29586,7 @@ article .link-copy {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -29608,7 +29633,7 @@ article .link-copy {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -29655,7 +29680,7 @@ article .link-copy {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -29702,7 +29727,7 @@ article .link-copy {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -29749,7 +29774,7 @@ article .link-copy {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -30798,7 +30823,7 @@ article .link-copy {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -30809,13 +30834,13 @@ article .link-copy {
 }
 
 .finder__filter legend button:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .finder__filter legend button:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
 }
@@ -32026,7 +32051,6 @@ article .link-copy {
 }
 
 .finder__results__card a .thumbnail__image-container {
-    margin-right: 1.5rem;
     overflow: hidden;
     position: relative;
     transition: transform 0.2s ease-in;
@@ -32052,6 +32076,9 @@ article .link-copy {
 
 .finder__results__card a .thumbnail__image-container img {
     transition: transform 0.2s ease-in;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -32067,7 +32094,7 @@ article .link-copy {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -32093,7 +32120,7 @@ article .link-copy {
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
+    background-size: 0% 0.19rem;
     transition: background-size 0.6s ease-in;
     /**
             Needs to be inline else underline transition
@@ -32104,13 +32131,13 @@ article .link-copy {
 }
 
 .finder__results__card a:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
+    background-size: 100% 0.19rem;
 }
 
 @media (hover: hover) {
     .finder__results__card a:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
+        background-size: 100% 0.19rem;
         color: #1e1e1e;
     }
 }
@@ -34339,7 +34366,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -34390,7 +34417,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -34441,7 +34468,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
@@ -34518,8 +34545,9 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-.content-hub .news-events {
-    grid-area: news-events;
+.content-hub--news-events .news-events {
+    grid-row-gap: 0;
+    display: grid;
     display: grid;
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
@@ -34528,27 +34556,48 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 @media (max-width: 432px) {
-    .content-hub .news-events {
+    .content-hub--news-events .news-events {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .content-hub--news-events .news-events {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .content-hub--news-events .news-events {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (max-width: 432px) {
+    .content-hub--news-events .news-events {
         grid-template-columns: repeat(6, 1fr);
         grid-template-areas: 'separator separator separator separator separator separator ' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1' 'news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2' 'news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3';
     }
 }
 
 @media (min-width: 433px) {
-    .content-hub .news-events {
+    .content-hub--news-events .news-events {
         grid-template-columns: repeat(12, 1fr);
         grid-template-areas: 'separator separator separator separator separator separator separator separator separator separator separator separator' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2' '. . . news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 . . . ';
     }
 }
 
 @media (min-width: 901px) {
-    .content-hub .news-events {
+    .content-hub--news-events .news-events {
         grid-template-columns: repeat(18, 1fr);
         grid-template-areas: '. . . . separator separator separator separator separator separator separator separator separator separator . . . .' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title ' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 ';
     }
 }
 
-.content-hub .news-events:before, .content-hub .news-events:after {
+.content-hub--news-events .news-events:before, .content-hub--news-events .news-events:after {
     position: absolute;
     left: 0;
     right: 0;
@@ -34560,39 +34609,39 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     transform: skewY(1.5deg);
 }
 
-.content-hub .news-events:before {
+.content-hub--news-events .news-events:before {
     top: -10%;
     display: block;
 }
 
-.content-hub .news-events:after {
+.content-hub--news-events .news-events:after {
     bottom: -10%;
 }
 
-.content-hub .news-events .content-separator {
+.content-hub--news-events .news-events .content-separator {
     grid-area: separator;
 }
 
-.content-hub .news-events h2:nth-of-type(1) {
+.content-hub--news-events .news-events h2:nth-of-type(1) {
     grid-area: news-events-title;
     text-align: center;
 }
 
-.content-hub .news-events__col1 {
+.content-hub--news-events .news-events__col1 {
     grid-area: news-events-col1;
 }
 
-.content-hub .news-events__col2 {
+.content-hub--news-events .news-events__col2 {
     grid-area: news-events-col2;
 }
 
-.content-hub .news-events__col3 {
+.content-hub--news-events .news-events__col3 {
     grid-area: news-events-col3;
 }
 
 @media (max-width: 432px) {
-    .content-hub .card--news,
-    .content-hub .card--event {
+    .content-hub--news-events .card--news,
+    .content-hub--news-events .card--event {
         box-shadow: none;
         margin-bottom: 1rem;
     }
