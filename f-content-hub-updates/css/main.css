@@ -23158,6 +23158,7 @@ article figure figcaption a:active {
 .finder__select--level {
     grid-area: select;
     z-index: 1;
+    background: #ffffff;
 }
 
 .finder__select__overline {
@@ -32528,6 +32529,7 @@ article .link-copy {
 .finder__select--level {
     grid-area: select;
     z-index: 1;
+    background: #ffffff;
 }
 
 .finder__select__overline {
@@ -33950,7 +33952,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     background: #e5e5e5;
     grid-template-rows: auto;
     padding-top: -5rem;
-    margin-top: 0;
+    margin-top: -5rem;
+    margin-bottom: 10rem;
     position: relative;
 }
 
@@ -34076,8 +34079,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
     background-color: #e5e5e5;
-    margin-bottom: 7rem;
-    margin-top: -4rem;
+    margin-top: 0;
     padding-top: 4rem;
 }
 

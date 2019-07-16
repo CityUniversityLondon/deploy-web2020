@@ -2874,7 +2874,7 @@ function finder__query(props) {
       } // Look to do switch statement later
 
 
-      const listingUrl = 'https://web2020.city.ac.uk/prototype-1/prospective-students/courses';
+      const listingUrl = 'https://web2020.city.ac.uk/prototype/prospective-students/courses';
 
       if (levelParam && queryParam) {
         window.location.href = "".concat(listingUrl, "?").concat(levelParam, "&").concat(queryParam);
