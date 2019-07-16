@@ -15718,6 +15718,70 @@ main table td em {
     background: #ffef2b;
 }
 
+.card--social-media {
+    padding: 1.5rem;
+    background: #ffffff;
+}
+
+.card--social-media__header div:first-child {
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 433px) {
+    .card--social-media__header {
+        display: flex;
+    }
+    .card--social-media__header div:first-child {
+        margin-right: 1.75rem;
+        margin-bottom: 0;
+    }
+}
+
+.card--social-media__header i {
+    margin-right: 0.5rem;
+}
+
+.card--social-media__source-title i.fa-twitter {
+    color: #00c4fb;
+}
+
+.card--social-media__source__link i {
+    color: #c4c4c4;
+}
+
+.card--social-media__content {
+    margin: 1.75rem 0;
+}
+
+.card--social-media__controls a {
+    color: #989898;
+    border-bottom: none;
+    transition: none;
+    margin-right: 0.5rem;
+}
+
+.card--social-media__controls a:hover {
+    background-image: none;
+    color: #989898;
+    border-bottom: none;
+}
+
+.card--social-media__controls a:focus {
+    background-image: none;
+}
+
+.card--social-media__controls a:active {
+    background-image: none;
+}
+
+.card--social-media__time-info {
+    margin-top: 1.75rem;
+    border-top: 0.125rem solid #d8d8d8;
+    padding-top: 1.25rem;
+    color: dimgray;
+    font-style: italic;
+}
+
 .card--testimonial {
     margin-top: 2rem;
 }
@@ -20537,6 +20601,7 @@ article figure figcaption a:active {
     grid-area: query;
     margin-top: 1rem;
     position: relative;
+    z-index: 0;
 }
 
 .finder__query > div {
@@ -22543,6 +22608,7 @@ article figure figcaption a:active {
 
 .finder .finder__results {
     grid-area: results;
+    z-index: 0;
 }
 
 @media (min-width: 769px) and (max-width: 900px) {
@@ -29919,6 +29985,7 @@ article .link-copy {
     grid-area: query;
     margin-top: 1rem;
     position: relative;
+    z-index: 0;
 }
 
 .finder__query > div {
@@ -31925,6 +31992,7 @@ article .link-copy {
 
 .finder .finder__results {
     grid-area: results;
+    z-index: 0;
 }
 
 @media (min-width: 769px) and (max-width: 900px) {
