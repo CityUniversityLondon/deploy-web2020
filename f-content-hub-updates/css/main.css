@@ -33920,6 +33920,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     margin-top: 1rem;
 }
 
+.case-study--research__details__section .icon {
+    margin-right: 0.5rem;
+}
+
 .case-study--research__details__section .label {
     color: #696969;
     font-weight: 600;
