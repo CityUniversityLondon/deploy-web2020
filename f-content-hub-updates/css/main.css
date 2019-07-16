@@ -13071,6 +13071,7 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
+    padding-bottom: 0.125rem;
 }
 
 .card--casestudy a:focus .underline-transition__title {
@@ -13738,6 +13739,7 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
+    padding-bottom: 0.125rem;
 }
 
 .card--related-course a:focus .underline-transition__title {
@@ -14446,6 +14448,7 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
+    padding-bottom: 0.125rem;
 }
 
 .card--event--portrait .card--event__title-link:focus .underline-transition__title {
@@ -14849,6 +14852,7 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
+    padding-bottom: 0.125rem;
 }
 
 .card--news__title-link:focus .underline-transition__title {
@@ -15125,6 +15129,7 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
+    padding-bottom: 0.125rem;
 }
 
 .card--pathway:focus .underline-transition__title {
@@ -19844,6 +19849,7 @@ article figure figcaption a:active {
             stretches beyond the element
         **/
     display: inline;
+    padding-bottom: 0.125rem;
 }
 
 .card--pathway:focus .underline-transition__title {
@@ -21458,6 +21464,7 @@ article figure figcaption a:active {
             stretches beyond the element
         **/
     display: inline;
+    padding-bottom: 0.125rem;
 }
 
 .finder__filter legend button:focus .underline-transition__title {
@@ -22756,6 +22763,7 @@ article figure figcaption a:active {
             stretches beyond the element
         **/
     display: inline;
+    padding-bottom: 0.125rem;
 }
 
 .finder__results__card a:focus .underline-transition__title {
@@ -29223,6 +29231,7 @@ article .link-copy {
             stretches beyond the element
         **/
     display: inline;
+    padding-bottom: 0.125rem;
 }
 
 .card--pathway:focus .underline-transition__title {
@@ -30837,6 +30846,7 @@ article .link-copy {
             stretches beyond the element
         **/
     display: inline;
+    padding-bottom: 0.125rem;
 }
 
 .finder__filter legend button:focus .underline-transition__title {
@@ -32135,6 +32145,7 @@ article .link-copy {
             stretches beyond the element
         **/
     display: inline;
+    padding-bottom: 0.125rem;
 }
 
 .finder__results__card a:focus .underline-transition__title {
