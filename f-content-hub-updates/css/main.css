@@ -28762,6 +28762,7 @@ article .link-copy {
     grid-area: slider-container;
     position: relative;
     width: 100%;
+    padding-bottom: 3.25rem;
 }
 
 @media (min-width: 901px) {
@@ -29062,16 +29063,17 @@ article .link-copy {
 
 .swiper-indicator {
     position: absolute;
-    bottom: 2rem;
-    right: 1rem;
     font-size: 0.79rem;
     font-weight: 500;
     color: #919191;
+    bottom: 1rem;
+    right: 9rem;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 769px) {
     .swiper-indicator {
-        bottom: 0;
+        bottom: 3rem;
+        right: 1rem;
     }
 }
 
@@ -29084,14 +29086,23 @@ article .link-copy {
 }
 
 .swiper-buttons-wrap {
+    bottom: 0.5rem;
+    right: 1rem;
     display: flex;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
+    position: absolute;
+    z-index: 999;
+}
+
+@media (min-width: 769px) {
+    .swiper-buttons-wrap {
+        bottom: 2.5rem;
+        right: -7rem;
+    }
 }
 
 .fas.swiper-slider-arrow {
     color: #d61726;
-    border: 1px solid #d61726;
+    border: 0.0625rem solid #d61726;
     padding: 0.75rem;
     font-weight: 400;
 }
