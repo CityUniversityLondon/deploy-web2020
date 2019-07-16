@@ -34161,8 +34161,28 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
+.content-hub__block-two {
+    max-width: 80rem;
+    margin: 1rem 1.5rem;
+}
+
+@media (min-width: 1441px) {
+    .content-hub__block-two {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .content-hub__block-two {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
 .content-hub__block-two .careers {
     grid-area: careers;
+    padding: 1rem 1.5rem 4rem;
     max-width: 80rem;
     grid-column-gap: 1.5rem;
     display: grid;
@@ -34282,6 +34302,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .content-hub__block-two .pathway-cards {
+    margin: 1rem 1.5rem 4rem;
     grid-area: pathway;
 }
 
@@ -34491,6 +34512,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .content-hub__block-two .outcomes {
     grid-area: outcomes;
     max-width: 80rem;
+    margin: 1rem 1.5rem 4rem;
 }
 
 @media (min-width: 1441px) {
@@ -34512,6 +34534,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .content-hub__block-two .swiper-viewport {
+    margin: 1rem 1.5rem;
     grid-area: gallery;
     grid-template-areas: 'slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container';
 }
@@ -34542,6 +34565,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
     background: #e5e5e5;
+    margin-top: 7rem;
+    padding: 1rem 1.5rem 4rem;
     position: relative;
 }
 
@@ -34610,11 +34635,13 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .content-hub--news-events .news-events .content-separator {
     grid-area: separator;
+    margin: 0 0 1rem 0;
 }
 
 .content-hub--news-events .news-events h2:nth-of-type(1) {
     grid-area: news-events-title;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .content-hub--news-events .news-events__col1 {
