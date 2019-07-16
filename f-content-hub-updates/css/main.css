@@ -13069,7 +13069,6 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .card--casestudy a:focus .underline-transition__title {
@@ -13256,10 +13255,6 @@ main table td em {
     .card--casestudy a .card__inner > :nth-child(2) {
         margin-top: 0;
     }
-}
-
-.card--casestudy a .card--casestudy__thumbnail {
-    margin-right: 1.25rem;
 }
 
 @media (min-width: 768px) {
@@ -13736,7 +13731,6 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .card--related-course a:focus .underline-transition__title {
@@ -14444,7 +14438,6 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .card--event--portrait .card--event__title-link:focus .underline-transition__title {
@@ -14640,7 +14633,7 @@ main table td em {
     }
     .card--news:hover .underline-transition__title {
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.25rem;
+        background-size: 100% 0.1875rem;
         color: #1e1e1e;
     }
 }
@@ -14846,7 +14839,6 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .card--news__title-link:focus .underline-transition__title {
@@ -15123,7 +15115,6 @@ main table td em {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .card--pathway:focus .underline-transition__title {
@@ -19844,7 +19835,6 @@ article figure figcaption a:active {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .card--pathway:focus .underline-transition__title {
@@ -21460,7 +21450,6 @@ article figure figcaption a:active {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .finder__filter legend button:focus .underline-transition__title {
@@ -22757,7 +22746,6 @@ article figure figcaption a:active {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .finder__results__card a:focus .underline-transition__title {
@@ -29215,7 +29203,6 @@ article .link-copy {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .card--pathway:focus .underline-transition__title {
@@ -30831,7 +30818,6 @@ article .link-copy {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .finder__filter legend button:focus .underline-transition__title {
@@ -32128,7 +32114,6 @@ article .link-copy {
             stretches beyond the element
         **/
     display: inline;
-    padding-bottom: 0.25rem;
 }
 
 .finder__results__card a:focus .underline-transition__title {
