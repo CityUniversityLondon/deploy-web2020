@@ -1117,12 +1117,12 @@
 }
 
 .angled-edge:before {
-    top: -10%;
+    top: -5%;
     display: block;
 }
 
 .angled-edge:after {
-    bottom: -10%;
+    bottom: -5%;
     display: block;
 }
 

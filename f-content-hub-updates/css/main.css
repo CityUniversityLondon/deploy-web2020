@@ -1117,12 +1117,12 @@
 }
 
 .angled-edge:before {
-    top: -10%;
+    top: -5%;
     display: block;
 }
 
 .angled-edge:after {
-    bottom: -10%;
+    bottom: -5%;
     display: block;
 }
 
@@ -15718,6 +15718,7 @@ main table td em {
 .card--social-media {
     padding: 1.5rem;
     background: #ffffff;
+    margin-bottom: 2rem;
 }
 
 .card--social-media__header div:first-child {
@@ -34232,7 +34233,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-template-rows: auto;
     padding-top: -5rem;
     margin-top: -5rem;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
     position: relative;
 }
 
@@ -34270,11 +34271,11 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .content-hub__block-one:before {
-    top: -10%;
+    top: -5%;
 }
 
 .content-hub__block-one:after {
-    bottom: -10%;
+    bottom: -5%;
     display: block;
 }
 
@@ -34848,7 +34849,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
     background: #e5e5e5;
-    margin-top: 7rem;
+    margin-top: 5rem;
     padding: 1rem 1.5rem 4rem;
     position: relative;
 }
@@ -34908,12 +34909,12 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .content-hub--news-events .news-events:before {
-    top: -10%;
+    top: -5%;
     display: block;
 }
 
 .content-hub--news-events .news-events:after {
-    bottom: -10%;
+    bottom: -5%;
 }
 
 .content-hub--news-events .news-events .content-separator {
