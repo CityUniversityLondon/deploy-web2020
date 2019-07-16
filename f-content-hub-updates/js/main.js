@@ -3524,7 +3524,7 @@ function Finder(props) {
       }
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
       className: "finder__title"
-    }, "Find ", props.config.facetLabels[2].funnelbackName, " courses"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+    }, "Find courses"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
       className: "finder__select finder__select--level"
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
       className: "finder__select__overline",
