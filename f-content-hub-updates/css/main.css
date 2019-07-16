@@ -13072,6 +13072,7 @@ main table td em {
         **/
     display: inline;
     padding-bottom: 0.125rem;
+    line-height: 1.5;
 }
 
 .card--casestudy a:focus .underline-transition__title {
@@ -13740,6 +13741,7 @@ main table td em {
         **/
     display: inline;
     padding-bottom: 0.125rem;
+    line-height: 1.5;
 }
 
 .card--related-course a:focus .underline-transition__title {
@@ -14189,10 +14191,6 @@ main table td em {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.card--event .underline-transition__title {
-    line-height: 1.6;
-}
-
 .card--event__icon {
     color: #d61726;
     width: 1rem;
@@ -14417,7 +14415,7 @@ main table td em {
         card - note the following
         value should match the mixin call:
 
-        - background size
+        - background size (2nd value)
 
         Mixin:  underline-transition-title
     */
@@ -14425,7 +14423,7 @@ main table td em {
 
 .card--event--portrait:hover .card--event__title-link .underline-transition__title {
     background-image: linear-gradient(#1e1e1e, #1e1e1e);
-    background-size: 100% 0.19rem;
+    background-size: 100% 0.1875rem;
     color: #1e1e1e;
 }
 
@@ -14453,6 +14451,7 @@ main table td em {
         **/
     display: inline;
     padding-bottom: 0.125rem;
+    line-height: 1.5;
 }
 
 .card--event--portrait .card--event__title-link:focus .underline-transition__title {
@@ -14465,10 +14464,6 @@ main table td em {
         background-size: 100% 0.1875rem;
         color: #1e1e1e;
     }
-}
-
-.card--event--portrait .card--event__title-link .underline-transition__title {
-    padding-bottom: 0;
 }
 
 .card--event--portrait .card--event__title-link a {
@@ -14857,6 +14852,7 @@ main table td em {
         **/
     display: inline;
     padding-bottom: 0.125rem;
+    line-height: 1.5;
 }
 
 .card--news__title-link:focus .underline-transition__title {
@@ -15134,6 +15130,7 @@ main table td em {
         **/
     display: inline;
     padding-bottom: 0.125rem;
+    line-height: 1.5;
 }
 
 .card--pathway:focus .underline-transition__title {
@@ -19918,6 +19915,7 @@ article figure figcaption a:active {
         **/
     display: inline;
     padding-bottom: 0.125rem;
+    line-height: 1.5;
 }
 
 .card--pathway:focus .underline-transition__title {
@@ -21534,6 +21532,7 @@ article figure figcaption a:active {
         **/
     display: inline;
     padding-bottom: 0.125rem;
+    line-height: 1.5;
 }
 
 .finder__filter legend button:focus .underline-transition__title {
@@ -22834,6 +22833,7 @@ article figure figcaption a:active {
         **/
     display: inline;
     padding-bottom: 0.125rem;
+    line-height: 1.5;
 }
 
 .finder__results__card a:focus .underline-transition__title {
@@ -29302,6 +29302,7 @@ article .link-copy {
         **/
     display: inline;
     padding-bottom: 0.125rem;
+    line-height: 1.5;
 }
 
 .card--pathway:focus .underline-transition__title {
@@ -30918,6 +30919,7 @@ article .link-copy {
         **/
     display: inline;
     padding-bottom: 0.125rem;
+    line-height: 1.5;
 }
 
 .finder__filter legend button:focus .underline-transition__title {
@@ -32218,6 +32220,7 @@ article .link-copy {
         **/
     display: inline;
     padding-bottom: 0.125rem;
+    line-height: 1.5;
 }
 
 .finder__results__card a:focus .underline-transition__title {
