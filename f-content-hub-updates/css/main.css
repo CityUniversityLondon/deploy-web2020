@@ -14164,6 +14164,10 @@ main table td em {
 }
 
 /* -- General event card styles applied to all -- */
+.card--event {
+    background: #ffffff;
+}
+
 .card--event:hover {
     /* 
         Trigger thumbnail transition on hover of
@@ -14266,9 +14270,9 @@ main table td em {
 .card--event__title-link a {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
-    font-size: 1.266rem;
+    font-size: 1.125rem;
     line-height: 1.25;
-    letter-spacing: -0.011em;
+    letter-spacing: -0.008em;
     font-style: normal;
     font-weight: 600;
     margin-top: 1rem;
@@ -14295,19 +14299,19 @@ main table td em {
 
 @media (min-width: 433px) and (max-width: 768px) {
     .card--event__title-link a {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .card--event__title-link a {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .card--event__title-link a {
-        letter-spacing: -0.015em;
+        letter-spacing: -0.014em;
     }
 }
 
