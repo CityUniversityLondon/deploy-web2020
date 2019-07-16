@@ -34539,6 +34539,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-template-areas: 'slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container';
 }
 
+.content-hub__block-two .gallery .section-title {
+    text-align: center;
+}
+
 .content-hub__block-two .testimonial {
     grid-area: testimonial;
     max-width: 80rem;
