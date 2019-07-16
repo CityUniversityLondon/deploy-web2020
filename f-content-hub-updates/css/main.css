@@ -27594,6 +27594,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .no-js .modal__popup--hidden {
     display: block;
+    opacity: 1;
 }
 
 .no-js .modal__content {
@@ -27991,6 +27992,28 @@ article .link-copy {
 @media (max-width: 899px) {
     .module-selector__button {
         margin: 2rem 0 1rem 0;
+    }
+}
+
+@media (min-width: 900px) {
+    .no-js .module-selector__separator {
+        display: block;
+        width: 100%;
+        position: unset;
+    }
+}
+
+@media (min-width: 900px) {
+    .no-js .module-selector__content__moduleLink,
+    .no-js .module-selector__content__text {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (min-width: 900px) {
+    .no-js .module-selector__content {
+        display: block;
     }
 }
 
@@ -33404,6 +33427,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .no-js .modal__popup--hidden {
     display: block;
+    opacity: 1;
 }
 
 .no-js .modal__content {
