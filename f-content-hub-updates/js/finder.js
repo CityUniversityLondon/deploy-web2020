@@ -1983,7 +1983,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const formatLabel = (label, value) => {
-  if (!value) {
+  if (value) {
     return label;
   }
 
