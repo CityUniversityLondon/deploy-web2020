@@ -20808,10 +20808,13 @@ article figure figcaption a:active {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
-    background: linear-gradient(45deg, #3e1031, #d61726);
-    padding: 0.1875rem 0.1875rem 0.1875rem 0.25rem;
-    z-index: 3;
     display: flex;
+    border-image-source: linear-gradient(45deg, #3e1031, #d61726);
+    border-image-slice: 1;
+    border-width: 0.25rem;
+    border-style: solid;
+    padding: 0;
+    z-index: 3;
     flex-grow: 1;
     position: relative;
 }
@@ -23327,6 +23330,7 @@ article figure figcaption a:active {
     margin-top: 1rem;
     position: relative;
     border: 0.1875rem solid #3e1031;
+    color: #0c0c0e;
 }
 
 .finder__select select {
@@ -23335,9 +23339,9 @@ article figure figcaption a:active {
     letter-spacing: -0.005em;
     padding: 0.25rem 0.25rem 0 0.75rem;
     position: relative;
+    color: #0c0c0e;
     bottom: 0.25rem;
     font-weight: 600;
-    color: #1e1e1e;
     width: 100%;
     border: 0;
     background: none;
@@ -30218,10 +30222,13 @@ article .link-copy {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
-    background: linear-gradient(45deg, #3e1031, #d61726);
-    padding: 0.1875rem 0.1875rem 0.1875rem 0.25rem;
-    z-index: 3;
     display: flex;
+    border-image-source: linear-gradient(45deg, #3e1031, #d61726);
+    border-image-slice: 1;
+    border-width: 0.25rem;
+    border-style: solid;
+    padding: 0;
+    z-index: 3;
     flex-grow: 1;
     position: relative;
 }
@@ -32737,6 +32744,7 @@ article .link-copy {
     margin-top: 1rem;
     position: relative;
     border: 0.1875rem solid #3e1031;
+    color: #0c0c0e;
 }
 
 .finder__select select {
@@ -32745,9 +32753,9 @@ article .link-copy {
     letter-spacing: -0.005em;
     padding: 0.25rem 0.25rem 0 0.75rem;
     position: relative;
+    color: #0c0c0e;
     bottom: 0.25rem;
     font-weight: 600;
-    color: #1e1e1e;
     width: 100%;
     border: 0;
     background: none;
@@ -34408,10 +34416,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-.content-hub__block-one .wrapper--finder--hub .finder__query__input {
-    padding: 0.25rem 0.1875rem 0.1875rem 0.1875rem;
-}
-
 .content-hub__block-one .embedded-video {
     grid-area: video;
     padding-bottom: 0;
@@ -35034,6 +35038,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
+}
+
+div.widget-123_test_ {
+    display: block;
 }
 
 .event {

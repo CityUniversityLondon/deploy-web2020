@@ -628,7 +628,7 @@ function finder__results__course(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-book-reader icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Method:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.metaData.metd)); // Course location, if it has it
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Method of study:"), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.metaData.metd)); // Course location, if it has it
 
   const location = props.details.metaData.loc && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__tag"
@@ -1263,9 +1263,7 @@ function finder__appliedfilters(props) {
   const facetKeys = Object.keys(props.query.facets);
 
   if (facetKeys.length > 0) {
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
-      className: "sr-only"
-    }, "Applied filters"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Applied filters"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
       className: "finder__appliedfilters"
     }, facetKeys.map(facet => {
       const labels = props.config.facetLabels.filter(facetLabel => facetLabel.meta === facet)[0],
