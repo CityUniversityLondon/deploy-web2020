@@ -20808,10 +20808,13 @@ article figure figcaption a:active {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
-    background: linear-gradient(45deg, #3e1031, #d61726);
-    padding: 0.1875rem 0.1875rem 0.1875rem 0.25rem;
-    z-index: 3;
     display: flex;
+    border-image-source: linear-gradient(45deg, #3e1031, #d61726);
+    border-image-slice: 1;
+    border-width: 0.25rem;
+    border-style: solid;
+    padding: 0;
+    z-index: 3;
     flex-grow: 1;
     position: relative;
 }
@@ -30219,10 +30222,13 @@ article .link-copy {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
-    background: linear-gradient(45deg, #3e1031, #d61726);
-    padding: 0.1875rem 0.1875rem 0.1875rem 0.25rem;
-    z-index: 3;
     display: flex;
+    border-image-source: linear-gradient(45deg, #3e1031, #d61726);
+    border-image-slice: 1;
+    border-width: 0.25rem;
+    border-style: solid;
+    padding: 0;
+    z-index: 3;
     flex-grow: 1;
     position: relative;
 }
@@ -34408,10 +34414,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
         grid-template-columns: repeat(18, 1fr);
         grid-template-areas: ' . . . . video video video video video video video video video video . . . . ' ' . . . finder finder finder finder finder finder finder finder finder finder finder finder . . . ';
     }
-}
-
-.content-hub__block-one .wrapper--finder--hub .finder__query__input {
-    padding: 0.25rem 0.1875rem 0.1875rem 0.1875rem;
 }
 
 .content-hub__block-one .embedded-video {
