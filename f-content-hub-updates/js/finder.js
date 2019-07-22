@@ -1539,7 +1539,19 @@ function finder__query(props) {
       backgroundFill[0].classList.remove('background-fill--grey');
       e.target.placeholder = props.config.placeholder;
       e.target.value = '';
-      let suggestedResults = document.querySelector('.finder__query__suggestions');
+      let suggestedResults = document.querySelector('.finder__query__suggestions'); // let suggestedResultsBtns = suggestedResults.querySelectorAll(
+      //     'button'
+      // );
+      // for (const suggestedResultsBtn of suggestedResultsBtns) {
+      //     suggestedResultsBtn.addEventListener('click', () => {
+      //         console.log(suggestedResultsBtn);
+      //     });
+      // }
+      // console.log(suggestedResultsBtns);
+      // suggestedResults.addEventListener('click', () => {
+      //     console.log('a')
+      // });
+
       document.addEventListener('click', function (event) {
         let classList = event.target.classList;
 

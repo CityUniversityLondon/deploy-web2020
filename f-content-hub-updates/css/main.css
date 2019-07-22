@@ -34580,29 +34580,11 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-area: employer;
 }
 
-.content-hub__block-two .careers__employer-logos-wrapper {
-    grid-template-columns: repeat(9, 1fr);
-    grid-column-gap: 1.5rem;
-    grid-template-areas: 'employer1 employer1 employer1 employer2 employer2 employer2 employer3 employer3 employer3';
-}
-
 .content-hub__block-two .careers__employer-logos-wrapper img {
-    margin: 1rem 0 0 0;
+    margin: 1rem 0.5rem 0 0;
     max-height: 4rem;
     padding: 0.5rem;
     border: 0.0625rem solid #e5e5e5;
-}
-
-.content-hub__block-two .careers__employer-logos-wrapper img:nth-of-type(1) {
-    grid-area: employer1;
-}
-
-.content-hub__block-two .careers__employer-logos-wrapper img:nth-of-type(2) {
-    grid-area: employer2;
-}
-
-.content-hub__block-two .careers__employer-logos-wrapper img:nth-of-type(3) {
-    grid-area: employer3;
 }
 
 .content-hub__block-two .careers__job-locations h2 {
