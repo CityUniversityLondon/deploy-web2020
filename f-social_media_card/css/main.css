@@ -14894,11 +14894,11 @@ main table td em {
 }
 
 .card--social-media__source-title i.fa-twitter {
-    color: #00c4fb;
+    color: #19c3fe;
 }
 
 .card--social-media__source__link i {
-    color: #c4c4c4;
+    color: #cbcbcb;
 }
 
 .card--social-media__content {
@@ -14906,7 +14906,7 @@ main table td em {
 }
 
 .card--social-media__controls a {
-    color: #989898;
+    color: #696969;
     border-bottom: none;
     transition: none;
     margin-right: 0.5rem;
@@ -14914,7 +14914,7 @@ main table td em {
 
 .card--social-media__controls a:hover {
     background-image: none;
-    color: #989898;
+    color: #696969;
     border-bottom: none;
 }
 
@@ -14930,7 +14930,7 @@ main table td em {
     margin-top: 1.75rem;
     border-top: 0.125rem solid #d8d8d8;
     padding-top: 1.25rem;
-    color: dimgray;
+    color: #696969;
     font-style: italic;
 }
 
