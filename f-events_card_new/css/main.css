@@ -14340,6 +14340,12 @@ main table td em {
     font-weight: 600;
 }
 
+@media (max-width: 767px) {
+    .card--event__title-link a {
+        line-height: 1.4;
+    }
+}
+
 .card--event__date--highlight,
 .card--event__date {
     font-size: 1.125rem;
@@ -14355,8 +14361,13 @@ main table td em {
 }
 
 .card--event__content {
-    padding: 0 1.75rem 1.75rem 1.75rem;
     position: relative;
+}
+
+@media (min-width: 769px) {
+    .card--event__content {
+        padding: 0 1.75rem 1.75rem 1.75rem;
+    }
 }
 
 .card--event__date-time-text {
@@ -14438,6 +14449,10 @@ main table td em {
     color: #1e1e1e;
 }
 
+.card--event--portrait .card--event__content {
+    padding: 0 1.75rem 1.75rem 1.75rem;
+}
+
 .card--event--portrait .card--event__date--highlight {
     display: inline-flex;
     position: relative;
@@ -14497,7 +14512,6 @@ main table td em {
 }
 
 .card--event--landscape {
-    padding: 1rem;
     position: relative;
 }
 
@@ -14533,6 +14547,13 @@ main table td em {
 @media (min-width: 769px) {
     .card--event--landscape {
         display: flex;
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .card--event--landscape {
+        padding: 1rem;
     }
 }
 
@@ -14566,14 +14587,13 @@ main table td em {
 
 .card--event--landscape .card--event__price {
     position: absolute;
-    right: 1.5rem;
-    bottom: 2.5rem;
+    right: 0;
+    bottom: 0;
 }
 
 @media (min-width: 769px) {
     .card--event--landscape .card--event__price {
         top: 1.5rem;
-        bottom: initial;
     }
 }
 
