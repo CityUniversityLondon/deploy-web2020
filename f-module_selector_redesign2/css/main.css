@@ -27918,7 +27918,7 @@ article .link-copy {
         display: block;
         right: 0;
         position: absolute;
-        right: -36%;
+        right: -14rem;
         height: 100%;
         top: 0;
         z-index: -1;
