@@ -1882,7 +1882,7 @@ function finder__results__course(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-book-reader icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Method:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.metaData.metd)); // Course location, if it has it
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Method of study:"), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.metaData.metd)); // Course location, if it has it
 
   const location = props.details.metaData.loc && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__tag"
@@ -2517,9 +2517,7 @@ function finder__appliedfilters(props) {
   const facetKeys = Object.keys(props.query.facets);
 
   if (facetKeys.length > 0) {
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
-      className: "sr-only"
-    }, "Applied filters"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Applied filters"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
       className: "finder__appliedfilters"
     }, facetKeys.map(facet => {
       const labels = props.config.facetLabels.filter(facetLabel => facetLabel.meta === facet)[0],
@@ -2795,7 +2793,19 @@ function finder__query(props) {
       backgroundFill[0].classList.remove('background-fill--grey');
       e.target.placeholder = props.config.placeholder;
       e.target.value = '';
-      let suggestedResults = document.querySelector('.finder__query__suggestions');
+      let suggestedResults = document.querySelector('.finder__query__suggestions'); // let suggestedResultsBtns = suggestedResults.querySelectorAll(
+      //     'button'
+      // );
+      // for (const suggestedResultsBtn of suggestedResultsBtns) {
+      //     suggestedResultsBtn.addEventListener('click', () => {
+      //         console.log(suggestedResultsBtn);
+      //     });
+      // }
+      // console.log(suggestedResultsBtns);
+      // suggestedResults.addEventListener('click', () => {
+      //     console.log('a')
+      // });
+
       document.addEventListener('click', function (event) {
         let classList = event.target.classList;
 
@@ -2874,7 +2884,7 @@ function finder__query(props) {
       } // Look to do switch statement later
 
 
-      const listingUrl = 'https://web2020.city.ac.uk/prototype-1/prospective-students/courses';
+      const listingUrl = 'https://web2020.city.ac.uk/prototype/prospective-students/courses';
 
       if (levelParam && queryParam) {
         window.location.href = "".concat(listingUrl, "?").concat(levelParam, "&").concat(queryParam);
@@ -3237,7 +3247,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const formatLabel = (label, value) => {
-  if (!value) {
+  if (value) {
     return label;
   }
 
@@ -3524,7 +3534,7 @@ function Finder(props) {
       }
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
       className: "finder__title"
-    }, "Find ", props.config.facetLabels[2].funnelbackName, " courses"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+    }, "Find courses"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
       className: "finder__select finder__select--level"
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
       className: "finder__select__overline",
@@ -3603,7 +3613,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { keys.push.apply(keys, Object.getOwnPropertySymbols(object)); } if (enumerableOnly) keys = keys.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -3678,7 +3690,7 @@ function find(collection, fixedFacets, query, sortBy, sortDirection, startRank, 
     }),
     url: findRootUrl,
     timeout: timeout,
-    params: _objectSpread({}, fixedFacetParams, facetParams, {
+    params: _objectSpread({}, fixedFacetParams, {}, facetParams, {
       collection: collection,
       num_ranks: numRank,
       query: query,
