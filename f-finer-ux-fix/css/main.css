@@ -22045,7 +22045,7 @@ article figure figcaption a:active {
 @media (max-width: 768px) {
     .finder__filters {
         background-color: #d8d8d8;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
     .finder__filters .finder__clear {
         display: none;
@@ -31470,7 +31470,7 @@ article .link-copy {
 @media (max-width: 768px) {
     .finder__filters {
         background-color: #d8d8d8;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
     .finder__filters .finder__clear {
         display: none;
