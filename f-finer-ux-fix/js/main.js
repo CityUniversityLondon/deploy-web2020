@@ -1911,7 +1911,7 @@ function finder__results__course(props) {
     className: "finder__results__card__heading underline-transition__title"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.title, props.query.query) : props.details.title)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__description"
-  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.L, props.query.query) : props.details.metaData.L), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.c, props.query.query) : props.details.metaData.c), school, award, duration, courseCode, method, location)));
+  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.L.replace(/_/g, ' '), props.query.query) : props.details.metaData.L.replace(/_/g, ' ')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.c, props.query.query) : props.details.metaData.c), school, award, duration, courseCode, method, location)));
 }
 
 finder__results__course.propTypes = {
@@ -2171,7 +2171,8 @@ function finder__filters(props) {
             facet: facet,
             query: props.query,
             responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
-            update: props.update
+            update: props.update,
+            mobile: props.mobile ? true : false
           });
 
         case 'checkbox':
@@ -2194,7 +2195,8 @@ finder__filters.propTypes = {
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   response: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+  mobile: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__filters);
 
@@ -2316,7 +2318,8 @@ function finder__mobilefilters(props) {
     query: props.query,
     response: props.response,
     update: props.update,
-    clear: props.clear
+    clear: props.clear,
+    mobile: true
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     type: "button",
     className: "finder__mobilefilters__apply",
@@ -2392,7 +2395,7 @@ function finder__radio(props) {
   // Radio facets can be toggled open and closed
   // default state on load is defined in config
   // Always open on load if facet set.
-  const [open, setOpen] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(props.query.facets[props.facet.meta] !== undefined ? true : props.facet.defaultOpen),
+  const [open, setOpen] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(props.query.facets[props.facet.meta] !== undefined ? true : props.mobile === true ? false : props.facet.defaultOpen),
         currentValue = props.query.facets[props.facet.meta] || ''; // reduce the facet configuration to an array of all possible values for
   // the facet
 
@@ -2472,7 +2475,8 @@ finder__radio.propTypes = {
   facet: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
   responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object),
-  update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object
+  update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  mobile: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__radio);
 
