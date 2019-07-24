@@ -21789,6 +21789,11 @@ article figure figcaption a:active {
     border: none;
 }
 
+.finder__appliedfilters__wrap {
+    background-color: #ffffff;
+    margin-top: 0;
+}
+
 .finder__appliedfilters {
     grid-area: appliedFilters;
     display: none;
@@ -21798,6 +21803,7 @@ article figure figcaption a:active {
     margin-left: 0;
     margin-bottom: 1rem;
     max-width: unset;
+    padding: 0.75rem 1.5rem;
 }
 
 @media (min-width: 769px) {
@@ -22039,6 +22045,7 @@ article figure figcaption a:active {
 @media (max-width: 768px) {
     .finder__filters {
         background-color: #d8d8d8;
+        margin-bottom: 2rem;
     }
     .finder__filters .finder__clear {
         display: none;
@@ -22062,19 +22069,6 @@ article figure figcaption a:active {
     }
 }
 
-.finder__filters .finder__filters__heading {
-    display: flex;
-    justify-content: space-between;
-    background-color: #d8d8d8;
-    padding: 0.75rem 1.5rem;
-    font-size: 1.424rem;
-}
-
-.finder__filters .finder__filters__heading h2 {
-    margin-top: 0;
-    font-size: 1.424rem;
-}
-
 .finder__filters .finder__filters__heading .fa-sliders-h {
     display: flex;
     flex-direction: column;
@@ -22090,6 +22084,27 @@ article figure figcaption a:active {
 @media (max-width: 768px) {
     .finder__filters .finder__filters__heading .finder__clear {
         display: block;
+    }
+}
+
+.finder__filters__heading,
+.finder__applied__filters__heading {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d8d8d8;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.424rem;
+}
+
+.finder__filters__heading h2,
+.finder__applied__filters__heading h2 {
+    margin-top: 0;
+    font-size: 1.424rem;
+}
+
+@media (max-width: 768px) {
+    .finder__applied__filters__heading {
+        display: none;
     }
 }
 
@@ -31199,6 +31214,11 @@ article .link-copy {
     border: none;
 }
 
+.finder__appliedfilters__wrap {
+    background-color: #ffffff;
+    margin-top: 0;
+}
+
 .finder__appliedfilters {
     grid-area: appliedFilters;
     display: none;
@@ -31208,6 +31228,7 @@ article .link-copy {
     margin-left: 0;
     margin-bottom: 1rem;
     max-width: unset;
+    padding: 0.75rem 1.5rem;
 }
 
 @media (min-width: 769px) {
@@ -31449,6 +31470,7 @@ article .link-copy {
 @media (max-width: 768px) {
     .finder__filters {
         background-color: #d8d8d8;
+        margin-bottom: 2rem;
     }
     .finder__filters .finder__clear {
         display: none;
@@ -31472,19 +31494,6 @@ article .link-copy {
     }
 }
 
-.finder__filters .finder__filters__heading {
-    display: flex;
-    justify-content: space-between;
-    background-color: #d8d8d8;
-    padding: 0.75rem 1.5rem;
-    font-size: 1.424rem;
-}
-
-.finder__filters .finder__filters__heading h2 {
-    margin-top: 0;
-    font-size: 1.424rem;
-}
-
 .finder__filters .finder__filters__heading .fa-sliders-h {
     display: flex;
     flex-direction: column;
@@ -31500,6 +31509,27 @@ article .link-copy {
 @media (max-width: 768px) {
     .finder__filters .finder__filters__heading .finder__clear {
         display: block;
+    }
+}
+
+.finder__filters__heading,
+.finder__applied__filters__heading {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d8d8d8;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.424rem;
+}
+
+.finder__filters__heading h2,
+.finder__applied__filters__heading h2 {
+    margin-top: 0;
+    font-size: 1.424rem;
+}
+
+@media (max-width: 768px) {
+    .finder__applied__filters__heading {
+        display: none;
     }
 }
 
