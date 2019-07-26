@@ -34470,27 +34470,12 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .content-hub__block-two {
-    max-width: 80rem;
-    margin: 1rem 1.5rem;
-}
-
-@media (min-width: 1441px) {
-    .content-hub__block-two {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .content-hub__block-two {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
+    margin: 1rem 0;
 }
 
 .content-hub__block-two .careers {
     grid-area: careers;
-    padding: 1rem 1.5rem 4rem;
+    padding: 1rem 0 4rem;
     max-width: 80rem;
     grid-column-gap: 1.5rem;
     display: grid;
@@ -34599,21 +34584,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .content-hub__block-two .pathway-cards .card--pathway__block {
     display: grid;
     grid-template-rows: auto;
-    max-width: 80rem;
-}
-
-@media (min-width: 1441px) {
-    .content-hub__block-two .pathway-cards .card--pathway__block {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .content-hub__block-two .pathway-cards .card--pathway__block {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
 }
 
 @media (max-width: 432px) {
@@ -34640,6 +34610,16 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .content-hub p {
     margin-right: 0;
     max-width: 100%;
+}
+
+@media (max-width: 431px) {
+    .content-hub__block-two .pathway-cards .card li {
+        margin: 0;
+    }
+    .content-hub__block-two .pathway-cards .card a {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .content-hub__block-two .pathway-cards .card:nth-of-type(1) {
@@ -34824,7 +34804,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .content-hub__block-two .swiper-viewport {
-    margin: 1rem 1.5rem;
+    padding: 1rem 1.5rem;
     grid-area: gallery;
     grid-template-areas: 'slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container slider-container';
 }
