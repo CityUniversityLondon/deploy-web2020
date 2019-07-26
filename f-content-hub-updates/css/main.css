@@ -34852,6 +34852,95 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
+.content-hub--news-events .news-events .related-content {
+    grid-area: ne-wrap;
+    display: grid;
+    grid-row-gap: 0;
+    display: grid;
+    grid-column-gap: 1.5rem;
+}
+
+@media (max-width: 432px) {
+    .content-hub--news-events .news-events .related-content {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .content-hub--news-events .news-events .related-content {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .content-hub--news-events .news-events .related-content {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .content-hub--news-events .news-events .related-content {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 'a a a a a a' 'b b b b b b' 'c c c c c c' 'd d d d d d' 'e e e e e e' 'f f f f f f' 'g g g g g g' 'h h h h h h' 'i i i i i i' 'j j j j j j';
+    }
+}
+
+@media (min-width: 769px) {
+    .content-hub--news-events .news-events .related-content {
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-areas: 'a a a a a a b b b b b b c c c c c c' 'd d d d d d e e e e e e f f f f f f' 'g g g g g g h h h h h h i i i i i i' 'j j j j j j . . . . . . . . . . . .';
+    }
+}
+
+.content-hub--news-events .news-events .related-content .card {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+.content-hub--news-events .news-events .related-content .card:nth-of-type(1) {
+    grid-area: a;
+}
+
+.content-hub--news-events .news-events .related-content .card:nth-of-type(2) {
+    grid-area: b;
+}
+
+.content-hub--news-events .news-events .related-content .card:nth-of-type(3) {
+    grid-area: c;
+}
+
+.content-hub--news-events .news-events .related-content .card:nth-of-type(4) {
+    grid-area: d;
+}
+
+.content-hub--news-events .news-events .related-content .card:nth-of-type(5) {
+    grid-area: e;
+}
+
+.content-hub--news-events .news-events .related-content .card:nth-of-type(6) {
+    grid-area: f;
+}
+
+.content-hub--news-events .news-events .related-content .card:nth-of-type(7) {
+    grid-area: g;
+}
+
+.content-hub--news-events .news-events .related-content .card:nth-of-type(8) {
+    grid-area: h;
+}
+
+.content-hub--news-events .news-events .related-content .card:nth-of-type(9) {
+    grid-area: i;
+}
+
+.content-hub--news-events .news-events .related-content .card:nth-of-type(10) {
+    grid-area: j;
+}
+
 .content-hub--news-events .news-events {
     grid-row-gap: 0;
     display: grid;
@@ -34888,21 +34977,21 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media (max-width: 432px) {
     .content-hub--news-events .news-events {
         grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: 'separator separator separator separator separator separator ' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1' 'news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2' 'news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3';
+        grid-template-areas: 'separator separator separator separator separator separator ' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap';
     }
 }
 
 @media (min-width: 433px) {
     .content-hub--news-events .news-events {
         grid-template-columns: repeat(12, 1fr);
-        grid-template-areas: 'separator separator separator separator separator separator separator separator separator separator separator separator' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2' '. . . news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 . . . ';
+        grid-template-areas: 'separator separator separator separator separator separator separator separator separator separator separator separator' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap';
     }
 }
 
 @media (min-width: 901px) {
     .content-hub--news-events .news-events {
         grid-template-columns: repeat(18, 1fr);
-        grid-template-areas: '. . . . separator separator separator separator separator separator separator separator separator separator . . . .' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title ' 'news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col1 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col2 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 news-events-col3 ';
+        grid-template-areas: '. . . . separator separator separator separator separator separator separator separator separator separator . . . .' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title ' 'ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap';
     }
 }
 
