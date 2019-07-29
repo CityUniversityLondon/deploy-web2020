@@ -34862,6 +34862,15 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
          break-inside: avoid;
 }
 
+.content-hub--news-events .news-events .related-content .card img {
+    -webkit-transition: none;
+}
+
+.content-hub--news-events .news-events .related-content .card--tagged {
+    border: 0;
+    margin-top: 0;
+}
+
 .content-hub--news-events .news-events {
     grid-row-gap: 0;
     display: grid;
