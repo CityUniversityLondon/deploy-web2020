@@ -16215,6 +16215,12 @@ a.card--tagged__title-link strong {
     grid-template-columns: repeat(9, 1fr);
 }
 
+@supports (-ms-ime-align: auto) {
+    .card--testimonial-feature__details__wrap {
+        left: -12%;
+    }
+}
+
 @media (max-width: 900px) {
     .card--testimonial-feature__details__wrap {
         grid-column: 1 / -1;
