@@ -24704,7 +24704,15 @@ article figure figcaption a:active {
     border: 0;
 }
 
+.fa-plus-circle {
+    border-bottom: 0.125rem solid transparent;
+}
+
 .load-more-label {
+    border-bottom: 0.125rem solid #006bbd;
+}
+
+button.load-more {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -24726,10 +24734,12 @@ article figure figcaption a:active {
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
+    border-bottom: 0.125rem solid transparent;
+    margin: 1rem auto 2rem;
 }
 
 @media (hover: hover) {
-    .load-more-label:hover {
+    button.load-more:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -24744,7 +24754,7 @@ article figure figcaption a:active {
     }
 }
 
-.load-more-label:focus, .load-more-label:active {
+button.load-more:focus, button.load-more:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -24759,103 +24769,112 @@ article figure figcaption a:active {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .load-more-label {
+    button.load-more {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .load-more-label:hover {
+    button.load-more:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.load-more-label:visited {
+button.load-more:visited {
     color: #4c2c92;
 }
 
-.load-more-label:focus {
+button.load-more:focus {
     color: #006bbd;
 }
 
 @media (hover: hover) {
-    .load-more-label:hover {
+    button.load-more:hover {
         color: #ffffff;
     }
 }
 
-.load-more-label:active {
+button.load-more:active {
     color: #ffffff;
     background-color: #006bbd;
 }
 
-.load-more-label:visited {
+button.load-more:visited {
     border-bottom-color: #4c2c92;
 }
 
-.load-more-label:focus {
+button.load-more:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
 
 @media (hover: hover) {
-    .load-more-label:hover {
+    button.load-more:hover {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
     }
 }
 
-.load-more-label:active {
+button.load-more:active {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
 
-.load-more-label:focus, .load-more-label:active {
+button.load-more:focus, button.load-more:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.load-more-label:visited {
+button.load-more:visited {
     color: #4c2c92;
 }
 
-.load-more-label:focus {
+button.load-more:focus {
     color: #006bbd;
 }
 
 @media (hover: hover) {
-    .load-more-label:hover {
+    button.load-more:hover {
         color: #ffffff;
     }
 }
 
-.load-more-label:active {
+button.load-more:active {
     color: #ffffff;
     background-color: #006bbd;
 }
 
-.load-more-label:visited {
+button.load-more:visited {
     color: #006bbd;
 }
 
 @media (hover: hover) {
-    .load-more-label:hover {
+    button.load-more:hover {
         color: #ffffff;
     }
 }
 
-.load-more-label:active {
+button.load-more:active {
     color: #ffffff;
 }
 
-.load-more-label:visited {
+button.load-more:visited {
     border-bottom-color: #006bbd;
+}
+
+.load-more .items-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.load-more .items-group .item {
+    border-bottom: 0.0625rem solid #e5e5e5;
 }
 
 .menu {
