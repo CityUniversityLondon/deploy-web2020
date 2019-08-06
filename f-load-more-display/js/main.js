@@ -4286,7 +4286,11 @@ let hashedUrl = window.location.hash,
 
 function itemsDisplay(items, visibleItems, loadMoreBtn) {
   for (const item of items.entries()) {
+    const anchor = document.createElement('a');
+    anchor.setAttribute('name', 'test');
+    anchor.classList.add('item-anchor');
     item[1].setAttribute('tabindex', '-1');
+    item[1].append(anchor);
 
     if (item[0] >= visibleItems) {
       item[1].classList.add('hide');
@@ -4341,7 +4345,7 @@ function scrollToItem(items, visibleItems, itemsIncrement) {
 
 function pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
   let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
-  history.pushState('', '', "#".concat(parentType).concat(wrapperId, "-").concat(childrenType).concat(targetListingUrlParam));
+  history.pushState('', '', "#".concat(wrapperId, "-").concat(targetListingUrlParam));
 }
 /**
  * Replace URL state: used to swap existing hash
@@ -4356,7 +4360,7 @@ function pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIn
 
 function replaceUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
   let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
-  history.replaceState('', '', "#".concat(parentType).concat(wrapperId, "-").concat(childrenType).concat(targetListingUrlParam));
+  history.replaceState('', '', "#".concat(wrapperId, "-").concat(targetListingUrlParam));
 }
 
 function launchLoadMore(e) {
@@ -4364,20 +4368,28 @@ function launchLoadMore(e) {
       items = e.querySelectorAll('.item'),
       itemsIncrement = parseInt(e.dataset.increment),
       parentType = e.getAttribute('data-item-parent'),
-      childrenType = e.getAttribute('data-item-children');
+      childrenType = e.getAttribute('data-item-children'); // Create & append 'load more' button
+
+  const loadMoreBtn = document.createElement('button');
+  loadMoreBtn.classList.add('load-more');
+  let loadMorePlusIcon = document.createElement('span');
+  loadMorePlusIcon.classList.add('far', 'fa-plus-circle', 'icon-plus-circle');
+  loadMorePlusIcon.setAttribute('aria-hidden', true);
+  let loadMorePlusLabel = document.createElement('span');
+  loadMorePlusLabel.classList.add('load-more-label');
+  let loadMorePlusLabelText = document.createTextNode('Load more');
+  loadMorePlusLabel.appendChild(loadMorePlusLabelText);
+  const contentContainer = e.querySelector('ul');
+  loadMoreBtn.appendChild(loadMorePlusIcon);
+  loadMoreBtn.appendChild(loadMorePlusLabel);
+  contentContainer.appendChild(loadMoreBtn);
   /**
    * Give wrapper a numeric data attribute. As this changes, so
    * will the number of visible items.
    */
 
   e.setAttribute('data-items-visible', itemsIncrement);
-  let visibleItems = parseInt(e.getAttribute('data-items-visible'));
-  const loadMoreBtn = document.createElement('button');
-  loadMoreBtn.classList.add('load-more');
-  const loadMoreBtnText = document.createTextNode('Load more');
-  const contentContainer = e.querySelector('.content-wrapper .content');
-  loadMoreBtn.appendChild(loadMoreBtnText);
-  contentContainer.appendChild(loadMoreBtn); // Load correct number of items based on URL hash
+  let visibleItems = parseInt(e.getAttribute('data-items-visible')); // Load correct number of items based on URL hash
 
   if (hashedUrl) {
     let hashedUrlParts = hashedUrl.split('-');
