@@ -12499,6 +12499,7 @@ main table td em {
 
 .icon {
     line-height: inherit;
+    font-weight: 400;
 }
 
 .icon.fa-phone {
