@@ -29067,7 +29067,7 @@ article .link-copy {
     }
 }
 
-.swiper-wrapper {
+.js .swiper-wrapper {
     --n: 1;
     --tx: 0px;
     display: flex;
@@ -29077,10 +29077,12 @@ article .link-copy {
     width: calc(var(--n) * 100%);
     transform: translate(calc(var(--tx, 0px) + var(--i, 0) / var(--n) * -100%));
     align-items: baseline;
+    list-style: none;
+    max-width: none;
 }
 
 @media (max-width: 900px) {
-    .swiper-wrapper {
+    .js .swiper-wrapper {
         height: inherit;
         max-height: 25rem;
     }
