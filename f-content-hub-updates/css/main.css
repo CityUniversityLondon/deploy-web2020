@@ -20790,7 +20790,6 @@ article figure figcaption a:active {
     grid-area: query;
     margin-top: 1rem;
     position: relative;
-    z-index: 0;
 }
 
 .finder__query > div {
@@ -20820,7 +20819,7 @@ article figure figcaption a:active {
     border-width: 0.25rem;
     border-style: solid;
     padding: 0;
-    z-index: 3;
+    z-index: 1;
     flex-grow: 1;
     position: relative;
 }
@@ -21076,7 +21075,6 @@ article figure figcaption a:active {
     background-color: #d61726;
     border-color: #d61726;
     color: #ffffff;
-    z-index: 2;
     flex-shrink: 0;
     margin-left: 2rem;
     box-shadow: none;
@@ -22001,7 +21999,6 @@ article figure figcaption a:active {
     position: absolute;
     top: 2.5rem;
     width: 100%;
-    z-index: 1;
 }
 
 .finder__query__suggestions li {
@@ -22717,7 +22714,6 @@ article figure figcaption a:active {
     right: 0;
     top: 0;
     width: 100vw;
-    z-index: 3;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
@@ -22801,7 +22797,6 @@ article figure figcaption a:active {
 
 .finder .finder__results {
     grid-area: results;
-    z-index: 0;
 }
 
 @media (min-width: 769px) and (max-width: 900px) {
@@ -23199,10 +23194,6 @@ article figure figcaption a:active {
     background-color: #ffffff;
 }
 
-.finder__results__card a .finder__results__card__details {
-    z-index: 2;
-}
-
 @media (min-width: 768px) {
     .finder__results__card a {
         flex-direction: row;
@@ -23403,7 +23394,6 @@ article figure figcaption a:active {
     position: absolute;
     top: 0.75rem;
     right: 1rem;
-    z-index: -1;
 }
 
 .finder__select:focus-within {
@@ -23427,7 +23417,6 @@ article figure figcaption a:active {
 
 .finder__select--level {
     grid-area: select;
-    z-index: 1;
     background: #ffffff;
 }
 
@@ -23496,22 +23485,6 @@ article figure figcaption a:active {
 
 .finder__icon--close__wrapper {
     font-weight: 400;
-}
-
-.background-fill {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    background-color: #ffffff;
-    opacity: 0.6;
-    transition: background-color 0.2s linear;
-}
-
-.background-fill--grey {
-    background-color: #e5e5e5;
 }
 
 .global-footer {
@@ -30204,7 +30177,6 @@ article .link-copy {
     grid-area: query;
     margin-top: 1rem;
     position: relative;
-    z-index: 0;
 }
 
 .finder__query > div {
@@ -30234,7 +30206,7 @@ article .link-copy {
     border-width: 0.25rem;
     border-style: solid;
     padding: 0;
-    z-index: 3;
+    z-index: 1;
     flex-grow: 1;
     position: relative;
 }
@@ -30490,7 +30462,6 @@ article .link-copy {
     background-color: #d61726;
     border-color: #d61726;
     color: #ffffff;
-    z-index: 2;
     flex-shrink: 0;
     margin-left: 2rem;
     box-shadow: none;
@@ -31415,7 +31386,6 @@ article .link-copy {
     position: absolute;
     top: 2.5rem;
     width: 100%;
-    z-index: 1;
 }
 
 .finder__query__suggestions li {
@@ -32131,7 +32101,6 @@ article .link-copy {
     right: 0;
     top: 0;
     width: 100vw;
-    z-index: 3;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
@@ -32215,7 +32184,6 @@ article .link-copy {
 
 .finder .finder__results {
     grid-area: results;
-    z-index: 0;
 }
 
 @media (min-width: 769px) and (max-width: 900px) {
@@ -32613,10 +32581,6 @@ article .link-copy {
     background-color: #ffffff;
 }
 
-.finder__results__card a .finder__results__card__details {
-    z-index: 2;
-}
-
 @media (min-width: 768px) {
     .finder__results__card a {
         flex-direction: row;
@@ -32817,7 +32781,6 @@ article .link-copy {
     position: absolute;
     top: 0.75rem;
     right: 1rem;
-    z-index: -1;
 }
 
 .finder__select:focus-within {
@@ -32841,7 +32804,6 @@ article .link-copy {
 
 .finder__select--level {
     grid-area: select;
-    z-index: 1;
     background: #ffffff;
 }
 
@@ -32910,22 +32872,6 @@ article .link-copy {
 
 .finder__icon--close__wrapper {
     font-weight: 400;
-}
-
-.background-fill {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    background-color: #ffffff;
-    opacity: 0.6;
-    transition: background-color 0.2s linear;
-}
-
-.background-fill--grey {
-    background-color: #e5e5e5;
 }
 
 /*
