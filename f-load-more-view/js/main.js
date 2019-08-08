@@ -4275,37 +4275,40 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'load-more';
 let hashedUrl = window.location.hash,
-    loadMoreId;
+    loadMoreId; // defaultVisibleItems;
+
 /**
  * Control what items will display based on wrapper's 'data-listings-show' data attribute.
  *
  * @param {HTMLElements} [items] - Elements controlled by 'Load more' button.
  * @param {number} visibleItems - Number of items visible at any one time.
- * @param {HTMLElement} loadMoreloadMoreBtn - Button controlling particular item group.
+ * @param {HTMLElement} loadMoreBtn - Button controlling particular item group.
+ * wrapperId
+ * currentItem
  */
 
-function itemsDisplay(items, visibleItems, loadMoreBtn) {
+function itemsDisplay(items, visibleItems, loadMoreBtn, wrapperId // currentItem
+) {
   for (const item of items.entries()) {
     const anchor = document.createElement('a');
-    anchor.setAttribute('name', 'test');
-    anchor.classList.add('item-anchor');
+    anchor.classList.add('item-anchor'); // console.log(wrapperId);
+
+    anchor.setAttribute('href', "#folder".concat(wrapperId, "-item").concat(item[0]));
     item[1].setAttribute('tabindex', '-1');
     item[1].append(anchor);
 
     if (item[0] >= visibleItems) {
       item[1].classList.add('hide');
-      item[1].style.display = 'none';
     } else {
       item[1].classList.remove('hide');
-      item[1].style.display = 'grid';
     }
   } // Hide 'load more' button when reached end of listings
 
 
-  if (visibleItems > items.length) {
-    loadMoreBtn.style.display = 'none';
+  if (visibleItems >= items.length) {
+    loadMoreBtn.classList.add('hide');
   } else {
-    loadMoreBtn.style.display = 'block';
+    loadMoreBtn.classList.remove('hide');
   }
 }
 /**
@@ -4345,7 +4348,7 @@ function scrollToItem(items, visibleItems, itemsIncrement) {
 
 function pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
   let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
-  history.pushState('', '', "#".concat(wrapperId, "-").concat(targetListingUrlParam));
+  history.pushState('', '', "#folder".concat(wrapperId, "-item").concat(targetListingUrlParam));
 }
 /**
  * Replace URL state: used to swap existing hash
@@ -4360,7 +4363,7 @@ function pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIn
 
 function replaceUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
   let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
-  history.replaceState('', '', "#".concat(wrapperId, "-").concat(targetListingUrlParam));
+  history.replaceState('', '', "#folder".concat(wrapperId, "-item").concat(targetListingUrlParam));
 }
 
 function launchLoadMore(e) {
@@ -4368,10 +4371,12 @@ function launchLoadMore(e) {
       items = e.querySelectorAll('.item'),
       itemsIncrement = parseInt(e.dataset.increment),
       parentType = e.getAttribute('data-item-parent'),
-      childrenType = e.getAttribute('data-item-children'); // Create & append 'load more' button
+      childrenType = e.getAttribute('data-item-children'),
+      defaultVisibleItems = e.getAttribute('data-items-visible'); // console.log('launch: ' + items);
+  // Create & append 'load more' button
 
   const loadMoreBtn = document.createElement('button');
-  loadMoreBtn.classList.add('load-more');
+  loadMoreBtn.classList.add('load-more-btn');
   let loadMorePlusIcon = document.createElement('span');
   loadMorePlusIcon.classList.add('far', 'fa-plus-circle', 'icon-plus-circle');
   loadMorePlusIcon.setAttribute('aria-hidden', true);
@@ -4388,16 +4393,20 @@ function launchLoadMore(e) {
    * will the number of visible items.
    */
 
-  e.setAttribute('data-items-visible', itemsIncrement);
   let visibleItems = parseInt(e.getAttribute('data-items-visible')); // Load correct number of items based on URL hash
 
   if (hashedUrl) {
     let hashedUrlParts = hashedUrl.split('-');
     let activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[1]));
+    let activeFolderId = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[0]));
+    let activeFolder = document.getElementById(activeFolderId);
+    let activeFolderItems = activeFolder.querySelectorAll('.item'); // let otherFolders = e.querySelectorAll('items')
+    // console.log(activeFolderItems);
+
     visibleItems = activeItem + (itemsIncrement - 1);
-    e.setAttribute('data-items-visible', visibleItems);
-    itemsDisplay(items, visibleItems, loadMoreBtn);
-    scrollToItem(items, visibleItems, itemsIncrement);
+    itemsDisplay(activeFolderItems, visibleItems, loadMoreBtn, wrapperId);
+    itemsDisplay(items, defaultVisibleItems, loadMoreBtn, wrapperId);
+    scrollToItem(activeFolderItems, visibleItems, itemsIncrement);
   } else {
     itemsDisplay(items, visibleItems, loadMoreBtn);
   } // Run on every 'load more' click: increase listings by batch number
@@ -4423,15 +4432,18 @@ function launchLoadMore(e) {
       let updatedUrlParts = window.location.hash.split('-');
       let currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(updatedUrlParts[1]));
       currentItem = currentItem + (itemsIncrement - 1);
-      visibleItems = currentItem;
+      visibleItems = currentItem; // console.log('currentItem');
+
       e.setAttribute('data-items-visible', visibleItems);
-      itemsDisplay(items, visibleItems, loadMoreBtn);
+      itemsDisplay(items, visibleItems, loadMoreBtn, wrapperId);
       scrollToItem(items, visibleItems, itemsIncrement);
     } else {
+      // console.log(loadMoreIdElement.getAttribute('data-items-visible'));
       let relatedItems = loadMoreIdElement.querySelectorAll('.item');
-      visibleItems = itemsIncrement;
-      itemsDisplay(items, visibleItems, loadMoreBtn);
-      e.setAttribute('data-items-visible', itemsIncrement);
+      visibleItems = itemsIncrement; // itemsDisplay(items, defaultVisibleItems, loadMoreBtn, wrapperId);
+      // console.log('defaultVisibleItems');
+      // e.setAttribute('data-items-visible', itemsIncrement);
+
       scrollToItem(relatedItems, visibleItems, itemsIncrement);
     }
   };

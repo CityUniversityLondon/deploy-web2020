@@ -24692,27 +24692,21 @@ article figure figcaption a:active {
     }
 }
 
-.item-anchor {
+.load-more .item-anchor {
     display: none;
 }
 
 .load-more .icon-plus-circle {
     margin-right: 0.25rem;
-}
-
-.fa-plus-circle {
     border: 0;
-}
-
-.fa-plus-circle {
     border-bottom: 0.125rem solid transparent;
 }
 
-.load-more-label {
+.load-more .load-more-label {
     border-bottom: 0.125rem solid #006bbd;
 }
 
-button.load-more {
+.load-more .load-more-btn {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -24736,10 +24730,11 @@ button.load-more {
     color: #006bbd;
     border-bottom: 0.125rem solid transparent;
     margin: 1rem auto 2rem;
+    display: block;
 }
 
 @media (hover: hover) {
-    button.load-more:hover {
+    .load-more .load-more-btn:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -24754,7 +24749,7 @@ button.load-more {
     }
 }
 
-button.load-more:focus, button.load-more:active {
+.load-more .load-more-btn:focus, .load-more .load-more-btn:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -24769,103 +24764,107 @@ button.load-more:focus, button.load-more:active {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    button.load-more {
+    .load-more .load-more-btn {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    button.load-more:hover {
+    .load-more .load-more-btn:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-button.load-more:visited {
+.load-more .load-more-btn:visited {
     color: #4c2c92;
 }
 
-button.load-more:focus {
+.load-more .load-more-btn:focus {
     color: #006bbd;
 }
 
 @media (hover: hover) {
-    button.load-more:hover {
+    .load-more .load-more-btn:hover {
         color: #ffffff;
     }
 }
 
-button.load-more:active {
+.load-more .load-more-btn:active {
     color: #ffffff;
     background-color: #006bbd;
 }
 
-button.load-more:visited {
+.load-more .load-more-btn:visited {
     border-bottom-color: #4c2c92;
 }
 
-button.load-more:focus {
+.load-more .load-more-btn:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
 
 @media (hover: hover) {
-    button.load-more:hover {
+    .load-more .load-more-btn:hover {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
     }
 }
 
-button.load-more:active {
+.load-more .load-more-btn:active {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
 
-button.load-more:focus, button.load-more:active {
+.load-more .load-more-btn:focus, .load-more .load-more-btn:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-button.load-more:visited {
+.load-more .load-more-btn:visited {
     color: #4c2c92;
 }
 
-button.load-more:focus {
+.load-more .load-more-btn:focus {
     color: #006bbd;
 }
 
 @media (hover: hover) {
-    button.load-more:hover {
+    .load-more .load-more-btn:hover {
         color: #ffffff;
     }
 }
 
-button.load-more:active {
+.load-more .load-more-btn:active {
     color: #ffffff;
     background-color: #006bbd;
 }
 
-button.load-more:visited {
+.load-more .load-more-btn:visited {
     color: #006bbd;
 }
 
 @media (hover: hover) {
-    button.load-more:hover {
+    .load-more .load-more-btn:hover {
         color: #ffffff;
     }
 }
 
-button.load-more:active {
+.load-more .load-more-btn:active {
     color: #ffffff;
 }
 
-button.load-more:visited {
+.load-more .load-more-btn:visited {
     border-bottom-color: #006bbd;
+}
+
+.load-more .load-more-btn.hide {
+    display: none;
 }
 
 .load-more .items-group {
@@ -24875,6 +24874,15 @@ button.load-more:visited {
 
 .load-more .items-group .item {
     border-bottom: 0.0625rem solid #e5e5e5;
+}
+
+.load-more .item {
+    display: grid;
+    list-style-type: none;
+}
+
+.load-more .item.hide {
+    display: none;
 }
 
 .menu {
