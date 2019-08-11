@@ -4275,24 +4275,20 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'load-more';
 let hashedUrl = window.location.hash,
-    loadMoreId; // defaultVisibleItems;
-
+    loadMoreId;
 /**
  * Control what items will display based on wrapper's 'data-listings-show' data attribute.
  *
  * @param {HTMLElements} [items] - Elements controlled by 'Load more' button.
  * @param {number} visibleItems - Number of items visible at any one time.
  * @param {HTMLElement} loadMoreBtn - Button controlling particular item group.
- * wrapperId
- * currentItem
  */
 
-function itemsDisplay(items, visibleItems, loadMoreBtn, wrapperId // currentItem
-) {
+function itemsDisplay(items, visibleItems, loadMoreBtn, wrapperId) {
   for (const item of items.entries()) {
+    // Create anchor inside each content item so direct links go straight to relevant content item
     const anchor = document.createElement('a');
-    anchor.classList.add('item-anchor'); // console.log(wrapperId);
-
+    anchor.classList.add('item-anchor');
     anchor.setAttribute('href', "#folder".concat(wrapperId, "-item").concat(item[0]));
     item[1].setAttribute('tabindex', '-1');
     item[1].append(anchor);
@@ -4372,8 +4368,8 @@ function launchLoadMore(e) {
       itemsIncrement = parseInt(e.dataset.increment),
       parentType = e.getAttribute('data-item-parent'),
       childrenType = e.getAttribute('data-item-children'),
-      defaultVisibleItems = e.getAttribute('data-items-visible'); // console.log('launch: ' + items);
-  // Create & append 'load more' button
+      defaultVisibleItems = parseInt(e.getAttribute('data-items-visible')),
+      active = e.setAttribute('active', false); // Create & append 'load more' button
 
   const loadMoreBtn = document.createElement('button');
   loadMoreBtn.classList.add('load-more-btn');
@@ -4384,7 +4380,7 @@ function launchLoadMore(e) {
   loadMorePlusLabel.classList.add('load-more-label');
   let loadMorePlusLabelText = document.createTextNode('Load more');
   loadMorePlusLabel.appendChild(loadMorePlusLabelText);
-  const contentContainer = e.querySelector('ul');
+  const contentContainer = e.querySelector('.items-group');
   loadMoreBtn.appendChild(loadMorePlusIcon);
   loadMoreBtn.appendChild(loadMorePlusLabel);
   contentContainer.appendChild(loadMoreBtn);
@@ -4400,12 +4396,16 @@ function launchLoadMore(e) {
     let activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[1]));
     let activeFolderId = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[0]));
     let activeFolder = document.getElementById(activeFolderId);
-    let activeFolderItems = activeFolder.querySelectorAll('.item'); // let otherFolders = e.querySelectorAll('items')
-    // console.log(activeFolderItems);
+    let activeFolderItems = activeFolder.querySelectorAll('.item');
+    visibleItems = activeItem + (itemsIncrement - 1); // Hide 'load more' button when reached end of listings
 
-    visibleItems = activeItem + (itemsIncrement - 1);
+    if (visibleItems <= items.length) {
+      loadMoreBtn.classList.add('hide');
+    } else {
+      loadMoreBtn.classList.remove('hide');
+    }
+
     itemsDisplay(activeFolderItems, visibleItems, loadMoreBtn, wrapperId);
-    itemsDisplay(items, defaultVisibleItems, loadMoreBtn, wrapperId);
     scrollToItem(activeFolderItems, visibleItems, itemsIncrement);
   } else {
     itemsDisplay(items, visibleItems, loadMoreBtn);
@@ -4413,8 +4413,21 @@ function launchLoadMore(e) {
 
 
   loadMoreBtn.addEventListener('click', () => {
-    visibleItems += itemsIncrement;
+    active = e.getAttribute('active');
+    /**
+     * Check if load more is already active, i.e. already had at least one click on it. If it has, track the number 
+       of visible items. If it is not active, i.e. first click, retrieve data attribute settings from launch and
+       use these to decide how many items should be shown.
+     */
+
+    if (active == 'true') {
+      visibleItems += itemsIncrement;
+    } else {
+      visibleItems = defaultVisibleItems + itemsIncrement;
+    }
+
     e.setAttribute('data-items-visible', visibleItems);
+    e.setAttribute('active', true);
     itemsDisplay(items, visibleItems, loadMoreBtn);
     scrollToItem(items, visibleItems, itemsIncrement);
     hashedUrl = window.location.hash;
@@ -4432,19 +4445,16 @@ function launchLoadMore(e) {
       let updatedUrlParts = window.location.hash.split('-');
       let currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(updatedUrlParts[1]));
       currentItem = currentItem + (itemsIncrement - 1);
-      visibleItems = currentItem; // console.log('currentItem');
-
+      visibleItems = currentItem;
       e.setAttribute('data-items-visible', visibleItems);
       itemsDisplay(items, visibleItems, loadMoreBtn, wrapperId);
       scrollToItem(items, visibleItems, itemsIncrement);
     } else {
-      // console.log(loadMoreIdElement.getAttribute('data-items-visible'));
       let relatedItems = loadMoreIdElement.querySelectorAll('.item');
-      visibleItems = itemsIncrement; // itemsDisplay(items, defaultVisibleItems, loadMoreBtn, wrapperId);
-      // console.log('defaultVisibleItems');
-      // e.setAttribute('data-items-visible', itemsIncrement);
-
+      relatedItems = Array.from(relatedItems);
+      visibleItems = itemsIncrement;
       scrollToItem(relatedItems, visibleItems, itemsIncrement);
+      visibleItems = visibleItems + itemsIncrement;
     }
   };
 }
