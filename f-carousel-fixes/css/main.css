@@ -29079,6 +29079,8 @@ article .link-copy {
     align-items: baseline;
     list-style: none;
     max-width: none;
+    margin-top: 0;
+    margin-left: 0;
 }
 
 @media (max-width: 900px) {
