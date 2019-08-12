@@ -4396,8 +4396,16 @@ function launchLoadMore(e) {
     let activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[1]));
     let activeFolderId = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[0]));
     let activeFolder = document.getElementById(activeFolderId);
-    let activeFolderItems = activeFolder.querySelectorAll('.item');
-    visibleItems = activeItem + (itemsIncrement - 1); // Hide 'load more' button when reached end of listings
+    let activeFolderItems = activeFolder.querySelectorAll('.item'); // let activeFolderDefaultVisible = parseInt(
+    //     activeFolder.getAttribute('data-items-visible')
+    // );
+
+    let activeFolderItemIncrement = parseInt(activeFolder.getAttribute('data-increment')); // console.log(activeFolderDefaultVisible);
+    // console.log(activeFolderItems);
+
+    visibleItems = activeItem + (itemsIncrement - 1);
+    let activeFolderVisibleItems = activeItem + (activeFolderItemIncrement - 1); // console.log(activeFolderVisibleItems);
+    // Hide 'load more' button when reached end of listings
 
     if (visibleItems <= items.length) {
       loadMoreBtn.classList.add('hide');
@@ -4405,10 +4413,11 @@ function launchLoadMore(e) {
       loadMoreBtn.classList.remove('hide');
     }
 
-    itemsDisplay(activeFolderItems, visibleItems, loadMoreBtn, wrapperId);
-    scrollToItem(activeFolderItems, visibleItems, itemsIncrement);
+    itemsDisplay(activeFolderItems, activeFolderVisibleItems, loadMoreBtn, wrapperId);
+    scrollToItem(activeFolderItems, activeFolderVisibleItems, activeFolderItemIncrement);
+    activeFolder.setAttribute('active', true);
   } else {
-    itemsDisplay(items, visibleItems, loadMoreBtn);
+    itemsDisplay(items, visibleItems, loadMoreBtn); // console.log(items);
   } // Run on every 'load more' click: increase listings by batch number
 
 
