@@ -4396,28 +4396,34 @@ function launchLoadMore(e) {
     let activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[1]));
     let activeFolderId = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[0]));
     let activeFolder = document.getElementById(activeFolderId);
-    let activeFolderItems = activeFolder.querySelectorAll('.item'); // let activeFolderDefaultVisible = parseInt(
-    //     activeFolder.getAttribute('data-items-visible')
-    // );
-
-    let activeFolderItemIncrement = parseInt(activeFolder.getAttribute('data-increment')); // console.log(activeFolderDefaultVisible);
-    // console.log(activeFolderItems);
-
+    let activeFolderItems = activeFolder.querySelectorAll('.item');
+    let activeFolderItemIncrement = parseInt(activeFolder.getAttribute('data-increment'));
     visibleItems = activeItem + (itemsIncrement - 1);
-    let activeFolderVisibleItems = activeItem + (activeFolderItemIncrement - 1); // console.log(activeFolderVisibleItems);
-    // Hide 'load more' button when reached end of listings
+    let activeFolderVisibleItems = activeItem + (activeFolderItemIncrement - 1); // Hide 'load more' button when reached end of listings
 
     if (visibleItems <= items.length) {
       loadMoreBtn.classList.add('hide');
     } else {
       loadMoreBtn.classList.remove('hide');
-    }
+    } // When hashed page loads, ensure non-active load more listings are isolated.
 
-    itemsDisplay(activeFolderItems, activeFolderVisibleItems, loadMoreBtn, wrapperId);
-    scrollToItem(activeFolderItems, activeFolderVisibleItems, activeFolderItemIncrement);
-    activeFolder.setAttribute('active', true);
+
+    if (wrapperId != activeFolderId) {
+      let notActiveFolderId = parseInt(wrapperId);
+      let notActiveFolder = document.getElementById(notActiveFolderId);
+      let notActiveFolderItems = notActiveFolder.querySelectorAll('.item');
+      let notActiveVisibleItems = parseInt(notActiveFolder.getAttribute('data-items-visible'));
+      let notActiveFolderBtn = notActiveFolder.querySelector('.load-more-btn');
+      itemsDisplay(notActiveFolderItems, notActiveVisibleItems, notActiveFolderBtn, notActiveFolderId);
+    } else {
+      // Look for active folder variables
+      itemsDisplay(activeFolderItems, activeFolderVisibleItems, loadMoreBtn, wrapperId);
+      scrollToItem(activeFolderItems, activeFolderVisibleItems, activeFolderItemIncrement);
+      activeFolder.setAttribute('active', true);
+    }
   } else {
-    itemsDisplay(items, visibleItems, loadMoreBtn); // console.log(items);
+    // Plain URL (no hash) => load default view.
+    itemsDisplay(items, visibleItems, loadMoreBtn);
   } // Run on every 'load more' click: increase listings by batch number
 
 
