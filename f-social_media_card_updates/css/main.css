@@ -22413,7 +22413,7 @@ main table td em {
     margin-right: 0.5rem;
 }
 
-.card--social-media__controls a:hover, .card--social-media__controls a:active, .card--social-media__controls a:focus {
+.card--social-media__controls a:hover, .card--social-media__controls a:active, .card--social-media__controls a:focus, .card--social-media__controls a:visited {
     color: #696969;
     background-image: none;
     border-bottom: none;
