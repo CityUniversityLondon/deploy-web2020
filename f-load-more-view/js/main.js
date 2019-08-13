@@ -4363,7 +4363,7 @@ function launchLoadMore(e) {
   let wrapperId = e.getAttribute('id'),
       items = e.querySelectorAll('.item'),
       itemsIncrement = parseInt(e.dataset.increment),
-      defaultVisibleItems = parseInt(e.getAttribute('data-items-visible')),
+      defaultVisibleItems = parseInt(e.dataset.itemsVisible),
       active = e.setAttribute('active', false),
       contentContainer = e.querySelector('.items-group'); // Create & append 'load more' button
 
@@ -4388,7 +4388,7 @@ function launchLoadMore(e) {
    */
 
 
-  let visibleItems = parseInt(e.getAttribute('data-items-visible')); // Load correct number of items based on URL hash
+  let visibleItems = parseInt(e.dataset.itemsVisible); // Load correct number of items based on URL hash
 
   if (hashedUrl) {
     let hashedUrlParts = hashedUrl.split('-');
@@ -4396,7 +4396,7 @@ function launchLoadMore(e) {
     let activeFolderId = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[0]));
     let activeFolder = document.getElementById(activeFolderId);
     let activeFolderItems = activeFolder.querySelectorAll('.item');
-    let activeFolderItemIncrement = parseInt(activeFolder.getAttribute('data-increment'));
+    let activeFolderItemIncrement = parseInt(activeFolder.dataset.increment);
     visibleItems = activeItem + (itemsIncrement - 1);
     let activeFolderVisibleItems = activeItem + (activeFolderItemIncrement - 1); // Hide 'load more' button when reached end of listings
 
@@ -4411,7 +4411,7 @@ function launchLoadMore(e) {
       let notActiveFolderId = parseInt(wrapperId);
       let notActiveFolder = document.getElementById(notActiveFolderId);
       let notActiveFolderItems = notActiveFolder.querySelectorAll('.item');
-      let notActiveVisibleItems = parseInt(notActiveFolder.getAttribute('data-items-visible'));
+      let notActiveVisibleItems = parseInt(notActiveFolder.dataset.itemsVisible);
       let notActiveFolderBtn = notActiveFolder.querySelector('.load-more-btn');
       itemsDisplay(notActiveFolderItems, notActiveVisibleItems, notActiveFolderBtn, notActiveFolderId);
     } else {
