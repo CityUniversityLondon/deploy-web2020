@@ -32520,6 +32520,8 @@ article figure figcaption a:active {
 
 .blockquote__body p {
     font-size: 1.266rem;
+    font-family: "Meta Sans", sans-serif;
+    font-weight: 300;
 }
 
 .blockquote__body p em {
