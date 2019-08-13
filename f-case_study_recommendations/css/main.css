@@ -40246,6 +40246,13 @@ a.modal__close:active, a.modal__close:focus {
 
 .case-study__overview .banner__content__header {
     margin-bottom: 0;
+    grid-column: 1 / -1;
+}
+
+@media (min-width: 1281px) {
+    .case-study__overview .banner__content__header {
+        grid-column: 4 / 16;
+    }
 }
 
 .case-study__overview .banner__content__labels {
