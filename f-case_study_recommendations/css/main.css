@@ -40248,9 +40248,12 @@ a.modal__close:active, a.modal__close:focus {
     margin-bottom: 0;
 }
 
+.case-study__overview .banner__content__labels {
+    margin-bottom: 1.5rem;
+}
+
 .case-study__overview__main {
     padding: 1.5rem 2rem 2.5rem 2rem;
-    margin-bottom: 2rem;
     background: #e7ebed;
     grid-column: 1 / -1;
     grid-row-gap: 0;
