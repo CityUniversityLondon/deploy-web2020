@@ -31950,7 +31950,7 @@ article figure figcaption a:active {
     position: absolute;
     top: 5.5rem;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -35525,12 +35525,12 @@ article .link-copy {
 .banner__content__labels {
     grid-area: l;
     text-align: center;
-    color: #696969;
     font-family: 'Plex Sans';
     font-weight: 700;
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
+    color: #696969;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
