@@ -40295,6 +40295,10 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
+.case-study__overview__main__details ul {
+    margin-top: 1rem;
+}
+
 /*
 Normally two logos will be displayed. However, given small logo sizes, each logo should be 1/3 of parent container.
 If >2 logos, each row to contain three logos, before wrapping to the next row.
