@@ -24872,10 +24872,6 @@ article figure figcaption a:active {
     margin-right: 0;
 }
 
-.load-more .items-group .item {
-    border-bottom: 0.0625rem solid #e5e5e5;
-}
-
 .load-more .item {
     display: grid;
     list-style-type: none;

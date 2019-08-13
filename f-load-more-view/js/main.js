@@ -4282,6 +4282,7 @@ let hashedUrl = window.location.hash,
  * @param {HTMLElements} [items] - Elements controlled by 'Load more' button.
  * @param {number} visibleItems - Number of items visible at any one time.
  * @param {HTMLElement} loadMoreBtn - Button controlling particular item group.
+ * @param {string} wrapperId - Folder ID where assets exist.
  */
 
 function itemsDisplay(items, visibleItems, loadMoreBtn, wrapperId) {
@@ -4334,30 +4335,26 @@ function scrollToItem(items, visibleItems, itemsIncrement) {
 /**
  * Push state to URL: used to build initial hash after first 'Load more' click.
  *
- * @param {string} parentType - Data attribute describing parent group.
- * @param {string} childrenType - Data attribute describing child items.
- * @param {HTMLElement} wrapperId - Parent element wrapping items and 'Load more' button.
+ * @param {string} wrapperId - Folder ID where assets exist.
  * @param {number} visibleItems - Number of items visible at any one time.
  * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
  */
 
 
-function pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
+function pushUrlState(wrapperId, visibleItems, itemsIncrement) {
   let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
   history.pushState('', '', "#folder".concat(wrapperId, "-item").concat(targetListingUrlParam));
 }
 /**
  * Replace URL state: used to swap existing hash
  *
- * @param {string} parentType - Data attribute describing parent group.
- * @param {string} childrenType - Data attribute describing child items.
- * @param {HTMLElement} wrapperId - Parent element wrapping items and 'Load more' button.
+ * @param {HTMLElement} wrapperId - Folder ID where assets exist.
  * @param {number} visibleItems - Number of items visible at any one time.
  * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
  */
 
 
-function replaceUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
+function replaceUrlState(wrapperId, visibleItems, itemsIncrement) {
   let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
   history.replaceState('', '', "#folder".concat(wrapperId, "-item").concat(targetListingUrlParam));
 }
@@ -4366,10 +4363,9 @@ function launchLoadMore(e) {
   let wrapperId = e.getAttribute('id'),
       items = e.querySelectorAll('.item'),
       itemsIncrement = parseInt(e.dataset.increment),
-      parentType = e.getAttribute('data-item-parent'),
-      childrenType = e.getAttribute('data-item-children'),
       defaultVisibleItems = parseInt(e.getAttribute('data-items-visible')),
-      active = e.setAttribute('active', false); // Create & append 'load more' button
+      active = e.setAttribute('active', false),
+      contentContainer = e.querySelector('.items-group'); // Create & append 'load more' button
 
   const loadMoreBtn = document.createElement('button');
   loadMoreBtn.classList.add('load-more-btn');
@@ -4379,15 +4375,18 @@ function launchLoadMore(e) {
   let loadMorePlusLabel = document.createElement('span');
   loadMorePlusLabel.classList.add('load-more-label');
   let loadMorePlusLabelText = document.createTextNode('Load more');
-  loadMorePlusLabel.appendChild(loadMorePlusLabelText);
-  const contentContainer = e.querySelector('.items-group');
-  loadMoreBtn.appendChild(loadMorePlusIcon);
-  loadMoreBtn.appendChild(loadMorePlusLabel);
-  contentContainer.appendChild(loadMoreBtn);
+  loadMorePlusLabel.appendChild(loadMorePlusLabelText); // Only add load more button to the DOM if more than one item exists and 'data-items-visible' is less than number of items
+
+  if (items.length > 1 && defaultVisibleItems < items.length) {
+    loadMoreBtn.appendChild(loadMorePlusIcon);
+    loadMoreBtn.appendChild(loadMorePlusLabel);
+    contentContainer.appendChild(loadMoreBtn);
+  }
   /**
    * Give wrapper a numeric data attribute. As this changes, so
    * will the number of visible items.
    */
+
 
   let visibleItems = parseInt(e.getAttribute('data-items-visible')); // Load correct number of items based on URL hash
 
@@ -4446,7 +4445,7 @@ function launchLoadMore(e) {
     itemsDisplay(items, visibleItems, loadMoreBtn);
     scrollToItem(items, visibleItems, itemsIncrement);
     hashedUrl = window.location.hash;
-    hashedUrl ? replaceUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) : pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement);
+    hashedUrl ? replaceUrlState(wrapperId, visibleItems, itemsIncrement) : pushUrlState(wrapperId, visibleItems, itemsIncrement);
     loadMoreId = e.id;
   }); // Back/forward browser clicks.
 
