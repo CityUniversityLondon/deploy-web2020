@@ -20784,7 +20784,6 @@ article figure figcaption a:active {
     grid-area: query;
     margin-top: 1rem;
     position: relative;
-    z-index: 0;
 }
 
 .finder__query > div {
@@ -21681,13 +21680,6 @@ article figure figcaption a:active {
     padding: 0.75rem 1.5rem;
 }
 
-.finder__filter legend button:active:focus, .finder__filter legend button:active:active, .finder__filter legend button:focus:focus, .finder__filter legend button:focus:active {
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-    outline-color: #0c0c0e;
-}
-
 .finder__filter legend button:active:focus, .finder__filter legend button:focus:focus {
     outline-offset: -0.25rem;
 }
@@ -21703,33 +21695,6 @@ article figure figcaption a:active {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-}
-
-.finder__filter legend button .underline-transition__title {
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition
-            stretches beyond the element
-        **/
-    display: inline;
-    padding-bottom: 0.125rem;
-    line-height: 1.5;
-}
-
-.finder__filter legend button:focus .underline-transition__title {
-    background-size: 100% 0.1875rem;
-}
-
-@media (hover: hover) {
-    .finder__filter legend button:hover .underline-transition__title {
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
-        color: #1e1e1e;
-    }
 }
 
 .finder__filter legend button[aria-expanded='true'] .icon {
@@ -21785,8 +21750,13 @@ article figure figcaption a:active {
     flex-direction: row;
 }
 
-.underline-transition__title:hover, .underline-transition__title:active {
-    border: none;
+@media (hover: hover) {
+    .underline-transition__title:hover, .underline-transition__title:active {
+        text-decoration: underline;
+        color: #006bbd;
+        outline: 0.125rem solid transparent;
+        text-decoration: none;
+    }
 }
 
 .finder__appliedfilters__wrap {
@@ -30209,7 +30179,6 @@ article .link-copy {
     grid-area: query;
     margin-top: 1rem;
     position: relative;
-    z-index: 0;
 }
 
 .finder__query > div {
@@ -31106,13 +31075,6 @@ article .link-copy {
     padding: 0.75rem 1.5rem;
 }
 
-.finder__filter legend button:active:focus, .finder__filter legend button:active:active, .finder__filter legend button:focus:focus, .finder__filter legend button:focus:active {
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-    outline-color: #0c0c0e;
-}
-
 .finder__filter legend button:active:focus, .finder__filter legend button:focus:focus {
     outline-offset: -0.25rem;
 }
@@ -31128,33 +31090,6 @@ article .link-copy {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-}
-
-.finder__filter legend button .underline-transition__title {
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition
-            stretches beyond the element
-        **/
-    display: inline;
-    padding-bottom: 0.125rem;
-    line-height: 1.5;
-}
-
-.finder__filter legend button:focus .underline-transition__title {
-    background-size: 100% 0.1875rem;
-}
-
-@media (hover: hover) {
-    .finder__filter legend button:hover .underline-transition__title {
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
-        color: #1e1e1e;
-    }
 }
 
 .finder__filter legend button[aria-expanded='true'] .icon {
@@ -31210,8 +31145,13 @@ article .link-copy {
     flex-direction: row;
 }
 
-.underline-transition__title:hover, .underline-transition__title:active {
-    border: none;
+@media (hover: hover) {
+    .underline-transition__title:hover, .underline-transition__title:active {
+        text-decoration: underline;
+        color: #006bbd;
+        outline: 0.125rem solid transparent;
+        text-decoration: none;
+    }
 }
 
 .finder__appliedfilters__wrap {
