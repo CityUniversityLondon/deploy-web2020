@@ -22863,11 +22863,6 @@ a.card--tagged__title-link strong {
     }
 }
 
-_:-ms-lang(x),
-.card--testimonial-feature__details__wrap {
-    left: -12%;
-}
-
 .card--testimonial-feature__details__wrap {
     grid-column: 11 / 18;
     position: relative;
@@ -22876,6 +22871,10 @@ _:-ms-lang(x),
     display: grid;
     grid-column-gap: 1.5rem;
     grid-template-columns: repeat(9, 1fr);
+}
+
+.card--testimonial-feature__details__wrap _:-ms-lang(x) {
+    left: -12%;
 }
 
 @media (max-width: 900px) {
