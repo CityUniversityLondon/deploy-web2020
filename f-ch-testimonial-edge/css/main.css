@@ -22865,28 +22865,22 @@ a.card--tagged__title-link strong {
 
 _:-ms-lang(x),
 .card--testimonial-feature__details__wrap {
-    left: -13%;
+    left: -10%;
 }
 
-doesnotexist:-o-prefocus,
-.card--testimonial-feature__details__wrap {
-    left: -30%;
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+    .card--testimonial-feature__details__wrap {
+        left: -30%;
+    }
 }
 
 .card--testimonial-feature__details__wrap {
     grid-column: 11 / 18;
     position: relative;
-    -webkit-left: -30%;
     width: 130%;
     display: grid;
     grid-column-gap: 1.5rem;
     grid-template-columns: repeat(9, 1fr);
-}
-
-@supports (-moz-appearance: none) {
-    .card--testimonial-feature__details__wrap {
-        left: -30%;
-    }
 }
 
 @media (max-width: 900px) {
