@@ -4265,7 +4265,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Load more - show additional items on 'Load more' button click. Update URL to illustrate where user is in item set.
+ * Load more - show additional items on 'Load more' button click.
+ * Update URL to illustrate where user is in item set.
  *
  * @module patterns/load-more/load-more
  * @author Mark Skinsley <mark.skinsley@city.ac.uk>
@@ -4277,20 +4278,20 @@ const className = 'load-more';
 let hashedUrl = window.location.hash,
     loadMoreId;
 /**
- * Control what items will display based on wrapper's 'data-listings-show' data attribute.
+ * Control what items will display based on wrapper's 'items-visible' data attribute.
  *
  * @param {HTMLElements} [items] - Elements controlled by 'Load more' button.
  * @param {number} visibleItems - Number of items visible at any one time.
  * @param {HTMLElement} loadMoreBtn - Button controlling particular item group.
- * @param {string} wrapperId - Folder ID where assets exist.
+ * @param {string} folderId - Folder ID where assets exist.
  */
 
-function itemsDisplay(items, visibleItems, loadMoreBtn, wrapperId) {
+function itemsDisplay(items, visibleItems, loadMoreBtn, folderId) {
   for (const item of items.entries()) {
     // Create anchor inside each content item so direct links go straight to relevant content item
     const anchor = document.createElement('a');
     anchor.classList.add('item-anchor');
-    anchor.setAttribute('href', "#folder".concat(wrapperId, "-item").concat(item[0]));
+    anchor.setAttribute('href', "#folder".concat(folderId, "-item").concat(item[0] + 1));
     item[1].setAttribute('tabindex', '-1');
     item[1].append(anchor);
 
@@ -4322,8 +4323,8 @@ function scrollToItem(items, visibleItems, itemsIncrement) {
 
   for (const item of items.entries()) {
     if (item[0] == targetItem) {
-      item[1].focus();
       zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(item[1]);
+      item[1].focus();
     } else if (visibleItems == itemsIncrement) {
       if (item[0] == 0) {
         item[1].focus();
@@ -4335,32 +4336,32 @@ function scrollToItem(items, visibleItems, itemsIncrement) {
 /**
  * Push state to URL: used to build initial hash after first 'Load more' click.
  *
- * @param {string} wrapperId - Folder ID where assets exist.
+ * @param {string} folderId - Folder ID where assets exist.
  * @param {number} visibleItems - Number of items visible at any one time.
  * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
  */
 
 
-function pushUrlState(wrapperId, visibleItems, itemsIncrement) {
+function pushUrlState(folderId, visibleItems, itemsIncrement) {
   let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
-  history.pushState('', '', "#folder".concat(wrapperId, "-item").concat(targetListingUrlParam));
+  history.pushState('', '', "#folder".concat(folderId, "-item").concat(targetListingUrlParam));
 }
 /**
  * Replace URL state: used to swap existing hash
  *
- * @param {HTMLElement} wrapperId - Folder ID where assets exist.
+ * @param {HTMLElement} folderId - Folder ID where assets exist.
  * @param {number} visibleItems - Number of items visible at any one time.
  * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
  */
 
 
-function replaceUrlState(wrapperId, visibleItems, itemsIncrement) {
+function replaceUrlState(folderId, visibleItems, itemsIncrement) {
   let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
-  history.replaceState('', '', "#folder".concat(wrapperId, "-item").concat(targetListingUrlParam));
+  history.replaceState('', '', "#folder".concat(folderId, "-item").concat(targetListingUrlParam));
 }
 
 function launchLoadMore(e) {
-  let wrapperId = e.getAttribute('id'),
+  let folderId = e.getAttribute('id'),
       items = e.querySelectorAll('.item'),
       itemsIncrement = parseInt(e.dataset.increment),
       defaultVisibleItems = parseInt(e.dataset.itemsVisible),
@@ -4375,7 +4376,11 @@ function launchLoadMore(e) {
   let loadMorePlusLabel = document.createElement('span');
   loadMorePlusLabel.classList.add('load-more-label');
   let loadMorePlusLabelText = document.createTextNode('Load more');
-  loadMorePlusLabel.appendChild(loadMorePlusLabelText); // Only add load more button to the DOM if more than one item exists and 'data-items-visible' is less than number of items
+  loadMorePlusLabel.appendChild(loadMorePlusLabelText);
+  /**
+   * Only add load more button to the DOM if more than one item exists and 'data-items-visible'
+   * is less than number of items in listing group.
+   **/
 
   if (items.length > 1 && defaultVisibleItems < items.length) {
     loadMoreBtn.appendChild(loadMorePlusIcon);
@@ -4398,6 +4403,13 @@ function launchLoadMore(e) {
     let activeFolderItems = activeFolder.querySelectorAll('.item');
     let activeFolderItemIncrement = parseInt(activeFolder.dataset.increment);
     visibleItems = activeItem + (itemsIncrement - 1);
+    /**
+     * Global variable that identifies which load more instance is being referenced
+     * in the URL. This is necessary to control how this, and not currently active
+     * load more instances should behave.
+     */
+
+    loadMoreId = activeFolderId;
     let activeFolderVisibleItems = activeItem + (activeFolderItemIncrement - 1); // Hide 'load more' button when reached end of listings
 
     if (visibleItems <= items.length) {
@@ -4407,8 +4419,8 @@ function launchLoadMore(e) {
     } // When hashed page loads, ensure non-active load more listings are isolated.
 
 
-    if (wrapperId != activeFolderId) {
-      let notActiveFolderId = parseInt(wrapperId);
+    if (folderId != activeFolderId) {
+      let notActiveFolderId = parseInt(folderId);
       let notActiveFolder = document.getElementById(notActiveFolderId);
       let notActiveFolderItems = notActiveFolder.querySelectorAll('.item');
       let notActiveVisibleItems = parseInt(notActiveFolder.dataset.itemsVisible);
@@ -4416,12 +4428,12 @@ function launchLoadMore(e) {
       itemsDisplay(notActiveFolderItems, notActiveVisibleItems, notActiveFolderBtn, notActiveFolderId);
     } else {
       // Look for active folder variables
-      itemsDisplay(activeFolderItems, activeFolderVisibleItems, loadMoreBtn, wrapperId);
+      itemsDisplay(activeFolderItems, activeFolderVisibleItems, loadMoreBtn, folderId);
       scrollToItem(activeFolderItems, activeFolderVisibleItems, activeFolderItemIncrement);
       activeFolder.setAttribute('active', true);
     }
   } else {
-    // Plain URL (no hash) => load default view.
+    // Plain URL (no hash) => load default view for all load more instances
     itemsDisplay(items, visibleItems, loadMoreBtn);
   } // Run on every 'load more' click: increase listings by batch number
 
@@ -4429,9 +4441,9 @@ function launchLoadMore(e) {
   loadMoreBtn.addEventListener('click', () => {
     active = e.getAttribute('active');
     /**
-     * Check if load more is already active, i.e. already had at least one click on it. If it has, track the number 
-       of visible items. If it is not active, i.e. first click, retrieve data attribute settings from launch and
-       use these to decide how many items should be shown.
+     * Check if load more is already active, i.e. already had at least one click on it. If it has, track the number
+     * of visible items. If it is not active, i.e. first click, retrieve data attribute settings from launch and
+     * use these to decide how many items should be shown.
      */
 
     if (active == 'true') {
@@ -4445,7 +4457,7 @@ function launchLoadMore(e) {
     itemsDisplay(items, visibleItems, loadMoreBtn);
     scrollToItem(items, visibleItems, itemsIncrement);
     hashedUrl = window.location.hash;
-    hashedUrl ? replaceUrlState(wrapperId, visibleItems, itemsIncrement) : pushUrlState(wrapperId, visibleItems, itemsIncrement);
+    hashedUrl ? replaceUrlState(folderId, visibleItems, itemsIncrement) : pushUrlState(folderId, visibleItems, itemsIncrement);
     loadMoreId = e.id;
   }); // Back/forward browser clicks.
 
@@ -4453,20 +4465,28 @@ function launchLoadMore(e) {
     let loadMoreIdElement = document.getElementById(loadMoreId); // Must re-assign variable on pop state change
 
     hashedUrl = window.location.hash;
+    let relatedItems = loadMoreIdElement.querySelectorAll('.item');
+    relatedItems = Array.from(relatedItems);
+    visibleItems = itemsIncrement;
 
     if (hashedUrl) {
-      // Capture latest hash
+      /**
+       * From non-hashed URL to hashed URL. This could be a forward browser click, e.g.
+       * '/' to '#folder479366-item4'. Target correct load more group (#folder479366)
+       * and active item within this group (item4).
+       */
       let updatedUrlParts = window.location.hash.split('-');
       let currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(updatedUrlParts[1]));
       currentItem = currentItem + (itemsIncrement - 1);
       visibleItems = currentItem;
       e.setAttribute('data-items-visible', visibleItems);
-      itemsDisplay(items, visibleItems, loadMoreBtn, wrapperId);
-      scrollToItem(items, visibleItems, itemsIncrement);
+      itemsDisplay(items, visibleItems, loadMoreBtn, folderId);
+      scrollToItem(relatedItems, visibleItems, itemsIncrement);
     } else {
-      let relatedItems = loadMoreIdElement.querySelectorAll('.item');
-      relatedItems = Array.from(relatedItems);
-      visibleItems = itemsIncrement;
+      /**
+       * From hashed URL to non-hashed URL. With hash removed, go to to
+       * first item in originally hashed load more item group.
+       */
       scrollToItem(relatedItems, visibleItems, itemsIncrement);
       visibleItems = visibleItems + itemsIncrement;
     }
