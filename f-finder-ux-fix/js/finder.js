@@ -1694,55 +1694,6 @@ function finder__query(props) {
       }
     }
   }), suggestionsList, clear);
-  let hub = document.getElementsByClassName('wrapper--finder--hub');
-  hub = hub[0];
-
-  if (hub) {
-    /**
-     * Build URL taking users from content hub to listing page with selected results.
-     */
-    const finderRedirect = () => {
-      let levelParam;
-      let levelSelect = document.getElementById('level-select');
-
-      if (levelSelect) {
-        levelParam = levelSelect.value.replace(/\s+/g, '-').toLowerCase();
-
-        if (levelParam !== 'all-levels') {
-          levelParam = "meta_L_orsand=".concat(levelParam);
-        } else {
-          levelParam = null;
-        }
-      } // Look to do switch statement later
-
-
-      const listingUrl = 'https://web2020.city.ac.uk/prototype/prospective-students/courses';
-
-      if (levelParam && queryParam) {
-        window.location.href = "".concat(listingUrl, "?").concat(levelParam, "&").concat(queryParam);
-      } else if (levelParam && !queryParam) {
-        window.location.href = "".concat(listingUrl, "?").concat(levelParam);
-      } else if (!levelParam && queryParam) {
-        window.location.href = "".concat(listingUrl, "?").concat(queryParam);
-      } else {
-        window.location.href = "".concat(listingUrl);
-      }
-    };
-
-    return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("fieldset", {
-      className: "finder__query"
-    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
-      type: "submit",
-      className: "finder__query__submit finder__query__submit--redirect",
-      onClick: () => finderRedirect()
-    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-      className: "fal fa-search finder__query__submit__icon",
-      "aria-hidden": "true"
-    }), ' ', react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-      className: "finder__query__submit__text"
-    }, "Find"))));
-  }
-
   return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("fieldset", {
     className: "finder__query"
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
