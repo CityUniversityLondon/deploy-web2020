@@ -10,7 +10,7 @@
 /******/ 		var moduleId, chunkId, i = 0, resolves = [];
 /******/ 		for(;i < chunkIds.length; i++) {
 /******/ 			chunkId = chunkIds[i];
-/******/ 			if(installedChunks[chunkId]) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 				resolves.push(installedChunks[chunkId][0]);
 /******/ 			}
 /******/ 			installedChunks[chunkId] = 0;
@@ -435,7 +435,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Finder entry
  *
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -475,7 +475,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/cards/finder__results__bestbet
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -527,7 +527,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/cards/finder__results__bestbet
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -587,7 +587,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/cards/finder__results__course
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -685,7 +685,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/cards/finder__results__profile
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -749,7 +749,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__checkbox
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 // import React from 'react';
@@ -792,7 +792,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__clear
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -810,7 +810,8 @@ function finder__clear(props) {
   if (facetKeys.length) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "finder__clear",
-      type: "button",
+      type: "reset",
+      value: "Reset",
       onClick: () => {
         props.clear();
       }
@@ -845,15 +846,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _finder_radio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finder__radio */ "./src/patterns/finder/components/filters/finder__radio.js");
 /* harmony import */ var _finder_checkbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__checkbox */ "./src/patterns/finder/components/filters/finder__checkbox.js");
-/* harmony import */ var _query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../query/finder__appliedfilters */ "./src/patterns/finder/components/query/finder__appliedfilters.js");
-/* harmony import */ var _finder_clear_filter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__clear__filter */ "./src/patterns/finder/components/filters/finder__clear__filter.js");
+/* harmony import */ var _finder_selectbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__selectbox */ "./src/patterns/finder/components/filters/finder__selectbox.js");
+/* harmony import */ var _query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../query/finder__appliedfilters */ "./src/patterns/finder/components/query/finder__appliedfilters.js");
+/* harmony import */ var _finder_clear_filter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__clear__filter */ "./src/patterns/finder/components/filters/finder__clear__filter.js");
 
 
 /**
  * @module patterns/finder/components/finder__filters
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
+
 
 
 
@@ -893,7 +896,7 @@ function dependencyMet(facet, facetMap) {
 function finder__filters(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_5__["default"], {
     config: props.config,
     query: props.query,
     update: props.update,
@@ -902,7 +905,7 @@ function finder__filters(props) {
     className: "finder__filters__heading"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Filter ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__heading__btn-icon"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_clear_filter__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_clear_filter__WEBPACK_IMPORTED_MODULE_6__["default"], {
     clear: props.clear,
     query: props.query
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -923,6 +926,15 @@ function finder__filters(props) {
 
         case 'checkbox':
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_checkbox__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            key: facet.meta,
+            facet: facet,
+            query: props.query,
+            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
+            update: props.update
+          });
+
+        case 'selectbox':
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_selectbox__WEBPACK_IMPORTED_MODULE_4__["default"], {
             key: facet.meta,
             facet: facet,
             query: props.query,
@@ -978,7 +990,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__mobilefilters
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1125,7 +1137,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__radio
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1223,6 +1235,84 @@ finder__radio.propTypes = {
 
 /***/ }),
 
+/***/ "./src/patterns/finder/components/filters/finder__selectbox.js":
+/*!*********************************************************************!*\
+  !*** ./src/patterns/finder/components/filters/finder__selectbox.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+/**<
+ * @module patterns/finder/components/finder__radio
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+
+function finder__selectbox(props) {
+  // the facet will be in the page twice, for desktop and mobile layouts
+  // salting the input name to stop that breaking
+  const randomNumber = Math.random().toString(16).slice(-4);
+
+  const setFacet = e => {
+    const newQuery = props.query,
+          newValue = e.target.value;
+    newValue ? newQuery.facets[props.facet.meta] = newValue : delete newQuery.facets[props.facet.meta];
+    newQuery.startRank = 1;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("fieldset", {
+    className: "finder__filter finder__selectbox"
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "finder__select"
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    className: "finder__select__overline",
+    htmlFor: "meta_".concat(props.facet.meta, "_orsand--").concat(randomNumber)
+  }, props.facet.name), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("select", {
+    name: props.facet.name,
+    id: "meta_".concat(props.facet.meta, "_orsand--").concat(randomNumber),
+    onChange: e => setFacet(e)
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("option", {
+    value: ""
+  }, "-- ".concat(props.facet.name, " --")), props.facet.values.map(value => {
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("option", {
+      key: value.data,
+      value: value.data
+    }, value.label);
+  }))));
+}
+
+finder__selectbox.propTypes = {
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (finder__selectbox);
+
+/***/ }),
+
 /***/ "./src/patterns/finder/components/query/finder__appliedfilters.js":
 /*!************************************************************************!*\
   !*** ./src/patterns/finder/components/query/finder__appliedfilters.js ***!
@@ -1248,7 +1338,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__appliedfilters
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1327,7 +1417,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__clear
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1394,7 +1484,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__query
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1402,9 +1492,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const maximumSuggestions = 5,
-      [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40],
-      body = document.getElementsByTagName('body'),
-      backgroundFill = body[0].querySelectorAll('.background-fill');
+      [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40];
 let queryParam;
 /**
  * Search input field and autocomplete.
@@ -1424,7 +1512,9 @@ function finder__query(props) {
     cancel: () => {}
   }); // ref for the input field, so we can .focus() it
 
-  const [inputId] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(16).slice(-4));
+  const [inputId] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(16).slice(-4)); // boolean to show or hide suggestions
+
+  const [showSuggestions, setShowSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(false);
   Object(react__WEBPACK_IMPORTED_MODULE_5__["useEffect"])(() => {
     setPartialQuery(props.query.query);
   }, [props.updating]);
@@ -1474,12 +1564,14 @@ function finder__query(props) {
   // TODO: probably should be refactored into a separate component
 
   const suggestionsList = suggestions && suggestions.length > 0 && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
-    className: "finder__query__suggestions"
+    className: showSuggestions && suggestions.length ? 'finder__query__suggestions show' : 'finder__query__suggestions hide',
+    onBlur: () => setShowSuggestions(false)
   }, [...new Set(suggestions)].slice(0, maximumSuggestions).map(suggestion => react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
     key: suggestion
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
     type: "button",
-    onClick: () => {
+    onClick: e => {
+      console.log(e);
       setPartialQuery(suggestion);
       setSuggestions([]);
       focusInput();
@@ -1547,30 +1639,14 @@ function finder__query(props) {
           if (suggestions && suggestions.length > 0) {
             e.preventDefault();
             e.target.parentNode.querySelector('.finder__query__suggestions button').focus();
+            setShowSuggestions(true);
           }
 
           break;
       }
     },
-    onBlur: e => {
-      backgroundFill[0].classList.remove('background-fill--grey');
-      e.target.placeholder = props.config.placeholder;
-      e.target.value = '';
-      let suggestedResults = document.querySelector('.finder__query__suggestions');
-      document.addEventListener('click', function (event) {
-        let classList = event.target.classList;
-
-        if (classList.contains('finder__query__suggestions')) {
-          suggestedResults.style.display = 'block';
-        } else {
-          suggestedResults.style.display = 'none';
-        }
-      });
-    },
-    onFocus: e => {
-      backgroundFill[0].classList.add('background-fill--grey');
-      e.target.placeholder = '';
-    },
+    onFocus: () => setShowSuggestions(true),
+    onBlur: () => setShowSuggestions(false),
     onChange: e => {
       //clear old suggestions
       setSuggestions([]); // keep  what they're typing
@@ -1710,7 +1786,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__didyoumean
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1765,7 +1841,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__pagination
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1893,7 +1969,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__results
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -2043,7 +2119,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__results__summary
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -2149,7 +2225,7 @@ __webpack_require__.r(__webpack_exports__);
  * Don't run this via patterns.js, it's a separate compilation.
  *
  * @module patterns/finder/finder
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -2394,7 +2470,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { keys.push.apply(keys, Object.getOwnPropertySymbols(object)); } if (enumerableOnly) keys = keys.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -2404,7 +2480,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  * Functions for making requests to Funnelback
  *
  * @module funnelback
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -2566,7 +2642,7 @@ __webpack_require__.r(__webpack_exports__);
  * Useful utility functions
  *
  * @module util
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018
  */
 
