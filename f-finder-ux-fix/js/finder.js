@@ -1523,6 +1523,7 @@ function finder__query(props) {
   const [inputId] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(16).slice(-4)); // boolean to show or hide suggestions
 
   const [showSuggestions, setShowSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(false);
+  const [suggestionFocus, setSuggestionFocus] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(false);
   Object(react__WEBPACK_IMPORTED_MODULE_5__["useEffect"])(() => {
     setPartialQuery(props.query.query);
   }, [props.updating]);
@@ -1572,12 +1573,13 @@ function finder__query(props) {
   // TODO: probably should be refactored into a separate component
 
   const suggestionsList = suggestions && suggestions.length > 0 && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
-    className: showSuggestions && suggestions.length ? 'finder__query__suggestions show' : 'finder__query__suggestions hide',
-    onBlur: () => setShowSuggestions(false)
+    className: showSuggestions || suggestionFocus ? 'finder__query__suggestions show' : 'finder__query__suggestions hide'
   }, [...new Set(suggestions)].slice(0, maximumSuggestions).map(suggestion => react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
     key: suggestion
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
     type: "button",
+    onBlur: () => setSuggestionFocus(false),
+    onFocus: () => setSuggestionFocus(true),
     onClick: () => {
       setPartialQuery(suggestion);
       setSuggestions([]);
@@ -1643,7 +1645,6 @@ function finder__query(props) {
           if (suggestions && suggestions.length > 0) {
             e.preventDefault();
             e.target.parentNode.querySelector('.finder__query__suggestions button').focus();
-            setShowSuggestions(true);
           }
 
           break;
