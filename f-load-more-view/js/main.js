@@ -4286,14 +4286,9 @@ let hashedUrl = window.location.hash,
  * @param {string} folderId - Folder ID where assets exist.
  */
 
-function itemsDisplay(items, visibleItems, loadMoreBtn, folderId) {
+function itemsDisplay(items, visibleItems, loadMoreBtn) {
   for (const item of items.entries()) {
-    // Create anchor inside each content item so direct links go straight to relevant content item
-    const anchor = document.createElement('a');
-    anchor.classList.add('item-anchor');
-    anchor.setAttribute('href', "#folder".concat(folderId, "-item").concat(item[0] + 1));
     item[1].setAttribute('tabindex', '-1');
-    item[1].append(anchor);
 
     if (item[0] >= visibleItems) {
       item[1].classList.add('hide');
