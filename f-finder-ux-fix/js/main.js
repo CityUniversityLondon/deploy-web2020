@@ -2546,6 +2546,7 @@ function finder__selectbox(props) {
   }, props.facet.name), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("select", {
     name: props.facet.name,
     id: "meta_".concat(props.facet.meta, "_orsand--").concat(randomNumber),
+    value: props.query.facets[props.facet.meta] ? props.query.facets[props.facet.meta] : '',
     onChange: e => setFacet(e)
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("option", {
     value: ""
@@ -2824,8 +2825,7 @@ function finder__query(props) {
     key: suggestion
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
     type: "button",
-    onClick: e => {
-      console.log(e);
+    onClick: () => {
       setPartialQuery(suggestion);
       setSuggestions([]);
       focusInput();
