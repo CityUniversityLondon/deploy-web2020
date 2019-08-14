@@ -31940,7 +31940,7 @@ article figure figcaption a:active {
     position: absolute;
     top: 5.5rem;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -35717,7 +35717,7 @@ article .link-copy {
     }
 }
 
-.swiper-wrapper {
+.js .swiper-wrapper {
     --n: 1;
     --tx: 0px;
     display: flex;
@@ -35727,10 +35727,14 @@ article .link-copy {
     width: calc(var(--n) * 100%);
     transform: translate(calc(var(--tx, 0px) + var(--i, 0) / var(--n) * -100%));
     align-items: baseline;
+    list-style: none;
+    max-width: none;
+    margin-top: 0;
+    margin-left: 0;
 }
 
 @media (max-width: 900px) {
-    .swiper-wrapper {
+    .js .swiper-wrapper {
         height: inherit;
         max-height: 25rem;
     }
@@ -35762,7 +35766,7 @@ article .link-copy {
     opacity: 1;
 }
 
-.swiper-slide__text {
+.js .swiper-slide__text {
     position: relative;
     top: -2rem;
     padding: 1.5rem;
@@ -35775,7 +35779,7 @@ article .link-copy {
     transition: opacity 0.6s;
 }
 
-.swiper-slide__text p {
+.js .swiper-slide__text p {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
@@ -35785,36 +35789,36 @@ article .link-copy {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .swiper-slide__text p {
+    .js .swiper-slide__text p {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .swiper-slide__text p {
+    .js .swiper-slide__text p {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .swiper-slide__text p {
+    .js .swiper-slide__text p {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .swiper-slide__text p {
+    .js .swiper-slide__text p {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .swiper-slide__text p {
+    .js .swiper-slide__text p {
         letter-spacing: -0.017em;
     }
 }
 
-.swiper-slide__text a {
+.js .swiper-slide__text a {
     pointer-events: auto;
     background-color: initial;
     border-bottom-color: initial;
@@ -35842,7 +35846,7 @@ article .link-copy {
 }
 
 @media (hover: hover) {
-    .swiper-slide__text a:hover {
+    .js .swiper-slide__text a:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -35857,7 +35861,7 @@ article .link-copy {
     }
 }
 
-.swiper-slide__text a:focus, .swiper-slide__text a:active {
+.js .swiper-slide__text a:focus, .js .swiper-slide__text a:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -35872,104 +35876,104 @@ article .link-copy {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .swiper-slide__text a {
+    .js .swiper-slide__text a {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .swiper-slide__text a:hover {
+    .js .swiper-slide__text a:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.swiper-slide__text a:visited {
+.js .swiper-slide__text a:visited {
     color: #4c2c92;
 }
 
-.swiper-slide__text a:focus {
+.js .swiper-slide__text a:focus {
     color: #006bbd;
 }
 
 @media (hover: hover) {
-    .swiper-slide__text a:hover {
+    .js .swiper-slide__text a:hover {
         color: #ffffff;
     }
 }
 
-.swiper-slide__text a:active {
+.js .swiper-slide__text a:active {
     color: #ffffff;
     background-color: #006bbd;
 }
 
-.swiper-slide__text a:visited {
+.js .swiper-slide__text a:visited {
     border-bottom-color: #4c2c92;
 }
 
-.swiper-slide__text a:focus {
+.js .swiper-slide__text a:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
 
 @media (hover: hover) {
-    .swiper-slide__text a:hover {
+    .js .swiper-slide__text a:hover {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
     }
 }
 
-.swiper-slide__text a:active {
+.js .swiper-slide__text a:active {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
 
-.swiper-slide__text a:focus, .swiper-slide__text a:active {
+.js .swiper-slide__text a:focus, .js .swiper-slide__text a:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.swiper-slide__text a:visited {
+.js .swiper-slide__text a:visited {
     border-bottom-color: #9b7ed9;
     color: #9b7ed9;
 }
 
-.swiper-slide__text a:focus {
+.js .swiper-slide__text a:focus {
     color: #919191;
     border-bottom-color: #919191;
     outline-color: #ffffff;
 }
 
 @media (hover: hover) {
-    .swiper-slide__text a:hover {
+    .js .swiper-slide__text a:hover {
         border-bottom: #ffffff solid 0.125rem;
         color: #ffffff;
     }
 }
 
-.swiper-slide__text a:active {
+.js .swiper-slide__text a:active {
     background-color: transparent;
     border-bottom-color: #ffffff;
     color: #ffffff;
     outline-color: #ffffff;
 }
 
-.swiper-slide__text a:visited {
+.js .swiper-slide__text a:visited {
     color: #919191;
     border-color: #919191;
 }
 
-.swiper-slide__text a:hover {
+.js .swiper-slide__text a:hover {
     background: none;
 }
 
 @media (max-width: 900px) {
-    .swiper-slide__text {
+    .js .swiper-slide__text {
         margin-right: none;
         margin-left: 1rem;
         padding: 1rem;
@@ -36005,6 +36009,10 @@ article .link-copy {
     .swiper-slide__image-wrapper img {
         max-height: 25rem;
     }
+}
+
+.no-js .lazy-img {
+    display: none;
 }
 
 .swiper-indicator {
