@@ -1717,14 +1717,10 @@ function launchFeedback(elem) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol.description */ "./node_modules/core-js/modules/es.symbol.description.js");
-/* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 
 
 /**
@@ -1742,21 +1738,21 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__bestbet(props) {
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "finder__results__card finder__results__bestbet"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: '/fb' + props.details.clickTrackingUrl
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "finder__results__card__heading underline-transition__title"
-  }, props.details.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, props.details.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__description"
   }, props.details.description))));
 }
 
 finder__results__bestbet.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
+  details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__bestbet);
 
@@ -2643,12 +2639,23 @@ const maximumSuggestions = 5,
       body = document.getElementsByTagName('body'),
       backgroundFill = body[0].querySelectorAll('.background-fill');
 let queryParam;
+
+function highlightQueryTerm(suggestion, partialQuery) {
+  return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    className: "sr-only"
+  }, suggestion), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    "aria-hidden": "true"
+  }, suggestion.slice(0, suggestion.indexOf(partialQuery)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    className: "finder__suggestion"
+  }, suggestion.slice(suggestion.indexOf(partialQuery), partialQuery.length)), suggestion.slice(suggestion.indexOf(partialQuery) + partialQuery.length))));
+}
 /**
  * Search input field and autocomplete.
  *
  * @param {object} props React props.
  * @return {object} - React component.
  */
+
 
 function finder__query(props) {
   // save what they're typing
@@ -2750,11 +2757,8 @@ function finder__query(props) {
 
           break;
       }
-    },
-    dangerouslySetInnerHTML: {
-      __html: suggestion.replace(partialQuery, "<strong>".concat(partialQuery, "</strong>"))
     }
-  }))));
+  }, highlightQueryTerm(suggestion, partialQuery)))));
   const input = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
     className: "finder__query__input"
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -3510,32 +3514,6 @@ function Finder(props) {
     setQuery(clearQuery);
     setUpdate(!update);
   };
-
-  let hub = document.getElementsByClassName('wrapper--finder--hub');
-  hub = hub[0];
-
-  if (hub) {
-    return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
-      className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
-      onSubmit: e => {
-        e.preventDefault();
-      }
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
-      className: "finder__title"
-    }, "Find courses"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-      className: "finder__select finder__select--level"
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-      className: "finder__select__overline",
-      htmlFor: "study-level"
-    }, "Level"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
-      id: "level-select"
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "All levels"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "Undergraduate"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "Postgraduate"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "Short course"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "CPD"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "CPPD"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_10__["default"], {
-      config: props.config,
-      query: query,
-      update: updater,
-      updating: updating
-    }));
-  }
 
   return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
     className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
