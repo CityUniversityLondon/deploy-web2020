@@ -21044,12 +21044,8 @@ main table td em {
 }
 
 .card--event__category {
-    padding-top: 1rem;
-    font-size: 0.889rem;
-    color: #00294a;
-    border-top: solid 0.125rem #d8d8d8;
-    font-style: italic;
-    margin: 0 1.75rem 0 1.75rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0;
 }
 
 .card--event__location {
@@ -21642,11 +21638,8 @@ main table td em {
 }
 
 .card--news__category {
-    padding-top: 1rem;
-    font-size: 0.889rem;
-    color: #d61726;
-    border-top: solid 0.125rem #d8d8d8;
-    font-style: italic;
+    padding: 0.5rem 0.75rem;
+    margin: 0;
 }
 
 .card--profile {
@@ -22638,11 +22631,8 @@ a.card--tagged__title-link strong {
 }
 
 .card--tagged__category {
-    padding-top: 1rem;
-    margin-top: 1rem;
-    color: #832c9e;
-    border-top: solid 0.125rem #d8d8d8;
-    font-style: italic;
+    padding: 0.5rem 0.75rem;
+    margin: 0;
 }
 
 .card--tagged__content {
@@ -41511,43 +41501,19 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-.content-hub--news-events .news-events .related-content {
+.content-hub__block-three .news-events .related-content {
     grid-area: ne-wrap;
-}
-
-@media (max-width: 768px) {
-    .content-hub--news-events .news-events .related-content {
-        -moz-columns: 1;
-             columns: 1;
-    }
-}
-
-@media (min-width: 769px) {
-    .content-hub--news-events .news-events .related-content {
-        -moz-columns: 2;
-             columns: 2;
-    }
-}
-
-@media (min-width: 901px) {
-    .content-hub--news-events .news-events .related-content {
-        -moz-columns: 3;
-             columns: 3;
-    }
+    display: flex;
 }
 
 .content-hub__block-three .news-events .related-content .card {
-    -moz-column-break-inside: avoid;
-         break-inside: avoid;
+    flex: 1;
+    align-self: flex-start;
+    margin-right: 1.5rem;
 }
 
-.content-hub__block-three .news-events .related-content .card img {
-    -webkit-transition: none;
-}
-
-.content-hub__block-three .news-events .related-content .card--tagged {
-    border: 0;
-    margin-top: 0;
+.content-hub__block-three .news-events .related-content .card:nth-of-type(4) {
+    margin-right: 0;
 }
 
 .content-hub__block-three .news-events {
@@ -41600,6 +41566,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 @media (min-width: 901px) {
     .content-hub__block-three .news-events {
         grid-template-columns: repeat(18, 1fr);
+        grid-template-areas: '. . . separator separator separator separator separator separator separator separator separator separator separator separator . . .' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap' 'social social social social social social social social social social social social social social social social social social';
     }
 }
 
@@ -41625,26 +41592,23 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .content-hub__block-three .news-events .content-separator {
-    grid-column: 5/14;
+    grid-area: separator;
     margin: 0 0 1rem 0;
 }
 
 .content-hub__block-three .news-events h2:nth-of-type(1) {
-    grid-column: 1/-1;
+    grid-area: news-events-title;
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.content-hub__block-three .news-events__col1 {
-    grid-column: 1/6;
+.content-hub__block-three .news-events .social-media {
+    grid-area: social;
 }
 
-.content-hub__block-three .news-events__col2 {
-    grid-column: 6/12;
-}
-
-.content-hub__block-three .news-events__col3 {
-    grid-column: 12/18;
+.content-hub__block-three .news-events .social-media h2:nth-of-type(1) {
+    text-align: center;
+    margin-top: 4rem;
 }
 
 @media (max-width: 432px) {
