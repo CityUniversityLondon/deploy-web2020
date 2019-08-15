@@ -2830,6 +2830,15 @@ function finder__query(props) {
     onBlur: () => setShowSuggestions(false),
     onFocus: () => setShowSuggestions(true),
     onMouseDown: () => {
+      //for browsers because onBlur get excuted before onClick
+      setShowSuggestions(true);
+      setPartialQuery(suggestion);
+      setSuggestions([]);
+      focusInput();
+      submitSuggestion(suggestion); //passing suggestion because partialQuery value get overwritten for some reason.
+    },
+    onClick: () => {
+      //for mobile
       setShowSuggestions(true);
       setPartialQuery(suggestion);
       setSuggestions([]);
