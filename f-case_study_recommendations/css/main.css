@@ -40160,7 +40160,7 @@ a.modal__close:active, a.modal__close:focus {
 @media (min-width: 1281px) {
     .article__content-wrap {
         grid-column: 4 / 16;
-        top: -5rem;
+        top: -4.5rem;
     }
 }
 
@@ -40169,9 +40169,17 @@ a.modal__close:active, a.modal__close:focus {
     top: 0;
     left: 0;
     content: '';
-    height: 5rem;
+    height: 4.5rem;
     width: 100%;
     background: #ffffff;
+}
+
+@media (min-width: 1281px) {
+    .case-study__overview__multimedia-banner__block-colour {
+        height: 10rem;
+        background: #e7ebed;
+        grid-column: 1 / -1;
+    }
 }
 
 .case-study {
@@ -40281,11 +40289,11 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .case-study__overview__main {
-    padding: 1.5rem 2rem 2.5rem 2rem;
-    background: #e7ebed;
     grid-column: 2 / 18;
     grid-row-gap: 0;
     display: grid;
+    padding: 1.5rem 2rem 2.5rem 2rem;
+    background: #e7ebed;
 }
 
 @media (max-width: 432px) {
@@ -40377,7 +40385,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-column: 1 / -1;
     grid-row-gap: 0;
     display: grid;
-    padding-bottom: 2.25rem;
+    margin-top: 1.5rem;
 }
 
 @media (max-width: 432px) {
@@ -40401,25 +40409,13 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-@media (max-width: 900px) {
-    .case-study__overview__multimedia-banner {
-        padding-bottom: 1.5rem;
-    }
-}
-
 .case-study__overview__multimedia-banner__video {
-    grid-column: 4 / 16;
+    grid-column: 1 / -1;
 }
 
-@media (max-width: 432px) {
+@media (min-width: 1281px) {
     .case-study__overview__multimedia-banner__video {
-        grid-column: 1 / -1;
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .case-study__overview__multimedia-banner__video {
-        grid-column: 1 / -1;
+        grid-column: 4 / 16;
     }
 }
 
