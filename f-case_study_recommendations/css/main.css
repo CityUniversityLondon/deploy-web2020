@@ -40153,9 +40153,15 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .article__content-wrap {
-    grid-column: 4 / 16;
+    grid-column: 1 / -1;
     position: relative;
-    top: -5rem;
+}
+
+@media (min-width: 1281px) {
+    .article__content-wrap {
+        grid-column: 4 / 16;
+        top: -5rem;
+    }
 }
 
 .article__content-wrap:before {
@@ -40202,9 +40208,6 @@ a.modal__close:active, a.modal__close:focus {
 
 .case-study__overview {
     max-width: 80rem;
-    grid-row-gap: 0;
-    display: grid;
-    grid-template-rows: auto;
 }
 
 @media (min-width: 1441px) {
@@ -40221,21 +40224,29 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
-@media (max-width: 432px) {
+@media (min-width: 1281px) {
+    .case-study__overview {
+        grid-row-gap: 0;
+        display: grid;
+        grid-template-rows: auto;
+    }
+}
+
+@media (min-width: 1281px) and (max-width: 432px) {
     .case-study__overview {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
-@media (min-width: 433px) and (max-width: 900px) {
+@media (min-width: 1281px) and (min-width: 433px) and (max-width: 900px) {
     .case-study__overview {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1281px) and (min-width: 901px) {
     .case-study__overview {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
@@ -40313,15 +40324,9 @@ a.modal__close:active, a.modal__close:focus {
     grid-column: 4 / 16;
 }
 
-@media (max-width: 432px) {
+@media (min-width: 901px) {
     .case-study__overview__main__details {
-        grid-column: 1 / -1;
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .case-study__overview__main__details {
-        grid-column: 2/ 12;
+        grid-column: 5 / 15;
     }
 }
 
@@ -40456,7 +40461,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-row-gap: 0;
     display: grid;
     max-width: 80rem;
-    max-width: 80rem;
 }
 
 @media (max-width: 432px) {
@@ -40494,27 +40498,35 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-@media (max-width: 432px) {
-    .case-study__content__container {
-        grid-template-areas: 'c c c c c c';
-    }
+.case-study__content {
+    grid-column: 1 / -1;
+    margin-bottom: 1rem;
 }
 
 @media (min-width: 433px) {
-    .case-study__content__container {
-        grid-template-areas: '. c c c c c c c c c c .';
+    .case-study__content {
+        grid-column: 2 / 12;
     }
 }
 
 @media (min-width: 901px) {
-    .case-study__content__container {
-        grid-template-areas: '. . . . c c c c c c c c c c . . . .';
+    .case-study__content {
+        grid-column: 5 / 15;
     }
 }
 
-.case-study__content {
-    grid-area: c;
-    padding-bottom: 2.25rem;
+@media (min-width: 1281px) {
+    .case-study__content {
+        grid-column: 4 / 16;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1441px) {
+    .case-study__content {
+        grid-column: 5 / 15;
+        margin-bottom: 0;
+    }
 }
 
 .case-study__content h2 {
@@ -40723,7 +40735,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1281px) {
     .case-study__grey__wrap__container {
         grid-template-areas: '. . . . c c c c c c c c c c . . . .';
     }
@@ -40829,19 +40841,17 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-@media (max-width: 432px) {
+.case-study--research .case-study__overview__main__details {
+    grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
     .case-study--research .case-study__overview__main__details {
-        grid-column: 1 / -1;
+        grid-column: 2 / 12;
     }
 }
 
-@media (min-width: 433px) {
-    .case-study--research .case-study__overview__main__details {
-        grid-column: 1 / -1;
-    }
-}
-
-@media (min-width: 901px) {
+@media (min-width: 1441px) {
     .case-study--research .case-study__overview__main__details {
         grid-column: 6 / 14;
     }
@@ -40864,23 +40874,24 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .case-study--research__details {
     padding-bottom: 3.25rem;
-}
-
-@media (max-width: 432px) {
-    .case-study--research__details {
-        grid-column: 1 / -1;
-    }
+    grid-column: 1 / -1;
 }
 
 @media (min-width: 433px) {
     .case-study--research__details {
-        grid-column: 2/ 12;
+        grid-column: 2 / 12;
     }
 }
 
 @media (min-width: 901px) {
     .case-study--research__details {
         grid-column: 5 / 15;
+    }
+}
+
+@media (min-width: 1281px) {
+    .case-study--research__details {
+        grid-column: 6 / 14;
     }
 }
 
