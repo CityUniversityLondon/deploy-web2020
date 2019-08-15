@@ -27474,7 +27474,7 @@ article figure figcaption a:active {
     display: flex;
     border-image-source: linear-gradient(45deg, #3e1031, #d61726);
     border-image-slice: 1;
-    border-width: 0.25rem;
+    border-width: 0.1875rem;
     border-style: solid;
     padding: 0;
     z-index: 1;
@@ -28095,7 +28095,7 @@ article figure figcaption a:active {
 
 .finder__query__submit .finder__query__submit__icon {
     padding: 0 0.5rem 0 0;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 @media (max-width: 768px) {
@@ -28265,10 +28265,6 @@ article figure figcaption a:active {
     border-bottom-color: #006bbd;
 }
 
-.finder__filter {
-    margin-bottom: 0.25rem;
-}
-
 .finder__filter legend {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
@@ -28414,6 +28410,10 @@ article figure figcaption a:active {
     align-items: center;
     display: flex;
     flex-direction: row;
+}
+
+.finder__radio {
+    margin-top: 0.25rem;
 }
 
 @media (hover: hover) {
@@ -29965,17 +29965,24 @@ article figure figcaption a:active {
 .finder__results__card a .finder__results__card__tag .icon {
     color: #d61726;
     margin-right: 0.5rem;
+    font-weight: 600;
 }
 
 .finder__results__bestbet a .finder__results__card__description {
     color: #1e1e1e;
 }
 
+.finder__selectbox {
+    background-color: #ffffff;
+    margin-bottom: 0;
+    padding: 0 1rem;
+}
+
 .finder__select {
     height: auto;
     margin-top: 1rem;
     position: relative;
-    border: 0.1875rem solid #3e1031;
+    border: 0.125rem solid #3e1031;
     color: #0c0c0e;
 }
 
@@ -29983,7 +29990,7 @@ article figure figcaption a:active {
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
-    padding: 0.25rem 0.25rem 0 0.75rem;
+    padding: 0.25rem 2rem 0 0.75rem;
     position: relative;
     color: #0c0c0e;
     bottom: 0.25rem;
@@ -30134,6 +30141,15 @@ article figure figcaption a:active {
 
 .finder__icon--close__wrapper {
     font-weight: 400;
+}
+
+@media (hover: hover) {
+    .finder__results__card a .finder__results__card__details {
+        z-index: 1;
+    }
+    .finder__results__card a:after {
+        z-index: 0;
+    }
 }
 
 .global-footer {
@@ -36880,7 +36896,7 @@ article .link-copy {
     display: flex;
     border-image-source: linear-gradient(45deg, #3e1031, #d61726);
     border-image-slice: 1;
-    border-width: 0.25rem;
+    border-width: 0.1875rem;
     border-style: solid;
     padding: 0;
     z-index: 1;
@@ -37501,7 +37517,7 @@ article .link-copy {
 
 .finder__query__submit .finder__query__submit__icon {
     padding: 0 0.5rem 0 0;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 @media (max-width: 768px) {
@@ -37671,10 +37687,6 @@ article .link-copy {
     border-bottom-color: #006bbd;
 }
 
-.finder__filter {
-    margin-bottom: 0.25rem;
-}
-
 .finder__filter legend {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
@@ -37820,6 +37832,10 @@ article .link-copy {
     align-items: center;
     display: flex;
     flex-direction: row;
+}
+
+.finder__radio {
+    margin-top: 0.25rem;
 }
 
 @media (hover: hover) {
@@ -39371,17 +39387,24 @@ article .link-copy {
 .finder__results__card a .finder__results__card__tag .icon {
     color: #d61726;
     margin-right: 0.5rem;
+    font-weight: 600;
 }
 
 .finder__results__bestbet a .finder__results__card__description {
     color: #1e1e1e;
 }
 
+.finder__selectbox {
+    background-color: #ffffff;
+    margin-bottom: 0;
+    padding: 0 1rem;
+}
+
 .finder__select {
     height: auto;
     margin-top: 1rem;
     position: relative;
-    border: 0.1875rem solid #3e1031;
+    border: 0.125rem solid #3e1031;
     color: #0c0c0e;
 }
 
@@ -39389,7 +39412,7 @@ article .link-copy {
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
-    padding: 0.25rem 0.25rem 0 0.75rem;
+    padding: 0.25rem 2rem 0 0.75rem;
     position: relative;
     color: #0c0c0e;
     bottom: 0.25rem;
@@ -39540,6 +39563,15 @@ article .link-copy {
 
 .finder__icon--close__wrapper {
     font-weight: 400;
+}
+
+@media (hover: hover) {
+    .finder__results__card a .finder__results__card__details {
+        z-index: 1;
+    }
+    .finder__results__card a:after {
+        z-index: 0;
+    }
 }
 
 /*

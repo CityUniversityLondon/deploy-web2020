@@ -2546,7 +2546,7 @@ function finder__selectbox(props) {
     onChange: e => setFacet(e)
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("option", {
     value: ""
-  }, "-- ".concat(props.facet.name, " --")), props.facet.values.map(value => {
+  }, "All ".concat(props.facet.name)), props.facet.values.map(value => {
     return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("option", {
       key: value.data,
       value: value.data
