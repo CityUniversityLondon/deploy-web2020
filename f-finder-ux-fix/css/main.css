@@ -29362,6 +29362,7 @@ article figure figcaption a:active {
     right: 0;
     top: 0;
     width: 100vw;
+    z-index: 3;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
@@ -38767,6 +38768,7 @@ article .link-copy {
     right: 0;
     top: 0;
     width: 100vw;
+    z-index: 3;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
