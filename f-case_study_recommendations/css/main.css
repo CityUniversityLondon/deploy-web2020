@@ -40338,10 +40338,6 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
-.case-study__overview__main__details p {
-    font-weight: 600;
-}
-
 .case-study__overview__main__details ul {
     margin-top: 1rem;
 }
