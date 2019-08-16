@@ -40326,19 +40326,98 @@ a.modal__close:active, a.modal__close:focus {
     grid-column: 4 / 16;
 }
 
-@media (min-width: 901px) {
-    .case-study__overview__main__details {
-        grid-column: 5 / 15;
-    }
-}
-
 .case-study__overview__main__details ul {
     margin-top: 1rem;
 }
 
-.case-study__overview__main__details__logos {
+.case-study--business .case-study__overview__main {
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.case-study--business .case-study__overview__main__details {
+    grid-column: 1 / -1;
+}
+
+@media (min-width: 1281px) {
+    .case-study--business .case-study__overview__main__details {
+        grid-column: 4 / 16;
+    }
+}
+
+@media (min-width: 768px) {
+    .case-study__overview__main__details__company-cards {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 1.25rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.case-study__company-card {
+    margin-bottom: 1rem;
     display: flex;
-    flex-wrap: wrap;
+    border: 0.0625rem solid #d8d8d8;
+    background: #ffffff;
+    min-height: 6.5rem;
+}
+
+@media (min-width: 769px) {
+    .case-study__company-card {
+        margin-bottom: 0;
+    }
+}
+
+.case-study__company-card .figure--image {
+    padding: 0 1rem;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.case-study__company-card .figure--image:after {
+    content: '';
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    height: 4.5rem;
+    width: 1px;
+    background-color: #ededed;
+}
+
+.case-study__company-card img {
+    max-width: 3rem;
+}
+
+.case-study__company-card a {
+    color: #696969;
+    border-bottom: none;
+    transition: none;
+}
+
+.case-study__company-card a:hover {
+    color: #0c0c0e;
+    border-bottom-color: #0c0c0e;
+    background-image: none;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.company-card__name-title {
+    margin-bottom: 0.25rem;
+    font-family: "Meta Sans", sans-serif;
+}
+
+.company-card__funder {
+    margin-bottom: 0.25rem;
+}
+
+.case-study__company-card__details {
+    width: 65%;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
 }
 
 .case-study__overview__main__details .label {
@@ -40347,7 +40426,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .case-study__overview__main__details__result p {
     float: left;
-    margin-right: 0.4rem;
+    margin-right: 0.5rem;
 }
 
 .case-study__overview__multimedia-banner {
