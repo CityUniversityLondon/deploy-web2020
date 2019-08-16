@@ -40153,7 +40153,7 @@ a.modal__close:active, a.modal__close:focus {
 
 @media (min-width: 768px) {
     .article__content-wrap {
-        grid-column: 2 / 12;
+        grid-column: 1 / 12;
         top: -4.5rem;
     }
 }
@@ -40348,6 +40348,24 @@ a.modal__close:active, a.modal__close:focus {
     margin-top: 1rem;
 }
 
+@media (min-width: 433px) {
+    .case-study--business .case-study__overview__main__details {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 901px) {
+    .case-study--business .case-study__overview__main__details {
+        grid-column: 2 / 18;
+    }
+}
+
+@media (min-width: 1281px) {
+    .case-study--business .case-study__overview__main__details {
+        grid-column: 4 / 16;
+    }
+}
+
 .case-study--business .case-study__overview__main {
     padding-top: 2rem;
     margin-bottom: 1rem;
@@ -40366,8 +40384,25 @@ a.modal__close:active, a.modal__close:focus {
     margin-bottom: 1rem;
     display: flex;
     border: 0.0625rem solid #d8d8d8;
+    border-bottom: 0.0625rem solid #d8d8d8;
     background: #ffffff;
     min-height: 6.5rem;
+    color: #696969;
+    transition: none;
+}
+
+.case-study__company-card:hover {
+    color: #0c0c0e;
+    background-image: none;
+    background: #ffffff;
+    border-bottom: 0.0625rem solid #d8d8d8;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.case-study__company-card:hover .company-card__name {
+    border-bottom-style: solid;
+    border-bottom-width: 0.1875rem;
+    border-bottom-color: #0c0c0e;
 }
 
 @media (min-width: 769px) {
@@ -40377,7 +40412,6 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .case-study__company-card .figure--image {
-    padding: 0 1rem;
     width: 35%;
     display: flex;
     align-items: center;
@@ -40399,17 +40433,8 @@ a.modal__close:active, a.modal__close:focus {
     max-width: 3rem;
 }
 
-.case-study__company-card a {
-    color: #696969;
-    border-bottom: none;
-    transition: none;
-}
-
-.case-study__company-card a:hover {
-    color: #0c0c0e;
-    border-bottom-color: #0c0c0e;
-    background-image: none;
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+.company-card__name {
+    padding-bottom: 0.08rem;
 }
 
 .company-card__name-title {
@@ -40423,9 +40448,9 @@ a.modal__close:active, a.modal__close:focus {
 
 .case-study__company-card__details {
     width: 65%;
-    padding: 0 1rem;
     display: flex;
     align-items: center;
+    padding-left: 1rem;
 }
 
 .case-study__overview__main__details .label {
@@ -40498,18 +40523,6 @@ a.modal__close:active, a.modal__close:focus {
     overflow: hidden;
 }
 
-@media (min-width: 768px) {
-    .case-study__overview__multimedia-banner__image {
-        height: 20vh;
-    }
-}
-
-@media (min-width: 1281px) {
-    .case-study__overview__multimedia-banner__image {
-        height: 30vh;
-    }
-}
-
 .case-study__overview__multimedia-banner__image figure {
     margin-top: 0;
 }
@@ -40574,9 +40587,15 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
+@media (min-width: 769px) {
+    .case-study__content {
+        margin-bottom: 0;
+    }
+}
+
 @media (min-width: 901px) {
     .case-study__content {
-        grid-column: 5 / 15;
+        grid-column: 4 / 16;
     }
 }
 
@@ -40724,12 +40743,12 @@ a.modal__close:active, a.modal__close:focus {
     margin-bottom: 1.5rem;
 }
 
-.case-study__content__share-icons__icons ul li {
+.case-study__content__share-icons__icons li {
     margin-right: 0.75rem;
     margin-top: 0;
 }
 
-.case-study__content__share-icons__icons ul li.copyLink {
+.case-study__content__share-icons__icons li.copyLink {
     margin-right: 0;
 }
 
@@ -40740,23 +40759,9 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .case-study__grey__wrap__container {
-    max-width: 80rem;
     grid-row-gap: 0;
     display: grid;
-}
-
-@media (min-width: 1441px) {
-    .case-study__grey__wrap__container {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .case-study__grey__wrap__container {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
+    max-width: 80rem;
 }
 
 @media (max-width: 432px) {
@@ -40780,26 +40785,18 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
-@media (max-width: 432px) {
+@media (min-width: 1441px) {
     .case-study__grey__wrap__container {
-        grid-template-areas: 'c c c c c c';
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-@media (min-width: 433px) {
+@media (max-width: 1440px) {
     .case-study__grey__wrap__container {
-        grid-template-areas: '. c c c c c c c c c c .';
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
-}
-
-@media (min-width: 1281px) {
-    .case-study__grey__wrap__container {
-        grid-template-areas: '. . . . c c c c c c c c c c . . . .';
-    }
-}
-
-.case-study__grey__wrap__container__content {
-    grid-area: c;
 }
 
 .case-study__related-case-studies__wrap {
@@ -40919,36 +40916,42 @@ a.modal__close:active, a.modal__close:focus {
     font-weight: 600;
 }
 
-.case-study--research__details {
+.case-study--research__details,
+.case-study__grey__wrap__container__content {
     padding-bottom: 3.25rem;
     grid-column: 1 / -1;
 }
 
 @media (min-width: 433px) {
-    .case-study--research__details {
+    .case-study--research__details,
+    .case-study__grey__wrap__container__content {
         grid-column: 2 / 12;
     }
 }
 
 @media (min-width: 901px) {
-    .case-study--research__details {
+    .case-study--research__details,
+    .case-study__grey__wrap__container__content {
         grid-column: 5 / 15;
     }
 }
 
 @media (min-width: 1281px) {
-    .case-study--research__details {
+    .case-study--research__details,
+    .case-study__grey__wrap__container__content {
         grid-column: 4 / 16;
     }
 }
 
 @media (min-width: 1441px) {
-    .case-study--research__details {
+    .case-study--research__details,
+    .case-study__grey__wrap__container__content {
         grid-column: 6 / 14;
     }
 }
 
-.case-study--research__details .icon {
+.case-study--research__details .icon,
+.case-study__grey__wrap__container__content .icon {
     color: #d61726;
 }
 
