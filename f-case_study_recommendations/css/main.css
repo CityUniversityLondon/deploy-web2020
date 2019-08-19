@@ -40373,9 +40373,7 @@ a.modal__close:active, a.modal__close:focus {
 
 @media (min-width: 768px) {
     .case-study__overview__main__details__company-cards {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-column-gap: 1.25rem;
+        display: flex;
         margin-bottom: 1rem;
     }
 }
@@ -40383,12 +40381,24 @@ a.modal__close:active, a.modal__close:focus {
 .case-study__company-card {
     margin-bottom: 1rem;
     display: flex;
+    width: 100%;
     border: 0.0625rem solid #d8d8d8;
     border-bottom: 0.0625rem solid #d8d8d8;
     background: #ffffff;
     min-height: 6.5rem;
     color: #696969;
     transition: none;
+}
+
+@media (min-width: 769px) {
+    .case-study__company-card {
+        margin-bottom: 0;
+        width: 20rem;
+    }
+}
+
+.case-study__company-card:first-child {
+    margin-right: 1rem;
 }
 
 .case-study__company-card:hover {
@@ -40399,16 +40409,14 @@ a.modal__close:active, a.modal__close:focus {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
-.case-study__company-card:hover .company-card__name {
+.case-study__company-card:hover .company-card__name:after {
     border-bottom-style: solid;
     border-bottom-width: 0.1875rem;
     border-bottom-color: #0c0c0e;
 }
 
-@media (min-width: 769px) {
-    .case-study__company-card {
-        margin-bottom: 0;
-    }
+.case-study__company-card figure {
+    margin-top: 0;
 }
 
 .case-study__company-card .figure--image {
@@ -40434,11 +40442,25 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .company-card__name {
-    padding-bottom: 0.08rem;
+    padding-bottom: 0.25rem;
+    position: relative;
+}
+
+.company-card__name:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1875rem;
+}
+
+.company-card__name .fa-external-link {
+    margin-left: 0;
 }
 
 .company-card__name-title {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
     font-family: "Meta Sans", sans-serif;
 }
 
