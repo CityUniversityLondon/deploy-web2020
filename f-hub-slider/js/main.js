@@ -5680,8 +5680,8 @@ function initSlider(slider) {
       sliderChild[1].classList.add('slider__active-slide');
     } else {
       // only displays first slide and hides rest
-      sliderChild[1].classList.add('slider__slide');
-      slider.style.display = 'grid';
+      sliderChild[1].classList.add('slider__slide'); // slider.style.display = 'grid';
+
       /* generates controls */
 
       let sliderControlsWrap = createElement('div', null, null, 'slider__controls__wrap');
