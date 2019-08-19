@@ -40401,7 +40401,7 @@ a.modal__close:active, a.modal__close:focus {
     margin-right: 1rem;
 }
 
-.case-study__company-card:hover {
+.case-study__company-card:hover, .case-study__company-card:focus {
     color: #0c0c0e;
     background-image: none;
     background: #ffffff;
@@ -40409,7 +40409,7 @@ a.modal__close:active, a.modal__close:focus {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
-.case-study__company-card:hover .company-card__name:after {
+.case-study__company-card:hover .company-card__name:after, .case-study__company-card:focus .company-card__name:after {
     border-bottom-style: solid;
     border-bottom-width: 0.1875rem;
     border-bottom-color: #0c0c0e;
