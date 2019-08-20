@@ -4852,9 +4852,8 @@ function launchMenu(menu) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modal_animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal_animation */ "./src/patterns/modal/modal_animation.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
@@ -4868,25 +4867,16 @@ __webpack_require__.r(__webpack_exports__);
  *
  */
 
-
-const className = 'modal__popup',
-      modalBackground = document.createElement('div');
-let windowWidth = window.innerWidth,
+const className = 'modal__popup';
+let modalBackground = document.createElement('div'),
     trap;
-window.addEventListener('resize', setWindowWidth);
-
-function setWindowWidth() {
-  windowWidth = window.innerWidth;
-}
 
 function launchModal(modal) {
   let modalHeading = modal.querySelector('.modal__heading');
   let modalDataTitle = modal.getAttribute('data-title');
-  let modalInner = modal.querySelector('.modal__inner');
   insertElement('a', modal, 'modal__trigger', '#', modalDataTitle);
   insertElement('a', modalHeading, 'modal__close fas fa-times', '#', null, 'Close modal');
   addEventListeners(modal);
-  Object(_modal_animation__WEBPACK_IMPORTED_MODULE_1__["default"])(modalInner, modal);
   setTabIndexes(modal, true);
 }
 
@@ -4900,7 +4890,7 @@ function addEventListeners(modal) {
    */
 
   modal.addEventListener('keydown', e => {
-    if (e.keyCode === 27 && modal.hasAttribute('data-open')) {
+    if (e.keyCode === 27) {
       closeModal(modal);
     }
   });
@@ -4910,7 +4900,7 @@ function addEventListeners(modal) {
 
   modal.addEventListener('click', e => {
     e.target.classList.forEach(className => {
-      if (className === 'modal__popup--show' && modal.hasAttribute('data-open')) {
+      if (className === 'modal__popup--show') {
         closeModal(modal);
       }
     });
@@ -4924,6 +4914,7 @@ function handleTriggerOpen(e) {
 }
 
 function handleTriggerClose(e) {
+  console.log(e);
   e.preventDefault();
   let modal = document.querySelector('.modal__popup--show');
   closeModal(modal);
@@ -4953,59 +4944,32 @@ function setTabIndexes(modal, removeTabIndex) {
 function openModal(modal) {
   document.body.classList.add('modal--in');
   document.body.classList.add('no-scroll');
-  modal.classList.add('no-click');
   modal.classList.add('modal__popup--show');
   modal.classList.remove('modal__popup--hidden');
   addBackgroundFade();
   setTabIndexes(modal, false);
-  /*
-      if tablet or above, trigger first transition. Rest of animation
-      and opening of modal handled in modal_animation.js. Otherwise,
-      just display the modal with no effects.
-  */
-
-  if (windowWidth >= 768) {
-    setTimeout(function () {
-      modal.classList.add('modal__popup--transitioning-in');
-    }, 200);
-  } else {
-    setOpenAttributes(modal);
-  }
-
+  setOpenAttributes(modal);
   trapFocus(modal);
 }
 
 function closeModal(modal) {
-  modal.classList.add('no-click');
-
-  if (windowWidth >= 768) {
-    modal.classList.add('modal__popup--transitioning-out');
-  } else {
-    setCloseAttributes(modal);
-  }
-
+  setCloseAttributes(modal);
   setTabIndexes(modal, true);
   trap.deactivate();
 }
 
 function setOpenAttributes(modal) {
-  modal.setAttribute('data-open', true);
   document.body.classList.add('modal--in');
   document.body.classList.add('no-scroll');
   modal.classList.add('modal__popup--show');
   modal.classList.remove('modal__popup--hidden');
-  modal.classList.add('modal__popup--show-content');
-  modal.classList.remove('no-click');
 }
 
 function setCloseAttributes(modal) {
-  modal.removeAttribute('data-open');
   document.body.classList.remove('modal--in');
   document.body.classList.remove('no-scroll');
   modal.classList.add('modal__popup--hidden');
   modal.classList.remove('modal__popup--show');
-  modal.classList.remove('modal__popup--show-content');
-  modal.classList.remove('no-click');
 }
 
 function addBackgroundFade() {
@@ -5039,7 +5003,7 @@ function insertElement(type, targetParent, classList, href, text, ariaLabel) {
 
 function trapFocus(modal) {
   let modalInner = modal.querySelector('.modal__inner');
-  trap = focus_trap__WEBPACK_IMPORTED_MODULE_2___default()(modalInner, {
+  trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalInner, {
     clickOutsideDeactivates: true
   });
   trap.activate();
@@ -5049,108 +5013,6 @@ function trapFocus(modal) {
   launchFn: launchModal,
   launchQuery: ".".concat(className)
 });
-
-/***/ }),
-
-/***/ "./src/patterns/modal/modal_animation.js":
-/*!***********************************************!*\
-  !*** ./src/patterns/modal/modal_animation.js ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return addModalAnimation; });
-
-
-/**
- * modal animation
- *
- * @module patterns/modal/modal_animation
- * @author Daniel Miller <daniel.miller@city.ac.uk>
- * @copyright City, University of London 2018
- *
- */
-const eventListeners = ['webkitTransitionEnd', 'transitionend', 'mozTransitionEnd', 'oTransitionEnd'];
-function addModalAnimation(modalInner, modal) {
-  setTransitionListeners(modalInner, modal);
-}
-/**
- * Set transition listeners: add transition finished listeners.
- * The transition event actually occurs on the :before and :after
- * but bubbles up to parent
- *
- * @param {HTMLElement} modalInner - the modalInner element
- * @param {HTMLElement} modal - the modal
- */
-
-function setTransitionListeners(modalInner, modal) {
-  for (let listener in eventListeners) {
-    modalInner.addEventListener(eventListeners[listener], e => {
-      setOpenOrCloseFunction(modal, e);
-    }, false);
-  }
-}
-/**
- * Set open or close function: decides if open/close needed
- *
- * @param {HTMLElement} modal - the modal
- */
-
-
-function setOpenOrCloseFunction(modal, e) {
-  if (e.target.classList[0] == 'modal__inner') {
-    if (modal.hasAttribute('data-open')) {
-      closeTransition(modal);
-    } else {
-      openTransition(modal);
-    }
-  }
-}
-/**
- * Open transition: handles the open transition and modal show.
- * Conditional statements ensure the code doesn't run twice.
- *
- * @param {HTMLElement} modal - the modal div
- */
-
-
-function openTransition(modal) {
-  if (!modal.classList.contains('modal__popup--show-content')) {
-    modal.classList.add('modal__popup--show-content');
-    setTimeout(function () {
-      modal.classList.remove('modal__popup--transitioning-in');
-    }, 50);
-    setTimeout(function () {
-      modal.setAttribute('data-open', true);
-      modal.classList.remove('no-click');
-    }, 600);
-  }
-}
-/**
- * Close transition: handles the close transition and modal hide
- *
- * @param {HTMLElement} modal - the modal div
- */
-
-
-function closeTransition(modal) {
-  if (modal.classList.contains('modal__popup--show-content')) {
-    modal.classList.remove('modal__popup--show-content');
-    setTimeout(function () {
-      modal.classList.remove('modal__popup--transitioning-out');
-    }, 50);
-    setTimeout(function () {
-      document.body.classList.remove('modal--in');
-      document.body.classList.remove('no-scroll');
-      modal.removeAttribute('data-open');
-      modal.classList.remove('modal__popup--show');
-      modal.classList.add('modal__popup--hidden');
-      modal.classList.remove('no-click');
-    }, 700);
-  }
-}
 
 /***/ }),
 

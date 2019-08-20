@@ -33899,55 +33899,6 @@ button
     margin-left: 0.5rem;
 }
 
-/**
-*
-* Modal animation styles
-*
-**/
-.modal__inner {
-    position: relative;
-}
-
-.modal__inner:before, .modal__inner:after {
-    content: '';
-    display: block;
-    background: #015a79;
-    position: absolute;
-    height: 100%;
-    width: 100.5%;
-    z-index: 1;
-    transition: transform 0.45s cubic-bezier(0.53, 0.745, 1, 0.83);
-    transform: scaleY(0);
-}
-
-.modal__inner:before {
-    transform-origin: 0 bottom;
-}
-
-.modal__inner:after {
-    transform-origin: 0 top;
-    bottom: -1px;
-}
-
-.modal__popup--transitioning-in .modal__inner:before {
-    transform-origin: 0 top;
-}
-
-.modal__popup--transitioning-out .modal__inner:after {
-    transform-origin: 0 bottom;
-}
-
-.modal__popup--transitioning-in .modal__inner:before,
-.modal__popup--transitioning-out .modal__inner:after {
-    transform: scaleY(1);
-    background: #3e1031;
-}
-
-/**
-*
-* End of modal animation styles
-*
-**/
 body.modal--in.no-scroll {
     position: fixed;
     width: 100%;
@@ -33996,16 +33947,9 @@ body.modal--in.no-scroll .modal__background {
     background: #ffffff;
     border: none;
     max-height: 80vh;
-    opacity: 0;
     overflow-y: auto;
     padding: 0.5rem 2.5rem 3rem;
-    pointer-events: none;
     position: relative;
-}
-
-.modal__popup--show-content .modal__content {
-    opacity: 1;
-    pointer-events: auto;
 }
 
 .modal__heading {
@@ -39737,55 +39681,6 @@ h3 .linked-heading__icons {
     }
 }
 
-/**
-*
-* Modal animation styles
-*
-**/
-.modal__inner {
-    position: relative;
-}
-
-.modal__inner:before, .modal__inner:after {
-    content: '';
-    display: block;
-    background: #015a79;
-    position: absolute;
-    height: 100%;
-    width: 100.5%;
-    z-index: 1;
-    transition: transform 0.45s cubic-bezier(0.53, 0.745, 1, 0.83);
-    transform: scaleY(0);
-}
-
-.modal__inner:before {
-    transform-origin: 0 bottom;
-}
-
-.modal__inner:after {
-    transform-origin: 0 top;
-    bottom: -1px;
-}
-
-.modal__popup--transitioning-in .modal__inner:before {
-    transform-origin: 0 top;
-}
-
-.modal__popup--transitioning-out .modal__inner:after {
-    transform-origin: 0 bottom;
-}
-
-.modal__popup--transitioning-in .modal__inner:before,
-.modal__popup--transitioning-out .modal__inner:after {
-    transform: scaleY(1);
-    background: #3e1031;
-}
-
-/**
-*
-* End of modal animation styles
-*
-**/
 body.modal--in.no-scroll {
     position: fixed;
     width: 100%;
@@ -39834,16 +39729,9 @@ body.modal--in.no-scroll .modal__background {
     background: #ffffff;
     border: none;
     max-height: 80vh;
-    opacity: 0;
     overflow-y: auto;
     padding: 0.5rem 2.5rem 3rem;
-    pointer-events: none;
     position: relative;
-}
-
-.modal__popup--show-content .modal__content {
-    opacity: 1;
-    pointer-events: auto;
 }
 
 .modal__heading {
@@ -43791,6 +43679,91 @@ div.widget-123_test_ {
     .js .lifelong-learning__content .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
         grid-area: body;
     }
+}
+
+.lifelong-learning__selling-points {
+    max-width: 80rem;
+    padding: 1.5rem 1rem;
+    border: solid 0.0625rem #d8d8d8;
+    background-color: #ffffff;
+}
+
+@media (min-width: 1441px) {
+    .lifelong-learning__selling-points {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .lifelong-learning__selling-points {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .lifelong-learning__selling-points {
+        padding: 3.5rem 1.5rem;
+        grid-gap: 4rem;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+
+.lifelong-learning__selling-points__background {
+    background: linear-gradient(#5d184a, #5d184a);
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+}
+
+.lifelong-learning__selling-points__card {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.lifelong-learning__selling-points__card:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 901px) {
+    .lifelong-learning__selling-points__card {
+        margin-bottom: 0;
+    }
+}
+
+.lifelong-learning__selling-points__card .icon {
+    font-size: 2.25rem;
+    min-width: 2rem;
+    margin-right: 2rem;
+}
+
+@media (min-width: 433px) {
+    .lifelong-learning__selling-points__card .icon {
+        min-width: 2.75rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .lifelong-learning__selling-points__card .icon {
+        margin-right: 1rem;
+    }
+}
+
+.lifelong-learning__selling-points__card:nth-child(1) .icon {
+    color: #6c953c;
+}
+
+.lifelong-learning__selling-points__card:nth-child(2) .icon {
+    color: #039cab;
+}
+
+.lifelong-learning__selling-points__card:nth-child(3) .icon {
+    color: #832c9e;
+}
+
+.lifelong-learning__selling-points__title {
+    font-weight: 700;
 }
 
 .standard-content {
