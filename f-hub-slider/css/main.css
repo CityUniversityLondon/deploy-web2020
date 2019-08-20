@@ -22893,7 +22893,7 @@ a.card--tagged__title-link strong {
         position: relative;
         left: 0;
         width: auto;
-        top: -5rem;
+        margin-top: -5rem;
         grid-row-gap: 0;
         display: grid;
         margin-left: 2rem;
@@ -22948,6 +22948,7 @@ a.card--tagged__title-link strong {
 .card--testimonial-feature__details {
     background: #ffffff;
     padding-bottom: 2rem;
+    margin-bottom: 2rem;
     grid-column: 1 / -1;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
@@ -41487,15 +41488,20 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .content-hub__block-two .testimonial .slider .slider__controls__wrap {
-    grid-column: 15/18;
+    grid-column: 1/-2;
     margin: 1rem 0;
+}
+
+@media (max-width: 900px) {
+    .content-hub__block-two .testimonial .slider .slider__controls__wrap {
+        grid-column: 1/-1;
+    }
 }
 
 .content-hub__block-two .testimonial .cta-block {
     max-width: none;
     grid-row-gap: 0;
     display: grid;
-    max-width: 80rem;
 }
 
 @media (max-width: 432px) {
@@ -41519,23 +41525,15 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-@media (min-width: 1441px) {
-    .content-hub__block-two .testimonial .cta-block {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .content-hub__block-two .testimonial .cta-block {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
 .content-hub__block-two .testimonial .cta-block li.further-info {
-    grid-column: 14/18;
+    grid-column: 1/-2;
     text-align: right;
+}
+
+@media (max-width: 900px) {
+    .content-hub__block-two .testimonial .cta-block li.further-info {
+        grid-column: 1/-1;
+    }
 }
 
 .content-hub__block-two .testimonial .cta-block li.further-info a {
