@@ -40703,8 +40703,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     display: grid;
     background: #e5e5e5;
     grid-template-rows: auto;
-    padding-top: -5rem;
-    margin-top: -5rem;
     margin-bottom: 5rem;
     position: relative;
 }
@@ -40749,25 +40747,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .content-hub__block-one:after {
     bottom: -3rem;
     display: block;
-}
-
-@media (max-width: 432px) {
-    .content-hub__block-one {
-        margin: 0;
-        grid-template-areas: 'main main main main main main';
-    }
-}
-
-@media (min-width: 433px) {
-    .content-hub__block-one {
-        grid-template-areas: 'main main main main main main main main main main main main';
-    }
-}
-
-@media (min-width: 901px) {
-    .content-hub__block-one {
-        grid-template-areas: 'main main main main main main main main main main main main main main main main main main';
-    }
 }
 
 .content-hub__block-one > .content {
@@ -40820,19 +40799,23 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
+.content-hub__block-one .banner {
+    grid-column: 1/-1;
+}
+
 .content-hub__block-one .section {
     margin: 1.5rem;
 }
 
 .content-hub__block-one .video-finder-wrapper {
     grid-area: vf-wrap;
+    grid-column: 1/-1;
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
     background-color: #e5e5e5;
     margin-top: 0;
-    padding-top: 4rem;
 }
 
 @media (max-width: 432px) {
