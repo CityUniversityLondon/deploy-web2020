@@ -42466,6 +42466,8 @@ div.widget-123_test_ {
 
 .lifelong-learning .lifelong-learning__video {
     max-width: 80rem;
+    background: #fdf0ed;
+    padding: 2rem;
 }
 
 @media (min-width: 1441px) {
@@ -42480,6 +42482,11 @@ div.widget-123_test_ {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
+}
+
+.lifelong-learning .embedded-video {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 @media (min-width: 768px) {
