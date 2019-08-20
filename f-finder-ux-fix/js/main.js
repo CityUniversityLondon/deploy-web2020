@@ -2531,7 +2531,11 @@ function finder__selectbox(props) {
     const newQuery = props.query,
           newValue = e.target.value;
     newValue ? newQuery.facets[props.facet.meta] = newValue : delete newQuery.facets[props.facet.meta];
-    newQuery.startRank = 1;
+    newQuery.startRank = 1; // if(props.facet.meta === 'G' && !newValue){
+    //     delete newQuery.facets.rSub;
+    // }
+
+    props.facet.meta === 'G' && !newValue ? delete newQuery.facets.rSub : null;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
   }; //filter out related subject
@@ -2626,6 +2630,7 @@ function finder__appliedfilters(props) {
   const removeFacet = facet => {
     const newQuery = props.query;
     delete newQuery.facets[facet];
+    facet === 'G' && props.query.facets.rSub ? delete newQuery.facets.rSub : null;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
   };
