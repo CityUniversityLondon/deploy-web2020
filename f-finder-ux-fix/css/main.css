@@ -27353,6 +27353,26 @@ article figure figcaption a:active {
     background-image: linear-gradient(#f2f2f2, #e5e5e5);
 }
 
+.listing .banner {
+    background-image: linear-gradient(165deg, #5d184a 20%, #d61726 85%);
+}
+
+.listing .banner__content {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 80rem;
+    padding: 0 1.5rem;
+}
+
+.listing .banner__content .banner__content__header {
+    text-align: left;
+    color: #ffffff;
+}
+
+.listing .banner__content .banner__content__header h1 {
+    padding-bottom: 0;
+}
+
 .finder {
     grid-row-gap: 0;
     display: grid;
@@ -36773,6 +36793,26 @@ article .link-copy {
 
 .listing {
     background-image: linear-gradient(#f2f2f2, #e5e5e5);
+}
+
+.listing .banner {
+    background-image: linear-gradient(165deg, #5d184a 20%, #d61726 85%);
+}
+
+.listing .banner__content {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 80rem;
+    padding: 0 1.5rem;
+}
+
+.listing .banner__content .banner__content__header {
+    text-align: left;
+    color: #ffffff;
+}
+
+.listing .banner__content .banner__content__header h1 {
+    padding-bottom: 0;
 }
 
 .finder {
