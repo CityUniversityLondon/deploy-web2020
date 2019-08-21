@@ -10,7 +10,7 @@
 /******/ 		var moduleId, chunkId, i = 0, resolves = [];
 /******/ 		for(;i < chunkIds.length; i++) {
 /******/ 			chunkId = chunkIds[i];
-/******/ 			if(installedChunks[chunkId]) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 				resolves.push(installedChunks[chunkId][0]);
 /******/ 			}
 /******/ 			installedChunks[chunkId] = 0;
@@ -430,7 +430,7 @@ __webpack_require__.r(__webpack_exports__);
  * variable and dot notation.
  *
  * @module aria-attributes
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018
  */
 
@@ -615,7 +615,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Main entry
  *
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018
  */
 
@@ -722,7 +722,7 @@ __webpack_require__.r(__webpack_exports__);
  * Exports an array of patterns to execute on startup.
  *
  * @module patterns
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018
  */
 
@@ -777,7 +777,7 @@ __webpack_require__.r(__webpack_exports__);
  * Accordion
  *
  * @module patterns/accordion/accordion
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018-2019
  */
 
@@ -1357,7 +1357,7 @@ __webpack_require__.r(__webpack_exports__);
  * Warning removal
  *
  * @module patterns/cms-editor-warning/cms-editor-warning
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018
  */
 
@@ -1428,7 +1428,7 @@ __webpack_require__.r(__webpack_exports__);
  * Cookie notice
  *
  * @module patterns/cookie-notice/cookie-notice
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018
  */
 
@@ -1502,7 +1502,7 @@ __webpack_require__.r(__webpack_exports__);
  * Devcorate
  *
  * @module patterns/devcorate/devcorate
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018
  */
 
@@ -1616,7 +1616,7 @@ __webpack_require__.r(__webpack_exports__);
  * Feedback
  *
  * @module patterns/feedback/feedback
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018
  */
 
@@ -1717,19 +1717,15 @@ function launchFeedback(elem) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol.description */ "./node_modules/core-js/modules/es.symbol.description.js");
-/* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 
 
 /**
  * @module patterns/finder/components/cards/finder__results__bestbet
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1742,21 +1738,21 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__bestbet(props) {
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "finder__results__card finder__results__bestbet"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: '/fb' + props.details.clickTrackingUrl
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "finder__results__card__heading underline-transition__title"
-  }, props.details.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, props.details.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__description"
   }, props.details.description))));
 }
 
 finder__results__bestbet.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
+  details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__bestbet);
 
@@ -1781,7 +1777,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/cards/finder__results__bestbet
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1837,7 +1833,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/cards/finder__results__course
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1928,7 +1924,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/cards/finder__results__profile
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1992,7 +1988,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__checkbox
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 // import React from 'react';
@@ -2035,7 +2031,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__clear
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -2094,7 +2090,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__filters
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -2221,7 +2217,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__mobilefilters
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -2367,7 +2363,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__radio
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -2493,7 +2489,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__appliedfilters
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -2564,7 +2560,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__clear
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -2631,7 +2627,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__query
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -2643,12 +2639,23 @@ const maximumSuggestions = 5,
       body = document.getElementsByTagName('body'),
       backgroundFill = body[0].querySelectorAll('.background-fill');
 let queryParam;
+
+function highlightQueryTerm(suggestion, partialQuery) {
+  return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    className: "sr-only"
+  }, suggestion), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    "aria-hidden": "true"
+  }, suggestion.slice(0, suggestion.indexOf(partialQuery)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    className: "finder__suggestion"
+  }, suggestion.slice(suggestion.indexOf(partialQuery), partialQuery.length)), suggestion.slice(suggestion.indexOf(partialQuery) + partialQuery.length))));
+}
 /**
  * Search input field and autocomplete.
  *
  * @param {object} props React props.
  * @return {object} - React component.
  */
+
 
 function finder__query(props) {
   // save what they're typing
@@ -2750,11 +2757,8 @@ function finder__query(props) {
 
           break;
       }
-    },
-    dangerouslySetInnerHTML: {
-      __html: suggestion.replace(partialQuery, "<strong>".concat(partialQuery, "</strong>"))
     }
-  }))));
+  }, highlightQueryTerm(suggestion, partialQuery)))));
   const input = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
     className: "finder__query__input"
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -2947,7 +2951,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__didyoumean
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -3002,7 +3006,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__pagination
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -3130,7 +3134,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__results
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -3272,7 +3276,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__results__summary
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -3358,7 +3362,7 @@ __webpack_require__.r(__webpack_exports__);
  * Don't run this via patterns.js, it's a separate compilation.
  *
  * @module patterns/finder/finder
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -3511,32 +3515,6 @@ function Finder(props) {
     setUpdate(!update);
   };
 
-  let hub = document.getElementsByClassName('wrapper--finder--hub');
-  hub = hub[0];
-
-  if (hub) {
-    return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
-      className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
-      onSubmit: e => {
-        e.preventDefault();
-      }
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
-      className: "finder__title"
-    }, "Find courses"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-      className: "finder__select finder__select--level"
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-      className: "finder__select__overline",
-      htmlFor: "study-level"
-    }, "Level"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
-      id: "level-select"
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "All levels"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "Undergraduate"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "Postgraduate"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "Short course"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "CPD"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "CPPD"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_10__["default"], {
-      config: props.config,
-      query: query,
-      update: updater,
-      updating: updating
-    }));
-  }
-
   return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
     className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
     onSubmit: e => {
@@ -3601,7 +3579,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { keys.push.apply(keys, Object.getOwnPropertySymbols(object)); } if (enumerableOnly) keys = keys.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -3611,7 +3589,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  * Functions for making requests to Funnelback
  *
  * @module funnelback
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -3807,8 +3785,7 @@ function init(elem) {
   nextBtnWrap.appendChild(nextBtn);
   prevBtnWrap.appendChild(prevBtn);
   buttonsWrap.appendChild(prevBtnWrap);
-  buttonsWrap.appendChild(nextBtnWrap);
-  elem.insertBefore(buttonsWrap, elem.childNodes[0]); //perpare the indicators to append to html
+  buttonsWrap.appendChild(nextBtnWrap); //perpare the indicators to append to html
 
   numInd.className = 'swiper-indicator';
   numIndActiveSl.className = 'swiper-indicator__active-slider';
@@ -3820,6 +3797,7 @@ function init(elem) {
   numInd.appendChild(numIndSeparator);
   numInd.appendChild(numbIndSlLength);
   elem.appendChild(numInd);
+  elem.appendChild(buttonsWrap);
   config.sliderLength = _C.children.length;
 
   _C.style.setProperty('--n', config.sliderLength); //add event listeners
@@ -4452,7 +4430,7 @@ __webpack_require__.r(__webpack_exports__);
  * Global menu
  *
  * @module patterns/menu/menu
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018
  */
 
@@ -5198,7 +5176,7 @@ __webpack_require__.r(__webpack_exports__);
  * Paginated list
  *
  * @module patterns/paginated-list/paginated-list
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018
  */
 
@@ -5350,7 +5328,7 @@ __webpack_require__.r(__webpack_exports__);
  * Pagination
  *
  * @module patterns/pagination/pagination
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018
  */
 
@@ -5757,8 +5735,21 @@ function handleSlideChange(direction, slider) {
       }
     }); // disables next & prev buttons when reaching beginning or end of slides
 
-    newSlide == 1 ? slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled') : slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.remove('slider__controls__buttons__disabled');
-    newSlide == sliderCollectionLength ? slider.querySelectorAll('.slider__controls__buttons__next')[0].classList.add('slider__controls__buttons__disabled') : slider.querySelectorAll('.slider__controls__buttons__next')[0].classList.remove('slider__controls__buttons__disabled');
+    if (newSlide == 1) {
+      slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled');
+      slider.querySelectorAll('.slider__controls__buttons__prev')[0].setAttribute('disabled', true);
+    } else {
+      slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.remove('slider__controls__buttons__disabled');
+      slider.querySelectorAll('.slider__controls__buttons__prev')[0].removeAttribute('disabled');
+    }
+
+    if (newSlide == sliderCollectionLength) {
+      slider.querySelectorAll('.slider__controls__buttons__next')[0].classList.add('slider__controls__buttons__disabled');
+      slider.querySelectorAll('.slider__controls__buttons__next')[0].setAttribute('disabled', true);
+    } else {
+      slider.querySelectorAll('.slider__controls__buttons__next')[0].classList.remove('slider__controls__buttons__disabled');
+      slider.querySelectorAll('.slider__controls__buttons__next')[0].removeAttribute('disabled');
+    }
   }
 }
 
@@ -5867,7 +5858,7 @@ __webpack_require__.r(__webpack_exports__);
  * Tabs
  *
  * @module patterns/tabs/tabs
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018-2019
  */
 
@@ -6174,7 +6165,7 @@ __webpack_require__.r(__webpack_exports__);
  * Theme switcher
  *
  * @module patterns/theme-switcher/theme-switcher
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018
  */
 
@@ -6279,7 +6270,7 @@ __webpack_require__.r(__webpack_exports__);
  * Useful utility functions
  *
  * @module util
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018
  */
 

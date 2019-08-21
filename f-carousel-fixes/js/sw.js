@@ -10,7 +10,7 @@
 /******/ 		var moduleId, chunkId, i = 0, resolves = [];
 /******/ 		for(;i < chunkIds.length; i++) {
 /******/ 			chunkId = chunkIds[i];
-/******/ 			if(installedChunks[chunkId]) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 				resolves.push(installedChunks[chunkId][0]);
 /******/ 			}
 /******/ 			installedChunks[chunkId] = 0;
@@ -176,7 +176,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Service worker
  *
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018
  */
 const cacheName = 'city-web2020',
