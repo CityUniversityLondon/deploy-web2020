@@ -30163,13 +30163,9 @@ article figure figcaption a:active {
     font-weight: 400;
 }
 
-@media (hover: hover) {
-    .finder__results__card a .finder__results__card__details {
-        z-index: 1;
-    }
-    .finder__results__card a:after {
-        z-index: 0;
-    }
+.finder__results__card {
+    position: relative;
+    z-index: 0;
 }
 
 .global-footer {
@@ -39605,13 +39601,9 @@ article .link-copy {
     font-weight: 400;
 }
 
-@media (hover: hover) {
-    .finder__results__card a .finder__results__card__details {
-        z-index: 1;
-    }
-    .finder__results__card a:after {
-        z-index: 0;
-    }
+.finder__results__card {
+    position: relative;
+    z-index: 0;
 }
 
 /*
