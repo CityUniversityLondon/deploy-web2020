@@ -5648,8 +5648,14 @@ function addPagination(elem, itemCount) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+
+
 
 
 
@@ -5662,46 +5668,45 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019!
  */
 const className = 'slider';
+let sliderChildren, sliderChildrenLength;
 
 function initSlider(slider) {
   // slider items count
-  let sliderCollection = slider.querySelectorAll('li');
-  let sliderCollectionLength = slider.querySelectorAll('li').length;
+  sliderChildren = [...slider.children];
+  sliderChildrenLength = sliderChildren.length;
 
-  if (sliderCollectionLength > 1) {
-    sliderCollection.forEach(function (item, i) {
-      if (i < 1) {
-        item.classList.add('slider__active-slide');
-      } else {
-        // only displays first slide and hides rest
-        item.classList.add('slider__slide');
-        slider.style.display = 'grid';
-        /* generates controls */
+  for (const sliderChild of sliderChildren.entries()) {
+    if (sliderChild[0] < 1) {
+      sliderChild[1].classList.add('slider__active-slide');
+    } else {
+      // only displays first slide and hides rest
+      sliderChild[1].classList.add('slider__slide'); // slider.style.display = 'grid';
 
-        let sliderControlsWrap = createElement('div', null, null, 'slider__controls__wrap');
-        let sliderControls = createElement('div', null, null, 'slider__controls');
-        let sliderProgress = createElement('div', null, null, 'slider__controls__progress');
-        let sliderButtons = createElement('div', null, null, 'slider__controls__buttons'); // generates progress
+      /* generates controls */
 
-        sliderProgress.appendChild(createElement('span', '1', null, 'slide__controls__progress__active'));
-        sliderProgress.appendChild(createElement('span', '/', null, 'slide__controls__progress__separator'));
-        sliderProgress.appendChild(createElement('span', sliderCollectionLength, null, 'slide__controls__progress__total'));
-        sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
-        slider.appendChild(sliderControlsWrap); // generates buttons
+      let sliderControlsWrap = createElement('div', null, null, 'slider__controls__wrap');
+      let sliderControls = createElement('div', null, null, 'slider__controls');
+      let sliderProgress = createElement('div', null, null, 'slider__controls__progress');
+      let sliderButtons = createElement('div', null, null, 'slider__controls__buttons'); // generates progress
 
-        sliderButtons.appendChild(createElement('button', null, 'Previous item', 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev'));
-        sliderButtons.appendChild(createElement('button', null, 'Next item', 'fas', 'fa-arrow-right', 'slider__controls__buttons__next'));
-        sliderControls.appendChild(sliderButtons);
-        slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
+      sliderProgress.appendChild(createElement('span', '1', null, 'slide__controls__progress__active'));
+      sliderProgress.appendChild(createElement('span', '/', null, 'slide__controls__progress__separator'));
+      sliderProgress.appendChild(createElement('span', sliderChildrenLength, null, 'slide__controls__progress__total'));
+      sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
+      slider.appendChild(sliderControlsWrap); // generates buttons
 
-        slider.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
-          handleSlideChange(-1, slider);
-        });
-        slider.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
-          handleSlideChange(1, slider);
-        });
-      }
-    });
+      sliderButtons.appendChild(createElement('button', null, 'Previous item', 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev'));
+      sliderButtons.appendChild(createElement('button', null, 'Next item', 'fas', 'fa-arrow-right', 'slider__controls__buttons__next'));
+      sliderControls.appendChild(sliderButtons);
+      slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
+
+      slider.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
+        handleSlideChange(-1, slider);
+      });
+      slider.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
+        handleSlideChange(1, slider);
+      });
+    }
   }
 }
 
@@ -5717,14 +5722,13 @@ function createElement(type, content, arialabel, className1, className2, classNa
 
 function handleSlideChange(direction, slider) {
   let activeSlide = parseInt(slider.querySelectorAll('.slide__controls__progress__active')[0].innerText);
-  let sliderCollectionLength = slider.querySelectorAll('li').length;
-  let newSlide = activeSlide + direction;
-  let sliderCollection = slider.querySelectorAll('li'); // ensures you don't slide past first and last slide
+  let newSlide = activeSlide + direction; // let sliderCollection = slider.querySelectorAll('li');
+  // ensures you don't slide past first and last slide
 
-  if (newSlide !== 0 && !(newSlide > sliderCollectionLength)) {
+  if (newSlide !== 0 && !(newSlide > sliderChildrenLength)) {
     // udpates progress
     slider.querySelectorAll('.slide__controls__progress__active')[0].innerHTML = newSlide;
-    sliderCollection.forEach(function (item, i) {
+    sliderChildren.forEach(function (item, i) {
       //displays new slide
       if (i == newSlide - 1) {
         item.classList.remove('slider__slide');
@@ -5743,7 +5747,7 @@ function handleSlideChange(direction, slider) {
       slider.querySelectorAll('.slider__controls__buttons__prev')[0].removeAttribute('disabled');
     }
 
-    if (newSlide == sliderCollectionLength) {
+    if (newSlide == sliderChildrenLength) {
       slider.querySelectorAll('.slider__controls__buttons__next')[0].classList.add('slider__controls__buttons__disabled');
       slider.querySelectorAll('.slider__controls__buttons__next')[0].setAttribute('disabled', true);
     } else {
