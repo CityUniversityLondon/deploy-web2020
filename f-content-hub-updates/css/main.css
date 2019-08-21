@@ -19588,6 +19588,74 @@ main table td em {
     list-style-type: none;
 }
 
+.card-category {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: #696969;
+    display: inline-block;
+    margin: 0.75rem;
+}
+
+.card-category i,
+.card-category em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.card-category b,
+.card-category strong {
+    font-weight: inherit;
+}
+
+.card-category i,
+.card-category em {
+    font-style: italic;
+}
+
+.card-category u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card-category {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card-category {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card-category {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card-category {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card-category {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card-category b,
+.card-category strong {
+    font-weight: 600;
+}
+
 .card--casestudy a {
     display: inline-block;
     background-color: initial;
