@@ -27353,10 +27353,6 @@ article figure figcaption a:active {
     background-image: linear-gradient(#f2f2f2, #e5e5e5);
 }
 
-.listing .banner {
-    background-image: linear-gradient(165deg, #5d184a 20%, #d61726 85%);
-}
-
 .listing .banner__content {
     margin-right: auto;
     margin-left: auto;
@@ -27366,7 +27362,6 @@ article figure figcaption a:active {
 
 .listing .banner__content .banner__content__header {
     text-align: left;
-    color: #ffffff;
 }
 
 .listing .banner__content .banner__content__header h1 {
@@ -28726,6 +28721,10 @@ article figure figcaption a:active {
     .finder__filters {
         display: block;
     }
+}
+
+.finder__filters fieldset:last-child .finder__select {
+    margin-bottom: 1rem;
 }
 
 .finder__filters .finder__filters__heading .fa-sliders-h {
@@ -30100,8 +30099,8 @@ article figure figcaption a:active {
     font-size: 0.79rem;
     line-height: 1.625;
     letter-spacing: 0.005em;
-    color: #d61726;
-    font-weight: 400;
+    color: #494949;
+    font-weight: 450;
     display: block;
     padding: 0.25rem 0.25rem 0 0.75rem;
 }
@@ -36791,10 +36790,6 @@ article .link-copy {
     background-image: linear-gradient(#f2f2f2, #e5e5e5);
 }
 
-.listing .banner {
-    background-image: linear-gradient(165deg, #5d184a 20%, #d61726 85%);
-}
-
 .listing .banner__content {
     margin-right: auto;
     margin-left: auto;
@@ -36804,7 +36799,6 @@ article .link-copy {
 
 .listing .banner__content .banner__content__header {
     text-align: left;
-    color: #ffffff;
 }
 
 .listing .banner__content .banner__content__header h1 {
@@ -38164,6 +38158,10 @@ article .link-copy {
     .finder__filters {
         display: block;
     }
+}
+
+.finder__filters fieldset:last-child .finder__select {
+    margin-bottom: 1rem;
 }
 
 .finder__filters .finder__filters__heading .fa-sliders-h {
@@ -39538,8 +39536,8 @@ article .link-copy {
     font-size: 0.79rem;
     line-height: 1.625;
     letter-spacing: 0.005em;
-    color: #d61726;
-    font-weight: 400;
+    color: #494949;
+    font-weight: 450;
     display: block;
     padding: 0.25rem 0.25rem 0 0.75rem;
 }
