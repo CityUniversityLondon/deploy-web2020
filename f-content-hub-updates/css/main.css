@@ -41578,10 +41578,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     transform: none;
 }
 
-.content-hub--news-events .news-events .related-content {
-    grid-area: ne-wrap;
-}
-
 @media (max-width: 768px) {
     .content-hub--news-events .news-events .related-content {
         -moz-columns: 1;
@@ -41650,24 +41646,24 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-@media (max-width: 432px) {
+@media (max-width: 768px) {
     .content-hub__block-three .news-events {
         grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: 'separator separator separator separator separator separator ' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap' 'social social social social social social';
+        grid-template-areas: 'separator separator separator separator separator separator ' 'a a a a a a' 'happening happening happening happening happening happening';
     }
 }
 
-@media (min-width: 433px) {
+@media (min-width: 769px) {
     .content-hub__block-three .news-events {
         grid-template-columns: repeat(12, 1fr);
-        grid-template-areas: 'separator separator separator separator separator separator separator separator separator separator separator separator' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap' 'social social social social social social social social social social social social';
+        grid-template-areas: 'separator separator separator separator separator separator separator separator separator separator separator separator' 'a a a a a a a a a a a a' 'happening happening happening happening happening happening happening happening happening happening happening happening';
     }
 }
 
 @media (min-width: 901px) {
     .content-hub__block-three .news-events {
         grid-template-columns: repeat(18, 1fr);
-        grid-template-areas: '. . . separator separator separator separator separator separator separator separator separator separator separator separator . . .' 'news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title news-events-title' 'ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap ne-wrap' 'social social social social social social social social social social social social social social social social social social';
+        grid-template-areas: '. . . separator separator separator separator separator separator separator separator separator separator separator separator . . .' 'a a a a a a a a a a a a a a a a a a' 'happening happening happening happening happening happening happening happening happening happening happening happening happening happening happening happening happening happening';
     }
 }
 
@@ -41725,37 +41721,37 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     height: fit-content;
 }
 
-@media (max-width: 431px) {
+@media (max-width: 767px) {
     .content-hub__block-three .news-events .related-content li:nth-of-type(1) {
         grid-column: 1/-1;
     }
 }
 
-@media (min-width: 433px) {
+@media (min-width: 769px) {
     .content-hub__block-three .news-events .related-content li:nth-of-type(1) {
         grid-column: 1/7;
     }
 }
 
-@media (max-width: 431px) {
+@media (max-width: 767px) {
     .content-hub__block-three .news-events .related-content li:nth-of-type(2) {
         grid-column: 1/-1;
     }
 }
 
-@media (min-width: 433px) {
+@media (min-width: 769px) {
     .content-hub__block-three .news-events .related-content li:nth-of-type(2) {
         grid-column: 7/13;
     }
 }
 
-@media (max-width: 431px) {
+@media (max-width: 767px) {
     .content-hub__block-three .news-events .related-content li:nth-of-type(3) {
         grid-column: 1/-1;
     }
 }
 
-@media (min-width: 433px) {
+@media (min-width: 769px) {
     .content-hub__block-three .news-events .related-content li:nth-of-type(3) {
         grid-column: 4/10;
     }
@@ -41773,16 +41769,20 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .content-hub__block-three .news-events h2:nth-of-type(1) {
-    grid-area: news-events-title;
+    grid-area: research-title;
     text-align: center;
     margin-bottom: 1rem;
 }
 
-.content-hub__block-three .news-events .social-media {
-    grid-area: social;
+.content-hub__block-three .news-events .happening {
+    grid-area: happening;
 }
 
-.content-hub__block-three .news-events .social-media h2:nth-of-type(1) {
+.content-hub__block-three__research {
+    grid-area: a;
+}
+
+.content-hub__block-three .news-events .happening h2:nth-of-type(1) {
     text-align: center;
     margin-top: 4rem;
 }
