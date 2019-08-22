@@ -1896,16 +1896,25 @@ function finder__results__course(props) {
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "far fa-building icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.E));
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.E)); //Clearing
+
+  const clearing = props.details.metaData.K && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "clearing_label"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Available in clearing", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "fas fa-arrow-circle-right",
+    "aria-hidden": "true"
+  })));
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "finder__results__card finder__results__course"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.clickTrackingUrl
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "finder__results__card__details__Top"
+  }, clearing, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "finder__results__card__heading underline-transition__title"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.title, props.query.query) : props.details.title)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.title, props.query.query) : props.details.title))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__description"
   }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.L.replace(/_/g, ' '), props.query.query) : props.details.metaData.L.replace(/_/g, ' ')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.c, props.query.query) : props.details.metaData.c), school, award, duration, courseCode, method, location)));
 }
@@ -2099,6 +2108,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _finder_selectbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__selectbox */ "./src/patterns/finder/components/filters/finder__selectbox.js");
 /* harmony import */ var _query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../query/finder__appliedfilters */ "./src/patterns/finder/components/query/finder__appliedfilters.js");
 /* harmony import */ var _finder_clear_filter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__clear__filter */ "./src/patterns/finder/components/filters/finder__clear__filter.js");
+/* harmony import */ var _finder_toggle__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__toggle */ "./src/patterns/finder/components/filters/finder__toggle.js");
 
 
 /**
@@ -2106,6 +2116,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2019
  */
+
 
 
 
@@ -2185,6 +2196,15 @@ function finder__filters(props) {
 
         case 'selectbox':
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_selectbox__WEBPACK_IMPORTED_MODULE_4__["default"], {
+            key: facet.meta,
+            facet: facet,
+            query: props.query,
+            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
+            update: props.update
+          });
+
+        case 'toggle':
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_toggle__WEBPACK_IMPORTED_MODULE_7__["default"], {
             key: facet.meta,
             facet: facet,
             query: props.query,
@@ -2517,7 +2537,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**<
- * @module patterns/finder/components/finder__radio
+ * @module patterns/finder/components/finder__selectbox
  * @author Web Development
  * @copyright City, University of London 2019
  */
@@ -2584,6 +2604,76 @@ finder__selectbox.propTypes = {
   update: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__selectbox);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/components/filters/finder__toggle.js":
+/*!******************************************************************!*\
+  !*** ./src/patterns/finder/components/filters/finder__toggle.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+/**
+ * @module patterns/finder/components/finder__toggle
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+
+function finder__toggle(props) {
+  const setFacet = e => {
+    const newQuery = props.query,
+          newValue = e.target.value,
+          checked = e.target.checked;
+    checked ? newQuery.facets[props.facet.meta] = newValue : delete newQuery.facets[props.facet.meta];
+    newQuery.startRank = 1;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("fieldset", {
+    className: "finder__filter finder__togglebox"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "finder__toggle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
+    htmlFor: props.facet.name,
+    "aria-label": props.facet.values[0].label
+  }, props.facet.values[0].label, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
+    type: "checkbox",
+    id: props.facet.name,
+    name: props.facet.name,
+    value: props.facet.values[0].data,
+    onChange: e => setFacet(e),
+    checked: props.query.facets[props.facet.meta] ? true : false
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "toggle round"
+  }))));
+}
+
+finder__toggle.propTypes = {
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (finder__toggle);
 
 /***/ }),
 
