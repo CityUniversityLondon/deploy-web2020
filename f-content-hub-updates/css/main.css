@@ -21796,6 +21796,7 @@ main table td em {
     padding: 0 1rem 1rem 1rem;
     margin-bottom: 1.5rem;
     background: #ffffff;
+    border: 0.0625rem solid #e5e5e5;
 }
 
 @media (hover: hover) {
@@ -22054,6 +22055,10 @@ main table td em {
 
 .card--pathway p {
     margin-top: 1rem;
+}
+
+.card--pathway:hover {
+    border: 0.0625rem solid transparent;
 }
 
 .card--pathway--blue {
@@ -26586,6 +26591,7 @@ article figure figcaption a:active {
     padding: 0 1rem 1rem 1rem;
     margin-bottom: 1.5rem;
     background: #ffffff;
+    border: 0.0625rem solid #e5e5e5;
 }
 
 @media (hover: hover) {
@@ -26844,6 +26850,10 @@ article figure figcaption a:active {
 
 .card--pathway p {
     margin-top: 1rem;
+}
+
+.card--pathway:hover {
+    border: 0.0625rem solid transparent;
 }
 
 .card--pathway--blue {
@@ -36001,6 +36011,7 @@ article .link-copy {
     padding: 0 1rem 1rem 1rem;
     margin-bottom: 1.5rem;
     background: #ffffff;
+    border: 0.0625rem solid #e5e5e5;
 }
 
 @media (hover: hover) {
@@ -36259,6 +36270,10 @@ article .link-copy {
 
 .card--pathway p {
     margin-top: 1rem;
+}
+
+.card--pathway:hover {
+    border: 0.0625rem solid transparent;
 }
 
 .card--pathway--blue {
