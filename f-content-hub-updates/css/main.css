@@ -40965,6 +40965,20 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .content-hub__block-one .explore .degree-options .degree-options__button {
     border-bottom: 0;
+    transition: none;
+    color: #1e1e1e;
+    background: #ffffff;
+    border: 0.0625rem solid #696969;
+    padding: 1rem;
+    margin: 2rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.content-hub__block-one .explore .degree-options .degree-options__button:hover {
+    background: #cbcbcb;
 }
 
 @media (min-width: 901px) {
@@ -40989,6 +41003,10 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     .content-hub__block-one .explore .degree-options .degree-options__button#short-courses-cpd {
         grid-column: 14/18;
     }
+}
+
+.content-hub__block-one .explore .degree-options .degree-options__button p {
+    margin: 0;
 }
 
 .content-hub__block-two {
