@@ -40305,11 +40305,16 @@ a.modal__close:active, a.modal__close:focus {
     color: #d61726;
 }
 
+.case-study__overview__multimedia-banner__block-colour {
+    height: 1rem;
+    margin-top: 1rem;
+    background: #e5e5e5;
+    grid-column: 1 / -1;
+}
+
 @media (min-width: 768px) {
     .case-study__overview__multimedia-banner__block-colour {
         height: 10rem;
-        background: #e5e5e5;
-        grid-column: 1 / -1;
     }
 }
 
@@ -40882,13 +40887,14 @@ a.modal__close:active, a.modal__close:focus {
     font-weight: 600;
 }
 
-.case-study__contact-details__card .related-content {
-    display: flex;
-}
-
-.case-study__contact-details__card .related-content .card {
-    width: 50%;
-    margin-right: 1.5rem;
+@media (min-width: 768px) {
+    .case-study__contact-details__card .related-content {
+        display: flex;
+    }
+    .case-study__contact-details__card .related-content .card {
+        width: 50%;
+        margin-right: 1.5rem;
+    }
 }
 
 .content-hub__block-one {
