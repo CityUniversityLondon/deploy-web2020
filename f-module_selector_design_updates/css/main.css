@@ -34397,6 +34397,7 @@ article .link-copy {
     margin-bottom: 2rem;
     background-color: #fdf0ed;
     overflow: hidden;
+    text-align: center;
 }
 
 @media (min-width: 1441px) {
@@ -34417,6 +34418,7 @@ article .link-copy {
     .module-selector {
         grid-row-gap: 0;
         display: grid;
+        text-align: left;
         padding: 2rem;
     }
 }
@@ -34516,6 +34518,7 @@ article .link-copy {
 }
 
 .module-selector__content {
+    grid-column: 7 / 13;
     font-family: "Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625;
@@ -34523,7 +34526,6 @@ article .link-copy {
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
-    grid-column: 7 / 13;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -34568,6 +34570,7 @@ article .link-copy {
 
 .module-selector__content p {
     margin-top: 0;
+    max-width: none;
 }
 
 .module-selector__button {
@@ -34586,7 +34589,7 @@ article .link-copy {
     margin-bottom: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 901px) {
     .module-selector__content,
     .module-selector__heading {
         margin-bottom: 0;
