@@ -40888,26 +40888,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     padding-bottom: 0;
 }
 
-@media (max-width: 432px) {
-    .content-hub__block-one .embedded-video {
-        max-width: 80rem;
-    }
-}
-
-@media (max-width: 432px) and (min-width: 1441px) {
-    .content-hub__block-one .embedded-video {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 432px) and (max-width: 1440px) {
-    .content-hub__block-one .embedded-video {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
 .content-hub__block-one .embedded-video .youtube-video {
     padding-left: 0;
 }
@@ -40915,6 +40895,12 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .content-hub__block-one .explore {
     grid-column: 1/-1;
     margin-top: 3rem;
+}
+
+@media (max-width: 899px) {
+    .content-hub__block-one .explore {
+        margin-top: 0;
+    }
 }
 
 .content-hub__block-one .explore h2:nth-of-type(1) {
@@ -40925,7 +40911,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     display: grid;
     grid-row-gap: 0;
     display: grid;
-    max-width: 80rem;
 }
 
 @media (max-width: 432px) {
@@ -40949,20 +40934,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-@media (min-width: 1441px) {
-    .content-hub__block-one .explore .degree-options {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .content-hub__block-one .explore .degree-options {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
 .content-hub__block-one .explore .degree-options .degree-options__button {
     border-bottom: 0;
     transition: none;
@@ -40981,9 +40952,27 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     background: #cbcbcb;
 }
 
+@media (max-width: 431px) {
+    .content-hub__block-one .explore .degree-options .degree-options__button {
+        grid-column: 1/-1;
+    }
+}
+
+@media (min-width: 433px) {
+    .content-hub__block-one .explore .degree-options .degree-options__button#undergraduate {
+        grid-column: 1/7;
+    }
+}
+
 @media (min-width: 901px) {
     .content-hub__block-one .explore .degree-options .degree-options__button#undergraduate {
         grid-column: 2/6;
+    }
+}
+
+@media (min-width: 433px) {
+    .content-hub__block-one .explore .degree-options .degree-options__button#graduate-taught {
+        grid-column: 7/-1;
     }
 }
 
@@ -40993,9 +40982,21 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
+@media (min-width: 433px) {
+    .content-hub__block-one .explore .degree-options .degree-options__button#research {
+        grid-column: 1/7;
+    }
+}
+
 @media (min-width: 901px) {
     .content-hub__block-one .explore .degree-options .degree-options__button#research {
         grid-column: 10/14;
+    }
+}
+
+@media (min-width: 433px) {
+    .content-hub__block-one .explore .degree-options .degree-options__button#short-courses-cpd {
+        grid-column: 7/-1;
     }
 }
 
