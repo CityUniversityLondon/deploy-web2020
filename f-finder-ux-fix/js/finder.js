@@ -646,10 +646,7 @@ function finder__results__course(props) {
 
   const clearing = props.details.metaData.K && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "clearing_label"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Available in clearing", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-arrow-circle-right",
-    "aria-hidden": "true"
-  })));
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Available in clearing"));
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "finder__results__card finder__results__course"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {

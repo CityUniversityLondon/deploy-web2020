@@ -28438,8 +28438,7 @@ article figure figcaption a:active {
 @media (min-width: 769px) {
     .finder__results__course .clearing_label {
         order: 1;
-        min-width: 27%;
-        margin-bottom: 0;
+        min-width: 24%;
     }
 }
 
@@ -28477,7 +28476,7 @@ article figure figcaption a:active {
 }
 
 .finder__toggle input:checked + .toggle:before {
-    transform: translateX(0.75rem);
+    transform: translateX(0.625rem);
 }
 
 .finder__toggle input:focus + .toggle {
@@ -28493,7 +28492,7 @@ article figure figcaption a:active {
     position: relative;
     display: inline-block;
     width: 2rem;
-    height: 1.25rem;
+    height: 1.375rem;
     transition: background-color 0.3s;
     border: 0.0625rem solid #696969;
 }
@@ -37967,8 +37966,7 @@ article .link-copy {
 @media (min-width: 769px) {
     .finder__results__course .clearing_label {
         order: 1;
-        min-width: 27%;
-        margin-bottom: 0;
+        min-width: 24%;
     }
 }
 
@@ -38006,7 +38004,7 @@ article .link-copy {
 }
 
 .finder__toggle input:checked + .toggle:before {
-    transform: translateX(0.75rem);
+    transform: translateX(0.625rem);
 }
 
 .finder__toggle input:focus + .toggle {
@@ -38022,7 +38020,7 @@ article .link-copy {
     position: relative;
     display: inline-block;
     width: 2rem;
-    height: 1.25rem;
+    height: 1.375rem;
     transition: background-color 0.3s;
     border: 0.0625rem solid #696969;
 }
