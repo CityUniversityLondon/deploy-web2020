@@ -1607,7 +1607,7 @@ function highlightQueryTerm(suggestion, partialQuery) {
     className: "sr-only"
   }, suggestion), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
     "aria-hidden": "true"
-  }, suggestion.slice(0, suggestion.indexOf(partialQuery)), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
     className: "finder__suggestion"
   }, suggestion.slice(suggestion.indexOf(partialQuery), partialQuery.length)), suggestion.slice(suggestion.indexOf(partialQuery) + partialQuery.length))));
 }

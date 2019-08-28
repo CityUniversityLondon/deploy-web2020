@@ -28779,6 +28779,10 @@ article figure figcaption a:active {
     color: #ffffff;
 }
 
+.finder__query__suggestions li button .finder__suggestion {
+    font-weight: bold;
+}
+
 .finder__query__suggestions.hide {
     display: none;
 }
@@ -38307,6 +38311,10 @@ article .link-copy {
     background-color: #006bbd;
     text-decoration: underline;
     color: #ffffff;
+}
+
+.finder__query__suggestions li button .finder__suggestion {
+    font-weight: bold;
 }
 
 .finder__query__suggestions.hide {
