@@ -40841,6 +40841,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     margin-top: -430px;
     margin-bottom: -830px;
     left: -300px;
+    width: 140%;
 }
 
 @supports (overflow: -webkit-marquee) and (justify-content: inherit) {
@@ -41923,6 +41924,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-area: ne-wrap;
     grid-row-gap: 0;
     display: grid;
+    align-items: flex-start;
 }
 
 @media (max-width: 432px) {
