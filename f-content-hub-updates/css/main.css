@@ -40835,12 +40835,18 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .content-hub__block-two .grey-rectangle--careers-section {
     transform: rotate(60deg);
     background: transparent;
-    top: 500px;
+    top: -200px;
     position: relative;
     z-index: -1;
     margin-top: -430px;
     margin-bottom: -830px;
-    left: -600px;
+    left: -300px;
+}
+
+@supports (overflow: -webkit-marquee) and (justify-content: inherit) {
+    .content-hub__block-two .grey-rectangle--careers-section {
+        width: 100%;
+    }
 }
 
 .content-hub__block-one .banner {
