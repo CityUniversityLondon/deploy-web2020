@@ -40820,6 +40820,17 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
+.content-hub__block-two svg {
+    transform: rotate(60deg);
+    background: transparent;
+    top: 300px;
+    position: relative;
+    z-index: -1;
+    margin-top: -428px;
+    margin-bottom: -428px;
+    left: -150px;
+}
+
 .content-hub__block-one .banner {
     grid-column: 1/-1;
 }
@@ -40837,6 +40848,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     grid-template-rows: auto;
     background-color: #e5e5e5;
     margin-top: 0;
+    margin-bottom: -6rem;
 }
 
 @media (max-width: 432px) {
@@ -40892,7 +40904,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     display: grid;
     display: grid;
     max-width: none;
-    margin-top: 1rem;
+    margin: 3rem 1.5rem 0 1.5rem;
 }
 
 @media (max-width: 432px) {
@@ -41182,7 +41194,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 .content-hub__block-two {
-    margin: 1rem 0;
+    margin: 6rem 0 1rem;
 }
 
 .content-hub__block-two .careers {
