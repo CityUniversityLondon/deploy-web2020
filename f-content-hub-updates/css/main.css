@@ -40832,15 +40832,15 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-.content-hub__block-two svg {
+.content-hub__block-two .grey-rectangle--careers-section {
     transform: rotate(60deg);
     background: transparent;
-    top: 300px;
+    top: 500px;
     position: relative;
     z-index: -1;
-    margin-top: -428px;
-    margin-bottom: -428px;
-    left: -150px;
+    margin-top: -430px;
+    margin-bottom: -830px;
+    left: -600px;
 }
 
 .content-hub__block-one .banner {
@@ -40952,23 +40952,23 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-.content-hub__block-one .explore .degree-options li {
+.content-hub__block-one .explore .degree-options li.degree-options__button {
     margin: 0.5rem;
 }
 
 @media (max-width: 767px) {
-    .content-hub__block-one .explore .degree-options li {
+    .content-hub__block-one .explore .degree-options li.degree-options__button {
         grid-column: 1/-1;
     }
 }
 
 @media (max-width: 899px) {
-    .content-hub__block-one .explore .degree-options li {
+    .content-hub__block-one .explore .degree-options li.degree-options__button {
         margin-bottom: 0.5rem;
     }
 }
 
-.content-hub__block-one .explore .degree-options li a {
+.content-hub__block-one .explore .degree-options li.degree-options__button a {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -40992,29 +40992,29 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     box-shadow: none;
 }
 
-.content-hub__block-one .explore .degree-options li a:disabled {
+.content-hub__block-one .explore .degree-options li.degree-options__button a:disabled {
     cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .content-hub__block-one .explore .degree-options li a {
+    .content-hub__block-one .explore .degree-options li.degree-options__button a {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .content-hub__block-one .explore .degree-options li a {
+    .content-hub__block-one .explore .degree-options li.degree-options__button a {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.content-hub__block-one .explore .degree-options li a span {
+.content-hub__block-one .explore .degree-options li.degree-options__button a span {
     transition: transform 0.6s;
 }
 
-.content-hub__block-one .explore .degree-options li a:after {
+.content-hub__block-one .explore .degree-options li.degree-options__button a:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -41028,66 +41028,66 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .content-hub__block-one .explore .degree-options li a:after {
+    .content-hub__block-one .explore .degree-options li.degree-options__button a:after {
         transition: none;
     }
 }
 
-.content-hub__block-one .explore .degree-options li a:focus, .content-hub__block-one .explore .degree-options li a:active {
+.content-hub__block-one .explore .degree-options li.degree-options__button a:focus, .content-hub__block-one .explore .degree-options li.degree-options__button a:active {
     background-color: transparent;
     border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
-.content-hub__block-one .explore .degree-options li a:focus span, .content-hub__block-one .explore .degree-options li a:active span {
+.content-hub__block-one .explore .degree-options li.degree-options__button a:focus span, .content-hub__block-one .explore .degree-options li.degree-options__button a:active span {
     transform: translateX(-0.75rem);
 }
 
-.content-hub__block-one .explore .degree-options li a:focus:after, .content-hub__block-one .explore .degree-options li a:active:after {
+.content-hub__block-one .explore .degree-options li.degree-options__button a:focus:after, .content-hub__block-one .explore .degree-options li.degree-options__button a:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .content-hub__block-one .explore .degree-options li a:hover {
+    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover {
         background-color: transparent;
         border: 0.125rem solid #d61726;
         color: #ffffff;
     }
-    .content-hub__block-one .explore .degree-options li a:hover span {
+    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover span {
         transform: translateX(-0.75rem);
     }
-    .content-hub__block-one .explore .degree-options li a:hover:after {
+    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.content-hub__block-one .explore .degree-options li a:disabled {
+.content-hub__block-one .explore .degree-options li.degree-options__button a:disabled {
     opacity: 0.7;
 }
 
-.content-hub__block-one .explore .degree-options li a:disabled span {
+.content-hub__block-one .explore .degree-options li.degree-options__button a:disabled span {
     transform: none;
 }
 
-.content-hub__block-one .explore .degree-options li a:disabled:after {
+.content-hub__block-one .explore .degree-options li.degree-options__button a:disabled:after {
     opacity: 0;
     transform: none;
 }
 
-.content-hub__block-one .explore .degree-options li a:visited {
+.content-hub__block-one .explore .degree-options li.degree-options__button a:visited {
     border-color: #ffffff;
     color: #d61726;
 }
 
-.content-hub__block-one .explore .degree-options li a:focus {
+.content-hub__block-one .explore .degree-options li.degree-options__button a:focus {
     background: #ffffff;
     border-color: #ffffff;
     color: #d61726;
 }
 
-.content-hub__block-one .explore .degree-options li a:focus:focus, .content-hub__block-one .explore .degree-options li a:focus:active {
+.content-hub__block-one .explore .degree-options li.degree-options__button a:focus:focus, .content-hub__block-one .explore .degree-options li.degree-options__button a:focus:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
@@ -41095,143 +41095,143 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 }
 
 @media (hover: hover) {
-    .content-hub__block-one .explore .degree-options li a:hover {
+    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover {
         background: #d61726;
         border-color: #ffffff;
         color: #ffffff;
     }
 }
 
-.content-hub__block-one .explore .degree-options li a:active {
+.content-hub__block-one .explore .degree-options li.degree-options__button a:active {
     border-color: #ffffff;
     box-shadow: none;
     color: #ffffff;
     background: transparent;
 }
 
-.content-hub__block-one .explore .degree-options li a:active:focus, .content-hub__block-one .explore .degree-options li a:active:active {
+.content-hub__block-one .explore .degree-options li.degree-options__button a:active:focus, .content-hub__block-one .explore .degree-options li.degree-options__button a:active:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.content-hub__block-one .explore .degree-options li a:disabled {
+.content-hub__block-one .explore .degree-options li.degree-options__button a:disabled {
     color: #d61726;
     background: #ffffff;
     border: 0.125rem solid #ffffff;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .content-hub__block-one .explore .degree-options li a {
+    .content-hub__block-one .explore .degree-options li.degree-options__button a {
         letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .content-hub__block-one .explore .degree-options li a {
+    .content-hub__block-one .explore .degree-options li.degree-options__button a {
         letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .content-hub__block-one .explore .degree-options li a {
+    .content-hub__block-one .explore .degree-options li.degree-options__button a {
         letter-spacing: -0.014em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .content-hub__block-one .explore .degree-options li a {
+    .content-hub__block-one .explore .degree-options li.degree-options__button a {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .content-hub__block-one .explore .degree-options li a {
+    .content-hub__block-one .explore .degree-options li.degree-options__button a {
         letter-spacing: -0.017em;
     }
 }
 
 @media (hover: hover) {
-    .content-hub__block-one .explore .degree-options li a:hover span {
+    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover span {
         color: #ffffff;
     }
 }
 
-.content-hub__block-one .explore .degree-options li a:after {
+.content-hub__block-one .explore .degree-options li.degree-options__button a:after {
     position: relative;
     display: flex;
     align-items: center;
     right: 0.5rem;
 }
 
-.content-hub__block-one .explore .degree-options li a span {
+.content-hub__block-one .explore .degree-options li.degree-options__button a span {
     color: #0c0c0e;
     margin: auto 0;
     width: 100%;
 }
 
 @media (min-width: 769px) {
-    .content-hub__block-one .explore .degree-options #undergraduate {
+    .content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(1) {
         grid-column: 1/7;
     }
 }
 
 @media (min-width: 1281px) {
-    .content-hub__block-one .explore .degree-options #undergraduate {
+    .content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(1) {
         grid-column: 1/10;
     }
 }
 
-.content-hub__block-one .explore .degree-options #undergraduate a {
+.content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(1) a {
     border: 0.125rem solid #d61726;
 }
 
 @media (min-width: 769px) {
-    .content-hub__block-one .explore .degree-options #graduate-taught {
+    .content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(2) {
         grid-column: 7/-1;
     }
 }
 
 @media (min-width: 1281px) {
-    .content-hub__block-one .explore .degree-options #graduate-taught {
+    .content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(2) {
         grid-column: 10/-1;
     }
 }
 
-.content-hub__block-one .explore .degree-options #graduate-taught a {
+.content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(2) a {
     border: 0.125rem solid #d61726;
 }
 
 @media (min-width: 769px) {
-    .content-hub__block-one .explore .degree-options #research {
+    .content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(3) {
         grid-column: 1/7;
     }
 }
 
 @media (min-width: 1281px) {
-    .content-hub__block-one .explore .degree-options #research {
+    .content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(3) {
         grid-column: 1/10;
     }
 }
 
-.content-hub__block-one .explore .degree-options #research a {
+.content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(3) a {
     border: 0.125rem solid #d61726;
 }
 
 @media (min-width: 769px) {
-    .content-hub__block-one .explore .degree-options #short-courses-cpd {
+    .content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(4) {
         grid-column: 7/-1;
     }
 }
 
 @media (min-width: 1281px) {
-    .content-hub__block-one .explore .degree-options #short-courses-cpd {
+    .content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(4) {
         grid-column: 10/-1;
     }
 }
 
-.content-hub__block-one .explore .degree-options #short-courses-cpd a {
+.content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(4) a {
     border: 0.125rem solid #d61726;
 }
 
