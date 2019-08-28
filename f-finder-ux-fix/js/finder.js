@@ -1409,7 +1409,7 @@ function finder__toggle(props) {
     onChange: e => setFacet(e),
     checked: props.query.facets[props.facet.meta] ? true : false
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "toggle round"
+    className: "toggle round ".concat(props.query.facets[props.facet.meta] ? 'toggleOpen' : 'toggleClose')
   }))));
 }
 

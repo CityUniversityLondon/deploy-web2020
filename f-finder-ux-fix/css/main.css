@@ -28474,6 +28474,7 @@ article figure figcaption a:active {
 
 .finder__toggle label {
     font-weight: bold;
+    display: flex;
 }
 
 .finder__toggle input {
@@ -28500,6 +28501,7 @@ article figure figcaption a:active {
     display: inline-block;
     width: 2rem;
     height: 1.25rem;
+    transition: background-color 0.3s;
 }
 
 .toggle:before {
@@ -28509,6 +28511,11 @@ article figure figcaption a:active {
     height: 1.25rem;
     width: 1.25rem;
     background-color: #ffffff;
+    transition: transform 0.3s;
+}
+
+.toggleOpen {
+    background-color: #f1c70b;
 }
 
 @media (min-width: 769px) {
@@ -37997,6 +38004,7 @@ article .link-copy {
 
 .finder__toggle label {
     font-weight: bold;
+    display: flex;
 }
 
 .finder__toggle input {
@@ -38023,6 +38031,7 @@ article .link-copy {
     display: inline-block;
     width: 2rem;
     height: 1.25rem;
+    transition: background-color 0.3s;
 }
 
 .toggle:before {
@@ -38032,6 +38041,11 @@ article .link-copy {
     height: 1.25rem;
     width: 1.25rem;
     background-color: #ffffff;
+    transition: transform 0.3s;
+}
+
+.toggleOpen {
+    background-color: #f1c70b;
 }
 
 @media (min-width: 769px) {
