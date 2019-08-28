@@ -1609,7 +1609,7 @@ function highlightQueryTerm(suggestion, partialQuery) {
     "aria-hidden": "true"
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
     className: "finder__suggestion"
-  }, suggestion.slice(suggestion.indexOf(partialQuery), partialQuery.length)), suggestion.slice(suggestion.indexOf(partialQuery) + partialQuery.length))));
+  }, suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()), partialQuery.length)), suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()) + partialQuery.length))));
 }
 /**
  * Search input field and autocomplete.
