@@ -40850,6 +40850,12 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     width: 140%;
 }
 
+@media (max-width: 432px) {
+    .content-hub__block-two .grey-rectangle--careers-section {
+        display: none;
+    }
+}
+
 @supports (overflow: -webkit-marquee) and (justify-content: inherit) {
     .content-hub__block-two .grey-rectangle--careers-section {
         width: 100%;
@@ -40915,6 +40921,12 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media (max-width: 899px) {
     .content-hub__block-one .explore {
+        border: 0.0625rem solid #e5e5e5;
+    }
+}
+
+@media (max-width: 899px) {
+    .content-hub__block-one .explore {
         margin-top: 0;
     }
 }
@@ -40950,6 +40962,12 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     .content-hub__block-one .explore .degree-options {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (max-width: 432px) {
+    .content-hub__block-one .explore .degree-options {
+        margin: 1rem 0 0 0;
     }
 }
 
