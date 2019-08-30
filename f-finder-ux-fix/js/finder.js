@@ -1286,7 +1286,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function finder__selectbox(props) {
-  const randomNumber = Math.random().toString(16).slice(-4);
+  const randomNumber = Math.random().toString(16).slice(-4),
+        currentValue = props.query.facets[props.facet.meta] || '';
 
   const setFacet = e => {
     const newQuery = props.query,
@@ -1331,10 +1332,16 @@ function finder__selectbox(props) {
       value: value.data
     }, value.label);
   }) : props.facet.values.map(value => {
-    return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("option", {
-      key: value.data,
-      value: value.data
-    }, value.label);
+    const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.replace(/^"/, '').replace(/"$/, ''));
+
+    if (responseFacetDetails && responseFacetDetails[0] || currentValue === value.data) {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("option", {
+        key: value.data,
+        value: value.data
+      }, value.label);
+    } else {
+      return null;
+    }
   }))));
 }
 
