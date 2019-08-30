@@ -32514,8 +32514,50 @@ article figure figcaption a:active {
 
 .blockquote__body p {
     font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
     font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-style: normal;
     font-weight: 300;
+    line-height: 1.625;
+    margin-top: 0.5rem;
+    max-width: 55ch;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .blockquote__body p {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .blockquote__body p {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .blockquote__body p {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .blockquote__body p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .blockquote__body p {
+        letter-spacing: -0.017em;
+    }
+}
+
+.blockquote__body p i,
+.blockquote__body p em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
 }
 
 .blockquote__body p em {
@@ -32552,6 +32594,11 @@ blockquote footer {
     margin-bottom: 1.75rem;
     text-align: left;
     font-size: 1rem;
+    color: #696969;
+}
+
+blockquote footer cite {
+    font-style: normal;
 }
 
 .related-content {
