@@ -40466,7 +40466,7 @@ a.modal__close:active, a.modal__close:focus {
 
 @media (min-width: 1281px) {
     .case-study__overview .banner__content {
-        padding: 3rem 0;
+        padding: 3rem 0 2rem 0;
     }
 }
 
