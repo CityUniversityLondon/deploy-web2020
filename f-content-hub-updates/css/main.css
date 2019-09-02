@@ -22670,6 +22670,7 @@ main table td em {
 
 .card--testimonial-feature.slider__active-slide {
     display: grid;
+    grid-column: 1 / -1;
 }
 
 .card--testimonial-feature__heading__wrap {
@@ -35104,6 +35105,7 @@ article .link-copy {
 
 .banner__group__overlay__heading--title-standfirst {
     grid-area: sf-wrap;
+    width: 100%;
     max-width: 80rem;
     grid-row-gap: 0;
     display: grid;
@@ -35312,10 +35314,6 @@ article .link-copy {
 .banner__group__overlay__heading--title-standfirst h1 b,
 .banner__group__overlay__heading--title-standfirst h1 strong {
     font-weight: 600;
-}
-
-.banner__group__overlay__heading--title-standfirst .standfirst {
-    max-width: 100%;
 }
 
 .banner__group__overlay__title-standfirst-wrapper {
@@ -40906,7 +40904,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .content-hub__block-one .explore {
     grid-column: 1/-1;
-    padding: 2rem;
+    padding: 2rem 0;
     background: #ffffff;
     margin-top: 3rem;
 }
@@ -40933,7 +40931,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     display: grid;
     display: grid;
     max-width: none;
-    margin: 3rem 1.5rem 0 1.5rem;
+    margin: 1rem 1.5rem 0 1.5rem;
 }
 
 @media (max-width: 432px) {
@@ -41013,6 +41011,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     height: 100%;
     border-radius: 0;
     box-shadow: none;
+    border: 0.125rem solid #d61726;
 }
 
 .content-hub__block-one .explore .degree-options li.degree-options__button a:disabled {
@@ -41202,12 +41201,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media (min-width: 1281px) {
     .content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(1) {
-        grid-column: 1/10;
+        grid-column: 3/10;
     }
-}
-
-.content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(1) a {
-    border: 0.125rem solid #d61726;
 }
 
 @media (min-width: 769px) {
@@ -41218,12 +41213,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media (min-width: 1281px) {
     .content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(2) {
-        grid-column: 10/-1;
+        grid-column: 10/-3;
     }
-}
-
-.content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(2) a {
-    border: 0.125rem solid #d61726;
 }
 
 @media (min-width: 769px) {
@@ -41234,12 +41225,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media (min-width: 1281px) {
     .content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(3) {
-        grid-column: 1/10;
+        grid-column: 3/10;
     }
-}
-
-.content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(3) a {
-    border: 0.125rem solid #d61726;
 }
 
 @media (min-width: 769px) {
@@ -41250,16 +41237,8 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 @media (min-width: 1281px) {
     .content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(4) {
-        grid-column: 10/-1;
+        grid-column: 10/-3;
     }
-}
-
-.content-hub__block-one .explore .degree-options li.degree-options__button:nth-of-type(4) a {
-    border: 0.125rem solid #d61726;
-}
-
-.content-hub__block-one .explore .degree-options p {
-    margin: 0;
 }
 
 .content-hub__block-two {
@@ -41401,11 +41380,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     .content-hub__block-two .pathway-cards .card--pathway__block {
         grid-template-areas: 'pathway1 pathway1 pathway1 pathway1 pathway1 pathway1 pathway2 pathway2 pathway2 pathway2 pathway2 pathway2 pathway3 pathway3 pathway3 pathway3 pathway3 pathway3' 'pathway4 pathway4 pathway4 pathway4 pathway4 pathway4 pathway5 pathway5 pathway5 pathway5 pathway5 pathway5 pathway6 pathway6 pathway6 pathway6 pathway6 pathway6';
     }
-}
-
-.content-hub__block-one p {
-    margin-right: 0;
-    max-width: 100%;
 }
 
 @media (min-width: 901px) {
