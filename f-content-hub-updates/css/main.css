@@ -41174,12 +41174,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-@media (hover: hover) {
-    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover span {
-        color: #ffffff;
-    }
-}
-
 .content-hub__block-one .explore .degree-options li.degree-options__button a:after {
     position: relative;
     display: flex;
@@ -41191,6 +41185,27 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     color: #0c0c0e;
     margin: auto 0;
     width: 100%;
+}
+
+.content-hub__block-one .explore .degree-options li.degree-options__button a:visited {
+    border: 0.125rem solid #d61726;
+}
+
+.content-hub__block-one .explore .degree-options li.degree-options__button a:focus span {
+    color: #0c0c0e;
+}
+
+.content-hub__block-one .explore .degree-options li.degree-options__button a:focus:after {
+    color: #0c0c0e;
+}
+
+@media (hover: hover) {
+    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover span {
+        color: #ffffff;
+    }
+    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover:after {
+        color: #ffffff;
+    }
 }
 
 @media (min-width: 769px) {
