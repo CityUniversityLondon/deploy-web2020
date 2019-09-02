@@ -4914,7 +4914,6 @@ function handleTriggerOpen(e) {
 }
 
 function handleTriggerClose(e) {
-  console.log(e);
   e.preventDefault();
   let modal = document.querySelector('.modal__popup--show');
   closeModal(modal);
