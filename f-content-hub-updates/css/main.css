@@ -32410,14 +32410,6 @@ blockquote footer {
     max-width: unset;
 }
 
-ul.related-content ul {
-    list-style-type: disc;
-}
-
-ul.related-content ul ul {
-    list-style-type: circle;
-}
-
 .slider {
     grid-row-gap: 0;
     display: grid;
