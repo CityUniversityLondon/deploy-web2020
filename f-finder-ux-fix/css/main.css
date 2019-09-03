@@ -27492,7 +27492,6 @@ article figure figcaption a:active {
     border-width: 0.1875rem;
     border-style: solid;
     padding: 0;
-    z-index: 1;
     flex-grow: 1;
     position: relative;
 }
@@ -28736,6 +28735,7 @@ article figure figcaption a:active {
     position: absolute;
     top: 2.5rem;
     width: 100%;
+    z-index: 1;
 }
 
 .finder__query__suggestions li {
@@ -30086,6 +30086,10 @@ article figure figcaption a:active {
     background-color: #ffffff;
     margin-bottom: 0;
     padding: 0 1rem;
+}
+
+.finder__selectbox select {
+    font-feature-settings: initial;
 }
 
 .finder__select {
@@ -37020,7 +37024,6 @@ article .link-copy {
     border-width: 0.1875rem;
     border-style: solid;
     padding: 0;
-    z-index: 1;
     flex-grow: 1;
     position: relative;
 }
@@ -38264,6 +38267,7 @@ article .link-copy {
     position: absolute;
     top: 2.5rem;
     width: 100%;
+    z-index: 1;
 }
 
 .finder__query__suggestions li {
@@ -39614,6 +39618,10 @@ article .link-copy {
     background-color: #ffffff;
     margin-bottom: 0;
     padding: 0 1rem;
+}
+
+.finder__selectbox select {
+    font-feature-settings: initial;
 }
 
 .finder__select {
