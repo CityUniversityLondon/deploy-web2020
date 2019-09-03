@@ -2307,7 +2307,8 @@ function replaceHistory(currQuery, currStartRank, currFacets, facetLabels) {
       params.delete("meta_".concat(facet.meta, "_orsand"));
     }
   });
-  window.history.replaceState({}, '', window.location.pathname + '?' + params.toString());
+  const hasParams = currQuery || Object.keys(currFacets).length ? '?' : '';
+  window.history.replaceState({}, '', "".concat(window.location.pathname).concat(hasParams).concat(params.toString()));
 }
 /**
  * Launch the universal Finder.
