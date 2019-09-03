@@ -40840,7 +40840,7 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     width: 140%;
 }
 
-@media (max-width: 432px) {
+@media (max-width: 900px) {
     .content-hub__block-two .grey-rectangle--careers-section {
         display: none;
     }
