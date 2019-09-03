@@ -1796,7 +1796,8 @@ function finder__results__course(props) {
     case 'course':
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_course__WEBPACK_IMPORTED_MODULE_2__["default"], {
         details: props.details,
-        query: props.query
+        query: props.query,
+        showClearing: props.showClearing
       });
 
     case 'profile':
@@ -1809,7 +1810,8 @@ function finder__results__course(props) {
 finder__results__course.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+  type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  showClearing: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__course);
 
@@ -1898,7 +1900,7 @@ function finder__results__course(props) {
     "aria-hidden": "true"
   }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.E)); //Clearing
 
-  const clearing = props.details.metaData.K && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  const clearing = props.details.metaData.K && props.showClearing && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "clearing_label"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Available in clearing"));
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
@@ -1916,7 +1918,8 @@ function finder__results__course(props) {
 
 finder__results__course.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
+  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  showClearing: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__course);
 
@@ -3316,7 +3319,8 @@ function finder__results(props) {
       details: card,
       key: card.docNum,
       type: props.type,
-      query: props.query
+      query: props.query,
+      showClearing: props.config.showClearing
     }))), pagination);
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "finder__results"
