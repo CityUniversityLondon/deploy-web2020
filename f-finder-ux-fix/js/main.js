@@ -2516,12 +2516,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
 /* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+
 
 
 
@@ -2552,33 +2555,33 @@ function finder__selectbox(props) {
     props.update.results(!props.update.updateState);
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("fieldset", {
+  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("fieldset", {
     className: "finder__filter finder__selectbox"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "finder__select"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
     className: "finder__select__overline",
     htmlFor: "meta_".concat(props.facet.meta, "_orsand--").concat(randomNumber)
-  }, props.facet.name), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("select", {
+  }, props.facet.name), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("select", {
     name: props.facet.name,
     id: "meta_".concat(props.facet.meta, "_orsand--").concat(randomNumber),
     value: props.query.facets[props.facet.meta] ? props.query.facets[props.facet.meta] : '',
     onChange: e => setFacet(e)
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("option", {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
     value: ""
   }, "All ".concat(props.facet.name)), props.responseFacet[0] && props.responseFacet[0].categories[0] ? props.responseFacet[0].categories[0].values.map(value => {
-    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("option", {
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
       key: value.data,
       value: value.data
-    }, value.label);
+    }, props.facet.meta === 'rSub' ? value.label.replace(props.query.facets.G + '_', '') : value.label);
   }) : null)));
 }
 
 finder__selectbox.propTypes = {
-  facet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object),
-  update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__selectbox);
 
