@@ -3564,7 +3564,7 @@ function replaceHistory(currQuery, currStartRank, currFacets, facetLabels) {
       params.delete("meta_".concat(facet.meta, "_orsand"));
     }
   });
-  const hasParams = currQuery || Object.keys(currFacets).length ? '?' : '';
+  const hasParams = params.toString().length ? '?' : '';
   window.history.replaceState({}, '', "".concat(window.location.pathname).concat(hasParams).concat(params.toString()));
 }
 /**
