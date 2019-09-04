@@ -1900,7 +1900,7 @@ function finder__results__course(props) {
     "aria-hidden": "true"
   }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.E)); //Clearing
 
-  const clearing = props.details.metaData.K && props.showClearing && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  const clearing = props.details.metaData.K === 'yes' && props.showClearing && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "clearing_label"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Available in clearing"));
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
