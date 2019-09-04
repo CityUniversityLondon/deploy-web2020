@@ -5684,19 +5684,19 @@ function initSlider(slider) {
 
       /* generates controls */
 
-      let sliderControlsWrap = createElement('div', null, null, 'slider__controls__wrap');
-      let sliderControls = createElement('div', null, null, 'slider__controls');
-      let sliderProgress = createElement('div', null, null, 'slider__controls__progress');
-      let sliderButtons = createElement('div', null, null, 'slider__controls__buttons'); // generates progress
+      let sliderControlsWrap = createElement('div', null, null, null, 'slider__controls__wrap');
+      let sliderControls = createElement('div', null, null, null, 'slider__controls');
+      let sliderProgress = createElement('div', null, null, null, 'slider__controls__progress');
+      let sliderButtons = createElement('div', null, null, null, 'slider__controls__buttons'); // generates progress
 
-      sliderProgress.appendChild(createElement('span', '1', null, 'slide__controls__progress__active'));
-      sliderProgress.appendChild(createElement('span', '/', null, 'slide__controls__progress__separator'));
-      sliderProgress.appendChild(createElement('span', sliderChildrenLength, null, 'slide__controls__progress__total'));
+      sliderProgress.appendChild(createElement('span', '1', null, null, 'slide__controls__progress__active'));
+      sliderProgress.appendChild(createElement('span', ' /', null, null, 'slide__controls__progress__separator'));
+      sliderProgress.appendChild(createElement('span', sliderChildrenLength, null, null, 'slide__controls__progress__total'));
       sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
       slider.appendChild(sliderControlsWrap); // generates buttons
 
-      sliderButtons.appendChild(createElement('button', null, 'Previous item', 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev'));
-      sliderButtons.appendChild(createElement('button', null, 'Next item', 'fas', 'fa-arrow-right', 'slider__controls__buttons__next'));
+      sliderButtons.appendChild(createElement('button', null, 'Previous item', true, 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev', 'swiper-slider-arrow', 'arrow-left--btn-prev'));
+      sliderButtons.appendChild(createElement('button', null, 'Next item', null, 'fas', 'fa-arrow-right', 'slider__controls__buttons__next', 'swiper-slider-arrow', 'arrow-right--btn-next'));
       sliderControls.appendChild(sliderButtons);
       slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
 
@@ -5710,20 +5710,22 @@ function initSlider(slider) {
   }
 }
 
-function createElement(type, content, arialabel, className1, className2, className3) {
+function createElement(type, content, arialabel, disabled, className1, className2, className3, className4, className5) {
   let el = document.createElement(type);
   content ? el.appendChild(document.createTextNode(content)) : null;
   className1 ? el.classList.add(className1) : null;
   className2 ? el.classList.add(className2) : null;
   className3 ? el.classList.add(className3) : null;
+  className4 ? el.classList.add(className4) : null;
+  className5 ? el.classList.add(className5) : null;
   arialabel ? el.setAttribute('aria-label', arialabel) : null;
+  disabled ? el.setAttribute('disabled', true) : null;
   return el;
 }
 
 function handleSlideChange(direction, slider) {
   let activeSlide = parseInt(slider.querySelectorAll('.slide__controls__progress__active')[0].innerText);
-  let newSlide = activeSlide + direction; // let sliderCollection = slider.querySelectorAll('li');
-  // ensures you don't slide past first and last slide
+  let newSlide = activeSlide + direction; // ensures you don't slide past first and last slide
 
   if (newSlide !== 0 && !(newSlide > sliderChildrenLength)) {
     // udpates progress

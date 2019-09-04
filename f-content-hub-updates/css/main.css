@@ -32465,20 +32465,22 @@ blockquote footer {
 }
 
 .slider__controls__wrap {
-    grid-column: 6 / 14;
+    grid-column: 6 / 16;
     display: flex;
     flex-direction: row-reverse;
+    margin: 0 2rem 2rem 0;
 }
 
 @media (max-width: 1280px) {
     .slider__controls__wrap {
-        grid-column: 3 / 17;
+        grid-column: 3 / 16;
     }
 }
 
 @media (max-width: 900px) {
     .slider__controls__wrap {
-        grid-column: 2 / 12;
+        grid-column: 2 / 13;
+        margin-right: 1rem;
     }
 }
 
@@ -32494,16 +32496,13 @@ blockquote footer {
 
 .slider__controls__progress {
     color: #919191;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: 1rem 2rem 0 0;
+    font-size: 0.79rem;
+    font-weight: 500;
 }
 
 .slide__controls__progress__active {
-    color: #7c2062;
-}
-
-.slide__controls__progress__separator {
-    margin: 0 0.25rem;
+    color: #d61726;
 }
 
 .slider__controls__buttons__next,
@@ -32511,46 +32510,7 @@ blockquote footer {
     border: 0.0625rem solid #1e1e1e;
     padding: 0.75rem 0.5rem;
     background: #ffffff;
-    width: 3rem;
     margin-left: 1rem;
-    font-size: 1.125rem;
-    line-height: 1.25;
-    letter-spacing: -0.008em;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .slider__controls__buttons__next,
-    .slider__controls__buttons__prev {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .slider__controls__buttons__next,
-    .slider__controls__buttons__prev {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .slider__controls__buttons__next,
-    .slider__controls__buttons__prev {
-        letter-spacing: -0.014em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .slider__controls__buttons__next,
-    .slider__controls__buttons__prev {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .slider__controls__buttons__next,
-    .slider__controls__buttons__prev {
-        letter-spacing: -0.017em;
-    }
 }
 
 .slider__controls__buttons__next:focus, .slider__controls__buttons__next:active,
@@ -41572,17 +41532,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 
 .content-hub__block-two .testimonial .slider li {
     grid-column: 1/-1;
-}
-
-.content-hub__block-two .testimonial .slider .slider__controls__wrap {
-    grid-column: 1/-2;
-    margin: 1rem 0;
-}
-
-@media (max-width: 900px) {
-    .content-hub__block-two .testimonial .slider .slider__controls__wrap {
-        grid-column: 1/-1;
-    }
 }
 
 .content-hub__block-two .testimonial .cta-block {
