@@ -41232,7 +41232,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .content-hub__block-two .careers {
     grid-area: careers;
-    padding: 1rem 0 4rem;
+    padding: 1rem 0 2rem;
     max-width: 80rem;
     grid-row-gap: 0;
     display: grid;
@@ -41334,7 +41334,6 @@ a.modal__close:active, a.modal__close:focus {
     --negative-offset-tiny: calc(var(--pathway-offset) / -10);
     --negative-offset-small: calc(var(--pathway-offset) / -2);
     --negative-offset-large: calc(var(--negative-offset-small) * 2);
-    margin-bottom: -7rem;
     grid-area: pathway;
 }
 
@@ -41438,6 +41437,12 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
+@media (min-width: 433px) {
+    .content-hub__block-two .pathway-cards .card {
+        padding-right: 1rem;
+    }
+}
+
 .content-hub__block-two .pathway-cards .card:nth-of-type(1) {
     grid-area: pathway1;
 }
@@ -41484,10 +41489,6 @@ a.modal__close:active, a.modal__close:focus {
     .content-hub__block-two .pathway-cards .card:nth-of-type(6) {
         margin-top: var(--negative-offset-large);
     }
-}
-
-.content-hub__block-two .pathway-cards .card:not(:last-child) {
-    padding-right: 1rem;
 }
 
 .content-hub__block-two .outcomes {
