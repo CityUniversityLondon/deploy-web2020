@@ -1344,12 +1344,15 @@ finder__selectbox.propTypes = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -1364,6 +1367,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function finder__toggle(props) {
+  const randomNumber = Math.random().toString(16).slice(-4);
+
   const setFacet = e => {
     const newQuery = props.query,
           newValue = e.target.value,
@@ -1374,30 +1379,30 @@ function finder__toggle(props) {
     props.update.results(!props.update.updateState);
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("fieldset", {
+  const idString = "".concat(props.facet.name, "-").concat(randomNumber);
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("fieldset", {
     className: "finder__filter finder__togglebox"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "finder__toggle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
-    htmlFor: props.facet.name,
-    "aria-label": props.facet.values[0].label
-  }, props.facet.values[0].label, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    htmlFor: idString
+  }, props.facet.values[0].label, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
     type: "checkbox",
-    id: props.facet.name,
+    id: idString,
     name: props.facet.name,
     value: props.facet.values[0].data,
     onChange: e => setFacet(e),
     checked: props.query.facets[props.facet.meta] ? true : false
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "toggle round ".concat(props.query.facets[props.facet.meta] ? 'toggleOpen' : 'toggleClose')
   }))));
 }
 
 finder__toggle.propTypes = {
-  facet: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object),
-  update: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__toggle);
 
