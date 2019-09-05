@@ -41237,12 +41237,18 @@ a.modal__close:active, a.modal__close:focus {
 
 .content-hub__block-two .careers {
     grid-area: careers;
-    padding: 1rem 0 2rem;
+    padding: 1rem 0 0;
     max-width: 80rem;
     grid-row-gap: 0;
     display: grid;
     grid-column-gap: 1.5rem;
     grid-template-rows: auto;
+}
+
+@media (max-width: 899px) {
+    .content-hub__block-two .careers {
+        padding: 1rem 0 2rem;
+    }
 }
 
 @media (min-width: 1441px) {
