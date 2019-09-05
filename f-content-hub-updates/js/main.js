@@ -5654,6 +5654,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -5667,6 +5668,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
  * @copyright City, University of London 2019!
  */
+
 const className = 'slider';
 let sliderChildren, sliderChildrenLength;
 
@@ -5680,23 +5682,22 @@ function initSlider(slider) {
       sliderChild[1].classList.add('slider__active-slide');
     } else {
       // only displays first slide and hides rest
-      sliderChild[1].classList.add('slider__slide'); // slider.style.display = 'grid';
-
+      sliderChild[1].classList.add('slider__slide');
       /* generates controls */
 
-      let sliderControlsWrap = createElement('div', null, null, null, 'slider__controls__wrap');
-      let sliderControls = createElement('div', null, null, null, 'slider__controls');
-      let sliderProgress = createElement('div', null, null, null, 'slider__controls__progress');
-      let sliderButtons = createElement('div', null, null, null, 'slider__controls__buttons'); // generates progress
+      let sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls__wrap');
+      let sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls');
+      let sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls__progress');
+      let sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls__buttons'); // generates progress
 
-      sliderProgress.appendChild(createElement('span', '1', null, null, 'slide__controls__progress__active'));
-      sliderProgress.appendChild(createElement('span', ' /', null, null, 'slide__controls__progress__separator'));
-      sliderProgress.appendChild(createElement('span', sliderChildrenLength, null, null, 'slide__controls__progress__total'));
+      sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', '1', null, null, 'slide__controls__progress__active'));
+      sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', ' /', null, null, 'slide__controls__progress__separator'));
+      sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', sliderChildrenLength, null, null, 'slide__controls__progress__total'));
       sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
       slider.appendChild(sliderControlsWrap); // generates buttons
 
-      sliderButtons.appendChild(createElement('button', null, 'Previous item', true, 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev', 'swiper-slider-arrow', 'arrow-left--btn-prev'));
-      sliderButtons.appendChild(createElement('button', null, 'Next item', null, 'fas', 'fa-arrow-right', 'slider__controls__buttons__next', 'swiper-slider-arrow', 'arrow-right--btn-next'));
+      sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('button', null, 'Previous item', true, 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev', 'swiper-slider-arrow', 'arrow-left--btn-prev'));
+      sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('button', null, 'Next item', null, 'fas', 'fa-arrow-right', 'slider__controls__buttons__next', 'swiper-slider-arrow', 'arrow-right--btn-next'));
       sliderControls.appendChild(sliderButtons);
       slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
 
@@ -5708,19 +5709,6 @@ function initSlider(slider) {
       });
     }
   }
-}
-
-function createElement(type, content, arialabel, disabled, className1, className2, className3, className4, className5) {
-  let el = document.createElement(type);
-  content ? el.appendChild(document.createTextNode(content)) : null;
-  className1 ? el.classList.add(className1) : null;
-  className2 ? el.classList.add(className2) : null;
-  className3 ? el.classList.add(className3) : null;
-  className4 ? el.classList.add(className4) : null;
-  className5 ? el.classList.add(className5) : null;
-  arialabel ? el.setAttribute('aria-label', arialabel) : null;
-  disabled ? el.setAttribute('disabled', true) : null;
-  return el;
 }
 
 function handleSlideChange(direction, slider) {
@@ -6235,7 +6223,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, createElement */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6254,6 +6242,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMobile", function() { return isMobile; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toArray", function() { return toArray; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detectIE", function() { return detectIE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return createElement; });
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
@@ -6497,6 +6486,18 @@ function detectIE() {
 
 
   return false;
+}
+function createElement(type, content, arialabel, disabled, className1, className2, className3, className4, className5) {
+  let el = document.createElement(type);
+  content ? el.appendChild(document.createTextNode(content)) : null;
+  className1 ? el.classList.add(className1) : null;
+  className2 ? el.classList.add(className2) : null;
+  className3 ? el.classList.add(className3) : null;
+  className4 ? el.classList.add(className4) : null;
+  className5 ? el.classList.add(className5) : null;
+  arialabel ? el.setAttribute('aria-label', arialabel) : null;
+  disabled ? el.setAttribute('disabled', true) : null;
+  return el;
 }
 
 /***/ }),

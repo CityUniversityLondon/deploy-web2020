@@ -40906,7 +40906,7 @@ a.modal__close:active, a.modal__close:focus {
     width: 140%;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1440px) {
     .content-hub__block-two .grey-rectangle--careers-section {
         display: none;
     }
@@ -41803,7 +41803,7 @@ a.modal__close:active, a.modal__close:focus {
     height: fit-content;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .content-hub__block-three
 .content-hub__block-three__research
 .related-content
@@ -41827,7 +41827,7 @@ li:nth-of-type(1) {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .content-hub__block-three
 .content-hub__block-three__research
 .related-content
@@ -41851,7 +41851,7 @@ li:nth-of-type(2) {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .content-hub__block-three
 .content-hub__block-three__research
 .related-content
