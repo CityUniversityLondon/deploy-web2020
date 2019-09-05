@@ -3785,8 +3785,7 @@ function init(elem) {
   nextBtnWrap.appendChild(nextBtn);
   prevBtnWrap.appendChild(prevBtn);
   buttonsWrap.appendChild(prevBtnWrap);
-  buttonsWrap.appendChild(nextBtnWrap);
-  elem.insertBefore(buttonsWrap, elem.childNodes[0]); //perpare the indicators to append to html
+  buttonsWrap.appendChild(nextBtnWrap); //perpare the indicators to append to html
 
   numInd.className = 'swiper-indicator';
   numIndActiveSl.className = 'swiper-indicator__active-slider';
@@ -3798,6 +3797,7 @@ function init(elem) {
   numInd.appendChild(numIndSeparator);
   numInd.appendChild(numbIndSlLength);
   elem.appendChild(numInd);
+  elem.appendChild(buttonsWrap);
   config.sliderLength = _C.children.length;
 
   _C.style.setProperty('--n', config.sliderLength); //add event listeners
