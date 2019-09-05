@@ -19588,14 +19588,6 @@ main table td em {
     list-style-type: none;
 }
 
-.card-category,
-.card--plain__title {
-    color: #696969;
-    font-style: italic;
-    padding: 0.5rem 1rem;
-    display: inline-block;
-}
-
 .card--casestudy a {
     display: inline-block;
     background-color: initial;
@@ -20691,6 +20683,13 @@ main table td em {
     background: transparent;
 }
 
+.card--event .card-category {
+    color: #696969;
+    font-style: italic;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+}
+
 .card--news {
     background: #ffffff;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
@@ -21049,9 +21048,11 @@ main table td em {
     margin: 1.5rem 0;
 }
 
-.card--news__category {
-    padding: 0.5rem 0.75rem;
-    margin: 0;
+.card--news .card-category {
+    color: #696969;
+    font-style: italic;
+    padding: 0.5rem 1rem;
+    display: inline-block;
 }
 
 @media (min-width: 901px) {
@@ -21722,16 +21723,6 @@ main table td em {
 
 .card--pathway--yellow:before {
     background: #ffef2b;
-}
-
-.card--plain {
-    background: #ffffff;
-    padding: 0;
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-}
-
-.card--plain .card--plain__content {
-    padding: 0 1.75rem 1.75rem 1.75rem;
 }
 
 .card--profile {
