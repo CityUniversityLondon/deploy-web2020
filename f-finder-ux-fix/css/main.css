@@ -27644,6 +27644,7 @@ article figure figcaption a:active {
     right: 1rem;
     top: 0;
     width: 2rem;
+    cursor: pointer;
 }
 
 .finder__query__input .finder__clear:focus {
@@ -37176,6 +37177,7 @@ article .link-copy {
     right: 1rem;
     top: 0;
     width: 2rem;
+    cursor: pointer;
 }
 
 .finder__query__input .finder__clear:focus {
