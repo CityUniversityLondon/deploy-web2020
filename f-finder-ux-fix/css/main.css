@@ -29953,7 +29953,7 @@ article figure figcaption a:active {
     background-color: #ffffff;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .finder__results__card a {
         flex-direction: row;
     }
@@ -39485,7 +39485,7 @@ article .link-copy {
     background-color: #ffffff;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .finder__results__card a {
         flex-direction: row;
     }
