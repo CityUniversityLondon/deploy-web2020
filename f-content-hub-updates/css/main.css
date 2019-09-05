@@ -40915,7 +40915,7 @@ a.modal__close:active, a.modal__close:focus {
     width: 140%;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1280px) {
     .content-hub__block-two .grey-rectangle--careers-section {
         display: none;
     }
@@ -40981,7 +40981,7 @@ a.modal__close:active, a.modal__close:focus {
     grid-column: 1/-1;
     background: #ffffff;
     margin-top: 3rem;
-    padding: 2rem 7rem 2rem;
+    padding: 2rem 9rem 9rem;
 }
 
 @media (max-width: 899px) {
