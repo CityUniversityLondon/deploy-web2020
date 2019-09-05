@@ -41692,6 +41692,93 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
 .content-hub__block-three .news-events .related-content .card {
     -moz-column-break-inside: avoid;
          break-inside: avoid;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+@media (max-width: 767px) {
+    .content-hub__block-three
+.content-hub__block-three__research
+.related-content
+li:nth-of-type(1),
+    .content-hub__block-three
+.content-hub__block-three__happening
+li:nth-of-type(1) {
+        grid-column: 1/-1;
+    }
+}
+
+@media (min-width: 769px) {
+    .content-hub__block-three
+.content-hub__block-three__research
+.related-content
+li:nth-of-type(1),
+    .content-hub__block-three
+.content-hub__block-three__happening
+li:nth-of-type(1) {
+        grid-column: 1/7;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-hub__block-three
+.content-hub__block-three__research
+.related-content
+li:nth-of-type(2),
+    .content-hub__block-three
+.content-hub__block-three__happening
+li:nth-of-type(2) {
+        grid-column: 1/-1;
+    }
+}
+
+@media (min-width: 769px) {
+    .content-hub__block-three
+.content-hub__block-three__research
+.related-content
+li:nth-of-type(2),
+    .content-hub__block-three
+.content-hub__block-three__happening
+li:nth-of-type(2) {
+        grid-column: 7/13;
+    }
+}
+
+@media (max-width: 767px) {
+    .content-hub__block-three
+.content-hub__block-three__research
+.related-content
+li:nth-of-type(3),
+    .content-hub__block-three
+.content-hub__block-three__happening
+li:nth-of-type(3) {
+        grid-column: 1/-1;
+    }
+}
+
+@media (min-width: 769px) {
+    .content-hub__block-three
+.content-hub__block-three__research
+.related-content
+li:nth-of-type(3),
+    .content-hub__block-three
+.content-hub__block-three__happening
+li:nth-of-type(3) {
+        grid-column: 4/10;
+    }
+}
+
+@media (min-width: 901px) {
+    .content-hub__block-three
+.content-hub__block-three__research
+.related-content
+li:nth-of-type(3),
+    .content-hub__block-three
+.content-hub__block-three__happening
+li:nth-of-type(3) {
+        grid-column: 13/-1;
+    }
 }
 
 .content-hub__block-three .news-events .related-content .card img {
@@ -41806,54 +41893,6 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     }
 }
 
-.content-hub__block-three .news-events .related-content li {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-}
-
-@media (max-width: 767px) {
-    .content-hub__block-three .news-events .related-content li:nth-of-type(1) {
-        grid-column: 1/-1;
-    }
-}
-
-@media (min-width: 769px) {
-    .content-hub__block-three .news-events .related-content li:nth-of-type(1) {
-        grid-column: 1/7;
-    }
-}
-
-@media (max-width: 767px) {
-    .content-hub__block-three .news-events .related-content li:nth-of-type(2) {
-        grid-column: 1/-1;
-    }
-}
-
-@media (min-width: 769px) {
-    .content-hub__block-three .news-events .related-content li:nth-of-type(2) {
-        grid-column: 7/13;
-    }
-}
-
-@media (max-width: 767px) {
-    .content-hub__block-three .news-events .related-content li:nth-of-type(3) {
-        grid-column: 1/-1;
-    }
-}
-
-@media (min-width: 769px) {
-    .content-hub__block-three .news-events .related-content li:nth-of-type(3) {
-        grid-column: 4/10;
-    }
-}
-
-@media (min-width: 901px) {
-    .content-hub__block-three .news-events .related-content li:nth-of-type(3) {
-        grid-column: 13/-1;
-    }
-}
-
 .content-hub__block-three .news-events .content-separator {
     grid-area: separator;
     margin: 0 0 1rem 0;
@@ -41865,12 +41904,24 @@ If >2 logos, each row to contain three logos, before wrapping to the next row.
     margin-bottom: 1rem;
 }
 
-.content-hub__block-three .news-events .happening {
+.content-hub__block-three .news-events .content-hub__block-three__happening {
     grid-area: happening;
 }
 
-.content-hub__block-three__research {
+.content-hub__block-three .news-events .content-hub__block-three__research {
     grid-area: research;
+}
+
+@media (max-width: 767px) {
+    .content-hub__block-three .news-events .content-hub__block-three__research .related-content li:nth-of-type(1) {
+        grid-column: 1/-1;
+    }
+}
+
+@media (min-width: 769px) {
+    .content-hub__block-three .news-events .content-hub__block-three__research .related-content li:nth-of-type(1) {
+        grid-column: 1/7;
+    }
 }
 
 .content-hub__block-three .news-events .happening h2:nth-of-type(1) {
