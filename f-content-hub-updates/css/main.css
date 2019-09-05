@@ -40972,10 +40972,10 @@ a.modal__close:active, a.modal__close:focus {
     grid-column: 1/-1;
     background: #ffffff;
     margin-top: 3rem;
-    padding: 2rem 9rem 9rem;
+    padding: 2rem 9rem 3rem;
 }
 
-@media (max-width: 899px) {
+@media (max-width: 1440px) {
     .content-hub__block-one .explore {
         margin-top: 0;
         padding: 2rem 3rem 2rem;
@@ -41334,12 +41334,19 @@ a.modal__close:active, a.modal__close:focus {
     --negative-offset-tiny: calc(var(--pathway-offset) / -10);
     --negative-offset-small: calc(var(--pathway-offset) / -2);
     --negative-offset-large: calc(var(--negative-offset-small) * 2);
+    margin-bottom: -7rem;
     grid-area: pathway;
 }
 
 @media (min-width: 901px) {
     .content-hub__block-two .pathway-cards {
-        margin: 4rem 0 var(--negative-offset-tiny);
+        margin-top: 7rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .content-hub__block-two .pathway-cards {
+        margin-top: 2rem;
     }
 }
 
