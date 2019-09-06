@@ -30258,6 +30258,27 @@ article figure figcaption a:active {
     z-index: 0;
 }
 
+.edge .finder__query__input input:focus {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.edge .finder__query__input .finder__clear:focus {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.edge .finder__select select:focus {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
 .global-footer {
     grid-row-gap: 0;
     display: grid;
@@ -39784,6 +39805,27 @@ article .link-copy {
 .finder__results__card {
     position: relative;
     z-index: 0;
+}
+
+.edge .finder__query__input input:focus {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.edge .finder__query__input .finder__clear:focus {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.edge .finder__select select:focus {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 /*
