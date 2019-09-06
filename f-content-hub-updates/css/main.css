@@ -42315,9 +42315,30 @@ li:nth-of-type(3) {
     }
 }
 
-.content-hub__block-three .news-events .happening h2:nth-of-type(1) {
+.content-hub__block-three
+.news-events
+.content-hub__block-three__happening
+h2.section-title,
+.content-hub__block-three
+.news-events
+.content-hub__block-three__happening
+h2.related-content__heading {
     text-align: center;
     margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 900px) {
+    .content-hub__block-three
+.news-events
+.content-hub__block-three__happening
+h2.section-title,
+    .content-hub__block-three
+.news-events
+.content-hub__block-three__happening
+h2.related-content__heading {
+        margin-top: 1rem;
+    }
 }
 
 .course {
