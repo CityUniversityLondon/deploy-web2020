@@ -27538,10 +27538,6 @@ article figure figcaption a:active {
     outline-color: #0c0c0e;
 }
 
-.finder__query__input:focus-within .finder__clear {
-    display: block;
-}
-
 .finder__query__input input {
     font-family: "Plex Sans", sans-serif;
     /**
@@ -27638,7 +27634,6 @@ article figure figcaption a:active {
 }
 
 .finder__query__input .finder__clear {
-    display: none;
     height: 100%;
     position: absolute;
     right: 1rem;
@@ -37071,10 +37066,6 @@ article .link-copy {
     outline-color: #0c0c0e;
 }
 
-.finder__query__input:focus-within .finder__clear {
-    display: block;
-}
-
 .finder__query__input input {
     font-family: "Plex Sans", sans-serif;
     /**
@@ -37171,7 +37162,6 @@ article .link-copy {
 }
 
 .finder__query__input .finder__clear {
-    display: none;
     height: 100%;
     position: absolute;
     right: 1rem;
