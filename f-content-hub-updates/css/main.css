@@ -42233,14 +42233,12 @@ li:nth-of-type(3) {
 @media (max-width: 768px) {
     .content-hub__block-three .news-events .content-hub__block-three__research {
         grid-column: 1/-1;
-        margin-bottom: 3rem;
     }
 }
 
 @media (min-width: 769px) {
     .content-hub__block-three .news-events .content-hub__block-three__research {
         grid-column: 4/10;
-        margin-bottom: 2px;
     }
 }
 
