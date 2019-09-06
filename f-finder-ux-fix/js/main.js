@@ -2071,9 +2071,6 @@ function finder__clear(props) {
       value: "Reset",
       onClick: () => {
         props.clear();
-      },
-      onTouchStart: () => {
-        props.clear();
       }
     }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: "far fa-fw fa-times icon",
@@ -2783,6 +2780,9 @@ function finder__clear(props) {
     className: "finder__clear",
     type: "button",
     onClick: () => {
+      props.clear();
+    },
+    onTouchStart: () => {
       props.clear();
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
