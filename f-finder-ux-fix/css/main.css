@@ -27638,7 +27638,7 @@ article figure figcaption a:active {
 }
 
 .finder__query__input .finder__clear {
-    display: block;
+    display: none;
     height: 100%;
     position: absolute;
     right: 1rem;
@@ -37171,7 +37171,7 @@ article .link-copy {
 }
 
 .finder__query__input .finder__clear {
-    display: block;
+    display: none;
     height: 100%;
     position: absolute;
     right: 1rem;
