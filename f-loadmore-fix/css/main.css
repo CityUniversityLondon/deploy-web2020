@@ -39485,6 +39485,7 @@ h3 .linked-heading__icons {
 
 .load-more .load-more-label {
     border-bottom: 0.125rem solid #006bbd;
+    display: inline-block;
 }
 
 .load-more .load-more-btn {
