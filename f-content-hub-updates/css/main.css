@@ -40906,12 +40906,12 @@ a.modal__close:active, a.modal__close:focus {
 .content-hub__block-two .grey-rectangle--careers-section {
     transform: rotate(60deg);
     background: transparent;
-    top: -200px;
+    top: -12.5rem;
     position: relative;
     z-index: -1;
-    margin-top: -430px;
-    margin-bottom: -830px;
-    left: -300px;
+    margin-top: -26.875rem;
+    margin-bottom: -51.875rem;
+    left: -18.75rem;
     width: 140%;
 }
 
@@ -41837,6 +41837,10 @@ a.modal__close:active, a.modal__close:focus {
 .related-content
 li:nth-of-type(1),
     .content-hub__block-three
+.news-events
+.content-hub__block-three__research.case-study-only
+li:nth-of-type(1),
+    .content-hub__block-three
 .content-hub__block-three__happening
 li:nth-of-type(1) {
         grid-column: 1/-1;
@@ -41847,6 +41851,10 @@ li:nth-of-type(1) {
     .content-hub__block-three
 .content-hub__block-three__research
 .related-content
+li:nth-of-type(1),
+    .content-hub__block-three
+.news-events
+.content-hub__block-three__research.case-study-only
 li:nth-of-type(1),
     .content-hub__block-three
 .content-hub__block-three__happening
@@ -41861,6 +41869,10 @@ li:nth-of-type(1) {
 .related-content
 li:nth-of-type(2),
     .content-hub__block-three
+.news-events
+.content-hub__block-three__research.case-study-only
+li:nth-of-type(2),
+    .content-hub__block-three
 .content-hub__block-three__happening
 li:nth-of-type(2) {
         grid-column: 1/-1;
@@ -41871,6 +41883,10 @@ li:nth-of-type(2) {
     .content-hub__block-three
 .content-hub__block-three__research
 .related-content
+li:nth-of-type(2),
+    .content-hub__block-three
+.news-events
+.content-hub__block-three__research.case-study-only
 li:nth-of-type(2),
     .content-hub__block-three
 .content-hub__block-three__happening
@@ -41885,6 +41901,10 @@ li:nth-of-type(2) {
 .related-content
 li:nth-of-type(3),
     .content-hub__block-three
+.news-events
+.content-hub__block-three__research.case-study-only
+li:nth-of-type(3),
+    .content-hub__block-three
 .content-hub__block-three__happening
 li:nth-of-type(3) {
         grid-column: 1/-1;
@@ -41897,6 +41917,10 @@ li:nth-of-type(3) {
 .related-content
 li:nth-of-type(3),
     .content-hub__block-three
+.news-events
+.content-hub__block-three__research.case-study-only
+li:nth-of-type(3),
+    .content-hub__block-three
 .content-hub__block-three__happening
 li:nth-of-type(3) {
         grid-column: 4/10;
@@ -41907,6 +41931,10 @@ li:nth-of-type(3) {
     .content-hub__block-three
 .content-hub__block-three__research
 .related-content
+li:nth-of-type(3),
+    .content-hub__block-three
+.news-events
+.content-hub__block-three__research.case-study-only
 li:nth-of-type(3),
     .content-hub__block-three
 .content-hub__block-three__happening
@@ -42237,6 +42265,13 @@ li:nth-of-type(3) {
 
 .content-hub__block-three .news-events .content-hub__block-three__research {
     display: grid;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 900px) {
+    .content-hub__block-three .news-events .content-hub__block-three__research {
+        margin-bottom: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -42333,20 +42368,51 @@ h2.section-title,
 .content-hub__block-three__happening
 h2.related-content__heading {
     text-align: center;
-    margin-top: 4rem;
     margin-bottom: 1rem;
 }
 
-@media (max-width: 900px) {
+/**
+Adjust grid layout when only case study(ies) exists in research section, i.e. no research studies.
+This will keep responsive behaviour in line with What's Happening cards below
+*/
+.content-hub__block-three
+.news-events
+.content-hub__block-three__research.case-study-only {
+    grid-column: 1/-1;
+}
+
+.content-hub__block-three
+.news-events
+.content-hub__block-three__research.case-study-only .related-content {
+    grid-row-gap: 0;
+    display: grid;
+    grid-column: 1/-1;
+}
+
+@media (max-width: 432px) {
     .content-hub__block-three
 .news-events
-.content-hub__block-three__happening
-h2.section-title,
+.content-hub__block-three__research.case-study-only .related-content {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
     .content-hub__block-three
 .news-events
-.content-hub__block-three__happening
-h2.related-content__heading {
-        margin-top: 1rem;
+.content-hub__block-three__research.case-study-only .related-content {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .content-hub__block-three
+.news-events
+.content-hub__block-three__research.case-study-only .related-content {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
     }
 }
 
