@@ -27354,18 +27354,48 @@ article figure figcaption a:active {
 }
 
 .listing .banner__content {
-    margin-right: auto;
-    margin-left: auto;
+    grid-row-gap: 0;
+    display: grid;
     max-width: 80rem;
-    padding: 0 1.5rem;
 }
 
-.listing .banner__content .banner__content__header {
+@media (max-width: 432px) {
+    .listing .banner__content {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .listing .banner__content {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .listing .banner__content {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (min-width: 1441px) {
+    .listing .banner__content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .listing .banner__content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.listing .banner__content__header {
     text-align: left;
-}
-
-.listing .banner__content .banner__content__header h1 {
-    padding-bottom: 0;
 }
 
 .finder {
@@ -29994,40 +30024,7 @@ article figure figcaption a:active {
 }
 
 .finder__results__card a p {
-    font-size: 1rem;
-    line-height: 1.625;
-    letter-spacing: -0.005em;
     color: #1e1e1e;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .finder__results__card a p {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .finder__results__card a p {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .finder__results__card a p {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .finder__results__card a p {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .finder__results__card a p {
-        letter-spacing: -0.017em;
-    }
 }
 
 .finder__results__card a .finder__results__card__tag {
@@ -36903,18 +36900,48 @@ article .link-copy {
 }
 
 .listing .banner__content {
-    margin-right: auto;
-    margin-left: auto;
+    grid-row-gap: 0;
+    display: grid;
     max-width: 80rem;
-    padding: 0 1.5rem;
 }
 
-.listing .banner__content .banner__content__header {
+@media (max-width: 432px) {
+    .listing .banner__content {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .listing .banner__content {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .listing .banner__content {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (min-width: 1441px) {
+    .listing .banner__content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .listing .banner__content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.listing .banner__content__header {
     text-align: left;
-}
-
-.listing .banner__content .banner__content__header h1 {
-    padding-bottom: 0;
 }
 
 .finder {
@@ -39543,40 +39570,7 @@ article .link-copy {
 }
 
 .finder__results__card a p {
-    font-size: 1rem;
-    line-height: 1.625;
-    letter-spacing: -0.005em;
     color: #1e1e1e;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .finder__results__card a p {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .finder__results__card a p {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .finder__results__card a p {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .finder__results__card a p {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .finder__results__card a p {
-        letter-spacing: -0.017em;
-    }
 }
 
 .finder__results__card a .finder__results__card__tag {
@@ -42223,16 +42217,6 @@ div.widget-123_test_ {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
-}
-
-.listing h1 {
-    padding-top: 4.5rem;
-    padding-bottom: 3rem;
-}
-
-.listing .standfirst {
-    padding-bottom: 2rem;
-    padding-top: 2rem;
 }
 
 .news {
