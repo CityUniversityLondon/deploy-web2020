@@ -21060,6 +21060,10 @@ main table td em {
     display: inline-block;
 }
 
+.card--news--case-study .card--news__title-link {
+    margin-top: 1.25rem;
+}
+
 @media (min-width: 901px) {
     .card--pathway__block {
         display: flex;
@@ -41953,17 +41957,11 @@ li:nth-of-type(3) {
     -webkit-transition: none;
 }
 
-.content-hub__block-three .news-events .related-content .card--tagged {
-    border: 0;
-    margin-top: 0;
-}
-
 .content-hub__block-three .news-events {
     grid-row-gap: 0;
     display: grid;
     display: grid;
     grid-column-gap: 1.5rem;
-    grid-template-rows: auto;
     background: #e5e5e5;
     margin-top: 5rem;
     padding: 1rem 1.5rem 4rem;
@@ -42036,7 +42034,6 @@ li:nth-of-type(3) {
 .content-hub__block-three .news-events .related-content {
     grid-row-gap: 0;
     display: grid;
-    align-items: flex-start;
 }
 
 @media (max-width: 432px) {
