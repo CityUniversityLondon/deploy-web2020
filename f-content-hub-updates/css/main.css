@@ -19440,6 +19440,7 @@ main table td em {
     border-bottom-width: 0.125rem;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
 }
 
 @media (hover: hover) {
@@ -19511,6 +19512,7 @@ main table td em {
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
+        background-image: none;
     }
     .breadcrumbs a:hover:before {
         opacity: 1;
@@ -26428,6 +26430,7 @@ article figure figcaption a {
     border-bottom-width: 0.125rem;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
 }
 
 @media (hover: hover) {
@@ -26499,6 +26502,7 @@ article figure figcaption a:focus {
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
+        background-image: none;
     }
     article figure figcaption a:hover:before {
         opacity: 1;
@@ -31227,6 +31231,7 @@ article figure figcaption a:active {
     border-bottom-width: 0.125rem;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
     border-bottom-color: transparent;
 }
 
@@ -31299,6 +31304,7 @@ article figure figcaption a:active {
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
+        background-image: none;
     }
     .menu li a:hover:before {
         opacity: 1;
@@ -42132,7 +42138,6 @@ li:nth-of-type(3) {
 .content-hub__block-three
 .news-events
 .content-hub__block-three__research__centres a {
-    background-image: none;
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -42149,6 +42154,7 @@ li:nth-of-type(3) {
     border-bottom-width: 0.125rem;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
 }
 
 @media (hover: hover) {
@@ -42238,6 +42244,7 @@ li:nth-of-type(3) {
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
+        background-image: none;
     }
     .content-hub__block-three
 .news-events
@@ -42253,14 +42260,6 @@ li:nth-of-type(3) {
     border-bottom-color: #d61726;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-}
-
-@media (hover: hover) {
-    .content-hub__block-three
-.news-events
-.content-hub__block-three__research__centres a:hover {
-        background-image: none;
-    }
 }
 
 .content-hub__block-three .news-events .content-hub__block-three__research {
@@ -45161,6 +45160,7 @@ div.widget-123_test_ {
     border-bottom-width: 0.125rem;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
     border-bottom-color: #ffffff;
     color: #ffffff;
 }
@@ -45234,6 +45234,7 @@ div.widget-123_test_ {
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
+        background-image: none;
     }
     .theme--dark .breadcrumbs a:hover:before {
         opacity: 1;
@@ -46267,6 +46268,7 @@ div.widget-123_test_ {
     border-bottom-width: 0.125rem;
     color: #1e1e1e;
     position: relative;
+    background-image: none;
     border-bottom-color: #ffffff;
     color: #ffffff;
 }
@@ -46340,6 +46342,7 @@ div.widget-123_test_ {
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
+        background-image: none;
     }
     .theme--dark article figure figcaption a:hover:before {
         opacity: 1;
@@ -46509,6 +46512,7 @@ div.widget-123_test_ {
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
         position: relative;
+        background-image: none;
         border-bottom-color: #ffffff;
         color: #ffffff;
         border-bottom-color: transparent;
@@ -46586,6 +46590,7 @@ div.widget-123_test_ {
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
+        background-image: none;
     }
     .theme--dark.js .menu li a:hover:before {
         opacity: 1;
