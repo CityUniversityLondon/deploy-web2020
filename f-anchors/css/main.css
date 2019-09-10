@@ -40301,43 +40301,6 @@ h3 .linked-heading__icons {
     outline-color: #ffffff;
 }
 
-.anchor-inline-color-notvisited {
-    color: #006bbd;
-}
-
-.anchor-inline-color-notvisited:visited {
-    color: #4c2c92;
-}
-
-.anchor-inline-color-notvisited:focus {
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .anchor-inline-color-notvisited:hover {
-        color: #ffffff;
-    }
-}
-
-.anchor-inline-color-notvisited:active {
-    color: #ffffff;
-    background-color: #006bbd;
-}
-
-.anchor-inline-color-notvisited:visited {
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .anchor-inline-color-notvisited:hover {
-        color: #ffffff;
-    }
-}
-
-.anchor-inline-color-notvisited:active {
-    color: #ffffff;
-}
-
 .load-more .item-anchor {
     display: none;
 }
