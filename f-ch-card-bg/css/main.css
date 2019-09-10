@@ -32418,7 +32418,11 @@ blockquote footer cite {
     max-width: unset;
 }
 
-.related-content .card {
+/**
+* Background colour and box shadow matches content height
+*/
+.related-content .card.card--news,
+.related-content .card.card--event {
     background: transparent;
     box-shadow: none;
 }
