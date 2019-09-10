@@ -1315,7 +1315,7 @@ function finder__selectbox(props) {
     onChange: e => setFacet(e)
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
     value: ""
-  }, "All ".concat(props.facet.name)), props.responseFacet[0] && props.responseFacet[0].categories[0] ? props.responseFacet[0].categories[0].values.map(value => {
+  }, props.facet.noSelection), props.responseFacet[0] && props.responseFacet[0].categories[0] ? props.responseFacet[0].categories[0].values.map(value => {
     return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
       key: value.data,
       value: value.data
