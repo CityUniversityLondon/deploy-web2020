@@ -42950,6 +42950,22 @@ div.widget-123_test_ {
     }
 }
 
+.profile .tabs .tabs__links li a[aria-selected='true'] span {
+    border-bottom-color: #1e1e1e;
+}
+
+.profile .tabs--accordion .accordion__heading button .accordion__heading__indicator {
+    background: #1e1e1e;
+}
+
+.profile .tabs--accordion
+.accordion__heading[data-open='true']
+button
+.accordion__heading__text {
+    background: #ffffff;
+    color: #1e1e1e;
+}
+
 .profile__banner {
     background-color: #0c0c0e;
 }
