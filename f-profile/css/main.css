@@ -43250,6 +43250,11 @@ button
     }
 }
 
+.profile .profile__student-tags .outline-cta--bright {
+    border-radius: 0;
+    margin-right: 1rem;
+}
+
 .research-degree {
     grid-row-gap: 0;
     display: grid;
