@@ -39905,77 +39905,22 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .highlighted-content__border {
-    padding-bottom: 1.5rem;
-    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
     padding-left: 2.5rem;
     border-left: 0.5rem solid #d61726;
-}
-
-.highlighted-content__border .timetable-heading {
-    color: #0c0c0e;
-    display: table;
-    height: 100%;
-    width: 100%;
-    padding: 1.5rem 1rem 1.5rem 1rem;
-}
-
-@media (min-width: 769px) {
-    .highlighted-content__border .timetable-heading {
-        padding: 0;
-        border-left: 0.1875rem dotted #5d184a;
-    }
-    .highlighted-content__border .timetable-heading span {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-    }
-}
-
-.highlighted-content__border .timetable-heading span {
-    font-weight: 700;
-}
-
-.highlighted-content__border .timetable-row {
-    background-color: #ffffff;
-    margin-bottom: 0.125rem;
-    padding: 0.25rem 1rem;
-}
-
-.highlighted-content__border .timetable-row:last-child {
-    margin-bottom: 0;
-}
-
-.highlighted-content__border .timetable-row span {
-    padding: 0.25rem 0;
-    line-height: 1.625;
-}
-
-@media (min-width: 769px) {
-    .highlighted-content__border .timetable-row span {
-        padding: 0;
-        display: inline-block;
-    }
-}
-
-.highlighted-content__border .timetable-row span.separator {
-    color: #cbcbcb;
-    padding: 0;
-}
-
-.highlighted-content__border .timetable-row:last-of-type div {
-    margin-left: 1.25rem;
-    line-height: 1.625;
-}
-
-.highlighted-content__border .timetable-row:last-of-type .icon {
-    float: left;
-    color: #5d184a;
 }
 
 .highlighted-content__info {
     padding-bottom: 1.5rem;
     margin-top: 1.5rem;
-    padding-left: 2.5rem;
+    padding-left: 3rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     position: relative;
 }
 
@@ -40051,7 +39996,6 @@ a.modal__close:active, a.modal__close:focus {
     color: #a1a1a1;
     position: absolute;
     left: 0.25rem;
-    top: 0.75rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
