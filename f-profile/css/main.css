@@ -43273,7 +43273,59 @@ button
 
 .profile .profile__student-tags .outline-cta--bright {
     border-radius: 0;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
+}
+
+.profile__student-tags {
+    grid-row-gap: 0;
+    display: grid;
+    max-width: 80rem;
+    background: #d5d2d0;
+    padding: 1rem 0 2rem 0;
+}
+
+@media (max-width: 432px) {
+    .profile__student-tags {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .profile__student-tags {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .profile__student-tags {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (min-width: 1441px) {
+    .profile__student-tags {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .profile__student-tags {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.profile__student-tags .profile__student-tags__content {
+    grid-column: 3 / 17;
+}
+
+.profile__student-tags .profile__student-tags__heading {
+    margin-bottom: 1.5rem;
+    color: #494949;
 }
 
 .research-degree {
