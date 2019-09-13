@@ -10,7 +10,7 @@
 /******/ 		var moduleId, chunkId, i = 0, resolves = [];
 /******/ 		for(;i < chunkIds.length; i++) {
 /******/ 			chunkId = chunkIds[i];
-/******/ 			if(installedChunks[chunkId]) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 				resolves.push(installedChunks[chunkId][0]);
 /******/ 			}
 /******/ 			installedChunks[chunkId] = 0;
@@ -435,7 +435,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Finder entry
  *
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -463,19 +463,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol.description */ "./node_modules/core-js/modules/es.symbol.description.js");
-/* harmony import */ var core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_description__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 
 
 /**
  * @module patterns/finder/components/cards/finder__results__bestbet
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -488,21 +484,21 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__bestbet(props) {
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "finder__results__card finder__results__bestbet"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: '/fb' + props.details.clickTrackingUrl
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "finder__results__card__heading underline-transition__title"
-  }, props.details.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, props.details.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__description"
   }, props.details.description))));
 }
 
 finder__results__bestbet.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
+  details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__bestbet);
 
@@ -527,7 +523,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/cards/finder__results__bestbet
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -546,7 +542,8 @@ function finder__results__course(props) {
     case 'course':
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_course__WEBPACK_IMPORTED_MODULE_2__["default"], {
         details: props.details,
-        query: props.query
+        query: props.query,
+        showClearing: props.showClearing
       });
 
     case 'profile':
@@ -559,7 +556,8 @@ function finder__results__course(props) {
 finder__results__course.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+  type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  showClearing: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__course);
 
@@ -574,16 +572,20 @@ finder__results__course.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../results/finder__results__highlight__query */ "./src/patterns/finder/components/results/finder__results__highlight__query.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../results/finder__results__highlight__query */ "./src/patterns/finder/components/results/finder__results__highlight__query.js");
+
+
 
 
 /**
  * @module patterns/finder/components/cards/finder__results__course
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -602,56 +604,68 @@ function finder__results__course(props) {
   // Render course codes for courses that have and should display them
   // notably, not short courses
   const displayCourseCode = ['Undergraduate', 'Foundation', 'CPD'],
-        courseCode = displayCourseCode.indexOf(props.details.metaData.L) >= 0 && props.details.metaData.N && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        courseCode = displayCourseCode.indexOf(props.details.metaData.L) >= 0 && props.details.metaData.N && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fal fa-fw fa-graduation-cap icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Course code:"), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.metaData.N)); // Degree certification, if it has it
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Course code:"), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.N)); // Degree certification, if it has it
 
-  const award = props.details.metaData.M && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  const award = props.details.metaData.M && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fal fa-fw fa-award icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Award:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.metaData.M)); // Course duration, if it has it
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Award:"), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.M)); // Course duration, if it has it
 
-  const duration = props.details.metaData.D && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  const duration = props.details.metaData.D && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fal fa-fw fa-clock icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Duration:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.metaData.D)); // Course method, if it has it
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Duration:"), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.D)); // Course method, if it has it
 
-  const method = props.details.metaData.metd && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  const method = props.details.metaData.metd && props.query.facets.metd && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-book-reader icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Method of study:"), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.metaData.metd)); // Course location, if it has it
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Method of study:"), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.metd)); // Course location, if it has it
 
-  const location = props.details.metaData.loc && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  const location = props.details.metaData.loc && props.query.facets.loc && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-map-marker-alt icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Location:"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.metaData.loc));
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Location:"), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.loc)); // Course School, if it has it
+
+  const school = props.details.metaData.E && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "far fa-building icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.E)); //Clearing
+
+  const clearing = props.details.metaData.K === 'yes' && props.showClearing && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "clearing_label"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Available in clearing"));
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "finder__results__card finder__results__course"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.clickTrackingUrl
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, clearing, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "finder__results__card__heading underline-transition__title"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_2__["default"])(props.details.title, props.query.query) : props.details.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.title, props.query.query) : props.details.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__description"
-  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_2__["default"])(props.details.metaData.L, props.query.query) : props.details.metaData.L), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_2__["default"])(props.details.metaData.c, props.query.query) : props.details.metaData.c), award, duration, courseCode, method, location)));
+  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.L.replace(/_/g, ' '), props.query.query) : props.details.metaData.L.replace(/_/g, ' ')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.c, props.query.query) : props.details.metaData.c), school, award, duration, courseCode, method, location)));
 }
 
 finder__results__course.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  showClearing: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__course);
 
@@ -674,7 +688,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/cards/finder__results__profile
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -738,7 +752,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__checkbox
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 // import React from 'react';
@@ -781,7 +795,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__clear
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -799,7 +813,8 @@ function finder__clear(props) {
   if (facetKeys.length) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       className: "finder__clear",
-      type: "button",
+      type: "reset",
+      value: "Reset",
       onClick: () => {
         props.clear();
       }
@@ -834,15 +849,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _finder_radio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finder__radio */ "./src/patterns/finder/components/filters/finder__radio.js");
 /* harmony import */ var _finder_checkbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__checkbox */ "./src/patterns/finder/components/filters/finder__checkbox.js");
-/* harmony import */ var _query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../query/finder__appliedfilters */ "./src/patterns/finder/components/query/finder__appliedfilters.js");
-/* harmony import */ var _finder_clear_filter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__clear__filter */ "./src/patterns/finder/components/filters/finder__clear__filter.js");
+/* harmony import */ var _finder_selectbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__selectbox */ "./src/patterns/finder/components/filters/finder__selectbox.js");
+/* harmony import */ var _query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../query/finder__appliedfilters */ "./src/patterns/finder/components/query/finder__appliedfilters.js");
+/* harmony import */ var _finder_clear_filter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__clear__filter */ "./src/patterns/finder/components/filters/finder__clear__filter.js");
+/* harmony import */ var _finder_toggle__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__toggle */ "./src/patterns/finder/components/filters/finder__toggle.js");
 
 
 /**
  * @module patterns/finder/components/finder__filters
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
+
+
 
 
 
@@ -882,18 +901,16 @@ function dependencyMet(facet, facetMap) {
 function finder__filters(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_clear_filter__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    clear: props.clear,
-    query: props.query
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_5__["default"], {
     config: props.config,
     query: props.query,
-    update: props.update
+    update: props.update,
+    clear: props.clear
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__heading"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Filter ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__heading__btn-icon"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_clear_filter__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_clear_filter__WEBPACK_IMPORTED_MODULE_6__["default"], {
     clear: props.clear,
     query: props.query
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -908,11 +925,30 @@ function finder__filters(props) {
             facet: facet,
             query: props.query,
             responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
-            update: props.update
+            update: props.update,
+            mobile: props.mobile ? true : false
           });
 
         case 'checkbox':
           return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_checkbox__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            key: facet.meta,
+            facet: facet,
+            query: props.query,
+            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
+            update: props.update
+          });
+
+        case 'selectbox':
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_selectbox__WEBPACK_IMPORTED_MODULE_4__["default"], {
+            key: facet.meta,
+            facet: facet,
+            query: props.query,
+            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
+            update: props.update
+          });
+
+        case 'toggle':
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_toggle__WEBPACK_IMPORTED_MODULE_7__["default"], {
             key: facet.meta,
             facet: facet,
             query: props.query,
@@ -931,7 +967,8 @@ finder__filters.propTypes = {
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   response: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+  mobile: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__filters);
 
@@ -967,7 +1004,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__mobilefilters
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1053,7 +1090,8 @@ function finder__mobilefilters(props) {
     query: props.query,
     response: props.response,
     update: props.update,
-    clear: props.clear
+    clear: props.clear,
+    mobile: true
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     type: "button",
     className: "finder__mobilefilters__apply",
@@ -1113,7 +1151,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__radio
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1129,7 +1167,7 @@ function finder__radio(props) {
   // Radio facets can be toggled open and closed
   // default state on load is defined in config
   // Always open on load if facet set.
-  const [open, setOpen] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(props.query.facets[props.facet.meta] !== undefined ? true : props.facet.defaultOpen),
+  const [open, setOpen] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(props.query.facets[props.facet.meta] !== undefined ? true : props.mobile === true ? false : props.facet.defaultOpen),
         currentValue = props.query.facets[props.facet.meta] || ''; // reduce the facet configuration to an array of all possible values for
   // the facet
 
@@ -1185,23 +1223,18 @@ function finder__radio(props) {
     htmlFor: "meta".concat(props.facet.meta, "all")
   }, props.facet.noSelection, hiddenFacets > 0 && " (".concat(hiddenFacets, " hidden)"))), props.facet.values.map((value, i) => {
     const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.replace(/^"/, '').replace(/"$/, ''));
-
-    if (responseFacetDetails && responseFacetDetails[0] || currentValue === value.data) {
-      return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
-        key: i
-      }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("input", {
-        checked: currentValue === value.data,
-        id: "meta".concat(props.facet.meta).concat(i),
-        name: "meta_".concat(props.facet.meta, "_orsand--").concat(randomNumber),
-        type: "radio",
-        value: value.data,
-        onChange: e => setFacet(e)
-      }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
-        htmlFor: "meta".concat(props.facet.meta).concat(i)
-      }, value.label, " (", responseFacetDetails && responseFacetDetails[0] ? responseFacetDetails[0].count : 0, ")"));
-    } else {
-      return null;
-    }
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
+      key: i
+    }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("input", {
+      checked: currentValue === value.data,
+      id: "meta".concat(props.facet.meta).concat(i),
+      name: "meta_".concat(props.facet.meta, "_orsand--").concat(randomNumber),
+      type: "radio",
+      value: value.data,
+      onChange: e => setFacet(e)
+    }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
+      htmlFor: "meta".concat(props.facet.meta).concat(i)
+    }, value.label, " (", responseFacetDetails && responseFacetDetails[0] ? responseFacetDetails[0].count : 0, ")"));
   })));
 }
 
@@ -1209,9 +1242,169 @@ finder__radio.propTypes = {
   facet: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
   responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object),
-  update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object
+  update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  mobile: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__radio);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/components/filters/finder__selectbox.js":
+/*!*********************************************************************!*\
+  !*** ./src/patterns/finder/components/filters/finder__selectbox.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+/**<
+ * @module patterns/finder/components/finder__selectbox
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+
+function finder__selectbox(props) {
+  const randomNumber = Math.random().toString(16).slice(-4);
+
+  const setFacet = e => {
+    const newQuery = props.query,
+          newValue = e.target.value;
+    newValue ? newQuery.facets[props.facet.meta] = newValue : delete newQuery.facets[props.facet.meta];
+    newQuery.startRank = 1; // if(props.facet.meta === 'G' && !newValue){
+    //     delete newQuery.facets.rSub;
+    // }
+
+    props.facet.meta === 'G' && !newValue ? delete newQuery.facets.rSub : null;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("fieldset", {
+    className: "finder__filter finder__selectbox"
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
+    className: "finder__select"
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
+    className: "finder__select__overline",
+    htmlFor: "meta_".concat(props.facet.meta, "_orsand--").concat(randomNumber)
+  }, props.facet.name), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("select", {
+    name: props.facet.name,
+    id: "meta_".concat(props.facet.meta, "_orsand--").concat(randomNumber),
+    value: props.query.facets[props.facet.meta] ? props.query.facets[props.facet.meta] : '',
+    onChange: e => setFacet(e)
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
+    value: ""
+  }, "All ".concat(props.facet.name)), props.responseFacet[0] && props.responseFacet[0].categories[0] ? props.responseFacet[0].categories[0].values.map(value => {
+    return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
+      key: value.data,
+      value: value.data
+    }, props.facet.meta === 'rSub' ? value.label.replace(props.query.facets.G + '_', '') : value.label);
+  }) : null)));
+}
+
+finder__selectbox.propTypes = {
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (finder__selectbox);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/components/filters/finder__toggle.js":
+/*!******************************************************************!*\
+  !*** ./src/patterns/finder/components/filters/finder__toggle.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+
+/**
+ * @module patterns/finder/components/finder__toggle
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+
+function finder__toggle(props) {
+  const randomNumber = Math.random().toString(16).slice(-4);
+
+  const setFacet = e => {
+    const newQuery = props.query,
+          newValue = e.target.value,
+          checked = e.target.checked;
+    checked ? newQuery.facets[props.facet.meta] = newValue : delete newQuery.facets[props.facet.meta];
+    newQuery.startRank = 1;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  const idString = "".concat(props.facet.name, "-").concat(randomNumber);
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("fieldset", {
+    className: "finder__filter finder__togglebox"
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "finder__toggle"
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
+    htmlFor: idString
+  }, props.facet.values[0].label, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
+    type: "checkbox",
+    id: idString,
+    name: props.facet.name,
+    value: props.facet.values[0].data,
+    onChange: e => setFacet(e),
+    checked: props.query.facets[props.facet.meta] ? true : false
+  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    className: "toggle round ".concat(props.query.facets[props.facet.meta] ? 'toggleOpen' : 'toggleClose')
+  }))));
+}
+
+finder__toggle.propTypes = {
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (finder__toggle);
 
 /***/ }),
 
@@ -1224,24 +1417,23 @@ finder__radio.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _filters_finder_clear_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../filters/finder__clear__filter */ "./src/patterns/finder/components/filters/finder__clear__filter.js");
 
 
 
 
 /**
  * @module patterns/finder/components/finder__appliedfilters
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
+
 
 
 /**
@@ -1256,6 +1448,7 @@ function finder__appliedfilters(props) {
   const removeFacet = facet => {
     const newQuery = props.query;
     delete newQuery.facets[facet];
+    facet === 'G' && props.query.facets.rSub ? delete newQuery.facets.rSub : null;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
   };
@@ -1263,31 +1456,37 @@ function finder__appliedfilters(props) {
   const facetKeys = Object.keys(props.query.facets);
 
   if (facetKeys.length > 0) {
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Applied filters"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "finder__applied__filters__heading"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", null, "Applied filters"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_filters_finder_clear_filter__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      clear: props.clear,
+      query: props.query
+    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      className: "finder__appliedfilters__wrap"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
       className: "finder__appliedfilters"
     }, facetKeys.map(facet => {
       const labels = props.config.facetLabels.filter(facetLabel => facetLabel.meta === facet)[0],
-            facetValue = props.query.facets[facet],
-            label = labels.values.filter(value => value.data === facetValue)[0];
-      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+            facetValue = props.query.facets[facet];
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
         key: facet
-      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
         type: "button",
         onClick: () => removeFacet(facet)
-      }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
         className: "fal fa-times icon",
         "aria-label": "Remove filter"
-      }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, labels.name, ":\xA0", label.label))));
-    })));
+      }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, labels.name, ":\xA0", labels.meta === 'rSub' ? facetValue.replace(props.query.facets.G + '_', '') : facetValue))));
+    }))));
   } else {
     return null;
   }
 }
 
 finder__appliedfilters.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
+  config: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__appliedfilters);
 
@@ -1310,7 +1509,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__clear
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1357,17 +1556,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
 /* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
-
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../funnelback */ "./src/patterns/finder/funnelback.js");
+/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
 
 
 
@@ -1377,7 +1573,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__query
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1385,10 +1581,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const maximumSuggestions = 5,
-      [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40],
-      body = document.getElementsByTagName('body'),
-      backgroundFill = body[0].querySelectorAll('.background-fill');
-let queryParam;
+      [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40];
+
+function highlightQueryTerm(suggestion, partialQuery) {
+  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
+    className: "sr-only"
+  }, suggestion), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
+    "aria-hidden": "true"
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
+    className: "finder__suggestion"
+  }, suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()), partialQuery.length)), suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()) + partialQuery.length))));
+}
 /**
  * Search input field and autocomplete.
  *
@@ -1396,19 +1599,22 @@ let queryParam;
  * @return {object} - React component.
  */
 
+
 function finder__query(props) {
   // save what they're typing
-  const [partialQuery, setPartialQuery] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(props.query.query); // Funnelback suggestions for the currently typed text
+  const [partialQuery, setPartialQuery] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(props.query.query); // Funnelback suggestions for the currently typed text
 
-  const [suggestions, setSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])([]); // Request token for calls to the Funnelback suggestions service, so we
+  const [suggestions, setSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])([]); // Request token for calls to the Funnelback suggestions service, so we
   // can cancel it
 
-  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])({
+  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])({
     cancel: () => {}
   }); // ref for the input field, so we can .focus() it
 
-  const [inputId] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(16).slice(-4));
-  Object(react__WEBPACK_IMPORTED_MODULE_5__["useEffect"])(() => {
+  const [inputId] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(16).slice(-4)); // boolean to show or hide suggestions
+
+  const [showSuggestions, setShowSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(false);
+  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(() => {
     setPartialQuery(props.query.query);
   }, [props.updating]);
   let textInput = null;
@@ -1449,20 +1655,32 @@ function finder__query(props) {
     props.update.results(!props.update.updateState);
   };
 
-  const clear = partialQuery && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  const clear = partialQuery && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_7__["default"], {
     clear: () => {
       clearQuery();
     }
   }); // render suggestions
   // TODO: probably should be refactored into a separate component
 
-  const suggestionsList = suggestions && suggestions.length > 0 && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
-    className: "finder__query__suggestions"
-  }, [...new Set(suggestions)].slice(0, maximumSuggestions).map(suggestion => react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
+  const suggestionsList = suggestions && suggestions.length > 0 && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("ul", {
+    className: showSuggestions ? 'finder__query__suggestions show' : 'finder__query__suggestions hide'
+  }, [...new Set(suggestions)].slice(0, maximumSuggestions).map(suggestion => react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
     key: suggestion
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("button", {
     type: "button",
+    onBlur: () => setShowSuggestions(false),
+    onFocus: () => setShowSuggestions(true),
+    onMouseDown: () => {
+      //for browsers because onBlur get excuted before onClick
+      setShowSuggestions(true);
+      setPartialQuery(suggestion);
+      setSuggestions([]);
+      focusInput();
+      submitSuggestion(suggestion); //passing suggestion because partialQuery value get overwritten for some reason.
+    },
     onClick: () => {
+      //for mobile
+      setShowSuggestions(true);
       setPartialQuery(suggestion);
       setSuggestions([]);
       focusInput();
@@ -1496,21 +1714,18 @@ function finder__query(props) {
 
           break;
       }
-    },
-    dangerouslySetInnerHTML: {
-      __html: suggestion.replace(partialQuery, "<strong>".concat(partialQuery, "</strong>"))
     }
-  }))));
-  const input = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+  }, highlightQueryTerm(suggestion, partialQuery)))));
+  const input = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "finder__query__input"
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "finder__query__icon--wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
     className: "finder__icon fal fa-search"
-  })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
+  })), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
     className: "sr-only",
     htmlFor: inputId
-  }, "Search ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
+  }, "Search ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("input", {
     autoComplete: "off",
     id: inputId,
     name: "query",
@@ -1535,25 +1750,8 @@ function finder__query(props) {
           break;
       }
     },
-    onBlur: e => {
-      backgroundFill[0].classList.remove('background-fill--grey');
-      e.target.placeholder = props.config.placeholder;
-      e.target.value = '';
-      let suggestedResults = document.querySelector('.finder__query__suggestions');
-      document.addEventListener('click', function (event) {
-        let classList = event.target.classList;
-
-        if (classList.contains('finder__query__suggestions')) {
-          suggestedResults.style.display = 'block';
-        } else {
-          suggestedResults.style.display = 'none';
-        }
-      });
-    },
-    onFocus: e => {
-      backgroundFill[0].classList.add('background-fill--grey');
-      e.target.placeholder = '';
-    },
+    onFocus: () => setShowSuggestions(true),
+    onBlur: () => setShowSuggestions(false),
     onChange: e => {
       //clear old suggestions
       setSuggestions([]); // keep  what they're typing
@@ -1569,7 +1767,7 @@ function finder__query(props) {
 
       if (e.target.value) {
         // input is populated, ask for suggestions
-        const [suggestionsPromise, newCall] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_7__["suggest"])(props.query.collection, e.target.value); // update our request cancel function for the new request
+        const [suggestionsPromise, newCall] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_6__["suggest"])(props.query.collection, e.target.value); // update our request cancel function for the new request
 
         setCall({
           cancel: () => {
@@ -1580,90 +1778,28 @@ function finder__query(props) {
       } else {
         // input is empty, empty suggestions
         setSuggestions([]);
-      } // Build query param to pass to listing page
-
-
-      let queryValue = document.getElementById(inputId);
-
-      if (queryValue) {
-        queryParam = queryValue.value.replace(/\s+/g, '+').toLowerCase();
-
-        if (queryParam) {
-          queryParam = "query=".concat(queryParam);
-        } else {
-          queryParam = null;
-        }
       }
     }
   }), suggestionsList, clear);
-  let hub = document.getElementsByClassName('wrapper--finder--hub');
-  hub = hub[0];
-
-  if (hub) {
-    /**
-     * Build URL taking users from content hub to listing page with selected results.
-     */
-    const finderRedirect = () => {
-      let levelParam;
-      let levelSelect = document.getElementById('level-select');
-
-      if (levelSelect) {
-        levelParam = levelSelect.value.replace(/\s+/g, '-').toLowerCase();
-
-        if (levelParam !== 'all-levels') {
-          levelParam = "meta_L_orsand=".concat(levelParam);
-        } else {
-          levelParam = null;
-        }
-      } // Look to do switch statement later
-
-
-      const listingUrl = 'https://web2020.city.ac.uk/prototype/prospective-students/courses';
-
-      if (levelParam && queryParam) {
-        window.location.href = "".concat(listingUrl, "?").concat(levelParam, "&").concat(queryParam);
-      } else if (levelParam && !queryParam) {
-        window.location.href = "".concat(listingUrl, "?").concat(levelParam);
-      } else if (!levelParam && queryParam) {
-        window.location.href = "".concat(listingUrl, "?").concat(queryParam);
-      } else {
-        window.location.href = "".concat(listingUrl);
-      }
-    };
-
-    return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("fieldset", {
-      className: "finder__query"
-    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
-      type: "submit",
-      className: "finder__query__submit finder__query__submit--redirect",
-      onClick: () => finderRedirect()
-    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-      className: "fal fa-search finder__query__submit__icon",
-      "aria-hidden": "true"
-    }), ' ', react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-      className: "finder__query__submit__text"
-    }, "Find"))));
-  }
-
-  return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("fieldset", {
+  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("fieldset", {
     className: "finder__query"
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("button", {
     type: "submit",
     className: "finder__query__submit",
     onClick: () => submitForm()
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
     className: "fal fa-search finder__query__submit__icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
     className: "finder__query__submit__text"
   }, "Find"))));
 }
 
 finder__query.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.bool
+  config: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  updating: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__query);
 
@@ -1693,7 +1829,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__didyoumean
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1748,7 +1884,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__pagination
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1839,7 +1975,8 @@ function finder__pagination(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "pagination__wrapper"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: "pagination__controls"
+    className: "pagination__controls",
+    "data-pagecount": numberOfPages
   }, pages));
 }
 
@@ -1876,7 +2013,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * @module patterns/finder/components/finder__results
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -1917,8 +2054,7 @@ function finder__results(props) {
       query: props.query,
       totalMatching: props.response.summary.totalMatching,
       update: props.update
-    });
-    const noResults = props.response.summary.fullyMatching === 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You search ", props.query.query, " did not match any courses"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Suggestions"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Make sure that all words are spell correctly"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Try different keywords"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Try more general keywords"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Try fewer keywords"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Try fewer filters"))); // render either the results, or a spinner while we wait for Funnelback
+    }); // render either the results, or a spinner while we wait for Funnelback
 
     const resultsContent = props.updating ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, updating) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_summary__WEBPACK_IMPORTED_MODULE_5__["default"], {
       currEnd: props.response.summary.currEnd,
@@ -1926,8 +2062,12 @@ function finder__results(props) {
       query: props.response.query,
       numRanks: props.response.summary.numRanks,
       summariseAs: props.summariseAs,
-      totalMatching: props.response.summary.totalMatching
-    }), didYouMean, noResults, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+      totalMatching: props.response.summary.totalMatching,
+      clear: props.clear,
+      update: props.update,
+      config: props.config,
+      queryF: props.query
+    }), didYouMean, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
       start: props.response.summary.currStart,
       className: "finder__results__list"
     }, props.response.bestBets.map(card => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -1938,7 +2078,8 @@ function finder__results(props) {
       details: card,
       key: card.docNum,
       type: props.type,
-      query: props.query
+      query: props.query,
+      showClearing: props.config.showClearing
     }))), pagination);
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "finder__results"
@@ -1956,7 +2097,8 @@ finder__results.propTypes = {
   summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
   update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+  updating: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results);
 
@@ -2010,15 +2152,19 @@ const formatLabel = (label, value) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+
+
 
 
 /**
  * @module patterns/finder/components/finder__results__summary
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -2035,22 +2181,42 @@ function finder__results__summary(props) {
   const result = props.totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural;
 
   if (props.totalMatching == 0) {
-    searchHints = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", null, "Your search"), " \"", props.query, "\u201C did not match any courses."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Suggestions:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Try different keywords"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Try more general keywords"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Try fewer keywords"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Try fewer filters"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Reset filters"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Reset search")));
+    searchHints = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("strong", null, "Your search"), " \"", props.query, "\u201C did not match any courses."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Suggestions:"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try different keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try more general keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer filters"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+      href: "#",
+      onClick: e => {
+        e.preventDefault;
+        props.clear();
+      }
+    }, "Reset filters")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+      href: "#",
+      onClick: e => {
+        e.preventDefault;
+        const newQuery = props.queryF;
+        newQuery.query = '';
+        newQuery.sortBy = props.config.sort;
+        props.update.query(newQuery);
+        props.update.results(!props.update.updateState);
+      }
+    }, "Reset search"))));
   }
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     "aria-live": "polite",
     className: "finder__results__summary__heading-wrap"
   }, props.totalMatching > props.numRanks && "".concat(props.currStart, "\u2013").concat(props.currEnd, " of "), props.totalMatching, " ", props.query && 'matching ', result, props.query && " for \u201C".concat(props.query, "\u201D")), searchHints);
 }
 
 finder__results__summary.propTypes = {
-  currEnd: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
-  currStart: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
-  numRanks: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
-  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  totalMatching: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number
+  queryF: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  currEnd: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
+  currStart: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.string,
+  numRanks: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
+  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  totalMatching: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  config: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__summary);
 
@@ -2104,7 +2270,7 @@ __webpack_require__.r(__webpack_exports__);
  * Don't run this via patterns.js, it's a separate compilation.
  *
  * @module patterns/finder/finder
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -2154,7 +2320,8 @@ function replaceHistory(currQuery, currStartRank, currFacets, facetLabels) {
       params.delete("meta_".concat(facet.meta, "_orsand"));
     }
   });
-  window.history.replaceState({}, '', window.location.pathname + '?' + params.toString());
+  const hasParams = params.toString().length ? '?' : '';
+  window.history.replaceState({}, '', "".concat(window.location.pathname).concat(hasParams).concat(params.toString()));
 }
 /**
  * Launch the universal Finder.
@@ -2257,32 +2424,6 @@ function Finder(props) {
     setUpdate(!update);
   };
 
-  let hub = document.getElementsByClassName('wrapper--finder--hub');
-  hub = hub[0];
-
-  if (hub) {
-    return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
-      className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
-      onSubmit: e => {
-        e.preventDefault();
-      }
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
-      className: "finder__title"
-    }, "Find courses"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-      className: "finder__select finder__select--level"
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
-      className: "finder__select__overline",
-      htmlFor: "study-level"
-    }, "Level"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("select", {
-      id: "level-select"
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "All levels"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "Undergraduate"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "Postgraduate"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "Short course"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "CPD"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("option", null, "CPPD"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_10__["default"], {
-      config: props.config,
-      query: query,
-      update: updater,
-      updating: updating
-    }));
-  }
-
   return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
     className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
     onSubmit: e => {
@@ -2313,7 +2454,9 @@ function Finder(props) {
     summariseAs: props.config.summariseAs,
     type: props.config.resultCard,
     update: updater,
-    updating: updating
+    updating: updating,
+    clear: clear,
+    config: props.config
   }));
 }
 
@@ -2347,7 +2490,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { keys.push.apply(keys, Object.getOwnPropertySymbols(object)); } if (enumerableOnly) keys = keys.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
@@ -2357,7 +2500,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  * Functions for making requests to Funnelback
  *
  * @module funnelback
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2019
  */
 
@@ -2478,7 +2621,7 @@ function finderConfig(url) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, createElement */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2497,6 +2640,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMobile", function() { return isMobile; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toArray", function() { return toArray; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detectIE", function() { return detectIE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return createElement; });
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
@@ -2519,7 +2663,7 @@ __webpack_require__.r(__webpack_exports__);
  * Useful utility functions
  *
  * @module util
- * @author Tom Waddington <tom.waddington.1@city.ac.uk>
+ * @author Web Development
  * @copyright City, University of London 2018
  */
 
@@ -2740,6 +2884,18 @@ function detectIE() {
 
 
   return false;
+}
+function createElement(type, content, arialabel, disabled, className1, className2, className3, className4, className5) {
+  let el = document.createElement(type);
+  content ? el.appendChild(document.createTextNode(content)) : null;
+  className1 ? el.classList.add(className1) : null;
+  className2 ? el.classList.add(className2) : null;
+  className3 ? el.classList.add(className3) : null;
+  className4 ? el.classList.add(className4) : null;
+  className5 ? el.classList.add(className5) : null;
+  arialabel ? el.setAttribute('aria-label', arialabel) : null;
+  disabled ? el.setAttribute('disabled', true) : null;
+  return el;
 }
 
 /***/ }),
