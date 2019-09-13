@@ -4208,22 +4208,20 @@ let hashedUrl = window.location.hash,
  * Functions from key-info-slider
  */
 // Mobile: Enable/disable navigation buttons based on position of listing in collection
-// function navBtnState() {
-//     if (counter === 0) {
-//         prevBtn.setAttribute('disabled', true);
-//         nextBtn.removeAttribute('disabled');
-//     } else if (
-//         counter > 0 &&
-//         counter < Array.from(listings.children).length - 1
-//     ) {
-//         prevBtn.removeAttribute('disabled');
-//         nextBtn.removeAttribute('disabled');
-//     } else {
-//         nextBtn.setAttribute('disabled', true);
-//         prevBtn.removeAttribute('disabled');
-//     }
-// }
-// Mobile: Show listing entry based on navigation button clicks
+
+function a_navBtnState(counter, prevBtn, nextBtn, itemsLength) {
+  if (counter === 0) {
+    prevBtn.setAttribute('disabled', true);
+    nextBtn.removeAttribute('disabled');
+  } else if (counter > 0 && counter < itemsLength - 1) {
+    prevBtn.removeAttribute('disabled');
+    nextBtn.removeAttribute('disabled');
+  } else {
+    nextBtn.setAttribute('disabled', true);
+    prevBtn.removeAttribute('disabled');
+  }
+} // Mobile: Show listing entry based on navigation button clicks
+
 
 function listingDisplay(items, counter, browserWidth) {
   // console.log(listings);
@@ -4321,6 +4319,7 @@ function replaceUrlState(folderId, visibleItems, itemsIncrement) {
 function launchLoadMore(e) {
   let folderId = e.getAttribute('id'),
       items = e.querySelectorAll('.item'),
+      itemsLength = Array.from(items).length,
       itemsIncrement = parseInt(e.dataset.increment),
       defaultVisibleItems = parseInt(e.dataset.itemsVisible),
       active = e.setAttribute('active', false),
@@ -4330,17 +4329,19 @@ function launchLoadMore(e) {
       sliderPrevBtn = e.querySelector('.arrow-left--btn-prev'),
       sliderNextBtn = e.querySelector('.arrow-right--btn-next'),
       counter = 0,
-      digits = e.querySelector('.content-slider__position__digit');
+      digits = e.querySelector('.content-slider__position__digit'); // Disable slider previous button on load
+
+  a_navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength);
   sliderNextBtn.addEventListener('click', () => {
     counter += 1;
-    digits.innerText = counter + 1; // navBtnState();
-    // listingDisplay();
+    digits.innerText = counter + 1;
+    a_navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength);
+    listingDisplay();
   });
   sliderPrevBtn.addEventListener('click', () => {
     counter -= 1;
-    digits.innerText = counter + 1; // navBtnState();
-
-    listingDisplay();
+    digits.innerText = counter + 1;
+    a_navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength); // listingDisplay();
   }); // Create & append 'load more' button
 
   const loadMoreBtn = document.createElement('button');
