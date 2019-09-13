@@ -4330,21 +4330,14 @@ function launchLoadMore(e) {
       sliderPrevBtn = e.querySelector('.arrow-left--btn-prev'),
       sliderNextBtn = e.querySelector('.arrow-right--btn-next'),
       counter = 0,
-      digits = e.querySelector('.content-slider__position__digit'); // listings = 'abc';
-  // listings = e.querySelectorAll('.items-group');
-  // for (const listing of listings) {
-  //     listings = listing;
-  //     console.log(listing.children);
-  // }
-
+      digits = e.querySelector('.content-slider__position__digit');
   sliderNextBtn.addEventListener('click', () => {
-    counter + 1;
+    counter += 1;
     digits.innerText = counter + 1; // navBtnState();
-
-    listingDisplay();
+    // listingDisplay();
   });
   sliderPrevBtn.addEventListener('click', () => {
-    counter - 1;
+    counter -= 1;
     digits.innerText = counter + 1; // navBtnState();
 
     listingDisplay();
