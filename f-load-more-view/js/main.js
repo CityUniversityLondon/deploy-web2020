@@ -4202,11 +4202,15 @@ const className = 'load-more';
 let hashedUrl = window.location.hash,
     loadMoreId;
 /**
- * Functions from key-info-slider
+ * Slider: Enable/disable navigation buttons based on position of listing in collection
+ *
+ * @param {number} [counter] - Position in dataset.
+ * @param {HTMLElement} prevBtn - Previous item button.
+ * @param {HTMLElement} nextBtn - Next item button.
+ * @param {number} itemsLength - Number of items.
  */
-// Mobile: Enable/disable navigation buttons based on position of listing in collection
 
-function a_navBtnState(counter, prevBtn, nextBtn, itemsLength) {
+function navBtnState(counter, prevBtn, nextBtn, itemsLength) {
   if (counter === 0) {
     prevBtn.setAttribute('disabled', true);
     nextBtn.removeAttribute('disabled');
@@ -4217,31 +4221,25 @@ function a_navBtnState(counter, prevBtn, nextBtn, itemsLength) {
     nextBtn.setAttribute('disabled', true);
     prevBtn.removeAttribute('disabled');
   }
-} // Mobile: Show listing entry based on navigation button clicks
-
-
-function a_listingDisplay(itemsArray, counter, browserWidth) {
-  for (const item of itemsArray.entries()) {
-    if (browserWidth < 768 && itemsArray.length > 1) {
-      item[0] === counter ? item[1].style.display = 'block' : item[1].style.display = 'none';
-    } //item[1].setAttribute('data-id', `listing-${i}`);
-
-  } // Array.from(items.children).forEach((item, i) => {
-  // if (browserWidth < 768 && Array.from(items.children).length > 1) {
-  //     i === counter
-  //         ? (item.style.display = 'block')
-  //         : (item.style.display = 'none');
-  // }
-  // item.setAttribute('data-id', `listing-${i}`);
-  // });
-
 }
 /**
- * End of functions from key-info-slider
+ * Slider: Show listing entry based on slider button clicks
+ *
+ * @param {array} [itemsArray] - Items in dataset.
+ * @param {number} counter - Position in dataset.
+ * @param {number} browserWidth - Browser window width.
  */
 
+
+function listingDisplay(itemsArray, counter, browserWidth, makeSlider) {
+  for (const item of itemsArray.entries()) {
+    if (browserWidth < 768 && itemsArray.length > 1 && makeSlider == 'true') {
+      item[0] === counter ? item[1].style.display = 'block' : item[1].style.display = 'none';
+    }
+  }
+}
 /**
- * Control what items will display based on wrapper's 'items-visible' data attribute.
+ * Load more: Control what items will display based on wrapper's 'items-visible' data attribute.
  *
  * @param {HTMLElements} [items] - Elements controlled by 'Load more' button.
  * @param {number} visibleItems - Number of items visible at any one time.
@@ -4269,7 +4267,7 @@ function itemsDisplay(items, visibleItems, loadMoreBtn) {
   }
 }
 /**
- * Scroll to, and focus first listing of newly visible items batch.
+ * Load more: Scroll to, and focus first listing of newly visible items batch.
  *
  * @param {HTMLElement} [items] - Elements controlled by 'Load more' button.
  * @param {number} visibleItems - Number of items visible at any one time.
@@ -4293,7 +4291,7 @@ function scrollToItem(items, visibleItems, itemsIncrement) {
   }
 }
 /**
- * Push state to URL: used to build initial hash after first 'Load more' click.
+ * Load more: Push state to URL: used to build initial hash after first 'Load more' click.
  *
  * @param {string} folderId - Folder ID where assets exist.
  * @param {number} visibleItems - Number of items visible at any one time.
@@ -4306,7 +4304,7 @@ function pushUrlState(folderId, visibleItems, itemsIncrement) {
   history.pushState('', '', "#folder".concat(folderId, "-item").concat(targetListingUrlParam));
 }
 /**
- * Replace URL state: used to swap existing hash
+ * Load more: Replace URL state: used to swap existing hash
  *
  * @param {HTMLElement} folderId - Folder ID where assets exist.
  * @param {number} visibleItems - Number of items visible at any one time.
@@ -4333,24 +4331,21 @@ function launchLoadMore(e) {
       sliderPrevBtn = e.querySelector('.arrow-left--btn-prev'),
       sliderNextBtn = e.querySelector('.arrow-right--btn-next'),
       counter = 0,
-      digits = e.querySelector('.content-slider__position__digit'); // for (const item of itemsArray) {
-  //     console.log(item);
-  // }
-  // Disable slider previous button on load
+      digit = e.querySelector('.content-slider__position__digit'); // Disable slider previous button on load
 
-  a_navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength);
-  a_listingDisplay(itemsArray, counter, browserWidth);
+  navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength);
+  listingDisplay(itemsArray, counter, browserWidth, makeSlider);
   sliderNextBtn.addEventListener('click', () => {
     counter += 1;
-    digits.innerText = counter + 1;
-    a_navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength);
-    a_listingDisplay(itemsArray, counter, browserWidth);
+    digit.innerText = counter + 1;
+    navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength);
+    listingDisplay(itemsArray, counter, browserWidth, makeSlider);
   });
   sliderPrevBtn.addEventListener('click', () => {
     counter -= 1;
-    digits.innerText = counter + 1;
-    a_navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength);
-    a_listingDisplay(itemsArray, counter, browserWidth);
+    digit.innerText = counter + 1;
+    navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength);
+    listingDisplay(itemsArray, counter, browserWidth, makeSlider);
   }); // Create & append 'load more' button
 
   const loadMoreBtn = document.createElement('button');
@@ -4361,9 +4356,7 @@ function launchLoadMore(e) {
   let loadMorePlusLabel = document.createElement('span');
   loadMorePlusLabel.classList.add('load-more-label');
   let loadMorePlusLabelText = document.createTextNode('Load more');
-  loadMorePlusLabel.appendChild(loadMorePlusLabelText); // const nextBtn = e.getElementsByClassName('arrow-right--btn-next');
-  // const prevBtn = e.getElementsByClassName('arrow-left--btn-prev');
-
+  loadMorePlusLabel.appendChild(loadMorePlusLabelText);
   const sliderControls = e.querySelector('.content-slider');
   /**
    * Only add load more button to the DOM if more than one item exists and 'data-items-visible'
