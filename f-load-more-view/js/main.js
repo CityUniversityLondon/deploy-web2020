@@ -4177,14 +4177,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
 /* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_5__);
-
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
@@ -4223,15 +4220,21 @@ function a_navBtnState(counter, prevBtn, nextBtn, itemsLength) {
 } // Mobile: Show listing entry based on navigation button clicks
 
 
-function listingDisplay(items, counter, browserWidth) {
-  // console.log(listings);
-  Array.from(items.children).forEach((item, i) => {
-    if (browserWidth < 768 && Array.from(items.children).length > 1) {
-      i === counter ? item.style.display = 'block' : item.style.display = 'none';
-    }
+function a_listingDisplay(itemsArray, counter, browserWidth) {
+  for (const item of itemsArray.entries()) {
+    if (browserWidth < 768 && itemsArray.length > 1) {
+      item[0] === counter ? item[1].style.display = 'block' : item[1].style.display = 'none';
+    } //item[1].setAttribute('data-id', `listing-${i}`);
 
-    item.setAttribute('data-id', "listing-".concat(i));
-  });
+  } // Array.from(items.children).forEach((item, i) => {
+  // if (browserWidth < 768 && Array.from(items.children).length > 1) {
+  //     i === counter
+  //         ? (item.style.display = 'block')
+  //         : (item.style.display = 'none');
+  // }
+  // item.setAttribute('data-id', `listing-${i}`);
+  // });
+
 }
 /**
  * End of functions from key-info-slider
@@ -4279,12 +4282,12 @@ function scrollToItem(items, visibleItems, itemsIncrement) {
 
   for (const item of items.entries()) {
     if (item[0] == targetItem) {
-      zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.to(item[1]);
+      zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(item[1]);
       item[1].focus();
     } else if (visibleItems == itemsIncrement) {
       if (item[0] == 0) {
         item[1].focus();
-        zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.to(item[1]);
+        zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(item[1]);
       }
     }
   }
@@ -4319,6 +4322,7 @@ function replaceUrlState(folderId, visibleItems, itemsIncrement) {
 function launchLoadMore(e) {
   let folderId = e.getAttribute('id'),
       items = e.querySelectorAll('.item'),
+      itemsArray = Array.from(items),
       itemsLength = Array.from(items).length,
       itemsIncrement = parseInt(e.dataset.increment),
       defaultVisibleItems = parseInt(e.dataset.itemsVisible),
@@ -4329,19 +4333,24 @@ function launchLoadMore(e) {
       sliderPrevBtn = e.querySelector('.arrow-left--btn-prev'),
       sliderNextBtn = e.querySelector('.arrow-right--btn-next'),
       counter = 0,
-      digits = e.querySelector('.content-slider__position__digit'); // Disable slider previous button on load
+      digits = e.querySelector('.content-slider__position__digit'); // for (const item of itemsArray) {
+  //     console.log(item);
+  // }
+  // Disable slider previous button on load
 
   a_navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength);
+  a_listingDisplay(itemsArray, counter, browserWidth);
   sliderNextBtn.addEventListener('click', () => {
     counter += 1;
     digits.innerText = counter + 1;
     a_navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength);
-    listingDisplay();
+    a_listingDisplay(itemsArray, counter, browserWidth);
   });
   sliderPrevBtn.addEventListener('click', () => {
     counter -= 1;
     digits.innerText = counter + 1;
-    a_navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength); // listingDisplay();
+    a_navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength);
+    a_listingDisplay(itemsArray, counter, browserWidth);
   }); // Create & append 'load more' button
 
   const loadMoreBtn = document.createElement('button');
@@ -4376,8 +4385,8 @@ function launchLoadMore(e) {
 
   if (hashedUrl) {
     let hashedUrlParts = hashedUrl.split('-');
-    let activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_4__["numberFromString"])(hashedUrlParts[1]));
-    let activeFolderId = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_4__["numberFromString"])(hashedUrlParts[0]));
+    let activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[1]));
+    let activeFolderId = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[0]));
     let activeFolder = document.getElementById(activeFolderId);
     let activeFolderItems = activeFolder.querySelectorAll('.item');
     let activeFolderItemIncrement = parseInt(activeFolder.dataset.increment);
@@ -4472,7 +4481,7 @@ function launchLoadMore(e) {
        * and active item within this group (item4).
        */
       let updatedUrlParts = window.location.hash.split('-');
-      let currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_4__["numberFromString"])(updatedUrlParts[1]));
+      let currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(updatedUrlParts[1]));
       currentItem = currentItem + (itemsIncrement - 1);
       visibleItems = currentItem;
       e.setAttribute('data-items-visible', visibleItems);
