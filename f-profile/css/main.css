@@ -43006,7 +43006,7 @@ button
     max-width: 80rem;
     grid-template-areas: '. . p p p h h h h h h h h h h h h h . .' '. . p p p f f f f f f f f f f f f f . .' '. . p p p t t t t t t t t t t t t t . .';
     color: #ffffff;
-    padding: 2.5rem 0;
+    padding: 5.5rem 0;
 }
 
 @media (max-width: 432px) {
@@ -43234,6 +43234,8 @@ button
     grid-row-gap: 0;
     display: grid;
     max-width: 80rem;
+    background: #ffffff;
+    margin-top: -4rem;
 }
 
 @media (max-width: 432px) {
@@ -43280,8 +43282,7 @@ button
     grid-row-gap: 0;
     display: grid;
     max-width: 80rem;
-    background: #d5d2d0;
-    padding: 1rem 0 2rem 0;
+    margin-top: 2rem;
 }
 
 @media (max-width: 432px) {
@@ -43321,11 +43322,90 @@ button
 
 .profile__student-tags .profile__student-tags__content {
     grid-column: 3 / 17;
+    background: #d5d2d0;
+    padding: 1rem 0 2rem 0;
 }
 
 .profile__student-tags .profile__student-tags__heading {
     margin-bottom: 1.5rem;
     color: #494949;
+}
+
+.profile__contact__inner {
+    grid-column: 2 / 18;
+    grid-row-gap: 0;
+    display: grid;
+    padding: 2rem 2rem 0 2rem;
+}
+
+@media (max-width: 432px) {
+    .profile__contact__inner {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .profile__contact__inner {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .profile__contact__inner {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+.profile__contact__contact-details {
+    grid-column: 1 / 11;
+}
+
+.profile__contact__postal-address {
+    grid-column: 11 / 15;
+}
+
+.profile__contact__personal-links {
+    grid-column: 15 / -1;
+}
+
+.profile__contact__details__heading {
+    padding-bottom: 0.5rem;
+    border-bottom: solid 0.125rem #e5e5e5;
+}
+
+.profile__contact__details__heading span:first-child {
+    font-size: 1.1rem;
+}
+
+.profile__contact__details__heading__text {
+    color: #696969;
+    margin-left: 0.5rem;
+    font-weight: 700;
+}
+
+.profile__contact__details__content {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.profile__contact__details__content .profile__contact__details__content__box:first-child {
+    margin-right: 6rem;
+}
+
+.profile__contact__details__content .profile__contact__details__content__box div {
+    margin-bottom: 1rem;
+}
+
+.profile__contact__details__content .profile__contact__details__content__box span {
+    color: #d61726;
+    margin-right: 0.5rem;
+}
+
+.profile__contact__details__content .profile__contact__details__content__box .fa-phone {
+    transform: rotate(90deg);
 }
 
 .research-degree {
