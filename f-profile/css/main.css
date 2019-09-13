@@ -43278,6 +43278,97 @@ button
     }
 }
 
+.press__contact {
+    max-width: 80rem;
+}
+
+@media (min-width: 1441px) {
+    .press__contact {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .press__contact {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .press__contact {
+        grid-row-gap: 0;
+        display: grid;
+        margin-top: -4rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 432px) {
+    .press__contact {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (min-width: 433px) and (max-width: 900px) {
+    .press__contact {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (min-width: 901px) {
+    .press__contact {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+.press__contact__content {
+    grid-row-gap: 0;
+    display: grid;
+}
+
+@media (max-width: 432px) {
+    .press__contact__content {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .press__contact__content {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .press__contact__content {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+.press__contact__content__inner {
+    grid-column: 5 / 15;
+}
+
+.press__contact__content__inner .profile__contact__details__content__box {
+    display: flex;
+}
+
+.press__contact__content__inner .profile__contact__details__content__box div:first-child {
+    margin-right: 5rem;
+}
+
+.press__contact__inner {
+    padding-top: 2rem;
+    grid-column: 3 / 17;
+    background: #ffffff;
+}
+
 .profile .profile__student-tags .outline-cta--bright {
     border-radius: 0;
     margin-right: 1.5rem;
@@ -43375,6 +43466,10 @@ button
     }
 }
 
+.profile__contact__contact-details .profile__contact__details__content__box:first-child {
+    margin-right: 6rem;
+}
+
 @media (min-width: 768px) {
     .profile__contact__contact-details {
         grid-column: 2 / 12;
@@ -43466,10 +43561,6 @@ button
 
 .profile__contact__details__content {
     margin-top: 1.5rem;
-}
-
-.profile__contact__details__content .profile__contact__details__content__box:first-child {
-    margin-right: 6rem;
 }
 
 .profile__contact__details__content .profile__contact__details__content__box div {
