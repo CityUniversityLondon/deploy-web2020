@@ -43001,7 +43001,7 @@ div.widget-123_test_ {
 .profile__banner__wrapper {
     position: relative;
     color: #ffffff;
-    padding: 2.5rem 0;
+    padding: 2.5rem 0 2rem 0;
     max-width: 80rem;
 }
 
@@ -43053,9 +43053,9 @@ div.widget-123_test_ {
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .profile__banner__wrapper {
-        padding: 2.5rem 0 6rem;
+        padding: 1.5rem 0 6rem 0;
     }
 }
 
@@ -43073,7 +43073,7 @@ div.widget-123_test_ {
 
 @media (min-width: 433px) {
     .profile__banner__content {
-        grid-column: 2 / 18;
+        grid-column: 2 / 12;
         display: flex;
     }
 }
@@ -43106,13 +43106,22 @@ div.widget-123_test_ {
     }
 }
 
-.profile__banner__content__thumbnail {
-    display: flex;
+@media (min-width: 768px) {
+    .profile__banner__content__thumbnail {
+        display: flex;
+    }
 }
 
 .profile__banner__content__thumbnail img {
-    min-width: 6.5rem;
-    min-height: 6.5rem;
+    max-width: 9rem;
+}
+
+@media (min-width: 1281px) {
+    .profile__banner__content__thumbnail img {
+        min-width: 6.5rem;
+        min-height: 6.5rem;
+        max-width: 12rem;
+    }
 }
 
 .profile__banner__content__thumbnail figure {
@@ -43154,6 +43163,7 @@ div.widget-123_test_ {
     font-weight: 600;
     font-family: "Meta Sans", sans-serif;
     align-self: flex-end;
+    margin-top: 1.5rem;
 }
 
 .profile__banner__content__mobile-header i,
@@ -43292,13 +43302,9 @@ div.widget-123_test_ {
     }
 }
 
-.profile__banner__content__text {
-    margin-top: 1.25rem;
-}
-
-@media (min-width: 433px) {
+@media (min-width: 768px) {
     .profile__banner__content__text {
-        margin-top: 0;
+        margin-top: 1.25rem;
     }
 }
 
@@ -43314,6 +43320,8 @@ div.widget-123_test_ {
 @media (min-width: 1281px) {
     .profile__banner__content__text {
         grid-column: 6 / 16;
+        padding-left: 0.75rem;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -43537,54 +43545,6 @@ div.widget-123_test_ {
     }
 }
 
-.profile--academic {
-    max-width: 80rem;
-}
-
-@media (min-width: 1441px) {
-    .profile--academic {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .profile--academic {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .profile--academic {
-        grid-row-gap: 0;
-        display: grid;
-        background: #ffffff;
-        margin-top: -4rem;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 432px) {
-    .profile--academic {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 768px) and (min-width: 433px) and (max-width: 900px) {
-    .profile--academic {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 768px) and (min-width: 901px) {
-    .profile--academic {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
-}
-
 /* --- STUDENT STYLES --- */
 .profile--student__tags {
     grid-row-gap: 0;
@@ -43759,6 +43719,54 @@ div.widget-123_test_ {
 
 /* --- END STUDENT STYLES --- */
 /* --- ACADEMIC STYLES --- */
+.profile--academic {
+    max-width: 80rem;
+}
+
+@media (min-width: 1441px) {
+    .profile--academic {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .profile--academic {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile--academic {
+        grid-row-gap: 0;
+        display: grid;
+        background: #ffffff;
+        margin-top: -4rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 432px) {
+    .profile--academic {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (min-width: 433px) and (max-width: 900px) {
+    .profile--academic {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (min-width: 901px) {
+    .profile--academic {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
 .profile--academic__inner {
     padding-top: 2rem;
 }
@@ -43862,6 +43870,7 @@ div.widget-123_test_ {
     color: #696969;
     margin-left: 0.5rem;
     font-weight: 700;
+    font-size: 18px;
 }
 
 @media (min-width: 1281px) {
@@ -43884,21 +43893,21 @@ div.widget-123_test_ {
     margin-top: 1.5rem;
 }
 
-.profile--academic__details__content .profile--academic__details__content__box div {
+.profile--academic__details__content a span {
+    margin-left: 0.25rem;
+}
+
+.profile--academic__details__content__box div {
     margin-bottom: 1rem;
 }
 
-.profile--academic__details__content .profile--academic__details__content__box span {
+.profile--academic__details__content__box span {
     color: #d61726;
     margin-right: 0.5rem;
 }
 
-.profile--academic__details__content .profile--academic__details__content__box .fa-phone {
+.profile--academic__details__content__box .fa-phone {
     transform: rotate(90deg);
-}
-
-.profile--academic__details__content a span {
-    margin-left: 0.25rem;
 }
 
 .profile--academic__details__content__name {
@@ -44010,14 +44019,24 @@ div.widget-123_test_ {
 }
 
 .profile--press__contact__content {
-    max-width: 55ch;
-    margin: auto;
     border-bottom: solid 0.1875rem #e5e5e5;
-    padding-bottom: 1.25rem;
+    padding: 0 0 1.25rem 1.5rem;
+}
+
+@media (min-width: 1281px) {
+    .profile--press__contact__content {
+        padding-left: 0;
+        max-width: 55ch;
+        margin: auto;
+    }
 }
 
 .profile--press__details__heading {
     border-bottom: none;
+}
+
+.profile--press__details__heading .fa-address-card {
+    color: #696969;
 }
 
 .profile--press__contact__details__content {
@@ -44025,22 +44044,28 @@ div.widget-123_test_ {
 }
 
 .profile--press__contact__inner {
+    grid-column: 2 / 12;
     padding-top: 2rem;
-    grid-column: 3 / 17;
     background: #ffffff;
 }
 
-.profile--press__contact__details__content__box {
-    display: flex;
+@media (min-width: 901px) {
+    .profile--press__contact__inner {
+        grid-column: 3 / 17;
+    }
 }
 
-.profile--press__contact__details__content__box div {
-    margin-bottom: 1rem;
-    margin-right: 5rem;
-}
-
-.profile--press__contact__details__content__box div:nth-child(2) {
-    margin-right: 0;
+@media (min-width: 768px) {
+    .profile--press__contact__details__content__box {
+        display: flex;
+    }
+    .profile--press__contact__details__content__box div {
+        margin-bottom: 1rem;
+        margin-right: 5rem;
+    }
+    .profile--press__contact__details__content__box div:nth-child(2) {
+        margin-right: 0;
+    }
 }
 
 /* --- END PRESS STYLES -- */
