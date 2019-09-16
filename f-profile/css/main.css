@@ -42954,20 +42954,9 @@ div.widget-123_test_ {
     }
 }
 
-.profile .tabs .tabs__links li a[aria-selected='true'] span {
-    border-bottom-color: #1e1e1e;
-}
-
-.profile .tabs--accordion .accordion__heading button .accordion__heading__indicator {
-    background: #1e1e1e;
-}
-
-.profile .tabs--accordion
-.accordion__heading[data-open='true']
-button
-.accordion__heading__text {
-    background: #ffffff;
-    color: #1e1e1e;
+.profile .tabs__panel__content {
+    margin: auto;
+    max-width: 55ch;
 }
 
 .profile__banner {
@@ -43532,7 +43521,6 @@ button
     max-width: 80rem;
     max-width: 55ch;
     margin: auto;
-    padding-top: 3rem;
 }
 
 @media (min-width: 1441px) {
@@ -43667,6 +43655,7 @@ button
     color: #696969;
     border-bottom: solid 0.1875rem #696969;
     padding-bottom: 1rem;
+    margin-top: 3rem;
 }
 
 .profile--student__standfirst {
