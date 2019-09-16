@@ -43919,12 +43919,12 @@ button
     padding-bottom: 1.25rem;
 }
 
-.profile--press__contact__content .profile__contact__details__heading {
+.profile--press__details__heading {
     border-bottom: none;
 }
 
-.profile--press__contact__content .profile__contact__details__content {
-    margin-top: 1rem;
+.profile--press__contact__details__content {
+    margin-top: 0.5rem;
 }
 
 .profile--press__contact__inner {
@@ -43933,16 +43933,16 @@ button
     background: #ffffff;
 }
 
-.profile--press__contact__details__content .profile--press__contact__details__content__box {
+.profile--press__contact__details__content__box {
     display: flex;
 }
 
-.profile--press__contact__details__content .profile--press__contact__details__content__box div {
+.profile--press__contact__details__content__box div {
     margin-bottom: 1rem;
     margin-right: 5rem;
 }
 
-.profile--press__contact__details__content .profile--press__contact__details__content__box div:nth-child(2) {
+.profile--press__contact__details__content__box div:nth-child(2) {
     margin-right: 0;
 }
 
