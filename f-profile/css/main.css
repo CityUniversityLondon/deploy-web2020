@@ -43926,6 +43926,108 @@ button
 }
 
 /* --- END PRESS STYLES -- */
+.profile__news-three-block .related-content {
+    grid-row-gap: 0;
+    display: grid;
+    max-width: 80rem;
+}
+
+@media (max-width: 432px) {
+    .profile__news-three-block .related-content {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .profile__news-three-block .related-content {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .profile__news-three-block .related-content {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (min-width: 1441px) {
+    .profile__news-three-block .related-content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .profile__news-three-block .related-content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.profile__news-three-block .related-content li:first-of-type {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 901px) {
+    .profile__news-three-block .related-content li:first-of-type {
+        grid-column: 1/7;
+    }
+}
+
+.profile__news-three-block .related-content li:nth-of-type(2) {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 901px) {
+    .profile__news-three-block .related-content li:nth-of-type(2) {
+        grid-column: 7/13;
+    }
+}
+
+.profile__news-three-block .related-content li:nth-of-type(3) {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 901px) {
+    .profile__news-three-block .related-content li:nth-of-type(3) {
+        grid-column: 13/-1;
+    }
+}
+
+.profile__news-three-block__heading {
+    max-width: 80rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 1441px) {
+    .profile__news-three-block__heading {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .profile__news-three-block__heading {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .profile__news-three-block__heading {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.related-news-content__heading {
+    margin-top: 0;
+}
+
 .research-degree {
     grid-row-gap: 0;
     display: grid;
