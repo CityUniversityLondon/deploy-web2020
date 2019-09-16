@@ -42985,6 +42985,12 @@ button
             clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
 }
 
+@media (max-width: 432px) {
+    .profile__banner h1 {
+        display: none;
+    }
+}
+
 .profile__banner--student,
 .profile__banner--alumni {
     background-color: #3e1031;
@@ -43058,6 +43064,12 @@ button
     }
 }
 
+@media (min-width: 769px) {
+    .profile__banner__wrapper {
+        padding: 2.5rem 0 6rem;
+    }
+}
+
 @media (min-width: 901px) {
     .profile__banner__wrapper {
         display: block;
@@ -43105,27 +43117,199 @@ button
     }
 }
 
+.profile__banner__content__thumbnail {
+    display: flex;
+}
+
 .profile__banner__content__thumbnail img {
-    min-width: 100px;
-    min-height: 100px;
+    min-width: 6.5rem;
+    min-height: 6.5rem;
+}
+
+.profile__banner__content__thumbnail figure {
+    margin-right: 0.75rem;
 }
 
 @media (min-width: 433px) {
-    .profile__banner__content__thumbnail {
+    .profile__banner__content__thumbnail figure {
         margin-right: 1.25rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .profile__banner__content__thumbnail figure {
+        margin-right: 0;
     }
 }
 
 @media (min-width: 901px) {
     .profile__banner__content__thumbnail {
         grid-column: 3 / 7;
-        margin-right: 0;
     }
 }
 
 @media (min-width: 1281px) {
     .profile__banner__content__thumbnail {
         grid-column: 3 / 6;
+    }
+}
+
+.profile__banner__content__mobile-header {
+    display: block;
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.802rem;
+    line-height: 1.25;
+    letter-spacing: -0.016em;
+    font-style: normal;
+    font-weight: 600;
+    font-family: "Meta Sans", sans-serif;
+    align-self: flex-end;
+}
+
+.profile__banner__content__mobile-header i,
+.profile__banner__content__mobile-header em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.profile__banner__content__mobile-header b,
+.profile__banner__content__mobile-header strong {
+    font-weight: inherit;
+}
+
+.profile__banner__content__mobile-header i,
+.profile__banner__content__mobile-header em {
+    font-style: italic;
+}
+
+.profile__banner__content__mobile-header u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .profile__banner__content__mobile-header {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .profile__banner__content__mobile-header {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .profile__banner__content__mobile-header {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .profile__banner__content__mobile-header {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .profile__banner__content__mobile-header {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .profile__banner__content__mobile-header {
+        font-size: 2.027rem;
+        line-height: 1.25;
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 433px) and (max-width: 768px) {
+    .profile__banner__content__mobile-header {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 769px) and (max-width: 1919px) {
+    .profile__banner__content__mobile-header {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 1920px) and (max-width: 3839px) {
+    .profile__banner__content__mobile-header {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 3840px) and (max-width: 7679px) {
+    .profile__banner__content__mobile-header {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 7680px) {
+    .profile__banner__content__mobile-header {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) {
+    .profile__banner__content__mobile-header {
+        font-size: 2.28rem;
+        line-height: 1.25;
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 433px) and (max-width: 768px) {
+    .profile__banner__content__mobile-header {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 769px) and (max-width: 1919px) {
+    .profile__banner__content__mobile-header {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 1920px) and (max-width: 3839px) {
+    .profile__banner__content__mobile-header {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 3840px) and (max-width: 7679px) {
+    .profile__banner__content__mobile-header {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 7680px) {
+    .profile__banner__content__mobile-header {
+        letter-spacing: -0.027em;
+    }
+}
+
+.profile__banner__content__mobile-header b,
+.profile__banner__content__mobile-header strong {
+    font-weight: 600;
+}
+
+@media (min-width: 433px) {
+    .profile__banner__content__mobile-header {
+        display: none;
+    }
+}
+
+.profile__banner__content__text {
+    margin-top: 1.25rem;
+}
+
+@media (min-width: 433px) {
+    .profile__banner__content__text {
+        margin-top: 0;
     }
 }
 
@@ -43144,45 +43328,51 @@ button
     }
 }
 
-.profile__banner__content__text__p__dept {
+.profile__banner__content__text__dept {
     font-family: "Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
-    margin-top: 1.5rem;
+    margin-top: 0.75rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .profile__banner__content__text__p__dept {
+    .profile__banner__content__text__dept {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .profile__banner__content__text__p__dept {
+    .profile__banner__content__text__dept {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .profile__banner__content__text__p__dept {
+    .profile__banner__content__text__dept {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .profile__banner__content__text__p__dept {
+    .profile__banner__content__text__dept {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .profile__banner__content__text__p__dept {
+    .profile__banner__content__text__dept {
         letter-spacing: -0.017em;
     }
 }
 
-.profile__banner__content__text__p__dept a {
+@media (min-width: 433px) {
+    .profile__banner__content__text__dept {
+        margin-top: 1.5rem;
+    }
+}
+
+.profile__banner__content__text__dept a {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -43210,7 +43400,7 @@ button
 }
 
 @media (hover: hover) {
-    .profile__banner__content__text__p__dept a:hover {
+    .profile__banner__content__text__dept a:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -43225,7 +43415,7 @@ button
     }
 }
 
-.profile__banner__content__text__p__dept a:focus, .profile__banner__content__text__p__dept a:active {
+.profile__banner__content__text__dept a:focus, .profile__banner__content__text__dept a:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -43240,100 +43430,100 @@ button
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .profile__banner__content__text__p__dept a {
+    .profile__banner__content__text__dept a {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .profile__banner__content__text__p__dept a:hover {
+    .profile__banner__content__text__dept a:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.profile__banner__content__text__p__dept a:visited {
+.profile__banner__content__text__dept a:visited {
     color: #4c2c92;
 }
 
-.profile__banner__content__text__p__dept a:focus {
+.profile__banner__content__text__dept a:focus {
     color: #006bbd;
 }
 
 @media (hover: hover) {
-    .profile__banner__content__text__p__dept a:hover {
+    .profile__banner__content__text__dept a:hover {
         color: #ffffff;
     }
 }
 
-.profile__banner__content__text__p__dept a:active {
+.profile__banner__content__text__dept a:active {
     color: #ffffff;
     background-color: #006bbd;
 }
 
-.profile__banner__content__text__p__dept a:visited {
+.profile__banner__content__text__dept a:visited {
     border-bottom-color: #4c2c92;
 }
 
-.profile__banner__content__text__p__dept a:focus {
+.profile__banner__content__text__dept a:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
 
 @media (hover: hover) {
-    .profile__banner__content__text__p__dept a:hover {
+    .profile__banner__content__text__dept a:hover {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
     }
 }
 
-.profile__banner__content__text__p__dept a:active {
+.profile__banner__content__text__dept a:active {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
 
-.profile__banner__content__text__p__dept a:focus, .profile__banner__content__text__p__dept a:active {
+.profile__banner__content__text__dept a:focus, .profile__banner__content__text__dept a:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.profile__banner__content__text__p__dept a:visited {
+.profile__banner__content__text__dept a:visited {
     border-bottom-color: #9b7ed9;
     color: #9b7ed9;
 }
 
-.profile__banner__content__text__p__dept a:focus {
+.profile__banner__content__text__dept a:focus {
     color: #919191;
     border-bottom-color: #919191;
     outline-color: #ffffff;
 }
 
 @media (hover: hover) {
-    .profile__banner__content__text__p__dept a:hover {
+    .profile__banner__content__text__dept a:hover {
         border-bottom: #ffffff solid 0.125rem;
         color: #ffffff;
         background-image: none;
     }
 }
 
-.profile__banner__content__text__p__dept a:active {
+.profile__banner__content__text__dept a:active {
     background-color: transparent;
     border-bottom-color: #ffffff;
     color: #ffffff;
     outline-color: #ffffff;
 }
 
-.profile__banner__content__text__p__dept span:nth-of-type(1) {
+.profile__banner__content__text__dept span:nth-of-type(1) {
     margin-right: 1rem;
 }
 
-.profile__banner__content__text__p__dept span:nth-of-type(3):before,
-.profile__banner__content__text__p__dept span:nth-of-type(4):before {
+.profile__banner__content__text__dept span:nth-of-type(3):before,
+.profile__banner__content__text__dept span:nth-of-type(4):before {
     content: '\2022';
     margin: 0 0.5rem;
 }
