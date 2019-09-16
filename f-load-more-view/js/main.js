@@ -4328,25 +4328,8 @@ function launchLoadMore(e) {
       makeSlider = e.getAttribute('data-slider'),
       contentContainer = e.querySelector('.items-group'),
       browserWidth = document.documentElement.scrollWidth,
-      sliderPrevBtn = e.querySelector('.arrow-left--btn-prev'),
-      sliderNextBtn = e.querySelector('.arrow-right--btn-next'),
       counter = 0,
-      digit = e.querySelector('.content-slider__position__digit'); // Disable slider previous button on load
-
-  navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength);
-  listingDisplay(itemsArray, counter, browserWidth, makeSlider);
-  sliderNextBtn.addEventListener('click', () => {
-    counter += 1;
-    digit.innerText = counter + 1;
-    navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength);
-    listingDisplay(itemsArray, counter, browserWidth, makeSlider);
-  });
-  sliderPrevBtn.addEventListener('click', () => {
-    counter -= 1;
-    digit.innerText = counter + 1;
-    navBtnState(counter, sliderPrevBtn, sliderNextBtn, itemsLength);
-    listingDisplay(itemsArray, counter, browserWidth, makeSlider);
-  }); // Create & append 'load more' button
+      digit = e.querySelector('.content-slider__position__digit'); // Create & append 'load more' button
 
   const loadMoreBtn = document.createElement('button');
   loadMoreBtn.classList.add('load-more-btn');
@@ -4358,6 +4341,23 @@ function launchLoadMore(e) {
   let loadMorePlusLabelText = document.createTextNode('Load more');
   loadMorePlusLabel.appendChild(loadMorePlusLabelText);
   const sliderControls = e.querySelector('.content-slider');
+  const sliderBtnPrev = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('button', null, 'Previous', null, 'fas', 'fa-arrow-left', 'arrow-left--btn-prev');
+  const sliderBtnNext = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('button', null, 'Next', null, 'fas', 'fa-arrow-right', 'arrow-right--btn-next'); // Disable slider previous button on load
+
+  navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
+  listingDisplay(itemsArray, counter, browserWidth, makeSlider);
+  sliderBtnNext.addEventListener('click', () => {
+    counter += 1;
+    digit.innerText = counter + 1;
+    navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
+    listingDisplay(itemsArray, counter, browserWidth, makeSlider);
+  });
+  sliderBtnPrev.addEventListener('click', () => {
+    counter -= 1;
+    digit.innerText = counter + 1;
+    navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
+    listingDisplay(itemsArray, counter, browserWidth, makeSlider);
+  });
   /**
    * Only add load more button to the DOM if more than one item exists and 'data-items-visible'
    * is less than number of items in listing group.
@@ -4428,6 +4428,8 @@ function launchLoadMore(e) {
       }
     }
 
+    contentContainer.appendChild(sliderBtnPrev);
+    contentContainer.appendChild(sliderBtnNext);
     lmBtn.style.display = 'none';
     sliderControls.style.display = 'block';
   } else {
