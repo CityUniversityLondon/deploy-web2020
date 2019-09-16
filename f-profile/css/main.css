@@ -43532,6 +43532,7 @@ button
     max-width: 80rem;
     max-width: 55ch;
     margin: auto;
+    padding-top: 3rem;
 }
 
 @media (min-width: 1441px) {
@@ -43662,7 +43663,113 @@ button
     margin: auto;
 }
 
+.profile--student__doi {
+    color: #696969;
+    border-bottom: solid 0.1875rem #696969;
+    padding-bottom: 1rem;
+}
+
+.profile--student__standfirst {
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.625;
+    margin-top: 0.5rem;
+    max-width: 55ch;
+    margin: 1rem 0;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .profile--student__standfirst {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .profile--student__standfirst {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .profile--student__standfirst {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .profile--student__standfirst {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .profile--student__standfirst {
+        letter-spacing: -0.017em;
+    }
+}
+
+.profile--student__standfirst i,
+.profile--student__standfirst em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.profile--student__about {
+    font-family: "Plex Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 450;
+    max-width: 55ch;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .profile--student__about {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .profile--student__about {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .profile--student__about {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .profile--student__about {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .profile--student__about {
+        letter-spacing: -0.017em;
+    }
+}
+
+.profile--student__about b,
+.profile--student__about strong {
+    font-weight: 700;
+}
+
+.profile--student__about i,
+.profile--student__about em {
+    font-style: italic;
+}
+
 /* --- END STUDENT STYLES --- */
+/* --- ACADEMIC STYLES --- */
 .profile--academic__inner {
     padding-top: 2rem;
 }
@@ -43860,6 +43967,7 @@ button
     font-style: italic;
 }
 
+/* --- END ACADEMIC STYLES --- */
 /* --- PRESS STYLES -- */
 .profile--press__contact {
     max-width: 80rem;
