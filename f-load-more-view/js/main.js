@@ -4231,10 +4231,10 @@ function navBtnState(counter, prevBtn, nextBtn, itemsLength) {
  */
 
 
-function listingDisplay(itemsArray, counter, browserWidth, makeSlider) {
+function listingDisplay(itemsArray, counter, browserWidth) {
   for (const item of itemsArray.entries()) {
-    if (browserWidth < 768 && itemsArray.length > 1 && makeSlider == 'true') {
-      item[0] === counter ? item[1].style.display = 'block' : item[1].style.display = 'none';
+    if (browserWidth < 768 && itemsArray.length > 1) {
+      item[0] <= counter ? item[1].classList.remove('hide') : item[1].classList.add('hide');
     }
   }
 }
@@ -4342,7 +4342,8 @@ function launchLoadMore(e) {
   loadMorePlusLabel.appendChild(loadMorePlusLabelText);
   const sliderControls = e.querySelector('.content-slider');
   const sliderBtnPrev = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('button', null, 'Previous', null, 'fas', 'fa-arrow-left', 'arrow-left--btn-prev');
-  const sliderBtnNext = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('button', null, 'Next', null, 'fas', 'fa-arrow-right', 'arrow-right--btn-next'); // Disable slider previous button on load
+  const sliderBtnNext = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('button', null, 'Next', null, 'fas', 'fa-arrow-right', 'arrow-right--btn-next');
+  const sliderPosition = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', "".concat(counter + 1, " / ").concat(itemsLength), 'Slider position', null, 'content-slider__position__digit'); // Disable slider previous button on load
 
   navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
   listingDisplay(itemsArray, counter, browserWidth, makeSlider);
@@ -4351,12 +4352,28 @@ function launchLoadMore(e) {
     digit.innerText = counter + 1;
     navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
     listingDisplay(itemsArray, counter, browserWidth, makeSlider);
+
+    for (const item of items.entries()) {
+      if (item[0] < counter) {
+        item[1].classList.add('dsk');
+      } else {
+        item[1].classList.remove('dsk');
+      }
+    }
   });
   sliderBtnPrev.addEventListener('click', () => {
     counter -= 1;
     digit.innerText = counter + 1;
     navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
     listingDisplay(itemsArray, counter, browserWidth, makeSlider);
+
+    for (const item of items.entries()) {
+      if (item[0] < counter) {
+        item[1].classList.add('dsk');
+      } else {
+        item[1].classList.remove('dsk');
+      }
+    }
   });
   /**
    * Only add load more button to the DOM if more than one item exists and 'data-items-visible'
@@ -4419,22 +4436,23 @@ function launchLoadMore(e) {
   } // If slider, hide 'load more' button and show slider controls
 
 
-  let lmBtn = e.querySelector('.load-more-btn');
-
-  if (makeSlider == 'true' && browserWidth < 768) {
-    for (const item of items.entries()) {
-      if (!item[1].classList.contains('hide') && item[0] > 0) {
-        item[1].classList.add('hide');
-      }
-    }
-
+  if (makeSlider == 'true') {
+    contentContainer.classList.add('slider-compatible');
     contentContainer.appendChild(sliderBtnPrev);
     contentContainer.appendChild(sliderBtnNext);
-    lmBtn.style.display = 'none';
-    sliderControls.style.display = 'block';
-  } else {
-    lmBtn.style.display = 'block';
-    sliderControls.style.display = 'none';
+    contentContainer.appendChild(sliderPosition);
+
+    if (browserWidth < 768) {
+      for (const item of items.entries()) {
+        if (!item[1].classList.contains('hide') && item[0] > 0) {
+          item[1].classList.add('hide');
+        }
+      }
+
+      sliderControls.style.display = 'block';
+    } else {
+      sliderControls.style.display = 'none';
+    }
   } // Run on every 'load more' click: increase listings by batch number
 
 
