@@ -43608,18 +43608,25 @@ div.widget-123_test_ {
 @media (min-width: 1281px) {
     .profile--global__tags {
         margin-top: 1rem;
+        margin-bottom: 3rem;
     }
 }
 
 .profile--global__tags__content {
-    padding: 1rem 0 2rem 0;
+    padding: 1rem 0 1rem 0;
     background: #d5d2d0;
 }
 
 @media (min-width: 768px) {
     .profile--global__tags__content {
+        grid-column: 1 / -1;
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 1281px) {
+    .profile--global__tags__content {
         grid-column: 2 / 18;
-        padding: 1.5rem 1.5rem 1rem 1.5rem;
     }
 }
 
@@ -43680,7 +43687,6 @@ div.widget-123_test_ {
     display: inline-block;
     margin: 0 1.5rem 1rem 0;
     border-radius: 0;
-    margin-right: 1.5rem;
 }
 
 .profile--global__tags__labels .outline-cta--bright:last-child {
@@ -43804,7 +43810,7 @@ div.widget-123_test_ {
 
 @media (min-width: 768px) {
     .profile--global__contact-details .profile--global__details__content__column:first-child {
-        margin-right: 6rem;
+        margin-right: 5.5rem;
     }
 }
 
@@ -44200,13 +44206,15 @@ div.widget-123_test_ {
 /* --- END PRESS STYLES --- */
 /* --- ALUMNI STYLES --- */
 @media (min-width: 768px) {
-    .profile--global__tags--alumni .profile--global__tags__content {
+    .profile--global__tags--alumni .profile--global__tags__content,
+    .profile--global__tags--staff .profile--global__tags__content {
         grid-column: 2 / 12;
     }
 }
 
 @media (min-width: 1281px) {
-    .profile--global__tags--alumni .profile--global__tags__content {
+    .profile--global__tags--alumni .profile--global__tags__content,
+    .profile--global__tags--staff .profile--global__tags__content {
         grid-column: 3 / 17;
     }
 }
