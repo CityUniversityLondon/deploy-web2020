@@ -43578,6 +43578,163 @@ div.widget-123_test_ {
     font-size: 18px;
 }
 
+.profile--global__details__content {
+    margin-top: 1.5rem;
+}
+
+.profile--global__details__content a span {
+    margin-left: 0.25rem;
+}
+
+.profile--global__details__content__column div {
+    margin-bottom: 1rem;
+}
+
+.profile--global__details__content__column span {
+    color: #d61726;
+    margin-right: 0.5rem;
+}
+
+.profile--global__details__content__column .fa-phone {
+    transform: rotate(90deg);
+}
+
+@media (min-width: 1281px) {
+    .profile--global__contact-details {
+        margin-right: 2rem;
+    }
+}
+
+.profile--global__personal-links ul {
+    margin-left: 1.5rem;
+}
+
+.profile--global__details__content {
+    font-family: "Plex Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 450;
+    max-width: 55ch;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .profile--global__details__content {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .profile--global__details__content {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .profile--global__details__content {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .profile--global__details__content {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .profile--global__details__content {
+        letter-spacing: -0.017em;
+    }
+}
+
+.profile--global__details__content b,
+.profile--global__details__content strong {
+    font-weight: 700;
+}
+
+.profile--global__details__content i,
+.profile--global__details__content em {
+    font-style: italic;
+}
+
+@media (min-width: 768px) {
+    .profile--global__contact-details {
+        grid-column: 2 / 12;
+    }
+}
+
+@media (min-width: 1280px) {
+    .profile--global__contact-details {
+        grid-column: 1 / 7;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile--global__contact-details .profile--global__details__content {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile--global__details__content__column:first-child {
+        margin-right: 6rem;
+    }
+}
+
+@media (min-width: 1281px) {
+    .profile--global__details__content__column:first-child {
+        margin-right: 3rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    .profile--global__details__content__column:first-child {
+        margin-right: 6rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile--global__other-contact-methods {
+        display: flex;
+        grid-column: 2 / 12;
+    }
+}
+
+@media (min-width: 1280px) {
+    .profile--global__other-contact-methods {
+        grid-column: 7 / -1;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile--global__other-contact-methods .profile--global__details {
+        width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile--global__other-contact-methods .profile--global__details:first-child {
+        margin-right: 2rem;
+    }
+}
+
+@media (min-width: 1281px) {
+    .profile--global__other-contact-methods .profile--global__details:first-child {
+        margin-right: 3rem;
+    }
+}
+
+.profile--global__details {
+    margin-bottom: 2.5rem;
+}
+
+.profile--global__details__content__name {
+    display: block;
+    font-weight: 700;
+}
+
 /* --- END GLOBAL PROFILE STYLES --- */
 /* --- STUDENT STYLES --- */
 .profile--student__tags {
@@ -43935,163 +44092,6 @@ div.widget-123_test_ {
     .profile--academic__inner {
         grid-column: 2 / 18;
     }
-}
-
-@media (min-width: 768px) {
-    .profile--academic__contact-details {
-        grid-column: 2 / 12;
-    }
-}
-
-@media (min-width: 1280px) {
-    .profile--academic__contact-details {
-        grid-column: 1 / 7;
-    }
-}
-
-@media (min-width: 768px) {
-    .profile--academic__contact-details .profile--academic__details__content__box:first-child {
-        margin-right: 5.75rem;
-    }
-}
-
-@media (min-width: 1281px) {
-    .profile--academic__contact-details .profile--academic__details__content__box:first-child {
-        margin-right: 3rem;
-    }
-}
-
-@media (min-width: 1441px) {
-    .profile--academic__contact-details .profile--academic__details__content__box:first-child {
-        margin-right: 6rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .profile--academic__other-contact-methods {
-        display: flex;
-        grid-column: 2 / 12;
-    }
-}
-
-@media (min-width: 1280px) {
-    .profile--academic__other-contact-methods {
-        grid-column: 7 / -1;
-    }
-}
-
-@media (min-width: 768px) {
-    .profile--academic__other-contact-methods .profile--academic__details {
-        width: 50%;
-    }
-}
-
-@media (min-width: 768px) {
-    .profile--academic__other-contact-methods .profile--academic__details:first-child {
-        margin-right: 2rem;
-    }
-}
-
-@media (min-width: 1281px) {
-    .profile--academic__other-contact-methods .profile--academic__details:first-child {
-        margin-right: 3rem;
-    }
-}
-
-.profile--academic__details {
-    margin-bottom: 2.5rem;
-}
-
-@media (min-width: 1281px) {
-    .profile--academic__contact-details {
-        margin-right: 2rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .profile--academic__contact-details .profile--academic__details__content {
-        display: flex;
-    }
-}
-
-.profile--academic__personal-links ul {
-    margin-left: 1.5rem;
-}
-
-.profile--academic__details__content {
-    margin-top: 1.5rem;
-}
-
-.profile--academic__details__content a span {
-    margin-left: 0.25rem;
-}
-
-.profile--academic__details__content__box div {
-    margin-bottom: 1rem;
-}
-
-.profile--academic__details__content__box span {
-    color: #d61726;
-    margin-right: 0.5rem;
-}
-
-.profile--academic__details__content__box .fa-phone {
-    transform: rotate(90deg);
-}
-
-.profile--academic__details__content__name {
-    display: block;
-    font-weight: 700;
-}
-
-.profile--academic__details__content {
-    font-family: "Plex Sans", sans-serif;
-    font-size: 1rem;
-    line-height: 1.625;
-    letter-spacing: -0.005em;
-    font-style: normal;
-    font-weight: 450;
-    max-width: 55ch;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .profile--academic__details__content {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .profile--academic__details__content {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .profile--academic__details__content {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .profile--academic__details__content {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .profile--academic__details__content {
-        letter-spacing: -0.017em;
-    }
-}
-
-.profile--academic__details__content b,
-.profile--academic__details__content strong {
-    font-weight: 700;
-}
-
-.profile--academic__details__content i,
-.profile--academic__details__content em {
-    font-style: italic;
 }
 
 /* --- END ACADEMIC STYLES --- */
