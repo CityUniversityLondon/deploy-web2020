@@ -4201,6 +4201,8 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'load-more';
 let hashedUrl = window.location.hash,
     loadMoreId;
+let dskItems = [];
+let dskItemsLength = dskItems.length;
 /**
  * Slider: Enable/disable navigation buttons based on position of listing in collection
  *
@@ -4275,14 +4277,14 @@ function itemsDisplay(items, visibleItems, loadMoreBtn) {
  */
 
 
-function scrollToItem(items, visibleItems, itemsIncrement) {
-  let targetItem = visibleItems - itemsIncrement;
+function scrollToItem(items, a_visibleItems, a_itemsIncrement) {
+  let targetItem = a_visibleItems - a_itemsIncrement;
 
   for (const item of items.entries()) {
     if (item[0] == targetItem) {
       zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(item[1]);
       item[1].focus();
-    } else if (visibleItems == itemsIncrement) {
+    } else if (a_visibleItems == a_itemsIncrement) {
       if (item[0] == 0) {
         item[1].focus();
         zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(item[1]);
@@ -4299,8 +4301,10 @@ function scrollToItem(items, visibleItems, itemsIncrement) {
  */
 
 
-function pushUrlState(folderId, visibleItems, itemsIncrement) {
-  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
+function pushUrlState(folderId, a_visibleItems, a_itemsIncrement) {
+  console.log('vis ' + a_visibleItems);
+  console.log('inc ' + a_itemsIncrement);
+  let targetListingUrlParam = a_visibleItems - (a_itemsIncrement - 1);
   history.pushState('', '', "#folder".concat(folderId, "-item").concat(targetListingUrlParam));
 }
 /**
@@ -4312,8 +4316,8 @@ function pushUrlState(folderId, visibleItems, itemsIncrement) {
  */
 
 
-function replaceUrlState(folderId, visibleItems, itemsIncrement) {
-  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
+function replaceUrlState(folderId, a_visibleItems, a_itemsIncrement) {
+  let targetListingUrlParam = a_visibleItems - (a_itemsIncrement - 1);
   history.replaceState('', '', "#folder".concat(folderId, "-item").concat(targetListingUrlParam));
 }
 
@@ -4356,6 +4360,7 @@ function launchLoadMore(e) {
     for (const item of items.entries()) {
       if (item[0] < counter) {
         item[1].classList.add('dsk');
+        dskItems.push(item[1]);
       } else {
         item[1].classList.remove('dsk');
       }
@@ -4453,16 +4458,61 @@ function launchLoadMore(e) {
     } else {
       sliderControls.style.display = 'none';
     }
-  } // Run on every 'load more' click: increase listings by batch number
+  } // let dskItems = [];
+  // for (const item of items) {
+  //     if (item.classList.contains('dsk')) {
+  //         dskItems.push(item);
+  //     }
+  // }
+  // let dskItemsLength = dskItems.length;
+  // Run on every 'load more' click: increase listings by batch number
 
 
   loadMoreBtn.addEventListener('click', () => {
     active = e.getAttribute('active');
+
+    if (makeSlider) {
+      for (const item of items.entries()) {
+        if (item[0] == visibleItems) {
+          item[1].classList.remove('dsk');
+        } else {
+          item[1].classList.add('dsk');
+        } // counter = visibleItems + (itemsIncrement -1);
+
+      }
+    }
+
+    if (dskItemsLength > 0) {
+      console.log(dskItemsLength); // itemsDisplay(items, visibleItems, loadMoreBtn);
+      // scrollToItem(items, visibleItems, itemsIncrement);
+
+      itemsDisplay(items, dskItemsLength, loadMoreBtn);
+      scrollToItem(items, 7, 1);
+
+      if (hashedUrl) {
+        console.log('hashed');
+        replaceUrlState(folderId, visibleItems + itemsIncrement, itemsIncrement);
+      } else {
+        console.log('no hash');
+        pushUrlState(folderId, dskItemsLength + itemsIncrement, itemsIncrement);
+      } // hashedUrl
+      //     ? replaceUrlState(folderId, dskItemsLength, itemsIncrement)
+      //     : pushUrlState(folderId, dskItemsLength, itemsIncrement);
+
+
+      for (const item of items.entries()) {
+        // if (item[0] < (dskItemsLength + itemsIncrement - 1)) {
+        item[1].classList.remove('hide'); // }
+
+        console.log(dskItemsLength);
+      }
+    }
     /**
      * Check if load more is already active, i.e. already had at least one click on it. If it has, track the number
      * of visible items. If it is not active, i.e. first click, retrieve data attribute settings from launch and
      * use these to decide how many items should be shown.
      */
+
 
     if (active == 'true') {
       visibleItems += itemsIncrement;

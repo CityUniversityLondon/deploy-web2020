@@ -31343,12 +31343,14 @@ article figure figcaption a:active {
     }
 }
 
-.load-more .dsk {
-    display: none;
+@media (max-width: 767px) {
+    .load-more[data-slider='true'] .dsk {
+        display: none;
+    }
 }
 
 @media (min-width: 768px) {
-    .load-more .dsk {
+    .load-more[data-slider='true'] .dsk {
         display: block;
     }
 }
@@ -40003,12 +40005,14 @@ h3 .linked-heading__icons {
     }
 }
 
-.load-more .dsk {
-    display: none;
+@media (max-width: 767px) {
+    .load-more[data-slider='true'] .dsk {
+        display: none;
+    }
 }
 
 @media (min-width: 768px) {
-    .load-more .dsk {
+    .load-more[data-slider='true'] .dsk {
         display: block;
     }
 }
