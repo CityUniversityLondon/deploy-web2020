@@ -43678,19 +43678,19 @@ div.widget-123_test_ {
 }
 
 @media (min-width: 768px) {
-    .profile--global__details__content__column:first-child {
+    .profile--global__contact-details .profile--global__details__content__column:first-child {
         margin-right: 6rem;
     }
 }
 
 @media (min-width: 1281px) {
-    .profile--global__details__content__column:first-child {
+    .profile--global__contact-details .profile--global__details__content__column:first-child {
         margin-right: 3rem;
     }
 }
 
 @media (min-width: 1441px) {
-    .profile--global__details__content__column:first-child {
+    .profile--global__contact-details .profile--global__details__content__column:first-child {
         margin-right: 6rem;
     }
 }
@@ -43791,7 +43791,7 @@ div.widget-123_test_ {
 
 @media (min-width: 768px) {
     .profile--student__tags__content {
-        grid-column: 1 / -1;
+        grid-column: 2 / 18;
         padding: 1.5rem 0 1rem 0;
     }
 }
@@ -44185,19 +44185,47 @@ div.widget-123_test_ {
 }
 
 @media (min-width: 768px) {
-    .profile--press__contact__details__content__box {
+    .profile--press__contact__details__content__column {
         display: flex;
     }
-    .profile--press__contact__details__content__box div {
+    .profile--press__contact__details__content__column div {
         margin-bottom: 1rem;
         margin-right: 5rem;
     }
-    .profile--press__contact__details__content__box div:nth-child(2) {
+    .profile--press__contact__details__content__column div:nth-child(2) {
         margin-right: 0;
     }
 }
 
-/* --- END PRESS STYLES -- */
+/* --- END PRESS STYLES --- */
+/* --- ALUMNI STYLES --- */
+@media (min-width: 768px) {
+    .profile--alumni__details {
+        max-width: 55ch;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        padding: 0 1.5rem 0 1.5rem;
+    }
+}
+
+@media (min-width: 1281px) {
+    .profile--alumni__details {
+        padding: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile--alumni__details__column {
+        width: 50%;
+    }
+}
+
+.profile--alumni__details__column:first-child {
+    margin-right: 4rem;
+}
+
+/* --- END ALUMNI STYLES --- */
 .profile__news-three-block .related-content {
     grid-row-gap: 0;
     display: grid;
