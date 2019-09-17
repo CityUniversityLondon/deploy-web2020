@@ -42998,6 +42998,14 @@ div.widget-123_test_ {
     background-image: linear-gradient(to top, rgba(48, 48, 48, 0), rgba(48, 48, 48, 0.2));
 }
 
+.profile__banner--staff {
+    background-color: color-blue90;
+}
+
+.profile__banner--staff:before {
+    background-image: linear-gradient(to top, rgba(12, 12, 14, 0), rgba(12, 12, 14, 0.3));
+}
+
 .profile__banner__wrapper {
     position: relative;
     color: #ffffff;
