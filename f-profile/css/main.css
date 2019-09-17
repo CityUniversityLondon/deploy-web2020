@@ -43561,6 +43561,24 @@ div.widget-123_test_ {
     }
 }
 
+/* --- GLOBAL PROFILE STYLES --- */
+.profile--global__details__heading {
+    padding-bottom: 0.5rem;
+    border-bottom: solid 0.125rem #e5e5e5;
+}
+
+.profile--global__details__heading span:first-child {
+    font-size: 1.1rem;
+}
+
+.profile--global__details__heading__text {
+    color: #696969;
+    margin-left: 0.5rem;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* --- END GLOBAL PROFILE STYLES --- */
 /* --- STUDENT STYLES --- */
 .profile--student__tags {
     margin-top: 2rem;
@@ -43980,24 +43998,8 @@ div.widget-123_test_ {
     }
 }
 
-.profile--academic__details__heading {
-    padding-bottom: 0.5rem;
-    border-bottom: solid 0.125rem #e5e5e5;
-}
-
-.profile--academic__details__heading span:first-child {
-    font-size: 1.1rem;
-}
-
 .profile--academic__details {
     margin-bottom: 2.5rem;
-}
-
-.profile--academic__details__heading__text {
-    color: #696969;
-    margin-left: 0.5rem;
-    font-weight: 700;
-    font-size: 18px;
 }
 
 @media (min-width: 1281px) {
