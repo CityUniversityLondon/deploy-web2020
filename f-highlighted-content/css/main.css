@@ -39913,6 +39913,10 @@ a.modal__close:active, a.modal__close:focus {
     border-left: 0.5rem solid #d61726;
 }
 
+.highlighted-content__border p {
+    margin: 0;
+}
+
 .highlighted-content__info {
     padding-bottom: 1.5rem;
     margin-top: 1.5rem;
@@ -40026,6 +40030,10 @@ a.modal__close:active, a.modal__close:focus {
     .highlighted-content__info:before {
         letter-spacing: -0.017em;
     }
+}
+
+.highlighted-content__info p {
+    margin: 0;
 }
 
 .generic {
