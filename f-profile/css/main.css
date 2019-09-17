@@ -43554,7 +43554,7 @@ div.widget-123_test_ {
     }
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 768px) {
     .profile .content {
         margin-left: auto;
         margin-right: auto;
@@ -43562,6 +43562,131 @@ div.widget-123_test_ {
 }
 
 /* --- GLOBAL PROFILE STYLES --- */
+@media (min-width: 768px) {
+    .profile--global__tags {
+        grid-row-gap: 0;
+        display: grid;
+        max-width: 80rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 432px) {
+    .profile--global__tags {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (min-width: 433px) and (max-width: 900px) {
+    .profile--global__tags {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (min-width: 901px) {
+    .profile--global__tags {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (min-width: 1441px) {
+    .profile--global__tags {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    .profile--global__tags {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1281px) {
+    .profile--global__tags {
+        margin-top: 1rem;
+    }
+}
+
+.profile--global__tags__content {
+    padding: 1rem 0 2rem 0;
+    background: #d5d2d0;
+}
+
+@media (min-width: 768px) {
+    .profile--global__tags__content {
+        grid-column: 2 / 18;
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+    }
+}
+
+.profile--global__tags__heading {
+    max-width: 80rem;
+    margin-bottom: 1.5rem;
+    color: #494949;
+    font-weight: 700;
+    max-width: 55ch;
+}
+
+@media (min-width: 1441px) {
+    .profile--global__tags__heading {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .profile--global__tags__heading {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile--global__tags__heading {
+        margin: 0 auto 1.5rem auto;
+    }
+}
+
+.profile--global__tags__labels {
+    max-width: 80rem;
+}
+
+@media (min-width: 1441px) {
+    .profile--global__tags__labels {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .profile--global__tags__labels {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile--global__tags__labels {
+        max-width: 55ch;
+        margin: auto;
+    }
+}
+
+.profile--global__tags__labels .outline-cta--bright {
+    display: inline-block;
+    margin: 0 1.5rem 1rem 0;
+    border-radius: 0;
+    margin-right: 1.5rem;
+}
+
+.profile--global__tags__labels .outline-cta--bright:last-child {
+    margin-bottom: 0;
+}
+
 .profile--global__details__heading {
     padding-bottom: 0.5rem;
     border-bottom: solid 0.125rem #e5e5e5;
@@ -43735,132 +43860,7 @@ div.widget-123_test_ {
     font-weight: 700;
 }
 
-/* --- END GLOBAL PROFILE STYLES --- */
-/* --- STUDENT STYLES --- */
-.profile--student__tags {
-    margin-top: 2rem;
-}
-
-@media (min-width: 768px) {
-    .profile--student__tags {
-        grid-row-gap: 0;
-        display: grid;
-        max-width: 80rem;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 432px) {
-    .profile--student__tags {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 768px) and (min-width: 433px) and (max-width: 900px) {
-    .profile--student__tags {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 768px) and (min-width: 901px) {
-    .profile--student__tags {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
-}
-
-@media (min-width: 768px) and (min-width: 1441px) {
-    .profile--student__tags {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1440px) {
-    .profile--student__tags {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-.profile--student__tags__content {
-    padding: 1rem 0 2rem 0;
-    background: #d5d2d0;
-}
-
-@media (min-width: 768px) {
-    .profile--student__tags__content {
-        grid-column: 2 / 18;
-        padding: 1.5rem 0 1rem 0;
-    }
-}
-
-.profile--student__tags__heading {
-    max-width: 80rem;
-    margin-bottom: 1.5rem;
-    color: #494949;
-    font-weight: 700;
-    max-width: 55ch;
-}
-
-@media (min-width: 1441px) {
-    .profile--student__tags__heading {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .profile--student__tags__heading {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .profile--student__tags__heading {
-        margin: 0 auto 1.5rem auto;
-    }
-}
-
-.profile--student__tags__labels {
-    max-width: 80rem;
-}
-
-@media (min-width: 1441px) {
-    .profile--student__tags__labels {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .profile--student__tags__labels {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .profile--student__tags__labels {
-        max-width: 55ch;
-        margin: auto;
-    }
-}
-
-.profile--student__tags__labels .outline-cta--bright {
-    display: inline-block;
-    margin: 0 1.5rem 1rem 0;
-    border-radius: 0;
-    margin-right: 1.5rem;
-}
-
-.profile--student__tags__labels .outline-cta--bright:last-child {
-    margin-bottom: 0;
-}
-
-.profile--student__doi {
+.profile--global__date {
     font-family: "Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625;
@@ -43869,58 +43869,58 @@ div.widget-123_test_ {
     font-weight: 450;
     max-width: 55ch;
     color: #696969;
-    border-bottom: solid 0.1875rem #696969;
-    padding-bottom: 1rem;
+    border-top: solid 0.1875rem #696969;
+    padding-top: 1rem;
     margin-top: 2rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .profile--student__doi {
+    .profile--global__date {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .profile--student__doi {
+    .profile--global__date {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .profile--student__doi {
+    .profile--global__date {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .profile--student__doi {
+    .profile--global__date {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .profile--student__doi {
+    .profile--global__date {
         letter-spacing: -0.017em;
     }
 }
 
-.profile--student__doi b,
-.profile--student__doi strong {
+.profile--global__date b,
+.profile--global__date strong {
     font-weight: 700;
 }
 
-.profile--student__doi i,
-.profile--student__doi em {
+.profile--global__date i,
+.profile--global__date em {
     font-style: italic;
 }
 
 @media (min-width: 768px) {
-    .profile--student__doi {
+    .profile--global__date {
         margin-top: 3rem;
     }
 }
 
-.profile--student__standfirst {
+.profile--global__standfirst {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
@@ -43935,41 +43935,41 @@ div.widget-123_test_ {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .profile--student__standfirst {
+    .profile--global__standfirst {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .profile--student__standfirst {
+    .profile--global__standfirst {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .profile--student__standfirst {
+    .profile--global__standfirst {
         letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .profile--student__standfirst {
+    .profile--global__standfirst {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .profile--student__standfirst {
+    .profile--global__standfirst {
         letter-spacing: -0.017em;
     }
 }
 
-.profile--student__standfirst i,
-.profile--student__standfirst em {
+.profile--global__standfirst i,
+.profile--global__standfirst em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
 }
 
-.profile--student__about {
+.profile--global__about {
     font-family: "Plex Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.625;
@@ -43980,46 +43980,46 @@ div.widget-123_test_ {
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .profile--student__about {
+    .profile--global__about {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .profile--student__about {
+    .profile--global__about {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .profile--student__about {
+    .profile--global__about {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .profile--student__about {
+    .profile--global__about {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .profile--student__about {
+    .profile--global__about {
         letter-spacing: -0.017em;
     }
 }
 
-.profile--student__about b,
-.profile--student__about strong {
+.profile--global__about b,
+.profile--global__about strong {
     font-weight: 700;
 }
 
-.profile--student__about i,
-.profile--student__about em {
+.profile--global__about i,
+.profile--global__about em {
     font-style: italic;
 }
 
-/* --- END STUDENT STYLES --- */
+/* --- END GLOBAL PROFILE STYLES --- */
 /* --- ACADEMIC STYLES --- */
 .profile--academic {
     max-width: 80rem;
@@ -44199,6 +44199,18 @@ div.widget-123_test_ {
 
 /* --- END PRESS STYLES --- */
 /* --- ALUMNI STYLES --- */
+@media (min-width: 768px) {
+    .profile--global__tags--alumni .profile--global__tags__content {
+        grid-column: 2 / 12;
+    }
+}
+
+@media (min-width: 1281px) {
+    .profile--global__tags--alumni .profile--global__tags__content {
+        grid-column: 3 / 17;
+    }
+}
+
 @media (min-width: 768px) {
     .profile--alumni__details {
         max-width: 55ch;
