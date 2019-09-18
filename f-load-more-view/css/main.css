@@ -31353,6 +31353,9 @@ article figure figcaption a:active {
     .load-more[data-slider='true'] .dsk {
         display: block;
     }
+    .load-more[data-slider='true'] .dsk.hide {
+        display: none;
+    }
 }
 
 .menu {
@@ -40014,6 +40017,9 @@ h3 .linked-heading__icons {
 @media (min-width: 768px) {
     .load-more[data-slider='true'] .dsk {
         display: block;
+    }
+    .load-more[data-slider='true'] .dsk.hide {
+        display: none;
     }
 }
 

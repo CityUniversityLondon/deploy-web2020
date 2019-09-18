@@ -4352,7 +4352,9 @@ function launchLoadMore(e) {
   navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
   listingDisplay(itemsArray, counter, browserWidth, makeSlider);
   sliderBtnNext.addEventListener('click', () => {
-    counter += 1;
+    // console.log(counter);
+    counter += 1; // console.log(counter);
+
     digit.innerText = counter + 1;
     navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
     listingDisplay(itemsArray, counter, browserWidth, makeSlider);
@@ -4361,8 +4363,11 @@ function launchLoadMore(e) {
       if (item[0] < counter) {
         item[1].classList.add('dsk');
         dskItems.push(item[1]);
-      } else {
+      } else if (item[0] > counter) {// item[1].classList.remove('dsk');
+      } else if (item[0] == counter) {
+        // console.log('equal');
         item[1].classList.remove('dsk');
+        item[1].classList.remove('hide');
       }
     }
   });
@@ -4458,14 +4463,7 @@ function launchLoadMore(e) {
     } else {
       sliderControls.style.display = 'none';
     }
-  } // let dskItems = [];
-  // for (const item of items) {
-  //     if (item.classList.contains('dsk')) {
-  //         dskItems.push(item);
-  //     }
-  // }
-  // let dskItemsLength = dskItems.length;
-  // Run on every 'load more' click: increase listings by batch number
+  } // Run on every 'load more' click: increase listings by batch number
 
 
   loadMoreBtn.addEventListener('click', () => {
@@ -4477,23 +4475,22 @@ function launchLoadMore(e) {
           item[1].classList.remove('dsk');
         } else {
           item[1].classList.add('dsk');
-        } // counter = visibleItems + (itemsIncrement -1);
+        }
 
+        counter = visibleItems;
       }
     }
 
     if (dskItemsLength > 0) {
-      console.log(dskItemsLength); // itemsDisplay(items, visibleItems, loadMoreBtn);
-      // scrollToItem(items, visibleItems, itemsIncrement);
-
+      // console.log(dskItemsLength);
       itemsDisplay(items, dskItemsLength, loadMoreBtn);
       scrollToItem(items, 7, 1);
 
       if (hashedUrl) {
-        console.log('hashed');
+        // console.log('hashed');
         replaceUrlState(folderId, visibleItems + itemsIncrement, itemsIncrement);
       } else {
-        console.log('no hash');
+        // console.log('no hash');
         pushUrlState(folderId, dskItemsLength + itemsIncrement, itemsIncrement);
       } // hashedUrl
       //     ? replaceUrlState(folderId, dskItemsLength, itemsIncrement)
@@ -4503,12 +4500,12 @@ function launchLoadMore(e) {
       for (const item of items.entries()) {
         // if (item[0] < (dskItemsLength + itemsIncrement - 1)) {
         item[1].classList.remove('hide'); // }
-
-        console.log(dskItemsLength);
+        // console.log(dskItemsLength);
       }
     }
     /**
-     * Check if load more is already active, i.e. already had at least one click on it. If it has, track the number
+     * Check if load more is already active, i.e. already had at least one
+     * click on it. If it has, track the number
      * of visible items. If it is not active, i.e. first click, retrieve data attribute settings from launch and
      * use these to decide how many items should be shown.
      */
