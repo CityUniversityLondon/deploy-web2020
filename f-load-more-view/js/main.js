@@ -4203,6 +4203,7 @@ let hashedUrl = window.location.hash,
     loadMoreId;
 let dskItems = [];
 let dskItemsLength = dskItems.length;
+let abc;
 /**
  * Slider: Enable/disable navigation buttons based on position of listing in collection
  *
@@ -4302,8 +4303,8 @@ function scrollToItem(items, a_visibleItems, a_itemsIncrement) {
 
 
 function pushUrlState(folderId, a_visibleItems, a_itemsIncrement) {
-  console.log('vis ' + a_visibleItems);
-  console.log('inc ' + a_itemsIncrement);
+  // console.log('vis ' + a_visibleItems);
+  // console.log('inc ' + a_itemsIncrement);
   let targetListingUrlParam = a_visibleItems - (a_itemsIncrement - 1);
   history.pushState('', '', "#folder".concat(folderId, "-item").concat(targetListingUrlParam));
 }
@@ -4351,10 +4352,47 @@ function launchLoadMore(e) {
 
   navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
   listingDisplay(itemsArray, counter, browserWidth, makeSlider);
-  sliderBtnNext.addEventListener('click', () => {
-    // console.log(counter);
-    counter += 1; // console.log(counter);
+  let abcArr = [];
+  sliderBtnPrev.addEventListener('click', () => {
+    counter -= 1; // console.log(counter);
 
+    abc = counter;
+    abcArr.push(abc);
+    e.setAttribute('data-items-visible', abc + 1);
+    digit.innerText = counter + 1;
+    navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
+    listingDisplay(itemsArray, counter, browserWidth, makeSlider);
+
+    for (const item of items.entries()) {
+      if (item[0] > counter) {
+        item[1].classList.add('dsk');
+        item[1].classList.add('hide');
+      } else if (item[0] == counter) {
+        item[1].classList.remove('dsk');
+      }
+    }
+
+    let loadMoreClicks = 0; // Pass counter value, i.e. position in listing to functions
+
+    loadMoreBtn.addEventListener('click', () => {
+      // // console.log('abc: ' + abcArr[abcArr.length-1]);
+      loadMoreClicks += 1;
+      abc = abcArr[abcArr.length - 1] + 1 + loadMoreClicks * itemsIncrement; // // console.log(loadMoreClicks);
+
+      e.setAttribute('data-items-visible', abc);
+      let currentlyVisibleItems = parseInt(e.dataset.itemsVisible); // // console.log(currentlyVisibleItems)
+
+      itemsDisplay(items, currentlyVisibleItems, loadMoreBtn);
+      scrollToItem(items, abc, itemsIncrement);
+      hashedUrl ? replaceUrlState(folderId, abc, itemsIncrement) : pushUrlState(folderId, abc, itemsIncrement);
+    });
+  });
+  sliderBtnNext.addEventListener('click', () => {
+    // // console.log(counter);
+    counter += 1; // // console.log('counter to be passed: ' + counter);
+    // Create new variable to override counter being set on any load more click
+
+    abc = counter;
     digit.innerText = counter + 1;
     navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
     listingDisplay(itemsArray, counter, browserWidth, makeSlider);
@@ -4363,27 +4401,22 @@ function launchLoadMore(e) {
       if (item[0] < counter) {
         item[1].classList.add('dsk');
         dskItems.push(item[1]);
-      } else if (item[0] > counter) {// item[1].classList.remove('dsk');
+      } else if (item[0] > counter) {
+        item[1].classList.add('hide');
       } else if (item[0] == counter) {
-        // console.log('equal');
+        // // console.log('equal');
         item[1].classList.remove('dsk');
         item[1].classList.remove('hide');
       }
-    }
-  });
-  sliderBtnPrev.addEventListener('click', () => {
-    counter -= 1;
-    digit.innerText = counter + 1;
-    navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
-    listingDisplay(itemsArray, counter, browserWidth, makeSlider);
+    } // Pass counter value, i.e. position in listing to functions
 
-    for (const item of items.entries()) {
-      if (item[0] < counter) {
-        item[1].classList.add('dsk');
-      } else {
-        item[1].classList.remove('dsk');
-      }
-    }
+
+    loadMoreBtn.addEventListener('click', () => {
+      // console.log('counter on load more click: ' + abc);
+      itemsDisplay(items, abc + itemsIncrement + 1, loadMoreBtn);
+      scrollToItem(items, abc + itemsIncrement + 1, itemsIncrement);
+      hashedUrl ? replaceUrlState(folderId, abc + itemsIncrement + 1, itemsIncrement) : pushUrlState(folderId, abc + itemsIncrement + 1, itemsIncrement);
+    });
   });
   /**
    * Only add load more button to the DOM if more than one item exists and 'data-items-visible'
@@ -4468,6 +4501,7 @@ function launchLoadMore(e) {
 
   loadMoreBtn.addEventListener('click', () => {
     active = e.getAttribute('active');
+    sliderBtnPrev.removeAttribute('disabled');
 
     if (makeSlider) {
       for (const item of items.entries()) {
@@ -4482,15 +4516,15 @@ function launchLoadMore(e) {
     }
 
     if (dskItemsLength > 0) {
-      // console.log(dskItemsLength);
+      // // console.log(dskItemsLength);
       itemsDisplay(items, dskItemsLength, loadMoreBtn);
       scrollToItem(items, 7, 1);
 
       if (hashedUrl) {
-        // console.log('hashed');
+        // // console.log('hashed');
         replaceUrlState(folderId, visibleItems + itemsIncrement, itemsIncrement);
       } else {
-        // console.log('no hash');
+        // // console.log('no hash');
         pushUrlState(folderId, dskItemsLength + itemsIncrement, itemsIncrement);
       } // hashedUrl
       //     ? replaceUrlState(folderId, dskItemsLength, itemsIncrement)
@@ -4500,7 +4534,7 @@ function launchLoadMore(e) {
       for (const item of items.entries()) {
         // if (item[0] < (dskItemsLength + itemsIncrement - 1)) {
         item[1].classList.remove('hide'); // }
-        // console.log(dskItemsLength);
+        // // console.log(dskItemsLength);
       }
     }
     /**
