@@ -4334,7 +4334,10 @@ function launchLoadMore(e) {
       contentContainer = e.querySelector('.items-group'),
       browserWidth = document.documentElement.scrollWidth,
       counter = 0,
-      digit = e.querySelector('.content-slider__position__digit'); // Create & append 'load more' button
+      digit = e.querySelector('.content-slider__position__digit'); //digitText = digit.innerText;
+  // digitTextParts = digitText.split(" / ");
+  // console.log(digitTextParts);
+  // Create & append 'load more' button
 
   const loadMoreBtn = document.createElement('button');
   loadMoreBtn.classList.add('load-more-btn');
@@ -4348,18 +4351,27 @@ function launchLoadMore(e) {
   const sliderControls = e.querySelector('.content-slider');
   const sliderBtnPrev = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('button', null, 'Previous', null, 'fas', 'fa-arrow-left', 'arrow-left--btn-prev');
   const sliderBtnNext = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('button', null, 'Next', null, 'fas', 'fa-arrow-right', 'arrow-right--btn-next');
-  const sliderPosition = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', "".concat(counter + 1, " / ").concat(itemsLength), 'Slider position', null, 'content-slider__position__digit'); // Disable slider previous button on load
+  let sliderPosition = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', "".concat(counter + 1, " / ").concat(itemsLength), 'Slider position', null, 'content-slider__position__digit'); // Disable slider previous button on load
 
   navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
   listingDisplay(itemsArray, counter, browserWidth, makeSlider);
   let abcArr = [];
+  let counterEl;
+  let counterElText;
   sliderBtnPrev.addEventListener('click', () => {
-    counter -= 1; // console.log(counter);
+    // sliderControls.style.display = 'block';
+    counterEl = document.createElement('p');
+    counterEl.classList.add('content-slider__position__digits');
+    counterEl.classList.add('counter');
+    counterElText = document.createTextNode("".concat(counter, " / ").concat(itemsLength));
+    counterEl.appendChild(counterElText);
+    sliderControls.appendChild(counterEl); // contentContainer.removeChild(items);
+
+    counter -= 1; // console.log(digit);
 
     abc = counter;
     abcArr.push(abc);
     e.setAttribute('data-items-visible', abc + 1);
-    digit.innerText = counter + 1;
     navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
     listingDisplay(itemsArray, counter, browserWidth, makeSlider);
 
@@ -4388,12 +4400,19 @@ function launchLoadMore(e) {
     });
   });
   sliderBtnNext.addEventListener('click', () => {
-    // // console.log(counter);
-    counter += 1; // // console.log('counter to be passed: ' + counter);
+    // console.log(counter);
+    // sliderControls.style.display = 'block';
+    counter += 1;
+    counterEl = document.createElement('p');
+    counterEl.classList.add('content-slider__position__digits');
+    counterEl.classList.add('counter');
+    counterElText = document.createTextNode("".concat(counter + 1, " / ").concat(itemsLength));
+    counterEl.appendChild(counterElText);
+    sliderControls.appendChild(counterEl); // // console.log('counter to be passed: ' + counter);
     // Create new variable to override counter being set on any load more click
 
     abc = counter;
-    digit.innerText = counter + 1;
+    digit.innerText = 'none';
     navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
     listingDisplay(itemsArray, counter, browserWidth, makeSlider);
 
@@ -4490,12 +4509,10 @@ function launchLoadMore(e) {
         if (!item[1].classList.contains('hide') && item[0] > 0) {
           item[1].classList.add('hide');
         }
-      }
+      } // sliderControls.style.display = 'block';
 
-      sliderControls.style.display = 'block';
-    } else {
-      sliderControls.style.display = 'none';
-    }
+    } else {// sliderControls.style.display = 'none';
+      }
   } // Run on every 'load more' click: increase listings by batch number
 
 
