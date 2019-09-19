@@ -4333,11 +4333,7 @@ function launchLoadMore(e) {
       makeSlider = e.getAttribute('data-slider'),
       contentContainer = e.querySelector('.items-group'),
       browserWidth = document.documentElement.scrollWidth,
-      counter = 0,
-      digit = e.querySelector('.content-slider__position__digit'); //digitText = digit.innerText;
-  // digitTextParts = digitText.split(" / ");
-  // console.log(digitTextParts);
-  // Create & append 'load more' button
+      counter = 0; // Create & append 'load more' button
 
   const loadMoreBtn = document.createElement('button');
   loadMoreBtn.classList.add('load-more-btn');
@@ -4356,19 +4352,9 @@ function launchLoadMore(e) {
   navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
   listingDisplay(itemsArray, counter, browserWidth, makeSlider);
   let abcArr = [];
-  let counterEl;
-  let counterElText;
   sliderBtnPrev.addEventListener('click', () => {
-    // sliderControls.style.display = 'block';
-    counterEl = document.createElement('p');
-    counterEl.classList.add('content-slider__position__digits');
-    counterEl.classList.add('counter');
-    counterElText = document.createTextNode("".concat(counter, " / ").concat(itemsLength));
-    counterEl.appendChild(counterElText);
-    sliderControls.appendChild(counterEl); // contentContainer.removeChild(items);
-
-    counter -= 1; // console.log(digit);
-
+    counter -= 1;
+    sliderControls.innerText = "".concat(counter + 1, " / ").concat(itemsLength);
     abc = counter;
     abcArr.push(abc);
     e.setAttribute('data-items-visible', abc + 1);
@@ -4400,19 +4386,10 @@ function launchLoadMore(e) {
     });
   });
   sliderBtnNext.addEventListener('click', () => {
-    // console.log(counter);
-    // sliderControls.style.display = 'block';
     counter += 1;
-    counterEl = document.createElement('p');
-    counterEl.classList.add('content-slider__position__digits');
-    counterEl.classList.add('counter');
-    counterElText = document.createTextNode("".concat(counter + 1, " / ").concat(itemsLength));
-    counterEl.appendChild(counterElText);
-    sliderControls.appendChild(counterEl); // // console.log('counter to be passed: ' + counter);
-    // Create new variable to override counter being set on any load more click
+    sliderControls.innerText = "".concat(counter + 1, " / ").concat(itemsLength); // Create new variable to override counter being set on any load more click
 
     abc = counter;
-    digit.innerText = 'none';
     navBtnState(counter, sliderBtnPrev, sliderBtnNext, itemsLength);
     listingDisplay(itemsArray, counter, browserWidth, makeSlider);
 
@@ -4423,7 +4400,6 @@ function launchLoadMore(e) {
       } else if (item[0] > counter) {
         item[1].classList.add('hide');
       } else if (item[0] == counter) {
-        // // console.log('equal');
         item[1].classList.remove('dsk');
         item[1].classList.remove('hide');
       }
@@ -4502,17 +4478,15 @@ function launchLoadMore(e) {
     contentContainer.classList.add('slider-compatible');
     contentContainer.appendChild(sliderBtnPrev);
     contentContainer.appendChild(sliderBtnNext);
-    contentContainer.appendChild(sliderPosition);
+    sliderControls.appendChild(sliderPosition);
 
     if (browserWidth < 768) {
       for (const item of items.entries()) {
         if (!item[1].classList.contains('hide') && item[0] > 0) {
           item[1].classList.add('hide');
         }
-      } // sliderControls.style.display = 'block';
-
-    } else {// sliderControls.style.display = 'none';
       }
+    }
   } // Run on every 'load more' click: increase listings by batch number
 
 

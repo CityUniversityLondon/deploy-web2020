@@ -31320,12 +31320,6 @@ article figure figcaption a:active {
     display: none;
 }
 
-.load-more .arrow-left--btn-prev,
-.load-more .arrow-right--btn-next,
-.load-more .content-slider__position__digit {
-    display: none;
-}
-
 @media (min-width: 768px) {
     .load-more .load-more-btn {
         display: block;
@@ -31340,6 +31334,17 @@ article figure figcaption a:active {
     .load-more .slider-compatible .arrow-right--btn-next,
     .load-more .slider-compatible .content-slider__position__digit {
         display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .load-more .slider-compatible .load-more-btn {
+        display: block;
+    }
+    .load-more .slider-compatible .arrow-left--btn-prev,
+    .load-more .slider-compatible .arrow-right--btn-next,
+    .load-more .slider-compatible .content-slider__position__digit {
+        display: none;
     }
 }
 
@@ -31366,14 +31371,6 @@ article figure figcaption a:active {
     .load-more[data-slider='true'] .dsk.hide {
         display: none;
     }
-}
-
-.load-more .content-slider__position__digits.counter {
-    display: none;
-}
-
-.load-more .content-slider__position__digits.counter:last-of-type {
-    display: block;
 }
 
 .menu {
@@ -40003,12 +40000,6 @@ h3 .linked-heading__icons {
     display: none;
 }
 
-.load-more .arrow-left--btn-prev,
-.load-more .arrow-right--btn-next,
-.load-more .content-slider__position__digit {
-    display: none;
-}
-
 @media (min-width: 768px) {
     .load-more .load-more-btn {
         display: block;
@@ -40023,6 +40014,17 @@ h3 .linked-heading__icons {
     .load-more .slider-compatible .arrow-right--btn-next,
     .load-more .slider-compatible .content-slider__position__digit {
         display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .load-more .slider-compatible .load-more-btn {
+        display: block;
+    }
+    .load-more .slider-compatible .arrow-left--btn-prev,
+    .load-more .slider-compatible .arrow-right--btn-next,
+    .load-more .slider-compatible .content-slider__position__digit {
+        display: none;
     }
 }
 
@@ -40049,14 +40051,6 @@ h3 .linked-heading__icons {
     .load-more[data-slider='true'] .dsk.hide {
         display: none;
     }
-}
-
-.load-more .content-slider__position__digits.counter {
-    display: none;
-}
-
-.load-more .content-slider__position__digits.counter:last-of-type {
-    display: block;
 }
 
 body.modal--in.no-scroll {
