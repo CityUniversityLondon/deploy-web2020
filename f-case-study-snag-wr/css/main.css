@@ -41385,6 +41385,10 @@ a.modal__close:active, a.modal__close:focus {
     font-weight: 600;
 }
 
+.case-study__overview__main__details__result {
+    display: inline-block;
+}
+
 .case-study__overview__main__details__result p {
     float: left;
     margin-right: 0.5rem;
