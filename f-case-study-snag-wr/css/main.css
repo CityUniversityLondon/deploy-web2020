@@ -19161,6 +19161,10 @@ main table td em {
     transform: rotate(90deg);
 }
 
+.inline-external-link {
+    margin-left: 0.25rem;
+}
+
 @media screen {
     .js .accordion > .accordion__body {
         background-color: #f2f2f2;

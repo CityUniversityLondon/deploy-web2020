@@ -1247,7 +1247,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Back To Top Link Scroll
  *
- * @module patterns/external-link-finder/external-link-finder
+ * @module patterns/back-to-top-link/back-to-top-link
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
  * @copyright City, University of London 2019!
  */
