@@ -44283,30 +44283,14 @@ div.widget-123_test_ {
 }
 
 .profile .content {
-    max-width: 80rem;
+    margin: 0 auto;
     max-width: 55ch;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-@media (min-width: 1441px) {
-    .profile .content {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
+@media (max-width: 767px) and (max-width: 1440px) {
     .profile .content {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .profile .content {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -44448,7 +44432,7 @@ div.widget-123_test_ {
 }
 
 .profile--global__details__heading span:first-child {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .profile--global__details__heading__text {
@@ -44479,9 +44463,13 @@ div.widget-123_test_ {
     transform: rotate(90deg);
 }
 
-@media (min-width: 1281px) {
-    .profile--global__contact-details {
-        margin-right: 2rem;
+.profile--global__personal-links {
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .profile--global__personal-links {
+        margin-top: 0;
     }
 }
 
@@ -44539,15 +44527,26 @@ div.widget-123_test_ {
     font-style: italic;
 }
 
+.profile--global__contact-details {
+    padding-top: 2rem;
+}
+
 @media (min-width: 768px) {
     .profile--global__contact-details {
         grid-column: 2 / 12;
     }
 }
 
+@media (min-width: 901px) {
+    .profile--global__contact-details {
+        grid-column: 2 / 18;
+    }
+}
+
 @media (min-width: 1280px) {
     .profile--global__contact-details {
-        grid-column: 1 / 7;
+        grid-column: 2 / 10;
+        padding-right: 1.5rem;
     }
 }
 
@@ -44559,7 +44558,7 @@ div.widget-123_test_ {
 
 @media (min-width: 768px) {
     .profile--global__contact-details .profile--global__details__content__column:first-child {
-        margin-right: 5.5rem;
+        margin-right: 6rem;
     }
 }
 
@@ -44575,6 +44574,10 @@ div.widget-123_test_ {
     }
 }
 
+.profile--global__other-contact-methods {
+    padding-top: 2rem;
+}
+
 @media (min-width: 768px) {
     .profile--global__other-contact-methods {
         display: flex;
@@ -44582,9 +44585,15 @@ div.widget-123_test_ {
     }
 }
 
+@media (min-width: 901px) {
+    .profile--global__other-contact-methods {
+        grid-column: 2 / 18;
+    }
+}
+
 @media (min-width: 1280px) {
     .profile--global__other-contact-methods {
-        grid-column: 7 / -1;
+        grid-column: 10 / 18;
     }
 }
 
@@ -44604,10 +44613,6 @@ div.widget-123_test_ {
     .profile--global__other-contact-methods .profile--global__details:first-child {
         margin-right: 3rem;
     }
-}
-
-.profile--global__details {
-    margin-bottom: 2.5rem;
 }
 
 .profile--global__details__content__name {
@@ -44778,6 +44783,7 @@ div.widget-123_test_ {
 /* --- ACADEMIC STYLES --- */
 .profile--academic {
     max-width: 80rem;
+    margin-bottom: 2.5rem;
 }
 
 @media (min-width: 1441px) {
@@ -44822,10 +44828,6 @@ div.widget-123_test_ {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
     }
-}
-
-.profile--academic__inner {
-    padding-top: 2rem;
 }
 
 @media (min-width: 768px) {
