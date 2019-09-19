@@ -2155,12 +2155,14 @@ function dependencyMet(facet, facetMap) {
 function finder__filters(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_5__["default"], {
     config: props.config,
     query: props.query,
     update: props.update,
     clear: props.clear
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", {
+    className: "finder__filter"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__heading"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Filter ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__heading__btn-icon"
@@ -2213,7 +2215,7 @@ function finder__filters(props) {
     } else {
       return null;
     }
-  }));
+  })));
 }
 
 finder__filters.propTypes = {
@@ -2555,10 +2557,8 @@ function finder__selectbox(props) {
     props.update.results(!props.update.updateState);
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("fieldset", {
-    className: "finder__filter finder__selectbox"
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
-    className: "finder__select"
+  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
+    className: "finder__select finder__selectbox"
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
     className: "finder__select__overline",
     htmlFor: "meta_".concat(props.facet.meta, "_orsand--").concat(randomNumber)
@@ -2574,7 +2574,7 @@ function finder__selectbox(props) {
       key: value.data,
       value: value.data
     }, props.facet.meta === 'rSub' ? value.label.replace(props.query.facets.G + '_', '') : value.label);
-  }) : null)));
+  }) : null));
 }
 
 finder__selectbox.propTypes = {
@@ -3229,7 +3229,8 @@ function finder__pagination(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "pagination__wrapper"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: "pagination__controls"
+    className: "pagination__controls",
+    "data-pagecount": numberOfPages
   }, pages));
 }
 
@@ -3949,8 +3950,7 @@ function init(elem) {
   nextBtnWrap.appendChild(nextBtn);
   prevBtnWrap.appendChild(prevBtn);
   buttonsWrap.appendChild(prevBtnWrap);
-  buttonsWrap.appendChild(nextBtnWrap);
-  elem.insertBefore(buttonsWrap, elem.childNodes[0]); //perpare the indicators to append to html
+  buttonsWrap.appendChild(nextBtnWrap); //perpare the indicators to append to html
 
   numInd.className = 'swiper-indicator';
   numIndActiveSl.className = 'swiper-indicator__active-slider';
@@ -3962,6 +3962,7 @@ function init(elem) {
   numInd.appendChild(numIndSeparator);
   numInd.appendChild(numbIndSlLength);
   elem.appendChild(numInd);
+  elem.appendChild(buttonsWrap);
   config.sliderLength = _C.children.length;
 
   _C.style.setProperty('--n', config.sliderLength); //add event listeners
@@ -5016,9 +5017,8 @@ function launchMenu(menu) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modal_animation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal_animation */ "./src/patterns/modal/modal_animation.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
@@ -5032,25 +5032,16 @@ __webpack_require__.r(__webpack_exports__);
  *
  */
 
-
-const className = 'modal__popup',
-      modalBackground = document.createElement('div');
-let windowWidth = window.innerWidth,
+const className = 'modal__popup';
+let modalBackground = document.createElement('div'),
     trap;
-window.addEventListener('resize', setWindowWidth);
-
-function setWindowWidth() {
-  windowWidth = window.innerWidth;
-}
 
 function launchModal(modal) {
   let modalHeading = modal.querySelector('.modal__heading');
   let modalDataTitle = modal.getAttribute('data-title');
-  let modalInner = modal.querySelector('.modal__inner');
   insertElement('a', modal, 'modal__trigger', '#', modalDataTitle);
   insertElement('a', modalHeading, 'modal__close fas fa-times', '#', null, 'Close modal');
   addEventListeners(modal);
-  Object(_modal_animation__WEBPACK_IMPORTED_MODULE_1__["default"])(modalInner, modal);
   setTabIndexes(modal, true);
 }
 
@@ -5064,7 +5055,7 @@ function addEventListeners(modal) {
    */
 
   modal.addEventListener('keydown', e => {
-    if (e.keyCode === 27 && modal.hasAttribute('data-open')) {
+    if (e.keyCode === 27) {
       closeModal(modal);
     }
   });
@@ -5074,7 +5065,7 @@ function addEventListeners(modal) {
 
   modal.addEventListener('click', e => {
     e.target.classList.forEach(className => {
-      if (className === 'modal__popup--show' && modal.hasAttribute('data-open')) {
+      if (className === 'modal__popup--show') {
         closeModal(modal);
       }
     });
@@ -5117,59 +5108,32 @@ function setTabIndexes(modal, removeTabIndex) {
 function openModal(modal) {
   document.body.classList.add('modal--in');
   document.body.classList.add('no-scroll');
-  modal.classList.add('no-click');
   modal.classList.add('modal__popup--show');
   modal.classList.remove('modal__popup--hidden');
   addBackgroundFade();
   setTabIndexes(modal, false);
-  /*
-      if tablet or above, trigger first transition. Rest of animation
-      and opening of modal handled in modal_animation.js. Otherwise,
-      just display the modal with no effects.
-  */
-
-  if (windowWidth >= 768) {
-    setTimeout(function () {
-      modal.classList.add('modal__popup--transitioning-in');
-    }, 200);
-  } else {
-    setOpenAttributes(modal);
-  }
-
+  setOpenAttributes(modal);
   trapFocus(modal);
 }
 
 function closeModal(modal) {
-  modal.classList.add('no-click');
-
-  if (windowWidth >= 768) {
-    modal.classList.add('modal__popup--transitioning-out');
-  } else {
-    setCloseAttributes(modal);
-  }
-
+  setCloseAttributes(modal);
   setTabIndexes(modal, true);
   trap.deactivate();
 }
 
 function setOpenAttributes(modal) {
-  modal.setAttribute('data-open', true);
   document.body.classList.add('modal--in');
   document.body.classList.add('no-scroll');
   modal.classList.add('modal__popup--show');
   modal.classList.remove('modal__popup--hidden');
-  modal.classList.add('modal__popup--show-content');
-  modal.classList.remove('no-click');
 }
 
 function setCloseAttributes(modal) {
-  modal.removeAttribute('data-open');
   document.body.classList.remove('modal--in');
   document.body.classList.remove('no-scroll');
   modal.classList.add('modal__popup--hidden');
   modal.classList.remove('modal__popup--show');
-  modal.classList.remove('modal__popup--show-content');
-  modal.classList.remove('no-click');
 }
 
 function addBackgroundFade() {
@@ -5203,7 +5167,7 @@ function insertElement(type, targetParent, classList, href, text, ariaLabel) {
 
 function trapFocus(modal) {
   let modalInner = modal.querySelector('.modal__inner');
-  trap = focus_trap__WEBPACK_IMPORTED_MODULE_2___default()(modalInner, {
+  trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalInner, {
     clickOutsideDeactivates: true
   });
   trap.activate();
@@ -5213,108 +5177,6 @@ function trapFocus(modal) {
   launchFn: launchModal,
   launchQuery: ".".concat(className)
 });
-
-/***/ }),
-
-/***/ "./src/patterns/modal/modal_animation.js":
-/*!***********************************************!*\
-  !*** ./src/patterns/modal/modal_animation.js ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return addModalAnimation; });
-
-
-/**
- * modal animation
- *
- * @module patterns/modal/modal_animation
- * @author Daniel Miller <daniel.miller@city.ac.uk>
- * @copyright City, University of London 2018
- *
- */
-const eventListeners = ['webkitTransitionEnd', 'transitionend', 'mozTransitionEnd', 'oTransitionEnd'];
-function addModalAnimation(modalInner, modal) {
-  setTransitionListeners(modalInner, modal);
-}
-/**
- * Set transition listeners: add transition finished listeners.
- * The transition event actually occurs on the :before and :after
- * but bubbles up to parent
- *
- * @param {HTMLElement} modalInner - the modalInner element
- * @param {HTMLElement} modal - the modal
- */
-
-function setTransitionListeners(modalInner, modal) {
-  for (let listener in eventListeners) {
-    modalInner.addEventListener(eventListeners[listener], e => {
-      setOpenOrCloseFunction(modal, e);
-    }, false);
-  }
-}
-/**
- * Set open or close function: decides if open/close needed
- *
- * @param {HTMLElement} modal - the modal
- */
-
-
-function setOpenOrCloseFunction(modal, e) {
-  if (e.target.classList[0] == 'modal__inner') {
-    if (modal.hasAttribute('data-open')) {
-      closeTransition(modal);
-    } else {
-      openTransition(modal);
-    }
-  }
-}
-/**
- * Open transition: handles the open transition and modal show.
- * Conditional statements ensure the code doesn't run twice.
- *
- * @param {HTMLElement} modal - the modal div
- */
-
-
-function openTransition(modal) {
-  if (!modal.classList.contains('modal__popup--show-content')) {
-    modal.classList.add('modal__popup--show-content');
-    setTimeout(function () {
-      modal.classList.remove('modal__popup--transitioning-in');
-    }, 50);
-    setTimeout(function () {
-      modal.setAttribute('data-open', true);
-      modal.classList.remove('no-click');
-    }, 600);
-  }
-}
-/**
- * Close transition: handles the close transition and modal hide
- *
- * @param {HTMLElement} modal - the modal div
- */
-
-
-function closeTransition(modal) {
-  if (modal.classList.contains('modal__popup--show-content')) {
-    modal.classList.remove('modal__popup--show-content');
-    setTimeout(function () {
-      modal.classList.remove('modal__popup--transitioning-out');
-    }, 50);
-    setTimeout(function () {
-      document.body.classList.remove('modal--in');
-      document.body.classList.remove('no-scroll');
-      modal.removeAttribute('data-open');
-      modal.classList.remove('modal__popup--show');
-      modal.classList.add('modal__popup--hidden');
-      modal.classList.remove('no-click');
-    }, 700);
-  }
-}
 
 /***/ }),
 
@@ -5784,6 +5646,7 @@ function addPagination(elem, itemCount) {
   pageButtons.push(next);
   wrapper.className = wrapperClassName;
   controls.className = controlsClassName;
+  controls.dataset.pagecount = pages.length;
   controls.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'Pagination');
   summary.className = summaryClassName;
   setSummaryText(summary, pages.length, itemCount);
@@ -5812,8 +5675,15 @@ function addPagination(elem, itemCount) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
 
 
 
@@ -5825,70 +5695,57 @@ __webpack_require__.r(__webpack_exports__);
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
  * @copyright City, University of London 2019!
  */
+
 const className = 'slider';
+let sliderChildren, sliderChildrenLength;
 
 function initSlider(slider) {
   // slider items count
-  let sliderCollection = slider.querySelectorAll('li');
-  let sliderCollectionLength = slider.querySelectorAll('li').length;
+  sliderChildren = [...slider.children];
+  sliderChildrenLength = sliderChildren.length;
 
-  if (sliderCollectionLength > 1) {
-    sliderCollection.forEach(function (item, i) {
-      if (i < 1) {
-        item.classList.add('slider__active-slide');
-      } else {
-        // only displays first slide and hides rest
-        item.classList.add('slider__slide');
-        slider.style.display = 'grid';
-        /* generates controls */
+  for (const sliderChild of sliderChildren.entries()) {
+    if (sliderChild[0] < 1) {
+      sliderChild[1].classList.add('slider__active-slide');
+    } else {
+      // only displays first slide and hides rest
+      sliderChild[1].classList.add('slider__slide');
+      /* generates controls */
 
-        let sliderControlsWrap = createElement('div', null, null, 'slider__controls__wrap');
-        let sliderControls = createElement('div', null, null, 'slider__controls');
-        let sliderProgress = createElement('div', null, null, 'slider__controls__progress');
-        let sliderButtons = createElement('div', null, null, 'slider__controls__buttons'); // generates progress
+      let sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls__wrap');
+      let sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls');
+      let sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls__progress');
+      let sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls__buttons'); // generates progress
 
-        sliderProgress.appendChild(createElement('span', '1', null, 'slide__controls__progress__active'));
-        sliderProgress.appendChild(createElement('span', '/', null, 'slide__controls__progress__separator'));
-        sliderProgress.appendChild(createElement('span', sliderCollectionLength, null, 'slide__controls__progress__total'));
-        sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
-        slider.appendChild(sliderControlsWrap); // generates buttons
+      sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', '1', null, null, 'slide__controls__progress__active'));
+      sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', ' /', null, null, 'slide__controls__progress__separator'));
+      sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', sliderChildrenLength, null, null, 'slide__controls__progress__total'));
+      sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
+      slider.appendChild(sliderControlsWrap); // generates buttons
 
-        sliderButtons.appendChild(createElement('button', null, 'Previous item', 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev'));
-        sliderButtons.appendChild(createElement('button', null, 'Next item', 'fas', 'fa-arrow-right', 'slider__controls__buttons__next'));
-        sliderControls.appendChild(sliderButtons);
-        slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
+      sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('button', null, 'Previous item', true, 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev', 'swiper-slider-arrow', 'arrow-left--btn-prev'));
+      sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('button', null, 'Next item', null, 'fas', 'fa-arrow-right', 'slider__controls__buttons__next', 'swiper-slider-arrow', 'arrow-right--btn-next'));
+      sliderControls.appendChild(sliderButtons);
+      slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
 
-        slider.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
-          handleSlideChange(-1, slider);
-        });
-        slider.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
-          handleSlideChange(1, slider);
-        });
-      }
-    });
+      slider.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
+        handleSlideChange(-1, slider);
+      });
+      slider.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
+        handleSlideChange(1, slider);
+      });
+    }
   }
-}
-
-function createElement(type, content, arialabel, className1, className2, className3) {
-  let el = document.createElement(type);
-  content ? el.appendChild(document.createTextNode(content)) : null;
-  className1 ? el.classList.add(className1) : null;
-  className2 ? el.classList.add(className2) : null;
-  className3 ? el.classList.add(className3) : null;
-  arialabel ? el.setAttribute('aria-label', arialabel) : null;
-  return el;
 }
 
 function handleSlideChange(direction, slider) {
   let activeSlide = parseInt(slider.querySelectorAll('.slide__controls__progress__active')[0].innerText);
-  let sliderCollectionLength = slider.querySelectorAll('li').length;
-  let newSlide = activeSlide + direction;
-  let sliderCollection = slider.querySelectorAll('li'); // ensures you don't slide past first and last slide
+  let newSlide = activeSlide + direction; // ensures you don't slide past first and last slide
 
-  if (newSlide !== 0 && !(newSlide > sliderCollectionLength)) {
+  if (newSlide !== 0 && !(newSlide > sliderChildrenLength)) {
     // udpates progress
     slider.querySelectorAll('.slide__controls__progress__active')[0].innerHTML = newSlide;
-    sliderCollection.forEach(function (item, i) {
+    sliderChildren.forEach(function (item, i) {
       //displays new slide
       if (i == newSlide - 1) {
         item.classList.remove('slider__slide');
@@ -5907,7 +5764,7 @@ function handleSlideChange(direction, slider) {
       slider.querySelectorAll('.slider__controls__buttons__prev')[0].removeAttribute('disabled');
     }
 
-    if (newSlide == sliderCollectionLength) {
+    if (newSlide == sliderChildrenLength) {
       slider.querySelectorAll('.slider__controls__buttons__next')[0].classList.add('slider__controls__buttons__disabled');
       slider.querySelectorAll('.slider__controls__buttons__next')[0].setAttribute('disabled', true);
     } else {
@@ -6393,7 +6250,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, createElement */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6412,6 +6269,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMobile", function() { return isMobile; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toArray", function() { return toArray; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detectIE", function() { return detectIE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return createElement; });
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
@@ -6655,6 +6513,18 @@ function detectIE() {
 
 
   return false;
+}
+function createElement(type, content, arialabel, disabled, className1, className2, className3, className4, className5) {
+  let el = document.createElement(type);
+  content ? el.appendChild(document.createTextNode(content)) : null;
+  className1 ? el.classList.add(className1) : null;
+  className2 ? el.classList.add(className2) : null;
+  className3 ? el.classList.add(className3) : null;
+  className4 ? el.classList.add(className4) : null;
+  className5 ? el.classList.add(className5) : null;
+  arialabel ? el.setAttribute('aria-label', arialabel) : null;
+  disabled ? el.setAttribute('disabled', true) : null;
+  return el;
 }
 
 /***/ }),
