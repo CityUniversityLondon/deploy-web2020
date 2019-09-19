@@ -44295,6 +44295,10 @@ div.widget-123_test_ {
 }
 
 /* --- GLOBAL PROFILE STYLES --- */
+.profile--global__tags {
+    margin-top: 3rem;
+}
+
 @media (min-width: 768px) {
     .profile--global__tags {
         grid-row-gap: 0;
@@ -44340,7 +44344,6 @@ div.widget-123_test_ {
 
 @media (min-width: 1281px) {
     .profile--global__tags {
-        margin-top: 1rem;
         margin-bottom: 3rem;
     }
 }
@@ -44464,7 +44467,7 @@ div.widget-123_test_ {
 }
 
 .profile--global__personal-links {
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -44528,12 +44531,13 @@ div.widget-123_test_ {
 }
 
 .profile--global__contact-details {
-    padding-top: 2rem;
+    margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
     .profile--global__contact-details {
         grid-column: 2 / 12;
+        margin-top: 2rem;
     }
 }
 
@@ -44575,12 +44579,13 @@ div.widget-123_test_ {
 }
 
 .profile--global__other-contact-methods {
-    padding-top: 2rem;
+    margin-top: 3rem;
 }
 
 @media (min-width: 768px) {
     .profile--global__other-contact-methods {
         display: flex;
+        margin-top: 2rem;
         grid-column: 2 / 12;
     }
 }
@@ -44942,15 +44947,11 @@ div.widget-123_test_ {
     }
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 901px) {
     .profile--global__tags--alumni .profile--global__tags__content,
     .profile--global__tags--staff .profile--global__tags__content {
         grid-column: 3 / 17;
     }
-}
-
-.profile--global__tags--alumni {
-    margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -44969,6 +44970,16 @@ div.widget-123_test_ {
     }
 }
 
+.profile--alumni__details .profile--global__details:nth-child(2) {
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .profile--alumni__details .profile--global__details:nth-child(2) {
+        margin-top: 0;
+    }
+}
+
 @media (min-width: 768px) {
     .profile--alumni__details__column {
         width: 50%;
@@ -44979,7 +44990,21 @@ div.widget-123_test_ {
     margin-right: 4rem;
 }
 
+.profile--alumni__personal-links {
+    margin-top: 1.5rem;
+}
+
 /* --- END ALUMNI STYLES --- */
+/* --- STUDENT STYLES --- */
+.profile--global__tags--student {
+    margin-top: 2rem;
+}
+
+.profile--global__tags--student .profile--global__tags__content {
+    padding-bottom: 2rem;
+}
+
+/* --- END STUDENT STYLES --- */
 .profile__news-three-block .related-content {
     grid-row-gap: 0;
     display: grid;
