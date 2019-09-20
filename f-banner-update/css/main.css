@@ -34991,13 +34991,7 @@ article .link-copy {
     bottom: 0;
 }
 
-@media (max-width: 432px) {
-    .banner__standfirst {
-        grid-column: 1 / 6;
-    }
-}
-
-@media (min-width: 433px) {
+@media (max-width: 1279px) {
     .banner__standfirst {
         grid-column: 1 / -1;
     }
@@ -41475,6 +41469,12 @@ a.modal__close:active, a.modal__close:focus {
     .content-hub__block-one .video-finder-wrapper {
         grid-template-columns: repeat(18, 1fr);
         grid-template-areas: ' . . . . video video video video video video video video video video . . . . ' ' . . . finder finder finder finder finder finder finder finder finder finder finder finder . . . ';
+    }
+}
+
+@media (min-width: 1280px) {
+    .content-hub__block-one .video-finder-wrapper .embedded-video {
+        padding-top: 0;
     }
 }
 
