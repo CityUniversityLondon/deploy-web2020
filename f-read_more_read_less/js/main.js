@@ -5686,6 +5686,11 @@ function readMore(anchor) {
 }
 
 function handleReadMoreClick(e) {
+  /* to do:
+       - get read-more__text element
+      - remove add a class the sets max-height: none
+      - this should toggle the transition 
+  */
   let linkTextElem = e.currentTarget.getElementsByClassName('read-more__anchor__link-text')[0];
 
   if (e.currentTarget.classList.contains('active')) {
