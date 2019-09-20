@@ -34825,171 +34825,154 @@ article .link-copy {
     position: relative;
 }
 
-.banner__group {
+.banner--text-overlay {
+    position: relative;
     overflow: hidden;
-    display: grid;
     grid-row-gap: 0;
     display: grid;
-    grid-column-gap: 1.5rem;
-    grid-template-rows: auto;
 }
 
 @media (max-width: 432px) {
-    .banner__group {
+    .banner--text-overlay {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
-    .banner__group {
+    .banner--text-overlay {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
 @media (min-width: 901px) {
-    .banner__group {
+    .banner--text-overlay {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
     }
 }
 
 @media (max-width: 432px) {
-    .banner__group {
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: 'image image image image image image' 'sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap';
+    .banner--text-overlay {
+        grid-template-areas: 'b b b b b b';
     }
 }
 
 @media (min-width: 433px) {
-    .banner__group {
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-areas: 'image image image image image image image image image image image image' 'sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap';
+    .banner--text-overlay {
+        grid-template-areas: 'b b b b b b b b b b b b';
     }
 }
 
-@media (min-width: 1281px) {
-    .banner__group {
-        grid-template-columns: repeat(18, 1fr);
-        grid-template-areas: 'image image image image image image image image image image image image image image image image image image' '. . . sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap sf-wrap . . .';
+@media (min-width: 769px) {
+    .banner--text-overlay {
+        grid-template-areas: 'b b b b b b b b b b b b b b b b b b';
     }
 }
 
-.banner__group__image {
-    grid-area: image;
+.banner__image {
     height: 100%;
     max-height: 480px;
+    grid-area: b;
 }
 
-.banner__group__image .hero-image {
-    display: block;
+.banner__image .hero-image {
     width: 100%;
     overflow: hidden;
 }
 
-.banner__group__image .hero-image img {
+.banner__image .hero-image img {
     width: 100%;
+    object-fit: cover;
 }
 
 @media (max-width: 768px) {
-    .banner__group__image {
+    .banner__image {
         max-height: 320px;
     }
 }
 
 @media (min-width: 1441px) {
-    .banner__group__image {
+    .banner__image {
         max-height: none;
     }
 }
 
-.banner__group__overlay {
+.banner__overlay {
     background: linear-gradient(to top, #303030, transparent 100%);
-    position: absolute;
-    bottom: 0;
+    grid-area: b;
     width: 100%;
     height: 100%;
 }
 
-@media (max-width: 767px) {
-    .banner__group__overlay {
-        height: 100%;
-    }
-}
-
-.banner__group__overlay__heading {
+.banner__overlay__heading {
+    text-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.3);
     max-width: 80rem;
-    grid-row-gap: 0;
-    display: grid;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
     height: 100%;
+    color: #ffffff;
+    padding-bottom: 2rem;
 }
 
 @media (min-width: 1441px) {
-    .banner__group__overlay__heading {
+    .banner__overlay__heading {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (max-width: 1440px) {
-    .banner__group__overlay__heading {
+    .banner__overlay__heading {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-@media (max-width: 432px) {
-    .banner__group__overlay__heading {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
+@media (max-width: 900px) {
+    .banner__overlay__heading {
+        padding-bottom: 1rem;
     }
 }
 
-@media (min-width: 433px) and (max-width: 900px) {
-    .banner__group__overlay__heading {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
+.banner__overlay__heading h1,
+.banner__overlay__heading p {
+    max-width: 80rem;
 }
 
-@media (min-width: 901px) {
-    .banner__group__overlay__heading {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
-}
-
-.banner__group__overlay__heading h1 {
+.banner-text {
+    background-color: #0c0c0e;
     color: #ffffff;
-    width: 54ch;
-    text-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.3);
+    padding-top: 4.5rem;
+    padding-bottom: 3rem;
 }
 
-@media (max-width: 1439px) {
-    .banner__group__overlay__heading h1 {
-        width: 100%;
-    }
+.banner-text .banner-text__content {
+    max-width: 80rem;
 }
 
-@media (max-width: 767px) {
-    .banner__group__overlay__heading {
-        bottom: 1.25rem;
-    }
-    .banner__group__overlay__heading h1 {
-        width: 100%;
+@media (min-width: 1441px) {
+    .banner-text .banner-text__content {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-@media (max-width: 431px) {
-    .banner__group__overlay__heading {
-        margin: 0 2rem;
-        bottom: 1.25rem;
+@media (max-width: 1440px) {
+    .banner-text .banner-text__content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
+}
+
+.banner-text .banner-text__content h1 {
+    max-width: 80rem;
+}
+
+.banner-text .banner-text__content p {
+    max-width: 80rem;
 }
 
 .banner__group__overlay__heading--title-standfirst {
@@ -35213,39 +35196,6 @@ article .link-copy {
     opacity: 0.9;
     padding: 2rem;
     z-index: 1;
-}
-
-.banner-text {
-    background-color: #0c0c0e;
-    color: #ffffff;
-    padding-top: 4.5rem;
-    padding-bottom: 3rem;
-}
-
-.banner-text .banner-text__content {
-    max-width: 80rem;
-}
-
-@media (min-width: 1441px) {
-    .banner-text .banner-text__content {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .banner-text .banner-text__content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-.banner-text .banner-text__content h1 {
-    max-width: 80rem;
-}
-
-.banner-text .banner-text__content p {
-    max-width: 80rem;
 }
 
 .swiper-viewport {
@@ -43776,7 +43726,7 @@ div.widget-123_test_ {
     color: #ffffff;
 }
 
-.lifelong-learning .banner__group__overlay {
+.lifelong-learning .banner__overlay {
     background: linear-gradient(to top, #5d184a, transparent 100%);
 }
 
