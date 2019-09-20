@@ -34873,18 +34873,7 @@ article .link-copy {
 
 .banner__image {
     height: 100%;
-    max-height: 480px;
     grid-area: b;
-}
-
-.banner__image .hero-image {
-    width: 100%;
-    overflow: hidden;
-}
-
-.banner__image .hero-image img {
-    width: 100%;
-    object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -34893,10 +34882,28 @@ article .link-copy {
     }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 769px) {
     .banner__image {
-        max-height: none;
+        max-height: 480px;
     }
+}
+
+@media (min-width: 1280px) {
+    .banner__image {
+        max-height: 650px;
+    }
+}
+
+.banner__image .hero-image {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.banner__image .hero-image img {
+    width: 100%;
+    object-fit: cover;
+    align-self: auto;
 }
 
 .banner__overlay {
