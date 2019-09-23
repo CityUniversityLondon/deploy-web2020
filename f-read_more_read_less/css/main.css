@@ -40558,6 +40558,11 @@ h3 .linked-heading__icons {
     font-style: italic;
 }
 
+.read-more__text.active {
+    max-height: none;
+    -webkit-mask-image: none;
+}
+
 .read-more__button {
     border-top-color: #6894c0;
     border-top-style: solid;
