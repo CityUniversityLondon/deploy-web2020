@@ -40584,8 +40584,13 @@ h3 .linked-heading__icons {
 }
 
 .read-more__button a:hover {
-    color: #ffffff;
     border-bottom: none;
+}
+
+@media (min-width: 1280px) {
+    .read-more__button a:hover {
+        color: #ffffff;
+    }
 }
 
 .read-more__button a:hover span:not(.icon) {
