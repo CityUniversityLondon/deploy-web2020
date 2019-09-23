@@ -5677,17 +5677,24 @@ function addPagination(elem, itemCount) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+
 
 
 const className = 'read-more';
 
+window.onload = function () {
+  let readMoreTextElements = document.querySelectorAll('.read-more__text');
+  readMoreTextElements.forEach(element => {
+    element.setAttribute('data-height', element.offsetHeight);
+    element.classList.add('read-more__text--hidden');
+  });
+};
+
 function readMore(element) {
-  let readMoreText = element.querySelector('.read-more__text');
-  let readMoreTextHeight = readMoreText.offsetHeight;
   let anchor = element.querySelector('.read-more__anchor');
   anchor.addEventListener('click', handleReadMoreClick, false);
-  readMoreText.setAttribute('data-height', readMoreTextHeight);
-  readMoreText.classList.add('read-more__text--hidden');
 }
 
 function handleReadMoreClick(e) {
