@@ -40559,7 +40559,7 @@ h3 .linked-heading__icons {
 }
 
 .read-more__text--hidden {
-    max-height: 144px;
+    max-height: 8rem;
     -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
 }
 

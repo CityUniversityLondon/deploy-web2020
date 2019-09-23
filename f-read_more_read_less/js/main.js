@@ -5682,15 +5682,12 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'read-more';
 
 function readMore(element) {
-  window.onload = function () {
-    let readMoreText = element.querySelector('.read-more__text');
-    let readMoreTextHeight = readMoreText.offsetHeight;
-    console.log(readMoreTextHeight);
-    let anchor = element.querySelector('.read-more__anchor');
-    readMoreText.setAttribute('data-height', readMoreTextHeight);
-    readMoreText.classList.add('read-more__text--hidden');
-    anchor.addEventListener('click', handleReadMoreClick, false);
-  };
+  let readMoreText = element.querySelector('.read-more__text');
+  let readMoreTextHeight = readMoreText.offsetHeight;
+  let anchor = element.querySelector('.read-more__anchor');
+  anchor.addEventListener('click', handleReadMoreClick, false);
+  readMoreText.setAttribute('data-height', readMoreTextHeight);
+  readMoreText.classList.add('read-more__text--hidden');
 }
 
 function handleReadMoreClick(e) {
