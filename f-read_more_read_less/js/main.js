@@ -5682,23 +5682,33 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'read-more';
 
 function readMore(element) {
-  let anchor = element.querySelector('.read-more__anchor');
-  anchor.addEventListener('click', handleReadMoreClick, false);
+  window.onload = function () {
+    let readMoreText = element.querySelector('.read-more__text');
+    let readMoreTextHeight = readMoreText.offsetHeight;
+    console.log(readMoreTextHeight);
+    let anchor = element.querySelector('.read-more__anchor');
+    readMoreText.setAttribute('data-height', readMoreTextHeight);
+    readMoreText.classList.add('read-more__text--hidden');
+    anchor.addEventListener('click', handleReadMoreClick, false);
+  };
 }
 
 function handleReadMoreClick(e) {
   let parent = e.currentTarget.parentNode.parentNode.parentNode;
   let readMoreText = parent.querySelector('.read-more__text');
+  let readMoreTextHeight = readMoreText.getAttribute('data-height') + 'px';
   let linkTextElem = e.currentTarget.getElementsByClassName('read-more__anchor__link-text')[0];
 
-  if (e.currentTarget.classList.contains('active')) {
+  if (readMoreText.classList.contains('read-more__text--hidden')) {
+    e.currentTarget.classList.add('active');
+    readMoreText.classList.remove('read-more__text--hidden');
+    linkTextElem.innerHTML = 'Read less';
+    readMoreText.style.maxHeight = readMoreTextHeight;
+  } else {
     e.currentTarget.classList.remove('active');
     linkTextElem.innerHTML = 'Read more';
-    readMoreText.classList.remove('active');
-  } else {
-    e.currentTarget.classList.add('active');
-    linkTextElem.innerHTML = 'Read less';
-    readMoreText.classList.add('active');
+    readMoreText.classList.add('read-more__text--hidden');
+    readMoreText.style.maxHeight = null;
   }
 }
 

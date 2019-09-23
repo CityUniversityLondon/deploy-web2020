@@ -40501,8 +40501,8 @@ h3 .linked-heading__icons {
 }
 
 .read-more__button__container {
-    margin: 2rem auto 0 auto;
-    display: flex;
+    text-align: center;
+    margin-top: 2.5rem;
 }
 
 .read-more__text {
@@ -40513,9 +40513,8 @@ h3 .linked-heading__icons {
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
-    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
-    max-height: 8rem;
-    transition: max-height 2s ease;
+    transition: max-height 0.5s ease;
+    -webkit-mask-image: none;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -40558,9 +40557,9 @@ h3 .linked-heading__icons {
     font-style: italic;
 }
 
-.read-more__text.active {
-    max-height: none;
-    -webkit-mask-image: none;
+.read-more__text--hidden {
+    max-height: 144px;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
 }
 
 .read-more__button {
