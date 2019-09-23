@@ -40513,8 +40513,9 @@ h3 .linked-heading__icons {
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
-    transition: max-height 0.5s ease;
+    transition: max-height 0.5s;
     -webkit-mask-image: none;
+    overflow: hidden;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
