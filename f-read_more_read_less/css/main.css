@@ -39999,34 +39999,167 @@ h3 .linked-heading__icons {
 }
 
 .read-more__button a {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
     border-bottom-style: none;
     border-bottom: none;
+}
+
+@media (hover: hover) {
+    .read-more__button a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.read-more__button a:focus, .read-more__button a:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .read-more__button a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .read-more__button a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.read-more__button a:visited {
+    color: #4c2c92;
+}
+
+.read-more__button a:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .read-more__button a:hover {
+        color: #ffffff;
+    }
+}
+
+.read-more__button a:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.read-more__button a:visited {
+    border-bottom-color: #4c2c92;
+}
+
+.read-more__button a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .read-more__button a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.read-more__button a:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.read-more__button a:focus, .read-more__button a:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.read-more__button a:visited {
+    color: #4c2c92;
+}
+
+.read-more__button a:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .read-more__button a:hover {
+        color: #ffffff;
+    }
+}
+
+.read-more__button a:active {
+    color: #ffffff;
+    background-color: #006bbd;
 }
 
 .read-more__button a:visited {
     color: #006bbd;
 }
 
-.read-more__button a:hover {
-    border-bottom: none;
-}
-
-@media (min-width: 1280px) {
+@media (hover: hover) {
     .read-more__button a:hover {
         color: #ffffff;
     }
 }
 
-.read-more__button a:hover span:not(.icon) {
+.read-more__button a:active {
+    color: #ffffff;
+}
+
+.read-more__button a:visited {
+    border-bottom-color: #006bbd;
+}
+
+.read-more__button a:hover, .read-more__button a.active, .read-more__button a:focus {
+    border-bottom-style: none;
     border-bottom: none;
 }
 
-.read-more__button a:active {
-    background-color: transparent;
-}
-
-.read-more__button a.active {
-    border-bottom-style: none;
+.read-more__button a:hover span:not(.icon) {
     border-bottom: none;
 }
 
