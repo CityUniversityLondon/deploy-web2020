@@ -22386,16 +22386,75 @@ main table td em {
     padding: 2.5rem;
 }
 
-.card--research:hover {
-    background: #ffffff;
-}
-
-.card--research:focus-within {
-    background: #ffffff;
+.card--research:hover, .card--research:focus-within {
+    transition: background-color 0.6s;
+    background-color: #ffffff;
 }
 
 .card--research__title-link {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
     line-height: 1.5;
+}
+
+.card--research__title-link i,
+.card--research__title-link em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.card--research__title-link b,
+.card--research__title-link strong {
+    font-weight: inherit;
+}
+
+.card--research__title-link i,
+.card--research__title-link em {
+    font-style: italic;
+}
+
+.card--research__title-link u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--research__title-link {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--research__title-link {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--research__title-link {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--research__title-link {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--research__title-link {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--research__title-link b,
+.card--research__title-link strong {
+    font-weight: 600;
 }
 
 .card--research__research-leader,
