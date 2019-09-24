@@ -43699,17 +43699,31 @@ div.widget-123_test_ {
 
 .profile__banner {
     background-color: #1e1e1e;
+    position: relative;
+    z-index: -1;
+    /*
+    &:before {
+        content: '';
+        background-image: linear-gradient(
+            to top,
+            rgba(12, 12, 14, 0),
+            rgba(12, 12, 14, 0.3)
+        );
+        position: absolute;
+        right: 0;
+        width: 14rem;
+        height: 12rem;
+        clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
+    }
+    */
 }
 
-.profile__banner:before {
-    content: '';
-    background-image: linear-gradient(to top, rgba(12, 12, 14, 0), rgba(12, 12, 14, 0.3));
+.profile__banner .profile__banner__cutaway {
     position: absolute;
     right: 0;
-    width: 14rem;
-    height: 12rem;
-    -webkit-clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
-            clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
+    top: 0;
+    height: 100%;
+    width: auto;
 }
 
 @media (max-width: 432px) {
@@ -43721,27 +43735,41 @@ div.widget-123_test_ {
 .profile__banner--student,
 .profile__banner--alumni {
     background-color: #3e1031;
-}
-
-.profile__banner--student:before,
-.profile__banner--alumni:before {
-    background-image: linear-gradient(to top, rgba(12, 12, 14, 0), rgba(12, 12, 14, 0.3));
+    /*
+    &:before {
+        background-image: linear-gradient(
+            to top,
+            rgba(12, 12, 14, 0),
+            rgba(12, 12, 14, 0.3)
+        );
+    }
+    */
 }
 
 .profile__banner--press {
     background-color: #b91924;
-}
-
-.profile__banner--press:before {
-    background-image: linear-gradient(to top, rgba(48, 48, 48, 0), rgba(48, 48, 48, 0.2));
+    /*
+    &:before {
+        background-image: linear-gradient(
+            to top,
+            rgba(48, 48, 48, 0),
+            rgba(48, 48, 48, 0.2)
+        );
+    }
+    */
 }
 
 .profile__banner--staff {
     background-color: #00294a;
-}
-
-.profile__banner--staff:before {
-    background-image: linear-gradient(to top, rgba(12, 12, 14, 0), rgba(12, 12, 14, 0.3));
+    /*
+    &:before {
+        background-image: linear-gradient(
+            to top,
+            rgba(12, 12, 14, 0),
+            rgba(12, 12, 14, 0.3)
+        );
+    }
+    */
 }
 
 .profile__banner__wrapper {
