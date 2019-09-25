@@ -43410,6 +43410,48 @@ div.widget-123_test_ {
     display: -webkit-box;
 }
 
+.research-degree__key-information {
+    grid-column: 1/-1;
+    margin: 0.25rem 0 2.25rem 0;
+}
+
+@media (min-width: 433px) {
+    .research-degree__key-information {
+        grid-column: 2/12;
+    }
+}
+
+@media (min-width: 769px) {
+    .research-degree__key-information {
+        grid-column: 3/11;
+    }
+}
+
+@media (min-width: 901px) {
+    .research-degree__key-information {
+        grid-column: 5/15;
+    }
+}
+
+.research-degree__promo-box {
+    border: 0.0625rem solid #541b85;
+    padding: 3rem 1.25rem;
+    grid-column: 1/-1;
+    margin: 0.25rem 0 2.25rem 0;
+}
+
+@media (min-width: 769px) {
+    .research-degree__promo-box {
+        grid-column: 2/12;
+    }
+}
+
+@media (min-width: 901px) {
+    .research-degree__promo-box {
+        grid-column: 4/16;
+    }
+}
+
 .search {
     grid-row-gap: 0;
     display: grid;
