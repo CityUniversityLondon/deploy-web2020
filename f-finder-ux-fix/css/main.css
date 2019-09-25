@@ -28272,7 +28272,7 @@ article figure figcaption a:active {
 .finder__filter legend[data-open='true']:after {
     content: '';
     position: absolute;
-    width: calc(100% - 3rem);
+    width: calc(100% - $measure--medium3);
     border-top: 0.0625rem solid #d8d8d8;
     left: 1.5rem;
     bottom: 0;
@@ -37548,7 +37548,7 @@ article .link-copy {
 .finder__filter legend[data-open='true']:after {
     content: '';
     position: absolute;
-    width: calc(100% - 3rem);
+    width: calc(100% - $measure--medium3);
     border-top: 0.0625rem solid #d8d8d8;
     left: 1.5rem;
     bottom: 0;
