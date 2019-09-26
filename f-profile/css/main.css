@@ -43700,7 +43700,7 @@ div.widget-123_test_ {
 .profile__banner {
     background-color: #1e1e1e;
     position: relative;
-    z-index: -1;
+    z-index: 1;
     background: linear-gradient(45deg, #1e1e1e 0%, #1a1919 50%, #121111 16%);
 }
 
@@ -44823,6 +44823,8 @@ div.widget-123_test_ {
 .profile--academic {
     max-width: 80rem;
     margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 2;
 }
 
 @media (min-width: 1441px) {
@@ -44873,6 +44875,8 @@ div.widget-123_test_ {
 /* --- PRESS STYLES -- */
 .profile--press__contact {
     max-width: 80rem;
+    position: relative;
+    z-index: 2;
 }
 
 @media (min-width: 1441px) {
