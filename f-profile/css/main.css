@@ -44312,7 +44312,7 @@ div.widget-123_test_ {
 
 .profile__banner__content__text__dept span:nth-of-type(3):before,
 .profile__banner__content__text__dept span:nth-of-type(4):before {
-    content: '\2022';
+    content: '\2219';
     margin: 0 0.5rem;
 }
 
