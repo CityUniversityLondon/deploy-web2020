@@ -43349,6 +43349,14 @@ div.widget-123_test_ {
     }
 }
 
+.wrapper--grey {
+    background: #f2f2f2;
+}
+
+.heading-centered {
+    text-align: center;
+}
+
 .wrapper--research-degree__standfirst {
     color: #ffffff;
     background: #303030;
@@ -43487,6 +43495,12 @@ div.widget-123_test_ {
     grid-column-gap: 1/-1;
 }
 
+@media (min-width: 433px) {
+    .wrapper--research-degree__promo-box .promo-box {
+        margin-bottom: 10rem;
+    }
+}
+
 @media (min-width: 769px) {
     .wrapper--research-degree__promo-box .promo-box {
         grid-column: 2/12;
@@ -43496,6 +43510,42 @@ div.widget-123_test_ {
 @media (min-width: 901px) {
     .wrapper--research-degree__promo-box .promo-box {
         grid-column: 4/16;
+    }
+}
+
+.research-degree__overview {
+    grid-column: 1/-1;
+    background: #ffffff;
+}
+
+@media (min-width: 433px) {
+    .research-degree__overview {
+        grid-column: 2/12;
+        margin-top: -8rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .research-degree__overview {
+        grid-column: 3/11;
+    }
+}
+
+@media (min-width: 901px) {
+    .research-degree__overview {
+        grid-column: 5/15;
+    }
+}
+
+.research-degree__overview .research-degree__overview__content {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-column-gap: 1.5rem;
+}
+
+@media (min-width: 901px) {
+    .research-degree__overview .research-degree__overview__content .read-more__text {
+        grid-column: 3/11;
     }
 }
 
