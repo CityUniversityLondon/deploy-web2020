@@ -43720,6 +43720,21 @@ div.widget-123_test_ {
 .profile__banner--student,
 .profile__banner--alumni {
     background-color: #3e1031;
+    background: linear-gradient(41deg, #3e1031 0%, #3d072e 50%, #300625 16%);
+}
+
+@media (min-width: 768px) {
+    .profile__banner--student,
+    .profile__banner--alumni {
+        background: linear-gradient(40deg, #3e1031 0%, #3d072e 32%, #300625 30%);
+    }
+}
+
+@media (min-width: 1280px) {
+    .profile__banner--student,
+    .profile__banner--alumni {
+        background: linear-gradient(45deg, #3e1031 0%, #3d072e 77%, #300625 30%);
+    }
 }
 
 .profile__banner--press {
