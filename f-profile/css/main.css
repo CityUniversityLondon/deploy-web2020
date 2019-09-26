@@ -43780,7 +43780,7 @@ div.widget-123_test_ {
 .profile__banner__wrapper {
     position: relative;
     color: #ffffff;
-    padding: 2.5rem 0 2rem 0;
+    padding: 1.5rem 0 2rem 0;
     max-width: 80rem;
 }
 
@@ -44314,6 +44314,12 @@ div.widget-123_test_ {
 .profile__banner__content__text__dept span:nth-of-type(4):before {
     content: '\2219';
     margin: 0 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .profile__banner--student .profile__banner__wrapper {
+        padding: 1.5rem 0;
+    }
 }
 
 .profile .content {
