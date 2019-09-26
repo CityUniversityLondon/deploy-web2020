@@ -43723,26 +43723,21 @@ div.widget-123_test_ {
 }
 
 .profile__banner--press {
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b91924+0,c11f21+32,ad1d1d+32,ad1d1d+32,ad1d1d+62 */
     background: #b91924;
-    background: linear-gradient(36deg, #b91924 0%, #c11f21 46%, #ad1d1d 16%, #ad1d1d 16%, #ad1d1d 41%);
+    background: linear-gradient(36deg, #b91924 0%, #c11f21 46%, #ad1d1d 16%);
 }
 
 @media (min-width: 768px) {
     .profile__banner--press {
-        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b91924+0,c11f21+32,ad1d1d+32,ad1d1d+32,ad1d1d+62 */
         background: #b91924;
-        background: linear-gradient(35deg, #b91924 0%, #c11f21 32%, #ad1d1d 32%, #ad1d1d 32%, #ad1d1d 62%);
+        background: linear-gradient(35deg, #b91924 0%, #c11f21 32%, #ad1d1d 30%);
     }
 }
 
 @media (min-width: 1280px) {
     .profile__banner--press {
-        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b91924+0,c11f21+76,c11f21+76,b91924+76,b5191b+76,871010+100 */
         background: #b91924;
-        /* Old browsers */
-        background: linear-gradient(45deg, #b91924 0%, #c11f21 76%, #c11f21 76%, #b91924 76%, #b5191b 76%, #871010 100%);
-        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: linear-gradient(45deg, #b91924 0%, #c11f21 77%, #ad1d1d 30%);
     }
 }
 
