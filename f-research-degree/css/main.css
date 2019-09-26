@@ -430,6 +430,14 @@
     background-color: #370612;
 }
 
+.color--purple5 {
+    color: #ede8f2;
+}
+
+.background--purple5 {
+    background-color: #ede8f2;
+}
+
 .color--purple10 {
     color: #d6bcf6;
 }
@@ -43433,21 +43441,60 @@ div.widget-123_test_ {
     }
 }
 
-.research-degree__promo-box {
+.wrapper--research-degree__promo-box .promo-box {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1.5rem;
+    background: #ede8f2;
     border: 0.0625rem solid #541b85;
-    padding: 3rem 1.25rem;
-    grid-column: 1/-1;
+    padding: 1.25rem 0 3rem;
     margin: 0.25rem 0 2.25rem 0;
+    grid-column: 1/-1;
+}
+
+.wrapper--research-degree__promo-box .promo-box .promo-box__contents {
+    grid-column: 2/12;
+    margin: 0 0 0 1.25rem;
+}
+
+.wrapper--research-degree__promo-box .promo-box .promo-box__contents h2,
+.wrapper--research-degree__promo-box .promo-box .promo-box__contents h3 {
+    color: #541b85;
+}
+
+.wrapper--research-degree__promo-box .promo-box .promo-box__contents__image-text {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-column-gap: 1.5rem;
+}
+
+.wrapper--research-degree__promo-box .promo-box .promo-box__contents__image-text img,
+.wrapper--research-degree__promo-box .promo-box .promo-box__contents__image-text p {
+    grid-column: 1/-1;
+    margin: 0.5rem 0 0 0;
 }
 
 @media (min-width: 769px) {
-    .research-degree__promo-box {
+    .wrapper--research-degree__promo-box .promo-box .promo-box__contents__image-text img {
+        grid-column: 1/4;
+    }
+    .wrapper--research-degree__promo-box .promo-box .promo-box__contents__image-text p {
+        grid-column: 4/-1;
+    }
+}
+
+.wrapper--research-degree__promo-box .promo-box .promo-box__contents__single_type {
+    grid-column-gap: 1/-1;
+}
+
+@media (min-width: 769px) {
+    .wrapper--research-degree__promo-box .promo-box {
         grid-column: 2/12;
     }
 }
 
 @media (min-width: 901px) {
-    .research-degree__promo-box {
+    .wrapper--research-degree__promo-box .promo-box {
         grid-column: 4/16;
     }
 }
