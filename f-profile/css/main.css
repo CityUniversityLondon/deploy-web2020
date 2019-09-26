@@ -43701,29 +43701,7 @@ div.widget-123_test_ {
     background-color: #1e1e1e;
     position: relative;
     z-index: -1;
-    /*
-    &:before {
-        content: '';
-        background-image: linear-gradient(
-            to top,
-            rgba(12, 12, 14, 0),
-            rgba(12, 12, 14, 0.3)
-        );
-        position: absolute;
-        right: 0;
-        width: 14rem;
-        height: 12rem;
-        clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
-    }
-    */
-}
-
-.profile__banner .profile__banner__cutaway {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: auto;
+    background: linear-gradient(45deg, #1e1e1e 0%, #1a1919 50%, #121111 16%);
 }
 
 @media (max-width: 432px) {
@@ -43732,44 +43710,71 @@ div.widget-123_test_ {
     }
 }
 
+@media (min-width: 768px) {
+    .profile__banner {
+        background: linear-gradient(26deg, #1e1e1e 0%, #1a1919 45%, #121111 30%);
+    }
+}
+
+@media (min-width: 1280px) {
+    .profile__banner {
+        background: linear-gradient(45deg, #1e1e1e 0%, #1a1919 80%, #121111 30%);
+    }
+}
+
 .profile__banner--student,
 .profile__banner--alumni {
     background-color: #3e1031;
-    /*
-    &:before {
-        background-image: linear-gradient(
-            to top,
-            rgba(12, 12, 14, 0),
-            rgba(12, 12, 14, 0.3)
-        );
+    background: linear-gradient(41deg, #3e1031 0%, #3d072e 50%, #300625 16%);
+}
+
+@media (min-width: 768px) {
+    .profile__banner--student,
+    .profile__banner--alumni {
+        background: linear-gradient(40deg, #3e1031 0%, #3d072e 32%, #300625 30%);
     }
-    */
+}
+
+@media (min-width: 1280px) {
+    .profile__banner--student,
+    .profile__banner--alumni {
+        background: linear-gradient(45deg, #3e1031 0%, #3d072e 77%, #300625 30%);
+    }
 }
 
 .profile__banner--press {
-    background-color: #b91924;
-    /*
-    &:before {
-        background-image: linear-gradient(
-            to top,
-            rgba(48, 48, 48, 0),
-            rgba(48, 48, 48, 0.2)
-        );
+    background: #b91924;
+    background: linear-gradient(24deg, #b91924 0%, #c11f21 56%, #ad1d1d 16%);
+}
+
+@media (min-width: 768px) {
+    .profile__banner--press {
+        background: linear-gradient(35deg, #b91924 0%, #c11f21 32%, #ad1d1d 30%);
     }
-    */
+}
+
+@media (min-width: 1280px) {
+    .profile__banner--press {
+        background: linear-gradient(45deg, #b91924 0%, #c11f21 77%, #ad1d1d 30%);
+    }
 }
 
 .profile__banner--staff {
     background-color: #00294a;
-    /*
-    &:before {
-        background-image: linear-gradient(
-            to top,
-            rgba(12, 12, 14, 0),
-            rgba(12, 12, 14, 0.3)
-        );
+    background: linear-gradient(37deg, #00294a 0%, #00203b 49%, #001a30 16%);
+}
+
+@media (min-width: 768px) {
+    .profile__banner--staff {
+        background: linear-gradient(35deg, #00294a 0%, #00203b 36%, #001a30 30%);
     }
-    */
+}
+
+@media (min-width: 1280px) {
+    .profile__banner--staff {
+        background: #00294a;
+        background: linear-gradient(45deg, #00294a 0%, #00203b 80%, #001a30 30%);
+    }
 }
 
 .profile__banner__wrapper {
