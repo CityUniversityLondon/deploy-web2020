@@ -22426,7 +22426,7 @@ main table td em {
     color: #696969;
     border-bottom: none;
     transition: none;
-    margin-right: 0.5rem;
+    margin-right: 1.25rem;
 }
 
 .card--social-media__controls a:hover, .card--social-media__controls a:active, .card--social-media__controls a:focus, .card--social-media__controls a:visited {
@@ -32517,7 +32517,7 @@ blockquote footer cite {
 }
 
 .slider__controls__progress {
-    color: #919191;
+    color: #696969;
     margin: 1rem 2rem 0 0;
     font-size: 0.79rem;
     font-weight: 500;
@@ -35768,7 +35768,7 @@ CHANGE TO ??
     position: absolute;
     font-size: 0.79rem;
     font-weight: 500;
-    color: #919191;
+    color: #696969;
     bottom: 1rem;
     right: 9rem;
 }
@@ -35785,7 +35785,7 @@ CHANGE TO ??
 }
 
 .swiper-indicator__slider-length {
-    color: #919191;
+    color: #696969;
 }
 
 .swiper-buttons-wrap {
