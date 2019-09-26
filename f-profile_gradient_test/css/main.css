@@ -43744,20 +43744,32 @@ div.widget-123_test_ {
 
 @media (min-width: 768px) {
     .profile__banner--press {
-        background: #b91924;
         background: linear-gradient(35deg, #b91924 0%, #c11f21 32%, #ad1d1d 30%);
     }
 }
 
 @media (min-width: 1280px) {
     .profile__banner--press {
-        background: #b91924;
         background: linear-gradient(45deg, #b91924 0%, #c11f21 77%, #ad1d1d 30%);
     }
 }
 
 .profile__banner--staff {
     background-color: #00294a;
+    background: linear-gradient(37deg, #00294a 0%, #00203b 49%, #001a30 16%);
+}
+
+@media (min-width: 768px) {
+    .profile__banner--staff {
+        background: linear-gradient(35deg, #00294a 0%, #00203b 36%, #001a30 30%);
+    }
+}
+
+@media (min-width: 1280px) {
+    .profile__banner--staff {
+        background: #00294a;
+        background: linear-gradient(45deg, #00294a 0%, #00203b 77%, #001a30 30%);
+    }
 }
 
 .profile__banner__wrapper {
