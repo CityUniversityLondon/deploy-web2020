@@ -40179,6 +40179,16 @@ h3 .linked-heading__icons {
     border-bottom: 0.125rem solid #006bbd;
 }
 
+.no-js .read-more__button__container {
+    display: none;
+}
+
+.no-js .read-more__text {
+    transition: none;
+    -webkit-mask-image: none;
+    overflow: auto;
+}
+
 body.modal--in.no-scroll {
     position: fixed;
     width: 100%;

@@ -5679,6 +5679,8 @@ function addPagination(elem, itemCount) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
 
 
 
@@ -5693,6 +5695,7 @@ window.onload = function () {
 };
 
 function readMore(element) {
+  createHTMLElements(element);
   let anchor = element.querySelector('.read-more__anchor');
   anchor.addEventListener('click', handleReadMoreClick, false);
 }
@@ -5714,6 +5717,17 @@ function handleReadMoreClick(e) {
     readMoreText.classList.add('read-more__text--hidden');
     readMoreText.style.maxHeight = null;
   }
+}
+
+function createHTMLElements(element) {
+  let readMoreButton = element.querySelector('.read-more__button');
+  let readMoreAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('a', '', '', '', 'read-more__anchor');
+  readMoreAnchor.setAttribute('href', '#/');
+  readMoreButton.appendChild(readMoreAnchor);
+  let elementsArray = [Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-plus-circle'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-minus-circle'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', 'Read more', '', '', 'read-more__anchor__link-text')];
+  elementsArray.forEach(function (element) {
+    readMoreAnchor.appendChild(element);
+  });
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
