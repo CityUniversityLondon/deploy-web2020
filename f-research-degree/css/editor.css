@@ -1107,6 +1107,13 @@
     
     Background color must match background color of element mixin is applied to
 */
+.rectangle-divider--mini {
+    background: #d61726;
+    width: 2.5rem;
+    height: 0.25rem;
+    margin: 0.25rem auto 1rem auto;
+}
+
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
