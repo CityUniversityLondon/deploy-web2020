@@ -45047,6 +45047,12 @@ div.widget-123_test_ {
 
 /* --- END ALUMNI STYLES --- */
 /* --- STUDENT STYLES --- */
+@media (min-width: 768px) {
+    .profile__banner--student .profile__banner__content {
+        padding-bottom: 2rem;
+    }
+}
+
 .profile--global__tags--student {
     margin-top: 2rem;
 }
