@@ -43698,8 +43698,8 @@ div.widget-123_test_ {
 }
 
 /* 
-   Acadamic profile is an example of the default
-   profile banner
+   Acadamic profile is an example of 
+   the default profile banner
 */
 .profile__banner {
     background-color: #1e1e1e;
@@ -44124,6 +44124,10 @@ div.widget-123_test_ {
         grid-column: 6 / 16;
         padding-left: 0.75rem;
     }
+}
+
+.profile__banner__content__text p {
+    font-weight: 200;
 }
 
 .profile__banner__content__text__dept {
@@ -44852,6 +44856,12 @@ div.widget-123_test_ {
     }
 }
 
+@media (max-width: 432px) {
+    .profile--academic {
+        padding-left: 0.75rem;
+    }
+}
+
 @media (min-width: 768px) {
     .profile--academic {
         grid-row-gap: 0;
@@ -44884,10 +44894,23 @@ div.widget-123_test_ {
 
 /* --- END ACADEMIC STYLES --- */
 /* --- PRESS STYLES -- */
+@media (max-width: 432px) {
+    .profile__banner--press .profile__banner__content__mobile-header {
+        display: none;
+    }
+}
+
+@media (max-width: 432px) {
+    .profile__banner--press h1 {
+        display: block;
+    }
+}
+
 .profile--press__contact {
     max-width: 80rem;
     position: relative;
     z-index: 2;
+    border-bottom: solid 0.125rem #e5e5e5;
 }
 
 @media (min-width: 1441px) {
@@ -44901,6 +44924,12 @@ div.widget-123_test_ {
     .profile--press__contact {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 433px) {
+    .profile--press__contact {
+        border-bottom: none;
     }
 }
 
@@ -44937,9 +44966,24 @@ div.widget-123_test_ {
     margin-top: 2rem;
 }
 
+.profile--press__contact__about h2 {
+    margin-bottom: 1rem;
+}
+
 .profile--press__contact__content {
-    border-bottom: solid 0.1875rem #e5e5e5;
-    padding: 0 0 1.25rem 1.5rem;
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 433px) {
+    .profile--press__contact__content {
+        border-bottom: solid 0.125rem #e5e5e5;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile--press__contact__content {
+        padding-left: 1.25rem;
+    }
 }
 
 @media (min-width: 1281px) {
@@ -44966,6 +45010,12 @@ div.widget-123_test_ {
     grid-column: 2 / 12;
     padding-top: 2rem;
     background: #ffffff;
+}
+
+@media (max-width: 432px) {
+    .profile--press__contact__inner {
+        padding-left: 0.75rem;
+    }
 }
 
 @media (min-width: 901px) {
@@ -45061,80 +45111,97 @@ div.widget-123_test_ {
 
 /* --- END STUDENT STYLES --- */
 .profile__news-three-block .related-content {
-    grid-row-gap: 0;
-    display: grid;
     max-width: 80rem;
 }
 
-@media (max-width: 432px) {
+@media (min-width: 1441px) {
+    .profile__news-three-block .related-content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .profile__news-three-block .related-content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .profile__news-three-block .related-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 901px) {
+    .profile__news-three-block .related-content {
+        grid-row-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 432px) {
     .profile__news-three-block .related-content {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
-@media (min-width: 433px) and (max-width: 900px) {
+@media (min-width: 901px) and (min-width: 433px) and (max-width: 900px) {
     .profile__news-three-block .related-content {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 901px) and (min-width: 901px) {
     .profile__news-three-block .related-content {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
     }
 }
 
-@media (min-width: 1441px) {
-    .profile__news-three-block .related-content {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .profile__news-three-block .related-content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-.profile__news-three-block .related-content li:first-of-type {
-    grid-column: 1/-1;
-}
-
 @media (min-width: 901px) {
     .profile__news-three-block .related-content li:first-of-type {
-        grid-column: 1/7;
+        grid-column: 1 / 7;
     }
-}
-
-.profile__news-three-block .related-content li:nth-of-type(2) {
-    grid-column: 1/-1;
 }
 
 @media (min-width: 901px) {
     .profile__news-three-block .related-content li:nth-of-type(2) {
-        grid-column: 7/13;
+        grid-column: 7 / 13;
     }
-}
-
-.profile__news-three-block .related-content li:nth-of-type(3) {
-    grid-column: 1/-1;
 }
 
 @media (min-width: 901px) {
     .profile__news-three-block .related-content li:nth-of-type(3) {
-        grid-column: 13/-1;
+        grid-column: 13 / -1;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .profile__news-three-block .related-content .card {
+        max-width: 28rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .profile__news-three-block .related-content .card {
+        margin-bottom: 1rem;
+    }
+    .profile__news-three-block .related-content .card:last-child {
+        margin-bottom: 0;
     }
 }
 
 .profile__news-three-block__heading {
     max-width: 80rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    max-width: 55ch;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 @media (min-width: 1441px) {
@@ -45151,10 +45218,10 @@ div.widget-123_test_ {
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 433px) and (max-width: 1279px) {
     .profile__news-three-block__heading {
-        display: flex;
-        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
