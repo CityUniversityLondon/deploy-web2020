@@ -43692,9 +43692,41 @@ div.widget-123_test_ {
     }
 }
 
+@media (max-width: 768px) {
+    .profile .tabs--accordion {
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 1441px) {
+    .profile .tabs--accordion {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) and (max-width: 1440px) {
+    .profile .tabs--accordion {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
 .profile .tabs__panel__content {
     margin: auto;
     max-width: 55ch;
+}
+
+.profile .tabs--accordion .accordion__heading button .accordion__heading__indicator,
+.profile .tabs--accordion
+.accordion__heading[data-open='true']
+button
+.accordion__heading__text {
+    background: #1e1e1e;
+}
+
+.profile .tabs .tabs__links li a[aria-selected='true'] span {
+    border-bottom-color: #1e1e1e;
 }
 
 /* 
