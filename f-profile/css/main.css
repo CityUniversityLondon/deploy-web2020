@@ -43697,6 +43697,10 @@ div.widget-123_test_ {
     max-width: 55ch;
 }
 
+/* 
+   Acadamic profile is an example of the default
+   profile banner
+*/
 .profile__banner {
     background-color: #1e1e1e;
     position: relative;
@@ -43712,7 +43716,7 @@ div.widget-123_test_ {
 
 @media (min-width: 768px) {
     .profile__banner {
-        background: linear-gradient(26deg, #1e1e1e 0%, #1a1919 45%, #121111 30%);
+        background: linear-gradient(29deg, #1e1e1e 0%, #1a1919 45%, #121111 30%);
     }
 }
 
@@ -43851,7 +43855,7 @@ div.widget-123_test_ {
     .profile__banner__content {
         grid-column: 2 / 12;
         display: flex;
-        padding-bottom: 7rem;
+        padding-bottom: 6rem;
     }
 }
 
@@ -43884,18 +43888,25 @@ div.widget-123_test_ {
 }
 
 .profile__banner__content__thumbnail {
-    padding-top: 2.5rem;
+    padding-top: 1.5rem;
 }
 
 @media (max-width: 432px) {
     .profile__banner__content__thumbnail {
         display: flex;
+        margin-bottom: 1rem;
     }
 }
 
 @media (min-width: 433px) {
     .profile__banner__content__thumbnail {
         display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile__banner__content__thumbnail {
+        padding-top: 2.5rem;
     }
 }
 
@@ -43935,7 +43946,7 @@ div.widget-123_test_ {
 
 @media (min-width: 768px) {
     .profile__banner__content__thumbnail figure {
-        margin-right: 2.25rem;
+        margin-right: 2.75rem;
     }
 }
 
@@ -44094,21 +44105,9 @@ div.widget-123_test_ {
     }
 }
 
-@media (max-width: 432px) {
-    .profile__banner__content__text {
-        margin-top: 1.25rem;
-    }
-}
-
-@media (min-width: 433px) {
-    .profile__banner__content__text {
-        margin-top: 1rem;
-    }
-}
-
 @media (min-width: 768px) {
     .profile__banner__content__text {
-        padding-top: 3.5rem;
+        padding-top: 4.25rem;
     }
 }
 
@@ -44122,7 +44121,6 @@ div.widget-123_test_ {
 
 @media (min-width: 1281px) {
     .profile__banner__content__text {
-        padding-top: 4.5rem;
         grid-column: 6 / 16;
         padding-left: 0.75rem;
     }
