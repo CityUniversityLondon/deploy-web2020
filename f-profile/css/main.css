@@ -45111,14 +45111,20 @@ button
     }
 }
 
+.profile--alumni__contact {
+    border-bottom: none;
+}
+
 @media (min-width: 768px) {
     .profile--alumni__details__column {
         width: 50%;
     }
 }
 
-.profile--alumni__details__column:first-child {
-    margin-right: 4rem;
+@media (min-width: 768px) {
+    .profile--alumni__details__column:first-child {
+        margin-right: 4rem;
+    }
 }
 
 .profile--alumni__personal-links {
