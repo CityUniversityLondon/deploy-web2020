@@ -43759,21 +43759,24 @@ button
 }
 
 .profile__banner--student,
-.profile__banner--alumni {
+.profile__banner--alumni,
+.profile__banner--ambassador {
     background-color: #3e1031;
     background: linear-gradient(41deg, #3e1031 41%, #3d072e 56%, #300625 16%);
 }
 
 @media (min-width: 768px) {
     .profile__banner--student,
-    .profile__banner--alumni {
+    .profile__banner--alumni,
+    .profile__banner--ambassador {
         background: linear-gradient(40deg, #3e1031 16%, #3d072e 32%, #300625 30%);
     }
 }
 
 @media (min-width: 1280px) {
     .profile__banner--student,
-    .profile__banner--alumni {
+    .profile__banner--alumni,
+    .profile__banner--ambassador {
         background: linear-gradient(45deg, #3e1031 63%, #3d072e 77%, #300625 30%);
     }
 }
@@ -44783,7 +44786,7 @@ button
     line-height: 1.625;
     margin-top: 0.5rem;
     max-width: 55ch;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 0 0;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -44829,6 +44832,7 @@ button
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
+    margin-top: 1.5rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -45138,9 +45142,10 @@ button
 }
 
 /* --- END ALUMNI STYLES --- */
-/* --- STUDENT STYLES --- */
+/* --- STUDENT/AMBASSADOR STYLES --- */
 @media (min-width: 768px) {
-    .profile__banner--student .profile__banner__content {
+    .profile__banner--student .profile__banner__content,
+    .profile__banner--ambassador .profile__banner__content {
         padding-bottom: 2rem;
     }
 }
