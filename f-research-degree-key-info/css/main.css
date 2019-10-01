@@ -30844,12 +30844,84 @@ article figure figcaption a:active {
 
 .key-information--research__main__dates tr th {
     color: #303030;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .key-information--research__main__dates tr th {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .key-information--research__main__dates tr th {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .key-information--research__main__dates tr th {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .key-information--research__main__dates tr th {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .key-information--research__main__dates tr th {
+        letter-spacing: -0.017em;
+    }
 }
 
 .key-information--research__main__duration {
     display: grid;
     flex-direction: row;
     grid-template-columns: repeat(3, 1fr);
+}
+
+.key-information--research__main__duration__heading {
+    color: #303030;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    font-weight: 700;
+    font-family: "Meta Sans", sans-serif;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .key-information--research__main__duration__heading {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .key-information--research__main__duration__heading {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .key-information--research__main__duration__heading {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .key-information--research__main__duration__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .key-information--research__main__duration__heading {
+        letter-spacing: -0.017em;
+    }
 }
 
 .key-information--research__main__duration__item {
