@@ -34688,7 +34688,7 @@ article .link-copy {
 
 @media (min-width: 1280px) {
     .banner__image {
-        max-height: 650px;
+        max-height: 450px;
     }
 }
 
@@ -43644,35 +43644,53 @@ div.widget-123_test_ {
     }
 }
 
-.research-degree__overview .research-degree__overview__content .read-more {
+.research-degree__overview .research-degree__overview__content .read-more,
+.research-degree__overview .research-degree__overview__content .accordion {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 1.5rem;
 }
 
 @media (min-width: 433px) {
-    .research-degree__overview .research-degree__overview__content .read-more {
+    .research-degree__overview .research-degree__overview__content .read-more,
+    .research-degree__overview .research-degree__overview__content .accordion {
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
-.research-degree__overview .research-degree__overview__content .read-more .read-more__text {
+.research-degree__overview .research-degree__overview__content .read-more .read-more__text,
+.research-degree__overview .research-degree__overview__content .read-more .accordion__body,
+.research-degree__overview .research-degree__overview__content .read-more .accordion__heading,
+.research-degree__overview .research-degree__overview__content .accordion .read-more__text,
+.research-degree__overview .research-degree__overview__content .accordion .accordion__body,
+.research-degree__overview .research-degree__overview__content .accordion .accordion__heading {
     grid-column: 1/-1;
 }
 
 @media (min-width: 433px) {
-    .research-degree__overview .research-degree__overview__content .read-more .read-more__text {
+    .research-degree__overview .research-degree__overview__content .read-more .read-more__text,
+    .research-degree__overview .research-degree__overview__content .read-more .accordion__body,
+    .research-degree__overview .research-degree__overview__content .read-more .accordion__heading,
+    .research-degree__overview .research-degree__overview__content .accordion .read-more__text,
+    .research-degree__overview .research-degree__overview__content .accordion .accordion__body,
+    .research-degree__overview .research-degree__overview__content .accordion .accordion__heading {
         grid-column: 2/12;
     }
 }
 
 @media (min-width: 901px) {
-    .research-degree__overview .research-degree__overview__content .read-more .read-more__text {
+    .research-degree__overview .research-degree__overview__content .read-more .read-more__text,
+    .research-degree__overview .research-degree__overview__content .read-more .accordion__body,
+    .research-degree__overview .research-degree__overview__content .read-more .accordion__heading,
+    .research-degree__overview .research-degree__overview__content .accordion .read-more__text,
+    .research-degree__overview .research-degree__overview__content .accordion .accordion__body,
+    .research-degree__overview .research-degree__overview__content .accordion .accordion__heading {
         grid-column: 3/11;
     }
 }
 
-.research-degree__overview .research-degree__overview__content .read-more .read-more__button__container {
+.research-degree__overview .research-degree__overview__content .read-more .read-more__button__container,
+.research-degree__overview .research-degree__overview__content .accordion .read-more__button__container {
     grid-column: 1/-1;
 }
 
