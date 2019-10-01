@@ -44532,15 +44532,19 @@ button
 }
 
 .profile--global__details__content {
-    margin-top: 1.5rem;
+    margin-top: 0.75rem;
 }
 
 .profile--global__details__content a span {
     margin-left: 0.25rem;
 }
 
-.profile--global__details__content__column div {
-    margin-bottom: 1rem;
+.profile--global__details__content__column ul {
+    margin-left: 0;
+}
+
+.profile--global__details__content__column li {
+    list-style: none;
 }
 
 .profile--global__details__content__column span {
