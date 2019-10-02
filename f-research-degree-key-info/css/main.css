@@ -30931,6 +30931,7 @@ article figure figcaption a:active {
 .key-information--research__main__duration__item span {
     display: block;
     color: #1e1e1e;
+    margin-bottom: 0.25rem;
 }
 
 .key-info {
