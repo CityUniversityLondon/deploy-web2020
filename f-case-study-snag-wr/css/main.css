@@ -35009,29 +35009,69 @@ article .link-copy {
     }
 }
 
-/*
+.banner-standfirst-label .banner__block-color {
+    height: 8rem;
+    margin-top: 1rem;
+    background: #e5e5e5;
+    grid-column: 1 / -1;
+}
 
-CHANGE TO ??
-<div class="banner--case-study__wrap">
-    
-    <div class="banner--case-study__image OR banner--case-study__no-image">
-        <picture class=""></picture>
-    </div>
+.banner-standfirst-label .banner__block-color.banner__standfirst {
+    bottom: 4.5rem;
+}
 
-    <div class="banner--case-study__banner__wrap"> 
-        <header class="banner">
-            <div class="banner__content">
-                <div class="banner__content__header">
-                    <h1></h1>
-                    <p class="standfirst"></p>
-                </div>
-                <div class="banner__content__labels"></div>
-            </div>
-        </header>    
-    </div>
-</div>
+.banner-standfirst-label .banner__standfirst {
+    background: #ffffff;
+    color: #0c0c0e;
+    text-align: center;
+}
 
-*/
+.banner-standfirst-label .labels {
+    color: #696969;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    font-family: 'Plex Sans';
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .banner-standfirst-label .labels {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .banner-standfirst-label .labels {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .banner-standfirst-label .labels {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .banner-standfirst-label .labels {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .banner-standfirst-label .labels {
+        letter-spacing: -0.017em;
+    }
+}
+
+.banner-standfirst-label .standfirst {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .banner--case-study__wrap {
     grid-column: 1 / -1;
     color: #0c0c0e;
@@ -35178,13 +35218,13 @@ CHANGE TO ??
 
 .banner--case-study__banner__wrap .banner__content__labels {
     margin-bottom: 1.5rem;
-    grid-area: l;
-    text-align: center;
+    font-weight: 700;
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
     font-family: 'Plex Sans';
-    font-weight: 700;
+    grid-area: l;
+    text-align: center;
     color: #696969;
 }
 
@@ -40974,6 +41014,10 @@ a.modal__close:active, a.modal__close:focus {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
     }
+}
+
+.case-study .banner {
+    grid-column: 1 / -1;
 }
 
 .case-study__overview__main__details {
