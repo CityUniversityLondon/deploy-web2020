@@ -35016,8 +35016,10 @@ article .link-copy {
     grid-column: 1 / -1;
 }
 
-.banner-standfirst-label .banner__block-color.banner__standfirst {
-    bottom: 4.5rem;
+@media (max-width: 767px) {
+    .banner-standfirst-label .banner__block-color {
+        height: 5.5rem;
+    }
 }
 
 .banner-standfirst-label .banner__standfirst {
@@ -35070,6 +35072,10 @@ article .link-copy {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.banner-standfirst-label__no-image .banner__standfirst {
+    bottom: 4.5rem;
 }
 
 .banner--case-study__wrap {
