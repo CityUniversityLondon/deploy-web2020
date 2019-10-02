@@ -26463,55 +26463,9 @@ article figure figcaption a:active {
     background-image: linear-gradient(#f2f2f2, #e5e5e5);
 }
 
-.listing .banner {
-    display: inherit;
-}
-
-.listing .banner__content {
-    grid-row-gap: 0;
-    display: grid;
-    max-width: 80rem;
-    padding: 4rem 0 3rem 0;
-}
-
-@media (max-width: 432px) {
-    .listing .banner__content {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .listing .banner__content {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .listing .banner__content {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
-}
-
-@media (min-width: 1441px) {
-    .listing .banner__content {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .listing .banner__content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-.listing .banner__content__header {
-    text-align: left;
-    grid-column: 1/-1;
+.listing .banner-text {
+    background: #f2f2f2;
+    color: #0c0c0e;
 }
 
 .finder {
@@ -34077,11 +34031,6 @@ article .link-copy {
     }
 }
 
-.banner__overlay__heading h1,
-.banner__overlay__heading p {
-    max-width: 80rem;
-}
-
 .banner-text {
     background-color: #0c0c0e;
     color: #ffffff;
@@ -34105,14 +34054,6 @@ article .link-copy {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
-}
-
-.banner-text .banner-text__content h1 {
-    max-width: 80rem;
-}
-
-.banner-text .banner-text__content p {
-    max-width: 80rem;
 }
 
 .banner__standfirst {
@@ -34578,55 +34519,9 @@ article .link-copy {
     background-image: linear-gradient(#f2f2f2, #e5e5e5);
 }
 
-.listing .banner {
-    display: inherit;
-}
-
-.listing .banner__content {
-    grid-row-gap: 0;
-    display: grid;
-    max-width: 80rem;
-    padding: 4rem 0 3rem 0;
-}
-
-@media (max-width: 432px) {
-    .listing .banner__content {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .listing .banner__content {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .listing .banner__content {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
-}
-
-@media (min-width: 1441px) {
-    .listing .banner__content {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .listing .banner__content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-.listing .banner__content__header {
-    text-align: left;
-    grid-column: 1/-1;
+.listing .banner-text {
+    background: #f2f2f2;
+    color: #0c0c0e;
 }
 
 .finder {
