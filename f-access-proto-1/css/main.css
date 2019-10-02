@@ -27571,7 +27571,6 @@ article figure figcaption a:active {
     background-color: #d61726;
     border-color: #d61726;
     color: #ffffff;
-    border-radius: 0;
     flex-shrink: 0;
     margin-left: 2rem;
     box-shadow: none;
@@ -36352,7 +36351,6 @@ article .link-copy {
     background-color: #d61726;
     border-color: #d61726;
     color: #ffffff;
-    border-radius: 0;
     flex-shrink: 0;
     margin-left: 2rem;
     box-shadow: none;
