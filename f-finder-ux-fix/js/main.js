@@ -2570,9 +2570,10 @@ function finder__selectbox(props) {
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
     value: ""
   }, props.facet.noSelection), props.responseFacet[0] && props.responseFacet[0].categories[0] ? props.responseFacet[0].categories[0].values.map(value => {
+    const responseFacetDetails = "\"".concat(value.data, "\"");
     return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
       key: value.data,
-      value: value.data
+      value: responseFacetDetails
     }, props.facet.meta === 'rSub' ? value.label.replace(props.query.facets.G + '_', '') : value.label);
   }) : null));
 }
