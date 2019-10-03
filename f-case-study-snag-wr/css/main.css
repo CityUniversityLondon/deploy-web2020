@@ -34899,6 +34899,18 @@ article .link-copy {
     }
 }
 
+@media (min-width: 3840px) {
+    .banner__image {
+        max-height: 850px;
+    }
+}
+
+@media (min-width: 7680px) {
+    .banner__image {
+        max-height: 1800px;
+    }
+}
+
 .banner__image .hero-image {
     width: 100%;
     overflow: hidden;
@@ -35011,8 +35023,6 @@ article .link-copy {
 
 .banner-standfirst-label .banner__image {
     overflow: hidden;
-    grid-column: 1 / -1;
-    grid-area: inherit;
 }
 
 .banner-standfirst-label .banner__block-color {
@@ -35100,191 +35110,6 @@ article .link-copy {
     margin-right: auto;
 }
 
-/*
-.banner--case-study__wrap {
-    grid-column: 1 / -1;
-    color: $color-nearblack;
-    background: $color-purewhite;
-    @include standard-grid();
-    grid-template-rows: auto;
-}
-
-.banner--case-study__image {
-    grid-column: 1 / -1;
-    overflow: hidden;
-
-    img {
-        width: 100%;
-    }
-}
-
-.banner--case-study__no-image {
-    height: $measure--basic;
-    margin-top: $measure--basic;
-    background: $color-gray2;
-    grid-column: 1 / -1;
-
-    @include media('>=tablet') {
-        height: $measure--huge5;
-    }
-}
-
-.banner--case-study__banner__wrap {
-    grid-column: 1 / -1;
-    color: $color-nearblack;
-    background: $color-purewhite;
-
-    @include media('>=tablet') {
-        grid-column: 2 / 12;
-        margin-top: -$measure--medium9;
-    }
-
-    @include media('>between') {
-        grid-column: 3 / 17;
-    }
-
-    @include media('>large') {
-        grid-column: 4 / 16;
-    }
-
-    .banner {
-        @include standard-margins();
-    }
-
-    .banner__content {
-        padding: $measure--small4 0 $measure--basic 0;
-        grid-column: 1 / -1;
-        @include standard-grid();
-        grid-template-areas:
-            'l l l l l l l l l l l l l l l l l l'
-            'h h h h h h h h h h h h h h h h h h'
-            'c c c c c c c c c c c c c c c c c c';
-
-        @include media('>desktop') {
-            padding: $measure--medium3 0 $measure--small4 0;
-        }
-    }
-
-    .banner__content__header {
-        margin-bottom: 0;
-        grid-column: 1 / -1;
-        grid-area: h;
-        text-align: center;
-    }
-
-    h1,
-    .standfirst {
-        max-width: $max-line-length;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .banner__content__labels {
-        margin-bottom: $measure--small2;
-        font-weight: $font-weight-bold;
-        @include smalltype();
-        font-family: 'Plex Sans';
-        grid-area: l;
-        text-align: center;
-
-        color: $color-gray7;
-    }
-}
-
-///////// END NEW CSS
-
-.case-study__overview__multimedia-banner__image {
-    grid-column: 1 / -1;
-    overflow: hidden;
-
-    img {
-        width: 100%;
-    }
-}
-
-.case-study__overview__multimedia-banner__block-colour {
-    height: $measure--basic;
-    margin-top: $measure--basic;
-    background: $color-gray2;
-    grid-column: 1 / -1;
-
-    @include media('>=tablet') {
-        height: $measure--huge5;
-    }
-}
-
-.case-study__overview__wrap {
-    grid-column: 1 / -1;
-    color: $color-nearblack;
-    background: $color-purewhite;
-
-    @include media('>=tablet') {
-        grid-column: 2 / 12;
-        margin-top: -$measure--medium9;
-    }
-
-    @include media('>between') {
-        grid-column: 3 / 17;
-    }
-
-    @include media('>large') {
-        grid-column: 4 / 16;
-    }
-
-    .case-study__overview {
-        @include standard-margins();
-
-        @include media('>desktop') {
-            @include standard-grid();
-            grid-template-rows: auto;
-        }
-
-        .banner {
-            grid-column: 2 / 18;
-        }
-
-        .banner__content {
-            padding: $measure--small4 0 $measure--basic 0;
-            grid-column: 1 / -1;
-            @include standard-grid();
-            grid-template-areas:
-                'l l l l l l l l l l l l l l l l l l'
-                'h h h h h h h h h h h h h h h h h h'
-                'c c c c c c c c c c c c c c c c c c';
-            //padding: $measure--medium7 0 $measure--medium3 0;
-
-            @include media('>desktop') {
-                padding: $measure--medium3 0 $measure--small4 0;
-            }
-        }
-
-        h1,
-        .standfirst {
-            max-width: $max-line-length;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .banner__content__header {
-            margin-bottom: 0;
-            grid-column: 1 / -1;
-            grid-area: h;
-            text-align: center;
-        }
-
-        .banner__content__labels {
-            margin-bottom: $measure--small2;
-            grid-area: l;
-            text-align: center;
-            @include smalltype();
-            font-family: 'Plex Sans';
-            font-weight: $font-weight-bold;
-            color: $color-gray7;
-        }
-    }
-}
-
-*/
 .swiper-viewport {
     grid-row-gap: 0;
     display: grid;
