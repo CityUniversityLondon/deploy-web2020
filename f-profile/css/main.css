@@ -44925,18 +44925,6 @@ button
 
 /* --- END ACADEMIC STYLES --- */
 /* --- PRESS STYLES -- */
-@media (max-width: 432px) {
-    .profile__banner--press .profile__banner__content__mobile-header {
-        display: none;
-    }
-}
-
-@media (max-width: 432px) {
-    .profile__banner--press h1 {
-        display: block;
-    }
-}
-
 .profile--press__contact {
     max-width: 80rem;
     position: relative;
