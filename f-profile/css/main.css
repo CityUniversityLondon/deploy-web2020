@@ -44556,16 +44556,6 @@ button
     transform: rotate(90deg);
 }
 
-.profile--global__personal-links {
-    margin-top: 3rem;
-}
-
-@media (min-width: 768px) {
-    .profile--global__personal-links {
-        margin-top: 0;
-    }
-}
-
 .profile--global__personal-links ul {
     margin-left: 1.5rem;
 }
@@ -45067,14 +45057,14 @@ button
 }
 
 @media (min-width: 768px) {
-    .profile--press__contact__details__content__column {
+    .profile--press__contact__details__content__column ul {
         display: flex;
     }
-    .profile--press__contact__details__content__column div {
+    .profile--press__contact__details__content__column ul li {
         margin-bottom: 1rem;
         margin-right: 5rem;
     }
-    .profile--press__contact__details__content__column div:nth-child(2) {
+    .profile--press__contact__details__content__column ul li:nth-child(2) {
         margin-right: 0;
     }
 }
@@ -45135,10 +45125,6 @@ button
     .profile--alumni__details__column:first-child {
         margin-right: 4rem;
     }
-}
-
-.profile--alumni__personal-links {
-    margin-top: 1.5rem;
 }
 
 /* --- END ALUMNI STYLES --- */
