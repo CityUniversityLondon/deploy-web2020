@@ -1541,6 +1541,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 
@@ -1558,6 +1559,7 @@ __webpack_require__.r(__webpack_exports__);
  *  Finds external links and adds font awesome icon to indicate external link
  * Instructions: add external-link-finder class to templates in article container element
  */
+
 const className = 'external-link-finder';
 
 function findExternalLink(anchorsArea) {
@@ -1579,8 +1581,8 @@ function findExternalLink(anchorsArea) {
       if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && anchor.querySelectorAll('.fab').length < 1 && anchor.className !== 'social-icon' && !anchor.parentElement.className.includes('cta-block') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
         // adds font awesome external link icon after completing checks
         let node = document.createElement('span');
-        node.className = 'fa fa-external-link inline-external-link ';
-        node.setAttribute('aria-hidden', 'true');
+        node.className = 'far fa-external-link inline-external-link';
+        node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, '(external link)');
         anchor.appendChild(node);
       }
     });
@@ -2157,12 +2159,14 @@ function dependencyMet(facet, facetMap) {
 function finder__filters(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_appliedfilters__WEBPACK_IMPORTED_MODULE_5__["default"], {
     config: props.config,
     query: props.query,
     update: props.update,
     clear: props.clear
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", {
+    className: "finder__filter"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__heading"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Filter ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__heading__btn-icon"
@@ -2215,7 +2219,7 @@ function finder__filters(props) {
     } else {
       return null;
     }
-  }));
+  })));
 }
 
 finder__filters.propTypes = {
@@ -2557,10 +2561,8 @@ function finder__selectbox(props) {
     props.update.results(!props.update.updateState);
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("fieldset", {
-    className: "finder__filter finder__selectbox"
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
-    className: "finder__select"
+  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
+    className: "finder__select finder__selectbox"
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
     className: "finder__select__overline",
     htmlFor: "meta_".concat(props.facet.meta, "_orsand--").concat(randomNumber)
@@ -2571,12 +2573,13 @@ function finder__selectbox(props) {
     onChange: e => setFacet(e)
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
     value: ""
-  }, "All ".concat(props.facet.name)), props.responseFacet[0] && props.responseFacet[0].categories[0] ? props.responseFacet[0].categories[0].values.map(value => {
+  }, props.facet.noSelection), props.responseFacet[0] && props.responseFacet[0].categories[0] ? props.responseFacet[0].categories[0].values.map(value => {
+    const responseFacetDetails = "\"".concat(value.data, "\"");
     return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
       key: value.data,
-      value: value.data
+      value: responseFacetDetails
     }, props.facet.meta === 'rSub' ? value.label.replace(props.query.facets.G + '_', '') : value.label);
-  }) : null)));
+  }) : null));
 }
 
 finder__selectbox.propTypes = {

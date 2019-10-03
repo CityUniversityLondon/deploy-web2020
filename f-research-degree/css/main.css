@@ -22372,7 +22372,7 @@ main table td em {
     color: #696969;
     border-bottom: none;
     transition: none;
-    margin-right: 0.5rem;
+    margin-right: 1.25rem;
 }
 
 .card--social-media__controls a:hover, .card--social-media__controls a:active, .card--social-media__controls a:focus, .card--social-media__controls a:visited {
@@ -22543,10 +22543,6 @@ main table td em {
 
 .card--testimonial--photo .card--testimonial__author__photo {
     margin-left: 1rem;
-}
-
-.card--testimonial--photo .card--testimonial__photo {
-    border-radius: 50%;
 }
 
 @media (min-width: 769px) {
@@ -25877,6 +25873,10 @@ _:-ms-lang(x),
     color: #ffffff;
 }
 
+.inline-external-link {
+    margin-left: 0.5rem;
+}
+
 .feedback {
     font-size: 1rem;
     line-height: 1.625;
@@ -26474,725 +26474,13 @@ article figure figcaption a:active {
     }
 }
 
-@media (min-width: 901px) {
-    .card--pathway__block {
-        display: flex;
-    }
-}
-
-.card--pathway {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    position: relative;
-    transition: none;
-    padding: 1rem;
-    border: 0.0625rem solid #e5e5e5;
-    display: block;
-    padding: 0 1rem 1rem 1rem;
-    margin-bottom: 1.5rem;
-    background: #ffffff;
-}
-
-@media (hover: hover) {
-    .card--pathway:hover {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.card--pathway:focus, .card--pathway:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-.card--pathway:focus, .card--pathway:active {
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-    outline-color: #0c0c0e;
-}
-
-.card--pathway .underline-transition__title {
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition
-            stretches beyond the element
-        **/
-    display: inline;
-    padding-bottom: 0.125rem;
-    line-height: 1.5;
-}
-
-.card--pathway:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
-}
-
-@media (hover: hover) {
-    .card--pathway:hover .underline-transition__title {
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
-        color: #1e1e1e;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway:hover {
-        background-image: none;
-    }
-}
-
-.card--pathway:focus:after, .card--pathway:active:after {
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-    outline-color: #0c0c0e;
-}
-
-.card--pathway:visited .title {
-    color: #4c2c92;
-}
-
-.card--pathway .card__title {
-    font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
-    font-size: 1.424rem;
-    line-height: 1.25;
-    letter-spacing: -0.013em;
-    font-style: normal;
-    font-weight: 600;
-    margin-top: 1rem;
-    font-size: 1.125rem;
-    line-height: 1.25;
-    letter-spacing: -0.008em;
-    color: #696969;
-}
-
-.card--pathway .card__title i,
-.card--pathway .card__title em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
-}
-
-.card--pathway .card__title b,
-.card--pathway .card__title strong {
-    font-weight: inherit;
-}
-
-.card--pathway .card__title i,
-.card--pathway .card__title em {
-    font-style: italic;
-}
-
-.card--pathway .card__title u {
-    text-decoration: none;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.015em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.015em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.016em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--pathway .card__title b,
-.card--pathway .card__title strong {
-    font-weight: 600;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.014em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--pathway p {
-    font-size: 1rem;
-    line-height: 1.625;
-    letter-spacing: -0.005em;
-    color: #1e1e1e;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--pathway p {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--pathway p {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--pathway p {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--pathway p {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--pathway p {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway:hover {
-        border: 0.0625rem solid transparent;
-    }
-}
-
-@media (min-width: 901px) {
-    .card--pathway {
-        margin: 0 1.5rem 0 0;
-    }
-}
-
-.card--pathway .card__title {
-    padding-bottom: 0;
-    margin-top: 1rem;
-}
-
-.card--pathway:before {
-    content: '';
-    height: 0.25rem;
-    width: 100%;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.card--pathway:after {
-    border: 0.0625rem solid #e5e5e5;
-}
-
-.card--pathway:focus, .card--pathway:active {
-    outline: none;
-}
-
-@media (hover: hover) {
-    .card--pathway:hover:after {
-        border: none;
-    }
-}
-
-.card--pathway:last-child {
-    margin-right: 0;
-}
-
-.card--pathway p {
-    margin-top: 1rem;
-}
-
-.card--pathway:visited {
-    border-color: #e5e5e5;
-}
-
-.card--pathway--blue {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--blue:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--blue:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--blue:hover:after {
-        background-color: #5fd8fe;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--blue .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--blue:before {
-    background: #5fd8fe;
-}
-
-.card--pathway--purple {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--purple:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--purple:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--purple:hover:after {
-        background-color: #b382ec;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--purple .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--purple:before {
-    background: #b382ec;
-}
-
-.card--pathway--pink {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--pink:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--pink:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--pink:hover:after {
-        background-color: #df82c4;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--pink .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--pink:before {
-    background: #df82c4;
-}
-
-.card--pathway--green {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--green:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--green:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--green:hover:after {
-        background-color: #b9d698;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--green .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--green:before {
-    background: #b9d698;
-}
-
-.card--pathway--purple {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--purple:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--purple:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--purple:hover:after {
-        background-color: #b382ec;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--purple .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--purple:before {
-    background: #b382ec;
-}
-
-.card--pathway--pink {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--pink:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--pink:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--pink:hover:after {
-        background-color: #df82c4;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--pink .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--pink:before {
-    background: #df82c4;
-}
-
-.card--pathway--teal {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--teal:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--teal:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--teal:hover:after {
-        background-color: #7fd6df;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--teal .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--teal:before {
-    background: #7fd6df;
-}
-
-.card--pathway--yellow {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--yellow:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--yellow:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--yellow:hover:after {
-        background-color: #ffef2b;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--yellow .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--yellow:before {
-    background: #ffef2b;
-}
-
 .listing {
     background-image: linear-gradient(#f2f2f2, #e5e5e5);
 }
 
-.listing .banner__content {
-    grid-row-gap: 0;
-    display: grid;
-    max-width: 80rem;
-}
-
-@media (max-width: 432px) {
-    .listing .banner__content {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .listing .banner__content {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .listing .banner__content {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
-}
-
-@media (min-width: 1441px) {
-    .listing .banner__content {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .listing .banner__content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-.listing .banner__content__header {
-    text-align: left;
+.listing .banner-text {
+    background: #f2f2f2;
+    color: #0c0c0e;
 }
 
 .finder {
@@ -27249,6 +26537,20 @@ article figure figcaption a:active {
     }
 }
 
+@media (min-width: 1281px) {
+    .finder {
+        grid-template-rows: 2;
+        grid-template-areas: 'query query query query query query query query query query query query query query query query . .' 'filters filters filters filters filters filters . results results results results results results results results results results results';
+    }
+}
+
+@media (min-width: 1441px) {
+    .finder {
+        grid-template-rows: 2;
+        grid-template-areas: 'query query query query query query query query query query query query query query query . . .' 'filters filters filters filters filters filters . results results results results results results results results results results results';
+    }
+}
+
 .finder > .content {
     grid-area: main;
 }
@@ -27290,6 +26592,8 @@ article figure figcaption a:active {
     grid-area: query;
     margin-top: 1rem;
     position: relative;
+    padding: 1.5rem;
+    background: #ffffff;
 }
 
 .finder__query > div {
@@ -27570,6 +26874,7 @@ article figure figcaption a:active {
     background-color: #d61726;
     border-color: #d61726;
     color: #ffffff;
+    border-radius: 0;
     flex-shrink: 0;
     margin-left: 2rem;
     box-shadow: none;
@@ -28102,6 +27407,10 @@ article figure figcaption a:active {
     border-bottom-color: #006bbd;
 }
 
+.finder__filter {
+    background-color: #ffffff;
+}
+
 .finder__filter legend {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
@@ -28219,7 +27528,7 @@ article figure figcaption a:active {
 .finder__filter legend[data-open='true']:after {
     content: '';
     position: absolute;
-    width: calc(100% - 3rem);
+    width: calc(100% - $measure--medium3);
     border-top: 0.0625rem solid #d8d8d8;
     left: 1.5rem;
     bottom: 0;
@@ -29873,9 +29182,9 @@ article figure figcaption a:active {
 }
 
 .finder__selectbox {
+    margin: 1rem;
     background-color: #ffffff;
     margin-bottom: 0;
-    padding: 0 1rem;
 }
 
 .finder__selectbox select {
@@ -29886,7 +29195,6 @@ article figure figcaption a:active {
     height: auto;
     margin-top: 1rem;
     position: relative;
-    border: 0.125rem solid #3e1031;
     color: #0c0c0e;
 }
 
@@ -29894,13 +29202,13 @@ article figure figcaption a:active {
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
-    padding: 0.25rem 2rem 0 0.75rem;
+    padding: 0.75rem 2rem 0.75rem 0.75rem;
     position: relative;
+    border: 0.125rem solid #3e1031;
     color: #0c0c0e;
     bottom: 0.25rem;
     font-weight: 600;
     width: 100%;
-    border: 0;
     background: none;
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -29939,10 +29247,13 @@ article figure figcaption a:active {
 }
 
 .finder__select select:focus {
-    outline: 0;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
-.finder__select:after {
+.finder__select:before {
     font-family: "Font Awesome";
     font-size: 0.875em;
     content: '\f078';
@@ -29952,15 +29263,8 @@ article figure figcaption a:active {
     vertical-align: middle;
     line-height: normal;
     position: absolute;
-    top: 0.75rem;
-    right: 1rem;
-}
-
-.finder__select:focus-within {
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-    outline-color: #0c0c0e;
+    top: 2.25rem;
+    right: 1.25rem;
 }
 
 @media (max-width: 767px) {
@@ -29981,30 +29285,30 @@ article figure figcaption a:active {
 }
 
 .finder__select__overline {
-    font-size: 0.79rem;
+    font-size: 0.889rem;
     line-height: 1.625;
-    letter-spacing: 0.005em;
-    color: #494949;
+    letter-spacing: 0em;
+    color: #d61726;
     font-weight: 450;
     display: block;
-    padding: 0.25rem 0.25rem 0 0.75rem;
+    padding-bottom: 1rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
     .finder__select__overline {
-        letter-spacing: 0em;
+        letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .finder__select__overline {
-        letter-spacing: 0em;
+        letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .finder__select__overline {
-        letter-spacing: -0.007em;
+        letter-spacing: -0.01em;
     }
 }
 
@@ -32577,7 +31881,7 @@ blockquote footer cite {
 }
 
 .slider__controls__progress {
-    color: #919191;
+    color: #696969;
     margin: 1rem 2rem 0 0;
     font-size: 0.79rem;
     font-weight: 500;
@@ -34856,17 +34160,13 @@ article .link-copy {
     }
 }
 
-.banner__overlay__heading h1,
-.banner__overlay__heading p {
-    max-width: 80rem;
-}
-
-.banner__overlay--center {
+.banner--center {
     text-align: center;
 }
 
-.banner__overlay--center p {
-    max-width: 100%;
+.banner--center h1,
+.banner--center p {
+    max-width: 80rem;
 }
 
 .banner-text {
@@ -34892,14 +34192,6 @@ article .link-copy {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
-}
-
-.banner-text .banner-text__content h1 {
-    max-width: 80rem;
-}
-
-.banner-text .banner-text__content p {
-    max-width: 80rem;
 }
 
 .banner__standfirst {
@@ -35285,7 +34577,7 @@ article .link-copy {
     position: absolute;
     font-size: 0.79rem;
     font-weight: 500;
-    color: #919191;
+    color: #696969;
     bottom: 1rem;
     right: 9rem;
 }
@@ -35361,725 +34653,13 @@ article .link-copy {
     transition: transform 0.5s ease-out;
 }
 
-@media (min-width: 901px) {
-    .card--pathway__block {
-        display: flex;
-    }
-}
-
-.card--pathway {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    position: relative;
-    transition: none;
-    padding: 1rem;
-    border: 0.0625rem solid #e5e5e5;
-    display: block;
-    padding: 0 1rem 1rem 1rem;
-    margin-bottom: 1.5rem;
-    background: #ffffff;
-}
-
-@media (hover: hover) {
-    .card--pathway:hover {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.card--pathway:focus, .card--pathway:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-.card--pathway:focus, .card--pathway:active {
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-    outline-color: #0c0c0e;
-}
-
-.card--pathway .underline-transition__title {
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition
-            stretches beyond the element
-        **/
-    display: inline;
-    padding-bottom: 0.125rem;
-    line-height: 1.5;
-}
-
-.card--pathway:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
-}
-
-@media (hover: hover) {
-    .card--pathway:hover .underline-transition__title {
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
-        color: #1e1e1e;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway:hover {
-        background-image: none;
-    }
-}
-
-.card--pathway:focus:after, .card--pathway:active:after {
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-    outline-color: #0c0c0e;
-}
-
-.card--pathway:visited .title {
-    color: #4c2c92;
-}
-
-.card--pathway .card__title {
-    font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
-    font-size: 1.424rem;
-    line-height: 1.25;
-    letter-spacing: -0.013em;
-    font-style: normal;
-    font-weight: 600;
-    margin-top: 1rem;
-    font-size: 1.125rem;
-    line-height: 1.25;
-    letter-spacing: -0.008em;
-    color: #696969;
-}
-
-.card--pathway .card__title i,
-.card--pathway .card__title em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
-}
-
-.card--pathway .card__title b,
-.card--pathway .card__title strong {
-    font-weight: inherit;
-}
-
-.card--pathway .card__title i,
-.card--pathway .card__title em {
-    font-style: italic;
-}
-
-.card--pathway .card__title u {
-    text-decoration: none;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.015em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.015em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.016em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--pathway .card__title b,
-.card--pathway .card__title strong {
-    font-weight: 600;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.014em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--pathway .card__title {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--pathway p {
-    font-size: 1rem;
-    line-height: 1.625;
-    letter-spacing: -0.005em;
-    color: #1e1e1e;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--pathway p {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--pathway p {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--pathway p {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--pathway p {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--pathway p {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway:hover {
-        border: 0.0625rem solid transparent;
-    }
-}
-
-@media (min-width: 901px) {
-    .card--pathway {
-        margin: 0 1.5rem 0 0;
-    }
-}
-
-.card--pathway .card__title {
-    padding-bottom: 0;
-    margin-top: 1rem;
-}
-
-.card--pathway:before {
-    content: '';
-    height: 0.25rem;
-    width: 100%;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.card--pathway:after {
-    border: 0.0625rem solid #e5e5e5;
-}
-
-.card--pathway:focus, .card--pathway:active {
-    outline: none;
-}
-
-@media (hover: hover) {
-    .card--pathway:hover:after {
-        border: none;
-    }
-}
-
-.card--pathway:last-child {
-    margin-right: 0;
-}
-
-.card--pathway p {
-    margin-top: 1rem;
-}
-
-.card--pathway:visited {
-    border-color: #e5e5e5;
-}
-
-.card--pathway--blue {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--blue:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--blue:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--blue:hover:after {
-        background-color: #5fd8fe;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--blue .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--blue:before {
-    background: #5fd8fe;
-}
-
-.card--pathway--purple {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--purple:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--purple:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--purple:hover:after {
-        background-color: #b382ec;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--purple .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--purple:before {
-    background: #b382ec;
-}
-
-.card--pathway--pink {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--pink:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--pink:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--pink:hover:after {
-        background-color: #df82c4;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--pink .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--pink:before {
-    background: #df82c4;
-}
-
-.card--pathway--green {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--green:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--green:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--green:hover:after {
-        background-color: #b9d698;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--green .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--green:before {
-    background: #b9d698;
-}
-
-.card--pathway--purple {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--purple:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--purple:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--purple:hover:after {
-        background-color: #b382ec;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--purple .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--purple:before {
-    background: #b382ec;
-}
-
-.card--pathway--pink {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--pink:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--pink:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--pink:hover:after {
-        background-color: #df82c4;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--pink .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--pink:before {
-    background: #df82c4;
-}
-
-.card--pathway--teal {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--teal:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--teal:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--teal:hover:after {
-        background-color: #7fd6df;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--teal .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--teal:before {
-    background: #7fd6df;
-}
-
-.card--pathway--yellow {
-    /*
-        Pathway card uses same background
-        color and scale transition as 
-        other cards (course, related) but
-        the colours need to be overriden
-        due to all alternatives below. This
-        local mixin takes care of this.
-    */
-    /*
-        Sets top stripe color
-    */
-}
-
-.card--pathway--yellow:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--yellow:after {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway--yellow:hover:after {
-        background-color: #ffef2b;
-        transform: scale(1.05);
-    }
-}
-
-.card--pathway--yellow .card__inner {
-    z-index: 2;
-    position: relative;
-}
-
-.card--pathway--yellow:before {
-    background: #ffef2b;
-}
-
 .listing {
     background-image: linear-gradient(#f2f2f2, #e5e5e5);
 }
 
-.listing .banner__content {
-    grid-row-gap: 0;
-    display: grid;
-    max-width: 80rem;
-}
-
-@media (max-width: 432px) {
-    .listing .banner__content {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .listing .banner__content {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .listing .banner__content {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
-}
-
-@media (min-width: 1441px) {
-    .listing .banner__content {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .listing .banner__content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-.listing .banner__content__header {
-    text-align: left;
+.listing .banner-text {
+    background: #f2f2f2;
+    color: #0c0c0e;
 }
 
 .finder {
@@ -36136,6 +34716,20 @@ article .link-copy {
     }
 }
 
+@media (min-width: 1281px) {
+    .finder {
+        grid-template-rows: 2;
+        grid-template-areas: 'query query query query query query query query query query query query query query query query . .' 'filters filters filters filters filters filters . results results results results results results results results results results results';
+    }
+}
+
+@media (min-width: 1441px) {
+    .finder {
+        grid-template-rows: 2;
+        grid-template-areas: 'query query query query query query query query query query query query query query query . . .' 'filters filters filters filters filters filters . results results results results results results results results results results results';
+    }
+}
+
 .finder > .content {
     grid-area: main;
 }
@@ -36177,6 +34771,8 @@ article .link-copy {
     grid-area: query;
     margin-top: 1rem;
     position: relative;
+    padding: 1.5rem;
+    background: #ffffff;
 }
 
 .finder__query > div {
@@ -36457,6 +35053,7 @@ article .link-copy {
     background-color: #d61726;
     border-color: #d61726;
     color: #ffffff;
+    border-radius: 0;
     flex-shrink: 0;
     margin-left: 2rem;
     box-shadow: none;
@@ -36989,6 +35586,10 @@ article .link-copy {
     border-bottom-color: #006bbd;
 }
 
+.finder__filter {
+    background-color: #ffffff;
+}
+
 .finder__filter legend {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
@@ -37106,7 +35707,7 @@ article .link-copy {
 .finder__filter legend[data-open='true']:after {
     content: '';
     position: absolute;
-    width: calc(100% - 3rem);
+    width: calc(100% - $measure--medium3);
     border-top: 0.0625rem solid #d8d8d8;
     left: 1.5rem;
     bottom: 0;
@@ -38760,9 +37361,9 @@ article .link-copy {
 }
 
 .finder__selectbox {
+    margin: 1rem;
     background-color: #ffffff;
     margin-bottom: 0;
-    padding: 0 1rem;
 }
 
 .finder__selectbox select {
@@ -38773,7 +37374,6 @@ article .link-copy {
     height: auto;
     margin-top: 1rem;
     position: relative;
-    border: 0.125rem solid #3e1031;
     color: #0c0c0e;
 }
 
@@ -38781,13 +37381,13 @@ article .link-copy {
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
-    padding: 0.25rem 2rem 0 0.75rem;
+    padding: 0.75rem 2rem 0.75rem 0.75rem;
     position: relative;
+    border: 0.125rem solid #3e1031;
     color: #0c0c0e;
     bottom: 0.25rem;
     font-weight: 600;
     width: 100%;
-    border: 0;
     background: none;
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -38826,10 +37426,13 @@ article .link-copy {
 }
 
 .finder__select select:focus {
-    outline: 0;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
-.finder__select:after {
+.finder__select:before {
     font-family: "Font Awesome";
     font-size: 0.875em;
     content: '\f078';
@@ -38839,15 +37442,8 @@ article .link-copy {
     vertical-align: middle;
     line-height: normal;
     position: absolute;
-    top: 0.75rem;
-    right: 1rem;
-}
-
-.finder__select:focus-within {
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-    outline-color: #0c0c0e;
+    top: 2.25rem;
+    right: 1.25rem;
 }
 
 @media (max-width: 767px) {
@@ -38868,30 +37464,30 @@ article .link-copy {
 }
 
 .finder__select__overline {
-    font-size: 0.79rem;
+    font-size: 0.889rem;
     line-height: 1.625;
-    letter-spacing: 0.005em;
-    color: #494949;
+    letter-spacing: 0em;
+    color: #d61726;
     font-weight: 450;
     display: block;
-    padding: 0.25rem 0.25rem 0 0.75rem;
+    padding-bottom: 1rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
     .finder__select__overline {
-        letter-spacing: 0em;
+        letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
     .finder__select__overline {
-        letter-spacing: 0em;
+        letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .finder__select__overline {
-        letter-spacing: -0.007em;
+        letter-spacing: -0.01em;
     }
 }
 
