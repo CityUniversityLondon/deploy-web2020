@@ -26095,12 +26095,6 @@ _:-ms-lang(x),
     display: inline-block;
 }
 
-@media (min-width: 769px) {
-    .cta-block__cta:not(:last-of-type) {
-        margin-right: 2rem;
-    }
-}
-
 .inline-external-link {
     margin-left: 0.5rem;
 }
@@ -43246,6 +43240,12 @@ div.widget-123_test_ {
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
     outline-color: #ffffff;
+}
+
+@media (min-width: 769px) {
+    .lifelong-learning__contact .cta-block li:not(:last-of-type) {
+        margin-right: 2rem;
+    }
 }
 
 .lifelong-learning--bespoke__introduction {
