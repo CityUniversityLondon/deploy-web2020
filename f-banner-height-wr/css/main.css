@@ -33976,6 +33976,12 @@ article .link-copy {
     }
 }
 
+@media (min-width: 900px) {
+    .banner__image {
+        max-height: 280px;
+    }
+}
+
 @media (min-width: 1280px) {
     .banner__image {
         max-height: 450px;
@@ -33984,7 +33990,7 @@ article .link-copy {
 
 @media (min-width: 3840px) {
     .banner__image {
-        max-height: 850px;
+        max-height: 900px;
     }
 }
 
