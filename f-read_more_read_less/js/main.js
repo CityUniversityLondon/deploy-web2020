@@ -5720,6 +5720,8 @@ function handleReadMoreClick(e) {
     readMoreAnchorLinkText.appendChild(srOnlyElement);
     readMoreText.classList.add('read-more__text--hidden');
     readMoreText.style.maxHeight = null;
+    let headingElement = parent.querySelector('h2');
+    headingElement.scrollIntoView;
   }
 }
 
