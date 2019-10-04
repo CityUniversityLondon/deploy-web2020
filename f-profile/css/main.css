@@ -44530,12 +44530,17 @@ button
     font-weight: 700;
 }
 
-.profile--global__details__content {
+.profile--global__details__content a span {
+    margin-left: 0.25rem;
+}
+
+.profile--global__personal-links .profile--global__details__content,
+.profile--global__other-contact-methods .profile--global__details__content {
     margin-top: 0.75rem;
 }
 
-.profile--global__details__content a span {
-    margin-left: 0.25rem;
+.profile--global__contact-details .profile--global__details__content {
+    margin-top: 0.25rem;
 }
 
 .profile--global__details__content__column ul {
@@ -44553,6 +44558,12 @@ button
 
 .profile--global__details__content__column .fa-phone {
     transform: rotate(90deg);
+}
+
+@media (max-width: 432px) {
+    .profile--global__personal-links {
+        margin-top: 3rem;
+    }
 }
 
 .profile--global__personal-links ul {
