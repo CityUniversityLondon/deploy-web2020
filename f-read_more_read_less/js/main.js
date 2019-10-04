@@ -5721,7 +5721,7 @@ function handleReadMoreClick(e) {
     readMoreText.classList.add('read-more__text--hidden');
     readMoreText.style.maxHeight = null;
     let headingElement = parent.querySelector('h2');
-    headingElement.scrollIntoView;
+    headingElement.scrollIntoView();
   }
 }
 
@@ -5732,7 +5732,7 @@ function createHTMLElements(element) {
   let readMoreAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('a', '', '', '', 'read-more__anchor');
   readMoreAnchor.setAttribute('href', '#/');
   readMoreButton.appendChild(readMoreAnchor);
-  let elementsArray = [Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-plus-circle'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-minus-circle'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', 'Show more', '', '', 'read-more__anchor__link-text')];
+  let elementsArray = [Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-plus-circle', '', '', 'aria-hidden', 'true'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-minus-circle', '', '', 'aria-hidden', 'true'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', 'Show more', '', '', 'read-more__anchor__link-text')];
   elementsArray.forEach(function (element) {
     readMoreAnchor.appendChild(element);
   });
