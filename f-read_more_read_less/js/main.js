@@ -5704,16 +5704,20 @@ function handleReadMoreClick(e) {
   let parent = e.currentTarget.parentNode.parentNode.parentNode;
   let readMoreText = parent.querySelector('.read-more__text');
   let readMoreTextHeight = readMoreText.getAttribute('data-height') + 'px';
-  let linkTextElem = e.currentTarget.getElementsByClassName('read-more__anchor__link-text')[0];
+  let readMoreAnchorLinkText = parent.querySelector('.read-more__anchor__link-text');
+  let srOnlyElement = readMoreAnchorLinkText.querySelector('.sr-only');
+  readMoreAnchorLinkText.innerHTML = null;
 
   if (readMoreText.classList.contains('read-more__text--hidden')) {
     e.currentTarget.classList.add('active');
     readMoreText.classList.remove('read-more__text--hidden');
-    linkTextElem.innerHTML = 'Read less';
+    readMoreAnchorLinkText.innerHTML = 'Show less';
+    readMoreAnchorLinkText.appendChild(srOnlyElement);
     readMoreText.style.maxHeight = readMoreTextHeight;
   } else {
     e.currentTarget.classList.remove('active');
-    linkTextElem.innerHTML = 'Read more';
+    readMoreAnchorLinkText.innerHTML = 'Show more';
+    readMoreAnchorLinkText.appendChild(srOnlyElement);
     readMoreText.classList.add('read-more__text--hidden');
     readMoreText.style.maxHeight = null;
   }
@@ -5721,13 +5725,18 @@ function handleReadMoreClick(e) {
 
 function createHTMLElements(element) {
   let readMoreButton = element.querySelector('.read-more__button');
+  let headingElement = element.querySelector('h2');
+  let headingText = headingElement.innerHTML;
   let readMoreAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('a', '', '', '', 'read-more__anchor');
   readMoreAnchor.setAttribute('href', '#/');
   readMoreButton.appendChild(readMoreAnchor);
-  let elementsArray = [Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-plus-circle'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-minus-circle'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', 'Read more', '', '', 'read-more__anchor__link-text')];
+  let elementsArray = [Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-plus-circle'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-minus-circle'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', 'Show more', '', '', 'read-more__anchor__link-text')];
   elementsArray.forEach(function (element) {
     readMoreAnchor.appendChild(element);
   });
+  let hiddenReadMoreText = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', ' about the ' + headingText + ' of this course', '', '', 'sr-only');
+  let readMoreAnchorLinkTextElement = element.querySelector('.read-more__anchor__link-text');
+  readMoreAnchorLinkTextElement.appendChild(hiddenReadMoreText, hiddenReadMoreText);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
