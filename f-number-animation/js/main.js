@@ -1267,7 +1267,7 @@ function findNumberContainer(widget) {
 }
 
 function initNumberAnimation(widget) {
-  const startStr = '0';
+  const startStr = widget.dataset.animationNumberStart || '0';
   const start = parseFloat(startStr);
   const numberContainer = findNumberContainer(widget);
   const numberStr = numberContainer.innerHTML.trim().replace(/,/g, '');
@@ -1313,7 +1313,6 @@ function runNumberAnimation(widget) {
       if (lastValue !== v) {
         lastValue = v;
         numberContainer.innerHTML = v.toLocaleString('en-GB');
-        console.log(v.toLocaleString('en-GB'));
       }
 
       if (finish) {
