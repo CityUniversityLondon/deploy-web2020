@@ -26091,7 +26091,7 @@ _:-ms-lang(x),
     transform: none;
 }
 
-.cta-block__cta {
+.cta-block--inline .cta-block__cta {
     display: inline-block;
 }
 
@@ -42689,10 +42689,6 @@ div.widget-123_test_ {
     flex-direction: column;
     grid-area: links;
     max-width: unset;
-}
-
-.key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links .cta-block__cta {
-    margin-right: 0;
 }
 
 @media (max-width: 900px) {
