@@ -42889,14 +42889,8 @@ button
     }
 }
 
-.profile--global__tags__labels .outline-cta--bright {
-    display: inline-block;
+.profile--global__tags__labels .cta-block__cta {
     margin: 0 1.5rem 1rem 0;
-    border-radius: 0;
-}
-
-.profile--global__tags__labels .outline-cta--bright:last-child {
-    margin-bottom: 0;
 }
 
 .profile--global__details__heading {
