@@ -39051,6 +39051,15 @@ a.modal__close:active, a.modal__close:focus {
     transition: all ease 2s;
 }
 
+.animate--number--init .animate--number__number {
+    opacity: 0.5;
+}
+
+.animate--number--complete .animate--number__number {
+    transition: 1s opacity;
+    opacity: 1;
+}
+
 .case-study__overview__main__details {
     grid-column: 1 / -1;
 }
