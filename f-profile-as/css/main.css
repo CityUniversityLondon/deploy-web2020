@@ -42894,7 +42894,7 @@ button
 @media (min-width: 433px) and (max-width: 900px) {
     .profile--global__tags__content {
         grid-column-gap: 1rem;
-        grid-template-columns: repeat(10, 1fr);
+        grid-template-columns: repeat(12, 1fr);
     }
 }
 
@@ -42913,19 +42913,13 @@ button
 
 @media (min-width: 433px) {
     .profile--global__tags__content {
-        grid-template-areas: '. c c c c c c c c .';
+        grid-template-areas: '. c c c c c c c c c c .';
     }
 }
 
 @media (min-width: 769px) {
     .profile--global__tags__content {
-        grid-template-areas: '. c c c c c c c c .';
-    }
-}
-
-@media (min-width: 901px) {
-    .profile--global__tags__content {
-        grid-template-areas: '. . . c c c c c c c c . . .';
+        grid-template-areas: '. . c c c c c c c c . .';
     }
 }
 
@@ -42936,8 +42930,9 @@ button
     }
 }
 
-@media (min-width: 1281px) {
+@media (min-width: 901px) {
     .profile--global__tags__content {
+        grid-template-areas: '. . . c c c c c c c c . . .';
         grid-column: 3 / 17;
     }
 }
