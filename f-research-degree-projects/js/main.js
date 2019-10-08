@@ -5860,8 +5860,8 @@ function initSlider(slider) {
         }
       }
 
-      sliderChildren[visibleSlide - (defaultItemsVisible - 1)].classList.add('slider__active-slide');
-      sliderChildren[visibleSlide - (defaultItemsVisible - 1)].classList.remove('slider__slide');
+      sliderChildren[visibleSlide + (defaultItemsVisible - 1)].classList.add('slider__active-slide');
+      sliderChildren[visibleSlide + (defaultItemsVisible - 1)].classList.remove('slider__slide');
     } else {
       handleSlideChange(-1, slider);
     }
