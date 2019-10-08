@@ -5860,8 +5860,12 @@ function initSlider(slider) {
         }
       }
 
-      sliderChildren[visibleSlide + (defaultItemsVisible - 1)].classList.add('slider__active-slide');
-      sliderChildren[visibleSlide + (defaultItemsVisible - 1)].classList.remove('slider__slide');
+      let maxVisibleSlidesIndex = visibleSlide + defaultItemsVisible;
+
+      for (var i = visibleSlide; i < maxVisibleSlidesIndex; i++) {
+        sliderChildren[i].classList.add('slider__active-slide');
+        sliderChildren[i].classList.remove('slider__slide');
+      }
     } else {
       handleSlideChange(-1, slider);
     }
@@ -5876,8 +5880,12 @@ function initSlider(slider) {
         }
       }
 
-      sliderChildren[visibleSlide + (defaultItemsVisible - 1)].classList.add('slider__active-slide');
-      sliderChildren[visibleSlide + (defaultItemsVisible - 1)].classList.remove('slider__slide');
+      let maxVisibleSlidesIndex = visibleSlide + defaultItemsVisible;
+
+      for (var i = visibleSlide; i < maxVisibleSlidesIndex; i++) {
+        sliderChildren[i].classList.add('slider__active-slide');
+        sliderChildren[i].classList.remove('slider__slide');
+      }
     } else {
       handleSlideChange(1, slider);
     }
