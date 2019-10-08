@@ -43806,15 +43806,8 @@ button
     }
 }
 
-@media (min-width: 1281px) {
-    .profile--global__tags {
-        margin-bottom: 3rem;
-    }
-}
-
 .profile--global__tags__content {
     padding: 1rem 0;
-    background: #d5d2d0;
     grid-column: 1 / -1;
     display: grid;
     grid-row-gap: 0;
@@ -43917,7 +43910,7 @@ button
 }
 
 .profile--global__tags__labels .cta-block__cta {
-    margin: 0 1.5rem 1rem 0;
+    margin: 0 1.5rem 0.75rem 0;
 }
 
 .profile--global__details__heading {
@@ -44540,7 +44533,7 @@ button
 }
 
 .profile--global__tags--student {
-    margin-top: 2rem;
+    margin-top: 0;
 }
 
 .profile--global__tags--student .profile--global__tags__content {
