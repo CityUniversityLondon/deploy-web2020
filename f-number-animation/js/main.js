@@ -411,6 +411,52 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./src/action-on-scroll.js":
+/*!*********************************!*\
+  !*** ./src/action-on-scroll.js ***!
+  \*********************************/
+/*! exports provided: actionOnScroll */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actionOnScroll", function() { return actionOnScroll; });
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+
+
+
+function actionOnScroll(element, action) {
+  let repeat = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+  let options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {
+    threshold: [0, 0.1, 1]
+  };
+
+  if (element && typeof element != 'undefined' && element != null) {
+    let actionOnScrollAction = function actionOnScrollAction(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (typeof action === 'string') {
+            element.classList.add(action);
+          } else if (typeof action === 'function') {
+            action(element);
+          } // stop observing if repeat === false
+
+
+          if (repeat === false) {
+            observer.unobserve(element);
+          }
+        }
+      });
+    };
+
+    let observer = new IntersectionObserver(actionOnScrollAction, options);
+    observer.observe(element);
+  }
+}
+
+/***/ }),
+
 /***/ "./src/aria-attributes.js":
 /*!********************************!*\
   !*** ./src/aria-attributes.js ***!
@@ -1252,6 +1298,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _action_on_scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../action-on-scroll */ "./src/action-on-scroll.js");
+
 
 
 
@@ -1330,17 +1378,9 @@ function init(elm) {
   const lazyNumbers = [].slice.call(elm.querySelectorAll('.animate--number__heading'));
 
   if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
-    let observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          runNumberAnimation(entry.target);
-          observer.unobserve(entry.target);
-        }
-      });
-    });
     lazyNumbers.forEach(function (lazyUnit) {
       initNumberAnimation(lazyUnit);
-      observer.observe(lazyUnit);
+      Object(_action_on_scroll__WEBPACK_IMPORTED_MODULE_4__["actionOnScroll"])(lazyUnit, runNumberAnimation);
     });
   }
 }
