@@ -5042,9 +5042,10 @@ let modalBackground = document.createElement('div'),
     trap;
 
 function launchModal(modal) {
-  let modalHeading = modal.querySelector('.modal__heading');
-  let modalDataTitle = modal.getAttribute('data-title');
-  insertElement('a', modal, 'modal__trigger', '#', modalDataTitle);
+  let modalHeading = modal.querySelector('.modal__heading'),
+      modalDataTitle = modal.getAttribute('data-title'),
+      modalCustomClass = modal.getAttribute('data-class');
+  insertElement('a', modal, "modal__trigger ".concat(modalCustomClass), '#', modalDataTitle);
   insertElement('a', modalHeading, 'modal__close fas fa-times', '#', null, 'Close modal');
   addEventListeners(modal);
   setTabIndexes(modal, true);
@@ -5771,46 +5772,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 const className = 'slider';
-let sliderChildren, sliderChildrenLength;
-
-function initSlider(slider) {
-  // slider items count
-  sliderChildren = [...slider.children];
-  sliderChildrenLength = sliderChildren.length;
-
-  for (const sliderChild of sliderChildren.entries()) {
-    if (sliderChild[0] < 1) {
-      sliderChild[1].classList.add('slider__active-slide');
-    } else {
-      // only displays first slide and hides rest
-      sliderChild[1].classList.add('slider__slide');
-      /* generates controls */
-
-      let sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls__wrap');
-      let sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls');
-      let sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls__progress');
-      let sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls__buttons'); // generates progress
-
-      sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', '1', null, null, 'slide__controls__progress__active'));
-      sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', ' /', null, null, 'slide__controls__progress__separator'));
-      sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', sliderChildrenLength, null, null, 'slide__controls__progress__total'));
-      sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
-      slider.appendChild(sliderControlsWrap); // generates buttons
-
-      sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('button', null, 'Previous item', true, 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev', 'swiper-slider-arrow', 'arrow-left--btn-prev'));
-      sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('button', null, 'Next item', null, 'fas', 'fa-arrow-right', 'slider__controls__buttons__next', 'swiper-slider-arrow', 'arrow-right--btn-next'));
-      sliderControls.appendChild(sliderButtons);
-      slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
-
-      slider.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
-        handleSlideChange(-1, slider);
-      });
-      slider.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
-        handleSlideChange(1, slider);
-      });
-    }
-  }
-}
+let sliderChildren, sliderChildrenLength, defaultItemsVisible, visibleSlide;
 
 function handleSlideChange(direction, slider) {
   let activeSlide = parseInt(slider.querySelectorAll('.slide__controls__progress__active')[0].innerText);
@@ -5846,6 +5808,88 @@ function handleSlideChange(direction, slider) {
       slider.querySelectorAll('.slider__controls__buttons__next')[0].removeAttribute('disabled');
     }
   }
+}
+
+function initSlider(slider) {
+  // slider items count
+  sliderChildren = [...slider.children];
+  sliderChildrenLength = sliderChildren.length;
+
+  for (const sliderChild of sliderChildren.entries()) {
+    let cardParentNode = sliderChild[1].parentNode;
+    defaultItemsVisible = parseInt(cardParentNode.getAttribute('data-visible'));
+
+    if (sliderChild[0] < 1) {
+      sliderChild[1].classList.add('slider__active-slide');
+    } else if (sliderChild[0] < defaultItemsVisible) {
+      sliderChild[1].classList.add('slider__active-slide');
+    } else {
+      // only displays first slide and hides rest
+      sliderChild[1].classList.add('slider__slide');
+    }
+  } // Only generate controls if there are more than item in the group
+
+
+  if (sliderChildrenLength > 1) {
+    let sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls__wrap');
+    let sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls');
+    let sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls__progress');
+    let sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('div', null, null, null, 'slider__controls__buttons'); // generates progress
+
+    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', '1', null, null, 'slide__controls__progress__active'));
+    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', ' /', null, null, 'slide__controls__progress__separator'));
+    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', sliderChildrenLength, null, null, 'slide__controls__progress__total'));
+    sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
+    slider.appendChild(sliderControlsWrap); // generates buttons
+
+    sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('button', null, 'Previous item', true, 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev', 'swiper-slider-arrow', 'arrow-left--btn-prev'));
+    sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('button', null, 'Next item', null, 'fas', 'fa-arrow-right', 'slider__controls__buttons__next', 'swiper-slider-arrow', 'arrow-right--btn-next'));
+    sliderControls.appendChild(sliderButtons);
+    slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled');
+  } // End build controls
+  // Adds event listener to buttons
+
+
+  slider.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
+    if (defaultItemsVisible) {
+      handleSlideChange(-defaultItemsVisible, slider);
+
+      for (const sliderChild of sliderChildren.entries()) {
+        if (sliderChild[1].classList.contains('slider__active-slide')) {
+          visibleSlide = sliderChild[0];
+        }
+      }
+
+      let maxVisibleSlidesIndex = visibleSlide + defaultItemsVisible;
+
+      for (var i = visibleSlide; i < maxVisibleSlidesIndex; i++) {
+        sliderChildren[i].classList.add('slider__active-slide');
+        sliderChildren[i].classList.remove('slider__slide');
+      }
+    } else {
+      handleSlideChange(-1, slider);
+    }
+  });
+  slider.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
+    if (defaultItemsVisible) {
+      handleSlideChange(defaultItemsVisible, slider);
+
+      for (const sliderChild of sliderChildren.entries()) {
+        if (sliderChild[1].classList.contains('slider__active-slide')) {
+          visibleSlide = sliderChild[0];
+        }
+      }
+
+      let maxVisibleSlidesIndex = visibleSlide + defaultItemsVisible;
+
+      for (var i = visibleSlide; i < maxVisibleSlidesIndex; i++) {
+        sliderChildren[i].classList.add('slider__active-slide');
+        sliderChildren[i].classList.remove('slider__slide');
+      }
+    } else {
+      handleSlideChange(1, slider);
+    }
+  });
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
