@@ -42560,10 +42560,7 @@ div.widget-123_test_ {
 
 .wrapper--research-degree__students {
     color: #ffffff;
-}
-
-.wrapper--research-degree__students .linked-heading__text {
-    color: #ffffff;
+    margin-top: 4rem;
 }
 
 .wrapper--research-degree__students .wrapper--research-degree__research-students__heading-intro {
@@ -42584,6 +42581,16 @@ div.widget-123_test_ {
     grid-column: 2/7;
 }
 
+.wrapper--research-degree__students .wrapper--research-degree__research-students__heading-intro .research-degree__research-students__heading-intro .research-degree__students__heading {
+    margin-bottom: 2rem;
+}
+
+.wrapper--research-degree__students .wrapper--research-degree__research-students__heading-intro .research-degree__research-students__heading-intro .research-degree__students__heading .linked-heading__text {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+    margin-bottom: 2rem;
+}
+
 .wrapper--research-degree__students .wrapper--research-degree__research-students__gallery {
     grid-column: 7/-1;
     display: grid;
@@ -42591,8 +42598,38 @@ div.widget-123_test_ {
     grid-column-gap: 1.5rem;
     background: #1e1e1e;
     grid-row: 1;
-    height: 50%;
-    margin: auto;
+    height: auto;
+    margin: auto 0;
+    padding: 2rem 0;
+}
+
+.wrapper--research-degree__students .wrapper--research-degree__research-students__gallery .research-degree__research-students__gallery {
+    grid-column: 2/-2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper--research-degree__students .wrapper--research-degree__research-students__gallery .research-degree__research-students__gallery .research-degree__research-students__gallery__profile {
+    grid-column: 1/-1;
+    flex-basis: 50%;
+    display: flex;
+    padding: 1rem 1rem 1rem 0;
+}
+
+.wrapper--research-degree__students .wrapper--research-degree__research-students__gallery .research-degree__research-students__gallery .research-degree__research-students__gallery__profile .research-degree__research-students__gallery__profile__image {
+    flex-basis: 30%;
+    padding-right: 1rem;
+}
+
+.wrapper--research-degree__students .wrapper--research-degree__research-students__gallery .research-degree__research-students__gallery .research-degree__research-students__gallery__profile .research-degree__research-students__gallery__profile__label {
+    flex-basis: 70%;
+}
+
+.wrapper--research-degree__students .wrapper--research-degree__research-students__gallery .research-degree__research-students__gallery .research-degree__research-students__gallery__profile .research-degree__research-students__gallery__profile__label h3 {
+    color: #919191;
+    font-family: "Meta Sans", sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 .search {
