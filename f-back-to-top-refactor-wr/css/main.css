@@ -33666,13 +33666,13 @@ button
 }
 
 @media (hover: hover) {
-    .back-to-top a:hover .back-to-top__button__arrow {
-        background: #1e1e1e;
+    .back-to-top a:hover .back-to-top__button svg circle {
+        fill: #1e1e1e;
     }
 }
 
-.back-to-top a:active .back-to-top__button__arrow {
-    background: #1e1e1e;
+.back-to-top a:active .back-to-top__button svg circle {
+    fill: #1e1e1e;
 }
 
 @media (hover: hover) {
@@ -33759,6 +33759,10 @@ button
     stroke-width: 5;
 }
 
+.back-to-top-stick .back-to-top__button svg circle {
+    fill: #696969;
+}
+
 .back-to-top-stick .back-to-top__button__arrow {
     padding-top: 1rem;
     display: block;
@@ -33766,13 +33770,8 @@ button
     height: 2.556rem;
     width: 2.556rem;
     margin: auto;
-}
-
-@media (min-width: 1441px) {
-    .back-to-top-stick .back-to-top__button__arrow {
-        height: 2.5rem;
-        width: 2.5rem;
-    }
+    position: relative;
+    background: none;
 }
 
 .back-to-top-stick .back-to-top__button__arrow:before {
