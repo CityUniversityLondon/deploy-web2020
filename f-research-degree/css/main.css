@@ -45318,79 +45318,24 @@ button
     margin-bottom: 0.5rem;
 }
 
-.wrapper--research-degree__promo-box .promo-box {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 1.5rem;
-    background: #ede8f2;
-    border: 0.0625rem solid #541b85;
-    padding: 1.25rem 0 3rem;
-    margin: 0.25rem 0 2.25rem 0;
+.wrapper--research-degree__promo-box .promo-content {
     grid-column: 1/-1;
-}
-
-.wrapper--research-degree__promo-box .promo-box .promo-box__contents {
-    grid-column: 1/-1;
-    grid-template-columns: repeat(12, 1fr);
-    margin: 0 0 0 1.25rem;
-}
-
-@media (max-width: 432px) {
-    .wrapper--research-degree__promo-box .promo-box .promo-box__contents {
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 769px) {
-    .wrapper--research-degree__promo-box .promo-box .promo-box__contents {
-        grid-column: 2/12;
-    }
-}
-
-.wrapper--research-degree__promo-box .promo-box .promo-box__contents h2,
-.wrapper--research-degree__promo-box .promo-box .promo-box__contents h3 {
-    color: #541b85;
-}
-
-.wrapper--research-degree__promo-box .promo-box .promo-box__contents__image-text {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-column-gap: 1.5rem;
-}
-
-.wrapper--research-degree__promo-box .promo-box .promo-box__contents__image-text img,
-.wrapper--research-degree__promo-box .promo-box .promo-box__contents__image-text p {
-    grid-column: 1/-1;
-    margin: 0.5rem 0 0 0;
-}
-
-@media (min-width: 769px) {
-    .wrapper--research-degree__promo-box .promo-box .promo-box__contents__image-text img {
-        grid-column: 1/4;
-    }
-    .wrapper--research-degree__promo-box .promo-box .promo-box__contents__image-text p {
-        grid-column: 4/-1;
-    }
-}
-
-.wrapper--research-degree__promo-box .promo-box .promo-box__contents__single_type {
-    grid-column-gap: 1/-1;
 }
 
 @media (min-width: 433px) {
-    .wrapper--research-degree__promo-box .promo-box {
+    .wrapper--research-degree__promo-box .promo-content {
         margin-bottom: 10rem;
     }
 }
 
 @media (min-width: 769px) {
-    .wrapper--research-degree__promo-box .promo-box {
+    .wrapper--research-degree__promo-box .promo-content {
         grid-column: 2/12;
     }
 }
 
 @media (min-width: 901px) {
-    .wrapper--research-degree__promo-box .promo-box {
+    .wrapper--research-degree__promo-box .promo-content {
         grid-column: 4/16;
     }
 }
@@ -45399,6 +45344,7 @@ button
     grid-column: 1/-1;
     background: #ffffff;
     padding-top: 1.5rem;
+    margin-bottom: 4rem;
 }
 
 @media (min-width: 433px) {
