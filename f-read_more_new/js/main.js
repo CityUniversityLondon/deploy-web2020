@@ -6392,7 +6392,7 @@ function createHTMLElements(element) {
   });
   var hiddenReadMoreText = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', ' about the ' + headingText + ' of this course', '', '', 'sr-only');
   var readMoreAnchorLinkTextElement = element.querySelector('.read-more__anchor__link-text');
-  readMoreAnchorLinkTextElement.appendChild(hiddenReadMoreText, hiddenReadMoreText);
+  readMoreAnchorLinkTextElement.appendChild(hiddenReadMoreText);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
