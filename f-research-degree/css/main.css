@@ -21875,7 +21875,7 @@ main table td em {
     font-weight: 600;
 }
 
-.card--news__title-link a:visited, .card--news__title-link a:focus, .card--news__title-link a:active {
+.card--news__title-link a:visited, .card--news__title-link a:focus {
     color: #696969;
 }
 
@@ -40655,6 +40655,170 @@ a.modal__close:active, a.modal__close:focus {
     margin: 0;
 }
 
+.promo-content {
+    border: 0.0625rem solid #541b85;
+    background-color: #ede8f2;
+    padding: 0.75rem 2rem 2rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 769px) {
+    .promo-content {
+        padding: 0.75rem 5rem 2rem 5rem;
+    }
+}
+
+.promo-content__heading {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-size: 1.602rem;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: #541b85;
+    font-weight: 700;
+}
+
+.promo-content__heading i,
+.promo-content__heading em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+}
+
+.promo-content__heading b,
+.promo-content__heading strong {
+    font-weight: inherit;
+}
+
+.promo-content__heading i,
+.promo-content__heading em {
+    font-style: italic;
+}
+
+.promo-content__heading u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .promo-content__heading {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .promo-content__heading {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .promo-content__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .promo-content__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .promo-content__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+.promo-content__heading b,
+.promo-content__heading strong {
+    font-weight: 600;
+}
+
+.promo-content__short-text {
+    color: #541b85;
+}
+
+@media (min-width: 769px) {
+    .promo-content__long-text {
+        margin-top: 0.75rem;
+    }
+}
+
+.promo-content--2col {
+    margin-top: 1rem;
+}
+
+@media (min-width: 769px) {
+    .promo-content--2col {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 3rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .promo-content--2col .promo-content__long-text {
+        margin-top: 0;
+    }
+}
+
+.promo-content__graphic span {
+    color: #541b85;
+    display: block;
+}
+
+.promo-content__graphic span.fad {
+    font-size: 3rem;
+}
+
+.promo-content__graphic img {
+    max-width: 14.44rem;
+}
+
+.promo-content--icon-graphic .promo-content__graphic {
+    border-top: 0.25rem solid #541b85;
+    padding-top: 1.5rem;
+}
+
+.promo-content__graphic--stat {
+    font-family: "Meta Sans", sans-serif;
+    font-size: 2.28rem;
+    line-height: 1.25;
+    letter-spacing: -0.017em;
+    font-weight: 300;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .promo-content__graphic--stat {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .promo-content__graphic--stat {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .promo-content__graphic--stat {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .promo-content__graphic--stat {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .promo-content__graphic--stat {
+        letter-spacing: -0.027em;
+    }
+}
+
 .cms-editor-warning {
     display: none;
 }
@@ -47372,6 +47536,25 @@ button
 
 .documentation--fullwidth .content-wrapper {
     display: block;
+}
+
+.documentation--fullwidth .promo-content {
+    max-width: 80rem;
+    grid-column: 1 / -1;
+}
+
+@media (min-width: 1441px) {
+    .documentation--fullwidth .promo-content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .documentation--fullwidth .promo-content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 .persona {
