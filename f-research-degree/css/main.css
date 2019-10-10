@@ -45194,7 +45194,7 @@ button
     margin-bottom: 2rem;
 }
 
-.research-degree .wrapper--grey {
+.research-degree .wrapper--gray1 {
     background: #f2f2f2;
 }
 
@@ -45415,43 +45415,47 @@ button
     grid-column: 1/-1;
 }
 
-.research-degree__research-projects {
+.wrapper--research-degree__research-projects {
+    background: #f2f2f2;
+}
+
+.wrapper--research-degree__research-projects .research-degree__research-projects {
     grid-column: 2/-2;
 }
 
-.research-degree__research-projects h2.research-degree__research-projects__heading {
+.wrapper--research-degree__research-projects .research-degree__research-projects h2.research-degree__research-projects__heading {
     margin-top: 2.5rem;
 }
 
-.research-degree__research-projects .related-content.slider {
+.wrapper--research-degree__research-projects .research-degree__research-projects .related-content.slider {
     display: flex;
     flex-wrap: wrap;
 }
 
-.research-degree__research-projects .related-content.slider .card--research.slider__active-slide {
+.wrapper--research-degree__research-projects .research-degree__research-projects .related-content.slider .card--research.slider__active-slide {
     margin-top: 1.75rem;
     display: block;
 }
 
 @media (min-width: 433px) {
-    .research-degree__research-projects .related-content.slider .card--research.slider__active-slide {
+    .wrapper--research-degree__research-projects .research-degree__research-projects .related-content.slider .card--research.slider__active-slide {
         flex-basis: 100%;
     }
 }
 
 @media (min-width: 769px) {
-    .research-degree__research-projects .related-content.slider .card--research.slider__active-slide {
+    .wrapper--research-degree__research-projects .research-degree__research-projects .related-content.slider .card--research.slider__active-slide {
         flex-basis: 50%;
     }
 }
 
 @media (min-width: 901px) {
-    .research-degree__research-projects .related-content.slider .card--research.slider__active-slide {
+    .wrapper--research-degree__research-projects .research-degree__research-projects .related-content.slider .card--research.slider__active-slide {
         flex-basis: 33.33%;
     }
 }
 
-.research-degree__research-projects .related-content.slider .slider__controls__wrap {
+.wrapper--research-degree__research-projects .research-degree__research-projects .related-content.slider .slider__controls__wrap {
     margin-right: 0;
     flex-basis: 100%;
 }
