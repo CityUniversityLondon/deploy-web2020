@@ -21000,7 +21000,7 @@ main table td em {
     }
 }
 
-.card--event__title-link a {
+.card--event__title-link .underline-transition__title {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
     font-size: 1.125rem;
@@ -21011,57 +21011,57 @@ main table td em {
     margin-top: 1rem;
 }
 
-.card--event__title-link a i,
-.card--event__title-link a em {
+.card--event__title-link .underline-transition__title i,
+.card--event__title-link .underline-transition__title em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
 }
 
-.card--event__title-link a b,
-.card--event__title-link a strong {
+.card--event__title-link .underline-transition__title b,
+.card--event__title-link .underline-transition__title strong {
     font-weight: inherit;
 }
 
-.card--event__title-link a i,
-.card--event__title-link a em {
+.card--event__title-link .underline-transition__title i,
+.card--event__title-link .underline-transition__title em {
     font-style: italic;
 }
 
-.card--event__title-link a u {
+.card--event__title-link .underline-transition__title u {
     text-decoration: none;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--event__title-link a {
+    .card--event__title-link .underline-transition__title {
         letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--event__title-link a {
+    .card--event__title-link .underline-transition__title {
         letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--event__title-link a {
+    .card--event__title-link .underline-transition__title {
         letter-spacing: -0.014em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--event__title-link a {
+    .card--event__title-link .underline-transition__title {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--event__title-link a {
+    .card--event__title-link .underline-transition__title {
         letter-spacing: -0.017em;
     }
 }
 
-.card--event__title-link a b,
-.card--event__title-link a strong {
+.card--event__title-link .underline-transition__title b,
+.card--event__title-link .underline-transition__title strong {
     font-weight: 600;
 }
 
@@ -21332,11 +21332,20 @@ main table td em {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
+.card--event--portrait a {
+    display: block;
+}
+
 .card--event--portrait a,
 .card--event--portrait a:hover,
 .card--event--portrait a:active,
-.card--event--portrait a:focus {
+.card--event--portrait a:focus,
+.card--event--portrait a:visited {
     border-bottom: none;
+    color: #0c0c0e;
+    background-image: none;
+    background-size: 0;
+    background-color: transparent;
 }
 
 @media (hover: hover) {
@@ -21397,22 +21406,8 @@ main table td em {
     }
 }
 
-.card--event--portrait .card--event__title-link a {
+.card--event--portrait .card--event__title-link .underline-transition__title {
     color: #696969;
-}
-
-.card--event--portrait .card--event__title-link a:visited {
-    color: #696969;
-}
-
-.card--event--portrait .card--event__title-link a:active {
-    background-color: transparent;
-}
-
-@media (hover: hover) {
-    .card--event--portrait .card--event__title-link a:hover {
-        color: #1e1e1e;
-    }
 }
 
 .card--event--portrait .card--event__date-time-text {
