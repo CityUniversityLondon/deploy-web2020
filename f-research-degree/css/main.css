@@ -45194,16 +45194,7 @@ button
     margin-bottom: 2rem;
 }
 
-.research-degree .wrapper--gray1 {
-    background: #f2f2f2;
-}
-
-.research-degree .wrapper--gray9 {
-    background: #303030;
-}
-
 .research-degree .highlighted-border--left {
-    background: #ffffff;
     padding: 0.25rem 1rem;
     margin: 0.5rem 0;
     border-left: 0.25rem solid #541b85;
@@ -45215,7 +45206,6 @@ button
 
 .wrapper--research-degree__standfirst {
     color: #ffffff;
-    background: #303030;
 }
 
 .research-degree__standfirst {
@@ -45342,7 +45332,6 @@ button
 
 .research-degree__overview {
     grid-column: 1/-1;
-    background: #ffffff;
     padding-top: 1.5rem;
     margin-bottom: 4rem;
 }
@@ -45415,10 +45404,6 @@ button
     grid-column: 1/-1;
 }
 
-.wrapper--research-degree__research-projects {
-    background: #f2f2f2;
-}
-
 .wrapper--research-degree__research-projects .research-degree__research-projects {
     grid-column: 2/-2;
 }
@@ -45471,7 +45456,6 @@ button
     grid-template-columns: repeat(16, 1fr);
     grid-column-gap: 1.5rem;
     grid-row: 1;
-    background: #303030;
     padding: 5.5rem 0 4.75rem;
 }
 
@@ -45498,7 +45482,6 @@ button
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 1.5rem;
-    background: #1e1e1e;
     grid-row: 1;
     height: auto;
     margin: auto 0;
