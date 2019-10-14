@@ -741,7 +741,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
 /* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
 /* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_read_more_read_more__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/read-more/read-more */ "./src/patterns/read-more/read-more.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
 
 
 /**
@@ -776,7 +776,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_read_more_read_more__WEBPACK_IMPORTED_MODULE_22__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__["default"]]);
 
 /***/ }),
 
@@ -6322,9 +6322,9 @@ function addPagination(elem, itemCount) {
 
 /***/ }),
 
-/***/ "./src/patterns/read-more/read-more.js":
+/***/ "./src/patterns/show-more/show-more.js":
 /*!*********************************************!*\
-  !*** ./src/patterns/read-more/read-more.js ***!
+  !*** ./src/patterns/show-more/show-more.js ***!
   \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -6338,65 +6338,60 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var className = 'read-more';
+var className = 'show-more';
 
 window.onload = function () {
-  var readMoreTextElements = document.querySelectorAll('.read-more__text');
-  readMoreTextElements.forEach(function (element) {
+  var showMoreTextElements = document.querySelectorAll('.show-more__text');
+  showMoreTextElements.forEach(function (element) {
     element.setAttribute('data-height', element.offsetHeight);
-    element.classList.add('read-more__text--hidden');
+    element.classList.add('show-more__text--hidden');
   });
 };
 
-function readMore(element) {
+function showMore(element) {
   createHTMLElements(element);
-  var anchor = element.querySelector('.read-more__anchor');
+  var anchor = element.querySelector('.show-more__anchor');
   anchor.addEventListener('click', handleReadMoreClick, false);
 }
 
 function handleReadMoreClick(e) {
   var parent = e.currentTarget.parentNode.parentNode.parentNode;
-  var readMoreText = parent.querySelector('.read-more__text');
-  var readMoreTextHeight = readMoreText.getAttribute('data-height') + 'px';
-  var readMoreAnchorLinkText = parent.querySelector('.read-more__anchor__link-text');
-  var srOnlyElement = readMoreAnchorLinkText.querySelector('.sr-only');
-  readMoreAnchorLinkText.innerHTML = null;
+  var showMoreText = parent.querySelector('.show-more__text');
+  var showMoreTextHeight = showMoreText.getAttribute('data-height') + 'px';
+  var showMoreAnchorLinkText = parent.querySelector('.show-more__anchor__link-text');
+  showMoreAnchorLinkText.innerHTML = null;
 
-  if (readMoreText.classList.contains('read-more__text--hidden')) {
+  if (showMoreText.classList.contains('show-more__text--hidden')) {
     e.currentTarget.classList.add('active');
-    readMoreText.classList.remove('read-more__text--hidden');
-    readMoreAnchorLinkText.innerHTML = 'Show less';
-    readMoreAnchorLinkText.appendChild(srOnlyElement);
-    readMoreText.style.maxHeight = readMoreTextHeight;
+    showMoreText.classList.remove('show-more__text--hidden');
+    showMoreAnchorLinkText.innerHTML = 'Show less';
+    showMoreText.style.maxHeight = showMoreTextHeight;
   } else {
     e.currentTarget.classList.remove('active');
-    readMoreAnchorLinkText.innerHTML = 'Show more';
-    readMoreAnchorLinkText.appendChild(srOnlyElement);
-    readMoreText.classList.add('read-more__text--hidden');
-    readMoreText.style.maxHeight = null;
+    showMoreAnchorLinkText.innerHTML = 'Show more';
+    showMoreText.classList.add('show-more__text--hidden');
+    showMoreText.style.maxHeight = null;
     var headingElement = parent.querySelector('h2');
     headingElement.scrollIntoView();
   }
 }
 
 function createHTMLElements(element) {
-  var readMoreButton = element.querySelector('.read-more__button');
-  var headingElement = element.querySelector('h2');
-  var headingText = headingElement.innerHTML;
-  var readMoreAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('a', '', '', '', 'read-more__anchor');
-  readMoreAnchor.setAttribute('href', '#/');
-  readMoreButton.appendChild(readMoreAnchor);
-  var elementsArray = [Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-plus-circle', '', '', 'aria-hidden', 'true'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-minus-circle', '', '', 'aria-hidden', 'true'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', 'Show more', '', '', 'read-more__anchor__link-text')];
+  var showMoreButtonContainer = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('div', '', '', '', 'show-more__button__container');
+  element.appendChild(showMoreButtonContainer);
+  var spanButtonContainer = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'show-more__button');
+  showMoreButtonContainer.appendChild(spanButtonContainer);
+  var showMoreAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('a', '', '', '', 'show-more__anchor');
+  showMoreAnchor.setAttribute('href', '#/');
+  spanButtonContainer.appendChild(showMoreAnchor);
+  var elementsArray = [Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-plus-circle', '', '', 'aria-hidden', 'true'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-minus-circle', '', '', 'aria-hidden', 'true'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', 'Show more', '', '', 'show-more__anchor__link-text')];
   elementsArray.forEach(function (element) {
-    readMoreAnchor.appendChild(element);
+    showMoreAnchor.appendChild(element);
   });
-  var hiddenReadMoreText = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', ' about the ' + headingText + ' of this course', '', '', 'sr-only');
-  var readMoreAnchorLinkTextElement = element.querySelector('.read-more__anchor__link-text');
-  readMoreAnchorLinkTextElement.appendChild(hiddenReadMoreText);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: readMore,
+  launchFn: showMore,
   launchQuery: ".".concat(className)
 });
 
