@@ -31337,6 +31337,7 @@ article figure figcaption a:active {
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
+    margin-top: 0;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -31382,6 +31383,7 @@ article figure figcaption a:active {
     letter-spacing: -0.008em;
     font-weight: 700;
     font-family: "Meta Sans", sans-serif;
+    margin-bottom: 0.5rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
