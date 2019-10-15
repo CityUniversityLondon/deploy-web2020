@@ -45531,7 +45531,25 @@ button
 }
 
 .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider .slider__active-slide {
-    grid-column: 3/14;
+    grid-column: 1/-1;
+}
+
+@media (min-width: 769px) {
+    .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider .slider__active-slide {
+        grid-column: 2/-2;
+    }
+}
+
+@media (min-width: 901px) {
+    .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider .slider__active-slide {
+        grid-column: 3/14;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider .slider__active-slide .card--testimonial__column:first-child {
+        margin-right: 0;
+    }
 }
 
 .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider .slider__controls__wrap {
@@ -45539,39 +45557,73 @@ button
 }
 
 .wrapper--research-degree__footer {
-    display: flex;
     padding: 3rem 0;
+}
+
+@media (min-width: 901px) {
+    .wrapper--research-degree__footer {
+        display: flex;
+    }
 }
 
 .wrapper--research-degree__footer .research-degree__footer__contact {
     margin: 0;
     max-width: none;
-    margin-right: 1.5rem;
-    display: flex;
+    display: grid;
+}
+
+@media (min-width: 901px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact {
+        display: flex;
+        margin-right: 1.5rem;
+    }
 }
 
 .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--one-column {
-    flex-basis: 33%;
+    grid-column: 1/-1;
 }
 
-.wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--one-column li {
-    flex-basis: 100%;
+@media (min-width: 901px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--one-column {
+        flex-basis: 33%;
+    }
+    .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--one-column li {
+        flex-basis: 100%;
+    }
 }
 
 .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column {
-    flex-basis: 66%;
+    grid-column: 1/-1;
 }
 
-.wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column li {
-    flex-basis: 50%;
+@media (min-width: 901px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column {
+        flex-basis: 66%;
+    }
+    .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column li {
+        flex-basis: 50%;
+    }
 }
 
 .wrapper--research-degree__footer .research-degree__footer__contact li {
-    margin-right: 1.5rem;
+    grid-column: 1/-1;
+    margin-right: 0;
+}
+
+@media (min-width: 901px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact li {
+        margin-right: 1.5rem;
+    }
 }
 
 .wrapper--research-degree__footer .research-degree__footer__useful-links {
-    flex-basis: 33%;
+    grid-column: 1/-1;
+}
+
+@media (min-width: 901px) {
+    .wrapper--research-degree__footer .research-degree__footer__useful-links {
+        flex-basis: 33%;
+    }
 }
 
 .search {
