@@ -21000,7 +21000,7 @@ main table td em {
     }
 }
 
-.card--event__title-link a {
+.card--event__title-link .underline-transition__title {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
     font-size: 1.125rem;
@@ -21011,57 +21011,57 @@ main table td em {
     margin-top: 1rem;
 }
 
-.card--event__title-link a i,
-.card--event__title-link a em {
+.card--event__title-link .underline-transition__title i,
+.card--event__title-link .underline-transition__title em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
 }
 
-.card--event__title-link a b,
-.card--event__title-link a strong {
+.card--event__title-link .underline-transition__title b,
+.card--event__title-link .underline-transition__title strong {
     font-weight: inherit;
 }
 
-.card--event__title-link a i,
-.card--event__title-link a em {
+.card--event__title-link .underline-transition__title i,
+.card--event__title-link .underline-transition__title em {
     font-style: italic;
 }
 
-.card--event__title-link a u {
+.card--event__title-link .underline-transition__title u {
     text-decoration: none;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--event__title-link a {
+    .card--event__title-link .underline-transition__title {
         letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--event__title-link a {
+    .card--event__title-link .underline-transition__title {
         letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--event__title-link a {
+    .card--event__title-link .underline-transition__title {
         letter-spacing: -0.014em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--event__title-link a {
+    .card--event__title-link .underline-transition__title {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--event__title-link a {
+    .card--event__title-link .underline-transition__title {
         letter-spacing: -0.017em;
     }
 }
 
-.card--event__title-link a b,
-.card--event__title-link a strong {
+.card--event__title-link .underline-transition__title b,
+.card--event__title-link .underline-transition__title strong {
     font-weight: 600;
 }
 
@@ -21330,14 +21330,22 @@ main table td em {
 /* -- Portrait/landscape specific styles -- */
 .card--event--portrait {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    padding-bottom: 1.75rem;
+}
+
+.card--event--portrait a {
+    display: block;
 }
 
 .card--event--portrait a,
 .card--event--portrait a:hover,
 .card--event--portrait a:active,
-.card--event--portrait a:focus {
+.card--event--portrait a:focus,
+.card--event--portrait a:visited {
     border-bottom: none;
+    color: #0c0c0e;
+    background-image: none;
+    background-size: 0;
+    background-color: transparent;
 }
 
 @media (hover: hover) {
@@ -21398,22 +21406,8 @@ main table td em {
     }
 }
 
-.card--event--portrait .card--event__title-link a {
+.card--event--portrait .card--event__title-link .underline-transition__title {
     color: #696969;
-}
-
-.card--event--portrait .card--event__title-link a:visited {
-    color: #696969;
-}
-
-.card--event--portrait .card--event__title-link a:active {
-    background-color: transparent;
-}
-
-@media (hover: hover) {
-    .card--event--portrait .card--event__title-link a:hover {
-        color: #1e1e1e;
-    }
 }
 
 .card--event--portrait .card--event__date-time-text {
@@ -21898,7 +21892,7 @@ main table td em {
     line-height: 1.625;
     letter-spacing: 0em;
     color: #1e1e1e;
-    margin: 1.5rem 0;
+    margin-top: 1.5rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -21940,6 +21934,10 @@ main table td em {
 
 .card--news--case-study .card--news__title-link {
     margin-top: 1.25rem;
+}
+
+.card--news--research .card--news__content {
+    padding: 1.75rem;
 }
 
 @media (min-width: 901px) {
@@ -32851,15 +32849,6 @@ blockquote footer cite {
     max-width: unset;
 }
 
-/**
-* Background colour and box shadow matches content height
-*/
-.related-content .card.card--news,
-.related-content .card.card--event {
-    background: transparent;
-    box-shadow: none;
-}
-
 .slider {
     grid-row-gap: 0;
     display: grid;
@@ -42298,7 +42287,9 @@ a.modal__close:active, a.modal__close:focus {
 
 @media (min-width: 901px) {
     .content-hub__block-two .pathway-cards .card--pathway__block {
-        grid-template-areas: 'pathway1 pathway1 pathway1 pathway1 pathway1 pathway1 pathway2 pathway2 pathway2 pathway2 pathway2 pathway2 pathway3 pathway3 pathway3 pathway3 pathway3 pathway3' 'pathway4 pathway4 pathway4 pathway4 pathway4 pathway4 pathway5 pathway5 pathway5 pathway5 pathway5 pathway5 pathway6 pathway6 pathway6 pathway6 pathway6 pathway6';
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: 1.5rem;
+        grid-template-areas: 'pathway1 pathway1 pathway1 pathway1 pathway2 pathway2 pathway2 pathway2 pathway3 pathway3 pathway3 pathway3' 'pathway4 pathway4 pathway4 pathway4 pathway5 pathway5 pathway5 pathway5 pathway6 pathway6 pathway6 pathway6';
     }
 }
 
@@ -42732,12 +42723,14 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
-.content-hub__block-three .news-events .related-content .card {
+.content-hub__block-three .news-events .related-content .card--event,
+.content-hub__block-three .news-events .related-content .card--news {
     -moz-column-break-inside: avoid;
          break-inside: avoid;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    box-shadow: none;
 }
 
 @media (max-width: 768px) {
@@ -44465,146 +44458,7 @@ button
 /* --- GLOBAL PROFILE STYLES --- */
 .profile--global__tags {
     margin-top: 3rem;
-    grid-row-gap: 0;
-    display: grid;
-}
-
-@media (max-width: 432px) {
-    .profile--global__tags {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .profile--global__tags {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .profile--global__tags {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
-}
-
-@media (min-width: 433px) {
-    .profile--global__tags {
-        max-width: 80rem;
-    }
-}
-
-@media (min-width: 433px) and (min-width: 1441px) {
-    .profile--global__tags {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (min-width: 433px) and (max-width: 1440px) {
-    .profile--global__tags {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 1281px) {
-    .profile--global__tags {
-        margin-bottom: 3rem;
-    }
-}
-
-.profile--global__tags__content {
     padding: 1rem 0;
-    background: #d5d2d0;
-    grid-column: 1 / -1;
-    display: grid;
-    grid-row-gap: 0;
-}
-
-@media (max-width: 432px) {
-    .profile--global__tags__content {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .profile--global__tags__content {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .profile--global__tags__content {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(14, 1fr);
-    }
-}
-
-@media (max-width: 432px) {
-    .profile--global__tags__content {
-        grid-template-areas: 'c c c c c c';
-    }
-}
-
-@media (min-width: 433px) {
-    .profile--global__tags__content {
-        grid-template-areas: '. c c c c c c c c c c .';
-    }
-}
-
-@media (min-width: 769px) {
-    .profile--global__tags__content {
-        grid-template-areas: '. . c c c c c c c c . .';
-    }
-}
-
-@media (min-width: 769px) {
-    .profile--global__tags__content {
-        grid-column: 1 / -1;
-        padding: 1.5rem 0;
-    }
-}
-
-@media (min-width: 901px) {
-    .profile--global__tags__content {
-        grid-template-areas: '. . . c c c c c c c c . . .';
-        grid-column: 3 / 17;
-    }
-}
-
-.profile--global__tags__content__wrapper {
-    grid-area: c;
-}
-
-@media (max-width: 432px) {
-    .profile--global__tags__content__wrapper {
-        max-width: 80rem;
-    }
-}
-
-@media (max-width: 432px) and (min-width: 1441px) {
-    .profile--global__tags__content__wrapper {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 432px) and (max-width: 1440px) {
-    .profile--global__tags__content__wrapper {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 433px) {
-    .profile--global__tags__content__wrapper {
-        margin: 0;
-    }
 }
 
 .profile--global__tags__heading {
@@ -44621,7 +44475,7 @@ button
 }
 
 .profile--global__tags__labels .cta-block__cta {
-    margin: 0 1.5rem 1rem 0;
+    margin: 0 1.5rem 0.75rem 0;
 }
 
 .profile--global__details__heading {
@@ -45030,20 +44884,6 @@ button
 /* --- END PRESS STYLES --- */
 /* --- ALUMNI STYLES --- */
 @media (min-width: 768px) {
-    .profile--global__tags--alumni .profile--global__tags__content,
-    .profile--global__tags--staff .profile--global__tags__content {
-        grid-column: 2 / 12;
-    }
-}
-
-@media (min-width: 901px) {
-    .profile--global__tags--alumni .profile--global__tags__content,
-    .profile--global__tags--staff .profile--global__tags__content {
-        grid-column: 3 / 17;
-    }
-}
-
-@media (min-width: 768px) {
     .profile--alumni__details {
         max-width: 55ch;
         margin-left: auto;
@@ -45095,7 +44935,7 @@ button
 }
 
 .profile--global__tags--student {
-    margin-top: 2rem;
+    margin-top: 0;
 }
 
 .profile--global__tags--student .profile--global__tags__content {
