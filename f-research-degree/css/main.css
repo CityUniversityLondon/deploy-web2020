@@ -45538,6 +45538,42 @@ button
     margin-right: 0;
 }
 
+.wrapper--research-degree__footer {
+    display: flex;
+    padding: 3rem 0;
+}
+
+.wrapper--research-degree__footer .research-degree__footer__contact {
+    margin: 0;
+    max-width: none;
+    margin-right: 1.5rem;
+    display: flex;
+}
+
+.wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--one-column {
+    flex-basis: 33%;
+}
+
+.wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--one-column li {
+    flex-basis: 100%;
+}
+
+.wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column {
+    flex-basis: 66%;
+}
+
+.wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column li {
+    flex-basis: 50%;
+}
+
+.wrapper--research-degree__footer .research-degree__footer__contact li {
+    margin-right: 1.5rem;
+}
+
+.wrapper--research-degree__footer .research-degree__footer__useful-links {
+    flex-basis: 33%;
+}
+
 .search {
     grid-row-gap: 0;
     display: grid;
