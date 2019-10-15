@@ -6359,6 +6359,7 @@ function handleReadMoreClick(e) {
   var showMoreText = parent.querySelector('.show-more__text');
   var showMoreTextHeight = showMoreText.getAttribute('data-height') + 'px';
   var showMoreAnchorLinkText = parent.querySelector('.show-more__anchor__link-text');
+  var srTextElement = parent.querySelector('.sr-only');
   showMoreAnchorLinkText.innerHTML = null;
 
   if (showMoreText.classList.contains('show-more__text--hidden')) {
@@ -6374,6 +6375,8 @@ function handleReadMoreClick(e) {
     var headingElement = parent.querySelector('h2');
     headingElement.scrollIntoView();
   }
+
+  showMoreAnchorLinkText.appendChild(srTextElement);
 }
 
 function createHTMLElements(element) {
@@ -6388,6 +6391,10 @@ function createHTMLElements(element) {
   elementsArray.forEach(function (element) {
     showMoreAnchor.appendChild(element);
   });
+  var dataTitle = element.getAttribute('data-title');
+  var dataContentType = element.getAttribute('data-content-type');
+  var srTextElement = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', ' about the ' + dataTitle + ' of this ' + dataContentType, '', '', 'sr-only');
+  elementsArray[2].appendChild(srTextElement);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
