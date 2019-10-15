@@ -19143,6 +19143,14 @@ main table td em {
     display: block;
 }
 
+.documentation--fullwidth .standard-grid-wrapper .key-information--research {
+    grid-column: 5/15;
+}
+
+.key-information--research__main__duration__item {
+    background: red;
+}
+
 .persona {
     max-width: 80rem;
     grid-row-gap: 0;
