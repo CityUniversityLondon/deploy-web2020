@@ -6360,16 +6360,16 @@ function handleReadMoreClick(e) {
   var showMoreTextHeight = showMoreText.getAttribute('data-height') + 'px';
   var showMoreAnchorLinkText = parent.querySelector('.show-more__anchor__link-text');
   var srTextElement = parent.querySelector('.sr-only');
-  showMoreAnchorLinkText.innerHTML = null;
+  showMoreAnchorLinkText.textContent = null;
 
   if (showMoreText.classList.contains('show-more__text--hidden')) {
     e.currentTarget.classList.add('active');
     showMoreText.classList.remove('show-more__text--hidden');
-    showMoreAnchorLinkText.innerHTML = 'Show less';
+    showMoreAnchorLinkText.textContent = 'Show less';
     showMoreText.style.maxHeight = showMoreTextHeight;
   } else {
     e.currentTarget.classList.remove('active');
-    showMoreAnchorLinkText.innerHTML = 'Show more';
+    showMoreAnchorLinkText.textContent = 'Show more';
     showMoreText.classList.add('show-more__text--hidden');
     showMoreText.style.maxHeight = null;
     var headingElement = parent.querySelector('h2');
@@ -6392,8 +6392,7 @@ function createHTMLElements(element) {
     showMoreAnchor.appendChild(element);
   });
   var dataTitle = element.getAttribute('data-title');
-  var dataContentType = element.getAttribute('data-content-type');
-  var srTextElement = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', ' about the ' + dataTitle + ' of this ' + dataContentType, '', '', 'sr-only');
+  var srTextElement = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', ' about the ' + dataTitle, '', '', 'sr-only');
   elementsArray[2].appendChild(srTextElement);
 }
 
