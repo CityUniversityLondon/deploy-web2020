@@ -1307,12 +1307,32 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const className = 'animate-number';
-const DURATION = 1500;
+const DURATION = 1500; // set duration variable 1500 ms increase if want longer animation
+
+/**
+ *
+ * find container containing the number
+ *
+ * @param {HTMLElement} element - html element to be animated
+ * @return {HTMLElement} element - if element to be animated is found return it else return original element
+ */
 
 function findNumberContainer(widget) {
   const nested = widget.querySelector('.animate--number__number');
   return typeof nested != 'undefined' && nested != null ? nested : widget;
 }
+/**
+ *
+ * Intial setup
+ * add data attr : data-animation-number-value - number to animate
+ * add data attr : data-animation-number-float - boolean value if number is float
+ * add data attr : data-animation-numner-start - number value of where to start animation from
+ * add class name - animate--number--init
+ *
+ * @param {HTMLElement} element - The section that need to be animated
+ * @return {boolean} - if number animation is setup?
+ */
+
 
 function initNumberAnimation(widget) {
   const startStr = widget.dataset.animationNumberStart || '0';
@@ -1331,6 +1351,13 @@ function initNumberAnimation(widget) {
     return false;
   }
 }
+/**
+ *
+ * run animation function
+ *
+ * @param {HTMLElement} element - element to be animated
+ */
+
 
 function runNumberAnimation(widget) {
   const numberContainer = findNumberContainer(widget);
@@ -1342,6 +1369,11 @@ function runNumberAnimation(widget) {
     let startTime = 0;
     let startValue = parseInt(widget.dataset.animationNumberStart);
     let lastValue = 0;
+    /**
+     * function to run animation
+     *
+     * @param {timestamp} time stamp - time stamp from requestAnimationFrame API
+     */
 
     const f = timestamp => {
       if (first) {
@@ -1349,7 +1381,9 @@ function runNumberAnimation(widget) {
         first = false;
       }
 
-      const t = (timestamp - startTime) / DURATION;
+      const t = (timestamp - startTime) / DURATION; // difference in time between two discrete points in time divied by duration
+
+      console.log(t);
       const finish = t >= 1;
       let k = finish ? 1 : 1 - Math.pow(1 - t, 4);
       let v = k * (value - startValue) + startValue;
@@ -1364,22 +1398,56 @@ function runNumberAnimation(widget) {
       }
 
       if (finish) {
+        //end of animation
         widget.classList.add('animate--number--complete');
       } else {
+        //repeat call requestAnimationFrame until finish is true
         window.requestAnimationFrame(f);
       }
     };
+    /**
+     * run requestAnimationFrame to repaint animation to screen
+     */
+
 
     window.requestAnimationFrame(f);
   }
 }
+/**
+ *
+ * Intial setup
+ *
+ * number animation should contain a wrapper with a class name 'animate-number'
+ * there should be at least one child element with a class name 'animate--number__heading'
+ * and a span element with a class name 'animate--number__number' containing the number
+ *
+ * e.g.
+ *
+ * <div class="animate-number">
+ *  <h2 class="animate animate--number__heading">
+ *      <span class="animate--number__number">10,000</span>
+ *  </h2>
+ * </div>
+ *
+ * @param {HTMLElement} elm - An HTML element with the 'animate-number' class.
+ *
+ */
+
 
 function init(elm) {
-  const lazyNumbers = [].slice.call(elm.querySelectorAll('.animate--number__heading'));
+  const lazyNumbers = [].slice.call(elm.querySelectorAll('.animate--number'));
+  /**
+   * check if browser support IntersectionObserver api
+   */
 
   if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
     lazyNumbers.forEach(function (lazyUnit) {
       initNumberAnimation(lazyUnit);
+      /**
+       * pass the element and function to actionOnScroll
+       * to animate when element is intersecting
+       */
+
       Object(_action_on_scroll__WEBPACK_IMPORTED_MODULE_4__["actionOnScroll"])(lazyUnit, runNumberAnimation);
     });
   }
