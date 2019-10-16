@@ -40266,7 +40266,7 @@ a.modal__close:active, a.modal__close:focus {
     margin-top: 3rem;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 901px) {
     .promo-content {
         padding: 0.75rem 5rem 2rem 5rem;
     }
@@ -40362,8 +40362,18 @@ a.modal__close:active, a.modal__close:focus {
 @media (min-width: 769px) {
     .promo-content--2col .promo-content__long-text {
         margin-top: 0;
+        margin-left: 2.25rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .promo-content--2col .promo-content__long-text {
         margin-left: 3rem;
     }
+}
+
+.promo-content__graphic {
+    margin-top: 0.75rem;
 }
 
 .promo-content__graphic span {
@@ -40375,15 +40385,9 @@ a.modal__close:active, a.modal__close:focus {
     font-size: 3rem;
 }
 
-@media (min-width: 900px) and (max-width: 1279px) {
+@media (min-width: 769px) and (max-width: 1279px) {
     .promo-content__graphic {
         max-width: 10rem;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 899px) {
-    .promo-content__graphic {
-        max-width: 8rem;
     }
 }
 
