@@ -40355,21 +40355,14 @@ a.modal__close:active, a.modal__close:focus {
 
 @media (min-width: 769px) {
     .promo-content--2col {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-gap: 1.75rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .promo-content--2col {
-        grid-gap: 3rem;
+        display: flex;
     }
 }
 
 @media (min-width: 769px) {
     .promo-content--2col .promo-content__long-text {
         margin-top: 0;
+        margin-left: 3rem;
     }
 }
 
@@ -40382,19 +40375,25 @@ a.modal__close:active, a.modal__close:focus {
     font-size: 3rem;
 }
 
-.promo-content__graphic img {
-    max-width: 14.44rem;
-}
-
 @media (min-width: 900px) and (max-width: 1279px) {
-    .promo-content__graphic img {
+    .promo-content__graphic {
         max-width: 10rem;
     }
 }
 
 @media (min-width: 769px) and (max-width: 899px) {
-    .promo-content__graphic img {
+    .promo-content__graphic {
         max-width: 8rem;
+    }
+}
+
+.promo-content__graphic img {
+    max-width: 14.44rem;
+}
+
+@media (min-width: 769px) and (max-width: 1279px) {
+    .promo-content__graphic img {
+        max-width: 100%;
     }
 }
 
@@ -46752,22 +46751,7 @@ button
 }
 
 .documentation--fullwidth .promo-content {
-    max-width: 80rem;
     grid-column: 1 / -1;
-}
-
-@media (min-width: 1441px) {
-    .documentation--fullwidth .promo-content {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .documentation--fullwidth .promo-content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
 }
 
 .persona {
