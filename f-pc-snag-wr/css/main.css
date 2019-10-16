@@ -40387,7 +40387,7 @@ a.modal__close:active, a.modal__close:focus {
 
 @media (min-width: 769px) and (max-width: 1279px) {
     .promo-content__graphic {
-        max-width: 10rem;
+        max-width: 13rem;
     }
 }
 
