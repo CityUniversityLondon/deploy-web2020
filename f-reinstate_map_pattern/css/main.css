@@ -40996,6 +40996,9 @@ a.modal__close:active, a.modal__close:focus {
     outline-width: 0;
     text-decoration: none;
     overflow: hidden;
+    background-image: none;
+    background-size: 0;
+    transition: none;
     display: block;
 }
 
