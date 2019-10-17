@@ -426,6 +426,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+/**
+ *
+ * actionOnScroll use the IntersectionObserver API to check if element is intersceting
+ *
+ * @param {HTMLElement} element - element to observer
+ * @param {Action} Function/String - To either excute provided function on element or add the string as a class name
+ * @param {Boolean} defualt false - pass true if you want the function to run every time element is Intersecting
+ * @param {Object} Object - Pass options to customise IntersectionObserver see docs
+ */
 function actionOnScroll(element, action) {
   let repeat = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
   let options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {
@@ -435,6 +445,7 @@ function actionOnScroll(element, action) {
   if (element && typeof element != 'undefined' && element != null) {
     let actionOnScrollAction = function actionOnScrollAction(entries) {
       entries.forEach(entry => {
+        //what to do with element depending on action type
         if (entry.isIntersecting) {
           if (typeof action === 'string') {
             element.classList.add(action);
@@ -448,7 +459,8 @@ function actionOnScroll(element, action) {
           }
         }
       });
-    };
+    }; //intialise observer and observer element
+
 
     let observer = new IntersectionObserver(actionOnScrollAction, options);
     observer.observe(element);
@@ -1383,7 +1395,6 @@ function runNumberAnimation(widget) {
 
       const t = (timestamp - startTime) / DURATION; // difference in time between two discrete points in time divied by duration
 
-      console.log(t);
       const finish = t >= 1;
       let k = finish ? 1 : 1 - Math.pow(1 - t, 4);
       let v = k * (value - startValue) + startValue;
@@ -1394,7 +1405,7 @@ function runNumberAnimation(widget) {
 
       if (lastValue !== v) {
         lastValue = v;
-        numberContainer.innerHTML = v.toLocaleString('en-GB');
+        numberContainer.innerHTML = v.toLocaleString('en-GB'); // append and format to GB
       }
 
       if (finish) {
