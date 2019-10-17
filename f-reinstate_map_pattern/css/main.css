@@ -41014,6 +41014,7 @@ a.modal__close:active, a.modal__close:focus {
         text-decoration: none;
         background-image: none;
         background-size: 0;
+        transition: none;
     }
     .figure--map a:hover picture {
         transform: scale(1.04);
