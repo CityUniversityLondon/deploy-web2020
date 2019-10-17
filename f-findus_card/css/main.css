@@ -24148,7 +24148,6 @@ _:-ms-lang(x),
 .card--findus .figure--map img {
     height: 100%;
     width: 100%;
-    object-fit: none;
 }
 
 .card--findus picture {
