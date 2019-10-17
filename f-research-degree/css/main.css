@@ -45722,7 +45722,7 @@ button
     padding: 3rem 0;
 }
 
-@media (min-width: 901px) {
+@media (min-width: 769px) {
     .wrapper--research-degree__footer {
         display: flex;
     }
@@ -45745,6 +45745,13 @@ button
     grid-column: 1/-1;
 }
 
+@media (min-width: 433px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--one-column {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
 @media (min-width: 901px) {
     .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--one-column {
         flex-basis: 33%;
@@ -45756,14 +45763,29 @@ button
 
 .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column {
     grid-column: 1/-1;
+    width: 100%;
+}
+
+@media (min-width: 433px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 @media (min-width: 901px) {
     .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column {
         flex-basis: 66%;
     }
+}
+
+.wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column li {
+    flex-basis: 100%;
+}
+
+@media (min-width: 433px) {
     .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column li {
-        flex-basis: 50%;
+        flex-basis: 48%;
     }
 }
 
@@ -45780,11 +45802,54 @@ button
 
 .wrapper--research-degree__footer .research-degree__footer__useful-links {
     grid-column: 1/-1;
+    padding: 2rem 1rem;
 }
 
-@media (min-width: 901px) {
+@media (min-width: 433px) {
     .wrapper--research-degree__footer .research-degree__footer__useful-links {
         flex-basis: 33%;
+        grid-column: 1/9;
+    }
+}
+
+.wrapper--research-degree__footer .research-degree__footer__useful-links h3 {
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    font-weight: 600;
+    margin-top: 0;
+    color: #696969;
+    border-bottom: 0.0625rem solid #e5e5e5;
+    padding-bottom: 0.5rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .wrapper--research-degree__footer .research-degree__footer__useful-links h3 {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .wrapper--research-degree__footer .research-degree__footer__useful-links h3 {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .wrapper--research-degree__footer .research-degree__footer__useful-links h3 {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .wrapper--research-degree__footer .research-degree__footer__useful-links h3 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .wrapper--research-degree__footer .research-degree__footer__useful-links h3 {
+        letter-spacing: -0.017em;
     }
 }
 
