@@ -2988,7 +2988,7 @@ function finder__selectbox(props) {
     return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
       key: value.data,
       value: responseFacetDetails
-    }, props.facet.meta === 'rSub' ? value.label.replace(props.query.facets.G + '_', '') : value.label);
+    }, props.facet.meta === 'rSub' ? value.label.replace(props.query.facets.G.replace(/"/g, '') + '_', '') : value.label);
   }) : null));
 }
 
@@ -3169,7 +3169,7 @@ function finder__appliedfilters(props) {
       }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
         className: "fal fa-times icon",
         "aria-label": "Remove filter"
-      }), ' ', react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, labels.name, ":\xA0", labels.meta === 'rSub' ? facetValue.replace(props.query.facets.G + '_', '') : facetValue))));
+      }), ' ', react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, labels.name, ":\xA0", labels.meta === 'rSub' ? facetValue.replace(props.query.facets.G.replace(/"/g, '') + '_', '') : facetValue))));
     }))));
   } else {
     return null;
