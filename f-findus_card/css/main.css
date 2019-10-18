@@ -24141,13 +24141,14 @@ _:-ms-lang(x),
 }
 
 .card--findus .figure--map {
-    width: 85%;
     margin-top: 0;
+    width: 85%;
 }
 
 .card--findus .figure--map img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .card--findus picture {
@@ -24327,6 +24328,10 @@ _:-ms-lang(x),
     .card--findus__inner a {
         display: flex;
     }
+}
+
+.card--findus__inner a:visited {
+    color: #0c0c0e;
 }
 
 @media (hover: hover) {
