@@ -24367,6 +24367,20 @@ _:-ms-lang(x),
     }
 }
 
+.card--findus__inner a:focus .card--findus__contactus__address__pseudo-link {
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.card--findus__inner a:hover .card--findus__contactus__address__pseudo-link, .card--findus__inner a:active .card--findus__contactus__address__pseudo-link {
+    background-size: 100% 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
 .card--findus__inner a:active, .card--findus__inner a:focus {
     transition: none;
     background-image: none;
@@ -24374,6 +24388,14 @@ _:-ms-lang(x),
     border-bottom: none;
     background-color: transparent;
     color: #0c0c0e;
+}
+
+.card--findus__contactus__address__pseudo-link {
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
 }
 
 .card--findus__contactus__card-title {
