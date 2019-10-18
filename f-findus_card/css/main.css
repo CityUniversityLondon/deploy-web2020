@@ -24151,9 +24151,15 @@ _:-ms-lang(x),
 }
 
 .card--findus .figure--map img {
-    height: 100%;
+    height: 15rem;
     width: 100%;
     object-fit: cover;
+}
+
+@media (min-width: 769px) {
+    .card--findus .figure--map img {
+        height: 100%;
+    }
 }
 
 .card--findus picture {
