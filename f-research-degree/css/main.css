@@ -34395,9 +34395,6 @@ a.modal__close:active, a.modal__close:focus {
         background-image: none;
         background-size: initial;
     }
-    .modal__buttons a:hover span:before {
-        content: '\f271';
-    }
 }
 
 .modal__buttons a:focus {
@@ -34408,20 +34405,12 @@ a.modal__close:active, a.modal__close:focus {
     color: #0c0c0e;
 }
 
-.modal__buttons a:focus span:before {
-    content: '\f274';
-}
-
 .modal__buttons a:active {
     background-color: #250020;
     border: 0.0625rem solid #250020;
     border-bottom-color: #250020;
     border-bottom-width: 0.0625rem;
     color: #ffffff;
-}
-
-.modal__buttons a:active span:before {
-    content: '\f274';
 }
 
 .no-click {
@@ -40479,9 +40468,6 @@ a.modal__close:active, a.modal__close:focus {
         background-image: none;
         background-size: initial;
     }
-    .modal__buttons a:hover span:before {
-        content: '\f271';
-    }
 }
 
 .modal__buttons a:focus {
@@ -40492,20 +40478,12 @@ a.modal__close:active, a.modal__close:focus {
     color: #0c0c0e;
 }
 
-.modal__buttons a:focus span:before {
-    content: '\f274';
-}
-
 .modal__buttons a:active {
     background-color: #250020;
     border: 0.0625rem solid #250020;
     border-bottom-color: #250020;
     border-bottom-width: 0.0625rem;
     color: #ffffff;
-}
-
-.modal__buttons a:active span:before {
-    content: '\f274';
 }
 
 .no-click {
@@ -45412,6 +45390,18 @@ button
 
 .research-degree__overview__content .modal-group li {
     display: inline;
+}
+
+.research-degree__overview__content .modal-group .modal__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.research-degree__overview__content .modal-group .modal__buttons a {
+    flex-basis: 49%;
+    margin-top: 0.5rem;
 }
 
 .wrapper--research-degree__research-projects .research-degree__research-projects {
