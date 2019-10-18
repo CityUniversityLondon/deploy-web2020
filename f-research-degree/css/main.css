@@ -45404,6 +45404,16 @@ button
     grid-column: 1/-1;
 }
 
+.research-degree__overview__content .modal-group {
+    display: inline;
+    list-style-type: none;
+    margin: 0 1rem 0 0;
+}
+
+.research-degree__overview__content .modal-group li {
+    display: inline;
+}
+
 .wrapper--research-degree__research-projects .research-degree__research-projects {
     grid-column: 2/-2;
 }
