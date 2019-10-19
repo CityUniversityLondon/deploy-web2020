@@ -35368,8 +35368,54 @@ article .link-copy {
     }
 }
 
-.banner--center {
-    text-align: center;
+.banner--center .banner__overlay {
+    grid-row-gap: 0;
+    display: grid;
+    align-content: end;
+}
+
+@media (max-width: 432px) {
+    .banner--center .banner__overlay {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .banner--center .banner__overlay {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .banner--center .banner__overlay {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+.banner--center .banner__overlay .banner__overlay__heading {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 769px) {
+    .banner--center .banner__overlay .banner__overlay__heading {
+        grid-column: 2/-2;
+    }
+}
+
+@media (min-width: 901px) {
+    .banner--center .banner__overlay .banner__overlay__heading {
+        grid-column: 3/-3;
+    }
+}
+
+@media (min-width: 1281px) {
+    .banner--center .banner__overlay .banner__overlay__heading {
+        display: flex;
+        text-align: center;
+    }
 }
 
 .banner--center h1,
@@ -45192,19 +45238,19 @@ button
     margin: 2.5rem 0;
 }
 
-@media (min-width: 433px) {
-    .research-degree__standfirst {
-        grid-column: 2/12;
-    }
-}
-
 @media (min-width: 769px) {
     .research-degree__standfirst {
-        grid-column: 3/11;
+        grid-column: 2/-2;
     }
 }
 
 @media (min-width: 901px) {
+    .research-degree__standfirst {
+        grid-column: 3/-3;
+    }
+}
+
+@media (min-width: 1281px) {
     .research-degree__standfirst {
         grid-column: 5/15;
     }
@@ -45278,11 +45324,15 @@ button
     }
 }
 
-.research-degree__key-information .key-information--research__main__dates th {
+.research-degree__key-information .key-information--research__main {
+    margin-top: 1rem;
+}
+
+.research-degree__key-information .key-information--research__main .key-information--research__main__dates th {
     margin-top: 0;
 }
 
-.research-degree__key-information .key-information--research__main__duration__heading {
+.research-degree__key-information .key-information--research__main .key-information--research__main__duration__heading {
     margin-bottom: 0.5rem;
 }
 
