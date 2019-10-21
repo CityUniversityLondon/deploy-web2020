@@ -31312,7 +31312,7 @@ article figure figcaption a:active {
 .key-information--research__main {
     background: #ffffff;
     border: solid 0.0625rem #d8d8d8;
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .key-information--research__main__dates {
@@ -31330,6 +31330,7 @@ article figure figcaption a:active {
 
 .key-information--research__main__dates tr {
     display: grid;
+    grid-gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -31349,6 +31350,7 @@ article figure figcaption a:active {
     line-height: 1.25;
     letter-spacing: -0.008em;
     margin-top: 0;
+    font-weight: 600;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -31383,7 +31385,7 @@ article figure figcaption a:active {
 
 .key-information--research__main__duration {
     display: grid;
-    flex-direction: row;
+    grid-gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -31393,12 +31395,18 @@ article figure figcaption a:active {
     }
 }
 
+@media (max-width: 431px) {
+    .key-information--research__main__duration {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 .key-information--research__main__duration__heading {
     color: #303030;
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
-    font-weight: 700;
+    font-weight: 600;
     font-family: "Meta Sans", sans-serif;
     margin-bottom: 0.5rem;
 }
@@ -31433,6 +31441,42 @@ article figure figcaption a:active {
     }
 }
 
+.key-information--research__main__duration__item {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .key-information--research__main__duration__item {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .key-information--research__main__duration__item {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .key-information--research__main__duration__item {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .key-information--research__main__duration__item {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .key-information--research__main__duration__item {
+        letter-spacing: -0.017em;
+    }
+}
+
 .key-information--research__main__duration__item span {
     color: #541b85;
     font-weight: 600;
@@ -31447,7 +31491,6 @@ article figure figcaption a:active {
 .key-information--research__main__duration__item__label {
     display: block;
     color: #1e1e1e;
-    margin-bottom: 0.25rem;
 }
 
 .key-info {
