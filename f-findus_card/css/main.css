@@ -24153,11 +24153,8 @@ _:-ms-lang(x),
 
 .card--findus .figure--map img {
     width: 100%;
-    object-fit: cover;
-}
-
-.card--findus picture {
     height: 100%;
+    object-fit: cover;
 }
 
 .card--findus figcaption {
@@ -24524,6 +24521,7 @@ a.card--findus__inner {
     outline-width: 0;
     text-decoration: none;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+    overflow: hidden;
     display: block;
 }
 
@@ -24534,6 +24532,12 @@ a.card--findus__inner {
         background-size: 0;
         border-bottom: none;
         color: #0c0c0e;
+    }
+    a.card--findus__inner:hover picture {
+        transform: scale(1.04);
+    }
+    a.card--findus__inner:hover picture:before {
+        background-color: rgba(12, 12, 14, 0.1);
     }
 }
 
