@@ -24151,15 +24151,8 @@ _:-ms-lang(x),
 }
 
 .card--findus .figure--map img {
-    height: 15rem;
     width: 100%;
     object-fit: cover;
-}
-
-@media (min-width: 769px) {
-    .card--findus .figure--map img {
-        height: 100%;
-    }
 }
 
 .card--findus picture {
@@ -24396,6 +24389,11 @@ _:-ms-lang(x),
     background-size: 100% 0;
     background-position: 0 100%;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    margin-top: 0.5rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -47468,6 +47466,21 @@ button
 
 .documentation--fullwidth .content-wrapper {
     display: block;
+    max-width: 80rem;
+}
+
+@media (min-width: 1441px) {
+    .documentation--fullwidth .content-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .documentation--fullwidth .content-wrapper {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 .documentation--fullwidth .promo-content {
