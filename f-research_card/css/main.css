@@ -23259,8 +23259,30 @@ main table td em {
     margin-right: 1.25rem;
 }
 
+.research-card-block {
+    background: #f2f2f2;
+}
+
+@media (max-width: 899px) {
+    .research-card-block {
+        background: none;
+    }
+}
+
+@media (min-width: 901px) {
+    .research-card-block {
+        padding: 2rem;
+    }
+}
+
 .card--research {
-    padding: 2.5rem;
+    padding: 1rem;
+}
+
+@media (min-width: 433px) {
+    .card--research {
+        padding: 2.5rem;
+    }
 }
 
 .card--research:hover, .card--research:focus-within {
