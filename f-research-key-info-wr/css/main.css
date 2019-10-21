@@ -31311,7 +31311,7 @@ article figure figcaption a:active {
 
 .key-information--research__main {
     background: #ffffff;
-    border: solid 0.125rem #d8d8d8;
+    border: solid 0.0625rem #d8d8d8;
     padding: 1.5rem;
 }
 
@@ -31319,6 +31319,7 @@ article figure figcaption a:active {
     overflow: hidden;
     text-align: left;
     margin-bottom: 1.5rem;
+    margin-top: 0;
     padding-bottom: 1.5rem;
     border-bottom: solid 0.25rem #541b85;
 }
@@ -31330,6 +31331,16 @@ article figure figcaption a:active {
 .key-information--research__main__dates tr {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 899px) {
+    .key-information--research__main__dates tr {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.key-information--research__main__dates tr:nth-of-type(2n + 2) {
+    background: #e5e5e5;
 }
 
 .key-information--research__main__dates tr th {
@@ -31376,6 +31387,12 @@ article figure figcaption a:active {
     grid-template-columns: repeat(3, 1fr);
 }
 
+@media (max-width: 899px) {
+    .key-information--research__main__duration {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .key-information--research__main__duration__heading {
     color: #303030;
     font-size: 1.125rem;
@@ -31416,11 +31433,18 @@ article figure figcaption a:active {
     }
 }
 
-.key-information--research__main__duration__item {
+.key-information--research__main__duration__item span {
     color: #541b85;
+    font-weight: 600;
 }
 
-.key-information--research__main__duration__item span {
+@media (max-width: 899px) {
+    .key-information--research__main__duration__item {
+        margin-bottom: 1rem;
+    }
+}
+
+.key-information--research__main__duration__item__label {
     display: block;
     color: #1e1e1e;
     margin-bottom: 0.25rem;
@@ -46871,6 +46895,24 @@ button
 
 .documentation--fullwidth .key-information--research {
     grid-column: 5/15;
+}
+
+@media (max-width: 431px) {
+    .documentation--fullwidth .key-information--research {
+        grid-column: 1/-1;
+    }
+}
+
+@media (min-width: 433px) {
+    .documentation--fullwidth .key-information--research {
+        grid-column: 2/12;
+    }
+}
+
+@media (min-width: 901px) {
+    .documentation--fullwidth .key-information--research {
+        grid-column: 4/17;
+    }
 }
 
 .persona {
