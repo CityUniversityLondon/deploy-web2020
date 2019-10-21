@@ -1784,6 +1784,17 @@ function devcorate(elem, param, value) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_regexp_constructor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.constructor */ "./node_modules/core-js/modules/es.regexp.constructor.js");
+/* harmony import */ var core_js_modules_es_regexp_constructor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_constructor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+
+
 
 
 /**
@@ -1794,11 +1805,30 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 //import aria from '../../aria-attributes';
+
 var className = 'document-download';
 
 function findDocumentLinks(element) {
   var anchors = element.querySelectorAll('a');
-  console.log(anchors);
+  var fileTypes = ['pdf', 'xls', 'doc', 'docx'];
+  anchors.forEach(function (element) {
+    for (var i in fileTypes) {
+      var regex = new RegExp('.' + fileTypes[i]);
+
+      if (regex.test(element.href)) {
+        createElementIcon(element, fileTypes[i]);
+      }
+    }
+  });
+}
+
+function createElementIcon(anchor, type) {
+  if (type !== 'pdf') {
+    type = 'download';
+  }
+
+  var el = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', '', '', '', 'fas', 'fa-file-' + type, '', '', '', 'aria-hidden', 'true');
+  anchor.parentNode.prepend(el);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
