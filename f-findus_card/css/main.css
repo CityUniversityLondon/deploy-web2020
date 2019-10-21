@@ -24505,6 +24505,12 @@ _:-ms-lang(x),
     border-bottom-width: 0.125rem;
 }
 
+@media (max-width: 768px) {
+    .card--findus__figcaption {
+        display: none;
+    }
+}
+
 a.card--findus__inner {
     background-color: initial;
     border-bottom-color: initial;
