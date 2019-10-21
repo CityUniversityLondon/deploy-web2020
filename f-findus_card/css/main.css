@@ -24157,6 +24157,12 @@ _:-ms-lang(x),
     object-fit: cover;
 }
 
+@media (max-width: 768px) {
+    .card--findus .figure--map img {
+        max-height: 12rem;
+    }
+}
+
 .card--findus figcaption {
     font-size: 0.889rem;
     line-height: 1.625;
@@ -24171,8 +24177,7 @@ _:-ms-lang(x),
     letter-spacing: 0.005em;
     display: block;
     text-align: right;
-    margin-right: 0.5rem;
-    margin-top: 0;
+    margin: 0 0.5rem 0.5rem 0;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
