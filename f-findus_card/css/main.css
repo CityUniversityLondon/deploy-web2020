@@ -24146,7 +24146,7 @@ _:-ms-lang(x),
 
 @media (min-width: 769px) {
     .card--findus .figure--map {
-        width: 85%;
+        width: 70%;
     }
 }
 
@@ -24157,22 +24157,14 @@ _:-ms-lang(x),
     object-fit: cover;
 }
 
-@media (max-width: 432px) {
+@media (max-width: 767px) {
     .card--findus .figure--map img {
-        max-height: 12rem;
+        max-height: 14rem;
     }
 }
 
-@media (min-width: 768px) {
-    .card--findus .figure--map img {
-        max-height: 23rem;
-    }
-}
-
-@media (min-width: 1281px) {
-    .card--findus .figure--map img {
-        max-height: 40rem;
-    }
+.card--findus picture {
+    height: 100%;
 }
 
 .card--findus figcaption {
@@ -24687,7 +24679,7 @@ a.card--findus__inner:visited {
     color: #d61726;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .card--findus--figure a.card--findus__inner {
         display: flex;
     }
@@ -47694,20 +47686,62 @@ button
 
 .documentation--fullwidth .content-wrapper {
     display: block;
+}
+
+.documentation--fullwidth .content-wrapper--wider {
     max-width: 80rem;
+    grid-row-gap: 0;
+    display: grid;
 }
 
 @media (min-width: 1441px) {
-    .documentation--fullwidth .content-wrapper {
+    .documentation--fullwidth .content-wrapper--wider {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (max-width: 1440px) {
-    .documentation--fullwidth .content-wrapper {
+    .documentation--fullwidth .content-wrapper--wider {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 432px) {
+    .documentation--fullwidth .content-wrapper--wider {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .documentation--fullwidth .content-wrapper--wider {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .documentation--fullwidth .content-wrapper--wider {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+.documentation--fullwidth .content-wrapper--wider .related-content-grid {
+    grid-column: 1 / -1;
+}
+
+@media (min-width: 901px) {
+    .documentation--fullwidth .content-wrapper--wider .related-content-grid {
+        grid-column: 4 / 16;
+    }
+}
+
+@media (min-width: 1281px) {
+    .documentation--fullwidth .content-wrapper--wider .related-content-grid {
+        grid-column: 5 / 15;
     }
 }
 
