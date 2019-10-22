@@ -1107,13 +1107,6 @@
     
     Background color must match background color of element mixin is applied to
 */
-.rectangle-divider--mini {
-    background: #d61726;
-    width: 2.5rem;
-    height: 0.25rem;
-    margin: 0.25rem auto 1rem auto;
-}
-
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
@@ -45836,13 +45829,22 @@ button
     border-left: 0.25rem solid #541b85;
 }
 
+.research-degree .icon-wrapper .icon {
+    display: table;
+    padding-right: 0.5rem;
+}
+
 .research-degree .heading-centered {
     text-align: center;
 }
 
-.research-degree .icon-wrapper .icon {
-    display: table;
-    padding-right: 0.5rem;
+.research-degree .heading-centered:after {
+    content: '';
+    width: 2.5rem;
+    height: 0.25rem;
+    display: block;
+    background: #9e111c;
+    margin: 0.25rem auto 1rem auto;
 }
 
 .wrapper--research-degree__standfirst {
@@ -45965,8 +45967,17 @@ button
 
 .research-degree__overview {
     grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 1.5rem;
     padding-top: 1.5rem;
     margin-bottom: 4rem;
+}
+
+@media (min-width: 433px) {
+    .research-degree__overview {
+        grid-template-columns: repeat(12, 1fr);
+    }
 }
 
 @media (min-width: 433px) {
@@ -45987,53 +45998,36 @@ button
     }
 }
 
-.research-degree__overview .research-degree__overview__content .read-more,
-.research-degree__overview .research-degree__overview__content .accordion {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 1.5rem;
+.research-degree__overview .show-more h2 {
+    text-align: center;
 }
 
-@media (min-width: 433px) {
-    .research-degree__overview .research-degree__overview__content .read-more,
-    .research-degree__overview .research-degree__overview__content .accordion {
-        grid-template-columns: repeat(12, 1fr);
-    }
+.research-degree__overview .show-more h2:after {
+    content: '';
+    width: 2.5rem;
+    height: 0.25rem;
+    display: block;
+    background: #9e111c;
+    margin: 0.25rem auto 1rem auto;
 }
 
-.research-degree__overview .research-degree__overview__content .read-more .read-more__text,
-.research-degree__overview .research-degree__overview__content .read-more .accordion__body,
-.research-degree__overview .research-degree__overview__content .read-more .accordion__heading,
-.research-degree__overview .research-degree__overview__content .accordion .read-more__text,
-.research-degree__overview .research-degree__overview__content .accordion .accordion__body,
-.research-degree__overview .research-degree__overview__content .accordion .accordion__heading {
+.research-degree__overview .research-degree__overview__content {
     grid-column: 1/-1;
 }
 
-@media (min-width: 433px) {
-    .research-degree__overview .research-degree__overview__content .read-more .read-more__text,
-    .research-degree__overview .research-degree__overview__content .read-more .accordion__body,
-    .research-degree__overview .research-degree__overview__content .read-more .accordion__heading,
-    .research-degree__overview .research-degree__overview__content .accordion .read-more__text,
-    .research-degree__overview .research-degree__overview__content .accordion .accordion__body,
-    .research-degree__overview .research-degree__overview__content .accordion .accordion__heading {
+@media (min-width: 769px) {
+    .research-degree__overview .research-degree__overview__content {
         grid-column: 2/12;
     }
 }
 
 @media (min-width: 901px) {
-    .research-degree__overview .research-degree__overview__content .read-more .read-more__text,
-    .research-degree__overview .research-degree__overview__content .read-more .accordion__body,
-    .research-degree__overview .research-degree__overview__content .read-more .accordion__heading,
-    .research-degree__overview .research-degree__overview__content .accordion .read-more__text,
-    .research-degree__overview .research-degree__overview__content .accordion .accordion__body,
-    .research-degree__overview .research-degree__overview__content .accordion .accordion__heading {
+    .research-degree__overview .research-degree__overview__content {
         grid-column: 3/11;
     }
 }
 
-.research-degree__overview .research-degree__overview__content .read-more .read-more__button__container,
-.research-degree__overview .research-degree__overview__content .accordion .read-more__button__container {
+.research-degree__overview .research-degree__overview__content .accordion {
     grid-column: 1/-1;
 }
 
