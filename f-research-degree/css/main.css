@@ -45228,6 +45228,15 @@ button
     text-align: center;
 }
 
+.research-degree .icon-wrapper {
+    display: table;
+}
+
+.research-degree .icon-wrapper .icon {
+    display: table-cell;
+    padding-right: 0.5rem;
+}
+
 .wrapper--research-degree__standfirst {
     color: #ffffff;
 }
@@ -45769,100 +45778,84 @@ button
 }
 
 .wrapper--research-degree__footer {
-    padding: 3rem 0;
+    padding: 2rem 0;
+}
+
+.wrapper--research-degree__footer .research-degree__footer__useful-links {
+    margin-top: 2rem;
+}
+
+.wrapper--research-degree__footer .research-degree__footer__contact--one-card .research-degree__footer__contact--one-column {
+    grid-column: 1/-1;
 }
 
 @media (min-width: 769px) {
-    .wrapper--research-degree__footer {
-        display: flex;
-        flex-wrap: wrap;
+    .wrapper--research-degree__footer .research-degree__footer__contact--one-card .research-degree__footer__contact--one-column {
+        grid-column: 1/7;
+    }
+}
+
+.wrapper--research-degree__footer .research-degree__footer__contact--one-card .research-degree__footer__useful-links {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 769px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact--one-card .research-degree__footer__useful-links {
+        grid-column: 7/13;
+    }
+}
+
+.wrapper--research-degree__footer .research-degree__footer__contact--two-cards .research-degree__footer__contact--two-column {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1.5rem;
+    grid-column: 1/-1;
+}
+
+@media (min-width: 901px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact--two-cards .research-degree__footer__contact--two-column {
+        grid-column: 1/13;
+    }
+}
+
+.wrapper--research-degree__footer .research-degree__footer__contact--two-cards .research-degree__footer__contact--two-column .card {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 769px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact--two-cards .research-degree__footer__contact--two-column .card:nth-of-type(1) {
+        grid-column: 1/7;
+    }
+}
+
+@media (min-width: 769px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact--two-cards .research-degree__footer__contact--two-column .card:nth-of-type(2) {
+        grid-column: 7/-1;
+    }
+}
+
+.wrapper--research-degree__footer .research-degree__footer__contact--two-cards .research-degree__footer__useful-links {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact--two-cards .research-degree__footer__useful-links {
+        grid-column: 1/7;
+    }
+}
+
+@media (min-width: 901px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact--two-cards .research-degree__footer__useful-links {
+        grid-column: 13/-1;
     }
 }
 
 .wrapper--research-degree__footer .research-degree__footer__contact {
-    margin: 0;
     max-width: none;
-    display: grid;
+    margin: 0;
 }
 
-@media (min-width: 901px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
-.wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--one-column {
-    grid-column: 1/-1;
-}
-
-@media (min-width: 433px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--one-column {
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-@media (min-width: 901px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--one-column {
-        flex-basis: 33%;
-    }
-    .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--one-column li {
-        flex-basis: 100%;
-    }
-}
-
-.wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column {
-    grid-column: 1/-1;
-    width: 100%;
-}
-
-@media (min-width: 433px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-}
-
-@media (min-width: 901px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column {
-        flex-basis: 66%;
-    }
-}
-
-.wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column li {
-    flex-basis: 100%;
-}
-
-@media (min-width: 433px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact.research-degree__footer__contact--two-column li {
-        flex-basis: 48%;
-    }
-}
-
-.wrapper--research-degree__footer .research-degree__footer__contact li {
-    grid-column: 1/-1;
-    margin-right: 0;
-}
-
-.wrapper--research-degree__footer .research-degree__footer__contact li:last-child {
-    margin-top: 0;
-}
-
-.wrapper--research-degree__footer .research-degree__footer__useful-links {
-    grid-column: 1/-1;
-    padding: 2rem 1rem;
-}
-
-@media (min-width: 433px) {
-    .wrapper--research-degree__footer .research-degree__footer__useful-links {
-        flex-basis: 33%;
-        grid-column: 1/9;
-    }
-}
-
-.wrapper--research-degree__footer .research-degree__footer__useful-links h3 {
+.research-degree__footer__useful-links h3 {
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
@@ -45874,31 +45867,31 @@ button
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .wrapper--research-degree__footer .research-degree__footer__useful-links h3 {
+    .research-degree__footer__useful-links h3 {
         letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .wrapper--research-degree__footer .research-degree__footer__useful-links h3 {
+    .research-degree__footer__useful-links h3 {
         letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .wrapper--research-degree__footer .research-degree__footer__useful-links h3 {
+    .research-degree__footer__useful-links h3 {
         letter-spacing: -0.014em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .wrapper--research-degree__footer .research-degree__footer__useful-links h3 {
+    .research-degree__footer__useful-links h3 {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .wrapper--research-degree__footer .research-degree__footer__useful-links h3 {
+    .research-degree__footer__useful-links h3 {
         letter-spacing: -0.017em;
     }
 }
