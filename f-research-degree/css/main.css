@@ -45829,9 +45829,23 @@ button
     border-left: 0.25rem solid #541b85;
 }
 
+.research-degree .icon-wrapper {
+    margin: 0 1rem 0 0;
+    display: -webkit-box;
+    line-height: 1.75rem;
+    padding-bottom: 0.375rem;
+}
+
+.research-degree .icon-wrapper:after {
+    content: '';
+    margin-bottom: 0.5rem;
+}
+
 .research-degree .icon-wrapper .icon {
     display: table;
-    padding-right: 0.5rem;
+    padding: 0.25rem 0.5rem 0 0;
+    margin: 0.25rem 0.25rem 0 0;
+    color: #541b85;
 }
 
 .research-degree .heading-centered {
@@ -45892,14 +45906,9 @@ button
     }
 }
 
-.research-degree__org-units-research-centres .icon {
-    margin: 0.25rem 0.25rem 0 0;
-    color: #541b85;
-}
-
 .research-degree__org-units-research-centres ul {
+    margin-left: 0;
     max-width: 100%;
-    margin: 0;
 }
 
 @media (min-width: 901px) {
@@ -45911,7 +45920,6 @@ button
 
 .research-degree__org-units-research-centres ul li {
     list-style-type: none;
-    display: -webkit-box;
 }
 
 .research-degree__key-information {
