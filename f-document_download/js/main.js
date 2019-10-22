@@ -5019,7 +5019,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Document Download
+ * Link Finder
  *
  * @module patterns/link-finder/link-finder
  * @author Web Development
