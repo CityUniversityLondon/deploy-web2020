@@ -5028,7 +5028,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var className = 'link-finder';
-var fileTypes = ['pdf', 'xls', 'doc', 'docx', 'txt'];
+var fileTypes = ['pdf', 'xls', 'doc', 'docx'];
 
 function findLinks(anchorsArea) {
   var anchors = anchorsArea.querySelectorAll('a');
@@ -5045,13 +5045,14 @@ function findDocumentLinks(anchors) {
     var downloadAttri = element.getAttribute('download');
 
     if (downloadAttri || downloadAttri == '') {
-      createElements(element, 'download');
+      setElements(element, 'download');
     } else {
       for (var i in fileTypes) {
         var regex = new RegExp('.' + fileTypes[i]);
 
         if (regex.test(element.href)) {
-          createElements(element, fileTypes[i]);
+          setElements(element, fileTypes[i]);
+          break;
         }
       }
     }
@@ -5081,13 +5082,44 @@ function findExternalLink(anchors) {
   });
 }
 
-function createElements(anchor, type) {
-  if (type !== 'download' && type !== 'pdf') {
-    type = 'download';
+function setElements(anchor, type) {
+  var faType;
+
+  switch (type) {
+    case 'pdf':
+      faType = 'pdf';
+      break;
+
+    case 'download':
+      faType = 'download';
+      break;
+
+    case 'xls':
+      faType = 'excel';
+      break;
+
+    case 'doc':
+      faType = 'word';
+      break;
+
+    case 'docx':
+      faType = 'word';
+      break;
+
+    default:
+      break;
   }
 
-  var elFA = Object(_util__WEBPACK_IMPORTED_MODULE_8__["createElement"])('span', '', '', '', 'fas', 'fa-file-' + type, 'document-download__icon', '', '', 'aria-hidden', 'true');
+  var elFA = Object(_util__WEBPACK_IMPORTED_MODULE_8__["createElement"])('span', '', '', '', 'fas', 'fa-file-' + faType, 'document-download__icon', '', '', 'aria-hidden', 'true');
   var elSR = Object(_util__WEBPACK_IMPORTED_MODULE_8__["createElement"])('span', 'Download ', '', '', 'sr-only');
+
+  if (type != 'download') {
+    var anchorText = anchor.textContent;
+    anchorText += ' [' + type.toUpperCase() + ']';
+    anchor.textContent = null;
+    anchor.textContent = anchorText;
+  }
+
   anchor.parentNode.prepend(elFA);
   anchor.prepend(elSR);
 }
