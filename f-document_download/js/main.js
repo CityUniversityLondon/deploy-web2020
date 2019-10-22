@@ -1804,31 +1804,38 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2019
  */
-//import aria from '../../aria-attributes';
 
 var className = 'document-download';
 
 function findDocumentLinks(element) {
   var anchors = element.querySelectorAll('a');
-  var fileTypes = ['pdf', 'xls', 'doc', 'docx'];
+  var fileTypes = ['pdf', 'xls', 'doc', 'docx', 'txt'];
   anchors.forEach(function (element) {
-    for (var i in fileTypes) {
-      var regex = new RegExp('.' + fileTypes[i]);
+    var downloadAttri = element.getAttribute('download');
 
-      if (regex.test(element.href)) {
-        createElementIcon(element, fileTypes[i]);
+    if (downloadAttri || downloadAttri == '') {
+      createElements(element, 'download');
+    } else {
+      for (var i in fileTypes) {
+        var regex = new RegExp('.' + fileTypes[i]);
+
+        if (regex.test(element.href)) {
+          createElements(element, fileTypes[i]);
+        }
       }
     }
   });
 }
 
-function createElementIcon(anchor, type) {
-  if (type !== 'pdf') {
+function createElements(anchor, type) {
+  if (type !== 'download' && type !== 'pdf') {
     type = 'download';
   }
 
-  var el = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', '', '', '', 'fas', 'fa-file-' + type, '', '', '', 'aria-hidden', 'true');
-  anchor.parentNode.prepend(el);
+  var elFA = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', '', '', '', 'fas', 'fa-file-' + type, '', '', '', 'aria-hidden', 'true');
+  anchor.parentNode.prepend(elFA);
+  var elSR = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createElement"])('span', 'Download ', '', '', 'sr-only');
+  anchor.prepend(elSR);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
