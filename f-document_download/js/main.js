@@ -5028,7 +5028,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var className = 'link-finder';
-var fileTypes = ['pdf', 'xls', 'doc', 'docx'];
+var fileTypes = ['pdf', 'xls', 'docx', 'doc'];
 
 function findLinks(anchorsArea) {
   var anchors = anchorsArea.querySelectorAll('a');
