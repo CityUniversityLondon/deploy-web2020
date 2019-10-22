@@ -1795,9 +1795,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * External Link Finder
+ * Document Download
  *
- * @module patterns/external-link-finder/external-link-finder
+ * @module patterns/document-download/document-download
  * @author Web Development
  * @copyright City, University of London 2019
  */
