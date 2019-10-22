@@ -777,18 +777,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
 /* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
 /* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
-/* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
-/* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
-/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
-/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
-/* harmony import */ var _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/image-carousel/image-carousel */ "./src/patterns/image-carousel/image-carousel.js");
-/* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
-/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
-/* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
-/* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
-/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
-/* harmony import */ var _patterns_document_download_document_download__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/document-download/document-download */ "./src/patterns/document-download/document-download.js");
+/* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
+/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
+/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
+/* harmony import */ var _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/image-carousel/image-carousel */ "./src/patterns/image-carousel/image-carousel.js");
+/* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
+/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
+/* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
+/* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
+/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
+/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
+/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
 
 
 /**
@@ -823,8 +822,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_document_download_document_download__WEBPACK_IMPORTED_MODULE_23__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_22__["default"]]);
 
 /***/ }),
 
@@ -1772,140 +1770,6 @@ function devcorate(elem, param, value) {
     }
   });
 }
-
-/***/ }),
-
-/***/ "./src/patterns/document-download/document-download.js":
-/*!*************************************************************!*\
-  !*** ./src/patterns/document-download/document-download.js ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
-
-
-
-
-/**
- * Document Download
- *
- * @module patterns/document-download/document-download
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-var className = 'document-download';
-
-function findDocumentLinks(element) {
-  var anchors = element.querySelectorAll('a');
-  anchors.forEach(function (element) {
-    var downloadAttri = element.getAttribute('download');
-
-    if (downloadAttri || downloadAttri == '') {
-      createElements(element, 'download');
-    } else {
-      if (element.href.indexOf('.pdf') !== -1) {
-        createElements(element, 'pdf');
-      } else {
-        createElements(element, 'download');
-      }
-    }
-  });
-}
-
-function createElements(anchor, type) {
-  var elFA = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createElement"])('span', '', '', '', 'fas', 'fa-file-' + type, '', '', '', 'aria-hidden', 'true');
-  anchor.parentNode.prepend(elFA);
-  var elSR = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createElement"])('span', 'Download ', '', '', 'sr-only');
-  anchor.prepend(elSR);
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: findDocumentLinks,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
-/***/ "./src/patterns/external-link-finder/external-link-finder.js":
-/*!*******************************************************************!*\
-  !*** ./src/patterns/external-link-finder/external-link-finder.js ***!
-  \*******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.includes */ "./node_modules/core-js/modules/es.array.includes.js");
-/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
-
-
-
-
-
-
-/**
- * External Link Finder
- *
- * @module patterns/external-link-finder/external-link-finder
- * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019
- */
-
-/**
- *  Finds external links and adds font awesome icon to indicate external link
- * Instructions: add external-link-finder class to templates in article container element
- */
-
-var className = 'external-link-finder';
-
-function findExternalLink(anchorsArea) {
-  var anchors = anchorsArea.querySelectorAll('a');
-
-  if (anchors.length > 0) {
-    anchors.forEach(function (anchor) {
-      /** checks if anchors links are :
-       * external
-       * not an image
-       * not contain font awesome external link icon already
-       * fab for social icons
-       * is not a social icon
-       * not a CTA
-       * not an email hyperlink
-       * not a telephone number link
-       * has to contain a href value
-       */
-      if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && anchor.querySelectorAll('.fab').length < 1 && anchor.className !== 'social-icon' && !anchor.parentElement.className.includes('cta-block') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
-        // adds font awesome external link icon after completing checks
-        var node = document.createElement('span');
-        node.className = 'far fa-external-link inline-external-link';
-        node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, '(external link)');
-        anchor.appendChild(node);
-      }
-    });
-  }
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: findExternalLink,
-  launchQuery: ".".concat(className)
-});
 
 /***/ }),
 
@@ -5111,6 +4975,112 @@ function launchKeyInfoSlider() {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchKeyInfoSlider,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/link-finder/link-finder.js":
+/*!*************************************************!*\
+  !*** ./src/patterns/link-finder/link-finder.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.includes */ "./node_modules/core-js/modules/es.array.includes.js");
+/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.promise */ "./node_modules/core-js/modules/es.promise.js");
+/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+
+
+
+
+
+
+
+
+
+/**
+ * Document Download
+ *
+ * @module patterns/link-finder/link-finder
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+var className = 'link-finder';
+
+function findLinks(anchorsArea) {
+  var anchors = anchorsArea.querySelectorAll('a');
+  var promise = new Promise(function (resolve) {
+    resolve(findDocumentLinks(anchors));
+  });
+  promise.then(function () {
+    findExternalLink(anchors);
+  });
+}
+
+function findDocumentLinks(anchors) {
+  anchors.forEach(function (element) {
+    var downloadAttri = element.getAttribute('download');
+
+    if (downloadAttri || downloadAttri == '') {
+      createElements(element, 'download');
+    } else {
+      if (element.href.indexOf('.pdf') !== -1) {
+        createElements(element, 'pdf');
+      } else {
+        createElements(element, 'download');
+      }
+    }
+  });
+}
+
+function findExternalLink(anchors) {
+  anchors.forEach(function (anchor) {
+    /** checks if anchors links are :
+     * external
+     * not an image
+     * not contain font awesome external link icon already
+     * fab for social icons
+     * is not a social icon
+     * not a CTA
+     * not an email hyperlink
+     * not a telephone number link
+     * has to contain a href value
+     */
+    if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && anchor.querySelectorAll('.fab').length < 1 && anchor.className !== 'social-icon' && !anchor.parentElement.className.includes('cta-block') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
+      // adds font awesome external link icon after completing checks
+      var node = document.createElement('span');
+      node.className = 'far fa-external-link inline-external-link';
+      node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].label, '(external link)');
+      anchor.appendChild(node);
+    }
+  });
+}
+
+function createElements(anchor, type) {
+  var elFA = Object(_util__WEBPACK_IMPORTED_MODULE_6__["createElement"])('span', '', '', '', 'fas', 'fa-file-' + type, 'document-download__icon', '', '', 'aria-hidden', 'true');
+  var elSR = Object(_util__WEBPACK_IMPORTED_MODULE_6__["createElement"])('span', 'Download ', '', '', 'sr-only');
+  anchor.parentNode.prepend(elFA);
+  anchor.prepend(elSR);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: findLinks,
   launchQuery: ".".concat(className)
 });
 

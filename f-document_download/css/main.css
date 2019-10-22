@@ -27071,6 +27071,14 @@ _:-ms-lang(x),
     display: inline-block;
 }
 
+.document-download a {
+    margin-left: 0.25rem;
+}
+
+.document-download__icon {
+    color: #d61726;
+}
+
 .inline-external-link {
     margin-left: 0.5rem;
 }
@@ -40981,14 +40989,6 @@ a.modal__close:active, a.modal__close:focus {
     flex-basis: 75%;
     margin-left: 1rem;
     padding-bottom: 0.5rem;
-}
-
-.document-download a {
-    margin-left: 0.25rem;
-}
-
-.document-download span {
-    color: #d61726;
 }
 
 .generic {
