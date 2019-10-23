@@ -45977,6 +45977,15 @@ button
     }
 }
 
+.research-degree__org-units-research-centres .research-degree__org-units-research-centres__org-units span:after {
+    content: '\2219';
+    margin: 0 0.5rem;
+}
+
+.research-degree__org-units-research-centres .research-degree__org-units-research-centres__org-units span:last-child:after {
+    display: none;
+}
+
 .research-degree__org-units-research-centres ul {
     margin-left: 0;
     max-width: 100%;
