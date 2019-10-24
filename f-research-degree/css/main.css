@@ -45961,6 +45961,12 @@ button
     }
 }
 
+@media (min-width: 433px) {
+    .wrapper--research-degree__pre-overview {
+        padding-bottom: 10rem;
+    }
+}
+
 .research-degree__org-units-research-centres {
     grid-column: 1/-1;
     margin: 2.25rem 0 2.25rem 0;
@@ -45978,14 +45984,12 @@ button
     }
 }
 
-.research-degree__org-units-research-centres .research-degree__org-units-research-centres__org-units .research-degree__org-units-research-centres__org-units__school__label:after,
-.research-degree__org-units-research-centres .research-degree__org-units-research-centres__org-units .research-degree__org-units-research-centres__org-units__department:after {
+.research-degree__org-units-research-centres .research-degree__org-units-research-centres__org-units__label:after {
     content: '\2219';
     margin: 0 0.5rem;
 }
 
-.research-degree__org-units-research-centres .research-degree__org-units-research-centres__org-units .research-degree__org-units-research-centres__org-units__school__label:last-child:after,
-.research-degree__org-units-research-centres .research-degree__org-units-research-centres__org-units .research-degree__org-units-research-centres__org-units__department:last-child:after {
+.research-degree__org-units-research-centres .research-degree__org-units-research-centres__org-units__label:last-child:after {
     display: none;
 }
 
@@ -46038,12 +46042,6 @@ button
     grid-column: 1/-1;
 }
 
-@media (min-width: 433px) {
-    .wrapper--research-degree__promo-box .promo-content {
-        margin-bottom: 10rem;
-    }
-}
-
 @media (min-width: 769px) {
     .wrapper--research-degree__promo-box .promo-content {
         grid-column: 2/12;
@@ -46086,6 +46084,12 @@ button
 @media (min-width: 901px) {
     .research-degree__overview {
         grid-column: 4/16;
+    }
+}
+
+@media (max-width: 767px) {
+    .research-degree__overview .show-more {
+        margin: 0 1.5rem;
     }
 }
 
