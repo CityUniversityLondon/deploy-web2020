@@ -45978,12 +45978,14 @@ button
     }
 }
 
-.research-degree__org-units-research-centres .research-degree__org-units-research-centres__org-units span:after {
+.research-degree__org-units-research-centres .research-degree__org-units-research-centres__org-units .research-degree__org-units-research-centres__org-units__school__label:after,
+.research-degree__org-units-research-centres .research-degree__org-units-research-centres__org-units .research-degree__org-units-research-centres__org-units__department:after {
     content: '\2219';
     margin: 0 0.5rem;
 }
 
-.research-degree__org-units-research-centres .research-degree__org-units-research-centres__org-units span:last-child:after {
+.research-degree__org-units-research-centres .research-degree__org-units-research-centres__org-units .research-degree__org-units-research-centres__org-units__school__label:last-child:after,
+.research-degree__org-units-research-centres .research-degree__org-units-research-centres__org-units .research-degree__org-units-research-centres__org-units__department:last-child:after {
     display: none;
 }
 
