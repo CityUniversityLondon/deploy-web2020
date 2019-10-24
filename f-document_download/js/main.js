@@ -5099,15 +5099,11 @@ function setElements(anchor, type) {
   var elFA = document.createElement('span');
   elFA.className = 'fas fa-file-' + faType + ' document-download__icon';
   elFA.setAttribute('aria-hidden', true);
-  var elSR = document.createElement('span');
-  elSR.textContent = 'Download';
-  elSR.className = 'sr-only';
   var anchorText = anchor.textContent;
   anchorText += ' [' + type.toUpperCase() + ']';
   anchor.textContent = null;
   anchor.textContent = anchorText;
   anchor.parentNode.prepend(elFA);
-  anchor.prepend(elSR);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
