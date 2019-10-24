@@ -6510,7 +6510,7 @@ window.onload = function () {
   var showMoreTextElements = document.querySelectorAll('.show-more__text');
   showMoreTextElements.forEach(function (element) {
     element.setAttribute('data-height', element.offsetHeight);
-    element.classList.add('show-more__text--hidden');
+    element.setAttribute('data-active', false);
   });
 };
 
@@ -6528,20 +6528,22 @@ function handleReadMoreClick(e) {
   var srTextElement = parent.querySelector('.sr-only');
   showMoreAnchorLinkText.textContent = null;
 
-  if (showMoreText.classList.contains('show-more__text--hidden')) {
+  if (showMoreText.getAttribute('data-active') == 'false') {
+    showMoreText.style.height = showMoreTextHeight;
     e.currentTarget.classList.add('active');
-    showMoreText.classList.remove('show-more__text--hidden');
     showMoreAnchorLinkText.textContent = 'Show less';
-    showMoreText.style.maxHeight = showMoreTextHeight;
+    showMoreText.setAttribute('data-active', true);
   } else {
     e.currentTarget.classList.remove('active');
     showMoreAnchorLinkText.textContent = 'Show more';
-    showMoreText.classList.add('show-more__text--hidden');
-    showMoreText.style.maxHeight = null;
     var headingElement = parent.querySelector('h2');
+    showMoreText.setAttribute('data-active', false);
     headingElement.scrollIntoView();
   }
 
+  setTimeout(function () {
+    showMoreText.style.height = null;
+  }, 500);
   showMoreAnchorLinkText.appendChild(srTextElement);
 }
 

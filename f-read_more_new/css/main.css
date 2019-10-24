@@ -40533,7 +40533,9 @@ a.modal__close:active, a.modal__close:focus {
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
-    transition: max-height 0.5s;
+    transition-duration: 0.2s;
+    transition-property: height;
+    transition-timing-function: ease-in-out;
     overflow: hidden;
 }
 
@@ -40577,12 +40579,12 @@ a.modal__close:active, a.modal__close:focus {
     font-style: italic;
 }
 
-.show-more__text--hidden {
-    max-height: 8rem;
+.show-more__text[data-active='false'] {
+    height: 8rem;
     position: relative;
 }
 
-.show-more__text--hidden:after {
+.show-more__text[data-active='false']:after {
     position: absolute;
     content: '';
     height: 100%;
