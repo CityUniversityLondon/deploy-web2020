@@ -5005,8 +5005,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 
@@ -5026,7 +5025,6 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 
-
 var className = 'link-finder';
 var fileTypes = ['pdf', 'xls', 'docx', 'doc'];
 
@@ -5042,41 +5040,29 @@ function findLinks(anchorsArea) {
 
 function findDocumentLinks(anchors) {
   anchors.forEach(function (element) {
-    var downloadAttri = element.getAttribute('download');
+    for (var i in fileTypes) {
+      var regex = new RegExp('.' + fileTypes[i]);
 
-    if (downloadAttri || downloadAttri == '') {
-      setElements(element, 'download');
-    } else {
-      for (var i in fileTypes) {
-        var regex = new RegExp('.' + fileTypes[i]);
-
-        if (regex.test(element.href)) {
-          setElements(element, fileTypes[i]);
-          break;
-        }
+      if (regex.test(element.href)) {
+        setElements(element, fileTypes[i]);
+        break;
       }
     }
   });
 }
+/**
+ * Checks if anchors need external URL icon
+ *
+ * @param {HTMLElement[]} anchors - All anchors found in block
+ */
+
 
 function findExternalLink(anchors) {
   anchors.forEach(function (anchor) {
-    /** checks if anchors links are :
-     * external
-     * not an image
-     * not contain font awesome external link icon already
-     * fab for social icons
-     * is not a social icon
-     * not a CTA
-     * not an email hyperlink
-     * not a telephone number link
-     * has to contain a href value
-     */
     if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && anchor.querySelectorAll('.fab').length < 1 && anchor.className !== 'social-icon' && !anchor.parentElement.className.includes('cta-block') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
-      // adds font awesome external link icon after completing checks
       var node = document.createElement('span');
       node.className = 'far fa-external-link inline-external-link';
-      node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].label, '(external link)');
+      node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].label, '(external link)');
       anchor.appendChild(node);
     }
   });
@@ -5110,16 +5096,16 @@ function setElements(anchor, type) {
       break;
   }
 
-  var elFA = Object(_util__WEBPACK_IMPORTED_MODULE_8__["createElement"])('span', '', '', '', 'fas', 'fa-file-' + faType, 'document-download__icon', '', '', 'aria-hidden', 'true');
-  var elSR = Object(_util__WEBPACK_IMPORTED_MODULE_8__["createElement"])('span', 'Download ', '', '', 'sr-only');
-
-  if (type != 'download') {
-    var anchorText = anchor.textContent;
-    anchorText += ' [' + type.toUpperCase() + ']';
-    anchor.textContent = null;
-    anchor.textContent = anchorText;
-  }
-
+  var elFA = document.createElement('span');
+  elFA.className = 'fas fa-file-' + faType + ' document-download__icon';
+  elFA.setAttribute('aria-hidden', true);
+  var elSR = document.createElement('span');
+  elSR.textContent = 'Download';
+  elSR.className = 'sr-only';
+  var anchorText = anchor.textContent;
+  anchorText += ' [' + type.toUpperCase() + ']';
+  anchor.textContent = null;
+  anchor.textContent = anchorText;
   anchor.parentNode.prepend(elFA);
   anchor.prepend(elSR);
 }
