@@ -20738,15 +20738,16 @@ main table td em {
 }
 
 .card--contact__key-info {
-    display: flex;
+    display: table;
     align-items: center;
     word-break: break-word;
     margin-top: 1.5rem;
 }
 
 .card--contact__key-info .icon {
+    display: table-cell;
     color: #d61726;
-    margin-right: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 .card--course {
