@@ -6501,8 +6501,6 @@ function addPagination(elem, itemCount) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
 
 
 
@@ -6548,20 +6546,32 @@ function handleReadMoreClick(e) {
 }
 
 function createHTMLElements(element) {
-  var showMoreButtonContainer = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('div', '', '', '', 'show-more__button__container');
+  var showMoreButtonContainer = document.createElement('div');
+  showMoreButtonContainer.className = 'show-more__button__container';
   element.appendChild(showMoreButtonContainer);
-  var spanButtonContainer = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'show-more__button');
+  var spanButtonContainer = document.createElement('span');
+  spanButtonContainer.className = 'show-more__button';
   showMoreButtonContainer.appendChild(spanButtonContainer);
-  var showMoreAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('a', '', '', '', 'show-more__anchor');
-  showMoreAnchor.setAttribute('href', '#/');
-  spanButtonContainer.appendChild(showMoreAnchor);
-  var elementsArray = [Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-plus-circle', '', '', 'aria-hidden', 'true'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-minus-circle', '', '', 'aria-hidden', 'true'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', 'Show more', '', '', 'show-more__anchor__link-text')];
-  elementsArray.forEach(function (element) {
-    showMoreAnchor.appendChild(element);
-  });
+  var showMoreButton = document.createElement('button');
+  showMoreButton.className = 'show-more__anchor';
+  spanButtonContainer.appendChild(showMoreButton);
+  var icon1 = document.createElement('span');
+  icon1.className = 'icon fal fa-plus-circle';
+  icon1.setAttribute('aria-hidden', true);
+  var icon2 = document.createElement('span');
+  icon2.className = 'icon fal fa-minus-circle';
+  icon2.setAttribute('aria-hidden', true);
+  var showMoreSpan = document.createElement('span');
+  showMoreSpan.className = 'show-more__anchor__link-text';
+  showMoreSpan.textContent = 'Show more';
+  showMoreButton.appendChild(icon1);
+  showMoreButton.appendChild(icon2);
+  showMoreButton.appendChild(showMoreSpan);
   var dataTitle = element.getAttribute('data-title');
-  var srTextElement = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', ' about the ' + dataTitle, '', '', 'sr-only');
-  elementsArray[2].appendChild(srTextElement);
+  var srTextElement = document.createElement('span');
+  srTextElement.textContent = ' about the ' + dataTitle;
+  srTextElement.className = 'sr-only';
+  showMoreSpan.appendChild(srTextElement);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
