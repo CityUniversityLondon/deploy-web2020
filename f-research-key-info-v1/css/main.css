@@ -31403,12 +31403,6 @@ article figure figcaption a:active {
 
 @media (max-width: 899px) {
     .key-information--research__main__duration {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 431px) {
-    .key-information--research__main__duration {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 0;
     }
