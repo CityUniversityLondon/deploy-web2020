@@ -6527,9 +6527,9 @@ function handleReadMoreClick(e) {
   var showMoreAnchorLinkText = parent.querySelector('.show-more__anchor__link-text');
   var srTextElement = parent.querySelector('.sr-only');
   showMoreAnchorLinkText.textContent = null;
+  showMoreText.style.height = showMoreTextHeight;
 
   if (showMoreText.getAttribute('data-active') == 'false') {
-    showMoreText.style.height = showMoreTextHeight;
     e.currentTarget.classList.add('active');
     showMoreAnchorLinkText.textContent = 'Show less';
     showMoreText.setAttribute('data-active', true);
@@ -6541,10 +6541,10 @@ function handleReadMoreClick(e) {
     headingElement.scrollIntoView();
   }
 
+  showMoreAnchorLinkText.appendChild(srTextElement);
   setTimeout(function () {
     showMoreText.style.height = null;
-  }, 500);
-  showMoreAnchorLinkText.appendChild(srTextElement);
+  }, 100);
 }
 
 function createHTMLElements(element) {
