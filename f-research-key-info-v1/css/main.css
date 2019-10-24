@@ -31383,6 +31383,18 @@ article figure figcaption a:active {
     }
 }
 
+@media (min-width: 432px) {
+    .key-information--research__main__dates .date--short {
+        display: none;
+    }
+}
+
+@media (max-width: 431px) {
+    .key-information--research__main__dates .date--long {
+        display: none;
+    }
+}
+
 .key-information--research__main__duration {
     display: grid;
     grid-gap: 1.5rem;
@@ -31398,6 +31410,7 @@ article figure figcaption a:active {
 @media (max-width: 431px) {
     .key-information--research__main__duration {
         grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0;
     }
 }
 
