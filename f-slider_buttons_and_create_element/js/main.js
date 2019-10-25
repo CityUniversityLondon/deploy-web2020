@@ -6758,20 +6758,21 @@ function initSlider(slider) {
         var previousButton = document.createElement('button');
         previousButton.setAttribute('aria-label', 'Previous item');
         previousButton.setAttribute('disabled', 'true');
+        previousButton.setAttribute('data-direction', '-1');
         previousButton.className = 'fas fa-arrow-left slider__control__button';
         var nextButton = document.createElement('button');
         nextButton.setAttribute('aria-label', 'Next item');
+        nextButton.setAttribute('data-direction', '1');
         nextButton.className = 'fas fa-arrow-right slider__control__button';
         sliderButtons.appendChild(previousButton);
         sliderButtons.appendChild(nextButton);
-        sliderControls.appendChild(sliderButtons);
-        slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
+        sliderControls.appendChild(sliderButtons); // Adds event listener to buttons
 
-        slider.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
-          handleSlideChange(-1, slider);
-        });
-        slider.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
-          handleSlideChange(1, slider);
+        var sliderButtonElements = slider.querySelectorAll('.slider__control__button');
+        sliderButtonElements.forEach(function (element) {
+          element.addEventListener('click', function (e) {
+            handleSlideChange(e, slider);
+          });
         });
       }
     }
@@ -6791,13 +6792,14 @@ function initSlider(slider) {
   }
 }
 
-function handleSlideChange(direction, slider) {
-  var activeSlide = parseInt(slider.querySelectorAll('.slide__controls__progress__active')[0].innerText);
+function handleSlideChange(event, slider) {
+  var direction = parseInt(event.target.getAttribute('data-direction'));
+  var activeSlide = parseInt(slider.querySelector('.slide__controls__progress__active').innerText);
   var newSlide = activeSlide + direction; // ensures you don't slide past first and last slide
 
   if (newSlide !== 0 && !(newSlide > sliderChildrenLength)) {
     // udpates progress
-    slider.querySelectorAll('.slide__controls__progress__active')[0].innerHTML = newSlide;
+    slider.querySelector('.slide__controls__progress__active').textContent = newSlide;
     sliderChildren.forEach(function (item, i) {
       //displays new slide
       if (i == newSlide - 1) {
@@ -6809,20 +6811,18 @@ function handleSlideChange(direction, slider) {
       }
     }); // disables next & prev buttons when reaching beginning or end of slides
 
+    var sliderButtonElements = slider.querySelectorAll('.slider__controls__buttons button'); // disables next & prev buttons when reaching beginning or end of slides
+
     if (newSlide == 1) {
-      slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled');
-      slider.querySelectorAll('.slider__controls__buttons__prev')[0].setAttribute('disabled', true);
+      sliderButtonElements[0].setAttribute('disabled', true);
     } else {
-      slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.remove('slider__controls__buttons__disabled');
-      slider.querySelectorAll('.slider__controls__buttons__prev')[0].removeAttribute('disabled');
+      sliderButtonElements[0].removeAttribute('disabled');
     }
 
     if (newSlide == sliderChildrenLength) {
-      slider.querySelectorAll('.slider__controls__buttons__next')[0].classList.add('slider__controls__buttons__disabled');
-      slider.querySelectorAll('.slider__controls__buttons__next')[0].setAttribute('disabled', true);
+      sliderButtonElements[1].setAttribute('disabled', true);
     } else {
-      slider.querySelectorAll('.slider__controls__buttons__next')[0].classList.remove('slider__controls__buttons__disabled');
-      slider.querySelectorAll('.slider__controls__buttons__next')[0].removeAttribute('disabled');
+      sliderButtonElements[1].removeAttribute('disabled');
     }
   }
 }
