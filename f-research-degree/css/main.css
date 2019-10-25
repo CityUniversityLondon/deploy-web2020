@@ -45897,6 +45897,24 @@ button
     border-left: 0.25rem solid #541b85;
 }
 
+.research-degree .highlighted-border--left .research-degree__fees {
+    display: flex;
+}
+
+.research-degree .highlighted-border--left .research-degree__fees p {
+    padding-right: 1rem;
+    flex-basis: 50%;
+}
+
+.research-degree .highlighted-border--left .research-degree__fees p span {
+    display: block;
+}
+
+.research-degree .highlighted-border--left .research-degree__fees p span.research-degree__fees__value {
+    color: #541b85;
+    font-weight: 600;
+}
+
 .research-degree .icon-wrapper {
     margin: 0 1rem 0 0;
     display: -webkit-box;
@@ -46040,6 +46058,7 @@ button
 
 .wrapper--research-degree__promo-box .promo-content {
     grid-column: 1/-1;
+    margin: 0 0 3rem 0;
 }
 
 @media (min-width: 769px) {
