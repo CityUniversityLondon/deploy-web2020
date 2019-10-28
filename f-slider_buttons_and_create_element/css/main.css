@@ -1113,8 +1113,9 @@ To be used on all sliders for controlling the look of the buttons.
 
 Used on (but not limited to):
 - pattern documentation
-- testimonial slider (used on Paint Layouts)
-- image-gallery
+- testimonial slider 
+- image carousel (pattern)
+-
 
 /**/
 /**
@@ -33087,53 +33088,52 @@ blockquote footer cite {
     align-self: flex-end;
 }
 
-.slider__controls__progress {
+.slider__control__button:nth-child(2) {
+    margin-left: 1rem;
+}
+
+.slider__controls .slider__controls__progress {
     color: #7c2062;
     margin: 1rem 2rem 0 0;
     font-size: 0.79rem;
     font-weight: 500;
 }
 
-.slide__controls__progress__active {
+.slider__controls .slide__controls__progress__active {
     color: #7c2062;
 }
 
-.slider__control__button {
+.slider__controls .slider__control__button {
     color: #3e1031;
     border: 0.0625rem solid #3e1031;
     padding: 0.75rem;
     font-weight: 400;
-    background: #ffffff;
 }
 
 @media (hover: hover) {
-    .slider__control__button:hover {
+    .slider__controls .slider__control__button:hover {
         color: #ffffff;
         background: #3e1031;
     }
 }
 
-.slider__control__button:focus, .slider__control__button:active {
+.slider__controls .slider__control__button:focus, .slider__controls .slider__control__button:active {
     color: #ffffff;
     background: #3e1031;
 }
 
-.slider__control__button:focus:focus, .slider__control__button:focus:active, .slider__control__button:active:focus, .slider__control__button:active:active {
+.slider__controls .slider__control__button:focus:focus, .slider__controls .slider__control__button:focus:active, .slider__controls .slider__control__button:active:focus, .slider__controls .slider__control__button:active:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.slider__control__button:disabled {
-    color: #696969;
+.slider__controls .slider__control__button:disabled {
     background: #ffffff;
+    color: #696969;
     border: none;
     opacity: 0.7;
-}
-
-.slider__control__button:nth-child(2) {
-    margin-left: 1rem;
 }
 
 @media print {
@@ -35942,7 +35942,6 @@ article .link-copy {
     border: 0.0625rem solid #d61726;
     padding: 0.75rem;
     font-weight: 400;
-    background: #ffffff;
 }
 
 @media (hover: hover) {
@@ -35965,8 +35964,8 @@ article .link-copy {
 }
 
 .swiper-slider-arrow:disabled {
-    color: #696969;
     background: #ffffff;
+    color: #696969;
     border: none;
     opacity: 0.7;
 }
@@ -47325,7 +47324,6 @@ button
     border: 0.0625rem solid #3e1031;
     padding: 0.75rem;
     font-weight: 400;
-    background: #ffffff;
 }
 
 @media (hover: hover) {
@@ -47348,8 +47346,8 @@ button
 }
 
 .lifelong-learning .swiper-slider-arrow:disabled {
-    color: #696969;
     background: #ffffff;
+    color: #696969;
     border: none;
     opacity: 0.7;
 }
