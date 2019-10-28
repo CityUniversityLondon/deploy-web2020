@@ -31325,19 +31325,22 @@ article figure figcaption a:active {
 }
 
 .key-information--research__main__dates tbody {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.5rem;
+}
+
+@media (max-width: 899px) {
+    .key-information--research__main__dates tbody {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .key-information--research__main__dates tr {
     display: grid;
     grid-gap: 1.5rem;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-@media (max-width: 899px) {
-    .key-information--research__main__dates tr {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1 / 3;
 }
 
 .key-information--research__main__dates tr:nth-of-type(2n + 2) {
