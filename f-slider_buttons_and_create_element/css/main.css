@@ -1123,6 +1123,11 @@ Used on (but not limited to):
 This mixin controls the styles of the 
 '2/4' display on a slider
 
+Used on:
+
+- slider
+- lifelong learning PL
+
 **/
 /* ghost animation - underline animation used on tab buttons */
 
@@ -33092,18 +33097,18 @@ blockquote footer cite {
     margin-left: 1rem;
 }
 
-.slider__controls .slider__controls__progress {
+.slider__controls__progress {
     color: #7c2062;
     margin: 1rem 2rem 0 0;
     font-size: 0.79rem;
     font-weight: 500;
 }
 
-.slider__controls .slide__controls__progress__active {
+.slide__controls__progress__active {
     color: #7c2062;
 }
 
-.slider__controls .slider__control__button {
+.slider__control__button {
     color: #3e1031;
     border: 0.0625rem solid #3e1031;
     padding: 0.75rem;
@@ -33111,25 +33116,25 @@ blockquote footer cite {
 }
 
 @media (hover: hover) {
-    .slider__controls .slider__control__button:hover {
+    .slider__control__button:hover {
         color: #ffffff;
         background: #3e1031;
     }
 }
 
-.slider__controls .slider__control__button:focus, .slider__controls .slider__control__button:active {
+.slider__control__button:focus, .slider__control__button:active {
     color: #ffffff;
     background: #3e1031;
 }
 
-.slider__controls .slider__control__button:focus:focus, .slider__controls .slider__control__button:focus:active, .slider__controls .slider__control__button:active:focus, .slider__controls .slider__control__button:active:active {
+.slider__control__button:focus:focus, .slider__control__button:focus:active, .slider__control__button:active:focus, .slider__control__button:active:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.slider__controls .slider__control__button:disabled {
+.slider__control__button:disabled {
     background: #ffffff;
     color: #696969;
     border: none;
