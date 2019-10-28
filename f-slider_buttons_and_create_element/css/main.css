@@ -33088,7 +33088,6 @@ blockquote footer cite {
     padding: 0.75rem;
     font-weight: 400;
     background: #ffffff;
-    margin-left: 1rem;
 }
 
 @media (hover: hover) {
@@ -33115,6 +33114,10 @@ blockquote footer cite {
     background: #ffffff;
     border: none;
     opacity: 0.7;
+}
+
+.slider__control__button:nth-child(2) {
+    margin-left: 1rem;
 }
 
 @media print {
@@ -35924,7 +35927,6 @@ article .link-copy {
     padding: 0.75rem;
     font-weight: 400;
     background: #ffffff;
-    margin-left: 1rem;
 }
 
 @media (hover: hover) {
@@ -47302,21 +47304,12 @@ button
     font-weight: 700;
 }
 
-.lifelong-learning .slide__controls__progress__active {
-    color: #3e1031;
-}
-
-.lifelong-learning .slide__controls__progress__active {
-    color: #3e1031;
-}
-
 .lifelong-learning .swiper-slider-arrow {
     color: #3e1031;
     border: 0.0625rem solid #3e1031;
     padding: 0.75rem;
     font-weight: 400;
     background: #ffffff;
-    margin-left: 1rem;
 }
 
 @media (hover: hover) {
@@ -47343,6 +47336,17 @@ button
     background: #ffffff;
     border: none;
     opacity: 0.7;
+}
+
+.lifelong-learning .slider__controls__progress {
+    color: #3e1031;
+    margin: 1rem 2rem 0 0;
+    font-size: 0.79rem;
+    font-weight: 500;
+}
+
+.lifelong-learning .slide__controls__progress__active {
+    color: #3e1031;
 }
 
 .standard-content {
