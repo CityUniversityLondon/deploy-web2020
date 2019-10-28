@@ -6730,47 +6730,49 @@ function initSlider(slider) {
 }
 
 function createSliderElements(slider) {
-  /* generates controls */
-  var sliderControlsWrap = document.createElement('div');
-  sliderControlsWrap.className = 'slider__controls__wrap';
-  var sliderControls = document.createElement('div');
-  sliderControls.className = 'slider__controls';
-  var sliderProgress = document.createElement('div');
-  sliderProgress.className = 'slider__controls__progress';
-  var sliderButtons = document.createElement('div');
-  sliderButtons.className = 'slider__controls__buttons';
-  var activeProgressIndicator = document.createElement('span');
-  activeProgressIndicator.textContent = '1';
-  activeProgressIndicator.classList = 'slide__controls__progress__active';
-  sliderProgress.appendChild(activeProgressIndicator);
-  var sliderControlsSeparator = document.createElement('span');
-  sliderControlsSeparator.textContent = ' / ';
-  sliderControlsSeparator.classList = 'slide__controls__progress__separator';
-  sliderProgress.appendChild(sliderControlsSeparator);
-  var sliderControlsProgressTotal = document.createElement('span');
-  sliderControlsProgressTotal.textContent = sliderChildrenLength;
-  sliderControlsProgressTotal.classList = 'slide__controls__progress__total';
-  sliderProgress.appendChild(sliderControlsProgressTotal);
-  sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
-  slider.appendChild(sliderControlsWrap);
-  var previousButton = document.createElement('button');
-  previousButton.setAttribute('aria-label', 'Previous item');
-  previousButton.setAttribute('disabled', 'true');
-  previousButton.setAttribute('data-direction', '-1');
-  previousButton.className = 'fas fa-arrow-left slider__control__button';
-  var nextButton = document.createElement('button');
-  nextButton.setAttribute('aria-label', 'Next item');
-  nextButton.setAttribute('data-direction', '1');
-  nextButton.className = 'fas fa-arrow-right slider__control__button';
-  sliderButtons.appendChild(previousButton);
-  sliderButtons.appendChild(nextButton);
-  sliderControls.appendChild(sliderButtons);
-  var sliderButtonElements = slider.querySelectorAll('.slider__control__button');
-  sliderButtonElements.forEach(function (element) {
-    element.addEventListener('click', function (e) {
-      handleSlideChange(e, slider);
+  if (sliderChildrenLength > 1) {
+    /* generates controls */
+    var sliderControlsWrap = document.createElement('div');
+    sliderControlsWrap.className = 'slider__controls__wrap';
+    var sliderControls = document.createElement('div');
+    sliderControls.className = 'slider__controls';
+    var sliderProgress = document.createElement('div');
+    sliderProgress.className = 'slider__controls__progress';
+    var sliderButtons = document.createElement('div');
+    sliderButtons.className = 'slider__controls__buttons';
+    var activeProgressIndicator = document.createElement('span');
+    activeProgressIndicator.textContent = '1';
+    activeProgressIndicator.classList = 'slide__controls__progress__active';
+    sliderProgress.appendChild(activeProgressIndicator);
+    var sliderControlsSeparator = document.createElement('span');
+    sliderControlsSeparator.textContent = ' / ';
+    sliderControlsSeparator.classList = 'slide__controls__progress__separator';
+    sliderProgress.appendChild(sliderControlsSeparator);
+    var sliderControlsProgressTotal = document.createElement('span');
+    sliderControlsProgressTotal.textContent = sliderChildrenLength;
+    sliderControlsProgressTotal.classList = 'slide__controls__progress__total';
+    sliderProgress.appendChild(sliderControlsProgressTotal);
+    sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
+    slider.appendChild(sliderControlsWrap);
+    var previousButton = document.createElement('button');
+    previousButton.setAttribute('aria-label', 'Previous item');
+    previousButton.setAttribute('disabled', 'true');
+    previousButton.setAttribute('data-direction', '-1');
+    previousButton.className = 'fas fa-arrow-left slider__control__button';
+    var nextButton = document.createElement('button');
+    nextButton.setAttribute('aria-label', 'Next item');
+    nextButton.setAttribute('data-direction', '1');
+    nextButton.className = 'fas fa-arrow-right slider__control__button';
+    sliderButtons.appendChild(previousButton);
+    sliderButtons.appendChild(nextButton);
+    sliderControls.appendChild(sliderButtons);
+    var sliderButtonElements = slider.querySelectorAll('.slider__control__button');
+    sliderButtonElements.forEach(function (element) {
+      element.addEventListener('click', function (e) {
+        handleSlideChange(e, slider);
+      });
     });
-  });
+  }
 }
 
 function handleSlideChange(event, slider) {
