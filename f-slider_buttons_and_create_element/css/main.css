@@ -1107,6 +1107,22 @@
     
     Background color must match background color of element mixin is applied to
 */
+/**
+
+To be used on all sliders for controlling the look of the buttons.
+
+Used on (but not limited to):
+- pattern documentation
+- testimonial slider (used on Paint Layouts)
+- image-gallery
+
+/**/
+/**
+
+This mixin controls the styles of the 
+'2/4' display on a slider
+
+**/
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
