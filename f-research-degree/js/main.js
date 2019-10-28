@@ -426,6 +426,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+/**
+ *
+ * actionOnScroll use the IntersectionObserver API to check if element is intersceting
+ *
+ * @param {HTMLElement} element - element to observer
+ * @param {Action} Function/String - To either excute provided function on element or add the string as a class name
+ * @param {Boolean} defualt false - pass true if you want the function to run every time element is Intersecting
+ * @param {Object} Object - Pass options to customise IntersectionObserver see docs
+ */
 function actionOnScroll(element, action) {
   var repeat = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
   var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {
@@ -435,6 +445,7 @@ function actionOnScroll(element, action) {
   if (element && typeof element != 'undefined' && element != null) {
     var actionOnScrollAction = function actionOnScrollAction(entries) {
       entries.forEach(function (entry) {
+        //what to do with element depending on action type
         if (entry.isIntersecting) {
           if (typeof action === 'string') {
             element.classList.add(action);
@@ -448,7 +459,8 @@ function actionOnScroll(element, action) {
           }
         }
       });
-    };
+    }; //intialise observer and observer element
+
 
     var observer = new IntersectionObserver(actionOnScrollAction, options);
     observer.observe(element);
@@ -1369,6 +1381,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _action_on_scroll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../action-on-scroll */ "./src/action-on-scroll.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+
 
 
 
@@ -1380,12 +1394,32 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var className = 'animate-number';
-var DURATION = 1500;
+var DURATION = 1500; // set duration variable 1500 ms increase if want longer animation
+
+/**
+ *
+ * find container containing the number
+ *
+ * @param {HTMLElement} element - html element to be animated
+ * @return {HTMLElement} element - if element to be animated is found return it else return original element
+ */
 
 function findNumberContainer(widget) {
   var nested = widget.querySelector('.animate--number__number');
   return typeof nested != 'undefined' && nested != null ? nested : widget;
 }
+/**
+ *
+ * Intial setup
+ * add data attr : data-animation-number-value - number to animate
+ * add data attr : data-animation-number-float - boolean value if number is float
+ * add data attr : data-animation-numner-start - number value of where to start animation from
+ * add class name - animate--number--init
+ *
+ * @param {HTMLElement} element - The section that need to be animated
+ * @return {boolean} - if number animation is setup?
+ */
+
 
 function initNumberAnimation(widget) {
   var startStr = widget.dataset.animationNumberStart || '0';
@@ -1404,6 +1438,13 @@ function initNumberAnimation(widget) {
     return false;
   }
 }
+/**
+ *
+ * run animation function
+ *
+ * @param {HTMLElement} element - element to be animated
+ */
+
 
 function runNumberAnimation(widget) {
   var numberContainer = findNumberContainer(widget);
@@ -1415,6 +1456,11 @@ function runNumberAnimation(widget) {
     var startTime = 0;
     var startValue = parseInt(widget.dataset.animationNumberStart);
     var lastValue = 0;
+    /**
+     * function to run animation
+     *
+     * @param {timestamp} time stamp - time stamp from requestAnimationFrame API
+     */
 
     var f = function f(timestamp) {
       if (first) {
@@ -1422,7 +1468,8 @@ function runNumberAnimation(widget) {
         first = false;
       }
 
-      var t = (timestamp - startTime) / DURATION;
+      var t = (timestamp - startTime) / DURATION; // difference in time between two discrete points in time divied by duration
+
       var finish = t >= 1;
       var k = finish ? 1 : 1 - Math.pow(1 - t, 4);
       var v = k * (value - startValue) + startValue;
@@ -1433,26 +1480,60 @@ function runNumberAnimation(widget) {
 
       if (lastValue !== v) {
         lastValue = v;
-        numberContainer.innerHTML = v.toLocaleString('en-GB');
+        numberContainer.innerHTML = v.toLocaleString('en-GB'); // append and format to GB
       }
 
       if (finish) {
+        //end of animation
         widget.classList.add('animate--number--complete');
       } else {
+        //repeat call requestAnimationFrame until finish is true
         window.requestAnimationFrame(f);
       }
     };
+    /**
+     * run requestAnimationFrame to repaint animation to screen
+     */
+
 
     window.requestAnimationFrame(f);
   }
 }
+/**
+ *
+ * Intial setup
+ *
+ * number animation should contain a wrapper with a class name 'animate-number'
+ * there should be at least one child element with a class name 'animate--number__heading'
+ * and a span element with a class name 'animate--number__number' containing the number
+ *
+ * e.g.
+ *
+ * <div class="animate-number">
+ *  <h2 class="animate animate--number__heading">
+ *      <span class="animate--number__number">10,000</span>
+ *  </h2>
+ * </div>
+ *
+ * @param {HTMLElement} elm - An HTML element with the 'animate-number' class.
+ *
+ */
+
 
 function init(elm) {
-  var lazyNumbers = [].slice.call(elm.querySelectorAll('.animate--number__heading'));
+  var lazyNumbers = [].slice.call(elm.querySelectorAll('.animate--number'));
+  /**
+   * check if browser support IntersectionObserver api
+   */
 
-  if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_8__["checkIntersectionObserver"])()) {
     lazyNumbers.forEach(function (lazyUnit) {
       initNumberAnimation(lazyUnit);
+      /**
+       * pass the element and function to actionOnScroll
+       * to animate when element is intersecting
+       */
+
       Object(_action_on_scroll__WEBPACK_IMPORTED_MODULE_7__["actionOnScroll"])(lazyUnit, runNumberAnimation);
     });
   }
@@ -6632,7 +6713,71 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
  */
 
 var className = 'slider';
-var sliderChildren, sliderChildrenLength, defaultItemsVisible, visibleSlide;
+var sliderChildren, sliderChildrenLength;
+
+function initSlider(slider) {
+  if (slider.children.length < 2) {
+    Object(_util__WEBPACK_IMPORTED_MODULE_10__["removeClass"])(slider, className, false);
+    return;
+  } // slider items count
+
+
+  sliderChildren = _toConsumableArray(slider.children);
+  sliderChildrenLength = sliderChildren.length;
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = sliderChildren.entries()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var sliderChild = _step.value;
+
+      if (sliderChild[0] < 1) {
+        sliderChild[1].classList.add('slider__active-slide');
+      } else {
+        // only displays first slide and hides rest
+        sliderChild[1].classList.add('slider__slide');
+        /* generates controls */
+
+        var sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls__wrap');
+        var sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls');
+        var sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls__progress');
+        var sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls__buttons'); // generates progress
+
+        sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('span', '1', null, null, 'slide__controls__progress__active'));
+        sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('span', ' /', null, null, 'slide__controls__progress__separator'));
+        sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('span', sliderChildrenLength, null, null, 'slide__controls__progress__total'));
+        sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
+        slider.appendChild(sliderControlsWrap); // generates buttons
+
+        sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('button', null, 'Previous item', true, 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev', 'swiper-slider-arrow', 'arrow-left--btn-prev'));
+        sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('button', null, 'Next item', null, 'fas', 'fa-arrow-right', 'slider__controls__buttons__next', 'swiper-slider-arrow', 'arrow-right--btn-next'));
+        sliderControls.appendChild(sliderButtons);
+        slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
+
+        slider.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
+          handleSlideChange(-1, slider);
+        });
+        slider.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
+          handleSlideChange(1, slider);
+        });
+      }
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return != null) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+}
 
 function handleSlideChange(direction, slider) {
   var activeSlide = parseInt(slider.querySelectorAll('.slide__controls__progress__active')[0].innerText);
@@ -6668,147 +6813,6 @@ function handleSlideChange(direction, slider) {
       slider.querySelectorAll('.slider__controls__buttons__next')[0].removeAttribute('disabled');
     }
   }
-}
-
-function initSlider(slider) {
-  // slider items count
-  sliderChildren = _toConsumableArray(slider.children);
-  sliderChildrenLength = sliderChildren.length;
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
-
-  try {
-    for (var _iterator = sliderChildren.entries()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var sliderChild = _step.value;
-      var cardParentNode = sliderChild[1].parentNode;
-      defaultItemsVisible = parseInt(cardParentNode.getAttribute('data-visible'));
-
-      if (sliderChild[0] < 1) {
-        sliderChild[1].classList.add('slider__active-slide');
-      } else if (sliderChild[0] < defaultItemsVisible) {
-        sliderChild[1].classList.add('slider__active-slide');
-      } else {
-        // only displays first slide and hides rest
-        sliderChild[1].classList.add('slider__slide');
-      }
-    } // Only generate controls if there are more than item in the group
-
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator.return != null) {
-        _iterator.return();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
-
-  if (sliderChildrenLength > 1) {
-    var sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls__wrap');
-    var sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls');
-    var sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls__progress');
-    var sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls__buttons'); // generates progress
-
-    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('span', '1', null, null, 'slide__controls__progress__active'));
-    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('span', ' /', null, null, 'slide__controls__progress__separator'));
-    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('span', sliderChildrenLength, null, null, 'slide__controls__progress__total'));
-    sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
-    slider.appendChild(sliderControlsWrap); // generates buttons
-
-    sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('button', null, 'Previous item', true, 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev', 'swiper-slider-arrow', 'arrow-left--btn-prev'));
-    sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('button', null, 'Next item', null, 'fas', 'fa-arrow-right', 'slider__controls__buttons__next', 'swiper-slider-arrow', 'arrow-right--btn-next'));
-    sliderControls.appendChild(sliderButtons);
-    slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled');
-  } // End build controls
-  // Adds event listener to buttons
-
-
-  slider.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
-    if (defaultItemsVisible) {
-      handleSlideChange(-defaultItemsVisible, slider);
-      var _iteratorNormalCompletion2 = true;
-      var _didIteratorError2 = false;
-      var _iteratorError2 = undefined;
-
-      try {
-        for (var _iterator2 = sliderChildren.entries()[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-          var sliderChild = _step2.value;
-
-          if (sliderChild[1].classList.contains('slider__active-slide')) {
-            visibleSlide = sliderChild[0];
-          }
-        }
-      } catch (err) {
-        _didIteratorError2 = true;
-        _iteratorError2 = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
-            _iterator2.return();
-          }
-        } finally {
-          if (_didIteratorError2) {
-            throw _iteratorError2;
-          }
-        }
-      }
-
-      var maxVisibleSlidesIndex = visibleSlide + defaultItemsVisible;
-
-      for (var i = visibleSlide; i < maxVisibleSlidesIndex; i++) {
-        sliderChildren[i].classList.add('slider__active-slide');
-        sliderChildren[i].classList.remove('slider__slide');
-      }
-    } else {
-      handleSlideChange(-1, slider);
-    }
-  });
-  slider.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
-    if (defaultItemsVisible) {
-      handleSlideChange(defaultItemsVisible, slider);
-      var _iteratorNormalCompletion3 = true;
-      var _didIteratorError3 = false;
-      var _iteratorError3 = undefined;
-
-      try {
-        for (var _iterator3 = sliderChildren.entries()[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-          var sliderChild = _step3.value;
-
-          if (sliderChild[1].classList.contains('slider__active-slide')) {
-            visibleSlide = sliderChild[0];
-          }
-        }
-      } catch (err) {
-        _didIteratorError3 = true;
-        _iteratorError3 = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
-            _iterator3.return();
-          }
-        } finally {
-          if (_didIteratorError3) {
-            throw _iteratorError3;
-          }
-        }
-      }
-
-      var maxVisibleSlidesIndex = visibleSlide + defaultItemsVisible;
-
-      for (var i = visibleSlide; i < maxVisibleSlidesIndex; i++) {
-        sliderChildren[i].classList.add('slider__active-slide');
-        sliderChildren[i].classList.remove('slider__slide');
-      }
-    } else {
-      handleSlideChange(1, slider);
-    }
-  });
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -7319,7 +7323,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, createElement */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, createElement, checkIntersectionObserver */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7339,6 +7343,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toArray", function() { return toArray; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detectIE", function() { return detectIE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return createElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkIntersectionObserver", function() { return checkIntersectionObserver; });
 /* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol */ "./node_modules/core-js/modules/es.symbol.js");
 /* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_symbol_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator */ "./node_modules/core-js/modules/es.symbol.iterator.js");
@@ -7647,6 +7652,20 @@ function createElement(type, content, arialabel, disabled, className1, className
   ariaTag2 ? el.setAttribute(ariaTag2, ariaTagContent2) : null;
   disabled ? el.setAttribute('disabled', true) : null;
   return el;
+}
+/**
+ *
+ * Check If browser support Intersection Observer API
+ *
+ * @returns {Boolean} -
+ */
+
+function checkIntersectionObserver() {
+  if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /***/ }),
