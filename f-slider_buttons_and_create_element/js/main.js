@@ -6713,113 +6713,92 @@ var className = 'slider';
 var sliderChildren, sliderChildrenLength;
 
 function initSlider(slider) {
-  // slider items count
+  // slider items and count
   sliderChildren = _toConsumableArray(slider.children);
   sliderChildrenLength = sliderChildren.length;
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
+  sliderChildren.forEach(function (sliderChild, index) {
+    // provide active attrib to first slide
+    if (index == 0) {
+      sliderChild.setAttribute('data-active', true);
+    } // all slides require following class
 
-  try {
-    for (var _iterator = sliderChildren.entries()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var sliderChild = _step.value;
 
-      if (sliderChild[0] < 1) {
-        sliderChild[1].classList.add('slider__active-slide');
-      } else {
-        // only displays first slide and hides rest
-        sliderChild[1].classList.add('slider__slide');
-        /* generates controls */
+    sliderChild.classList.add('slider__slide');
+  }); // create the buttons for the slider
 
-        var sliderControlsWrap = document.createElement('div');
-        sliderControlsWrap.className = 'slider__controls__wrap';
-        var sliderControls = document.createElement('div');
-        sliderControls.className = 'slider__controls';
-        var sliderProgress = document.createElement('div');
-        sliderProgress.className = 'slider__controls__progress';
-        var sliderButtons = document.createElement('div');
-        sliderButtons.className = 'slider__controls__buttons'; // generates progress
+  createSliderElements(slider, sliderChildrenLength);
+}
 
-        var activeProgressIndicator = document.createElement('span');
-        activeProgressIndicator.textContent = '1';
-        activeProgressIndicator.classList = 'slide__controls__progress__active';
-        sliderProgress.appendChild(activeProgressIndicator);
-        var sliderControlsSeparator = document.createElement('span');
-        sliderControlsSeparator.textContent = ' / ';
-        sliderControlsSeparator.classList = 'slide__controls__progress__separator';
-        sliderProgress.appendChild(sliderControlsSeparator);
-        var sliderControlsProgressTotal = document.createElement('span');
-        sliderControlsProgressTotal.textContent = sliderChildrenLength;
-        sliderControlsProgressTotal.classList = 'slide__controls__progress__total';
-        sliderProgress.appendChild(sliderControlsProgressTotal);
-        sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
-        slider.appendChild(sliderControlsWrap); // generates buttons
-
-        var previousButton = document.createElement('button');
-        previousButton.setAttribute('aria-label', 'Previous item');
-        previousButton.setAttribute('disabled', 'true');
-        previousButton.setAttribute('data-direction', '-1');
-        previousButton.className = 'fas fa-arrow-left slider__control__button';
-        var nextButton = document.createElement('button');
-        nextButton.setAttribute('aria-label', 'Next item');
-        nextButton.setAttribute('data-direction', '1');
-        nextButton.className = 'fas fa-arrow-right slider__control__button';
-        sliderButtons.appendChild(previousButton);
-        sliderButtons.appendChild(nextButton);
-        sliderControls.appendChild(sliderButtons); // Adds event listener to buttons
-
-        var sliderButtonElements = slider.querySelectorAll('.slider__control__button');
-        sliderButtonElements.forEach(function (element) {
-          element.addEventListener('click', function (e) {
-            handleSlideChange(e, slider);
-          });
-        });
-      }
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion && _iterator.return != null) {
-        _iterator.return();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
+function createSliderElements(slider) {
+  /* generates controls */
+  var sliderControlsWrap = document.createElement('div');
+  sliderControlsWrap.className = 'slider__controls__wrap';
+  var sliderControls = document.createElement('div');
+  sliderControls.className = 'slider__controls';
+  var sliderProgress = document.createElement('div');
+  sliderProgress.className = 'slider__controls__progress';
+  var sliderButtons = document.createElement('div');
+  sliderButtons.className = 'slider__controls__buttons';
+  var activeProgressIndicator = document.createElement('span');
+  activeProgressIndicator.textContent = '1';
+  activeProgressIndicator.classList = 'slide__controls__progress__active';
+  sliderProgress.appendChild(activeProgressIndicator);
+  var sliderControlsSeparator = document.createElement('span');
+  sliderControlsSeparator.textContent = ' / ';
+  sliderControlsSeparator.classList = 'slide__controls__progress__separator';
+  sliderProgress.appendChild(sliderControlsSeparator);
+  var sliderControlsProgressTotal = document.createElement('span');
+  sliderControlsProgressTotal.textContent = sliderChildrenLength;
+  sliderControlsProgressTotal.classList = 'slide__controls__progress__total';
+  sliderProgress.appendChild(sliderControlsProgressTotal);
+  sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
+  slider.appendChild(sliderControlsWrap);
+  var previousButton = document.createElement('button');
+  previousButton.setAttribute('aria-label', 'Previous item');
+  previousButton.setAttribute('disabled', 'true');
+  previousButton.setAttribute('data-direction', '-1');
+  previousButton.className = 'fas fa-arrow-left slider__control__button';
+  var nextButton = document.createElement('button');
+  nextButton.setAttribute('aria-label', 'Next item');
+  nextButton.setAttribute('data-direction', '1');
+  nextButton.className = 'fas fa-arrow-right slider__control__button';
+  sliderButtons.appendChild(previousButton);
+  sliderButtons.appendChild(nextButton);
+  sliderControls.appendChild(sliderButtons);
+  var sliderButtonElements = slider.querySelectorAll('.slider__control__button');
+  sliderButtonElements.forEach(function (element) {
+    element.addEventListener('click', function (e) {
+      handleSlideChange(e, slider);
+    });
+  });
 }
 
 function handleSlideChange(event, slider) {
   var direction = parseInt(event.target.getAttribute('data-direction'));
   var activeSlide = parseInt(slider.querySelector('.slide__controls__progress__active').innerText);
-  var newSlide = activeSlide + direction; // ensures you don't slide past first and last slide
+  var newSlideIndex = activeSlide + direction; // ensures you don't slide past first and last slide
 
-  if (newSlide !== 0 && !(newSlide > sliderChildrenLength)) {
+  if (newSlideIndex !== 0 && !(newSlideIndex > sliderChildrenLength)) {
     // udpates progress
-    slider.querySelector('.slide__controls__progress__active').textContent = newSlide;
+    slider.querySelector('.slide__controls__progress__active').textContent = newSlideIndex;
     sliderChildren.forEach(function (item, i) {
       //displays new slide
-      if (i == newSlide - 1) {
-        item.classList.remove('slider__slide');
-        item.classList.add('slider__active-slide');
+      if (i == newSlideIndex - 1) {
+        item.setAttribute('data-active', true);
       } else {
-        item.classList.remove('slider__active-slide');
-        item.classList.add('slider__slide');
+        item.removeAttribute('data-active');
       }
     }); // disables next & prev buttons when reaching beginning or end of slides
 
     var sliderButtonElements = slider.querySelectorAll('.slider__controls__buttons button'); // disables next & prev buttons when reaching beginning or end of slides
 
-    if (newSlide == 1) {
+    if (newSlideIndex == 1) {
       sliderButtonElements[0].setAttribute('disabled', true);
     } else {
       sliderButtonElements[0].removeAttribute('disabled');
     }
 
-    if (newSlide == sliderChildrenLength) {
+    if (newSlideIndex == sliderChildrenLength) {
       sliderButtonElements[1].setAttribute('disabled', true);
     } else {
       sliderButtonElements[1].removeAttribute('disabled');

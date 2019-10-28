@@ -33012,31 +33012,31 @@ blockquote footer cite {
     }
 }
 
-.slider__active-slide {
-    display: flex;
+.slider__slide {
+    display: none;
     grid-column: 6 / 14;
 }
 
 @media (max-width: 1280px) {
-    .slider__active-slide {
+    .slider__slide {
         grid-column: 3 / 17;
     }
 }
 
 @media (max-width: 900px) {
-    .slider__active-slide {
+    .slider__slide {
         grid-column: 2 / 12;
     }
 }
 
 @media (max-width: 432px) {
-    .slider__active-slide {
+    .slider__slide {
         grid-column: 1 / -1;
     }
 }
 
-.slider__slide {
-    display: none;
+.slider__slide[data-active='true'] {
+    display: flex;
 }
 
 .slider__controls__wrap {
@@ -33089,31 +33089,6 @@ blockquote footer cite {
     font-weight: 400;
     background: #ffffff;
     margin-left: 1rem;
-    /*
-    border: $border-width-hairline $border-style-solid $color-gray10;
-    padding: $measure--threequarters $measure--half;
-    background: $color-purewhite;
-    margin-left: $measure--basic;
-    @include anchor-default-outline--dark;
-
-    &:hover {
-        @include media('hover') {
-            background: $color-pink90;
-            color: $color-purewhite;
-        }
-    }
-
-    &:focus,
-    &:active {
-        color: $color-purewhite;
-        background: $color-pink90;
-        outline-offset: 0;
-    }
-
-    &:before {
-        font-weight: $font-weight-normal;
-    }
-    */
 }
 
 @media (hover: hover) {
@@ -33142,18 +33117,6 @@ blockquote footer cite {
     opacity: 0.7;
 }
 
-/*
-.l .slider__controls__buttons__disabled {
-    border: none;
-    color: $color-gray10;
-    opacity: 0.7;
-
-    &:hover {
-        background: $color-purewhite;
-        color: $color-gray10;
-    }
-}
-*/
 @media print {
     .js .tabs .tabs__links,
     .js .tabs--accordion .accordion {
