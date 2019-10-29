@@ -35793,7 +35793,7 @@ article .link-copy {
 
 .swiper-slider-arrow {
     color: #d61726;
-    border: 0.0625rem solid #d61726;
+    border: 4px solid #d61726;
     padding: 0.75rem;
     font-weight: 400;
 }
@@ -41857,6 +41857,10 @@ a.modal__close:active, a.modal__close:focus {
     border: 0.125rem solid #d61726;
 }
 
+.content-hub__block-one .explore .degree-options li.degree-options__button a:focus {
+    border: 0.125rem solid #d61726;
+}
+
 .content-hub__block-one .explore .degree-options li.degree-options__button a:focus span {
     color: #0c0c0e;
 }
@@ -41865,8 +41869,15 @@ a.modal__close:active, a.modal__close:focus {
     color: #0c0c0e;
 }
 
+.content-hub__block-one .explore .degree-options li.degree-options__button a:active {
+    background: #d61726;
+}
+
 @media (hover: hover) {
     .content-hub__block-one .explore .degree-options li.degree-options__button a:hover span {
+        color: #ffffff;
+    }
+    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover span:active {
         color: #ffffff;
     }
     .content-hub__block-one .explore .degree-options li.degree-options__button a:hover:after {
@@ -46507,7 +46518,7 @@ button
 
 .lifelong-learning .swiper-slider-arrow {
     color: #3e1031;
-    border: 0.0625rem solid #3e1031;
+    border: 4px solid #3e1031;
     padding: 0.75rem;
     font-weight: 400;
 }
