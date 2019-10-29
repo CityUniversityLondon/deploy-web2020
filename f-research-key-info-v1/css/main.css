@@ -31385,8 +31385,16 @@ article figure figcaption a:active {
     }
 }
 
+.key-information--research__main__dates tr th:nth-of-type(2) {
+    margin-left: 1.5rem;
+}
+
 .key-information--research__main__dates tr td {
     flex: 1;
+}
+
+.key-information--research__main__dates tr td:nth-of-type(2) {
+    margin-left: 1.5rem;
 }
 
 @media (min-width: 432px) {
