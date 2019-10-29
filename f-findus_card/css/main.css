@@ -24340,12 +24340,6 @@ a.card--findus__inner:visited {
     }
 }
 
-@media (max-width: 767px) {
-    .card--findus--figure .card--findus__contactus {
-        padding: 0 1.5rem 1.5rem 1.5rem;
-    }
-}
-
 .js .cookie-notice {
     display: none;
 }
