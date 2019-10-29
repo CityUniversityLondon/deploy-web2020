@@ -24189,6 +24189,10 @@ a.card--findus__inner:focus .card--findus__contactus__address__pseudo-link {
     border-bottom-width: 0.125rem;
 }
 
+a.card--findus__inner:focus:hover .card--findus__contactus__address__pseudo-link {
+    color: #ffffff;
+}
+
 a.card--findus__inner:active .card--findus__map {
     transform: scale(1.04);
 }
