@@ -41635,7 +41635,7 @@ a.modal__close:active, a.modal__close:focus {
     margin: 0;
 }
 
-.content-hub__block-one .explore .degree-options {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
@@ -41644,18 +41644,18 @@ a.modal__close:active, a.modal__close:focus {
     margin-top: 1rem;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor {
     width: calc(1 / 2 * 100% - (1 - 1 / 2) * 0.5rem);
     list-style-type: none;
 }
 
 @media (max-width: 767px) {
-    .content-hub__block-one .explore .degree-options li.degree-options__button {
+    .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor {
         width: 100%;
     }
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -41680,29 +41680,29 @@ a.modal__close:active, a.modal__close:focus {
     border: 0.125rem solid #d61726;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:disabled {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:disabled {
     cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .content-hub__block-one .explore .degree-options li.degree-options__button a {
+    .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .content-hub__block-one .explore .degree-options li.degree-options__button a {
+    .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a span {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a span {
     transition: transform 0.6s;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:after {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -41716,66 +41716,66 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .content-hub__block-one .explore .degree-options li.degree-options__button a:after {
+    .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:after {
         transition: none;
     }
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:focus, .content-hub__block-one .explore .degree-options li.degree-options__button a:active {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:focus, .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:active {
     background-color: transparent;
     border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:focus span, .content-hub__block-one .explore .degree-options li.degree-options__button a:active span {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:focus span, .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:active span {
     transform: translateX(-0.75rem);
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:focus:after, .content-hub__block-one .explore .degree-options li.degree-options__button a:active:after {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:focus:after, .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover {
+    .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:hover {
         background-color: transparent;
         border: 0.125rem solid #d61726;
         color: #ffffff;
     }
-    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover span {
+    .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:hover span {
         transform: translateX(-0.75rem);
     }
-    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover:after {
+    .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:disabled {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:disabled {
     opacity: 0.7;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:disabled span {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:disabled span {
     transform: none;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:disabled:after {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:disabled:after {
     opacity: 0;
     transform: none;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:visited {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:visited {
     border-color: #ffffff;
     color: #d61726;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:focus {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:focus {
     background: #ffffff;
     border-color: #ffffff;
     color: #d61726;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:focus:focus, .content-hub__block-one .explore .degree-options li.degree-options__button a:focus:active {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:focus:focus, .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:focus:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
@@ -41783,104 +41783,105 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 @media (hover: hover) {
-    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover {
+    .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:hover {
         background: #d61726;
         border-color: #ffffff;
         color: #ffffff;
     }
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:active {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:active {
     border-color: #ffffff;
     box-shadow: none;
     color: #ffffff;
     background: transparent;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:active:focus, .content-hub__block-one .explore .degree-options li.degree-options__button a:active:active {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:active:focus, .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:active:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:disabled {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:disabled {
     color: #d61726;
     background: #ffffff;
     border: 0.125rem solid #ffffff;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .content-hub__block-one .explore .degree-options li.degree-options__button a {
+    .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a {
         letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .content-hub__block-one .explore .degree-options li.degree-options__button a {
+    .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a {
         letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .content-hub__block-one .explore .degree-options li.degree-options__button a {
+    .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a {
         letter-spacing: -0.014em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .content-hub__block-one .explore .degree-options li.degree-options__button a {
+    .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .content-hub__block-one .explore .degree-options li.degree-options__button a {
+    .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a {
         letter-spacing: -0.017em;
     }
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:after {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:after {
     position: relative;
     display: flex;
     align-items: center;
     right: 0.5rem;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a span {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a span {
     color: #0c0c0e;
     margin: auto 0;
     width: 100%;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:visited {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a span:active {
+    color: #ffffff;
+}
+
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:visited {
     border: 0.125rem solid #d61726;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:focus {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:focus {
     border: 0.125rem solid #d61726;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:focus span {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:focus span {
     color: #0c0c0e;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:focus:after {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:focus:after {
     color: #0c0c0e;
 }
 
-.content-hub__block-one .explore .degree-options li.degree-options__button a:active {
+.content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:active {
     background: #d61726;
 }
 
 @media (hover: hover) {
-    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover span {
+    .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:hover span {
         color: #ffffff;
     }
-    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover span:active {
-        color: #ffffff;
-    }
-    .content-hub__block-one .explore .degree-options li.degree-options__button a:hover:after {
+    .content-hub__block-one .explore .cta-like-anchor-block--degree-options li.cta-like-anchor a:hover:after {
         color: #ffffff;
     }
 }
