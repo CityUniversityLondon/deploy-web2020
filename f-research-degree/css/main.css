@@ -46111,7 +46111,7 @@ button
 
 .research-degree .icon-wrapper {
     margin: 0 1rem 0 0;
-    display: -webkit-box;
+    display: table;
     line-height: 1.75rem;
     padding-bottom: 0.375rem;
 }
@@ -46122,10 +46122,14 @@ button
 }
 
 .research-degree .icon-wrapper .icon {
-    display: table;
+    display: table-cell;
     padding: 0.25rem 0.5rem 0 0;
     margin: 0.25rem 0.25rem 0 0;
     color: #541b85;
+}
+
+.research-degree .icon-wrapper a {
+    display: inline;
 }
 
 .research-degree .heading-centered {
@@ -46361,7 +46365,7 @@ button
 }
 
 .research-degree__overview__content .modal-group .modal__buttons a {
-    flex-basis: 49%;
+    flex-basis: 48%;
     margin-top: 0.5rem;
 }
 
