@@ -5053,7 +5053,9 @@ function findExternalLink(anchor) {
 function findDocumentLinks(anchor) {
   var fileTypes = {
     pdf: 'pdf',
+    docx: 'word',
     doc: 'word',
+    xlsx: 'excel',
     xls: 'excel'
   };
 
@@ -5064,6 +5066,7 @@ function findDocumentLinks(anchor) {
       anchorText += ' [' + key.toUpperCase() + ']';
       anchor.textContent = null;
       anchor.textContent = anchorText;
+      break;
     }
   }
 }
