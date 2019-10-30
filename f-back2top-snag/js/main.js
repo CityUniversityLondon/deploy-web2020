@@ -1593,8 +1593,8 @@ function initBacktoTop(backToTop) {
     var docHeight = document.body.clientHeight; // calculates page height
 
     if (docHeight > viewPortHeight * pageHeight) {
-      //backToTopBut.style.opacity = 0;
-      backToTopBut.classList.add('back-to-top-stick');
+      backToTopBut.style.opacity = 1;
+      backToTopBut.classList.add('back-to-top-hide');
 
       window.onscroll = function () {
         updateProgress(backToTopBut);
@@ -1617,13 +1617,14 @@ function scrollButtonShow(backToTopBut) {
 
   if (screenPos > viewPortHeight * scrollPos && screenPos < deadZone) {
     // shows button when scrolled down far enough - see parameters
-    backToTopBut.classList.add('back-to-top-show');
+    backToTopBut.classList.remove('back-to-top-hide');
     backToTopBut.classList.add('back-to-top-stick');
   } else if (screenPos < 200) {
     // hides button when close to top of the page
-    backToTopBut.classList.remove('back-to-top-show');
+    backToTopBut.classList.add('back-to-top-hide');
   } else if (screenPos >= deadZone) {
     backToTopBut.classList.remove('back-to-top-stick');
+    backToTopBut.classList.remove('back-to-top-hide');
   }
   /*
   document.addEventListener('click', function() {

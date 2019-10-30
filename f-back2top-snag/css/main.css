@@ -33977,6 +33977,7 @@ button
     border-bottom: none;
     font-size: 0.889rem;
     transition: opacity 1s ease;
+    opacity: 1;
 }
 
 .back-to-top a:active {
@@ -34043,7 +34044,7 @@ button
     z-index: 100;
     text-decoration: none;
     width: 3rem;
-    opacity: 0;
+    opacity: 0.75;
     overflow: hidden;
 }
 
@@ -34119,8 +34120,8 @@ button
     display: none;
 }
 
-.back-to-top-show {
-    opacity: 0.75 !important;
+.back-to-top-hide {
+    opacity: 0 !important;
     transition: opacity 1s ease;
 }
 
