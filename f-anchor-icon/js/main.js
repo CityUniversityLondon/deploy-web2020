@@ -5169,7 +5169,6 @@ function findLinks(e) {
 
     if (download) {
       prependIcon(anchor, 'fa-download');
-      console.log('booo');
     } else {
       findDocumentLinks(anchor);
     }
