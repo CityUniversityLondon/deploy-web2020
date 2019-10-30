@@ -46677,6 +46677,8 @@ button
 
 .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider .slider__controls__wrap {
     margin-right: 0;
+    margin: 1rem 0;
+    grid-column: 1/-1;
 }
 
 .wrapper--research-degree__footer {
@@ -46740,7 +46742,7 @@ button
     grid-column: 1/-1;
 }
 
-@media (min-width: 433px) and (max-width: 900px) {
+@media (min-width: 769px) and (max-width: 900px) {
     .wrapper--research-degree__footer .research-degree__footer__contact--two-cards .research-degree__footer__useful-links {
         grid-column: 1/7;
     }
