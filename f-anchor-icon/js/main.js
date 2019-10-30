@@ -426,6 +426,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+/**
+ *
+ * actionOnScroll use the IntersectionObserver API to check if element is intersceting
+ *
+ * @param {HTMLElement} element - element to observer
+ * @param {Action} Function/String - To either excute provided function on element or add the string as a class name
+ * @param {Boolean} defualt false - pass true if you want the function to run every time element is Intersecting
+ * @param {Object} Object - Pass options to customise IntersectionObserver see docs
+ */
 function actionOnScroll(element, action) {
   var repeat = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
   var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {
@@ -435,6 +445,7 @@ function actionOnScroll(element, action) {
   if (element && typeof element != 'undefined' && element != null) {
     var actionOnScrollAction = function actionOnScrollAction(entries) {
       entries.forEach(function (entry) {
+        //what to do with element depending on action type
         if (entry.isIntersecting) {
           if (typeof action === 'string') {
             element.classList.add(action);
@@ -448,7 +459,8 @@ function actionOnScroll(element, action) {
           }
         }
       });
-    };
+    }; //intialise observer and observer element
+
 
     var observer = new IntersectionObserver(actionOnScrollAction, options);
     observer.observe(element);
@@ -777,17 +789,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
 /* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
 /* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
-/* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
-/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
-/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
-/* harmony import */ var _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/image-carousel/image-carousel */ "./src/patterns/image-carousel/image-carousel.js");
-/* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
-/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
-/* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
-/* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
-/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
-/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
+/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
+/* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
+/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
+/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
+/* harmony import */ var _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/image-carousel/image-carousel */ "./src/patterns/image-carousel/image-carousel.js");
+/* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
+/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
+/* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
+/* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
+/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
+/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
 
 
 /**
@@ -822,7 +835,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_22__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__["default"]]);
 
 /***/ }),
 
@@ -1367,6 +1381,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _action_on_scroll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../action-on-scroll */ "./src/action-on-scroll.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+
 
 
 
@@ -1378,12 +1394,32 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var className = 'animate-number';
-var DURATION = 1500;
+var DURATION = 1500; // set duration variable 1500 ms increase if want longer animation
+
+/**
+ *
+ * find container containing the number
+ *
+ * @param {HTMLElement} element - html element to be animated
+ * @return {HTMLElement} element - if element to be animated is found return it else return original element
+ */
 
 function findNumberContainer(widget) {
   var nested = widget.querySelector('.animate--number__number');
   return typeof nested != 'undefined' && nested != null ? nested : widget;
 }
+/**
+ *
+ * Intial setup
+ * add data attr : data-animation-number-value - number to animate
+ * add data attr : data-animation-number-float - boolean value if number is float
+ * add data attr : data-animation-numner-start - number value of where to start animation from
+ * add class name - animate--number--init
+ *
+ * @param {HTMLElement} element - The section that need to be animated
+ * @return {boolean} - if number animation is setup?
+ */
+
 
 function initNumberAnimation(widget) {
   var startStr = widget.dataset.animationNumberStart || '0';
@@ -1402,6 +1438,13 @@ function initNumberAnimation(widget) {
     return false;
   }
 }
+/**
+ *
+ * run animation function
+ *
+ * @param {HTMLElement} element - element to be animated
+ */
+
 
 function runNumberAnimation(widget) {
   var numberContainer = findNumberContainer(widget);
@@ -1413,6 +1456,11 @@ function runNumberAnimation(widget) {
     var startTime = 0;
     var startValue = parseInt(widget.dataset.animationNumberStart);
     var lastValue = 0;
+    /**
+     * function to run animation
+     *
+     * @param {timestamp} time stamp - time stamp from requestAnimationFrame API
+     */
 
     var f = function f(timestamp) {
       if (first) {
@@ -1420,7 +1468,8 @@ function runNumberAnimation(widget) {
         first = false;
       }
 
-      var t = (timestamp - startTime) / DURATION;
+      var t = (timestamp - startTime) / DURATION; // difference in time between two discrete points in time divied by duration
+
       var finish = t >= 1;
       var k = finish ? 1 : 1 - Math.pow(1 - t, 4);
       var v = k * (value - startValue) + startValue;
@@ -1431,26 +1480,60 @@ function runNumberAnimation(widget) {
 
       if (lastValue !== v) {
         lastValue = v;
-        numberContainer.innerHTML = v.toLocaleString('en-GB');
+        numberContainer.innerHTML = v.toLocaleString('en-GB'); // append and format to GB
       }
 
       if (finish) {
+        //end of animation
         widget.classList.add('animate--number--complete');
       } else {
+        //repeat call requestAnimationFrame until finish is true
         window.requestAnimationFrame(f);
       }
     };
+    /**
+     * run requestAnimationFrame to repaint animation to screen
+     */
+
 
     window.requestAnimationFrame(f);
   }
 }
+/**
+ *
+ * Intial setup
+ *
+ * number animation should contain a wrapper with a class name 'animate-number'
+ * there should be at least one child element with a class name 'animate--number__heading'
+ * and a span element with a class name 'animate--number__number' containing the number
+ *
+ * e.g.
+ *
+ * <div class="animate-number">
+ *  <h2 class="animate animate--number__heading">
+ *      <span class="animate--number__number">10,000</span>
+ *  </h2>
+ * </div>
+ *
+ * @param {HTMLElement} elm - An HTML element with the 'animate-number' class.
+ *
+ */
+
 
 function init(elm) {
-  var lazyNumbers = [].slice.call(elm.querySelectorAll('.animate--number__heading'));
+  var lazyNumbers = [].slice.call(elm.querySelectorAll('.animate--number'));
+  /**
+   * check if browser support IntersectionObserver api
+   */
 
-  if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_8__["checkIntersectionObserver"])()) {
     lazyNumbers.forEach(function (lazyUnit) {
       initNumberAnimation(lazyUnit);
+      /**
+       * pass the element and function to actionOnScroll
+       * to animate when element is intersecting
+       */
+
       Object(_action_on_scroll__WEBPACK_IMPORTED_MODULE_7__["actionOnScroll"])(lazyUnit, runNumberAnimation);
     });
   }
@@ -2914,7 +2997,7 @@ function finder__selectbox(props) {
     return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("option", {
       key: value.data,
       value: responseFacetDetails
-    }, props.facet.meta === 'rSub' ? value.label.replace(props.query.facets.G + '_', '') : value.label);
+    }, props.facet.meta === 'rSub' ? value.label.replace(props.query.facets.G.replace(/"/g, '') + '_', '') : value.label);
   }) : null));
 }
 
@@ -3095,7 +3178,7 @@ function finder__appliedfilters(props) {
       }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
         className: "fal fa-times icon",
         "aria-label": "Remove filter"
-      }), ' ', react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, labels.name, ":\xA0", labels.meta === 'rSub' ? facetValue.replace(props.query.facets.G + '_', '') : facetValue))));
+      }), ' ', react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, labels.name, ":\xA0", labels.meta === 'rSub' ? facetValue.replace(props.query.facets.G.replace(/"/g, '') + '_', '') : facetValue))));
     }))));
   } else {
     return null;
@@ -5023,7 +5106,7 @@ var className = 'link-finder';
 
 function prependIcon(anchor, className) {
   var node = document.createElement('span');
-  node.className = 'fas fa-' + className + '  file-icon';
+  node.className = 'fas ' + className + '  link-decorator';
   node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, true);
   anchor.parentNode.prepend(node);
 }
@@ -5061,7 +5144,7 @@ function findDocumentLinks(anchor) {
 
   for (var key in fileTypes) {
     if (anchor.href.indexOf('.' + key) != -1) {
-      prependIcon(anchor, 'file-' + fileTypes[key]);
+      prependIcon(anchor, 'fa-file-' + fileTypes[key]);
       var anchorText = anchor.textContent;
       anchorText += ' [' + key.toUpperCase() + ']';
       anchor.textContent = null;
@@ -6535,6 +6618,87 @@ function addPagination(elem, itemCount) {
 
 /***/ }),
 
+/***/ "./src/patterns/show-more/show-more.js":
+/*!*********************************************!*\
+  !*** ./src/patterns/show-more/show-more.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+
+
+var className = 'show-more';
+
+window.onload = function () {
+  var showMoreTextElements = document.querySelectorAll('.show-more__text');
+  showMoreTextElements.forEach(function (element) {
+    element.setAttribute('data-height', element.offsetHeight);
+    element.classList.add('show-more__text--hidden');
+  });
+};
+
+function showMore(element) {
+  createHTMLElements(element);
+  var anchor = element.querySelector('.show-more__anchor');
+  anchor.addEventListener('click', handleReadMoreClick, false);
+}
+
+function handleReadMoreClick(e) {
+  var parent = e.currentTarget.parentNode.parentNode.parentNode;
+  var showMoreText = parent.querySelector('.show-more__text');
+  var showMoreTextHeight = showMoreText.getAttribute('data-height') + 'px';
+  var showMoreAnchorLinkText = parent.querySelector('.show-more__anchor__link-text');
+  var srTextElement = parent.querySelector('.sr-only');
+  showMoreAnchorLinkText.textContent = null;
+
+  if (showMoreText.classList.contains('show-more__text--hidden')) {
+    e.currentTarget.classList.add('active');
+    showMoreText.classList.remove('show-more__text--hidden');
+    showMoreAnchorLinkText.textContent = 'Show less';
+    showMoreText.style.maxHeight = showMoreTextHeight;
+  } else {
+    e.currentTarget.classList.remove('active');
+    showMoreAnchorLinkText.textContent = 'Show more';
+    showMoreText.classList.add('show-more__text--hidden');
+    showMoreText.style.maxHeight = null;
+    var headingElement = parent.querySelector('h2');
+    headingElement.scrollIntoView();
+  }
+
+  showMoreAnchorLinkText.appendChild(srTextElement);
+}
+
+function createHTMLElements(element) {
+  var showMoreButtonContainer = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('div', '', '', '', 'show-more__button__container');
+  element.appendChild(showMoreButtonContainer);
+  var spanButtonContainer = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'show-more__button');
+  showMoreButtonContainer.appendChild(spanButtonContainer);
+  var showMoreAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('a', '', '', '', 'show-more__anchor');
+  showMoreAnchor.setAttribute('href', '#/');
+  spanButtonContainer.appendChild(showMoreAnchor);
+  var elementsArray = [Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-plus-circle', '', '', 'aria-hidden', 'true'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-minus-circle', '', '', 'aria-hidden', 'true'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', 'Show more', '', '', 'show-more__anchor__link-text')];
+  elementsArray.forEach(function (element) {
+    showMoreAnchor.appendChild(element);
+  });
+  var dataTitle = element.getAttribute('data-title');
+  var srTextElement = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', ' about the ' + dataTitle, '', '', 'sr-only');
+  elementsArray[2].appendChild(srTextElement);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: showMore,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
 /***/ "./src/patterns/slider/slider.js":
 /*!***************************************!*\
   !*** ./src/patterns/slider/slider.js ***!
@@ -6598,7 +6762,12 @@ var className = 'slider';
 var sliderChildren, sliderChildrenLength;
 
 function initSlider(slider) {
-  // slider items count
+  if (slider.children.length < 2) {
+    Object(_util__WEBPACK_IMPORTED_MODULE_10__["removeClass"])(slider, className, false);
+    return;
+  } // slider items count
+
+
   sliderChildren = _toConsumableArray(slider.children);
   sliderChildrenLength = sliderChildren.length;
   var _iteratorNormalCompletion = true;
@@ -7200,7 +7369,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, createElement */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, createElement, checkIntersectionObserver */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7220,6 +7389,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toArray", function() { return toArray; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detectIE", function() { return detectIE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return createElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkIntersectionObserver", function() { return checkIntersectionObserver; });
 /* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol */ "./node_modules/core-js/modules/es.symbol.js");
 /* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_symbol_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator */ "./node_modules/core-js/modules/es.symbol.iterator.js");
@@ -7528,6 +7698,20 @@ function createElement(type, content, arialabel, disabled, className1, className
   ariaTag2 ? el.setAttribute(ariaTag2, ariaTagContent2) : null;
   disabled ? el.setAttribute('disabled', true) : null;
   return el;
+}
+/**
+ *
+ * Check If browser support Intersection Observer API
+ *
+ * @returns {Boolean} -
+ */
+
+function checkIntersectionObserver() {
+  if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /***/ }),

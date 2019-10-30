@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .width--quarter {
     width: 0.25rem;
 }
@@ -18102,7 +18103,7 @@ html {
      * ss03: 0/1 plain/slashed '0'
      * ss04: 0/1 plain/dotted '0'
      */
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
     font-size: 16px;
     font-style: normal;
     font-weight: 450;
@@ -18112,7 +18113,7 @@ html {
 
 html i,
 html em {
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -18348,13 +18349,13 @@ u {
 
 .meta {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-weight: 400;
 }
 
 .meta i,
 .meta em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .meta b,
@@ -18416,12 +18417,12 @@ u {
      * ss03: 0/1 plain/slashed '0'
      * ss04: 0/1 plain/dotted '0'
      */
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 1;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 1, 'liga' 1;
 }
 
 .style-fraction i,
 .style-fraction em {
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 1;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 1, 'liga' 1;
 }
 
 .content-style {
@@ -18548,7 +18549,7 @@ p code {
 h6,
 .h6-style {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
@@ -18562,7 +18563,7 @@ h6 i,
 h6 em,
 .h6-style i,
 .h6-style em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 h6 b,
@@ -18629,7 +18630,7 @@ h6 strong,
 h5,
 .h5-style {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
@@ -18642,7 +18643,7 @@ h5 i,
 h5 em,
 .h5-style i,
 .h5-style em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 h5 b,
@@ -18709,7 +18710,7 @@ h5 strong,
 h4,
 .h4-style {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
@@ -18722,7 +18723,7 @@ h4 i,
 h4 em,
 .h4-style i,
 .h4-style em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 h4 b,
@@ -18789,7 +18790,7 @@ h4 strong,
 h3,
 .h3-style {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.25;
     letter-spacing: -0.013em;
@@ -18802,7 +18803,7 @@ h3 i,
 h3 em,
 .h3-style i,
 .h3-style em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 h3 b,
@@ -18869,7 +18870,7 @@ h3 strong,
 h2,
 .h2-style {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.602rem;
     line-height: 1.25;
     letter-spacing: -0.015em;
@@ -18882,7 +18883,7 @@ h2 i,
 h2 em,
 .h2-style i,
 .h2-style em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 h2 b,
@@ -18949,7 +18950,7 @@ h2 strong,
 h1,
 .h1-style {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.802rem;
     line-height: 1.25;
     letter-spacing: -0.016em;
@@ -18961,7 +18962,7 @@ h1 i,
 h1 em,
 .h1-style i,
 .h1-style em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 h1 b,
@@ -19143,7 +19144,7 @@ h6 + h3,
 h6 + h4,
 h6 + h5,
 h6 + h6 {
-    margin-top: 0;
+    margin-top: 1rem;
 }
 
 main {
@@ -19257,7 +19258,7 @@ main sub {
 
 main header p {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.602rem;
     line-height: 1.25;
     letter-spacing: -0.015em;
@@ -19270,7 +19271,7 @@ main header p {
 
 main header p i,
 main header p em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 main header p b,
@@ -19328,7 +19329,7 @@ main .standfirst-style {
     line-height: 1.25;
     letter-spacing: -0.011em;
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-style: normal;
     font-weight: 300;
     line-height: 1.625;
@@ -19375,7 +19376,7 @@ main .standfirst i,
 main .standfirst em,
 main .standfirst-style i,
 main .standfirst-style em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 main p > img {
@@ -19402,7 +19403,7 @@ main ul ul {
 
 main dt {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
@@ -19414,7 +19415,7 @@ main dt {
 
 main dt i,
 main dt em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 main dt b,
@@ -19484,7 +19485,7 @@ main table {
 
 main table th {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
@@ -19497,7 +19498,7 @@ main table th {
 
 main table th i,
 main table th em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 main table th b,
@@ -19822,10 +19823,6 @@ main table td em {
     color: #d61726;
 }
 
-.icon.fa-phone {
-    transform: rotate(90deg);
-}
-
 .standard-grid-wrapper {
     grid-row-gap: 0;
     display: grid;
@@ -20030,7 +20027,6 @@ main table td em {
         margin: 1rem 0;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body:focus, .js .accordion > .accordion__heading[data-open='true'] + .accordion__body:active {
-        border-width: 0 0.0625rem 0.0625rem;
         border-style: dotted;
         border-color: #0c0c0e;
     }
@@ -20478,7 +20474,7 @@ main table td em {
 
 .card--casestudy a .card__title {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.25;
     letter-spacing: -0.013em;
@@ -20493,7 +20489,7 @@ main table td em {
 
 .card--casestudy a .card__title i,
 .card--casestudy a .card__title em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .card--casestudy a .card__title b,
@@ -21011,7 +21007,7 @@ main table td em {
 
 .card--event__title-link .underline-transition__title {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
@@ -21022,7 +21018,7 @@ main table td em {
 
 .card--event__title-link .underline-transition__title i,
 .card--event__title-link .underline-transition__title em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .card--event__title-link .underline-transition__title b,
@@ -21807,7 +21803,7 @@ main table td em {
 
 .card--news__title-link a {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
@@ -21819,7 +21815,7 @@ main table td em {
 
 .card--news__title-link a i,
 .card--news__title-link a em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .card--news__title-link a b,
@@ -22061,7 +22057,7 @@ main table td em {
 
 .card--pathway .card__title {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.25;
     letter-spacing: -0.013em;
@@ -22076,7 +22072,7 @@ main table td em {
 
 .card--pathway .card__title i,
 .card--pathway .card__title em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .card--pathway .card__title b,
@@ -22207,10 +22203,6 @@ main table td em {
     }
 }
 
-.card--pathway:after {
-    border: 0.0625rem solid #e5e5e5;
-}
-
 .card--pathway:focus, .card--pathway:active {
     outline: none;
 }
@@ -22243,7 +22235,7 @@ main table td em {
 .card--pathway--blue {
     /*
         Pathway card uses same background
-        color and scale transition as 
+        color and scale transition as
         other cards (course, related) but
         the colours need to be overriden
         due to all alternatives below. This
@@ -22290,7 +22282,7 @@ main table td em {
 .card--pathway--purple {
     /*
         Pathway card uses same background
-        color and scale transition as 
+        color and scale transition as
         other cards (course, related) but
         the colours need to be overriden
         due to all alternatives below. This
@@ -22337,7 +22329,7 @@ main table td em {
 .card--pathway--pink {
     /*
         Pathway card uses same background
-        color and scale transition as 
+        color and scale transition as
         other cards (course, related) but
         the colours need to be overriden
         due to all alternatives below. This
@@ -22384,7 +22376,7 @@ main table td em {
 .card--pathway--green {
     /*
         Pathway card uses same background
-        color and scale transition as 
+        color and scale transition as
         other cards (course, related) but
         the colours need to be overriden
         due to all alternatives below. This
@@ -22431,7 +22423,7 @@ main table td em {
 .card--pathway--purple {
     /*
         Pathway card uses same background
-        color and scale transition as 
+        color and scale transition as
         other cards (course, related) but
         the colours need to be overriden
         due to all alternatives below. This
@@ -22478,7 +22470,7 @@ main table td em {
 .card--pathway--pink {
     /*
         Pathway card uses same background
-        color and scale transition as 
+        color and scale transition as
         other cards (course, related) but
         the colours need to be overriden
         due to all alternatives below. This
@@ -22525,7 +22517,7 @@ main table td em {
 .card--pathway--teal {
     /*
         Pathway card uses same background
-        color and scale transition as 
+        color and scale transition as
         other cards (course, related) but
         the colours need to be overriden
         due to all alternatives below. This
@@ -22572,7 +22564,7 @@ main table td em {
 .card--pathway--yellow {
     /*
         Pathway card uses same background
-        color and scale transition as 
+        color and scale transition as
         other cards (course, related) but
         the colours need to be overriden
         due to all alternatives below. This
@@ -22878,7 +22870,7 @@ main table td em {
 
 .card--related-course a .card__title {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.25;
     letter-spacing: -0.013em;
@@ -22893,7 +22885,7 @@ main table td em {
 
 .card--related-course a .card__title i,
 .card--related-course a .card__title em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .card--related-course a .card__title b,
@@ -23087,7 +23079,7 @@ main table td em {
 
 .card--related-course__title {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.25;
     letter-spacing: -0.013em;
@@ -23101,7 +23093,7 @@ main table td em {
 
 .card--related-course__title i,
 .card--related-course__title em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .card--related-course__title b,
@@ -23268,8 +23260,30 @@ main table td em {
     margin-right: 1.25rem;
 }
 
+.research-card-block {
+    background: #f2f2f2;
+}
+
+@media (max-width: 899px) {
+    .research-card-block {
+        background: none;
+    }
+}
+
+@media (min-width: 901px) {
+    .research-card-block {
+        padding: 2rem;
+    }
+}
+
 .card--research {
-    padding: 2.5rem;
+    padding: 1rem;
+}
+
+@media (min-width: 433px) {
+    .card--research {
+        padding: 2rem;
+    }
 }
 
 .card--research:hover, .card--research:focus-within {
@@ -23279,7 +23293,7 @@ main table td em {
 
 .card--research__title-link {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
@@ -23290,7 +23304,7 @@ main table td em {
 
 .card--research__title-link i,
 .card--research__title-link em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .card--research__title-link b,
@@ -23423,183 +23437,250 @@ main table td em {
 }
 
 .card--testimonial {
-    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
-.card--testimonial__quote {
+@media (max-width: 768px) {
+    .card--testimonial {
+        align-items: center;
+    }
+}
+
+@media (min-width: 769px) {
+    .card--testimonial {
+        flex-direction: row;
+    }
+}
+
+.card--testimonial .card--testimonial__photo {
+    margin-top: 2rem;
+    max-width: 8rem;
+}
+
+@media (min-width: 769px) {
+    .card--testimonial .card--testimonial__photo {
+        align-self: start;
+        margin-left: 1rem;
+        margin-right: 2rem;
+    }
+}
+
+.card--testimonial .card--testimonial__text .card--testimonial__quote {
+    margin-top: 2rem;
+    position: relative;
+}
+
+.card--testimonial .card--testimonial__text .card--testimonial__quote p {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-style: normal;
     font-weight: 300;
     line-height: 1.625;
     margin-top: 0.75rem;
     max-width: 55ch;
-    margin-top: 0;
+    /**
+                 * Increasing the font size of the quotation marks means that the
+                 * lines containing them are slightly taller, resulting in uneven
+                 * spacing.
+                 *
+                 * Increase the spacing throughout to make space and so it’s at
+                 * equal throughout.
+                 **/
+    line-height: 1.802;
     color: #1e1e1e;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--testimonial__quote {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote p {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--testimonial__quote {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote p {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--testimonial__quote {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote p {
         letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--testimonial__quote {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote p {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--testimonial__quote {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote p {
         letter-spacing: -0.017em;
     }
 }
 
-.card--testimonial__quote i,
-.card--testimonial__quote em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+.card--testimonial .card--testimonial__text .card--testimonial__quote p i,
+.card--testimonial .card--testimonial__text .card--testimonial__quote p em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
-.card--testimonial__quote-marks {
+.card--testimonial .card--testimonial__text .card--testimonial__quote p:first-child {
+    margin-top: 0;
+}
+
+.card--testimonial .card--testimonial__text .card--testimonial__quote:before,
+.card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.625;
+    margin-top: 0.75rem;
+    max-width: 55ch;
     font-size: 1.802rem;
     line-height: 1.25;
     letter-spacing: -0.016em;
-    font-family: "Meta Sans", sans-serif;
     color: #3e1031;
+    display: inline;
+    /**
+                 * Quotation mark line height equal to other lines, even though
+                 * the font size is greater.
+                 **/
+    line-height: 1;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--testimonial__quote-marks {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
+    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
+    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
+    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
+    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
+    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--testimonial .card--testimonial__text .card--testimonial__quote:before i,
+.card--testimonial .card--testimonial__text .card--testimonial__quote:before em,
+.card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after i,
+.card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
+    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
         letter-spacing: -0.016em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--testimonial__quote-marks {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
+    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
         letter-spacing: -0.016em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--testimonial__quote-marks {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
+    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--testimonial__quote-marks {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
+    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--testimonial__quote-marks {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
+    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
         letter-spacing: -0.017em;
     }
 }
 
-.card--testimonial__author {
-    margin-top: 2rem;
+.card--testimonial .card--testimonial__text .card--testimonial__quote:before {
+    content: '“';
+    left: -0.75rem;
+    position: absolute;
+    top: -0.5rem;
 }
 
-.card--testimonial__author p {
+.card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+    content: '”';
+}
+
+.card--testimonial .card--testimonial__text .card--testimonial__author {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    font-weight: 700;
     color: #696969;
-    margin-top: 0;
+    font-weight: 700;
+    margin-top: 2rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--testimonial__author p {
+    .card--testimonial .card--testimonial__text .card--testimonial__author {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--testimonial__author p {
+    .card--testimonial .card--testimonial__text .card--testimonial__author {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--testimonial__author p {
+    .card--testimonial .card--testimonial__text .card--testimonial__author {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--testimonial__author p {
+    .card--testimonial .card--testimonial__text .card--testimonial__author {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--testimonial__author p {
+    .card--testimonial .card--testimonial__text .card--testimonial__author {
         letter-spacing: -0.017em;
-    }
-}
-
-.card--testimonial__column:first-child {
-    margin-right: 1.5rem;
-}
-
-@media (min-width: 769px) {
-    .card--testimonial--photo {
-        display: flex;
-    }
-}
-
-.card--testimonial--photo .card--testimonial__author {
-    display: flex;
-}
-
-.card--testimonial--photo .card--testimonial__author__photo {
-    margin-left: 1rem;
-}
-
-@media (min-width: 769px) {
-    .card--testimonial--photo .card--testimonial__photo {
-        margin-bottom: 0;
-    }
-}
-
-.card--testimonial--photo .card--testimonial__photo--large {
-    margin-bottom: 2rem;
-    max-width: 8rem;
-    display: none;
-}
-
-@media (min-width: 769px) {
-    .card--testimonial--photo .card--testimonial__photo--large {
-        display: block;
-    }
-}
-
-.card--testimonial--photo .card--testimonial__photo--small {
-    max-width: 3rem;
-}
-
-@media (min-width: 769px) {
-    .card--testimonial--photo .card--testimonial__photo--small {
-        display: none;
     }
 }
 
@@ -23805,7 +23886,7 @@ _:-ms-lang(x),
     line-height: 1.25;
     letter-spacing: -0.011em;
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-style: normal;
     font-weight: 300;
     line-height: 1.625;
@@ -23847,7 +23928,7 @@ _:-ms-lang(x),
 
 .card--testimonial-feature__details__quote i,
 .card--testimonial-feature__details__quote em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .card--testimonial-feature__details__quote-marks {
@@ -23888,61 +23969,45 @@ _:-ms-lang(x),
     }
 }
 
-.card--testimonial-feature__details__author {
-    margin-top: 2rem;
-}
-
-.card--testimonial-feature__details__author p {
+.card--testimonial-feature__details__author__details {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    font-weight: 700;
     color: #696969;
-    margin-top: 0;
+    margin-top: 2rem;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .card--testimonial-feature__details__author p {
+    .card--testimonial-feature__details__author__details {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .card--testimonial-feature__details__author p {
+    .card--testimonial-feature__details__author__details {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--testimonial-feature__details__author p {
+    .card--testimonial-feature__details__author__details {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--testimonial-feature__details__author p {
+    .card--testimonial-feature__details__author__details {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--testimonial-feature__details__author p {
+    .card--testimonial-feature__details__author__details {
         letter-spacing: -0.017em;
     }
 }
 
-.card--testimonial-feature__details__author a {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
+.card--testimonial-feature__details__author__details a {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -23963,10 +24028,18 @@ _:-ms-lang(x),
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
 }
 
 @media (hover: hover) {
-    .card--testimonial-feature__details__author a:hover {
+    .card--testimonial-feature__details__author__details a:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -23981,37 +24054,7 @@ _:-ms-lang(x),
     }
 }
 
-.card--testimonial-feature__details__author a:focus, .card--testimonial-feature__details__author a:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (hover: hover) {
-    .card--testimonial-feature__details__author a:hover {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.card--testimonial-feature__details__author a:focus, .card--testimonial-feature__details__author a:active {
+.card--testimonial-feature__details__author__details a:focus, .card--testimonial-feature__details__author__details a:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -24026,68 +24069,122 @@ _:-ms-lang(x),
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .card--testimonial-feature__details__author a {
+    .card--testimonial-feature__details__author__details a {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .card--testimonial-feature__details__author a:hover {
+    .card--testimonial-feature__details__author__details a:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.card--testimonial-feature__details__author a:visited {
+.card--testimonial-feature__details__author__details a:visited {
     color: #4c2c92;
 }
 
-.card--testimonial-feature__details__author a:focus {
+.card--testimonial-feature__details__author__details a:focus {
     color: #006bbd;
 }
 
 @media (hover: hover) {
-    .card--testimonial-feature__details__author a:hover {
+    .card--testimonial-feature__details__author__details a:hover {
         color: #ffffff;
     }
 }
 
-.card--testimonial-feature__details__author a:active {
+.card--testimonial-feature__details__author__details a:active {
     color: #ffffff;
     background-color: #006bbd;
 }
 
-.card--testimonial-feature__details__author a:focus, .card--testimonial-feature__details__author a:active {
+.card--testimonial-feature__details__author__details a:focus, .card--testimonial-feature__details__author__details a:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-.card--testimonial-feature__details__author a:visited {
+.card--testimonial-feature__details__author__details a:visited {
     border-bottom-color: #4c2c92;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
 
-.card--testimonial-feature__details__author a:focus {
+.card--testimonial-feature__details__author__details a:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
 
 @media (hover: hover) {
-    .card--testimonial-feature__details__author a:hover {
+    .card--testimonial-feature__details__author__details a:hover {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
     }
 }
 
-.card--testimonial-feature__details__author a:active {
+.card--testimonial-feature__details__author__details a:active {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
+}
+
+.card--testimonial-feature__details__author__details a i,
+.card--testimonial-feature__details__author__details a em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.card--testimonial-feature__details__author__details a b,
+.card--testimonial-feature__details__author__details a strong {
+    font-weight: inherit;
+}
+
+.card--testimonial-feature__details__author__details a i,
+.card--testimonial-feature__details__author__details a em {
+    font-style: italic;
+}
+
+.card--testimonial-feature__details__author__details a u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--testimonial-feature__details__author__details a {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--testimonial-feature__details__author__details a {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--testimonial-feature__details__author__details a {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--testimonial-feature__details__author__details a {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--testimonial-feature__details__author__details a {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--testimonial-feature__details__author__details a b,
+.card--testimonial-feature__details__author__details a strong {
+    font-weight: 600;
 }
 
 @media (min-width: 769px) {
@@ -27071,7 +27168,7 @@ _:-ms-lang(x),
     display: inline-block;
 }
 
-.file-icon {
+.link-decorator {
     color: #d61726;
     margin-right: 0.5rem;
 }
@@ -27842,7 +27939,7 @@ article figure figcaption a:active {
      * ss03: 0/1 plain/slashed '0'
      * ss04: 0/1 plain/dotted '0'
      */
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
@@ -27858,7 +27955,7 @@ article figure figcaption a:active {
 
 .finder__query__input i,
 .finder__query__input em {
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -27908,7 +28005,7 @@ article figure figcaption a:active {
      * ss03: 0/1 plain/slashed '0'
      * ss04: 0/1 plain/dotted '0'
      */
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
@@ -27925,7 +28022,7 @@ article figure figcaption a:active {
 
 .finder__query__input input i,
 .finder__query__input input em {
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -28477,7 +28574,14 @@ article figure figcaption a:active {
 
 @media (max-width: 768px) {
     .finder__query__submit .finder__query__submit__text {
-        display: none;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
     }
 }
 
@@ -28676,7 +28780,7 @@ article figure figcaption a:active {
 
 .finder__filter legend {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.25;
     letter-spacing: -0.013em;
@@ -28692,7 +28796,7 @@ article figure figcaption a:active {
 
 .finder__filter legend i,
 .finder__filter legend em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .finder__filter legend b,
@@ -30261,7 +30365,7 @@ article figure figcaption a:active {
 
 .finder__results__card a .card__title {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.25;
     letter-spacing: -0.013em;
@@ -30276,7 +30380,7 @@ article figure figcaption a:active {
 
 .finder__results__card a .card__title i,
 .finder__results__card a .card__title em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .finder__results__card a .card__title b,
@@ -31437,6 +31541,211 @@ article figure figcaption a:active {
     grid-area: button;
 }
 
+.key-information--research__main {
+    background: #ffffff;
+    border: solid 0.0625rem #d8d8d8;
+    padding: 1rem;
+}
+
+.key-information--research__main__dates {
+    overflow: hidden;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    padding-bottom: 1.5rem;
+    border-bottom: solid 0.25rem #541b85;
+}
+
+.key-information--research__main__dates tbody {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.5rem;
+}
+
+@media (max-width: 899px) {
+    .key-information--research__main__dates tbody {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.key-information--research__main__dates tr {
+    display: flex;
+    grid-column: 1 / 3;
+}
+
+.key-information--research__main__dates tr:nth-of-type(2n + 2) {
+    background: #e5e5e5;
+}
+
+.key-information--research__main__dates tr th {
+    flex: 1;
+    color: #303030;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    margin-top: 0;
+    font-weight: 600;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .key-information--research__main__dates tr th {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .key-information--research__main__dates tr th {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .key-information--research__main__dates tr th {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .key-information--research__main__dates tr th {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .key-information--research__main__dates tr th {
+        letter-spacing: -0.017em;
+    }
+}
+
+.key-information--research__main__dates tr th:nth-of-type(2) {
+    margin-left: 1.5rem;
+}
+
+.key-information--research__main__dates tr td {
+    flex: 1;
+}
+
+.key-information--research__main__dates tr td:nth-of-type(2) {
+    margin-left: 1.5rem;
+}
+
+@media (min-width: 432px) {
+    .key-information--research__main__dates .date--short {
+        display: none;
+    }
+}
+
+@media (max-width: 431px) {
+    .key-information--research__main__dates .date--long {
+        display: none;
+    }
+}
+
+.key-information--research__main__duration {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 899px) {
+    .key-information--research__main__duration {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0;
+    }
+}
+
+.key-information--research__main__duration__heading {
+    color: #303030;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    font-weight: 600;
+    font-family: "Meta Sans", sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .key-information--research__main__duration__heading {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .key-information--research__main__duration__heading {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .key-information--research__main__duration__heading {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .key-information--research__main__duration__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .key-information--research__main__duration__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+.key-information--research__main__duration__item {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .key-information--research__main__duration__item {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .key-information--research__main__duration__item {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .key-information--research__main__duration__item {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .key-information--research__main__duration__item {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .key-information--research__main__duration__item {
+        letter-spacing: -0.017em;
+    }
+}
+
+.key-information--research__main__duration__item span {
+    color: #541b85;
+    font-weight: 600;
+}
+
+@media (max-width: 899px) {
+    .key-information--research__main__duration__item {
+        margin-bottom: 1rem;
+    }
+}
+
+.key-information--research__main__duration__item__label {
+    display: block;
+    color: #1e1e1e;
+}
+
 .key-info {
     max-width: 80rem;
 }
@@ -31886,7 +32195,7 @@ article figure figcaption a:active {
 
 .js .menu .menu__button {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.802rem;
     line-height: 1.25;
     letter-spacing: -0.016em;
@@ -31896,7 +32205,7 @@ article figure figcaption a:active {
 
 .js .menu .menu__button i,
 .js .menu .menu__button em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .js .menu .menu__button b,
@@ -32895,7 +33204,7 @@ article figure figcaption a:active {
     line-height: 1.25;
     letter-spacing: -0.011em;
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-style: normal;
     font-weight: 300;
     line-height: 1.625;
@@ -32935,7 +33244,7 @@ article figure figcaption a:active {
 
 .blockquote__body p i,
 .blockquote__body p em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .blockquote__body p em {
@@ -33038,21 +33347,22 @@ blockquote footer cite {
 }
 
 .slider__controls__wrap {
-    grid-column: 6 / 16;
+    grid-column: 6 / 14;
     display: flex;
     flex-direction: row-reverse;
     margin: 0 2rem 2rem 0;
+    max-width: 65ch;
 }
 
 @media (max-width: 1280px) {
     .slider__controls__wrap {
-        grid-column: 3 / 16;
+        grid-column: 3 / 17;
     }
 }
 
 @media (max-width: 900px) {
     .slider__controls__wrap {
-        grid-column: 2 / 13;
+        grid-column: 2 / 12;
         margin-right: 1rem;
     }
 }
@@ -33328,7 +33638,7 @@ blockquote footer cite {
     }
     .js .tabs .tabs__links li a span {
         font-family: "Meta Sans", sans-serif;
-        font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+        font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
         font-size: 1rem;
         line-height: 1.625;
         letter-spacing: -0.005em;
@@ -33351,7 +33661,7 @@ blockquote footer cite {
     }
     .js .tabs .tabs__links li a span i,
     .js .tabs .tabs__links li a span em {
-        font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+        font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     }
     .js .tabs .tabs__links li a span b,
     .js .tabs .tabs__links li a span strong {
@@ -34217,7 +34527,7 @@ body.modal--in.no-scroll .modal__background {
     line-height: 1.25;
     letter-spacing: -0.011em;
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-style: normal;
     font-weight: 300;
     line-height: 1.625;
@@ -34259,7 +34569,7 @@ body.modal--in.no-scroll .modal__background {
 
 .modal__heading i,
 .modal__heading em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 a.modal__close {
@@ -34650,7 +34960,7 @@ article .link-copy {
 
 .module-selector__heading {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.25;
     letter-spacing: -0.013em;
@@ -34661,7 +34971,7 @@ article .link-copy {
 
 .module-selector__heading i,
 .module-selector__heading em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .module-selector__heading b,
@@ -34897,7 +35207,7 @@ article .link-copy {
 
 .statistics-block .ksp__items .ksp__item h2 {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.802rem;
     line-height: 1.25;
     letter-spacing: -0.016em;
@@ -34908,7 +35218,7 @@ article .link-copy {
 
 .statistics-block .ksp__items .ksp__item h2 i,
 .statistics-block .ksp__items .ksp__item h2 em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .statistics-block .ksp__items .ksp__item h2 b,
@@ -36109,7 +36419,7 @@ article .link-copy {
      * ss03: 0/1 plain/slashed '0'
      * ss04: 0/1 plain/dotted '0'
      */
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
@@ -36125,7 +36435,7 @@ article .link-copy {
 
 .finder__query__input i,
 .finder__query__input em {
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -36175,7 +36485,7 @@ article .link-copy {
      * ss03: 0/1 plain/slashed '0'
      * ss04: 0/1 plain/dotted '0'
      */
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
@@ -36192,7 +36502,7 @@ article .link-copy {
 
 .finder__query__input input i,
 .finder__query__input input em {
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -36744,7 +37054,14 @@ article .link-copy {
 
 @media (max-width: 768px) {
     .finder__query__submit .finder__query__submit__text {
-        display: none;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
     }
 }
 
@@ -36943,7 +37260,7 @@ article .link-copy {
 
 .finder__filter legend {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.25;
     letter-spacing: -0.013em;
@@ -36959,7 +37276,7 @@ article .link-copy {
 
 .finder__filter legend i,
 .finder__filter legend em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .finder__filter legend b,
@@ -38528,7 +38845,7 @@ article .link-copy {
 
 .finder__results__card a .card__title {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.25;
     letter-spacing: -0.013em;
@@ -38543,7 +38860,7 @@ article .link-copy {
 
 .finder__results__card a .card__title i,
 .finder__results__card a .card__title em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .finder__results__card a .card__title b,
@@ -40166,7 +40483,7 @@ body.modal--in.no-scroll .modal__background {
     line-height: 1.25;
     letter-spacing: -0.011em;
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-style: normal;
     font-weight: 300;
     line-height: 1.625;
@@ -40208,7 +40525,7 @@ body.modal--in.no-scroll .modal__background {
 
 .modal__heading i,
 .modal__heading em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 a.modal__close {
@@ -40525,6 +40842,298 @@ a.modal__close:active, a.modal__close:focus {
     margin: 0;
 }
 
+.show-more__button__container {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.show-more__text {
+    font-family: "Plex Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 450;
+    max-width: 55ch;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .show-more__text {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .show-more__text {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .show-more__text {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .show-more__text {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .show-more__text {
+        letter-spacing: -0.017em;
+    }
+}
+
+.show-more__text b,
+.show-more__text strong {
+    font-weight: 700;
+}
+
+.show-more__text i,
+.show-more__text em {
+    font-style: italic;
+}
+
+.show-more__text--hidden {
+    max-height: 8rem;
+    position: relative;
+}
+
+.show-more__text--hidden:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 90%);
+}
+
+.show-more__button {
+    border-top-color: #6894c0;
+    border-top-style: solid;
+    border-top-width: 0.125rem;
+    padding-top: 0.5rem;
+}
+
+.show-more__button .fa-minus-circle {
+    display: none;
+}
+
+.show-more__button a {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    transition: background-size 0.2s ease-in-out;
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+    border-bottom: #006bbd solid 0.125rem;
+    border-bottom-style: none;
+    border-bottom: none;
+}
+
+@media (hover: hover) {
+    .show-more__button a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.show-more__button a:focus, .show-more__button a:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .show-more__button a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .show-more__button a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.show-more__button a:visited {
+    color: #4c2c92;
+}
+
+.show-more__button a:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .show-more__button a:hover {
+        color: #ffffff;
+    }
+}
+
+.show-more__button a:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.show-more__button a:focus, .show-more__button a:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.show-more__button a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.show-more__button a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .show-more__button a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.show-more__button a:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.show-more__button a:visited {
+    color: #4c2c92;
+}
+
+.show-more__button a:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .show-more__button a:hover {
+        color: #ffffff;
+    }
+}
+
+.show-more__button a:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.show-more__button a:visited {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .show-more__button a:hover {
+        color: #ffffff;
+    }
+}
+
+.show-more__button a:active {
+    color: #ffffff;
+}
+
+.show-more__button a:visited {
+    border-bottom: #006bbd solid 0.125rem;
+}
+
+.show-more__button a:focus {
+    border-bottom: #006bbd solid 0.125rem;
+}
+
+@media (hover: hover) {
+    .show-more__button a:hover {
+        border-bottom: #006bbd solid 0.125rem;
+    }
+}
+
+.show-more__button a:active {
+    border-bottom: #006bbd solid 0.125rem;
+}
+
+.show-more__button a:hover, .show-more__button a.active, .show-more__button a:focus {
+    border-bottom-style: none;
+    border-bottom: none;
+}
+
+.show-more__button a:hover span:not(.icon) {
+    border-bottom: none;
+}
+
+.show-more__button a.active .fa-minus-circle {
+    display: inline;
+}
+
+.show-more__button a.active .fa-plus-circle {
+    display: none;
+}
+
+.show-more__button span.icon {
+    margin-right: 0.25rem;
+}
+
+.show-more__button span.show-more__anchor__link-text {
+    border-bottom: 0.125rem solid #006bbd;
+}
+
+.no-js .show-more__button__container {
+    display: none;
+}
+
+.no-js .show-more__text {
+    transition: none;
+    background-image: none;
+    overflow: auto;
+}
+
 .promo-content {
     border: 0.0625rem solid #541b85;
     background-color: #ede8f2;
@@ -40540,7 +41149,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .promo-content__heading {
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.602rem;
     line-height: 1.25;
     letter-spacing: -0.015em;
@@ -40548,12 +41157,11 @@ a.modal__close:active, a.modal__close:focus {
     font-weight: 600;
     margin-top: 1rem;
     color: #541b85;
-    font-weight: 700;
 }
 
 .promo-content__heading i,
 .promo-content__heading em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .promo-content__heading b,
@@ -40644,7 +41252,6 @@ a.modal__close:active, a.modal__close:focus {
 
 .promo-content__graphic span {
     color: #541b85;
-    display: block;
 }
 
 .promo-content__graphic span.fad {
@@ -40986,6 +41593,89 @@ a.modal__close:active, a.modal__close:focus {
     flex-basis: 75%;
     margin-left: 1rem;
     padding-bottom: 0.5rem;
+}
+
+.figure--map a {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    overflow: hidden;
+    background-image: none;
+    background-size: 0;
+    transition: none;
+    display: block;
+}
+
+@media (hover: hover) {
+    .figure--map a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-image: none;
+        background-size: 0;
+        transition: none;
+    }
+    .figure--map a:hover picture {
+        transform: scale(1.04);
+    }
+    .figure--map a:hover picture:before {
+        background-color: rgba(12, 12, 14, 0.1);
+    }
+}
+
+.figure--map a:focus, .figure--map a:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.figure--map a:focus picture {
+    transform: scale(1.04);
+}
+
+.figure--map picture {
+    position: relative;
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.figure--map picture:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .generic {
@@ -41398,6 +42088,18 @@ a.modal__close:active, a.modal__close:focus {
     justify-content: center;
     position: relative;
     padding: 1rem;
+}
+
+.case-study__company-card .figure--image picture {
+    text-align: center;
+    height: 100%;
+}
+
+.case-study__company-card .figure--image picture img {
+    max-height: 100%;
+    height: auto;
+    max-width: 100%;
+    width: auto;
 }
 
 @media (min-width: 769px) {
@@ -41878,6 +42580,16 @@ a.modal__close:active, a.modal__close:focus {
     margin: 1.5rem;
 }
 
+.content-hub .banner__standfirst h1 {
+    text-align: center;
+}
+
+.content-hub .banner__standfirst .standfirst {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .content-hub__block-one .video-finder-wrapper {
     grid-area: vf-wrap;
     grid-column: 1/-1;
@@ -41962,6 +42674,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .content-hub__block-one .explore .degree-options li.degree-options__button {
     width: calc(1 / 2 * 100% - (1 - 1 / 2) * 0.5rem);
+    list-style-type: none;
 }
 
 @media (max-width: 767px) {
@@ -41984,15 +42697,20 @@ a.modal__close:active, a.modal__close:focus {
     background: #ffffff;
     border: 0.125rem solid #ffffff;
     color: #d61726;
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
-    font-family: "Meta Sans", sans-serif;
-    width: 100%;
-    height: 100%;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
     border-radius: 0;
-    box-shadow: none;
     border: 0.125rem solid #d61726;
+    box-shadow: none;
+    height: 100%;
+    margin-top: 0;
+    width: 100%;
 }
 
 .content-hub__block-one .explore .degree-options li.degree-options__button a:disabled {
@@ -42125,6 +42843,25 @@ a.modal__close:active, a.modal__close:focus {
     border: 0.125rem solid #ffffff;
 }
 
+.content-hub__block-one .explore .degree-options li.degree-options__button a i,
+.content-hub__block-one .explore .degree-options li.degree-options__button a em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.content-hub__block-one .explore .degree-options li.degree-options__button a b,
+.content-hub__block-one .explore .degree-options li.degree-options__button a strong {
+    font-weight: inherit;
+}
+
+.content-hub__block-one .explore .degree-options li.degree-options__button a i,
+.content-hub__block-one .explore .degree-options li.degree-options__button a em {
+    font-style: italic;
+}
+
+.content-hub__block-one .explore .degree-options li.degree-options__button a u {
+    text-decoration: none;
+}
+
 @media (min-width: 433px) and (max-width: 768px) {
     .content-hub__block-one .explore .degree-options li.degree-options__button a {
         letter-spacing: -0.011em;
@@ -42155,10 +42892,15 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
+.content-hub__block-one .explore .degree-options li.degree-options__button a b,
+.content-hub__block-one .explore .degree-options li.degree-options__button a strong {
+    font-weight: 600;
+}
+
 .content-hub__block-one .explore .degree-options li.degree-options__button a:after {
-    position: relative;
-    display: flex;
     align-items: center;
+    display: flex;
+    position: relative;
     right: 0.5rem;
 }
 
@@ -42353,7 +43095,7 @@ a.modal__close:active, a.modal__close:focus {
 .content-hub__block-two .pathway-cards .card a {
     /*
         Pathway card uses same background
-        color and scale transition as 
+        color and scale transition as
         other cards (course, related) but
         the colours need to be overriden
         due to all alternatives below. This
@@ -44147,7 +44889,7 @@ button
 .profile__banner__content__mobile-header {
     display: block;
     font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.802rem;
     line-height: 1.25;
     letter-spacing: -0.016em;
@@ -44159,7 +44901,7 @@ button
 
 .profile__banner__content__mobile-header i,
 .profile__banner__content__mobile-header em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .profile__banner__content__mobile-header b,
@@ -46732,6 +47474,74 @@ button
     }
 }
 
+.js .lifelong-learning__content > div:not(.tabs):not(.tabs--accordion) > .tabs__panel {
+    grid-row-gap: 0;
+    display: grid;
+    max-width: 80rem;
+    grid-template-rows: repeat(2, auto);
+}
+
+@media (max-width: 432px) {
+    .js .lifelong-learning__content > div:not(.tabs):not(.tabs--accordion) > .tabs__panel {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .js .lifelong-learning__content > div:not(.tabs):not(.tabs--accordion) > .tabs__panel {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .js .lifelong-learning__content > div:not(.tabs):not(.tabs--accordion) > .tabs__panel {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (min-width: 1441px) {
+    .js .lifelong-learning__content > div:not(.tabs):not(.tabs--accordion) > .tabs__panel {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .js .lifelong-learning__content > div:not(.tabs):not(.tabs--accordion) > .tabs__panel {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 432px) {
+    .js .lifelong-learning__content > div:not(.tabs):not(.tabs--accordion) > .tabs__panel {
+        grid-template-areas: 'heading heading heading heading heading heading' 'body body body body body body';
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .js .lifelong-learning__content > div:not(.tabs):not(.tabs--accordion) > .tabs__panel {
+        grid-template-areas: '. . heading heading heading heading heading heading heading heading . .' '. . body body body body body body body body . .';
+    }
+}
+
+@media (min-width: 901px) {
+    .js .lifelong-learning__content > div:not(.tabs):not(.tabs--accordion) > .tabs__panel {
+        grid-template-areas: '. . . . . heading heading heading heading heading heading heading heading . . . . .' '. . . . . body body body body body body body body . . . . .';
+    }
+}
+
+.js .lifelong-learning__content > div:not(.tabs):not(.tabs--accordion) > .tabs__panel .tabs__panel__heading {
+    grid-area: heading;
+}
+
+.js .lifelong-learning__content > div:not(.tabs):not(.tabs--accordion) > .tabs__panel .tabs__panel__body {
+    grid-area: body;
+}
+
 .lifelong-learning__selling-points {
     max-width: 80rem;
     padding: 1.5rem 1rem;
@@ -46765,12 +47575,7 @@ button
 .lifelong-learning__selling-points__background {
     background: linear-gradient(180deg, #5d184a 50%, #f2f2f2 50%);
     background-repeat: no-repeat;
-    padding-bottom: 8rem;
-}
-
-.lifelong-learning__selling-points {
-    position: relative;
-    top: 4rem;
+    padding-bottom: 1.75rem;
 }
 
 .lifelong-learning__selling-points__card {
@@ -46790,7 +47595,7 @@ button
 
 .lifelong-learning__selling-points__card .icon {
     font-size: 2.25rem;
-    min-width: 2rem;
+    min-width: 3rem;
     margin-right: 2rem;
 }
 
@@ -47063,6 +47868,28 @@ button
     grid-column: 1 / -1;
 }
 
+.documentation--fullwidth .key-information--research {
+    grid-column: 5/15;
+}
+
+@media (max-width: 431px) {
+    .documentation--fullwidth .key-information--research {
+        grid-column: 1/-1;
+    }
+}
+
+@media (min-width: 433px) {
+    .documentation--fullwidth .key-information--research {
+        grid-column: 2/12;
+    }
+}
+
+@media (min-width: 901px) {
+    .documentation--fullwidth .key-information--research {
+        grid-column: 4/17;
+    }
+}
+
 .persona {
     max-width: 80rem;
     grid-row-gap: 0;
@@ -47288,7 +48115,7 @@ button
      * ss03: 0/1 plain/slashed '0'
      * ss04: 0/1 plain/dotted '0'
      */
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
     font-weight: 600;
 }
 
@@ -47334,7 +48161,7 @@ button
 
 .user-journey__steps h3 i,
 .user-journey__steps h3 em {
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
 @media screen {
