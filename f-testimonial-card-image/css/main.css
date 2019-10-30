@@ -23458,9 +23458,8 @@ main table td em {
         position: absolute;
         right: 0;
         bottom: -0.5rem;
-        width: 4rem;
-        width: 30%;
         margin-top: -3rem;
+        width: auto;
     }
 }
 
