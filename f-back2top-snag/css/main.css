@@ -30806,7 +30806,7 @@ article figure figcaption a:active {
     padding-bottom: 1rem;
     padding-top: 1rem;
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: 'feedback feedback feedback feedback feedback feedback' 'switcher switcher switcher switcher switcher switcher' 'uol uol uol city city city' 'copyright copyright copyright copyright copyright copyright';
+    grid-template-areas: 'feedback feedback feedback feedback feedback feedback' 'backtotop backtotop backtotop backtotop backtotop backtotop' 'switcher switcher switcher switcher switcher switcher' 'uol uol uol city city city' 'copyright copyright copyright copyright copyright copyright';
 }
 
 @media (max-width: 432px) {
@@ -30887,14 +30887,14 @@ article figure figcaption a:active {
 @media (min-width: 433px) and (max-width: 900px) {
     .global-footer {
         grid-template-rows: repeat(3, auto);
-        grid-template-areas: 'feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback' 'switcher switcher switcher switcher . . . . . uol uol city' 'copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright';
+        grid-template-areas: 'feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback' 'backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop' 'switcher switcher switcher switcher . . . . . uol uol city' 'copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright';
     }
 }
 
 @media (min-width: 901px) {
     .global-footer {
         grid-template-rows: repeat(3, auto);
-        grid-template-areas: 'feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback' 'switcher switcher switcher switcher switcher switcher . . . . . . . uol uol uol city city' 'copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright';
+        grid-template-areas: 'feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback' 'backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop' 'switcher switcher switcher switcher switcher switcher . . . . . . . uol uol uol city city' 'copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright';
     }
 }
 
@@ -33971,6 +33971,7 @@ button
 .back-to-top {
     display: flex;
     flex-direction: row-reverse;
+    grid-area: backtotop;
 }
 
 .back-to-top a {

@@ -1626,12 +1626,6 @@ function scrollButtonShow(backToTopBut) {
     backToTopBut.classList.remove('back-to-top-stick');
     backToTopBut.classList.remove('back-to-top-hide');
   }
-  /*
-  document.addEventListener('click', function() {
-      console.log(`clicked deadzoneis: ${deadZone}`);
-  });
-  */
-
 }
 /**
  *  Progress meter:
