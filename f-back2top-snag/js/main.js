@@ -1575,11 +1575,13 @@ var className = 'back-to-top',
 /**
  *  Parameters
  *
+ * Please change the values below to alter the behavious of the back to top button.
+ *
  */
 
 var pageHeight = 1.5; // only appears on long pages which are 'X' times the viewport height
 
-var scrollPos = 1; // sets how many viewport heights you need to scroll down for back to top to appear
+var scrollPos = 1; // sets how many viewport heights you need to scroll down for back to top to appear. 1 = 1 viewport height
 
 /**
  *  Initialises for long pages only
@@ -1588,18 +1590,25 @@ var scrollPos = 1; // sets how many viewport heights you need to scroll down for
 
 function initBacktoTop(backToTop) {
   var backToTopBut = backToTop.querySelectorAll('a')[0];
-  backToTopBut.style.opacity = 0;
+  backToTopBut.style.display = 'none';
   window.addEventListener('load', function () {
     var docHeight = document.body.clientHeight; // calculates page height
 
-    if (docHeight > viewPortHeight * pageHeight) {
-      backToTopBut.style.opacity = 1;
+    var backToTopDock = backToTop.offsetTop;
+    var deadZone = backToTopDock - viewPortHeight; // deadzone is the 'area' when you scroll to the bottom of the page, where the back to top botton docks back into the footer
+
+    if (docHeight > viewPortHeight * pageHeight && deadZone > viewPortHeight * scrollPos + viewPortHeight) {
+      // this route is for pages long enough to have the back to top button stick to the right and eventually dock in the footer once you reach the bottom of the page
+      backToTopBut.style.display = 'inline';
       backToTopBut.classList.add('back-to-top-hide');
 
       window.onscroll = function () {
-        updateProgress(backToTopBut);
-        scrollButtonShow(backToTopBut);
+        updateProgress(backToTopBut, deadZone);
+        scrollButtonShow(backToTopBut, deadZone);
       };
+    } else if (docHeight > viewPortHeight * pageHeight) {
+      // this route is for odd pages just long enough for button to appear in footer once scrolled down, but no long enough to have space for a sticky button to sit in the corner while scrolling.
+      backToTopBut.style.display = 'inline';
     }
   });
 }
@@ -1609,11 +1618,8 @@ function initBacktoTop(backToTop) {
  */
 
 
-function scrollButtonShow(backToTopBut) {
+function scrollButtonShow(backToTopBut, deadZone) {
   var screenPos = window.pageYOffset; // calculates scroll position
-
-  var backToTopDock = document.getElementsByClassName('back-to-top')[0].offsetTop;
-  var deadZone = backToTopDock - viewPortHeight;
 
   if (screenPos > viewPortHeight * scrollPos && screenPos < deadZone) {
     // shows button when scrolled down far enough - see parameters
@@ -1623,6 +1629,7 @@ function scrollButtonShow(backToTopBut) {
     // hides button when close to top of the page
     backToTopBut.classList.add('back-to-top-hide');
   } else if (screenPos >= deadZone) {
+    // docks button in footer when reaching bottom of the page
     backToTopBut.classList.remove('back-to-top-stick');
     backToTopBut.classList.remove('back-to-top-hide');
   }
