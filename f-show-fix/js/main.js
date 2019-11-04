@@ -6671,7 +6671,7 @@ function showMore(element) {
  */
 
 
-function handleReadMoreClick(e) {
+function handleShowMoreClick(e) {
   e.preventDefault();
   console.log(e);
   var parent = e.currentTarget.parentNode.parentNode.parentNode;
@@ -6723,7 +6723,7 @@ function createShowMoreButton(element) {
   var showMoreAnchor = document.createElement('a');
   showMoreAnchor.classList.add('show-more__anchor');
   showMoreAnchor.setAttribute('href', '');
-  showMoreAnchor.addEventListener('click', handleReadMoreClick);
+  showMoreAnchor.addEventListener('click', handleShowMoreClick);
   showMoreButton.appendChild(showMoreAnchor);
   element.appendChild(showMoreButtonDiv);
   var plusIcon = document.createElement('span');
@@ -6741,7 +6741,7 @@ function createShowMoreButton(element) {
   showMoreText.appendChild(document.createTextNode('Show more'));
   var dataTitle = element.getAttribute('data-title');
   var srTextElement = document.createElement('span');
-  srTextElement.appendChild(document.createTextNode('about the ' + dataTitle));
+  srTextElement.appendChild(document.createTextNode('about ' + dataTitle));
   srTextElement.classList.add('sr-only');
   showMoreAnchor.appendChild(plusIcon);
   showMoreAnchor.appendChild(minusIcon);
