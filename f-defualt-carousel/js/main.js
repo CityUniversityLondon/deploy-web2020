@@ -4606,6 +4606,7 @@ function carouselGallery(elem) {
   thumbnails.forEach(function (e, i) {
     if (i === 0) {
       e.classList.add('active');
+      e.parentElement.children[3].classList.add('fade');
     }
 
     e.addEventListener('click', function (t) {
@@ -4676,6 +4677,46 @@ var i = 0,
     locked = false,
     config = {},
     sliderTranslateCoOr = 0;
+/**
+ *
+ * Adds and setups carousel controls
+ * e.g.
+ *
+ *  <div class="swiper-viewport">
+ *      <div class="swiper-container">
+ *
+ *          <ul class="swiper-wrapper">
+ *              <li class="swiper-slide">
+ *                  <div class="swiper-slide__image-wrapper">
+ *                      <img src="https://web2020.city.ac.uk/documentation/patterns/carousel/_DP57645_1920x1080.jpg" alt="Image">
+ *                  </div>
+ *                  <div class="swiper-slide__text">
+ *                      <p>We are a leading provider of healthcare .....</p>
+ *                  </div>
+ *              </li>
+ *              <li class="swiper-slide">
+ *                  <div class="swiper-slide__image-wrapper">
+ *                      <img src="https://web2020.city.ac.uk/documentation/patterns/carousel/_DP57645_1920x1080.jpg" alt="Image">
+ *                  </div>
+ *                  <div class="swiper-slide__text">
+ *                      <p>We are a leading provider of healthcare .....</p>
+ *                  </div>
+ *              </li>
+ *          </ul>
+ *
+ *      </div>
+ *  </div>
+ *
+ *@param {HTMLElement} elem - The element to carousel.
+ *@param {Object} object - Object containing setting to setup defualt carousel. if using full width carousel
+ * then do not pass in object unless you want to hide the number indicators.
+ * To intialise the defualt carousel pass this object
+ * {
+ *  defaultCarousel: true,
+ *  hidNumInd: true,
+ *  }
+ *
+ */
 
 function init(elem, options) {
   if (options) {
@@ -4775,10 +4816,25 @@ function init(elem, options) {
 
   activeSlider(i, _C);
 }
+/**
+ * Set the number indicators Number
+ *
+ * @param {number} carousel index - current carousel index
+ * @param {HTMLelement} indicator html - pass HTML containing the indicator
+ */
+
 
 function numIndicator(index, e) {
   e.querySelector('.swiper-indicator__active-slider').innerText = index + 1;
 }
+/**
+ *
+ * Set active slider
+ *
+ * @param {number} carousel index - current carousel index
+ * @param {HTMLelement} sliders html - pass HTML containing the sliders
+ */
+
 
 function activeSlider(index, sliders) {
   var a = Object(_util__WEBPACK_IMPORTED_MODULE_11__["toArray"])(sliders.querySelectorAll('.swiper-slide'));
@@ -4793,6 +4849,15 @@ function activeSlider(index, sliders) {
     return a.tabIndex = 0;
   });
 }
+/**
+ *
+ * Toggle next button
+ *
+ * @param {number} carousel index - current carousel index
+ * @param {number} length of sliders -
+ * @param {event} user event - interaction event perform by user
+ */
+
 
 function toogleNextBtn(index, length, e) {
   var nextBtn = checkEventType(e);
@@ -4811,6 +4876,15 @@ function toogleNextBtn(index, length, e) {
     numIndicator(index, nextBtn);
   }
 }
+/**
+ *
+ * Toggle previous button
+ *
+ * @param {number} carousel index - current carousel index
+ * @param {number} length of sliders -
+ * @param {event} user event - interaction event perform by user
+ */
+
 
 function tooglePrevBtn(index, length, e) {
   var prevBtn = checkEventType(e);
@@ -4829,6 +4903,14 @@ function tooglePrevBtn(index, length, e) {
     numIndicator(index, prevBtn);
   }
 }
+/**
+ *
+ * Move slide either forwards or backwards
+ *
+ * @param {event} user event - interaction event perform by user from onClick on btn or thumbnail
+ * @param {boolean} boolean for either next or pervious - boolean to check if next or previous is called
+ */
+
 
 function moveSlide(e, t) {
   var sl = checkEventType(e).querySelector('.swiper-wrapper');
@@ -4868,94 +4950,49 @@ function moveSlide(e, t) {
     activeThumbnail(i, e);
   }
 }
+/**
+ *
+ * Next slide
+ *
+ * @param {event} user event - interaction event perform by user from onClick on btn or thumbnail
+ */
+
 
 function next(e) {
   e.preventDefault();
   moveSlide(e, true);
-  /*if (sl.classList.contains('smooth')) {
-      sl.classList.toggle('smooth');
-  }
-   if (!ie) {
-      if(config.defaultCarousel && e.target.tagName === 'IMG'){
-          sl.style.setProperty('--i', i);
-      }else{
-          sl.style.setProperty('--i', i != 0 ? (i += 1) : (i = 1));
-      }
-      
-      sl.classList.toggle('smooth');
-      toogleNextBtn(i, sl.children.length, e);
-  } else {
-      let sliderWidthIndex = totalSliderWidth(e) / sl.children.length * i,
-          sliderWidth = totalSliderWidth(e) / sl.children.length;
-       sliderTranslateCoOr -= sliderWidth;
-       
-      sl.classList.toggle('smooth');
-      if(config.defaultCarousel && e.target.tagName === 'IMG'){
-          sliderTranslateCoOr = -sliderWidthIndex;
-          sl.style.setProperty(
-              'transform',
-              'translate(-' + sliderWidthIndex + 'px)'
-          );
-          sl.style.setProperty('--i', i);
-      }else{
-          sl.style.setProperty(
-              'transform',
-              'translate(' + sliderTranslateCoOr + 'px)'
-          );
-          i != 0 ? (i += 1) : (i = 1);
-      }
-      toogleNextBtn(i, sl.children.length, e);
-  }
-  if(config.defaultCarousel){
-      activeThumbnail(i,e);
-  }*/
 }
+/**
+ *
+ * Prvious slide
+ *
+ * @param {event} user event - interaction event perform by user from onClick on btn or thumbnail
+ */
+
 
 function previous(e) {
   e.preventDefault();
   moveSlide(e, false);
-  /*const psl = checkEventType(e).querySelector('.swiper-wrapper');
-  if (psl.classList.contains('smooth')) {
-      psl.classList.toggle('smooth');
-  }
-   if (!ie) {
-      if(config.defaultCarousel && e.target.tagName === 'IMG'){
-           psl.style.setProperty('--i', i);
-      }else{
-           psl.style.setProperty('--i', i ? (i -= 1) : (i = 0));
-       }
-       psl.classList.toggle('smooth');
-      tooglePrevBtn(i, psl.children.length, e);
-   } else {
-      let sliderWidthIndex = totalSliderWidth(e) / psl.children.length * i,
-          sliderWidth = totalSliderWidth(e) / psl.children.length;
-       sliderTranslateCoOr += sliderWidth;
-      psl.classList.toggle('smooth');
-       if(config.defaultCarousel && e.target.tagName === 'IMG'){
-           sliderTranslateCoOr = -sliderWidthIndex;
-          psl.style.setProperty(
-              'transform',
-              'translate(-' + sliderWidthIndex + 'px)'
-          );
-          psl.style.setProperty('--i', i);
-       } else{
-           psl.classList.toggle('smooth');
-          psl.style.setProperty(
-              'transform',
-              'translate(' + sliderTranslateCoOr + 'px)'
-          );
-          i ? (i -= 1) : (i = 0);
-       }
-       tooglePrevBtn(i, psl.children.length, e);
-  }
-  if(config.defaultCarousel){
-      activeThumbnail(i,e);
-  }*/
 }
+/**
+ *
+ * Return touch points of either touch or mouse
+ *
+ * @param {event} user event - event on silder from either mouse or touch events
+ * @returns {event or object} - either return the event back or the object of touch events
+ */
+
 
 function unify(e) {
   return e.changedTouches ? e.changedTouches[0] : e;
 } //return touch points or event
+
+/**
+ *
+ * Start of slider move Set mousedown value to global and toggle smooth class for css transition on mouse down or touch start
+ *
+ * @param {event} user event - user action either mosuedown or touch start
+ */
 
 
 function lock(e) {
@@ -4963,6 +5000,13 @@ function lock(e) {
 
   e.target.classList.toggle('smooth', !(locked = true));
 }
+/**
+ *
+ * Moving the slider - moving the slider trigger by mouse move or touch move
+ *
+ * @param {event} user event - mousetouch or touchmove
+ */
+
 
 function drag(e) {
   //e.preventDefault();
@@ -4972,13 +5016,20 @@ function drag(e) {
     }
   }
 }
+/**
+ *
+ * Move slider
+ *
+ * @param {event} user event - mouseup or touchend
+ */
+
 
 function move(e) {
   if (locked) {
     var dx = unify(e).clientX - x0,
         //dx is value calculate by using clientX mousedown and after value
     s = Math.sign(dx),
-        //check if swipe is left or right by checking value is negative ot positive
+        //check if swipe is left or right by checking value is negative or positive
     tx = getComputedStyle(e.target).getPropertyValue('--tx'),
         p = parseInt(tx.replace(/\D/g, '')); // MAY use the drag length as a condition to move slider
 
@@ -5008,9 +5059,17 @@ function move(e) {
       }
   }
 }
+/**
+ *
+ * Check event type and passing the correct parent node
+ *
+ * @param {event} user event - either mouse, touch, click events and thumbnail click events
+ * @returns {HTMLSliderElement} -
+ */
+
 
 function checkEventType(e) {
-  if (e.target.parentElement.className === 'galleria-thumbnail') {
+  if (e.target.parentElement.classList.contains('galleria-thumbnail')) {
     return e.target.parentElement.parentElement.parentElement.parentElement;
   } else {
     switch (e.type) {
@@ -5024,7 +5083,15 @@ function checkEventType(e) {
         return e.target.parentElement.parentElement.parentElement;
     }
   }
-} //edge fall back cannot use CSS var inside a cal()
+}
+/**
+ *
+ * For edge browsers calculate silders total width
+ *
+ * @param {event} user event -
+ * @returns {number} - total width of slider
+ */
+//edge fall back cannot use CSS var inside a cal()
 
 
 function totalSliderWidth(e) {
@@ -5036,6 +5103,14 @@ function totalSliderWidth(e) {
   });
   return totalWidth;
 }
+/**
+ *
+ * Animate slider by setting translate value
+ *
+ * @param {event} user event -
+ * @param {number}  - number either negative or a positive number
+ */
+
 
 function animateSlider(e, lr) {
   var sliderWidth = totalSliderWidth(e) / e.target.children.length;
@@ -5044,6 +5119,15 @@ function animateSlider(e, lr) {
   e.target.classList.toggle('smooth');
   i -= lr;
 }
+/**
+ *
+ * Exported function for defualt caousel to preform when thumbnail it cliked on
+ * move slider forward or backwards
+ *
+ * @param {event} user event - onlcik event on thumbnail
+ * @param {number} thumbnail index -
+ */
+
 
 function onClickThunbnail(thumbnail, thumbindex) {
   if (thumbindex > i) {
@@ -5056,10 +5140,21 @@ function onClickThunbnail(thumbnail, thumbindex) {
 
   activeThumbnail(thumbindex, thumbnail);
 }
+/**
+ *
+ * Set click on thumbnail to be active
+ *
+ * @param {number} thumbnail index -
+ * @param {event} user event - onlcik event on thumbnail
+ */
+
 
 function activeThumbnail(thumbindex, e) {
   var thumbnail = checkEventType(e),
-      listThumbnail = thumbnail.querySelector('.galleria-thumbnails-list').getElementsByTagName('li');
+      slider = thumbindex + 1,
+      listThumbnail = thumbnail.querySelector('.galleria-thumbnails-list').getElementsByTagName('li'),
+      lengthThumbnail = listThumbnail.length,
+      lastTwoSlider = lengthThumbnail - 2;
   var _iteratorNormalCompletion = true;
   var _didIteratorError = false;
   var _iteratorError = undefined;
@@ -5067,7 +5162,7 @@ function activeThumbnail(thumbindex, e) {
   try {
     for (var _iterator = listThumbnail[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var li = _step.value;
-      li.classList.remove('active');
+      li.classList.remove('active', 'fade');
     }
   } catch (err) {
     _didIteratorError = true;
@@ -5084,9 +5179,18 @@ function activeThumbnail(thumbindex, e) {
     }
   }
 
+  slider === 1 ? listThumbnail[thumbindex + 3].classList.add('fade') : slider > lastTwoSlider ? null : listThumbnail[thumbindex + 2].classList.add('fade');
   listThumbnail[thumbindex].classList.add('active');
   translateThumbnails(thumbindex, e);
 }
+/**
+ *
+ * Move thumbnail
+ *
+ * @param {number} thumbnail index -
+ * @param {event} user event - onlcik event on thumbnail
+ */
+
 
 function translateThumbnails(thumbindex, e) {
   var thumbnailLi = checkEventType(e).querySelector('.galleria-thumbnails-list'),

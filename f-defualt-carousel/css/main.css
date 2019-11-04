@@ -35973,62 +35973,6 @@ article .link-copy {
     transition: transform 0.5s ease-out;
 }
 
-.carousel-gallery-default {
-    padding: 1rem;
-    background-color: #3e1031;
-}
-
-.carousel-gallery {
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel-gallery .swiper-slide {
-    margin-right: 0;
-    margin-top: 0;
-}
-
-.carousel-gallery .swiper-slide__text {
-    display: block;
-    top: 0;
-    background-color: initial;
-    width: 100%;
-    margin-right: unset;
-    margin-left: unset;
-    padding: 1rem 0;
-}
-
-.carousel-gallery .swiper-buttons-wrap {
-    bottom: 0.5rem;
-    right: 0;
-}
-
-.galleria-thumbnails-wrap {
-    width: calc(100% - 7rem);
-    overflow: hidden;
-}
-
-.galleria-thumbnails-list {
-    --thumbnails: 1;
-    display: flex;
-    list-style: none;
-    margin: 0;
-    width: calc(var(--thumbnails) * 25%);
-    max-width: none;
-    align-items: baseline;
-    transition: transform 0.5s;
-}
-
-.galleria-thumbnails-list .galleria-thumbnail {
-    width: calc(100% / var(--thumbnails));
-    margin-top: 0;
-    margin-right: 0.5rem;
-}
-
-.galleria-thumbnails-list .galleria-thumbnail.active img {
-    border: 1px solid red;
-}
-
 .listing {
     background-image: linear-gradient(#f2f2f2, #e5e5e5);
 }
@@ -41419,6 +41363,122 @@ a.modal__close:active, a.modal__close:focus {
     width: 100%;
     background: transparent;
     transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-gallery-default {
+    padding: 1rem;
+    background-color: #3e1031;
+}
+
+.carousel-gallery {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-gallery .swiper-slide {
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.carousel-gallery .swiper-slide__text {
+    display: block;
+    top: 0;
+    background-color: initial;
+    width: 100%;
+    margin-right: unset;
+    margin-left: unset;
+    padding: 1rem 0;
+}
+
+.carousel-gallery .swiper-buttons-wrap {
+    bottom: 0.5rem;
+    right: 0.5rem;
+}
+
+.carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow {
+    color: #ffffff;
+    border: 0.0625rem solid #ffffff;
+    padding: 0.75rem;
+    font-weight: 400;
+}
+
+@media (hover: hover) {
+    .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:hover {
+        color: #ffffff;
+        background: #ffffff;
+    }
+}
+
+.carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:focus, .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:active {
+    color: #ffffff;
+    background: #ffffff;
+}
+
+.carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:focus:focus, .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:focus:active, .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:active:focus, .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:active:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:disabled {
+    color: #696969;
+    background: #ffffff;
+    border: none;
+    opacity: 0.7;
+}
+
+.carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:focus {
+    background-color: transparent;
+}
+
+.carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:hover, .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:active {
+    color: #3e1031;
+    background-color: #ffffff;
+}
+
+.carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:hover, .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:focus:focus, .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:active:active {
+    outline-color: #ffffff;
+}
+
+.carousel-gallery .swiper-slide__image-wrapper {
+    height: 22rem;
+    background-color: #250020;
+}
+
+.carousel-gallery .swiper-slide__image-wrapper img {
+    object-fit: contain;
+}
+
+.galleria-thumbnails-wrap {
+    width: calc(100% - 7rem);
+    overflow: hidden;
+}
+
+.galleria-thumbnails-list {
+    --thumbnails: 1;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    width: calc(var(--thumbnails) * 25%);
+    max-width: none;
+    align-items: baseline;
+    transition: transform 0.5s;
+}
+
+.galleria-thumbnails-list .galleria-thumbnail {
+    width: calc(100% / var(--thumbnails));
+    margin-top: 0;
+    margin-right: 0.5rem;
+}
+
+.galleria-thumbnails-list .galleria-thumbnail.active img {
+    border: 1px solid red;
+}
+
+.galleria-thumbnails-list .galleria-thumbnail.fade img {
+    -webkit-mask-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+            mask-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
 }
 
 .generic {
