@@ -6648,49 +6648,67 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-//import { createElement } from '../../util';
 
 var className = 'show-more';
-
-window.onload = function () {
-  var showMoreTextElements = document.querySelectorAll('.show-more__text');
-  showMoreTextElements.forEach(function (element) {
-    element.setAttribute('data-height', element.offsetHeight);
-    element.classList.add('show-more__text--hidden');
-  });
-};
+/**
+ * innitial function on page load; it hides text of show-more container and calles
+ * createShowMoreButton(element) function to create control button
+ *
+ * @param {HTMLElement} element - HTML parent element with classname 'show-more'
+ */
 
 function showMore(element) {
-  //let anchor;
-  createShowMoreButton(element); // anchor = element.querySelector('.show-more__anchor');
-  // anchor.addEventListener('click', handleReadMoreClick, false);
-} // function handleReadMoreClick(e) {
-//     let parent = e.currentTarget.parentNode.parentNode.parentNode;
-//     let showMoreText = parent.querySelector('.show-more__text');
-//     let showMoreTextHeight = showMoreText.getAttribute('data-height') + 'px';
-//     let showMoreAnchorLinkText = parent.querySelector(
-//         '.show-more__anchor__link-text'
-//     );
-//     let srTextElement = parent.querySelector('.sr-only');
-//     showMoreAnchorLinkText.textContent = null;
-//     if (showMoreText.classList.contains('show-more__text--hidden')) {
-//         e.currentTarget.classList.add('active');
-//         showMoreText.classList.remove('show-more__text--hidden');
-//         showMoreAnchorLinkText.textContent = 'Show less';
-//         showMoreText.style.maxHeight = showMoreTextHeight;
-//     } else {
-//         e.currentTarget.classList.remove('active');
-//         showMoreAnchorLinkText.textContent = 'Show more';
-//         showMoreText.classList.add('show-more__text--hidden');
-//         showMoreText.style.maxHeight = null;
-//         let headingElement = parent.querySelector('h2');
-//         headingElement.scrollIntoView();
-//     }
-//     showMoreAnchorLinkText.appendChild(srTextElement);
-// }
-
+  var showMoreTextElements = document.querySelectorAll('.show-more__text');
+  showMoreTextElements.forEach(function (element) {
+    element.classList.add('show-more__text--hidden');
+  });
+  createShowMoreButton(element);
+}
 /**
- * create Show more button in the following HTML structure
+ * event listener that handles show-more button click event
+ *
+ * @param {object} e - MouseEvent object
+ */
+
+
+function handleReadMoreClick(e) {
+  e.preventDefault();
+  console.log(e);
+  var parent = e.currentTarget.parentNode.parentNode.parentNode;
+  var showMoreText = parent.querySelector('.show-more__text');
+  var showMoreAnchorLinkText = parent.querySelector('.show-more__anchor__link-text');
+  showMoreAnchorLinkText.textContent = null;
+
+  if (showMoreText.classList.contains('show-more__text--hidden')) {
+    e.currentTarget.classList.add('active');
+    showMoreText.classList.remove('show-more__text--hidden');
+    showMoreAnchorLinkText.textContent = 'Show less';
+    showMoreText.style.maxHeight = '100%';
+    var headingElement = parent.querySelector('h2');
+    headingElement.scrollIntoView();
+  } else {
+    e.currentTarget.classList.remove('active');
+    showMoreAnchorLinkText.textContent = 'Show more';
+    showMoreText.classList.add('show-more__text--hidden');
+    showMoreText.style.maxHeight = null;
+
+    var _headingElement = parent.querySelector('h2');
+
+    _headingElement.scrollIntoView();
+  }
+}
+/**
+ * create Show more button in the following HTML structure:
+ * <div class="show-more__button__container">
+ *  <span class="show-more__button">
+ *    <a class="show-more__anchor" href="">
+ *      <span class="icon fal fa-plus-circle" aria-hidden="true"></span>
+ *      <span class="icon fal fa-minus-circle" aria-hidden="true"></span>
+ *      <span class="show-more__anchor__link-text">Show more</span>
+ *      <span class="sr-only"> about the {[data]=title} </span>
+ *    </a>
+ *  </span>
+ * </div>
  *
  * @param {HTMLElement} element - HTML parent element with classname 'show-more'
  */
@@ -6704,11 +6722,8 @@ function createShowMoreButton(element) {
   showMoreButtonDiv.appendChild(showMoreButton);
   var showMoreAnchor = document.createElement('a');
   showMoreAnchor.classList.add('show-more__anchor');
-  showMoreAnchor.setAttribute('href', '#'); // showMoreAnchor.click(function(event) {
-  //     event.preventDefault();
-  // });
-  //showMoreAnchor.addEventListener('click', handleReadMoreClick, false);
-
+  showMoreAnchor.setAttribute('href', '');
+  showMoreAnchor.addEventListener('click', handleReadMoreClick);
   showMoreButton.appendChild(showMoreAnchor);
   element.appendChild(showMoreButtonDiv);
   var plusIcon = document.createElement('span');
@@ -6726,7 +6741,7 @@ function createShowMoreButton(element) {
   showMoreText.appendChild(document.createTextNode('Show more'));
   var dataTitle = element.getAttribute('data-title');
   var srTextElement = document.createElement('span');
-  srTextElement.appendChild(document.createTextNode('about the' + dataTitle));
+  srTextElement.appendChild(document.createTextNode('about the ' + dataTitle));
   srTextElement.classList.add('sr-only');
   showMoreAnchor.appendChild(plusIcon);
   showMoreAnchor.appendChild(minusIcon);

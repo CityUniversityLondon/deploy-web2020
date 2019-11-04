@@ -41130,16 +41130,6 @@ a.modal__close:active, a.modal__close:focus {
     border-bottom: 0.125rem solid #006bbd;
 }
 
-.no-js .show-more__button__container {
-    display: none;
-}
-
-.no-js .show-more__text {
-    transition: none;
-    background-image: none;
-    overflow: auto;
-}
-
 .promo-content {
     border: 0.0625rem solid #541b85;
     background-color: #ede8f2;
