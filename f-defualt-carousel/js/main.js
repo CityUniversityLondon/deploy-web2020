@@ -4729,7 +4729,11 @@ function init(elem, options) {
 
   if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
     var lazyImageObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
+      entries.forEach(function (entry, i) {
+        if (i === 0) {
+          entry.target.firstElementChild.classList.remove('lazy');
+        }
+
         if (entry.isIntersecting) {
           var lazyImage = entry.target.parentNode.nextSibling.firstElementChild.firstElementChild;
           lazyImage.src = lazyImage.dataset.src;

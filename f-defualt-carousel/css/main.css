@@ -35889,6 +35889,10 @@ article .link-copy {
     }
 }
 
+.js .lazy {
+    display: none;
+}
+
 .no-js .lazy-img {
     display: none;
 }
@@ -41455,7 +41459,7 @@ a.modal__close:active, a.modal__close:focus {
     overflow: hidden;
 }
 
-.galleria-thumbnails-list {
+.js .galleria-thumbnails-list {
     --thumbnails: 1;
     display: flex;
     list-style: none;
@@ -41466,17 +41470,21 @@ a.modal__close:active, a.modal__close:focus {
     transition: transform 0.5s;
 }
 
-.galleria-thumbnails-list .galleria-thumbnail {
+.js .galleria-thumbnails-list .galleria-thumbnail {
     width: calc(100% / var(--thumbnails));
     margin-top: 0;
     margin-right: 0.5rem;
 }
 
-.galleria-thumbnails-list .galleria-thumbnail.active img {
+.js .galleria-thumbnails-list .galleria-thumbnail img {
+    max-height: 4rem;
+}
+
+.js .galleria-thumbnails-list .galleria-thumbnail.active img {
     border: 1px solid red;
 }
 
-.galleria-thumbnails-list .galleria-thumbnail.fade img {
+.js .galleria-thumbnails-list .galleria-thumbnail.fade img {
     -webkit-mask-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
             mask-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
 }
