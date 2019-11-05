@@ -40905,12 +40905,12 @@ a.modal__close:active, a.modal__close:focus {
     font-style: italic;
 }
 
-.show-more__text--hidden {
+.show-more__text[data-hidden='true'] {
     max-height: 8rem;
     position: relative;
 }
 
-.show-more__text--hidden:after {
+.show-more__text[data-hidden='true']:after {
     position: absolute;
     content: '';
     height: 90%;
@@ -40928,7 +40928,28 @@ a.modal__close:active, a.modal__close:focus {
     padding-top: 0.5rem;
 }
 
+.show-more__button span.icon {
+    margin-right: 0.25rem;
+    border-bottom: 0.125rem solid transparent;
+}
+
+.show-more__button span.show-more__link-text {
+    border-bottom: 0.125rem solid #006bbd;
+}
+
 .show-more__button .fa-minus-circle {
+    display: none;
+}
+
+.show-more__button .fa-plus-circle {
+    display: inline;
+}
+
+.show-more__button [data-open='true'] .fa-minus-circle {
+    display: inline;
+}
+
+.show-more__button [data-open='true'] .fa-plus-circle {
     display: none;
 }
 
@@ -40955,7 +40976,6 @@ a.modal__close:active, a.modal__close:focus {
     border-bottom-width: 0.125rem;
     color: #006bbd;
     border-bottom: #006bbd solid 0.125rem;
-    border-bottom-style: none;
     border-bottom: none;
 }
 
@@ -41105,28 +41125,27 @@ a.modal__close:active, a.modal__close:focus {
     border-bottom: #006bbd solid 0.125rem;
 }
 
-.show-more__button a:hover, .show-more__button a.active, .show-more__button a:focus {
-    border-bottom-style: none;
+.show-more__button a:hover, .show-more__button a:active {
     border-bottom: none;
 }
 
-.show-more__button a:hover span:not(.icon) {
+.show-more__button a:hover span.icon, .show-more__button a:active span.icon {
+    border-bottom: 0.125rem solid transparent;
+}
+
+.show-more__button a:hover span.show-more__link-text, .show-more__button a:active span.show-more__link-text {
+    border-bottom: 0.125rem solid transparent;
+}
+
+.show-more__button a:focus {
     border-bottom: none;
 }
 
-.show-more__button a.active .fa-minus-circle {
-    display: inline;
+.show-more__button a:focus span.icon {
+    border-bottom: 0.125rem solid transparent;
 }
 
-.show-more__button a.active .fa-plus-circle {
-    display: none;
-}
-
-.show-more__button span.icon {
-    margin-right: 0.25rem;
-}
-
-.show-more__button span.show-more__anchor__link-text {
+.show-more__button a:focus span.show-more__link-text {
     border-bottom: 0.125rem solid #006bbd;
 }
 
