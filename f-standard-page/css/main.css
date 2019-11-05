@@ -47727,6 +47727,42 @@ button
     }
 }
 
+@media (min-width: 768px) and (max-width: 1280px) {
+    .standard-content .statistics-block .ksp__items.ksp__items--2 {
+        grid-template-areas: 'a a a a a a b b b b b a';
+    }
+}
+
+@media (min-width: 1281px) {
+    .standard-content .statistics-block .ksp__items.ksp__items--2 {
+        grid-template-areas: 'a a a a a a a a a b b b b b b b b b';
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    .standard-content .statistics-block .ksp__items.ksp__items--3 {
+        grid-template-areas: 'a a a a a a b b b b b b' '. . . c c c c c c . . .';
+    }
+}
+
+@media (min-width: 1281px) {
+    .standard-content .statistics-block .ksp__items.ksp__items--3 {
+        grid-template-areas: 'a a a a a a b b b b b b c c c c c c';
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    .standard-content .statistics-block .ksp__items.ksp__items--4 {
+        grid-template-areas: 'a a a a a a b b b b b b' 'c c c c c c d d d d d d';
+    }
+}
+
+@media (min-width: 1281px) {
+    .standard-content .statistics-block .ksp__items.ksp__items--4 {
+        grid-template-areas: '. a a a a b b b b c c c c d d d d .';
+    }
+}
+
 .visit-us {
     grid-row-gap: 0;
     display: grid;
