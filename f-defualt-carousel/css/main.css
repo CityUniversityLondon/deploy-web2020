@@ -41379,6 +41379,10 @@ a.modal__close:active, a.modal__close:focus {
     position: relative;
 }
 
+.carousel-gallery h3 {
+    color: #ffffff;
+}
+
 .carousel-gallery .swiper-slide {
     margin-right: 0;
     margin-top: 0;

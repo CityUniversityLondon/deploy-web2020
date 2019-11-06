@@ -4596,6 +4596,55 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var className = 'carousel-gallery';
+/**
+ *
+ * Init the defualt gallery
+ *
+ *
+ *
+ * HTML e.g.
+ *
+ *  <div class="carousel-gallery-default">
+ *      <div class="carousel-gallery">
+ *          <h3>Gallery title</h3>
+ *          <ul class="swiper-wrapper">
+ *              <li class="swiper-slide">
+ *                  <div class="swiper-slide__image-wrapper">
+ *                      <img src="centre-healthcare-innovation-research.jpg" alt="Banner depicting ">
+ *                  </div>
+ *              </li>
+ *              <li class="swiper-slide">
+ *                  <div class="swiper-slide__image-wrapper">
+ *                      <img class="lazy" src="centre-healthcare-innovation-research.jpg" alt="Banner depicting ">
+ *                  </div>
+ *              </li>
+ *              <li class="swiper-slide">
+ *                  <div class="swiper-slide__image-wrapper">
+ *                      <img class="lazy" src="centre-healthcare-innovation-research.jpg" alt="Banner depicting ">
+ *                      <noscript>
+ *                          <img class="lazy" src="https://web2020.city.ac.uk/__data/assets/image/0019/341236/Phonetics-lab.jpg" alt="Woman using the phonetics lab">
+ *                      </noscript>
+ *                  </div>
+ *              </li>
+ *          </ul>
+ *          <div class="galleria-thumbnails-wrap">
+ *              <ul class="galleria-thumbnails-list">
+ *                  <li class="galleria-thumbnail">
+ *                      <img src="big_thumbnail.jpg" alt="Banner depicting "/>
+ *                  </li>
+ *                  <li class="galleria-thumbnail">
+ *                      <img src="big_thumbnail.jpg" alt="Banner depicting "/>
+ *                  </li>
+ *                  <li class="galleria-thumbnail">
+ *                      <img src="big_thumbnail.jpg" alt="Banner depicting "/>
+ *                  </li>
+ *              </ul>
+ *          </div>
+ *      </div>
+ *  </div>
+ *
+ * @param {HTMLElement} elem - The element to carousel.
+ */
 
 function carouselGallery(elem) {
   Object(_image_carousel__WEBPACK_IMPORTED_MODULE_2__["init"])(elem, {
@@ -4696,7 +4745,7 @@ var i = 0,
  *              </li>
  *              <li class="swiper-slide">
  *                  <div class="swiper-slide__image-wrapper">
- *                      <img src="https://web2020.city.ac.uk/documentation/patterns/carousel/_DP57645_1920x1080.jpg" alt="Image">
+ *                      <img class="lazy" src="https://web2020.city.ac.uk/documentation/patterns/carousel/_DP57645_1920x1080.jpg" alt="Image">
  *                  </div>
  *                  <div class="swiper-slide__text">
  *                      <p>We are a leading provider of healthcare .....</p>
@@ -4815,6 +4864,8 @@ function init(elem, options) {
   _C.addEventListener('mouseup', move, false);
 
   _C.addEventListener('touchend', move, false);
+
+  _C.addEventListener('mouseout', stopDrag, false);
 
   _C.firstElementChild.classList.toggle('active');
 
@@ -5062,6 +5113,19 @@ function move(e) {
         }
       }
   }
+}
+/**
+ *
+ * Stop drag when mouse or touch move outside the slider element
+ *
+ * @param {event} user event - mouseup or touchend
+ */
+
+
+function stopDrag(e) {
+  e.target.style.setProperty('--tx', '0px');
+  e.stopPropagation();
+  e.target.classList.toggle('smooth', !(locked = false));
 }
 /**
  *
