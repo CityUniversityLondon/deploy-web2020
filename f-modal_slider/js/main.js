@@ -5933,69 +5933,56 @@ __webpack_require__.r(__webpack_exports__);
  */
 var className = 'modal-slider';
 /**
- * Entry function
+ * Entry function - loop through all the list items and add
+ * add the navigation buttons/listeners
  *
  * @param {HTMLElement} modalSlider - The UL element
  *
  */
 
 function modalSlider(modalSlider) {
-  var modalTriggers = modalSlider.querySelectorAll('.modal__trigger');
-  modalTriggers.forEach(function (element) {
-    element.addEventListener('click', getNextPrevListItem, false);
-  });
-}
-/**
- * Event listener for modal link click
- *
- * @param {event} e - the trigger click event
- *
- */
-
-
-function getNextPrevListItem(e) {
-  var thisModalSlider = e.target.closest('.modal-slider');
-  var allListItems = thisModalSlider.querySelectorAll('li');
-  var parentListItem = e.target.closest('li');
-  var modalButtonsContainer = parentListItem.querySelector('.modal__buttons');
-  var testForDiv = modalButtonsContainer.querySelectorAll('div');
+  var allListItems = modalSlider.querySelectorAll('li');
   var direction;
-  /* 
-      test for divs already inserted so we don't keep
-      inserting more elements
-  */
-
-  if (testForDiv.length == 0) {
-    /*
-        if there's a previous sibling, get it and 
-        create HTML elements inside current modal, if not, 
-        we get the last list item and link to that
+  allListItems.forEach(function (listItem) {
+    var modalButtonsContainer = listItem.querySelector('.modal__buttons');
+    var testForDiv = modalButtonsContainer.querySelectorAll('div');
+    /* 
+        test for divs already inserted so we don't keep
+        inserting more elements
     */
-    direction = -1;
 
-    if (parentListItem.previousElementSibling != null) {
-      createElements(parentListItem, parentListItem.previousElementSibling, direction);
-    } else {
-      createElements(parentListItem, allListItems[allListItems.length - 1], direction);
+    if (testForDiv.length == 0) {
+      /*
+          if there's a previous sibling, get it and 
+          create HTML elements inside current modal, if not, 
+          we get the last list item and link to that
+      */
+      direction = -1;
+
+      if (listItem.previousElementSibling != null) {
+        createElements(listItem, listItem.previousElementSibling, direction);
+      } else {
+        createElements(listItem, allListItems[allListItems.length - 1], direction);
+      }
+      /*
+          if there's a next sibling, get it and 
+          create HTML elements inside current modal, if not, 
+          we get the first list item and link to that
+      */
+
+
+      direction = 1;
+
+      if (listItem.nextElementSibling != null) {
+        createElements(listItem, listItem.nextElementSibling, direction);
+      } else {
+        createElements(listItem, allListItems[0], direction);
+      } // now the buttons are added, add listeners for left/right click
+
+
+      addButtonListeners(listItem);
     }
-    /*
-        if there's a next sibling, get it and 
-        create HTML elements inside current modal, if not, 
-        we get the first list item and link to that
-    */
-
-
-    direction = 1;
-
-    if (parentListItem.nextElementSibling != null) {
-      createElements(parentListItem, parentListItem.nextElementSibling, direction);
-    } else {
-      createElements(parentListItem, allListItems[0], direction);
-    } // now the buttons are added, add listeners for left/right click
-
-
-    addButtonListeners(parentListItem);
-  }
+  });
 }
 /**
  * Add listeners to buttons so user can navigate left/right
