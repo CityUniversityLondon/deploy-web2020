@@ -34748,40 +34748,6 @@ a.modal__close:active, a.modal__close:focus {
     color: #0c0c0e;
 }
 
-.modal__buttons--slider a .underline-transition__title {
-    background-image: linear-gradient(#0c0c0e, #0c0c0e);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.125rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition
-            stretches beyond the element
-        **/
-    display: inline;
-    padding-bottom: 0.125rem;
-    line-height: 1.5;
-}
-
-.modal__buttons--slider a:focus .underline-transition__title {
-    background-size: 100% 0.125rem;
-}
-
-@media (hover: hover) {
-    .modal__buttons--slider a:hover .underline-transition__title {
-        background-image: linear-gradient(#d61726, #d61726);
-        background-size: 100% 0.125rem;
-        color: #d61726;
-    }
-}
-
-.modal__buttons--slider a span.underline-transition__title {
-    position: relative;
-    border-bottom-color: #1e1e1e;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-}
-
 @media (hover: hover) {
     .modal__buttons--slider a:hover {
         border-bottom: none;
@@ -34792,8 +34758,14 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
-.modal__buttons--slider a:hover span.underline-transition__title {
-    color: #0c0c0e;
+.modal__buttons--slider a:hover span {
+    border-bottom-color: #d61726;
+}
+
+.modal__buttons--slider a span {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
 }
 
 .modal__buttons--slider div {
@@ -40806,40 +40778,6 @@ a.modal__close:active, a.modal__close:focus {
     color: #0c0c0e;
 }
 
-.modal__buttons--slider a .underline-transition__title {
-    background-image: linear-gradient(#0c0c0e, #0c0c0e);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.125rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition
-            stretches beyond the element
-        **/
-    display: inline;
-    padding-bottom: 0.125rem;
-    line-height: 1.5;
-}
-
-.modal__buttons--slider a:focus .underline-transition__title {
-    background-size: 100% 0.125rem;
-}
-
-@media (hover: hover) {
-    .modal__buttons--slider a:hover .underline-transition__title {
-        background-image: linear-gradient(#d61726, #d61726);
-        background-size: 100% 0.125rem;
-        color: #d61726;
-    }
-}
-
-.modal__buttons--slider a span.underline-transition__title {
-    position: relative;
-    border-bottom-color: #1e1e1e;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-}
-
 @media (hover: hover) {
     .modal__buttons--slider a:hover {
         border-bottom: none;
@@ -40850,8 +40788,14 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
-.modal__buttons--slider a:hover span.underline-transition__title {
-    color: #0c0c0e;
+.modal__buttons--slider a:hover span {
+    border-bottom-color: #d61726;
+}
+
+.modal__buttons--slider a span {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
 }
 
 .modal__buttons--slider div {
