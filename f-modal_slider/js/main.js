@@ -5944,44 +5944,35 @@ function modalSlider(modalSlider) {
   var allListItems = modalSlider.querySelectorAll('li');
   var direction;
   allListItems.forEach(function (listItem) {
-    var modalButtonsContainer = listItem.querySelector('.modal__buttons');
-    var testForDiv = modalButtonsContainer.querySelectorAll('div');
-    /* 
-        test for divs already inserted so we don't keep
-        inserting more elements
+    /*
+        if there's a previous sibling, get it and 
+        create HTML elements inside current modal, if not, 
+        we get the last list item and link to that
+    */
+    direction = -1;
+
+    if (listItem.previousElementSibling != null) {
+      createElements(listItem, listItem.previousElementSibling, direction);
+    } else {
+      createElements(listItem, allListItems[allListItems.length - 1], direction);
+    }
+    /*
+        if there's a next sibling, get it and 
+        create HTML elements inside current modal, if not, 
+        we get the first list item and link to that
     */
 
-    if (testForDiv.length == 0) {
-      /*
-          if there's a previous sibling, get it and 
-          create HTML elements inside current modal, if not, 
-          we get the last list item and link to that
-      */
-      direction = -1;
 
-      if (listItem.previousElementSibling != null) {
-        createElements(listItem, listItem.previousElementSibling, direction);
-      } else {
-        createElements(listItem, allListItems[allListItems.length - 1], direction);
-      }
-      /*
-          if there's a next sibling, get it and 
-          create HTML elements inside current modal, if not, 
-          we get the first list item and link to that
-      */
+    direction = 1;
+
+    if (listItem.nextElementSibling != null) {
+      createElements(listItem, listItem.nextElementSibling, direction);
+    } else {
+      createElements(listItem, allListItems[0], direction);
+    } // now the buttons are added, add listeners for left/right click
 
 
-      direction = 1;
-
-      if (listItem.nextElementSibling != null) {
-        createElements(listItem, listItem.nextElementSibling, direction);
-      } else {
-        createElements(listItem, allListItems[0], direction);
-      } // now the buttons are added, add listeners for left/right click
-
-
-      addButtonListeners(listItem);
-    }
+    addButtonListeners(listItem);
   });
 }
 /**
