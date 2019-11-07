@@ -5949,6 +5949,7 @@ function modalSlider(modalSlider) {
         create HTML elements inside current modal, if not, 
         we get the last list item and link to that
     */
+    // 1 is right, -1 is left
     direction = -1;
 
     if (listItem.previousElementSibling != null) {
