@@ -5954,15 +5954,44 @@ function modalSlider(modalSlider) {
 
 
 function getNextPrevListItem(e) {
-  //const allListItems = e.target.closest('.modal-slider');
+  var thisModalSlider = e.target.closest('.modal-slider');
+  var allListItems = thisModalSlider.querySelectorAll('li');
   var parentListItem = e.target.closest('li');
-  var direction; // if there's a next sibling, get it and create HTML elements inside
-  // current modal
+  var modalButtonsContainer = parentListItem.querySelector('.modal__buttons');
+  var testForDiv = modalButtonsContainer.querySelectorAll('div');
+  var direction;
+  /* 
+      test for divs already inserted so we don't keep
+      inserting more elements
+  */
 
-  if (parentListItem.nextElementSibling != null) {
+  if (testForDiv.length == 0) {
+    /*
+        if there's a previous sibling, get it and 
+        create HTML elements inside current modal, if not, 
+        we get the last list item and link to that
+    */
+    direction = -1;
+
+    if (parentListItem.previousElementSibling != null) {
+      createElements(parentListItem, parentListItem.previousElementSibling, direction);
+    } else {
+      createElements(parentListItem, allListItems[allListItems.length - 1], direction);
+    }
+    /*
+        if there's a next sibling, get it and 
+        create HTML elements inside current modal, if not, 
+        we get the first list item and link to that
+    */
+
+
     direction = 1;
-    createElements(parentListItem, parentListItem.nextElementSibling, direction);
-  } else {// if not, we get the first list item and link to that
+
+    if (parentListItem.nextElementSibling != null) {
+      createElements(parentListItem, parentListItem.nextElementSibling, direction);
+    } else {
+      createElements(parentListItem, allListItems[0], direction);
+    }
   }
 }
 /**
@@ -5984,18 +6013,18 @@ function createElements(activeListItem, elementSibling, direction) {
   icon.className = 'modal__buttons__icon far';
   var button = document.createElement('button');
   var spanText = document.createElement('span');
-  spanText.textContent = elementSiblingDataTitle; // 1 is right, -1 is left
+  spanText.textContent = elementSiblingDataTitle;
+  modalButtonsContainer.append(parentDiv);
+  parentDiv.append(button);
+  button.append(spanText); // 1 is right, -1 is left
 
   if (direction == 1) {
     icon.classList.add('fa-long-arrow-right');
+    parentDiv.append(icon);
   } else {
     icon.classList.add('fa-long-arrow-left');
+    parentDiv.prepend(icon);
   }
-
-  modalButtonsContainer.appendChild(parentDiv);
-  parentDiv.appendChild(button);
-  button.appendChild(spanText);
-  parentDiv.appendChild(icon);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
