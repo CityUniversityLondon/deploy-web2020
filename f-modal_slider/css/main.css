@@ -34739,14 +34739,14 @@ a.modal__close:active, a.modal__close:focus {
     text-align: left;
 }
 
-.modal__buttons--slider button:hover span {
-    border-bottom-color: #d61726;
-}
-
 .modal__buttons--slider button span {
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
+}
+
+.modal__buttons--slider button:hover span {
+    border-bottom-color: #d61726;
 }
 
 .modal__buttons--slider div {
@@ -40750,14 +40750,14 @@ a.modal__close:active, a.modal__close:focus {
     text-align: left;
 }
 
-.modal__buttons--slider button:hover span {
-    border-bottom-color: #d61726;
-}
-
 .modal__buttons--slider button span {
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
+}
+
+.modal__buttons--slider button:hover span {
+    border-bottom-color: #d61726;
 }
 
 .modal__buttons--slider div {

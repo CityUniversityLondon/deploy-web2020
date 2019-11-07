@@ -5991,13 +5991,80 @@ function getNextPrevListItem(e) {
       createElements(parentListItem, parentListItem.nextElementSibling, direction);
     } else {
       createElements(parentListItem, allListItems[0], direction);
+    } // now the buttons are added, add listeners for left/right click
+
+
+    addButtonListeners(parentListItem);
+  }
+}
+/**
+ * Add listeners to buttons so user can navigate left/right
+ *
+ * @param {HTMLElement} currentListItem - the active list item
+ *
+ */
+
+
+function addButtonListeners(currentListItem) {
+  var buttons = currentListItem.querySelectorAll('button');
+  buttons.forEach(function (button) {
+    button.addEventListener('click', slideLeftorRight, false);
+  });
+}
+/**
+ * Respond to left or right button click
+ *
+ * @param {event} e - the button event
+ *
+ */
+
+
+function slideLeftorRight(e) {
+  var dataDirection = e.target.parentNode.getAttribute('data-direction');
+  var parentListItem = e.target.closest('li');
+  var thisModalSlider = e.target.closest('.modal-slider');
+  var allListItems = thisModalSlider.querySelectorAll('li'); // always hide the active modal
+
+  var activeModal = document.querySelector('.modal__popup--show');
+  activeModal.classList.remove('modal__popup--show');
+  activeModal.classList.add('modal__popup--hidden');
+
+  if (dataDirection == '1') {
+    /* 
+        if there's a next li element, show it, if not, show the
+        first list item's modal
+    */
+    if (parentListItem.nextElementSibling != null) {
+      var nextModal = parentListItem.nextElementSibling.querySelector('.modal__popup');
+      nextModal.classList.remove('modal__popup--hidden');
+      nextModal.classList.add('modal__popup--show');
+    } else {
+      var firstModal = allListItems[0].querySelector('.modal__popup');
+      firstModal.classList.remove('modal__popup--hidden');
+      firstModal.classList.add('modal__popup--show');
+    }
+  } else {
+    /* 
+        if there's a previous li element, show it, if not, show the
+        last list item's modal
+    */
+    if (parentListItem.previousElementSibling != null) {
+      var _nextModal = parentListItem.previousElementSibling.querySelector('.modal__popup');
+
+      _nextModal.classList.remove('modal__popup--hidden');
+
+      _nextModal.classList.add('modal__popup--show');
+    } else {
+      var lastModal = allListItems[allListItems.length - 1].querySelector('.modal__popup');
+      lastModal.classList.remove('modal__popup--hidden');
+      lastModal.classList.add('modal__popup--show');
     }
   }
 }
 /**
  * Create elements helper function to create all the HTML elements
  *
- * @param {HTMLElement} activeListItem - the active list item container active modal HTML markup
+ * @param {HTMLElement} activeListItem - the active list item containing active modal HTML markup
  * @param {HTMLElement} elementSibling - the element's next or prev sibling list item
  * @param {int} direction - helper var to tell us if it's a next or previous button required
  *
@@ -6019,9 +6086,11 @@ function createElements(activeListItem, elementSibling, direction) {
   button.append(spanText); // 1 is right, -1 is left
 
   if (direction == 1) {
+    button.setAttribute('data-direction', '1');
     icon.classList.add('fa-long-arrow-right');
     parentDiv.append(icon);
   } else {
+    button.setAttribute('data-direction', '-1');
     icon.classList.add('fa-long-arrow-left');
     parentDiv.prepend(icon);
   }
