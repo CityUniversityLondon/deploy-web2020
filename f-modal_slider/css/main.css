@@ -34750,10 +34750,15 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .modal__buttons--slider div {
-    display: flex;
     align-items: center;
-    width: 50%;
     padding: 1.5rem 0;
+    display: flex;
+}
+
+@media (min-width: 769px) {
+    .modal__buttons--slider div {
+        width: 50%;
+    }
 }
 
 .modal__buttons--slider div:first-child {
@@ -34761,14 +34766,16 @@ a.modal__close:active, a.modal__close:focus {
     padding-right: 1.5rem;
 }
 
-.modal__buttons--slider div:first-child:after {
-    content: '';
-    height: 100%;
-    width: 0.125rem;
-    background: #d61726;
-    position: absolute;
-    top: 0;
-    right: 0;
+@media (min-width: 769px) {
+    .modal__buttons--slider div:first-child:after {
+        content: '';
+        height: 100%;
+        width: 0.125rem;
+        background: #d61726;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
 
 .modal__buttons--slider div:first-child .modal__buttons__icon {
@@ -40761,10 +40768,15 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .modal__buttons--slider div {
-    display: flex;
     align-items: center;
-    width: 50%;
     padding: 1.5rem 0;
+    display: flex;
+}
+
+@media (min-width: 769px) {
+    .modal__buttons--slider div {
+        width: 50%;
+    }
 }
 
 .modal__buttons--slider div:first-child {
@@ -40772,14 +40784,16 @@ a.modal__close:active, a.modal__close:focus {
     padding-right: 1.5rem;
 }
 
-.modal__buttons--slider div:first-child:after {
-    content: '';
-    height: 100%;
-    width: 0.125rem;
-    background: #d61726;
-    position: absolute;
-    top: 0;
-    right: 0;
+@media (min-width: 769px) {
+    .modal__buttons--slider div:first-child:after {
+        content: '';
+        height: 100%;
+        width: 0.125rem;
+        background: #d61726;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
 
 .modal__buttons--slider div:first-child .modal__buttons__icon {
