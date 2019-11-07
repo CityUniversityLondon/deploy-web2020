@@ -789,7 +789,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
 /* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
 /* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
-/* harmony import */ var _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/external-link-finder/external-link-finder */ "./src/patterns/external-link-finder/external-link-finder.js");
+/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
 /* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
 /* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
 /* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
@@ -836,7 +836,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_external_link_finder_external_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__["default"]]);
 
 /***/ }),
 
@@ -1570,36 +1570,47 @@ __webpack_require__.r(__webpack_exports__);
  *
  */
 var className = 'back-to-top',
-    viewPortHeight = window.innerHeight,
-    // calculates viewport height
-docHeight = document.documentElement.scrollHeight; // calculates page height
+    viewPortHeight = window.innerHeight; // calculates viewport height
 
 /**
  *  Parameters
+ *
+ * Please change the values below to alter the behavious of the back to top button.
  *
  */
 
 var pageHeight = 1.5; // only appears on long pages which are 'X' times the viewport height
 
-var scrollPos = 1; // sets how many viewport heights you need to scroll down for back to top to appear
+var scrollPos = 1; // sets how many viewport heights you need to scroll down for back to top to appear. 1 = 1 viewport height
 
 /**
  *  Initialises for long pages only
  *
  */
 
-function initBacktoTop() {
-  var scrollToTopBut = document.getElementsByClassName('back-to-top')[0].querySelectorAll('a')[0];
+function initBacktoTop(backToTop) {
+  var backToTopBut = backToTop.querySelectorAll('a')[0];
+  backToTopBut.style.display = 'none';
+  window.addEventListener('load', function () {
+    var docHeight = document.body.clientHeight; // calculates page height
 
-  if (docHeight > viewPortHeight * pageHeight) {
-    scrollToTopBut.style.opacity = 0;
-    scrollToTopBut.classList.add('back-to-top-stick');
+    var backToTopDock = backToTop.offsetTop;
+    var deadZone = backToTopDock - viewPortHeight; // deadzone is the 'area' when you scroll to the bottom of the page, where the back to top botton docks back into the footer
 
-    window.onscroll = function () {
-      updateProgress();
-      scrollButtonShow();
-    };
-  }
+    if (docHeight > viewPortHeight * pageHeight && deadZone > viewPortHeight * scrollPos + viewPortHeight) {
+      // this route is for pages long enough to have the back to top button stick to the right and eventually dock in the footer once you reach the bottom of the page
+      backToTopBut.style.display = 'inline';
+      backToTopBut.classList.add('back-to-top-hide');
+
+      window.onscroll = function () {
+        updateProgress(backToTopBut, deadZone);
+        scrollButtonShow(backToTopBut, deadZone);
+      };
+    } else if (docHeight > viewPortHeight * pageHeight) {
+      // this route is for odd pages just long enough for button to appear in footer once scrolled down, but no long enough to have space for a sticky button to sit in the corner while scrolling.
+      backToTopBut.style.display = 'inline';
+    }
+  });
 }
 /**
  *  Button fading behaviour
@@ -1607,16 +1618,20 @@ function initBacktoTop() {
  */
 
 
-function scrollButtonShow() {
-  var scrollToTopBut = document.getElementsByClassName('back-to-top')[0].querySelectorAll('a')[0];
+function scrollButtonShow(backToTopBut, deadZone) {
   var screenPos = window.pageYOffset; // calculates scroll position
 
-  if (screenPos > viewPortHeight * scrollPos) {
+  if (screenPos > viewPortHeight * scrollPos && screenPos < deadZone) {
     // shows button when scrolled down far enough - see parameters
-    scrollToTopBut.classList.add('back-to-top-show');
+    backToTopBut.classList.remove('back-to-top-hide');
+    backToTopBut.classList.add('back-to-top-stick');
   } else if (screenPos < 200) {
     // hides button when close to top of the page
-    scrollToTopBut.classList.remove('back-to-top-show');
+    backToTopBut.classList.add('back-to-top-hide');
+  } else if (screenPos >= deadZone) {
+    // docks button in footer when reaching bottom of the page
+    backToTopBut.classList.remove('back-to-top-stick');
+    backToTopBut.classList.remove('back-to-top-hide');
   }
 }
 /**
@@ -1853,80 +1868,6 @@ function devcorate(elem, param, value) {
     }
   });
 }
-
-/***/ }),
-
-/***/ "./src/patterns/external-link-finder/external-link-finder.js":
-/*!*******************************************************************!*\
-  !*** ./src/patterns/external-link-finder/external-link-finder.js ***!
-  \*******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.includes */ "./node_modules/core-js/modules/es.array.includes.js");
-/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
-
-
-
-
-
-
-/**
- * External Link Finder
- *
- * @module patterns/external-link-finder/external-link-finder
- * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019
- */
-
-/**
- *  Finds external links and adds font awesome icon to indicate external link
- * Instructions: add external-link-finder class to templates in article container element
- */
-
-var className = 'external-link-finder';
-
-function findExternalLink(anchorsArea) {
-  var anchors = anchorsArea.querySelectorAll('a');
-
-  if (anchors.length > 0) {
-    anchors.forEach(function (anchor) {
-      /** checks if anchors links are :
-       * external
-       * not an image
-       * not contain font awesome external link icon already
-       * fab for social icons
-       * is not a social icon
-       * not a CTA
-       * not an email hyperlink
-       * not a telephone number link
-       * has to contain a href value
-       */
-      if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && anchor.querySelectorAll('.fab').length < 1 && anchor.className !== 'social-icon' && !anchor.parentElement.className.includes('cta-block') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
-        // adds font awesome external link icon after completing checks
-        var node = document.createElement('span');
-        node.className = 'far fa-external-link inline-external-link';
-        node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, '(external link)');
-        anchor.appendChild(node);
-      }
-    });
-  }
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: findExternalLink,
-  launchQuery: ".".concat(className)
-});
 
 /***/ }),
 
@@ -5137,6 +5078,120 @@ function launchKeyInfoSlider() {
 
 /***/ }),
 
+/***/ "./src/patterns/link-finder/link-finder.js":
+/*!*************************************************!*\
+  !*** ./src/patterns/link-finder/link-finder.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.includes */ "./node_modules/core-js/modules/es.array.includes.js");
+/* harmony import */ var core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+
+
+
+
+
+
+
+/**
+ * Link Finder
+ *
+ * @module patterns/link-finder/link-finder
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+var className = 'link-finder';
+/**
+ * Function that prepends icon to anchor paramater
+ *
+ * @param {HTMLElement} anchor - HTML element to prepend icon to
+ * @param {string} className - class name to specify FA icon
+ */
+
+function prependIcon(anchor, className) {
+  var node = document.createElement('span');
+  node.className = 'fas ' + className + '  link-decorator';
+  node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, true);
+  anchor.parentNode.prepend(node);
+}
+/**
+ * Checks if anchor has to have external URL icon
+ *
+ * @param {HTMLElement} anchor - an anchor HTML element
+ */
+
+
+function findExternalLink(anchor) {
+  if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && anchor.className !== 'social-icon' && !anchor.parentElement.className.includes('cta-block') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
+    var node = document.createElement('span');
+    node.className = 'far fa-external-link inline-external-link';
+    node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, '(external link)');
+    anchor.appendChild(node);
+  }
+}
+/**
+ * This function checks if the anchor has any of the extensions from the 'fileTypes' object
+ * if yes it calls prependIcon() to add the appropriate FA icon
+ *
+ * @param {HTMLElement} anchor - an anchor HTML element
+ */
+
+
+function findDocumentLinks(anchor) {
+  var fileTypes = {
+    pdf: 'pdf',
+    docx: 'word',
+    doc: 'word',
+    xlsx: 'excel',
+    xls: 'excel'
+  };
+
+  for (var key in fileTypes) {
+    if (anchor.href.indexOf('.' + key) != -1) {
+      prependIcon(anchor, 'fa-file-' + fileTypes[key]);
+      var anchorText = anchor.textContent;
+      anchorText += ' [' + key.toUpperCase() + ']';
+      anchor.textContent = null;
+      anchor.textContent = anchorText;
+      break;
+    }
+  }
+}
+/**
+ * Every anchor on the webpage has to have appropriate icons prepended or appended depending on predefined requirements
+ * This function will iterate through every anchor of the HTML element and calls the appropriate function to add the right icon
+ * if required
+ *
+ * @param {HTMLElement} e - an HTML element with 'link-finder' class name
+ */
+
+
+function findLinks(e) {
+  var anchors = e.querySelectorAll('a');
+  anchors.forEach(function (anchor) {
+    findDocumentLinks(anchor);
+    findExternalLink(anchor);
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: findLinks,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
 /***/ "./src/patterns/load-more/load-more.js":
 /*!*********************************************!*\
   !*** ./src/patterns/load-more/load-more.js ***!
@@ -6583,67 +6638,117 @@ function addPagination(elem, itemCount) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
+
+
+/**
+ * Show-more
+ *
+ * @module patterns/show-more/show-more
+ * @author Web Development
+ * @copyright City, University of London 2018-2019
+ */
 
 
 var className = 'show-more';
-
-window.onload = function () {
-  var showMoreTextElements = document.querySelectorAll('.show-more__text');
-  showMoreTextElements.forEach(function (element) {
-    element.setAttribute('data-height', element.offsetHeight);
-    element.classList.add('show-more__text--hidden');
-  });
-};
+/**
+ * innitial function on page load; it hides text container of 'show-more' DOM element, and calles
+ * createShowMoreButton(element) function to create a control button
+ *
+ * @param {HTMLElement} element - HTML parent element with classname 'show-more'
+ */
 
 function showMore(element) {
-  createHTMLElements(element);
-  var anchor = element.querySelector('.show-more__anchor');
-  anchor.addEventListener('click', handleReadMoreClick, false);
+  var showMoreTextElements = document.querySelectorAll('.show-more__text');
+  showMoreTextElements.forEach(function (element) {
+    element.setAttribute('data-hidden', 'true');
+  });
+  createShowMoreButton(element);
 }
+/**
+ * event listener that handles click event of 'show-more' button
+ *
+ * @param {object} e - MouseEvent object
+ */
 
-function handleReadMoreClick(e) {
+
+function handleShowMoreClick(e) {
+  e.preventDefault();
   var parent = e.currentTarget.parentNode.parentNode.parentNode;
   var showMoreText = parent.querySelector('.show-more__text');
-  var showMoreTextHeight = showMoreText.getAttribute('data-height') + 'px';
-  var showMoreAnchorLinkText = parent.querySelector('.show-more__anchor__link-text');
-  var srTextElement = parent.querySelector('.sr-only');
-  showMoreAnchorLinkText.textContent = null;
+  var showMoreAnchorLinkText = parent.querySelector('.show-more__link-text');
+  var hiddenElement = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(showMoreText.dataset.hidden);
 
-  if (showMoreText.classList.contains('show-more__text--hidden')) {
-    e.currentTarget.classList.add('active');
-    showMoreText.classList.remove('show-more__text--hidden');
+  if (hiddenElement) {
+    e.currentTarget.setAttribute('data-open', 'true');
+    showMoreText.setAttribute('data-hidden', 'false');
     showMoreAnchorLinkText.textContent = 'Show less';
-    showMoreText.style.maxHeight = showMoreTextHeight;
-  } else {
-    e.currentTarget.classList.remove('active');
-    showMoreAnchorLinkText.textContent = 'Show more';
-    showMoreText.classList.add('show-more__text--hidden');
-    showMoreText.style.maxHeight = null;
+    showMoreText.style.maxHeight = '100%';
     var headingElement = parent.querySelector('h2');
     headingElement.scrollIntoView();
+  } else {
+    e.currentTarget.setAttribute('data-open', 'false');
+    showMoreText.setAttribute('data-hidden', 'true');
+    showMoreAnchorLinkText.textContent = 'Show more';
+    showMoreText.style.maxHeight = null;
+
+    var _headingElement = parent.querySelector('h2');
+
+    _headingElement.scrollIntoView();
   }
-
-  showMoreAnchorLinkText.appendChild(srTextElement);
 }
+/**
+ * create 'show-more' button in the following HTML structure then append it to '.show-more' HTML element
+ * <div class="show-more__button__container">
+ *  <span class="show-more__button">
+ *    <a href="">
+ *      <span class="icon fal fa-plus-circle" aria-hidden="true"></span>
+ *      <span class="icon fal fa-minus-circle" aria-hidden="true"></span>
+ *      <span class="show-more__link-text">Show more</span>
+ *      <span class="sr-only"> about the {[data]=title} </span>
+ *    </a>
+ *  </span>
+ * </div>
+ *
+ * @param {HTMLElement} element - HTML parent element with classname 'show-more'
+ */
 
-function createHTMLElements(element) {
-  var showMoreButtonContainer = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('div', '', '', '', 'show-more__button__container');
-  element.appendChild(showMoreButtonContainer);
-  var spanButtonContainer = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'show-more__button');
-  showMoreButtonContainer.appendChild(spanButtonContainer);
-  var showMoreAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('a', '', '', '', 'show-more__anchor');
-  showMoreAnchor.setAttribute('href', '#/');
-  spanButtonContainer.appendChild(showMoreAnchor);
-  var elementsArray = [Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-plus-circle', '', '', 'aria-hidden', 'true'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', '', '', '', 'icon', 'fal', 'fa-minus-circle', '', '', 'aria-hidden', 'true'), Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', 'Show more', '', '', 'show-more__anchor__link-text')];
-  elementsArray.forEach(function (element) {
-    showMoreAnchor.appendChild(element);
-  });
+
+function createShowMoreButton(element) {
+  var showMoreButtonDiv = document.createElement('div');
+  showMoreButtonDiv.classList.add('show-more__button__container');
+  var showMoreButton = document.createElement('span');
+  showMoreButton.classList.add('show-more__button');
+  showMoreButtonDiv.appendChild(showMoreButton);
+  var showMoreAnchor = document.createElement('a');
+  showMoreAnchor.setAttribute('href', '');
+  showMoreAnchor.addEventListener('click', handleShowMoreClick);
+  showMoreButton.appendChild(showMoreAnchor);
+  element.appendChild(showMoreButtonDiv);
+  var plusIcon = document.createElement('span');
+  plusIcon.classList.add('icon');
+  plusIcon.classList.add('fal');
+  plusIcon.classList.add('fa-plus-circle');
+  plusIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
+  var minusIcon = document.createElement('span');
+  minusIcon.classList.add('icon');
+  minusIcon.classList.add('fal');
+  minusIcon.classList.add('fa-minus-circle');
+  minusIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
+  var showMoreText = document.createElement('span');
+  showMoreText.classList.add('show-more__link-text');
+  showMoreText.appendChild(document.createTextNode('Show more'));
   var dataTitle = element.getAttribute('data-title');
-  var srTextElement = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createElement"])('span', ' about the ' + dataTitle, '', '', 'sr-only');
-  elementsArray[2].appendChild(srTextElement);
+  var srTextElement = document.createElement('span');
+  srTextElement.appendChild(document.createTextNode('about ' + dataTitle));
+  srTextElement.classList.add('sr-only');
+  showMoreAnchor.appendChild(plusIcon);
+  showMoreAnchor.appendChild(minusIcon);
+  showMoreAnchor.appendChild(showMoreText);
+  showMoreAnchor.appendChild(srTextElement);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
