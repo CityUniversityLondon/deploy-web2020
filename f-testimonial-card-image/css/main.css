@@ -23450,7 +23450,6 @@ main table td em {
 
 .card--testimonial .card--testimonial__photo {
     margin-top: 2rem;
-    width: 30%;
 }
 
 @media (max-width: 768px) {
@@ -23459,7 +23458,6 @@ main table td em {
         right: 0;
         bottom: -0.5rem;
         margin-top: -3rem;
-        width: auto;
     }
 }
 
