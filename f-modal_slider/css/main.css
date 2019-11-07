@@ -34735,34 +34735,15 @@ a.modal__close:active, a.modal__close:focus {
     margin-top: 2.5rem;
 }
 
-.modal__buttons--slider a,
-.modal__buttons--slider a:focus,
-.modal__buttons--slider a:active,
-.modal__buttons--slider a:visited {
-    border: none;
-    border-bottom: none;
-    border-bottom-style: none;
-    background-image: none;
-    background-size: 0;
-    transition: none;
-    color: #0c0c0e;
+.modal__buttons--slider button {
+    text-align: left;
 }
 
-@media (hover: hover) {
-    .modal__buttons--slider a:hover {
-        border-bottom: none;
-        border-bottom-style: none;
-        background-image: none;
-        transition: none;
-        color: #0c0c0e;
-    }
-}
-
-.modal__buttons--slider a:hover span {
+.modal__buttons--slider button:hover span {
     border-bottom-color: #d61726;
 }
 
-.modal__buttons--slider a span {
+.modal__buttons--slider button span {
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -40765,34 +40746,15 @@ a.modal__close:active, a.modal__close:focus {
     margin-top: 2.5rem;
 }
 
-.modal__buttons--slider a,
-.modal__buttons--slider a:focus,
-.modal__buttons--slider a:active,
-.modal__buttons--slider a:visited {
-    border: none;
-    border-bottom: none;
-    border-bottom-style: none;
-    background-image: none;
-    background-size: 0;
-    transition: none;
-    color: #0c0c0e;
+.modal__buttons--slider button {
+    text-align: left;
 }
 
-@media (hover: hover) {
-    .modal__buttons--slider a:hover {
-        border-bottom: none;
-        border-bottom-style: none;
-        background-image: none;
-        transition: none;
-        color: #0c0c0e;
-    }
-}
-
-.modal__buttons--slider a:hover span {
+.modal__buttons--slider button:hover span {
     border-bottom-color: #d61726;
 }
 
-.modal__buttons--slider a span {
+.modal__buttons--slider button span {
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
