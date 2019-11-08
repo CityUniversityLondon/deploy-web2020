@@ -5919,6 +5919,8 @@ function launchMenu(menu) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
@@ -5931,6 +5933,7 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2018
  *
  */
+
 var className = 'modal-slider';
 /**
  * Entry function - loop through all the list items and add
@@ -6002,11 +6005,14 @@ function slideLeftorRight(e) {
   var dataDirection = e.target.parentNode.getAttribute('data-direction');
   var parentListItem = e.target.closest('li');
   var thisModalSlider = e.target.closest('.modal-slider');
-  var allListItems = thisModalSlider.querySelectorAll('li'); // always hide the active modal
+  var allListItems = thisModalSlider.querySelectorAll('li');
+  var newModal; // always hide the active modal
 
   var activeModal = document.querySelector('.modal__popup--show');
   activeModal.classList.remove('modal__popup--show');
-  activeModal.classList.add('modal__popup--hidden');
+  activeModal.classList.add('modal__popup--hidden'); // remove tab indexes of current modal
+
+  setTabIndexes(activeModal, false);
 
   if (dataDirection == '1') {
     /* 
@@ -6014,13 +6020,13 @@ function slideLeftorRight(e) {
         first list item's modal
     */
     if (parentListItem.nextElementSibling != null) {
-      var nextModal = parentListItem.nextElementSibling.querySelector('.modal__popup');
-      nextModal.classList.remove('modal__popup--hidden');
-      nextModal.classList.add('modal__popup--show');
+      newModal = parentListItem.nextElementSibling.querySelector('.modal__popup');
+      newModal.classList.remove('modal__popup--hidden');
+      newModal.classList.add('modal__popup--show');
     } else {
-      var firstModal = allListItems[0].querySelector('.modal__popup');
-      firstModal.classList.remove('modal__popup--hidden');
-      firstModal.classList.add('modal__popup--show');
+      newModal = allListItems[0].querySelector('.modal__popup');
+      newModal.classList.remove('modal__popup--hidden');
+      newModal.classList.add('modal__popup--show');
     }
   } else {
     /* 
@@ -6028,17 +6034,56 @@ function slideLeftorRight(e) {
         last list item's modal
     */
     if (parentListItem.previousElementSibling != null) {
-      var _nextModal = parentListItem.previousElementSibling.querySelector('.modal__popup');
-
-      _nextModal.classList.remove('modal__popup--hidden');
-
-      _nextModal.classList.add('modal__popup--show');
+      newModal = parentListItem.previousElementSibling.querySelector('.modal__popup');
+      newModal.classList.remove('modal__popup--hidden');
+      newModal.classList.add('modal__popup--show');
     } else {
-      var lastModal = allListItems[allListItems.length - 1].querySelector('.modal__popup');
-      lastModal.classList.remove('modal__popup--hidden');
-      lastModal.classList.add('modal__popup--show');
+      newModal = allListItems[allListItems.length - 1].querySelector('.modal__popup');
+      newModal.classList.remove('modal__popup--hidden');
+      newModal.classList.add('modal__popup--show');
     }
-  }
+  } // set the tab indexes
+
+
+  setTabIndexes(newModal, true); // trap the focus in the newly shown modal
+
+  trapFocus(newModal);
+}
+/**
+ * Trap focus: when the user navigates left or right,
+ * the focus must be trapped to the new modal
+ *
+ * @param {HTMLElement} modalPopup - the modal popup div
+ *
+ */
+
+
+function trapFocus(modalPopup) {
+  var modalInner = modalPopup.querySelector('.modal__inner');
+  var trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalInner, {
+    clickOutsideDeactivates: true
+  });
+  trap.activate();
+}
+/**
+ * Set tab indexes: when the modal is closed
+ * (i.e when user navs left or right), the anchors
+ * need to lose their tab indexes otherwise the user
+ * will tab through the modal even though it is hidden
+ *
+ * @param {HTMLElement} modalPopup - the modal popup element
+ * @param {boolean} addOrRemove - helper boolean to tell us if add/remove
+ */
+
+
+function setTabIndexes(modalPopup, addOrRemove) {
+  modalPopup.querySelectorAll('a').forEach(function (el) {
+    if (!addOrRemove) {
+      el.setAttribute('tabindex', '-1');
+    } else {
+      el.removeAttribute('tabindex');
+    }
+  });
 }
 /**
  * Create elements helper function to create all the HTML elements
