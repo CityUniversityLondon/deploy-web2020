@@ -6010,7 +6010,7 @@ function slideLeftorRight(e) {
 
   var activeModal = document.querySelector('.modal__popup--show');
   activeModal.classList.remove('modal__popup--show');
-  activeModal.classList.add('modal__popup--hidden'); // remove tab indexes of current modal
+  activeModal.classList.add('modal__popup--hidden'); // remove tab indexes of current modal, false is set tab index -1
 
   setTabIndexes(activeModal, false);
 
@@ -6042,7 +6042,7 @@ function slideLeftorRight(e) {
       newModal.classList.remove('modal__popup--hidden');
       newModal.classList.add('modal__popup--show');
     }
-  } // set the tab indexes
+  } // set the tab indexes, true is remove tab indexes
 
 
   setTabIndexes(newModal, true); // trap the focus in the newly shown modal
@@ -6072,7 +6072,7 @@ function trapFocus(modalPopup) {
  * will tab through the modal even though it is hidden
  *
  * @param {HTMLElement} modalPopup - the modal popup element
- * @param {boolean} addOrRemove - helper boolean to tell us if add/remove
+ * @param {boolean} addOrRemove - helper boolean to tell us to add/remove
  */
 
 
