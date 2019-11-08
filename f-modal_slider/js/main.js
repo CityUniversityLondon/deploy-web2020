@@ -6106,11 +6106,19 @@ function createElements(activeListItem, elementSibling, direction) {
   icon.className = 'modal__buttons__icon far';
   var button = document.createElement('button');
   button.setAttribute('tabindex', '-1');
+  /* 
+      outer span is for anchor discreet effect to work on text
+      that wraps - by default anchor discreet will not work
+      on text that wraps on two or more lines
+  */
+
+  var outerSpan = document.createElement('span');
   var spanText = document.createElement('span');
   spanText.textContent = elementSiblingDataTitle;
   modalButtonsContainer.append(parentDiv);
   parentDiv.append(button);
-  button.append(spanText); // 1 is right, -1 is left
+  button.append(outerSpan);
+  outerSpan.append(spanText); // 1 is right, -1 is left
 
   if (direction == 1) {
     button.setAttribute('data-direction', '1');
