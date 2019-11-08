@@ -6077,7 +6077,8 @@ function trapFocus(modalPopup) {
 
 
 function setTabIndexes(modalPopup, addOrRemove) {
-  modalPopup.querySelectorAll('a').forEach(function (el) {
+  var elements = modalPopup.querySelectorAll('a, button');
+  elements.forEach(function (el) {
     if (!addOrRemove) {
       el.setAttribute('tabindex', '-1');
     } else {
@@ -6103,6 +6104,7 @@ function createElements(activeListItem, elementSibling, direction) {
   var icon = document.createElement('span');
   icon.className = 'modal__buttons__icon far';
   var button = document.createElement('button');
+  button.setAttribute('tabindex', '-1');
   var spanText = document.createElement('span');
   spanText.textContent = elementSiblingDataTitle;
   modalButtonsContainer.append(parentDiv);
