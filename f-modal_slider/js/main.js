@@ -6066,10 +6066,11 @@ function trapFocus(modalPopup) {
   trap.activate();
 }
 /**
- * Set tab indexes: when the modal is closed
+ * Set tab indexes: when the modal is opened/closed
  * (i.e when user navs left or right), the anchors
- * need to lose their tab indexes otherwise the user
- * will tab through the modal even though it is hidden
+ * need to lose/gain their tab indexes otherwise the user
+ * will tab through the modal even though it is hidden or
+ * not be able to tab through the modal at all
  *
  * @param {HTMLElement} modalPopup - the modal popup element
  * @param {boolean} addOrRemove - helper boolean to tell us to add/remove
@@ -6079,8 +6080,6 @@ function trapFocus(modalPopup) {
 function setTabIndexes(modalPopup, addOrRemove) {
   var elements = modalPopup.querySelectorAll('a, button');
   elements.forEach(function (el) {
-    console.log(el);
-
     if (!addOrRemove) {
       el.setAttribute('tabindex', '-1');
     } else {
