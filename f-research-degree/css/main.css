@@ -42833,6 +42833,11 @@ a.modal__close:active, a.modal__close:focus {
     border-bottom: 0;
 }
 
+.featured-profiles-block .wrapper--featured-profiles__heading-intro .linked-heading:focus {
+    outline-color: #ffffff;
+    outline-offset: 0.5rem;
+}
+
 .featured-profiles-block .wrapper--featured-profiles__heading-intro .linked-heading .linked-heading__text {
     color: #ffffff;
     border-bottom-color: #ffffff;
@@ -42844,25 +42849,24 @@ a.modal__close:active, a.modal__close:focus {
 
 .featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile {
     display: flex;
-    background: #2a0d43;
     padding: 0 1rem 1rem 0;
     margin: 1rem 0;
 }
 
-.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:hover {
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:hover, .featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:focus-within {
     background: #ffffff;
 }
 
-.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:hover .featured-profiles__profile__label h3 a {
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:hover .featured-profiles__profile__label h3 a, .featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:focus-within .featured-profiles__profile__label h3 a {
     color: #1e1e1e;
     border-bottom-color: #1e1e1e;
 }
 
-.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:hover .featured-profiles__profile__label p {
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:hover .featured-profiles__profile__label p, .featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:focus-within .featured-profiles__profile__label p {
     color: #1e1e1e;
 }
 
-.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:hover .featured-profiles__profile__label .fas.fa-long-arrow-right {
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:hover .featured-profiles__profile__label .fas.fa-long-arrow-right, .featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:focus-within .featured-profiles__profile__label .fas.fa-long-arrow-right {
     visibility: visible;
     color: #d61726;
 }
@@ -42919,6 +42923,14 @@ a.modal__close:active, a.modal__close:focus {
     font-size: 1.602rem;
     font-weight: 300;
     margin-top: 0.25rem;
+}
+
+.featured-profiles-block.background--purple80 .featured-profiles__profile {
+    background: #2a0d43;
+}
+
+.featured-profiles-block.background--gray9 .featured-profiles__profile {
+    background: #1e1e1e;
 }
 
 .generic {
