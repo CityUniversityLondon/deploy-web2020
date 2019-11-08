@@ -5926,7 +5926,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * modal-slider
  *
- * @module patterns/modal/modal
+ * @module patterns/modal-slider/modal-slider
  * @author Daniel Miller <daniel.miller@city.ac.uk>
  * @copyright City, University of London 2018
  *

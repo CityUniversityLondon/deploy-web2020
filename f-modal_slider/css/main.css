@@ -34572,6 +34572,10 @@ body.modal--in.no-scroll .modal__background {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
+.modal_strapline {
+    color: #d61726;
+}
+
 a.modal__close {
     background-color: initial;
     border-bottom-color: initial;
@@ -34751,7 +34755,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .modal__buttons--slider div {
     align-items: center;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     display: flex;
 }
 
@@ -34763,7 +34767,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .modal__buttons--slider div:first-child {
     position: relative;
-    padding-right: 1.5rem;
+    padding-right: 2rem;
 }
 
 @media (min-width: 769px) {
@@ -34779,16 +34783,16 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .modal__buttons--slider div:first-child .modal__buttons__icon {
-    margin-right: 0.5rem;
+    margin-right: 0.75rem;
 }
 
 .modal__buttons--slider div:last-child {
     text-align: right;
-    padding-left: 1.5rem;
+    padding-left: 2rem;
 }
 
 .modal__buttons--slider div:last-child .modal__buttons__icon {
-    margin-left: 0.5rem;
+    margin-left: 0.75rem;
 }
 
 .modal__buttons {
@@ -40590,6 +40594,10 @@ body.modal--in.no-scroll .modal__background {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
+.modal_strapline {
+    color: #d61726;
+}
+
 a.modal__close {
     background-color: initial;
     border-bottom-color: initial;
@@ -40769,7 +40777,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .modal__buttons--slider div {
     align-items: center;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     display: flex;
 }
 
@@ -40781,7 +40789,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .modal__buttons--slider div:first-child {
     position: relative;
-    padding-right: 1.5rem;
+    padding-right: 2rem;
 }
 
 @media (min-width: 769px) {
@@ -40797,16 +40805,16 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .modal__buttons--slider div:first-child .modal__buttons__icon {
-    margin-right: 0.5rem;
+    margin-right: 0.75rem;
 }
 
 .modal__buttons--slider div:last-child {
     text-align: right;
-    padding-left: 1.5rem;
+    padding-left: 2rem;
 }
 
 .modal__buttons--slider div:last-child .modal__buttons__icon {
-    margin-left: 0.5rem;
+    margin-left: 0.75rem;
 }
 
 .modal__buttons {
