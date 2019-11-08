@@ -5936,7 +5936,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var className = 'modal-slider';
 /**
- * Entry function - loop through all the list items and add
+ * Entry function - loop through all the list items and
  * add the navigation buttons/listeners
  *
  * @param {HTMLElement} modalSlider - The UL element
