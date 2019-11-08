@@ -6113,6 +6113,7 @@ function createElements(activeListItem, elementSibling, direction) {
   */
 
   var outerSpan = document.createElement('span');
+  outerSpan.className = 'modal__underline-transition';
   var spanText = document.createElement('span');
   spanText.textContent = elementSiblingDataTitle;
   modalButtonsContainer.append(parentDiv);

@@ -34743,13 +34743,13 @@ a.modal__close:active, a.modal__close:focus {
     text-align: left;
 }
 
-.modal__buttons--slider button > span {
+.modal__buttons--slider button .modal__underline-transition {
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
 
-.modal__buttons--slider button span span {
+.modal__buttons--slider button .modal__underline-transition span {
     position: relative;
     background-image: linear-gradient(#0c0c0e, #0c0c0e);
     background-position: 0% 100%;
@@ -34760,7 +34760,7 @@ a.modal__close:active, a.modal__close:focus {
     line-height: 1.5;
 }
 
-.modal__buttons--slider button:hover span span {
+.modal__buttons--slider button:hover .modal__underline-transition span {
     background-image: linear-gradient(#d61726, #d61726);
     background-size: 100% 0.125rem;
 }
@@ -40777,13 +40777,13 @@ a.modal__close:active, a.modal__close:focus {
     text-align: left;
 }
 
-.modal__buttons--slider button > span {
+.modal__buttons--slider button .modal__underline-transition {
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
 
-.modal__buttons--slider button span span {
+.modal__buttons--slider button .modal__underline-transition span {
     position: relative;
     background-image: linear-gradient(#0c0c0e, #0c0c0e);
     background-position: 0% 100%;
@@ -40794,7 +40794,7 @@ a.modal__close:active, a.modal__close:focus {
     line-height: 1.5;
 }
 
-.modal__buttons--slider button:hover span span {
+.modal__buttons--slider button:hover .modal__underline-transition span {
     background-image: linear-gradient(#d61726, #d61726);
     background-size: 100% 0.125rem;
 }
