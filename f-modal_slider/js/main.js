@@ -6079,6 +6079,8 @@ function trapFocus(modalPopup) {
 function setTabIndexes(modalPopup, addOrRemove) {
   var elements = modalPopup.querySelectorAll('a, button');
   elements.forEach(function (el) {
+    console.log(el);
+
     if (!addOrRemove) {
       el.setAttribute('tabindex', '-1');
     } else {
@@ -6218,7 +6220,7 @@ function handleTriggerClose(e) {
 
 
 function setTabIndexes(modal, removeTabIndex) {
-  var elements = modal.querySelectorAll('a');
+  var elements = modal.querySelectorAll('a, button');
   elements.forEach(function (el) {
     if (removeTabIndex) {
       el.setAttribute('tabindex', '-1');
