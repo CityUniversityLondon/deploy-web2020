@@ -42801,7 +42801,7 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .featured-profiles-block--row .wrapper--featured-profiles__profile {
-    grid-column: 2/-1;
+    grid-column: 2/-2;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
