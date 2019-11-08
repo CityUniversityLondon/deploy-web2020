@@ -31324,6 +31324,7 @@ article figure figcaption a:active {
     border-bottom: solid 0.25rem #541b85;
 }
 
+.key-information--research__main__dates thead,
 .key-information--research__main__dates tbody {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -31331,6 +31332,7 @@ article figure figcaption a:active {
 }
 
 @media (max-width: 899px) {
+    .key-information--research__main__dates thead,
     .key-information--research__main__dates tbody {
         grid-template-columns: repeat(2, 1fr);
     }
