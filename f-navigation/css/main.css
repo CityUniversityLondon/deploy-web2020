@@ -33255,11 +33255,6 @@ article figure figcaption a:active {
     }
 }
 
-.navigation--primary__level1:focus-within
-~ .navigation--primary__level1:hover:not(:focus-within) > .navigation--primary__menu {
-    display: none;
-}
-
 .navigation--secondary {
     display: none;
     color: #696969;
