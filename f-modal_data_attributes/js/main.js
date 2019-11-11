@@ -6010,6 +6010,7 @@ function addEventListeners(modal, linkElement, modalCloseElement) {
 
 
 function openModal(e) {
+  e.preventDefault();
   var modal = e.target.nextElementSibling;
   addBackgroundFade();
   document.body.classList.add('modal--in', 'no-scroll');
@@ -6027,6 +6028,7 @@ function openModal(e) {
 
 
 function closeModal(e) {
+  e.preventDefault();
   var modal;
 
   if (e.target.classList.contains('modal__close')) {
