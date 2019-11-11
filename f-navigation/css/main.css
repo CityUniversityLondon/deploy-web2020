@@ -33018,20 +33018,17 @@ article figure figcaption a:active {
     margin-right: 0;
 }
 
+.navigation--primary .navigation__level1 > li:hover > .navigation--primary__menu {
+    display: block;
+}
+
 .navigation--primary .navigation__level2 {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    background-color: #ffffff;
+    display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
-    left: 0;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 1rem;
-    position: absolute;
-    z-index: 2;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -33084,7 +33081,7 @@ article figure figcaption a:active {
     font-size: 0.79rem;
     line-height: 1.625;
     letter-spacing: 0.005em;
-    font-weight: 400;
+    font-weight: 450;
 }
 
 .navigation--primary .navigation__level3 i,
@@ -33168,7 +33165,87 @@ article figure figcaption a:active {
     max-width: unset;
 }
 
-.navigation--primary .navigation__level2 {
+.navigation--primary .navigation--primary__menu {
+    background-color: #ffffff;
+    left: 0;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.navigation--primary .navigation--primary__menu__header {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+.navigation--primary .navigation--primary__menu__header i,
+.navigation--primary .navigation--primary__menu__header em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.navigation--primary .navigation--primary__menu__header b,
+.navigation--primary .navigation--primary__menu__header strong {
+    font-weight: inherit;
+}
+
+.navigation--primary .navigation--primary__menu__header i,
+.navigation--primary .navigation--primary__menu__header em {
+    font-style: italic;
+}
+
+.navigation--primary .navigation--primary__menu__header u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .navigation--primary .navigation--primary__menu__header {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .navigation--primary .navigation--primary__menu__header {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .navigation--primary .navigation--primary__menu__header {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .navigation--primary .navigation--primary__menu__header {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .navigation--primary .navigation--primary__menu__header {
+        letter-spacing: -0.017em;
+    }
+}
+
+.navigation--primary .navigation--primary__menu__header b,
+.navigation--primary .navigation--primary__menu__header strong {
+    font-weight: 700;
+}
+
+.navigation--primary .navigation--primary__menu {
     display: none;
 }
 
