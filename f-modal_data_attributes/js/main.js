@@ -6044,7 +6044,7 @@ function closeModal(e) {
 }
 /**
  * Add background fade: adds the background fade element
- * to the body. Only adds once if it's note present
+ * to the body. Only adds once if element not in source
  *
  */
 
