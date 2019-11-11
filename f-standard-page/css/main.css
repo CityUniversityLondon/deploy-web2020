@@ -33246,6 +33246,10 @@ article figure figcaption a:active {
     font-style: normal;
 }
 
+.blockquote__body.color--red50 p {
+    color: #d61726;
+}
+
 .blockquote__body--text-align-left {
     text-align: left;
 }
