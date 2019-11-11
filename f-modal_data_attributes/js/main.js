@@ -5945,7 +5945,7 @@ var modalBackground = document.createElement('div'),
     trap;
 /**
  * Launch function: sets the modal attr to hidden, adds
- * elements to toggle the modal, adds events to those
+ * elements to toggle the modal, adds event listeners to those
  * elements to toggle the modal and sets tab indexes
  * on all anchor elements
  *
