@@ -41454,6 +41454,18 @@ a.modal__close:active, a.modal__close:focus {
     background-color: #250020;
 }
 
+@media (max-width: 1279px) {
+    .carousel-gallery .swiper-slide__image-wrapper {
+        height: 16rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-gallery .swiper-slide__image-wrapper {
+        height: 4rem;
+    }
+}
+
 .carousel-gallery .swiper-slide__image-wrapper img {
     object-fit: contain;
 }
@@ -41475,7 +41487,7 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .js .galleria-thumbnails-list .galleria-thumbnail {
-    width: calc(100% / var(--thumbnails));
+    max-width: calc(100% / var(--thumbnails));
     margin-top: 0;
     margin-right: 0.5rem;
 }
@@ -41491,6 +41503,10 @@ a.modal__close:active, a.modal__close:focus {
 .js .galleria-thumbnails-list .galleria-thumbnail.fade img {
     -webkit-mask-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
             mask-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+}
+
+.js .galleria-thumbnails-list .galleria-thumbnail.blurSlider {
+    opacity: 0.1;
 }
 
 .generic {

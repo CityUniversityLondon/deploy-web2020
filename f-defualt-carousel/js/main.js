@@ -4656,6 +4656,9 @@ function carouselGallery(elem) {
     if (i === 0) {
       e.classList.add('active');
       e.parentElement.children[3].classList.add('fade');
+      e.parentElement.children.forEach(function (e, i) {
+        i > 3 ? e.classList.add('blurSlider') : null;
+      });
     }
 
     e.addEventListener('click', function (t) {
@@ -5230,7 +5233,7 @@ function activeThumbnail(thumbindex, e) {
   try {
     for (var _iterator = listThumbnail[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var li = _step.value;
-      li.classList.remove('active', 'fade');
+      li.classList.remove('active', 'fade', 'blurSlider');
     }
   } catch (err) {
     _didIteratorError = true;
@@ -5247,7 +5250,28 @@ function activeThumbnail(thumbindex, e) {
     }
   }
 
-  slider === 1 ? listThumbnail[thumbindex + 3].classList.add('fade') : slider > lastTwoSlider ? null : listThumbnail[thumbindex + 2].classList.add('fade');
+  if (slider === 1) {
+    listThumbnail[thumbindex + 3].classList.add('fade');
+    listThumbnail.forEach(function (e, i) {
+      if (i > thumbindex + 3) {
+        e.classList.add('blurSlider');
+      }
+    });
+  } else if (!(slider > lastTwoSlider)) {
+    listThumbnail[thumbindex + 2].classList.add('fade');
+    listThumbnail.forEach(function (e, i) {
+      if (i > thumbindex + 2) {
+        e.classList.add('blurSlider');
+      }
+    });
+  }
+  /*slider === 1
+      ? listThumbnail[thumbindex + 3].classList.add('fade')
+      : slider > lastTwoSlider
+      ? null
+      : listThumbnail[thumbindex + 2].classList.add('fade');*/
+
+
   listThumbnail[thumbindex].classList.add('active');
   translateThumbnails(thumbindex, e);
 }
