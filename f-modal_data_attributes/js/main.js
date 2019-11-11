@@ -5987,7 +5987,7 @@ function addEventListeners(modal, linkElement, modalCloseElement) {
 
   modal.addEventListener('keydown', function (e) {
     if (e.keyCode === 27) {
-      closeModal(modal);
+      closeModal(e);
     }
   });
   /*
@@ -6004,7 +6004,7 @@ function addEventListeners(modal, linkElement, modalCloseElement) {
  * Open modal: runs all the required functions
  * to open the modal
  *
- * @param {HTMLElement} modal - the modal
+ * @param {event} e - click event
  *
  */
 
@@ -6021,14 +6021,20 @@ function openModal(e) {
  * Close modal: runs all the required functions
  * to close the modal
  *
- * @param {HTMLElement} modal - the modal
+ * @param {event} e - click event
  *
  */
 
 
 function closeModal(e) {
   var modal;
-  e.target.classList.contains('modal__close') ? modal = e.target.closest('.modal__popup') : modal = e.target;
+
+  if (e.target.classList.contains('modal__close')) {
+    modal = e.target.closest('.modal__popup');
+  } else {
+    modal = e.target;
+  }
+
   document.body.classList.remove('modal--in', 'no-scroll');
   modal.setAttribute('data-hidden', true);
   setTabIndexes(modal, true);
@@ -6037,8 +6043,6 @@ function closeModal(e) {
 /**
  * Add background fade: adds the background fade element
  * to the body. Only adds once if it's note present
- *
- * @param {HTMLElement} modal - the modal
  *
  */
 
