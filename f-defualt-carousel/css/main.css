@@ -41462,7 +41462,7 @@ a.modal__close:active, a.modal__close:focus {
 
 @media (max-width: 767px) {
     .carousel-gallery .swiper-slide__image-wrapper {
-        height: 4rem;
+        height: 10rem;
     }
 }
 
