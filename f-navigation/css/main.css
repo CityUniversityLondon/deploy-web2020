@@ -33018,7 +33018,7 @@ article figure figcaption a:active {
     margin-right: 0;
 }
 
-.navigation--primary .navigation__level1 > li:hover > .navigation--primary__menu {
+.navigation--primary .navigation__level1 > li:hover > .navigation--primary__menu, .navigation--primary .navigation__level1 > li:focus-within > .navigation--primary__menu {
     display: block;
 }
 
