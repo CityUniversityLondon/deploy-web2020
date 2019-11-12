@@ -32489,38 +32489,7 @@ article figure figcaption a:active {
 }
 
 .no-js .menu {
-    font-size: 0.79rem;
-    grid-area: menu;
-}
-
-.no-js .menu .menu__button {
     display: none;
-}
-
-.no-js .menu li {
-    margin-top: 0.5rem;
-}
-
-.no-js .menu .menu__level2,
-.no-js .menu .menu__level3,
-.no-js .menu .menu__level4,
-.no-js .menu .menu__level5,
-.no-js .menu .menu__level6 {
-    display: none;
-    margin-left: 1rem;
-}
-
-.no-js .menu .menu__current > .menu__level2,
-.no-js .menu .menu__current > .menu__level3,
-.no-js .menu .menu__current > .menu__level4,
-.no-js .menu .menu__current > .menu__level5,
-.no-js .menu .menu__current > .menu__level6,
-.no-js .menu .menu__hierarchy > .menu__level2,
-.no-js .menu .menu__hierarchy > .menu__level3,
-.no-js .menu .menu__hierarchy > .menu__level4,
-.no-js .menu .menu__hierarchy > .menu__level5,
-.no-js .menu .menu__hierarchy > .menu__level6 {
-    display: block;
 }
 
 .js .menu {
@@ -33178,6 +33147,12 @@ article figure figcaption a:active {
 
 .js .menu__veil[data-on='true'] {
     display: block;
+}
+
+@media (min-width: 1024px) {
+    .js .menu__veil[data-on='true'] {
+        display: none;
+    }
 }
 
 .navigation ul {
