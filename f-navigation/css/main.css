@@ -33416,7 +33416,7 @@ article figure figcaption a:active {
 }
 
 .navigation--primary .navigation__level1 > li:hover > .navigation--primary__menu, .navigation--primary .navigation__level1 > li:focus-within > .navigation--primary__menu {
-    display: block;
+    display: grid;
 }
 
 .navigation--primary .navigation__level2 {
@@ -33565,6 +33565,8 @@ article figure figcaption a:active {
 
 .navigation--primary .navigation--primary__menu {
     background-color: #ffffff;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
     left: 0;
     padding-bottom: 1rem;
     padding-left: 1rem;
@@ -33573,6 +33575,12 @@ article figure figcaption a:active {
     position: absolute;
     width: 100%;
     z-index: 2;
+}
+
+@media (min-width: 1280px) {
+    .navigation--primary .navigation--primary__menu {
+        grid-template-columns: 1fr 2fr;
+    }
 }
 
 .navigation--primary .navigation--primary__menu__header {
@@ -33654,14 +33662,7 @@ article figure figcaption a:active {
 }
 
 .navigation--secondary {
-    display: none;
     color: #696969;
-}
-
-@media (min-width: 1024px) {
-    .navigation--secondary.navigation__hierarchy.navigation__haschildren, .navigation--secondary.navigation__current.navigation__haschildren {
-        display: block;
-    }
 }
 
 .navigation--secondary div {
@@ -33906,12 +33907,11 @@ article figure figcaption a:active {
     border-bottom-color: #1e1e1e;
 }
 
-.js .navigation--secondary ul {
+.js .navigation--secondary .navigation__level3,
+.js .navigation--secondary .navigation__level4,
+.js .navigation--secondary .navigation__level5,
+.js .navigation--secondary .navigation__level6 {
     display: none;
-}
-
-.js .navigation--secondary ul.navigation__level4 {
-    display: block;
 }
 
 .js .navigation--secondary li {
