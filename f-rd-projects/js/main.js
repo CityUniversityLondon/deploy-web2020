@@ -6891,12 +6891,18 @@ function initSlider(slider) {
     sliderControls.appendChild(sliderButtons);
     slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled');
   } // MS
+  // Each time slider loads, build three sets of controls (one for each device)
 
 
   buildControls('desktop', 3, 1);
   buildControls('tablet', 2, 1);
   buildControls('mobile', 1, 1);
   var controlWraps = slider.querySelectorAll('.slider__controls__wrap');
+  /**
+   * For each instance of the controls, update the current position data attribute when next previous/buttons
+   * are selected. This means if the viewport changes, the correct value is retained for each control.
+   */
+
   var _iteratorNormalCompletion2 = true;
   var _didIteratorError2 = false;
   var _iteratorError2 = undefined;
@@ -6907,8 +6913,10 @@ function initSlider(slider) {
       controlWrap.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
         var currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
         var sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
-        var updatedPosition = parseInt(currentPosition + sliderIncrement);
-        controlWrap.setAttribute('data-currentposition', updatedPosition);
+        var updatedPosition = parseInt(currentPosition + sliderIncrement); // Set updated position to active controls
+
+        controlWrap.setAttribute('data-currentposition', updatedPosition); // Set updated position to all controls
+
         var _iteratorNormalCompletion3 = true;
         var _didIteratorError3 = false;
         var _iteratorError3 = undefined;
@@ -6917,6 +6925,10 @@ function initSlider(slider) {
           for (var _iterator3 = controlWraps[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
             var c = _step3.value;
             c.setAttribute('data-currentposition', updatedPosition);
+            sliderIncrement = c.getAttribute('data-increment');
+            var group = updatedPosition / sliderIncrement;
+            var p = c.querySelector('.slide__controls__progress__active');
+            p.innerHTML = Math.ceil(group);
           }
         } catch (err) {
           _didIteratorError3 = true;
