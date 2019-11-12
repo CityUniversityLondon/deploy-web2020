@@ -5501,8 +5501,8 @@ var className = 'menu',
     menuLevelClassNamePrefix = className + '__level',
     veilClassName = className + '__veil',
     // the menu starts with the entries below the root, not the root itself
-firstLevel = 2,
-    levelsSupported = 4,
+firstLevel = 1,
+    levelsSupported = 6,
     scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_10__["reduceMotion"])() ? 0 : 999;
 /**
  * Copies a sub-menu into the appropriate column for its menu level, replacing
