@@ -33638,6 +33638,13 @@ article figure figcaption a:active {
 
 .navigation--secondary {
     color: #696969;
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .navigation--secondary {
+        display: block;
+    }
 }
 
 .navigation--secondary div {
