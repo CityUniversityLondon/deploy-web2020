@@ -6868,11 +6868,13 @@ function initSlider(slider) {
     var sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('div', null, null, null, 'slider__controls__wrap'); // for testing
 
     var type = Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('p', deviceType, null, null, 'slider__controls__type');
+    var slides = Math.ceil(sliderChildrenLength / increment);
     setAttributes(sliderControlsWrap, {
       'data-device': deviceType,
       'data-increment': increment,
       'data-currentPosition': currentPosition,
-      'data-length': sliderChildrenLength
+      'data-length': sliderChildrenLength,
+      'data-slides': slides
     });
     var sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('div', null, null, null, 'slider__controls');
     var sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('div', null, null, null, 'slider__controls__progress');
@@ -6915,7 +6917,10 @@ function initSlider(slider) {
         var sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
         var updatedPosition = parseInt(currentPosition + sliderIncrement); // Set updated position to active controls
 
-        controlWrap.setAttribute('data-currentposition', updatedPosition); // Set updated position to all controls
+        controlWrap.setAttribute('data-currentposition', updatedPosition);
+        /**
+         * Update properties on all controls, not just the active control
+         */
 
         var _iteratorNormalCompletion3 = true;
         var _didIteratorError3 = false;
@@ -6923,12 +6928,22 @@ function initSlider(slider) {
 
         try {
           for (var _iterator3 = controlWraps[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-            var c = _step3.value;
-            c.setAttribute('data-currentposition', updatedPosition);
-            sliderIncrement = c.getAttribute('data-increment');
-            var group = updatedPosition / sliderIncrement;
-            var p = c.querySelector('.slide__controls__progress__active');
-            p.innerHTML = Math.ceil(group);
+            var control = _step3.value;
+            control.setAttribute('data-currentposition', updatedPosition);
+            sliderIncrement = control.getAttribute('data-increment');
+            var currentGroup = updatedPosition / sliderIncrement;
+            var progressIndicator = control.querySelector('.slide__controls__progress__active');
+            progressIndicator.innerHTML = Math.ceil(currentGroup); // Disable next button if reached final slide of set
+
+            var totalSlides = control.getAttribute('data-slides');
+
+            if (Math.ceil(currentGroup) >= totalSlides) {
+              control.querySelector('.slider__controls__buttons__next').setAttribute('disabled', true);
+            }
+
+            if (currentPosition > 0) {
+              control.querySelector('.slider__controls__buttons__prev').removeAttribute('disabled');
+            }
           }
         } catch (err) {
           _didIteratorError3 = true;
@@ -6947,7 +6962,55 @@ function initSlider(slider) {
 
         currentPosition = updatedPosition;
       });
-      controlWrap.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {//  currentPosition -= sliderIncrement;
+      controlWrap.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
+        var currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
+        var sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
+        var updatedPosition = parseInt(currentPosition - sliderIncrement); // Set updated position to active controls
+
+        controlWrap.setAttribute('data-currentposition', updatedPosition);
+        /**
+         * Update properties on all controls, not just the active control
+         */
+
+        var _iteratorNormalCompletion4 = true;
+        var _didIteratorError4 = false;
+        var _iteratorError4 = undefined;
+
+        try {
+          for (var _iterator4 = controlWraps[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+            var control = _step4.value;
+            control.setAttribute('data-currentposition', updatedPosition);
+            sliderIncrement = control.getAttribute('data-increment');
+            var currentGroup = updatedPosition / sliderIncrement;
+            var progressIndicator = control.querySelector('.slide__controls__progress__active');
+            progressIndicator.innerHTML = Math.ceil(currentGroup); // Disable next button if reached final slide of set
+
+            var totalSlides = control.getAttribute('data-slides');
+
+            if (Math.ceil(currentGroup) < totalSlides) {
+              control.querySelector('.slider__controls__buttons__next').removeAttribute('disabled');
+
+              if (Math.ceil(currentGroup) == 1) {
+                control.querySelector('.slider__controls__buttons__prev').setAttribute('disabled', true);
+              }
+            }
+          }
+        } catch (err) {
+          _didIteratorError4 = true;
+          _iteratorError4 = err;
+        } finally {
+          try {
+            if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
+              _iterator4.return();
+            }
+          } finally {
+            if (_didIteratorError4) {
+              throw _iteratorError4;
+            }
+          }
+        }
+
+        currentPosition = updatedPosition;
       });
     };
 
