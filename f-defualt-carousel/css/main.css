@@ -42613,6 +42613,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .carousel-gallery h3 {
     color: #ffffff;
+    margin-bottom: 1rem;
 }
 
 .carousel-gallery .swiper-slide {
@@ -42621,6 +42622,9 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .carousel-gallery .swiper-slide__text {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
     display: block;
     top: 0;
     background-color: initial;
@@ -42628,6 +42632,36 @@ a.modal__close:active, a.modal__close:focus {
     margin-right: unset;
     margin-left: unset;
     padding: 1rem 0;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .carousel-gallery .swiper-slide__text {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .carousel-gallery .swiper-slide__text {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .carousel-gallery .swiper-slide__text {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .carousel-gallery .swiper-slide__text {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .carousel-gallery .swiper-slide__text {
+        letter-spacing: -0.017em;
+    }
 }
 
 .carousel-gallery .swiper-buttons-wrap {
@@ -42724,15 +42758,26 @@ a.modal__close:active, a.modal__close:focus {
     margin-right: 0.5rem;
 }
 
-.js .galleria-thumbnails-list .galleria-thumbnail img {
+.js .galleria-thumbnails-list .galleria-thumbnail input {
+    max-width: 100%;
+    height: auto;
+    border: 0;
     max-height: 4rem;
 }
 
-.js .galleria-thumbnails-list .galleria-thumbnail.active img {
-    border: 1px solid red;
+.js .galleria-thumbnails-list .galleria-thumbnail input:active {
+    outline: #b91924 solid 1px;
 }
 
-.js .galleria-thumbnails-list .galleria-thumbnail.fade img {
+.js .galleria-thumbnails-list .galleria-thumbnail input:focus {
+    outline: #fe8f91 solid 1px;
+}
+
+.js .galleria-thumbnails-list .galleria-thumbnail.active input {
+    outline: #b91924 solid 1px;
+}
+
+.js .galleria-thumbnails-list .galleria-thumbnail.fade input {
     -webkit-mask-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
             mask-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
 }

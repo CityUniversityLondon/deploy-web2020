@@ -4605,6 +4605,11 @@ function carouselGallery(elem) {
     e.addEventListener('click', function (t) {
       Object(_image_carousel__WEBPACK_IMPORTED_MODULE_2__["onClickThunbnail"])(t, i);
     }, false);
+    e.addEventListener('keyup', function (e) {
+      if (e.keyCode === 13) {
+        Object(_image_carousel__WEBPACK_IMPORTED_MODULE_2__["onClickThunbnail"])(e, i);
+      }
+    }, false);
   });
 }
 
@@ -4919,7 +4924,7 @@ function moveSlide(e, t) {
   }
 
   if (!ie) {
-    if (config.defaultCarousel && e.target.tagName === 'IMG') {
+    if (config.defaultCarousel && e.target.tagName === 'INPUT') {
       sl.style.setProperty('--i', i);
     } else {
       t ? sl.style.setProperty('--i', i != 0 ? i += 1 : i = 1) : sl.style.setProperty('--i', i != 0 ? i -= 1 : i = 1);
@@ -4933,7 +4938,7 @@ function moveSlide(e, t) {
     t ? sliderTranslateCoOr -= sliderWidth : sliderTranslateCoOr += sliderWidth;
     sl.classList.toggle('smooth');
 
-    if (config.defaultCarousel && e.target.tagName === 'IMG') {
+    if (config.defaultCarousel && e.target.tagName === 'INPUT') {
       sliderTranslateCoOr = -sliderWidthIndex;
       sl.style.setProperty('transform', 'translate(-' + sliderWidthIndex + 'px)');
       sl.style.setProperty('--i', i);
