@@ -6933,15 +6933,27 @@ function initSlider(slider) {
             sliderIncrement = control.getAttribute('data-increment');
             var currentGroup = updatedPosition / sliderIncrement;
             var progressIndicator = control.querySelector('.slide__controls__progress__active');
-            progressIndicator.innerHTML = Math.ceil(currentGroup); // Disable next button if reached final slide of set
-
             var totalSlides = control.getAttribute('data-slides');
+            /**
+             * If increment increase exceeds total slides' length, limit the current
+             * position value to the total slides' length. This can happen when
+             * clicking on desktop viewport and reducing screen size to tablet or
+             * mobile.
+             */
+
+            if (currentGroup > totalSlides) {
+              progressIndicator.innerHTML = totalSlides;
+              control.setAttribute('data-currentposition', totalSlides);
+            } else {
+              progressIndicator.innerHTML = Math.ceil(currentGroup);
+            } // Disable next button if reached final slide of set
+
 
             if (Math.ceil(currentGroup) >= totalSlides) {
               control.querySelector('.slider__controls__buttons__next').setAttribute('disabled', true);
             }
 
-            if (currentPosition > 0) {
+            if (updatedPosition > 0) {
               control.querySelector('.slider__controls__buttons__prev').removeAttribute('disabled');
             }
           }
