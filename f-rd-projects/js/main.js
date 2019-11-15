@@ -6840,12 +6840,18 @@ function initSlider(slider) {
     for (var _iterator = sliderChildren.entries()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var sliderChild = _step.value;
 
+      //console.log(sliderChild[1])
       if (sliderChild[0] < 1) {
-        sliderChild[1].classList.add('slider__active-slide');
+        sliderChild[1].setAttribute('data-active', true);
       } else {
-        // only displays first slide and hides rest
-        sliderChild[1].classList.add('slider__slide');
-      }
+        sliderChild[1].setAttribute('data-active', false);
+      } // if (sliderChild[0] < 1) {
+
+
+      sliderChild[1].classList.add('slider__slide'); // }
+      // only displays first slide and hides rest
+      // sliderChild[1].classList.add('slider__slide');
+      // let items = slider.querySelectorAll('li');
     }
     /* generates controls */
 
@@ -6912,9 +6918,27 @@ function initSlider(slider) {
   try {
     var _loop = function _loop() {
       var controlWrap = _step2.value;
-      controlWrap.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
+      var nextBtn = controlWrap.querySelector('.slider__controls__buttons__next');
+      nextBtn.addEventListener('click', function () {
         var currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
-        var sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
+        var parentWrapper = nextBtn.closest('.slider__controls__wrap');
+        var dataActiveValue;
+        var sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
+
+        switch (sliderIncrement) {
+          case 1:
+            dataActiveValue = 'data-active-mobile';
+            break;
+
+          case 2:
+            dataActiveValue = 'data-active-tablet';
+            break;
+
+          case 3:
+            dataActiveValue = 'data-active-desktop';
+            break;
+        }
+
         var updatedPosition = parseInt(currentPosition + sliderIncrement); // Set updated position to active controls
 
         controlWrap.setAttribute('data-currentposition', updatedPosition);
@@ -6929,8 +6953,8 @@ function initSlider(slider) {
         try {
           for (var _iterator3 = controlWraps[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
             var control = _step3.value;
-            control.setAttribute('data-currentposition', updatedPosition);
-            sliderIncrement = control.getAttribute('data-increment');
+            control.setAttribute('data-currentposition', updatedPosition); // sliderIncrement = parseInt(control.getAttribute('data-increment'));
+
             var currentGroup = updatedPosition / sliderIncrement;
             var progressIndicator = control.querySelector('.slide__controls__progress__active');
             var totalSlides = control.getAttribute('data-slides');
@@ -6955,6 +6979,27 @@ function initSlider(slider) {
 
             if (updatedPosition > 0) {
               control.querySelector('.slider__controls__buttons__prev').removeAttribute('disabled');
+            }
+            /**
+             * Add/remove 'data-active' attributes to relevant items in listing, based on the current
+             * position user is at. CSS will determine how many of these elements will be visible to
+             * the user, depending on viewport size.
+             */
+
+
+            var items = slider.querySelectorAll('li');
+
+            for (var i = 0; i < totalSlides; i++) {
+              if (items[i].getAttribute('data-active')) {
+                items[i].setAttribute('data-active', false);
+              }
+            }
+
+            console.log(updatedPosition + sliderIncrement);
+            console.log(updatedPosition);
+
+            for (var j = updatedPosition - 1; j < updatedPosition + (sliderIncrement - 1) && j <= totalSlides; j++) {
+              items[j].setAttribute('data-active', dataActiveValue);
             }
           }
         } catch (err) {
@@ -6992,7 +7037,7 @@ function initSlider(slider) {
           for (var _iterator4 = controlWraps[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
             var control = _step4.value;
             control.setAttribute('data-currentposition', updatedPosition);
-            sliderIncrement = control.getAttribute('data-increment');
+            sliderIncrement = parseInt(control.getAttribute('data-increment'));
             var currentGroup = updatedPosition / sliderIncrement;
             var progressIndicator = control.querySelector('.slide__controls__progress__active');
             progressIndicator.innerHTML = Math.ceil(currentGroup); // Disable next button if reached final slide of set
@@ -7005,6 +7050,26 @@ function initSlider(slider) {
               if (Math.ceil(currentGroup) == 1) {
                 control.querySelector('.slider__controls__buttons__prev').setAttribute('disabled', true);
               }
+            }
+            /**
+             * Add/remove 'data-active' attributes to relevant items in listing, based on the current
+             * position user is at. CSS will determine how many of these elements will be visible to
+             * the user, depending on viewport size.
+             */
+
+
+            var items = slider.querySelectorAll('li');
+
+            for (var i = 0; i < totalSlides; i++) {
+              if (items[i].getAttribute('data-active')) {
+                items[i].removeAttribute('data-active');
+              }
+            } // console.log(updatedPosition);
+            // console.log(updatedPosition + sliderIncrement -1)
+
+
+            for (var j = updatedPosition - 1; j < updatedPosition + sliderIncrement; j++) {
+              items[j].setAttribute('data-active', true);
             }
           }
         } catch (err) {

@@ -33704,7 +33704,11 @@ blockquote footer cite {
     }
 }
 
-.slider__slide {
+.slider__slide[data-active='true'] {
+    display: block;
+}
+
+.slider__slide[data-active='false'] {
     display: none;
 }
 
@@ -33732,6 +33736,36 @@ blockquote footer cite {
 @media (max-width: 432px) {
     .slider__controls__wrap {
         grid-column: 1 / -1;
+    }
+}
+
+.slider__controls__wrap[data-device='mobile'] {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .slider__controls__wrap[data-device='mobile'] {
+        display: flex;
+    }
+}
+
+.slider__controls__wrap[data-device='tablet'] {
+    display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .slider__controls__wrap[data-device='tablet'] {
+        display: flex;
+    }
+}
+
+.slider__controls__wrap[data-device='desktop'] {
+    display: none;
+}
+
+@media (min-width: 1280px) {
+    .slider__controls__wrap[data-device='desktop'] {
+        display: flex;
     }
 }
 
