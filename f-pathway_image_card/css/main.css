@@ -22536,6 +22536,10 @@ main table td em {
     position: relative;
 }
 
+.card--pathway-image a:visited {
+    color: #0c0c0e;
+}
+
 .card--pathway-image a:hover, .card--pathway-image a:active, .card--pathway-image a:focus {
     background-image: none;
     background-color: transparent;
