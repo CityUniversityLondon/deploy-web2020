@@ -6830,15 +6830,18 @@ function setAttributes(el, attrs) {
     el.setAttribute(key, attrs[key]);
   }
 }
+/**
+ *
+ * @param {Number} sliderIncrement - Amount to increase/decrease visible listing index number.
+ * @param {Number} currentPosition - Index number of first item to be visible.
+ * @param {String} sliderDirection - Increase or decrease visible index number.
+ * @param {Element} slider - The slider.
+ */
+
 
 function listingsDisplay(sliderIncrement, currentPosition, sliderDirection, slider) {
   // Decide whether to show next, or previous, group of listings
-  if (sliderDirection == 'forward') {
-    updatedPosition = parseInt(currentPosition + sliderIncrement);
-  } else {
-    updatedPosition = parseInt(currentPosition - sliderIncrement);
-  } // Loop through all slides, adding data-device attributes passed from controller.
-
+  sliderDirection == 'forward' ? updatedPosition = parseInt(currentPosition + sliderIncrement) : updatedPosition = parseInt(currentPosition - sliderIncrement); // Loop through all slides, adding data-device attributes passed from controller.
 
   var items = slider.querySelectorAll('li');
 
@@ -6851,9 +6854,97 @@ function listingsDisplay(sliderIncrement, currentPosition, sliderDirection, slid
   }
 }
 /**
+ *
+ * @param {Number} sliderIncrement - Amount to increase/decrease visible listing index number.
+ * @param {Number} currentPosition - Index number of first item to be visible.
+ * @param {String} sliderDirection - Increase or decrease visible index number.
+ * @param {Element} slider - The slider.
+ */
+
+
+function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slider) {
+  var controlWraps = slider.querySelectorAll('.slider__controls__wrap');
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = controlWraps[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var controlWrap = _step.value;
+      // Increase/decrease progrees indicator based on button click.
+      sliderDirection == 'forward' ? updatedPosition = parseInt(currentPosition + sliderIncrement) : updatedPosition = parseInt(currentPosition - sliderIncrement);
+      controlWrap.setAttribute('data-currentposition', updatedPosition);
+    } // Update properties on all controls, not just the active control
+
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return != null) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  var _iteratorNormalCompletion2 = true;
+  var _didIteratorError2 = false;
+  var _iteratorError2 = undefined;
+
+  try {
+    for (var _iterator2 = controlWraps[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+      var control = _step2.value;
+      control.setAttribute('data-currentposition', updatedPosition);
+      sliderIncrement = control.getAttribute('data-increment');
+      var currentGroup = updatedPosition / sliderIncrement;
+      var progressIndicator = control.querySelector('.slide__controls__progress__active');
+      var totalSlides = control.getAttribute('data-slides');
+      /**
+       * If increment increase exceeds total slides' length, limit the current
+       * position value to the total slides' length. This can happen when
+       * clicking on desktop viewport and reducing screen size to tablet or
+       * mobile.
+       */
+
+      if (currentGroup > totalSlides) {
+        progressIndicator.innerHTML = totalSlides;
+        control.setAttribute('data-currentposition', totalSlides);
+      } else {
+        progressIndicator.innerHTML = Math.ceil(currentGroup);
+      } // Disable next button if reached final slide of set
+
+
+      if (Math.ceil(currentGroup) >= totalSlides) {
+        control.querySelector('.slider__controls__buttons__next').setAttribute('disabled', true);
+      }
+
+      if (updatedPosition > 0) {
+        control.querySelector('.slider__controls__buttons__prev').removeAttribute('disabled');
+      }
+    }
+  } catch (err) {
+    _didIteratorError2 = true;
+    _iteratorError2 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
+        _iterator2.return();
+      }
+    } finally {
+      if (_didIteratorError2) {
+        throw _iteratorError2;
+      }
+    }
+  }
+}
+/**
  * Turn a group of list items into a responsive slider where, depending on viewport, the number of visible items
  * at any one time, varies. This pattern is designed to accommodate up to three items per slide.
- * @param {HTMLElement} slider
+ * @param {HTMLElement} slider - The slider.
  */
 
 
@@ -6867,13 +6958,13 @@ function launchResponsiveSlider(slider) {
 
   sliderChildren = _toConsumableArray(slider.children);
   sliderChildrenLength = sliderChildren.length;
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
+  var _iteratorNormalCompletion3 = true;
+  var _didIteratorError3 = false;
+  var _iteratorError3 = undefined;
 
   try {
-    for (var _iterator = sliderChildren.entries()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var sliderChild = _step.value;
+    for (var _iterator3 = sliderChildren.entries()[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+      var sliderChild = _step3.value;
       sliderChild[1].classList.add('slider__slide');
       var items = slider.querySelectorAll('li');
       /**
@@ -6895,16 +6986,16 @@ function launchResponsiveSlider(slider) {
      */
 
   } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
+    _didIteratorError3 = true;
+    _iteratorError3 = err;
   } finally {
     try {
-      if (!_iteratorNormalCompletion && _iterator.return != null) {
-        _iterator.return();
+      if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
+        _iterator3.return();
       }
     } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
+      if (_didIteratorError3) {
+        throw _iteratorError3;
       }
     }
   }
@@ -6949,13 +7040,13 @@ function launchResponsiveSlider(slider) {
    * are selected. This means if the viewport changes, the correct value is passed to each control.
    */
 
-  var _iteratorNormalCompletion2 = true;
-  var _didIteratorError2 = false;
-  var _iteratorError2 = undefined;
+  var _iteratorNormalCompletion4 = true;
+  var _didIteratorError4 = false;
+  var _iteratorError4 = undefined;
 
   try {
     var _loop = function _loop() {
-      var controlWrap = _step2.value;
+      var controlWrap = _step4.value;
       var nextBtn = controlWrap.querySelector('.slider__controls__buttons__next');
       /**
        * Slide content display. Isolate event listener to specific controller clicked. This is needed
@@ -6977,61 +7068,7 @@ function launchResponsiveSlider(slider) {
       controlWrap.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
         var currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
         var sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
-        var updatedPosition = parseInt(currentPosition + sliderIncrement); // Set updated position to active controls
-
-        controlWrap.setAttribute('data-currentposition', updatedPosition); // Update properties on all controls, not just the active control
-
-        var _iteratorNormalCompletion3 = true;
-        var _didIteratorError3 = false;
-        var _iteratorError3 = undefined;
-
-        try {
-          for (var _iterator3 = controlWraps[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-            var control = _step3.value;
-            control.setAttribute('data-currentposition', updatedPosition);
-            sliderIncrement = control.getAttribute('data-increment');
-            var currentGroup = updatedPosition / sliderIncrement;
-            var progressIndicator = control.querySelector('.slide__controls__progress__active');
-            var totalSlides = control.getAttribute('data-slides');
-            /**
-             * If increment increase exceeds total slides' length, limit the current
-             * position value to the total slides' length. This can happen when
-             * clicking on desktop viewport and reducing screen size to tablet or
-             * mobile.
-             */
-
-            if (currentGroup > totalSlides) {
-              progressIndicator.innerHTML = totalSlides;
-              control.setAttribute('data-currentposition', totalSlides);
-            } else {
-              progressIndicator.innerHTML = Math.ceil(currentGroup);
-            } // Disable next button if reached final slide of set
-
-
-            if (Math.ceil(currentGroup) >= totalSlides) {
-              control.querySelector('.slider__controls__buttons__next').setAttribute('disabled', true);
-            }
-
-            if (updatedPosition > 0) {
-              control.querySelector('.slider__controls__buttons__prev').removeAttribute('disabled');
-            }
-          }
-        } catch (err) {
-          _didIteratorError3 = true;
-          _iteratorError3 = err;
-        } finally {
-          try {
-            if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
-              _iterator3.return();
-            }
-          } finally {
-            if (_didIteratorError3) {
-              throw _iteratorError3;
-            }
-          }
-        }
-
-        currentPosition = updatedPosition;
+        progressUpdate(sliderIncrement, currentPosition, 'forward', slider);
       });
       var prevBtn = controlWrap.querySelector('.slider__controls__buttons__prev');
       /**
@@ -7057,13 +7094,13 @@ function launchResponsiveSlider(slider) {
          * Update properties on all controls, not just the active control
          */
 
-        var _iteratorNormalCompletion4 = true;
-        var _didIteratorError4 = false;
-        var _iteratorError4 = undefined;
+        var _iteratorNormalCompletion5 = true;
+        var _didIteratorError5 = false;
+        var _iteratorError5 = undefined;
 
         try {
-          for (var _iterator4 = controlWraps[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-            var control = _step4.value;
+          for (var _iterator5 = controlWraps[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+            var control = _step5.value;
             control.setAttribute('data-currentposition', updatedPosition);
             sliderIncrement = parseInt(control.getAttribute('data-increment'));
             var currentGroup = updatedPosition / sliderIncrement;
@@ -7081,16 +7118,16 @@ function launchResponsiveSlider(slider) {
             }
           }
         } catch (err) {
-          _didIteratorError4 = true;
-          _iteratorError4 = err;
+          _didIteratorError5 = true;
+          _iteratorError5 = err;
         } finally {
           try {
-            if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
-              _iterator4.return();
+            if (!_iteratorNormalCompletion5 && _iterator5.return != null) {
+              _iterator5.return();
             }
           } finally {
-            if (_didIteratorError4) {
-              throw _iteratorError4;
+            if (_didIteratorError5) {
+              throw _iteratorError5;
             }
           }
         }
@@ -7099,20 +7136,20 @@ function launchResponsiveSlider(slider) {
       });
     };
 
-    for (var _iterator2 = controlWraps[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+    for (var _iterator4 = controlWraps[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
       _loop();
     }
   } catch (err) {
-    _didIteratorError2 = true;
-    _iteratorError2 = err;
+    _didIteratorError4 = true;
+    _iteratorError4 = err;
   } finally {
     try {
-      if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
-        _iterator2.return();
+      if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
+        _iterator4.return();
       }
     } finally {
-      if (_didIteratorError2) {
-        throw _iteratorError2;
+      if (_didIteratorError4) {
+        throw _iteratorError4;
       }
     }
   }
