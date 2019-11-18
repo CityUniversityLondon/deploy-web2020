@@ -22730,7 +22730,7 @@ main table td em {
     text-align: right;
 }
 
-.card--pathway-image-container {
+.card--pathway-image__container {
     overflow: hidden;
     margin-bottom: 1rem;
 }
