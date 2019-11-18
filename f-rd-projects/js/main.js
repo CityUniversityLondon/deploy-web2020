@@ -6777,17 +6777,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.parse-int */ "./node_modules/core-js/modules/es.parse-int.js");
-/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.array.map */ "./node_modules/core-js/modules/es.array.map.js");
+/* harmony import */ var core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.parse-int */ "./node_modules/core-js/modules/es.parse-int.js");
+/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
 
 
 
@@ -6819,16 +6822,18 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 var className = 'slider-responsive';
 var sliderChildren, sliderChildrenLength, updatedPosition;
 /**
- * Add attributes to a particular element, or group of elements.
+ * Create elements containing classes, content and any other attributes
  *
- * @param {HTMLElement} el - An HTML element.
- * @param {Object} attrs - An object of attribute(s) and their assigned value(s).
+ * @param {string} type - Type of element you like to create, e.g. "div", "button".
+ * @param {array} attributes - Array of objects specifying which attributes to assign to the element i.e. {label : "class", val : "container"},{label: "content" , val:"I'm a div"}
  */
 
-function setAttributes(el, attrs) {
-  for (var key in attrs) {
-    el.setAttribute(key, attrs[key]);
-  }
+function createElement(type, attributes) {
+  var el = document.createElement(type);
+  attributes.map(function (att) {
+    att.label === 'class' ? el.classList.add(att.val) : att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : el.setAttribute(att.label, att.val);
+  });
+  return el;
 }
 /**
  *
@@ -6872,7 +6877,7 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
     for (var _iterator = controlWraps[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var controlWrap = _step.value;
       // Increase/decrease progrees indicator based on button click.
-      sliderDirection == 'forward' ? updatedPosition = parseInt(currentPosition + sliderIncrement) : updatedPosition = parseInt(currentPosition - sliderIncrement);
+      sliderDirection == 'forward' ? updatedPosition = currentPosition + sliderIncrement : updatedPosition = currentPosition - sliderIncrement;
       controlWrap.setAttribute('data-currentposition', updatedPosition);
     } // Update properties on all controls, not just the active control
 
@@ -6915,14 +6920,18 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
         control.setAttribute('data-currentposition', totalSlides);
       } else {
         progressIndicator.innerHTML = Math.ceil(currentGroup);
-      } // Disable next button if reached final slide of set
+      } // Disable control buttons if at start or end of items in slider.
 
 
       if (Math.ceil(currentGroup) >= totalSlides) {
         control.querySelector('.slider__controls__buttons__next').setAttribute('disabled', true);
+      } else {
+        control.querySelector('.slider__controls__buttons__next').removeAttribute('disabled');
       }
 
-      if (updatedPosition > 0) {
+      if (Math.ceil(currentGroup) <= 1) {
+        control.querySelector('.slider__controls__buttons__prev').setAttribute('disabled', true);
+      } else {
         control.querySelector('.slider__controls__buttons__prev').removeAttribute('disabled');
       }
     }
@@ -6951,7 +6960,7 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
 function launchResponsiveSlider(slider) {
   // Only launch slider if there are more than one item.
   if (slider.children.length < 2) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_9__["removeClass"])(slider, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_10__["removeClass"])(slider, className, false);
     return;
   } // Slider items count
 
@@ -7001,31 +7010,113 @@ function launchResponsiveSlider(slider) {
   }
 
   function buildControls(deviceType, increment, currentPosition) {
-    var sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('div', null, null, null, 'slider__controls__wrap'); // for testing
+    var sliderControlsWrap = createElement('div', [{
+      label: 'class',
+      val: 'slider__controls__wrap'
+    }, {
+      label: 'data-device',
+      val: deviceType
+    }, {
+      label: 'data-increment',
+      val: increment
+    }, {
+      label: 'data-currentPosition',
+      val: currentPosition
+    }, {
+      label: 'data-length',
+      val: sliderChildrenLength
+    }, {
+      label: 'data-slides',
+      val: slides
+    }]); // For testing
 
-    var type = Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('p', deviceType, null, null, 'slider__controls__type');
+    var type = createElement('p', [{
+      label: 'content',
+      val: deviceType
+    }, {
+      class: 'slider__controls__type'
+    }]);
     var slides = Math.ceil(sliderChildrenLength / increment);
-    setAttributes(sliderControlsWrap, {
-      'data-device': deviceType,
-      'data-increment': increment,
-      'data-currentPosition': currentPosition,
-      'data-length': sliderChildrenLength,
-      'data-slides': slides
-    });
-    var sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('div', null, null, null, 'slider__controls');
-    var sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('div', null, null, null, 'slider__controls__progress');
-    var sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('div', null, null, null, 'slider__controls__buttons'); // generates progress
+    var sliderControls = createElement('div', [{
+      label: 'class',
+      val: 'slider__controls'
+    }]);
+    var sliderProgress = createElement('div', [{
+      label: 'class',
+      val: 'slider__controls__progress'
+    }]);
+    var sliderButtons = createElement('div', [{
+      label: 'class',
+      val: 'slider__controls__buttons'
+    }]); // Generates progress
 
-    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('span', '1', null, null, 'slide__controls__progress__active'));
-    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('span', ' /', null, null, 'slide__controls__progress__separator')); // Total slides
+    sliderProgress.appendChild(createElement('span', [{
+      label: 'content',
+      val: '1'
+    }, {
+      label: 'class',
+      val: 'slide__controls__progress__active'
+    }]));
+    sliderProgress.appendChild(createElement('span', [{
+      label: 'content',
+      val: '/'
+    }, {
+      label: 'class',
+      val: 'slide__controls__progress__separator'
+    }])); // Total slides
 
-    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('span', Math.ceil(sliderChildrenLength / increment), null, null, 'slide__controls__progress__total'));
+    sliderProgress.appendChild(createElement('span', [{
+      label: 'content',
+      val: Math.ceil(sliderChildrenLength / increment)
+    }, {
+      label: 'class',
+      val: 'slide__controls__progress__total'
+    }]));
     sliderControlsWrap.appendChild(type) // for testing
     .appendChild(sliderControls).appendChild(sliderProgress);
-    slider.appendChild(sliderControlsWrap); // generates buttons
+    slider.appendChild(sliderControlsWrap); // Generates buttons
 
-    sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('button', null, 'Previous item', true, 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev', 'swiper-slider-arrow', 'arrow-left--btn-prev'));
-    sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('button', null, 'Next item', null, 'fas', 'fa-arrow-right', 'slider__controls__buttons__next', 'swiper-slider-arrow', 'arrow-right--btn-next'));
+    sliderButtons.appendChild(createElement('button', [{
+      label: 'aria-label',
+      val: 'Previous item'
+    }, {
+      label: 'disabled',
+      val: true
+    }, {
+      label: 'class',
+      val: 'fas'
+    }, {
+      label: 'class',
+      val: 'fa-arrow-left'
+    }, {
+      label: 'class',
+      val: 'slider__controls__buttons__prev'
+    }, {
+      label: 'class',
+      val: 'swiper-slider-arrow'
+    }, {
+      label: 'class',
+      val: 'aarrow-left--btn-prev'
+    }]));
+    sliderButtons.appendChild(createElement('button', [{
+      label: 'aria-label',
+      val: 'Next item'
+    }, {
+      label: 'class',
+      val: 'fas'
+    }, {
+      label: 'class',
+      val: 'fa-arrow-right'
+    }, {
+      label: 'class',
+      val: 'slider__controls__buttons__next'
+    }, {
+      label: 'class',
+      val: 'swiper-slider-arrow'
+    }, {
+      label: 'class',
+      val: 'arrow-left--btn-next'
+    }]));
     sliderControls.appendChild(sliderButtons);
     slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled');
   } // Each time responsive slider loads, build three sets of controls (one for each device)
@@ -7087,52 +7178,7 @@ function launchResponsiveSlider(slider) {
       controlWrap.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
         var currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
         var sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
-        var updatedPosition = parseInt(currentPosition - sliderIncrement); // Set updated position to active controls
-
-        controlWrap.setAttribute('data-currentposition', updatedPosition);
-        /**
-         * Update properties on all controls, not just the active control
-         */
-
-        var _iteratorNormalCompletion5 = true;
-        var _didIteratorError5 = false;
-        var _iteratorError5 = undefined;
-
-        try {
-          for (var _iterator5 = controlWraps[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-            var control = _step5.value;
-            control.setAttribute('data-currentposition', updatedPosition);
-            sliderIncrement = parseInt(control.getAttribute('data-increment'));
-            var currentGroup = updatedPosition / sliderIncrement;
-            var progressIndicator = control.querySelector('.slide__controls__progress__active');
-            progressIndicator.innerHTML = Math.ceil(currentGroup); // Disable next button if reached final slide of set
-
-            var totalSlides = control.getAttribute('data-slides');
-
-            if (Math.ceil(currentGroup) < totalSlides) {
-              control.querySelector('.slider__controls__buttons__next').removeAttribute('disabled');
-
-              if (Math.ceil(currentGroup) == 1) {
-                control.querySelector('.slider__controls__buttons__prev').setAttribute('disabled', true);
-              }
-            }
-          }
-        } catch (err) {
-          _didIteratorError5 = true;
-          _iteratorError5 = err;
-        } finally {
-          try {
-            if (!_iteratorNormalCompletion5 && _iterator5.return != null) {
-              _iterator5.return();
-            }
-          } finally {
-            if (_didIteratorError5) {
-              throw _iteratorError5;
-            }
-          }
-        }
-
-        currentPosition = updatedPosition;
+        progressUpdate(sliderIncrement, currentPosition, 'back', slider);
       });
     };
 
