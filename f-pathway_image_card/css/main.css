@@ -20382,7 +20382,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -20742,7 +20742,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -21368,7 +21368,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22174,7 +22174,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22221,7 +22221,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22268,7 +22268,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22315,7 +22315,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22362,7 +22362,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22409,7 +22409,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22456,7 +22456,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22503,7 +22503,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22613,7 +22613,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -22625,7 +22625,7 @@ main table td em {
 @media (hover: hover) {
     .card--pathway-image a:hover:after {
         background-color: #f2f2f2;
-        transform: scale(1.03);
+        transform: scale(1.1);
     }
 }
 
@@ -22674,12 +22674,6 @@ main table td em {
         color: #1e1e1e;
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
         background-size: 100% 0.1875rem;
-    }
-}
-
-@media (hover: hover) {
-    .card--pathway-image a:hover:after {
-        transform: scale(1.1);
     }
 }
 
@@ -22906,7 +22900,7 @@ main table td em {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -30586,7 +30580,7 @@ article figure figcaption a:active {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -39207,7 +39201,7 @@ article .link-copy {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -43877,7 +43871,7 @@ a.modal__close:active, a.modal__close:focus {
     width: 100%;
     height: 100%;
     z-index: -1;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
