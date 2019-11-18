@@ -6817,7 +6817,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
  */
 
 var className = 'slider-responsive';
-var sliderChildren, sliderChildrenLength;
+var sliderChildren, sliderChildrenLength, updatedPosition;
 /**
  * Add attributes to a particular element, or group of elements.
  *
@@ -6828,6 +6828,26 @@ var sliderChildren, sliderChildrenLength;
 function setAttributes(el, attrs) {
   for (var key in attrs) {
     el.setAttribute(key, attrs[key]);
+  }
+}
+
+function listingsDisplay(sliderIncrement, currentPosition, sliderDirection, slider) {
+  // Decide whether to show next, or previous, group of listings
+  if (sliderDirection == 'forward') {
+    updatedPosition = parseInt(currentPosition + sliderIncrement);
+  } else {
+    updatedPosition = parseInt(currentPosition - sliderIncrement);
+  } // Loop through all slides, adding data-device attributes passed from controller.
+
+
+  var items = slider.querySelectorAll('li');
+
+  for (var i = 0; i < items.length; i++) {
+    // Check item exists before adding data attribute to prevent errors
+    items[i].getAttribute('data-device') ? items[i].removeAttribute('data-device') : null;
+    items[updatedPosition - 1] ? items[updatedPosition - 1].setAttribute('data-device', 'mobile') : null;
+    items[updatedPosition] ? items[updatedPosition].setAttribute('data-device', 'tablet') : null;
+    items[updatedPosition + 1] ? items[updatedPosition + 1].setAttribute('data-device', 'desktop') : null;
   }
 }
 /**
@@ -6947,17 +6967,8 @@ function launchResponsiveSlider(slider) {
         var parentWrapper = nextBtn.closest('.slider__controls__wrap');
         var sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
         var currentPosition = parseInt(parentWrapper.getAttribute('data-currentposition'));
-        var updatedPosition = parseInt(currentPosition + sliderIncrement); // Loop through all slides, adding data-device attributes passed from controller.
-
-        var items = slider.querySelectorAll('li');
-
-        for (var _i = 0; _i < items.length; _i++) {
-          // Check item exists before adding data attribute to prevent errors
-          items[_i].getAttribute('data-device') ? items[_i].removeAttribute('data-device') : null;
-          items[updatedPosition - 1] ? items[updatedPosition - 1].setAttribute('data-device', 'mobile') : null;
-          items[updatedPosition] ? items[updatedPosition].setAttribute('data-device', 'tablet') : null;
-          items[updatedPosition + 1] ? items[updatedPosition + 1].setAttribute('data-device', 'desktop') : null;
-        }
+        var sliderDirection = 'forward';
+        listingsDisplay(sliderIncrement, currentPosition, sliderDirection, slider);
       });
       /**
        * Controller display. When user clicks, update each slider's progress indicator.
@@ -7022,6 +7033,20 @@ function launchResponsiveSlider(slider) {
 
         currentPosition = updatedPosition;
       });
+      var prevBtn = controlWrap.querySelector('.slider__controls__buttons__prev');
+      /**
+       * Slide content display. Isolate event listener to specific controller clicked. This is needed
+       * to apply data attributes to the correct listings regardless of which controller is clicked.
+       */
+
+      prevBtn.addEventListener('click', function () {
+        //Get data attribute values from specific controller clicked.
+        var parentWrapper = prevBtn.closest('.slider__controls__wrap');
+        var sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
+        var currentPosition = parseInt(parentWrapper.getAttribute('data-currentposition'));
+        var sliderDirection = 'back';
+        listingsDisplay(sliderIncrement, currentPosition, sliderDirection, slider);
+      });
       controlWrap.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
         var currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
         var sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
@@ -7052,33 +7077,6 @@ function launchResponsiveSlider(slider) {
 
               if (Math.ceil(currentGroup) == 1) {
                 control.querySelector('.slider__controls__buttons__prev').setAttribute('disabled', true);
-              }
-            }
-            /**
-             * Add/remove 'data-active' attributes to relevant items in listing, based on the current
-             * position user is at. CSS will determine how many of these elements will be visible to
-             * the user, depending on viewport size.
-             */
-
-
-            var _items = slider.querySelectorAll('li');
-
-            for (var i = 0; i < _items.length; i++) {
-              if (_items[i].getAttribute('data-device')) {
-                _items[i].removeAttribute('data-device');
-              }
-
-              if (_items[updatedPosition - 1]) {
-                _items[updatedPosition - 1].setAttribute('data-device', 'mobile');
-              } // Check item exists before removing attribute to prevent errors
-
-
-              if (_items[updatedPosition]) {
-                _items[updatedPosition].setAttribute('data-device', 'tablet');
-              }
-
-              if (_items[updatedPosition + 1]) {
-                _items[updatedPosition + 1].setAttribute('data-device', 'desktop');
               }
             }
           }
