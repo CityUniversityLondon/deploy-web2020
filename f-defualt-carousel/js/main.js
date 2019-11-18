@@ -4606,8 +4606,13 @@ function carouselGallery(elem) {
       Object(_image_carousel__WEBPACK_IMPORTED_MODULE_2__["onClickThunbnail"])(t, i);
     }, false);
     e.addEventListener('keyup', function (e) {
-      if (e.keyCode === 13) {
-        Object(_image_carousel__WEBPACK_IMPORTED_MODULE_2__["onClickThunbnail"])(e, i);
+      switch (e.keyCode) {
+        case 13:
+          Object(_image_carousel__WEBPACK_IMPORTED_MODULE_2__["onClickThunbnail"])(e, i);
+          break;
+
+        case 9:
+          Object(_image_carousel__WEBPACK_IMPORTED_MODULE_2__["translateThumbnails"])(i, e);
       }
     }, false);
   });
@@ -4624,13 +4629,14 @@ function carouselGallery(elem) {
 /*!*******************************************************!*\
   !*** ./src/patterns/image-carousel/image-carousel.js ***!
   \*******************************************************/
-/*! exports provided: init, onClickThunbnail, default */
+/*! exports provided: init, onClickThunbnail, translateThumbnails, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "init", function() { return init; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onClickThunbnail", function() { return onClickThunbnail; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "translateThumbnails", function() { return translateThumbnails; });
 /* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol */ "./node_modules/core-js/modules/es.symbol.js");
 /* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_symbol_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator */ "./node_modules/core-js/modules/es.symbol.iterator.js");

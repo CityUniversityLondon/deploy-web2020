@@ -42612,8 +42612,9 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .carousel-gallery h3 {
+    margin-top: 0;
+    padding-bottom: 0.5rem;
     color: #ffffff;
-    margin-bottom: 1rem;
 }
 
 .carousel-gallery .swiper-slide {
@@ -42662,6 +42663,153 @@ a.modal__close:active, a.modal__close:focus {
     .carousel-gallery .swiper-slide__text {
         letter-spacing: -0.017em;
     }
+}
+
+.carousel-gallery .swiper-slide__text a {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    border-bottom: #919191 solid 0.125rem;
+    color: #919191;
+    background-image: none;
+}
+
+@media (hover: hover) {
+    .carousel-gallery .swiper-slide__text a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.carousel-gallery .swiper-slide__text a:focus, .carousel-gallery .swiper-slide__text a:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carousel-gallery .swiper-slide__text a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .carousel-gallery .swiper-slide__text a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.carousel-gallery .swiper-slide__text a:visited {
+    color: #4c2c92;
+}
+
+.carousel-gallery .swiper-slide__text a:focus {
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .carousel-gallery .swiper-slide__text a:hover {
+        color: #ffffff;
+    }
+}
+
+.carousel-gallery .swiper-slide__text a:active {
+    color: #ffffff;
+    background-color: #006bbd;
+}
+
+.carousel-gallery .swiper-slide__text a:focus, .carousel-gallery .swiper-slide__text a:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+.carousel-gallery .swiper-slide__text a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.carousel-gallery .swiper-slide__text a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .carousel-gallery .swiper-slide__text a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+}
+
+.carousel-gallery .swiper-slide__text a:active {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.carousel-gallery .swiper-slide__text a:visited {
+    border-bottom: #919191 solid 0.125rem;
+    color: #919191;
+}
+
+.carousel-gallery .swiper-slide__text a:focus {
+    color: #919191;
+    border-bottom: #919191 solid 0.125rem;
+    outline-color: #ffffff;
+}
+
+@media (hover: hover) {
+    .carousel-gallery .swiper-slide__text a:hover {
+        border-bottom: #ffffff solid 0.125rem;
+        color: #ffffff;
+        background-image: none;
+    }
+}
+
+.carousel-gallery .swiper-slide__text a:active {
+    background-color: transparent;
+    border-bottom: #ffffff solid 0.125rem;
+    color: #ffffff;
+    outline-color: #ffffff;
 }
 
 .carousel-gallery .swiper-buttons-wrap {
@@ -42741,6 +42889,10 @@ a.modal__close:active, a.modal__close:focus {
     overflow: hidden;
 }
 
+.js .swiper-wrapper {
+    align-items: initial;
+}
+
 .js .galleria-thumbnails-list {
     --thumbnails: 1;
     display: flex;
@@ -42752,38 +42904,58 @@ a.modal__close:active, a.modal__close:focus {
     transition: transform 0.5s;
 }
 
+@media (max-width: 899px) {
+    .js .galleria-thumbnails-list {
+        width: calc(var(--thumbnails) * 33%);
+    }
+}
+
 .js .galleria-thumbnails-list .galleria-thumbnail {
     max-width: calc(100% / var(--thumbnails));
     margin-top: 0;
     margin-right: 0.5rem;
 }
 
+.js .galleria-thumbnails-list .galleria-thumbnail:first-child {
+    margin-left: 0.125rem;
+}
+
 .js .galleria-thumbnails-list .galleria-thumbnail input {
+    opacity: 0.7;
     max-width: 100%;
     height: auto;
     border: 0;
     max-height: 4rem;
+    margin-top: 0.25rem;
+    transition: opacity 0.6s;
 }
 
-.js .galleria-thumbnails-list .galleria-thumbnail input:active {
-    outline: #b91924 solid 1px;
+.js .galleria-thumbnails-list .galleria-thumbnail input:focus:focus, .js .galleria-thumbnails-list .galleria-thumbnail input:focus:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+    outline-color: #ffffff;
 }
 
-.js .galleria-thumbnails-list .galleria-thumbnail input:focus {
-    outline: #fe8f91 solid 1px;
+.js .galleria-thumbnails-list .galleria-thumbnail input:focus:active {
+    outline-style: solid;
+    outline-color: #d61726;
+    outline-width: 0.125rem;
+    outline-offset: 0;
 }
 
-.js .galleria-thumbnails-list .galleria-thumbnail.active input {
-    outline: #b91924 solid 1px;
-}
-
-.js .galleria-thumbnails-list .galleria-thumbnail.fade input {
-    -webkit-mask-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
-            mask-image: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+.js .galleria-thumbnails-list .galleria-thumbnail.active input,
+.js .galleria-thumbnails-list .galleria-thumbnail.active input:focus:focus {
+    opacity: 1;
+    outline-style: solid;
+    outline-color: #d61726;
+    outline-width: 0.125rem;
+    outline-offset: 0;
 }
 
 .js .galleria-thumbnails-list .galleria-thumbnail.blurSlider {
-    opacity: 0.1;
+    opacity: 0.7;
 }
 
 .generic {
