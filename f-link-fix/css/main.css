@@ -20306,6 +20306,10 @@ main table td em {
 
 .card--casestudy a {
     display: inline-block;
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
@@ -20400,16 +20404,28 @@ main table td em {
 }
 
 .card--casestudy a:visited {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
 }
 
 .card--casestudy a:focus {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
     background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
     .card--casestudy a:hover {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
         color: #1e1e1e;
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
         background-size: 100% 0.1875rem;
@@ -20881,6 +20897,10 @@ main table td em {
 }
 
 .card--event .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
@@ -20899,16 +20919,28 @@ main table td em {
 }
 
 .card--event .underline-transition__title:visited {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
 }
 
 .card--event .underline-transition__title:focus {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
     background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
     .card--event .underline-transition__title:hover {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
         color: #1e1e1e;
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
         background-size: 100% 0.1875rem;
@@ -21671,6 +21703,10 @@ main table td em {
     font-style: normal;
     font-weight: 600;
     margin-top: 1rem;
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
@@ -21735,16 +21771,28 @@ main table td em {
 }
 
 .card--news__title-link a:visited {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
 }
 
 .card--news__title-link a:focus {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
     background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
     .card--news__title-link a:hover {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
         color: #1e1e1e;
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
         background-size: 100% 0.1875rem;
@@ -22020,6 +22068,10 @@ main table td em {
 }
 
 .card--pathway .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
     background-repeat: no-repeat;
@@ -22030,16 +22082,28 @@ main table td em {
 }
 
 .card--pathway:visited .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
 }
 
 .card--pathway:focus .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
     background-size: 100% 0.15rem;
 }
 
 @media (hover: hover) {
     .card--pathway:hover .underline-transition__title {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
         color: #ffffff;
         background-image: linear-gradient(#ffffff, #ffffff);
         background-size: 100% 0.15rem;
@@ -22554,6 +22618,10 @@ main table td em {
 
 .card--related-course a {
     display: inline-block;
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
@@ -22647,16 +22715,28 @@ main table td em {
 }
 
 .card--related-course a:visited {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
 }
 
 .card--related-course a:focus {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
     background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
     .card--related-course a:hover {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
         color: #1e1e1e;
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
         background-size: 100% 0.1875rem;
@@ -30215,6 +30295,10 @@ article figure figcaption a:active {
 }
 
 .finder__results__card a {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
@@ -30311,16 +30395,28 @@ article figure figcaption a:active {
 }
 
 .finder__results__card a:visited {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
 }
 
 .finder__results__card a:focus {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
     background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
     .finder__results__card a:hover {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
         color: #1e1e1e;
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
         background-size: 100% 0.1875rem;
@@ -38820,6 +38916,10 @@ article .link-copy {
 }
 
 .finder__results__card a {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
@@ -38916,16 +39016,28 @@ article .link-copy {
 }
 
 .finder__results__card a:visited {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
 }
 
 .finder__results__card a:focus {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
     background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
     .finder__results__card a:hover {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
         color: #1e1e1e;
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
         background-size: 100% 0.1875rem;
@@ -40590,6 +40702,10 @@ h3 .linked-heading__icons {
 }
 
 .anchor-underline-transition {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
     background-image: linear-gradient(#696969, #696969);
     background-position: 0% 100%;
@@ -40600,16 +40716,28 @@ h3 .linked-heading__icons {
 }
 
 .anchor-underline-transition:visited {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
 }
 
 .anchor-underline-transition:focus {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
     background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
     .anchor-underline-transition:hover {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
         color: #1e1e1e;
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
         background-size: 100% 0.1875rem;
