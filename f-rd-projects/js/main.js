@@ -799,8 +799,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
 /* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
 /* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
-/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
+!(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/slider-responsive/slider-responsive'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
 
 
 /**
@@ -836,7 +837,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__["default"], !(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/slider-responsive/slider-responsive'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__["default"]]);
 
 /***/ }),
 
@@ -6783,9 +6785,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
 /* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
 
 
 
@@ -6817,15 +6822,9 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 var className = 'slider';
 var sliderChildren, sliderChildrenLength;
 
-function setAttributes(el, attrs) {
-  for (var key in attrs) {
-    el.setAttribute(key, attrs[key]);
-  }
-}
-
 function initSlider(slider) {
   if (slider.children.length < 2) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_9__["removeClass"])(slider, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_10__["removeClass"])(slider, className, false);
     return;
   } // slider items count
 
@@ -6840,21 +6839,37 @@ function initSlider(slider) {
     for (var _iterator = sliderChildren.entries()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var sliderChild = _step.value;
 
-      //console.log(sliderChild[1])
       if (sliderChild[0] < 1) {
-        sliderChild[1].setAttribute('data-active', true);
+        sliderChild[1].classList.add('slider__active-slide');
       } else {
-        sliderChild[1].setAttribute('data-active', false);
-      } // if (sliderChild[0] < 1) {
+        // only displays first slide and hides rest
+        sliderChild[1].classList.add('slider__slide');
+        /* generates controls */
 
+        var sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls__wrap');
+        var sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls');
+        var sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls__progress');
+        var sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls__buttons'); // generates progress
 
-      sliderChild[1].classList.add('slider__slide'); // }
-      // only displays first slide and hides rest
-      // sliderChild[1].classList.add('slider__slide');
-      // let items = slider.querySelectorAll('li');
+        sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('span', '1', null, null, 'slide__controls__progress__active'));
+        sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('span', ' /', null, null, 'slide__controls__progress__separator'));
+        sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('span', sliderChildrenLength, null, null, 'slide__controls__progress__total'));
+        sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
+        slider.appendChild(sliderControlsWrap); // generates buttons
+
+        sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('button', null, 'Previous item', true, 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev', 'swiper-slider-arrow', 'arrow-left--btn-prev'));
+        sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('button', null, 'Next item', null, 'fas', 'fa-arrow-right', 'slider__controls__buttons__next', 'swiper-slider-arrow', 'arrow-right--btn-next'));
+        sliderControls.appendChild(sliderButtons);
+        slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
+
+        slider.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
+          handleSlideChange(-1, slider);
+        });
+        slider.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
+          handleSlideChange(1, slider);
+        });
+      }
     }
-    /* generates controls */
-
   } catch (err) {
     _didIteratorError = true;
     _iteratorError = err;
@@ -6869,313 +6884,43 @@ function initSlider(slider) {
       }
     }
   }
+}
 
-  function buildControls(deviceType, increment, currentPosition) {
-    var sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('div', null, null, null, 'slider__controls__wrap'); // for testing
+function handleSlideChange(direction, slider) {
+  var activeSlide = parseInt(slider.querySelectorAll('.slide__controls__progress__active')[0].innerText);
+  var newSlide = activeSlide + direction; // ensures you don't slide past first and last slide
 
-    var type = Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('p', deviceType, null, null, 'slider__controls__type');
-    var slides = Math.ceil(sliderChildrenLength / increment);
-    setAttributes(sliderControlsWrap, {
-      'data-device': deviceType,
-      'data-increment': increment,
-      'data-currentPosition': currentPosition,
-      'data-length': sliderChildrenLength,
-      'data-slides': slides
-    });
-    var sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('div', null, null, null, 'slider__controls');
-    var sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('div', null, null, null, 'slider__controls__progress');
-    var sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('div', null, null, null, 'slider__controls__buttons'); // generates progress
-
-    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('span', '1', null, null, 'slide__controls__progress__active'));
-    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('span', ' /', null, null, 'slide__controls__progress__separator')); // Total slides
-
-    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('span', Math.ceil(sliderChildrenLength / increment), null, null, 'slide__controls__progress__total'));
-    sliderControlsWrap.appendChild(type) // for testing
-    .appendChild(sliderControls).appendChild(sliderProgress);
-    slider.appendChild(sliderControlsWrap); // generates buttons
-
-    sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('button', null, 'Previous item', true, 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev', 'swiper-slider-arrow', 'arrow-left--btn-prev'));
-    sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_9__["createElement"])('button', null, 'Next item', null, 'fas', 'fa-arrow-right', 'slider__controls__buttons__next', 'swiper-slider-arrow', 'arrow-right--btn-next'));
-    sliderControls.appendChild(sliderButtons);
-    slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled');
-  } // MS
-  // Each time slider loads, build three sets of controls (one for each device)
-
-
-  buildControls('desktop', 3, 1);
-  buildControls('tablet', 2, 1);
-  buildControls('mobile', 1, 1);
-  var controlWraps = slider.querySelectorAll('.slider__controls__wrap');
-  /**
-   * For each instance of the controls, update the current position data attribute when next previous/buttons
-   * are selected. This means if the viewport changes, the correct value is retained for each control.
-   */
-
-  var _iteratorNormalCompletion2 = true;
-  var _didIteratorError2 = false;
-  var _iteratorError2 = undefined;
-
-  try {
-    var _loop = function _loop() {
-      var controlWrap = _step2.value;
-      var nextBtn = controlWrap.querySelector('.slider__controls__buttons__next');
-      nextBtn.addEventListener('click', function () {
-        var currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
-        var parentWrapper = nextBtn.closest('.slider__controls__wrap');
-        var dataActiveValue;
-        var sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
-
-        switch (sliderIncrement) {
-          case 1:
-            dataActiveValue = 'data-active-mobile';
-            break;
-
-          case 2:
-            dataActiveValue = 'data-active-tablet';
-            break;
-
-          case 3:
-            dataActiveValue = 'data-active-desktop';
-            break;
-        }
-
-        var updatedPosition = parseInt(currentPosition + sliderIncrement); // Set updated position to active controls
-
-        controlWrap.setAttribute('data-currentposition', updatedPosition);
-        /**
-         * Update properties on all controls, not just the active control
-         */
-
-        var _iteratorNormalCompletion3 = true;
-        var _didIteratorError3 = false;
-        var _iteratorError3 = undefined;
-
-        try {
-          for (var _iterator3 = controlWraps[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-            var control = _step3.value;
-            control.setAttribute('data-currentposition', updatedPosition); // sliderIncrement = parseInt(control.getAttribute('data-increment'));
-
-            var currentGroup = updatedPosition / sliderIncrement;
-            var progressIndicator = control.querySelector('.slide__controls__progress__active');
-            var totalSlides = control.getAttribute('data-slides');
-            /**
-             * If increment increase exceeds total slides' length, limit the current
-             * position value to the total slides' length. This can happen when
-             * clicking on desktop viewport and reducing screen size to tablet or
-             * mobile.
-             */
-
-            if (currentGroup > totalSlides) {
-              progressIndicator.innerHTML = totalSlides;
-              control.setAttribute('data-currentposition', totalSlides);
-            } else {
-              progressIndicator.innerHTML = Math.ceil(currentGroup);
-            } // Disable next button if reached final slide of set
-
-
-            if (Math.ceil(currentGroup) >= totalSlides) {
-              control.querySelector('.slider__controls__buttons__next').setAttribute('disabled', true);
-            }
-
-            if (updatedPosition > 0) {
-              control.querySelector('.slider__controls__buttons__prev').removeAttribute('disabled');
-            }
-            /**
-             * Add/remove 'data-active' attributes to relevant items in listing, based on the current
-             * position user is at. CSS will determine how many of these elements will be visible to
-             * the user, depending on viewport size.
-             */
-
-
-            var items = slider.querySelectorAll('li');
-
-            for (var i = 0; i < totalSlides; i++) {
-              if (items[i].getAttribute('data-active')) {
-                items[i].setAttribute('data-active', false);
-              }
-            }
-
-            console.log(updatedPosition + sliderIncrement);
-            console.log(updatedPosition);
-
-            for (var j = updatedPosition - 1; j < updatedPosition + (sliderIncrement - 1) && j <= totalSlides; j++) {
-              items[j].setAttribute('data-active', dataActiveValue);
-            }
-          }
-        } catch (err) {
-          _didIteratorError3 = true;
-          _iteratorError3 = err;
-        } finally {
-          try {
-            if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
-              _iterator3.return();
-            }
-          } finally {
-            if (_didIteratorError3) {
-              throw _iteratorError3;
-            }
-          }
-        }
-
-        currentPosition = updatedPosition;
-      });
-      controlWrap.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
-        var currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
-        var sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
-        var updatedPosition = parseInt(currentPosition - sliderIncrement); // Set updated position to active controls
-
-        controlWrap.setAttribute('data-currentposition', updatedPosition);
-        /**
-         * Update properties on all controls, not just the active control
-         */
-
-        var _iteratorNormalCompletion4 = true;
-        var _didIteratorError4 = false;
-        var _iteratorError4 = undefined;
-
-        try {
-          for (var _iterator4 = controlWraps[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-            var control = _step4.value;
-            control.setAttribute('data-currentposition', updatedPosition);
-            sliderIncrement = parseInt(control.getAttribute('data-increment'));
-            var currentGroup = updatedPosition / sliderIncrement;
-            var progressIndicator = control.querySelector('.slide__controls__progress__active');
-            progressIndicator.innerHTML = Math.ceil(currentGroup); // Disable next button if reached final slide of set
-
-            var totalSlides = control.getAttribute('data-slides');
-
-            if (Math.ceil(currentGroup) < totalSlides) {
-              control.querySelector('.slider__controls__buttons__next').removeAttribute('disabled');
-
-              if (Math.ceil(currentGroup) == 1) {
-                control.querySelector('.slider__controls__buttons__prev').setAttribute('disabled', true);
-              }
-            }
-            /**
-             * Add/remove 'data-active' attributes to relevant items in listing, based on the current
-             * position user is at. CSS will determine how many of these elements will be visible to
-             * the user, depending on viewport size.
-             */
-
-
-            var items = slider.querySelectorAll('li');
-
-            for (var i = 0; i < totalSlides; i++) {
-              if (items[i].getAttribute('data-active')) {
-                items[i].removeAttribute('data-active');
-              }
-            } // console.log(updatedPosition);
-            // console.log(updatedPosition + sliderIncrement -1)
-
-
-            for (var j = updatedPosition - 1; j < updatedPosition + sliderIncrement; j++) {
-              items[j].setAttribute('data-active', true);
-            }
-          }
-        } catch (err) {
-          _didIteratorError4 = true;
-          _iteratorError4 = err;
-        } finally {
-          try {
-            if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
-              _iterator4.return();
-            }
-          } finally {
-            if (_didIteratorError4) {
-              throw _iteratorError4;
-            }
-          }
-        }
-
-        currentPosition = updatedPosition;
-      });
-    };
-
-    for (var _iterator2 = controlWraps[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-      _loop();
-    } // END MS
-    // Adds event listener to buttons
-    // slider
-    //     .querySelector('.slider__controls__buttons__prev')
-    //     .addEventListener('click', function() {
-    //         handleSlideChange(-1, slider);
-    //     });
-    // slider
-    //     .querySelector('.slider__controls__buttons__next')
-    //     .addEventListener('click', function() {
-    //         handleSlideChange(1, slider);
-    //     });
-
-  } catch (err) {
-    _didIteratorError2 = true;
-    _iteratorError2 = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
-        _iterator2.return();
+  if (newSlide !== 0 && !(newSlide > sliderChildrenLength)) {
+    // udpates progress
+    slider.querySelectorAll('.slide__controls__progress__active')[0].innerHTML = newSlide;
+    sliderChildren.forEach(function (item, i) {
+      //displays new slide
+      if (i == newSlide - 1) {
+        item.classList.remove('slider__slide');
+        item.classList.add('slider__active-slide');
+      } else {
+        item.classList.remove('slider__active-slide');
+        item.classList.add('slider__slide');
       }
-    } finally {
-      if (_didIteratorError2) {
-        throw _iteratorError2;
-      }
+    }); // disables next & prev buttons when reaching beginning or end of slides
+
+    if (newSlide == 1) {
+      slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled');
+      slider.querySelectorAll('.slider__controls__buttons__prev')[0].setAttribute('disabled', true);
+    } else {
+      slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.remove('slider__controls__buttons__disabled');
+      slider.querySelectorAll('.slider__controls__buttons__prev')[0].removeAttribute('disabled');
+    }
+
+    if (newSlide == sliderChildrenLength) {
+      slider.querySelectorAll('.slider__controls__buttons__next')[0].classList.add('slider__controls__buttons__disabled');
+      slider.querySelectorAll('.slider__controls__buttons__next')[0].setAttribute('disabled', true);
+    } else {
+      slider.querySelectorAll('.slider__controls__buttons__next')[0].classList.remove('slider__controls__buttons__disabled');
+      slider.querySelectorAll('.slider__controls__buttons__next')[0].removeAttribute('disabled');
     }
   }
-} // function originalHandleSlideChange(direction, slider) {
-//     let activeSlide = parseInt(
-//         slider.querySelectorAll('.slide__controls__progress__active')[0]
-//             .innerText
-//     );
-//     let newSlide = activeSlide + direction;
-//     // ensures you don't slide past first and last slide
-//     if (newSlide !== 0 && !(newSlide > sliderChildrenLength)) {
-//         // udpates progress
-//         slider.querySelectorAll(
-//             '.slide__controls__progress__active'
-//         )[0].innerHTML = newSlide;
-//         sliderChildren.forEach(function(item, i) {
-//             //displays new slide
-//             if (i == newSlide - 1) {
-//                 item.classList.remove('slider__slide');
-//                 item.classList.add('slider__active-slide');
-//             } else {
-//                 item.classList.remove('slider__active-slide');
-//                 item.classList.add('slider__slide');
-//             }
-//         });
-//         // disables next & prev buttons when reaching beginning or end of slides
-//         if (newSlide == 1) {
-//             slider
-//                 .querySelectorAll('.slider__controls__buttons__prev')[0]
-//                 .classList.add('slider__controls__buttons__disabled');
-//             slider
-//                 .querySelectorAll('.slider__controls__buttons__prev')[0]
-//                 .setAttribute('disabled', true);
-//         } else {
-//             slider
-//                 .querySelectorAll('.slider__controls__buttons__prev')[0]
-//                 .classList.remove('slider__controls__buttons__disabled');
-//             slider
-//                 .querySelectorAll('.slider__controls__buttons__prev')[0]
-//                 .removeAttribute('disabled');
-//         }
-//         if (newSlide == sliderChildrenLength) {
-//             slider
-//                 .querySelectorAll('.slider__controls__buttons__next')[0]
-//                 .classList.add('slider__controls__buttons__disabled');
-//             slider
-//                 .querySelectorAll('.slider__controls__buttons__next')[0]
-//                 .setAttribute('disabled', true);
-//         } else {
-//             slider
-//                 .querySelectorAll('.slider__controls__buttons__next')[0]
-//                 .classList.remove('slider__controls__buttons__disabled');
-//             slider
-//                 .querySelectorAll('.slider__controls__buttons__next')[0]
-//                 .removeAttribute('disabled');
-//         }
-//     }
-// }
-
+}
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: initSlider,
