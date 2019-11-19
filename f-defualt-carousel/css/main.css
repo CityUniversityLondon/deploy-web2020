@@ -42930,7 +42930,7 @@ a.modal__close:active, a.modal__close:focus {
     transition: opacity 0.6s;
 }
 
-.js .galleria-thumbnails-list .galleria-thumbnail input:focus:focus, .js .galleria-thumbnails-list .galleria-thumbnail input:focus:active {
+.js .galleria-thumbnails-list .galleria-thumbnail input:focus, .js .galleria-thumbnails-list .galleria-thumbnail input:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
@@ -42938,15 +42938,24 @@ a.modal__close:active, a.modal__close:focus {
     outline-color: #ffffff;
 }
 
-.js .galleria-thumbnails-list .galleria-thumbnail input:focus:active {
+.js .galleria-thumbnails-list .galleria-thumbnail input:focus {
+    opacity: 1;
+    outline-offset: 0;
+}
+
+.js .galleria-thumbnails-list .galleria-thumbnail input:active {
     outline-style: solid;
     outline-color: #d61726;
     outline-width: 0.125rem;
     outline-offset: 0;
 }
 
+.js .galleria-thumbnails-list .galleria-thumbnail input:hover {
+    opacity: 1;
+}
+
 .js .galleria-thumbnails-list .galleria-thumbnail.active input,
-.js .galleria-thumbnails-list .galleria-thumbnail.active input:focus:focus {
+.js .galleria-thumbnails-list .galleria-thumbnail.active input:focus {
     opacity: 1;
     outline-style: solid;
     outline-color: #d61726;
