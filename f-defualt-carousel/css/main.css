@@ -42601,11 +42601,6 @@ a.modal__close:active, a.modal__close:focus {
     transition: background-color 0.3s ease-in-out;
 }
 
-.carousel-gallery-default {
-    padding: 1rem;
-    background-color: #3e1031;
-}
-
 .carousel-gallery {
     overflow: hidden;
     position: relative;
@@ -42901,6 +42896,11 @@ a.modal__close:active, a.modal__close:focus {
     .galleria-thumbnails-wrap {
         width: calc(100%);
     }
+}
+
+.js .carousel-gallery-default {
+    padding: 1rem;
+    background-color: #3e1031;
 }
 
 .js .swiper-wrapper {
