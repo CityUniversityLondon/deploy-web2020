@@ -799,8 +799,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
 /* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
 /* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
-/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
+/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
+/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
 
 
 /**
@@ -836,7 +837,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__["default"]]);
 
 /***/ }),
 
@@ -6753,6 +6755,462 @@ function createShowMoreButton(element) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: showMore,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/slider-responsive/slider-responsive.js":
+/*!*************************************************************!*\
+  !*** ./src/patterns/slider-responsive/slider-responsive.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_symbol_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator */ "./node_modules/core-js/modules/es.symbol.iterator.js");
+/* harmony import */ var core_js_modules_es_symbol_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_iterator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.from */ "./node_modules/core-js/modules/es.array.from.js");
+/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.array.map */ "./node_modules/core-js/modules/es.array.map.js");
+/* harmony import */ var core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_number_constructor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.number.constructor */ "./node_modules/core-js/modules/es.number.constructor.js");
+/* harmony import */ var core_js_modules_es_number_constructor__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_constructor__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_number_is_integer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.number.is-integer */ "./node_modules/core-js/modules/es.number.is-integer.js");
+/* harmony import */ var core_js_modules_es_number_is_integer__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_is_integer__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.parse-int */ "./node_modules/core-js/modules/es.parse-int.js");
+/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+/**
+ * Responsive Slider
+ *
+ * @module patterns/slider-responsive/slider-responsive
+ * @author Mark Skinsley <mark.skinsley@city.ac.uk>
+ * @copyright City, University of London
+ */
+
+var className = 'slider-responsive';
+var sliderChildren, sliderChildrenLength, updatedPosition;
+/**
+ * Create elements containing classes, content and any other attributes
+ *
+ * @param {string} type - Type of element you like to create, e.g. "div", "button".
+ * @param {array} attributes - Array of objects specifying which attributes to assign to the element i.e. {label : "class", val : "container"},{label: "content" , val:"I'm a div"}
+ */
+
+function createElement(type, attributes) {
+  var el = document.createElement(type);
+  attributes.map(function (att) {
+    att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : el.setAttribute(att.label, att.val);
+  });
+  return el;
+}
+/**
+ *
+ * @param {Number} sliderIncrement - Amount to increase/decrease visible listing index number.
+ * @param {Number} currentPosition - Index number of first item to be visible.
+ * @param {String} sliderDirection - Increase or decrease visible index number.
+ * @param {Element} slider - The slider.
+ */
+
+
+function listingsDisplay(sliderIncrement, currentPosition, sliderDirection, slider) {
+  // Decide whether to show next, or previous, group of listings
+  sliderDirection == 'forward' ? updatedPosition = parseInt(currentPosition + sliderIncrement) : updatedPosition = parseInt(currentPosition - sliderIncrement); // Prevent updated index position dropping below 1
+
+  if (updatedPosition < 1) {
+    updatedPosition = 1;
+  } // Loop through all slides, adding data-device attributes passed from controller.
+
+
+  var items = slider.querySelectorAll('li');
+
+  for (var i = 0; i < items.length; i++) {
+    // Check item exists before adding data attribute to prevent errors
+    items[i].getAttribute('data-device') ? items[i].removeAttribute('data-device') : null;
+    items[updatedPosition - 1] ? items[updatedPosition - 1].setAttribute('data-device', 'mobile') : null;
+    items[updatedPosition] ? items[updatedPosition].setAttribute('data-device', 'tablet') : null;
+    items[updatedPosition + 1] ? items[updatedPosition + 1].setAttribute('data-device', 'desktop') : null;
+  }
+}
+/**
+ *
+ * @param {Number} sliderIncrement - Amount to increase/decrease visible listing index number.
+ * @param {Number} currentPosition - Index number of first item to be visible.
+ * @param {String} sliderDirection - Increase or decrease visible index number.
+ * @param {Element} slider - The slider.
+ */
+
+
+function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slider) {
+  var controlWraps = slider.querySelectorAll('.slider__controls__wrap');
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = controlWraps[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var controlWrap = _step.value;
+
+      // Increase/decrease progrees indicator based on button click.
+      if (sliderDirection == 'forward') {
+        updatedPosition = currentPosition + sliderIncrement;
+      }
+
+      if (sliderDirection == 'back' && currentPosition - sliderIncrement >= 1) {
+        updatedPosition = currentPosition - sliderIncrement;
+      }
+
+      if (sliderDirection == 'back' && currentPosition - sliderIncrement < 1) {
+        updatedPosition = 1;
+      }
+
+      controlWrap.setAttribute('data-currentposition', updatedPosition);
+    } // Update properties on all controls, not just the active control
+
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion && _iterator.return != null) {
+        _iterator.return();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  var _iteratorNormalCompletion2 = true;
+  var _didIteratorError2 = false;
+  var _iteratorError2 = undefined;
+
+  try {
+    for (var _iterator2 = controlWraps[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+      var control = _step2.value;
+      control.setAttribute('data-currentposition', updatedPosition);
+      sliderIncrement = control.getAttribute('data-increment');
+      var currentGroup = updatedPosition / sliderIncrement;
+      var progressIndicator = control.querySelector('.slide__controls__progress__active');
+      /**
+       * Check if there is a remainder when dividing the listing position by increment. If there is,
+       * increase progress indicator and total slides by 1.
+       */
+
+      var groupNumber = parseInt(updatedPosition - 1) / sliderIncrement;
+      var totalSlides = parseInt(control.getAttribute('data-slides'));
+      var totalSlidesDisplay = control.querySelector('.slide__controls__progress__total');
+
+      if (!Number.isInteger(groupNumber) && groupNumber > 0) {
+        currentGroup += 1;
+        totalSlides += 1;
+        totalSlidesDisplay.innerHTML = totalSlides;
+      } else {
+        var originalSlides = parseInt(control.getAttribute('data-slides'));
+        totalSlidesDisplay.innerHTML = originalSlides;
+      }
+      /**
+       * If increment increase exceeds total slides' length, limit the current
+       * position value to the total slides' length. This can happen when
+       * clicking on desktop viewport and reducing screen size to tablet or
+       * mobile.
+       */
+
+
+      if (currentGroup > totalSlides) {
+        progressIndicator.innerHTML = totalSlides;
+        control.setAttribute('data-currentposition', totalSlides);
+      } else {
+        progressIndicator.innerHTML = Math.ceil(currentGroup);
+      } // Disable control buttons if at start or end of items in slider.
+
+
+      if (Math.ceil(currentGroup) >= totalSlides) {
+        control.querySelector('.slider__controls__buttons__next').setAttribute('disabled', true);
+      } else {
+        control.querySelector('.slider__controls__buttons__next').removeAttribute('disabled');
+      }
+
+      if (Math.ceil(currentGroup) <= 1) {
+        control.querySelector('.slider__controls__buttons__prev').setAttribute('disabled', true);
+      } else {
+        control.querySelector('.slider__controls__buttons__prev').removeAttribute('disabled');
+      }
+    }
+  } catch (err) {
+    _didIteratorError2 = true;
+    _iteratorError2 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion2 && _iterator2.return != null) {
+        _iterator2.return();
+      }
+    } finally {
+      if (_didIteratorError2) {
+        throw _iteratorError2;
+      }
+    }
+  }
+}
+/**
+ * Turn a group of list items into a responsive slider where, depending on viewport, the number of visible items
+ * at any one time, varies. This pattern is designed to accommodate up to three items per slide.
+ * @param {HTMLElement} slider - The slider.
+ */
+
+
+function launchResponsiveSlider(slider) {
+  // Only launch slider if there are more than one item.
+  if (slider.children.length < 2) {
+    Object(_util__WEBPACK_IMPORTED_MODULE_12__["removeClass"])(slider, className, false);
+    return;
+  } // Slider items count
+
+
+  sliderChildren = _toConsumableArray(slider.children);
+  sliderChildrenLength = sliderChildren.length;
+  var _iteratorNormalCompletion3 = true;
+  var _didIteratorError3 = false;
+  var _iteratorError3 = undefined;
+
+  try {
+    for (var _iterator3 = sliderChildren.entries()[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+      var sliderChild = _step3.value;
+      sliderChild[1].classList.add('slider__slide');
+      var items = slider.querySelectorAll('li');
+      /**
+       * Add data attribute to first three listings. This will control what is visible on load,
+       * depending on device type.
+       **/
+
+      for (var i = 0; i <= 2 || i < sliderChildrenLength; i++) {
+        items[0] ? items[0].setAttribute('data-device', 'mobile') : null;
+        items[1] ? items[1].setAttribute('data-device', 'tablet') : null;
+        items[2] ? items[2].setAttribute('data-device', 'desktop') : null;
+      }
+    }
+    /**
+     * Builds slider controls.
+     * @param {String} deviceType
+     * @param {Number} increment
+     * @param {Number} currentPosition
+     */
+
+  } catch (err) {
+    _didIteratorError3 = true;
+    _iteratorError3 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion3 && _iterator3.return != null) {
+        _iterator3.return();
+      }
+    } finally {
+      if (_didIteratorError3) {
+        throw _iteratorError3;
+      }
+    }
+  }
+
+  function buildControls(deviceType, increment, currentPosition) {
+    var slides = Math.ceil(sliderChildrenLength / increment);
+    var sliderControlsWrap = createElement('div', [{
+      label: 'class',
+      val: 'slider__controls__wrap'
+    }, {
+      label: 'data-device',
+      val: deviceType
+    }, {
+      label: 'data-increment',
+      val: increment
+    }, {
+      label: 'data-currentPosition',
+      val: currentPosition
+    }, {
+      label: 'data-length',
+      val: sliderChildrenLength
+    }, {
+      label: 'data-slides',
+      val: slides
+    }]);
+    var sliderControls = createElement('div', [{
+      label: 'class',
+      val: 'slider__controls'
+    }]);
+    var sliderProgress = createElement('div', [{
+      label: 'class',
+      val: 'slider__controls__progress'
+    }]);
+    var sliderButtons = createElement('div', [{
+      label: 'class',
+      val: 'slider__controls__buttons'
+    }]); // Slider progress
+
+    sliderProgress.appendChild(createElement('span', [{
+      label: 'content',
+      val: '1'
+    }, {
+      label: 'class',
+      val: 'slide__controls__progress__active'
+    }]));
+    sliderProgress.appendChild(createElement('span', [{
+      label: 'content',
+      val: '/'
+    }, {
+      label: 'class',
+      val: 'slide__controls__progress__separator'
+    }])); // Total slides display
+
+    sliderProgress.appendChild(createElement('span', [{
+      label: 'content',
+      val: Math.ceil(sliderChildrenLength / increment)
+    }, {
+      label: 'class',
+      val: 'slide__controls__progress__total'
+    }])); // Next / previous buttons
+
+    sliderButtons.appendChild(createElement('button', [{
+      label: 'aria-label',
+      val: 'Previous item'
+    }, {
+      label: 'disabled',
+      val: true
+    }, {
+      label: 'class',
+      val: 'fas fa-arrow-left slider__controls__buttons__prev swiper-slider-arrow arrow-left--btn-prev'
+    }]));
+    sliderButtons.appendChild(createElement('button', [{
+      label: 'aria-label',
+      val: 'Next item'
+    }, {
+      label: 'class',
+      val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-left--btn-next'
+    }]));
+    sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
+    slider.appendChild(sliderControlsWrap);
+    sliderControls.appendChild(sliderButtons);
+    slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled');
+  } // Each time responsive slider loads, build three sets of controls (one for each device)
+
+
+  buildControls('desktop', 3, 1, false);
+  buildControls('tablet', 2, 1, false);
+  buildControls('mobile', 1, 1, false);
+  var controlWraps = slider.querySelectorAll('.slider__controls__wrap');
+  /**
+   * For each instance of the controls, update the current position data attribute when next previous/buttons
+   * are selected. This means if the viewport changes, the correct value is passed to each control.
+   */
+
+  var _iteratorNormalCompletion4 = true;
+  var _didIteratorError4 = false;
+  var _iteratorError4 = undefined;
+
+  try {
+    var _loop = function _loop() {
+      var controlWrap = _step4.value;
+      var nextBtn = controlWrap.querySelector('.slider__controls__buttons__next');
+      /**
+       * Slide content display. Isolate event listener to specific controller clicked. This is needed
+       * to apply data attributes to the correct listings regardless of which controller is clicked.
+       */
+
+      nextBtn.addEventListener('click', function () {
+        //Get data attribute values from specific controller clicked.
+        var parentWrapper = nextBtn.closest('.slider__controls__wrap');
+        var sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
+        var currentPosition = parseInt(parentWrapper.getAttribute('data-currentposition'));
+        var sliderDirection = 'forward';
+        listingsDisplay(sliderIncrement, currentPosition, sliderDirection, slider);
+      });
+      /**
+       * Controller display. When user clicks, update each slider's progress indicator.
+       */
+
+      controlWrap.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
+        var currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
+        var sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
+        progressUpdate(sliderIncrement, currentPosition, 'forward', slider);
+      });
+      var prevBtn = controlWrap.querySelector('.slider__controls__buttons__prev');
+      /**
+       * Slide content display. Isolate event listener to specific controller clicked. This is needed
+       * to apply data attributes to the correct listings regardless of which controller is clicked.
+       */
+
+      prevBtn.addEventListener('click', function () {
+        //Get data attribute values from specific controller clicked.
+        var parentWrapper = prevBtn.closest('.slider__controls__wrap');
+        var sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
+        var currentPosition = parseInt(parentWrapper.getAttribute('data-currentposition'));
+        var sliderDirection = 'back';
+        listingsDisplay(sliderIncrement, currentPosition, sliderDirection, slider);
+      });
+      controlWrap.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
+        var currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
+        var sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
+        progressUpdate(sliderIncrement, currentPosition, 'back', slider);
+      });
+    };
+
+    for (var _iterator4 = controlWraps[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+      _loop();
+    }
+  } catch (err) {
+    _didIteratorError4 = true;
+    _iteratorError4 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion4 && _iterator4.return != null) {
+        _iterator4.return();
+      }
+    } finally {
+      if (_didIteratorError4) {
+        throw _iteratorError4;
+      }
+    }
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchResponsiveSlider,
   launchQuery: ".".concat(className)
 });
 
