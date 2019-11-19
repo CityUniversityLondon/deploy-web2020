@@ -35131,7 +35131,12 @@ a.modal__close:active, a.modal__close:focus {
     position: relative;
     text-align: left;
     margin-bottom: 1rem;
-    padding-left: 0;
+}
+
+@media (min-width: 769px) {
+    .modal__buttons--slider button:first-child {
+        padding-left: 0;
+    }
 }
 
 @media (min-width: 769px) {
@@ -35152,7 +35157,12 @@ a.modal__close:active, a.modal__close:focus {
 
 .modal__buttons--slider button:last-child {
     text-align: right;
-    padding-right: 0;
+}
+
+@media (min-width: 769px) {
+    .modal__buttons--slider button:last-child {
+        padding-right: 0;
+    }
 }
 
 .modal__buttons--slider button:last-child .modal__buttons__icon {
@@ -41711,7 +41721,12 @@ a.modal__close:active, a.modal__close:focus {
     position: relative;
     text-align: left;
     margin-bottom: 1rem;
-    padding-left: 0;
+}
+
+@media (min-width: 769px) {
+    .modal__buttons--slider button:first-child {
+        padding-left: 0;
+    }
 }
 
 @media (min-width: 769px) {
@@ -41732,7 +41747,12 @@ a.modal__close:active, a.modal__close:focus {
 
 .modal__buttons--slider button:last-child {
     text-align: right;
-    padding-right: 0;
+}
+
+@media (min-width: 769px) {
+    .modal__buttons--slider button:last-child {
+        padding-right: 0;
+    }
 }
 
 .modal__buttons--slider button:last-child .modal__buttons__icon {
