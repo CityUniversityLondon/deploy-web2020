@@ -35123,7 +35123,7 @@ a.modal__close:active, a.modal__close:focus {
 @media (min-width: 769px) {
     .modal__buttons--slider button {
         border: none;
-        width: auto;
+        width: 50%;
     }
 }
 
@@ -41701,7 +41701,7 @@ a.modal__close:active, a.modal__close:focus {
 @media (min-width: 769px) {
     .modal__buttons--slider button {
         border: none;
-        width: auto;
+        width: 50%;
     }
 }
 
