@@ -22528,6 +22528,11 @@ main table td em {
     background: #ffef2b;
 }
 
+.pathway-image-cards {
+    background-color: #e5e5e5;
+    padding: 2rem;
+}
+
 .pathway-image-cards h3 {
     text-align: center;
 }
@@ -22557,6 +22562,7 @@ main table td em {
     transition: none;
     color: #0c0c0e;
     position: relative;
+    z-index: 1;
 }
 
 .card--pathway-image a:visited {
@@ -22754,6 +22760,7 @@ main table td em {
 .card--pathway-image__icon {
     display: block;
     text-align: right;
+    font-weight: 400;
 }
 
 .card--pathway-image__container {
@@ -22761,13 +22768,9 @@ main table td em {
     margin-bottom: 1rem;
 }
 
-.pathway-image-cards__blocks div:nth-child(1) a:hover, .pathway-image-cards__blocks div:nth-child(1) a:active, .pathway-image-cards__blocks div:nth-child(1) a:focus,
+.pathway-image-cards__blocks div:nth-child(1) a:hover,
 .pathway-image-cards__blocks div:nth-child(2) a:hover,
-.pathway-image-cards__blocks div:nth-child(2) a:active,
-.pathway-image-cards__blocks div:nth-child(2) a:focus,
-.pathway-image-cards__blocks div:nth-child(3) a:hover,
-.pathway-image-cards__blocks div:nth-child(3) a:active,
-.pathway-image-cards__blocks div:nth-child(3) a:focus {
+.pathway-image-cards__blocks div:nth-child(3) a:hover {
     color: #ffffff;
 }
 
