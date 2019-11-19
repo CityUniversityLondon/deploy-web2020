@@ -6852,7 +6852,12 @@ function createElement(type, attributes) {
 
 function listingsDisplay(sliderIncrement, currentPosition, sliderDirection, slider) {
   // Decide whether to show next, or previous, group of listings
-  sliderDirection == 'forward' ? updatedPosition = parseInt(currentPosition + sliderIncrement) : updatedPosition = parseInt(currentPosition - sliderIncrement); // Loop through all slides, adding data-device attributes passed from controller.
+  sliderDirection == 'forward' ? updatedPosition = parseInt(currentPosition + sliderIncrement) : updatedPosition = parseInt(currentPosition - sliderIncrement); // Prevent updated index position dropping below 1
+
+  if (updatedPosition < 1) {
+    updatedPosition = 1;
+  } // Loop through all slides, adding data-device attributes passed from controller.
+
 
   var items = slider.querySelectorAll('li');
 
@@ -6882,8 +6887,20 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
   try {
     for (var _iterator = controlWraps[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var controlWrap = _step.value;
+
       // Increase/decrease progrees indicator based on button click.
-      sliderDirection == 'forward' ? updatedPosition = currentPosition + sliderIncrement : updatedPosition = currentPosition - sliderIncrement;
+      if (sliderDirection == 'forward') {
+        updatedPosition = currentPosition + sliderIncrement;
+      }
+
+      if (sliderDirection == 'back' && currentPosition - sliderIncrement >= 1) {
+        updatedPosition = currentPosition - sliderIncrement;
+      }
+
+      if (sliderDirection == 'back' && currentPosition - sliderIncrement < 1) {
+        updatedPosition = 1;
+      }
+
       controlWrap.setAttribute('data-currentposition', updatedPosition);
     } // Update properties on all controls, not just the active control
 
@@ -6922,10 +6939,13 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
       var totalSlides = parseInt(control.getAttribute('data-slides'));
       var totalSlidesDisplay = control.querySelector('.slide__controls__progress__total');
 
-      if (!Number.isInteger(groupNumber)) {
+      if (!Number.isInteger(groupNumber) && groupNumber > 0) {
         currentGroup += 1;
         totalSlides += 1;
         totalSlidesDisplay.innerHTML = totalSlides;
+      } else {
+        var originalSlides = parseInt(control.getAttribute('data-slides'));
+        totalSlidesDisplay.innerHTML = originalSlides;
       }
       /**
        * If increment increase exceeds total slides' length, limit the current
