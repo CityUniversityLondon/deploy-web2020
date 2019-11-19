@@ -44818,70 +44818,30 @@ This will keep responsive behaviour in line with What's Happening cards below
     }
 }
 
+/*
 .course {
-    grid-row-gap: 0;
-    display: grid;
+    @include standard-grid();
+
     grid-template-rows: auto;
-}
 
-@media (max-width: 432px) {
-    .course {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .course {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .course {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
-}
-
-@media (max-width: 432px) {
-    .course {
+    @include media('<=mobile') {
         grid-template-areas: 'main main main main main main';
     }
-}
 
-@media (min-width: 433px) {
-    .course {
+    @include media('>mobile') {
         grid-template-areas: '. . main main main main main main main main . .';
     }
-}
 
-@media (min-width: 901px) {
-    .course {
+    @include media('>between') {
         grid-template-areas: '. . . . . main main main main main main main main . . . . .';
     }
-}
 
-.course > .content {
-    max-width: 80rem;
-    grid-area: main;
-}
-
-@media (min-width: 1441px) {
-    .course > .content {
-        margin-left: auto;
-        margin-right: auto;
+    > .content {
+        @include standard-margins();
+        grid-area: main;
     }
 }
-
-@media (max-width: 1440px) {
-    .course > .content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
+*/
 div.widget-123_test_ {
     display: block;
 }
@@ -48933,30 +48893,40 @@ button
     font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
-.wrapper--key-information--course--undergraduate {
-    grid-column: 1 / -1;
-}
-
-.key-information--course--undergraduate {
-    background: linear-gradient(360deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.65) 100%);
+.key-information--course--undergraduate__intro,
+.key-information--course--undergraduate__details {
+    padding: 1.75rem 1.75rem;
+    margin-top: 1.75rem;
+    background: linear-gradient(360deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 100%);
 }
 
 @media (max-width: 432px) {
-    .key-information--course--undergraduate {
+    .key-information--course--undergraduate__intro,
+    .key-information--course--undergraduate__details {
         grid-column: 1 / -1;
     }
 }
 
 @media (min-width: 433px) {
-    .key-information--course--undergraduate {
-        grid-column: 1 / 11;
+    .key-information--course--undergraduate__intro,
+    .key-information--course--undergraduate__details {
+        grid-column: 2 / 18;
     }
 }
 
 @media (min-width: 901px) {
-    .key-information--course--undergraduate {
-        grid-column: 6 / 14;
+    .key-information--course--undergraduate__intro,
+    .key-information--course--undergraduate__details {
+        grid-column: 3 / 17;
     }
+}
+
+.key-information--course--undergraduate__details {
+    display: flex;
+}
+
+.key-information--course--undergraduate__details--column {
+    flex: 1;
 }
 
 .parallax {
