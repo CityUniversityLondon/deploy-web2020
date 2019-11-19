@@ -42817,6 +42817,14 @@ a.modal__close:active, a.modal__close:focus {
     right: 0.5rem;
 }
 
+@media (max-width: 899px) {
+    .carousel-gallery .swiper-buttons-wrap {
+        position: initial;
+        padding: 0.5rem;
+        justify-content: flex-end;
+    }
+}
+
 .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow {
     color: #ffffff;
     border: 0.0625rem solid #ffffff;
@@ -42887,6 +42895,12 @@ a.modal__close:active, a.modal__close:focus {
 .galleria-thumbnails-wrap {
     width: calc(100% - 7rem);
     overflow: hidden;
+}
+
+@media (max-width: 899px) {
+    .galleria-thumbnails-wrap {
+        width: calc(100%);
+    }
 }
 
 .js .swiper-wrapper {
