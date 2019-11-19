@@ -35106,11 +35106,53 @@ a.modal__close:active, a.modal__close:focus {
     margin-top: 2.5rem;
 }
 
+.modal__buttons--slider button {
+    align-items: center;
+    padding: 1rem 0;
+    display: flex;
+}
+
 .modal__buttons--slider button:focus, .modal__buttons--slider button:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
+}
+
+.modal__buttons--slider button:first-child {
+    position: relative;
+    text-align: left;
+    padding-right: 1rem;
+}
+
+@media (min-width: 769px) {
+    .modal__buttons--slider button:first-child:after {
+        content: '';
+        height: 100%;
+        width: 0.125rem;
+        background: #d61726;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.modal__buttons--slider button:first-child .modal__buttons__icon {
+    margin-right: 0.75rem;
+}
+
+.modal__buttons--slider button:last-child {
+    text-align: right;
+    padding-left: 1rem;
+}
+
+.modal__buttons--slider button:last-child .modal__buttons__icon {
+    margin-left: 0.75rem;
+}
+
+.modal__buttons--slider button:hover .modal__underline-transition span {
+    background-image: linear-gradient(#d61726, #d61726);
+    background-size: 100% 0.125rem;
 }
 
 .modal__buttons--slider button .modal__underline-transition {
@@ -35128,61 +35170,6 @@ a.modal__close:active, a.modal__close:focus {
     transition: background-size 0.6s ease-in;
     padding-bottom: 0.125rem;
     line-height: 1.5;
-}
-
-.modal__buttons--slider button:hover .modal__underline-transition span {
-    background-image: linear-gradient(#d61726, #d61726);
-    background-size: 100% 0.125rem;
-}
-
-.modal__buttons--slider div {
-    align-items: center;
-    padding: 1rem 0;
-    display: flex;
-}
-
-@media (min-width: 769px) {
-    .modal__buttons--slider div {
-        width: 50%;
-    }
-}
-
-.modal__buttons--slider div:first-child {
-    position: relative;
-    padding-right: 1rem;
-}
-
-@media (min-width: 769px) {
-    .modal__buttons--slider div:first-child:after {
-        content: '';
-        height: 100%;
-        width: 0.125rem;
-        background: #d61726;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-}
-
-.modal__buttons--slider div:first-child .modal__buttons__icon {
-    margin-right: 0.75rem;
-}
-
-.modal__buttons--slider div:first-child button {
-    text-align: left;
-}
-
-.modal__buttons--slider div:last-child {
-    text-align: right;
-    padding-left: 1rem;
-}
-
-.modal__buttons--slider div:last-child .modal__buttons__icon {
-    margin-left: 0.75rem;
-}
-
-.modal__buttons--slider div:last-child button {
-    text-align: right;
 }
 
 .modal__buttons {
@@ -41690,11 +41677,53 @@ a.modal__close:active, a.modal__close:focus {
     margin-top: 2.5rem;
 }
 
+.modal__buttons--slider button {
+    align-items: center;
+    padding: 1rem 0;
+    display: flex;
+}
+
 .modal__buttons--slider button:focus, .modal__buttons--slider button:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
+}
+
+.modal__buttons--slider button:first-child {
+    position: relative;
+    text-align: left;
+    padding-right: 1rem;
+}
+
+@media (min-width: 769px) {
+    .modal__buttons--slider button:first-child:after {
+        content: '';
+        height: 100%;
+        width: 0.125rem;
+        background: #d61726;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.modal__buttons--slider button:first-child .modal__buttons__icon {
+    margin-right: 0.75rem;
+}
+
+.modal__buttons--slider button:last-child {
+    text-align: right;
+    padding-left: 1rem;
+}
+
+.modal__buttons--slider button:last-child .modal__buttons__icon {
+    margin-left: 0.75rem;
+}
+
+.modal__buttons--slider button:hover .modal__underline-transition span {
+    background-image: linear-gradient(#d61726, #d61726);
+    background-size: 100% 0.125rem;
 }
 
 .modal__buttons--slider button .modal__underline-transition {
@@ -41712,61 +41741,6 @@ a.modal__close:active, a.modal__close:focus {
     transition: background-size 0.6s ease-in;
     padding-bottom: 0.125rem;
     line-height: 1.5;
-}
-
-.modal__buttons--slider button:hover .modal__underline-transition span {
-    background-image: linear-gradient(#d61726, #d61726);
-    background-size: 100% 0.125rem;
-}
-
-.modal__buttons--slider div {
-    align-items: center;
-    padding: 1rem 0;
-    display: flex;
-}
-
-@media (min-width: 769px) {
-    .modal__buttons--slider div {
-        width: 50%;
-    }
-}
-
-.modal__buttons--slider div:first-child {
-    position: relative;
-    padding-right: 1rem;
-}
-
-@media (min-width: 769px) {
-    .modal__buttons--slider div:first-child:after {
-        content: '';
-        height: 100%;
-        width: 0.125rem;
-        background: #d61726;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-}
-
-.modal__buttons--slider div:first-child .modal__buttons__icon {
-    margin-right: 0.75rem;
-}
-
-.modal__buttons--slider div:first-child button {
-    text-align: left;
-}
-
-.modal__buttons--slider div:last-child {
-    text-align: right;
-    padding-left: 1rem;
-}
-
-.modal__buttons--slider div:last-child .modal__buttons__icon {
-    margin-left: 0.75rem;
-}
-
-.modal__buttons--slider div:last-child button {
-    text-align: right;
 }
 
 .modal__buttons {

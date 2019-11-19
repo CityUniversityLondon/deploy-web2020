@@ -6109,7 +6109,6 @@ function createElements(activeListItem, elementSibling, direction) {
   var elementSiblingModalPopup = elementSibling.querySelector('.modal__popup');
   var elementSiblingDataTitle = elementSiblingModalPopup.getAttribute('data-title');
   var modalButtonsContainer = activeListItem.querySelector('.modal__buttons');
-  var parentDiv = document.createElement('div');
   var icon = document.createElement('span');
   icon.className = 'modal__buttons__icon far';
   var button = document.createElement('button');
@@ -6124,19 +6123,20 @@ function createElements(activeListItem, elementSibling, direction) {
   outerSpan.className = 'modal__underline-transition';
   var spanText = document.createElement('span');
   spanText.textContent = elementSiblingDataTitle;
-  modalButtonsContainer.append(parentDiv);
-  parentDiv.append(button);
-  button.append(outerSpan);
-  outerSpan.append(spanText); // 1 is right, -1 is left
+  modalButtonsContainer.append(button);
+  var blockDiv = document.createElement('div');
+  blockDiv.append(outerSpan);
+  outerSpan.append(spanText);
+  button.append(blockDiv); // 1 is right, -1 is left
 
   if (direction == 1) {
     button.setAttribute('data-direction', '1');
     icon.classList.add('fa-long-arrow-right');
-    parentDiv.append(icon);
+    button.append(icon);
   } else {
     button.setAttribute('data-direction', '-1');
     icon.classList.add('fa-long-arrow-left');
-    parentDiv.prepend(icon);
+    button.prepend(icon);
   }
 }
 
