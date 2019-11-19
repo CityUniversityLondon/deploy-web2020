@@ -35106,8 +35106,11 @@ a.modal__close:active, a.modal__close:focus {
     margin-top: 2.5rem;
 }
 
-.modal__buttons--slider button {
-    text-align: left;
+.modal__buttons--slider button:focus, .modal__buttons--slider button:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .modal__buttons--slider button .modal__underline-transition {
@@ -35165,6 +35168,10 @@ a.modal__close:active, a.modal__close:focus {
     margin-right: 0.75rem;
 }
 
+.modal__buttons--slider div:first-child button {
+    text-align: left;
+}
+
 .modal__buttons--slider div:last-child {
     text-align: right;
     padding-left: 2rem;
@@ -35172,6 +35179,10 @@ a.modal__close:active, a.modal__close:focus {
 
 .modal__buttons--slider div:last-child .modal__buttons__icon {
     margin-left: 0.75rem;
+}
+
+.modal__buttons--slider div:last-child button {
+    text-align: right;
 }
 
 .modal__buttons {
@@ -41679,8 +41690,11 @@ a.modal__close:active, a.modal__close:focus {
     margin-top: 2.5rem;
 }
 
-.modal__buttons--slider button {
-    text-align: left;
+.modal__buttons--slider button:focus, .modal__buttons--slider button:active {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
 }
 
 .modal__buttons--slider button .modal__underline-transition {
@@ -41738,6 +41752,10 @@ a.modal__close:active, a.modal__close:focus {
     margin-right: 0.75rem;
 }
 
+.modal__buttons--slider div:first-child button {
+    text-align: left;
+}
+
 .modal__buttons--slider div:last-child {
     text-align: right;
     padding-left: 2rem;
@@ -41745,6 +41763,10 @@ a.modal__close:active, a.modal__close:focus {
 
 .modal__buttons--slider div:last-child .modal__buttons__icon {
     margin-left: 0.75rem;
+}
+
+.modal__buttons--slider div:last-child button {
+    text-align: right;
 }
 
 .modal__buttons {
