@@ -6928,7 +6928,6 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
        * Check if there is a remainder when dividing the listing position by increment. If there is,
        * increase progress indicator and total slides by 1.
        */
-      // let groupNumber = parseInt(updatedPosition - 1) / sliderIncrement;
 
       var totalSlides = parseInt(control.getAttribute('data-slides'));
       var totalSlidesDisplay = control.querySelector('.slide__controls__progress__total');
@@ -6936,25 +6935,27 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
 
       if ((updatedPosition - 1) % sliderIncrement == 0) {
         firstInGroup = true;
-      } // console.log(updatedPosition);
+      } // If index position not first in group
 
 
-      if (!firstInGroup && updatedPosition <= sliderChildrenLength - sliderIncrement && updatedPosition < sliderIncrement) {
-        totalSlides += 1;
-        totalSlidesDisplay.innerHTML = totalSlides;
-        currentGroup += 1; // console.log('a')
-      } else if (!firstInGroup && updatedPosition > sliderChildrenLength - sliderIncrement && updatedPosition > 1) {
+      if (!firstInGroup) {
+        // Increase group position by 1 to account for extra slide
+        currentGroup += 1; //
+
+        if (sliderChildrenLength - updatedPosition >= sliderIncrement && updatedPosition < sliderChildrenLength) {
+          totalSlides += 1;
+          totalSlidesDisplay.innerHTML = totalSlides;
+        } else {
+          // Limit progress indicator to max number of slides
+          currentGroup = totalSlides;
+        }
+      } else if (!firstInGroup) {
         currentGroup += 1;
-        totalSlidesDisplay.innerHTML = totalSlides; // console.log('b')
-      } else if (!firstInGroup && updatedPosition < sliderChildrenLength - sliderIncrement && updatedPosition > 1) {
-        currentGroup += 1; // console.log('c')
-      } else if (!firstInGroup && updatedPosition > sliderChildrenLength - sliderIncrement && updatedPosition == sliderChildrenLength) {
-        totalSlides += 1;
-        totalSlidesDisplay.innerHTML = totalSlides; // console.log('d')
-      } else {
-        totalSlidesDisplay.innerHTML = totalSlides; // currentGroup += 1;
-        // console.log('e')
+        totalSlidesDisplay.innerHTML = totalSlides;
       }
+
+      totalSlidesDisplay.innerHTML = totalSlides;
+      progressIndicator.innerHTML = Math.ceil(currentGroup) + 1;
       /**
        * If increment increase exceeds total slides' length, limit the current
        * position value to the total slides' length. This can happen when
@@ -6962,9 +6963,7 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
        * mobile.
        */
 
-
       if (currentGroup > totalSlides) {
-        progressIndicator.innerHTML = totalSlides;
         control.setAttribute('data-currentposition', totalSlides);
       } else {
         progressIndicator.innerHTML = Math.ceil(currentGroup);
