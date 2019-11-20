@@ -33532,6 +33532,10 @@ article figure figcaption a:active {
     }
 }
 
+.navigation--primary .navigation__level2 > li:first-of-type > .navigation__level3 {
+    display: block;
+}
+
 .navigation--primary .navigation__level1,
 .navigation--primary .navigation__level2,
 .navigation--primary .navigation__level3 {
