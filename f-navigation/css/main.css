@@ -33637,6 +33637,10 @@ article figure figcaption a:active {
     font-weight: 700;
 }
 
+.navigation--primary .navigation--primary__menu__header span {
+    text-transform: lowercase;
+}
+
 .navigation--primary .navigation--primary__menu {
     display: none;
 }
