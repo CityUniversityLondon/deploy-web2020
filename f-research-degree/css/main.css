@@ -33803,12 +33803,14 @@ blockquote footer cite {
 .slider-responsive {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    position: relative;
 }
 
 .slider-responsive .slider__slide {
     display: none;
     margin-top: 1.75rem;
+    margin-bottom: 4rem;
 }
 
 @media (min-width: 433px) {
@@ -33848,6 +33850,10 @@ blockquote footer cite {
 .slider-responsive .slider__controls__wrap {
     display: none;
     margin: 1rem 0 2rem 0;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    margin-top: 100px;
 }
 
 @media (max-width: 767px) {

@@ -5700,26 +5700,6 @@ module.exports = isForced;
 
 /***/ }),
 
-/***/ "./node_modules/core-js/internals/is-integer.js":
-/*!******************************************************!*\
-  !*** ./node_modules/core-js/internals/is-integer.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isObject = __webpack_require__(/*! ../internals/is-object */ "./node_modules/core-js/internals/is-object.js");
-
-var floor = Math.floor;
-
-// `Number.isInteger` method implementation
-// https://tc39.github.io/ecma262/#sec-number.isinteger
-module.exports = function isInteger(it) {
-  return !isObject(it) && isFinite(it) && floor(it) === it;
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/internals/is-object.js":
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/internals/is-object.js ***!
@@ -8135,25 +8115,6 @@ if (isForced(NUMBER, !NativeNumber(' 0o1') || !NativeNumber('0b1') || NativeNumb
   NumberPrototype.constructor = NumberWrapper;
   redefine(global, NUMBER, NumberWrapper);
 }
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/modules/es.number.is-integer.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/core-js/modules/es.number.is-integer.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
-var isInteger = __webpack_require__(/*! ../internals/is-integer */ "./node_modules/core-js/internals/is-integer.js");
-
-// `Number.isInteger` method
-// https://tc39.github.io/ecma262/#sec-number.isinteger
-$({ target: 'Number', stat: true }, {
-  isInteger: isInteger
-});
 
 
 /***/ }),
