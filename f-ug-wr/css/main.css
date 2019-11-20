@@ -48893,40 +48893,71 @@ button
     font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
-.key-information--course--undergraduate__intro,
-.key-information--course--undergraduate__details {
-    padding: 1.75rem 1.75rem;
-    margin-top: 1.75rem;
+.course--undergraduate__key-information__intro,
+.course--undergraduate__key-information__details,
+.course--undergraduate__key-information__accordion {
     background: linear-gradient(360deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 100%);
 }
 
 @media (max-width: 432px) {
-    .key-information--course--undergraduate__intro,
-    .key-information--course--undergraduate__details {
+    .course--undergraduate__key-information__intro,
+    .course--undergraduate__key-information__details,
+    .course--undergraduate__key-information__accordion {
         grid-column: 1 / -1;
     }
 }
 
 @media (min-width: 433px) {
-    .key-information--course--undergraduate__intro,
-    .key-information--course--undergraduate__details {
+    .course--undergraduate__key-information__intro,
+    .course--undergraduate__key-information__details,
+    .course--undergraduate__key-information__accordion {
         grid-column: 2 / 18;
     }
 }
 
 @media (min-width: 901px) {
-    .key-information--course--undergraduate__intro,
-    .key-information--course--undergraduate__details {
+    .course--undergraduate__key-information__intro,
+    .course--undergraduate__key-information__details,
+    .course--undergraduate__key-information__accordion {
         grid-column: 3 / 17;
     }
 }
 
-.key-information--course--undergraduate__details {
+.course--undergraduate__key-information__intro {
+    padding: 1.75rem 1.75rem;
+    margin-top: 1.75rem;
+}
+
+.course--undergraduate__key-information__details {
+    padding: 1.75rem 1.75rem;
+    margin-top: 1.75rem;
     display: flex;
 }
 
-.key-information--course--undergraduate__details--column {
+.course--undergraduate__key-information__details--column {
     flex: 1;
+}
+
+.course--undergraduate__key-information__details .label {
+    display: block;
+}
+
+.course--undergraduate__key-information__details__duration ul {
+    margin-left: 0;
+    list-style: none;
+}
+
+.course--undergraduate__key-information__details__ucas-code {
+    margin-top: 1.75rem;
+}
+
+.course--undergraduate__key-information__details__ucas-code ul {
+    margin-left: 0;
+    list-style: none;
+}
+
+.course--undergraduate__key-information__details__location {
+    margin-top: 1.75rem;
 }
 
 .parallax {
@@ -48939,6 +48970,10 @@ button
     z-index: -1;
     top: 0;
     width: 100%;
+}
+
+.course--undergraduate__key-information__accordion {
+    border-top: 0.125rem solid #d8d8d8;
 }
 
 @media screen {
