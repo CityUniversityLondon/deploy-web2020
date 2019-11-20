@@ -49358,7 +49358,8 @@ button
 .course--undergraduate__key-information__intro,
 .course--undergraduate__key-information__details,
 .course--undergraduate__key-information__accordion {
-    background: linear-gradient(360deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 100%);
+    background: linear-gradient(360deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
+    padding: 1.75rem 1.75rem;
 }
 
 @media (max-width: 432px) {
@@ -49386,12 +49387,10 @@ button
 }
 
 .course--undergraduate__key-information__intro {
-    padding: 1.75rem 1.75rem;
     margin-top: 1.75rem;
 }
 
 .course--undergraduate__key-information__details {
-    padding: 1.75rem 1.75rem;
     margin-top: 1.75rem;
     display: flex;
     flex-wrap: wrap;
@@ -49459,6 +49458,11 @@ button
 
 .course--undergraduate__key-information__accordion {
     border-top: 0.125rem solid #d8d8d8;
+    margin-bottom: 1.75rem;
+}
+
+.course--undergraduate__key-information__accordion .accordion__heading {
+    background: #f2f2f2;
 }
 
 @media screen {
