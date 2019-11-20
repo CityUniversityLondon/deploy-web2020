@@ -48911,7 +48911,7 @@ button
     .course--undergraduate__key-information__intro,
     .course--undergraduate__key-information__details,
     .course--undergraduate__key-information__accordion {
-        grid-column: 2 / 18;
+        grid-column: 2 / 12;
     }
 }
 
@@ -48932,28 +48932,49 @@ button
     padding: 1.75rem 1.75rem;
     margin-top: 1.75rem;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .course--undergraduate__key-information__details--column {
     flex: 1;
 }
 
-.course--undergraduate__key-information__details .label {
-    display: block;
+@media (max-width: 899px) {
+    .course--undergraduate__key-information__details--column {
+        flex-basis: 50%;
+    }
+    .course--undergraduate__key-information__details--column:nth-child(3) {
+        margin-top: 1.75rem;
+    }
 }
 
-.course--undergraduate__key-information__details__duration ul {
-    margin-left: 0;
-    list-style: none;
+@media (max-width: 767px) {
+    .course--undergraduate__key-information__details--column {
+        flex-basis: 100%;
+    }
+    .course--undergraduate__key-information__details--column:nth-child(2) {
+        margin-top: 1.75rem;
+    }
+}
+
+.course--undergraduate__key-information__details .label {
+    display: block;
+    font-family: "Meta Sans", sans-serif;
+    color: #696969;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.course--undergraduate__key-information__details span:not(.label) {
+    display: block;
+    color: #303030;
+    font-weight: 500;
+    font-family: "Plex Sans", sans-serif;
+    margin-bottom: 0.25rem;
 }
 
 .course--undergraduate__key-information__details__ucas-code {
     margin-top: 1.75rem;
-}
-
-.course--undergraduate__key-information__details__ucas-code ul {
-    margin-left: 0;
-    list-style: none;
 }
 
 .course--undergraduate__key-information__details__location {
@@ -48969,7 +48990,9 @@ button
     position: fixed;
     z-index: -1;
     top: 0;
+    height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .course--undergraduate__key-information__accordion {
