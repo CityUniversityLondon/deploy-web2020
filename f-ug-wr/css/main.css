@@ -49461,8 +49461,46 @@ button
     margin-bottom: 1.75rem;
 }
 
-.course--undergraduate__key-information__accordion .accordion__heading {
+.course--undergraduate__key-information__accordion .accordion .accordion__heading {
     background: #f2f2f2;
+}
+
+.course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+    color: #0c0c0e;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+        letter-spacing: -0.017em;
+    }
 }
 
 @media screen {
