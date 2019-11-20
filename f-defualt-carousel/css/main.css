@@ -42939,7 +42939,7 @@ a.modal__close:active, a.modal__close:focus {
     max-width: 100%;
     height: auto;
     border: 0;
-    max-height: 4rem;
+    max-height: 3rem;
     margin-top: 0.25rem;
     transition: opacity 0.6s;
 }
