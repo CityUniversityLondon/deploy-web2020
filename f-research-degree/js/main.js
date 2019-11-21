@@ -7134,12 +7134,16 @@ function launchResponsiveSlider(slider) {
     slider.appendChild(sliderControlsWrap);
     sliderControls.appendChild(sliderButtons);
     slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled');
-  } // Each time responsive slider loads, build three sets of controls (one for each device)
+  }
+  /**
+   * Build each type of controller (mobile, tablet, desktop) depending on
+   */
 
 
-  sliderChildrenLength >= 1 ? buildControls('mobile', 1, 1, false) : null;
-  sliderChildrenLength >= 2 ? buildControls('tablet', 2, 1, false) : null;
-  sliderChildrenLength >= 3 ? buildControls('desktop', 3, 1, false) : null;
+  sliderChildrenLength > 1 ? buildControls('mobile', 1, 1, false) : null;
+  sliderChildrenLength > 2 ? buildControls('tablet', 2, 1, false) : null;
+  sliderChildrenLength > 3 ? buildControls('desktop', 3, 1, false) : null;
+  console.log(sliderChildrenLength);
   var controlWraps = slider.querySelectorAll('.slider__controls__wrap');
   /**
    * For each instance of the controls, update the current position data attribute when next previous/buttons
