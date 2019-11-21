@@ -49503,6 +49503,49 @@ button
     }
 }
 
+.course--undergraduate__footer {
+    max-width: 80rem;
+    max-width: 80rem;
+}
+
+@media (min-width: 1441px) {
+    .course--undergraduate__footer {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .course--undergraduate__footer {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.course--undergraduate__footer .footer__contact--two-cards,
+.course--undergraduate__footer .footer__contact--one-card {
+    display: flex;
+}
+
+.course--undergraduate__footer .footer__contact--two-cards .related-content,
+.course--undergraduate__footer .footer__contact--one-card .related-content {
+    flex-basis: 66%;
+    display: flex;
+}
+
+.course--undergraduate__footer .footer__contact--two-cards .related-content li,
+.course--undergraduate__footer .footer__contact--one-card .related-content li {
+    flex: 1;
+}
+
+.course--undergraduate__footer .footer__contact--one-card ul {
+    flex-basis: 33%;
+}
+
+.course--undergraduate__footer .useful-links {
+    flex-basis: 33%;
+}
+
 @media screen {
     .theme--dark {
         background-color: #1e1e1e;
