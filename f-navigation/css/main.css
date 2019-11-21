@@ -33662,72 +33662,6 @@ article figure figcaption a:active {
     }
 }
 
-.navigation--secondary div {
-    font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-    font-size: 1rem;
-    line-height: 1.625;
-    letter-spacing: -0.005em;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.25;
-    margin-top: 1rem;
-}
-
-.navigation--secondary div i,
-.navigation--secondary div em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-}
-
-.navigation--secondary div b,
-.navigation--secondary div strong {
-    font-weight: inherit;
-}
-
-.navigation--secondary div i,
-.navigation--secondary div em {
-    font-style: italic;
-}
-
-.navigation--secondary div u {
-    text-decoration: none;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .navigation--secondary div {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .navigation--secondary div {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .navigation--secondary div {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .navigation--secondary div {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .navigation--secondary div {
-        letter-spacing: -0.017em;
-    }
-}
-
-.navigation--secondary div b,
-.navigation--secondary div strong {
-    font-weight: 700;
-}
-
 .navigation--secondary li {
     font-size: 0.889rem;
     line-height: 1.625;
@@ -33902,6 +33836,72 @@ article figure figcaption a:active {
     border-bottom-width: 0.125rem;
     border-bottom-style: solid;
     border-bottom-color: #1e1e1e;
+}
+
+.navigation--secondary__heading {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 1rem;
+}
+
+.navigation--secondary__heading i,
+.navigation--secondary__heading em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.navigation--secondary__heading b,
+.navigation--secondary__heading strong {
+    font-weight: inherit;
+}
+
+.navigation--secondary__heading i,
+.navigation--secondary__heading em {
+    font-style: italic;
+}
+
+.navigation--secondary__heading u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .navigation--secondary__heading {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .navigation--secondary__heading {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .navigation--secondary__heading {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .navigation--secondary__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .navigation--secondary__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+.navigation--secondary__heading b,
+.navigation--secondary__heading strong {
+    font-weight: 700;
 }
 
 .js .navigation--secondary .navigation__level3,
