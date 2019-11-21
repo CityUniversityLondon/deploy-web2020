@@ -49506,6 +49506,8 @@ button
 .course--undergraduate__footer {
     max-width: 80rem;
     max-width: 80rem;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
 }
 
 @media (min-width: 1441px) {
@@ -49522,15 +49524,44 @@ button
     }
 }
 
+.course--undergraduate__footer h2 {
+    margin-bottom: 1.5rem;
+}
+
 .course--undergraduate__footer .footer__contact--two-cards,
 .course--undergraduate__footer .footer__contact--one-card {
     display: flex;
+}
+
+@media (max-width: 899px) {
+    .course--undergraduate__footer .footer__contact--two-cards,
+    .course--undergraduate__footer .footer__contact--one-card {
+        flex-direction: column;
+    }
 }
 
 .course--undergraduate__footer .footer__contact--two-cards .related-content,
 .course--undergraduate__footer .footer__contact--one-card .related-content {
     flex-basis: 66%;
     display: flex;
+    margin-right: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 0.0625rem solid #cbcbcb;
+}
+
+@media (max-width: 899px) {
+    .course--undergraduate__footer .footer__contact--two-cards .related-content,
+    .course--undergraduate__footer .footer__contact--one-card .related-content {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .course--undergraduate__footer .footer__contact--two-cards .related-content,
+    .course--undergraduate__footer .footer__contact--one-card .related-content {
+        display: inline-block;
+    }
 }
 
 .course--undergraduate__footer .footer__contact--two-cards .related-content li,
@@ -49538,12 +49569,35 @@ button
     flex: 1;
 }
 
-.course--undergraduate__footer .footer__contact--one-card ul {
+.course--undergraduate__footer .footer__contact--two-cards .related-content li:not(:last-child),
+.course--undergraduate__footer .footer__contact--one-card .related-content li:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+@media (max-width: 767px) {
+    .course--undergraduate__footer .footer__contact--two-cards .related-content li:not(:last-child),
+    .course--undergraduate__footer .footer__contact--one-card .related-content li:not(:last-child) {
+        margin-right: 0;
+    }
+}
+
+.course--undergraduate__footer .footer__contact--one-card .related-content {
     flex-basis: 33%;
+}
+
+@media (max-width: 899px) {
+    .course--undergraduate__footer .footer__contact--one-card .related-content {
+        flex-basis: 100%;
+    }
+}
+
+.course--undergraduate__footer .card--contact .card--contact__header {
+    display: none;
 }
 
 .course--undergraduate__footer .useful-links {
     flex-basis: 33%;
+    margin-top: 2.5rem;
 }
 
 @media screen {
