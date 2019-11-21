@@ -5993,7 +5993,8 @@ function modalSlider(modalSlider) {
 
 
 function addButtonListeners(currentListItem) {
-  var buttons = currentListItem.querySelectorAll('button');
+  var buttonsContainer = currentListItem.querySelector('.modal__buttons');
+  var buttons = buttonsContainer.querySelectorAll('button');
   buttons.forEach(function (button) {
     button.addEventListener('click', slideLeftorRight, false);
   });
@@ -6078,7 +6079,7 @@ function trapFocus(modalPopup) {
 
 
 function setTabIndexes(modalPopup, addOrRemove) {
-  var elements = modalPopup.querySelectorAll('a, button');
+  var elements = modalPopup.querySelectorAll('button');
   elements.forEach(function (el) {
     if (!addOrRemove) {
       el.setAttribute('tabindex', '-1');
@@ -6185,11 +6186,10 @@ function launchModal(modal) {
   linkElement.setAttribute('href', '#');
   linkElement.textContent = modal.getAttribute('data-title');
   modal.parentNode.prepend(linkElement);
-  var modalCloseElement = document.createElement('a');
+  var modalCloseElement = document.createElement('button');
   modalCloseElement.className = 'modal__close fas fa-times';
-  modalCloseElement.setAttribute('href', '#');
   modalCloseElement.setAttribute('aria--label', 'Close modal');
-  modal.querySelector('.modal__heading').parentNode.prepend(modalCloseElement);
+  modal.querySelector('.modal__content').prepend(modalCloseElement);
   addEventListeners(modal, linkElement, modalCloseElement);
   setTabIndexes(modal, true);
 }

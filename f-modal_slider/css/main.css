@@ -35376,41 +35376,23 @@ body.modal--in.no-scroll .modal__background {
     color: #d61726;
 }
 
-a.modal__close {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    background-image: none;
-    background-size: initial;
+.modal__close {
     color: #696969;
-    cursor: pointer;
     padding: 0.75rem;
     position: absolute;
     right: 1px;
     top: 1px;
 }
 
-a.modal__close:focus, a.modal__close:active {
+.modal__close:focus, .modal__close:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-a.modal__close:visited {
-    color: #696969;
-}
-
 @media (hover: hover) {
-    a.modal__close:hover {
+    .modal__close:hover {
         background-image: none;
         border: none;
         background-color: #f2f2f2;
@@ -35418,28 +35400,20 @@ a.modal__close:visited {
     }
 }
 
-a.modal__close:hover:before {
+.modal__close:hover:before {
     font-size: 1.075em;
 }
 
-a.modal__close:active {
+.modal__close:active {
     background-color: #f2f2f2;
     color: #1e1e1e;
-    border: none;
-    border-bottom-width: 0;
-    border-bottom-color: transparent;
-    border-bottom-style: none;
 }
 
-a.modal__close:focus {
+.modal__close:focus {
     color: #1e1e1e;
-    border: none;
-    border-bottom-width: 0;
-    border-bottom-color: transparent;
-    border-bottom-style: none;
 }
 
-a.modal__close:active, a.modal__close:focus {
+.modal__close:active, .modal__close:focus {
     outline-offset: 0;
 }
 
@@ -42044,41 +42018,23 @@ body.modal--in.no-scroll .modal__background {
     color: #d61726;
 }
 
-a.modal__close {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    background-image: none;
-    background-size: initial;
+.modal__close {
     color: #696969;
-    cursor: pointer;
     padding: 0.75rem;
     position: absolute;
     right: 1px;
     top: 1px;
 }
 
-a.modal__close:focus, a.modal__close:active {
+.modal__close:focus, .modal__close:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
     outline-color: #0c0c0e;
 }
 
-a.modal__close:visited {
-    color: #696969;
-}
-
 @media (hover: hover) {
-    a.modal__close:hover {
+    .modal__close:hover {
         background-image: none;
         border: none;
         background-color: #f2f2f2;
@@ -42086,28 +42042,20 @@ a.modal__close:visited {
     }
 }
 
-a.modal__close:hover:before {
+.modal__close:hover:before {
     font-size: 1.075em;
 }
 
-a.modal__close:active {
+.modal__close:active {
     background-color: #f2f2f2;
     color: #1e1e1e;
-    border: none;
-    border-bottom-width: 0;
-    border-bottom-color: transparent;
-    border-bottom-style: none;
 }
 
-a.modal__close:focus {
+.modal__close:focus {
     color: #1e1e1e;
-    border: none;
-    border-bottom-width: 0;
-    border-bottom-color: transparent;
-    border-bottom-style: none;
 }
 
-a.modal__close:active, a.modal__close:focus {
+.modal__close:active, .modal__close:focus {
     outline-offset: 0;
 }
 
