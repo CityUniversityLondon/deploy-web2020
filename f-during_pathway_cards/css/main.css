@@ -49464,7 +49464,7 @@ button
 
 .course--undergraduate__pathway-image-cards {
     display: grid;
-    grid-column-gap: 2rem;
+    grid-column-gap: 4rem;
     grid-row-gap: 4rem;
     margin-top: 2rem;
 }
@@ -49475,12 +49475,41 @@ button
     }
 }
 
-.course--undergraduate .tabs__panel__heading {
+.course--undergraduate .course--undergraduate__tabs__panel__inner {
+    grid-column: 4 / 16;
+}
+
+.js .course--undergraduate .tabs {
+    max-width: 80rem;
+    background: #ffffff;
+    margin-top: 4rem;
+}
+
+@media (min-width: 1441px) {
+    .js .course--undergraduate .tabs {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .js .course--undergraduate .tabs {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.js .course--undergraduate .tabs .tabs__panel {
+    border-top: none;
+    background: transparent;
+}
+
+.js .course--undergraduate .tabs .tabs__panel__heading {
     text-align: center;
 }
 
-.course--undergraduate .course--undergraduate__tabs__panel__inner {
-    grid-column: 4 / 16;
+.js .course--undergraduate .tabs .tabs__panel__body {
+    margin-top: 4rem;
 }
 
 @media screen {
