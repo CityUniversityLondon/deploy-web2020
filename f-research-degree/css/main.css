@@ -33810,7 +33810,6 @@ blockquote footer cite {
 .slider-responsive .slider__slide {
     display: none;
     margin-top: 1.75rem;
-    margin-bottom: 4rem;
 }
 
 @media (min-width: 433px) {
@@ -33850,27 +33849,26 @@ blockquote footer cite {
 .slider-responsive .slider__controls__wrap {
     display: none;
     margin: 1rem 0 2rem 0;
-    right: 0;
-    position: absolute;
-    bottom: 0;
-    margin-top: 100px;
+    flex-direction: row-reverse;
+    flex-basis: 100%;
+    max-width: none;
 }
 
 @media (max-width: 767px) {
     .slider-responsive .slider__controls__wrap[data-device='mobile'] {
-        display: block;
+        display: flex;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
     .slider-responsive .slider__controls__wrap[data-device='tablet'] {
-        display: block;
+        display: flex;
     }
 }
 
 @media (min-width: 1280px) {
     .slider-responsive .slider__controls__wrap[data-device='desktop'] {
-        display: block;
+        display: flex;
     }
 }
 

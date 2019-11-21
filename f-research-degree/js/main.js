@@ -7137,9 +7137,9 @@ function launchResponsiveSlider(slider) {
   } // Each time responsive slider loads, build three sets of controls (one for each device)
 
 
-  buildControls('desktop', 3, 1, false);
-  buildControls('tablet', 2, 1, false);
-  buildControls('mobile', 1, 1, false);
+  sliderChildrenLength >= 1 ? buildControls('mobile', 1, 1, false) : null;
+  sliderChildrenLength >= 2 ? buildControls('tablet', 2, 1, false) : null;
+  sliderChildrenLength >= 3 ? buildControls('desktop', 3, 1, false) : null;
   var controlWraps = slider.querySelectorAll('.slider__controls__wrap');
   /**
    * For each instance of the controls, update the current position data attribute when next previous/buttons
