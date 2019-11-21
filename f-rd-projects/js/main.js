@@ -7122,14 +7122,29 @@ function launchResponsiveSlider(slider) {
     }, {
       label: 'class',
       val: 'fas fa-arrow-left slider__controls__buttons__prev swiper-slider-arrow arrow-left--btn-prev'
-    }]));
-    sliderButtons.appendChild(createElement('button', [{
-      label: 'aria-label',
-      val: 'Next item'
-    }, {
-      label: 'class',
-      val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-left--btn-next'
-    }]));
+    }])); // If slider children items is equal to slider increment, disable next button by default
+
+    if (sliderChildrenLength == increment) {
+      sliderButtons.appendChild(createElement('button', [{
+        label: 'aria-label',
+        val: 'Next item'
+      }, {
+        label: 'class',
+        val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-left--btn-next'
+      }, {
+        label: 'disabled',
+        val: 'true'
+      }]));
+    } else {
+      sliderButtons.appendChild(createElement('button', [{
+        label: 'aria-label',
+        val: 'Next item'
+      }, {
+        label: 'class',
+        val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-left--btn-next'
+      }]));
+    }
+
     sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
     slider.appendChild(sliderControlsWrap);
     sliderControls.appendChild(sliderButtons);
@@ -7141,8 +7156,8 @@ function launchResponsiveSlider(slider) {
 
 
   sliderChildrenLength > 1 ? buildControls('mobile', 1, 1, false) : null;
-  sliderChildrenLength > 2 ? buildControls('tablet', 2, 1, false) : null;
-  sliderChildrenLength > 3 ? buildControls('desktop', 3, 1, false) : null;
+  sliderChildrenLength >= 2 ? buildControls('tablet', 2, 1, false) : null;
+  sliderChildrenLength >= 3 ? buildControls('desktop', 3, 1, false) : null;
   console.log(sliderChildrenLength);
   var controlWraps = slider.querySelectorAll('.slider__controls__wrap');
   /**
