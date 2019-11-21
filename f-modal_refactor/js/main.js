@@ -5971,11 +5971,9 @@ function launchModal(modal) {
   modalInner.setAttribute('role', 'dialog');
   var modalContent = document.createElement('div');
   modalContent.className = 'modal__content';
-  var modalButtons = document.createElement('div');
-  modalButtons.className = 'modal__buttons';
   modal.appendChild(modalInner);
   modalInner.append(modalContent);
-  modalContent.append(modalCloseElement, heading, modalBodyCopy, modalButtons);
+  modalContent.append(modalCloseElement, heading, modalBodyCopy);
   addEventListeners(modal, linkElement, modalCloseElement);
   setTabIndexes(modal, true);
 }
