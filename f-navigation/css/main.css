@@ -1099,15 +1099,35 @@
     Used where card has two divs, one most likely
     being a thumbnail.
 **/
-/* 
+/*
     USAGE:
 
     $pseudo: both / before / after
     $background-color: any hex color
     $skew: a degree value
-    
+
     Background color must match background color of element mixin is applied to
 */
+.focusable-screenreader-content {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.focusable-screenreader-content:active, .focusable-screenreader-content:focus, .focusable-screenreader-content:focus-within {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
