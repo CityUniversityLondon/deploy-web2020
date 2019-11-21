@@ -33800,193 +33800,100 @@ blockquote footer cite {
     color: #1e1e1e;
 }
 
-.slider {
-    grid-row-gap: 0;
-    display: grid;
-}
-
-@media (max-width: 432px) {
-    .slider {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .slider {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .slider {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
-}
-
-.slider[data-visibility='always'] .slider__slide[data-device='mobile'] {
-    display: block !important;
-}
-
-.slider[data-visibility='always'] .slider__slide[data-device='tablet'] {
-    display: none !important;
-}
-
-.slider[data-visibility='always'] .slider__slide[data-device='desktop'] {
-    display: none !important;
-}
-
-.slider[data-visibility='always'] .slider__controls__wrap[data-device='mobile'] {
-    display: block !important;
-}
-
-.slider__active-slide {
+.slider-responsive {
     display: flex;
-    grid-column: 6 / 14;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: relative;
 }
 
-@media (max-width: 1280px) {
-    .slider__active-slide {
-        grid-column: 3 / 17;
-    }
-}
-
-@media (max-width: 900px) {
-    .slider__active-slide {
-        grid-column: 2 / 12;
-    }
-}
-
-@media (max-width: 432px) {
-    .slider__active-slide {
-        grid-column: 1 / -1;
-    }
-}
-
-.slider__slide {
+.slider-responsive .slider__slide {
     display: none;
+    margin-top: 1.75rem;
 }
 
-.slider__slide[data-device='mobile'] {
-    display: block;
-}
-
-.slider__slide[data-device='tablet'] {
-    display: none;
+@media (min-width: 433px) {
+    .slider-responsive .slider__slide {
+        flex-basis: 100%;
+    }
 }
 
 @media (min-width: 769px) {
-    .slider__slide[data-device='tablet'] {
-        display: block;
+    .slider-responsive .slider__slide {
+        flex-basis: 50%;
     }
-}
-
-.slider__slide[data-device='desktop'] {
-    display: none;
 }
 
 @media (min-width: 1281px) {
-    .slider__slide[data-device='desktop'] {
-        display: block;
+    .slider-responsive .slider__slide {
+        flex-basis: 33.33%;
     }
 }
 
-.slider__controls__wrap {
-    /**
-    * Standard, single-item sliders should always show controller
-    **/
-}
-
-.slider__controls__wrap[data-show='always'][data-device='mobile'] {
+.slider-responsive .slider__slide[data-device='mobile'] {
     display: block;
 }
 
-.slider__controls__wrap[data-device='mobile'] {
+@media (min-width: 769px) {
+    .slider-responsive .slider__slide[data-device='tablet'] {
+        display: block;
+    }
+}
+
+@media (min-width: 1281px) {
+    .slider-responsive .slider__slide[data-device='desktop'] {
+        display: block;
+    }
+}
+
+.slider-responsive .slider__controls__wrap {
     display: none;
+    margin: 1rem 0 2rem 0;
+    flex-direction: row-reverse;
+    flex-basis: 100%;
+    max-width: none;
 }
 
 @media (max-width: 767px) {
-    .slider__controls__wrap[data-device='mobile'] {
-        display: block;
+    .slider-responsive .slider__controls__wrap[data-device='mobile'] {
+        display: flex;
     }
-}
-
-.slider__controls__wrap[data-device='tablet'] {
-    display: none;
 }
 
 @media (min-width: 768px) and (max-width: 1279px) {
-    .slider__controls__wrap[data-device='tablet'] {
-        display: block;
+    .slider-responsive .slider__controls__wrap[data-device='tablet'] {
+        display: flex;
     }
-}
-
-.slider__controls__wrap[data-device='desktop'] {
-    display: none;
 }
 
 @media (min-width: 1280px) {
-    .slider__controls__wrap[data-device='desktop'] {
-        display: block;
+    .slider-responsive .slider__controls__wrap[data-device='desktop'] {
+        display: flex;
     }
 }
 
-.slider__controls__wrap {
-    grid-column: 6 / 14;
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 0 2rem 2rem 0;
-    max-width: 65ch;
-}
-
-@media (max-width: 1280px) {
-    .slider__controls__wrap {
-        grid-column: 3 / 17;
-    }
-}
-
-@media (max-width: 900px) {
-    .slider__controls__wrap {
-        grid-column: 2 / 12;
-        margin-right: 1rem;
-    }
-}
-
-@media (max-width: 432px) {
-    .slider__controls__wrap {
-        grid-column: 1 / -1;
-    }
-}
-
-.slider__controls {
-    display: flex;
-    align-self: flex-end;
-}
-
-.slider__controls__progress {
+.slider-responsive .slider__controls__progress {
     color: #696969;
     margin: 1rem 2rem 0 0;
     font-size: 0.79rem;
     font-weight: 500;
 }
 
-.slide__controls__progress__active {
+.slider-responsive .slide__controls__progress__active {
     color: #d61726;
 }
 
-.slider__controls__buttons__next,
-.slider__controls__buttons__prev {
-    border: 0.0625rem solid #1e1e1e;
-    padding: 0.75rem 0.5rem;
+.slider-responsive .slider__controls__buttons__next,
+.slider-responsive .slider__controls__buttons__prev {
+    border: 0.0625rem solid #d61726;
+    padding: 0.75rem;
     background: #ffffff;
     margin-left: 1rem;
 }
 
-.slider__controls__buttons__next:focus, .slider__controls__buttons__next:active,
-.slider__controls__buttons__prev:focus,
-.slider__controls__buttons__prev:active {
+.slider-responsive .slider__controls__buttons__next:focus, .slider-responsive .slider__controls__buttons__next:active,
+.slider-responsive .slider__controls__buttons__prev:focus,
+.slider-responsive .slider__controls__buttons__prev:active {
     outline-width: 0.125rem;
     outline-style: dotted;
     outline-offset: 0.1875rem;
@@ -33994,35 +33901,24 @@ blockquote footer cite {
 }
 
 @media (hover: hover) {
-    .slider__controls__buttons__next:hover,
-    .slider__controls__buttons__prev:hover {
+    .slider-responsive .slider__controls__buttons__next:hover,
+    .slider-responsive .slider__controls__buttons__prev:hover {
         background: #3e1031;
         color: #ffffff;
     }
 }
 
-.slider__controls__buttons__next:focus, .slider__controls__buttons__next:active,
-.slider__controls__buttons__prev:focus,
-.slider__controls__buttons__prev:active {
+.slider-responsive .slider__controls__buttons__next:focus, .slider-responsive .slider__controls__buttons__next:active,
+.slider-responsive .slider__controls__buttons__prev:focus,
+.slider-responsive .slider__controls__buttons__prev:active {
     color: #ffffff;
-    background: #3e1031;
+    background: #d61726;
     outline-offset: 0;
 }
 
-.slider__controls__buttons__next:before,
-.slider__controls__buttons__prev:before {
+.slider-responsive .slider__controls__buttons__next:before,
+.slider-responsive .slider__controls__buttons__prev:before {
     font-weight: 400;
-}
-
-.l .slider__controls__buttons__disabled {
-    border: none;
-    color: #1e1e1e;
-    opacity: 0.7;
-}
-
-.l .slider__controls__buttons__disabled:hover {
-    background: #ffffff;
-    color: #1e1e1e;
 }
 
 @media print {
@@ -47447,39 +47343,6 @@ button
 
 .wrapper--research-degree__research-projects .research-degree__research-projects h2.research-degree__research-projects__heading {
     margin-top: 2.5rem;
-}
-
-.wrapper--research-degree__research-projects .research-degree__research-projects .related-content.slider {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.wrapper--research-degree__research-projects .research-degree__research-projects .related-content.slider .card--research.slider__active-slide {
-    margin-top: 1.75rem;
-    display: block;
-}
-
-@media (min-width: 433px) {
-    .wrapper--research-degree__research-projects .research-degree__research-projects .related-content.slider .card--research.slider__active-slide {
-        flex-basis: 100%;
-    }
-}
-
-@media (min-width: 769px) {
-    .wrapper--research-degree__research-projects .research-degree__research-projects .related-content.slider .card--research.slider__active-slide {
-        flex-basis: 50%;
-    }
-}
-
-@media (min-width: 901px) {
-    .wrapper--research-degree__research-projects .research-degree__research-projects .related-content.slider .card--research.slider__active-slide {
-        flex-basis: 33.33%;
-    }
-}
-
-.wrapper--research-degree__research-projects .research-degree__research-projects .related-content.slider .slider__controls__wrap {
-    margin-right: 0;
-    flex-basis: 100%;
 }
 
 .wrapper--research-degree__testimonials {

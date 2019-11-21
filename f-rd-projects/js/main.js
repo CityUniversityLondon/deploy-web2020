@@ -6779,23 +6779,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.array.map */ "./node_modules/core-js/modules/es.array.map.js");
 /* harmony import */ var core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_number_constructor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.number.constructor */ "./node_modules/core-js/modules/es.number.constructor.js");
-/* harmony import */ var core_js_modules_es_number_constructor__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_constructor__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_es_number_is_integer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.number.is-integer */ "./node_modules/core-js/modules/es.number.is-integer.js");
-/* harmony import */ var core_js_modules_es_number_is_integer__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_is_integer__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.parse-int */ "./node_modules/core-js/modules/es.parse-int.js");
-/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
-
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.parse-int */ "./node_modules/core-js/modules/es.parse-int.js");
+/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -6837,7 +6831,7 @@ var sliderChildren, sliderChildrenLength, updatedPosition;
 function createElement(type, attributes) {
   var el = document.createElement(type);
   attributes.map(function (att) {
-    att.label === 'class' ? el.classList.add(att.val) : att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : el.setAttribute(att.label, att.val);
+    att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : el.setAttribute(att.label, att.val);
   });
   return el;
 }
@@ -6935,18 +6929,33 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
        * increase progress indicator and total slides by 1.
        */
 
-      var groupNumber = parseInt(updatedPosition - 1) / sliderIncrement;
       var totalSlides = parseInt(control.getAttribute('data-slides'));
       var totalSlidesDisplay = control.querySelector('.slide__controls__progress__total');
+      var firstInGroup = false;
 
-      if (!Number.isInteger(groupNumber) && groupNumber > 0) {
+      if ((updatedPosition - 1) % sliderIncrement == 0) {
+        firstInGroup = true;
+      } // If index position not first in group
+
+
+      if (!firstInGroup) {
+        // Increase group position by 1 to account for extra slide
+        currentGroup += 1; //
+
+        if (sliderChildrenLength - updatedPosition >= sliderIncrement && updatedPosition < sliderChildrenLength) {
+          totalSlides += 1;
+          totalSlidesDisplay.innerHTML = totalSlides;
+        } else {
+          // Limit progress indicator to max number of slides
+          currentGroup = totalSlides;
+        }
+      } else if (!firstInGroup) {
         currentGroup += 1;
-        totalSlides += 1;
         totalSlidesDisplay.innerHTML = totalSlides;
-      } else {
-        var originalSlides = parseInt(control.getAttribute('data-slides'));
-        totalSlidesDisplay.innerHTML = originalSlides;
       }
+
+      totalSlidesDisplay.innerHTML = totalSlides;
+      progressIndicator.innerHTML = Math.ceil(currentGroup) + 1;
       /**
        * If increment increase exceeds total slides' length, limit the current
        * position value to the total slides' length. This can happen when
@@ -6954,9 +6963,7 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
        * mobile.
        */
 
-
       if (currentGroup > totalSlides) {
-        progressIndicator.innerHTML = totalSlides;
         control.setAttribute('data-currentposition', totalSlides);
       } else {
         progressIndicator.innerHTML = Math.ceil(currentGroup);
@@ -7000,7 +7007,7 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
 function launchResponsiveSlider(slider) {
   // Only launch slider if there are more than one item.
   if (slider.children.length < 2) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_12__["removeClass"])(slider, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_10__["removeClass"])(slider, className, false);
     return;
   } // Slider items count
 
@@ -7069,13 +7076,6 @@ function launchResponsiveSlider(slider) {
     }, {
       label: 'data-slides',
       val: slides
-    }]); // For testing
-
-    var type = createElement('p', [{
-      label: 'content',
-      val: deviceType
-    }, {
-      class: 'slider__controls__type'
     }]);
     var sliderControls = createElement('div', [{
       label: 'class',
@@ -7088,7 +7088,7 @@ function launchResponsiveSlider(slider) {
     var sliderButtons = createElement('div', [{
       label: 'class',
       val: 'slider__controls__buttons'
-    }]); // Generates progress
+    }]); // Slider progress
 
     sliderProgress.appendChild(createElement('span', [{
       label: 'content',
@@ -7103,7 +7103,7 @@ function launchResponsiveSlider(slider) {
     }, {
       label: 'class',
       val: 'slide__controls__progress__separator'
-    }])); // Total slides
+    }])); // Total slides display
 
     sliderProgress.appendChild(createElement('span', [{
       label: 'content',
@@ -7111,10 +7111,7 @@ function launchResponsiveSlider(slider) {
     }, {
       label: 'class',
       val: 'slide__controls__progress__total'
-    }]));
-    sliderControlsWrap.appendChild(type) // for testing
-    .appendChild(sliderControls).appendChild(sliderProgress);
-    slider.appendChild(sliderControlsWrap); // Generates buttons
+    }])); // Next / previous buttons
 
     sliderButtons.appendChild(createElement('button', [{
       label: 'aria-label',
@@ -7124,47 +7121,29 @@ function launchResponsiveSlider(slider) {
       val: true
     }, {
       label: 'class',
-      val: 'fas'
-    }, {
-      label: 'class',
-      val: 'fa-arrow-left'
-    }, {
-      label: 'class',
-      val: 'slider__controls__buttons__prev'
-    }, {
-      label: 'class',
-      val: 'swiper-slider-arrow'
-    }, {
-      label: 'class',
-      val: 'aarrow-left--btn-prev'
+      val: 'fas fa-arrow-left slider__controls__buttons__prev swiper-slider-arrow arrow-left--btn-prev'
     }]));
     sliderButtons.appendChild(createElement('button', [{
       label: 'aria-label',
       val: 'Next item'
     }, {
       label: 'class',
-      val: 'fas'
-    }, {
-      label: 'class',
-      val: 'fa-arrow-right'
-    }, {
-      label: 'class',
-      val: 'slider__controls__buttons__next'
-    }, {
-      label: 'class',
-      val: 'swiper-slider-arrow'
-    }, {
-      label: 'class',
-      val: 'arrow-left--btn-next'
+      val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-left--btn-next'
     }]));
+    sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
+    slider.appendChild(sliderControlsWrap);
     sliderControls.appendChild(sliderButtons);
     slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled');
-  } // Each time responsive slider loads, build three sets of controls (one for each device)
+  }
+  /**
+   * Build each type of controller (mobile, tablet, desktop) depending on
+   */
 
 
-  buildControls('desktop', 3, 1, false);
-  buildControls('tablet', 2, 1, false);
-  buildControls('mobile', 1, 1, false);
+  sliderChildrenLength > 1 ? buildControls('mobile', 1, 1, false) : null;
+  sliderChildrenLength > 2 ? buildControls('tablet', 2, 1, false) : null;
+  sliderChildrenLength > 3 ? buildControls('desktop', 3, 1, false) : null;
+  console.log(sliderChildrenLength);
   var controlWraps = slider.querySelectorAll('.slider__controls__wrap');
   /**
    * For each instance of the controls, update the current position data attribute when next previous/buttons
