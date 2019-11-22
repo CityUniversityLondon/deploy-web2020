@@ -1108,18 +1108,7 @@
 
     Background color must match background color of element mixin is applied to
 */
-.focusable-screenreader-content {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.focusable-screenreader-content:active, .focusable-screenreader-content:focus, .focusable-screenreader-content:focus-within {
+.sr-only-focusable-within:active, .sr-only-focusable-within:focus, .sr-only-focusable-within:focus-within {
     clip: auto;
     height: auto;
     margin: 0;
@@ -33655,10 +33644,6 @@ article figure figcaption a:active {
 .navigation--primary .navigation--primary__menu__header b,
 .navigation--primary .navigation--primary__menu__header strong {
     font-weight: 700;
-}
-
-.navigation--primary .navigation--primary__menu__header span {
-    text-transform: lowercase;
 }
 
 .navigation--primary .navigation--primary__menu {
