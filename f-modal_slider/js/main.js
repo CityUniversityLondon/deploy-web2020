@@ -6129,7 +6129,7 @@ function createElements(activeListItem, elementSibling, direction) {
   } else {
     button.setAttribute('data-direction', '-1');
     icon.classList.add('fa-long-arrow-left');
-    button.prepend(icon);
+    button.append(icon);
   }
 }
 
