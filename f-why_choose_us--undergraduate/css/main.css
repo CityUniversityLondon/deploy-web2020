@@ -49588,7 +49588,7 @@ button
     }
 }
 
-.course--undergraduate__why-choose-us__inner__video:first-child {
+.course--undergraduate__why-choose-us__inner__video .course--undergraduate__why-choose-us__inner__block:first-child {
     margin-top: 3rem;
 }
 
