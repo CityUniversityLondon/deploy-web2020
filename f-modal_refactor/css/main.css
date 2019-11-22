@@ -35541,22 +35541,6 @@ a.modal__close:active, a.modal__close:focus {
     pointer-events: none;
 }
 
-.no-js .modal__popup {
-    position: initial;
-}
-
-.no-js .modal__popup--hidden {
-    display: block;
-    opacity: 1;
-}
-
-.no-js .modal__content {
-    max-height: none;
-    opacity: 1;
-    padding: 0;
-    pointer-events: auto;
-}
-
 article .social-icon {
     background-color: initial;
     border-bottom-color: initial;
@@ -42113,22 +42097,6 @@ a.modal__close:active, a.modal__close:focus {
 
 .no-click {
     pointer-events: none;
-}
-
-.no-js .modal__popup {
-    position: initial;
-}
-
-.no-js .modal__popup--hidden {
-    display: block;
-    opacity: 1;
-}
-
-.no-js .modal__content {
-    max-height: none;
-    opacity: 1;
-    padding: 0;
-    pointer-events: auto;
 }
 
 .highlighted-content__border {
