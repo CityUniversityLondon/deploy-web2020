@@ -6940,19 +6940,21 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
 
       if (!firstInGroup) {
         // Increase group position by 1 to account for extra slide
-        currentGroup += 1; //
+        currentGroup += 1; // And not within final group of items
 
         if (sliderChildrenLength - updatedPosition >= sliderIncrement && updatedPosition < sliderChildrenLength) {
           totalSlides += 1;
           totalSlidesDisplay.innerHTML = totalSlides;
         } else {
-          // Limit progress indicator to max number of slides
+          // Within final group of items, return progress indicator and and total slides counter to original values
           currentGroup = totalSlides;
-        }
+        } // Review this final else if
+
       } else if (!firstInGroup) {
         currentGroup += 1;
         totalSlidesDisplay.innerHTML = totalSlides;
-      }
+      } // Review: Maybe move to top of if statement
+
 
       totalSlidesDisplay.innerHTML = totalSlides;
       progressIndicator.innerHTML = Math.ceil(currentGroup) + 1;
@@ -7133,7 +7135,7 @@ function launchResponsiveSlider(slider) {
         val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-left--btn-next'
       }, {
         label: 'disabled',
-        val: 'true'
+        val: true
       }]));
     } else {
       sliderButtons.appendChild(createElement('button', [{
@@ -7158,7 +7160,6 @@ function launchResponsiveSlider(slider) {
   sliderChildrenLength > 1 ? buildControls('mobile', 1, 1, false) : null;
   sliderChildrenLength >= 2 ? buildControls('tablet', 2, 1, false) : null;
   sliderChildrenLength >= 3 ? buildControls('desktop', 3, 1, false) : null;
-  console.log(sliderChildrenLength);
   var controlWraps = slider.querySelectorAll('.slider__controls__wrap');
   /**
    * For each instance of the controls, update the current position data attribute when next previous/buttons
