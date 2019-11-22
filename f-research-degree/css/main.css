@@ -33903,7 +33903,7 @@ blockquote footer cite {
 @media (hover: hover) {
     .slider-responsive .slider__controls__buttons__next:hover,
     .slider-responsive .slider__controls__buttons__prev:hover {
-        background: #3e1031;
+        background: #d61726;
         color: #ffffff;
     }
 }
@@ -33919,6 +33919,15 @@ blockquote footer cite {
 .slider-responsive .slider__controls__buttons__next:before,
 .slider-responsive .slider__controls__buttons__prev:before {
     font-weight: 400;
+}
+
+.slider-responsive .slider__controls__buttons__next[disabled='true'],
+.slider-responsive .slider__controls__buttons__prev[disabled='true'] {
+    color: #696969;
+    background: #ffffff;
+    border: none;
+    opacity: 0.7;
+    cursor: auto;
 }
 
 @media print {
