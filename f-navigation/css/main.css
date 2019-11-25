@@ -34179,6 +34179,14 @@ article figure figcaption a:active {
     font-weight: 700;
 }
 
+.navigation--primary .navigation--primary__menu__header a:after {
+    font-family: "Font Awesome";
+    content: '\f178';
+    display: inline-block;
+    font-weight: 800;
+    padding-left: 0.5rem;
+}
+
 .navigation--primary .navigation--primary__menu {
     display: none;
 }
@@ -34286,12 +34294,25 @@ article figure figcaption a:active {
     border-bottom-color: #1e1e1e;
 }
 
-.navigation--primary .navigation__current {
+.navigation--primary .navigation--primary__level1.navigation__current .navigation--primary__section-text {
+    border-bottom-width: 0.125rem;
+    border-bottom-style: solid;
+    border-bottom-color: #1e1e1e;
+}
+
+.navigation--primary .navigation--primary__level1.navigation__current .navigation--primary__menu__header > span {
     color: #696969;
 }
 
-.navigation--primary .navigation__current:before,
-.navigation--primary .navigation__current .navigation--primary__menu__header > a > span:first-of-type:before {
+.navigation--primary .navigation--primary__level1.navigation__current .navigation--primary__menu__header > span:before {
+    content: '> ';
+}
+
+.navigation--primary .navigation__level2 .navigation__current {
+    color: #696969;
+}
+
+.navigation--primary .navigation__level2 .navigation__current:before {
     content: '> ';
 }
 
