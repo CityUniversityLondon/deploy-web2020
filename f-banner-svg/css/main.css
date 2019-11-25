@@ -36256,20 +36256,6 @@ article .link-copy {
     margin-right: auto;
 }
 
-@media (max-width: 432px) {
-    .banner-svg--wrapper__title,
-    .banner-svg--wrapper__svg {
-        grid-column: 1/-1;
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .banner-svg--wrapper__title,
-    .banner-svg--wrapper__svg {
-        grid-column: 1/13;
-    }
-}
-
 .course-info,
 .course--promo-cards {
     grid-row-gap: 0;
@@ -36340,6 +36326,39 @@ article .link-copy {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .course-info__year .start-date {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .course-info__year .start-date {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .course-info__year .start-date {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .course-info__year .start-date {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .course-info__year .start-date {
+        letter-spacing: -0.017em;
+    }
 }
 
 @media (max-width: 900px) {
@@ -36433,36 +36452,30 @@ article .link-copy {
     grid-column: 3/10;
 }
 
-@media (max-width: 432px) {
-    .course--promo-cards__ranking--first {
-        grid-column: 1/-1;
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .course--promo-cards__ranking--first {
-        grid-column: 1/13;
-    }
-}
-
 .course--promo-cards__ranking--sec {
     grid-column: 10/17;
 }
 
+.course-info__cta a:first-child {
+    margin-bottom: 1rem;
+}
+
 @media (max-width: 432px) {
+    .banner-svg--wrapper__title,
+    .banner-svg--wrapper__svg,
+    .course--promo-cards__ranking--first,
     .course--promo-cards__ranking--sec {
         grid-column: 1/-1;
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
+    .banner-svg--wrapper__title,
+    .banner-svg--wrapper__svg,
+    .course--promo-cards__ranking--first,
     .course--promo-cards__ranking--sec {
         grid-column: 1/13;
     }
-}
-
-.course-info__cta a:first-child {
-    margin-bottom: 1rem;
 }
 
 .swiper-viewport {
