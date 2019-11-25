@@ -49527,6 +49527,11 @@ button
     }
 }
 
+.course--undergraduate__related-courses .card--related-course {
+    position: relative;
+    z-index: 0;
+}
+
 .course--undergraduate__related-courses .related-content {
     display: grid;
     margin-top: 1rem;
