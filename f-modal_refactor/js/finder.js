@@ -3335,7 +3335,7 @@ function checkIntersectionObserver() {
  * belonging to a parent
  *
  * @param {HTMLElement} parent - the parent element to query
- * @param {string} selectors - a string of query selectors, e.g: 'a, button'
+ * @param {string} selectors - a string of query selectors, e.g: 'a' or combined selector 'a, button'
  * @param {boolean} addOrRemove - helper boolean to tell us to add/remove (false is set tab index to -1)
  */
 
