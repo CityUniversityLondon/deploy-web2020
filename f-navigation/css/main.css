@@ -34288,7 +34288,7 @@ article figure figcaption a:active {
 
 .navigation--primary .navigation__hierarchy > button div,
 .navigation--primary .navigation__hierarchy > a,
-.navigation--primary .navigation__hierarchy .navigation--primary__menu__header > a > span:first-of-type {
+.navigation--primary .navigation__hierarchy .navigation--primary__menu__header > span {
     border-bottom-width: 0.125rem;
     border-bottom-style: solid;
     border-bottom-color: #1e1e1e;
