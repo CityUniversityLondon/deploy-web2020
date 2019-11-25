@@ -20201,6 +20201,10 @@ main table td em {
     }
 }
 
+.breadcrumbs a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
 .breadcrumbs a:focus {
     color: #1e1e1e;
     border-bottom-color: #1e1e1e;
@@ -20226,6 +20230,7 @@ main table td em {
     .breadcrumbs a:hover:before {
         opacity: 1;
         width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     }
 }
 
@@ -20301,51 +20306,21 @@ main table td em {
 
 .card--casestudy a {
     display: inline-block;
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
+    border: none;
     border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-size: 0% 0.1875rem;
+    background-repeat: no-repeat;
+    transition: background-size 0.6s ease-in;
+    padding-bottom: 0.125rem;
     position: relative;
     transition: none;
     padding: 1rem;
     width: 100%;
-}
-
-@media (hover: hover) {
-    .card--casestudy a:hover {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.card--casestudy a:focus, .card--casestudy a:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
 }
 
 @media (hover: hover) {
@@ -20424,34 +20399,36 @@ main table td em {
 }
 
 .card--casestudy a .card__inner {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
-.card--casestudy a .underline-transition__title {
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition
-            stretches beyond the element
-        **/
-    display: inline;
-    padding-bottom: 0.125rem;
-    line-height: 1.5;
+.card--casestudy a:visited {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
 }
 
-.card--casestudy a:focus .underline-transition__title {
+.card--casestudy a:focus {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
     background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
-    .card--casestudy a:hover .underline-transition__title {
+    .card--casestudy a:hover {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
+        color: #1e1e1e;
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
         background-size: 100% 0.1875rem;
-        color: #1e1e1e;
     }
 }
 
@@ -20783,7 +20760,7 @@ main table td em {
 }
 
 .card--course .card__inner {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
@@ -20912,24 +20889,117 @@ main table td em {
 }
 
 @media (hover: hover) {
-    .card--event:hover {
-        /* 
-            Trigger thumbnail transition on hover of
-            the card - note the following
-            values should match the mixin call:
-
-            - scale value
-            - background opacity
-
-            Mixin: thumbnail-gradient-scale
-        */
-    }
     .card--event:hover .thumbnail__image-container img {
         transform: scale(1.04);
     }
     .card--event:hover .thumbnail__image-container:after {
         background-color: rgba(0, 0, 0, 0.1);
     }
+}
+
+.card--event .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-size: 0% 0.1875rem;
+    background-repeat: no-repeat;
+    transition: background-size 0.6s ease-in;
+    padding-bottom: 0.125rem;
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.card--event .underline-transition__title:visited {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+}
+
+.card--event .underline-transition__title:focus {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+    background-size: 100% 0.1875rem;
+}
+
+@media (hover: hover) {
+    .card--event .underline-transition__title:hover {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
+        color: #1e1e1e;
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 0.1875rem;
+    }
+}
+
+.card--event .underline-transition__title i,
+.card--event .underline-transition__title em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.card--event .underline-transition__title b,
+.card--event .underline-transition__title strong {
+    font-weight: inherit;
+}
+
+.card--event .underline-transition__title i,
+.card--event .underline-transition__title em {
+    font-style: italic;
+}
+
+.card--event .underline-transition__title u {
+    text-decoration: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--event .underline-transition__title {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--event .underline-transition__title {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--event .underline-transition__title {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--event .underline-transition__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--event .underline-transition__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--event .underline-transition__title b,
+.card--event .underline-transition__title strong {
+    font-weight: 600;
 }
 
 .card--event__icon {
@@ -20990,10 +21060,6 @@ main table td em {
     }
 }
 
-.card--event__image-container a:first-child {
-    display: block;
-}
-
 .card--event__image-container .thumbnail__image-container {
     height: 10rem;
     width: 100%;
@@ -21004,71 +21070,6 @@ main table td em {
         height: 16.66rem;
         width: 100%;
     }
-}
-
-.card--event__title-link .underline-transition__title {
-    font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-    font-size: 1.125rem;
-    line-height: 1.25;
-    letter-spacing: -0.008em;
-    font-style: normal;
-    font-weight: 600;
-    margin-top: 1rem;
-}
-
-.card--event__title-link .underline-transition__title i,
-.card--event__title-link .underline-transition__title em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-}
-
-.card--event__title-link .underline-transition__title b,
-.card--event__title-link .underline-transition__title strong {
-    font-weight: inherit;
-}
-
-.card--event__title-link .underline-transition__title i,
-.card--event__title-link .underline-transition__title em {
-    font-style: italic;
-}
-
-.card--event__title-link .underline-transition__title u {
-    text-decoration: none;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .card--event__title-link .underline-transition__title {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .card--event__title-link .underline-transition__title {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--event__title-link .underline-transition__title {
-        letter-spacing: -0.014em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--event__title-link .underline-transition__title {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--event__title-link .underline-transition__title {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--event__title-link .underline-transition__title b,
-.card--event__title-link .underline-transition__title strong {
-    font-weight: 600;
 }
 
 .card--event__date--highlight,
@@ -21338,41 +21339,6 @@ main table td em {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
-.card--event--portrait a {
-    display: block;
-}
-
-.card--event--portrait a,
-.card--event--portrait a:hover,
-.card--event--portrait a:active,
-.card--event--portrait a:focus,
-.card--event--portrait a:visited {
-    border-bottom: none;
-    color: #0c0c0e;
-    background-image: none;
-    background-size: 0;
-    background-color: transparent;
-}
-
-@media (hover: hover) {
-    .card--event--portrait:hover {
-        /* 
-            Trigger underline transition on hover of the
-            card - note the following
-            value should match the mixin call:
-
-            - background size (2nd value)
-
-            Mixin:  underline-transition-title
-        */
-    }
-    .card--event--portrait:hover .card--event__title-link .underline-transition__title {
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
-        color: #1e1e1e;
-    }
-}
-
 .card--event--portrait .card--event__date--highlight {
     display: inline-flex;
     position: relative;
@@ -21383,37 +21349,6 @@ main table td em {
 
 .card--event--portrait .card--event__price {
     text-align: right;
-}
-
-.card--event--portrait .card--event__title-link .underline-transition__title {
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition
-            stretches beyond the element
-        **/
-    display: inline;
-    padding-bottom: 0.125rem;
-    line-height: 1.5;
-}
-
-.card--event--portrait .card--event__title-link:focus .underline-transition__title {
-    background-size: 100% 0.1875rem;
-}
-
-@media (hover: hover) {
-    .card--event--portrait .card--event__title-link:hover .underline-transition__title {
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
-        color: #1e1e1e;
-    }
-}
-
-.card--event--portrait .card--event__title-link .underline-transition__title {
-    color: #696969;
 }
 
 .card--event--portrait .card--event__date-time-text {
@@ -21451,7 +21386,7 @@ main table td em {
 }
 
 .card--event--landscape .card__inner {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
@@ -21558,27 +21493,12 @@ main table td em {
 
                 Mixin: thumbnail-gradient-scale
             */
-        /* 
-                Trigger underline transition - note the following
-                values should match the mixin call:
-
-                - background image gradients
-                - background sizem, 2nd val
-                - color
-
-                Mixin:  underline-transition-title
-            */
     }
     .card--news:hover .thumbnail__image-container img {
         transform: scale(1.04);
     }
     .card--news:hover .thumbnail__image-container:after {
         background-color: rgba(0, 0, 0, 0.1);
-    }
-    .card--news:hover .underline-transition__title {
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
-        color: #1e1e1e;
     }
 }
 
@@ -21775,33 +21695,6 @@ main table td em {
     visibility: hidden;
 }
 
-.card--news__title-link .underline-transition__title {
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition
-            stretches beyond the element
-        **/
-    display: inline;
-    padding-bottom: 0.125rem;
-    line-height: 1.5;
-}
-
-.card--news__title-link:focus .underline-transition__title {
-    background-size: 100% 0.1875rem;
-}
-
-@media (hover: hover) {
-    .card--news__title-link:hover .underline-transition__title {
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
-        color: #1e1e1e;
-    }
-}
-
 .card--news__title-link a {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
@@ -21811,7 +21704,17 @@ main table td em {
     font-style: normal;
     font-weight: 600;
     margin-top: 1rem;
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-size: 0% 0.1875rem;
+    background-repeat: no-repeat;
+    transition: background-size 0.6s ease-in;
+    padding-bottom: 0.125rem;
 }
 
 .card--news__title-link a i,
@@ -21868,24 +21771,32 @@ main table td em {
     font-weight: 600;
 }
 
-.card--news__title-link a:visited, .card--news__title-link a:focus {
+.card--news__title-link a:visited {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
     color: #696969;
 }
 
-.card--news__title-link a:active {
-    background-color: transparent;
-    background-image: linear-gradient(#1e1e1e, #1e1e1e);
+.card--news__title-link a:focus {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
     background-size: 100% 0.1875rem;
-    color: #1e1e1e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-    outline-color: #0c0c0e;
 }
 
 @media (hover: hover) {
     .card--news__title-link a:hover {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
         color: #1e1e1e;
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 0.1875rem;
     }
 }
 
@@ -21967,7 +21878,6 @@ main table td em {
     position: relative;
     transition: none;
     padding: 1rem;
-    z-index: 1;
     border: 0.0625rem solid #e5e5e5;
     display: block;
     padding: 0 1rem 1rem 1rem;
@@ -22003,40 +21913,6 @@ main table td em {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-}
-
-.card--pathway:focus, .card--pathway:active {
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-    outline-color: #0c0c0e;
-}
-
-.card--pathway .underline-transition__title {
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.15rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition
-            stretches beyond the element
-        **/
-    display: inline;
-    padding-bottom: 0.125rem;
-    line-height: 1.5;
-}
-
-.card--pathway:focus .underline-transition__title {
-    background-size: 100% 0.15rem;
-}
-
-@media (hover: hover) {
-    .card--pathway:hover .underline-transition__title {
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.15rem;
-        color: #1e1e1e;
-    }
 }
 
 @media (hover: hover) {
@@ -22192,24 +22068,72 @@ main table td em {
     }
 }
 
+.card--pathway .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.15rem;
+    transition: background-size 0.6s ease-in;
+    display: inline;
+    padding-bottom: 0.125rem;
+}
+
+.card--pathway:visited .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+}
+
+.card--pathway:focus .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+    background-size: 100% 0.15rem;
+}
+
+@media (hover: hover) {
+    .card--pathway:hover .underline-transition__title {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
+        color: #ffffff;
+        background-image: linear-gradient(#ffffff, #ffffff);
+        background-size: 100% 0.15rem;
+    }
+}
+
 @media (min-width: 901px) {
     .card--pathway {
         margin: 0 1.5rem 0 0;
     }
 }
 
-@media (hover: hover) {
-    .card--pathway:hover:after {
-        border: none;
-    }
+.card--pathway:visited {
+    border: 0.0625rem solid #e5e5e5;
 }
 
 .card--pathway:focus, .card--pathway:active {
-    outline: none;
+    border-color: transparent;
+    background: #ffffff;
 }
 
-.card--pathway:visited {
-    border-color: #e5e5e5;
+@media (hover: hover) {
+    .card--pathway:hover {
+        border-width: 0;
+        background: transparent;
+    }
+    .card--pathway:hover:after {
+        border-color: transparent;
+    }
 }
 
 .card--pathway:before {
@@ -22218,10 +22142,6 @@ main table td em {
     width: 100%;
     display: block;
     margin-bottom: 1rem;
-}
-
-.card--pathway:last-child {
-    margin-right: 0;
 }
 
 .card--pathway .card__title {
@@ -22272,7 +22192,7 @@ main table td em {
 }
 
 .card--pathway--blue .card__inner {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
@@ -22319,7 +22239,7 @@ main table td em {
 }
 
 .card--pathway--purple .card__inner {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
@@ -22366,7 +22286,7 @@ main table td em {
 }
 
 .card--pathway--pink .card__inner {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
@@ -22413,7 +22333,7 @@ main table td em {
 }
 
 .card--pathway--green .card__inner {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
@@ -22460,7 +22380,7 @@ main table td em {
 }
 
 .card--pathway--purple .card__inner {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
@@ -22507,7 +22427,7 @@ main table td em {
 }
 
 .card--pathway--pink .card__inner {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
@@ -22554,7 +22474,7 @@ main table td em {
 }
 
 .card--pathway--teal .card__inner {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
@@ -22601,12 +22521,475 @@ main table td em {
 }
 
 .card--pathway--yellow .card__inner {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
 .card--pathway--yellow:before {
     background: #ffef2b;
+}
+
+.pathway-image-cards {
+    background-color: #e5e5e5;
+    padding: 2rem;
+}
+
+.pathway-image-cards h3 {
+    text-align: center;
+}
+
+.pathway-image-cards__blocks {
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .pathway-image-cards__blocks {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (min-width: 1281px) {
+    .pathway-image-cards__blocks {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+.card--pathway-image a {
+    display: block;
+    border: none;
+    transition: none;
+    color: #0c0c0e;
+    position: relative;
+    z-index: 1;
+}
+
+.card--pathway-image a:visited {
+    color: #0c0c0e;
+}
+
+.card--pathway-image a:hover, .card--pathway-image a:active, .card--pathway-image a:focus {
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    color: #0c0c0e;
+}
+
+.card--pathway-image a:focus, .card--pathway-image a:active {
+    outline: none;
+}
+
+.card--pathway-image a:focus:after, .card--pathway-image a:active:after {
+    outline-width: 0.125rem;
+    outline-style: dotted;
+    outline-offset: 0.1875rem;
+    outline-color: #0c0c0e;
+}
+
+@media (hover: hover) {
+    .card--pathway-image a:hover {
+        background-image: none;
+    }
+    .card--pathway-image a:hover img {
+        transform: scale(1.04);
+    }
+    .card--pathway-image a:hover .thumbnail__image-container:after {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.card--pathway-image a .thumbnail__image-container {
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease-in;
+    width: 9rem;
+    height: 8rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway-image a .thumbnail__image-container {
+        transition: none;
+    }
+}
+
+.card--pathway-image a .thumbnail__image-container:after {
+    background-color: transparent;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: background-color 0.2s ease-in;
+    width: 100%;
+}
+
+.card--pathway-image a .thumbnail__image-container img {
+    transition: transform 0.2s ease-in;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway-image a .thumbnail__image-container img {
+        transition: none;
+    }
+}
+
+.card--pathway-image a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway-image a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--pathway-image a:hover:after {
+        background-color: #f2f2f2;
+        transform: scale(1.1);
+    }
+}
+
+.card--pathway-image a .card__inner {
+    z-index: 0;
+    position: relative;
+}
+
+.card--pathway-image a .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.1875rem;
+    transition: background-size 0.6s ease-in;
+    display: inline;
+    padding-bottom: 0.125rem;
+}
+
+.card--pathway-image a:visited .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+}
+
+.card--pathway-image a:focus .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+    background-size: 100% 0.1875rem;
+}
+
+@media (hover: hover) {
+    .card--pathway-image a:hover .underline-transition__title {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
+        color: #1e1e1e;
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 0.1875rem;
+    }
+}
+
+.card--pathway-image a img {
+    transition: transform 0.2s ease-in;
+    width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--pathway-image a img {
+        transition: none;
+    }
+}
+
+.card--pathway-image h3 {
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    color: #696969;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--pathway-image h3 {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--pathway-image h3 {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--pathway-image h3 {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--pathway-image h3 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--pathway-image h3 {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--pathway-image__icon {
+    display: block;
+    text-align: right;
+    font-weight: 400;
+}
+
+.card--pathway-image__container {
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.pathway-image-cards__blocks div:nth-child(1) a:hover,
+.pathway-image-cards__blocks div:nth-child(2) a:hover,
+.pathway-image-cards__blocks div:nth-child(3) a:hover {
+    color: #ffffff;
+}
+
+.pathway-image-cards__blocks div:nth-child(1) a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pathway-image-cards__blocks div:nth-child(1) a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .pathway-image-cards__blocks div:nth-child(1) a:hover:after {
+        background-color: #832c9e;
+        transform: scale(1.1);
+    }
+}
+
+.pathway-image-cards__blocks div:nth-child(1) a .card__inner {
+    z-index: 0;
+    position: relative;
+}
+
+.pathway-image-cards__blocks div:nth-child(1) a .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.1875rem;
+    transition: background-size 0.6s ease-in;
+    display: inline;
+    padding-bottom: 0.125rem;
+}
+
+.pathway-image-cards__blocks div:nth-child(1) a:visited .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+}
+
+.pathway-image-cards__blocks div:nth-child(1) a:focus .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+    background-size: 100% 0.1875rem;
+}
+
+@media (hover: hover) {
+    .pathway-image-cards__blocks div:nth-child(1) a:hover .underline-transition__title {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
+        color: #ffffff;
+        background-image: linear-gradient(#ffffff, #ffffff);
+        background-size: 100% 0.1875rem;
+    }
+}
+
+.pathway-image-cards__blocks div:nth-child(2) a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pathway-image-cards__blocks div:nth-child(2) a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .pathway-image-cards__blocks div:nth-child(2) a:hover:after {
+        background-color: #123456;
+        transform: scale(1.1);
+    }
+}
+
+.pathway-image-cards__blocks div:nth-child(2) a .card__inner {
+    z-index: 0;
+    position: relative;
+}
+
+.pathway-image-cards__blocks div:nth-child(2) a .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.1875rem;
+    transition: background-size 0.6s ease-in;
+    display: inline;
+    padding-bottom: 0.125rem;
+}
+
+.pathway-image-cards__blocks div:nth-child(2) a:visited .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+}
+
+.pathway-image-cards__blocks div:nth-child(2) a:focus .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+    background-size: 100% 0.1875rem;
+}
+
+@media (hover: hover) {
+    .pathway-image-cards__blocks div:nth-child(2) a:hover .underline-transition__title {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
+        color: #ffffff;
+        background-image: linear-gradient(#ffffff, #ffffff);
+        background-size: 100% 0.1875rem;
+    }
+}
+
+.pathway-image-cards__blocks div:nth-child(3) a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pathway-image-cards__blocks div:nth-child(3) a:after {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .pathway-image-cards__blocks div:nth-child(3) a:hover:after {
+        background-color: #cf44a7;
+        transform: scale(1.1);
+    }
+}
+
+.pathway-image-cards__blocks div:nth-child(3) a .card__inner {
+    z-index: 0;
+    position: relative;
+}
+
+.pathway-image-cards__blocks div:nth-child(3) a .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.1875rem;
+    transition: background-size 0.6s ease-in;
+    display: inline;
+    padding-bottom: 0.125rem;
+}
+
+.pathway-image-cards__blocks div:nth-child(3) a:visited .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+}
+
+.pathway-image-cards__blocks div:nth-child(3) a:focus .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+    background-size: 100% 0.1875rem;
+}
+
+@media (hover: hover) {
+    .pathway-image-cards__blocks div:nth-child(3) a:hover .underline-transition__title {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
+        color: #ffffff;
+        background-image: linear-gradient(#ffffff, #ffffff);
+        background-size: 100% 0.1875rem;
+    }
 }
 
 .card--profile {
@@ -22699,50 +23082,20 @@ main table td em {
 
 .card--related-course a {
     display: inline-block;
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
+    border: none;
     border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-size: 0% 0.1875rem;
+    background-repeat: no-repeat;
+    transition: background-size 0.6s ease-in;
+    padding-bottom: 0.125rem;
     position: relative;
     transition: none;
     padding: 1rem;
-}
-
-@media (hover: hover) {
-    .card--related-course a:hover {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.card--related-course a:focus, .card--related-course a:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
 }
 
 @media (hover: hover) {
@@ -22821,34 +23174,36 @@ main table td em {
 }
 
 .card--related-course a .card__inner {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
-.card--related-course a .underline-transition__title {
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition
-            stretches beyond the element
-        **/
-    display: inline;
-    padding-bottom: 0.125rem;
-    line-height: 1.5;
+.card--related-course a:visited {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
 }
 
-.card--related-course a:focus .underline-transition__title {
+.card--related-course a:focus {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
     background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
-    .card--related-course a:hover .underline-transition__title {
+    .card--related-course a:hover {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
+        color: #1e1e1e;
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
         background-size: 100% 0.1875rem;
-        color: #1e1e1e;
     }
 }
 
@@ -24300,6 +24655,13 @@ _:-ms-lang(x),
     background-color: rgba(12, 12, 14, 0.1);
 }
 
+.card--findus a:hover .card--findus__content__name {
+    background-repeat: no-repeat;
+    color: #ffffff;
+    background-size: 100% 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+}
+
 .card--findus a:active .card--findus__map {
     transform: scale(1.04);
 }
@@ -24398,6 +24760,30 @@ _:-ms-lang(x),
 
 .card--findus__content__name {
     font-weight: 700;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    display: inline-block;
+    margin-top: 1.25rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--findus__content__name {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--findus__content__name:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
 }
 
 .card--findus__content__address {
@@ -27965,6 +28351,10 @@ article figure figcaption a:before {
     }
 }
 
+article figure figcaption a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
 article figure figcaption a:focus {
     color: #1e1e1e;
     border-bottom-color: #1e1e1e;
@@ -27990,6 +28380,7 @@ article figure figcaption a:visited {
     article figure figcaption a:hover:before {
         opacity: 1;
         width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     }
 }
 
@@ -29219,18 +29610,83 @@ article figure figcaption a:active {
     background-color: #f1c70b;
 }
 
-@media (min-width: 769px) {
-    .finder__results__course .underline-transition__title {
-        margin-top: 0;
+.finder__results__course a {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+}
+
+.finder__results__course a .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.1875rem;
+    transition: background-size 0.6s ease-in;
+    display: inline;
+    padding-bottom: 0.125rem;
+}
+
+.finder__results__course a:visited .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+}
+
+.finder__results__course a:focus .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+    background-size: 100% 0.1875rem;
+}
+
+@media (hover: hover) {
+    .finder__results__course a:hover .underline-transition__title {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
+        color: #1e1e1e;
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 0.1875rem;
     }
 }
 
 @media (hover: hover) {
-    .finder__results__course .underline-transition__title:hover, .finder__results__course .underline-transition__title:active {
-        text-decoration: underline;
-        color: #006bbd;
-        outline: 0.125rem solid transparent;
-        text-decoration: none;
+    .finder__results__course a:hover, .finder__results__course a:active {
+        background-color: #ffffff;
+        background-image: none;
+        outline: none;
+    }
+}
+
+.finder__results__course a:focus {
+    outline: none;
+    background-image: none;
+}
+
+@media (min-width: 769px) {
+    .finder__results__course .underline-transition__title {
+        margin-top: 0;
     }
 }
 
@@ -30399,53 +30855,23 @@ article figure figcaption a:active {
 }
 
 .finder__results__card a {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
+    border: none;
     border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-size: 0% 0.1875rem;
+    background-repeat: no-repeat;
+    transition: background-size 0.6s ease-in;
+    padding-bottom: 0.125rem;
     position: relative;
     transition: none;
     padding: 1rem;
     color: #1e1e1e;
     display: flex;
     flex-direction: column;
-}
-
-@media (hover: hover) {
-    .finder__results__card a:hover {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.finder__results__card a:focus, .finder__results__card a:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
 }
 
 @media (hover: hover) {
@@ -30524,34 +30950,36 @@ article figure figcaption a:active {
 }
 
 .finder__results__card a .card__inner {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
-.finder__results__card a .underline-transition__title {
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition
-            stretches beyond the element
-        **/
-    display: inline;
-    padding-bottom: 0.125rem;
-    line-height: 1.5;
+.finder__results__card a:visited {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
 }
 
-.finder__results__card a:focus .underline-transition__title {
+.finder__results__card a:focus {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
     background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
-    .finder__results__card a:hover .underline-transition__title {
+    .finder__results__card a:hover {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
+        color: #1e1e1e;
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
         background-size: 100% 0.1875rem;
-        color: #1e1e1e;
     }
 }
 
@@ -32323,6 +32751,10 @@ article figure figcaption a:active {
     }
 }
 
+.menu li a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
 .menu li a:focus {
     color: #1e1e1e;
     border-bottom-color: #1e1e1e;
@@ -32348,6 +32780,7 @@ article figure figcaption a:active {
     .menu li a:hover:before {
         opacity: 1;
         width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     }
 }
 
@@ -33142,6 +33575,10 @@ article figure figcaption a:active {
     }
 }
 
+.navigation a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
 .navigation a:focus {
     color: #1e1e1e;
     border-bottom-color: #1e1e1e;
@@ -33167,6 +33604,7 @@ article figure figcaption a:active {
     .navigation a:hover:before {
         opacity: 1;
         width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     }
 }
 
@@ -34998,17 +35436,14 @@ body.modal--in.no-scroll .modal__background {
     position: fixed;
     width: 100%;
     z-index: 4;
-}
-
-.modal__popup--hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.modal__popup--show {
     opacity: 1;
     pointer-events: auto;
     display: flex;
+}
+
+.modal__popup[data-hidden='true'] {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .modal__content {
@@ -35103,13 +35538,10 @@ a.modal__close:visited {
     color: #696969;
 }
 
-a.modal__close:hover {
-    background-image: none;
-    border: none;
-}
-
 @media (hover: hover) {
     a.modal__close:hover {
+        background-image: none;
+        border: none;
         background-color: #f2f2f2;
         color: #1e1e1e;
     }
@@ -38091,18 +38523,83 @@ article .link-copy {
     background-color: #f1c70b;
 }
 
-@media (min-width: 769px) {
-    .finder__results__course .underline-transition__title {
-        margin-top: 0;
+.finder__results__course a {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+}
+
+.finder__results__course a .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.1875rem;
+    transition: background-size 0.6s ease-in;
+    display: inline;
+    padding-bottom: 0.125rem;
+}
+
+.finder__results__course a:visited .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+}
+
+.finder__results__course a:focus .underline-transition__title {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+    background-size: 100% 0.1875rem;
+}
+
+@media (hover: hover) {
+    .finder__results__course a:hover .underline-transition__title {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
+        color: #1e1e1e;
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 0.1875rem;
     }
 }
 
 @media (hover: hover) {
-    .finder__results__course .underline-transition__title:hover, .finder__results__course .underline-transition__title:active {
-        text-decoration: underline;
-        color: #006bbd;
-        outline: 0.125rem solid transparent;
-        text-decoration: none;
+    .finder__results__course a:hover, .finder__results__course a:active {
+        background-color: #ffffff;
+        background-image: none;
+        outline: none;
+    }
+}
+
+.finder__results__course a:focus {
+    outline: none;
+    background-image: none;
+}
+
+@media (min-width: 769px) {
+    .finder__results__course .underline-transition__title {
+        margin-top: 0;
     }
 }
 
@@ -39271,53 +39768,23 @@ article .link-copy {
 }
 
 .finder__results__card a {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
+    border: none;
     border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-size: 0% 0.1875rem;
+    background-repeat: no-repeat;
+    transition: background-size 0.6s ease-in;
+    padding-bottom: 0.125rem;
     position: relative;
     transition: none;
     padding: 1rem;
     color: #1e1e1e;
     display: flex;
     flex-direction: column;
-}
-
-@media (hover: hover) {
-    .finder__results__card a:hover {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.finder__results__card a:focus, .finder__results__card a:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
 }
 
 @media (hover: hover) {
@@ -39396,34 +39863,36 @@ article .link-copy {
 }
 
 .finder__results__card a .card__inner {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
-.finder__results__card a .underline-transition__title {
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.1875rem;
-    transition: background-size 0.6s ease-in;
-    /**
-            Needs to be inline else underline transition
-            stretches beyond the element
-        **/
-    display: inline;
-    padding-bottom: 0.125rem;
-    line-height: 1.5;
+.finder__results__card a:visited {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
 }
 
-.finder__results__card a:focus .underline-transition__title {
+.finder__results__card a:focus {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
     background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
-    .finder__results__card a:hover .underline-transition__title {
+    .finder__results__card a:hover {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
+        color: #1e1e1e;
         background-image: linear-gradient(#1e1e1e, #1e1e1e);
         background-size: 100% 0.1875rem;
-        color: #1e1e1e;
     }
 }
 
@@ -40449,6 +40918,10 @@ h3 .linked-heading__icons {
     }
 }
 
+.anchor-discreet:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
 .anchor-discreet:focus {
     color: #1e1e1e;
     border-bottom-color: #1e1e1e;
@@ -40474,6 +40947,7 @@ h3 .linked-heading__icons {
     .anchor-discreet:hover:before {
         opacity: 1;
         width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     }
 }
 
@@ -41076,6 +41550,49 @@ h3 .linked-heading__icons {
     }
     .anchor-cta-like:hover:after {
         color: #ffffff;
+    }
+}
+
+.anchor-underline-transition {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-size: 0% 0.1875rem;
+    background-repeat: no-repeat;
+    transition: background-size 0.6s ease-in;
+    padding-bottom: 0.125rem;
+}
+
+.anchor-underline-transition:visited {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+}
+
+.anchor-underline-transition:focus {
+    border: none;
+    border-bottom-width: 0;
+    border-bottom-color: transparent;
+    border-bottom-style: none;
+    color: #696969;
+    background-size: 100% 0.1875rem;
+}
+
+@media (hover: hover) {
+    .anchor-underline-transition:hover {
+        border: none;
+        border-bottom-width: 0;
+        border-bottom-color: transparent;
+        border-bottom-style: none;
+        color: #1e1e1e;
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 0.1875rem;
     }
 }
 
@@ -41878,17 +42395,14 @@ body.modal--in.no-scroll .modal__background {
     position: fixed;
     width: 100%;
     z-index: 4;
-}
-
-.modal__popup--hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.modal__popup--show {
     opacity: 1;
     pointer-events: auto;
     display: flex;
+}
+
+.modal__popup[data-hidden='true'] {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .modal__content {
@@ -41983,13 +42497,10 @@ a.modal__close:visited {
     color: #696969;
 }
 
-a.modal__close:hover {
-    background-image: none;
-    border: none;
-}
-
 @media (hover: hover) {
     a.modal__close:hover {
+        background-image: none;
+        border: none;
         background-color: #f2f2f2;
         color: #1e1e1e;
     }
@@ -42697,6 +43208,10 @@ a.modal__close:active, a.modal__close:focus {
 .promo-content--icon-graphic .promo-content__graphic {
     border-top: 0.25rem solid #541b85;
     padding-top: 1.5rem;
+}
+
+.promo-content--icon-graphic .promo-content__graphic__icon {
+    width: 3.25rem;
 }
 
 .promo-content__graphic--stat {
@@ -44347,7 +44862,7 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .content-hub__block-two .pathway-cards .card a .card__inner {
-    z-index: 2;
+    z-index: 0;
     position: relative;
 }
 
@@ -44356,13 +44871,8 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 @media (hover: hover) {
-    .content-hub__block-two .pathway-cards .card a:hover .card__inner .card__title,
     .content-hub__block-two .pathway-cards .card a:hover .card__inner p {
         color: #ffffff;
-        border-color: #ffffff;
-    }
-    .content-hub__block-two .pathway-cards .card a:hover .card__inner .card__title {
-        background-image: linear-gradient(#ffffff, #ffffff);
     }
 }
 
@@ -45126,6 +45636,12 @@ li:nth-of-type(3) {
 
 .content-hub__block-three
 .news-events
+.content-hub__block-three__research__centres a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.content-hub__block-three
+.news-events
 .content-hub__block-three__research__centres a:focus {
     color: #1e1e1e;
     border-bottom-color: #1e1e1e;
@@ -45157,6 +45673,7 @@ li:nth-of-type(3) {
 .content-hub__block-three__research__centres a:hover:before {
         opacity: 1;
         width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     }
 }
 
@@ -45321,70 +45838,30 @@ This will keep responsive behaviour in line with What's Happening cards below
     }
 }
 
+/*
 .course {
-    grid-row-gap: 0;
-    display: grid;
+    @include standard-grid();
+
     grid-template-rows: auto;
-}
 
-@media (max-width: 432px) {
-    .course {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .course {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .course {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
-}
-
-@media (max-width: 432px) {
-    .course {
+    @include media('<=mobile') {
         grid-template-areas: 'main main main main main main';
     }
-}
 
-@media (min-width: 433px) {
-    .course {
+    @include media('>mobile') {
         grid-template-areas: '. . main main main main main main main main . .';
     }
-}
 
-@media (min-width: 901px) {
-    .course {
+    @include media('>between') {
         grid-template-areas: '. . . . . main main main main main main main main . . . . .';
     }
-}
 
-.course > .content {
-    max-width: 80rem;
-    grid-area: main;
-}
-
-@media (min-width: 1441px) {
-    .course > .content {
-        margin-left: auto;
-        margin-right: auto;
+    > .content {
+        @include standard-margins();
+        grid-area: main;
     }
 }
-
-@media (max-width: 1440px) {
-    .course > .content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
+*/
 div.widget-123_test_ {
     display: block;
 }
@@ -47319,10 +47796,6 @@ button
 
 .research-degree__overview__content .research-degree__overview__content__apply-links ul {
     flex-basis: 50%;
-}
-
-.research-degree__overview__content .research-degree__overview__content__apply-links ul li a {
-    width: 100%;
 }
 
 .research-degree__overview__content .modal-group {
@@ -49557,7 +50030,7 @@ button
 
 @media (min-width: 1281px) {
     .documentation--fullwidth .content-wrapper--wider .related-content-grid {
-        grid-column: 5 / 15;
+        grid-column: 3 / 17;
     }
 }
 
@@ -49859,6 +50332,352 @@ button
 .user-journey__steps h3 i,
 .user-journey__steps h3 em {
     font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+}
+
+.course--undergraduate__key-information__intro,
+.course--undergraduate__key-information__details,
+.course--undergraduate__key-information__accordion {
+    background: linear-gradient(360deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
+    padding: 1.75rem 1.75rem;
+}
+
+@media (max-width: 432px) {
+    .course--undergraduate__key-information__intro,
+    .course--undergraduate__key-information__details,
+    .course--undergraduate__key-information__accordion {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 433px) {
+    .course--undergraduate__key-information__intro,
+    .course--undergraduate__key-information__details,
+    .course--undergraduate__key-information__accordion {
+        grid-column: 2 / 12;
+    }
+}
+
+@media (min-width: 901px) {
+    .course--undergraduate__key-information__intro,
+    .course--undergraduate__key-information__details,
+    .course--undergraduate__key-information__accordion {
+        grid-column: 3 / 17;
+    }
+}
+
+.course--undergraduate__key-information__intro {
+    margin-top: 1.75rem;
+}
+
+.course--undergraduate__key-information__details {
+    margin-top: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.course--undergraduate__key-information__details--column {
+    flex: 1;
+}
+
+@media (max-width: 899px) {
+    .course--undergraduate__key-information__details--column {
+        flex-basis: 50%;
+    }
+    .course--undergraduate__key-information__details--column:nth-child(3) {
+        margin-top: 1.75rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .course--undergraduate__key-information__details--column {
+        flex-basis: 100%;
+    }
+    .course--undergraduate__key-information__details--column:nth-child(2) {
+        margin-top: 1.75rem;
+    }
+}
+
+.course--undergraduate__key-information__details .label {
+    display: block;
+    font-family: "Meta Sans", sans-serif;
+    color: #696969;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.course--undergraduate__key-information__details span:not(.label) {
+    display: block;
+    color: #303030;
+    font-weight: 500;
+    font-family: "Plex Sans", sans-serif;
+    margin-bottom: 0.25rem;
+}
+
+.course--undergraduate__key-information__details__ucas-code {
+    margin-top: 1.75rem;
+}
+
+.course--undergraduate__key-information__details__location {
+    margin-top: 1.75rem;
+}
+
+.parallax {
+    -webkit-clip-path: inset(0% 0% 0% 0%);
+            clip-path: inset(0% 0% 0% 0%);
+}
+
+.parallax img {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.course--undergraduate__key-information__accordion {
+    border-top: 0.125rem solid #d8d8d8;
+    margin-bottom: 1.75rem;
+}
+
+.course--undergraduate__key-information__accordion .accordion .accordion__heading {
+    background: #f2f2f2;
+}
+
+.course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+    color: #0c0c0e;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+        letter-spacing: -0.017em;
+    }
+}
+
+.course--undergraduate__related-courses__wrapper {
+    background: linear-gradient(360deg, white 0%, #f2f2f2 100%);
+}
+
+.course--undergraduate__related-courses {
+    max-width: 80rem;
+    padding-bottom: 4.25rem;
+    padding-top: 4.25rem;
+}
+
+@media (min-width: 1441px) {
+    .course--undergraduate__related-courses {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .course--undergraduate__related-courses {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.course--undergraduate__related-courses .related-content {
+    display: grid;
+    margin-top: 1rem;
+    grid-template-columns: auto auto;
+}
+
+@media (max-width: 899px) {
+    .course--undergraduate__related-courses .related-content {
+        display: block;
+    }
+}
+
+.course--undergraduate__related-courses h2 {
+    text-align: center;
+}
+
+.course--undergraduate__related-courses h2:after {
+    background-color: #5d184a;
+    content: '';
+    display: block;
+    height: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    width: 6rem;
+}
+
+.course--undergraduate__footer {
+    max-width: 80rem;
+    max-width: 80rem;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+@media (min-width: 1441px) {
+    .course--undergraduate__footer {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .course--undergraduate__footer {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.course--undergraduate__footer h2 {
+    margin-bottom: 1.5rem;
+}
+
+.course--undergraduate__footer .footer__contact--two-cards,
+.course--undergraduate__footer .footer__contact--one-card {
+    display: flex;
+}
+
+@media (max-width: 899px) {
+    .course--undergraduate__footer .footer__contact--two-cards,
+    .course--undergraduate__footer .footer__contact--one-card {
+        flex-direction: column;
+    }
+}
+
+.course--undergraduate__footer .footer__contact--two-cards .related-content,
+.course--undergraduate__footer .footer__contact--one-card .related-content {
+    flex-basis: 66%;
+    display: flex;
+    margin-right: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 0.0625rem solid #cbcbcb;
+}
+
+@media (max-width: 899px) {
+    .course--undergraduate__footer .footer__contact--two-cards .related-content,
+    .course--undergraduate__footer .footer__contact--one-card .related-content {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .course--undergraduate__footer .footer__contact--two-cards .related-content,
+    .course--undergraduate__footer .footer__contact--one-card .related-content {
+        display: inline-block;
+    }
+}
+
+.course--undergraduate__footer .footer__contact--two-cards .related-content li,
+.course--undergraduate__footer .footer__contact--one-card .related-content li {
+    flex: 1;
+}
+
+.course--undergraduate__footer .footer__contact--two-cards .related-content li:not(:last-child),
+.course--undergraduate__footer .footer__contact--one-card .related-content li:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+@media (max-width: 767px) {
+    .course--undergraduate__footer .footer__contact--two-cards .related-content li:not(:last-child),
+    .course--undergraduate__footer .footer__contact--one-card .related-content li:not(:last-child) {
+        margin-right: 0;
+    }
+}
+
+.course--undergraduate__footer .footer__contact--one-card .related-content {
+    flex-basis: 33%;
+}
+
+@media (max-width: 899px) {
+    .course--undergraduate__footer .footer__contact--one-card .related-content {
+        flex-basis: 100%;
+    }
+}
+
+.course--undergraduate__footer .card--contact .card--contact__header {
+    display: none;
+}
+
+.course--undergraduate__footer .useful-links {
+    flex-basis: 33%;
+    margin-top: 2.5rem;
+}
+
+.course--undergraduate__pathway-image-cards {
+    display: grid;
+    grid-column-gap: 4rem;
+    grid-row-gap: 4rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .course--undergraduate__pathway-image-cards {
+        grid-template-columns: auto auto;
+    }
+}
+
+.course--undergraduate .course--undergraduate__tabs__panel__inner {
+    grid-column: 4 / 16;
+}
+
+.js .course--undergraduate .tabs {
+    max-width: 80rem;
+    background: #ffffff;
+    margin-top: 4rem;
+}
+
+@media (min-width: 1441px) {
+    .js .course--undergraduate .tabs {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .js .course--undergraduate .tabs {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.js .course--undergraduate .tabs .tabs__panel {
+    border-top: none;
+    background: transparent;
+}
+
+.js .course--undergraduate .tabs .tabs__panel__heading {
+    text-align: center;
+}
+
+.js .course--undergraduate .tabs .tabs__panel__body {
+    margin-top: 4rem;
 }
 
 @media screen {
@@ -50367,6 +51186,10 @@ button
     }
 }
 
+.theme--dark .breadcrumbs a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
 .theme--dark .breadcrumbs a:focus {
     color: #1e1e1e;
     border-bottom-color: #1e1e1e;
@@ -50392,6 +51215,7 @@ button
     .theme--dark .breadcrumbs a:hover:before {
         opacity: 1;
         width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     }
 }
 
@@ -51486,6 +52310,10 @@ button
     }
 }
 
+.theme--dark article figure figcaption a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
 .theme--dark article figure figcaption a:focus {
     color: #1e1e1e;
     border-bottom-color: #1e1e1e;
@@ -51511,6 +52339,7 @@ button
     .theme--dark article figure figcaption a:hover:before {
         opacity: 1;
         width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     }
 }
 
@@ -51740,6 +52569,9 @@ button
 }
 
 @media screen {
+    .theme--dark.js .menu li a:before {
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    }
     .theme--dark.js .menu li a:focus {
         color: #1e1e1e;
         border-bottom-color: #1e1e1e;
@@ -51765,6 +52597,7 @@ button
     .theme--dark.js .menu li a:hover:before {
         opacity: 1;
         width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     }
 }
 

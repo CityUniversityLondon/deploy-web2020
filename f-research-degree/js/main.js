@@ -1566,28 +1566,23 @@ __webpack_require__.r(__webpack_exports__);
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
  * @copyright City, University of London 2019!
  */
-
-/**
- *  Back to top link button only appears on long pages and when you have scrolled down long enough
- *
- */
 var className = 'back-to-top',
-    viewPortHeight = window.innerHeight; // calculates viewport height
-
+    viewPortHeight = window.innerHeight;
 /**
- *  Parameters
+ * Back to top link button only appears on long pages and when you have scrolled down long enough
  *
- * Please change the values below to alter the behavious of the back to top button.
+ * Please change the parameters below to alter the behaviour of the back to top button.
  *
+ * @param {variable} pageHeight - only appears on long pages which are 'X' times the viewport height.
+ * @param {variable} scrollPos - sets how many viewport heights you need to scroll down for back to top to appear. 1 = 1 viewport height
  */
 
-var pageHeight = 1.5; // only appears on long pages which are 'X' times the viewport height
-
-var scrollPos = 1; // sets how many viewport heights you need to scroll down for back to top to appear. 1 = 1 viewport height
-
+var pageHeight = 1.5;
+var scrollPos = 1;
 /**
- *  Initialises for long pages only
+ *  Initialises back to top button for long pages only
  *
+ * @param{HTMLParentElement} - selects back to top parent element, which is used in return to select children elements
  */
 
 function initBacktoTop(backToTop) {
@@ -1617,6 +1612,8 @@ function initBacktoTop(backToTop) {
 /**
  *  Button fading behaviour
  *
+ * @param {HTMLAnchorElement} backToTopBut - back to top anchor button.
+ * @param {number} deadZone - deadzone is the 'area' identified by vertical scroll position, when you scroll to the bottom of the page, where the back to top botton docks back into the footer.
  */
 
 
@@ -5945,29 +5942,53 @@ __webpack_require__.r(__webpack_exports__);
 var className = 'modal__popup';
 var modalBackground = document.createElement('div'),
     trap;
+/**
+ * Launch function: sets the modal attr to hidden, adds
+ * elements to toggle the modal, adds event listeners to those
+ * elements to toggle the modal and sets tab indexes
+ * on all anchor elements
+ *
+ * @param {HTMLElement} modal - the modal
+ *
+ */
 
 function launchModal(modal) {
-  var modalHeading = modal.querySelector('.modal__heading'),
-      modalDataTitle = modal.getAttribute('data-title'),
-      modalCustomClass = modal.getAttribute('data-class');
-  insertElement('a', modal, "modal__trigger ".concat(modalCustomClass), '#', modalDataTitle);
-  insertElement('a', modalHeading, 'modal__close fas fa-times', '#', null, 'Close modal');
-  addEventListeners(modal);
+  var modalCustomClass = modal.getAttribute('data-class');
+  modal.setAttribute('data-hidden', true);
+  var linkElement = document.createElement('a');
+  linkElement.className = 'modal__trigger';
+  modalCustomClass ? linkElement.classList.add(modalCustomClass) : null;
+  linkElement.setAttribute('href', '#');
+  linkElement.textContent = modal.getAttribute('data-title');
+  modal.parentNode.prepend(linkElement);
+  var modalCloseElement = document.createElement('a');
+  modalCloseElement.className = 'modal__close fas fa-times';
+  modalCloseElement.setAttribute('href', '#');
+  modalCloseElement.setAttribute('aria--label', 'Close modal');
+  modal.querySelector('.modal__heading').parentNode.prepend(modalCloseElement);
+  addEventListeners(modal, linkElement, modalCloseElement);
   setTabIndexes(modal, true);
 }
+/**
+ * Add event listeners: adds all the required event listerners
+ *
+ * @param {HTMLElement} modal - the modal
+ * @param {HTMLElement} linkElement - the modal trigger anchor
+ * @param {HTMLElement} modalCloseElement - the modal close trigger
+ *
+ */
 
-function addEventListeners(modal) {
-  var anchorTriggerSibling = modal.previousElementSibling;
-  var modalCloseTrigger = modal.querySelector('.modal__close');
-  anchorTriggerSibling.addEventListener('click', handleTriggerOpen, false);
-  modalCloseTrigger.addEventListener('click', handleTriggerClose, false);
+
+function addEventListeners(modal, linkElement, modalCloseElement) {
+  linkElement.addEventListener('click', openModal, false);
+  modalCloseElement.addEventListener('click', closeModal, false);
   /*
    * listen for escape key press and close
    */
 
   modal.addEventListener('keydown', function (e) {
     if (e.keyCode === 27) {
-      closeModal(modal);
+      closeModal(e);
     }
   });
   /*
@@ -5975,24 +5996,65 @@ function addEventListeners(modal) {
    */
 
   modal.addEventListener('click', function (e) {
-    e.target.classList.forEach(function (className) {
-      if (className === 'modal__popup--show') {
-        closeModal(modal);
-      }
-    });
+    if (e.target.classList.contains('modal__popup')) {
+      closeModal(e);
+    }
   });
 }
+/**
+ * Open modal: runs all the required functions
+ * to open the modal
+ *
+ * @param {event} e - click event
+ *
+ */
 
-function handleTriggerOpen(e) {
+
+function openModal(e) {
   e.preventDefault();
   var modal = e.target.nextElementSibling;
-  openModal(modal);
+  addBackgroundFade();
+  document.body.classList.add('modal--in', 'no-scroll');
+  modal.removeAttribute('data-hidden', true);
+  setTabIndexes(modal, false);
+  trapFocus(modal);
 }
+/**
+ * Close modal: runs all the required functions
+ * to close the modal
+ *
+ * @param {event} e - click event
+ *
+ */
 
-function handleTriggerClose(e) {
+
+function closeModal(e) {
   e.preventDefault();
-  var modal = document.querySelector('.modal__popup--show');
-  closeModal(modal);
+  var modal;
+
+  if (e.target.classList.contains('modal__close')) {
+    modal = e.target.closest('.modal__popup');
+  } else {
+    modal = e.target;
+  }
+
+  document.body.classList.remove('modal--in', 'no-scroll');
+  modal.setAttribute('data-hidden', true);
+  setTabIndexes(modal, true);
+  trap.deactivate();
+}
+/**
+ * Add background fade: adds the background fade element
+ * to the body. Only adds once if element not in source
+ *
+ */
+
+
+function addBackgroundFade() {
+  if (!document.body.contains(modalBackground)) {
+    modalBackground.setAttribute('class', 'modal__background');
+    document.body.appendChild(modalBackground);
+  }
 }
 /**
  * Set tab indexes: when the modal is closed, the anchors
@@ -6015,66 +6077,15 @@ function setTabIndexes(modal, removeTabIndex) {
     }
   });
 }
-
-function openModal(modal) {
-  document.body.classList.add('modal--in');
-  document.body.classList.add('no-scroll');
-  modal.classList.add('modal__popup--show');
-  modal.classList.remove('modal__popup--hidden');
-  addBackgroundFade();
-  setTabIndexes(modal, false);
-  setOpenAttributes(modal);
-  trapFocus(modal);
-}
-
-function closeModal(modal) {
-  setCloseAttributes(modal);
-  setTabIndexes(modal, true);
-  trap.deactivate();
-}
-
-function setOpenAttributes(modal) {
-  document.body.classList.add('modal--in');
-  document.body.classList.add('no-scroll');
-  modal.classList.add('modal__popup--show');
-  modal.classList.remove('modal__popup--hidden');
-}
-
-function setCloseAttributes(modal) {
-  document.body.classList.remove('modal--in');
-  document.body.classList.remove('no-scroll');
-  modal.classList.add('modal__popup--hidden');
-  modal.classList.remove('modal__popup--show');
-}
-
-function addBackgroundFade() {
-  if (!document.body.contains(modalBackground)) {
-    modalBackground.setAttribute('class', 'modal__background');
-    document.body.appendChild(modalBackground);
-  }
-}
 /**
+ * Trap focus: focus needs to be trapped inside the
+ * modal when it's opened. This function takes care of
+ * this
  *
- * Insert element: helper function to insert elements
- * to the html
- *
- * @param {type} string - the element type
- * @param {targetParent} HTMLElement - the element to append to
- * @param {classList} string - the class list
- * @param {href} string - the href
- * @param {text} text - optional text content
+ * @param {HTMLElement} modal - the modal
  *
  */
 
-
-function insertElement(type, targetParent, classList, href, text, ariaLabel) {
-  var element = document.createElement(type);
-  element.setAttribute('class', classList);
-  element.setAttribute('href', href);
-  if (text) element.textContent = text;
-  if (ariaLabel) element.setAttribute('aria-label', ariaLabel);
-  targetParent.parentNode.insertBefore(element, targetParent);
-}
 
 function trapFocus(modal) {
   var modalInner = modal.querySelector('.modal__inner');
@@ -7263,19 +7274,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.parse-int */ "./node_modules/core-js/modules/es.parse-int.js");
-/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.array.map */ "./node_modules/core-js/modules/es.array.map.js");
+/* harmony import */ var core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.parse-int */ "./node_modules/core-js/modules/es.parse-int.js");
+/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
 
 
 
@@ -7307,10 +7321,15 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 var className = 'slider';
 var sliderChildren, sliderChildrenLength;
+/**
+ * Creates a slider when adding slider class to an ul element. The li elements are the slides.
+ *
+ * @param {className} slider - class name of Ul element containing li (slides).
+ */
 
 function initSlider(slider) {
   if (slider.children.length < 2) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_10__["removeClass"])(slider, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_11__["removeClass"])(slider, className, false);
     return;
   } // slider items count
 
@@ -7332,19 +7351,64 @@ function initSlider(slider) {
         sliderChild[1].classList.add('slider__slide');
         /* generates controls */
 
-        var sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls__wrap');
-        var sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls');
-        var sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls__progress');
-        var sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('div', null, null, null, 'slider__controls__buttons'); // generates progress
+        var sliderControlsWrap = createElement('div', [{
+          label: 'class',
+          val: 'slider__controls__wrap'
+        }]);
+        var sliderControls = createElement('div', [{
+          label: 'class',
+          val: 'slider__controls'
+        }]);
+        var sliderProgress = createElement('div', [{
+          label: 'class',
+          val: 'slider__controls__progress'
+        }]);
+        var sliderButtons = createElement('div', [{
+          label: 'class',
+          val: 'slider__controls__buttons'
+        }]); // generates progress
 
-        sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('span', '1', null, null, 'slide__controls__progress__active'));
-        sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('span', ' /', null, null, 'slide__controls__progress__separator'));
-        sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('span', sliderChildrenLength, null, null, 'slide__controls__progress__total'));
+        sliderProgress.appendChild(createElement('span', [{
+          label: 'content',
+          val: '1'
+        }, {
+          label: 'class',
+          val: 'slide__controls__progress__active'
+        }]));
+        sliderProgress.appendChild(createElement('span', [{
+          label: 'content',
+          val: ' /'
+        }, {
+          label: 'class',
+          val: 'slide__controls__progress__separator'
+        }]));
+        sliderProgress.appendChild(createElement('span', [{
+          label: 'content',
+          val: sliderChildrenLength
+        }, {
+          label: 'class',
+          val: 'slide__controls__progress__total'
+        }]));
         sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
         slider.appendChild(sliderControlsWrap); // generates buttons
 
-        sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('button', null, 'Previous item', true, 'fas', 'fa-arrow-left', 'slider__controls__buttons__prev', 'swiper-slider-arrow', 'arrow-left--btn-prev'));
-        sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_10__["createElement"])('button', null, 'Next item', null, 'fas', 'fa-arrow-right', 'slider__controls__buttons__next', 'swiper-slider-arrow', 'arrow-right--btn-next'));
+        sliderButtons.appendChild(createElement('button', [{
+          label: 'aria-label',
+          val: 'Previous item'
+        }, {
+          label: 'disabled',
+          val: 'true'
+        }, {
+          label: 'class',
+          val: 'fas fa-arrow-left slider__controls__buttons__prev swiper-slider-arrow arrow-left--btn-prev'
+        }]));
+        sliderButtons.appendChild(createElement('button', [{
+          label: 'aria-label',
+          val: 'Next item'
+        }, {
+          label: 'class',
+          val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-right--btn-next'
+        }]));
         sliderControls.appendChild(sliderButtons);
         slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
 
@@ -7371,8 +7435,31 @@ function initSlider(slider) {
     }
   }
 }
+/**
+ * A function to create elements containing classes, content and any other attributes
+ *
+ * @param {string} type - .specify what type of element you like to create i.e. "div", "button"...
+ * @param {array} attributes - an array containing objects  specifying which attributes to assign to the element i.e. {label : "class", val : "container"},{label: "content" , val:"I'm a div"}
+ */
+
+
+function createElement(type, attributes) {
+  var el = document.createElement(type);
+  attributes.map(function (att) {
+    att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : el.setAttribute(att.label, att.val);
+  });
+  return el;
+}
+/**
+ * Handles direction of slide when sliding left or right
+ *
+ * @param {number} direction - either 1 (next) or -1 (prev)
+ * @param {className} slider - class name of Ul element containing li (slides).
+ */
+
 
 function handleSlideChange(direction, slider) {
+  // gets position of active slide
   var activeSlide = parseInt(slider.querySelectorAll('.slide__controls__progress__active')[0].innerText);
   var newSlide = activeSlide + direction; // ensures you don't slide past first and last slide
 
