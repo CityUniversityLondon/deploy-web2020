@@ -6106,16 +6106,15 @@ function createElements(activeListItem, elementSibling, direction) {
   var blockDiv = document.createElement('div');
   blockDiv.append(outerSpan);
   outerSpan.append(spanText);
-  button.append(blockDiv); // 1 is right, -1 is left
+  button.append(blockDiv);
+  button.append(icon); // 1 is right, -1 is left
 
   if (direction == 1) {
     button.setAttribute('data-direction', '1');
     icon.classList.add('fa-long-arrow-right');
-    button.append(icon);
   } else {
     button.setAttribute('data-direction', '-1');
     icon.classList.add('fa-long-arrow-left');
-    button.prepend(icon);
   }
 }
 

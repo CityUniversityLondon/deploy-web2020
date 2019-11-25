@@ -35648,7 +35648,7 @@ body.modal--in.no-scroll .modal__background {
     max-width: 55ch;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .modal__buttons {
         display: flex;
     }
