@@ -20716,16 +20716,47 @@ main table td em {
 }
 
 .card--contact__key-info {
-    display: table;
-    align-items: center;
+    display: flex;
     word-break: break-word;
     margin-top: 1.5rem;
 }
 
 .card--contact__key-info .icon {
-    display: table-cell;
     color: #d61726;
-    padding-right: 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .card--contact__key-info .icon {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .card--contact__key-info .icon {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--contact__key-info .icon {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--contact__key-info .icon {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--contact__key-info .icon {
+        letter-spacing: -0.017em;
+    }
 }
 
 .card--course {
