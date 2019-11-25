@@ -34101,7 +34101,6 @@ article figure figcaption a:active {
     grid-gap: 1rem;
     grid-template-columns: 1fr 3fr;
     left: 0;
-    margin-top: 0.5rem;
     padding-bottom: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -34299,6 +34298,7 @@ article figure figcaption a:active {
 .js .navigation--primary .navigation__level1 > li button[aria-expanded='true'] + .navigation--primary__menu {
     box-shadow: 0 1rem 1rem 0 rgba(12, 12, 14, 0.15);
     display: grid;
+    margin-top: 0.5rem;
 }
 
 .no-js .navigation--primary .navigation__level1 > li:hover > .navigation--primary__menu, .no-js .navigation--primary .navigation__level1 > li:focus-within > .navigation--primary__menu {
