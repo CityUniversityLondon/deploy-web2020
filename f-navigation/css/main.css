@@ -34291,7 +34291,8 @@ article figure figcaption a:active {
     color: #696969;
 }
 
-.navigation--primary .navigation__current:before {
+.navigation--primary .navigation__current:before,
+.navigation--primary .navigation__current .navigation--primary__menu__header > a > span:first-of-type {
     content: '> ';
 }
 
