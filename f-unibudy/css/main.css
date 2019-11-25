@@ -24833,8 +24833,8 @@ _:-ms-lang(x),
 
 .unibudy-card {
     background-color: var(--color-purewhite);
-    box-shadow: 0 2px 20px 0 rgba(12, 12, 14, 0.2);
     padding: 1rem;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
 .unibudy-card--info {
