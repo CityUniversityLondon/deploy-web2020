@@ -6942,9 +6942,12 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
         // Increase group position by 1 to account for extra slide
         currentGroup += 1; // And not within final group of items
 
-        if (sliderChildrenLength - updatedPosition >= sliderIncrement && updatedPosition < sliderChildrenLength) {
+        if (sliderChildrenLength - updatedPosition >= sliderIncrement && updatedPosition < sliderChildrenLength && (sliderChildrenLength - 1) % sliderIncrement !== 0) {
           totalSlides += 1;
           totalSlidesDisplay.innerHTML = totalSlides;
+        } else if (sliderChildrenLength - updatedPosition < sliderIncrement && updatedPosition == sliderChildrenLength) {// totalSlides += 1;
+          // totalSlidesDisplay.innerHTML = totalSlides;
+          // currentGroup = totalSlides;
         } else {
           // Within final group of items, return progress indicator and and total slides counter to original values
           currentGroup = totalSlides;
