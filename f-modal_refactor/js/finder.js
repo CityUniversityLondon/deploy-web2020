@@ -2985,7 +2985,7 @@ function finderConfig(url) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, createElement, checkIntersectionObserver */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, createElement, checkIntersectionObserver, setTabIndexes */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3006,6 +3006,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detectIE", function() { return detectIE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return createElement; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkIntersectionObserver", function() { return checkIntersectionObserver; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setTabIndexes", function() { return setTabIndexes; });
 /* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol */ "./node_modules/core-js/modules/es.symbol.js");
 /* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_symbol_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator */ "./node_modules/core-js/modules/es.symbol.iterator.js");
@@ -3328,6 +3329,25 @@ function checkIntersectionObserver() {
   } else {
     return false;
   }
+}
+/**
+ * Set tab indexes: util function to set tab indexes of elements
+ * belonging to a parent
+ *
+ * @param {HTMLElement} parent - the parent element to query
+ * @param {string} selectors - a string of query selectors, e.g: 'a, button'
+ * @param {boolean} addOrRemove - helper boolean to tell us to add/remove (false is set tab index to -1)
+ */
+
+function setTabIndexes(parent, selectors, addOrRemove) {
+  var elements = parent.querySelectorAll(selectors);
+  elements.forEach(function (el) {
+    if (!addOrRemove) {
+      el.setAttribute('tabindex', '-1');
+    } else {
+      el.removeAttribute('tabindex');
+    }
+  });
 }
 
 /***/ }),

@@ -792,15 +792,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
 /* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
 /* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
-/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
-/* harmony import */ var _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/image-carousel/image-carousel */ "./src/patterns/image-carousel/image-carousel.js");
-/* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
-/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
-/* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
-/* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
-/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
-/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
+/* harmony import */ var _patterns_modal_slider_modal_slider__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/modal-slider/modal-slider */ "./src/patterns/modal-slider/modal-slider.js");
+/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
+/* harmony import */ var _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/image-carousel/image-carousel */ "./src/patterns/image-carousel/image-carousel.js");
+/* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
+/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
+/* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
+/* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
+/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
+/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
 
 
 /**
@@ -836,7 +837,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_modal_slider_modal_slider__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__["default"]]);
 
 /***/ }),
 
@@ -5911,6 +5913,219 @@ function launchMenu(menu) {
 
 /***/ }),
 
+/***/ "./src/patterns/modal-slider/modal-slider.js":
+/*!***************************************************!*\
+  !*** ./src/patterns/modal-slider/modal-slider.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+
+
+/**
+ * modal-slider
+ *
+ * @module patterns/modal-slider/modal-slider
+ * @author Daniel Miller <daniel.miller@city.ac.uk>
+ * @copyright City, University of London 2018
+ *
+ */
+
+
+var className = 'modal-slider';
+/**
+ * Entry function - loop through all the list items and
+ * add the navigation buttons/listeners
+ *
+ * @param {HTMLElement} modalSlider - The UL element
+ *
+ */
+
+function modalSlider(modalSlider) {
+  var allListItems = modalSlider.querySelectorAll('li');
+  var direction;
+  allListItems.forEach(function (listItem) {
+    // insert the button container once for each list item
+    var buttonContainer = document.createElement('div');
+    buttonContainer.className = 'modal__buttons modal__buttons--slider';
+    var modalContent = listItem.querySelector('.modal__content');
+    modalContent.append(buttonContainer);
+    /*
+        if there's a previous sibling, get it and 
+        create HTML elements inside current modal, if not, 
+        we get the last list item and link to that
+    */
+    // 1 is right, -1 is left
+
+    direction = -1;
+
+    if (listItem.previousElementSibling != null) {
+      createElements(listItem, listItem.previousElementSibling, direction);
+    } else {
+      createElements(listItem, allListItems[allListItems.length - 1], direction);
+    }
+    /*
+        if there's a next sibling, get it and 
+        create HTML elements inside current modal, if not, 
+        we get the first list item and link to that
+    */
+
+
+    direction = 1;
+
+    if (listItem.nextElementSibling != null) {
+      createElements(listItem, listItem.nextElementSibling, direction);
+    } else {
+      createElements(listItem, allListItems[0], direction);
+    } // now the buttons are added, add listeners for left/right click
+
+
+    addButtonListeners(listItem);
+  });
+}
+/**
+ * Add listeners to buttons so user can navigate left/right
+ *
+ * @param {HTMLElement} currentListItem - the active list item
+ *
+ */
+
+
+function addButtonListeners(currentListItem) {
+  var buttonsContainer = currentListItem.querySelector('.modal__buttons');
+  var buttons = buttonsContainer.querySelectorAll('button');
+  buttons.forEach(function (button) {
+    button.addEventListener('click', slideLeftorRight, false);
+  });
+}
+/**
+ * Respond to left or right button click
+ *
+ * @param {event} e - the button event
+ *
+ */
+
+
+function slideLeftorRight(e) {
+  var dataDirection = e.target.parentNode.getAttribute('data-direction');
+  var parentListItem = e.target.closest('li');
+  var thisModalSlider = e.target.closest('.modal-slider');
+  var thisModalPopup = parentListItem.querySelector('.modal__popup');
+  var allListItems = thisModalSlider.querySelectorAll('li');
+  var newModal; // always hide the active modal
+
+  thisModalPopup.setAttribute('data-hidden', true); // remove tab indexes of current modal, false is set tab index to -1
+
+  Object(_util__WEBPACK_IMPORTED_MODULE_2__["setTabIndexes"])(thisModalPopup, 'button', false);
+
+  if (dataDirection == '1') {
+    /* 
+        if there's a next li element, show it, if not, show the
+        first list item's modal
+    */
+    if (parentListItem.nextElementSibling != null) {
+      newModal = parentListItem.nextElementSibling.querySelector('.modal__popup');
+      newModal.removeAttribute('data-hidden');
+    } else {
+      newModal = allListItems[0].querySelector('.modal__popup');
+      newModal.removeAttribute('data-hidden');
+    }
+  } else {
+    /* 
+        if there's a previous li element, show it, if not, show the
+        last list item's modal
+    */
+    if (parentListItem.previousElementSibling != null) {
+      newModal = parentListItem.previousElementSibling.querySelector('.modal__popup');
+      newModal.removeAttribute('data-hidden');
+    } else {
+      newModal = allListItems[allListItems.length - 1].querySelector('.modal__popup');
+      newModal.removeAttribute('data-hidden');
+    }
+  } // set the tab indexes, true is remove tab indexes
+
+
+  Object(_util__WEBPACK_IMPORTED_MODULE_2__["setTabIndexes"])(newModal, 'button', true); // trap the focus in the newly shown modal
+
+  trapFocus(newModal);
+}
+/**
+ * Trap focus: when the user navigates left or right,
+ * the focus must be trapped to the new modal
+ *
+ * @param {HTMLElement} modalPopup - the modal popup div
+ *
+ */
+
+
+function trapFocus(modalPopup) {
+  var modalInner = modalPopup.querySelector('.modal__inner');
+  var trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalInner, {
+    clickOutsideDeactivates: true
+  });
+  trap.activate();
+}
+/**
+ * Create elements helper function to create all the HTML elements
+ *
+ * @param {HTMLElement} activeListItem - the active list item containing active modal HTML markup
+ * @param {HTMLElement} elementSibling - the element's next or prev sibling list item
+ * @param {int} direction - helper var to tell us if it's a next or previous button required
+ *
+ */
+
+
+function createElements(activeListItem, elementSibling, direction) {
+  var elementSiblingModalPopup = elementSibling.querySelector('.modal__popup');
+  var elementSiblingDataTitle = elementSiblingModalPopup.getAttribute('data-title');
+  var modalButtonsContainer = activeListItem.querySelector('.modal__buttons');
+  var icon = document.createElement('span');
+  icon.className = 'modal__buttons__icon far';
+  var button = document.createElement('button');
+  button.setAttribute('tabindex', '-1');
+  /* 
+      outer span is for anchor discreet effect to work on text
+      that wraps - by default anchor discreet will not work
+      on text that wraps on two or more lines
+  */
+
+  var outerSpan = document.createElement('span');
+  outerSpan.className = 'modal__underline-transition';
+  var spanText = document.createElement('span');
+  spanText.textContent = elementSiblingDataTitle;
+  modalButtonsContainer.append(button);
+  var blockDiv = document.createElement('div');
+  blockDiv.append(outerSpan);
+  outerSpan.append(spanText);
+  button.append(blockDiv); // 1 is right, -1 is left
+
+  if (direction == 1) {
+    button.setAttribute('data-direction', '1');
+    icon.classList.add('fa-long-arrow-right');
+    button.append(icon);
+  } else {
+    button.setAttribute('data-direction', '-1');
+    icon.classList.add('fa-long-arrow-left');
+    button.prepend(icon);
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: modalSlider,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
 /***/ "./src/patterns/modal/modal.js":
 /*!*************************************!*\
   !*** ./src/patterns/modal/modal.js ***!
@@ -5924,6 +6139,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -5937,7 +6153,8 @@ __webpack_require__.r(__webpack_exports__);
  *
  */
 
-var className = 'modal__popup';
+
+var className = 'modal-group';
 var modalBackground = document.createElement('div'),
     trap;
 /**
@@ -5950,32 +6167,42 @@ var modalBackground = document.createElement('div'),
  *
  */
 
-function launchModal(modal) {
-  modal.setAttribute('data-hidden', true);
-  var linkElement = document.createElement('a');
-  linkElement.className = 'modal__trigger';
-  linkElement.setAttribute('href', '#');
-  linkElement.textContent = modal.getAttribute('data-title');
-  modal.parentNode.prepend(linkElement);
-  var modalCloseElement = document.createElement('a');
-  modalCloseElement.className = 'modal__close fas fa-times';
-  modalCloseElement.setAttribute('href', '#');
-  modalCloseElement.setAttribute('aria--label', 'Close modal'); // get heading and body ready to append back to modal
+function launchModal(modalGroup) {
+  var allListItems = modalGroup.querySelectorAll('li');
+  allListItems.forEach(function (listItem) {
+    // add classes to heading and first p element as per modal format
+    var heading = listItem.firstElementChild;
+    var modalBodyCopy = listItem.getElementsByTagName('p')[0];
+    heading.className = 'modal__heading';
+    modalBodyCopy.className = 'modal__body-copy';
+    var linkElement = document.createElement('a');
+    linkElement.className = 'modal__trigger';
+    linkElement.setAttribute('href', '#');
+    linkElement.textContent = heading.textContent;
+    listItem.prepend(linkElement); // remove elements, create the div scaffolding, then reinsert
 
-  var heading = modal.querySelector('.modal__heading');
-  var modalBodyCopy = modal.querySelector('.modal__body-copy');
-  heading.remove();
-  modalBodyCopy.remove();
-  var modalInner = document.createElement('div');
-  modalInner.className = 'modal__inner';
-  modalInner.setAttribute('role', 'dialog');
-  var modalContent = document.createElement('div');
-  modalContent.className = 'modal__content';
-  modal.appendChild(modalInner);
-  modalInner.append(modalContent);
-  modalContent.append(modalCloseElement, heading, modalBodyCopy);
-  addEventListeners(modal, linkElement, modalCloseElement);
-  setTabIndexes(modal, true);
+    heading.remove();
+    modalBodyCopy.remove();
+    var modalPopup = document.createElement('div');
+    modalPopup.className = 'modal__popup';
+    modalPopup.setAttribute('data-hidden', true); // data-title is used in modal slider
+
+    modalPopup.setAttribute('data-title', heading.textContent);
+    var modalInner = document.createElement('div');
+    modalInner.className = 'modal__inner';
+    modalInner.setAttribute('role', 'dialog');
+    var modalContent = document.createElement('div');
+    modalContent.className = 'modal__content';
+    var modalCloseElement = document.createElement('button');
+    modalCloseElement.className = 'modal__close fas fa-times';
+    modalCloseElement.setAttribute('aria-label', 'Close modal');
+    listItem.append(modalPopup);
+    modalPopup.append(modalInner);
+    modalInner.append(modalContent);
+    modalContent.append(modalCloseElement, heading, modalBodyCopy);
+    addEventListeners(listItem, linkElement, modalCloseElement);
+    Object(_util__WEBPACK_IMPORTED_MODULE_2__["setTabIndexes"])(listItem, 'button', false);
+  });
 }
 /**
  * Add event listeners: adds all the required event listerners
@@ -6024,7 +6251,7 @@ function openModal(e) {
   addBackgroundFade();
   document.body.classList.add('modal--in', 'no-scroll');
   modal.removeAttribute('data-hidden', true);
-  setTabIndexes(modal, false);
+  Object(_util__WEBPACK_IMPORTED_MODULE_2__["setTabIndexes"])(modal, 'button', true);
   trapFocus(modal);
 }
 /**
@@ -6048,7 +6275,7 @@ function closeModal(e) {
 
   document.body.classList.remove('modal--in', 'no-scroll');
   modal.setAttribute('data-hidden', true);
-  setTabIndexes(modal, true);
+  Object(_util__WEBPACK_IMPORTED_MODULE_2__["setTabIndexes"])(modal, 'button', false);
   trap.deactivate();
 }
 /**
@@ -6063,27 +6290,6 @@ function addBackgroundFade() {
     modalBackground.setAttribute('class', 'modal__background');
     document.body.appendChild(modalBackground);
   }
-}
-/**
- * Set tab indexes: when the modal is closed, the anchors
- * lose their tab indexes, when the modal is open, the
- * attr is removed so the user can tab through them
- *
- * @param {HTMLElement} modal - the modal
- * @param {boolean} removeTabIndex - no index or remove
- *
- */
-
-
-function setTabIndexes(modal, removeTabIndex) {
-  var elements = modal.querySelectorAll('a');
-  elements.forEach(function (el) {
-    if (removeTabIndex) {
-      el.setAttribute('tabindex', '-1');
-    } else {
-      el.removeAttribute('tabindex');
-    }
-  });
 }
 /**
  * Trap focus: focus needs to be trapped inside the
@@ -7549,7 +7755,7 @@ function launchThemeSwitcher(themeList) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, createElement, checkIntersectionObserver */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, createElement, checkIntersectionObserver, setTabIndexes */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7570,6 +7776,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detectIE", function() { return detectIE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createElement", function() { return createElement; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkIntersectionObserver", function() { return checkIntersectionObserver; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setTabIndexes", function() { return setTabIndexes; });
 /* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol */ "./node_modules/core-js/modules/es.symbol.js");
 /* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_symbol_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator */ "./node_modules/core-js/modules/es.symbol.iterator.js");
@@ -7892,6 +8099,25 @@ function checkIntersectionObserver() {
   } else {
     return false;
   }
+}
+/**
+ * Set tab indexes: util function to set tab indexes of elements
+ * belonging to a parent
+ *
+ * @param {HTMLElement} parent - the parent element to query
+ * @param {string} selectors - a string of query selectors, e.g: 'a, button'
+ * @param {boolean} addOrRemove - helper boolean to tell us to add/remove (false is set tab index to -1)
+ */
+
+function setTabIndexes(parent, selectors, addOrRemove) {
+  var elements = parent.querySelectorAll(selectors);
+  elements.forEach(function (el) {
+    if (!addOrRemove) {
+      el.setAttribute('tabindex', '-1');
+    } else {
+      el.removeAttribute('tabindex');
+    }
+  });
 }
 
 /***/ }),
