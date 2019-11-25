@@ -34292,7 +34292,7 @@ article figure figcaption a:active {
 }
 
 .navigation--primary .navigation__current:before,
-.navigation--primary .navigation__current .navigation--primary__menu__header > a > span:first-of-type {
+.navigation--primary .navigation__current .navigation--primary__menu__header > a > span:first-of-type:before {
     content: '> ';
 }
 
