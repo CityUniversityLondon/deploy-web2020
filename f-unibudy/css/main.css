@@ -20381,7 +20381,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -20395,6 +20394,7 @@ main table td em {
     .card--casestudy a:hover:after {
         background-color: #f2f2f2;
         transform: scale(1.03);
+        z-index: -1;
     }
 }
 
@@ -20741,7 +20741,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -20755,6 +20754,7 @@ main table td em {
     .card--course:hover:after {
         background-color: #f2f2f2;
         transform: scale(1.03);
+        z-index: -1;
     }
 }
 
@@ -21367,7 +21367,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -21381,6 +21380,7 @@ main table td em {
     .card--event--landscape:hover:after {
         background-color: #f2f2f2;
         transform: scale(1.03);
+        z-index: -1;
     }
 }
 
@@ -22173,7 +22173,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -22187,6 +22186,7 @@ main table td em {
     .card--pathway--blue:hover:after {
         background-color: #5fd8fe;
         transform: scale(1.05);
+        z-index: -1;
     }
 }
 
@@ -22220,7 +22220,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -22234,6 +22233,7 @@ main table td em {
     .card--pathway--purple:hover:after {
         background-color: #b382ec;
         transform: scale(1.05);
+        z-index: -1;
     }
 }
 
@@ -22267,7 +22267,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -22281,6 +22280,7 @@ main table td em {
     .card--pathway--pink:hover:after {
         background-color: #df82c4;
         transform: scale(1.05);
+        z-index: -1;
     }
 }
 
@@ -22314,7 +22314,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -22328,6 +22327,7 @@ main table td em {
     .card--pathway--green:hover:after {
         background-color: #b9d698;
         transform: scale(1.05);
+        z-index: -1;
     }
 }
 
@@ -22361,7 +22361,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -22375,6 +22374,7 @@ main table td em {
     .card--pathway--purple:hover:after {
         background-color: #b382ec;
         transform: scale(1.05);
+        z-index: -1;
     }
 }
 
@@ -22408,7 +22408,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -22422,6 +22421,7 @@ main table td em {
     .card--pathway--pink:hover:after {
         background-color: #df82c4;
         transform: scale(1.05);
+        z-index: -1;
     }
 }
 
@@ -22455,7 +22455,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -22469,6 +22468,7 @@ main table td em {
     .card--pathway--teal:hover:after {
         background-color: #7fd6df;
         transform: scale(1.05);
+        z-index: -1;
     }
 }
 
@@ -22502,7 +22502,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -22516,6 +22515,7 @@ main table td em {
     .card--pathway--yellow:hover:after {
         background-color: #ffef2b;
         transform: scale(1.05);
+        z-index: -1;
     }
 }
 
@@ -22562,7 +22562,6 @@ main table td em {
     transition: none;
     color: #0c0c0e;
     position: relative;
-    z-index: 1;
 }
 
 .card--pathway-image a:visited {
@@ -22574,6 +22573,7 @@ main table td em {
     background-color: transparent;
     border: none;
     color: #0c0c0e;
+    z-index: 1;
 }
 
 .card--pathway-image a:focus, .card--pathway-image a:active {
@@ -22645,7 +22645,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -22659,6 +22658,7 @@ main table td em {
     .card--pathway-image a:hover:after {
         background-color: #f2f2f2;
         transform: scale(1.1);
+        z-index: -1;
     }
 }
 
@@ -22782,7 +22782,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -22796,6 +22795,7 @@ main table td em {
     .pathway-image-cards__blocks div:nth-child(1) a:hover:after {
         background-color: #832c9e;
         transform: scale(1.1);
+        z-index: -1;
     }
 }
 
@@ -22854,7 +22854,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -22868,6 +22867,7 @@ main table td em {
     .pathway-image-cards__blocks div:nth-child(2) a:hover:after {
         background-color: #123456;
         transform: scale(1.1);
+        z-index: -1;
     }
 }
 
@@ -22926,7 +22926,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -22940,6 +22939,7 @@ main table td em {
     .pathway-image-cards__blocks div:nth-child(3) a:hover:after {
         background-color: #cf44a7;
         transform: scale(1.1);
+        z-index: -1;
     }
 }
 
@@ -23155,7 +23155,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -23169,6 +23168,7 @@ main table td em {
     .card--related-course a:hover:after {
         background-color: #f2f2f2;
         transform: scale(1.03);
+        z-index: -1;
     }
 }
 
@@ -24843,7 +24843,13 @@ _:-ms-lang(x),
 
 .unibudy-card--info__image img {
     max-width: 6rem;
+    height: 6rem;
+    object-fit: cover;
     border-radius: 100%;
+}
+
+.unibudy-card--info__image .fa-user {
+    font-size: 4rem;
 }
 
 .unibudy-card--info__details {
@@ -27967,6 +27973,195 @@ _:-ms-lang(x),
 
 .inline-external-link {
     margin-left: 0.5rem;
+}
+
+.featured-profiles-block--row .wrapper--featured-profiles__profile {
+    grid-column: 1/-1;
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 433px) {
+    .featured-profiles-block--row .wrapper--featured-profiles__profile {
+        grid-column: 2/-2;
+    }
+}
+
+@media (min-width: 769px) {
+    .featured-profiles-block--row .wrapper--featured-profiles__profile {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1281px) {
+    .featured-profiles-block--row .wrapper--featured-profiles__profile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .featured-profiles-block--row .wrapper--featured-profiles__profile .featured-profiles__profile {
+        width: calc(1 / 3 * 100% - (1 - 1 / 3) *1rem);
+    }
+}
+
+.featured-profiles-block--grid .wrapper--featured-profiles__heading-intro {
+    grid-column: 1/-1;
+}
+
+.featured-profiles-block--grid .wrapper--featured-profiles__profile {
+    grid-column: 1/-1;
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 433px) {
+    .featured-profiles-block--grid .wrapper--featured-profiles__profile {
+        grid-column: 2/-2;
+    }
+}
+
+@media (min-width: 769px) {
+    .featured-profiles-block--grid .wrapper--featured-profiles__profile {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1281px) {
+    .featured-profiles-block--grid .wrapper--featured-profiles__profile {
+        grid-column: 8/-2;
+        display: grid;
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(10, 1fr);
+    }
+    .featured-profiles-block--grid .wrapper--featured-profiles__profile .featured-profiles__profile:nth-of-type(odd) {
+        grid-column: 1/6;
+    }
+    .featured-profiles-block--grid .wrapper--featured-profiles__profile .featured-profiles__profile:nth-of-type(even) {
+        grid-column: 6/-1;
+    }
+}
+
+.featured-profiles-block {
+    color: #cbcbcb;
+    grid-column: 1/-1;
+    margin: 0;
+    padding: 1rem 0 2rem;
+}
+
+.featured-profiles-block a {
+    color: #cbcbcb;
+    background-image: none;
+    border-bottom: #cbcbcb solid 0.125rem;
+}
+
+.featured-profiles-block a:hover {
+    background-image: none;
+    border-bottom: #cbcbcb;
+}
+
+.featured-profiles-block .linked-heading {
+    grid-column: 2/-2;
+    border-bottom: 0;
+}
+
+.featured-profiles-block .linked-heading:focus {
+    outline-color: #ffffff;
+    outline-offset: 0.5rem;
+}
+
+.featured-profiles-block .linked-heading .linked-heading__text {
+    color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+.featured-profiles-block .featured-profiles__heading,
+.featured-profiles-block .wrapper--featured-profiles__heading-intro {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 433px) {
+    .featured-profiles-block .featured-profiles__heading,
+    .featured-profiles-block .wrapper--featured-profiles__heading-intro {
+        grid-column: 2/-2;
+    }
+}
+
+.featured-profiles-block .wrapper--featured-profiles__heading-intro {
+    color: #ffffff;
+}
+
+@media (min-width: 1281px) {
+    .featured-profiles-block .wrapper--featured-profiles__heading-intro {
+        grid-column: 2/8;
+    }
+}
+
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile {
+    display: flex;
+    padding: 0 1rem 1rem 0;
+    margin: 1rem 0;
+    transition: 0.6s;
+}
+
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:hover, .featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:focus-within {
+    background: #ffffff;
+}
+
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:hover .featured-profiles__profile__label h3 a, .featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:focus-within .featured-profiles__profile__label h3 a {
+    color: #1e1e1e;
+    border-bottom-color: #1e1e1e;
+}
+
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:hover .featured-profiles__profile__label p, .featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:focus-within .featured-profiles__profile__label p {
+    color: #1e1e1e;
+}
+
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:hover .featured-profiles__profile__label .fas.fa-long-arrow-right, .featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:focus-within .featured-profiles__profile__label .fas.fa-long-arrow-right {
+    visibility: visible;
+    color: #d61726;
+}
+
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile .featured-profiles__profile__image {
+    width: 6rem;
+}
+
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile .featured-profiles__profile__image img {
+    height: 5rem;
+    object-fit: cover;
+}
+
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile .featured-profiles__profile__label {
+    margin-left: 1rem;
+}
+
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile .featured-profiles__profile__label h3 {
+    margin-top: 0;
+}
+
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile .featured-profiles__profile__label h3 a {
+    color: #cbcbcb;
+    border-bottom-color: #cbcbcb;
+}
+
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile .featured-profiles__profile__label p {
+    color: #ffffff;
+}
+
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile .featured-profiles__profile__label .fas.fa-long-arrow-right {
+    visibility: hidden;
+    font-size: 1.602rem;
+    font-weight: 300;
+    margin-top: 0.25rem;
+}
+
+.featured-profiles-block.background--purple80 .featured-profiles__profile {
+    background: #2a0d43;
+}
+
+.featured-profiles-block.background--gray9 .featured-profiles__profile {
+    background: #1e1e1e;
 }
 
 .feedback {
@@ -31129,7 +31324,6 @@ article figure figcaption a:active {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -31143,6 +31337,7 @@ article figure figcaption a:active {
     .finder__results__card a:hover:after {
         background-color: #f2f2f2;
         transform: scale(1.03);
+        z-index: -1;
     }
 }
 
@@ -36837,6 +37032,94 @@ article .link-copy {
     margin-right: auto;
 }
 
+.banner-svg {
+    background: linear-gradient(to bottom, #e5e5e5, #ffffff 75%);
+}
+
+.banner-svg--wrapper {
+    grid-row-gap: 0;
+    display: grid;
+    max-width: 80rem;
+}
+
+@media (max-width: 432px) {
+    .banner-svg--wrapper {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .banner-svg--wrapper {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .banner-svg--wrapper {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (min-width: 1441px) {
+    .banner-svg--wrapper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .banner-svg--wrapper {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.banner-svg--wrapper__svg {
+    grid-column: 3/17;
+    position: relative;
+}
+
+.banner-svg--wrapper__svg svg {
+    height: 14rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.banner-svg--wrapper__title {
+    grid-column: 3/17;
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.banner-svg--wrapper__title h1 {
+    text-align: center;
+}
+
+.banner-svg--wrapper__title .course-level {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 432px) {
+    .banner-svg--wrapper__title,
+    .banner-svg--wrapper__svg {
+        grid-column: 1/-1;
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .banner-svg--wrapper__title,
+    .banner-svg--wrapper__svg {
+        grid-column: 1/13;
+    }
+}
+
 .swiper-viewport {
     grid-row-gap: 0;
     display: grid;
@@ -39809,7 +40092,6 @@ article .link-copy {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -39823,6 +40105,7 @@ article .link-copy {
     .finder__results__card a:hover:after {
         background-color: #f2f2f2;
         transform: scale(1.03);
+        z-index: -1;
     }
 }
 
@@ -44473,7 +44756,6 @@ a.modal__close:active, a.modal__close:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;
     transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
 
@@ -44487,6 +44769,7 @@ a.modal__close:active, a.modal__close:focus {
     .content-hub__block-two .pathway-cards .card a:hover:after {
         background-color: #d61726;
         transform: scale(1.05);
+        z-index: -1;
     }
 }
 
@@ -49540,6 +49823,224 @@ button
 .user-journey__steps h3 i,
 .user-journey__steps h3 em {
     font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+}
+
+.course-info,
+.course--promo-cards {
+    grid-row-gap: 0;
+    display: grid;
+    max-width: 80rem;
+}
+
+@media (max-width: 432px) {
+    .course-info,
+    .course--promo-cards {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .course-info,
+    .course--promo-cards {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .course-info,
+    .course--promo-cards {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (min-width: 1441px) {
+    .course-info,
+    .course--promo-cards {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .course-info,
+    .course--promo-cards {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.course-info__year {
+    grid-column: 3/17;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 432px) {
+    .course-info__year {
+        grid-column: 1/-1;
+        display: block;
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .course-info__year {
+        grid-column: 1/13;
+    }
+}
+
+.course-info__year .start-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .course-info__year .start-date {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .course-info__year .start-date {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .course-info__year .start-date {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .course-info__year .start-date {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .course-info__year .start-date {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 900px) {
+    .course-info__year .start-date {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+
+.course--promo-cards__ranking {
+    border: solid 0.125rem #d61726;
+    padding: 1rem;
+    margin-top: 3rem;
+    background-color: #fdf0ed;
+}
+
+.course--promo-cards__ranking h3 {
+    margin-top: 0;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .course--promo-cards__ranking h3 {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .course--promo-cards__ranking h3 {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .course--promo-cards__ranking h3 {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .course--promo-cards__ranking h3 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .course--promo-cards__ranking h3 {
+        letter-spacing: -0.017em;
+    }
+}
+
+.course--promo-cards__ranking p {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .course--promo-cards__ranking p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .course--promo-cards__ranking p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .course--promo-cards__ranking p {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .course--promo-cards__ranking p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .course--promo-cards__ranking p {
+        letter-spacing: -0.017em;
+    }
+}
+
+.course--promo-cards__ranking--first {
+    grid-column: 3/10;
+}
+
+.course--promo-cards__ranking--sec {
+    grid-column: 10/17;
+}
+
+.course-info__cta a:first-child {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 432px) {
+    .course--promo-cards__ranking--first,
+    .course--promo-cards__ranking--sec {
+        grid-column: 1/-1;
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .course--promo-cards__ranking--first,
+    .course--promo-cards__ranking--sec {
+        grid-column: 1/13;
+    }
 }
 
 .course--undergraduate__key-information__intro,
