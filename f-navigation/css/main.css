@@ -18092,14 +18092,9 @@ body {
     top: 1rem;
 }
 
-.logo--light {
-    display: none;
-    width: 6rem;
-}
-
-.logo--dark {
+.logo {
     display: block;
-    width: 6rem;
+    width: 4rem;
 }
 
 main {
@@ -31620,7 +31615,7 @@ article figure figcaption a:active {
     padding-bottom: 1rem;
     padding-top: 1rem;
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: 'feedback feedback feedback feedback feedback feedback' 'backtotop backtotop backtotop backtotop backtotop backtotop' 'switcher switcher switcher switcher switcher switcher' 'uol uol uol city city city' 'copyright copyright copyright copyright copyright copyright';
+    grid-template-areas: 'feedback feedback feedback feedback feedback feedback' 'backtotop backtotop backtotop backtotop backtotop backtotop' 'switcher switcher switcher switcher switcher switcher' 'uol uol uol uol uol uol' 'copyright copyright copyright copyright copyright copyright';
 }
 
 @media (max-width: 432px) {
@@ -31706,14 +31701,14 @@ article figure figcaption a:active {
 @media (min-width: 433px) and (max-width: 900px) {
     .global-footer {
         grid-template-rows: repeat(3, auto);
-        grid-template-areas: 'feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback' 'backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop' 'switcher switcher switcher switcher . . . . . uol uol city' 'copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright';
+        grid-template-areas: 'feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback' 'backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop' 'switcher switcher switcher switcher . . . . . . uol uol' 'copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright';
     }
 }
 
 @media (min-width: 901px) {
     .global-footer {
         grid-template-rows: repeat(3, auto);
-        grid-template-areas: 'feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback' 'backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop' 'switcher switcher switcher switcher switcher switcher . . . . . . . uol uol uol city city' 'copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright';
+        grid-template-areas: 'feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback feedback' 'backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop backtotop' 'switcher switcher switcher switcher switcher switcher . . . . . . . . . . uol uol' 'copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright copyright';
     }
 }
 
@@ -31730,10 +31725,6 @@ article figure figcaption a:active {
 
 .global-footer > .footer-logo--uol {
     grid-area: uol;
-}
-
-.global-footer > .footer-logo--city {
-    grid-area: city;
 }
 
 .global-footer > .copyright {
