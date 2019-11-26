@@ -33971,23 +33971,28 @@ article figure figcaption a:active {
            can fill 3 columns but only if there are only two rows */
 }
 
-.navigation--primary .navigation--primary__level1:nth-of-type(1) .navigation__level2 {
+.navigation--primary .navigation--primary__level1[data-title='Prospective Students'] .navigation__level2 {
     grid-template-rows: repeat(6, auto);
 }
 
-.navigation--primary .navigation--primary__level1:nth-of-type(1) .navigation__level2 > li:first-of-type {
+.navigation--primary .navigation--primary__level1[data-title='Prospective Students'] .navigation__level2 > li:first-of-type {
     grid-row: 1 / span 6;
 }
 
-.navigation--primary .navigation--primary__level1:nth-of-type(5) .navigation__level2 {
+.navigation--primary .navigation--primary__level1[data-title='News and events'] .navigation__level2 {
     grid-auto-flow: row;
+    grid-template-rows: repeat(1, auto);
 }
 
-.navigation--primary .navigation--primary__level1:nth-of-type(2) .navigation__level2, .navigation--primary .navigation--primary__level1:nth-of-type(3) .navigation__level2, .navigation--primary .navigation--primary__level1:nth-of-type(4) .navigation__level2 {
+.navigation--primary .navigation--primary__level1[data-title='News and events'] .navigation__level2 > li:first-of-type {
+    grid-row: 1 / span 1;
+}
+
+.navigation--primary .navigation--primary__level1[data-title='Research'] .navigation__level2, .navigation--primary .navigation--primary__level1[data-title='For businesses'] .navigation__level2 {
     grid-template-rows: repeat(2, auto);
 }
 
-.navigation--primary .navigation--primary__level1:nth-of-type(2) .navigation__level2 > li:first-of-type, .navigation--primary .navigation--primary__level1:nth-of-type(3) .navigation__level2 > li:first-of-type, .navigation--primary .navigation--primary__level1:nth-of-type(4) .navigation__level2 > li:first-of-type {
+.navigation--primary .navigation--primary__level1[data-title='Research'] .navigation__level2 > li:first-of-type, .navigation--primary .navigation--primary__level1[data-title='For businesses'] .navigation__level2 > li:first-of-type {
     grid-row: 1 / span 2;
 }
 
