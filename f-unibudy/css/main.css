@@ -24831,43 +24831,43 @@ _:-ms-lang(x),
     }
 }
 
-.unibudy-card {
+.unibuddy-card {
     background-color: var(--color-purewhite);
     padding: 1rem;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
-.unibudy-card--info {
+.unibuddy-card--info {
     display: flex;
 }
 
-.unibudy-card--info__image img {
+.unibuddy-card--info__image img {
     max-width: 6rem;
     height: 6rem;
     object-fit: cover;
     border-radius: 100%;
 }
 
-.unibudy-card--info__image .fa-user {
+.unibuddy-card--info__image .fa-user {
     font-size: 4rem;
 }
 
-.unibudy-card--info__details {
+.unibuddy-card--info__details {
     display: flex;
     flex-direction: column;
     padding-left: 1rem;
 }
 
-.unibudy-card--info__details .unibudy-card--info__details--name {
+.unibuddy-card--info__details .unibuddy-card--info__details--name {
     color: #d61726;
     font-weight: bold;
 }
 
-.unibudy-card--info__details .unibudy-card--info__details--level {
+.unibuddy-card--info__details .unibuddy-card--info__details--level {
     font-weight: bold;
 }
 
-.unibudy-card--text {
+.unibuddy-card--text {
     padding-bottom: 1rem;
 }
 
