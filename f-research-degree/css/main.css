@@ -47437,20 +47437,11 @@ button
     padding-bottom: 0.375rem;
 }
 
-.research-degree .icon-wrapper:after {
-    content: '';
-    margin-bottom: 0.5rem;
-}
-
 .research-degree .icon-wrapper .icon {
     display: table-cell;
     padding: 0.25rem 0.5rem 0 0;
     margin: 0.25rem 0.25rem 0 0;
     color: #541b85;
-}
-
-.research-degree .icon-wrapper a {
-    display: inline;
 }
 
 .research-degree .heading-centered {
@@ -47567,14 +47558,6 @@ button
     margin-top: 1rem;
 }
 
-.key-information--research .key-information--research__main .key-information--research__main__dates th {
-    margin-top: 0;
-}
-
-.key-information--research .key-information--research__main .key-information--research__main__duration__heading {
-    margin-bottom: 0.5rem;
-}
-
 .wrapper--research-degree__promo-box .promo-content {
     grid-column: 1/-1;
     margin: 0 0 3rem 0;
@@ -47668,27 +47651,24 @@ button
     display: flex;
 }
 
-.research-degree__overview__content .research-degree__overview__content__apply-links ul {
+.research-degree__overview__content .research-degree__overview__content__apply-links .modal-group {
     flex-basis: 50%;
-}
-
-.research-degree__overview__content .modal-group {
     list-style-type: none;
     margin: 0 1rem 0 0;
 }
 
-.research-degree__overview__content .modal-group li a {
+.research-degree__overview__content .research-degree__overview__content__apply-links .modal-group li a {
     display: block;
 }
 
-.research-degree__overview__content .modal-group .modal__buttons {
+.research-degree__overview__content .research-degree__overview__content__apply-links .modal-group .modal__buttons {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 1rem;
 }
 
-.research-degree__overview__content .modal-group .modal__buttons a {
+.research-degree__overview__content .research-degree__overview__content__apply-links .modal-group .modal__buttons a {
     flex-basis: 48%;
     margin-top: 0.5rem;
 }
@@ -47725,12 +47705,6 @@ button
     }
 }
 
-@media (max-width: 768px) {
-    .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider .slider__active-slide .card--testimonial__column:first-child {
-        margin-right: 0;
-    }
-}
-
 .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider .slider__controls__wrap {
     margin: 1rem 0;
     grid-column: 7/-1;
@@ -47742,6 +47716,11 @@ button
 
 .wrapper--research-degree__footer .research-degree__footer__useful-links {
     margin-top: 2rem;
+}
+
+.wrapper--research-degree__footer .research-degree__footer__contact {
+    max-width: none;
+    margin: 0;
 }
 
 .wrapper--research-degree__footer .research-degree__footer__contact--one-card .research-degree__footer__contact--one-column {
@@ -47807,11 +47786,6 @@ button
     .wrapper--research-degree__footer .research-degree__footer__contact--two-cards .research-degree__footer__useful-links {
         grid-column: 13/-1;
     }
-}
-
-.wrapper--research-degree__footer .research-degree__footer__contact {
-    max-width: none;
-    margin: 0;
 }
 
 .research-degree__footer__useful-links h3 {
