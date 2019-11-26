@@ -33908,6 +33908,39 @@ article figure figcaption a:active {
     margin-right: 0;
 }
 
+.navigation--primary .navigation--primary__level1 {
+    /* Prospective students has a lot of programmes to list */
+    /* News and events has only 3 items, so can’t fill 3 columns with
+           column flow */
+    /* Alumni, For business and Research have 4-5 items, so they
+           can fill 3 columns but only if there are only two rows */
+}
+
+.navigation--primary .navigation--primary__level1[data-title='Prospective students'] .navigation__level2 {
+    grid-template-rows: repeat(6, auto);
+}
+
+.navigation--primary .navigation--primary__level1[data-title='Prospective students'] .navigation__level2 > li:first-of-type {
+    grid-row: 1 / span 6;
+}
+
+.navigation--primary .navigation--primary__level1[data-title='News and events'] .navigation__level2 {
+    grid-auto-flow: row;
+    grid-template-rows: repeat(1, auto);
+}
+
+.navigation--primary .navigation--primary__level1[data-title='News and events'] .navigation__level2 > li:first-of-type {
+    grid-row: 1 / span 1;
+}
+
+.navigation--primary .navigation--primary__level1[data-title='Research'] .navigation__level2, .navigation--primary .navigation--primary__level1[data-title='For businesses'] .navigation__level2, .navigation--primary .navigation--primary__level1[data-title='Alumni and supporters'] .navigation__level2 {
+    grid-template-rows: repeat(2, auto);
+}
+
+.navigation--primary .navigation--primary__level1[data-title='Research'] .navigation__level2 > li:first-of-type, .navigation--primary .navigation--primary__level1[data-title='For businesses'] .navigation__level2 > li:first-of-type, .navigation--primary .navigation--primary__level1[data-title='Alumni and supporters'] .navigation__level2 > li:first-of-type {
+    grid-row: 1 / span 2;
+}
+
 .navigation--primary .navigation__level2 {
     font-size: 0.889rem;
     line-height: 1.625;
@@ -33961,39 +33994,6 @@ article figure figcaption a:active {
 
 .navigation--primary .navigation__level3 > li {
     margin-bottom: 0.25rem;
-}
-
-.navigation--primary .navigation--primary__level1 {
-    /* Prospective students has a lot of programmes to list */
-    /* News and events has only 3 items, so can’t fill 3 columns with
-           column flow */
-    /* Alumni, For business and Research have 4-5 items, so they
-           can fill 3 columns but only if there are only two rows */
-}
-
-.navigation--primary .navigation--primary__level1[data-title='Prospective Students'] .navigation__level2 {
-    grid-template-rows: repeat(6, auto);
-}
-
-.navigation--primary .navigation--primary__level1[data-title='Prospective Students'] .navigation__level2 > li:first-of-type {
-    grid-row: 1 / span 6;
-}
-
-.navigation--primary .navigation--primary__level1[data-title='News and events'] .navigation__level2 {
-    grid-auto-flow: row;
-    grid-template-rows: repeat(1, auto);
-}
-
-.navigation--primary .navigation--primary__level1[data-title='News and events'] .navigation__level2 > li:first-of-type {
-    grid-row: 1 / span 1;
-}
-
-.navigation--primary .navigation--primary__level1[data-title='Research'] .navigation__level2, .navigation--primary .navigation--primary__level1[data-title='For businesses'] .navigation__level2, .navigation--primary .navigation--primary__level1[data-title='Alumni and supporters'] .navigation__level2 {
-    grid-template-rows: repeat(2, auto);
-}
-
-.navigation--primary .navigation--primary__level1[data-title='Research'] .navigation__level2 > li:first-of-type, .navigation--primary .navigation--primary__level1[data-title='For businesses'] .navigation__level2 > li:first-of-type, .navigation--primary .navigation--primary__level1[data-title='Alumni and supporters'] .navigation__level2 > li:first-of-type {
-    grid-row: 1 / span 2;
 }
 
 .navigation--primary .navigation__level3 {
