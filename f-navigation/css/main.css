@@ -34381,6 +34381,11 @@ article figure figcaption a:active {
     border: none;
 }
 
+.navigation--secondary li a:before,
+.navigation--secondary li.navigation__current > span:before {
+    content: '> ';
+}
+
 .navigation--secondary li.navigation__current > span:focus {
     outline-color: #1e1e1e;
     outline-width: 0.125rem;
@@ -34519,7 +34524,7 @@ article figure figcaption a:active {
     border-bottom-color: #1e1e1e;
 }
 
-.navigation--secondary__heading {
+.navigation--secondary__header {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1rem;
@@ -34531,57 +34536,57 @@ article figure figcaption a:active {
     margin-top: 1rem;
 }
 
-.navigation--secondary__heading i,
-.navigation--secondary__heading em {
+.navigation--secondary__header i,
+.navigation--secondary__header em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
-.navigation--secondary__heading b,
-.navigation--secondary__heading strong {
+.navigation--secondary__header b,
+.navigation--secondary__header strong {
     font-weight: inherit;
 }
 
-.navigation--secondary__heading i,
-.navigation--secondary__heading em {
+.navigation--secondary__header i,
+.navigation--secondary__header em {
     font-style: italic;
 }
 
-.navigation--secondary__heading u {
+.navigation--secondary__header u {
     text-decoration: none;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .navigation--secondary__heading {
+    .navigation--secondary__header {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .navigation--secondary__heading {
+    .navigation--secondary__header {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .navigation--secondary__heading {
+    .navigation--secondary__header {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .navigation--secondary__heading {
+    .navigation--secondary__header {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .navigation--secondary__heading {
+    .navigation--secondary__header {
         letter-spacing: -0.017em;
     }
 }
 
-.navigation--secondary__heading b,
-.navigation--secondary__heading strong {
+.navigation--secondary__header b,
+.navigation--secondary__header strong {
     font-weight: 700;
 }
 
