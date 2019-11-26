@@ -20721,6 +20721,10 @@ main table td em {
     margin-top: 1.5rem;
 }
 
+.card--contact__key-info p {
+    margin: 0;
+}
+
 .card--contact__key-info .icon {
     color: #d61726;
     margin-right: 0.5rem;
@@ -34273,11 +34277,9 @@ blockquote footer cite {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    position: relative;
 }
 
 .slider-responsive .slider__slide {
-    display: none;
     margin-top: 1.75rem;
 }
 
@@ -34318,7 +34320,6 @@ blockquote footer cite {
 .slider-responsive .slider__controls__wrap {
     display: none;
     margin: 1rem 0 2rem 0;
-    flex-direction: row-reverse;
     flex-basis: 100%;
     max-width: none;
 }
@@ -34339,6 +34340,10 @@ blockquote footer cite {
     .slider-responsive .slider__controls__wrap[data-device='desktop'] {
         display: flex;
     }
+}
+
+.slider-responsive .slider__controls__wrap[data-hide='true'] {
+    display: none;
 }
 
 .slider-responsive .slider__controls__progress {
@@ -34382,7 +34387,6 @@ blockquote footer cite {
 .slider-responsive .slider__controls__buttons__prev:active {
     color: #ffffff;
     background: #d61726;
-    outline-offset: 0;
 }
 
 .slider-responsive .slider__controls__buttons__next:before,
@@ -36647,7 +36651,6 @@ article .link-copy {
 .banner--center .banner__overlay {
     grid-row-gap: 0;
     display: grid;
-    align-content: end;
 }
 
 @media (max-width: 432px) {
@@ -43431,26 +43434,13 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .featured-profiles-block {
-    color: #cbcbcb;
     grid-column: 1/-1;
     margin: 0;
-    padding: 1rem 0 2rem;
-}
-
-.featured-profiles-block a {
-    color: #cbcbcb;
-    background-image: none;
-    border-bottom: #cbcbcb solid 0.125rem;
-}
-
-.featured-profiles-block a:hover {
-    background-image: none;
-    border-bottom: #cbcbcb;
+    padding: 1rem 1rem 2rem;
 }
 
 .featured-profiles-block .linked-heading {
     grid-column: 2/-2;
-    border-bottom: 0;
 }
 
 .featured-profiles-block .linked-heading:focus {
@@ -43530,6 +43520,12 @@ a.modal__close:active, a.modal__close:focus {
 .featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile .featured-profiles__profile__label h3 a {
     color: #cbcbcb;
     border-bottom-color: #cbcbcb;
+    background-image: none;
+    border-bottom: #cbcbcb solid 0.125rem;
+}
+
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile .featured-profiles__profile__label h3 a:hover {
+    background-image: none;
 }
 
 .featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile .featured-profiles__profile__label p {

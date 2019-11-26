@@ -6827,7 +6827,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
  *
  * @module patterns/slider-responsive/slider-responsive
  * @author Mark Skinsley <mark.skinsley@city.ac.uk>
- * @copyright City, University of London
+ * @copyright City, University of London 2019
  */
 
 var className = 'slider-responsive';
@@ -6835,8 +6835,8 @@ var sliderChildren, sliderChildrenLength, updatedPosition;
 /**
  * Create elements containing classes, content and any other attributes
  *
- * @param {string} type - Type of element you like to create, e.g. "div", "button".
- * @param {array} attributes - Array of objects specifying which attributes to assign to the element i.e. {label : "class", val : "container"},{label: "content" , val:"I'm a div"}
+ * @param {string} type - Type of element to create, e.g. "div", "button".
+ * @param {array} attributes - Array of objects specifying which attributes to assign to the element i.e. {label : "class", val : "container"}
  */
 
 function createElement(type, attributes) {
@@ -6847,6 +6847,7 @@ function createElement(type, attributes) {
   return el;
 }
 /**
+ * The number of items to display on each slide.
  *
  * @param {Number} sliderIncrement - Amount to increase/decrease visible listing index number.
  * @param {Number} currentPosition - Index number of first item to be visible.
@@ -6855,16 +6856,21 @@ function createElement(type, attributes) {
  */
 
 
-function listingsDisplay(sliderIncrement, currentPosition, sliderDirection, slider) {
-  // Decide whether to show next, or previous, group of listings
+function itemsDisplay(sliderIncrement, currentPosition, sliderDirection, slider) {
+  // Show next, or previous, group of listings based on button's slider direction
   sliderDirection == 'forward' ? updatedPosition = parseInt(currentPosition + sliderIncrement) : updatedPosition = parseInt(currentPosition - sliderIncrement); // Prevent updated index position dropping below 1
 
-  if (updatedPosition < 1) {
-    updatedPosition = 1;
-  } // Loop through all slides, adding data-device attributes passed from controller.
-
-
+  updatedPosition < 1 ? updatedPosition = 1 : null;
   var items = slider.querySelectorAll('li');
+  /**
+   * Loop through all slides, adding data-device attributes to items based on their
+   * position within the list. The CSS will target what to show/hide at different breakpoints.
+   * You will end up with HTML similar to the following:
+   *
+   * <li data-device="mobile"></li>
+   * <li data-device="tablet"></li>
+   * <li data-device="desktop"></li>
+   */
 
   for (var i = 0; i < items.length; i++) {
     // Check item exists before adding data attribute to prevent errors
@@ -6875,6 +6881,15 @@ function listingsDisplay(sliderIncrement, currentPosition, sliderDirection, slid
   }
 }
 /**
+ * Determines controller's behaviour, i.e. what slide the user is currently at within the
+ * items list. Depending on the slider increment and the total number of items, the total
+ * slides number adjusts too.
+ *
+ * For example, by default a grouping with 5 items will show as '1/2' on desktop, as this
+ * viewport has an increment of 3 and there are effectively 2 slides at this point. However,
+ * if user is at position 2, this will update to read '2/3'.
+ *
+ * This function updates all 3 controllers concurrently, updating their values indepenently.
  *
  * @param {Number} sliderIncrement - Amount to increase/decrease visible listing index number.
  * @param {Number} currentPosition - Index number of first item to be visible.
@@ -6935,13 +6950,13 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
       sliderIncrement = control.getAttribute('data-increment');
       var currentGroup = updatedPosition / sliderIncrement;
       var progressIndicator = control.querySelector('.slide__controls__progress__active');
-      /**
-       * Check if there is a remainder when dividing the listing position by increment. If there is,
-       * increase progress indicator and total slides by 1.
-       */
-
       var totalSlides = parseInt(control.getAttribute('data-slides'));
       var totalSlidesDisplay = control.querySelector('.slide__controls__progress__total');
+      /**
+       * Check if there is a remainder when dividing the current listing position by it's controller's
+       * increment. If there is, increase progress indicator and total slides by 1.
+       */
+
       var firstInGroup = false;
 
       if ((updatedPosition - 1) % sliderIncrement == 0) {
@@ -6951,26 +6966,22 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
 
       if (!firstInGroup) {
         // Increase group position by 1 to account for extra slide
-        currentGroup += 1; // And not within final group of items
+        currentGroup += 1; // Not within final group of items and has a remainder -> add slide
 
-        if (sliderChildrenLength - updatedPosition >= sliderIncrement && updatedPosition < sliderChildrenLength) {
+        if (sliderChildrenLength - updatedPosition >= sliderIncrement && updatedPosition < sliderChildrenLength && (sliderChildrenLength - 1) % sliderIncrement !== 0) {
           totalSlides += 1;
-          totalSlidesDisplay.innerHTML = totalSlides;
-        } else if (sliderChildrenLength - updatedPosition < sliderIncrement && updatedPosition == sliderChildrenLength) {
+          totalSlidesDisplay.textContent = totalSlides; // Not within final group of items and has no remainder -> don't add slide
+        } else if (sliderChildrenLength - updatedPosition >= sliderIncrement && updatedPosition < sliderChildrenLength && (sliderChildrenLength - 1) % sliderIncrement == 0) {
+          totalSlidesDisplay.textContent = totalSlides; // Within final group and only one slide in group -> add slide
+        } else if (sliderChildrenLength - updatedPosition < sliderIncrement && totalSlides == 1) {
+          totalSlides += 1;
+          totalSlidesDisplay.textContent = totalSlides;
           currentGroup = totalSlides;
-        } else {
-          // Within final group of items, return progress indicator and and total slides counter to original values
-          currentGroup = totalSlides;
-        } // Review this final else if
+        } // First in group and ndex position is 1 -> don't add slide
 
-      } else if (!firstInGroup) {
-        currentGroup += 1;
-        totalSlidesDisplay.innerHTML = totalSlides;
-      } // Review: Maybe move to top of if statement
-
-
-      totalSlidesDisplay.innerHTML = totalSlides;
-      progressIndicator.innerHTML = Math.ceil(currentGroup) + 1;
+      } else if (sliderChildrenLength == sliderIncrement && updatedPosition == 1) {
+        totalSlidesDisplay.textContent = totalSlides;
+      }
       /**
        * If increment increase exceeds total slides' length, limit the current
        * position value to the total slides' length. This can happen when
@@ -6978,10 +6989,11 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
        * mobile.
        */
 
+
       if (currentGroup > totalSlides) {
         control.setAttribute('data-currentposition', totalSlides);
       } else {
-        progressIndicator.innerHTML = Math.ceil(currentGroup);
+        progressIndicator.textContent = Math.ceil(currentGroup);
       } // Disable control buttons if at start or end of items in slider.
 
 
@@ -7015,20 +7027,21 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
 /**
  * Turn a group of list items into a responsive slider where, depending on viewport, the number of visible items
  * at any one time, varies. This pattern is designed to accommodate up to three items per slide.
+ *
  * @param {HTMLElement} slider - The slider.
  */
 
 
 function launchResponsiveSlider(slider) {
-  // Only launch slider if there are more than one item.
-  if (slider.children.length < 2) {
+  // Slider items count
+  sliderChildren = _toConsumableArray(slider.children);
+  sliderChildrenLength = sliderChildren.length; // Disable responsive slider if less than 2 items exists
+
+  if (sliderChildrenLength < 2) {
     Object(_util__WEBPACK_IMPORTED_MODULE_10__["removeClass"])(slider, className, false);
     return;
-  } // Slider items count
+  }
 
-
-  sliderChildren = _toConsumableArray(slider.children);
-  sliderChildrenLength = sliderChildren.length;
   var _iteratorNormalCompletion3 = true;
   var _didIteratorError3 = false;
   var _iteratorError3 = undefined;
@@ -7137,7 +7150,7 @@ function launchResponsiveSlider(slider) {
     }, {
       label: 'class',
       val: 'fas fa-arrow-left slider__controls__buttons__prev swiper-slider-arrow arrow-left--btn-prev'
-    }])); // If slider children items is equal to slider increment, disable next button by default
+    }])); // If slider children items is equal to slider increment, disable next button by default.
 
     if (sliderChildrenLength == increment) {
       sliderButtons.appendChild(createElement('button', [{
@@ -7164,10 +7177,7 @@ function launchResponsiveSlider(slider) {
     slider.appendChild(sliderControlsWrap);
     sliderControls.appendChild(sliderButtons);
     slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled');
-  }
-  /**
-   * Build each type of controller (mobile, tablet, desktop) depending on
-   */
+  } // Build each type of controller (mobile, tablet, desktop)
 
 
   sliderChildrenLength > 1 ? buildControls('mobile', 1, 1, false) : null;
@@ -7198,11 +7208,8 @@ function launchResponsiveSlider(slider) {
         var sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
         var currentPosition = parseInt(parentWrapper.getAttribute('data-currentposition'));
         var sliderDirection = 'forward';
-        listingsDisplay(sliderIncrement, currentPosition, sliderDirection, slider);
-      });
-      /**
-       * Controller display. When user clicks, update each slider's progress indicator.
-       */
+        itemsDisplay(sliderIncrement, currentPosition, sliderDirection, slider);
+      }); // Controller display. When user clicks, update each slider's progress indicator.
 
       controlWrap.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
         var currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
@@ -7221,8 +7228,9 @@ function launchResponsiveSlider(slider) {
         var sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
         var currentPosition = parseInt(parentWrapper.getAttribute('data-currentposition'));
         var sliderDirection = 'back';
-        listingsDisplay(sliderIncrement, currentPosition, sliderDirection, slider);
-      });
+        itemsDisplay(sliderIncrement, currentPosition, sliderDirection, slider);
+      }); // Update all controllers' values accordingly
+
       controlWrap.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
         var currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
         var sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
