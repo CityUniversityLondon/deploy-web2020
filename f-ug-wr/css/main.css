@@ -50184,6 +50184,11 @@ button
     }
 }
 
+.course--undergraduate__academics__wrapper .featured-profiles-block .linked-heading__text,
+.course--undergraduate__academics__wrapper .featured-profiles-block .wrapper--featured-profiles__heading-intro {
+    color: #1e1e1e;
+}
+
 .course--undergraduate__related-courses__wrapper {
     background: linear-gradient(360deg, white 0%, #e5e5e5 100%);
 }
