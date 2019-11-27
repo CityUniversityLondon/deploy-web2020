@@ -36297,7 +36297,6 @@ article .link-copy {
         -ms-user-select: none;
             user-select: none;
     pointer-events: none;
-    opacity: 0.7;
 }
 
 @media (min-width: 901px) {
@@ -36313,6 +36312,10 @@ article .link-copy {
 
 .swiper-slide.active .swiper-slide__text {
     opacity: 1;
+}
+
+.js .swiper-slide {
+    opacity: 0.7;
 }
 
 .js .swiper-slide__text {
@@ -42896,6 +42899,10 @@ a.modal__close:active, a.modal__close:focus {
     .galleria-thumbnails-wrap {
         width: calc(100%);
     }
+}
+
+.no-js .galleria-thumbnails-wrap {
+    display: none;
 }
 
 .js .carousel-gallery-default {
