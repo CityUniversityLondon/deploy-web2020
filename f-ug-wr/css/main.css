@@ -50187,6 +50187,20 @@ button
 .course--undergraduate__academics__wrapper .featured-profiles-block .linked-heading__text,
 .course--undergraduate__academics__wrapper .featured-profiles-block .wrapper--featured-profiles__heading-intro {
     color: #1e1e1e;
+    border-bottom-color: #1e1e1e;
+}
+
+.course--undergraduate__academics__wrapper .featured-profiles-block .featured-profiles__profile {
+    background: #ffffff;
+}
+
+.course--undergraduate__academics__wrapper .featured-profiles-block .featured-profiles__profile .featured-profiles__profile__label h3 a {
+    color: #696969;
+    border-bottom: none;
+}
+
+.course--undergraduate__academics__wrapper .featured-profiles-block .featured-profiles__profile .featured-profiles__profile__label p {
+    color: #d61726;
 }
 
 .course--undergraduate__related-courses__wrapper {
