@@ -50232,6 +50232,10 @@ button
     z-index: 0;
 }
 
+.course--undergraduate__related-courses .card--related-course a:hover::after {
+    background-color: #ffffff;
+}
+
 .course--undergraduate__related-courses .related-content {
     display: grid;
     margin-top: 1rem;
