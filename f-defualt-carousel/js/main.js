@@ -4596,10 +4596,6 @@ function carouselGallery(elem) {
   thumbnails.forEach(function (e, i) {
     if (i === 0) {
       e.classList.add('active');
-      e.parentElement.children[3].classList.add('fade');
-      e.parentElement.children.forEach(function (e, i) {
-        i > 3 ? e.classList.add('blurSlider') : null;
-      });
     }
 
     e.addEventListener('click', function (t) {
@@ -5174,10 +5170,7 @@ function onClickThunbnail(thumbnail, thumbindex) {
 
 function activeThumbnail(thumbindex, e) {
   var thumbnail = checkEventType(e),
-      slider = thumbindex + 1,
-      listThumbnail = thumbnail.querySelector('.galleria-thumbnails-list').getElementsByTagName('li'),
-      lengthThumbnail = listThumbnail.length,
-      lastTwoSlider = lengthThumbnail - 2;
+      listThumbnail = thumbnail.querySelector('.galleria-thumbnails-list').getElementsByTagName('li');
   var _iteratorNormalCompletion = true;
   var _didIteratorError = false;
   var _iteratorError = undefined;
@@ -5185,8 +5178,14 @@ function activeThumbnail(thumbindex, e) {
   try {
     for (var _iterator = listThumbnail[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var li = _step.value;
-      li.classList.remove('active', 'fade', 'blurSlider');
+      li.classList.remove('active');
     }
+    /*slider === 1
+        ? listThumbnail[thumbindex + 3].classList.add('fade')
+        : slider > lastTwoSlider
+        ? null
+        : listThumbnail[thumbindex + 2].classList.add('fade');*/
+
   } catch (err) {
     _didIteratorError = true;
     _iteratorError = err;
@@ -5201,28 +5200,6 @@ function activeThumbnail(thumbindex, e) {
       }
     }
   }
-
-  if (slider === 1) {
-    listThumbnail[thumbindex + 3].classList.add('fade');
-    listThumbnail.forEach(function (e, i) {
-      if (i > thumbindex + 3) {
-        e.classList.add('blurSlider');
-      }
-    });
-  } else if (!(slider > lastTwoSlider)) {
-    listThumbnail[thumbindex + 2].classList.add('fade');
-    listThumbnail.forEach(function (e, i) {
-      if (i > thumbindex + 2) {
-        e.classList.add('blurSlider');
-      }
-    });
-  }
-  /*slider === 1
-      ? listThumbnail[thumbindex + 3].classList.add('fade')
-      : slider > lastTwoSlider
-      ? null
-      : listThumbnail[thumbindex + 2].classList.add('fade');*/
-
 
   listThumbnail[thumbindex].classList.add('active');
   translateThumbnails(thumbindex, e);
