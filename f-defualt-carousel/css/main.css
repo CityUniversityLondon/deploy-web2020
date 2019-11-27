@@ -37212,17 +37212,17 @@ article .link-copy {
     }
 }
 
-.swiper-slide.active {
+.js .swiper-slide {
+    opacity: 0.7;
+}
+
+.js .swiper-slide.active {
     opacity: 1;
     transition: opacity 0.6s;
 }
 
-.swiper-slide.active .swiper-slide__text {
+.js .swiper-slide.active .swiper-slide__text {
     opacity: 1;
-}
-
-.js .swiper-slide {
-    opacity: 0.7;
 }
 
 .js .swiper-slide__text {
