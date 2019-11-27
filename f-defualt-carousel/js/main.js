@@ -4982,7 +4982,7 @@ function previous(e) {
  * Return touch points of either touch or mouse
  *
  * @param {event} user event - event on silder from either mouse or touch events
- * @returns {event or object} - either return the event back or the object of touch events
+ * @returns {event | object} - either return the event back or the object of touch events
  */
 
 
