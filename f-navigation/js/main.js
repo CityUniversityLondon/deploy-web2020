@@ -840,7 +840,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_25__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_15__["default"]]);
 
 /***/ }),
 
@@ -7119,101 +7119,10 @@ function initSlider(slider) {
       } else {
         // only displays first slide and hides rest
         sliderChild[1].classList.add('slider__slide');
-        /* generates controls */
-
-        var sliderControlsWrap = createElement('div', [{
-          label: 'class',
-          val: 'slider__controls__wrap'
-        }]);
-        var sliderControls = createElement('div', [{
-          label: 'class',
-          val: 'slider__controls'
-        }]);
-        var sliderProgress = createElement('div', [{
-          label: 'class',
-          val: 'slider__controls__progress'
-        }]);
-        var sliderButtons = createElement('div', [{
-          label: 'class',
-          val: 'slider__controls__buttons'
-        }]); // generates progress
-
-        sliderProgress.appendChild(createElement('span', [{
-          label: 'content',
-          val: '1'
-        }, {
-          label: 'class',
-          val: 'slide__controls__progress__active'
-        }]));
-        sliderProgress.appendChild(createElement('span', [{
-          label: 'content',
-          val: ' /'
-        }, {
-          label: 'class',
-          val: 'slide__controls__progress__separator'
-        }]));
-        sliderProgress.appendChild(createElement('span', [{
-          label: 'content',
-          val: sliderChildrenLength
-        }, {
-          label: 'class',
-          val: 'slide__controls__progress__total'
-        }]));
-        sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
-        slider.appendChild(sliderControlsWrap); // generates buttons
-
-        sliderButtons.appendChild(createElement('button', [{
-          label: 'aria-label',
-          val: 'Previous item'
-        }, {
-          label: 'disabled',
-          val: 'true'
-        }, {
-          label: 'class',
-          val: 'fas'
-        }, {
-          label: 'class',
-          val: 'fa-arrow-left'
-        }, {
-          label: 'class',
-          val: 'slider__controls__buttons__prev'
-        }, {
-          label: 'class',
-          val: 'swiper-slider-arrow'
-        }, {
-          label: 'class',
-          val: 'arrow-left--btn-prev'
-        }]));
-        sliderButtons.appendChild(createElement('button', [{
-          label: 'aria-label',
-          val: 'Next item'
-        }, {
-          label: 'class',
-          val: 'fas'
-        }, {
-          label: 'class',
-          val: 'fa-arrow-right'
-        }, {
-          label: 'class',
-          val: 'slider__controls__buttons__next'
-        }, {
-          label: 'class',
-          val: 'swiper-slider-arrow'
-        }, {
-          label: 'class',
-          val: 'arrow-right--btn-next'
-        }]));
-        sliderControls.appendChild(sliderButtons);
-        slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
-
-        slider.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
-          handleSlideChange(-1, slider);
-        });
-        slider.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
-          handleSlideChange(1, slider);
-        });
       }
     }
+    /* generates controls */
+
   } catch (err) {
     _didIteratorError = true;
     _iteratorError = err;
@@ -7228,6 +7137,74 @@ function initSlider(slider) {
       }
     }
   }
+
+  var sliderControlsWrap = createElement('div', [{
+    label: 'class',
+    val: 'slider__controls__wrap'
+  }]);
+  var sliderControls = createElement('div', [{
+    label: 'class',
+    val: 'slider__controls'
+  }]);
+  var sliderProgress = createElement('div', [{
+    label: 'class',
+    val: 'slider__controls__progress'
+  }]);
+  var sliderButtons = createElement('div', [{
+    label: 'class',
+    val: 'slider__controls__buttons'
+  }]); // generates progress
+
+  sliderProgress.appendChild(createElement('span', [{
+    label: 'content',
+    val: '1'
+  }, {
+    label: 'class',
+    val: 'slide__controls__progress__active'
+  }]));
+  sliderProgress.appendChild(createElement('span', [{
+    label: 'content',
+    val: ' /'
+  }, {
+    label: 'class',
+    val: 'slide__controls__progress__separator'
+  }]));
+  sliderProgress.appendChild(createElement('span', [{
+    label: 'content',
+    val: sliderChildrenLength
+  }, {
+    label: 'class',
+    val: 'slide__controls__progress__total'
+  }]));
+  sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
+  slider.appendChild(sliderControlsWrap); // generates buttons
+
+  sliderButtons.appendChild(createElement('button', [{
+    label: 'aria-label',
+    val: 'Previous item'
+  }, {
+    label: 'disabled',
+    val: 'true'
+  }, {
+    label: 'class',
+    val: 'fas fa-arrow-left slider__controls__buttons__prev swiper-slider-arrow arrow-left--btn-prev'
+  }]));
+  sliderButtons.appendChild(createElement('button', [{
+    label: 'aria-label',
+    val: 'Next item'
+  }, {
+    label: 'class',
+    val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-right--btn-next'
+  }]));
+  sliderControls.appendChild(sliderButtons);
+  slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
+
+  slider.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
+    handleSlideChange(-1, slider);
+  });
+  slider.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
+    handleSlideChange(1, slider);
+  });
 }
 /**
  * A function to create elements containing classes, content and any other attributes
@@ -7240,7 +7217,7 @@ function initSlider(slider) {
 function createElement(type, attributes) {
   var el = document.createElement(type);
   attributes.map(function (att) {
-    att.label === 'class' ? el.classList.add(att.val) : att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : el.setAttribute(att.label, att.val);
+    att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : el.setAttribute(att.label, att.val);
   });
   return el;
 }
