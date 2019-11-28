@@ -50130,7 +50130,7 @@ button
 
 .parallax img {
     position: fixed;
-    z-index: -1;
+    z-index: 'below';
     top: 0;
     height: 100%;
     width: 100%;
@@ -50229,7 +50229,7 @@ button
 
 .course--undergraduate__related-courses .card--related-course {
     position: relative;
-    z-index: 0;
+    z-index: 'default';
 }
 
 .course--undergraduate__related-courses .card--related-course a:hover::after {
