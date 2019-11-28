@@ -34212,6 +34212,9 @@ article figure figcaption a:active {
     font-weight: 700;
     line-height: 1.25;
     margin-top: 1rem;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -34272,6 +34275,36 @@ article figure figcaption a:active {
 .navigation--primary .navigation__level1 b,
 .navigation--primary .navigation__level1 strong {
     font-weight: 700;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .navigation--primary .navigation__level1 {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1919px) {
+    .navigation--primary .navigation__level1 {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .navigation--primary .navigation__level1 {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .navigation--primary .navigation__level1 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .navigation--primary .navigation__level1 {
+        letter-spacing: -0.017em;
+    }
 }
 
 .navigation--primary .navigation__level1 > li {
