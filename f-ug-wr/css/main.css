@@ -1099,13 +1099,13 @@
     Used where card has two divs, one most likely
     being a thumbnail.
 **/
-/* 
+/*
     USAGE:
 
     $pseudo: both / before / after
     $background-color: any hex color
     $skew: a degree value
-    
+
     Background color must match background color of element mixin is applied to
 */
 /* ghost animation - underline animation used on tab buttons */
@@ -25033,7 +25033,7 @@ _:-ms-lang(x),
         left: 0;
         position: fixed;
         width: 100vw;
-        z-index: 1;
+        z-index: 'inpage';
     }
 }
 
@@ -31070,7 +31070,7 @@ article figure figcaption a:active {
     right: 0;
     top: 0;
     width: 100vw;
-    z-index: 3;
+    z-index: 5;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
@@ -33221,7 +33221,7 @@ article figure figcaption a:active {
 .js .menu {
     grid-area: menu;
     text-align: right;
-    z-index: 2;
+    z-index: 4;
 }
 
 .js .menu .menu__button {
@@ -33656,7 +33656,7 @@ article figure figcaption a:active {
     position: absolute;
     top: 5.5rem;
     width: 100%;
-    z-index: 2;
+    z-index: 4;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -33862,7 +33862,7 @@ article figure figcaption a:active {
     height: 100%;
     position: absolute;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
 }
 
 .js .menu__veil[data-on='true'] {
@@ -34895,26 +34895,26 @@ blockquote footer cite {
         font-weight: 700;
     }
     .js .tabs .tabs__links li a span::before {
-        transform: translateX(105%);
         animation: slide-right-out 0.2s ease 0s both normal;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        content: '';
-        opacity: 0;
         background-color: #d8d8d8;
-        width: 100%;
+        bottom: 0;
+        content: '';
         height: 0.5rem;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        transform: translateX(105%);
         transition: opacity 0.2s ease 0.2s;
+        width: 100%;
         z-index: 0;
     }
 }
 
 @media screen and (hover: hover) {
     .js .tabs .tabs__links li a[aria-selected='false']:hover span::before {
-        transform: translateX(-105%);
         animation: slide-left-in 0.2s ease 0s both normal;
         opacity: 1;
+        transform: translateX(-105%);
         transition: none;
     }
 }
@@ -35432,20 +35432,20 @@ button
 }
 
 .back-to-top-stick {
+    bottom: 0.75rem;
+    opacity: 0.75;
+    overflow: hidden;
     position: fixed;
     right: 1.25rem;
-    bottom: 0.75rem;
-    z-index: 100;
     text-decoration: none;
     width: 3rem;
-    opacity: 0.75 !important;
-    overflow: hidden;
+    z-index: 2;
 }
 
 @media (max-width: 432px) {
     .back-to-top-stick {
-        right: 0.25rem;
         bottom: 0.25rem;
+        right: 0.25rem;
     }
 }
 
@@ -35682,16 +35682,16 @@ body.modal--in.no-scroll .modal__background {
 
 .modal__popup {
     align-items: center;
+    display: flex;
     height: 100%;
     justify-content: center;
-    top: 0;
     left: 0;
-    position: fixed;
-    width: 100%;
-    z-index: 4;
     opacity: 1;
     pointer-events: auto;
-    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
 }
 
 .modal__popup[data-hidden='true'] {
@@ -37500,7 +37500,7 @@ article .link-copy {
     right: 1rem;
     display: flex;
     position: absolute;
-    z-index: 999;
+    z-index: 1;
 }
 
 @media (min-width: 769px) {
@@ -39838,7 +39838,7 @@ article .link-copy {
     right: 0;
     top: 0;
     width: 100vw;
-    z-index: 3;
+    z-index: 5;
 }
 
 .finder__mobilefilters[data-open='true'] .finder__mobilefilters__filters {
@@ -42344,16 +42344,16 @@ body.modal--in.no-scroll .modal__background {
 
 .modal__popup {
     align-items: center;
+    display: flex;
     height: 100%;
     justify-content: center;
-    top: 0;
     left: 0;
-    position: fixed;
-    width: 100%;
-    z-index: 4;
     opacity: 1;
     pointer-events: auto;
-    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
 }
 
 .modal__popup[data-hidden='true'] {
@@ -42734,8 +42734,8 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .show-more__button__container {
-    text-align: center;
     margin-top: 2.5rem;
+    text-align: center;
 }
 
 .show-more__text {
@@ -42746,8 +42746,8 @@ a.modal__close:active, a.modal__close:focus {
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
-    transition: max-height 0.5s;
     overflow: hidden;
+    transition: max-height 0.5s;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
@@ -42796,14 +42796,14 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .show-more__text[data-hidden='true']:after {
-    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 90%);
+    bottom: 0;
     content: '';
     height: 90%;
-    width: 100%;
-    bottom: 0;
     left: 0;
+    position: absolute;
+    width: 100%;
     z-index: 1;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 90%);
 }
 
 .show-more__button {
@@ -44452,16 +44452,16 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .content-hub__block-two .grey-rectangle--careers-section {
-    transform: rotate(60deg);
     background: #e5e5e5;
-    top: -18.5rem;
-    position: relative;
-    z-index: -1;
-    margin-top: -30.875rem;
-    margin-bottom: -51.875rem;
-    left: 9rem;
-    width: 60rem;
     height: 64rem;
+    left: 9rem;
+    margin-bottom: -51.875rem;
+    margin-top: -30.875rem;
+    position: relative;
+    top: -18.5rem;
+    transform: rotate(60deg);
+    width: 60rem;
+    z-index: -1;
 }
 
 @media (max-width: 1440px) {
@@ -50129,12 +50129,12 @@ button
 }
 
 .parallax img {
-    position: fixed;
-    z-index: 'below';
-    top: 0;
     height: 100%;
-    width: 100%;
     object-fit: cover;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
 }
 
 .course--undergraduate__key-information__accordion {
@@ -50229,7 +50229,7 @@ button
 
 .course--undergraduate__related-courses .card--related-course {
     position: relative;
-    z-index: 'default';
+    z-index: 0;
 }
 
 .course--undergraduate__related-courses .card--related-course a:hover::after {
