@@ -32239,7 +32239,7 @@ article figure figcaption a:active {
     grid-column-gap: 1.5rem;
 }
 
-@media (max-width: 899px) {
+@media (max-width: 1279px) {
     .key-information--research__main__dates thead,
     .key-information--research__main__dates tbody {
         grid-template-columns: repeat(2, 1fr);
