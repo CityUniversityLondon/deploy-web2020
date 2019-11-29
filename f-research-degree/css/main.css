@@ -19970,7 +19970,6 @@ main table td em {
         border-bottom: 0;
     }
     .js .accordion > .accordion__heading[data-open='true']:focus, .js .accordion > .accordion__heading[data-open='true']:active {
-        border: 0;
         outline: 0;
     }
     .js .accordion > .accordion__heading[data-open='true'] button {
@@ -23882,6 +23881,7 @@ main table td em {
 .card--testimonial .card--testimonial__text .card--testimonial__quote {
     margin-top: 2rem;
     position: relative;
+    padding-left: 0.75rem;
 }
 
 .card--testimonial .card--testimonial__text .card--testimonial__quote p {
@@ -24049,7 +24049,7 @@ main table td em {
 
 .card--testimonial .card--testimonial__text .card--testimonial__quote:before {
     content: '“';
-    left: -0.75rem;
+    left: 0;
     position: absolute;
     top: -0.5rem;
 }
@@ -47681,8 +47681,20 @@ button
     margin-top: 4rem;
 }
 
-.wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider {
-    grid-column: 1/-1;
+.wrapper--research-degree__testimonials .research-degree__testimonials__content {
+    display: block;
+}
+
+@media (max-width: 432px) {
+    .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider {
+        display: block;
+    }
+}
+
+@media (min-width: 433px) {
+    .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider {
+        grid-column: 1/-1;
+    }
 }
 
 .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider .slider__active-slide {
