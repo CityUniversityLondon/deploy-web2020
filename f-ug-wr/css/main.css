@@ -28134,6 +28134,7 @@ _:-ms-lang(x),
 .featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile .featured-profiles__profile__label h3 a {
     color: #cbcbcb;
     border-bottom-color: #cbcbcb;
+    font-weight: 500;
 }
 
 .featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile .featured-profiles__profile__label p {
@@ -50197,40 +50198,6 @@ button
 .course--undergraduate__academics__wrapper .featured-profiles-block .featured-profiles__profile .featured-profiles__profile__label h3 a {
     color: #696969;
     border-bottom: none;
-    font-size: 1.125rem;
-    line-height: 1.25;
-    letter-spacing: -0.008em;
-    font-weight: 500;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .course--undergraduate__academics__wrapper .featured-profiles-block .featured-profiles__profile .featured-profiles__profile__label h3 a {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .course--undergraduate__academics__wrapper .featured-profiles-block .featured-profiles__profile .featured-profiles__profile__label h3 a {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .course--undergraduate__academics__wrapper .featured-profiles-block .featured-profiles__profile .featured-profiles__profile__label h3 a {
-        letter-spacing: -0.014em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .course--undergraduate__academics__wrapper .featured-profiles-block .featured-profiles__profile .featured-profiles__profile__label h3 a {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .course--undergraduate__academics__wrapper .featured-profiles-block .featured-profiles__profile .featured-profiles__profile__label h3 a {
-        letter-spacing: -0.017em;
-    }
 }
 
 .course--undergraduate__academics__wrapper .featured-profiles-block .featured-profiles__profile .featured-profiles__profile__label p {
