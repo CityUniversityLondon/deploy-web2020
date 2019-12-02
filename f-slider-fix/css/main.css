@@ -49227,8 +49227,8 @@ button
     font-weight: 700;
 }
 
-.lifelong-learning .slide__controls__progress__active {
-    color: #3e1031;
+.lifelong-learning .lifelong-learning__testimonials .slider {
+    display: grid;
 }
 
 .lifelong-learning .slide__controls__progress__active {
