@@ -32409,7 +32409,7 @@ article figure figcaption a:active {
     display: block;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1280px) {
     .global-header .header-logo__responsive {
         display: none;
     }
@@ -32419,7 +32419,7 @@ article figure figcaption a:active {
     display: none;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1280px) {
     .global-header .header-logo__full {
         display: block;
     }
