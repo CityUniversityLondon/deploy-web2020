@@ -32405,6 +32405,26 @@ article figure figcaption a:active {
     outline-color: #0c0c0e;
 }
 
+.global-header .header-logo__responsive {
+    display: block;
+}
+
+@media (min-width: 1025px) {
+    .global-header .header-logo__responsive {
+        display: none;
+    }
+}
+
+.global-header .header-logo__full {
+    display: none;
+}
+
+@media (min-width: 1025px) {
+    .global-header .header-logo__full {
+        display: block;
+    }
+}
+
 .key-information--lifelong-learning .lifelong-learning__start-date__cta {
     max-width: unset;
 }
