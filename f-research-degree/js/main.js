@@ -6839,7 +6839,7 @@ var sliderChildren, sliderChildrenLength, updatedPosition;
  * @param {array} attributes - Array of objects specifying which attributes to assign to the element i.e. {label : "class", val : "container"}
  */
 
-function createElement(type, attributes) {
+function createHTMLElement(type, attributes) {
   var el = document.createElement(type);
   attributes.map(function (att) {
     att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : el.setAttribute(att.label, att.val);
@@ -7086,7 +7086,7 @@ function launchResponsiveSlider(slider) {
 
   function buildControls(deviceType, increment, currentPosition) {
     var slides = Math.ceil(sliderChildrenLength / increment);
-    var sliderControlsWrap = createElement('div', [{
+    var sliderControlsWrap = createHTMLElement('div', [{
       label: 'class',
       val: 'slider__controls__wrap'
     }, {
@@ -7105,27 +7105,27 @@ function launchResponsiveSlider(slider) {
       label: 'data-slides',
       val: slides
     }]);
-    var sliderControls = createElement('div', [{
+    var sliderControls = createHTMLElement('div', [{
       label: 'class',
       val: 'slider__controls'
     }]);
-    var sliderProgress = createElement('div', [{
+    var sliderProgress = createHTMLElement('div', [{
       label: 'class',
       val: 'slider__controls__progress'
     }]);
-    var sliderButtons = createElement('div', [{
+    var sliderButtons = createHTMLElement('div', [{
       label: 'class',
       val: 'slider__controls__buttons'
     }]); // Slider progress
 
-    sliderProgress.appendChild(createElement('span', [{
+    sliderProgress.appendChild(createHTMLElement('span', [{
       label: 'content',
       val: '1'
     }, {
       label: 'class',
       val: 'slide__controls__progress__active'
     }]));
-    sliderProgress.appendChild(createElement('span', [{
+    sliderProgress.appendChild(createHTMLElement('span', [{
       label: 'content',
       val: '/'
     }, {
@@ -7133,7 +7133,7 @@ function launchResponsiveSlider(slider) {
       val: 'slide__controls__progress__separator'
     }])); // Total slides display
 
-    sliderProgress.appendChild(createElement('span', [{
+    sliderProgress.appendChild(createHTMLElement('span', [{
       label: 'content',
       val: Math.ceil(sliderChildrenLength / increment)
     }, {
@@ -7141,7 +7141,7 @@ function launchResponsiveSlider(slider) {
       val: 'slide__controls__progress__total'
     }])); // Next / previous buttons
 
-    sliderButtons.appendChild(createElement('button', [{
+    sliderButtons.appendChild(createHTMLElement('button', [{
       label: 'aria-label',
       val: 'Previous item'
     }, {
@@ -7153,7 +7153,7 @@ function launchResponsiveSlider(slider) {
     }])); // If slider children items is equal to slider increment, disable next button by default.
 
     if (sliderChildrenLength == increment) {
-      sliderButtons.appendChild(createElement('button', [{
+      sliderButtons.appendChild(createHTMLElement('button', [{
         label: 'aria-label',
         val: 'Next item'
       }, {
@@ -7164,7 +7164,7 @@ function launchResponsiveSlider(slider) {
         val: true
       }]));
     } else {
-      sliderButtons.appendChild(createElement('button', [{
+      sliderButtons.appendChild(createHTMLElement('button', [{
         label: 'aria-label',
         val: 'Next item'
       }, {

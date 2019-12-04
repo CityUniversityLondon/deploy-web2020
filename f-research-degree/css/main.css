@@ -43495,7 +43495,7 @@ a.modal__close:active, a.modal__close:focus {
     color: #1e1e1e;
 }
 
-.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:hover .featured-profiles__profile__label .fas.fa-long-arrow-right, .featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:focus-within .featured-profiles__profile__label .fas.fa-long-arrow-right {
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
     visibility: visible;
     color: #d61726;
 }
@@ -43532,7 +43532,7 @@ a.modal__close:active, a.modal__close:focus {
     color: #ffffff;
 }
 
-.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile .featured-profiles__profile__label .fas.fa-long-arrow-right {
+.featured-profiles-block .wrapper--featured-profiles__profile .featured-profiles__profile .featured-profiles__profile__label .fa-long-arrow-right {
     visibility: hidden;
     font-size: 1.602rem;
     font-weight: 300;
