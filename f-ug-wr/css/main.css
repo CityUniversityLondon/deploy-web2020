@@ -24862,6 +24862,156 @@ _:-ms-lang(x),
     padding-bottom: 1rem;
 }
 
+.chart-row {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+    margin-top: 5.5rem;
+    margin-bottom: 5.5rem;
+    border-top: 1px dashed grey;
+    border-bottom: 1px dashed grey;
+}
+
+.chart-row h2 {
+    text-align: center;
+}
+
+.chart-row__items {
+    display: flex;
+}
+
+.chart-row__items__chart {
+    margin-bottom: 5.5rem;
+    max-width: 50%;
+}
+
+.chart-row__items__chart__row__title {
+    text-align: center;
+    text-transform: uppercase;
+    color: grey;
+    margin-bottom: 2.5rem;
+}
+
+.chart-row__items__chart__row__title,
+.chart-row__items__chart__row__graph {
+    width: 50%;
+}
+
+.chart-row__items__chart path:nth-child(1) {
+    stroke: #a4cacc;
+}
+
+.chart-row__items__chart .chart-row__items__chart__row__legend__item:nth-child(1) .fa.fa-circle {
+    color: #a4cacc;
+}
+
+.chart-row__items__chart path:nth-child(2) {
+    stroke: #724289;
+}
+
+.chart-row__items__chart .chart-row__items__chart__row__legend__item:nth-child(2) .fa.fa-circle {
+    color: #724289;
+}
+
+.chart-row__items__chart path:nth-child(3) {
+    stroke: #c7637d;
+}
+
+.chart-row__items__chart .chart-row__items__chart__row__legend__item:nth-child(3) .fa.fa-circle {
+    color: #c7637d;
+}
+
+.chart-row__items__chart path:nth-child(4) {
+    stroke: #63c781;
+}
+
+.chart-row__items__chart .chart-row__items__chart__row__legend__item:nth-child(4) .fa.fa-circle {
+    color: #63c781;
+}
+
+.chart-row__items__chart path:nth-child(5) {
+    stroke: #c7b763;
+}
+
+.chart-row__items__chart .chart-row__items__chart__row__legend__item:nth-child(5) .fa.fa-circle {
+    color: #c7b763;
+}
+
+.chart-row__items__chart path:nth-child(1) {
+    stroke: #a4cacc;
+}
+
+.chart-row__items__chart .chart-row__items__chart__row__legend__item:nth-child(1) .fa.fa-circle {
+    color: #a4cacc;
+}
+
+.chart-row__items__chart path:nth-child(2) {
+    stroke: #724289;
+}
+
+.chart-row__items__chart .chart-row__items__chart__row__legend__item:nth-child(2) .fa.fa-circle {
+    color: #724289;
+}
+
+.chart-row__items__chart path:nth-child(3) {
+    stroke: #c7637d;
+}
+
+.chart-row__items__chart .chart-row__items__chart__row__legend__item:nth-child(3) .fa.fa-circle {
+    color: #c7637d;
+}
+
+.chart-row__items__chart path:nth-child(4) {
+    stroke: #63c781;
+}
+
+.chart-row__items__chart .chart-row__items__chart__row__legend__item:nth-child(4) .fa.fa-circle {
+    color: #63c781;
+}
+
+.chart-row__items__chart path:nth-child(5) {
+    stroke: #c7b763;
+}
+
+.chart-row__items__chart .chart-row__items__chart__row__legend__item:nth-child(5) .fa.fa-circle {
+    color: #c7b763;
+}
+
+.chart-row__items__chart__row__legend__item {
+    margin-bottom: 1.25rem;
+}
+
+.chart-row__items__chart__row__legend__item:not(:last-child) {
+    padding-bottom: 1.25rem;
+    position: relative;
+}
+
+.chart-row__items__chart__row__legend__item:not(:last-child):after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    background: grey;
+    height: 1px;
+    width: 50%;
+}
+
+.chart-row__items__chart__value {
+    transition: stroke-dashoffset 1.5s;
+}
+
+.chart-row__items__chart__value.animate--svg-path--jsinit {
+    display: none;
+}
+
+.chart-row__items__chart__value.animate--svg-path--jsrun {
+    display: block;
+}
+
+.chart-row__items__chart__row__legend__item__label {
+    margin-left: 1rem;
+    color: grey;
+}
+
 .js .cookie-notice {
     display: none;
 }
@@ -50262,6 +50412,24 @@ button
     margin-right: auto;
     margin-top: 0.5rem;
     width: 6rem;
+}
+
+.course--undergraduate__charts {
+    max-width: 80rem;
+}
+
+@media (min-width: 1441px) {
+    .course--undergraduate__charts {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .course--undergraduate__charts {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 .course--undergraduate__pathway-image-cards {
