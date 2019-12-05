@@ -24995,6 +24995,11 @@ _:-ms-lang(x),
     width: 50%;
 }
 
+.chart-row__items__chart__row__legend__item__label {
+    margin-left: 1rem;
+    color: grey;
+}
+
 .chart-row__items__chart__value {
     transition: stroke-dashoffset 1.5s;
 }
@@ -25005,11 +25010,6 @@ _:-ms-lang(x),
 
 .chart-row__items__chart__value.animate--svg-path--jsrun {
     display: block;
-}
-
-.chart-row__items__chart__row__legend__item__label {
-    margin-left: 1rem;
-    color: grey;
 }
 
 .js .cookie-notice {
