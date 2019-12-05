@@ -24888,7 +24888,6 @@ _:-ms-lang(x),
 }
 
 .chart-row__items__chart__row__title {
-    text-align: center;
     text-transform: uppercase;
     color: grey;
     margin-bottom: 2.5rem;
@@ -24981,6 +24980,7 @@ _:-ms-lang(x),
 
 .chart-row__items__chart__row__legend__item {
     margin-bottom: 1.25rem;
+    display: flex;
 }
 
 .chart-row__items__chart__row__legend__item:not(:last-child) {
@@ -24998,9 +24998,14 @@ _:-ms-lang(x),
     width: 50%;
 }
 
-.chart-row__items__chart__row__legend__item__label {
+.chart-row__items__chart__row__legend__item__label__wrap {
+    display: inline-block;
     margin-left: 1rem;
+}
+
+.chart-row__items__chart__row__legend__item__label {
     color: grey;
+    display: inline-block;
 }
 
 .chart-row__items__chart__value {
