@@ -24984,18 +24984,7 @@ _:-ms-lang(x),
 }
 
 .chart-row__items__chart__row__legend__item:not(:last-child) {
-    padding-bottom: 1.25rem;
     position: relative;
-}
-
-.chart-row__items__chart__row__legend__item:not(:last-child):after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 1rem;
-    background: grey;
-    height: 1px;
-    width: 50%;
 }
 
 .chart-row__items__chart__row__legend__item__label__wrap {
