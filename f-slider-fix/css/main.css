@@ -34549,7 +34549,6 @@ blockquote footer cite {
 @media (max-width: 900px) {
     .slider__controls__wrap {
         grid-column: 2 / 12;
-        margin-right: 1rem;
     }
 }
 
