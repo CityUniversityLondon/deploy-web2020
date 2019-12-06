@@ -47313,182 +47313,53 @@ button
     padding-bottom: 2rem;
 }
 
-.lifelong-learning .key-information--lifelong-learning:not(.tabs) {
-    grid-row-gap: 0;
-    display: grid;
+.lifelong-learning .key-information--lifelong-learning {
     max-width: 80rem;
-    grid-template-rows: repeat(2, auto);
-}
-
-@media (max-width: 432px) {
-    .lifelong-learning .key-information--lifelong-learning:not(.tabs) {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .lifelong-learning .key-information--lifelong-learning:not(.tabs) {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .lifelong-learning .key-information--lifelong-learning:not(.tabs) {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
+    padding-top: 1rem;
 }
 
 @media (min-width: 1441px) {
-    .lifelong-learning .key-information--lifelong-learning:not(.tabs) {
+    .lifelong-learning .key-information--lifelong-learning {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (max-width: 1440px) {
-    .lifelong-learning .key-information--lifelong-learning:not(.tabs) {
+    .lifelong-learning .key-information--lifelong-learning {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-@media (max-width: 432px) {
-    .lifelong-learning .key-information--lifelong-learning:not(.tabs) {
-        grid-template-areas: 'heading heading heading heading heading heading' 'dates dates dates dates dates dates' 'controls controls controls controls controls controls';
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .lifelong-learning .key-information--lifelong-learning:not(.tabs) {
-        grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading' 'dates dates dates dates dates dates dates dates dates dates dates dates' 'controls controls controls controls controls controls controls controls controls controls controls controls';
-    }
-}
-
-@media (min-width: 901px) {
-    .lifelong-learning .key-information--lifelong-learning:not(.tabs) {
-        grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading' 'dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates' 'controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls';
-    }
-}
-
-.lifelong-learning .key-information--lifelong-learning:not(.tabs) > h2 {
+.lifelong-learning .key-information--lifelong-learning > h2 {
     color: #5d184a;
-    grid-area: heading;
 }
 
-.lifelong-learning .key-information--lifelong-learning:not(.tabs) .key-information--lifelong-learning__icon {
+.lifelong-learning .key-information--lifelong-learning .key-information--lifelong-learning__icon {
     margin-right: 1rem;
 }
 
-.lifelong-learning .key-information--lifelong-learning:not(.tabs) > .key-information--lifelong-learning__dates,
-.lifelong-learning .key-information--lifelong-learning:not(.tabs) > .pagination__wrapper {
-    grid-area: dates;
+.lifelong-learning .key-information--lifelong-learning > .key-information--lifelong-learning__dates {
     max-width: unset;
 }
 
-.lifelong-learning .key-information--lifelong-learning:not(.tabs) > .key-information--lifelong-learning__controls {
-    grid-area: controls;
-}
-
-.lifelong-learning .key-information--lifelong-learning:not(.tabs) > .key-information--lifelong-learning__dates > li {
+.lifelong-learning .key-information--lifelong-learning > .key-information--lifelong-learning__dates > li {
     background-color: #ffffff;
     border: 0.0625rem solid #d8d8d8;
-    padding: 0 1rem 1rem 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
 }
 
-.lifelong-learning .key-information--lifelong-learning:not(.tabs) > .key-information--lifelong-learning__dates > li > ul {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content {
-    grid-row-gap: 0;
-    display: grid;
-    max-width: 80rem;
-    grid-template-rows: repeat(2, auto);
-}
-
-@media (max-width: 432px) {
-    .lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(6, 1fr);
+@media (min-width: 769px) {
+    .lifelong-learning .key-information--lifelong-learning > .key-information--lifelong-learning__dates > li {
+        padding-top: 0;
     }
 }
 
-@media (min-width: 433px) and (max-width: 900px) {
-    .lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content {
-        grid-column-gap: 1rem;
-        grid-template-columns: repeat(12, 1fr);
-    }
-}
-
-@media (min-width: 901px) {
-    .lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content {
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(18, 1fr);
-    }
-}
-
-@media (min-width: 1441px) {
-    .lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1440px) {
-    .lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 432px) {
-    .lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content {
-        grid-template-areas: 'heading heading heading heading heading heading' 'dates dates dates dates dates dates' 'controls controls controls controls controls controls';
-    }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content {
-        grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading' 'dates dates dates dates dates dates dates dates dates dates dates dates' 'controls controls controls controls controls controls controls controls controls controls controls controls';
-    }
-}
-
-@media (min-width: 901px) {
-    .lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content {
-        grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading' 'dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates dates' 'controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls controls';
-    }
-}
-
-.lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content > h2 {
-    color: #5d184a;
-    grid-area: heading;
-}
-
-.lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content .key-information--lifelong-learning__icon {
-    margin-right: 1rem;
-}
-
-.lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content > .key-information--lifelong-learning__dates,
-.lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content > .pagination__wrapper {
-    grid-area: dates;
-    max-width: unset;
-}
-
-.lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content > .key-information--lifelong-learning__controls {
-    grid-area: controls;
-}
-
-.lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content > .key-information--lifelong-learning__dates > li {
-    background-color: #ffffff;
-    border: 0.0625rem solid #d8d8d8;
-    padding: 0 1rem 1rem 1rem;
-}
-
-.lifelong-learning .key-information--lifelong-learning.tabs .tabs__panel__content > .key-information--lifelong-learning__dates > li > ul {
+.lifelong-learning .key-information--lifelong-learning > .key-information--lifelong-learning__dates > li > ul {
     margin-left: 0;
     margin-right: 0;
 }
