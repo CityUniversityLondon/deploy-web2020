@@ -1108,6 +1108,19 @@
 
     Background color must match background color of element mixin is applied to
 */
+.heading-centered {
+    text-align: center;
+}
+
+.heading-centered:after {
+    content: '';
+    width: 2.5rem;
+    height: 0.25rem;
+    display: block;
+    background: #d61726;
+    margin: 0.25rem auto 1rem auto;
+}
+
 /* ghost animation - underline animation used on tab buttons */
 
 @keyframes slide-left-in {
@@ -49010,25 +49023,8 @@ button
     color: #541b85;
 }
 
-.research-degree .heading-centered {
-    text-align: center;
-}
-
-.research-degree .heading-centered:after {
-    content: '';
-    width: 2.5rem;
-    height: 0.25rem;
-    display: block;
-    background: #d61726;
-    margin: 0.25rem auto 1rem auto;
-}
-
 .research-degree .banner-text.banner--center {
     background: #303030;
-}
-
-.wrapper--research-degree__standfirst {
-    color: #ffffff;
 }
 
 .research-degree__standfirst {
@@ -49053,6 +49049,10 @@ button
     .research-degree__standfirst {
         grid-column: 5/15;
     }
+}
+
+.research-degree__standfirst .standfirst {
+    color: #ffffff;
 }
 
 @media (min-width: 433px) {
