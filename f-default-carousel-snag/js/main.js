@@ -4596,12 +4596,12 @@ function carouselGallery(elem) {
   var thumbnails = [].slice.call(elem.querySelector('.galleria-thumbnails-list').querySelectorAll('li'));
   var thumbnailsObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
-      console.log(entry);
-
       if (entry.isIntersecting) {
-        entry.target.setAttribute('aria-hidden', 'true');
-      } else {
         entry.target.setAttribute('aria-hidden', 'false');
+        entry.target.style.visibility = 'visible';
+      } else {
+        entry.target.setAttribute('aria-hidden', 'true');
+        entry.target.style.visibility = 'hidden';
       }
     });
   });
@@ -4867,13 +4867,15 @@ function activeSlider(index, sliders) {
       return a.tabIndex = -1;
     }); // disable focus on non active slider with hyperlinks
 
-    e.setAttribute('aria-hidden', 'false');
+    e.setAttribute('aria-hidden', 'true');
+    e.style.visibility = 'hidden';
   });
   a[index].classList.toggle('active');
   a[index].querySelectorAll('a').forEach(function (a) {
     return a.tabIndex = 0;
   });
-  a[index].setAttribute('aria-hidden', 'true');
+  a[index].setAttribute('aria-hidden', 'false');
+  a[index].style.visibility = 'visible';
 }
 /**
  *
