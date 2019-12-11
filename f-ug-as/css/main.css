@@ -20393,13 +20393,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--casestudy a:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -20777,13 +20770,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--course:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -21403,13 +21389,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--event--landscape:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -22274,13 +22253,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--blue:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -22321,13 +22293,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--purple:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -22368,13 +22333,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--pink:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -22415,13 +22373,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--green:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -22462,13 +22413,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--purple:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -22509,13 +22453,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--pink:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -22556,13 +22493,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--teal:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -22603,13 +22533,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway--yellow:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -22762,13 +22685,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--pathway-image a:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -23103,13 +23019,6 @@ main table td em {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--related-course a:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -31407,13 +31316,6 @@ article figure figcaption a:active {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .finder__results__card a:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -40637,13 +40539,6 @@ article .link-copy {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .finder__results__card a:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -45871,13 +45766,6 @@ a.modal__close:active, a.modal__close:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .content-hub__block-two .pathway-cards .card a:after {
-        transition: none;
-    }
 }
 
 @media (hover: hover) {
@@ -51910,6 +51798,17 @@ button
 
 .js .course--ug .tabs .tabs__panel__body {
     margin-top: 4rem;
+}
+
+.course--ug__usp-section__inner {
+    grid-column: 3 / 17;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+}
+
+.course--ug__usp-section__inner__video .course--ug__usp-section__inner__block:first-child {
+    margin-top: 3rem;
 }
 
 @media screen {
