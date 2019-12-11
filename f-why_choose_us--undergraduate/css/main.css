@@ -51800,107 +51800,15 @@ button
     margin-top: 4rem;
 }
 
-.course--undergraduate__why-choose-us__inner {
+.course--ug__usp-section__inner {
     grid-column: 3 / 17;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1rem;
 }
 
-.course--undergraduate__why-choose-us__inner__block h2 {
-    font-size: 1.266rem;
-    line-height: 1.25;
-    letter-spacing: -0.011em;
-    font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 1.625;
-    margin-top: 0.75rem;
-    max-width: 55ch;
-    font-size: 1.602rem;
-    line-height: 1.25;
-    letter-spacing: -0.015em;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .course--undergraduate__why-choose-us__inner__block h2 {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .course--undergraduate__why-choose-us__inner__block h2 {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .course--undergraduate__why-choose-us__inner__block h2 {
-        letter-spacing: -0.015em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .course--undergraduate__why-choose-us__inner__block h2 {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .course--undergraduate__why-choose-us__inner__block h2 {
-        letter-spacing: -0.017em;
-    }
-}
-
-.course--undergraduate__why-choose-us__inner__block h2 i,
-.course--undergraduate__why-choose-us__inner__block h2 em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .course--undergraduate__why-choose-us__inner__block h2 {
-        letter-spacing: -0.016em;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1919px) {
-    .course--undergraduate__why-choose-us__inner__block h2 {
-        letter-spacing: -0.016em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .course--undergraduate__why-choose-us__inner__block h2 {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .course--undergraduate__why-choose-us__inner__block h2 {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .course--undergraduate__why-choose-us__inner__block h2 {
-        letter-spacing: -0.017em;
-    }
-}
-
-.course--undergraduate__why-choose-us__inner__video .course--undergraduate__why-choose-us__inner__block:first-child {
+.course--ug__usp-section__inner__video .course--ug__usp-section__inner__block:first-child {
     margin-top: 3rem;
-}
-
-.course--undergraduate__why-choose-us__apply {
-    border-top: 0.125rem solid #f2f2f2;
-    padding-top: 0.5rem;
-}
-
-.course--undergraduate__why-choose-us__apply__ctas {
-    display: inline-block;
-    background: #ffffff;
-    padding: 1rem;
 }
 
 @media screen {
