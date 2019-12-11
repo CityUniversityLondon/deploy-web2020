@@ -6456,6 +6456,15 @@ function openModal(e) {
   modal.removeAttribute('data-hidden', true);
   setTabIndexes(modal, false);
   trapFocus(modal);
+  /**
+   * By default, if a modal contains a YouTube video embed, the video URL should
+   * be hidden from the tabindex until the modal is opened.
+   */
+
+  var youtubeEmbed = modal.querySelector('.youtube-video iframe');
+  var closeIcon = modal.querySelector('.modal__close');
+  youtubeEmbed.setAttribute('tabindex', '1');
+  closeIcon.setAttribute('tabindex', '1');
 }
 /**
  * Close modal: runs all the required functions

@@ -46691,7 +46691,8 @@ div.widget-123_test_ {
     }
 }
 
-.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay a:focus {
+.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .wrapper--entry-year-apply a:focus,
+.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .modal__trigger:focus {
     outline: 0.125rem dotted #ffffff;
 }
 
