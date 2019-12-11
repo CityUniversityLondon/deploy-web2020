@@ -6464,6 +6464,7 @@ function openModal(e) {
   var youtubeEmbed = modal.querySelector('.youtube-video iframe');
   var closeIcon = modal.querySelector('.modal__close');
   youtubeEmbed.setAttribute('tabindex', '1');
+  youtubeEmbed.setAttribute('aria-hidden', false);
   closeIcon.setAttribute('tabindex', '1');
 }
 /**
@@ -6489,6 +6490,15 @@ function closeModal(e) {
   modal.setAttribute('data-hidden', true);
   setTabIndexes(modal, true);
   trap.deactivate();
+  /**
+   * Remove YouTube video embed from tabindex if modal is closed
+   */
+
+  var youtubeEmbed = modal.querySelector('.youtube-video iframe');
+  var closeIcon = modal.querySelector('.modal__close');
+  youtubeEmbed.setAttribute('tabindex', '-1');
+  youtubeEmbed.setAttribute('aria-hidden', true);
+  closeIcon.setAttribute('tabindex', '-1');
 }
 /**
  * Add background fade: adds the background fade element

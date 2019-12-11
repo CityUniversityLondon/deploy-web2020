@@ -46756,16 +46756,26 @@ div.widget-123_test_ {
     border: 0.125rem solid #d61726;
 }
 
-.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .modal-group li .modal__content,
-.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .modal-group li .modal__close {
-    color: #696969;
-}
-
 @media (max-width: 768px) {
     .course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .modal-group li {
         display: block;
         text-align: center;
     }
+}
+
+.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .modal-group li .modal__inner {
+    width: 60%;
+}
+
+@media (max-width: 768px) {
+    .course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .modal-group li .modal__inner {
+        width: 100%;
+    }
+}
+
+.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .modal-group li .modal__content,
+.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .modal-group li .modal__close {
+    color: #696969;
 }
 
 .course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .modal-group li a {
