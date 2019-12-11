@@ -51224,7 +51224,7 @@ button
 
 .course-info,
 .course--promo-cards,
-.course--undergraduate__student-testimonials {
+.course--ug__student-testimonials {
     grid-row-gap: 0;
     display: grid;
     max-width: 80rem;
@@ -51233,7 +51233,7 @@ button
 @media (max-width: 432px) {
     .course-info,
     .course--promo-cards,
-    .course--undergraduate__student-testimonials {
+    .course--ug__student-testimonials {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(6, 1fr);
     }
@@ -51242,7 +51242,7 @@ button
 @media (min-width: 433px) and (max-width: 900px) {
     .course-info,
     .course--promo-cards,
-    .course--undergraduate__student-testimonials {
+    .course--ug__student-testimonials {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
     }
@@ -51251,7 +51251,7 @@ button
 @media (min-width: 901px) {
     .course-info,
     .course--promo-cards,
-    .course--undergraduate__student-testimonials {
+    .course--ug__student-testimonials {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
     }
@@ -51260,7 +51260,7 @@ button
 @media (min-width: 1441px) {
     .course-info,
     .course--promo-cards,
-    .course--undergraduate__student-testimonials {
+    .course--ug__student-testimonials {
         margin-left: auto;
         margin-right: auto;
     }
@@ -51269,17 +51269,17 @@ button
 @media (max-width: 1440px) {
     .course-info,
     .course--promo-cards,
-    .course--undergraduate__student-testimonials {
+    .course--ug__student-testimonials {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-.course--undergraduate__student-testimonials h2 {
+.course--ug__student-testimonials h2 {
     grid-column: 1/-2;
 }
 
-.course--undergraduate__student-testimonials .unibuddy-card {
+.course--ug__student-testimonials .unibuddy-card {
     grid-column: 11/17;
 }
 
@@ -51454,70 +51454,70 @@ button
     }
 }
 
-.course--undergraduate__key-information__intro,
-.course--undergraduate__key-information__details,
-.course--undergraduate__key-information__accordion {
+.course--ug__keyinfo__intro,
+.course--ug__keyinfo__details,
+.course--ug__keyinfo__accordion {
     background: linear-gradient(360deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
     padding: 1.75rem 1.75rem;
 }
 
 @media (max-width: 432px) {
-    .course--undergraduate__key-information__intro,
-    .course--undergraduate__key-information__details,
-    .course--undergraduate__key-information__accordion {
+    .course--ug__keyinfo__intro,
+    .course--ug__keyinfo__details,
+    .course--ug__keyinfo__accordion {
         grid-column: 1 / -1;
     }
 }
 
 @media (min-width: 433px) {
-    .course--undergraduate__key-information__intro,
-    .course--undergraduate__key-information__details,
-    .course--undergraduate__key-information__accordion {
+    .course--ug__keyinfo__intro,
+    .course--ug__keyinfo__details,
+    .course--ug__keyinfo__accordion {
         grid-column: 2 / 12;
     }
 }
 
 @media (min-width: 901px) {
-    .course--undergraduate__key-information__intro,
-    .course--undergraduate__key-information__details,
-    .course--undergraduate__key-information__accordion {
+    .course--ug__keyinfo__intro,
+    .course--ug__keyinfo__details,
+    .course--ug__keyinfo__accordion {
         grid-column: 3 / 17;
     }
 }
 
-.course--undergraduate__key-information__intro {
+.course--ug__keyinfo__intro {
     margin-top: 1.75rem;
 }
 
-.course--undergraduate__key-information__details {
+.course--ug__keyinfo__details {
     margin-top: 1.75rem;
     display: flex;
     flex-wrap: wrap;
 }
 
-.course--undergraduate__key-information__details--column {
+.course--ug__keyinfo__details--column {
     flex: 1;
 }
 
 @media (max-width: 899px) {
-    .course--undergraduate__key-information__details--column {
+    .course--ug__keyinfo__details--column {
         flex-basis: 50%;
     }
-    .course--undergraduate__key-information__details--column:nth-child(3) {
+    .course--ug__keyinfo__details--column:nth-child(3) {
         margin-top: 1.75rem;
     }
 }
 
 @media (max-width: 767px) {
-    .course--undergraduate__key-information__details--column {
+    .course--ug__keyinfo__details--column {
         flex-basis: 100%;
     }
-    .course--undergraduate__key-information__details--column:nth-child(2) {
+    .course--ug__keyinfo__details--column:nth-child(2) {
         margin-top: 1.75rem;
     }
 }
 
-.course--undergraduate__key-information__details .label {
+.course--ug__keyinfo__details .label {
     display: block;
     font-family: "Meta Sans", sans-serif;
     color: #696969;
@@ -51525,7 +51525,7 @@ button
     margin-bottom: 0.5rem;
 }
 
-.course--undergraduate__key-information__details span:not(.label) {
+.course--ug__keyinfo__details span:not(.label) {
     display: block;
     color: #303030;
     font-weight: 500;
@@ -51533,11 +51533,11 @@ button
     margin-bottom: 0.25rem;
 }
 
-.course--undergraduate__key-information__details__ucas-code {
+.course--ug__keyinfo__details__ucas-code {
     margin-top: 1.75rem;
 }
 
-.course--undergraduate__key-information__details__location {
+.course--ug__keyinfo__details__location {
     margin-top: 1.75rem;
 }
 
@@ -51555,16 +51555,16 @@ button
     z-index: -1;
 }
 
-.course--undergraduate__key-information__accordion {
+.course--ug__keyinfo__accordion {
     border-top: 0.125rem solid #d8d8d8;
     margin-bottom: 1.75rem;
 }
 
-.course--undergraduate__key-information__accordion .accordion .accordion__heading {
+.course--ug__keyinfo__accordion .accordion .accordion__heading {
     background: #f2f2f2;
 }
 
-.course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+.course--ug__keyinfo__accordion .accordion .accordion__heading button {
     color: #0c0c0e;
     font-weight: 500;
     font-size: 1rem;
@@ -51573,76 +51573,76 @@ button
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+    .course--ug__keyinfo__accordion .accordion .accordion__heading button {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1919px) {
-    .course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+    .course--ug__keyinfo__accordion .accordion .accordion__heading button {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+    .course--ug__keyinfo__accordion .accordion .accordion__heading button {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+    .course--ug__keyinfo__accordion .accordion .accordion__heading button {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .course--undergraduate__key-information__accordion .accordion .accordion__heading button {
+    .course--ug__keyinfo__accordion .accordion .accordion__heading button {
         letter-spacing: -0.017em;
     }
 }
 
-.course--undergraduate__related-courses__wrapper {
+.course--ug__related-courses__wrapper {
     background: linear-gradient(360deg, white 0%, #f2f2f2 100%);
 }
 
-.course--undergraduate__related-courses {
+.course--ug__related-courses {
     max-width: 80rem;
     padding-bottom: 4.25rem;
     padding-top: 4.25rem;
 }
 
 @media (min-width: 1441px) {
-    .course--undergraduate__related-courses {
+    .course--ug__related-courses {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (max-width: 1440px) {
-    .course--undergraduate__related-courses {
+    .course--ug__related-courses {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-.course--undergraduate__related-courses .related-content {
+.course--ug__related-courses .related-content {
     display: grid;
     margin-top: 1rem;
     grid-template-columns: auto auto;
 }
 
 @media (max-width: 899px) {
-    .course--undergraduate__related-courses .related-content {
+    .course--ug__related-courses .related-content {
         display: block;
     }
 }
 
-.course--undergraduate__related-courses h2 {
+.course--ug__related-courses h2 {
     text-align: center;
 }
 
-.course--undergraduate__related-courses h2:after {
+.course--ug__related-courses h2:after {
     background-color: #5d184a;
     content: '';
     display: block;
@@ -51653,7 +51653,7 @@ button
     width: 6rem;
 }
 
-.course--undergraduate__footer {
+.course--ug__footer {
     max-width: 80rem;
     max-width: 80rem;
     padding-top: 1.5rem;
@@ -51661,37 +51661,37 @@ button
 }
 
 @media (min-width: 1441px) {
-    .course--undergraduate__footer {
+    .course--ug__footer {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (max-width: 1440px) {
-    .course--undergraduate__footer {
+    .course--ug__footer {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-.course--undergraduate__footer h2 {
+.course--ug__footer h2 {
     margin-bottom: 1.5rem;
 }
 
-.course--undergraduate__footer .footer__contact--two-cards,
-.course--undergraduate__footer .footer__contact--one-card {
+.course--ug__footer .footer__contact--two-cards,
+.course--ug__footer .footer__contact--one-card {
     display: flex;
 }
 
 @media (max-width: 899px) {
-    .course--undergraduate__footer .footer__contact--two-cards,
-    .course--undergraduate__footer .footer__contact--one-card {
+    .course--ug__footer .footer__contact--two-cards,
+    .course--ug__footer .footer__contact--one-card {
         flex-direction: column;
     }
 }
 
-.course--undergraduate__footer .footer__contact--two-cards .related-content,
-.course--undergraduate__footer .footer__contact--one-card .related-content {
+.course--ug__footer .footer__contact--two-cards .related-content,
+.course--ug__footer .footer__contact--one-card .related-content {
     flex-basis: 66%;
     display: flex;
     margin-right: 1.5rem;
@@ -51700,57 +51700,57 @@ button
 }
 
 @media (max-width: 899px) {
-    .course--undergraduate__footer .footer__contact--two-cards .related-content,
-    .course--undergraduate__footer .footer__contact--one-card .related-content {
+    .course--ug__footer .footer__contact--two-cards .related-content,
+    .course--ug__footer .footer__contact--one-card .related-content {
         flex-basis: 100%;
         margin-right: 0;
     }
 }
 
 @media (max-width: 767px) {
-    .course--undergraduate__footer .footer__contact--two-cards .related-content,
-    .course--undergraduate__footer .footer__contact--one-card .related-content {
+    .course--ug__footer .footer__contact--two-cards .related-content,
+    .course--ug__footer .footer__contact--one-card .related-content {
         display: inline-block;
     }
 }
 
-.course--undergraduate__footer .footer__contact--two-cards .related-content li,
-.course--undergraduate__footer .footer__contact--one-card .related-content li {
+.course--ug__footer .footer__contact--two-cards .related-content li,
+.course--ug__footer .footer__contact--one-card .related-content li {
     flex: 1;
 }
 
-.course--undergraduate__footer .footer__contact--two-cards .related-content li:not(:last-child),
-.course--undergraduate__footer .footer__contact--one-card .related-content li:not(:last-child) {
+.course--ug__footer .footer__contact--two-cards .related-content li:not(:last-child),
+.course--ug__footer .footer__contact--one-card .related-content li:not(:last-child) {
     margin-right: 1.5rem;
 }
 
 @media (max-width: 767px) {
-    .course--undergraduate__footer .footer__contact--two-cards .related-content li:not(:last-child),
-    .course--undergraduate__footer .footer__contact--one-card .related-content li:not(:last-child) {
+    .course--ug__footer .footer__contact--two-cards .related-content li:not(:last-child),
+    .course--ug__footer .footer__contact--one-card .related-content li:not(:last-child) {
         margin-right: 0;
     }
 }
 
-.course--undergraduate__footer .footer__contact--one-card .related-content {
+.course--ug__footer .footer__contact--one-card .related-content {
     flex-basis: 33%;
 }
 
 @media (max-width: 899px) {
-    .course--undergraduate__footer .footer__contact--one-card .related-content {
+    .course--ug__footer .footer__contact--one-card .related-content {
         flex-basis: 100%;
     }
 }
 
-.course--undergraduate__footer .card--contact .card--contact__header {
+.course--ug__footer .card--contact .card--contact__header {
     display: none;
 }
 
-.course--undergraduate__footer .useful-links {
+.course--ug__footer .useful-links {
     flex-basis: 33%;
     margin-top: 2.5rem;
 }
 
-.course--undergraduate__pathway-image-cards {
+.course--ug__pathway-image-cards {
     display: grid;
     grid-column-gap: 4rem;
     grid-row-gap: 4rem;
@@ -51758,45 +51758,45 @@ button
 }
 
 @media (min-width: 768px) {
-    .course--undergraduate__pathway-image-cards {
+    .course--ug__pathway-image-cards {
         grid-template-columns: auto auto;
     }
 }
 
-.course--undergraduate .course--undergraduate__tabs__panel__inner {
+.course--ug .course--ug__tabs__panel__inner {
     grid-column: 4 / 16;
 }
 
-.js .course--undergraduate .tabs {
+.js .course--ug .tabs {
     max-width: 80rem;
     background: #ffffff;
     margin-top: 4rem;
 }
 
 @media (min-width: 1441px) {
-    .js .course--undergraduate .tabs {
+    .js .course--ug .tabs {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (max-width: 1440px) {
-    .js .course--undergraduate .tabs {
+    .js .course--ug .tabs {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-.js .course--undergraduate .tabs .tabs__panel {
+.js .course--ug .tabs .tabs__panel {
     border-top: none;
     background: transparent;
 }
 
-.js .course--undergraduate .tabs .tabs__panel__heading {
+.js .course--ug .tabs .tabs__panel__heading {
     text-align: center;
 }
 
-.js .course--undergraduate .tabs .tabs__panel__body {
+.js .course--ug .tabs .tabs__panel__body {
     margin-top: 4rem;
 }
 
