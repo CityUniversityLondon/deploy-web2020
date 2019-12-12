@@ -1933,7 +1933,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /* WEBPACK VAR INJECTION */(function(global) {/*!
  * The buffer module from node.js, for the browser.
  *
- * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
+ * @author   Feross Aboukhadijeh <http://feross.org>
  * @license  MIT
  */
 /* eslint-disable no-proto */
@@ -4118,11 +4118,15 @@ module.exports = {
 
 var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
 var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+var V8_VERSION = __webpack_require__(/*! ../internals/v8-version */ "./node_modules/core-js/internals/v8-version.js");
 
 var SPECIES = wellKnownSymbol('species');
 
 module.exports = function (METHOD_NAME) {
-  return !fails(function () {
+  // We can't use this feature detection in V8 since it causes
+  // deoptimization and serious performance degradation
+  // https://github.com/zloirock/core-js/issues/677
+  return V8_VERSION >= 51 || !fails(function () {
     var array = [];
     var constructor = array.constructor = {};
     constructor[SPECIES] = function () {
@@ -4297,6 +4301,7 @@ module.exports = function (it) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var TO_STRING_TAG_SUPPORT = __webpack_require__(/*! ../internals/to-string-tag-support */ "./node_modules/core-js/internals/to-string-tag-support.js");
 var classofRaw = __webpack_require__(/*! ../internals/classof-raw */ "./node_modules/core-js/internals/classof-raw.js");
 var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
 
@@ -4312,7 +4317,7 @@ var tryGet = function (it, key) {
 };
 
 // getting tag from ES6+ `Object.prototype.toString`
-module.exports = function (it) {
+module.exports = TO_STRING_TAG_SUPPORT ? classofRaw : function (it) {
   var O, tag, result;
   return it === undefined ? 'Undefined' : it === null ? 'Null'
     // @@toStringTag case
@@ -4546,11 +4551,13 @@ var checkCorrectnessOfIteration = __webpack_require__(/*! ../internals/check-cor
 var setToStringTag = __webpack_require__(/*! ../internals/set-to-string-tag */ "./node_modules/core-js/internals/set-to-string-tag.js");
 var inheritIfRequired = __webpack_require__(/*! ../internals/inherit-if-required */ "./node_modules/core-js/internals/inherit-if-required.js");
 
-module.exports = function (CONSTRUCTOR_NAME, wrapper, common, IS_MAP, IS_WEAK) {
+module.exports = function (CONSTRUCTOR_NAME, wrapper, common) {
+  var IS_MAP = CONSTRUCTOR_NAME.indexOf('Map') !== -1;
+  var IS_WEAK = CONSTRUCTOR_NAME.indexOf('Weak') !== -1;
+  var ADDER = IS_MAP ? 'set' : 'add';
   var NativeConstructor = global[CONSTRUCTOR_NAME];
   var NativePrototype = NativeConstructor && NativeConstructor.prototype;
   var Constructor = NativeConstructor;
-  var ADDER = IS_MAP ? 'set' : 'add';
   var exported = {};
 
   var fixMethod = function (KEY) {
@@ -5158,14 +5165,21 @@ module.exports = function (KEY, length, exec, sham) {
     // Symbol-named RegExp methods call .exec
     var execCalled = false;
     var re = /a/;
-    re.exec = function () { execCalled = true; return null; };
 
     if (KEY === 'split') {
+      // We can't use real regex here since it causes deoptimization
+      // and serious performance degradation in V8
+      // https://github.com/zloirock/core-js/issues/306
+      re = {};
       // RegExp[@@split] doesn't call the regex's exec method, but first creates
       // a new one. We need to return the patched regex when creating the new one.
       re.constructor = {};
       re.constructor[SPECIES] = function () { return re; };
+      re.flags = '';
+      re[SYMBOL] = /./[SYMBOL];
     }
+
+    re.exec = function () { execCalled = true; return null; };
 
     re[SYMBOL]('');
     return !execCalled;
@@ -5244,20 +5258,6 @@ var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-j
 module.exports = !fails(function () {
   return Object.isExtensible(Object.preventExtensions({}));
 });
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/internals/function-to-string.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/core-js/internals/function-to-string.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var shared = __webpack_require__(/*! ../internals/shared */ "./node_modules/core-js/internals/shared.js");
-
-module.exports = shared('native-function-to-string', Function.toString);
 
 
 /***/ }),
@@ -5485,6 +5485,29 @@ module.exports = function ($this, dummy, Wrapper) {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/inspect-source.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/core-js/internals/inspect-source.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var store = __webpack_require__(/*! ../internals/shared-store */ "./node_modules/core-js/internals/shared-store.js");
+
+var functionToString = Function.toString;
+
+// this helper broken in `3.4.1-3.4.4`, so we can't use `shared` helper
+if (typeof store.inspectSource != 'function') {
+  store.inspectSource = function (it) {
+    return functionToString.call(it);
+  };
+}
+
+module.exports = store.inspectSource;
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/internal-metadata.js":
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/internals/internal-metadata.js ***!
@@ -5700,6 +5723,20 @@ module.exports = isForced;
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/is-ios.js":
+/*!**************************************************!*\
+  !*** ./node_modules/core-js/internals/is-ios.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var userAgent = __webpack_require__(/*! ../internals/user-agent */ "./node_modules/core-js/internals/user-agent.js");
+
+module.exports = /(iphone|ipod|ipad).*applewebkit/i.test(userAgent);
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/is-object.js":
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/internals/is-object.js ***!
@@ -5892,7 +5929,7 @@ var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core
 var getOwnPropertyDescriptor = __webpack_require__(/*! ../internals/object-get-own-property-descriptor */ "./node_modules/core-js/internals/object-get-own-property-descriptor.js").f;
 var classof = __webpack_require__(/*! ../internals/classof-raw */ "./node_modules/core-js/internals/classof-raw.js");
 var macrotask = __webpack_require__(/*! ../internals/task */ "./node_modules/core-js/internals/task.js").set;
-var userAgent = __webpack_require__(/*! ../internals/user-agent */ "./node_modules/core-js/internals/user-agent.js");
+var IS_IOS = __webpack_require__(/*! ../internals/is-ios */ "./node_modules/core-js/internals/is-ios.js");
 
 var MutationObserver = global.MutationObserver || global.WebKitMutationObserver;
 var process = global.process;
@@ -5929,7 +5966,7 @@ if (!queueMicrotask) {
       process.nextTick(flush);
     };
   // browsers with MutationObserver, except iOS - https://github.com/zloirock/core-js/issues/339
-  } else if (MutationObserver && !/(iphone|ipod|ipad).*applewebkit/i.test(userAgent)) {
+  } else if (MutationObserver && !IS_IOS) {
     toggle = true;
     node = document.createTextNode('');
     new MutationObserver(flush).observe(node, { characterData: true });
@@ -6054,11 +6091,11 @@ module.exports = !fails(function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
-var nativeFunctionToString = __webpack_require__(/*! ../internals/function-to-string */ "./node_modules/core-js/internals/function-to-string.js");
+var inspectSource = __webpack_require__(/*! ../internals/inspect-source */ "./node_modules/core-js/internals/inspect-source.js");
 
 var WeakMap = global.WeakMap;
 
-module.exports = typeof WeakMap === 'function' && /native code/.test(nativeFunctionToString.call(WeakMap));
+module.exports = typeof WeakMap === 'function' && /native code/.test(inspectSource(WeakMap));
 
 
 /***/ }),
@@ -6129,11 +6166,22 @@ var toObject = __webpack_require__(/*! ../internals/to-object */ "./node_modules
 var IndexedObject = __webpack_require__(/*! ../internals/indexed-object */ "./node_modules/core-js/internals/indexed-object.js");
 
 var nativeAssign = Object.assign;
+var defineProperty = Object.defineProperty;
 
 // `Object.assign` method
 // https://tc39.github.io/ecma262/#sec-object.assign
-// should work with symbols and should have deterministic property order (V8 bug)
 module.exports = !nativeAssign || fails(function () {
+  // should have correct order of operations (Edge bug)
+  if (DESCRIPTORS && nativeAssign({ b: 1 }, nativeAssign(defineProperty({}, 'a', {
+    enumerable: true,
+    get: function () {
+      defineProperty(this, 'b', {
+        value: 3,
+        enumerable: false
+      });
+    }
+  }), { b: 2 })).b !== 1) return true;
+  // should work with symbols and should have deterministic property order (V8 bug)
   var A = {};
   var B = {};
   // eslint-disable-next-line no-undef
@@ -6523,19 +6571,14 @@ module.exports = Object.setPrototypeOf || ('__proto__' in {} ? function () {
 
 "use strict";
 
+var TO_STRING_TAG_SUPPORT = __webpack_require__(/*! ../internals/to-string-tag-support */ "./node_modules/core-js/internals/to-string-tag-support.js");
 var classof = __webpack_require__(/*! ../internals/classof */ "./node_modules/core-js/internals/classof.js");
-var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
-
-var TO_STRING_TAG = wellKnownSymbol('toStringTag');
-var test = {};
-
-test[TO_STRING_TAG] = 'z';
 
 // `Object.prototype.toString` method implementation
 // https://tc39.github.io/ecma262/#sec-object.prototype.tostring
-module.exports = String(test) !== '[object z]' ? function toString() {
+module.exports = TO_STRING_TAG_SUPPORT ? {}.toString : function toString() {
   return '[object ' + classof(this) + ']';
-} : test.toString;
+};
 
 
 /***/ }),
@@ -6619,7 +6662,9 @@ module.exports = FORCED ? function parseInt(string, radix) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
+var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
+
+module.exports = global;
 
 
 /***/ }),
@@ -6870,20 +6915,15 @@ module.exports = function (target, src, options) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
-var shared = __webpack_require__(/*! ../internals/shared */ "./node_modules/core-js/internals/shared.js");
 var createNonEnumerableProperty = __webpack_require__(/*! ../internals/create-non-enumerable-property */ "./node_modules/core-js/internals/create-non-enumerable-property.js");
 var has = __webpack_require__(/*! ../internals/has */ "./node_modules/core-js/internals/has.js");
 var setGlobal = __webpack_require__(/*! ../internals/set-global */ "./node_modules/core-js/internals/set-global.js");
-var nativeFunctionToString = __webpack_require__(/*! ../internals/function-to-string */ "./node_modules/core-js/internals/function-to-string.js");
+var inspectSource = __webpack_require__(/*! ../internals/inspect-source */ "./node_modules/core-js/internals/inspect-source.js");
 var InternalStateModule = __webpack_require__(/*! ../internals/internal-state */ "./node_modules/core-js/internals/internal-state.js");
 
 var getInternalState = InternalStateModule.get;
 var enforceInternalState = InternalStateModule.enforce;
-var TEMPLATE = String(nativeFunctionToString).split('toString');
-
-shared('inspectSource', function (it) {
-  return nativeFunctionToString.call(it);
-});
+var TEMPLATE = String(String).split('String');
 
 (module.exports = function (O, key, value, options) {
   var unsafe = options ? !!options.unsafe : false;
@@ -6906,7 +6946,7 @@ shared('inspectSource', function (it) {
   else createNonEnumerableProperty(O, key, value);
 // add fake Function#toString for correct work wrapped methods / constructors with methods like LoDash isNative
 })(Function.prototype, 'toString', function toString() {
-  return typeof this == 'function' && getInternalState(this).source || nativeFunctionToString.call(this);
+  return typeof this == 'function' && getInternalState(this).source || inspectSource(this);
 });
 
 
@@ -7197,7 +7237,7 @@ var store = __webpack_require__(/*! ../internals/shared-store */ "./node_modules
 (module.exports = function (key, value) {
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
-  version: '3.3.2',
+  version: '3.5.0',
   mode: IS_PURE ? 'pure' : 'global',
   copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
 });
@@ -7341,7 +7381,7 @@ var classof = __webpack_require__(/*! ../internals/classof-raw */ "./node_module
 var bind = __webpack_require__(/*! ../internals/bind-context */ "./node_modules/core-js/internals/bind-context.js");
 var html = __webpack_require__(/*! ../internals/html */ "./node_modules/core-js/internals/html.js");
 var createElement = __webpack_require__(/*! ../internals/document-create-element */ "./node_modules/core-js/internals/document-create-element.js");
-var userAgent = __webpack_require__(/*! ../internals/user-agent */ "./node_modules/core-js/internals/user-agent.js");
+var IS_IOS = __webpack_require__(/*! ../internals/is-ios */ "./node_modules/core-js/internals/is-ios.js");
 
 var location = global.location;
 var set = global.setImmediate;
@@ -7406,7 +7446,7 @@ if (!set || !clear) {
     };
   // Browsers with MessageChannel, includes WebWorkers
   // except iOS - https://github.com/zloirock/core-js/issues/624
-  } else if (MessageChannel && !/(iphone|ipod|ipad).*applewebkit/i.test(userAgent)) {
+  } else if (MessageChannel && !IS_IOS) {
     channel = new MessageChannel();
     port = channel.port2;
     channel.port1.onmessage = listener;
@@ -7454,7 +7494,7 @@ var min = Math.min;
 
 // Helper for a popular repeating case of the spec:
 // Let integer be ? ToInteger(index).
-// If integer < 0, let result be max((length + integer), 0); else let result be min(length, length).
+// If integer < 0, let result be max((length + integer), 0); else let result be min(integer, length).
 module.exports = function (index, length) {
   var integer = toInteger(index);
   return integer < 0 ? max(integer + length, 0) : min(integer, length);
@@ -7563,6 +7603,25 @@ module.exports = function (input, PREFERRED_STRING) {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/to-string-tag-support.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/core-js/internals/to-string-tag-support.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+
+var TO_STRING_TAG = wellKnownSymbol('toStringTag');
+var test = {};
+
+test[TO_STRING_TAG] = 'z';
+
+module.exports = String(test) === '[object z]';
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/uid.js":
 /*!***********************************************!*\
   !*** ./node_modules/core-js/internals/uid.js ***!
@@ -7576,6 +7635,24 @@ var postfix = Math.random();
 module.exports = function (key) {
   return 'Symbol(' + String(key === undefined ? '' : key) + ')_' + (++id + postfix).toString(36);
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/use-symbol-as-uid.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/core-js/internals/use-symbol-as-uid.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/native-symbol */ "./node_modules/core-js/internals/native-symbol.js");
+
+module.exports = NATIVE_SYMBOL
+  // eslint-disable-next-line no-undef
+  && !Symbol.sham
+  // eslint-disable-next-line no-undef
+  && typeof Symbol() == 'symbol';
 
 
 /***/ }),
@@ -7594,6 +7671,37 @@ module.exports = getBuiltIn('navigator', 'userAgent') || '';
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/v8-version.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/internals/v8-version.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
+var userAgent = __webpack_require__(/*! ../internals/user-agent */ "./node_modules/core-js/internals/user-agent.js");
+
+var process = global.process;
+var versions = process && process.versions;
+var v8 = versions && versions.v8;
+var match, version;
+
+if (v8) {
+  match = v8.split('.');
+  version = match[0] + match[1];
+} else if (userAgent) {
+  match = userAgent.match(/Edge\/(\d+)/);
+  if (!match || match[1] >= 74) {
+    match = userAgent.match(/Chrome\/(\d+)/);
+    if (match) version = match[1];
+  }
+}
+
+module.exports = version && +version;
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/well-known-symbol.js":
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/internals/well-known-symbol.js ***!
@@ -7603,15 +7711,20 @@ module.exports = getBuiltIn('navigator', 'userAgent') || '';
 
 var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
 var shared = __webpack_require__(/*! ../internals/shared */ "./node_modules/core-js/internals/shared.js");
+var has = __webpack_require__(/*! ../internals/has */ "./node_modules/core-js/internals/has.js");
 var uid = __webpack_require__(/*! ../internals/uid */ "./node_modules/core-js/internals/uid.js");
 var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/native-symbol */ "./node_modules/core-js/internals/native-symbol.js");
+var USE_SYMBOL_AS_UID = __webpack_require__(/*! ../internals/use-symbol-as-uid */ "./node_modules/core-js/internals/use-symbol-as-uid.js");
 
+var WellKnownSymbolsStore = shared('wks');
 var Symbol = global.Symbol;
-var store = shared('wks');
+var createWellKnownSymbol = USE_SYMBOL_AS_UID ? Symbol : uid;
 
 module.exports = function (name) {
-  return store[name] || (store[name] = NATIVE_SYMBOL && Symbol[name]
-    || (NATIVE_SYMBOL ? Symbol : uid)('Symbol.' + name));
+  if (!has(WellKnownSymbolsStore, name)) {
+    if (NATIVE_SYMBOL && has(Symbol, name)) WellKnownSymbolsStore[name] = Symbol[name];
+    else WellKnownSymbolsStore[name] = createWellKnownSymbol('Symbol.' + name);
+  } return WellKnownSymbolsStore[name];
 };
 
 
@@ -7638,7 +7751,9 @@ module.exports = '\u0009\u000A\u000B\u000C\u000D\u0020\u00A0\u1680\u2000\u2001\u
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports.f = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+
+exports.f = wellKnownSymbol;
 
 
 /***/ }),
@@ -7662,12 +7777,16 @@ var createProperty = __webpack_require__(/*! ../internals/create-property */ "./
 var arraySpeciesCreate = __webpack_require__(/*! ../internals/array-species-create */ "./node_modules/core-js/internals/array-species-create.js");
 var arrayMethodHasSpeciesSupport = __webpack_require__(/*! ../internals/array-method-has-species-support */ "./node_modules/core-js/internals/array-method-has-species-support.js");
 var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+var V8_VERSION = __webpack_require__(/*! ../internals/v8-version */ "./node_modules/core-js/internals/v8-version.js");
 
 var IS_CONCAT_SPREADABLE = wellKnownSymbol('isConcatSpreadable');
 var MAX_SAFE_INTEGER = 0x1FFFFFFFFFFFFF;
 var MAXIMUM_ALLOWED_INDEX_EXCEEDED = 'Maximum allowed index exceeded';
 
-var IS_CONCAT_SPREADABLE_SUPPORT = !fails(function () {
+// We can't use this feature detection in V8 since it causes
+// deoptimization and serious performance degradation
+// https://github.com/zloirock/core-js/issues/679
+var IS_CONCAT_SPREADABLE_SUPPORT = V8_VERSION >= 51 || !fails(function () {
   var array = [];
   array[IS_CONCAT_SPREADABLE] = false;
   return array.concat()[0] !== array;
@@ -7722,12 +7841,19 @@ $({ target: 'Array', proto: true, forced: FORCED }, {
 
 var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
 var $filter = __webpack_require__(/*! ../internals/array-iteration */ "./node_modules/core-js/internals/array-iteration.js").filter;
+var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
 var arrayMethodHasSpeciesSupport = __webpack_require__(/*! ../internals/array-method-has-species-support */ "./node_modules/core-js/internals/array-method-has-species-support.js");
+
+var HAS_SPECIES_SUPPORT = arrayMethodHasSpeciesSupport('filter');
+// Edge 14- issue
+var USES_TO_LENGTH = HAS_SPECIES_SUPPORT && !fails(function () {
+  [].filter.call({ length: -1, 0: 1 }, function (it) { throw it; });
+});
 
 // `Array.prototype.filter` method
 // https://tc39.github.io/ecma262/#sec-array.prototype.filter
 // with adding support of @@species
-$({ target: 'Array', proto: true, forced: !arrayMethodHasSpeciesSupport('filter') }, {
+$({ target: 'Array', proto: true, forced: !HAS_SPECIES_SUPPORT || !USES_TO_LENGTH }, {
   filter: function filter(callbackfn /* , thisArg */) {
     return $filter(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
   }
@@ -7895,12 +8021,19 @@ addToUnscopables('entries');
 
 var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
 var $map = __webpack_require__(/*! ../internals/array-iteration */ "./node_modules/core-js/internals/array-iteration.js").map;
+var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
 var arrayMethodHasSpeciesSupport = __webpack_require__(/*! ../internals/array-method-has-species-support */ "./node_modules/core-js/internals/array-method-has-species-support.js");
+
+var HAS_SPECIES_SUPPORT = arrayMethodHasSpeciesSupport('map');
+// FF49- issue
+var USES_TO_LENGTH = HAS_SPECIES_SUPPORT && !fails(function () {
+  [].map.call({ length: -1, 0: 1 }, function (it) { throw it; });
+});
 
 // `Array.prototype.map` method
 // https://tc39.github.io/ecma262/#sec-array.prototype.map
 // with adding support of @@species
-$({ target: 'Array', proto: true, forced: !arrayMethodHasSpeciesSupport('map') }, {
+$({ target: 'Array', proto: true, forced: !HAS_SPECIES_SUPPORT || !USES_TO_LENGTH }, {
   map: function map(callbackfn /* , thisArg */) {
     return $map(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
   }
@@ -7981,8 +8114,8 @@ var toObject = __webpack_require__(/*! ../internals/to-object */ "./node_modules
 var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
 var sloppyArrayMethod = __webpack_require__(/*! ../internals/sloppy-array-method */ "./node_modules/core-js/internals/sloppy-array-method.js");
 
-var nativeSort = [].sort;
-var test = [1, 2, 3];
+var test = [];
+var nativeSort = test.sort;
 
 // IE8-
 var FAILS_ON_UNDEFINED = fails(function () {
@@ -8278,15 +8411,14 @@ $({ target: 'Object', stat: true, forced: FAILS_ON_PRIMITIVES }, {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var TO_STRING_TAG_SUPPORT = __webpack_require__(/*! ../internals/to-string-tag-support */ "./node_modules/core-js/internals/to-string-tag-support.js");
 var redefine = __webpack_require__(/*! ../internals/redefine */ "./node_modules/core-js/internals/redefine.js");
 var toString = __webpack_require__(/*! ../internals/object-to-string */ "./node_modules/core-js/internals/object-to-string.js");
 
-var ObjectPrototype = Object.prototype;
-
 // `Object.prototype.toString` method
 // https://tc39.github.io/ecma262/#sec-object.prototype.tostring
-if (toString !== ObjectPrototype.toString) {
-  redefine(ObjectPrototype, 'toString', toString, { unsafe: true });
+if (!TO_STRING_TAG_SUPPORT) {
+  redefine(Object.prototype, 'toString', toString, { unsafe: true });
 }
 
 
@@ -8342,7 +8474,7 @@ $({ global: true, forced: parseInt != parseIntImplementation }, {
 var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
 var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "./node_modules/core-js/internals/is-pure.js");
 var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
-var path = __webpack_require__(/*! ../internals/path */ "./node_modules/core-js/internals/path.js");
+var getBuiltIn = __webpack_require__(/*! ../internals/get-built-in */ "./node_modules/core-js/internals/get-built-in.js");
 var NativePromise = __webpack_require__(/*! ../internals/native-promise-constructor */ "./node_modules/core-js/internals/native-promise-constructor.js");
 var redefine = __webpack_require__(/*! ../internals/redefine */ "./node_modules/core-js/internals/redefine.js");
 var redefineAll = __webpack_require__(/*! ../internals/redefine-all */ "./node_modules/core-js/internals/redefine-all.js");
@@ -8352,6 +8484,7 @@ var isObject = __webpack_require__(/*! ../internals/is-object */ "./node_modules
 var aFunction = __webpack_require__(/*! ../internals/a-function */ "./node_modules/core-js/internals/a-function.js");
 var anInstance = __webpack_require__(/*! ../internals/an-instance */ "./node_modules/core-js/internals/an-instance.js");
 var classof = __webpack_require__(/*! ../internals/classof-raw */ "./node_modules/core-js/internals/classof-raw.js");
+var inspectSource = __webpack_require__(/*! ../internals/inspect-source */ "./node_modules/core-js/internals/inspect-source.js");
 var iterate = __webpack_require__(/*! ../internals/iterate */ "./node_modules/core-js/internals/iterate.js");
 var checkCorrectnessOfIteration = __webpack_require__(/*! ../internals/check-correctness-of-iteration */ "./node_modules/core-js/internals/check-correctness-of-iteration.js");
 var speciesConstructor = __webpack_require__(/*! ../internals/species-constructor */ "./node_modules/core-js/internals/species-constructor.js");
@@ -8361,10 +8494,10 @@ var promiseResolve = __webpack_require__(/*! ../internals/promise-resolve */ "./
 var hostReportErrors = __webpack_require__(/*! ../internals/host-report-errors */ "./node_modules/core-js/internals/host-report-errors.js");
 var newPromiseCapabilityModule = __webpack_require__(/*! ../internals/new-promise-capability */ "./node_modules/core-js/internals/new-promise-capability.js");
 var perform = __webpack_require__(/*! ../internals/perform */ "./node_modules/core-js/internals/perform.js");
-var userAgent = __webpack_require__(/*! ../internals/user-agent */ "./node_modules/core-js/internals/user-agent.js");
 var InternalStateModule = __webpack_require__(/*! ../internals/internal-state */ "./node_modules/core-js/internals/internal-state.js");
 var isForced = __webpack_require__(/*! ../internals/is-forced */ "./node_modules/core-js/internals/is-forced.js");
 var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+var V8_VERSION = __webpack_require__(/*! ../internals/v8-version */ "./node_modules/core-js/internals/v8-version.js");
 
 var SPECIES = wellKnownSymbol('species');
 var PROMISE = 'Promise';
@@ -8375,9 +8508,7 @@ var PromiseConstructor = NativePromise;
 var TypeError = global.TypeError;
 var document = global.document;
 var process = global.process;
-var $fetch = global.fetch;
-var versions = process && process.versions;
-var v8 = versions && versions.v8 || '';
+var $fetch = getBuiltIn('fetch');
 var newPromiseCapability = newPromiseCapabilityModule.f;
 var newGenericPromiseCapability = newPromiseCapability;
 var IS_NODE = classof(process) == 'process';
@@ -8392,21 +8523,29 @@ var UNHANDLED = 2;
 var Internal, OwnPromiseCapability, PromiseWrapper, nativeThen;
 
 var FORCED = isForced(PROMISE, function () {
-  // correct subclassing with @@species support
-  var promise = PromiseConstructor.resolve(1);
-  var empty = function () { /* empty */ };
-  var FakePromise = (promise.constructor = {})[SPECIES] = function (exec) {
-    exec(empty, empty);
-  };
-  // unhandled rejections tracking support, NodeJS Promise without it fails @@species test
-  return !((IS_NODE || typeof PromiseRejectionEvent == 'function')
-    && (!IS_PURE || promise['finally'])
-    && promise.then(empty) instanceof FakePromise
-    // v8 6.6 (Node 10 and Chrome 66) have a bug with resolving custom thenables
+  var GLOBAL_CORE_JS_PROMISE = inspectSource(PromiseConstructor) !== String(PromiseConstructor);
+  if (!GLOBAL_CORE_JS_PROMISE) {
+    // V8 6.6 (Node 10 and Chrome 66) have a bug with resolving custom thenables
     // https://bugs.chromium.org/p/chromium/issues/detail?id=830565
-    // we can't detect it synchronously, so just check versions
-    && v8.indexOf('6.6') !== 0
-    && userAgent.indexOf('Chrome/66') === -1);
+    // We can't detect it synchronously, so just check versions
+    if (V8_VERSION === 66) return true;
+    // Unhandled rejections tracking support, NodeJS Promise without it fails @@species test
+    if (!IS_NODE && typeof PromiseRejectionEvent != 'function') return true;
+  }
+  // We need Promise#finally in the pure version for preventing prototype pollution
+  if (IS_PURE && !PromiseConstructor.prototype['finally']) return true;
+  // We can't use @@species feature detection in V8 since it causes
+  // deoptimization and performance degradation
+  // https://github.com/zloirock/core-js/issues/679
+  if (V8_VERSION >= 51 && /native code/.test(PromiseConstructor)) return false;
+  // Detect correctness of subclassing with @@species support
+  var promise = PromiseConstructor.resolve(1);
+  var FakePromise = function (exec) {
+    exec(function () { /* empty */ }, function () { /* empty */ });
+  };
+  var constructor = promise.constructor = {};
+  constructor[SPECIES] = FakePromise;
+  return !(promise.then(function () { /* empty */ }) instanceof FakePromise);
 });
 
 var INCORRECT_ITERATION = FORCED || !checkCorrectnessOfIteration(function (iterable) {
@@ -8629,7 +8768,7 @@ if (FORCED) {
     // wrap fetch result
     if (typeof $fetch == 'function') $({ global: true, enumerable: true, forced: true }, {
       // eslint-disable-next-line no-unused-vars
-      fetch: function fetch(input) {
+      fetch: function fetch(input /* , init */) {
         return promiseResolve(PromiseConstructor, $fetch.apply(global, arguments));
       }
     });
@@ -8643,7 +8782,7 @@ $({ global: true, wrap: true, forced: FORCED }, {
 setToStringTag(PromiseConstructor, PROMISE, false, true);
 setSpecies(PROMISE);
 
-PromiseWrapper = path[PROMISE];
+PromiseWrapper = getBuiltIn(PROMISE);
 
 // statics
 $({ target: PROMISE, stat: true, forced: FORCED }, {
@@ -8765,8 +8904,8 @@ var collectionStrong = __webpack_require__(/*! ../internals/collection-strong */
 
 // `Set` constructor
 // https://tc39.github.io/ecma262/#sec-set-objects
-module.exports = collection('Set', function (get) {
-  return function Set() { return get(this, arguments.length ? arguments[0] : undefined); };
+module.exports = collection('Set', function (init) {
+  return function Set() { return init(this, arguments.length ? arguments[0] : undefined); };
 }, collectionStrong);
 
 
@@ -9276,9 +9415,11 @@ defineWellKnownSymbol('iterator');
 
 var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
 var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
+var getBuiltIn = __webpack_require__(/*! ../internals/get-built-in */ "./node_modules/core-js/internals/get-built-in.js");
 var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "./node_modules/core-js/internals/is-pure.js");
 var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
 var NATIVE_SYMBOL = __webpack_require__(/*! ../internals/native-symbol */ "./node_modules/core-js/internals/native-symbol.js");
+var USE_SYMBOL_AS_UID = __webpack_require__(/*! ../internals/use-symbol-as-uid */ "./node_modules/core-js/internals/use-symbol-as-uid.js");
 var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
 var has = __webpack_require__(/*! ../internals/has */ "./node_modules/core-js/internals/has.js");
 var isArray = __webpack_require__(/*! ../internals/is-array */ "./node_modules/core-js/internals/is-array.js");
@@ -9317,8 +9458,7 @@ var setInternalState = InternalStateModule.set;
 var getInternalState = InternalStateModule.getterFor(SYMBOL);
 var ObjectPrototype = Object[PROTOTYPE];
 var $Symbol = global.Symbol;
-var JSON = global.JSON;
-var nativeJSONStringify = JSON && JSON.stringify;
+var $stringify = getBuiltIn('JSON', 'stringify');
 var nativeGetOwnPropertyDescriptor = getOwnPropertyDescriptorModule.f;
 var nativeDefineProperty = definePropertyModule.f;
 var nativeGetOwnPropertyNames = getOwnPropertyNamesExternal.f;
@@ -9470,7 +9610,9 @@ if (!NATIVE_SYMBOL) {
       redefine(ObjectPrototype, 'propertyIsEnumerable', $propertyIsEnumerable, { unsafe: true });
     }
   }
+}
 
+if (!USE_SYMBOL_AS_UID) {
   wrappedWellKnownSymbolModule.f = function (name) {
     return wrap(wellKnownSymbol(name), name);
   };
@@ -9539,30 +9681,35 @@ $({ target: 'Object', stat: true, forced: fails(function () { getOwnPropertySymb
 
 // `JSON.stringify` method behavior with symbols
 // https://tc39.github.io/ecma262/#sec-json.stringify
-JSON && $({ target: 'JSON', stat: true, forced: !NATIVE_SYMBOL || fails(function () {
-  var symbol = $Symbol();
-  // MS Edge converts symbol values to JSON as {}
-  return nativeJSONStringify([symbol]) != '[null]'
-    // WebKit converts symbol values to JSON as null
-    || nativeJSONStringify({ a: symbol }) != '{}'
-    // V8 throws on boxed symbols
-    || nativeJSONStringify(Object(symbol)) != '{}';
-}) }, {
-  stringify: function stringify(it) {
-    var args = [it];
-    var index = 1;
-    var replacer, $replacer;
-    while (arguments.length > index) args.push(arguments[index++]);
-    $replacer = replacer = args[1];
-    if (!isObject(replacer) && it === undefined || isSymbol(it)) return; // IE8 returns string on undefined
-    if (!isArray(replacer)) replacer = function (key, value) {
-      if (typeof $replacer == 'function') value = $replacer.call(this, key, value);
-      if (!isSymbol(value)) return value;
-    };
-    args[1] = replacer;
-    return nativeJSONStringify.apply(JSON, args);
-  }
-});
+if ($stringify) {
+  var FORCED_JSON_STRINGIFY = !NATIVE_SYMBOL || fails(function () {
+    var symbol = $Symbol();
+    // MS Edge converts symbol values to JSON as {}
+    return $stringify([symbol]) != '[null]'
+      // WebKit converts symbol values to JSON as null
+      || $stringify({ a: symbol }) != '{}'
+      // V8 throws on boxed symbols
+      || $stringify(Object(symbol)) != '{}';
+  });
+
+  $({ target: 'JSON', stat: true, forced: FORCED_JSON_STRINGIFY }, {
+    // eslint-disable-next-line no-unused-vars
+    stringify: function stringify(it, replacer, space) {
+      var args = [it];
+      var index = 1;
+      var $replacer;
+      while (arguments.length > index) args.push(arguments[index++]);
+      $replacer = replacer;
+      if (!isObject(replacer) && it === undefined || isSymbol(it)) return; // IE8 returns string on undefined
+      if (!isArray(replacer)) replacer = function (key, value) {
+        if (typeof $replacer == 'function') value = $replacer.call(this, key, value);
+        if (!isSymbol(value)) return value;
+      };
+      args[1] = replacer;
+      return $stringify.apply(null, args);
+    }
+  });
+}
 
 // `Symbol.prototype[@@toPrimitive]` method
 // https://tc39.github.io/ecma262/#sec-symbol.prototype-@@toprimitive
@@ -9660,6 +9807,7 @@ for (var COLLECTION_NAME in DOMIterables) {
 // TODO: in core-js@4, move /modules/ dependencies to public entries for better optimization by tools like `preset-env`
 __webpack_require__(/*! ../modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var getBuiltIn = __webpack_require__(/*! ../internals/get-built-in */ "./node_modules/core-js/internals/get-built-in.js");
 var USE_NATIVE_URL = __webpack_require__(/*! ../internals/native-url */ "./node_modules/core-js/internals/native-url.js");
 var redefine = __webpack_require__(/*! ../internals/redefine */ "./node_modules/core-js/internals/redefine.js");
 var redefineAll = __webpack_require__(/*! ../internals/redefine-all */ "./node_modules/core-js/internals/redefine-all.js");
@@ -9669,12 +9817,17 @@ var InternalStateModule = __webpack_require__(/*! ../internals/internal-state */
 var anInstance = __webpack_require__(/*! ../internals/an-instance */ "./node_modules/core-js/internals/an-instance.js");
 var hasOwn = __webpack_require__(/*! ../internals/has */ "./node_modules/core-js/internals/has.js");
 var bind = __webpack_require__(/*! ../internals/bind-context */ "./node_modules/core-js/internals/bind-context.js");
+var classof = __webpack_require__(/*! ../internals/classof */ "./node_modules/core-js/internals/classof.js");
 var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
 var isObject = __webpack_require__(/*! ../internals/is-object */ "./node_modules/core-js/internals/is-object.js");
+var create = __webpack_require__(/*! ../internals/object-create */ "./node_modules/core-js/internals/object-create.js");
+var createPropertyDescriptor = __webpack_require__(/*! ../internals/create-property-descriptor */ "./node_modules/core-js/internals/create-property-descriptor.js");
 var getIterator = __webpack_require__(/*! ../internals/get-iterator */ "./node_modules/core-js/internals/get-iterator.js");
 var getIteratorMethod = __webpack_require__(/*! ../internals/get-iterator-method */ "./node_modules/core-js/internals/get-iterator-method.js");
 var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
 
+var $fetch = getBuiltIn('fetch');
+var Headers = getBuiltIn('Headers');
 var ITERATOR = wellKnownSymbol('iterator');
 var URL_SEARCH_PARAMS = 'URLSearchParams';
 var URL_SEARCH_PARAMS_ITERATOR = URL_SEARCH_PARAMS + 'Iterator';
@@ -9965,6 +10118,34 @@ $({ global: true, forced: !USE_NATIVE_URL }, {
   URLSearchParams: URLSearchParamsConstructor
 });
 
+// Wrap `fetch` for correct work with polyfilled `URLSearchParams`
+// https://github.com/zloirock/core-js/issues/674
+if (!USE_NATIVE_URL && typeof $fetch == 'function' && typeof Headers == 'function') {
+  $({ global: true, enumerable: true, forced: true }, {
+    fetch: function fetch(input /* , init */) {
+      var args = [input];
+      var init, body, headers;
+      if (arguments.length > 1) {
+        init = arguments[1];
+        if (isObject(init)) {
+          body = init.body;
+          if (classof(body) === URL_SEARCH_PARAMS) {
+            headers = init.headers ? new Headers(init.headers) : new Headers();
+            if (!headers.has('content-type')) {
+              headers.set('content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
+            }
+            init = create(init, {
+              body: createPropertyDescriptor(0, String(body)),
+              headers: createPropertyDescriptor(0, headers)
+            });
+          }
+        }
+        args.push(init);
+      } return $fetch.apply(this, args);
+    }
+  });
+}
+
 module.exports = {
   URLSearchParams: URLSearchParamsConstructor,
   getState: getInternalParamsState
@@ -10243,7 +10424,6 @@ var percentEncode = function (char, set) {
 var specialSchemes = {
   ftp: 21,
   file: null,
-  gopher: 70,
   http: 80,
   https: 443,
   ws: 80,
@@ -11695,7 +11875,7 @@ function focusTrap(element, userOptions) {
         : config.returnFocusOnDeactivate;
     if (returnFocus) {
       delay(function() {
-        tryFocus(state.nodeFocusedBeforeActivation);
+        tryFocus(getReturnFocusNode(state.nodeFocusedBeforeActivation));
       });
     }
 
@@ -11793,11 +11973,16 @@ function focusTrap(element, userOptions) {
 
     if (!node) {
       throw new Error(
-        "You can't have a focus-trap without at least one focusable element"
+        'Your focus-trap needs to have at least one focusable element'
       );
     }
 
     return node;
+  }
+
+  function getReturnFocusNode(previousActiveElement) {
+    var node = getNodeForOption('setReturnFocus');
+    return node ? node : previousActiveElement;
   }
 
   // This needs to be done on mousedown and touchstart instead of click
@@ -11882,7 +12067,6 @@ function focusTrap(element, userOptions) {
       tryFocus(getInitialFocusNode());
       return;
     }
-
     node.focus();
     state.mostRecentlyFocusedNode = node;
     if (isSelectableInput(node)) {
@@ -16610,7 +16794,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v0.16.2
+/** @license React v0.18.0
  * scheduler-tracing.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -16629,12 +16813,8 @@ if (true) {
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
-// Helps identify side effects in begin-phase lifecycle hooks and setState reducers:
-
- // In some cases, StrictMode should also double-render lifecycles.
-// This can be confusing for tests though,
-// And it can be bad for performance in production.
-// This feature flag can be used to control the behavior:
+// Helps identify side effects in render-phase lifecycle hooks and setState
+// reducers by double invoking them in Strict Mode.
 
  // To preserve the "Pause on caught exceptions" behavior of the debugger, we
 // replay the begin phase of a failed component inside invokeGuardedCallback.
@@ -16645,9 +16825,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
  // Trace which interactions trigger each commit.
 
-var enableSchedulerTracing = true; // Only used in www builds.
+var enableSchedulerTracing = true; // SSR experiments
 
- // TODO: true? Here it might just be false.
 
  // Only used in www builds.
 
@@ -16662,9 +16841,6 @@ var enableSchedulerTracing = true; // Only used in www builds.
 // Control this behavior with a flag to support 16.6 minor releases in the meanwhile.
 
 
- // See https://github.com/react-native-community/discussions-and-proposals/issues/72 for more information
-// This is a flag so we can fix warnings in RN core before turning it on
-
  // Experimental React Flare event system and event components support.
 
  // Experimental Host Component support.
@@ -16674,14 +16850,10 @@ var enableSchedulerTracing = true; // Only used in www builds.
  // New API for JSX transforms to target - https://github.com/reactjs/rfcs/pull/107
 
  // We will enforce mocking scheduler with scheduler/unstable_mock at some point. (v17?)
-// Till then, we warn about the missing mock, but still fallback to a sync mode compatible version
+// Till then, we warn about the missing mock, but still fallback to a legacy mode compatible version
 
  // For tests, we flush suspense fallbacks in an act scope;
 // *except* in some of our own tests, where we test incremental loading states.
-
- // Changes priority of some events like mousemove to user-blocking priority,
-// but without making them discrete. The flag exists in case it causes
-// starvation problems.
 
  // Add a callback property to suspense to notify which promises are currently
 // in the update queue. This allows reporting and tracing of what is causing
@@ -16692,6 +16864,12 @@ var enableSchedulerTracing = true; // Only used in www builds.
  // Part of the simplification of React.createElement so we can eventually move
 // from React.createElement to React.jsx
 // https://github.com/reactjs/rfcs/blob/createlement-rfc/text/0000-create-element-changes.md
+
+
+
+
+
+ // Flag to turn event.target and event.currentTarget in ReactNative from a reactTag to a component instance
 
 var DEFAULT_THREAD_ID = 0; // Counters used to generate unique IDs.
 
@@ -17051,7 +17229,7 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v0.16.2
+/** @license React v0.18.0
  * scheduler.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -17072,15 +17250,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var enableSchedulerDebugging = false;
 var enableIsInputPending = false;
-var enableMessageLoopImplementation = true;
 var enableProfiling = true;
-
-// works by scheduling a requestAnimationFrame, storing the time for the start
-// of the frame, then scheduling a postMessage which gets scheduled after paint.
-// Within the postMessage handler do as much work as possible until time + frame
-// rate. By separating the idle call into a separate event tick we ensure that
-// layout, paint and other browser work is counted against the available time.
-// The frame rate is dynamically adjusted.
 
 var requestHostCallback;
 
@@ -17151,11 +17321,14 @@ typeof MessageChannel !== 'function') {
   var _Date = window.Date;
   var _setTimeout = window.setTimeout;
   var _clearTimeout = window.clearTimeout;
-  var requestAnimationFrame = window.requestAnimationFrame;
-  var cancelAnimationFrame = window.cancelAnimationFrame;
 
   if (typeof console !== 'undefined') {
-    // TODO: Remove fb.me link
+    // TODO: Scheduler no longer requires these methods to be polyfilled. But
+    // maybe we want to continue warning if they don't exist, to preserve the
+    // option to rely on it in the future?
+    var requestAnimationFrame = window.requestAnimationFrame;
+    var cancelAnimationFrame = window.cancelAnimationFrame; // TODO: Remove fb.me link
+
     if (typeof requestAnimationFrame !== 'function') {
       console.error("This browser doesn't support requestAnimationFrame. " + 'Make sure that you load a ' + 'polyfill in older browsers. https://fb.me/react-polyfills');
     }
@@ -17177,26 +17350,18 @@ typeof MessageChannel !== 'function') {
     };
   }
 
-  var isRAFLoopRunning = false;
   var isMessageLoopRunning = false;
   var scheduledHostCallback = null;
-  var rAFTimeoutID = -1;
-  var taskTimeoutID = -1;
-  var frameLength = enableMessageLoopImplementation ? // We won't attempt to align with the vsync. Instead we'll yield multiple
-  // times per frame, often enough to keep it responsive even at really
-  // high frame rates > 120.
-  5 : // Use a heuristic to measure the frame rate and yield at the end of the
-  // frame. We start out assuming that we run at 30fps but then the
-  // heuristic tracking will adjust this value to a faster fps if we get
-  // more frequent animation frames.
-  33.33;
-  var prevRAFTime = -1;
-  var prevRAFInterval = -1;
-  var frameDeadline = 0;
-  var fpsLocked = false; // TODO: Make this configurable
+  var taskTimeoutID = -1; // Scheduler periodically yields in case there is other work on the main
+  // thread, like user events. By default, it yields multiple times per frame.
+  // It does not attempt to align with frame boundaries, since most tasks don't
+  // need to be frame aligned; for those that do, use requestAnimationFrame.
+
+  var yieldInterval = 5;
+  var deadline = 0; // TODO: Make this configurable
   // TODO: Adjust this based on priority?
 
-  var maxFrameLength = 300;
+  var maxYieldInterval = 300;
   var needsPaint = false;
 
   if (enableIsInputPending && navigator !== undefined && navigator.scheduling !== undefined && navigator.scheduling.isInputPending !== undefined) {
@@ -17205,23 +17370,23 @@ typeof MessageChannel !== 'function') {
     shouldYieldToHost = function () {
       var currentTime = exports.unstable_now();
 
-      if (currentTime >= frameDeadline) {
-        // There's no time left in the frame. We may want to yield control of
-        // the main thread, so the browser can perform high priority tasks. The
-        // main ones are painting and user input. If there's a pending paint or
-        // a pending input, then we should yield. But if there's neither, then
-        // we can yield less often while remaining responsive. We'll eventually
-        // yield regardless, since there could be a pending paint that wasn't
+      if (currentTime >= deadline) {
+        // There's no time left. We may want to yield control of the main
+        // thread, so the browser can perform high priority tasks. The main ones
+        // are painting and user input. If there's a pending paint or a pending
+        // input, then we should yield. But if there's neither, then we can
+        // yield less often while remaining responsive. We'll eventually yield
+        // regardless, since there could be a pending paint that wasn't
         // accompanied by a call to `requestPaint`, or other main thread tasks
         // like network events.
         if (needsPaint || scheduling.isInputPending()) {
           // There is either a pending paint or a pending input.
           return true;
         } // There's no pending input. Only yield if we've reached the max
-        // frame length.
+        // yield interval.
 
 
-        return currentTime >= frameDeadline + maxFrameLength;
+        return currentTime >= maxYieldInterval;
       } else {
         // There's still time left in the frame.
         return false;
@@ -17235,7 +17400,7 @@ typeof MessageChannel !== 'function') {
     // `isInputPending` is not available. Since we have no way of knowing if
     // there's pending input, always yield at the end of the frame.
     shouldYieldToHost = function () {
-      return exports.unstable_now() >= frameDeadline;
+      return exports.unstable_now() >= deadline;
     }; // Since we yield every frame regardless, `requestPaint` has no effect.
 
 
@@ -17249,166 +17414,58 @@ typeof MessageChannel !== 'function') {
     }
 
     if (fps > 0) {
-      frameLength = Math.floor(1000 / fps);
-      fpsLocked = true;
+      yieldInterval = Math.floor(1000 / fps);
     } else {
       // reset the framerate
-      frameLength = 33.33;
-      fpsLocked = false;
+      yieldInterval = 5;
     }
   };
 
   var performWorkUntilDeadline = function () {
-    if (enableMessageLoopImplementation) {
-      if (scheduledHostCallback !== null) {
-        var currentTime = exports.unstable_now(); // Yield after `frameLength` ms, regardless of where we are in the vsync
-        // cycle. This means there's always time remaining at the beginning of
-        // the message event.
+    if (scheduledHostCallback !== null) {
+      var currentTime = exports.unstable_now(); // Yield after `yieldInterval` ms, regardless of where we are in the vsync
+      // cycle. This means there's always time remaining at the beginning of
+      // the message event.
 
-        frameDeadline = currentTime + frameLength;
-        var hasTimeRemaining = true;
+      deadline = currentTime + yieldInterval;
+      var hasTimeRemaining = true;
 
-        try {
-          var hasMoreWork = scheduledHostCallback(hasTimeRemaining, currentTime);
+      try {
+        var hasMoreWork = scheduledHostCallback(hasTimeRemaining, currentTime);
 
-          if (!hasMoreWork) {
-            isMessageLoopRunning = false;
-            scheduledHostCallback = null;
-          } else {
-            // If there's more work, schedule the next message event at the end
-            // of the preceding one.
-            port.postMessage(null);
-          }
-        } catch (error) {
-          // If a scheduler task throws, exit the current browser task so the
-          // error can be observed.
+        if (!hasMoreWork) {
+          isMessageLoopRunning = false;
+          scheduledHostCallback = null;
+        } else {
+          // If there's more work, schedule the next message event at the end
+          // of the preceding one.
           port.postMessage(null);
-          throw error;
         }
-      } else {
-        isMessageLoopRunning = false;
-      } // Yielding to the browser will give it a chance to paint, so we can
-      // reset this.
-
-
-      needsPaint = false;
+      } catch (error) {
+        // If a scheduler task throws, exit the current browser task so the
+        // error can be observed.
+        port.postMessage(null);
+        throw error;
+      }
     } else {
-      if (scheduledHostCallback !== null) {
-        var _currentTime = exports.unstable_now();
-
-        var _hasTimeRemaining = frameDeadline - _currentTime > 0;
-
-        try {
-          var _hasMoreWork = scheduledHostCallback(_hasTimeRemaining, _currentTime);
-
-          if (!_hasMoreWork) {
-            scheduledHostCallback = null;
-          }
-        } catch (error) {
-          // If a scheduler task throws, exit the current browser task so the
-          // error can be observed, and post a new task as soon as possible
-          // so we can continue where we left off.
-          port.postMessage(null);
-          throw error;
-        }
-      } // Yielding to the browser will give it a chance to paint, so we can
-      // reset this.
+      isMessageLoopRunning = false;
+    } // Yielding to the browser will give it a chance to paint, so we can
+    // reset this.
 
 
-      needsPaint = false;
-    }
+    needsPaint = false;
   };
 
   var channel = new MessageChannel();
   var port = channel.port2;
   channel.port1.onmessage = performWorkUntilDeadline;
 
-  var onAnimationFrame = function (rAFTime) {
-    if (scheduledHostCallback === null) {
-      // No scheduled work. Exit.
-      prevRAFTime = -1;
-      prevRAFInterval = -1;
-      isRAFLoopRunning = false;
-      return;
-    } // Eagerly schedule the next animation callback at the beginning of the
-    // frame. If the scheduler queue is not empty at the end of the frame, it
-    // will continue flushing inside that callback. If the queue *is* empty,
-    // then it will exit immediately. Posting the callback at the start of the
-    // frame ensures it's fired within the earliest possible frame. If we
-    // waited until the end of the frame to post the callback, we risk the
-    // browser skipping a frame and not firing the callback until the frame
-    // after that.
-
-
-    isRAFLoopRunning = true;
-    requestAnimationFrame(function (nextRAFTime) {
-      _clearTimeout(rAFTimeoutID);
-
-      onAnimationFrame(nextRAFTime);
-    }); // requestAnimationFrame is throttled when the tab is backgrounded. We
-    // don't want to stop working entirely. So we'll fallback to a timeout loop.
-    // TODO: Need a better heuristic for backgrounded work.
-
-    var onTimeout = function () {
-      frameDeadline = exports.unstable_now() + frameLength / 2;
-      performWorkUntilDeadline();
-      rAFTimeoutID = _setTimeout(onTimeout, frameLength * 3);
-    };
-
-    rAFTimeoutID = _setTimeout(onTimeout, frameLength * 3);
-
-    if (prevRAFTime !== -1 && // Make sure this rAF time is different from the previous one. This check
-    // could fail if two rAFs fire in the same frame.
-    rAFTime - prevRAFTime > 0.1) {
-      var rAFInterval = rAFTime - prevRAFTime;
-
-      if (!fpsLocked && prevRAFInterval !== -1) {
-        // We've observed two consecutive frame intervals. We'll use this to
-        // dynamically adjust the frame rate.
-        //
-        // If one frame goes long, then the next one can be short to catch up.
-        // If two frames are short in a row, then that's an indication that we
-        // actually have a higher frame rate than what we're currently
-        // optimizing. For example, if we're running on 120hz display or 90hz VR
-        // display. Take the max of the two in case one of them was an anomaly
-        // due to missed frame deadlines.
-        if (rAFInterval < frameLength && prevRAFInterval < frameLength) {
-          frameLength = rAFInterval < prevRAFInterval ? prevRAFInterval : rAFInterval;
-
-          if (frameLength < 8.33) {
-            // Defensive coding. We don't support higher frame rates than 120hz.
-            // If the calculated frame length gets lower than 8, it is probably
-            // a bug.
-            frameLength = 8.33;
-          }
-        }
-      }
-
-      prevRAFInterval = rAFInterval;
-    }
-
-    prevRAFTime = rAFTime;
-    frameDeadline = rAFTime + frameLength; // We use the postMessage trick to defer idle work until after the repaint.
-
-    port.postMessage(null);
-  };
-
   requestHostCallback = function (callback) {
     scheduledHostCallback = callback;
 
-    if (enableMessageLoopImplementation) {
-      if (!isMessageLoopRunning) {
-        isMessageLoopRunning = true;
-        port.postMessage(null);
-      }
-    } else {
-      if (!isRAFLoopRunning) {
-        // Start a rAF loop.
-        isRAFLoopRunning = true;
-        requestAnimationFrame(function (rAFTime) {
-          onAnimationFrame(rAFTime);
-        });
-      }
+    if (!isMessageLoopRunning) {
+      isMessageLoopRunning = true;
+      port.postMessage(null);
     }
   };
 
@@ -17592,47 +17649,50 @@ function stopLoggingProfilingEvents() {
   eventLogIndex = 0;
   return buffer;
 }
-function markTaskStart(task, time) {
+function markTaskStart(task, ms) {
   if (enableProfiling) {
     profilingState[QUEUE_SIZE]++;
 
     if (eventLog !== null) {
-      logEvent([TaskStartEvent, time, task.id, task.priorityLevel]);
+      // performance.now returns a float, representing milliseconds. When the
+      // event is logged, it's coerced to an int. Convert to microseconds to
+      // maintain extra degrees of precision.
+      logEvent([TaskStartEvent, ms * 1000, task.id, task.priorityLevel]);
     }
   }
 }
-function markTaskCompleted(task, time) {
+function markTaskCompleted(task, ms) {
   if (enableProfiling) {
     profilingState[PRIORITY] = NoPriority;
     profilingState[CURRENT_TASK_ID] = 0;
     profilingState[QUEUE_SIZE]--;
 
     if (eventLog !== null) {
-      logEvent([TaskCompleteEvent, time, task.id]);
+      logEvent([TaskCompleteEvent, ms * 1000, task.id]);
     }
   }
 }
-function markTaskCanceled(task, time) {
+function markTaskCanceled(task, ms) {
   if (enableProfiling) {
     profilingState[QUEUE_SIZE]--;
 
     if (eventLog !== null) {
-      logEvent([TaskCancelEvent, time, task.id]);
+      logEvent([TaskCancelEvent, ms * 1000, task.id]);
     }
   }
 }
-function markTaskErrored(task, time) {
+function markTaskErrored(task, ms) {
   if (enableProfiling) {
     profilingState[PRIORITY] = NoPriority;
     profilingState[CURRENT_TASK_ID] = 0;
     profilingState[QUEUE_SIZE]--;
 
     if (eventLog !== null) {
-      logEvent([TaskErrorEvent, time, task.id]);
+      logEvent([TaskErrorEvent, ms * 1000, task.id]);
     }
   }
 }
-function markTaskRun(task, time) {
+function markTaskRun(task, ms) {
   if (enableProfiling) {
     runIdCounter++;
     profilingState[PRIORITY] = task.priorityLevel;
@@ -17640,34 +17700,34 @@ function markTaskRun(task, time) {
     profilingState[CURRENT_RUN_ID] = runIdCounter;
 
     if (eventLog !== null) {
-      logEvent([TaskRunEvent, time, task.id, runIdCounter]);
+      logEvent([TaskRunEvent, ms * 1000, task.id, runIdCounter]);
     }
   }
 }
-function markTaskYield(task, time) {
+function markTaskYield(task, ms) {
   if (enableProfiling) {
     profilingState[PRIORITY] = NoPriority;
     profilingState[CURRENT_TASK_ID] = 0;
     profilingState[CURRENT_RUN_ID] = 0;
 
     if (eventLog !== null) {
-      logEvent([TaskYieldEvent, time, task.id, runIdCounter]);
+      logEvent([TaskYieldEvent, ms * 1000, task.id, runIdCounter]);
     }
   }
 }
-function markSchedulerSuspended(time) {
+function markSchedulerSuspended(ms) {
   if (enableProfiling) {
     mainThreadIdCounter++;
 
     if (eventLog !== null) {
-      logEvent([SchedulerSuspendEvent, time, mainThreadIdCounter]);
+      logEvent([SchedulerSuspendEvent, ms * 1000, mainThreadIdCounter]);
     }
   }
 }
-function markSchedulerUnsuspended(time) {
+function markSchedulerUnsuspended(ms) {
   if (enableProfiling) {
     if (eventLog !== null) {
-      logEvent([SchedulerResumeEvent, time, mainThreadIdCounter]);
+      logEvent([SchedulerResumeEvent, ms * 1000, mainThreadIdCounter]);
     }
   }
 }
