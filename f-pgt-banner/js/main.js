@@ -6387,25 +6387,6 @@ function launchModal(modal) {
   modal.querySelector('.modal__heading').parentNode.prepend(modalCloseElement);
   addEventListeners(modal, linkElement, modalCloseElement);
   setTabIndexes(modal, true);
-  /**
-   * Variant - create modal icon
-   *
-   * If modal link requires an icon, e.g. video play icon, add as a
-   * 'data-icon' attribute and modify switch statement below as required.
-   */
-
-  var modalIcon = modal.getAttribute('data-icon');
-
-  if (modalIcon) {
-    var iconElement = document.createElement('span');
-
-    switch (modalIcon) {
-      case 'video':
-        iconElement.classList.add('icon', 'fas', 'fa-play-circle');
-    }
-
-    linkElement.prepend(iconElement);
-  }
 }
 /**
  * Add event listeners: adds all the required event listerners
@@ -6456,16 +6437,6 @@ function openModal(e) {
   modal.removeAttribute('data-hidden', true);
   setTabIndexes(modal, false);
   trapFocus(modal);
-  /**
-   * By default, if a modal contains a YouTube video embed, the video URL should
-   * be hidden from the tabindex until the modal is opened.
-   */
-
-  var youtubeEmbed = modal.querySelector('.youtube-video iframe');
-  var closeIcon = modal.querySelector('.modal__close');
-  youtubeEmbed.setAttribute('tabindex', '1');
-  youtubeEmbed.setAttribute('aria-hidden', false);
-  closeIcon.setAttribute('tabindex', '1');
 }
 /**
  * Close modal: runs all the required functions
@@ -6490,15 +6461,6 @@ function closeModal(e) {
   modal.setAttribute('data-hidden', true);
   setTabIndexes(modal, true);
   trap.deactivate();
-  /**
-   * Remove YouTube video embed from tabindex if modal is closed
-   */
-
-  var youtubeEmbed = modal.querySelector('.youtube-video iframe');
-  var closeIcon = modal.querySelector('.modal__close');
-  youtubeEmbed.setAttribute('tabindex', '-1');
-  youtubeEmbed.setAttribute('aria-hidden', true);
-  closeIcon.setAttribute('tabindex', '-1');
 }
 /**
  * Add background fade: adds the background fade element
