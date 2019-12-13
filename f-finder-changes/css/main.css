@@ -30804,6 +30804,17 @@ article figure figcaption a:active {
     outline-color: #0c0c0e;
 }
 
+.finder__query__input .finder__clear .finder__clear__text {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
 .finder__query__input .finder__clear .icon {
     background-color: #f2f2f2;
     border-radius: 50%;
@@ -32468,6 +32479,10 @@ article figure figcaption a:active {
 .finder__mobilefilters .finder__filters .finder__clear {
     display: block;
     margin-right: 1rem;
+}
+
+.finder__filters__clear--desktop .finder__clear {
+    display: block;
 }
 
 .finder__filters__heading__btn-icon {
