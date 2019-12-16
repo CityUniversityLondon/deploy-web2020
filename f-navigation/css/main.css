@@ -39998,7 +39998,7 @@ button
 }
 
 .finder__query__input .finder__clear .icon:before {
-    line-height: 2rem;
+    line-height: 2;
 }
 
 .finder__query__input .finder__clear .finder__icon--close {
@@ -42806,7 +42806,7 @@ button
     background-color: #ffffff;
     color: #696969;
     font-weight: 450;
-    margin-top: 50%;
+    margin-top: 0.75rem;
 }
 
 .finder__icon--close {
