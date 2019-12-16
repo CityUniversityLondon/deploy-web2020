@@ -42675,6 +42675,16 @@ button
 }
 
 .finder__select select {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
@@ -42689,6 +42699,11 @@ button
     padding: 0.75rem 2rem 0.75rem 0.75rem;
     position: relative;
     width: 100%;
+}
+
+.finder__select select i,
+.finder__select select em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
