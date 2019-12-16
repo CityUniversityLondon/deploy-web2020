@@ -3108,7 +3108,6 @@ function finder__query(props) {
       clearQuery();
     }
   }); // render suggestions
-  // TODO: probably should be refactored into a separate component
 
   var suggestionsList = suggestions && suggestions.length > 0 && react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("ul", {
     role: "listbox",
@@ -3174,9 +3173,9 @@ function finder__query(props) {
           case keyCodeHome:
             e.preventDefault();
 
-            if (e.target.parentNode.nextElementSibling && e.target.parentNode.nextElementSibling.querySelector('button')) {
+            if (e.target.parentNode.parentNode.firstChild && e.target.parentNode.parentNode.firstChild.querySelector('button')) {
               e.preventDefault();
-              e.target.parentNode.nextElementSibling.querySelector('button').focus();
+              e.target.parentNode.parentNode.firstChild.querySelector('button').focus();
             }
 
             break;
@@ -3184,9 +3183,9 @@ function finder__query(props) {
           case keyCodeEnd:
             e.preventDefault();
 
-            if (e.target.parentNode.nextElementSibling && e.target.parentNode.nextElementSibling.querySelector('button')) {
+            if (e.target.parentNode.parentNode.lastChild && e.target.parentNode.parentNode.lastChild.querySelector('button')) {
               e.preventDefault();
-              e.target.parentNode.nextElementSibling.querySelector('button').focus();
+              e.target.parentNode.parentNode.lastChild.querySelector('button').focus();
             }
 
             break;
@@ -3849,18 +3848,20 @@ function getFacetParams(facets, params) {
 
 
 function replaceHistory(currQuery, currStartRank, currFacets, facetLabels) {
-  var params = new URLSearchParams(window.location.search);
-  currQuery !== '' ? params.set('query', currQuery) : params.delete('query');
-  currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
-  facetLabels.forEach(function (facet) {
-    if (currFacets[facet.meta]) {
-      params.set("meta_".concat(facet.meta, "_sand"), currFacets[facet.meta]);
-    } else {
-      params.delete("meta_".concat(facet.meta, "_sand"));
-    }
-  });
-  var hasParams = params.toString().length ? '?' : '';
-  window.history.replaceState({}, '', "".concat(window.location.pathname).concat(hasParams).concat(params.toString()));
+  if (window) {
+    var params = new URLSearchParams(window.location.search);
+    currQuery !== '' ? params.set('query', currQuery) : params.delete('query');
+    currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
+    facetLabels.forEach(function (facet) {
+      if (currFacets[facet.meta]) {
+        params.set("meta_".concat(facet.meta, "_sand"), currFacets[facet.meta]);
+      } else {
+        params.delete("meta_".concat(facet.meta, "_sand"));
+      }
+    });
+    var hasParams = params.toString().length ? '?' : '';
+    window.history.replaceState({}, '', "".concat(window.location.pathname).concat(hasParams).concat(params.toString()));
+  }
 }
 /**
  * Launch the universal Finder.

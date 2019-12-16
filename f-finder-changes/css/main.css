@@ -30714,7 +30714,10 @@ article figure figcaption a:active {
     grid-area: input;
     height: 100%;
     min-width: 0;
-    padding: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 3.5rem;
+    padding-top: 0.5rem;
     width: 100%;
 }
 
@@ -32481,12 +32484,27 @@ article figure figcaption a:active {
     margin-right: 1rem;
 }
 
+.finder__mobilefilters .finder__filters__clear--desktop .finder__clear {
+    display: none;
+}
+
 .finder__filters__clear--desktop .finder__clear {
     display: block;
 }
 
 .finder__filters__heading__btn-icon {
     display: flex;
+}
+
+:not(.finder__mobilefilters__filters__content) > .finder__filters label {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
 .finder__mobilefilters {
@@ -33711,6 +33729,12 @@ article figure figcaption a:active {
     position: absolute;
     right: 0.5rem;
     top: 2rem;
+}
+
+@media (min-width: 769px) {
+    .finder__select:after {
+        top: -0.25rem;
+    }
 }
 
 .finder__select select {
