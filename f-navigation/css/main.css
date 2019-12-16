@@ -39990,7 +39990,7 @@ button
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
     .finder__query__input .finder__clear .icon {
         width: 1.5rem;
         height: 1.5rem;
@@ -40008,7 +40008,7 @@ button
     top: 0.25rem;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .finder__query__input .finder__clear .finder__icon--close {
         left: 0.25rem;
         top: 0.5rem;
@@ -40424,13 +40424,13 @@ button
     cursor: pointer;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .finder__query__submit {
         margin-left: 2rem;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
     .finder__query__submit {
         padding: 1rem 1.25rem;
     }
@@ -40443,7 +40443,7 @@ button
     margin: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
     .finder__query__submit .finder__query__submit__text {
         border: 0;
         clip: rect(0, 0, 0, 0);
@@ -40461,7 +40461,7 @@ button
     padding: 0 0.5rem 0 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
     .finder__query__submit .finder__query__submit__icon {
         display: block;
         padding: 0;
@@ -40798,7 +40798,7 @@ button
     margin-bottom: 1rem;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .finder__results__course .clearing_label {
         min-width: 24%;
         order: 1;
@@ -40812,7 +40812,7 @@ button
     padding: 0.75rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
     .finder__results__course .clearing_label p {
         display: inline;
     }
@@ -41014,7 +41014,7 @@ button
     background-image: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .finder__results__course .underline-transition__title {
         margin-top: 0;
     }
@@ -41081,7 +41081,7 @@ button
     display: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .finder__filters .finder__clear {
         font-size: 1rem;
         line-height: 1.625;
@@ -41107,49 +41107,49 @@ button
     }
 }
 
-@media (min-width: 769px) and (min-width: 433px) and (max-width: 768px) {
+@media (min-width: 1024px) and (min-width: 433px) and (max-width: 768px) {
     .finder__filters .finder__clear {
         letter-spacing: -0.008em;
     }
 }
 
-@media (min-width: 769px) and (min-width: 769px) and (max-width: 1919px) {
+@media (min-width: 1024px) and (min-width: 769px) and (max-width: 1919px) {
     .finder__filters .finder__clear {
         letter-spacing: -0.008em;
     }
 }
 
-@media (min-width: 769px) and (min-width: 1920px) and (max-width: 3839px) {
+@media (min-width: 1024px) and (min-width: 1920px) and (max-width: 3839px) {
     .finder__filters .finder__clear {
         letter-spacing: -0.013em;
     }
 }
 
-@media (min-width: 769px) and (min-width: 3840px) and (max-width: 7679px) {
+@media (min-width: 1024px) and (min-width: 3840px) and (max-width: 7679px) {
     .finder__filters .finder__clear {
         letter-spacing: -0.017em;
     }
 }
 
-@media (min-width: 769px) and (min-width: 7680px) {
+@media (min-width: 1024px) and (min-width: 7680px) {
     .finder__filters .finder__clear {
         letter-spacing: -0.017em;
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .finder__filters .finder__clear:disabled {
         cursor: default;
     }
 }
 
-@media (min-width: 769px) and (prefers-reduced-motion: reduce) {
+@media (min-width: 1024px) and (prefers-reduced-motion: reduce) {
     .finder__filters .finder__clear {
         transition: none;
     }
 }
 
-@media (min-width: 769px) and (max-width: 432px) {
+@media (min-width: 1024px) and (max-width: 432px) {
     .finder__filters .finder__clear {
         display: flex;
         justify-content: center;
@@ -41157,7 +41157,7 @@ button
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .finder__filters .finder__clear span {
         transition: transform 0.6s;
     }
@@ -41175,13 +41175,13 @@ button
     }
 }
 
-@media (min-width: 769px) and (prefers-reduced-motion: reduce) {
+@media (min-width: 1024px) and (prefers-reduced-motion: reduce) {
     .finder__filters .finder__clear:after {
         transition: none;
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .finder__filters .finder__clear:focus, .finder__filters .finder__clear:active {
         background-color: transparent;
         border: 0.125rem solid #d61726;
@@ -41196,7 +41196,7 @@ button
     }
 }
 
-@media (min-width: 769px) and (hover: hover) {
+@media (min-width: 1024px) and (hover: hover) {
     .finder__filters .finder__clear:hover {
         background-color: transparent;
         border: 0.125rem solid #d61726;
@@ -41211,7 +41211,7 @@ button
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .finder__filters .finder__clear:disabled {
         opacity: 0.7;
     }
@@ -41239,7 +41239,7 @@ button
     }
 }
 
-@media (min-width: 769px) and (hover: hover) {
+@media (min-width: 1024px) and (hover: hover) {
     .finder__filters .finder__clear:hover {
         background: #0c0c0e;
         border-color: #0c0c0e;
@@ -41247,7 +41247,7 @@ button
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .finder__filters .finder__clear:active {
         background: #0c0c0e;
         border-color: #0c0c0e;
@@ -41920,7 +41920,7 @@ button
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .finder__filters--mobile {
         display: none;
     }
@@ -41950,7 +41950,7 @@ button
     padding-bottom: 4.5rem;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .finder__filters--mobile[data-open='true'] .finder__filters {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -42190,7 +42190,7 @@ button
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
     .finder__results__summary__heading {
         display: none;
     }
@@ -42541,7 +42541,7 @@ button
     background-color: #ffffff;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
     .finder__results__card a {
         flex-direction: row;
     }
