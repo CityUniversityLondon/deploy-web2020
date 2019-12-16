@@ -2371,9 +2371,9 @@ function finder__filters(props) {
   }));
   return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "finder__filters"
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("h2", {
     className: "finder__filters__heading"
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("h2", null, "Filter ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
+  }, "Filter ".concat(props.config.summariseAs.plural), ' ', react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "finder__filters__heading__btn-icon"
   }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_query_finder_clear__WEBPACK_IMPORTED_MODULE_7__["default"], {
     clear: props.clear,

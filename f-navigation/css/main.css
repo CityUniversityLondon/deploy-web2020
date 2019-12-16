@@ -39768,6 +39768,7 @@ button
     border-width: 0.1875rem;
     display: flex;
     flex-grow: 1;
+    font-weight: 450;
     padding: 0;
     position: relative;
 }
@@ -41294,49 +41295,60 @@ button
 }
 
 .finder__filters--mobile .finder__filters {
-    background-color: #d8d8d8;
     margin-bottom: 3rem;
 }
 
 .finder__filters--desktop .finder__filters {
-    background-color: #ffffff;
     display: none;
 }
 
 @media (min-width: 1024px) {
     .finder__filters--desktop .finder__filters {
+        background-color: #ffffff;
         display: block;
+    }
+    .finder__filters--desktop .finder__filters .finder__filter,
+    .finder__filters--desktop .finder__filters .finder__filters__clear--desktop {
+        width: calc(33% - 1.5rem);
+        margin-right: 1.5rem;
     }
 }
 
-.finder__filters--desktop .finder__filters .finder__filter,
-.finder__filters--desktop .finder__filters .finder__filters__clear--desktop {
-    width: calc(33% - 1.5rem);
-    margin-right: 1.5rem;
-}
-
-@media (min-width: 1280px) {
+@media (min-width: 1024px) and (min-width: 1280px) {
     .finder__filters--desktop .finder__filters .finder__filter,
     .finder__filters--desktop .finder__filters .finder__filters__clear--desktop {
         width: calc(25% - 1.5rem);
     }
 }
 
-.finder__filters--desktop .finder__filters .finder__filters__clear--desktop {
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-    margin-top: 1rem;
+@media (min-width: 1024px) {
+    .finder__filters--desktop .finder__filters .finder__filters__clear--desktop {
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        margin-top: 0.75rem;
+    }
+    .finder__filters--desktop .finder__filters .finder__filters__clear--desktop button {
+        padding-bottom: 0.75rem;
+        padding-right: 1.5rem;
+        padding-top: 0.75rem;
+    }
 }
 
-.finder__filters--desktop .finder__filters .finder__filters__clear--desktop button {
-    padding-right: 1.5rem;
+@media (max-width: 1023px) {
+    .finder__filters__wrapper--filters {
+        background-color: #ffffff;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 }
 
-.finder__filters__wrapper--filters {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-left: 1.5rem;
+@media (min-width: 1024px) {
+    .finder__filters__wrapper--filters {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 1.5rem;
+    }
 }
 
 .finder__filters__heading {
@@ -41346,6 +41358,7 @@ button
     background-color: #d8d8d8;
     display: flex;
     justify-content: space-between;
+    margin-top: 0;
     padding: 0.75rem 1.5rem;
 }
 
@@ -41379,44 +41392,17 @@ button
     }
 }
 
-.finder__filters__heading h2 {
-    font-size: 1.424rem;
-    line-height: 1.25;
-    letter-spacing: -0.013em;
-    margin-top: 0;
-}
-
-@media (min-width: 433px) and (max-width: 768px) {
-    .finder__filters__heading h2 {
-        letter-spacing: -0.015em;
+@media (min-width: 1024px) {
+    .finder__filters__heading {
+        background-color: transparent;
+        justify-content: flex-start;
     }
 }
 
-@media (min-width: 769px) and (max-width: 1919px) {
-    .finder__filters__heading h2 {
-        letter-spacing: -0.015em;
-    }
+.finder__filters__heading__btn-icon {
+    margin-left: 1rem;
 }
 
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .finder__filters__heading h2 {
-        letter-spacing: -0.016em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .finder__filters__heading h2 {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .finder__filters__heading h2 {
-        letter-spacing: -0.017em;
-    }
-}
-
-.finder__filters__heading > .icon,
 .finder__filters__heading__btn-icon > .icon {
     display: flex;
     flex-direction: column;
@@ -41425,6 +41411,11 @@ button
 
 .finder__filters .finder__clear {
     display: none;
+}
+
+.finder__filters--mobile[data-open='false'] {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 .finder__filters--mobile .finder__filters .finder__clear {
@@ -41444,7 +41435,7 @@ button
     display: flex;
 }
 
-:not(.finder__filters--mobile__filters__content) > .finder__filters label {
+.finder__filters--desktop .finder__filters label {
     border: 0;
     clip: rect(0, 0, 0, 0);
     height: 1px;
@@ -41456,7 +41447,6 @@ button
 }
 
 .finder__filters--mobile {
-    grid-area: filters;
     display: block;
 }
 
@@ -42266,6 +42256,10 @@ button
     z-index: 0;
 }
 
+.finder__results__card:last-of-type {
+    border-bottom: 0;
+}
+
 .finder__results__card a {
     border: none;
     border-bottom-width: 0;
@@ -42284,6 +42278,8 @@ button
     color: #1e1e1e;
     display: flex;
     flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .finder__results__card a:visited {
@@ -45172,6 +45168,13 @@ div.widget-123_test_ {
 .listing .banner-text {
     background-color: #f2f2f2;
     color: #0c0c0e;
+}
+
+@media (min-width: 1440px) {
+    .listing .banner-text {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 }
 
 .news {
