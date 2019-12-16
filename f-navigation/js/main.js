@@ -2609,7 +2609,7 @@ function finder__mobilefilters(props) {
   }, props.updating ? react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", {
     className: "fas fa-spinner fa-pulse icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, "Updating results\u2026")) : react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, Object.keys(props.query.facets).length === 0 ? 'Close' : totalMatchingMessage)))))), summary);
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, "Updating ", props.summariseAs.plural, "\u2026")) : react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, Object.keys(props.query.facets).length === 0 ? 'Close' : totalMatchingMessage)))))), summary);
 }
 
 finder__mobilefilters.propTypes = {
@@ -3537,7 +3537,7 @@ function finder__results(props) {
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-spinner fa-pulse icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Updating results\u2026"));
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Updating ", props.summariseAs.plural, "\u2026"));
 
   if (props.response) {
     // Response may include spelling suggestion
@@ -3661,10 +3661,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
 /* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_object_keys__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.keys */ "./node_modules/core-js/modules/es.object.keys.js");
+/* harmony import */ var core_js_modules_es_object_keys__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_keys__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -3689,12 +3692,12 @@ function finder__results__summary(props) {
   var result = props.totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural;
 
   if (props.totalMatching == 0) {
-    searchHints = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Your search did not match any ", props.summariseAs.plural, "."), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Suggestions:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, "Try different keywords"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, "Try more general keywords"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, "Try fewer keywords"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, "Try fewer filters"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    searchHints = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Your search did not match any ", props.summariseAs.plural, "."), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Suggestions:"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Try different keywords"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Try more general keywords"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Try fewer keywords"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Try fewer filters"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
       type: "button",
       onClick: function onClick() {
         props.clear();
       }
-    }, "Reset filters")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    }, "Reset filters")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
       type: "button",
       onClick: function onClick() {
         var newQuery = props.query;
@@ -3706,24 +3709,24 @@ function finder__results__summary(props) {
     }, "Reset search"))));
   }
 
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "finder__results__summary"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h2", {
     "aria-live": "polite",
     className: "finder__results__summary__heading"
-  }, props.totalMatching > props.numRanks && "".concat(props.currStart, "\u2013").concat(props.currEnd, " of "), props.totalMatching, " ", props.query.query && 'matching ', result, props.query.query && " for \u201C".concat(props.query.query, "\u201D")), searchHints);
+  }, props.query.query || Object.keys(props.query.facets).length > 0 ? 'Matching' : 'All', ' ', result, " (", props.totalMatching > props.numRanks && "".concat(props.currStart, "\u2013").concat(props.currEnd, " of "), props.totalMatching, " ", result, props.query.query && " for \u201C".concat(props.query.query, "\u201D"), ")"), searchHints);
 }
 
 finder__results__summary.propTypes = {
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.func,
-  config: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  currEnd: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number,
-  currStart: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number,
-  numRanks: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  totalMatching: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+  config: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  currEnd: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
+  currStart: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
+  numRanks: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  totalMatching: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.number,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__summary);
 
