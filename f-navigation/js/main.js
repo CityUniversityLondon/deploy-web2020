@@ -2416,7 +2416,9 @@ function finder__filters(props) {
     } else {
       return null;
     }
-  }), clearFilters)));
+  }), clearFilters, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("p", {
+    className: "finder__filters__nofilters"
+  }, "No filters are valid for the current query."))));
 }
 
 finder__filters.propTypes = {
@@ -2737,9 +2739,7 @@ function finder__select(props) {
 
   if (props.facet.values.length > hiddenFacets) {
     return react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("div", {
-      className: "finder__filter wrapper--finder__select"
-    }, react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("div", {
-      className: currentValue ? 'finder__select finder__select--selected' : 'finder__select'
+      className: "finder__filter finder__select ".concat(currentValue && 'finder__select--selected')
     }, react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("label", {
       className: "finder__select__overline",
       htmlFor: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
@@ -2769,7 +2769,7 @@ function finder__select(props) {
       } else {
         return null;
       }
-    }))));
+    })));
   } else {
     return null;
   }
@@ -3054,13 +3054,16 @@ function finder__query(props) {
 
   var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_13__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(16).slice(-4)),
       _useState8 = _slicedToArray(_useState7, 1),
-      inputId = _useState8[0]; // boolean to show or hide suggestions
-
+      inputId = _useState8[0];
 
   var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_13__["useState"])(false),
       _useState10 = _slicedToArray(_useState9, 2),
       showSuggestions = _useState10[0],
-      setShowSuggestions = _useState10[1];
+      setShowSuggestions = _useState10[1],
+      _useState11 = Object(react__WEBPACK_IMPORTED_MODULE_13__["useState"])(''),
+      _useState12 = _slicedToArray(_useState11, 2),
+      activeSuggestionID = _useState12[0],
+      setActiveSuggestionID = _useState12[1];
 
   Object(react__WEBPACK_IMPORTED_MODULE_13__["useEffect"])(function () {
     setPartialQuery(props.query.query);
@@ -3084,21 +3087,13 @@ function finder__query(props) {
     props.update.results(!props.update.updateState);
   };
 
-  var submitForm = function submitForm() {
+  var submitForm = function submitForm(query) {
     call.cancel();
     setSuggestions([]);
     var newQuery = props.query;
-    newQuery.query = partialQuery ? partialQuery : '';
+    newQuery.query = query ? query : partialQuery ? partialQuery : '';
     newQuery.startRank = 1;
     newQuery.sortBy = partialQuery ? null : props.config.sort;
-    props.update.query(newQuery);
-    props.update.results(!props.update.updateState);
-  };
-
-  var submitSuggestion = function submitSuggestion(s) {
-    call.cancel();
-    var newQuery = props.query;
-    newQuery.query = s;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
   };
@@ -3107,11 +3102,20 @@ function finder__query(props) {
     clear: function clear() {
       clearQuery();
     }
-  }); // render suggestions
+  });
+
+  var submitSuggestion = function submitSuggestion(suggestion) {
+    setShowSuggestions(false);
+    setSuggestions([]);
+    focusInput();
+    submitForm(suggestion);
+  }; // render suggestions
+
 
   var suggestionsList = suggestions && suggestions.length > 0 && react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("ul", {
     role: "listbox",
     "aria-label": "Search suggestions",
+    "aria-activedescendant": activeSuggestionID,
     className: showSuggestions ? 'finder__query__suggestions show' : 'finder__query__suggestions hide'
   }, _toConsumableArray(new Set(suggestions)).slice(0, maximumSuggestions).map(function (suggestion, i) {
     return react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("li", {
@@ -3121,41 +3125,35 @@ function finder__query(props) {
     }, react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("button", {
       type: "button",
       onBlur: function onBlur() {
-        return setShowSuggestions(false);
+        setActiveSuggestionID('');
+        setShowSuggestions(false);
       },
       onFocus: function onFocus() {
         return setShowSuggestions(true);
       },
       onMouseDown: function onMouseDown() {
-        //for browsers because onBlur get excuted before onClick
-        setShowSuggestions(true);
-        setPartialQuery(suggestion);
-        setSuggestions([]);
-        focusInput();
-        submitSuggestion(suggestion); //passing suggestion because partialQuery value get overwritten for some reason.
+        return submitSuggestion(suggestion);
       },
       onClick: function onClick() {
-        //for mobile
-        setShowSuggestions(true);
-        setPartialQuery(suggestion);
-        setSuggestions([]);
-        focusInput();
-        submitSuggestion(suggestion); //passing suggestion because partialQuery value get overwritten for some reason.
+        return submitSuggestion(suggestion);
       },
       onKeyDown: function onKeyDown(e) {
         switch (e.keyCode) {
           case keyCodeEscape:
             e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
             setSuggestions([]);
+            setActiveSuggestionID('');
             break;
 
           case keyCodeUp:
             if (e.target.parentNode.previousElementSibling && e.target.parentNode.previousElementSibling.querySelector('button')) {
               e.preventDefault();
               e.target.parentNode.previousElementSibling.querySelector('button').focus();
+              setActiveSuggestionID(e.target.parentNode.previousElementSibling.id);
             } else {
               e.preventDefault();
               e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
+              setActiveSuggestionID('');
             }
 
             break;
@@ -3166,6 +3164,7 @@ function finder__query(props) {
             if (e.target.parentNode.nextElementSibling && e.target.parentNode.nextElementSibling.querySelector('button')) {
               e.preventDefault();
               e.target.parentNode.nextElementSibling.querySelector('button').focus();
+              setActiveSuggestionID(e.target.parentNode.nextElementSibling.id);
             }
 
             break;
@@ -3176,6 +3175,7 @@ function finder__query(props) {
             if (e.target.parentNode.parentNode.firstChild && e.target.parentNode.parentNode.firstChild.querySelector('button')) {
               e.preventDefault();
               e.target.parentNode.parentNode.firstChild.querySelector('button').focus();
+              setActiveSuggestionID(e.target.parentNode.firstChild.id);
             }
 
             break;
@@ -3186,6 +3186,7 @@ function finder__query(props) {
             if (e.target.parentNode.parentNode.lastChild && e.target.parentNode.parentNode.lastChild.querySelector('button')) {
               e.preventDefault();
               e.target.parentNode.parentNode.lastChild.querySelector('button').focus();
+              setActiveSuggestionID(e.target.parentNode.lastChild.id);
             }
 
             break;
@@ -3223,6 +3224,7 @@ function finder__query(props) {
           if (suggestions && suggestions.length > 0) {
             e.preventDefault();
             e.target.parentNode.querySelector('.finder__query__suggestions button').focus();
+            setActiveSuggestionID(e.target.parentNode.querySelector('.finder__query__suggestions li').id);
           }
 
           break;
@@ -3714,7 +3716,7 @@ function finder__results__summary(props) {
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h2", {
     "aria-live": "polite",
     className: "finder__results__summary__heading"
-  }, props.query.query || Object.keys(props.query.facets).length > 0 ? 'Matching' : 'All', ' ', result, " (", props.totalMatching > props.numRanks && "".concat(props.currStart, "\u2013").concat(props.currEnd, " of "), props.totalMatching, " ", result, props.query.query && " for \u201C".concat(props.query.query, "\u201D"), ")"), searchHints);
+  }, props.query.query || Object.keys(props.query.facets).length > 0 ? 'Matching' : 'All', ' ', result, " (showing", ' ', props.totalMatching > props.numRanks && "".concat(props.currStart, "\u2013").concat(props.currEnd, " of "), props.totalMatching, " ", result, props.query.query && " for \u201C".concat(props.query.query, "\u201D"), ")"), searchHints);
 }
 
 finder__results__summary.propTypes = {
