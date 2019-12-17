@@ -44702,7 +44702,11 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .column {
-    padding: 0 1rem;
+    padding-right: 1rem;
+}
+
+.column:last-child {
+    padding-right: 0;
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
