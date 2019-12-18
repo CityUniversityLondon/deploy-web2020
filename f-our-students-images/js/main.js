@@ -803,7 +803,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
 /* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
 /* harmony import */ var _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/image-carousel/default-carousel/default-carousel */ "./src/patterns/image-carousel/default-carousel/default-carousel.js");
-/* harmony import */ var _patterns_pathway_pathway__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/pathway/pathway */ "./src/patterns/pathway/pathway.js");
+/* harmony import */ var _patterns_image_column_layout_image_column_layout__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/image-column-layout/image-column-layout */ "./src/patterns/image-column-layout/image-column-layout.js");
 
 
 /**
@@ -842,7 +842,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_pathway_pathway__WEBPACK_IMPORTED_MODULE_26__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_image_column_layout_image_column_layout__WEBPACK_IMPORTED_MODULE_26__["default"]]);
 
 /***/ }),
 
@@ -5245,6 +5245,67 @@ function translateThumbnails(thumbindex, e) {
 
 /***/ }),
 
+/***/ "./src/patterns/image-column-layout/image-column-layout.js":
+/*!*****************************************************************!*\
+  !*** ./src/patterns/image-column-layout/image-column-layout.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
+/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+var className = 'imageColLayout';
+
+function initPathway(elem) {
+  var cards = [].slice.call(elem.querySelectorAll('.imageColLayout--card'));
+  var wrapper = document.createElement('div'),
+      columnOne = document.createElement('div'),
+      columnTwo = document.createElement('div'),
+      columnThree = document.createElement('div'),
+      columnFour = document.createElement('div');
+  wrapper.setAttribute('data-columns', '4');
+  wrapper.className = 'imageColLayout';
+  columnOne.className = 'columnOne';
+  columnOne.className += ' column';
+  columnTwo.className = 'columnTwo';
+  columnTwo.className += ' column';
+  columnThree.className = 'columnThree';
+  columnThree.className += ' column';
+  columnFour.className = 'columnFour';
+  columnFour.className += ' column';
+  cards.forEach(function (card, i) {
+    if ((i + 1) % 4 === 1) {
+      columnOne.appendChild(card);
+    } else if ((i + 1) % 4 === 2) {
+      columnTwo.appendChild(card);
+    } else if ((i + 1) % 4 === 3) {
+      columnThree.appendChild(card);
+    } else {
+      columnFour.appendChild(card);
+    }
+  });
+  wrapper.appendChild(columnOne);
+  wrapper.appendChild(columnTwo);
+  wrapper.appendChild(columnThree);
+  wrapper.appendChild(columnFour);
+  elem.parentNode.replaceChild(wrapper, elem);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: initPathway,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
 /***/ "./src/patterns/key-info-box/key-info-slider.js":
 /*!******************************************************!*\
   !*** ./src/patterns/key-info-box/key-info-slider.js ***!
@@ -7060,67 +7121,6 @@ function addPagination(elem, itemCount) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: addPagination,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
-/***/ "./src/patterns/pathway/pathway.js":
-/*!*****************************************!*\
-  !*** ./src/patterns/pathway/pathway.js ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-
-var className = 'pathway';
-
-function initPathway(elem) {
-  var cards = [].slice.call(elem.querySelectorAll('.pathway--card'));
-  var wrapper = document.createElement('div'),
-      columnOne = document.createElement('div'),
-      columnTwo = document.createElement('div'),
-      columnThree = document.createElement('div'),
-      columnFour = document.createElement('div');
-  wrapper.setAttribute('data-columns', '4');
-  wrapper.className = 'pathway';
-  columnOne.className = 'columnOne';
-  columnOne.className += ' column';
-  columnTwo.className = 'columnTwo';
-  columnTwo.className += ' column';
-  columnThree.className = 'columnThree';
-  columnThree.className += ' column';
-  columnFour.className = 'columnFour';
-  columnFour.className += ' column';
-  cards.forEach(function (card, i) {
-    if ((i + 1) % 4 === 1) {
-      columnOne.appendChild(card);
-    } else if ((i + 1) % 4 === 2) {
-      columnTwo.appendChild(card);
-    } else if ((i + 1) % 4 === 3) {
-      columnThree.appendChild(card);
-    } else {
-      columnFour.appendChild(card);
-    }
-  });
-  wrapper.appendChild(columnOne);
-  wrapper.appendChild(columnTwo);
-  wrapper.appendChild(columnThree);
-  wrapper.appendChild(columnFour);
-  elem.parentNode.replaceChild(wrapper, elem);
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: initPathway,
   launchQuery: ".".concat(className)
 });
 

@@ -44599,103 +44599,104 @@ a.modal__close:active, a.modal__close:focus {
     opacity: 0.7;
 }
 
-.pathway-wrap {
+.imageColLayout-wrap {
     background-color: #f2f2f2;
 }
 
-.pathway-wrap .pathway-wrap__section {
+.imageColLayout-wrap .imageColLayout-wrap__section {
     grid-row-gap: 0;
     display: grid;
     max-width: 80rem;
 }
 
 @media (max-width: 432px) {
-    .pathway-wrap .pathway-wrap__section {
+    .imageColLayout-wrap .imageColLayout-wrap__section {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
-    .pathway-wrap .pathway-wrap__section {
+    .imageColLayout-wrap .imageColLayout-wrap__section {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
 @media (min-width: 901px) {
-    .pathway-wrap .pathway-wrap__section {
+    .imageColLayout-wrap .imageColLayout-wrap__section {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
     }
 }
 
 @media (min-width: 1441px) {
-    .pathway-wrap .pathway-wrap__section {
+    .imageColLayout-wrap .imageColLayout-wrap__section {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (max-width: 1440px) {
-    .pathway-wrap .pathway-wrap__section {
+    .imageColLayout-wrap .imageColLayout-wrap__section {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-.pathway-wrap .pathway-wrap__section h2 {
+.imageColLayout-wrap .imageColLayout-wrap__section h2 {
     grid-column-start: 1;
     grid-column-end: -1;
     grid-row-start: 1;
     grid-row-end: -1;
 }
 
-.pathway {
+.imageColLayout {
     --c: attr(data-columns);
     grid-column: 1/-1;
     display: flex;
     flex-wrap: wrap;
+    margin: 1rem 0;
 }
 
-.pathway[data-columns='2'] .column {
+.imageColLayout[data-columns='2'] .column {
     flex: 50%;
     max-width: 50%;
 }
 
-.pathway[data-columns='3'] .column {
+.imageColLayout[data-columns='3'] .column {
     flex: 33%;
     max-width: 33%;
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
-    .pathway[data-columns='3'] .column {
+    .imageColLayout[data-columns='3'] .column {
         flex: 50%;
         max-width: 50%;
     }
 }
 
 @media (max-width: 432px) {
-    .pathway[data-columns='3'] .column {
+    .imageColLayout[data-columns='3'] .column {
         flex: 100%;
         max-width: 100%;
     }
 }
 
-.pathway[data-columns='4'] .column {
+.imageColLayout[data-columns='4'] .column {
     flex: 25%;
     max-width: 25%;
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
-    .pathway[data-columns='4'] .column {
+    .imageColLayout[data-columns='4'] .column {
         flex: 50%;
         max-width: 50%;
     }
 }
 
 @media (max-width: 432px) {
-    .pathway[data-columns='4'] .column {
+    .imageColLayout[data-columns='4'] .column {
         flex: 100%;
         max-width: 100%;
     }
@@ -44723,15 +44724,15 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
-.pathway-card {
+.imageColLayout-card {
     padding: 1rem 0;
 }
 
-.path-way-card--text {
+.imageColLayout-card--text {
     padding: 0.5rem 0;
 }
 
-.pathway-card--image img {
+.imageColLayout-card--image img {
     min-width: 100%;
 }
 
