@@ -44704,6 +44704,17 @@ a.modal__close:active, a.modal__close:focus {
     opacity: 0.7;
 }
 
+.js .galleria-thumbnails-list .galleria-thumbnail .galleria-thumbnail__current-thumbnail {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
 .generic {
     grid-row-gap: 0;
     display: grid;
