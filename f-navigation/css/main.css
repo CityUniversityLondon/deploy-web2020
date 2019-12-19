@@ -44402,7 +44402,7 @@ li:nth-of-type(3) {
 }
 
 .content-hub__block-three .news-events .related-content .card img {
-    -webkit-transition: none;
+    transition: none;
 }
 
 .content-hub__block-three .news-events {
