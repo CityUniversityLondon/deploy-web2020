@@ -44651,8 +44651,8 @@ a.modal__close:active, a.modal__close:focus {
 .imageColLayout {
     -moz-column-count: 4;
          column-count: 4;
-    -moz-column-gap: 1em;
-         column-gap: 1em;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
     grid-column: 1/-1;
     margin: 1rem 0;
 }
@@ -44732,8 +44732,8 @@ a.modal__close:active, a.modal__close:focus {
 .imageColLayout {
     -moz-column-count: 4;
          column-count: 4;
-    -moz-column-gap: 1em;
-         column-gap: 1em;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
     grid-column: 1/-1;
     margin: 1rem 0;
 }
