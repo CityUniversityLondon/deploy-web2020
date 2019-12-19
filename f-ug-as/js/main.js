@@ -8345,8 +8345,14 @@ function launchTabs(tabs) {
   }, true);
 }
 
+function launchEach(tabs) {
+  var tabsInTabs = tabs.querySelector('.tabs-in-tabs');
+  launchTabs(tabsInTabs);
+  launchTabs(tabs);
+}
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchTabs,
+  launchFn: launchEach,
   launchQuery: ".".concat(className)
 });
 
