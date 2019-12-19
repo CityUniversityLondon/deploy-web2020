@@ -44599,10 +44599,6 @@ a.modal__close:active, a.modal__close:focus {
     opacity: 0.7;
 }
 
-.imageColLayout-wrap {
-    background-color: #f0f0f0;
-}
-
 .imageColLayout-wrap__section {
     grid-row-gap: 0;
     display: grid;
