@@ -4598,7 +4598,8 @@ function carouselGallery(elem) {
   var options = {
     rootMargin: '0px',
     threshold: [0, 1]
-  };
+  },
+      edge = document.documentElement.classList.contains('edge');
   var edgeThumbnailsObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.intersectionRatio === 1) {
@@ -4637,9 +4638,9 @@ function carouselGallery(elem) {
     }, false);
     e.setAttribute('aria-hidden', 'false');
 
-    if (_util__WEBPACK_IMPORTED_MODULE_3__["checkIntersectionObserver"] && !document.documentElement.classList.contains('edge')) {
+    if (_util__WEBPACK_IMPORTED_MODULE_3__["checkIntersectionObserver"] && !edge) {
       thumbnailsObserver.observe(e);
-    } else if (_util__WEBPACK_IMPORTED_MODULE_3__["checkIntersectionObserver"] && document.documentElement.classList.contains('edge')) {
+    } else if (_util__WEBPACK_IMPORTED_MODULE_3__["checkIntersectionObserver"] && edge) {
       edgeThumbnailsObserver.observe(e);
     }
   });
