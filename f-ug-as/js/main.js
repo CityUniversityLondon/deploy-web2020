@@ -8178,16 +8178,18 @@ function prepareLinks(linkItems) {
 
 function preparePanels(panels) {
   panels.forEach(function (panel) {
-    var wrapper = document.createElement('div'),
-        panelElements = Array.from(panel.children);
-    wrapper.className = contentClassName;
-    panelElements.forEach(function (element) {
-      return wrapper.appendChild(element);
-    });
-    panel.appendChild(wrapper);
-    panel.setAttribute('role', 'tabpanel');
-    panel.setAttribute('tabindex', 0);
-    panel.setAttribute('hidden', 'true');
+    if (!panel.querySelector(".".concat(contentClassName))) {
+      var wrapper = document.createElement('div'),
+          panelElements = Array.from(panel.children);
+      wrapper.className = contentClassName;
+      panelElements.forEach(function (element) {
+        return wrapper.appendChild(element);
+      });
+      panel.appendChild(wrapper);
+      panel.setAttribute('role', 'tabpanel');
+      panel.setAttribute('tabindex', 0);
+      panel.setAttribute('hidden', 'true');
+    }
   });
 }
 /**
