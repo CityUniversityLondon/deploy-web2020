@@ -800,7 +800,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
 /* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
 /* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
-/* harmony import */ var _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/back-to-top-link/back-to-top-link */ "./src/patterns/back-to-top-link/back-to-top-link.js");
+/* harmony import */ var _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/back-to-top/back-to-top */ "./src/patterns/back-to-top/back-to-top.js");
 /* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
 /* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
 /* harmony import */ var _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/image-carousel/image-carousel */ "./src/patterns/image-carousel/image-carousel.js");
@@ -851,7 +851,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_14__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_14__["default"]]);
 
 /***/ }),
 
@@ -1561,10 +1561,10 @@ function init(elm) {
 
 /***/ }),
 
-/***/ "./src/patterns/back-to-top-link/back-to-top-link.js":
-/*!***********************************************************!*\
-  !*** ./src/patterns/back-to-top-link/back-to-top-link.js ***!
-  \***********************************************************/
+/***/ "./src/patterns/back-to-top/back-to-top.js":
+/*!*************************************************!*\
+  !*** ./src/patterns/back-to-top/back-to-top.js ***!
+  \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1575,9 +1575,9 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Back To Top Link Scroll
  *
- * @module patterns/back-to-top-Link/back-to-top-Link
+ * @module patterns/back-to-top/back-to-top
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
+ * @copyright City, University of London 2019
  */
 var className = 'back-to-top',
     viewPortHeight = window.innerHeight;
@@ -1595,7 +1595,7 @@ var pageHeight = 1.5,
 /**
  *  Initialises back to top anchor for long pages only
  *
- * @param {HTMLParentElement} - selects back to top parent element, which is used in return to select children elements
+ * @param {HTMLElement} - selects back to top parent element, which is used in return to select children elements
  */
 
 function initBacktoTop(backToTop) {
@@ -1627,7 +1627,7 @@ function initBacktoTop(backToTop) {
 /**
  *  Anchor fading behaviour
  *
- * @param {HTMLAnchorElement} backToTop - back to top element.
+ * @param {HTMLElement} backToTop - back to top element.
  * @param {Number} deadZone - deadzone is the 'area' identified by vertical scroll position, when you scroll to the bottom of the page, where the back to top botton docks back into the footer.
  */
 
@@ -1651,6 +1651,8 @@ function showAnchor(backToTop, deadZone) {
 }
 /**
  *  Progress meter
+ *
+ * @param {HTMLElement} backToTopAnchor - The anchor of the back to top element.
  */
 
 
@@ -1658,10 +1660,8 @@ function updateProgress(backToTopAnchor) {
   // Setting up SVG animation
   var progressPath = backToTopAnchor.querySelector('path'),
       pathLength = progressPath.getTotalLength();
-  progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
   progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-  progressPath.style.strokeDashoffset = pathLength;
-  progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 0ms linear'; // Calculate values
+  progressPath.style.strokeDashoffset = pathLength; // Calculate values
 
   var scroll = window.pageYOffset,
       height = document.documentElement.scrollHeight - window.innerHeight,
