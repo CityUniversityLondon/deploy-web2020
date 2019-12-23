@@ -1582,90 +1582,90 @@ __webpack_require__.r(__webpack_exports__);
 var className = 'back-to-top',
     viewPortHeight = window.innerHeight;
 /**
- * Back to top link button only appears on long pages and when you have scrolled down long enough
+ * Back to top anchor anchor only appears on long pages and when you have scrolled down long enough
  *
- * Please change the parameters below to alter the behaviour of the back to top button.
+ * Please change the parameters below to alter the behaviour of the back to top anchor.
  *
- * @param {variable} pageHeight - only appears on long pages which are 'X' times the viewport height.
- * @param {variable} scrollPos - sets how many viewport heights you need to scroll down for back to top to appear. 1 = 1 viewport height
+ * pageHeight - only appears on long pages which are 'X' times the viewport height.
+ * scrollPos - sets how many viewport heights you need to scroll down for back to top to appear. 1 = 1 viewport height
  */
 
-var pageHeight = 1.5;
-var scrollPos = 1;
+var pageHeight = 1.5,
+    scrollPos = 1;
 /**
- *  Initialises back to top button for long pages only
+ *  Initialises back to top anchor for long pages only
  *
- * @param{HTMLParentElement} - selects back to top parent element, which is used in return to select children elements
+ * @param {HTMLParentElement} - selects back to top parent element, which is used in return to select children elements
  */
 
 function initBacktoTop(backToTop) {
-  var backToTopBut = backToTop.querySelectorAll('a')[0];
-  backToTopBut.style.display = 'none';
+  var backToTopAnchor = backToTop.querySelectorAll('a')[0];
   window.addEventListener('load', function () {
-    var docHeight = document.body.clientHeight; // calculates page height
+    var documentHeight = document.body.clientHeight,
+        backToTopDock = backToTop.offsetTop,
+        // deadzone is the 'area' when you scroll to the bottom of the
+    // page, where the back to top botton docks back into the footer
+    deadZone = backToTopDock - viewPortHeight;
 
-    var backToTopDock = backToTop.offsetTop;
-    var deadZone = backToTopDock - viewPortHeight; // deadzone is the 'area' when you scroll to the bottom of the page, where the back to top botton docks back into the footer
-
-    if (docHeight > viewPortHeight * pageHeight && deadZone > viewPortHeight * scrollPos + viewPortHeight) {
-      // this route is for pages long enough to have the back to top button stick to the right and eventually dock in the footer once you reach the bottom of the page
-      backToTopBut.style.display = 'inline';
-      backToTopBut.classList.add('back-to-top-hide');
-
-      window.onscroll = function () {
-        updateProgress(backToTopBut, deadZone);
-        scrollButtonShow(backToTopBut, deadZone);
-      };
-    } else if (docHeight > viewPortHeight * pageHeight) {
-      // this route is for odd pages just long enough for button to appear in footer once scrolled down, but no long enough to have space for a sticky button to sit in the corner while scrolling.
-      backToTopBut.style.display = 'inline';
+    if (documentHeight > viewPortHeight * pageHeight && deadZone > viewPortHeight * scrollPos + viewPortHeight) {
+      // this route is for pages long enough to have the back to top
+      // anchor stick to the right and eventually dock in the footer
+      // once you reach the bottom of the page
+      backToTop.setAttribute('hidden', 'true');
+      window.addEventListener('scroll', function () {
+        updateProgress(backToTopAnchor);
+        showAnchor(backToTop, deadZone);
+      }, false);
+    } else if (documentHeight > viewPortHeight * pageHeight) {
+      // this route is for odd pages just long enough for anchor to appear
+      // in footer once scrolled down, but no long enough to have space
+      // for a sticky anchor to sit in the corner while scrolling.
+      backToTop.dataset.docked = 'true';
     }
   });
 }
 /**
- *  Button fading behaviour
+ *  Anchor fading behaviour
  *
- * @param {HTMLAnchorElement} backToTopBut - back to top anchor button.
- * @param {number} deadZone - deadzone is the 'area' identified by vertical scroll position, when you scroll to the bottom of the page, where the back to top botton docks back into the footer.
+ * @param {HTMLAnchorElement} backToTop - back to top element.
+ * @param {Number} deadZone - deadzone is the 'area' identified by vertical scroll position, when you scroll to the bottom of the page, where the back to top botton docks back into the footer.
  */
 
 
-function scrollButtonShow(backToTopBut, deadZone) {
-  var screenPos = window.pageYOffset; // calculates scroll position
+function showAnchor(backToTop, deadZone) {
+  var positionOnScreen = window.pageYOffset;
 
-  if (screenPos > viewPortHeight * scrollPos && screenPos < deadZone) {
-    // shows button when scrolled down far enough - see parameters
-    backToTopBut.classList.remove('back-to-top-hide');
-    backToTopBut.classList.add('back-to-top-stick');
-  } else if (screenPos < 200) {
-    // hides button when close to top of the page
-    backToTopBut.classList.add('back-to-top-hide');
-  } else if (screenPos >= deadZone) {
-    // docks button in footer when reaching bottom of the page
-    backToTopBut.classList.remove('back-to-top-stick');
-    backToTopBut.classList.remove('back-to-top-hide');
+  if (positionOnScreen < deadZone && positionOnScreen > viewPortHeight * scrollPos) {
+    // shows anchor when scrolled down far enough - see parameters
+    backToTop.dataset.docked = 'false';
+    backToTop.removeAttribute('hidden');
+  } else if (positionOnScreen < 200) {
+    // hides anchor when close to top of the page
+    backToTop.setAttribute('hidden', 'true');
+    backToTop.dataset.docked = 'false';
+  } else if (positionOnScreen >= deadZone) {
+    // docks anchor in footer when reaching bottom of the page
+    backToTop.removeAttribute('hidden');
+    backToTop.dataset.docked = 'true';
   }
 }
 /**
- *  Progress meter:
- *
+ *  Progress meter
  */
-// updateProgress function
 
 
-function updateProgress() {
+function updateProgress(backToTopAnchor) {
   // Setting up SVG animation
-  var progressPath = document.getElementsByClassName('back-to-top')[0].querySelector('path');
-  var pathLength = progressPath.getTotalLength();
+  var progressPath = backToTopAnchor.querySelector('path'),
+      pathLength = progressPath.getTotalLength();
   progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
   progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
   progressPath.style.strokeDashoffset = pathLength;
-  progressPath.getBoundingClientRect();
   progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 0ms linear'; // Calculate values
 
-  var scroll = window.pageYOffset;
-  var height = document.documentElement.scrollHeight - window.innerHeight;
-  var progress = pathLength - scroll * pathLength / height; // Updates progress bar
+  var scroll = window.pageYOffset,
+      height = document.documentElement.scrollHeight - window.innerHeight,
+      progress = pathLength - scroll * pathLength / height; // Updates progress bar
 
   progressPath.style.strokeDashoffset = progress;
 }
@@ -6323,12 +6323,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
 /* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+
 
 
 
@@ -6348,12 +6351,13 @@ __webpack_require__.r(__webpack_exports__);
 
 var className = 'navigation',
     classNameSpecific = className + '--secondary',
+    controlsClassName = className + '__controls',
     currentClassName = className + '__current',
     hierarchyClassName = className + '__hierarchy',
     buttonClassName = className + '__button',
     buttonTextClassName = buttonClassName + '__text',
     buttonIconClassName = buttonClassName + '__icon',
-    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_5__["reduceMotion"])() ? 0 : 999;
+    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_6__["reduceMotion"])() ? 0 : 999;
 /**
  * Set sub-menu button attributes for the open/closed state.
  *
@@ -6367,7 +6371,7 @@ function setNavigationItemButtonDetails(button, open) {
       textSpan = button.querySelector(".".concat(buttonTextClassName)),
       text = open ? 'Close ' : 'Open ';
   navigationItem.dataset.open = open;
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].expanded, open);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded, open);
   button.title = text + sectionText;
   textSpan.innerText = text + sectionText;
 }
@@ -6391,30 +6395,30 @@ function listenForSubNavigationToggles(subNavigation) {
 
 
 function toggleSubNavigation(button) {
-  var expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].expanded),
+  var expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded),
       thisList = button.closest('ul'),
-      scrollList = zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.createScroller(thisList);
-  Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(expanded) ? setNavigationItemButtonDetails(button, false) : setNavigationItemButtonDetails(button, true);
+      scrollList = zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.createScroller(thisList);
+  Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(expanded) ? setNavigationItemButtonDetails(button, false) : setNavigationItemButtonDetails(button, true);
   scrollList.to(button.closest('li'), scrollDuration);
 }
 /**
  * Decorate sub-navigation element with the appropriate attributes.
  *
  * @param {HTMLLIElement} navigationItem - The list item representing button navigation item.
- * @param {HTMLULElement} subNavigation - The navigation item's sub-navigation.
  */
 
 
-function prepareSubNavigation(navigationItem, subNavigation) {
+function prepareSubNavigation(navigationItem) {
   var navigationItemBtn = document.createElement('button'),
       iconSpan = document.createElement('span'),
-      textSpan = document.createElement('span');
+      textSpan = document.createElement('span'),
+      controlsWrapper = navigationItem.querySelector(".".concat(controlsClassName));
   navigationItemBtn.setAttribute('type', 'button');
-  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].hidden, 'true');
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].hidden, 'true');
   iconSpan.className = "".concat(buttonIconClassName, " fal fa-fw");
   textSpan.className = "".concat(buttonTextClassName);
-  Object(_util__WEBPACK_IMPORTED_MODULE_5__["appendAll"])(navigationItemBtn, [iconSpan, textSpan]);
-  navigationItem.insertBefore(navigationItemBtn, subNavigation);
+  Object(_util__WEBPACK_IMPORTED_MODULE_6__["appendAll"])(navigationItemBtn, [iconSpan, textSpan]);
+  controlsWrapper.appendChild(navigationItemBtn);
 
   if (navigationItem.className.indexOf(currentClassName) >= 0 || navigationItem.className.indexOf(hierarchyClassName) >= 0) {
     setNavigationItemButtonDetails(navigationItemBtn, true);
@@ -6431,12 +6435,17 @@ function prepareSubNavigation(navigationItem, subNavigation) {
 
 
 function prepareNavigation(navigation) {
+  Array.from(navigation.querySelectorAll('li a')).forEach(function (anchor) {
+    return anchor.innerText = anchor.innerText.replace(/\(\( /, '').replace(/ \)\)/, '');
+  });
   Array.from(navigation.querySelectorAll('li')).forEach(function (navigationItem) {
     var link = navigationItem.querySelector('a'),
         subNavigation = navigationItem.querySelector('ul'),
         linkText = 'Visit ' + navigationItem.dataset.title,
         textWrapper = document.createElement('span'),
-        currentWrapper = document.createElement('span');
+        currentPageWrapper = document.createElement('span'),
+        controlsWrapper = document.createElement('div');
+    controlsWrapper.className = controlsClassName;
     /**
      * To format the current page the same as a link, we need to double-wrap
      * it in spans. To programmatically focus it, we need to give it a
@@ -6447,16 +6456,19 @@ function prepareNavigation(navigation) {
 
     if (navigationItem.className.indexOf(currentClassName) >= 0) {
       textWrapper.appendChild(navigationItem.firstChild.cloneNode(true));
-      currentWrapper.appendChild(textWrapper);
-      currentWrapper.setAttribute('tabindex', -1);
-      navigationItem.replaceChild(currentWrapper, navigationItem.firstChild);
+      currentPageWrapper.appendChild(textWrapper);
+      currentPageWrapper.setAttribute('tabindex', -1);
+      navigationItem.replaceChild(controlsWrapper, navigationItem.firstChild);
+      controlsWrapper.appendChild(currentPageWrapper);
     } else {
       textWrapper.appendChild(link.firstChild.cloneNode(true));
       link.replaceChild(textWrapper, link.firstChild);
       link.title = linkText;
+      navigationItem.replaceChild(controlsWrapper, link);
+      controlsWrapper.appendChild(link);
     }
 
-    subNavigation && prepareSubNavigation(navigationItem, subNavigation);
+    subNavigation && prepareSubNavigation(navigationItem);
   });
 }
 /**
