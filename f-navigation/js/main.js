@@ -6339,6 +6339,7 @@ function prepareTopLevel(navigation, veil, closeAll) {
     el.removeAttribute('tabindex');
     button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded, 'false');
     button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].owns, el.nextElementSibling.id);
+    button.setAttribute('type', 'button');
     button.id = el.nextElementSibling.id + '-button';
     button.className = buttonClassName;
     srOpenCloseSpan.className = openCloseTextClassName;
