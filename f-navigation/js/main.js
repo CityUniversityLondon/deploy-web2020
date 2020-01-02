@@ -5600,7 +5600,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/menu/menu
  * @author Web Development
- * @copyright City, University of London 2018
+ * @copyright City, University of London 2018-2020
  */
 
 
