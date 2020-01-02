@@ -1319,7 +1319,7 @@ function finder__toggle(props) {
     },
     checked: props.query.facets[props.facet.meta] ? true : false
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
-    className: "toggle round ".concat(props.query.facets[props.facet.meta] ? 'toggleOpen' : 'toggleClose')
+    className: "toggle ".concat(props.query.facets[props.facet.meta] ? 'toggle--open' : 'toggle--close')
   }))));
 }
 

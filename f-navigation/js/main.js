@@ -1709,7 +1709,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var className = 'cms-editor',
     warningClass = className + '-warning',
-    buttonClass = warningClass + '-remover';
+    buttonClass = warningClass + '-remover',
+    wrapperClass = 'wrapper--' + buttonClass;
 /**
  * Create a warning remover button.
  *
@@ -1739,7 +1740,8 @@ function launchRemover(elem) {
   var warnings = Array.from(elem.querySelectorAll(".".concat(warningClass)));
 
   if (warnings.length) {
-    var button = createButton();
+    var button = createButton(),
+        wrapper = document.createElement('div');
     button.addEventListener('click', function () {
       warnings.forEach(function (w) {
         return w.parentNode.removeChild(w);
@@ -1747,7 +1749,9 @@ function launchRemover(elem) {
       button.parentNode.removeChild(button);
       Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(elem, className, false);
     }, true);
-    elem.appendChild(button);
+    wrapper.className = wrapperClass;
+    wrapper.appendChild(button);
+    document.querySelector('body').insertBefore(wrapper, document.querySelector('.global-footer'));
   }
 }
 
@@ -2859,7 +2863,7 @@ function finder__toggle(props) {
     },
     checked: props.query.facets[props.facet.meta] ? true : false
   }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
-    className: "toggle round ".concat(props.query.facets[props.facet.meta] ? 'toggleOpen' : 'toggleClose')
+    className: "toggle ".concat(props.query.facets[props.facet.meta] ? 'toggle--open' : 'toggle--close')
   }))));
 }
 
@@ -6233,12 +6237,21 @@ function trapFocus(modal) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.from */ "./node_modules/core-js/modules/es.array.from.js");
 /* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+
+
+
 
 
 
@@ -6255,50 +6268,280 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var className = 'navigation',
+    currentClassName = className + '__current',
     classNameSpecific = className + '--primary',
-    topLevel = classNameSpecific + '__section-text',
+    topLevelClassName = classNameSpecific + '__section-text',
     buttonClassName = className + '__button',
-    buttonIconClassName = buttonClassName + '__icon',
-    openText = 'Open dropdown',
-    closeText = 'Close dropdown';
+    openCloseTextClassName = buttonClassName + '__open-close',
+    navigationTextClassName = buttonClassName + '__navigation',
+    veilClassName = className + '__veil',
+    openText = 'Open',
+    closeText = 'Close',
+    navigationText = 'navigation section',
+    keyCodeTab = 9,
+    keyCodeEscape = 27;
+/**
+ * Return a function to toggle everything closed.
+ *
+ * @param {HTMLElement} navigation - The primary navigation element.
+ * @param {HTMLElement} veil - The veiling element.
+ * @returns {function} - A function for toggling all the menus closed.
+ */
+
+function createCloseAll(navigation, veil) {
+  return function () {
+    var buttons = Array.from(navigation.querySelectorAll('.navigation--primary__level1 > .navigation__button'));
+    buttons.forEach(function (button) {
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded, 'false');
+      button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(openText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
+    });
+    veil.dataset.on = 'false';
+  };
+}
+/**
+ * Return a function to toggle whether a navigation section is open.
+ *
+ * @param {HTMLElement} veil - The veiling element.
+ * @returns {function} - A function for toggling a menu open or closed.
+ */
+
+
+function createSectionToggle(button, veil, closeAll) {
+  return function () {
+    var open = !Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded));
+    closeAll();
+
+    if (open) {
+      veil.dataset.on = 'true';
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded, open);
+      button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(closeText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
+    }
+  };
+}
+/**
+ * Create toggle buttons from the top level anchors.
+ *
+ * @param {HTMLElement} navigation - The primary navigation element.
+ * @param {HTMLElement} veil - The veiling element.
+ */
+
+
+function prepareTopLevel(navigation, veil, closeAll) {
+  var topLevels = Array.from(navigation.querySelectorAll(".".concat(topLevelClassName)));
+  topLevels.forEach(function (el) {
+    var listItem = el.parentNode,
+        button = document.createElement('button'),
+        buttonDiv = document.createElement('div'),
+        srOpenCloseSpan = document.createElement('span'),
+        srNavigationSpan = document.createElement('span'),
+        toggleSection = createSectionToggle(button, veil, closeAll); // LIs have tabindex so they're accessible with no JS, remove it
+
+    el.removeAttribute('tabindex');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded, 'false');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].owns, el.nextElementSibling.id);
+    button.id = el.nextElementSibling.id + '-button';
+    button.className = buttonClassName;
+    srOpenCloseSpan.className = openCloseTextClassName;
+    srOpenCloseSpan.appendChild(document.createTextNode(openText));
+    srNavigationSpan.className = navigationTextClassName;
+    srNavigationSpan.appendChild(document.createTextNode(navigationText));
+    button.addEventListener('click', function () {
+      return toggleSection();
+    }, true);
+    Object(_util__WEBPACK_IMPORTED_MODULE_6__["appendAll"])(buttonDiv, [srOpenCloseSpan, document.createTextNode(' '), el, document.createTextNode(' '), srNavigationSpan]);
+    button.append(buttonDiv);
+    listItem.prepend(button);
+  });
+}
+/**
+ * Add event listeners to top level buttons enabling shift-tabbing into the previous
+ * section.
+ *
+ * @param {HTMLElement} navigation - The primary navigation element.
+ * @param {HTMLElement} veil - The veiling element.
+ */
+
+
+function setupTabPrevious(navigation, veil, closeAll) {
+  var firstButton = navigation.querySelector('.navigation--primary__level1:first-of-type > .navigation__button'),
+      restButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:first-of-type) > .navigation__button')); // If we tab out of the open, first menu into the other header content, close the menu.
+
+  firstButton.addEventListener('keydown', function (e) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
+      closeAll();
+    }
+  });
+  restButtons.forEach(function (thisSectionButton) {
+    var previousSection = thisSectionButton.parentElement.previousElementSibling,
+        previousSectionButton = previousSection.querySelector('button'),
+        lastNavigationAnchor = previousSection.querySelector('.navigation__level2 > li:last-of-type > a') ? previousSection.querySelector('.navigation__level2 > li:last-of-type > a') : previousSection.querySelector('.navigation__level2 > li:last-of-type').previousElementSibling.querySelector('a'),
+        togglePreviousSection = createSectionToggle(previousSectionButton, veil, closeAll);
+    thisSectionButton.addEventListener('keydown', function (e) {
+      if (Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
+        e.preventDefault();
+        togglePreviousSection();
+        lastNavigationAnchor.focus();
+      }
+    }, true);
+  });
+}
+/**
+ * Add event listeners to the final anchor in each section allowing tabbing into
+ * the next navigation section.
+ *
+ * @param {HTMLElement} navigation - The primary navigation element.
+ * @param {HTMLElement} veil - The veiling element.
+ * @param {function} closeAll - A function to close the entire menu.
+ */
+
+
+function setupTabNext(navigation, veil, closeAll) {
+  var lastSectionLastNavigationItem = navigation.querySelector('.navigation--primary__level1:last-of-type .navigation__level2 > li:last-of-type'),
+      lastSectionLastAnchor = lastSectionLastNavigationItem.className.indexOf(currentClassName) >= 0 ? lastSectionLastNavigationItem.previousElementSibling.querySelector('a') : lastSectionLastNavigationItem.querySelector('a'),
+      restSectionsLastNavigationItems = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:last-of-type) .navigation__level2 > li:last-of-type')); // If we tab out of the open, first menu into the other header content, close the menu.
+
+  lastSectionLastAnchor.addEventListener('keydown', function (e) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(lastSectionLastAnchor.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded)) && keyCodeTab === e.keyCode && !e.shiftKey) {
+      closeAll();
+    }
+  });
+  restSectionsLastNavigationItems.forEach(function (navigationItem) {
+    var lastSectionAnchor = navigationItem.className.indexOf(currentClassName) >= 0 ? navigationItem.previousElementSibling.querySelector('a') : navigationItem.querySelector('a'),
+        nextSectionButton = lastSectionAnchor.closest('.navigation--primary__level1').nextElementSibling.querySelector('button'),
+        toggleNextSection = createSectionToggle(nextSectionButton, veil, closeAll);
+    lastSectionAnchor.addEventListener('keydown', function (e) {
+      if (keyCodeTab === e.keyCode && !e.shiftKey) {
+        e.preventDefault();
+        toggleNextSection();
+        nextSectionButton.focus();
+      }
+    }, true);
+  });
+}
+/**
+ * Wrap anchor text in spans for styling.
+ *
+ * @param {HTMLElement} navigation - The primary navigation element.
+ */
+
+
+function prepareLowerLevels(navigation) {
+  Array.from(navigation.querySelectorAll('.navigation__level2 li')).forEach(function (navigationItem) {
+    var link = navigationItem.querySelector('a'),
+        textWrapper = document.createElement('span');
+    /**
+     * To format the current page the same as a link, we need to
+     * double-wrap.
+     *
+     * Actual links only need one span.
+     */
+
+    if (navigationItem.className.indexOf(currentClassName) >= 0) {
+      var currentPageWrapper = document.createElement('span'),
+          linkText = navigationItem.firstChild.wholeText.trim();
+      textWrapper.appendChild(document.createTextNode(linkText));
+      currentPageWrapper.appendChild(textWrapper);
+      navigationItem.replaceChild(currentPageWrapper, navigationItem.firstChild);
+    } else {
+      textWrapper.appendChild(link.firstChild.cloneNode(true));
+      link.replaceChild(textWrapper, link.firstChild);
+    }
+  });
+}
+/**
+ * Wrap header text in spans for styling.
+ *
+ * @param {HTMLElement} navigation - The primary navigation element.
+ * @param {HTMLElement} veil - The veiling element.
+ */
+
+
+function prepareHeaders(navigation) {
+  Array.from(navigation.querySelectorAll('.navigation--primary__menu__header')).forEach(function (header) {
+    var link = header.querySelector('a'),
+        textWrapper = document.createElement('span');
+
+    if (!link) {
+      var currentPageWrapper = document.createElement('span'),
+          linkText = header.firstChild.wholeText.trim();
+      textWrapper.appendChild(document.createTextNode(linkText));
+      currentPageWrapper.appendChild(textWrapper);
+      header.replaceChild(currentPageWrapper, header.firstChild);
+    } else {
+      textWrapper.appendChild(link.firstChild.cloneNode(true));
+      link.replaceChild(textWrapper, link.firstChild);
+    }
+  });
+}
+/**
+ * Add close buttons to menu sections.
+ *
+ * @param {HTMLElement} navigation
+ */
+
+
+function addCloseButtons(navigation, closeAll) {
+  Array.from(navigation.querySelectorAll('.navigation--primary__menu__content')).forEach(function (menu) {
+    var header = menu.querySelector('.navigation--primary__menu__header'),
+        closeButtonWrapper = document.createElement('div'),
+        closeButton = document.createElement('button'),
+        closeButtonDiv = document.createElement('div'),
+        closeButtonText = document.createElement('span'),
+        closeButtonIcon = document.createElement('span'),
+        text = 'Close ' + header.innerText.trim() + ' menu';
+    closeButtonText.appendChild(document.createTextNode(text));
+    closeButtonText.className = 'navigation--primary__menu__close__text';
+    closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].hidden, 'true');
+    closeButtonIcon.className = 'fas fa-fw fa-times navigation--primary__menu__close__icon';
+    closeButtonWrapper.className = 'wrapper--navigation--primary__menu__close';
+    closeButton.className = 'navigation--primary__menu__close';
+    Object(_util__WEBPACK_IMPORTED_MODULE_6__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
+    closeButton.appendChild(closeButtonDiv);
+    closeButton.setAttribute('type', 'button');
+    closeButton.title = text;
+    closeButton.addEventListener('click', function () {
+      return closeAll();
+    }, true);
+    closeButtonWrapper.appendChild(closeButton);
+    menu.insertBefore(closeButtonWrapper, header);
+  });
+}
 /**
  * Transform the Matrix-generated navigation lists into an interactive menu.
  *
  * @param {HTMLElement} navigation - The primary navigation element.
  */
 
+
 function launchPrimaryNavigation(navigation) {
-  var topLevels = Array.from(navigation.querySelectorAll(".".concat(topLevel)));
-  topLevels.forEach(function (el) {
-    var listItem = el.parentNode,
-        button = document.createElement('button'),
-        buttonDiv = document.createElement('div'),
-        iconSpan = document.createElement('span');
-    el.removeAttribute('tabindex');
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
-    iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, openText);
-    iconSpan.classList.add(buttonIconClassName);
-    iconSpan.classList.add('fas');
-    iconSpan.classList.add('fa-fw');
-    button.addEventListener('click', function () {
-      if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded))) {
-        button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
-        iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, openText);
-      } else {
-        Array.from(navigation.querySelectorAll('button')).forEach(function (button) {
-          return button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
-        });
-        Array.from(navigation.querySelectorAll(".".concat(buttonIconClassName))).forEach(function (span) {
-          return span.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, openText);
-        });
-        button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'true');
-        iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, closeText);
-      }
-    }, true);
-    Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(buttonDiv, [el, iconSpan]);
-    button.append(buttonDiv);
-    listItem.prepend(button);
-  });
+  // During testing only: remove 'under construction' indicators globally
+  navigation.innerHTML = navigation.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
+  var veil = document.createElement('div'),
+      closeAll = createCloseAll(navigation, veil);
+  veil.className = veilClassName;
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].hidden, 'true');
+  document.querySelector('body').insertBefore(veil, document.querySelector('main'));
+  prepareTopLevel(navigation, veil, closeAll);
+  prepareLowerLevels(navigation, veil);
+  prepareHeaders(navigation);
+  addCloseButtons(navigation, closeAll); // Allow tabbing from one section to another,
+  // and close when tabbing out of the navigation
+
+  setupTabPrevious(navigation, veil, closeAll);
+  setupTabNext(navigation, veil, closeAll); // If the navigation is open, close on escape.
+
+  navigation.addEventListener('keydown', function (e) {
+    if (navigation.querySelector(".".concat(buttonClassName, "[aria-expanded='true']")) && keyCodeEscape === e.keyCode) {
+      e.preventDefault();
+      closeAll();
+    }
+  }, true); // If the navigation is open, close it on click outside it.
+
+  window.addEventListener('click', function (e) {
+    if (navigation.querySelector(".".concat(buttonClassName, "[aria-expanded='true']")) && !e.target.closest(".".concat(classNameSpecific))) {
+      closeAll();
+    }
+  }, true);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -6435,9 +6678,7 @@ function prepareSubNavigation(navigationItem) {
 
 
 function prepareNavigation(navigation) {
-  Array.from(navigation.querySelectorAll('li a')).forEach(function (anchor) {
-    return anchor.innerText = anchor.innerText.replace(/\(\( /, '').replace(/ \)\)/, '');
-  });
+  navigation.innerHTML = navigation.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
   Array.from(navigation.querySelectorAll('li')).forEach(function (navigationItem) {
     var link = navigationItem.querySelector('a'),
         subNavigation = navigationItem.querySelector('ul'),
@@ -6468,7 +6709,7 @@ function prepareNavigation(navigation) {
       controlsWrapper.appendChild(link);
     }
 
-    subNavigation && prepareSubNavigation(navigationItem);
+    subNavigation && subNavigation.firstElementChild && prepareSubNavigation(navigationItem);
   });
 }
 /**
