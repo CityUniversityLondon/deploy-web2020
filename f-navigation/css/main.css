@@ -18758,15 +18758,6 @@ body {
     box-sizing: inherit;
 }
 
-.skip-link:focus {
-    background-color: #ffffff;
-    outline-offset: 0;
-    padding: 1rem;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 1rem;
-}
-
 .logo {
     display: block;
     width: 4rem;
