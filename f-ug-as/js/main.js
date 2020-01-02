@@ -4773,6 +4773,8 @@ function init(elem, options) {
     lazyImages.forEach(function (lazyImage, i, a) {
       if (i !== a.length - 1) {
         lazyImageObserver.observe(lazyImage.parentNode);
+      } else {
+        lazyImage.classList.remove('lazy');
       }
     });
   }
