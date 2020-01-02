@@ -5569,31 +5569,24 @@ function launchLoadMore(e) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_filter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.filter */ "./node_modules/core-js/modules/es.array.filter.js");
-/* harmony import */ var core_js_modules_es_array_filter__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_filter__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.from */ "./node_modules/core-js/modules/es.array.from.js");
-/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_number_constructor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.number.constructor */ "./node_modules/core-js/modules/es.number.constructor.js");
-/* harmony import */ var core_js_modules_es_number_constructor__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_constructor__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_number_parse_int__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.number.parse-int */ "./node_modules/core-js/modules/es.number.parse-int.js");
-/* harmony import */ var core_js_modules_es_number_parse_int__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_parse_int__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
-
-
+/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.from */ "./node_modules/core-js/modules/es.array.from.js");
+/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js");
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(body_scroll_lock__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 
@@ -5613,33 +5606,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var className = 'menu',
     currentClassName = className + '__current',
     hierarchyClassName = className + '__hierarchy',
-    columnsClassName = className + '__columns',
-    columnClassName = columnsClassName + '__col',
     buttonClassName = className + '__button',
+    level1ClassName = className + '__level1',
     buttonTextClassName = buttonClassName + '__text',
     buttonIconClassName = buttonClassName + '__icon',
-    menuLevelClassNamePrefix = className + '__level',
     veilClassName = className + '__veil',
-    // the menu starts with the entries below the root, not the root itself
-firstLevel = 1,
-    levelsSupported = 6,
-    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_10__["reduceMotion"])() ? 0 : 999;
-/**
- * Copies a sub-menu into the appropriate column for its menu level, replacing
- * the existing sub-menu if there is one.
- *
- * @param {HTMLUListElement} subMenu - A UL element representing a sub-menu.
- * @param {HTMLDivElement[]} columns - The array of column divs.
- */
-
-function appendMenu(subMenu, columns) {
-  var menuLevel = Number.parseInt(subMenu.className.slice(-1)),
-      column = columns[menuLevel - firstLevel];
-  column.firstChild ? column.replaceChild(subMenu.cloneNode(true), column.firstChild) : column.appendChild(subMenu.cloneNode(true));
-}
+    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_7__["reduceMotion"])() ? 0 : 999;
 /**
  * Decorate sub-menu element with the appropriate attributes.
  *
@@ -5648,16 +5624,15 @@ function appendMenu(subMenu, columns) {
  * @returns {HTMLULElement|null} Return the sub-menu if it should be open, otherwise null.
  */
 
-
 function prepareSubMenu(menuItem, subMenu) {
   var menuItemBtn = document.createElement('button'),
       iconSpan = document.createElement('span'),
       textSpan = document.createElement('span');
   menuItemBtn.setAttribute('type', 'button');
-  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_11__["default"].hidden, 'true');
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].hidden, 'true');
   iconSpan.className = "".concat(buttonIconClassName, " fal fa-fw");
   textSpan.className = "".concat(buttonTextClassName);
-  Object(_util__WEBPACK_IMPORTED_MODULE_10__["appendAll"])(menuItemBtn, [iconSpan, textSpan]);
+  Object(_util__WEBPACK_IMPORTED_MODULE_7__["appendAll"])(menuItemBtn, [iconSpan, textSpan]);
   menuItem.insertBefore(menuItemBtn, subMenu);
 
   if (menuItem.className.indexOf(currentClassName) >= 0 || menuItem.className.indexOf(hierarchyClassName) >= 0) {
@@ -5730,47 +5705,13 @@ function menuSetter(menu, veil, button) {
    * @param {boolean} open - Set the menu to be open?
    */
   var setMenu = function setMenu(open) {
+    open ? Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_8__["disableBodyScroll"])() : Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_8__["enableBodyScroll"])();
     menu.dataset.open = open;
     veil.dataset.on = open;
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_11__["default"].expanded, open);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].expanded, open);
   };
 
   return setMenu;
-}
-/**
- * Scroll the selected asset lineage into view in each column of the menu.
- *
- * @param {HTMLElement} menu - The menu element.
- */
-
-
-function scrollMenusIntoView(menu) {
-  /**
-   * If the current page is in the first level, select it.
-   * */
-  var currentPage = menu.querySelector(".".concat(columnClassName, ":first-of-type > ul .").concat(currentClassName)),
-      col = currentPage && menu.querySelector(".".concat(columnClassName, ":first-of-type > ul"));
-  /**
-   * The first column is the entire menu on mobile, so we need to scroll
-   * the entire column if the current page is in it and off-screen.
-   *
-   * The other sub-menus only display a single level, so we scroll the
-   * list to the open item or the current page.
-   */
-
-  Array.from(menu.querySelectorAll(".".concat(columnClassName, " > ul"))).forEach(function (list, i) {
-    if (i === 0 && currentPage && Object(_util__WEBPACK_IMPORTED_MODULE_10__["isVisible"])(currentPage)) {
-      /**
-       * The current page is in the first column
-       */
-      var scrollCol = zenscroll__WEBPACK_IMPORTED_MODULE_8___default.a.createScroller(col);
-      scrollCol.center(currentPage, scrollDuration);
-    } else {
-      var target = list.querySelector(['[data-open="true"]', ".".concat(currentClassName)].join(',')),
-          scrollList = zenscroll__WEBPACK_IMPORTED_MODULE_8___default.a.createScroller(list);
-      target && scrollList.to(target, scrollDuration);
-    }
-  });
 }
 /**
  * Opens or closes the menu, (de)activates the focus trap if provided, and
@@ -5784,66 +5725,15 @@ function scrollMenusIntoView(menu) {
 
 
 function toggleMenu(button, setMenu, trap) {
-  var expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_11__["default"].expanded);
+  var expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].expanded);
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_10__["toBool"])(expanded)) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_7__["toBool"])(expanded)) {
     trap && trap.deactivate();
     setMenu(false);
   } else {
     setMenu(true);
-    trap && trap.activate();
-    var menu = button.closest(".".concat(className));
-    scrollMenusIntoView(menu);
-  }
-}
-/**
- * Return all menu items from every instance of a sub-menu level.
- *
- * @param {HTMLElement} menu - The menu element.
- * @param {number} level - The menu level to retrieve.
- * @returns {HTMLLIElement[]} Every menu item of that level from every sub-menu.
- */
-
-
-function menuItems(menu, level) {
-  return Array.from(menu.querySelectorAll(".".concat(menuLevelClassNamePrefix).concat(level, " > li")));
-}
-/**
- * When we change which sub-menu is open, the entire tree below it also changes
- * - whatever was open is now closed. So, we remove those sub-menus.
- *
- * @param {HTMLDivElement} column - The column to retain.
- * @param {number} level - Close everything at this level and lower.
- */
-
-
-function clearColumnsToTheRight(column, level) {
-  var menu = column.closest(".".concat(className));
-  /**
-   * Remove sub-menus from columns to the right
-   */
-
-  var nextColumn = column.nextElementSibling;
-
-  while (nextColumn) {
-    Array.from(nextColumn.childNodes).forEach(function (subMenu) {
-      return nextColumn.removeChild(subMenu);
-    });
-    nextColumn = nextColumn.nextElementSibling;
-  }
-  /**
-   * Set all items to be closed at current level and lower, in every sub-menu.
-   */
-
-
-  var list = menuItems(menu, level);
-
-  while (list.length) {
-    list.forEach(function (menuItem) {
-      var button = menuItem.querySelector('button');
-      button && setMenuItemButtonDetails(button, false);
-    });
-    list = menuItems(menu, ++level);
+    trap && trap.activate(); // const menu = button.closest(`.${className}`);
+    // scrollMenusIntoView(menu);
   }
 }
 /**
@@ -5860,19 +5750,19 @@ function setMenuItemButtonDetails(button, open) {
       textSpan = button.querySelector(".".concat(buttonTextClassName)),
       text = open ? 'Close ' : 'Open ';
   menuItem.dataset.open = open;
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_11__["default"].expanded, open);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].expanded, open);
   button.title = text + sectionText;
   textSpan.innerText = text + sectionText;
 }
 /**
  * Open/close the sub-menu when its button is clicked.
  *
- * @param {HTMLUListElement} subMenu - Toggle the sub-menu when its button is clicked.
+ * @param {HTMLUListElement} menu - Toggle the sub-menu when its button is clicked.
  */
 
 
-function listenForSubMenuToggles(subMenu) {
-  Array.from(subMenu.querySelectorAll('button')).forEach(function (button) {
+function listenForMenuToggles(menu) {
+  Array.from(menu.querySelectorAll('button')).forEach(function (button) {
     return button.addEventListener('click', function () {
       return toggleSubMenu(button);
     }, true);
@@ -5887,68 +5777,11 @@ function listenForSubMenuToggles(subMenu) {
 
 
 function toggleSubMenu(button) {
-  var expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_11__["default"].expanded),
-      menu = button.closest(".".concat(className)),
-      thisList = button.closest('ul'),
-      thisLevel = Number.parseInt(thisList.className.slice(-1)),
-      thisCol = menu.querySelector(".".concat(columnClassName, ":nth-of-type(").concat(thisLevel - firstLevel + 1, ")")),
-      scrollList = zenscroll__WEBPACK_IMPORTED_MODULE_8___default.a.createScroller(thisList);
-  /***
-   * Whether we're opening a different sub-menu or closing the current one,
-   * everything below it should collapse.
-   */
-
-  clearColumnsToTheRight(thisCol, thisLevel);
-
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_10__["toBool"])(expanded)) {
-    setAllWithSameID(button, false);
-  } else {
-    var columnToTheRight = thisCol.nextSibling,
-        subMenu = button.closest('li').querySelector('ul').cloneNode(true);
-    columnToTheRight.appendChild(subMenu);
-    /**
-     * The cloned element won't have any of the event listeners the were
-     * set up on the original.
-     */
-
-    listenForSubMenuToggles(subMenu);
-    subMenu.querySelector(['button', 'a'].join(',')).focus();
-    setAllWithSameID(button, true);
-  }
-
+  var expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].expanded),
+      thisList = button.closest(".".concat(className)),
+      scrollList = zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.createScroller(thisList);
+  Object(_util__WEBPACK_IMPORTED_MODULE_7__["toBool"])(expanded) ? setMenuItemButtonDetails(button, false) : setMenuItemButtonDetails(button, true);
   scrollList.to(button.closest('li'), scrollDuration);
-}
-/**
- * The desktop menus are cloned sub-sections of the overall menu. When we open
- * and close one, we need to set the others the same way.
- *
- * @param {HTMLButtonElement} button - The button that's been opened/closed.
- * @param {boolean} open - Should it be set open?
- */
-
-
-function setAllWithSameID(button, open) {
-  Array.from(document.querySelectorAll("[data-id=\"".concat(button.closest('li').dataset.id, "\"]"))).forEach(function (menuItem) {
-    return setMenuItemButtonDetails(menuItem.querySelector('button'), open);
-  });
-}
-/**
- * Create an array of divs representing each column of the menu.
- *
- * @param {number} levels - How many columns to create.
- * @returns {HTMLDivElement[]} An array of divs representing the columns.
- */
-
-
-function createColumns(levels) {
-  var columns = [];
-
-  for (var i = 0; i < levels; i++) {
-    columns[i] = document.createElement('div');
-    columns[i].className = columnClassName;
-  }
-
-  return columns;
 }
 /**
  * Turn the menu label into a button to toggle the menu open and closed.
@@ -5966,23 +5799,29 @@ function createMenuToggle(label, button, setMenu) {
   var buttonWrapper = document.createElement('div'),
       menu = label.closest(".".concat(className));
   button.setAttribute('type', 'button');
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_11__["default"].hasPopup, 'menu');
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].hasPopup, 'menu');
   Array.from(label.childNodes).forEach(function (child) {
     return buttonWrapper.appendChild(child);
   });
   button.appendChild(buttonWrapper);
-  var trap = focus_trap__WEBPACK_IMPORTED_MODULE_9___default()(menu, {
+  var trap = focus_trap__WEBPACK_IMPORTED_MODULE_6___default()(menu, {
     /**
      * Initial focus should be whichever of: the current page; a menu item
      * in the asset lineage or; the first item in the last column appears
      * last in the DOM and is visible.
      */
-    initialFocus: function initialFocus() {
-      var open = Array.from(menu.querySelectorAll([".".concat(currentClassName, " > span"), ".".concat(hierarchyClassName, " > a"), ".".concat(columnClassName, " > ul > li:first-of-type > a")].join(','))).filter(function (elem) {
-        return elem && Object(_util__WEBPACK_IMPORTED_MODULE_10__["isVisible"])(elem);
-      });
-      return open[open.length - 1];
-    },
+    // initialFocus: () => {
+    //     const open = Array.from(
+    //         menu.querySelectorAll(
+    //             [
+    //                 `.${currentClassName} > span`,
+    //                 `.${hierarchyClassName} > a`,
+    //                 `.${level1ClassName} > ul > li:first-of-type > a`,
+    //             ].join(',')
+    //         )
+    //     ).filter(elem => elem && isVisible(elem));
+    //     return open[open.length - 1];
+    // },
     onDeactivate: function onDeactivate() {
       return toggleMenu(button, setMenu);
     },
@@ -6000,34 +5839,20 @@ function createMenuToggle(label, button, setMenu) {
 
 
 function launchMenu(menu) {
+  // During testing only: remove 'under construction' indicators globally
+  menu.innerHTML = menu.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
   var label = menu.querySelector(".".concat(buttonClassName)),
-      menuList = menu.querySelector(".".concat(menuLevelClassNamePrefix).concat(firstLevel)),
       button = document.createElement('button'),
-      columnsContainer = document.createElement('div'),
-      columns = createColumns(levelsSupported),
       veil = document.createElement('div'),
-      setMenu = menuSetter(menu, veil, button),
-      menus = prepareMenu(menu);
-  columnsContainer.className = columnsClassName;
-  /**
-   * Put the entire menu in the first column.
-   */
-
-  columns[0].appendChild(menuList);
+      setMenu = menuSetter(menu, veil, button);
+  prepareMenu(menu);
   createMenuToggle(label, button, setMenu);
   veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_11__["default"].hidden, 'true');
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   setMenu(false);
-  menus.forEach(function (menu) {
-    return appendMenu(menu, columns);
-  });
-  columns.forEach(function (column) {
-    return columnsContainer.appendChild(column);
-  });
-  menu.appendChild(columnsContainer);
   label.appendChild(button);
-  listenForSubMenuToggles(columnsContainer);
+  listenForMenuToggles(menu.querySelector(".".concat(level1ClassName)));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -6679,6 +6504,7 @@ function prepareSubNavigation(navigationItem) {
 
 
 function prepareNavigation(navigation) {
+  // During testing only: remove 'under construction' indicators globally
   navigation.innerHTML = navigation.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
   Array.from(navigation.querySelectorAll('li')).forEach(function (navigationItem) {
     var link = navigationItem.querySelector('a'),

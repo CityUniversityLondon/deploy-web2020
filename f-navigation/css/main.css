@@ -31877,54 +31877,60 @@ article figure figcaption a:active {
     }
 }
 
-.global-header .global-header__content {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-    grid-template-rows: 1fr;
+@media (max-width: 1023px) {
+    .global-header .global-header__content {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1024px) {
+    .global-header .global-header__content {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        grid-template-columns: repeat(24, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
     .global-header .global-header__content {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1024px) and (min-width: 1441px) {
     .global-header .global-header__content {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1024px) and (min-width: 901px) {
     .global-header .global-header__content {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) and (min-width: 768px) {
     .global-header .global-header__content {
         grid-column-gap: 1rem;
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1024px) and (min-width: 901px) {
     .global-header .global-header__content {
         grid-column-gap: 1.5rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .global-header .global-header__content {
-        grid-template-rows: repeat(3, auto);
     }
 }
 
@@ -31935,16 +31941,20 @@ article figure figcaption a:active {
     }
 }
 
-.header-logo {
-    grid-column-end: span 3;
-    grid-column-start: 1;
-    grid-row-end: span 1;
-    grid-row-start: 1;
+@media (max-width: 1023px) {
+    .header-logo {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        max-width: 5rem;
+    }
 }
 
 @media (min-width: 1024px) {
     .header-logo {
+        grid-column-end: span 3;
+        grid-column-start: 1;
         grid-row-end: span 2;
+        grid-row-start: 1;
     }
 }
 
@@ -32176,6 +32186,12 @@ article figure figcaption a:active {
     grid-column-end: span 4;
 }
 
+@media (max-width: 1023px) {
+    .global-header__search {
+        margin-right: 1.5rem;
+    }
+}
+
 @media (min-width: 1024px) {
     .global-header__search {
         grid-row-end: 1;
@@ -32184,104 +32200,111 @@ article figure figcaption a:active {
 
 .global-header__search > a,
 .global-header__search > button {
-    font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-    font-size: 1.125rem;
-    line-height: 1.25;
-    letter-spacing: -0.008em;
-    font-style: normal;
-    font-weight: 600;
-    margin-top: 1rem;
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    display: inline-block;
-    padding-bottom: 0.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 0.5rem;
-    transition: background-color 0.6s;
     align-items: center;
-    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    height: 100%;
     justify-content: center;
-    margin-top: 0;
     min-height: 44px;
     width: 100%;
 }
 
-.global-header__search > a i,
-.global-header__search > a em,
-.global-header__search > button i,
-.global-header__search > button em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-}
-
-.global-header__search > a b,
-.global-header__search > a strong,
-.global-header__search > button b,
-.global-header__search > button strong {
-    font-weight: inherit;
-}
-
-.global-header__search > a i,
-.global-header__search > a em,
-.global-header__search > button i,
-.global-header__search > button em {
-    font-style: italic;
-}
-
-.global-header__search > a u,
-.global-header__search > button u {
-    text-decoration: none;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
+@media (max-width: 1023px) {
     .global-header__search > a,
     .global-header__search > button {
-        letter-spacing: -0.011em;
+        font-family: "Meta Sans", sans-serif;
+        font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+        font-size: 1rem;
+        line-height: 1.625;
+        letter-spacing: -0.005em;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-top: 1rem;
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        border-style: solid;
+        border-width: 0.125rem;
+        display: inline-block;
+        padding-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 0.5rem;
+        transition: background-color 0.6s, border-color 0.6s, color 0.6s;
+        display: flex;
+        height: unset;
+        margin-top: 0;
+    }
+    .global-header__search > a i,
+    .global-header__search > a em,
+    .global-header__search > button i,
+    .global-header__search > button em {
+        font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    }
+    .global-header__search > a b,
+    .global-header__search > a strong,
+    .global-header__search > button b,
+    .global-header__search > button strong {
+        font-weight: inherit;
+    }
+    .global-header__search > a i,
+    .global-header__search > a em,
+    .global-header__search > button i,
+    .global-header__search > button em {
+        font-style: italic;
+    }
+    .global-header__search > a u,
+    .global-header__search > button u {
+        text-decoration: none;
     }
 }
 
-@media (min-width: 1920px) and (max-width: 3839px) {
+@media (max-width: 1023px) and (min-width: 1280px) and (max-width: 1919px) {
     .global-header__search > a,
     .global-header__search > button {
-        letter-spacing: -0.014em;
+        letter-spacing: -0.008em;
     }
 }
 
-@media (min-width: 3840px) and (max-width: 7679px) {
+@media (max-width: 1023px) and (min-width: 1920px) and (max-width: 3839px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 3840px) and (max-width: 7679px) {
     .global-header__search > a,
     .global-header__search > button {
         letter-spacing: -0.017em;
     }
 }
 
-@media (min-width: 7680px) {
+@media (max-width: 1023px) and (min-width: 7680px) {
     .global-header__search > a,
     .global-header__search > button {
         letter-spacing: -0.017em;
     }
 }
 
-.global-header__search > a b,
-.global-header__search > a strong,
-.global-header__search > button b,
-.global-header__search > button strong {
-    font-weight: 600;
+@media (max-width: 1023px) {
+    .global-header__search > a b,
+    .global-header__search > a strong,
+    .global-header__search > button b,
+    .global-header__search > button strong {
+        font-weight: 700;
+    }
 }
 
-@media (hover: hover) {
+@media (max-width: 1023px) and (hover: hover) {
     .global-header__search > a:hover,
     .global-header__search > button:hover {
         background-color: initial;
@@ -32298,39 +32321,232 @@ article figure figcaption a:active {
     }
 }
 
-.global-header__search > a:focus, .global-header__search > a:active,
-.global-header__search > button:focus,
-.global-header__search > button:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
+@media (max-width: 1023px) {
+    .global-header__search > a:focus, .global-header__search > a:active,
+    .global-header__search > button:focus,
+    .global-header__search > button:active {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .global-header__search > a, .global-header__search > a:focus, .global-header__search > a:active,
+    .global-header__search > button,
+    .global-header__search > button:focus,
+    .global-header__search > button:active {
+        background-color: transparent;
+        border-color: #696969;
+        border-style: solid;
+        border-width: 0.125rem;
+        color: #0c0c0e;
+    }
+    .global-header__search > a:focus .global-header__search__text,
+    .global-header__search > button:focus .global-header__search__text {
+        outline-color: #ffffff;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
 }
 
-.global-header__search > a, .global-header__search > a:focus, .global-header__search > a:active,
-.global-header__search > button,
-.global-header__search > button:focus,
-.global-header__search > button:active {
-    background-color: #d61726;
-    color: #ffffff;
+@media (max-width: 1023px) and (hover: hover) {
+    .global-header__search > a:hover,
+    .global-header__search > button:hover {
+        background-color: #696969;
+        border-color: #696969;
+        border-style: solid;
+        border-width: 0.125rem;
+        color: #ffffff;
+    }
 }
 
-.global-header__search > a:focus .global-header__search__text,
-.global-header__search > button:focus .global-header__search__text {
-    outline-color: #ffffff;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
+@media (max-width: 432px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        font-size: 0.889rem;
+        line-height: 1.625;
+        letter-spacing: 0em;
+    }
 }
 
-@media (hover: hover) {
+@media (max-width: 432px) and (min-width: 1280px) and (max-width: 1919px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (max-width: 432px) and (min-width: 1920px) and (max-width: 3839px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (max-width: 432px) and (min-width: 3840px) and (max-width: 7679px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 432px) and (min-width: 7680px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        font-family: "Meta Sans", sans-serif;
+        font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+        font-size: 1.125rem;
+        line-height: 1.25;
+        letter-spacing: -0.008em;
+        font-style: normal;
+        font-weight: 600;
+        margin-top: 1rem;
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        display: inline-block;
+        padding-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 0.5rem;
+        transition: background-color 0.6s;
+        display: flex;
+        height: 100%;
+        margin-top: 0;
+    }
+    .global-header__search > a i,
+    .global-header__search > a em,
+    .global-header__search > button i,
+    .global-header__search > button em {
+        font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    }
+    .global-header__search > a b,
+    .global-header__search > a strong,
+    .global-header__search > button b,
+    .global-header__search > button strong {
+        font-weight: inherit;
+    }
+    .global-header__search > a i,
+    .global-header__search > a em,
+    .global-header__search > button i,
+    .global-header__search > button em {
+        font-style: italic;
+    }
+    .global-header__search > a u,
+    .global-header__search > button u {
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1919px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1920px) and (max-width: 3839px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 3840px) and (max-width: 7679px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 7680px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .global-header__search > a b,
+    .global-header__search > a strong,
+    .global-header__search > button b,
+    .global-header__search > button strong {
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 1024px) and (hover: hover) {
+    .global-header__search > a:hover,
+    .global-header__search > button:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .global-header__search > a:focus, .global-header__search > a:active,
+    .global-header__search > button:focus,
+    .global-header__search > button:active {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .global-header__search > a, .global-header__search > a:focus, .global-header__search > a:active,
+    .global-header__search > button,
+    .global-header__search > button:focus,
+    .global-header__search > button:active {
+        background-color: #d61726;
+        color: #ffffff;
+    }
+    .global-header__search > a:focus .global-header__search__text,
+    .global-header__search > button:focus .global-header__search__text {
+        outline-color: #ffffff;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+}
+
+@media (min-width: 1024px) and (hover: hover) {
     .global-header__search > a:hover,
     .global-header__search > button:hover {
         background-color: #9e111c;
@@ -35383,62 +35599,387 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     transition: background-color 0.3s ease-in-out;
 }
 
-.menu {
-    color: #696969;
-}
-
-@media print {
+@media (max-width: 1023px) {
     .menu {
-        display: none;
+        display: block;
+    }
+    .menu .menu__level1,
+    .menu .menu__level2,
+    .menu .menu__level3,
+    .menu .menu__level4,
+    .menu .menu__level5,
+    .menu .menu__level6 {
+        list-style: none;
+        margin-left: 0;
+        margin-top: 0;
+        max-width: unset;
+    }
+    .menu .menu__level1 > li > .menu__controls > button,
+    .menu .menu__level2 > li > .menu__controls > button,
+    .menu .menu__level3 > li > .menu__controls > button,
+    .menu .menu__level4 > li > .menu__controls > button,
+    .menu .menu__level5 > li > .menu__controls > button,
+    .menu .menu__level6 > li > .menu__controls > button {
+        align-self: center;
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+        padding-bottom: 0.25rem;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        padding-top: 0.25rem;
+    }
+    .menu .menu__level1 li.menu__current > .menu__controls > span > span,
+    .menu .menu__level2 li.menu__current > .menu__controls > span > span,
+    .menu .menu__level3 li.menu__current > .menu__controls > span > span,
+    .menu .menu__level4 li.menu__current > .menu__controls > span > span,
+    .menu .menu__level5 li.menu__current > .menu__controls > span > span,
+    .menu .menu__level6 li.menu__current > .menu__controls > span > span {
+        display: inline;
+        border-bottom: 0.125rem solid #d61726;
+    }
+    .menu .menu__level1 button .menu__button__icon,
+    .menu .menu__level2 button .menu__button__icon,
+    .menu .menu__level3 button .menu__button__icon,
+    .menu .menu__level4 button .menu__button__icon,
+    .menu .menu__level5 button .menu__button__icon,
+    .menu .menu__level6 button .menu__button__icon {
+        transition: 0.2s transform;
+    }
+    .menu .menu__level1 button .menu__button__icon:before,
+    .menu .menu__level2 button .menu__button__icon:before,
+    .menu .menu__level3 button .menu__button__icon:before,
+    .menu .menu__level4 button .menu__button__icon:before,
+    .menu .menu__level5 button .menu__button__icon:before,
+    .menu .menu__level6 button .menu__button__icon:before {
+        font-family: "Font Awesome";
+        content: '\f067';
+        font-weight: 300;
+    }
+    .menu .menu__level1 button .menu__button__text,
+    .menu .menu__level2 button .menu__button__text,
+    .menu .menu__level3 button .menu__button__text,
+    .menu .menu__level4 button .menu__button__text,
+    .menu .menu__level5 button .menu__button__text,
+    .menu .menu__level6 button .menu__button__text {
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    .menu .menu__level1 button[aria-expanded='true'] .menu__button__icon,
+    .menu .menu__level2 button[aria-expanded='true'] .menu__button__icon,
+    .menu .menu__level3 button[aria-expanded='true'] .menu__button__icon,
+    .menu .menu__level4 button[aria-expanded='true'] .menu__button__icon,
+    .menu .menu__level5 button[aria-expanded='true'] .menu__button__icon,
+    .menu .menu__level6 button[aria-expanded='true'] .menu__button__icon {
+        -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+        transform: rotate(45deg);
+    }
+    .menu .menu__level1 li,
+    .menu .menu__level2 li {
+        font-family: "Plex Sans", sans-serif;
+        /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+        font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+        font-size: 1rem;
+        line-height: 1.625;
+        letter-spacing: -0.005em;
+        font-style: normal;
+        font-weight: 450;
+        max-width: 55ch;
+        font-family: "Meta Sans", sans-serif;
+        font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+        font-weight: 400;
+        max-width: unset;
+    }
+    .menu .menu__level1 li i,
+    .menu .menu__level1 li em,
+    .menu .menu__level2 li i,
+    .menu .menu__level2 li em {
+        font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
     }
 }
 
-.menu ul {
-    list-style: none;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    text-align: left;
+@media (max-width: 1023px) and (min-width: 1280px) and (max-width: 1919px) {
+    .menu .menu__level1 li,
+    .menu .menu__level2 li {
+        letter-spacing: -0.008em;
+    }
 }
 
-.menu li {
-    margin-left: 0.5rem;
+@media (max-width: 1023px) and (min-width: 1920px) and (max-width: 3839px) {
+    .menu .menu__level1 li,
+    .menu .menu__level2 li {
+        letter-spacing: -0.013em;
+    }
 }
 
-.menu li a,
-.menu li.menu__current > span {
-    padding: 0.25rem;
-    border: none;
+@media (max-width: 1023px) and (min-width: 3840px) and (max-width: 7679px) {
+    .menu .menu__level1 li,
+    .menu .menu__level2 li {
+        letter-spacing: -0.017em;
+    }
 }
 
-.menu li.menu__current > span:focus {
-    outline-color: #1e1e1e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
+@media (max-width: 1023px) and (min-width: 7680px) {
+    .menu .menu__level1 li,
+    .menu .menu__level2 li {
+        letter-spacing: -0.017em;
+    }
 }
 
-.menu li a {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    background-image: none;
-    border-bottom-color: #1e1e1e;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #1e1e1e;
-    position: relative;
-    border-bottom-color: transparent;
+@media (max-width: 1023px) {
+    .menu .menu__level1 li b,
+    .menu .menu__level1 li strong,
+    .menu .menu__level2 li b,
+    .menu .menu__level2 li strong {
+        font-weight: 700;
+    }
+    .menu .menu__level1 li i,
+    .menu .menu__level1 li em,
+    .menu .menu__level2 li i,
+    .menu .menu__level2 li em {
+        font-style: italic;
+    }
+    .menu .menu__level1 li i,
+    .menu .menu__level1 li em,
+    .menu .menu__level2 li i,
+    .menu .menu__level2 li em {
+        font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    }
+    .menu .menu__level1 li.menu__hierarchy > .menu__controls > a span,
+    .menu .menu__level2 li.menu__hierarchy > .menu__controls > a span {
+        border-bottom: 0.125rem solid #e5e5e5;
+    }
+    .menu .menu__level1 li.menu__current > .menu__controls > span:focus, .menu .menu__level1 li.menu__current > .menu__controls > span:active,
+    .menu .menu__level2 li.menu__current > .menu__controls > span:focus,
+    .menu .menu__level2 li.menu__current > .menu__controls > span:active {
+        outline-color: #ffffff;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+    .menu .menu__level3 li,
+    .menu .menu__level4 li,
+    .menu .menu__level5 li,
+    .menu .menu__level6 li {
+        font-family: "Plex Sans", sans-serif;
+        /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+        font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+        font-size: 1rem;
+        line-height: 1.625;
+        letter-spacing: -0.005em;
+        font-style: normal;
+        font-weight: 450;
+        max-width: 55ch;
+        font-size: 0.889rem;
+        line-height: 1.625;
+        letter-spacing: 0em;
+        font-weight: 450;
+        max-width: unset;
+    }
+    .menu .menu__level3 li i,
+    .menu .menu__level3 li em,
+    .menu .menu__level4 li i,
+    .menu .menu__level4 li em,
+    .menu .menu__level5 li i,
+    .menu .menu__level5 li em,
+    .menu .menu__level6 li i,
+    .menu .menu__level6 li em {
+        font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    }
 }
 
-@media (hover: hover) {
-    .menu li a:hover {
+@media (max-width: 1023px) and (min-width: 1280px) and (max-width: 1919px) {
+    .menu .menu__level3 li,
+    .menu .menu__level4 li,
+    .menu .menu__level5 li,
+    .menu .menu__level6 li {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1920px) and (max-width: 3839px) {
+    .menu .menu__level3 li,
+    .menu .menu__level4 li,
+    .menu .menu__level5 li,
+    .menu .menu__level6 li {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 3840px) and (max-width: 7679px) {
+    .menu .menu__level3 li,
+    .menu .menu__level4 li,
+    .menu .menu__level5 li,
+    .menu .menu__level6 li {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 7680px) {
+    .menu .menu__level3 li,
+    .menu .menu__level4 li,
+    .menu .menu__level5 li,
+    .menu .menu__level6 li {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level3 li b,
+    .menu .menu__level3 li strong,
+    .menu .menu__level4 li b,
+    .menu .menu__level4 li strong,
+    .menu .menu__level5 li b,
+    .menu .menu__level5 li strong,
+    .menu .menu__level6 li b,
+    .menu .menu__level6 li strong {
+        font-weight: 700;
+    }
+    .menu .menu__level3 li i,
+    .menu .menu__level3 li em,
+    .menu .menu__level4 li i,
+    .menu .menu__level4 li em,
+    .menu .menu__level5 li i,
+    .menu .menu__level5 li em,
+    .menu .menu__level6 li i,
+    .menu .menu__level6 li em {
+        font-style: italic;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1280px) and (max-width: 1919px) {
+    .menu .menu__level3 li,
+    .menu .menu__level4 li,
+    .menu .menu__level5 li,
+    .menu .menu__level6 li {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1920px) and (max-width: 3839px) {
+    .menu .menu__level3 li,
+    .menu .menu__level4 li,
+    .menu .menu__level5 li,
+    .menu .menu__level6 li {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 3840px) and (max-width: 7679px) {
+    .menu .menu__level3 li,
+    .menu .menu__level4 li,
+    .menu .menu__level5 li,
+    .menu .menu__level6 li {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 7680px) {
+    .menu .menu__level3 li,
+    .menu .menu__level4 li,
+    .menu .menu__level5 li,
+    .menu .menu__level6 li {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level3 li.menu__hierarchy > .menu__controls > a span,
+    .menu .menu__level4 li.menu__hierarchy > .menu__controls > a span,
+    .menu .menu__level5 li.menu__hierarchy > .menu__controls > a span,
+    .menu .menu__level6 li.menu__hierarchy > .menu__controls > a span {
+        border-bottom: 0.125rem solid #303030;
+    }
+    .menu .menu__level3 li.menu__current > .menu__controls > span:focus:focus, .menu .menu__level3 li.menu__current > .menu__controls > span:focus:active,
+    .menu .menu__level4 li.menu__current > .menu__controls > span:focus:focus,
+    .menu .menu__level4 li.menu__current > .menu__controls > span:focus:active,
+    .menu .menu__level5 li.menu__current > .menu__controls > span:focus:focus,
+    .menu .menu__level5 li.menu__current > .menu__controls > span:focus:active,
+    .menu .menu__level6 li.menu__current > .menu__controls > span:focus:focus,
+    .menu .menu__level6 li.menu__current > .menu__controls > span:focus:active {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+    .menu .menu__level1 {
+        background-color: #1e1e1e;
+        color: #ffffff;
+    }
+    .menu .menu__level1 > li {
+        font-size: 1.125rem;
+        line-height: 1.25;
+        letter-spacing: -0.008em;
+        line-height: 1.625;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1280px) and (max-width: 1919px) {
+    .menu .menu__level1 > li {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1920px) and (max-width: 3839px) {
+    .menu .menu__level1 > li {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 3840px) and (max-width: 7679px) {
+    .menu .menu__level1 > li {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 7680px) {
+    .menu .menu__level1 > li {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level1 > li > .menu__controls {
+        border-bottom: 0.0625rem solid #494949;
+    }
+    .menu .menu__level1 > li > .menu__controls > a {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-color: #1e1e1e;
+        color: #ffffff;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level1 > li > .menu__controls > a:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -35453,99 +35994,815 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     }
 }
 
-.menu li a:focus, .menu li a:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-.menu li a:focus, .menu li a:active {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.menu li a:before {
-    background: #d61726;
-    bottom: -0.125rem;
-    content: '';
-    display: block;
-    height: 0.125rem;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
-    width: 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .menu li a:before {
-        transition: none;
+@media (max-width: 1023px) {
+    .menu .menu__level1 > li > .menu__controls > a:focus, .menu .menu__level1 > li > .menu__controls > a:active {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .menu .menu__level1 > li > .menu__controls > a:focus, .menu .menu__level1 > li > .menu__controls > a:active {
+        color: #ffffff;
+    }
+    .menu .menu__level1 > li > .menu__controls > a:focus span, .menu .menu__level1 > li > .menu__controls > a:active span {
+        outline-color: #ffffff;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
     }
 }
 
-.menu li a:before {
-    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
-}
-
-.menu li a:focus {
-    border-bottom-color: #1e1e1e;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #1e1e1e;
-}
-
-.menu li a:visited {
-    border-bottom-color: #1e1e1e;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #1e1e1e;
-}
-
-@media (hover: hover) {
-    .menu li a:hover {
-        background-image: none;
-        border-bottom-color: #1e1e1e;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        color: #1e1e1e;
-    }
-    .menu li a:hover:before {
-        opacity: 1;
-        width: 100%;
-        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level1 > li > .menu__controls > a:hover {
+        background-color: #494949;
+        color: #ffffff;
     }
 }
 
-.menu li a:active {
-    border-bottom-color: #1e1e1e;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-}
-
-.menu li a:focus {
-    border-bottom-color: transparent;
-}
-
-@media (hover: hover) {
-    .menu li a:hover {
-        border-bottom-color: transparent;
+@media (max-width: 1023px) {
+    .menu .menu__level1 > li > .menu__controls > button {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-color: #1e1e1e;
+        color: #ffffff;
     }
 }
 
-.menu li.menu__hierarchy > a span {
-    border-bottom-width: 0.125rem;
-    border-bottom-style: solid;
-    border-bottom-color: #1e1e1e;
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level1 > li > .menu__controls > button:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level1 > li > .menu__controls > button:focus, .menu .menu__level1 > li > .menu__controls > button:active {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .menu .menu__level1 > li > .menu__controls > button:focus, .menu .menu__level1 > li > .menu__controls > button:active {
+        outline-color: #ffffff;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+    .menu .menu__level1 > li > .menu__controls > button:focus span {
+        color: #ffffff;
+    }
+    .menu .menu__level1 > li > .menu__controls > button:hover {
+        background-color: #494949;
+        color: #ffffff;
+    }
+    .menu .menu__level1 > li > .menu__controls > a,
+    .menu .menu__level1 > li > .menu__controls > span {
+        padding-left: 0.5rem;
+    }
+    .menu .menu__level2 {
+        background-color: #303030;
+        color: #ffffff;
+    }
+    .menu .menu__level2 > li {
+        font-size: 1rem;
+        line-height: 1.625;
+        letter-spacing: -0.005em;
+        line-height: 1.625;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1280px) and (max-width: 1919px) {
+    .menu .menu__level2 > li {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1920px) and (max-width: 3839px) {
+    .menu .menu__level2 > li {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 3840px) and (max-width: 7679px) {
+    .menu .menu__level2 > li {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 7680px) {
+    .menu .menu__level2 > li {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level2 > li > .menu__controls {
+        border-bottom: 0.0625rem solid #696969;
+    }
+    .menu .menu__level2 > li > .menu__controls > a {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-color: #303030;
+        color: #ffffff;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level2 > li > .menu__controls > a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level2 > li > .menu__controls > a:focus, .menu .menu__level2 > li > .menu__controls > a:active {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .menu .menu__level2 > li > .menu__controls > a:focus, .menu .menu__level2 > li > .menu__controls > a:active {
+        color: #ffffff;
+    }
+    .menu .menu__level2 > li > .menu__controls > a:focus span, .menu .menu__level2 > li > .menu__controls > a:active span {
+        outline-color: #ffffff;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level2 > li > .menu__controls > a:hover {
+        background-color: #696969;
+        color: #ffffff;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level2 > li > .menu__controls > button {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-color: #303030;
+        color: #ffffff;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level2 > li > .menu__controls > button:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level2 > li > .menu__controls > button:focus, .menu .menu__level2 > li > .menu__controls > button:active {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .menu .menu__level2 > li > .menu__controls > button:focus, .menu .menu__level2 > li > .menu__controls > button:active {
+        outline-color: #ffffff;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+    .menu .menu__level2 > li > .menu__controls > button:focus span {
+        color: #ffffff;
+    }
+    .menu .menu__level2 > li > .menu__controls > button:hover {
+        background-color: #696969;
+        color: #ffffff;
+    }
+    .menu .menu__level2 > li > .menu__controls > a,
+    .menu .menu__level2 > li > .menu__controls > span {
+        padding-left: 1rem;
+    }
+    .menu .menu__level3 {
+        background-color: #e5e5e5;
+        color: #0c0c0e;
+    }
+    .menu .menu__level3 > li > .menu__controls > a {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-color: #e5e5e5;
+        color: #0c0c0e;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level3 > li > .menu__controls > a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level3 > li > .menu__controls > a:focus, .menu .menu__level3 > li > .menu__controls > a:active {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .menu .menu__level3 > li > .menu__controls > a:focus, .menu .menu__level3 > li > .menu__controls > a:active {
+        color: #0c0c0e;
+    }
+    .menu .menu__level3 > li > .menu__controls > a:focus span, .menu .menu__level3 > li > .menu__controls > a:active span {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level3 > li > .menu__controls > a:hover {
+        background-color: #cbcbcb;
+        color: #0c0c0e;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level3 > li > .menu__controls > button {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-color: #e5e5e5;
+        color: #0c0c0e;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level3 > li > .menu__controls > button:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level3 > li > .menu__controls > button:focus, .menu .menu__level3 > li > .menu__controls > button:active {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .menu .menu__level3 > li > .menu__controls > button:focus, .menu .menu__level3 > li > .menu__controls > button:active {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+    .menu .menu__level3 > li > .menu__controls > button:focus span {
+        color: #0c0c0e;
+    }
+    .menu .menu__level3 > li > .menu__controls > button:hover {
+        background-color: #cbcbcb;
+        color: #0c0c0e;
+    }
+    .menu .menu__level3 > li > .menu__controls > a,
+    .menu .menu__level3 > li > .menu__controls > span {
+        padding-left: 1.5rem;
+    }
+    .menu .menu__level4 {
+        background-color: #d8d8d8;
+        color: #0c0c0e;
+    }
+    .menu .menu__level4 > li > .menu__controls > a {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-color: #d8d8d8;
+        color: #0c0c0e;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level4 > li > .menu__controls > a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level4 > li > .menu__controls > a:focus, .menu .menu__level4 > li > .menu__controls > a:active {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .menu .menu__level4 > li > .menu__controls > a:focus, .menu .menu__level4 > li > .menu__controls > a:active {
+        color: #0c0c0e;
+    }
+    .menu .menu__level4 > li > .menu__controls > a:focus span, .menu .menu__level4 > li > .menu__controls > a:active span {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level4 > li > .menu__controls > a:hover {
+        background-color: #bebebe;
+        color: #0c0c0e;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level4 > li > .menu__controls > button {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-color: #d8d8d8;
+        color: #0c0c0e;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level4 > li > .menu__controls > button:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level4 > li > .menu__controls > button:focus, .menu .menu__level4 > li > .menu__controls > button:active {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .menu .menu__level4 > li > .menu__controls > button:focus, .menu .menu__level4 > li > .menu__controls > button:active {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+    .menu .menu__level4 > li > .menu__controls > button:focus span {
+        color: #0c0c0e;
+    }
+    .menu .menu__level4 > li > .menu__controls > button:hover {
+        background-color: #bebebe;
+        color: #0c0c0e;
+    }
+    .menu .menu__level4 > li > .menu__controls > a,
+    .menu .menu__level4 > li > .menu__controls > span {
+        padding-left: 2rem;
+    }
+    .menu .menu__level5 {
+        background-color: #cbcbcb;
+        color: #0c0c0e;
+    }
+    .menu .menu__level5 > li > .menu__controls > a {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-color: #cbcbcb;
+        color: #0c0c0e;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level5 > li > .menu__controls > a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level5 > li > .menu__controls > a:focus, .menu .menu__level5 > li > .menu__controls > a:active {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .menu .menu__level5 > li > .menu__controls > a:focus, .menu .menu__level5 > li > .menu__controls > a:active {
+        color: #0c0c0e;
+    }
+    .menu .menu__level5 > li > .menu__controls > a:focus span, .menu .menu__level5 > li > .menu__controls > a:active span {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level5 > li > .menu__controls > a:hover {
+        background-color: #a1a1a1;
+        color: #0c0c0e;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level5 > li > .menu__controls > button {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-color: #cbcbcb;
+        color: #0c0c0e;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level5 > li > .menu__controls > button:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level5 > li > .menu__controls > button:focus, .menu .menu__level5 > li > .menu__controls > button:active {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .menu .menu__level5 > li > .menu__controls > button:focus, .menu .menu__level5 > li > .menu__controls > button:active {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+    .menu .menu__level5 > li > .menu__controls > button:focus span {
+        color: #0c0c0e;
+    }
+    .menu .menu__level5 > li > .menu__controls > button:hover {
+        background-color: #a1a1a1;
+        color: #0c0c0e;
+    }
+    .menu .menu__level5 > li > .menu__controls > a,
+    .menu .menu__level5 > li > .menu__controls > span {
+        padding-left: 2.5rem;
+    }
+    .menu .menu__level6 {
+        background-color: #cbcbcb;
+        color: #0c0c0e;
+    }
+    .menu .menu__level6 > li > .menu__controls > a {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-color: #cbcbcb;
+        color: #0c0c0e;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level6 > li > .menu__controls > a:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level6 > li > .menu__controls > a:focus, .menu .menu__level6 > li > .menu__controls > a:active {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .menu .menu__level6 > li > .menu__controls > a:focus, .menu .menu__level6 > li > .menu__controls > a:active {
+        color: #0c0c0e;
+    }
+    .menu .menu__level6 > li > .menu__controls > a:focus span, .menu .menu__level6 > li > .menu__controls > a:active span {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level6 > li > .menu__controls > a:hover {
+        background-color: #a1a1a1;
+        color: #0c0c0e;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level6 > li > .menu__controls > button {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-color: #cbcbcb;
+        color: #0c0c0e;
+    }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
+    .menu .menu__level6 > li > .menu__controls > button:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu .menu__level6 > li > .menu__controls > button:focus, .menu .menu__level6 > li > .menu__controls > button:active {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .menu .menu__level6 > li > .menu__controls > button:focus, .menu .menu__level6 > li > .menu__controls > button:active {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+    .menu .menu__level6 > li > .menu__controls > button:focus span {
+        color: #0c0c0e;
+    }
+    .menu .menu__level6 > li > .menu__controls > button:hover {
+        background-color: #a1a1a1;
+        color: #0c0c0e;
+    }
+    .menu .menu__level6 > li > .menu__controls > a,
+    .menu .menu__level6 > li > .menu__controls > span {
+        padding-left: 2.5rem;
+    }
+}
+
+@media print {
+    .menu {
+        display: none;
+    }
 }
 
 .no-js .menu {
@@ -35553,8 +36810,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
 }
 
 .js .menu {
-    grid-area: menu;
-    text-align: right;
+    align-self: stretch;
     z-index: 4;
 }
 
@@ -35564,302 +36820,76 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     }
 }
 
-.js .menu .menu__button {
-    font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-    font-size: 1.802rem;
-    line-height: 1.25;
-    letter-spacing: -0.016em;
-    font-style: normal;
-    font-weight: 600;
-}
-
-.js .menu .menu__button i,
-.js .menu .menu__button em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-}
-
-.js .menu .menu__button b,
-.js .menu .menu__button strong {
-    font-weight: inherit;
-}
-
-.js .menu .menu__button i,
-.js .menu .menu__button em {
-    font-style: italic;
-}
-
-.js .menu .menu__button u {
-    text-decoration: none;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .js .menu .menu__button {
-        letter-spacing: -0.016em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .js .menu .menu__button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .js .menu .menu__button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .js .menu .menu__button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 900px) {
-    .js .menu .menu__button {
-        font-size: 2.027rem;
-        line-height: 1.25;
-        letter-spacing: -0.016em;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 900px) and (min-width: 1280px) and (max-width: 1919px) {
-    .js .menu .menu__button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 900px) and (min-width: 1920px) and (max-width: 3839px) {
-    .js .menu .menu__button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 900px) and (min-width: 3840px) and (max-width: 7679px) {
-    .js .menu .menu__button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 900px) and (min-width: 7680px) {
-    .js .menu .menu__button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 901px) {
-    .js .menu .menu__button {
-        font-size: 2.28rem;
-        line-height: 1.25;
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 901px) and (min-width: 1280px) and (max-width: 1919px) {
-    .js .menu .menu__button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 901px) and (min-width: 1920px) and (max-width: 3839px) {
-    .js .menu .menu__button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 901px) and (min-width: 3840px) and (max-width: 7679px) {
-    .js .menu .menu__button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 901px) and (min-width: 7680px) {
-    .js .menu .menu__button {
-        letter-spacing: -0.027em;
-    }
-}
-
-.js .menu .menu__button b,
-.js .menu .menu__button strong {
-    font-weight: 600;
-}
-
-.js .menu .menu__button .menu__toggle:before {
-    content: '\f141';
-}
-
-@media (max-width: 1023px) {
-    .js .menu .menu__button .menu__toggle:before {
-        content: '\f142';
-    }
-}
-
-.js .menu .menu__button button {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    color: #006bbd;
-    border: none;
-}
-
-@media (hover: hover) {
-    .js .menu .menu__button button:hover {
-        background-color: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.js .menu .menu__button button:focus, .js .menu .menu__button button:active {
-    background-color: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-.js .menu .menu__button button:focus {
-    color: #1e1e1e;
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-}
-
-@media (hover: hover) {
-    .js .menu .menu__button button:hover {
-        background-image: none;
-        color: #1e1e1e;
-    }
-}
-
-.js .menu .menu__button button:active {
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-}
-
-.js .menu .menu__button button[disabled] {
-    color: #1e1e1e;
-}
-
-.js .menu .menu__button button[disabled]:focus, .js .menu .menu__button button[disabled]:hover, .js .menu .menu__button button[disabled]:active {
-    outline: none;
-}
-
-.js .menu .menu__button button div {
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
-}
-
-.js .menu .menu__columns,
 .js .menu ul {
     display: none;
 }
 
-.js .menu[data-open='true'] .menu__toggle:before {
+.js .menu[data-open='true'] .menu__button__icon:before {
     content: '\f00d';
 }
 
-.js .menu[data-open='true'] .menu__columns__col {
-    margin-left: 0;
-    padding-bottom: 1rem;
-    padding-right: 0.5rem;
-}
-
-.js .menu[data-open='true'] .menu__columns__col > ul {
+.js .menu[data-open='true'] > ul {
+    bottom: 0;
     display: block;
-    max-height: 66vh;
+    height: 100vh;
+    left: 0;
     overflow-y: scroll;
-    position: relative;
+    position: fixed;
+    right: 0;
+    top: 0;
 }
 
-.js .menu[data-open='true'] .menu__columns__col > ul::-webkit-scrollbar {
+.js .menu[data-open='true'] > ul::-webkit-scrollbar {
     -webkit-appearance: none;
 }
 
-.js .menu[data-open='true'] .menu__columns__col > ul::-webkit-scrollbar:vertical {
+.js .menu[data-open='true'] > ul::-webkit-scrollbar:vertical {
     width: 11px;
 }
 
-.js .menu[data-open='true'] .menu__columns__col > ul::-webkit-scrollbar:horizontal {
+.js .menu[data-open='true'] > ul::-webkit-scrollbar:horizontal {
     height: 11px;
 }
 
-.js .menu[data-open='true'] .menu__columns__col > ul::-webkit-scrollbar-thumb {
+.js .menu[data-open='true'] > ul::-webkit-scrollbar-thumb {
     border-radius: 8px;
     border: 0.125rem solid #ffffff;
     background-color: rgba(30, 30, 30, 0.5);
 }
 
-.js .menu[data-open='true'] .menu__columns__col > ul::-webkit-scrollbar-track {
+.js .menu[data-open='true'] > ul::-webkit-scrollbar-track {
     background-color: #ffffff;
     border-radius: 8px;
 }
 
-@media (max-width: 1023px) {
-    .js .menu[data-open='true'] .menu__columns__col > ul {
-        width: 100%;
-    }
-}
-
-.js .menu[data-open='true'] .menu__columns__col > ul li {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 'link button';
-}
-
-@media (max-width: 1023px) {
-    .js .menu[data-open='true'] .menu__columns__col > ul li {
-        grid-template-columns: 9fr 1fr;
-    }
-}
-
-.js .menu[data-open='true'] .menu__columns__col > ul li a {
-    grid-area: link;
-}
-
-.js .menu[data-open='true'] .menu__columns__col > ul li[data-open='true'] > a > span {
+.js .menu[data-open='true'] > ul li[data-open='true'] > a > span {
     font-weight: 700;
 }
 
-.js .menu[data-open='true'] .menu__columns__col > ul li[data-open='true'] > span > span {
+.js .menu[data-open='true'] > ul li[data-open='true'] > span > span {
     font-weight: 700;
 }
 
 @media (max-width: 1023px) {
-    .js .menu[data-open='true'] .menu__columns__col > ul li[data-open='true'] > ul {
+    .js .menu[data-open='true'] > ul li[data-open='true'] > ul {
         display: block;
     }
 }
 
-.js .menu[data-open='true'] .menu__columns__col > ul button {
+.js .menu > .menu__button {
+    height: 100%;
+}
+
+.js .menu > .menu__button > button {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 1rem;
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -35871,13 +36901,72 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    color: #006bbd;
-    border: none;
-    margin-right: 0.5rem;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    transition: background-color 0.6s;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: center;
+    margin-top: 0;
+    min-height: 44px;
+    width: 100%;
+}
+
+.js .menu > .menu__button > button i,
+.js .menu > .menu__button > button em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.js .menu > .menu__button > button b,
+.js .menu > .menu__button > button strong {
+    font-weight: inherit;
+}
+
+.js .menu > .menu__button > button i,
+.js .menu > .menu__button > button em {
+    font-style: italic;
+}
+
+.js .menu > .menu__button > button u {
+    text-decoration: none;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .js .menu > .menu__button > button {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .js .menu > .menu__button > button {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .js .menu > .menu__button > button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .js .menu > .menu__button > button {
+        letter-spacing: -0.017em;
+    }
+}
+
+.js .menu > .menu__button > button b,
+.js .menu > .menu__button > button strong {
+    font-weight: 700;
 }
 
 @media (hover: hover) {
-    .js .menu[data-open='true'] .menu__columns__col > ul button:hover {
+    .js .menu > .menu__button > button:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -35892,7 +36981,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     }
 }
 
-.js .menu[data-open='true'] .menu__columns__col > ul button:focus, .js .menu[data-open='true'] .menu__columns__col > ul button:active {
+.js .menu > .menu__button > button:focus, .js .menu > .menu__button > button:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -35906,249 +36995,72 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     text-decoration: none;
 }
 
-.js .menu[data-open='true'] .menu__columns__col > ul button:focus {
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
+.js .menu > .menu__button > button, .js .menu > .menu__button > button:focus, .js .menu > .menu__button > button:active {
+    background-color: #d61726;
+    color: #ffffff;
+}
+
+.js .menu > .menu__button > button:focus .global-header__search__text {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
     outline-style: dotted;
+    outline-width: 0.125rem;
 }
 
 @media (hover: hover) {
-    .js .menu[data-open='true'] .menu__columns__col > ul button:hover {
-        color: #1e1e1e;
+    .js .menu > .menu__button > button:hover {
+        background-color: #9e111c;
+        color: #ffffff;
     }
 }
 
-.js .menu[data-open='true'] .menu__columns__col > ul button:active {
-    outline-color: #0c0c0e;
-    outline-width: 0.125rem;
-    outline-style: dotted;
-    outline-offset: 0.1875rem;
-}
-
-.js .menu[data-open='true'] .menu__columns__col > ul button .menu__button__icon:before {
-    font-family: "Font Awesome";
-    content: '\f105';
-    font-size: 1.125rem;
-    font-weight: 300;
-}
-
-@media (max-width: 1023px) {
-    .js .menu[data-open='true'] .menu__columns__col > ul button .menu__button__icon:before {
-        content: '\f067';
+@media (max-width: 432px) {
+    .js .menu > .menu__button > button {
+        font-size: 0.889rem;
+        line-height: 1.625;
+        letter-spacing: 0em;
     }
 }
 
-.js .menu[data-open='true'] .menu__columns__col > ul button .menu__button__text {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.js .menu[data-open='true'] .menu__columns__col > ul button[aria-expanded='true'] .menu__button__icon:before {
-    border-bottom: 0.0625rem solid #006bbd;
-}
-
-@media (max-width: 1023px) {
-    .js .menu[data-open='true'] .menu__columns__col > ul button[aria-expanded='true'] .menu__button__icon:before {
-        border-bottom: none;
-        content: '\f068';
-    }
-}
-
-.js .menu[data-open='true'] .menu__columns__col > ul button[aria-expanded='true']:hover .menu__button__icon:before, .js .menu[data-open='true'] .menu__columns__col > ul button[aria-expanded='true']:focus .menu__button__icon:before {
-    border-bottom-color: #1e1e1e;
-}
-
-.js .menu[data-open='true'] .menu__columns {
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    background-color: #ffffff;
-    display: grid;
-    font-weight: 450;
-    gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    left: 0;
-    position: absolute;
-    top: 5.5rem;
-    width: 100%;
-    z-index: 4;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .js .menu[data-open='true'] .menu__columns {
+@media (max-width: 432px) and (min-width: 1280px) and (max-width: 1919px) {
+    .js .menu > .menu__button > button {
         letter-spacing: -0.005em;
     }
 }
 
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .js .menu[data-open='true'] .menu__columns {
+@media (max-width: 432px) and (min-width: 1920px) and (max-width: 3839px) {
+    .js .menu > .menu__button > button {
         letter-spacing: -0.01em;
     }
 }
 
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .js .menu[data-open='true'] .menu__columns {
+@media (max-width: 432px) and (min-width: 3840px) and (max-width: 7679px) {
+    .js .menu > .menu__button > button {
         letter-spacing: -0.017em;
     }
 }
 
-@media (min-width: 7680px) {
-    .js .menu[data-open='true'] .menu__columns {
+@media (max-width: 432px) and (min-width: 7680px) {
+    .js .menu > .menu__button > button {
         letter-spacing: -0.017em;
     }
 }
 
-@media (max-width: 1440px) {
-    .js .menu[data-open='true'] .menu__columns {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
+.js .menu > .menu__button > button div {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
 }
 
-@media (max-width: 1023px) {
-    .js .menu[data-open='true'] .menu__columns {
-        font-family: "Plex Sans", sans-serif;
-        font-size: 1.424rem;
-        line-height: 1.25;
-        letter-spacing: -0.013em;
-        grid-template-columns: 1fr;
-    }
+.js .menu > .menu__button > button .menu__button__icon {
+    margin-left: 0.5rem;
 }
 
-@media (max-width: 1023px) and (min-width: 1280px) and (max-width: 1919px) {
-    .js .menu[data-open='true'] .menu__columns {
-        letter-spacing: -0.015em;
-    }
+.js .menu > .menu__button > button .menu__button__icon:before {
+    content: '\f0c9';
 }
 
-@media (max-width: 1023px) and (min-width: 1920px) and (max-width: 3839px) {
-    .js .menu[data-open='true'] .menu__columns {
-        letter-spacing: -0.016em;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 3840px) and (max-width: 7679px) {
-    .js .menu[data-open='true'] .menu__columns {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 7680px) {
-    .js .menu[data-open='true'] .menu__columns {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (max-width: 1023px) {
-    .js .menu[data-open='true'] .menu__columns .menu__level3 {
-        font-size: 1.266rem;
-        line-height: 1.25;
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1280px) and (max-width: 1919px) {
-    .js .menu[data-open='true'] .menu__columns .menu__level3 {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1920px) and (max-width: 3839px) {
-    .js .menu[data-open='true'] .menu__columns .menu__level3 {
-        letter-spacing: -0.015em;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 3840px) and (max-width: 7679px) {
-    .js .menu[data-open='true'] .menu__columns .menu__level3 {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 7680px) {
-    .js .menu[data-open='true'] .menu__columns .menu__level3 {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (max-width: 1023px) {
-    .js .menu[data-open='true'] .menu__columns .menu__level4 {
-        font-size: 1.125rem;
-        line-height: 1.25;
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1280px) and (max-width: 1919px) {
-    .js .menu[data-open='true'] .menu__columns .menu__level4 {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1920px) and (max-width: 3839px) {
-    .js .menu[data-open='true'] .menu__columns .menu__level4 {
-        letter-spacing: -0.014em;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 3840px) and (max-width: 7679px) {
-    .js .menu[data-open='true'] .menu__columns .menu__level4 {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 7680px) {
-    .js .menu[data-open='true'] .menu__columns .menu__level4 {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (max-width: 1023px) {
-    .js .menu[data-open='true'] .menu__columns .menu__level5 {
-        font-size: 1rem;
-        line-height: 1.625;
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1280px) and (max-width: 1919px) {
-    .js .menu[data-open='true'] .menu__columns .menu__level5 {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1920px) and (max-width: 3839px) {
-    .js .menu[data-open='true'] .menu__columns .menu__level5 {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 3840px) and (max-width: 7679px) {
-    .js .menu[data-open='true'] .menu__columns .menu__level5 {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 7680px) {
-    .js .menu[data-open='true'] .menu__columns .menu__level5 {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (max-width: 1023px) {
-    .js .menu[data-open='true'] .menu__columns__col + .menu__columns__col {
-        display: none;
-    }
-}
-
-.js .menu__veil {
+.menu__veil {
     background-color: rgba(30, 30, 30, 0.8);
     display: none;
     height: 100%;
@@ -36157,18 +37069,12 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     z-index: 3;
 }
 
-.js .menu__veil[data-on='true'] {
+.menu__veil[data-on='true'] {
     display: block;
 }
 
-@media (max-width: 1023px) {
-    .js .menu__veil[data-on='true'] {
-        display: none;
-    }
-}
-
 @media (min-width: 1024px) {
-    .js .menu__veil[data-on='true'] {
+    .menu__veil[data-on='true'] {
         display: none;
     }
 }
@@ -37572,12 +38478,6 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
-@media (max-width: 1023px) {
-    .js .navigation__veil[data-on='true'] {
-        display: none;
-    }
-}
-
 .js .navigation__button__navigation,
 .js .navigation__button__open-close {
     border: 0;
@@ -37660,6 +38560,7 @@ a.modal__close:active, a.modal__close:focus {
         font-family: "Meta Sans", sans-serif;
         font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
         font-weight: 400;
+        max-width: unset;
     }
     .navigation--secondary .navigation__level2 li i,
     .navigation--secondary .navigation__level2 li em,
@@ -37751,6 +38652,7 @@ a.modal__close:active, a.modal__close:focus {
         line-height: 1.625;
         letter-spacing: 0em;
         font-weight: 450;
+        max-width: unset;
     }
     .navigation--secondary .navigation__level4 li i,
     .navigation--secondary .navigation__level4 li em,
@@ -39753,8 +40655,15 @@ blockquote footer cite {
     }
 }
 
-.skip-links .skip-links__content > .skip-links__intro {
-    display: none;
+.skip-links .skip-links__link > .skip-links__intro {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
 .skip-links:active, .skip-links:focus, .skip-links:focus-within {
@@ -39783,10 +40692,6 @@ blockquote footer cite {
 
 .skip-links:active .skip-links__link > .skip-links__intro, .skip-links:focus .skip-links__link > .skip-links__intro, .skip-links:focus-within .skip-links__link > .skip-links__intro {
     display: none;
-}
-
-.skip-links:active .skip-links__content > .skip-links__intro, .skip-links:focus .skip-links__content > .skip-links__intro, .skip-links:focus-within .skip-links__content > .skip-links__intro {
-    display: block;
 }
 
 .skip-links .skip-links__content {
