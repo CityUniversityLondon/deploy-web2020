@@ -39679,6 +39679,181 @@ blockquote footer cite {
     border-bottom: 0.125rem solid #006bbd;
 }
 
+.skip-links {
+    background-color: #1e1e1e;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    color: #ffffff;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.skip-links .skip-links__link {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    transition: background-color 0.6s;
+}
+
+@media (hover: hover) {
+    .skip-links .skip-links__link:hover {
+        background-color: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.skip-links .skip-links__link:focus, .skip-links .skip-links__link:active {
+    background-color: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.skip-links .skip-links__link:focus, .skip-links .skip-links__link:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.skip-links .skip-links__link, .skip-links .skip-links__link:focus, .skip-links .skip-links__link:active {
+    background-color: #d61726;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .skip-links .skip-links__link:hover {
+        background-color: #9e111c;
+        color: #ffffff;
+    }
+}
+
+.skip-links .skip-links__content > .skip-links__intro {
+    display: none;
+}
+
+.skip-links:active, .skip-links:focus, .skip-links:focus-within {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    position: static;
+    width: auto;
+}
+
+.skip-links:active .skip-links__link, .skip-links:focus .skip-links__link, .skip-links:focus-within .skip-links__link {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    position: static;
+    width: auto;
+}
+
+.skip-links:active .skip-links__link > .skip-links__intro, .skip-links:focus .skip-links__link > .skip-links__intro, .skip-links:focus-within .skip-links__link > .skip-links__intro {
+    display: none;
+}
+
+.skip-links:active .skip-links__content > .skip-links__intro, .skip-links:focus .skip-links__content > .skip-links__intro, .skip-links:focus-within .skip-links__content > .skip-links__intro {
+    display: block;
+}
+
+.skip-links .skip-links__content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    flex-direction: row;
+}
+
+@media (min-width: 901px) {
+    .skip-links .skip-links__content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    .skip-links .skip-links__content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 901px) {
+    .skip-links .skip-links__content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.skip-links .skip-links__content p {
+    align-self: center;
+    display: flex;
+    margin-right: 1rem;
+    margin-top: 0;
+    max-width: unset;
+}
+
+.skip-links .skip-links__content ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left: 0;
+    margin-top: 0;
+    max-width: unset;
+}
+
+.skip-links .skip-links__content ul li {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.skip-links .skip-links__content ul li:not(:last-of-type) {
+    margin-right: 1rem;
+}
+
 .slider-responsive {
     display: flex;
     flex-wrap: wrap;
