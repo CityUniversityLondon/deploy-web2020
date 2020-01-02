@@ -5614,7 +5614,6 @@ var className = 'menu',
     level1ClassName = className + '__level1',
     buttonTextClassName = buttonClassName + '__text',
     buttonIconClassName = buttonClassName + '__icon',
-    veilClassName = className + '__veil',
     scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_7__["reduceMotion"])() ? 0 : 999;
 /**
  * Decorate sub-menu element with the appropriate attributes.
@@ -5694,20 +5693,18 @@ function prepareMenu(menu) {
  * Creates a function for setting a menu to be open or closed.
  *
  * @param {HTMLElement} menu - The menu container.
- * @param {HTMLDivElement} veil - The veil div.
  * @param {HTMLButtonElement} button - The button that toggles the menu.
  * @returns {Function} A function that will set the menu to be open/closed.
  */
 
 
-function menuSetter(menu, veil, button) {
+function menuSetter(menu, button) {
   /**
    * @param {boolean} open - Set the menu to be open?
    */
   var setMenu = function setMenu(open) {
     open ? Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_8__["disableBodyScroll"])() : Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_8__["enableBodyScroll"])();
     menu.dataset.open = open;
-    veil.dataset.on = open;
     button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].expanded, open);
   };
 
@@ -5787,7 +5784,7 @@ function toggleSubMenu(button) {
  * Turn the menu label into a button to toggle the menu open and closed.
  *
  * While the menu is open, a focus trap should limit tab indexing to the menu
- * and its button, and the content should be veiled.
+ * and its button.
  *
  * @param {HTMLElement} label - The menu label.
  * @param {HTMLButtonElement} button - A button element.
@@ -5843,13 +5840,9 @@ function launchMenu(menu) {
   menu.innerHTML = menu.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
   var label = menu.querySelector(".".concat(buttonClassName)),
       button = document.createElement('button'),
-      veil = document.createElement('div'),
-      setMenu = menuSetter(menu, veil, button);
+      setMenu = menuSetter(menu, button);
   prepareMenu(menu);
   createMenuToggle(label, button, setMenu);
-  veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].hidden, 'true');
-  document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   setMenu(false);
   label.appendChild(button);
   listenForMenuToggles(menu.querySelector(".".concat(level1ClassName)));

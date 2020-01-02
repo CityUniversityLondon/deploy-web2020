@@ -37060,25 +37060,6 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     content: '\f0c9';
 }
 
-.menu__veil {
-    background-color: rgba(30, 30, 30, 0.8);
-    display: none;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: 3;
-}
-
-.menu__veil[data-on='true'] {
-    display: block;
-}
-
-@media (min-width: 1024px) {
-    .menu__veil[data-on='true'] {
-        display: none;
-    }
-}
-
 body.modal--in.no-scroll {
     position: fixed;
     width: 100%;
@@ -40728,14 +40709,16 @@ blockquote footer cite {
 .skip-links .skip-links__content p {
     align-self: center;
     display: flex;
+    margin-bottom: 0.25rem;
     margin-right: 1rem;
-    margin-top: 0;
+    margin-top: 0.25rem;
     max-width: unset;
 }
 
 .skip-links .skip-links__content ul {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     list-style: none;
     margin-left: 0;
     margin-top: 0;
@@ -40743,8 +40726,9 @@ blockquote footer cite {
 }
 
 .skip-links .skip-links__content ul li {
+    margin-bottom: 0.25rem;
     margin-left: 0;
-    margin-top: 0;
+    margin-top: 0.25rem;
 }
 
 .skip-links .skip-links__content ul li:not(:last-of-type) {
