@@ -5631,7 +5631,7 @@ function toggleSubNavigation(button, rootClass) {
       thisList = button.closest('ul'),
       scrollList = zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.createScroller(thisList);
   Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(expanded) ? setNavigationItemButtonDetails(button, false, rootClass) : setNavigationItemButtonDetails(button, true, rootClass);
-  scrollList.center(button.closest('li'), scrollDuration);
+  scrollList.to(button.closest('li'), scrollDuration);
 }
 /**
  * Decorate sub-navigation element with the appropriate attributes.
