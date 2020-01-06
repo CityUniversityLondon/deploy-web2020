@@ -461,7 +461,8 @@ document.addEventListener('DOMContentLoaded', function () {
   if (/(Trident|MSIE)/.test(navigator.userAgent)) {
     return;
   } else {
-    Array.from(document.querySelectorAll('.wrapper--finder')).forEach(function (finder) {
+    var finders = document.querySelectorAll('.wrapper--finder');
+    finders && Array.from(finders).forEach(function (finder) {
       Object(_patterns_finder_funnelback__WEBPACK_IMPORTED_MODULE_6__["finderConfig"])(finder.dataset.config).then(function (config) {
         Object(react_dom__WEBPACK_IMPORTED_MODULE_4__["render"])(react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_patterns_finder_finder__WEBPACK_IMPORTED_MODULE_5__["default"], {
           config: config

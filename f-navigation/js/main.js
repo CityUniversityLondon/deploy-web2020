@@ -717,7 +717,7 @@ function tryCatch(f) {
   try {
     f();
   } catch (e) {
-    // console.log(e);
+    console.log(e);
     Object(_util__WEBPACK_IMPORTED_MODULE_9__["gaEvent"])('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "Pattern launch ".concat(e.fileName, " (").concat(window.location, ")"), true);
   }
 }
@@ -5560,6 +5560,173 @@ function launchLoadMore(e) {
 
 /***/ }),
 
+/***/ "./src/patterns/menu/menu-formatters.js":
+/*!**********************************************!*\
+  !*** ./src/patterns/menu/menu-formatters.js ***!
+  \**********************************************/
+/*! exports provided: prepareNavigation, listenForNavigationToggles */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prepareNavigation", function() { return prepareNavigation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "listenForNavigationToggles", function() { return listenForNavigationToggles; });
+/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.from */ "./node_modules/core-js/modules/es.array.from.js");
+/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+
+
+
+
+
+
+
+/**
+ * Generic navigation functions for menu and secondary navigation.
+ *
+ * @module menu-formatters
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+
+var scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_5__["reduceMotion"])() ? 0 : 999;
+/**
+ * Set sub-menu button attributes for the open/closed state.
+ *
+ * @param {HTMLButtonElement} button - The button to decorate.
+ * @param {boolean} open - Should it be open?
+ * @param {string} buttonTextClassName - The class of the text span.
+ */
+
+function setNavigationItemButtonDetails(button, open, rootClass) {
+  var navigationItem = button.closest('li'),
+      sectionText = navigationItem.dataset.title + ' section',
+      buttonClassName = rootClass + '__button',
+      buttonTextClassName = buttonClassName + '__text',
+      textSpan = button.querySelector(".".concat(buttonTextClassName)),
+      text = open ? 'Close ' : 'Open ';
+  navigationItem.dataset.open = open;
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].expanded, open);
+  button.title = text + sectionText;
+  textSpan.innerText = text + sectionText;
+}
+/**
+ * Toggle a sub-navigation open or closed.
+ */
+
+
+function toggleSubNavigation(button, rootClass) {
+  var expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].expanded),
+      thisList = button.closest('ul'),
+      scrollList = zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.createScroller(thisList);
+  Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(expanded) ? setNavigationItemButtonDetails(button, false, rootClass) : setNavigationItemButtonDetails(button, true, rootClass);
+  scrollList.to(button.closest('li'), scrollDuration);
+}
+/**
+ * Decorate sub-navigation element with the appropriate attributes.
+ *
+ * @param {HTMLLIElement} navigationItem - The list item representing button navigation item.
+ * @param {string} rootClass - The class of the navigation element.
+ */
+
+
+function prepareSubNavigation(navigationItem, rootClass) {
+  var navigationItemBtn = document.createElement('button'),
+      iconSpan = document.createElement('span'),
+      textSpan = document.createElement('span'),
+      controlsClassName = rootClass + '__controls',
+      buttonClassName = rootClass + '__button',
+      buttonTextClassName = buttonClassName + '__text',
+      buttonIconClassName = buttonClassName + '__icon',
+      currentClassName = rootClass + '__current',
+      hierarchyClassName = rootClass + '__hierarchy',
+      controlsWrapper = navigationItem.querySelector(".".concat(controlsClassName));
+  navigationItemBtn.setAttribute('type', 'button');
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].hidden, 'true');
+  iconSpan.className = "".concat(buttonIconClassName, " fal fa-fw");
+  textSpan.className = "".concat(buttonTextClassName);
+  Object(_util__WEBPACK_IMPORTED_MODULE_5__["appendAll"])(navigationItemBtn, [iconSpan, textSpan]);
+  controlsWrapper.appendChild(navigationItemBtn);
+
+  if (navigationItem.className.indexOf(currentClassName) >= 0 || navigationItem.className.indexOf(hierarchyClassName) >= 0) {
+    setNavigationItemButtonDetails(navigationItemBtn, true, rootClass);
+  } else {
+    setNavigationItemButtonDetails(navigationItemBtn, false, rootClass);
+  }
+}
+/**
+ * Iterate over the navigation lists, transforming them into the initial
+ * navigation with the current asset lineage open.
+ *
+ * @param {HTMLElement} navigation - The navigation container.
+ * @param {string} rootClass - The class of the navigation element.
+ */
+
+
+function prepareNavigation(navigation, rootClass) {
+  var controlsClassName = rootClass + '__controls',
+      currentClassName = rootClass + '__current';
+  Array.from(navigation.querySelectorAll('li')).forEach(function (navigationItem) {
+    var link = navigationItem.querySelector('a'),
+        subNavigation = navigationItem.querySelector('ul'),
+        linkText = 'Visit ' + navigationItem.dataset.title,
+        textWrapper = document.createElement('span'),
+        currentPageWrapper = document.createElement('span'),
+        controlsWrapper = document.createElement('div');
+    controlsWrapper.className = controlsClassName;
+    /**
+     * To format the current page the same as a link, we need to double-wrap
+     * it in spans. To programmatically focus it, we need to give it a
+     * tabindex.
+     *
+     * Actual links only need one span.
+     */
+
+    if (navigationItem.className.indexOf(currentClassName) >= 0) {
+      textWrapper.appendChild(navigationItem.firstChild.cloneNode(true));
+      currentPageWrapper.appendChild(textWrapper);
+      currentPageWrapper.setAttribute('tabindex', -1);
+      navigationItem.replaceChild(controlsWrapper, navigationItem.firstChild);
+      controlsWrapper.appendChild(currentPageWrapper);
+    } else {
+      textWrapper.appendChild(link.firstChild.cloneNode(true));
+      link.replaceChild(textWrapper, link.firstChild);
+      link.title = linkText;
+      navigationItem.replaceChild(controlsWrapper, link);
+      controlsWrapper.appendChild(link);
+    }
+
+    subNavigation && subNavigation.firstElementChild && prepareSubNavigation(navigationItem, rootClass);
+  });
+}
+/**
+ * Open/close the sub-menu when its button is clicked.
+ *
+ * @param {HTMLUListElement} subNavigation - Toggle the sub-navigation when its button is clicked.
+ * @param {string} rootClass - The class of the navigation element.
+ */
+
+function listenForNavigationToggles(subNavigation, rootClass) {
+  Array.from(subNavigation.querySelectorAll('button')).forEach(function (button) {
+    return button.addEventListener('click', function () {
+      return toggleSubNavigation(button, rootClass);
+    }, true);
+  });
+}
+
+/***/ }),
+
 /***/ "./src/patterns/menu/menu.js":
 /*!***********************************!*\
   !*** ./src/patterns/menu/menu.js ***!
@@ -5571,23 +5738,19 @@ function launchLoadMore(e) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.from */ "./node_modules/core-js/modules/es.array.from.js");
 /* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js");
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(body_scroll_lock__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js");
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _menu_formatters__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./menu-formatters */ "./src/patterns/menu/menu-formatters.js");
 
 
 
@@ -5608,87 +5771,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var className = 'menu',
-    currentClassName = className + '__current',
-    hierarchyClassName = className + '__hierarchy',
+    veilClassName = className + '__veil',
+    contentClassName = className + '__content',
+    buttonDisplayClassName = className + '__display__button',
     buttonClassName = className + '__button',
     level1ClassName = className + '__level1',
-    buttonTextClassName = buttonClassName + '__text',
-    buttonIconClassName = buttonClassName + '__icon',
-    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_7__["reduceMotion"])() ? 0 : 999;
-/**
- * Decorate sub-menu element with the appropriate attributes.
- *
- * @param {HTMLLIElement} menuItem - The list item representing button menu item.
- * @param {HTMLULElement} subMenu - The menu item's sub-menu.
- * @returns {HTMLULElement|null} Return the sub-menu if it should be open, otherwise null.
- */
-
-function prepareSubMenu(menuItem, subMenu) {
-  var menuItemBtn = document.createElement('button'),
-      iconSpan = document.createElement('span'),
-      textSpan = document.createElement('span');
-  menuItemBtn.setAttribute('type', 'button');
-  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].hidden, 'true');
-  iconSpan.className = "".concat(buttonIconClassName, " fal fa-fw");
-  textSpan.className = "".concat(buttonTextClassName);
-  Object(_util__WEBPACK_IMPORTED_MODULE_7__["appendAll"])(menuItemBtn, [iconSpan, textSpan]);
-  menuItem.insertBefore(menuItemBtn, subMenu);
-
-  if (menuItem.className.indexOf(currentClassName) >= 0 || menuItem.className.indexOf(hierarchyClassName) >= 0) {
-    /**
-     * The sub-menu is in the asset lineage, so it will be opened.
-     * Return it so it can be pushed into the menus array.
-     */
-    setMenuItemButtonDetails(menuItemBtn, true);
-    return subMenu;
-  } else {
-    setMenuItemButtonDetails(menuItemBtn, false);
-    return null;
-  }
-}
-/**
- * Iterate over the menu lists, transforming them into the initial menu with the
- * current asset lineage open.
- *
- * @param {HTMLElement} menu - The menu container.
- * @returns {HTMLUListElement[]} An initial array of sub-menus, with attributes set.
- */
-
-
-function prepareMenu(menu) {
-  var menus = [];
-  Array.from(menu.querySelectorAll('li')).forEach(function (menuItem) {
-    var link = menuItem.querySelector('a'),
-        subMenu = menuItem.querySelector('ul'),
-        linkText = 'Visit ' + menuItem.dataset.title,
-        textWrapper = document.createElement('span'),
-        currentWrapper = document.createElement('span');
-    /**
-     * To format the current page the same as a link, we need to double-wrap
-     * it in spans. To programmatically focus it, we need to give it a
-     * tabindex.
-     *
-     * Actual links only need one span.
-     */
-
-    if (menuItem.className.indexOf(currentClassName) >= 0) {
-      textWrapper.appendChild(menuItem.firstChild.cloneNode(true));
-      currentWrapper.appendChild(textWrapper);
-      currentWrapper.setAttribute('tabindex', -1);
-      menuItem.replaceChild(currentWrapper, menuItem.firstChild);
-    } else {
-      textWrapper.appendChild(link.firstChild.cloneNode(true));
-      link.replaceChild(textWrapper, link.firstChild);
-      link.title = linkText;
-    }
-
-    if (subMenu) {
-      var prepped = prepareSubMenu(menuItem, subMenu);
-      prepped && menus.push(prepped);
-    }
-  });
-  return menus;
-}
+    buttonTextClassName = buttonClassName + '__text';
 /**
  * Creates a function for setting a menu to be open or closed.
  *
@@ -5697,15 +5785,18 @@ function prepareMenu(menu) {
  * @returns {Function} A function that will set the menu to be open/closed.
  */
 
-
 function menuSetter(menu, button) {
+  var menuContent = menu.querySelector(".".concat(contentClassName));
   /**
    * @param {boolean} open - Set the menu to be open?
    */
+
   var setMenu = function setMenu(open) {
-    open ? Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_8__["disableBodyScroll"])() : Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_8__["enableBodyScroll"])();
+    var buttonText = button.querySelector(".".concat(buttonTextClassName));
+    open ? Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__["disableBodyScroll"])(menuContent) : Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__["enableBodyScroll"])(menuContent);
     menu.dataset.open = open;
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].expanded, open);
+    buttonText.innerText = open ? 'Close' : 'Menu';
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded, open);
   };
 
   return setMenu;
@@ -5721,64 +5812,19 @@ function menuSetter(menu, button) {
  */
 
 
-function toggleMenu(button, setMenu, trap) {
-  var expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].expanded);
+function toggleMenu(button, setMenu, trap, veil) {
+  var expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded);
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_7__["toBool"])(expanded)) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(expanded)) {
     trap && trap.deactivate();
+    veil.dataset.on = 'false';
     setMenu(false);
   } else {
     setMenu(true);
+    veil.dataset.on = 'true';
     trap && trap.activate(); // const menu = button.closest(`.${className}`);
     // scrollMenusIntoView(menu);
   }
-}
-/**
- * Set sub-menu button attributes for the open/closed state.
- *
- * @param {HTMLButtonElement} button - The button to decorate.
- * @param {boolean} open - Should it be open?
- */
-
-
-function setMenuItemButtonDetails(button, open) {
-  var menuItem = button.closest('li'),
-      sectionText = menuItem.dataset.title + ' section',
-      textSpan = button.querySelector(".".concat(buttonTextClassName)),
-      text = open ? 'Close ' : 'Open ';
-  menuItem.dataset.open = open;
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].expanded, open);
-  button.title = text + sectionText;
-  textSpan.innerText = text + sectionText;
-}
-/**
- * Open/close the sub-menu when its button is clicked.
- *
- * @param {HTMLUListElement} menu - Toggle the sub-menu when its button is clicked.
- */
-
-
-function listenForMenuToggles(menu) {
-  Array.from(menu.querySelectorAll('button')).forEach(function (button) {
-    return button.addEventListener('click', function () {
-      return toggleSubMenu(button);
-    }, true);
-  });
-}
-/**
- * Toggle a sub-menu open or closed.
- *
- * When a sub-menu is opened, we clone it and add it to the next column to the
- * right.
- */
-
-
-function toggleSubMenu(button) {
-  var expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].expanded),
-      thisList = button.closest(".".concat(className)),
-      scrollList = zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.createScroller(thisList);
-  Object(_util__WEBPACK_IMPORTED_MODULE_7__["toBool"])(expanded) ? setMenuItemButtonDetails(button, false) : setMenuItemButtonDetails(button, true);
-  scrollList.to(button.closest('li'), scrollDuration);
 }
 /**
  * Turn the menu label into a button to toggle the menu open and closed.
@@ -5792,16 +5838,16 @@ function toggleSubMenu(button) {
  */
 
 
-function createMenuToggle(label, button, setMenu) {
+function createMenuToggle(label, button, setMenu, veil) {
   var buttonWrapper = document.createElement('div'),
       menu = label.closest(".".concat(className));
   button.setAttribute('type', 'button');
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].hasPopup, 'menu');
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].hasPopup, 'menu');
   Array.from(label.childNodes).forEach(function (child) {
     return buttonWrapper.appendChild(child);
   });
   button.appendChild(buttonWrapper);
-  var trap = focus_trap__WEBPACK_IMPORTED_MODULE_6___default()(menu, {
+  var trap = focus_trap__WEBPACK_IMPORTED_MODULE_4___default()(menu, {
     /**
      * Initial focus should be whichever of: the current page; a menu item
      * in the asset lineage or; the first item in the last column appears
@@ -5820,12 +5866,12 @@ function createMenuToggle(label, button, setMenu) {
     //     return open[open.length - 1];
     // },
     onDeactivate: function onDeactivate() {
-      return toggleMenu(button, setMenu);
+      return toggleMenu(button, setMenu, trap, veil);
     },
     clickOutsideDeactivates: true
   });
   button.addEventListener('click', function () {
-    return toggleMenu(button, setMenu, trap);
+    return toggleMenu(button, setMenu, trap, veil);
   }, true);
 }
 /**
@@ -5838,14 +5884,18 @@ function createMenuToggle(label, button, setMenu) {
 function launchMenu(menu) {
   // During testing only: remove 'under construction' indicators globally
   menu.innerHTML = menu.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
-  var label = menu.querySelector(".".concat(buttonClassName)),
+  var label = menu.querySelector(".".concat(buttonDisplayClassName)),
       button = document.createElement('button'),
+      veil = document.createElement('div'),
       setMenu = menuSetter(menu, button);
-  prepareMenu(menu);
-  createMenuToggle(label, button, setMenu);
-  setMenu(false);
+  veil.className = veilClassName;
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].hidden, 'true');
+  document.querySelector('body').insertBefore(veil, document.querySelector('main'));
+  createMenuToggle(label, button, setMenu, veil);
   label.appendChild(button);
-  listenForMenuToggles(menu.querySelector(".".concat(level1ClassName)));
+  setMenu(false);
+  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_8__["prepareNavigation"])(menu.querySelector(".".concat(level1ClassName)), className);
+  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_8__["listenForNavigationToggles"])(menu.querySelector(".".concat(level1ClassName)), className);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -6215,24 +6265,22 @@ function setupTabPrevious(navigation, veil, closeAll) {
 
 
 function setupTabNext(navigation, veil, closeAll) {
-  var lastSectionLastNavigationItem = navigation.querySelector('.navigation--primary__level1:last-of-type .navigation__level2 > li:last-of-type'),
-      lastSectionLastAnchor = lastSectionLastNavigationItem.className.indexOf(currentClassName) >= 0 ? lastSectionLastNavigationItem.previousElementSibling.querySelector('a') : lastSectionLastNavigationItem.querySelector('a'),
-      restSectionsLastNavigationItems = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:last-of-type) .navigation__level2 > li:last-of-type')); // If we tab out of the open, first menu into the other header content, close the menu.
+  var closeButton = navigation.querySelector('.navigation--primary__level1:last-of-type .wrapper--navigation--primary__menu__close button'),
+      restSectionsCloseButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:last-of-type) .wrapper--navigation--primary__menu__close button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
-  lastSectionLastAnchor.addEventListener('keydown', function (e) {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(lastSectionLastAnchor.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded)) && keyCodeTab === e.keyCode && !e.shiftKey) {
+  closeButton.addEventListener('keydown', function (e) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded)) && keyCodeTab === e.keyCode && !e.shiftKey) {
       closeAll();
     }
   });
-  restSectionsLastNavigationItems.forEach(function (navigationItem) {
-    var lastSectionAnchor = navigationItem.className.indexOf(currentClassName) >= 0 ? navigationItem.previousElementSibling.querySelector('a') : navigationItem.querySelector('a'),
-        nextSectionButton = lastSectionAnchor.closest('.navigation--primary__level1').nextElementSibling.querySelector('button'),
+  restSectionsCloseButtons.forEach(function (closeButton) {
+    var nextSectionButton = closeButton.closest('.navigation--primary__level1').nextElementSibling.querySelector('button'),
         toggleNextSection = createSectionToggle(nextSectionButton, veil, closeAll);
-    lastSectionAnchor.addEventListener('keydown', function (e) {
+    closeButton.addEventListener('keydown', function (e) {
       if (keyCodeTab === e.keyCode && !e.shiftKey) {
         e.preventDefault();
         toggleNextSection();
-        nextSectionButton.focus();
+        nextSectionButton.closest('.navigation--primary__level1').querySelector('.navigation--primary__menu__header a').focus();
       }
     }, true);
   });
@@ -6322,7 +6370,7 @@ function addCloseButtons(navigation, closeAll) {
       return closeAll();
     }, true);
     closeButtonWrapper.appendChild(closeButton);
-    menu.insertBefore(closeButtonWrapper, header);
+    menu.appendChild(closeButtonWrapper);
   });
 }
 /**
@@ -6379,24 +6427,9 @@ function launchPrimaryNavigation(navigation) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.from */ "./node_modules/core-js/modules/es.array.from.js");
-/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
-
-
-
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _menu_menu_formatters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menu/menu-formatters */ "./src/patterns/menu/menu-formatters.js");
 
 
 
@@ -6409,139 +6442,19 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 
-
-
 var className = 'navigation',
-    classNameSpecific = className + '--secondary',
-    controlsClassName = className + '__controls',
-    currentClassName = className + '__current',
-    hierarchyClassName = className + '__hierarchy',
-    buttonClassName = className + '__button',
-    buttonTextClassName = buttonClassName + '__text',
-    buttonIconClassName = buttonClassName + '__icon',
-    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_6__["reduceMotion"])() ? 0 : 999;
-/**
- * Set sub-menu button attributes for the open/closed state.
- *
- * @param {HTMLButtonElement} button - The button to decorate.
- * @param {boolean} open - Should it be open?
- */
-
-function setNavigationItemButtonDetails(button, open) {
-  var navigationItem = button.closest('li'),
-      sectionText = navigationItem.dataset.title + ' section',
-      textSpan = button.querySelector(".".concat(buttonTextClassName)),
-      text = open ? 'Close ' : 'Open ';
-  navigationItem.dataset.open = open;
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded, open);
-  button.title = text + sectionText;
-  textSpan.innerText = text + sectionText;
-}
-/**
- * Open/close the sub-menu when its button is clicked.
- *
- * @param {HTMLUListElement} subNavigation - Toggle the sub-navigation when its button is clicked.
- */
-
-
-function listenForSubNavigationToggles(subNavigation) {
-  Array.from(subNavigation.querySelectorAll('button')).forEach(function (button) {
-    return button.addEventListener('click', function () {
-      return toggleSubNavigation(button);
-    }, true);
-  });
-}
-/**
- * Toggle a sub-navigation open or closed.
- */
-
-
-function toggleSubNavigation(button) {
-  var expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded),
-      thisList = button.closest('ul'),
-      scrollList = zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.createScroller(thisList);
-  Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(expanded) ? setNavigationItemButtonDetails(button, false) : setNavigationItemButtonDetails(button, true);
-  scrollList.to(button.closest('li'), scrollDuration);
-}
-/**
- * Decorate sub-navigation element with the appropriate attributes.
- *
- * @param {HTMLLIElement} navigationItem - The list item representing button navigation item.
- */
-
-
-function prepareSubNavigation(navigationItem) {
-  var navigationItemBtn = document.createElement('button'),
-      iconSpan = document.createElement('span'),
-      textSpan = document.createElement('span'),
-      controlsWrapper = navigationItem.querySelector(".".concat(controlsClassName));
-  navigationItemBtn.setAttribute('type', 'button');
-  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].hidden, 'true');
-  iconSpan.className = "".concat(buttonIconClassName, " fal fa-fw");
-  textSpan.className = "".concat(buttonTextClassName);
-  Object(_util__WEBPACK_IMPORTED_MODULE_6__["appendAll"])(navigationItemBtn, [iconSpan, textSpan]);
-  controlsWrapper.appendChild(navigationItemBtn);
-
-  if (navigationItem.className.indexOf(currentClassName) >= 0 || navigationItem.className.indexOf(hierarchyClassName) >= 0) {
-    setNavigationItemButtonDetails(navigationItemBtn, true);
-  } else {
-    setNavigationItemButtonDetails(navigationItemBtn, false);
-  }
-}
-/**
- * Iterate over the navigation lists, transforming them into the initial
- * navigation with the current asset lineage open.
- *
- * @param {HTMLElement} navigation - The navigation container.
- */
-
-
-function prepareNavigation(navigation) {
-  // During testing only: remove 'under construction' indicators globally
-  navigation.innerHTML = navigation.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
-  Array.from(navigation.querySelectorAll('li')).forEach(function (navigationItem) {
-    var link = navigationItem.querySelector('a'),
-        subNavigation = navigationItem.querySelector('ul'),
-        linkText = 'Visit ' + navigationItem.dataset.title,
-        textWrapper = document.createElement('span'),
-        currentPageWrapper = document.createElement('span'),
-        controlsWrapper = document.createElement('div');
-    controlsWrapper.className = controlsClassName;
-    /**
-     * To format the current page the same as a link, we need to double-wrap
-     * it in spans. To programmatically focus it, we need to give it a
-     * tabindex.
-     *
-     * Actual links only need one span.
-     */
-
-    if (navigationItem.className.indexOf(currentClassName) >= 0) {
-      textWrapper.appendChild(navigationItem.firstChild.cloneNode(true));
-      currentPageWrapper.appendChild(textWrapper);
-      currentPageWrapper.setAttribute('tabindex', -1);
-      navigationItem.replaceChild(controlsWrapper, navigationItem.firstChild);
-      controlsWrapper.appendChild(currentPageWrapper);
-    } else {
-      textWrapper.appendChild(link.firstChild.cloneNode(true));
-      link.replaceChild(textWrapper, link.firstChild);
-      link.title = linkText;
-      navigationItem.replaceChild(controlsWrapper, link);
-      controlsWrapper.appendChild(link);
-    }
-
-    subNavigation && subNavigation.firstElementChild && prepareSubNavigation(navigationItem);
-  });
-}
+    classNameSpecific = className + '--secondary';
 /**
  * Transform the Matrix-generated navigation lists into an interactive menu.
  *
  * @param {HTMLElement} navigation - The secondary navigation element.
  */
 
-
 function launchSecondaryNavigation(navigation) {
-  prepareNavigation(navigation);
-  listenForSubNavigationToggles(navigation);
+  // During testing only: remove 'under construction' indicators globally
+  navigation.innerHTML = navigation.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
+  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_1__["prepareNavigation"])(navigation, className);
+  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_1__["listenForNavigationToggles"])(navigation, className);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
