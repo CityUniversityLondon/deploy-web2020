@@ -717,7 +717,7 @@ function tryCatch(f) {
   try {
     f();
   } catch (e) {
-    console.log(e);
+    // console.log(e);
     Object(_util__WEBPACK_IMPORTED_MODULE_9__["gaEvent"])('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "Pattern launch ".concat(e.fileName, " (").concat(window.location, ")"), true);
   }
 }
