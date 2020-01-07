@@ -18741,7 +18741,6 @@ html {
 
 body {
     min-height: 100vh;
-    overflow: hidden;
     position: relative;
     scroll-behavior: smooth;
 }
@@ -31877,6 +31876,12 @@ article figure figcaption a:active {
     }
 }
 
+.global-header {
+    background-color: #ffffff;
+    position: relative;
+    z-index: 4;
+}
+
 @media (max-width: 1023px) {
     .global-header .global-header__content {
         align-items: center;
@@ -36836,7 +36841,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
 
 .js .menu {
     align-self: stretch;
-    z-index: 4;
+    z-index: 5;
 }
 
 @media (min-width: 1024px) {
@@ -36849,17 +36854,12 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     display: none;
 }
 
-.js .menu .menu__content .menu__level1 {
-    height: 60vh;
-    overflow-y: scroll;
-}
-
 .js .menu .menu__content .menu__level1 ul {
     display: none;
 }
 
 .js .menu .menu__content .menu__utility {
-    background-color: #e5e5e5;
+    background-color: #e7ebed;
     border-top: 0.25rem solid #d61726;
     color: #0c0c0e;
     padding-bottom: 1.5rem;
@@ -36880,27 +36880,36 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
 }
 
 .js .menu .menu__content .menu__utility ul li {
-    font-family: "Plex Sans", sans-serif;
-    /**
-     * IBM Plex OpenType stylistic sets:
-     *
-     * ss01: 0/1 double-storey/simple 'a'
-     * ss02: 0/1 double-storey/simple 'g'
-     * ss03: 0/1 plain/slashed '0'
-     * ss04: 0/1 plain/dotted '0'
-     */
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
-    max-width: 55ch;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 1rem;
+    font-weight: 600;
+    margin-top: 0;
 }
 
 .js .menu .menu__content .menu__utility ul li i,
 .js .menu .menu__content .menu__utility ul li em {
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.js .menu .menu__content .menu__utility ul li b,
+.js .menu .menu__content .menu__utility ul li strong {
+    font-weight: inherit;
+}
+
+.js .menu .menu__content .menu__utility ul li i,
+.js .menu .menu__content .menu__utility ul li em {
+    font-style: italic;
+}
+
+.js .menu .menu__content .menu__utility ul li u {
+    text-decoration: none;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -36930,11 +36939,6 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
 .js .menu .menu__content .menu__utility ul li b,
 .js .menu .menu__content .menu__utility ul li strong {
     font-weight: 700;
-}
-
-.js .menu .menu__content .menu__utility ul li i,
-.js .menu .menu__content .menu__utility ul li em {
-    font-style: italic;
 }
 
 .js .menu .menu__content .menu__utility ul li a {
@@ -36990,42 +36994,42 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
 }
 
 .js .menu .menu__content .menu__utility ul li a .global-header__utility__text {
-    background-image: linear-gradient(#696969, #696969);
+    background-image: linear-gradient(#494949, #494949);
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 0.1875rem;
-    color: #696969;
+    color: #494949;
     transition: background-size 0.6s ease-in;
     display: inline;
     padding-bottom: 0.125rem;
 }
 
 .js .menu .menu__content .menu__utility ul li a:visited .global-header__utility__text {
-    color: #696969;
+    color: #494949;
 }
 
 .js .menu .menu__content .menu__utility ul li a:focus .global-header__utility__text {
-    color: #696969;
+    color: #494949;
     background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
     .js .menu .menu__content .menu__utility ul li a:hover .global-header__utility__text {
-        color: #1e1e1e;
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        color: #0c0c0e;
+        background-image: linear-gradient(#0c0c0e, #0c0c0e);
         background-size: 100% 0.1875rem;
     }
 }
 
 .js .menu .menu__content .menu__utility ul li a .global-header__utility__icon {
-    color: #696969;
+    color: #494949;
     margin-left: 0.25rem;
     top: -0.125rem;
 }
 
 @media (hover: hover) {
     .js .menu .menu__content .menu__utility ul li a:hover .global-header__utility__icon {
-        color: #1e1e1e;
+        color: #0c0c0e;
     }
 }
 
@@ -37307,26 +37311,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     content: '\f0c9';
 }
 
-.js .menu__veil {
-    background-color: rgba(30, 30, 30, 0.8);
-    display: none;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: 3;
-}
-
-.js .menu__veil[data-on='true'] {
-    display: block;
-}
-
-@media (min-width: 1024px) {
-    .js .menu__veil[data-on='true'] {
-        display: none;
-    }
-}
-
-.menu__content__header {
+.js .menu .menu__content__header {
     font-family: "Plex Sans", sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
@@ -37357,75 +37342,75 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     max-width: unset;
 }
 
-.menu__content__header i,
-.menu__content__header em {
+.js .menu .menu__content__header i,
+.js .menu .menu__content__header em {
     font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .menu__content__header {
+    .js .menu .menu__content__header {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .menu__content__header {
+    .js .menu .menu__content__header {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .menu__content__header {
+    .js .menu .menu__content__header {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .menu__content__header {
+    .js .menu .menu__content__header {
         letter-spacing: -0.017em;
     }
 }
 
-.menu__content__header b,
-.menu__content__header strong {
+.js .menu .menu__content__header b,
+.js .menu .menu__content__header strong {
     font-weight: 700;
 }
 
-.menu__content__header i,
-.menu__content__header em {
+.js .menu .menu__content__header i,
+.js .menu .menu__content__header em {
     font-style: italic;
 }
 
-.menu__content__header i,
-.menu__content__header em {
+.js .menu .menu__content__header i,
+.js .menu .menu__content__header em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .menu__content__header {
+    .js .menu .menu__content__header {
         letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .menu__content__header {
+    .js .menu .menu__content__header {
         letter-spacing: -0.014em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .menu__content__header {
+    .js .menu .menu__content__header {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .menu__content__header {
+    .js .menu .menu__content__header {
         letter-spacing: -0.017em;
     }
 }
 
-.menu__content__header a {
+.js .menu .menu__content__header a {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -37442,7 +37427,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
 }
 
 @media (hover: hover) {
-    .menu__content__header a:hover {
+    .js .menu .menu__content__header a:hover {
         background-color: initial;
         border-bottom-color: initial;
         border-bottom-style: none;
@@ -37457,7 +37442,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     }
 }
 
-.menu__content__header a:focus, .menu__content__header a:active {
+.js .menu .menu__content__header a:focus, .js .menu .menu__content__header a:active {
     background-color: initial;
     border-bottom-color: initial;
     border-bottom-style: none;
@@ -37471,11 +37456,11 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     text-decoration: none;
 }
 
-.menu__content__header a:focus, .menu__content__header a:active {
+.js .menu .menu__content__header a:focus, .js .menu .menu__content__header a:active {
     color: #ffffff;
 }
 
-.menu__content__header a:focus span, .menu__content__header a:active span {
+.js .menu .menu__content__header a:focus span, .js .menu .menu__content__header a:active span {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: dotted;
@@ -37483,39 +37468,60 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
 }
 
 @media (hover: hover) {
-    .menu__content__header a:hover {
+    .js .menu .menu__content__header a:hover {
         background-color: #494949;
         color: #ffffff;
     }
 }
 
-.menu__content__header a > span {
+.js .menu .menu__content__header a > span {
     border-bottom: 0.125rem solid #ffffff;
     display: inline;
     padding: 0;
 }
 
-.menu__content__header span {
+.js .menu .menu__content__header span {
     display: block;
     padding: 0.5rem;
     width: 100%;
 }
 
-.menu__content__header span > span {
+.js .menu .menu__content__header span > span {
     border-bottom: 0.125rem solid #d61726;
     display: inline;
     padding: 0;
 }
 
-.menu__content__header span:focus {
+.js .menu .menu__content__header span:focus {
     outline: none;
 }
 
-.menu__content__header span:focus > span {
+.js .menu .menu__content__header span:focus > span {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
+}
+
+.js .menu__veil {
+    background-color: rgba(30, 30, 30, 0.8);
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.js .menu__veil[data-on='true'] {
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    .js .menu__veil[data-on='true'] {
+        display: none;
+    }
 }
 
 body.modal--in.no-scroll {
@@ -37551,7 +37557,7 @@ body.modal--in.no-scroll .modal__background {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 6;
 }
 
 .modal__popup[data-hidden='true'] {
@@ -38123,47 +38129,28 @@ a.modal__close:active, a.modal__close:focus {
     margin-right: 0;
 }
 
-.navigation--primary .navigation--primary__level1 {
-    /* Prospective students has a lot of programmes to list */
-    /* News and events has only 3 items, so can’t fill 3 columns with
-           column flow */
-    /* Alumni, For business and Research have 4-5 items, so they
-           can fill 3 columns but only if there are only two rows */
-    /* News and events has only 3 items, so can’t fill 3 columns with
-           column flow */
+.navigation--primary .navigation--primary__level1[data-title='Prospective students'] .navigation__level2, .navigation--primary .navigation--primary__level1[data-title='About City'] .navigation__level2 {
+    grid-template-rows: repeat(8, auto);
 }
 
-.navigation--primary .navigation--primary__level1[data-title='Prospective students'] .navigation__level2 {
-    grid-template-rows: repeat(7, auto);
-}
-
-.navigation--primary .navigation--primary__level1[data-title='Prospective students'] .navigation__level2 > li:first-of-type {
-    grid-row: 1 / span 7;
-}
-
-.navigation--primary .navigation--primary__level1[data-title='News and events'] .navigation__level2 {
-    grid-auto-flow: row;
-    grid-template-rows: repeat(1, auto);
-}
-
-.navigation--primary .navigation--primary__level1[data-title='News and events'] .navigation__level2 > li:first-of-type {
-    grid-row: 1 / span 1;
+.navigation--primary .navigation--primary__level1[data-title='Prospective students'] .navigation__level2 > li:first-of-type, .navigation--primary .navigation--primary__level1[data-title='About City'] .navigation__level2 > li:first-of-type {
+    grid-row: 1 / span 8;
 }
 
 .navigation--primary .navigation--primary__level1[data-title='Research'] .navigation__level2, .navigation--primary .navigation--primary__level1[data-title='For businesses'] .navigation__level2, .navigation--primary .navigation--primary__level1[data-title='Alumni and supporters'] .navigation__level2 {
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
 }
 
 .navigation--primary .navigation--primary__level1[data-title='Research'] .navigation__level2 > li:first-of-type, .navigation--primary .navigation--primary__level1[data-title='For businesses'] .navigation__level2 > li:first-of-type, .navigation--primary .navigation--primary__level1[data-title='Alumni and supporters'] .navigation__level2 > li:first-of-type {
-    grid-row: 1 / span 3;
+    grid-row: 1 / span 4;
 }
 
-.navigation--primary .navigation--primary__level1[data-title='About City'] .navigation__level2 {
-    grid-template-rows: repeat(6, auto);
+.navigation--primary .navigation--primary__level1[data-title='News and events'] .navigation__level2 {
+    grid-template-rows: repeat(2, auto);
 }
 
-.navigation--primary .navigation--primary__level1[data-title='About City'] .navigation__level2 > li:first-of-type {
-    grid-row: 1 / span 6;
+.navigation--primary .navigation--primary__level1[data-title='News and events'] .navigation__level2 > li:first-of-type {
+    grid-row: 1 / span 2;
 }
 
 .navigation--primary .navigation__level2 {
@@ -38171,7 +38158,7 @@ a.modal__close:active, a.modal__close:focus {
          column-gap: 1.5rem;
     display: grid;
     grid-auto-flow: column;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
     row-gap: 0.5rem;
 }
@@ -38447,10 +38434,10 @@ a.modal__close:active, a.modal__close:focus {
     background-color: #1e1e1e;
     color: #ffffff;
     left: 0;
-    min-height: 15vh;
+    min-height: 20vh;
     position: absolute;
     width: 100%;
-    z-index: 4;
+    z-index: 5;
 }
 
 .navigation--primary .navigation--primary__menu__content {
@@ -38462,7 +38449,7 @@ a.modal__close:active, a.modal__close:focus {
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: repeat(2, auto);
     padding-bottom: 1rem;
     padding-left: 1rem;
@@ -38902,10 +38889,12 @@ a.modal__close:active, a.modal__close:focus {
 
 .js .navigation__veil {
     background-color: rgba(30, 30, 30, 0.8);
+    bottom: 0;
     display: none;
-    height: 100%;
+    left: 0;
     position: absolute;
-    width: 100%;
+    right: 0;
+    top: 0;
     z-index: 3;
 }
 
@@ -43932,7 +43921,7 @@ button
     right: 0;
     top: 0;
     width: 100vw;
-    z-index: 5;
+    z-index: 6;
 }
 
 .finder__filters--mobile[data-open='true'] .finder__filters--mobile__filters {
