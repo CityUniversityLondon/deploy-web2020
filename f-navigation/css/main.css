@@ -36106,6 +36106,9 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     .menu .menu__level1 > li > .menu__controls > span {
         padding-left: 0.5rem;
     }
+    .menu .menu__level1 > li:last-of-type[data-open='false'] > .menu__controls {
+        border-bottom: none;
+    }
     .menu .menu__level2 {
         background-color: #303030;
         color: #ffffff;
@@ -36275,6 +36278,9 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     .menu .menu__level2 > li > .menu__controls > a,
     .menu .menu__level2 > li > .menu__controls > span {
         padding-left: 1rem;
+    }
+    .menu .menu__level2 > li:last-of-type[data-open='false'] > .menu__controls {
+        border-bottom: none;
     }
     .menu .menu__level3 {
         background-color: #f2f2f2;
@@ -37129,7 +37135,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
 }
 
 .js .menu > .menu__display__button > button > div {
-    min-width: 3.75rem;
+    min-width: 4.25rem;
 }
 
 .js .menu > .menu__display__button > button {
