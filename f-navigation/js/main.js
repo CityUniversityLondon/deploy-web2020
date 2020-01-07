@@ -5682,10 +5682,10 @@ function setNavigationItemButtonDetails(button, open, rootClass) {
 
 function toggleSubNavigation(button, rootClass) {
   var expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].expanded),
-      thisList = button.closest('ul'),
-      scrollList = zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.createScroller(thisList);
+      elem = document.querySelector('html'),
+      scrollList = zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.createScroller(elem);
   Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(expanded) ? setNavigationItemButtonDetails(button, false, rootClass) : setNavigationItemButtonDetails(button, true, rootClass);
-  scrollList.to(button.closest('li'), scrollDuration);
+  scrollList.intoView(button.closest('li'), scrollDuration);
 }
 /**
  * Decorate sub-navigation element with the appropriate attributes.
