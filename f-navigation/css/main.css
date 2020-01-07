@@ -40970,10 +40970,6 @@ blockquote footer cite {
     width: auto;
 }
 
-.skip-links:active .skip-links__link > .skip-links__intro, .skip-links:focus .skip-links__link > .skip-links__intro, .skip-links:focus-within .skip-links__link > .skip-links__intro {
-    display: none;
-}
-
 .skip-links .skip-links__content {
     margin-left: 1rem;
     margin-right: 1rem;
