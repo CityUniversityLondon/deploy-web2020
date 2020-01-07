@@ -38142,6 +38142,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .navigation--primary .navigation--primary__level1[data-title='Prospective students'] .navigation__level2 > li:first-of-type, .navigation--primary .navigation--primary__level1[data-title='About City'] .navigation__level2 > li:first-of-type {
     grid-row: 1 / span 8;
+    justify-content: flex-start;
 }
 
 .navigation--primary .navigation--primary__level1[data-title='Research'] .navigation__level2, .navigation--primary .navigation--primary__level1[data-title='For businesses'] .navigation__level2, .navigation--primary .navigation--primary__level1[data-title='Alumni and supporters'] .navigation__level2 {
@@ -38150,6 +38151,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .navigation--primary .navigation--primary__level1[data-title='Research'] .navigation__level2 > li:first-of-type, .navigation--primary .navigation--primary__level1[data-title='For businesses'] .navigation__level2 > li:first-of-type, .navigation--primary .navigation--primary__level1[data-title='Alumni and supporters'] .navigation__level2 > li:first-of-type {
     grid-row: 1 / span 4;
+    justify-content: flex-start;
 }
 
 .navigation--primary .navigation--primary__level1[data-title='News and events'] .navigation__level2 {
@@ -38158,6 +38160,7 @@ a.modal__close:active, a.modal__close:focus {
 
 .navigation--primary .navigation--primary__level1[data-title='News and events'] .navigation__level2 > li:first-of-type {
     grid-row: 1 / 1;
+    justify-content: flex-start;
 }
 
 .navigation--primary .navigation__level2 {
@@ -38324,7 +38327,6 @@ a.modal__close:active, a.modal__close:focus {
 
 .navigation--primary .navigation__level2 .navigation__current > span {
     align-items: center;
-    display: flex;
 }
 
 .navigation--primary .navigation__level2 .navigation__current > span > span {
