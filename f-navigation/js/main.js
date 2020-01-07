@@ -5616,6 +5616,9 @@ function setNavigationItemButtonDetails(button, open, rootClass) {
       buttonTextClassName = buttonClassName + '__text',
       textSpan = button.querySelector(".".concat(buttonTextClassName)),
       text = open ? 'Close ' : 'Open ';
+  open && Array.from(button.closest('ul').querySelectorAll('button')).forEach(function (button) {
+    return setNavigationItemButtonDetails(button, false, rootClass);
+  });
   navigationItem.dataset.open = open;
   button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].expanded, open);
   button.title = text + sectionText;
