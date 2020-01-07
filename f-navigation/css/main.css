@@ -39929,6 +39929,9 @@ a.modal__close:active, a.modal__close:focus {
         padding-top: 0.5rem;
         width: 100%;
     }
+    .navigation--secondary > .navigation--secondary__header > span {
+        border-bottom: 0.0625rem solid #cbcbcb;
+    }
     .navigation--secondary > .navigation--secondary__header > span:focus, .navigation--secondary > .navigation--secondary__header > span:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
