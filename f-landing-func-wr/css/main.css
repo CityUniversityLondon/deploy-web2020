@@ -45798,6 +45798,24 @@ a.modal__close:active, a.modal__close:focus {
     min-width: 100%;
 }
 
+.logos-list--nolinks {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.logos-list--nolinks__logo {
+    list-style: none;
+    width: 4rem;
+    margin-top: 0;
+}
+
+.logos-list--nolinks__logo:not(:first-child) {
+    margin-left: 0.5rem;
+}
+
 .generic {
     grid-row-gap: 0;
     display: grid;
@@ -48242,6 +48260,24 @@ div.widget-123_test_ {
 
 @media (max-width: 1440px) {
     .landing--functional .content__wrap > .content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.landing--functional .related-cards__wrap .related-cards {
+    max-width: 80rem;
+}
+
+@media (min-width: 1441px) {
+    .landing--functional .related-cards__wrap .related-cards {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .landing--functional .related-cards__wrap .related-cards {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
