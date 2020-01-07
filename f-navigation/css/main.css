@@ -38150,7 +38150,7 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .navigation--primary .navigation--primary__level1[data-title='News and events'] .navigation__level2 > li:first-of-type {
-    grid-row: 1 / span 2;
+    grid-row: 1 / 1;
 }
 
 .navigation--primary .navigation__level2 {
