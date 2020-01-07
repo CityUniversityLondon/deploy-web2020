@@ -37115,11 +37115,8 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     right: 0;
 }
 
-.js .menu[data-open='true'] > .menu__content ul li[data-open='true'] > a > span {
-    font-weight: 700;
-}
-
-.js .menu[data-open='true'] > .menu__content ul li[data-open='true'] > span > span {
+.js .menu[data-open='true'] > .menu__content ul li[data-open='true'] > .menu__controls > a > span,
+.js .menu[data-open='true'] > .menu__content ul li[data-open='true'] > .menu__controls > span > span {
     font-weight: 700;
 }
 
