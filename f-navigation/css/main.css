@@ -36679,7 +36679,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
         padding-left: 2.5rem;
     }
     .menu .menu__level6 {
-        background-color: #e5e5e5;
+        background-color: #bebebe;
         color: #0c0c0e;
     }
     .menu .menu__level6 > li > .menu__controls > a {
@@ -36694,7 +36694,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-color: #e5e5e5;
+        background-color: #bebebe;
         color: #0c0c0e;
     }
 }
@@ -36742,7 +36742,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
 
 @media (max-width: 1023px) and (hover: hover) {
     .menu .menu__level6 > li > .menu__controls > a:hover {
-        background-color: #cbcbcb;
+        background-color: #696969;
         color: #0c0c0e;
     }
 }
@@ -36760,7 +36760,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-color: #e5e5e5;
+        background-color: #bebebe;
         color: #0c0c0e;
     }
 }
@@ -36805,12 +36805,12 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
         color: #0c0c0e;
     }
     .menu .menu__level6 > li > .menu__controls > button:hover {
-        background-color: #cbcbcb;
+        background-color: #696969;
         color: #0c0c0e;
     }
     .menu .menu__level6 > li > .menu__controls > a,
     .menu .menu__level6 > li > .menu__controls > span {
-        padding-left: 2.5rem;
+        padding-left: 3rem;
     }
     .menu .menu__controls {
         display: flex;
