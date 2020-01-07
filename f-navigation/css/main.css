@@ -39793,7 +39793,6 @@ a.modal__close:active, a.modal__close:focus {
         font-weight: 600;
         margin-top: 1rem;
         background-color: #ffffff;
-        border-bottom: 0.0625rem solid #cbcbcb;
         border-top: 0.0625rem solid #cbcbcb;
         color: #0c0c0e;
         display: block;
@@ -39911,6 +39910,9 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 @media (min-width: 1024px) {
+    .navigation--secondary > .navigation--secondary__header a, .navigation--secondary > .navigation--secondary__header a:hover {
+        border-bottom: 0.0625rem solid #cbcbcb;
+    }
     .navigation--secondary > .navigation--secondary__header a > span {
         border-bottom: 0.125rem solid #0c0c0e;
     }
