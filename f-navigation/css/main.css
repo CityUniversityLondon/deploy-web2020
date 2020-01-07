@@ -37131,6 +37131,10 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     height: 100%;
 }
 
+.js .menu > .menu__display__button > button > div {
+    min-width: 3.75rem;
+}
+
 .js .menu > .menu__display__button > button {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
@@ -38882,7 +38886,7 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'] + .navigation--primary__menu {
-    box-shadow: 0 1rem 1rem 0 rgba(12, 12, 14, 0.25);
+    border-bottom: 0.125rem solid #d61726;
     display: block;
     margin-top: 1.5rem;
 }
