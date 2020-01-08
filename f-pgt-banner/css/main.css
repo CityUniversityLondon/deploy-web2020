@@ -37936,84 +37936,84 @@ article .link-copy {
 }
 
 @media (max-width: 768px) {
-    .course--postgraduate-taught .banner--postgraduate-taught {
+    .banner--pgt {
         background: #3e1031;
     }
 }
 
 @media (max-width: 768px) {
-    .course--postgraduate-taught .banner--postgraduate-taught .banner__image {
+    .banner--pgt .banner__image {
         display: none;
     }
 }
 
-.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay {
+.banner--pgt .banner__overlay {
     background: linear-gradient(to right, #5d184a, transparent 100%);
     padding: 4.5rem 0 2rem;
 }
 
 @media (max-width: 768px) {
-    .course--postgraduate-taught .banner--postgraduate-taught .banner__overlay {
+    .banner--pgt .banner__overlay {
         background: transparent;
     }
 }
 
-.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading {
+.banner--pgt .banner__overlay .banner__overlay__heading {
     display: grid;
     color: #ffffff;
     text-shadow: none;
 }
 
-.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content {
+.banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content {
     grid-column: 1/-1;
 }
 
 @media (min-width: 769px) {
-    .course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content {
+    .banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content {
         grid-column: 1/10;
     }
 }
 
-.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content ul {
+.banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content ul {
     margin-left: 0;
 }
 
 @media (max-width: 768px) {
-    .course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content ul {
+    .banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content ul {
         max-width: none;
         margin: 0;
         display: block;
     }
 }
 
-.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content ul li a {
+.banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content ul li a {
     text-shadow: none;
 }
 
 @media (max-width: 768px) {
-    .course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content ul li a {
+    .banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content ul li a {
         display: block;
     }
 }
 
 @media (hover: hover) {
-    .course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content ul li a:hover {
+    .banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content ul li a:hover {
         color: #d61726;
         background: #ffffff;
     }
 }
 
-.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content ul li a:active {
+.banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content ul li a:active {
     background: #ffffff;
 }
 
-.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content .wrapper--entry-year-apply {
+.banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content .wrapper--entry-year-apply {
     display: flex;
     align-items: center;
 }
 
 @media (max-width: 768px) {
-    .course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content .wrapper--entry-year-apply {
+    .banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content .wrapper--entry-year-apply {
         display: block;
         text-align: center;
         margin-top: 2rem;
@@ -38021,28 +38021,28 @@ article .link-copy {
 }
 
 @media (min-width: 769px) {
-    .course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content .wrapper--entry-year-apply ul.cta-block {
+    .banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content .wrapper--entry-year-apply ul.cta-block {
         margin-left: 3rem;
     }
 }
 
-.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content .modal__trigger .icon {
+.banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content .modal__trigger .icon {
     margin-right: 0.5rem;
     color: #d61726;
 }
 
-.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content .wrapper--entry-year-apply a:focus,
-.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content .modal__trigger:focus {
+.banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content .wrapper--entry-year-apply a:focus,
+.banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content .modal__trigger:focus {
     outline: 0.125rem dotted #ffffff;
 }
 
-.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content #alternative-year a {
+.banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content #alternative-year a {
     color: #cbcbcb;
     font-size: 1.125rem;
     font-weight: 500;
 }
 
-.course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content #alternative-year a:hover, .course--postgraduate-taught .banner--postgraduate-taught .banner__overlay .banner__overlay__heading .banner__overlay__heading__content #alternative-year a:focus {
+.banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content #alternative-year a:hover, .banner--pgt .banner__overlay .banner__overlay__heading .banner__overlay__heading__content #alternative-year a:focus {
     color: #ffffff;
     border-color: #ffffff;
 }
