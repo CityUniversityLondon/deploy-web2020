@@ -39287,7 +39287,7 @@ a.modal__close:active, a.modal__close:focus {
 
 @media (min-width: 1024px) and (hover: hover) {
     .navigation--secondary .navigation__level3 > li > .navigation__controls > a:hover {
-        background-color: #f2f2f2;
+        background-color: #e5e5e5;
         color: #0c0c0e;
     }
 }
@@ -39350,7 +39350,7 @@ a.modal__close:active, a.modal__close:focus {
         color: #0c0c0e;
     }
     .navigation--secondary .navigation__level3 > li > .navigation__controls > button:hover {
-        background-color: #f2f2f2;
+        background-color: #e5e5e5;
         color: #0c0c0e;
     }
     .navigation--secondary .navigation__level3 > li > .navigation__controls > a,
@@ -39913,7 +39913,7 @@ a.modal__close:active, a.modal__close:focus {
 
 @media (min-width: 1024px) and (hover: hover) {
     .navigation--secondary > .navigation--secondary__header a:hover {
-        background-color: #f2f2f2;
+        background-color: #e5e5e5;
         color: #0c0c0e;
     }
 }
