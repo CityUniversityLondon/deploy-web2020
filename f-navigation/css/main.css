@@ -38231,6 +38231,15 @@ a.modal__close:active, a.modal__close:focus {
     height: 100%;
 }
 
+.navigation--primary .navigation__level2 > li > a:after,
+.navigation--primary .navigation__level2 > .navigation__current > span:after {
+    font-family: "Font Awesome";
+    content: '\f054';
+    font-size: 0.875em;
+    font-weight: 300;
+    margin-left: 0.5rem;
+}
+
 .navigation--primary .navigation__level2 a {
     background-color: initial;
     border-bottom-color: initial;
@@ -38776,7 +38785,8 @@ a.modal__close:active, a.modal__close:focus {
 
 .navigation--primary .navigation--primary__menu__header a:after {
     font-family: "Font Awesome";
-    content: '\f178';
+    content: '\f054';
+    font-size: 0.875em;
     font-weight: 400;
     margin-left: 0.5rem;
 }
