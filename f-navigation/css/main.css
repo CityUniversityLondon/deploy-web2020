@@ -38783,7 +38783,8 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
-.navigation--primary .navigation--primary__menu__header a:after {
+.navigation--primary .navigation--primary__menu__header a:after,
+.navigation--primary .navigation--primary__menu__header > span:after {
     font-family: "Font Awesome";
     content: '\f054';
     font-size: 0.875em;
