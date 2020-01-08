@@ -51101,6 +51101,9 @@ button
 }
 
 @media screen {
+    .js main > .lifelong-learning .lifelong-learning__content .tabs__panel:not([hidden]) {
+        padding: 0;
+    }
     .js main > .lifelong-learning .lifelong-learning__content .tabs__panel:not([hidden]) .tabs__panel__content {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
@@ -51194,6 +51197,7 @@ button
     grid-column-gap: 0;
     display: grid;
     grid-template-rows: repeat(2, auto);
+    padding: 0;
 }
 
 @media (min-width: 768px) {
