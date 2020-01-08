@@ -48201,6 +48201,32 @@ div.widget-123_test_ {
     */
 }
 
+.landing--functional .finder__wrap {
+    grid-row-gap: 0;
+    display: grid;
+}
+
+@media (max-width: 432px) {
+    .landing--functional .finder__wrap {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .landing--functional .finder__wrap {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .landing--functional .finder__wrap {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
 .landing--functional .content__wrap {
     grid-row-gap: 0;
     display: grid;
