@@ -50156,7 +50156,7 @@ button
 
 @media (min-width: 769px) {
     .course--pgt__usp .course--pgt__usp__content .statistics-block .ksp__items.ksp__items--2 {
-        grid-template-areas: 'a a a a a a a a a b b b b b b b b b';
+        grid-template-areas: 'a a a a a a b b b b b b';
     }
 }
 
