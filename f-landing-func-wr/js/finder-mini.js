@@ -439,7 +439,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/finder/finder */ "./src/patterns/finder/finder.js");
+/* harmony import */ var _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/finder/finder-mini */ "./src/patterns/finder/finder-mini.js");
 /* harmony import */ var _patterns_finder_funnelback__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/finder/funnelback */ "./src/patterns/finder/funnelback.js");
 
 
@@ -454,18 +454,18 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 
+ //import Finder from './patterns/finder/finder';
 
- //import FinderMini from './patterns/finder/finder-mini';
 
 
 document.addEventListener('DOMContentLoaded', function () {
   if (/(Trident|MSIE)/.test(navigator.userAgent)) {
     return;
   } else {
-    console.log('mini!!');
-    Array.from(document.querySelectorAll('.wrapper--finder')).forEach(function (finder) {
+    console.log('mini!! v1.2');
+    Array.from(document.querySelectorAll('.wrapper--finder__mini')).forEach(function (finder) {
       Object(_patterns_finder_funnelback__WEBPACK_IMPORTED_MODULE_6__["finderConfig"])(finder.dataset.config).then(function (config) {
-        Object(react_dom__WEBPACK_IMPORTED_MODULE_4__["render"])(react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_patterns_finder_finder__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        Object(react_dom__WEBPACK_IMPORTED_MODULE_4__["render"])(react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_5__["default"], {
           config: config
         }), finder);
       });
@@ -2518,10 +2518,10 @@ finder__results__summary.propTypes = {
 
 /***/ }),
 
-/***/ "./src/patterns/finder/finder.js":
-/*!***************************************!*\
-  !*** ./src/patterns/finder/finder.js ***!
-  \***************************************/
+/***/ "./src/patterns/finder/finder-mini.js":
+/*!********************************************!*\
+  !*** ./src/patterns/finder/finder-mini.js ***!
+  \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
