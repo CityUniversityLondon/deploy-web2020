@@ -42656,8 +42656,8 @@ article .link-copy {
 
 @media screen and (min-width: 901px) {
     .js .tabs .tabs__links li a span {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
