@@ -3290,6 +3290,341 @@ finder__clear.propTypes = {
 
 /***/ }),
 
+/***/ "./src/patterns/finder/components/query/finder__query--mini.js":
+/*!*********************************************************************!*\
+  !*** ./src/patterns/finder/components/query/finder__query--mini.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_symbol_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator */ "./node_modules/core-js/modules/es.symbol.iterator.js");
+/* harmony import */ var core_js_modules_es_symbol_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_iterator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.from */ "./node_modules/core-js/modules/es.array.from.js");
+/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.array.map */ "./node_modules/core-js/modules/es.array.map.js");
+/* harmony import */ var core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_map__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
+/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.object.to-string */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_es_set__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/es.set */ "./node_modules/core-js/modules/es.set.js");
+/* harmony import */ var core_js_modules_es_set__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_set__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../funnelback */ "./src/patterns/finder/funnelback.js");
+/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+/**
+ * @module patterns/finder/components/finder__query
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+
+var maximumSuggestions = 5,
+    keyCodeEscape = 27,
+    keyCodeUp = 38,
+    keyCodeDown = 40;
+
+function highlightQueryTerm(suggestion, partialQuery) {
+  return react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_14___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("span", {
+    className: "sr-only"
+  }, suggestion), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("span", {
+    "aria-hidden": "true"
+  }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("span", {
+    className: "finder__suggestion"
+  }, suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()), partialQuery.length)), suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()) + partialQuery.length))));
+}
+/**
+ * Search input field and autocomplete.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+
+function finder__query(props) {
+  // save what they're typing
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])(props.query.query),
+      _useState2 = _slicedToArray(_useState, 2),
+      partialQuery = _useState2[0],
+      setPartialQuery = _useState2[1]; // Funnelback suggestions for the currently typed text
+
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])([]),
+      _useState4 = _slicedToArray(_useState3, 2),
+      suggestions = _useState4[0],
+      setSuggestions = _useState4[1]; // Request token for calls to the Funnelback suggestions service, so we
+  // can cancel it
+
+
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])({
+    cancel: function cancel() {}
+  }),
+      _useState6 = _slicedToArray(_useState5, 2),
+      call = _useState6[0],
+      setCall = _useState6[1]; // ref for the input field, so we can .focus() it
+
+
+  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(16).slice(-4)),
+      _useState8 = _slicedToArray(_useState7, 1),
+      inputId = _useState8[0]; // boolean to show or hide suggestions
+
+
+  var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])(false),
+      _useState10 = _slicedToArray(_useState9, 2),
+      showSuggestions = _useState10[0],
+      setShowSuggestions = _useState10[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_14__["useEffect"])(function () {
+    setPartialQuery(props.query.query);
+  }, [props.updating]);
+  var textInput = null;
+
+  function focusInput() {
+    textInput.focus();
+  } // on clear, make a default request for results
+
+
+  var clearQuery = function clearQuery() {
+    call.cancel();
+    setPartialQuery('');
+    setSuggestions([]);
+    focusInput();
+    var newQuery = props.query;
+    newQuery.query = '';
+    newQuery.sortBy = props.config.sort;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  var submitForm = function submitForm() {
+    window.location.replace("https://web2020.city.ac.uk/documentation/paint-layouts/listing/courses?query=".concat(partialQuery));
+  };
+
+  var submitSuggestion = function submitSuggestion(s) {
+    call.cancel();
+    var newQuery = props.query;
+    newQuery.query = s;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  var clear = partialQuery && react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_16__["default"], {
+    clear: function clear() {
+      clearQuery();
+    }
+  }); // render suggestions
+  // TODO: probably should be refactored into a separate component
+
+  var suggestionsList = suggestions && suggestions.length > 0 && react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("ul", {
+    className: showSuggestions ? 'finder__query__suggestions show' : 'finder__query__suggestions hide'
+  }, _toConsumableArray(new Set(suggestions)).slice(0, maximumSuggestions).map(function (suggestion) {
+    return react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("li", {
+      key: suggestion
+    }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("button", {
+      type: "button",
+      onBlur: function onBlur() {
+        return setShowSuggestions(false);
+      },
+      onFocus: function onFocus() {
+        return setShowSuggestions(true);
+      },
+      onMouseDown: function onMouseDown() {
+        //for browsers because onBlur get excuted before onClick
+        setShowSuggestions(true);
+        setPartialQuery(suggestion);
+        setSuggestions([]);
+        focusInput();
+        submitSuggestion(suggestion); //passing suggestion because partialQuery value get overwritten for some reason.
+      },
+      onClick: function onClick() {
+        //for mobile
+        setShowSuggestions(true);
+        setPartialQuery(suggestion);
+        setSuggestions([]);
+        focusInput();
+        submitSuggestion(suggestion); //passing suggestion because partialQuery value get overwritten for some reason.
+      },
+      onKeyDown: function onKeyDown(e) {
+        switch (e.keyCode) {
+          case keyCodeEscape:
+            e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
+            setSuggestions([]);
+            break;
+
+          case keyCodeUp:
+            if (e.target.parentNode.previousElementSibling && e.target.parentNode.previousElementSibling.querySelector('button')) {
+              e.preventDefault();
+              e.target.parentNode.previousElementSibling.querySelector('button').focus();
+            } else {
+              e.preventDefault();
+              e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
+            }
+
+            break;
+
+          case keyCodeDown:
+            e.preventDefault();
+
+            if (e.target.parentNode.nextElementSibling && e.target.parentNode.nextElementSibling.querySelector('button')) {
+              e.preventDefault();
+              e.target.parentNode.nextElementSibling.querySelector('button').focus();
+            }
+
+            break;
+        }
+      }
+    }, highlightQueryTerm(suggestion, partialQuery)));
+  }));
+  var input = react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("div", {
+    className: "finder__query__input"
+  }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("div", {
+    className: "finder__query__icon--wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("span", {
+    className: "finder__icon fal fa-search"
+  })), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("label", {
+    className: "sr-only",
+    htmlFor: inputId
+  }, "Search ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("input", {
+    autoComplete: "off",
+    id: inputId,
+    name: "query",
+    placeholder: props.config.placeholder,
+    ref: function ref(input) {
+      textInput = input;
+    },
+    type: "text",
+    value: partialQuery,
+    onKeyDown: function onKeyDown(e) {
+      switch (e.keyCode) {
+        case keyCodeEscape:
+          clearQuery();
+          break;
+
+        case keyCodeDown:
+          if (suggestions && suggestions.length > 0) {
+            e.preventDefault();
+            e.target.parentNode.querySelector('.finder__query__suggestions button').focus();
+          }
+
+          break;
+      }
+    },
+    onFocus: function onFocus() {
+      return setShowSuggestions(true);
+    },
+    onBlur: function onBlur() {
+      return setShowSuggestions(false);
+    },
+    onChange: function onChange(e) {
+      //clear old suggestions
+      setSuggestions([]); // keep  what they're typing
+
+      setPartialQuery(e.target.value);
+      /**
+       * if we have a request to the suggestions service in progress,
+       * cancel it. Stops old suggestions overwriting new ones because
+       * the requests can't keep up with fast typing.
+       */
+
+      call.cancel();
+
+      if (e.target.value) {
+        // input is populated, ask for suggestions
+        var _suggest = Object(_funnelback__WEBPACK_IMPORTED_MODULE_15__["suggest"])(props.query.collection, e.target.value),
+            _suggest2 = _slicedToArray(_suggest, 2),
+            suggestionsPromise = _suggest2[0],
+            newCall = _suggest2[1]; // update our request cancel function for the new request
+
+
+        setCall({
+          cancel: function cancel() {
+            newCall.cancel();
+          }
+        });
+        suggestionsPromise.then(function (data) {
+          return setSuggestions(data);
+        }).catch(function () {
+          return setSuggestions([]);
+        });
+      } else {
+        // input is empty, empty suggestions
+        setSuggestions([]);
+      }
+    }
+  }), suggestionsList, clear);
+  return react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("fieldset", {
+    className: "finder__query"
+  }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("button", {
+    type: "submit",
+    className: "finder__query__submit",
+    onClick: function onClick() {
+      return submitForm();
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("span", {
+    className: "fal fa-search finder__query__submit__icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("span", {
+    className: "finder__query__submit__text"
+  }, "Find"))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (finder__query);
+
+/***/ }),
+
 /***/ "./src/patterns/finder/components/query/finder__query.js":
 /*!***************************************************************!*\
   !*** ./src/patterns/finder/components/query/finder__query.js ***!
@@ -4115,10 +4450,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var _components_query_finder_query__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/query/finder__query */ "./src/patterns/finder/components/query/finder__query.js");
-/* harmony import */ var _components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/filters/finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
-/* harmony import */ var _components_filters_finder_mobilefilters__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/filters/finder__mobilefilters */ "./src/patterns/finder/components/filters/finder__mobilefilters.js");
-/* harmony import */ var _components_results_finder_results__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/results/finder__results */ "./src/patterns/finder/components/results/finder__results.js");
+/* harmony import */ var _components_query_finder_query_mini__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/query/finder__query--mini */ "./src/patterns/finder/components/query/finder__query--mini.js");
 
 
 
@@ -4153,9 +4485,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
  * @author Web Development
  * @copyright City, University of London 2019
  */
-
-
-
 
 
 
@@ -4253,9 +4582,8 @@ function Finder(props) {
       setQuery = _useState2[1];
 
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])(initialResponse),
-      _useState4 = _slicedToArray(_useState3, 2),
-      funnelbackResponse = _useState4[0],
-      setResponse = _useState4[1]; // Boolean to indicate when a query is in progress
+      _useState4 = _slicedToArray(_useState3, 1),
+      setResponse = _useState4[0]; // Boolean to indicate when a query is in progress
 
 
   var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])(true),
@@ -4326,47 +4654,15 @@ function Finder(props) {
     },
     updateState: update
   };
-
-  var clear = function clear() {
-    var clearQuery = Object.assign({}, query);
-    clearQuery.facets = {};
-    setQuery(clearQuery);
-    setUpdate(!update);
-  };
-
   return react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("form", {
-    className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
     onSubmit: function onSubmit(e) {
       e.preventDefault();
     }
-  }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_17__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_components_query_finder_query_mini__WEBPACK_IMPORTED_MODULE_17__["default"], {
     config: props.config,
     query: query,
     update: updater,
     updating: updating
-  }), props.config.facetLabels.length > 0 && react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_14___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_components_filters_finder_mobilefilters__WEBPACK_IMPORTED_MODULE_19__["default"], {
-    config: props.config,
-    query: query,
-    response: funnelbackResponse,
-    update: updater,
-    updating: updating,
-    summariseAs: props.config.summariseAs,
-    clear: clear
-  }), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_18__["default"], {
-    config: props.config,
-    query: query,
-    response: funnelbackResponse,
-    update: updater,
-    clear: clear
-  })), react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_components_results_finder_results__WEBPACK_IMPORTED_MODULE_20__["default"], {
-    query: query,
-    response: funnelbackResponse,
-    summariseAs: props.config.summariseAs,
-    type: props.config.resultCard,
-    update: updater,
-    updating: updating,
-    clear: clear,
-    config: props.config
   }));
 }
 
