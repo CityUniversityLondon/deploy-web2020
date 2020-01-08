@@ -5830,7 +5830,6 @@ __webpack_require__.r(__webpack_exports__);
 var className = 'menu',
     hierarchyClassName = className + '__hierarchy',
     currentClassName = className + '__current',
-    veilClassName = className + '__veil',
     contentClassName = className + '__content',
     contentHeaderClassName = contentClassName + '__header',
     controlsClassName = className + '__controls',
@@ -5867,20 +5866,17 @@ function menuSetter(menu, button) {
  * @param {HTMLButtonElement} button - The button for toggling the menu.
  * @param {Function} setMenu - A function for setting menu attributes to be open/closed.
  * @param {object} trap - The focus trap object.
- * @param {HTMLElement} veil - The veiling element.
  */
 
 
-function toggleMenu(button, setMenu, trap, veil) {
+function toggleMenu(button, setMenu, trap) {
   var expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].expanded);
 
   if (Object(_util__WEBPACK_IMPORTED_MODULE_7__["toBool"])(expanded)) {
     trap.deactivate();
-    veil.dataset.on = 'false';
     setMenu(false);
   } else {
     setMenu(true);
-    veil.dataset.on = 'true';
     trap.activate();
   }
 }
@@ -5896,7 +5892,7 @@ function toggleMenu(button, setMenu, trap, veil) {
  */
 
 
-function createMenuToggle(label, button, setMenu, veil) {
+function createMenuToggle(label, button, setMenu) {
   var buttonWrapper = document.createElement('div'),
       menu = label.closest(".".concat(className));
   button.setAttribute('type', 'button');
@@ -5918,12 +5914,12 @@ function createMenuToggle(label, button, setMenu, veil) {
       return open[open.length - 1];
     },
     onDeactivate: function onDeactivate() {
-      return toggleMenu(button, setMenu, trap, veil);
+      return toggleMenu(button, setMenu, trap);
     },
     clickOutsideDeactivates: true
   });
   button.addEventListener('click', function () {
-    return toggleMenu(button, setMenu, trap, veil);
+    return toggleMenu(button, setMenu, trap);
   }, true);
 }
 /**
@@ -5938,12 +5934,8 @@ function launchMenu(menu) {
   menu.innerHTML = menu.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
   var label = menu.querySelector(".".concat(buttonDisplayClassName)),
       button = document.createElement('button'),
-      veil = document.createElement('div'),
       setMenu = menuSetter(menu, button);
-  veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].hidden, 'true');
-  document.querySelector('body').insertBefore(veil, document.querySelector('main'));
-  createMenuToggle(label, button, setMenu, veil);
+  createMenuToggle(label, button, setMenu);
   label.appendChild(button);
   setMenu(false);
   Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_9__["prepareNavigation"])(menu.querySelector(".".concat(level1ClassName)), className);
@@ -6200,7 +6192,6 @@ var className = 'navigation',
     buttonClassName = className + '__button',
     openCloseTextClassName = buttonClassName + '__open-close',
     navigationTextClassName = buttonClassName + '__navigation',
-    veilClassName = className + '__veil',
     openText = 'Open',
     closeText = 'Close',
     navigationText = 'navigation section',
@@ -6210,35 +6201,32 @@ var className = 'navigation',
  * Return a function to toggle everything closed.
  *
  * @param {HTMLElement} navigation - The primary navigation element.
- * @param {HTMLElement} veil - The veiling element.
  * @returns {function} - A function for toggling all the menus closed.
  */
 
-function createCloseAll(navigation, veil) {
+function createCloseAll(navigation) {
   return function () {
     var buttons = Array.from(navigation.querySelectorAll('.navigation--primary__level1 > .navigation__button'));
     buttons.forEach(function (button) {
       button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].expanded, 'false');
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(openText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     });
-    veil.dataset.on = 'false';
   };
 }
 /**
  * Return a function to toggle whether a navigation section is open.
  *
- * @param {HTMLElement} veil - The veiling element.
+ * @param {function} closeAll - A function for closing all menus.
  * @returns {function} - A function for toggling a menu open or closed.
  */
 
 
-function createSectionToggle(button, veil, closeAll) {
+function createSectionToggle(button, closeAll) {
   return function () {
     var open = !Object(_util__WEBPACK_IMPORTED_MODULE_7__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].expanded));
     closeAll();
 
     if (open) {
-      veil.dataset.on = 'true';
       button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].expanded, open);
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(closeText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     }
@@ -6248,11 +6236,11 @@ function createSectionToggle(button, veil, closeAll) {
  * Create toggle buttons from the top level anchors.
  *
  * @param {HTMLElement} navigation - The primary navigation element.
- * @param {HTMLElement} veil - The veiling element.
+ * @param {function} closeAll - A function for closing all menus.
  */
 
 
-function prepareTopLevel(navigation, veil, closeAll) {
+function prepareTopLevel(navigation, closeAll) {
   var topLevels = Array.from(navigation.querySelectorAll(".".concat(topLevelClassName)));
   topLevels.forEach(function (el) {
     var listItem = el.parentNode,
@@ -6260,7 +6248,7 @@ function prepareTopLevel(navigation, veil, closeAll) {
         buttonDiv = document.createElement('div'),
         srOpenCloseSpan = document.createElement('span'),
         srNavigationSpan = document.createElement('span'),
-        toggleSection = createSectionToggle(button, veil, closeAll); // LIs have tabindex so they're accessible with no JS, remove it
+        toggleSection = createSectionToggle(button, closeAll); // LIs have tabindex so they're accessible with no JS, remove it
 
     el.removeAttribute('tabindex');
     button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].expanded, 'false');
@@ -6285,11 +6273,11 @@ function prepareTopLevel(navigation, veil, closeAll) {
  * section.
  *
  * @param {HTMLElement} navigation - The primary navigation element.
- * @param {HTMLElement} veil - The veiling element.
+ * @param {function} closeAll - A function for closing all menus.
  */
 
 
-function setupTabPrevious(navigation, veil, closeAll) {
+function setupTabPrevious(navigation, closeAll) {
   var firstButton = navigation.querySelector('.navigation--primary__level1:first-of-type > .navigation__button'),
       restButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:first-of-type) > .navigation__button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
@@ -6302,7 +6290,7 @@ function setupTabPrevious(navigation, veil, closeAll) {
     var previousSection = thisSectionButton.parentElement.previousElementSibling,
         previousSectionButton = previousSection.querySelector('button'),
         lastNavigationAnchor = previousSection.querySelector('.navigation__level2 > li:last-of-type > a') ? previousSection.querySelector('.navigation__level2 > li:last-of-type > a') : previousSection.querySelector('.navigation__level2 > li:last-of-type').previousElementSibling.querySelector('a'),
-        togglePreviousSection = createSectionToggle(previousSectionButton, veil, closeAll);
+        togglePreviousSection = createSectionToggle(previousSectionButton, closeAll);
     thisSectionButton.addEventListener('keydown', function (e) {
       if (Object(_util__WEBPACK_IMPORTED_MODULE_7__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
         e.preventDefault();
@@ -6317,12 +6305,11 @@ function setupTabPrevious(navigation, veil, closeAll) {
  * the next navigation section.
  *
  * @param {HTMLElement} navigation - The primary navigation element.
- * @param {HTMLElement} veil - The veiling element.
  * @param {function} closeAll - A function to close the entire menu.
  */
 
 
-function setupTabNext(navigation, veil, closeAll) {
+function setupTabNext(navigation, closeAll) {
   var closeButton = navigation.querySelector('.navigation--primary__level1:last-of-type .wrapper--navigation--primary__menu__close button'),
       restSectionsCloseButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:last-of-type) .wrapper--navigation--primary__menu__close button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
@@ -6333,7 +6320,7 @@ function setupTabNext(navigation, veil, closeAll) {
   });
   restSectionsCloseButtons.forEach(function (closeButton) {
     var nextSectionButton = closeButton.closest('.navigation--primary__level1').nextElementSibling.querySelector('button'),
-        toggleNextSection = createSectionToggle(nextSectionButton, veil, closeAll);
+        toggleNextSection = createSectionToggle(nextSectionButton, closeAll);
     closeButton.addEventListener('keydown', function (e) {
       if (keyCodeTab === e.keyCode && !e.shiftKey) {
         e.preventDefault();
@@ -6377,7 +6364,6 @@ function prepareLowerLevels(navigation) {
  * Wrap header text in spans for styling.
  *
  * @param {HTMLElement} navigation - The primary navigation element.
- * @param {HTMLElement} veil - The veiling element.
  */
 
 
@@ -6441,19 +6427,15 @@ function addCloseButtons(navigation, closeAll) {
 function launchPrimaryNavigation(navigation) {
   // During testing only: remove 'under construction' indicators globally
   navigation.innerHTML = navigation.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
-  var veil = document.createElement('div'),
-      closeAll = createCloseAll(navigation, veil);
-  veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].hidden, 'true');
-  document.querySelector('body').insertBefore(veil, document.querySelector('main'));
-  prepareTopLevel(navigation, veil, closeAll);
-  prepareLowerLevels(navigation, veil);
+  var closeAll = createCloseAll(navigation);
+  prepareTopLevel(navigation, closeAll);
+  prepareLowerLevels(navigation);
   prepareHeaders(navigation);
   addCloseButtons(navigation, closeAll); // Allow tabbing from one section to another,
   // and close when tabbing out of the navigation
 
-  setupTabPrevious(navigation, veil, closeAll);
-  setupTabNext(navigation, veil, closeAll); // If the navigation is open, close on escape.
+  setupTabPrevious(navigation, closeAll);
+  setupTabNext(navigation, closeAll); // If the navigation is open, close on escape.
 
   navigation.addEventListener('keydown', function (e) {
     if (navigation.querySelector(".".concat(buttonClassName, "[aria-expanded='true']")) && keyCodeEscape === e.keyCode) {
