@@ -455,12 +455,14 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
+ //import FinderMini from './patterns/finder/finder-mini';
 
 
 document.addEventListener('DOMContentLoaded', function () {
   if (/(Trident|MSIE)/.test(navigator.userAgent)) {
     return;
   } else {
+    console.log('w1');
     Array.from(document.querySelectorAll('.wrapper--finder')).forEach(function (finder) {
       Object(_patterns_finder_funnelback__WEBPACK_IMPORTED_MODULE_6__["finderConfig"])(finder.dataset.config).then(function (config) {
         Object(react_dom__WEBPACK_IMPORTED_MODULE_4__["render"])(react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_patterns_finder_finder__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -468,6 +470,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }), finder);
       });
     });
+    console.log('w2');
   }
 });
 
