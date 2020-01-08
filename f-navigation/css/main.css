@@ -38875,6 +38875,7 @@ a.modal__close:active, a.modal__close:focus {
     border-bottom: 0.125rem solid #d61726;
     display: block;
     margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .js .navigation__button__navigation,
