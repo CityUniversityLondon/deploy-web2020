@@ -35637,14 +35637,6 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
         padding-right: 0.25rem;
         padding-top: 0.25rem;
     }
-    .menu .menu__level1 > li > .menu__controls > button .menu__button__icon,
-    .menu .menu__level2 > li > .menu__controls > button .menu__button__icon,
-    .menu .menu__level3 > li > .menu__controls > button .menu__button__icon,
-    .menu .menu__level4 > li > .menu__controls > button .menu__button__icon,
-    .menu .menu__level5 > li > .menu__controls > button .menu__button__icon,
-    .menu .menu__level6 > li > .menu__controls > button .menu__button__icon {
-        transition: 0.2s transform;
-    }
     .menu .menu__level1 > li > .menu__controls > button .menu__button__icon:before,
     .menu .menu__level2 > li > .menu__controls > button .menu__button__icon:before,
     .menu .menu__level3 > li > .menu__controls > button .menu__button__icon:before,
@@ -35670,14 +35662,13 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
         position: absolute;
         width: 1px;
     }
-    .menu .menu__level1 > li > .menu__controls > button[aria-expanded='true'] .menu__button__icon,
-    .menu .menu__level2 > li > .menu__controls > button[aria-expanded='true'] .menu__button__icon,
-    .menu .menu__level3 > li > .menu__controls > button[aria-expanded='true'] .menu__button__icon,
-    .menu .menu__level4 > li > .menu__controls > button[aria-expanded='true'] .menu__button__icon,
-    .menu .menu__level5 > li > .menu__controls > button[aria-expanded='true'] .menu__button__icon,
-    .menu .menu__level6 > li > .menu__controls > button[aria-expanded='true'] .menu__button__icon {
-        -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
-        transform: rotate(45deg);
+    .menu .menu__level1 > li > .menu__controls > button[aria-expanded='true'] .menu__button__icon:before,
+    .menu .menu__level2 > li > .menu__controls > button[aria-expanded='true'] .menu__button__icon:before,
+    .menu .menu__level3 > li > .menu__controls > button[aria-expanded='true'] .menu__button__icon:before,
+    .menu .menu__level4 > li > .menu__controls > button[aria-expanded='true'] .menu__button__icon:before,
+    .menu .menu__level5 > li > .menu__controls > button[aria-expanded='true'] .menu__button__icon:before,
+    .menu .menu__level6 > li > .menu__controls > button[aria-expanded='true'] .menu__button__icon:before {
+        content: '\f068';
     }
     .menu .menu__level1 li.menu__current > .menu__controls > span > span,
     .menu .menu__level2 li.menu__current > .menu__controls > span > span,
@@ -39978,10 +39969,6 @@ a.modal__close:active, a.modal__close:focus {
     display: block;
 }
 
-.js .navigation--secondary button .navigation__button__icon {
-    transition: 0.2s transform;
-}
-
 .js .navigation--secondary button .navigation__button__icon:before {
     font-family: "Font Awesome";
     content: '\f067';
@@ -39999,9 +39986,8 @@ a.modal__close:active, a.modal__close:focus {
     width: 1px;
 }
 
-.js .navigation--secondary button[aria-expanded='true'] .navigation__button__icon {
-    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
-    transform: rotate(45deg);
+.js .navigation--secondary button[aria-expanded='true'] .navigation__button__icon:before {
+    content: '\f068';
 }
 
 .js .paginated-list {
