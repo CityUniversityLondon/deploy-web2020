@@ -24865,6 +24865,12 @@ _:-ms-lang(x),
     padding-bottom: 1rem;
 }
 
+.course--undergraduate__charts-inner {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .chart-row {
     padding-top: 5.5rem;
     padding-bottom: 5.5rem;
@@ -24884,12 +24890,12 @@ _:-ms-lang(x),
 
 .chart-row__items__chart {
     margin-bottom: 5.5rem;
-    max-width: 50%;
 }
 
 .chart-row__items__chart__row__title {
     text-transform: uppercase;
     color: grey;
+    font-weight: 600;
     margin-bottom: 2.5rem;
 }
 
@@ -24984,6 +24990,7 @@ _:-ms-lang(x),
 }
 
 .chart-row__items__chart__row__legend__item:not(:last-child) {
+    padding-bottom: 1.25rem;
     position: relative;
 }
 
