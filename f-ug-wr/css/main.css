@@ -24929,22 +24929,14 @@ _:-ms-lang(x),
     color: #9c5d8b;
 }
 
-/* move to course ug when done */
-.course--undergraduate__charts-inner {
-    grid-column: 1 / -1;
-    margin-top: 4rem;
-}
-
-@media (min-width: 1280px) {
-    .course--undergraduate__charts-inner {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 1rem;
-    }
-}
-
 .chart {
     margin-bottom: 2rem;
+}
+
+@media (min-width: 1025px) {
+    .chart {
+        flex: 0 0 50%;
+    }
 }
 
 .chart--piechart {
@@ -24969,12 +24961,6 @@ _:-ms-lang(x),
 .chart__legend {
     flex: 0 0 60%;
     margin-top: 1rem;
-}
-
-@media (min-width: 433px) {
-    .chart-row__items {
-        display: flex;
-    }
 }
 
 .chart__title {
@@ -51007,6 +50993,31 @@ button
 
 .course--undergraduate .course--undergraduate__tabs__panel__inner {
     grid-column: 4 / 16;
+}
+
+.course--undergraduate__charts {
+    margin-top: 4rem;
+    max-width: 80rem;
+}
+
+@media (min-width: 1441px) {
+    .course--undergraduate__charts {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .course--undergraduate__charts {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .course--undergraduate__charts {
+        display: flex;
+    }
 }
 
 .js .course--undergraduate .tabs {
