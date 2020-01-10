@@ -1586,6 +1586,7 @@ var className = 'animate-svg';
 function initSvgPathAnimation(animateSvg) {
   var viewPortHeight = window.innerHeight; // calculates viewport height
 
+  console.log(animateSvg);
   window.addEventListener('DOMContentLoaded', function () {
     var paths = animateSvg.querySelectorAll('.animate--svg-path'); // prepares the animation
 
