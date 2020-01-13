@@ -24865,28 +24865,29 @@ _:-ms-lang(x),
     padding-bottom: 1rem;
 }
 
+/* duplicate colors will break the display */
 .chart--purple path:nth-child(1) {
-    stroke: #541e46;
+    stroke: #5d2b89;
 }
 
 .chart--purple .chart__legend__item:nth-child(1) .fa.fa-circle {
-    color: #541e46;
+    color: #5d2b89;
 }
 
 .chart--purple path:nth-child(2) {
-    stroke: #903578;
+    stroke: #391b61;
 }
 
 .chart--purple .chart__legend__item:nth-child(2) .fa.fa-circle {
-    color: #903578;
+    color: #391b61;
 }
 
 .chart--purple path:nth-child(3) {
-    stroke: #bebebe;
+    stroke: #391c61;
 }
 
 .chart--purple .chart__legend__item:nth-child(3) .fa.fa-circle {
-    color: #bebebe;
+    color: #391c61;
 }
 
 .chart--purple path:nth-child(4) {
@@ -24898,19 +24899,19 @@ _:-ms-lang(x),
 }
 
 .chart--red path:nth-child(1) {
-    stroke: red;
+    stroke: #d7474c;
 }
 
 .chart--red .chart__legend__item:nth-child(1) .fa.fa-circle {
-    color: red;
+    color: #d7474c;
 }
 
 .chart--red path:nth-child(2) {
-    stroke: darkred;
+    stroke: #aa302c;
 }
 
 .chart--red .chart__legend__item:nth-child(2) .fa.fa-circle {
-    color: darkred;
+    color: #aa302c;
 }
 
 .chart--red path:nth-child(3) {
@@ -24930,27 +24931,27 @@ _:-ms-lang(x),
 }
 
 .chart--maroon path:nth-child(1) {
-    stroke: #541e46;
-}
-
-.chart--maroon .chart__legend__item:nth-child(1) .fa.fa-circle {
-    color: #541e46;
-}
-
-.chart--maroon path:nth-child(2) {
     stroke: #903578;
 }
 
-.chart--maroon .chart__legend__item:nth-child(2) .fa.fa-circle {
+.chart--maroon .chart__legend__item:nth-child(1) .fa.fa-circle {
     color: #903578;
 }
 
+.chart--maroon path:nth-child(2) {
+    stroke: #561f48;
+}
+
+.chart--maroon .chart__legend__item:nth-child(2) .fa.fa-circle {
+    color: #561f48;
+}
+
 .chart--maroon path:nth-child(3) {
-    stroke: #bebebe;
+    stroke: #561c48;
 }
 
 .chart--maroon .chart__legend__item:nth-child(3) .fa.fa-circle {
-    color: #bebebe;
+    color: #561c48;
 }
 
 .chart--maroon path:nth-child(4) {
