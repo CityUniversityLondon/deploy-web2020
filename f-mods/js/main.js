@@ -6448,41 +6448,38 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-var className = 'modal',
-    modalHeader = className + '__header',
-    modalBody = className + '__body';
+var className = 'modal';
 var trap;
 
 function launchModal(modal) {
-  var headerArray = [];
-  var listItems = Array.from(modal.getElementsByTagName('li'));
-  console.log(listItems);
-  console.log('one: ', listItems[0]);
-  Array.from(modal.getElementsByTagName('li')).forEach(function (list) {
+  var dialogArray = [];
+  Array.from(modal.getElementsByTagName('li')).forEach(function (list, i) {
     var wrapper = document.createElement('div'),
         listAnchor = document.createElement('a'),
         listBody = Array.from(list.childNodes),
-        listHeader = list.firstElementChild,
-        parent = list.parentElement;
-    headerArray.push(listHeader.innerText);
+        listHeader = list.firstElementChild;
+    dialogArray.push(listHeader.innerText);
     listAnchor.setAttribute('href', '#');
     list.appendChild(wrapper);
-    wrapper.classList.add("".concat(modalBody));
-    listHeader.classList.add("".concat(modalHeader));
     Object(_util__WEBPACK_IMPORTED_MODULE_4__["appendAll"])(wrapper, listBody);
     list.insertBefore(listAnchor, wrapper);
     listAnchor.appendChild(listHeader);
     var title = listHeader.cloneNode(true);
     var body = wrapper.cloneNode(true);
+    dialogArray.push({
+      title: title.innerText,
+      body: body
+    });
     listAnchor.addEventListener('click', function (e) {
       e.preventDefault();
       e.stopPropagation();
-      createDialog(title, body, parent);
+      createDialog(title, body, modal, "".concat(i), dialogArray);
     });
   });
 }
 
-function createDialog(title, body, parent) {
+function createDialog(title, body, parent, position, dialogArray) {
+  var slider = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(parent.getAttribute('data-slider'));
   var closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('button', [{
     label: 'class',
     val: 'modal__close fas fa-times'
@@ -6508,9 +6505,7 @@ function createDialog(title, body, parent) {
     label: 'role',
     val: 'role'
   }]);
-  title.classList.remove("".concat(modalHeader));
   title.classList.add('modal__heading');
-  body.classList.remove("".concat(modalBody));
   body.classList.add('modal__body-copy');
   bodyWrapper.appendChild(closeBtn);
   bodyWrapper.appendChild(title);
@@ -6538,6 +6533,32 @@ function createDialog(title, body, parent) {
   });
   trapFocus(dialog);
   document.body.classList.add('modal--in', 'no-scroll');
+
+  if (slider) {
+    var buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
+      label: 'class',
+      val: 'modal__buttons modal__buttons--slider'
+    }]);
+    var buttonLeft = controlButtons(dialogArray, 'left');
+    var buttonRight = controlButtons(dialogArray, 'right');
+    buttonWrapper.appendChild(buttonLeft);
+    buttonWrapper.appendChild(buttonRight);
+    bodyWrapper.appendChild(buttonWrapper);
+  }
+}
+
+function controlButtons(list, direction) {
+  var button = document.createElement('button');
+  var buttonLabel = document.createElement('span');
+  buttonLabel.classList.add('modal__underline-transition');
+  buttonLabel.innerText = 'I am the inner text';
+  var buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
+    label: 'class',
+    val: "modal__buttons__icon far fa-long-arrow-".concat(direction)
+  }]);
+  button.appendChild(buttonLabel);
+  button.appendChild(buttonIcon);
+  return button;
 }
 
 function closeDialog(dialog, background) {
