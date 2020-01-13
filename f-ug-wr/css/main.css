@@ -24992,10 +24992,6 @@ _:-ms-lang(x),
     margin-right: 0.75rem;
 }
 
-.chart--piechart {
-    flex: 0 0 40%;
-}
-
 .chart__legend {
     margin-top: 1.5rem;
 }
