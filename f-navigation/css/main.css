@@ -37991,6 +37991,27 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     outline-width: 0.125rem;
 }
 
+.js .menu__veil {
+    background-color: rgba(30, 30, 30, 0.35);
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.js .menu__veil[data-on='true'] {
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    .js .menu__veil[data-on='true'] {
+        display: none;
+    }
+}
+
 body.modal--in.no-scroll {
     position: fixed;
     width: 100%;
@@ -39396,6 +39417,27 @@ a.modal__close:active, a.modal__close:focus {
     display: block;
     margin-top: 1.5rem;
     padding-bottom: 1.5rem;
+}
+
+.js .navigation__veil {
+    background-color: rgba(30, 30, 30, 0.35);
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.js .navigation__veil[data-on='true'] {
+    display: block;
+}
+
+@media (max-width: 1023px) {
+    .js .navigation__veil[data-on='true'] {
+        display: none;
+    }
 }
 
 .js .navigation__button__navigation,
