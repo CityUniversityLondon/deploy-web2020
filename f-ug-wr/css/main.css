@@ -24875,19 +24875,19 @@ _:-ms-lang(x),
 }
 
 .chart--purple path:nth-child(2) {
-    stroke: #391b61;
+    stroke: #4b3863;
 }
 
 .chart--purple .chart__legend__item:nth-child(2) .fa.fa-circle {
-    color: #391b61;
+    color: #4b3863;
 }
 
 .chart--purple path:nth-child(3) {
-    stroke: #391c61;
+    stroke: #845bba;
 }
 
 .chart--purple .chart__legend__item:nth-child(3) .fa.fa-circle {
-    color: #391c61;
+    color: #845bba;
 }
 
 .chart--purple path:nth-child(4) {
