@@ -48347,142 +48347,202 @@ div.widget-123_test_ {
     }
 }
 
-@media (max-width: 767px) {
-    .course--pgt .accordion__heading button .accordion__heading__text {
-        background: #ffffff;
-    }
-}
-
-.tabs--accordion {
+.js .course--pgt__tabs .tabs--accordion {
     grid-column: 1/-1;
 }
 
-.tabs--accordion .course--pgt__tabs {
+.js .course--pgt__tabs .tabs--accordion .course--pgt__tabs {
+    grid-column: 1/-1;
     max-width: 80rem;
 }
 
 @media (min-width: 1441px) {
-    .tabs--accordion .course--pgt__tabs {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (max-width: 1440px) {
-    .tabs--accordion .course--pgt__tabs {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-@media (max-width: 767px) {
-    .tabs--accordion .course--pgt__tabs {
-        grid-row-gap: 0;
-        display: grid;
-        max-width: 80rem;
-    }
+.js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .tabs__links,
+.js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .tabs__panel {
+    background: #ffffff;
 }
 
-@media (max-width: 767px) and (max-width: 432px) {
-    .tabs--accordion .course--pgt__tabs {
+.js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .tabs__links .accordion,
+.js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .tabs__panel .accordion {
+    display: block;
+}
+
+.js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .tabs__links .tabs__panel__body,
+.js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .tabs__panel .tabs__panel__body {
+    grid-column: 1/-1;
+}
+
+.js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .tabs__links .tabs__panel__heading,
+.js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .tabs__panel .tabs__panel__heading {
+    text-align: center;
+}
+
+.js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--one-column {
+    grid-row-gap: 0;
+    display: grid;
+    max-width: 80rem;
+}
+
+@media (max-width: 432px) {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--one-column {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
-@media (max-width: 767px) and (min-width: 433px) and (max-width: 900px) {
-    .tabs--accordion .course--pgt__tabs {
+@media (min-width: 433px) and (max-width: 900px) {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--one-column {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
     }
 }
 
-@media (max-width: 767px) and (min-width: 901px) {
-    .tabs--accordion .course--pgt__tabs {
+@media (min-width: 901px) {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--one-column {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
     }
 }
 
-@media (max-width: 767px) and (min-width: 1441px) {
-    .tabs--accordion .course--pgt__tabs {
+@media (min-width: 1441px) {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--one-column {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-@media (max-width: 767px) and (max-width: 1440px) {
-    .tabs--accordion .course--pgt__tabs {
+@media (max-width: 1440px) {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--one-column {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-.tabs--accordion .course--pgt__tabs .tabs__links,
-.tabs--accordion .course--pgt__tabs .tabs__panel {
-    background: #ffffff;
-    grid-column: 1/-1;
-}
-
 @media (min-width: 768px) {
-    .tabs--accordion .course--pgt__tabs .tabs__links,
-    .tabs--accordion .course--pgt__tabs .tabs__panel {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--one-column .tabs__panel__heading,
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--one-column .tabs__panel__body {
         grid-column: 6/-6;
     }
 }
 
-.tabs--accordion .course--pgt__tabs .tabs__links .course--pgt__requirements__accordion .accordion,
-.tabs--accordion .course--pgt__tabs .tabs__panel .course--pgt__requirements__accordion .accordion {
-    display: block;
+.js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns {
+    grid-row-gap: 0;
+    display: grid;
+    margin: 0 2rem;
 }
 
-.tabs--accordion .course--pgt__tabs .tabs__links .tabs__panel__heading,
-.tabs--accordion .course--pgt__tabs .tabs__panel .tabs__panel__heading {
-    text-align: center;
+@media (max-width: 432px) {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
 }
 
-.tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--one-column .tabs__panel__heading {
-    grid-column: 1/-1;
+@media (min-width: 433px) and (max-width: 900px) {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
 }
 
 @media (min-width: 768px) {
-    .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--one-column .tabs__panel__heading {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__heading {
         grid-column: 6/-6;
     }
 }
 
-.tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--one-column .tabs__panel__body {
-    grid-column: 1/-1;
+.js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__body {
+    grid-row-gap: 0;
+    display: grid;
+    max-width: 80rem;
 }
 
-@media (min-width: 768px) {
-    .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--one-column .tabs__panel__body {
-        grid-column: 6/-6;
+@media (max-width: 432px) {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__body {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
     }
 }
 
-.tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__body {
-    grid-column: 1/-1;
+@media (min-width: 433px) and (max-width: 900px) {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__body {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
 }
 
-.tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__body .tabs__panel__body__layout--two-columns__block-one {
+@media (min-width: 901px) {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__body {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (min-width: 1441px) {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__body {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1440px) {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__body {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__body .tabs__panel__body__layout--two-columns__block-one {
     grid-column: 1/-1;
 }
 
 @media (min-width: 768px) {
-    .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__body .tabs__panel__body__layout--two-columns__block-one {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__body .tabs__panel__body__layout--two-columns__block-one {
         grid-column: 1/10;
     }
 }
 
-.tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__body .tabs__panel__body__layout--two-columns__block-two {
+.js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__body .tabs__panel__body__layout--two-columns__block-two {
     grid-column: 1/-1;
 }
 
 @media (min-width: 768px) {
-    .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__body .tabs__panel__body__layout--two-columns__block-two {
+    .js .course--pgt__tabs .tabs--accordion .course--pgt__tabs .wrapper--tabs__panel__body.tabs__panel__body__layout--two-columns .tabs__panel__body .tabs__panel__body__layout--two-columns__block-two {
         grid-column: 10/-1;
     }
+}
+
+.js .course--pgt__tabs .tabs--accordion .accordion__heading {
+    background: #ffffff;
+    border-bottom: 0.0625rem solid #cbcbcb;
+}
+
+.js .course--pgt__tabs .tabs--accordion .accordion__body {
+    background: #ffffff;
+}
+
+.no-js .course--pgt__tabs.tabs {
+    grid-column: 1/-1;
 }
 
 .profile .content-wrapper {
