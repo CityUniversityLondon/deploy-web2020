@@ -19273,7 +19273,7 @@ h6,
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     margin-top: 1rem;
 }
@@ -19336,7 +19336,7 @@ h6 b,
 h6 strong,
 .h6-style b,
 .h6-style strong {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 h5,
@@ -20070,7 +20070,7 @@ main dt {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     margin-top: 1rem;
 }
@@ -20120,7 +20120,7 @@ main dt u {
 
 main dt b,
 main dt strong {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 main dt:first-of-type {
@@ -20146,7 +20146,7 @@ main table th {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     margin-top: 1rem;
     vertical-align: top;
@@ -20197,7 +20197,7 @@ main table th u {
 
 main table th b,
 main table th strong {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 main table td {
@@ -32405,7 +32405,7 @@ article figure figcaption a:active {
         line-height: 1.625;
         letter-spacing: -0.005em;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1.25;
         margin-top: 1rem;
         background-color: initial;
@@ -32490,7 +32490,7 @@ article figure figcaption a:active {
     .global-header__search > a strong,
     .global-header__search > button b,
     .global-header__search > button strong {
-        font-weight: 700;
+        font-weight: 600;
     }
 }
 
@@ -37361,7 +37361,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     margin-top: 1rem;
     font-weight: 600;
@@ -37413,7 +37413,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
 
 .js .menu .menu__content .menu__utility ul li b,
 .js .menu .menu__content .menu__utility ul li strong {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .js .menu .menu__content .menu__utility ul li a {
@@ -37626,7 +37626,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.25;
     margin-top: 1rem;
     background-color: initial;
@@ -37703,7 +37703,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
 
 .js .menu > .menu__display__button > button b,
 .js .menu > .menu__display__button > button strong {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 @media (hover: hover) {
@@ -42652,7 +42652,7 @@ article .link-copy {
         line-height: 1.625;
         letter-spacing: -0.005em;
         font-style: normal;
-        font-weight: 700;
+        font-weight: 600;
         line-height: 1.25;
         margin-top: 1rem;
         align-items: flex-end;
@@ -42712,7 +42712,7 @@ article .link-copy {
 @media screen {
     .js .tabs .tabs__links li a span b,
     .js .tabs .tabs__links li a span strong {
-        font-weight: 700;
+        font-weight: 600;
     }
 }
 
