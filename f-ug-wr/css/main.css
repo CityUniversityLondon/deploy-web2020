@@ -24867,99 +24867,59 @@ _:-ms-lang(x),
 
 /* duplicate colors will break the display */
 .chart--purple path:nth-child(1) {
-    stroke: #5d2b89;
+    stroke: #65218e;
 }
 
 .chart--purple .chart__legend__item:nth-child(1) .fa.fa-circle {
-    color: #5d2b89;
+    color: #65218e;
 }
 
 .chart--purple path:nth-child(2) {
-    stroke: #4b3863;
+    stroke: #2a0d43;
 }
 
 .chart--purple .chart__legend__item:nth-child(2) .fa.fa-circle {
-    color: #4b3863;
-}
-
-.chart--purple path:nth-child(3) {
-    stroke: #845bba;
-}
-
-.chart--purple .chart__legend__item:nth-child(3) .fa.fa-circle {
-    color: #845bba;
-}
-
-.chart--purple path:nth-child(4) {
-    stroke: #9c5d8b;
-}
-
-.chart--purple .chart__legend__item:nth-child(4) .fa.fa-circle {
-    color: #9c5d8b;
+    color: #2a0d43;
 }
 
 .chart--red path:nth-child(1) {
-    stroke: #d7474c;
+    stroke: #e93745;
 }
 
 .chart--red .chart__legend__item:nth-child(1) .fa.fa-circle {
-    color: #d7474c;
+    color: #e93745;
 }
 
 .chart--red path:nth-child(2) {
-    stroke: #aa302c;
+    stroke: #b91924;
 }
 
 .chart--red .chart__legend__item:nth-child(2) .fa.fa-circle {
-    color: #aa302c;
-}
-
-.chart--red path:nth-child(3) {
-    stroke: crimson;
-}
-
-.chart--red .chart__legend__item:nth-child(3) .fa.fa-circle {
-    color: crimson;
-}
-
-.chart--red path:nth-child(4) {
-    stroke: coral;
-}
-
-.chart--red .chart__legend__item:nth-child(4) .fa.fa-circle {
-    color: coral;
+    color: #b91924;
 }
 
 .chart--maroon path:nth-child(1) {
-    stroke: #903578;
+    stroke: #cf44a7;
 }
 
 .chart--maroon .chart__legend__item:nth-child(1) .fa.fa-circle {
-    color: #903578;
+    color: #cf44a7;
 }
 
 .chart--maroon path:nth-child(2) {
-    stroke: #561f48;
+    stroke: #9c287b;
 }
 
 .chart--maroon .chart__legend__item:nth-child(2) .fa.fa-circle {
-    color: #561f48;
+    color: #9c287b;
 }
 
 .chart--maroon path:nth-child(3) {
-    stroke: #561c48;
+    stroke: #5d184a;
 }
 
 .chart--maroon .chart__legend__item:nth-child(3) .fa.fa-circle {
-    color: #561c48;
-}
-
-.chart--maroon path:nth-child(4) {
-    stroke: #9c5d8b;
-}
-
-.chart--maroon .chart__legend__item:nth-child(4) .fa.fa-circle {
-    color: #9c5d8b;
+    color: #5d184a;
 }
 
 .chart {
