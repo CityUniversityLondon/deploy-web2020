@@ -6425,13 +6425,16 @@ function launchMenu(menu) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.from */ "./node_modules/core-js/modules/es.array.from.js");
 /* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
-/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.parse-int */ "./node_modules/core-js/modules/es.parse-int.js");
+/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
 
 
 
@@ -6458,10 +6461,9 @@ function launchModal(modal) {
         listAnchor = document.createElement('a'),
         listBody = Array.from(list.childNodes),
         listHeader = list.firstElementChild;
-    dialogArray.push(listHeader.innerText);
     listAnchor.setAttribute('href', '#');
     list.appendChild(wrapper);
-    Object(_util__WEBPACK_IMPORTED_MODULE_4__["appendAll"])(wrapper, listBody);
+    Object(_util__WEBPACK_IMPORTED_MODULE_5__["appendAll"])(wrapper, listBody);
     list.insertBefore(listAnchor, wrapper);
     listAnchor.appendChild(listHeader);
     var title = listHeader.cloneNode(true);
@@ -6479,26 +6481,29 @@ function launchModal(modal) {
 }
 
 function createDialog(title, body, parent, position, dialogArray) {
-  var slider = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(parent.getAttribute('data-slider'));
-  var closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('button', [{
+  var slider = Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(parent.getAttribute('data-slider'));
+  var closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('button', [{
     label: 'class',
     val: 'modal__close fas fa-times'
   }, {
     label: 'aria-label',
     val: 'Close modal'
   }]);
-  var dialog = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
+  var dialog = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog modal__popup'
   }, {
     label: 'data-hidden',
     val: 'false'
+  }, {
+    label: 'data-position',
+    val: "".concat(position)
   }]);
-  var bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
+  var bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'modal__content'
   }]);
-  var wrapperWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
+  var wrapperWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'modal__inner'
   }, {
@@ -6534,25 +6539,42 @@ function createDialog(title, body, parent, position, dialogArray) {
   trapFocus(dialog);
   document.body.classList.add('modal--in', 'no-scroll');
 
-  if (slider) {
-    var buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'modal__buttons modal__buttons--slider'
-    }]);
-    var buttonLeft = controlButtons(dialogArray, 'left');
-    var buttonRight = controlButtons(dialogArray, 'right');
-    buttonWrapper.appendChild(buttonLeft);
-    buttonWrapper.appendChild(buttonRight);
-    bodyWrapper.appendChild(buttonWrapper);
+  if (slider && dialogArray.length > 1) {
+    createControl(dialog, dialogArray);
   }
 }
 
-function controlButtons(list, direction) {
+function createControl(dialog, dialogArray) {
+  var position = dialog.getAttribute('data-position');
+  var buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'modal__buttons modal__buttons--slider'
+  }]);
+  var buttonPrev = controlButton(dialogArray, parseInt(position) - 1, 'left');
+  var buttonNext = controlButton(dialogArray, parseInt(position) + 1, 'right');
+  buttonPrev.addEventListener('click', function (e) {
+    e.preventDefault(); //dialog.querySelector('.modal__heading').innerText = dialogArray[position].title;
+  });
+  buttonWrapper.appendChild(buttonPrev);
+  buttonWrapper.appendChild(buttonNext);
+  var dialogContent = dialog.querySelector('.modal__content');
+  dialogContent.appendChild(buttonWrapper);
+}
+
+function controlButton(dialogArray, position, direction) {
+  var pos = position;
   var button = document.createElement('button');
   var buttonLabel = document.createElement('span');
   buttonLabel.classList.add('modal__underline-transition');
-  buttonLabel.innerText = 'I am the inner text';
-  var buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
+
+  if (position < 0) {
+    pos = dialogArray.length - 1;
+  } else if (position > dialogArray.length - 1) {
+    pos = 0;
+  }
+
+  buttonLabel.innerText = dialogArray[pos].title;
+  var buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('span', [{
     label: 'class',
     val: "modal__buttons__icon far fa-long-arrow-".concat(direction)
   }]);
@@ -6570,7 +6592,7 @@ function closeDialog(dialog, background) {
 
 function trapFocus(modal) {
   var modalInner = modal.querySelector('.modal__inner');
-  trap = focus_trap__WEBPACK_IMPORTED_MODULE_3___default()(modalInner, {
+  trap = focus_trap__WEBPACK_IMPORTED_MODULE_4___default()(modalInner, {
     clickOutsideDeactivates: true
   });
   trap.activate();
