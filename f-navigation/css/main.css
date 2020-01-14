@@ -49807,6 +49807,34 @@ button
         grid-column: 1 / span 24;
         grid-row: 3;
     }
+    main > .lifelong-learning .lifelong-learning__tutors {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    main > .lifelong-learning .lifelong-learning__tutors {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    main > .lifelong-learning .lifelong-learning__tutors {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1441px) {
+    main > .lifelong-learning .lifelong-learning__tutors {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media (max-width: 899px) {
@@ -49847,34 +49875,6 @@ button
     main > .lifelong-learning .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links {
         grid-column: 1 / span 24;
         grid-row: 4;
-    }
-    main > .lifelong-learning .lifelong-learning__tutors {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 901px) {
-    main > .lifelong-learning .lifelong-learning__tutors {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 901px) {
-    main > .lifelong-learning .lifelong-learning__tutors {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 1441px) {
-    main > .lifelong-learning .lifelong-learning__tutors {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
