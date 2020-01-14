@@ -40579,7 +40579,7 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 @media (min-width: 1024px) {
-    .navigation--secondary > .navigation--secondary__header a, .navigation--secondary > .navigation--secondary__header a:hover {
+    .navigation--secondary > .navigation--secondary__header a, .navigation--secondary > .navigation--secondary__header a:active, .navigation--secondary > .navigation--secondary__header a:focus, .navigation--secondary > .navigation--secondary__header a:hover {
         border-bottom: 0.0625rem solid #cbcbcb;
     }
     .navigation--secondary > .navigation--secondary__header a > span {
