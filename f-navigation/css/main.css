@@ -36497,10 +36497,16 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     .menu .menu__level1 > li > .menu__controls > button:focus span {
         color: #ffffff;
     }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
     .menu .menu__level1 > li > .menu__controls > button:hover {
         background-color: #494949;
         color: #ffffff;
     }
+}
+
+@media (max-width: 1023px) {
     .menu .menu__level1 > li > .menu__controls > a,
     .menu .menu__level1 > li > .menu__controls > span {
         padding-left: 0.5rem;
@@ -36684,10 +36690,16 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     .menu .menu__level2 > li > .menu__controls > button:focus span {
         color: #ffffff;
     }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
     .menu .menu__level2 > li > .menu__controls > button:hover {
         background-color: #696969;
         color: #ffffff;
     }
+}
+
+@media (max-width: 1023px) {
     .menu .menu__level2 > li > .menu__controls > a,
     .menu .menu__level2 > li > .menu__controls > span {
         padding-left: 1rem;
@@ -36835,10 +36847,16 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     .menu .menu__level3 > li > .menu__controls > button:focus span {
         color: #0c0c0e;
     }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
     .menu .menu__level3 > li > .menu__controls > button:hover {
         background-color: #d8d8d8;
         color: #0c0c0e;
     }
+}
+
+@media (max-width: 1023px) {
     .menu .menu__level3 > li > .menu__controls > a,
     .menu .menu__level3 > li > .menu__controls > span {
         padding-left: 1.5rem;
@@ -36983,10 +37001,16 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     .menu .menu__level4 > li > .menu__controls > button:focus span {
         color: #0c0c0e;
     }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
     .menu .menu__level4 > li > .menu__controls > button:hover {
         background-color: #cbcbcb;
         color: #0c0c0e;
     }
+}
+
+@media (max-width: 1023px) {
     .menu .menu__level4 > li > .menu__controls > a,
     .menu .menu__level4 > li > .menu__controls > span {
         padding-left: 2rem;
@@ -37131,10 +37155,16 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     .menu .menu__level5 > li > .menu__controls > button:focus span {
         color: #0c0c0e;
     }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
     .menu .menu__level5 > li > .menu__controls > button:hover {
         background-color: #bebebe;
         color: #0c0c0e;
     }
+}
+
+@media (max-width: 1023px) {
     .menu .menu__level5 > li > .menu__controls > a,
     .menu .menu__level5 > li > .menu__controls > span {
         padding-left: 2.5rem;
@@ -37279,10 +37309,16 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
     .menu .menu__level6 > li > .menu__controls > button:focus span {
         color: #0c0c0e;
     }
+}
+
+@media (max-width: 1023px) and (hover: hover) {
     .menu .menu__level6 > li > .menu__controls > button:hover {
         background-color: #a1a1a1;
         color: #0c0c0e;
     }
+}
+
+@media (max-width: 1023px) {
     .menu .menu__level6 > li > .menu__controls > a,
     .menu .menu__level6 > li > .menu__controls > span {
         padding-left: 3rem;
@@ -39091,9 +39127,11 @@ a.modal__close:active, a.modal__close:focus {
     color: #ffffff;
 }
 
-.navigation--primary .wrapper--navigation--primary__menu__close button:hover {
-    background-color: #494949;
-    color: #ffffff;
+@media (hover: hover) {
+    .navigation--primary .wrapper--navigation--primary__menu__close button:hover {
+        background-color: #494949;
+        color: #ffffff;
+    }
 }
 
 .navigation--primary .wrapper--navigation--primary__menu__close button i,
@@ -39400,8 +39438,10 @@ a.modal__close:active, a.modal__close:focus {
     outline-width: 0.125rem;
 }
 
-.js .navigation--primary .navigation__level1 > li .navigation__button:hover div {
-    border-bottom-color: #d61726;
+@media (hover: hover) {
+    .js .navigation--primary .navigation__level1 > li .navigation__button:hover div {
+        border-bottom-color: #d61726;
+    }
 }
 
 .js .navigation--primary .navigation__level1 > li .navigation__button > div:after {
@@ -39895,10 +39935,16 @@ a.modal__close:active, a.modal__close:focus {
     .navigation--secondary .navigation__level3 > li > .navigation__controls > button:focus span {
         color: #0c0c0e;
     }
+}
+
+@media (min-width: 1024px) and (hover: hover) {
     .navigation--secondary .navigation__level3 > li > .navigation__controls > button:hover {
         background-color: #e5e5e5;
         color: #0c0c0e;
     }
+}
+
+@media (min-width: 1024px) {
     .navigation--secondary .navigation__level3 > li > .navigation__controls > a,
     .navigation--secondary .navigation__level3 > li > .navigation__controls > span {
         padding-left: 0.5rem;
@@ -40076,10 +40122,16 @@ a.modal__close:active, a.modal__close:focus {
     .navigation--secondary .navigation__level4 > li > .navigation__controls > button:focus span {
         color: #0c0c0e;
     }
+}
+
+@media (min-width: 1024px) and (hover: hover) {
     .navigation--secondary .navigation__level4 > li > .navigation__controls > button:hover {
         background-color: #d8d8d8;
         color: #0c0c0e;
     }
+}
+
+@media (min-width: 1024px) {
     .navigation--secondary .navigation__level4 > li > .navigation__controls > a,
     .navigation--secondary .navigation__level4 > li > .navigation__controls > span {
         padding-left: 1rem;
@@ -40224,10 +40276,16 @@ a.modal__close:active, a.modal__close:focus {
     .navigation--secondary .navigation__level5 > li > .navigation__controls > button:focus span {
         color: #0c0c0e;
     }
+}
+
+@media (min-width: 1024px) and (hover: hover) {
     .navigation--secondary .navigation__level5 > li > .navigation__controls > button:hover {
         background-color: #cbcbcb;
         color: #0c0c0e;
     }
+}
+
+@media (min-width: 1024px) {
     .navigation--secondary .navigation__level5 > li > .navigation__controls > a,
     .navigation--secondary .navigation__level5 > li > .navigation__controls > span {
         padding-left: 1.5rem;
@@ -40372,10 +40430,16 @@ a.modal__close:active, a.modal__close:focus {
     .navigation--secondary .navigation__level6 > li > .navigation__controls > button:focus span {
         color: #0c0c0e;
     }
+}
+
+@media (min-width: 1024px) and (hover: hover) {
     .navigation--secondary .navigation__level6 > li > .navigation__controls > button:hover {
         background-color: #bebebe;
         color: #0c0c0e;
     }
+}
+
+@media (min-width: 1024px) {
     .navigation--secondary .navigation__level6 > li > .navigation__controls > a,
     .navigation--secondary .navigation__level6 > li > .navigation__controls > span {
         padding-left: 2rem;
@@ -49807,7 +49871,8 @@ button
         grid-column: 1 / span 24;
         grid-row: 3;
     }
-    main > .lifelong-learning .lifelong-learning__tutors {
+    main > .lifelong-learning .lifelong-learning__tutors,
+    main > .lifelong-learning .lifelong-learning__testimonials {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -49817,21 +49882,24 @@ button
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    main > .lifelong-learning .lifelong-learning__tutors {
+    main > .lifelong-learning .lifelong-learning__tutors,
+    main > .lifelong-learning .lifelong-learning__testimonials {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    main > .lifelong-learning .lifelong-learning__tutors {
+    main > .lifelong-learning .lifelong-learning__tutors,
+    main > .lifelong-learning .lifelong-learning__testimonials {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
 @media (max-width: 1023px) and (min-width: 1441px) {
-    main > .lifelong-learning .lifelong-learning__tutors {
+    main > .lifelong-learning .lifelong-learning__tutors,
+    main > .lifelong-learning .lifelong-learning__testimonials {
         margin-left: auto;
         margin-right: auto;
     }
@@ -49964,7 +50032,8 @@ button
         grid-column: 17 / span 8;
         grid-row: 2;
     }
-    main > .lifelong-learning .lifelong-learning__tutors {
+    main > .lifelong-learning .lifelong-learning__tutors,
+    main > .lifelong-learning .lifelong-learning__testimonials {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -49973,23 +50042,29 @@ button
 }
 
 @media (min-width: 1024px) and (min-width: 768px) {
-    main > .lifelong-learning .lifelong-learning__tutors {
+    main > .lifelong-learning .lifelong-learning__tutors,
+    main > .lifelong-learning .lifelong-learning__testimonials {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main > .lifelong-learning .lifelong-learning__tutors {
+    main > .lifelong-learning .lifelong-learning__tutors,
+    main > .lifelong-learning .lifelong-learning__testimonials {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
-    main > .lifelong-learning .lifelong-learning__tutors h2 {
-        grid-column: 1 / span 18;
+    main > .lifelong-learning .lifelong-learning__tutors h2,
+    main > .lifelong-learning .lifelong-learning__testimonials h2 {
+        grid-column: 1 / span 24;
     }
     main > .lifelong-learning .lifelong-learning__tutors .related-content {
         grid-column: 7 / span 12;
+    }
+    main > .lifelong-learning .lifelong-learning__testimonials .related-content {
+        grid-column: 1 / span 24;
     }
 }
 
@@ -50037,7 +50112,8 @@ button
         grid-column: 13 / span 6;
         grid-row: 2;
     }
-    main .navigation--secondary + .lifelong-learning .lifelong-learning__tutors {
+    main .navigation--secondary + .lifelong-learning .lifelong-learning__tutors,
+    main .navigation--secondary + .lifelong-learning .lifelong-learning__testimonials {
         grid-template-columns: repeat(18, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -50046,23 +50122,33 @@ button
 }
 
 @media (min-width: 1024px) and (min-width: 768px) {
-    main .navigation--secondary + .lifelong-learning .lifelong-learning__tutors {
+    main .navigation--secondary + .lifelong-learning .lifelong-learning__tutors,
+    main .navigation--secondary + .lifelong-learning .lifelong-learning__testimonials {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main .navigation--secondary + .lifelong-learning .lifelong-learning__tutors {
+    main .navigation--secondary + .lifelong-learning .lifelong-learning__tutors,
+    main .navigation--secondary + .lifelong-learning .lifelong-learning__testimonials {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
-    main .navigation--secondary + .lifelong-learning .lifelong-learning__tutors h2 {
+    main .navigation--secondary + .lifelong-learning .lifelong-learning__tutors h2,
+    main .navigation--secondary + .lifelong-learning .lifelong-learning__testimonials h2 {
         grid-column: 1 / span 18;
+    }
+    main .navigation--secondary + .lifelong-learning .lifelong-learning__tutors .related-content,
+    main .navigation--secondary + .lifelong-learning .lifelong-learning__testimonials .related-content {
+        grid-column: 4 / span 12;
     }
     main .navigation--secondary + .lifelong-learning .lifelong-learning__tutors .related-content {
         grid-column: 4 / span 12;
+    }
+    main .navigation--secondary + .lifelong-learning .lifelong-learning__testimonials .related-content {
+        grid-column: 1 / span 18;
     }
 }
 
@@ -50350,37 +50436,6 @@ button
     padding-top: 4.25rem;
 }
 
-.lifelong-learning .lifelong-learning__testimonials .related-content {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    display: flex;
-    justify-content: center;
-}
-
-@media (min-width: 901px) {
-    .lifelong-learning .lifelong-learning__testimonials .related-content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .lifelong-learning .lifelong-learning__testimonials .related-content {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (min-width: 1441px) {
-    .lifelong-learning .lifelong-learning__testimonials .related-content {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 .lifelong-learning .lifelong-learning__testimonials h2 {
     text-align: center;
 }
@@ -50394,6 +50449,11 @@ button
     margin-right: auto;
     margin-top: 0.5rem;
     width: 6rem;
+}
+
+.lifelong-learning .lifelong-learning__testimonials .related-content {
+    display: flex;
+    justify-content: center;
 }
 
 .lifelong-learning .lifelong-learning__related-courses {
