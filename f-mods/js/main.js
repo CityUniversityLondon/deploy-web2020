@@ -823,16 +823,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
 /* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
 /* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
-/* harmony import */ var _patterns_modal_modal_dev__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/modal/modal-dev */ "./src/patterns/modal/modal-dev.js");
-/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
-/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
-/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
-/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
-/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
-/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
+/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
+/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
+/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
+/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
+/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
+/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/theme-switcher/theme-switcher */ "./src/patterns/theme-switcher/theme-switcher.js");
 
 
 /**
@@ -870,8 +869,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_modal_modal_dev__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_1__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_theme_switcher_theme_switcher__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_back_to_top_link_back_to_top_link__WEBPACK_IMPORTED_MODULE_1__["default"]]);
 
 /***/ }),
 
@@ -6414,10 +6412,10 @@ function launchMenu(menu) {
 
 /***/ }),
 
-/***/ "./src/patterns/modal/modal-dev.js":
-/*!*****************************************!*\
-  !*** ./src/patterns/modal/modal-dev.js ***!
-  \*****************************************/
+/***/ "./src/patterns/modal/modal.js":
+/*!*************************************!*\
+  !*** ./src/patterns/modal/modal.js ***!
+  \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -6451,7 +6449,8 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-var className = 'modal';
+var className = 'modal',
+    bodyClassName = className + '__body';
 var trap;
 
 function launchModal(modal) {
@@ -6465,22 +6464,21 @@ function launchModal(modal) {
     list.appendChild(wrapper);
     Object(_util__WEBPACK_IMPORTED_MODULE_5__["appendAll"])(wrapper, listBody);
     list.insertBefore(listAnchor, wrapper);
+    wrapper.classList.add("".concat(bodyClassName));
     listAnchor.appendChild(listHeader);
-    var title = listHeader.cloneNode(true);
-    var body = wrapper.cloneNode(true);
     dialogArray.push({
-      title: title.innerText,
-      body: body
+      title: listHeader.innerText,
+      body: wrapper.innerHTML
     });
     listAnchor.addEventListener('click', function (e) {
       e.preventDefault();
       e.stopPropagation();
-      createDialog(title, body, modal, "".concat(i), dialogArray);
+      createDialog(modal, "".concat(i), dialogArray);
     });
   });
 }
 
-function createDialog(title, body, parent, position, dialogArray) {
+function createDialog(parent, position, dialogArray) {
   var slider = Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(parent.getAttribute('data-slider'));
   var closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('button', [{
     label: 'class',
@@ -6510,11 +6508,19 @@ function createDialog(title, body, parent, position, dialogArray) {
     label: 'role',
     val: 'role'
   }]);
-  title.classList.add('modal__heading');
-  body.classList.add('modal__body-copy');
+  var dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('h2', [{
+    label: 'class',
+    val: 'modal__heading'
+  }]);
+  var dialogBody = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'modal__body-copy'
+  }]);
+  dialogTitle.innerText = dialogArray[position].title;
+  dialogBody.innerHTML = dialogArray[position].body;
   bodyWrapper.appendChild(closeBtn);
-  bodyWrapper.appendChild(title);
-  bodyWrapper.appendChild(body);
+  bodyWrapper.appendChild(dialogTitle);
+  bodyWrapper.appendChild(dialogBody);
   wrapperWrapper.appendChild(bodyWrapper);
   dialog.appendChild(wrapperWrapper);
   parent.appendChild(dialog);
@@ -6545,15 +6551,22 @@ function createDialog(title, body, parent, position, dialogArray) {
 }
 
 function createControl(dialog, dialogArray) {
-  var position = dialog.getAttribute('data-position');
+  var position = parseInt(dialog.getAttribute('data-position'));
   var buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'modal__buttons modal__buttons--slider'
   }]);
-  var buttonPrev = controlButton(dialogArray, parseInt(position) - 1, 'left');
-  var buttonNext = controlButton(dialogArray, parseInt(position) + 1, 'right');
+  var buttonPrev = controlButton(dialogArray, position, 'left');
+  var buttonNext = controlButton(dialogArray, position, 'right');
+  buttonNext.addEventListener('click', function (e) {
+    e.preventDefault();
+    var pos = buttonNext.getAttribute('data-nextState');
+    addDialogEvent(dialog, dialogArray, pos);
+  });
   buttonPrev.addEventListener('click', function (e) {
-    e.preventDefault(); //dialog.querySelector('.modal__heading').innerText = dialogArray[position].title;
+    e.preventDefault();
+    var pos = buttonPrev.getAttribute('data-nextState');
+    addDialogEvent(dialog, dialogArray, pos);
   });
   buttonWrapper.appendChild(buttonPrev);
   buttonWrapper.appendChild(buttonNext);
@@ -6561,19 +6574,36 @@ function createControl(dialog, dialogArray) {
   dialogContent.appendChild(buttonWrapper);
 }
 
+function addDialogEvent(dialog, dialogArray, nextState) {
+  nextState = parseInt(nextState);
+  dialog.querySelector('.modal__heading').innerText = dialogArray[nextState].title;
+  dialog.querySelector('.modal__body-copy').innerHTML = dialogArray[nextState].body;
+
+  if (nextState == 0) {
+    dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(dialogArray.length - 1));
+    dialog.querySelectorAll('.modal__underline-transition')[0].innerText = dialogArray[dialogArray.length - 1].title;
+    dialog.querySelectorAll('.modal__underline-transition')[1].innerText = dialogArray[nextState + 1].title;
+    dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', "".concat(nextState + 1));
+  } else if (nextState == dialogArray.length - 1) {
+    dialog.querySelectorAll('.modal__underline-transition')[0].innerText = dialogArray[nextState - 1].title;
+    dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(nextState - 1));
+    dialog.querySelectorAll('.modal__underline-transition')[1].innerText = dialogArray[0].title;
+    dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', '0');
+  } else {
+    dialog.querySelectorAll('.modal__underline-transition')[0].innerText = dialogArray[nextState - 1].title;
+    dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(nextState - 1));
+    dialog.querySelectorAll('.modal__underline-transition')[1].innerText = dialogArray[nextState + 1].title;
+    dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', "".concat(nextState + 1));
+  }
+}
+
 function controlButton(dialogArray, position, direction) {
-  var pos = position;
   var button = document.createElement('button');
   var buttonLabel = document.createElement('span');
   buttonLabel.classList.add('modal__underline-transition');
-
-  if (position < 0) {
-    pos = dialogArray.length - 1;
-  } else if (position > dialogArray.length - 1) {
-    pos = 0;
-  }
-
-  buttonLabel.innerText = dialogArray[pos].title;
+  var nextState = checkNextState(dialogArray, position, direction);
+  button.setAttribute('data-nextstate', "".concat(nextState));
+  buttonLabel.innerText = dialogArray[nextState].title;
   var buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('span', [{
     label: 'class',
     val: "modal__buttons__icon far fa-long-arrow-".concat(direction)
@@ -6581,6 +6611,33 @@ function controlButton(dialogArray, position, direction) {
   button.appendChild(buttonLabel);
   button.appendChild(buttonIcon);
   return button;
+}
+
+function checkNextState(dialogArray, position, direction) {
+  var pos = parseInt("".concat(position));
+  var nextState;
+
+  if (pos == 0) {
+    if (direction === 'left') {
+      nextState = dialogArray.length - 1;
+    } else {
+      nextState = pos + 1;
+    }
+  } else if (pos == dialogArray.length - 1) {
+    if (direction === 'left') {
+      nextState = pos - 1;
+    } else {
+      nextState = 0;
+    }
+  } else {
+    if (direction === 'left') {
+      nextState = pos - 1;
+    } else {
+      nextState = pos + 1;
+    }
+  }
+
+  return nextState;
 }
 
 function closeDialog(dialog, background) {
@@ -6593,195 +6650,6 @@ function closeDialog(dialog, background) {
 function trapFocus(modal) {
   var modalInner = modal.querySelector('.modal__inner');
   trap = focus_trap__WEBPACK_IMPORTED_MODULE_4___default()(modalInner, {
-    clickOutsideDeactivates: true
-  });
-  trap.activate();
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchModal,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
-/***/ "./src/patterns/modal/modal.js":
-/*!*************************************!*\
-  !*** ./src/patterns/modal/modal.js ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-
-/**
- * modal
- *
- * @module patterns/modal/modal
- * @author Daniel Miller <daniel.miller@city.ac.uk>
- * @copyright City, University of London 2018
- *
- */
-
-var className = 'modal__popup';
-var modalBackground = document.createElement('div'),
-    trap;
-/**
- * Launch function: sets the modal attr to hidden, adds
- * elements to toggle the modal, adds event listeners to those
- * elements to toggle the modal and sets tab indexes
- * on all anchor elements
- *
- * @param {HTMLElement} modal - the modal
- *
- */
-
-function launchModal(modal) {
-  var modalCustomClass = modal.getAttribute('data-class');
-  modal.setAttribute('data-hidden', true);
-  var linkElement = document.createElement('a');
-  linkElement.className = 'modal__trigger';
-  modalCustomClass ? linkElement.classList.add(modalCustomClass) : null;
-  linkElement.setAttribute('href', '#');
-  linkElement.textContent = modal.getAttribute('data-title');
-  modal.parentNode.prepend(linkElement);
-  var modalCloseElement = document.createElement('a');
-  modalCloseElement.className = 'modal__close fas fa-times';
-  modalCloseElement.setAttribute('href', '#');
-  modalCloseElement.setAttribute('aria--label', 'Close modal');
-  modal.querySelector('.modal__heading').parentNode.prepend(modalCloseElement);
-  addEventListeners(modal, linkElement, modalCloseElement);
-  setTabIndexes(modal, true);
-}
-/**
- * Add event listeners: adds all the required event listerners
- *
- * @param {HTMLElement} modal - the modal
- * @param {HTMLElement} linkElement - the modal trigger anchor
- * @param {HTMLElement} modalCloseElement - the modal close trigger
- *
- */
-
-
-function addEventListeners(modal, linkElement, modalCloseElement) {
-  linkElement.addEventListener('click', openModal, false);
-  modalCloseElement.addEventListener('click', closeModal, false);
-  /*
-   * listen for escape key press and close
-   */
-
-  modal.addEventListener('keydown', function (e) {
-    if (e.keyCode === 27) {
-      closeModal(e);
-    }
-  });
-  /*
-   * listen for a click outside of modal inner and close
-   */
-
-  modal.addEventListener('click', function (e) {
-    if (e.target.classList.contains('modal__popup')) {
-      closeModal(e);
-    }
-  });
-}
-/**
- * Open modal: runs all the required functions
- * to open the modal
- *
- * @param {event} e - click event
- *
- */
-
-
-function openModal(e) {
-  e.preventDefault();
-  var modal = e.target.nextElementSibling;
-  addBackgroundFade();
-  document.body.classList.add('modal--in', 'no-scroll');
-  modal.removeAttribute('data-hidden', true);
-  setTabIndexes(modal, false);
-  trapFocus(modal);
-}
-/**
- * Close modal: runs all the required functions
- * to close the modal
- *
- * @param {event} e - click event
- *
- */
-
-
-function closeModal(e) {
-  e.preventDefault();
-  var modal;
-
-  if (e.target.classList.contains('modal__close')) {
-    modal = e.target.closest('.modal__popup');
-  } else {
-    modal = e.target;
-  }
-
-  document.body.classList.remove('modal--in', 'no-scroll');
-  modal.setAttribute('data-hidden', true);
-  setTabIndexes(modal, true);
-  trap.deactivate();
-}
-/**
- * Add background fade: adds the background fade element
- * to the body. Only adds once if element not in source
- *
- */
-
-
-function addBackgroundFade() {
-  if (!document.body.contains(modalBackground)) {
-    modalBackground.setAttribute('class', 'modal__background');
-    document.body.appendChild(modalBackground);
-  }
-}
-/**
- * Set tab indexes: when the modal is closed, the anchors
- * lose their tab indexes, when the modal is open, the
- * attr is removed so the user can tab through them
- *
- * @param {HTMLElement} modal - the modal
- * @param {boolean} removeTabIndex - no index or remove
- *
- */
-
-
-function setTabIndexes(modal, removeTabIndex) {
-  var elements = modal.querySelectorAll('a');
-  elements.forEach(function (el) {
-    if (removeTabIndex) {
-      el.setAttribute('tabindex', '-1');
-    } else {
-      el.removeAttribute('tabindex');
-    }
-  });
-}
-/**
- * Trap focus: focus needs to be trapped inside the
- * modal when it's opened. This function takes care of
- * this
- *
- * @param {HTMLElement} modal - the modal
- *
- */
-
-
-function trapFocus(modal) {
-  var modalInner = modal.querySelector('.modal__inner');
-  trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalInner, {
     clickOutsideDeactivates: true
   });
   trap.activate();

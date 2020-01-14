@@ -36974,6 +36974,10 @@ button
     pointer-events: none;
 }
 
+.modal__body {
+    display: none;
+}
+
 article .social-icon {
     background-color: initial;
     border-bottom-color: initial;
@@ -44362,6 +44366,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 .no-click {
     pointer-events: none;
+}
+
+.modal__body {
+    display: none;
 }
 
 .highlighted-content__border {
