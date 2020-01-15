@@ -32118,7 +32118,14 @@ article figure figcaption a:active {
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 375px) {
+    .header-logo {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 1023px) {
     .header-logo {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -32375,7 +32382,13 @@ article figure figcaption a:active {
     grid-column-end: span 4;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 375px) {
+    .global-header__search {
+        margin-right: 0.5rem;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 1023px) {
     .global-header__search {
         margin-right: 1.5rem;
     }
