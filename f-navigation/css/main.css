@@ -38072,7 +38072,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .js .menu[data-open='true'] > .menu__content {
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -39905,7 +39905,7 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'] + .navigation--primary__menu {
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
     display: block;
     margin-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -39945,7 +39945,7 @@ a.modal__close:active, a.modal__close:focus {
 }
 
 .no-js .navigation--primary .navigation__level1 > li:hover > .navigation--primary__menu, .no-js .navigation--primary .navigation__level1 > li:focus-within > .navigation--primary__menu {
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
     display: grid;
 }
 
