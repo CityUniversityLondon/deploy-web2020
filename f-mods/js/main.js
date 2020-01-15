@@ -6459,15 +6459,32 @@ function launchModal(modal) {
     var wrapper = document.createElement('div'),
         listAnchor = document.createElement('a'),
         listBody = Array.from(list.childNodes),
-        listHeader = list.firstElementChild;
+        listHeader = list.firstElementChild,
+        customHeader = list.getAttribute('data-header'),
+        format = list.getAttribute('data-keepformat');
+    var title,
+        keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(format);
     listAnchor.setAttribute('href', '#');
     list.appendChild(wrapper);
     Object(_util__WEBPACK_IMPORTED_MODULE_5__["appendAll"])(wrapper, listBody);
-    list.insertBefore(listAnchor, wrapper);
     wrapper.classList.add("".concat(bodyClassName));
-    listAnchor.appendChild(listHeader);
+
+    if (keepFormat) {
+      listAnchor.appendChild(listHeader);
+    } else {
+      listAnchor.innerText = listHeader.innerText;
+    }
+
+    list.insertBefore(listAnchor, wrapper);
+
+    if (customHeader) {
+      title = customHeader;
+    } else {
+      title = listHeader.innerText;
+    }
+
     dialogArray.push({
-      title: listHeader.innerText,
+      title: title,
       body: wrapper.innerHTML
     });
     listAnchor.addEventListener('click', function (e) {
