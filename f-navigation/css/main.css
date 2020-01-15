@@ -51898,28 +51898,44 @@ main .standard-content {
     }
 }
 
-main .documentation {
-    margin-top: 1.5rem;
-}
-
-@media (min-width: 1280px) {
-    main .documentation {
-        grid-column: 6 / span 14;
+@media (max-width: 1023px) {
+    main > .documentation {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
     }
 }
 
-main .documentation.documentation--fullwidth {
-    grid-column: 1 / span 24;
+@media (max-width: 1023px) and (min-width: 901px) {
+    main > .documentation {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
+    main > .documentation {
+        grid-column: 6 / span 14;
+    }
+    main > .documentation.documentation--fullwidth {
+        grid-column: 1 / span 24;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .navigation--secondary {
+        grid-column: 1 / span 6;
+    }
     main .navigation--secondary + .documentation {
         grid-column: 10 / span 12;
     }
+    main .navigation--secondary + .documentation.documentation--fullwidth {
+        grid-column: 7 / span 18;
+    }
 }
 
-main .navigation--secondary + .documentation.documentation--fullwidth {
-    grid-column: 7 / span 18;
+.documentation .content {
+    margin-top: 1.5rem;
 }
 
 .persona {
