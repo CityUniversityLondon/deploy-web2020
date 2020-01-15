@@ -31431,6 +31431,7 @@ article figure figcaption a:active {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+    background-color: transparent;
     border-style: solid;
     border-width: 0.125rem;
     display: inline-block;
@@ -32421,6 +32422,7 @@ article figure figcaption a:active {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-color: transparent;
         border-style: solid;
         border-width: 0.125rem;
         display: inline-block;
@@ -44058,6 +44060,7 @@ button
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
+        background-color: transparent;
         border-style: solid;
         border-width: 0.125rem;
         display: inline-block;
@@ -44328,15 +44331,12 @@ button
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    transition: background-size 0.2s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    transition: background-color 0.6s;
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
@@ -44376,55 +44376,23 @@ button
     text-decoration: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .finder__filters--mobile .finder__filters--mobile__apply {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .finder__filters--mobile .finder__filters--mobile__apply:hover {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    }
-}
-
 .finder__filters--mobile .finder__filters--mobile__apply:focus, .finder__filters--mobile .finder__filters--mobile__apply:active {
-    outline-color: #0c0c0e;
+    outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.finder__filters--mobile .finder__filters--mobile__apply:visited {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-.finder__filters--mobile .finder__filters--mobile__apply:focus {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
+.finder__filters--mobile .finder__filters--mobile__apply, .finder__filters--mobile .finder__filters--mobile__apply:focus, .finder__filters--mobile .finder__filters--mobile__apply:active {
+    background-color: #d61726;
+    color: #ffffff;
 }
 
 @media (hover: hover) {
     .finder__filters--mobile .finder__filters--mobile__apply:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
+        background-color: #9e111c;
         color: #ffffff;
     }
-}
-
-.finder__filters--mobile .finder__filters--mobile__apply:active {
-    background-color: #006bbd;
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #ffffff;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -44465,23 +44433,19 @@ button
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    transition: background-size 0.2s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 0.125rem;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    transition: background-color 0.6s, border-color 0.6s, color 0.6s;
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
-    background-color: #ffffff;
-    border: 0.125rem solid #696969;
-    color: #0c0c0e;
     margin-top: 1rem;
-    padding: 0.5rem;
 }
 
 @media (hover: hover) {
@@ -44518,19 +44482,6 @@ button
     text-decoration: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .finder__filters--mobile .finder__filters--mobile__toggle {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .finder__filters--mobile .finder__filters--mobile__toggle:hover {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    }
-}
-
 .finder__filters--mobile .finder__filters--mobile__toggle:focus, .finder__filters--mobile .finder__filters--mobile__toggle:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
@@ -44538,35 +44489,22 @@ button
     outline-width: 0.125rem;
 }
 
-.finder__filters--mobile .finder__filters--mobile__toggle:visited {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-.finder__filters--mobile .finder__filters--mobile__toggle:focus {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
+.finder__filters--mobile .finder__filters--mobile__toggle, .finder__filters--mobile .finder__filters--mobile__toggle:focus, .finder__filters--mobile .finder__filters--mobile__toggle:active {
+    background-color: #ffffff;
+    border-color: #0c0c0e;
+    border-style: solid;
+    border-width: 0.125rem;
+    color: #0c0c0e;
 }
 
 @media (hover: hover) {
     .finder__filters--mobile .finder__filters--mobile__toggle:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
+        background-color: #0c0c0e;
+        border-color: #0c0c0e;
+        border-style: solid;
+        border-width: 0.125rem;
         color: #ffffff;
     }
-}
-
-.finder__filters--mobile .finder__filters--mobile__toggle:active {
-    background-color: #006bbd;
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #ffffff;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -44591,17 +44529,6 @@ button
     .finder__filters--mobile .finder__filters--mobile__toggle {
         letter-spacing: -0.017em;
     }
-}
-
-.finder__filters--mobile .finder__filters--mobile__toggle:focus {
-    background-color: #ffffff;
-    border: 0.125rem solid #696969;
-    color: #0c0c0e;
-}
-
-.finder__filters--mobile .finder__filters--mobile__toggle:hover, .finder__filters--mobile .finder__filters--mobile__toggle:active {
-    background-color: #696969;
-    color: #ffffff;
 }
 
 .finder__filters--mobile .finder__filters--mobile__toggle[data-filters-applied='true'] {
