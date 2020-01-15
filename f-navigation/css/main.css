@@ -43160,6 +43160,9 @@ button
     main .embedded-video--with-heading .youtube-video {
         width: 65%;
     }
+    main .youtube-video {
+        margin: 0;
+    }
 }
 
 .embedded-video {
