@@ -6421,10 +6421,20 @@ function launchMenu(menu) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.from */ "./node_modules/core-js/modules/es.array.from.js");
+/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.parse-int */ "./node_modules/core-js/modules/es.parse-int.js");
+/* harmony import */ var core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.iterator */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+
 
 
 
@@ -6432,163 +6442,231 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * modal
  *
- * @module patterns/modal/modal
- * @author Daniel Miller <daniel.miller@city.ac.uk>
+ * @module patterns/pagination/pagination
+ * @author Web Development
  * @copyright City, University of London 2018
  *
  */
 
-var className = 'modal__popup';
-var modalBackground = document.createElement('div'),
-    trap;
-/**
- * Launch function: sets the modal attr to hidden, adds
- * elements to toggle the modal, adds event listeners to those
- * elements to toggle the modal and sets tab indexes
- * on all anchor elements
- *
- * @param {HTMLElement} modal - the modal
- *
- */
+
+var className = 'modal',
+    bodyClassName = className + '__body';
+var trap;
 
 function launchModal(modal) {
-  var modalCustomClass = modal.getAttribute('data-class');
-  modal.setAttribute('data-hidden', true);
-  var linkElement = document.createElement('a');
-  linkElement.className = 'modal__trigger';
-  modalCustomClass ? linkElement.classList.add(modalCustomClass) : null;
-  linkElement.setAttribute('href', '#');
-  linkElement.textContent = modal.getAttribute('data-title');
-  modal.parentNode.prepend(linkElement);
-  var modalCloseElement = document.createElement('a');
-  modalCloseElement.className = 'modal__close fas fa-times';
-  modalCloseElement.setAttribute('href', '#');
-  modalCloseElement.setAttribute('aria--label', 'Close modal');
-  modal.querySelector('.modal__heading').parentNode.prepend(modalCloseElement);
-  addEventListeners(modal, linkElement, modalCloseElement);
-  setTabIndexes(modal, true);
-}
-/**
- * Add event listeners: adds all the required event listerners
- *
- * @param {HTMLElement} modal - the modal
- * @param {HTMLElement} linkElement - the modal trigger anchor
- * @param {HTMLElement} modalCloseElement - the modal close trigger
- *
- */
+  var dialogArray = [];
+  Array.from(modal.getElementsByTagName('li')).forEach(function (list, i) {
+    var wrapper = document.createElement('div'),
+        listAnchor = document.createElement('a'),
+        listBody = Array.from(list.childNodes),
+        listHeader = list.firstElementChild,
+        customHeader = list.getAttribute('data-header'),
+        format = list.getAttribute('data-keepformat');
+    var title,
+        keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(format);
+    listAnchor.setAttribute('href', '#');
+    list.appendChild(wrapper);
+    Object(_util__WEBPACK_IMPORTED_MODULE_5__["appendAll"])(wrapper, listBody);
+    wrapper.classList.add("".concat(bodyClassName));
 
-
-function addEventListeners(modal, linkElement, modalCloseElement) {
-  linkElement.addEventListener('click', openModal, false);
-  modalCloseElement.addEventListener('click', closeModal, false);
-  /*
-   * listen for escape key press and close
-   */
-
-  modal.addEventListener('keydown', function (e) {
-    if (e.keyCode === 27) {
-      closeModal(e);
+    if (keepFormat) {
+      listAnchor.appendChild(listHeader);
+    } else {
+      listAnchor.innerText = listHeader.innerText;
     }
-  });
-  /*
-   * listen for a click outside of modal inner and close
-   */
 
-  modal.addEventListener('click', function (e) {
-    if (e.target.classList.contains('modal__popup')) {
-      closeModal(e);
+    list.insertBefore(listAnchor, wrapper);
+
+    if (customHeader) {
+      title = customHeader;
+    } else {
+      title = listHeader.innerText;
     }
+
+    dialogArray.push({
+      title: title,
+      body: wrapper.innerHTML
+    });
+    listAnchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      createDialog(modal, "".concat(i), dialogArray);
+    });
   });
 }
-/**
- * Open modal: runs all the required functions
- * to open the modal
- *
- * @param {event} e - click event
- *
- */
 
+function createDialog(parent, position, dialogArray) {
+  var slider = Object(_util__WEBPACK_IMPORTED_MODULE_5__["toBool"])(parent.getAttribute('data-slider'));
+  var closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('button', [{
+    label: 'class',
+    val: 'modal__close fas fa-times'
+  }, {
+    label: 'aria-label',
+    val: 'Close modal'
+  }]);
+  var dialog = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'dialog modal__popup'
+  }, {
+    label: 'data-hidden',
+    val: 'false'
+  }, {
+    label: 'data-position',
+    val: "".concat(position)
+  }]);
+  var bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'modal__content'
+  }]);
+  var wrapperWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'modal__inner'
+  }, {
+    label: 'role',
+    val: 'role'
+  }]);
+  var dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('h2', [{
+    label: 'class',
+    val: 'modal__heading'
+  }]);
+  var dialogBody = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'modal__body-copy'
+  }]);
+  dialogTitle.innerText = dialogArray[position].title;
+  dialogBody.innerHTML = dialogArray[position].body;
+  bodyWrapper.appendChild(closeBtn);
+  bodyWrapper.appendChild(dialogTitle);
+  bodyWrapper.appendChild(dialogBody);
+  wrapperWrapper.appendChild(bodyWrapper);
+  dialog.appendChild(wrapperWrapper);
+  parent.appendChild(dialog);
+  var modalBackground = document.createElement('div');
 
-function openModal(e) {
-  e.preventDefault();
-  var modal = e.target.nextElementSibling;
-  addBackgroundFade();
-  document.body.classList.add('modal--in', 'no-scroll');
-  modal.removeAttribute('data-hidden', true);
-  setTabIndexes(modal, false);
-  trapFocus(modal);
-}
-/**
- * Close modal: runs all the required functions
- * to close the modal
- *
- * @param {event} e - click event
- *
- */
-
-
-function closeModal(e) {
-  e.preventDefault();
-  var modal;
-
-  if (e.target.classList.contains('modal__close')) {
-    modal = e.target.closest('.modal__popup');
-  } else {
-    modal = e.target;
-  }
-
-  document.body.classList.remove('modal--in', 'no-scroll');
-  modal.setAttribute('data-hidden', true);
-  setTabIndexes(modal, true);
-  trap.deactivate();
-}
-/**
- * Add background fade: adds the background fade element
- * to the body. Only adds once if element not in source
- *
- */
-
-
-function addBackgroundFade() {
   if (!document.body.contains(modalBackground)) {
     modalBackground.setAttribute('class', 'modal__background');
     document.body.appendChild(modalBackground);
   }
-}
-/**
- * Set tab indexes: when the modal is closed, the anchors
- * lose their tab indexes, when the modal is open, the
- * attr is removed so the user can tab through them
- *
- * @param {HTMLElement} modal - the modal
- * @param {boolean} removeTabIndex - no index or remove
- *
- */
 
-
-function setTabIndexes(modal, removeTabIndex) {
-  var elements = modal.querySelectorAll('a');
-  elements.forEach(function (el) {
-    if (removeTabIndex) {
-      el.setAttribute('tabindex', '-1');
-    } else {
-      el.removeAttribute('tabindex');
+  dialog.addEventListener('keydown', function (e) {
+    if (e.keyCode === 27) {
+      e.preventDefault();
+      closeDialog(dialog, modalBackground);
     }
   });
-}
-/**
- * Trap focus: focus needs to be trapped inside the
- * modal when it's opened. This function takes care of
- * this
- *
- * @param {HTMLElement} modal - the modal
- *
- */
+  closeBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    closeDialog(dialog, modalBackground);
+  });
+  trapFocus(dialog);
+  document.body.classList.add('modal--in', 'no-scroll');
 
+  if (slider && dialogArray.length > 1) {
+    createControl(dialog, dialogArray);
+  }
+}
+
+function createControl(dialog, dialogArray) {
+  var position = parseInt(dialog.getAttribute('data-position'));
+  var buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'modal__buttons modal__buttons--slider'
+  }]);
+  var buttonPrev = controlButton(dialogArray, position, 'left');
+  var buttonNext = controlButton(dialogArray, position, 'right');
+  buttonNext.addEventListener('click', function (e) {
+    e.preventDefault();
+    var pos = buttonNext.getAttribute('data-nextState');
+    addDialogEvent(dialog, dialogArray, pos);
+  });
+  buttonPrev.addEventListener('click', function (e) {
+    e.preventDefault();
+    var pos = buttonPrev.getAttribute('data-nextState');
+    addDialogEvent(dialog, dialogArray, pos);
+  });
+  buttonWrapper.appendChild(buttonPrev);
+  buttonWrapper.appendChild(buttonNext);
+  var dialogContent = dialog.querySelector('.modal__content');
+  dialogContent.appendChild(buttonWrapper);
+}
+
+function addDialogEvent(dialog, dialogArray, nextState) {
+  nextState = parseInt(nextState);
+  dialog.querySelector('.modal__heading').innerText = dialogArray[nextState].title;
+  dialog.querySelector('.modal__body-copy').innerHTML = dialogArray[nextState].body;
+
+  if (nextState == 0) {
+    dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(dialogArray.length - 1));
+    dialog.querySelectorAll('.modal__underline-transition')[0].innerText = dialogArray[dialogArray.length - 1].title;
+    dialog.querySelectorAll('.modal__underline-transition')[1].innerText = dialogArray[nextState + 1].title;
+    dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', "".concat(nextState + 1));
+  } else if (nextState == dialogArray.length - 1) {
+    dialog.querySelectorAll('.modal__underline-transition')[0].innerText = dialogArray[nextState - 1].title;
+    dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(nextState - 1));
+    dialog.querySelectorAll('.modal__underline-transition')[1].innerText = dialogArray[0].title;
+    dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', '0');
+  } else {
+    dialog.querySelectorAll('.modal__underline-transition')[0].innerText = dialogArray[nextState - 1].title;
+    dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(nextState - 1));
+    dialog.querySelectorAll('.modal__underline-transition')[1].innerText = dialogArray[nextState + 1].title;
+    dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', "".concat(nextState + 1));
+  }
+}
+
+function controlButton(dialogArray, position, direction) {
+  var button = document.createElement('button');
+  var buttonLabel = document.createElement('span');
+  buttonLabel.classList.add('modal__underline-transition');
+  var nextState = checkNextState(dialogArray, position, direction);
+  button.setAttribute('data-nextstate', "".concat(nextState));
+  buttonLabel.innerText = dialogArray[nextState].title;
+  var buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_5__["createHTMLElement"])('span', [{
+    label: 'class',
+    val: "modal__buttons__icon far fa-long-arrow-".concat(direction)
+  }]);
+  button.appendChild(buttonLabel);
+  button.appendChild(buttonIcon);
+  return button;
+}
+
+function checkNextState(dialogArray, position, direction) {
+  var pos = parseInt("".concat(position));
+  var nextState;
+
+  if (pos == 0) {
+    if (direction === 'left') {
+      nextState = dialogArray.length - 1;
+    } else {
+      nextState = pos + 1;
+    }
+  } else if (pos == dialogArray.length - 1) {
+    if (direction === 'left') {
+      nextState = pos - 1;
+    } else {
+      nextState = 0;
+    }
+  } else {
+    if (direction === 'left') {
+      nextState = pos - 1;
+    } else {
+      nextState = pos + 1;
+    }
+  }
+
+  return nextState;
+}
+
+function closeDialog(dialog, background) {
+  dialog.parentNode.removeChild(dialog);
+  background.parentNode.removeChild(background);
+  document.body.classList.remove('modal--in', 'no-scroll');
+  trap.deactivate();
+}
 
 function trapFocus(modal) {
   var modalInner = modal.querySelector('.modal__inner');
-  trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalInner, {
+  trap = focus_trap__WEBPACK_IMPORTED_MODULE_4___default()(modalInner, {
     clickOutsideDeactivates: true
   });
   trap.activate();
