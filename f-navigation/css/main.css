@@ -43137,49 +43137,61 @@ button
     padding-bottom: 0.5rem;
 }
 
-.embedded-video {
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+@media (max-width: 1023px) {
+    main > .lifelong-learning .embedded-video .youtube-video {
+        margin-top: 1.25rem;
+    }
+    main > .lifelong-learning .embedded-video-details__heading:after {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
-@media (min-width: 768px) {
-    .embedded-video {
-        grid-column-gap: 1rem;
+@media (min-width: 1024px) {
+    main .embedded-video {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
+    main .embedded-video--with-heading .embedded-video-details {
+        width: calc(35% - 2rem);
+        margin-right: 2rem;
+    }
+    main .embedded-video--with-heading .youtube-video {
+        width: 65%;
+    }
+}
+
+.embedded-video {
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1.5rem;
 }
 
 @media (min-width: 901px) {
     .embedded-video {
-        grid-column-gap: 1.5rem;
+        padding-bottom: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 2rem;
     }
 }
 
-.embedded-video .youtube-video__align-right {
-    grid-column: 8 / 19;
-    margin-top: 0;
-}
-
-@media screen and (max-width: 900px) {
-    .embedded-video .youtube-video__align-right {
-        margin-top: 1.25rem;
-    }
-}
-
-.embedded-video-details {
+.embedded-video .embedded-video-details {
     align-items: center;
     display: flex;
-    grid-column: 1 / 8;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.embedded-video-details__heading {
+.embedded-video .embedded-video-details__heading {
     margin-top: 0;
 }
 
-.embedded-video-details__seperator {
+.embedded-video .embedded-video-details__heading:after {
     background: #5d184a;
+    content: '';
     display: block;
     height: 0.25rem;
     margin-bottom: 2rem;
@@ -43187,15 +43199,11 @@ button
     width: 6rem;
 }
 
-@media screen and (max-width: 432px) {
-    .embedded-video-details__seperator {
+@media (max-width: 1023px) {
+    .embedded-video .embedded-video-details__heading:after {
         margin-bottom: 1.25rem;
         margin-top: 1.25rem;
     }
-}
-
-.youtube-video {
-    grid-column: 1 / -1;
 }
 
 .youtube-video__wrapper {
@@ -43217,23 +43225,6 @@ button
 .youtube-video__caption-element--text,
 .youtube-video__caption-element--time {
     display: block;
-}
-
-@media screen and (max-width: 900px) {
-    .embedded-video .youtube-video__align-right,
-    .embedded-video-details {
-        grid-column: 3 / 11;
-    }
-    .youtube-video {
-        grid-column: 1 / -1;
-    }
-}
-
-@media screen and (max-width: 432px) {
-    .embedded-video .youtube-video__align-right,
-    .embedded-video-details {
-        grid-column: 1 / -1;
-    }
 }
 
 .finder__query {
@@ -49906,6 +49897,21 @@ button
     }
 }
 
+@media (max-width: 1023px) {
+    main > .lifelong-learning .lifelong-learning__video {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    main > .lifelong-learning .lifelong-learning__video {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
 @media (max-width: 899px) {
     main > .lifelong-learning .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact {
         grid-template-columns: repeat(24, 1fr);
@@ -50515,42 +50521,6 @@ button
     width: 6rem;
 }
 
-.lifelong-learning .lifelong-learning__video {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    background: #fdf0ed;
-    padding: 2rem;
-}
-
-@media (min-width: 901px) {
-    .lifelong-learning .lifelong-learning__video {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .lifelong-learning .lifelong-learning__video {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (min-width: 1441px) {
-    .lifelong-learning .lifelong-learning__video {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-.lifelong-learning .embedded-video {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
 .lifelong-learning .lifelong-learning__tutors {
     padding-bottom: 4.25rem;
     padding-top: 4.25rem;
@@ -50577,17 +50547,21 @@ button
     justify-content: center;
 }
 
+.lifelong-learning .lifelong-learning__video {
+    background: #fdf0ed;
+}
+
 @media (min-width: 768px) {
     .lifelong-learning .tabs .tabs__panel {
         border: 0.125rem solid #d8d8d8;
     }
 }
 
-.lifelong-learning__content + .lifelong-learning__contact {
+.lifelong-learning .lifelong-learning__content + .lifelong-learning__contact {
     margin-top: 2rem;
 }
 
-.lifelong-learning__contact {
+.lifelong-learning .lifelong-learning__contact {
     margin-left: 1rem;
     margin-right: 1rem;
     max-width: 80rem;
@@ -50598,54 +50572,54 @@ button
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-bottom: 2rem;
     padding-bottom: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 2rem;
-    margin-bottom: 2rem;
 }
 
 @media (min-width: 901px) {
-    .lifelong-learning__contact {
+    .lifelong-learning .lifelong-learning__contact {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 901px) {
-    .lifelong-learning__contact {
+    .lifelong-learning .lifelong-learning__contact {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
 @media (min-width: 1441px) {
-    .lifelong-learning__contact {
+    .lifelong-learning .lifelong-learning__contact {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (min-width: 769px) {
-    .lifelong-learning__contact {
+    .lifelong-learning .lifelong-learning__contact {
         flex-direction: row;
     }
 }
 
-.lifelong-learning__contact .lifelong-learning__contact__heading {
+.lifelong-learning .lifelong-learning__contact .lifelong-learning__contact__heading {
     margin-top: 0;
     text-align: center;
 }
 
 @media (min-width: 769px) {
-    .lifelong-learning__contact .lifelong-learning__contact__heading {
+    .lifelong-learning .lifelong-learning__contact .lifelong-learning__contact__heading {
         align-self: center;
         margin-right: 2rem;
         text-align: left;
     }
 }
 
-.lifelong-learning__contact .cta-block {
+.lifelong-learning .lifelong-learning__contact .cta-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50653,23 +50627,23 @@ button
 }
 
 @media (min-width: 769px) {
-    .lifelong-learning__contact .cta-block {
+    .lifelong-learning .lifelong-learning__contact .cta-block {
         flex-direction: row;
     }
 }
 
-.lifelong-learning__contact .cta-block li {
+.lifelong-learning .lifelong-learning__contact .cta-block li {
     align-self: stretch;
     margin-top: 1rem;
 }
 
 @media (min-width: 769px) {
-    .lifelong-learning__contact .cta-block li {
+    .lifelong-learning .lifelong-learning__contact .cta-block li {
         margin-top: 0;
     }
 }
 
-.lifelong-learning__contact .cta-block li a {
+.lifelong-learning .lifelong-learning__contact .cta-block li a {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -50691,29 +50665,29 @@ button
     justify-content: center;
 }
 
-.lifelong-learning__contact .cta-block li a:disabled {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:disabled {
     cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .lifelong-learning__contact .cta-block li a {
+    .lifelong-learning .lifelong-learning__contact .cta-block li a {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .lifelong-learning__contact .cta-block li a {
+    .lifelong-learning .lifelong-learning__contact .cta-block li a {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.lifelong-learning__contact .cta-block li a span {
+.lifelong-learning .lifelong-learning__contact .cta-block li a span {
     transition: transform 0.6s;
 }
 
-.lifelong-learning__contact .cta-block li a:after {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:after {
     content: '\f061';
     font-family: 'Font Awesome';
     font-style: normal;
@@ -50727,66 +50701,66 @@ button
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .lifelong-learning__contact .cta-block li a:after {
+    .lifelong-learning .lifelong-learning__contact .cta-block li a:after {
         transition: none;
     }
 }
 
-.lifelong-learning__contact .cta-block li a:focus, .lifelong-learning__contact .cta-block li a:active {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:focus, .lifelong-learning .lifelong-learning__contact .cta-block li a:active {
     background-color: transparent;
     border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
-.lifelong-learning__contact .cta-block li a:focus span, .lifelong-learning__contact .cta-block li a:active span {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:focus span, .lifelong-learning .lifelong-learning__contact .cta-block li a:active span {
     transform: translateX(-0.75rem);
 }
 
-.lifelong-learning__contact .cta-block li a:focus:after, .lifelong-learning__contact .cta-block li a:active:after {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:focus:after, .lifelong-learning .lifelong-learning__contact .cta-block li a:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .lifelong-learning__contact .cta-block li a:hover {
+    .lifelong-learning .lifelong-learning__contact .cta-block li a:hover {
         background-color: transparent;
         border: 0.125rem solid #d61726;
         color: #ffffff;
     }
-    .lifelong-learning__contact .cta-block li a:hover span {
+    .lifelong-learning .lifelong-learning__contact .cta-block li a:hover span {
         transform: translateX(-0.75rem);
     }
-    .lifelong-learning__contact .cta-block li a:hover:after {
+    .lifelong-learning .lifelong-learning__contact .cta-block li a:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.lifelong-learning__contact .cta-block li a:disabled {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:disabled {
     opacity: 0.7;
 }
 
-.lifelong-learning__contact .cta-block li a:disabled span {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:disabled span {
     transform: none;
 }
 
-.lifelong-learning__contact .cta-block li a:disabled:after {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:disabled:after {
     opacity: 0;
     transform: none;
 }
 
-.lifelong-learning__contact .cta-block li a:visited {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:visited {
     border-color: #d61726;
     color: #ffffff;
 }
 
-.lifelong-learning__contact .cta-block li a:focus {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:focus {
     background: #d61726;
     border-color: #d61726;
     color: #ffffff;
 }
 
-.lifelong-learning__contact .cta-block li a:focus:focus, .lifelong-learning__contact .cta-block li a:focus:active {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:focus:focus, .lifelong-learning .lifelong-learning__contact .cta-block li a:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
@@ -50794,76 +50768,76 @@ button
 }
 
 @media (hover: hover) {
-    .lifelong-learning__contact .cta-block li a:hover {
+    .lifelong-learning .lifelong-learning__contact .cta-block li a:hover {
         background: #ffffff;
         border-color: #d61726;
         color: #d61726;
     }
 }
 
-.lifelong-learning__contact .cta-block li a:active {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:active {
     border-color: #d61726;
     box-shadow: none;
     color: #d61726;
     background: transparent;
 }
 
-.lifelong-learning__contact .cta-block li a:active:focus, .lifelong-learning__contact .cta-block li a:active:active {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:active:focus, .lifelong-learning .lifelong-learning__contact .cta-block li a:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.lifelong-learning__contact .cta-block li a:disabled {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:disabled {
     color: #ffffff;
     background: #d61726;
     border: 0.125rem solid #d61726;
 }
 
-.lifelong-learning__contact .cta-block li a span {
+.lifelong-learning .lifelong-learning__contact .cta-block li a span {
     transition: none;
 }
 
-.lifelong-learning__contact .cta-block li a:visited {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:visited {
     border-color: #d8d8d8;
     color: #1e1e1e;
 }
 
-.lifelong-learning__contact .cta-block li a:after {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:after {
     content: '';
 }
 
-.lifelong-learning__contact .cta-block li a:focus, .lifelong-learning__contact .cta-block li a:active {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:focus, .lifelong-learning .lifelong-learning__contact .cta-block li a:active {
     background-color: #d8d8d8;
     border-color: #d8d8d8;
     color: #1e1e1e;
 }
 
 @media (hover: hover) {
-    .lifelong-learning__contact .cta-block li a:hover {
+    .lifelong-learning .lifelong-learning__contact .cta-block li a:hover {
         background-color: #bfbfbf;
         border-color: #bfbfbf;
         color: #1e1e1e;
     }
 }
 
-.lifelong-learning__contact .cta-block li a:active {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:active {
     background-color: #bfbfbf;
     border-color: #bfbfbf;
 }
 
-.lifelong-learning__contact .cta-block li a:disabled {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:disabled {
     color: #1e1e1e;
     background: #d8d8d8;
     border-color: #d8d8d8;
 }
 
-.lifelong-learning__contact .cta-block li a:active span, .lifelong-learning__contact .cta-block li a:focus span, .lifelong-learning__contact .cta-block li a:hover span {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:active span, .lifelong-learning .lifelong-learning__contact .cta-block li a:focus span, .lifelong-learning .lifelong-learning__contact .cta-block li a:hover span {
     transform: none;
 }
 
-.lifelong-learning__contact .cta-block li a:focus:focus, .lifelong-learning__contact .cta-block li a:focus:active, .lifelong-learning__contact .cta-block li a:active:focus, .lifelong-learning__contact .cta-block li a:active:active {
+.lifelong-learning .lifelong-learning__contact .cta-block li a:focus:focus, .lifelong-learning .lifelong-learning__contact .cta-block li a:focus:active, .lifelong-learning .lifelong-learning__contact .cta-block li a:active:focus, .lifelong-learning .lifelong-learning__contact .cta-block li a:active:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: dotted;
@@ -50871,7 +50845,7 @@ button
 }
 
 @media (min-width: 769px) {
-    .lifelong-learning__contact .cta-block li:not(:last-of-type) {
+    .lifelong-learning .lifelong-learning__contact .cta-block li:not(:last-of-type) {
         margin-right: 2rem;
     }
 }
