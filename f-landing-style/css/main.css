@@ -48426,10 +48426,31 @@ div.widget-123_test_ {
     }
 }
 
+.landing .landing__middle1 h2 {
+    grid-column: 4/15;
+}
+
+@media (max-width: 900px) {
+    .landing .landing__middle1 h2 {
+        grid-column: 1/-1;
+    }
+}
+
+.landing .landing__middle1 p {
+    grid-column: 4/15;
+}
+
+@media (max-width: 900px) {
+    .landing .landing__middle1 p {
+        grid-column: 1/-1;
+    }
+}
+
 .landing .landing_middle1_content {
     grid-row-gap: 0;
     display: grid;
     max-width: 80rem;
+    margin: 1rem 0;
 }
 
 @media (max-width: 432px) {
