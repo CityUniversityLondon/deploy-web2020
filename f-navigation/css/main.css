@@ -50176,6 +50176,7 @@ button
 
 .lifelong-learning .wrapper--key-information--lifelong-learning {
     background-color: #f2f2f2;
+    border-bottom: 0.125rem solid #d8d8d8;
     padding-bottom: 2rem;
 }
 
@@ -50438,7 +50439,6 @@ button
 }
 
 .lifelong-learning .lifelong-learning__testimonials {
-    border-top: 0.125rem solid #d8d8d8;
     padding-bottom: 4.25rem;
     padding-top: 4.25rem;
 }
