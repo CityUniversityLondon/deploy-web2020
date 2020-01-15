@@ -24931,7 +24931,7 @@ _:-ms-lang(x),
     margin-right: 0;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 768px) {
     .chart {
         flex: 0 0 20%;
     }
@@ -50997,7 +50997,7 @@ button
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 768px) {
     .course--undergraduate__charts {
         display: flex;
     }
