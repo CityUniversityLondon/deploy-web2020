@@ -46812,6 +46812,19 @@ button
     main > .case-study .case-study--research__details__wrap__container .case-study__overview__multimedia-banner__image {
         grid-column: 6 / -6;
     }
+    main > .case-study .wrapper__case-study__overview__main .case-study__overview__multimedia-banner__video .embedded-video,
+    main > .case-study .wrapper__case-study__overview__main .case-study__overview__multimedia-banner__image .embedded-video,
+    main > .case-study .case-study__overview__multimedia-banner .case-study__overview__multimedia-banner__video .embedded-video,
+    main > .case-study .case-study__overview__multimedia-banner .case-study__overview__multimedia-banner__image .embedded-video,
+    main > .case-study .case-study__content__container .case-study__overview__multimedia-banner__video .embedded-video,
+    main > .case-study .case-study__content__container .case-study__overview__multimedia-banner__image .embedded-video,
+    main > .case-study .case-study--research__details__wrap__container .case-study__overview__multimedia-banner__video .embedded-video,
+    main > .case-study .case-study--research__details__wrap__container .case-study__overview__multimedia-banner__image .embedded-video {
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+    }
     main > .case-study .wrapper__case-study__overview__main .case-study__overview__multimedia-banner__video .youtube-video,
     main > .case-study .wrapper__case-study__overview__main .case-study__overview__multimedia-banner__image .youtube-video,
     main > .case-study .case-study__overview__multimedia-banner .case-study__overview__multimedia-banner__video .youtube-video,
@@ -46821,19 +46834,6 @@ button
     main > .case-study .case-study--research__details__wrap__container .case-study__overview__multimedia-banner__video .youtube-video,
     main > .case-study .case-study--research__details__wrap__container .case-study__overview__multimedia-banner__image .youtube-video {
         width: 100%;
-    }
-    main > .case-study .wrapper__case-study__overview__main .case-study__overview__multimedia-banner__video .youtube-video .embedded-video,
-    main > .case-study .wrapper__case-study__overview__main .case-study__overview__multimedia-banner__image .youtube-video .embedded-video,
-    main > .case-study .case-study__overview__multimedia-banner .case-study__overview__multimedia-banner__video .youtube-video .embedded-video,
-    main > .case-study .case-study__overview__multimedia-banner .case-study__overview__multimedia-banner__image .youtube-video .embedded-video,
-    main > .case-study .case-study__content__container .case-study__overview__multimedia-banner__video .youtube-video .embedded-video,
-    main > .case-study .case-study__content__container .case-study__overview__multimedia-banner__image .youtube-video .embedded-video,
-    main > .case-study .case-study--research__details__wrap__container .case-study__overview__multimedia-banner__video .youtube-video .embedded-video,
-    main > .case-study .case-study--research__details__wrap__container .case-study__overview__multimedia-banner__image .youtube-video .embedded-video {
-        padding-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 0;
     }
     main > .case-study .wrapper__case-study__overview__main .case-study__content,
     main > .case-study .wrapper__case-study__overview__main .case-study--research__details,
@@ -46928,6 +46928,19 @@ button
     main .navigation--secondary + .case-study .case-study--research__details__wrap__container .case-study__overview__multimedia-banner__video,
     main .navigation--secondary + .case-study .case-study--research__details__wrap__container .case-study__overview__multimedia-banner__image {
         grid-column: 3 / -3;
+    }
+    main .navigation--secondary + .case-study .wrapper__case-study__overview__main .case-study__overview__multimedia-banner__video .embedded-video,
+    main .navigation--secondary + .case-study .wrapper__case-study__overview__main .case-study__overview__multimedia-banner__image .embedded-video,
+    main .navigation--secondary + .case-study .case-study__overview__multimedia-banner .case-study__overview__multimedia-banner__video .embedded-video,
+    main .navigation--secondary + .case-study .case-study__overview__multimedia-banner .case-study__overview__multimedia-banner__image .embedded-video,
+    main .navigation--secondary + .case-study .case-study__content__container .case-study__overview__multimedia-banner__video .embedded-video,
+    main .navigation--secondary + .case-study .case-study__content__container .case-study__overview__multimedia-banner__image .embedded-video,
+    main .navigation--secondary + .case-study .case-study--research__details__wrap__container .case-study__overview__multimedia-banner__video .embedded-video,
+    main .navigation--secondary + .case-study .case-study--research__details__wrap__container .case-study__overview__multimedia-banner__image .embedded-video {
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
     }
     main .navigation--secondary + .case-study .wrapper__case-study__overview__main .case-study__overview__multimedia-banner__video .youtube-video,
     main .navigation--secondary + .case-study .wrapper__case-study__overview__main .case-study__overview__multimedia-banner__image .youtube-video,
