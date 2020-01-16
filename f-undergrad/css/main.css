@@ -41928,6 +41928,22 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
+.promo-content--v2 {
+    border: none;
+    background-color: #d61726;
+    background-image: linear-gradient(to right, #d61726, #5d184a);
+    color: #ffffff;
+    display: flex;
+}
+
+.promo-content--v2 img {
+    width: 3.25rem;
+}
+
+.promo-content--v2__card__wrapper {
+    flex: 1;
+}
+
 .promo-content {
     border: 0.0625rem solid #541b85;
     background-color: #ede8f2;
