@@ -41560,6 +41560,12 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
+.promo-content--courses {
+    background-color: #d61726;
+    background-image: linear-gradient(to left, #d61726 100%, v #5d184a 0%);
+    border: none;
+}
+
 .promo-content {
     border: 0.0625rem solid #541b85;
     background-color: #ede8f2;
