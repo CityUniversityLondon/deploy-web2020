@@ -48309,6 +48309,10 @@ main .home {
     margin-bottom: 1rem;
 }
 
+.landing .landing__top > h2 {
+    text-align: center;
+}
+
 .landing .landing__top .carousel-gallery-default {
     background-color: initial;
     grid-template-columns: repeat(24, 1fr);
@@ -48332,6 +48336,29 @@ main .home {
     background-color: #3e1031;
     padding: 1rem;
     grid-column: 4/15;
+}
+
+.landing .landing__top .figure--image {
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .landing .landing__top .figure--image {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .landing .landing__top .figure--image {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+.landing .landing__top .figure--image picture,
+.landing .landing__top .figure--image figcaption {
+    grid-column: 8/18;
 }
 
 .landing .landing__top__content {
@@ -48406,6 +48433,8 @@ main .home {
 
 .landing .landing__middle1 .accordion {
     grid-column: 8/18;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 @media (max-width: 899px) {
@@ -48454,11 +48483,24 @@ main .home {
 }
 
 .landing .landing_middle1_content .landing__middle1__content--heading {
-    grid-column: 4/15;
+    grid-column: 8/18;
 }
 
 .landing .landing_middle1_content .landing__middle1__content--text {
-    grid-column: 4/15;
+    grid-column: 8/18;
+}
+
+.landing .landing__middle2 > h2 {
+    text-align: center;
+}
+
+.landing .landing__middle2 .swiper-viewport {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.landing .landing__middle2 .slider__active-slide {
+    grid-column: 8/18;
 }
 
 @media (min-width: 901px) {
@@ -48532,6 +48574,32 @@ main .home {
         -moz-column-count: 2;
              column-count: 2;
     }
+}
+
+.landing .embedded-video {
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .landing .embedded-video {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .landing .embedded-video {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+.landing .embedded-video .youtube-video {
+    grid-column: 8/18;
+}
+
+.landing .landing__top__cta {
+    padding: 3rem 0;
 }
 
 .landing .cta-block {
