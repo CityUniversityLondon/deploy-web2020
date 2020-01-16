@@ -46820,6 +46820,7 @@ button
     main > .case-study .case-study__content__container .case-study__overview__multimedia-banner__image .embedded-video,
     main > .case-study .case-study--research__details__wrap__container .case-study__overview__multimedia-banner__video .embedded-video,
     main > .case-study .case-study--research__details__wrap__container .case-study__overview__multimedia-banner__image .embedded-video {
+        margin-top: 1.5rem;
         padding-bottom: 0;
         padding-left: 0;
         padding-right: 0;
@@ -46937,6 +46938,7 @@ button
     main .navigation--secondary + .case-study .case-study__content__container .case-study__overview__multimedia-banner__image .embedded-video,
     main .navigation--secondary + .case-study .case-study--research__details__wrap__container .case-study__overview__multimedia-banner__video .embedded-video,
     main .navigation--secondary + .case-study .case-study--research__details__wrap__container .case-study__overview__multimedia-banner__image .embedded-video {
+        margin-top: 1.5rem;
         padding-bottom: 0;
         padding-left: 0;
         padding-right: 0;
