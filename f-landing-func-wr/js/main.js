@@ -4558,56 +4558,36 @@ function Finder(props) {
     startRank: params.get('start_rank') || 1,
     numRanks: params.get('num_ranks') || props.config.numRanks,
     facets: getFacetParams(props.config.facetLabels, params)
-  };
-  /**
-   * Dummy, empty Funnelback response object for initial state.
-   */
-
-  var initialResponse = {
-    bestBets: [],
-    facets: [],
-    results: [],
-    spell: null,
-    summary: {
-      currEnd: 0,
-      currStart: 0,
-      numRanks: 0,
-      totalMatching: 0
-    }
   }; // State objects for the Funnelback query and response
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])(initialQuery),
       _useState2 = _slicedToArray(_useState, 2),
       query = _useState2[0],
-      setQuery = _useState2[1];
-
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])(initialResponse),
-      _useState4 = _slicedToArray(_useState3, 1),
-      setResponse = _useState4[0]; // Boolean to indicate when a query is in progress
+      setQuery = _useState2[1]; // Boolean to indicate when a query is in progress
 
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])(true),
-      _useState6 = _slicedToArray(_useState5, 2),
-      updating = _useState6[0],
-      setUpdating = _useState6[1]; // Request token from the Funnelback request object, so we can cancel if
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])(true),
+      _useState4 = _slicedToArray(_useState3, 2),
+      updating = _useState4[0],
+      setUpdating = _useState4[1]; // Request token from the Funnelback request object, so we can cancel if
   // another request is triggered by the user
 
 
-  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])({
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])({
     cancel: function cancel() {}
   }),
-      _useState8 = _slicedToArray(_useState7, 2),
-      call = _useState8[0],
-      setCall = _useState8[1]; // useEffect doesn't deep inspect objects, so we need an additional, plain
+      _useState6 = _slicedToArray(_useState5, 2),
+      call = _useState6[0],
+      setCall = _useState6[1]; // useEffect doesn't deep inspect objects, so we need an additional, plain
   // state variable to indicate that the query state has changed and the
   // component should render
   // the value isn't important, it's just easy to toggle a bool back and forth
 
 
-  var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])(false),
-      _useState10 = _slicedToArray(_useState9, 2),
-      update = _useState10[0],
-      setUpdate = _useState10[1]; // Retrieve Funnelback results
+  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])(false),
+      _useState8 = _slicedToArray(_useState7, 2),
+      update = _useState8[0],
+      setUpdate = _useState8[1]; // Retrieve Funnelback results
 
 
   Object(react__WEBPACK_IMPORTED_MODULE_14__["useEffect"])(function () {
@@ -4636,11 +4616,9 @@ function Finder(props) {
     }); // when the response from Funnelback arrives,
     // update the results and display them
 
-    request.then(function (data) {
-      setResponse(data);
+    request.then(function () {
       setUpdating(false);
     }).catch(function () {
-      setResponse(initialResponse);
       setUpdating(false);
     });
   }, [update]); // update props so child components can update the query
