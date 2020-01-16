@@ -32860,6 +32860,87 @@ article figure figcaption a:active {
     line-height: 0.7em;
 }
 
+.promo-strap .promo-strap__content a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    color: #ffffff;
+    background-image: linear-gradient(#ffffff, #ffffff);
+    background-position: 0% 100%;
+    background-size: 0% 0.125rem;
+    background-repeat: no-repeat;
+    transition: background-size 0.6s ease-in;
+    padding-bottom: 0.125rem;
+}
+
+@media (hover: hover) {
+    .promo-strap .promo-strap__content a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.promo-strap .promo-strap__content a:focus, .promo-strap .promo-strap__content a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.promo-strap .promo-strap__content a:focus, .promo-strap .promo-strap__content a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.promo-strap .promo-strap__content a:visited {
+    color: #ffffff;
+}
+
+.promo-strap .promo-strap__content a:focus {
+    color: #ffffff;
+    background-size: 100% 0.125rem;
+}
+
+@media (hover: hover) {
+    .promo-strap .promo-strap__content a:hover {
+        color: #ffffff;
+        background-image: linear-gradient(#ffffff, #ffffff);
+        background-size: 100% 0.125rem;
+    }
+}
+
 .highlighted-content__border {
     border-left: 0.5rem solid #d61726;
     margin-bottom: 1rem;
