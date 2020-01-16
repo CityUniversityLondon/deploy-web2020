@@ -2821,7 +2821,7 @@ function finder__query(props) {
   };
 
   const submitForm = () => {
-    window.location.replace("https://web2020.city.ac.uk/documentation/paint-layouts/listing/courses?query=".concat(partialQuery));
+    window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?query=".concat(partialQuery));
   };
 
   const submitSuggestion = s => {
