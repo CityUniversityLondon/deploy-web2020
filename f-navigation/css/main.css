@@ -21453,7 +21453,6 @@ Assign mixin:
     background-color: #e5e5e5;
     grid-column: 1 / -1;
     height: 8rem;
-    margin-top: 1rem;
 }
 
 @media (max-width: 767px) {
