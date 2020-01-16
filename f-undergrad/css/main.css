@@ -41928,20 +41928,43 @@ a.modal__close:active, a.modal__close:focus {
     }
 }
 
-.promo-content--v2 {
-    border: none;
+.promo-box {
     background-color: #d61726;
     background-image: linear-gradient(to right, #d61726, #5d184a);
     color: #ffffff;
     display: flex;
+    padding: 0.75rem 2rem 2rem;
 }
 
-.promo-content--v2 img {
-    width: 3.25rem;
+@media (min-width: 901px) {
+    .promo-box {
+        padding: 0.75rem 5rem 2rem 5rem;
+    }
 }
 
-.promo-content--v2__card__wrapper {
+.promo-box__card {
     flex: 1;
+    display: flex;
+}
+
+.promo-box__card:first-of-type {
+    margin-right: 2rem;
+}
+
+.promo-box__card div:first-child {
+    align-self: center;
+}
+
+.promo-box__card__body {
+    display: flex;
+    padding-top: 1.25rem;
+}
+
+.promo-box__card__body img {
+    min-width: 3.25rem;
+    max-width: 3.25rem;
+    display: block;
+    margin-right: 1.25rem;
 }
 
 .promo-content {
