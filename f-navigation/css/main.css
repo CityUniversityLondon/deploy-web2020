@@ -32757,6 +32757,109 @@ article figure figcaption a:active {
     height: 100%;
 }
 
+.promo-strap {
+    background-color: #2a0d43;
+    background: linear-gradient(90deg, #2a0d43 0%, #b91924 100%);
+    color: #ffffff;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.promo-strap .promo-strap__content {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: center;
+}
+
+.promo-strap .promo-strap__content i,
+.promo-strap .promo-strap__content em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.promo-strap .promo-strap__content b,
+.promo-strap .promo-strap__content strong {
+    font-weight: inherit;
+}
+
+.promo-strap .promo-strap__content i,
+.promo-strap .promo-strap__content em {
+    font-style: italic;
+}
+
+.promo-strap .promo-strap__content u {
+    text-decoration: none;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .promo-strap .promo-strap__content {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .promo-strap .promo-strap__content {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .promo-strap .promo-strap__content {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .promo-strap .promo-strap__content {
+        letter-spacing: -0.017em;
+    }
+}
+
+.promo-strap .promo-strap__content b,
+.promo-strap .promo-strap__content strong {
+    font-weight: 600;
+}
+
+@media (min-width: 901px) {
+    .promo-strap .promo-strap__content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .promo-strap .promo-strap__content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    .promo-strap .promo-strap__content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.promo-strap .promo-strap__content sup,
+.promo-strap .promo-strap__content sub {
+    font-size: 0.7em;
+    line-height: 0.7em;
+}
+
 .highlighted-content__border {
     border-left: 0.5rem solid #d61726;
     margin-bottom: 1rem;
