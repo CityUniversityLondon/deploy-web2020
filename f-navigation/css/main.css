@@ -46568,8 +46568,7 @@ button
     }
 }
 
-@media (max-width: 432px) {
-    main > .case-study .case-study__content__container,
+@media (max-width: 1023px) {
     main > .case-study .case-study--research__details__section {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -46579,31 +46578,28 @@ button
     }
 }
 
-@media (max-width: 432px) and (min-width: 901px) {
-    main > .case-study .case-study__content__container,
+@media (max-width: 1023px) and (min-width: 901px) {
     main > .case-study .case-study--research__details__section {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-@media (max-width: 432px) and (min-width: 901px) {
-    main > .case-study .case-study__content__container,
+@media (max-width: 1023px) and (min-width: 901px) {
     main > .case-study .case-study--research__details__section {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media (max-width: 432px) and (min-width: 1441px) {
-    main > .case-study .case-study__content__container,
+@media (max-width: 1023px) and (min-width: 1441px) {
     main > .case-study .case-study--research__details__section {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-@media (max-width: 432px) {
+@media (max-width: 1023px) {
     main > .case-study .case-study--research__details h2 {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -46613,22 +46609,53 @@ button
     }
 }
 
-@media (max-width: 432px) and (min-width: 901px) {
+@media (max-width: 1023px) and (min-width: 901px) {
     main > .case-study .case-study--research__details h2 {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-@media (max-width: 432px) and (min-width: 901px) {
+@media (max-width: 1023px) and (min-width: 901px) {
     main > .case-study .case-study--research__details h2 {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media (max-width: 432px) and (min-width: 1441px) {
+@media (max-width: 1023px) and (min-width: 1441px) {
     main > .case-study .case-study--research__details h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 432px) {
+    main > .case-study .case-study__content__container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 432px) and (min-width: 901px) {
+    main > .case-study .case-study__content__container {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 432px) and (min-width: 901px) {
+    main > .case-study .case-study__content__container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 432px) and (min-width: 1441px) {
+    main > .case-study .case-study__content__container {
         margin-left: auto;
         margin-right: auto;
     }
