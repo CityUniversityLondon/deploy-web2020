@@ -46184,6 +46184,24 @@ button
     }
 }
 
+.logos-list--nolinks {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.logos-list--nolinks__logo {
+    list-style: none;
+    width: 4rem;
+    margin-top: 0;
+}
+
+.logos-list--nolinks__logo:not(:first-child) {
+    margin-left: 0.5rem;
+}
+
 .generic {
     display: block;
 }
@@ -48500,63 +48518,39 @@ main .landing {
     }
 }
 
-.landing--functional .finder__wrap {
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-}
-
-@media (min-width: 768px) {
-    .landing--functional .finder__wrap {
-        grid-column-gap: 1rem;
+.landing--functional {
+    /*
+    header {
+        //grid-column: 1 / -1;
     }
-}
 
-@media (min-width: 901px) {
-    .landing--functional .finder__wrap {
-        grid-column-gap: 1.5rem;
+    .finder__wrap {
+        @include standard-grid();
     }
-}
 
-.landing--functional .content__wrap {
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-    grid-template-rows: auto;
-}
+    .content__wrap {
+        @include standard-grid();
+        grid-template-rows: auto;
 
-@media (min-width: 768px) {
-    .landing--functional .content__wrap {
-        grid-column-gap: 1rem;
+        @include media('<=mobile') {
+            grid-template-areas: 'main main main main main main';
+        }
+
+        @include media('>mobile') {
+            grid-template-areas: '. . main main main main main main main main . .';
+        }
+
+        @include media('>between') {
+            grid-template-areas: '. . . . . main main main main main main main main . . . . .';
+        }
+
+        > .content {
+            //@include standard-margins();
+            grid-area: main;
+        }
     }
-}
 
-@media (min-width: 901px) {
-    .landing--functional .content__wrap {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-@media (max-width: 432px) {
-    .landing--functional .content__wrap {
-        grid-template-areas: 'main main main main main main';
-    }
-}
-
-@media (min-width: 433px) {
-    .landing--functional .content__wrap {
-        grid-template-areas: '. . main main main main main main main main . .';
-    }
-}
-
-@media (min-width: 901px) {
-    .landing--functional .content__wrap {
-        grid-template-areas: '. . . . . main main main main main main main main . . . . .';
-    }
-}
-
-.landing--functional .content__wrap > .content {
-    grid-area: main;
+    */
 }
 
 .listing {
