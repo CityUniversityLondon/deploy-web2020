@@ -5408,6 +5408,11 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'modal',
       bodyClassName = className + '__body';
 let trap;
+/**
+ * launch function
+ *
+ * @param {HTMLElement} modal - an HTML element with the modal class.
+ */
 
 function launchModal(modal) {
   let dialogArray = [];
@@ -5450,6 +5455,15 @@ function launchModal(modal) {
     });
   });
 }
+/**
+ * function that creates a pop-up dialog, linked to click event in launchModal(modal)
+ *
+ * @param {HTMLElement} parent - an HTML element with the modal class.
+ * @param {number} position - position of the <li> in the <ul>
+ * @param {array} dialogArray - array of objects contaning title and body {title:title, body:body} to build dialog pager
+ *
+ */
+
 
 function createDialog(parent, position, dialogArray) {
   const slider = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(parent.getAttribute('data-slider'));
@@ -5522,6 +5536,15 @@ function createDialog(parent, position, dialogArray) {
     createControl(dialog, dialogArray);
   }
 }
+/**
+ * function that creates pager button on dialog box
+ * this function is triggered by createDialog() if the HTML element with classname modal has data[slider] set to true
+ *
+ * @param {HTMLElement} dialog - an HTML element created by createDialog()
+ * @param {array} dialogArray - array of objects contaning title and body {title:title, body:body} to build dialog pager
+ *
+ */
+
 
 function createControl(dialog, dialogArray) {
   let position = parseInt(dialog.getAttribute('data-position'));
@@ -5546,6 +5569,16 @@ function createControl(dialog, dialogArray) {
   const dialogContent = dialog.querySelector('.modal__content');
   dialogContent.appendChild(buttonWrapper);
 }
+/**
+ * function attached to control button (created by function 'createControl()') click event
+ * it rerenders title, body, button labels of dialog
+ *
+ * @param {HTMLElement} dialog - an HTML element created by createDialog()
+ * @param {array} dialogArray - array of objects contaning title and body {title:title, body:body} to build dialog pager
+ * @param {number} nextState - position of object in dialogArray that will be used to update dialog title, body, and button labels
+ *
+ */
+
 
 function addDialogEvent(dialog, dialogArray, nextState) {
   nextState = parseInt(nextState);
@@ -5569,6 +5602,15 @@ function addDialogEvent(dialog, dialogArray, nextState) {
     dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', "".concat(nextState + 1));
   }
 }
+/**
+ * function that creates HTML structure of dialog control buttons
+ *
+ * @param {array} dialogArray - array of objects contaning title and body {title:title, body:body} to build dialog pager
+ * @param {number} position - position of the <li> in the <ul>, used to calculate nextState
+ * @param {string} direction - either "left" or "right", this will determine the type of icon being attached to the button
+ *
+ */
+
 
 function controlButton(dialogArray, position, direction) {
   const button = document.createElement('button');
@@ -5585,6 +5627,16 @@ function controlButton(dialogArray, position, direction) {
   button.appendChild(buttonIcon);
   return button;
 }
+/**
+ * function calculates and returns nextState
+ * it will be used to create click event of control button
+ *
+ * @param {array} dialogArray - array of objects contaning title and body {title:title, body:body} to build dialog pager
+ * @param {number} position - position of the <li> in the <ul>, used to calculate nextState
+ * @param {string} direction - either "left" or "right"
+ *
+ */
+
 
 function checkNextState(dialogArray, position, direction) {
   const pos = parseInt("".concat(position));
@@ -5612,6 +5664,14 @@ function checkNextState(dialogArray, position, direction) {
 
   return nextState;
 }
+/**
+ * removes dialog from document
+ *
+ * @param {HTMLElement} dialog - HTML element created by created by function createDialog()
+ * @param {HTMLElement} background - background of dialog
+ *
+ */
+
 
 function closeDialog(dialog, background) {
   dialog.parentNode.removeChild(dialog);
