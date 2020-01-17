@@ -55105,6 +55105,18 @@ main .standard-content {
     background-color: #ffffff;
 }
 
+.course--ug__usp__cta li,
+.course--ug__usp__stats li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 0.5rem;
+}
+
+.course--ug__usp__cta li:last-of-type,
+.course--ug__usp__stats li:last-of-type {
+    margin-right: 0;
+}
+
 @media (min-width: 769px) {
     .course--ug__usp__video {
         display: grid;
