@@ -49025,7 +49025,7 @@ main .landing {
         flex-wrap: wrap;
     }
     .course--pgt__related-courses .related-content .card--related-course {
-        flex-basis: 50%;
+        flex: 1;
     }
 }
 
