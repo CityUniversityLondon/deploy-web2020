@@ -26087,44 +26087,57 @@ _:-ms-lang(x),
     padding-bottom: 1rem;
 }
 
-.unibuddy-card {
-    background-color: var(--color-purewhite);
-    padding: 1rem;
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+.footer-cards {
+    padding: 2rem 2rem;
 }
 
-.unibuddy-card--info {
-    display: flex;
+@media (min-width: 901px) {
+    .footer-cards {
+        padding: 2rem 5rem;
+    }
 }
 
-.unibuddy-card--info__image img {
-    max-width: 6rem;
-    height: 6rem;
-    object-fit: cover;
-    border-radius: 100%;
+.footer-cards h2:nth-of-type(2n) {
+    margin-top: 4rem;
 }
 
-.unibuddy-card--info__image .fa-user {
-    font-size: 4rem;
+.footer-cards__contact {
+    margin-left: 0;
 }
 
-.unibuddy-card--info__details {
-    display: flex;
-    flex-direction: column;
-    padding-left: 1rem;
+.footer-cards__contact li {
+    list-style-type: none;
 }
 
-.unibuddy-card--info__details .unibuddy-card--info__details--name {
-    color: #d61726;
-    font-weight: bold;
+.footer-cards__contact li .footer-cards__contact__name:nth-of-type(2n) {
+    margin-top: 2rem;
 }
 
-.unibuddy-card--info__details .unibuddy-card--info__details--level {
-    font-weight: bold;
+@media (min-width: 768px) {
+    .footer-cards__contact li .footer-cards__contact__name:nth-of-type(2n) {
+        margin-top: 0;
+    }
 }
 
-.unibuddy-card--text {
-    padding-bottom: 1rem;
+.footer-cards__contact .icon {
+    margin-right: 1rem;
+}
+
+@media (min-width: 768px) {
+    .footer-cards__contact {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer-cards__contact__name {
+    margin-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+    .footer-cards__contact__name {
+        margin-bottom: 2rem;
+    }
 }
 
 .cms-editor-warning {
@@ -54878,4 +54891,145 @@ main .standard-content {
     .course--ug__charts {
         display: flex;
     }
+}
+
+.course--ug .footer-cards {
+    color: #ffffff;
+}
+
+.course--ug .footer-cards a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #919191 0%, #919191 100%);
+    border-bottom-color: #919191;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #919191;
+}
+
+@media (hover: hover) {
+    .course--ug .footer-cards a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.course--ug .footer-cards a:focus, .course--ug .footer-cards a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .course--ug .footer-cards a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .course--ug .footer-cards a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #919191 0%, #919191 100%);
+    }
+}
+
+.course--ug .footer-cards a:focus, .course--ug .footer-cards a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.course--ug .footer-cards a:visited {
+    border-bottom-color: #919191;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #919191;
+}
+
+.course--ug .footer-cards a:focus {
+    border-bottom-color: #919191;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #919191;
+}
+
+@media (hover: hover) {
+    .course--ug .footer-cards a:hover {
+        border-bottom-color: #919191;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.course--ug .footer-cards a:active {
+    background-color: #919191;
+    border-bottom-color: #919191;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.course--ug .footer-cards h2 {
+    border-bottom: 0.0625rem solid #7c2062;
+    padding-bottom: 0.5rem;
+}
+
+.course--ug .footer-cards h2 .full-width-heading {
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .course--ug .footer-cards h2 .full-width-heading {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .course--ug .footer-cards h2 .full-width-heading {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+.course--ug .footer-cards h2 .full-width-heading h2 {
+    grid-column: 2/-2;
 }
