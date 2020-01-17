@@ -1863,7 +1863,7 @@ function prepareDropdown(element) {
  * Hide list items: both functions require all list items to be hidden.
  * Ths function takes care of this
  *
- * @param {HTMLElements array} items: the list of items to hide
+ * @param {HTMLElements} items: the list of items to hide
  */
 
 
@@ -1876,7 +1876,7 @@ function hideListItems(items) {
 /**
  * Insert select: build and add the select box to source
  *
- * @param {HTMLElements array} items: the list of content for the select options
+ * @param {HTMLElements} items: the list of content for the select options
  * @param {HTMLElement} parentElement: the element where we need to insert the select
  */
 
