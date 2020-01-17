@@ -26072,6 +26072,46 @@ _:-ms-lang(x),
     padding-bottom: 1rem;
 }
 
+.unibuddy-card {
+    background-color: var(--color-purewhite);
+    padding: 1rem;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.unibuddy-card--info {
+    display: flex;
+}
+
+.unibuddy-card--info__image img {
+    max-width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.unibuddy-card--info__image .fa-user {
+    font-size: 4rem;
+}
+
+.unibuddy-card--info__details {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+.unibuddy-card--info__details .unibuddy-card--info__details--name {
+    color: #d61726;
+    font-weight: bold;
+}
+
+.unibuddy-card--info__details .unibuddy-card--info__details--level {
+    font-weight: bold;
+}
+
+.unibuddy-card--text {
+    padding-bottom: 1rem;
+}
+
 .cms-editor-warning {
     display: none;
 }
