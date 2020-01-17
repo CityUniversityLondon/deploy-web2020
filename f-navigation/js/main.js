@@ -7461,7 +7461,7 @@ function preparePanels(panels) {
 
 function launchTabs(tabs) {
   const controls = tabs.querySelector(".".concat(linksClassName)),
-        linkItems = Array.from(controls.parentNode.querySelectorAll('li')),
+        linkItems = Array.from(controls.querySelectorAll('li')),
         panels = Array.from(tabs.childNodes).filter(node => node.className && node.className === panelClassName);
 
   if (linkItems.length === 1) {
