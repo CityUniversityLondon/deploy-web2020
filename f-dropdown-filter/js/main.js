@@ -1855,16 +1855,15 @@ function prepareDropdown(element) {
   // only get direct children
   const listItems = element.querySelectorAll('ul.data-group > li'); // hide list items
 
-  hideListItems(listItems); // get select element and apply change event listener
+  hideListItems(listItems); // insert the select box to toggle items
 
-  const selectFilter = element.querySelector('.select-filter');
-  selectFilter.addEventListener('change', selectChange);
+  insertSelect(listItems, element);
 }
 /**
  * Hide list items: both functions require all list items to be hidden.
  * Ths function takes care of this
  *
- * @param {HTMLElement} items: the list of items to hide
+ * @param {HTMLElements array} items: the list of items to hide
  */
 
 
@@ -1875,9 +1874,36 @@ function hideListItems(items) {
   });
 }
 /**
+ * Insert select: build and add the select box to source
+ *
+ * @param {HTMLElements array} items: the list of content for the select options
+ * @param {HTMLElement} parentElement: the element where we need to insert the select
+ */
+
+
+function insertSelect(items, parentElement) {
+  const selectBox = document.createElement('select');
+  selectBox.className = 'select-filter';
+  parentElement.prepend(selectBox); // get and add default select text
+
+  let option = document.createElement('option');
+  option.text = parentElement.getAttribute('data-text');
+  selectBox.appendChild(option); // iterate over each item and create/append select option
+
+  items.forEach(function (item) {
+    let dataValue = item.getAttribute('data-value');
+    let option = document.createElement('option');
+    option.value = dataValue;
+    option.text = dataValue;
+    selectBox.appendChild(option);
+  }); // add change listner to newly created select box
+
+  selectBox.addEventListener('change', selectChange);
+}
+/**
  * Select change: respond to select change
  *
- * @param {HTMLElement} element: the dropdown div containing all elements
+ * @param {event} e: the event
  */
 
 
