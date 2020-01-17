@@ -7293,10 +7293,8 @@ function toggleLink(link, selected) {
   link.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].selected, selected);
 
   if (selected) {
-    //link.removeAttribute('tabindex');
     link.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current, true);
   } else {
-    link.setAttribute('tabindex', 0);
     link.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current);
   }
 }
@@ -7311,7 +7309,7 @@ function selectTab(newTab) {
   const tabs = newTab.closest(".".concat(className)),
         controls = tabs.querySelector(".".concat(linksClassName)),
         linkItems = Array.from(controls.querySelectorAll('li')),
-        panels = Array.from(tabs.parentNode.querySelectorAll("#".concat(tabs.id, " > .").concat(panelClassName)));
+        panels = Array.from(tabs.childNodes).filter(node => node.className && node.className === panelClassName);
   /**
    * Unselect every tab and related panel.
    */
@@ -7463,8 +7461,8 @@ function preparePanels(panels) {
 
 function launchTabs(tabs) {
   const controls = tabs.querySelector(".".concat(linksClassName)),
-        linkItems = Array.from(controls.querySelectorAll('li')),
-        panels = Array.from(tabs.parentNode.querySelectorAll("#".concat(tabs.id, " > .").concat(panelClassName)));
+        linkItems = Array.from(controls.parentNode.querySelectorAll('li')),
+        panels = Array.from(tabs.childNodes).filter(node => node.className && node.className === panelClassName);
 
   if (linkItems.length === 1) {
     /**
