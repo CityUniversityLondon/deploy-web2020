@@ -42804,24 +42804,6 @@ blockquote footer cite {
     cursor: auto;
 }
 
-.slider {
-    grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-}
-
-@media (min-width: 768px) {
-    .slider {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .slider {
-        grid-column-gap: 1.5rem;
-    }
-}
-
 .slider__active-slide {
     display: flex;
     grid-column: 6 / 14;
