@@ -26097,6 +26097,10 @@ _:-ms-lang(x),
     }
 }
 
+.footer-cards h2 {
+    padding-bottom: 1rem;
+}
+
 .footer-cards h2:nth-of-type(2n) {
     margin-top: 4rem;
 }
@@ -50455,7 +50459,6 @@ main .landing {
 
 .course--pgt__contact-cards .footer-cards h2 {
     border-bottom: 0.0625rem solid #7c2062;
-    padding-bottom: 1rem;
 }
 
 .course--pgt__contact-cards .footer-cards a {
