@@ -51382,6 +51382,7 @@ main .landing {
 
 .js .course--pgt .tabs .tabs__panel {
     background: #ffffff;
+    border-top: none;
 }
 
 .course--pgt .wrapper--tabs__panel__body {
