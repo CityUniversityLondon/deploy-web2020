@@ -21594,7 +21594,7 @@ Assign mixin:
 }
 
 .banner-svg--wrapper__svg {
-    grid-column: 3/17;
+    grid-column: 3/23;
     position: relative;
 }
 
@@ -21610,7 +21610,7 @@ Assign mixin:
 }
 
 .banner-svg--wrapper__title {
-    grid-column: 3/17;
+    grid-column: 3/23;
     position: relative;
     padding-top: 4rem;
     padding-bottom: 4rem;
