@@ -44378,6 +44378,22 @@ button
     }
 }
 
+.js .tabs--grey-underline .tabs__links li a span {
+    border-bottom-color: #f2f2f2;
+}
+
+.js .tabs--grey-underline .tabs__links li a[aria-selected="true"] span {
+    border-bottom-color: #5d184a;
+}
+
+.js .tabs--grey-underline .tabs__panel__body .tabs__links {
+    justify-content: left;
+}
+
+.js .tabs--grey-underline .tabs__panel__body .tabs__links li a[aria-selected="true"] span {
+    border-bottom-color: #d61726;
+}
+
 .timetable {
     padding-bottom: 1.5rem;
     margin-top: 1.5rem;
@@ -55772,14 +55788,6 @@ main .standard-content {
     }
 }
 
-.js .course--ug .tabs .tabs__links li a span {
-    border-bottom-color: #f2f2f2;
-}
-
-.js .course--ug .tabs .tabs__links li a[aria-selected="true"] span {
-    border-bottom-color: #5d184a;
-}
-
 .js .course--ug .tabs .tabs__panel {
     border-top: none;
     background: transparent;
@@ -55791,14 +55799,6 @@ main .standard-content {
 
 .js .course--ug .tabs .tabs__panel__body {
     margin-top: 4rem;
-}
-
-.js .course--ug .tabs .tabs__panel__body .tabs__links {
-    justify-content: left;
-}
-
-.js .course--ug .tabs .tabs__panel__body .tabs__links li a[aria-selected="true"] span {
-    border-bottom-color: #d61726;
 }
 
 .js .accordion > .accordion__heading {
