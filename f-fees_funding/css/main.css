@@ -51370,6 +51370,20 @@ main .landing {
     }
 }
 
+.course--pgt__tabs {
+    background: #ffffff;
+    margin: 0 2rem;
+}
+
+.course--pgt__tabs .course--pgt__tabs {
+    margin: 0;
+    background: transparent;
+}
+
+.js .course--pgt .tabs .tabs__panel {
+    background: #ffffff;
+}
+
 .course--pgt .wrapper--tabs__panel__body {
     margin: 0 10rem;
 }
