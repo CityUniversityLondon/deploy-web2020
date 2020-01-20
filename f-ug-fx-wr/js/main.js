@@ -6092,7 +6092,8 @@ function launchModal(modal) {
           listBody = Array.from(list.childNodes),
           listHeader = list.firstElementChild,
           customHeader = list.getAttribute('data-header'),
-          format = list.getAttribute('data-keepformat');
+          format = list.getAttribute('data-keepformat'),
+          header = document.createElement('div');
     let title,
         keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(format);
     listAnchor.setAttribute('href', '#');
@@ -6101,12 +6102,22 @@ function launchModal(modal) {
     wrapper.classList.add("".concat(bodyClassName));
 
     if (keepFormat) {
-      listAnchor.appendChild(listHeader);
+      list.insertBefore(listHeader, wrapper);
+      listHeader.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        createDialog(modal, "".concat(i), dialogArray);
+      });
     } else {
       listAnchor.innerText = listHeader.innerText;
+      header.appendChild(listHeader);
+      list.insertBefore(listAnchor, wrapper);
+      listAnchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        createDialog(modal, "".concat(i), dialogArray);
+      });
     }
-
-    list.insertBefore(listAnchor, wrapper);
 
     if (customHeader) {
       title = customHeader;
@@ -6117,11 +6128,6 @@ function launchModal(modal) {
     dialogArray.push({
       title: title,
       body: wrapper.innerHTML
-    });
-    listAnchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      createDialog(modal, "".concat(i), dialogArray);
     });
   });
 }
@@ -6410,6 +6416,7 @@ const className = 'navigation',
       buttonClassName = className + '__button',
       openCloseTextClassName = buttonClassName + '__open-close',
       navigationTextClassName = buttonClassName + '__navigation',
+      headerClassName = classNameSpecific + '__menu__header',
       veilClassName = className + '__veil',
       openText = 'Open',
       closeText = 'Close',
@@ -6548,7 +6555,7 @@ function setupTabNext(navigation, closeAll, veil) {
       if (keyCodeTab === e.keyCode && !e.shiftKey) {
         e.preventDefault();
         toggleNextSection();
-        nextSectionButton.closest('.navigation--primary__level1').querySelector('.navigation--primary__menu__header a').focus();
+        nextSectionButton.closest('.navigation--primary__level1').querySelector(".".concat(headerClassName, " a")).focus();
       }
     }, true);
   });
@@ -6591,18 +6598,18 @@ function prepareLowerLevels(navigation) {
 
 
 function prepareHeaders(navigation) {
-  Array.from(navigation.querySelectorAll('.navigation--primary__menu__header')).forEach(header => {
+  Array.from(navigation.querySelectorAll(".".concat(headerClassName))).forEach(header => {
     const link = header.querySelector('a'),
           textWrapper = document.createElement('span');
 
     if (!link) {
       const currentPageWrapper = document.createElement('span'),
-            linkText = header.firstChild.wholeText.trim();
+            linkText = header.firstChild.wholeText.trim() + ' overview';
       textWrapper.appendChild(document.createTextNode(linkText));
       currentPageWrapper.appendChild(textWrapper);
       header.replaceChild(currentPageWrapper, header.firstChild);
     } else {
-      textWrapper.appendChild(link.firstChild.cloneNode(true));
+      textWrapper.innerText = link.innerText + ' overview';
       link.replaceChild(textWrapper, link.firstChild);
     }
   });
@@ -6616,7 +6623,7 @@ function prepareHeaders(navigation) {
 
 function addCloseButtons(navigation, closeAll) {
   Array.from(navigation.querySelectorAll('.navigation--primary__menu__content')).forEach(menu => {
-    const header = menu.querySelector('.navigation--primary__menu__header'),
+    const header = menu.querySelector(".".concat(headerClassName)),
           closeButtonWrapper = document.createElement('div'),
           closeButton = document.createElement('button'),
           closeButtonDiv = document.createElement('div'),
