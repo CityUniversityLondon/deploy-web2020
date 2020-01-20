@@ -5648,7 +5648,8 @@ function launchModal(modal) {
           listBody = Array.from(list.childNodes),
           listHeader = list.firstElementChild,
           customHeader = list.getAttribute('data-header'),
-          format = list.getAttribute('data-keepformat');
+          format = list.getAttribute('data-keepformat'),
+          header = document.createElement('div');
     let title,
         keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(format);
     listAnchor.setAttribute('href', '#');
@@ -5660,6 +5661,7 @@ function launchModal(modal) {
       listAnchor.appendChild(listHeader);
     } else {
       listAnchor.innerText = listHeader.innerText;
+      header.appendChild(listHeader);
     }
 
     list.insertBefore(listAnchor, wrapper);
