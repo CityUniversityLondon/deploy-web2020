@@ -51390,7 +51390,7 @@ main .landing {
     }
 }
 
-.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees {
+.course--pgt p.tabs__panel__body__domicile__fees {
     color: #5d184a;
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
@@ -51403,51 +51403,55 @@ main .landing {
     font-weight: 500;
 }
 
-.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees i,
-.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees em {
+.course--pgt p.tabs__panel__body__domicile__fees i,
+.course--pgt p.tabs__panel__body__domicile__fees em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
-.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees b,
-.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees strong {
+.course--pgt p.tabs__panel__body__domicile__fees b,
+.course--pgt p.tabs__panel__body__domicile__fees strong {
     font-weight: inherit;
 }
 
-.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees i,
-.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees em {
+.course--pgt p.tabs__panel__body__domicile__fees i,
+.course--pgt p.tabs__panel__body__domicile__fees em {
     font-style: italic;
 }
 
-.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees u {
+.course--pgt p.tabs__panel__body__domicile__fees u {
     text-decoration: none;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees {
+    .course--pgt p.tabs__panel__body__domicile__fees {
         letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees {
+    .course--pgt p.tabs__panel__body__domicile__fees {
         letter-spacing: -0.014em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees {
+    .course--pgt p.tabs__panel__body__domicile__fees {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees {
+    .course--pgt p.tabs__panel__body__domicile__fees {
         letter-spacing: -0.017em;
     }
 }
 
-.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees b,
-.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees strong {
+.course--pgt p.tabs__panel__body__domicile__fees b,
+.course--pgt p.tabs__panel__body__domicile__fees strong {
+    font-weight: 600;
+}
+
+.course--pgt p.tabs__panel__body__domicile__per-year {
     font-weight: 600;
 }
 
