@@ -44396,6 +44396,12 @@ button
     }
 }
 
+@media screen and (min-width: 769px) and (min-width: 769px) {
+    .js .tabs--accordion .tabs .accordion {
+        display: block;
+    }
+}
+
 .timetable {
     padding-bottom: 1.5rem;
     margin-top: 1.5rem;
