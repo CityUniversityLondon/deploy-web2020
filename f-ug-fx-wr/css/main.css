@@ -44425,7 +44425,7 @@ button
 }
 
 .js .tabs--grey-underline .tabs__links li a span {
-    border-bottom-color: #f2f2f2;
+    border-bottom-color: #e5e5e5;
 }
 
 .js .tabs--grey-underline .tabs__links li a[aria-selected="true"] span {
