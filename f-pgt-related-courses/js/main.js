@@ -786,26 +786,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
 /* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
 /* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
-/* harmony import */ var _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/cookie-notice/cookie-notice */ "./src/patterns/cookie-notice/cookie-notice.js");
-/* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
-/* harmony import */ var _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/finder/finder */ "./src/patterns/finder/finder.js");
-/* harmony import */ var _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/image-carousel/default-carousel/default-carousel */ "./src/patterns/image-carousel/default-carousel/default-carousel.js");
-/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
-/* harmony import */ var _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-slider */ "./src/patterns/key-info-box/key-info-slider.js");
-/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
-/* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
-/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
-/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
-/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
-/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
-/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
-/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
-/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
-/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
-/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
-/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
+/* harmony import */ var _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/cookie-notice/cookie-notice */ "./src/patterns/cookie-notice/cookie-notice.js");
+/* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
+/* harmony import */ var _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/finder/finder */ "./src/patterns/finder/finder.js");
+/* harmony import */ var _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/image-carousel/default-carousel/default-carousel */ "./src/patterns/image-carousel/default-carousel/default-carousel.js");
+/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
+/* harmony import */ var _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-slider */ "./src/patterns/key-info-box/key-info-slider.js");
+/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
+/* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
+/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
+/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
+/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
+/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
+/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
+/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
+/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
+/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
+/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
+/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/dropdown-filter/dropdown-filter */ "./src/patterns/dropdown-filter/dropdown-filter.js");
 
 
 /**
@@ -844,7 +846,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"]]);
+
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_28__["default"]]);
 
 /***/ }),
 
@@ -1510,6 +1514,72 @@ function init(elm) {
 
 /***/ }),
 
+/***/ "./src/patterns/animation/svg-path-animation/svg-path-animation.js":
+/*!*************************************************************************!*\
+  !*** ./src/patterns/animation/svg-path-animation/svg-path-animation.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+
+
+
+
+/**
+ * SVG path animation
+ *
+ * @module patterns/animation/svg path
+ * @author adapted by Walter Reyneke <walter.reyneke@city.ac.uk> from CASS polaris
+ * @copyright City, University of London 2019!
+ */
+const className = 'animate-svg';
+/**
+ * This animation targets SVG paths. When in scrolling distance the path will animated from a starting position of zero till the full length of the path is shown.
+ *
+ * @param {class} animateSvg - Selects a parent class which will contain the paths targetted for animation
+ *
+ */
+
+function initSvgPathAnimation(animateSvg) {
+  const viewPortHeight = window.innerHeight; // calculates viewport height
+
+  window.addEventListener('DOMContentLoaded', () => {
+    var paths = animateSvg.querySelectorAll('.animate--svg-path'); // prepares the animation
+
+    paths.forEach(path => {
+      let length = path.getTotalLength() + 'px';
+      path.classList.add('animate--svg-path--jsinit');
+      path.style.strokeDashoffset = length;
+      path.style.strokeDasharray = "".concat(length, ", ").concat(length);
+    }); // starts animation when in scrolling view
+
+    window.addEventListener('scroll', function () {
+      const elemOffset = animateSvg.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
+
+      if (screenPos > elemOffset - viewPortHeight + 30) {
+        paths.forEach(function (path) {
+          !path.classList.contains('animate--svg-path--jsrun') ? path.classList.add('animate--svg-path--jsrun') : null;
+          setTimeout(() => {
+            path.style.strokeDashoffset = 0;
+          }, 100);
+        });
+      }
+    });
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: initSvgPathAnimation,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
 /***/ "./src/patterns/back-to-top/back-to-top.js":
 /*!*************************************************!*\
   !*** ./src/patterns/back-to-top/back-to-top.js ***!
@@ -1816,6 +1886,117 @@ function devcorate(elem, param, value) {
     }
   });
 }
+
+/***/ }),
+
+/***/ "./src/patterns/dropdown-filter/dropdown-filter.js":
+/*!*********************************************************!*\
+  !*** ./src/patterns/dropdown-filter/dropdown-filter.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+
+
+
+
+/**
+ * Dropdown filter
+ *
+ * @module patterns/dropdown-filter/dropdown-filter
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+const className = 'dropdown-filter';
+/**
+ * Entry function: loops through and hides list items, sets up event listener on
+ * child select box
+ *
+ * @param {HTMLElement} element: the dropdown div containing all elements
+ */
+
+function prepareDropdown(element) {
+  // only get direct children
+  const listItems = element.querySelectorAll('ul.data-group > li'); // hide list items
+
+  hideListItems(listItems); // insert the select box to toggle items
+
+  insertSelect(listItems, element);
+}
+/**
+ * Hide list items: both functions require all list items to be hidden.
+ * Ths function takes care of this
+ *
+ * @param {HTMLElements} items: the list of items to hide
+ */
+
+
+function hideListItems(items) {
+  // hide list items
+  items.forEach(function (item) {
+    item.setAttribute('data-hidden', 'true');
+  });
+}
+/**
+ * Insert select: build and add the select box to source
+ *
+ * @param {HTMLElements} items: the list of content for the select options
+ * @param {HTMLElement} parentElement: the element where we need to insert the select
+ */
+
+
+function insertSelect(items, parentElement) {
+  const selectBox = document.createElement('select');
+  selectBox.className = 'select-filter';
+  parentElement.prepend(selectBox); // get and add default select text
+
+  let option = document.createElement('option');
+  option.text = parentElement.getAttribute('data-text');
+  selectBox.appendChild(option); // iterate over each item and create/append select option
+
+  items.forEach(function (item) {
+    let dataValue = item.getAttribute('data-value');
+    let option = document.createElement('option');
+    option.value = dataValue;
+    option.text = dataValue;
+    selectBox.appendChild(option);
+  }); // add change listner to newly created select box
+
+  selectBox.addEventListener('change', selectChange);
+}
+/**
+ * Select change: respond to select change
+ *
+ * @param {event} e: the event
+ */
+
+
+function selectChange(e) {
+  // get the ul containing the list items
+  const dataGroup = e.target.nextElementSibling; // get direct list items
+
+  const listItems = dataGroup.querySelectorAll('ul.data-group > li'); // hide all items before displaying chosen item
+
+  hideListItems(listItems); // if first option selected, return
+
+  if (e.srcElement.selectedIndex == 0) {
+    return;
+  } // get the list item corresponding to the select value chosen
+
+
+  const targetListItem = dataGroup.querySelector('li[data-value=' + e.target.value + ']'); // remove data-hidden
+
+  targetListItem.removeAttribute('data-hidden');
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: prepareDropdown,
+  launchQuery: ".".concat(className)
+});
 
 /***/ }),
 
@@ -3824,6 +4005,672 @@ function finderConfig(url) {
 
 /***/ }),
 
+/***/ "./src/patterns/image-carousel/carousel-constructor.js":
+/*!*************************************************************!*\
+  !*** ./src/patterns/image-carousel/carousel-constructor.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Carousel; });
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+
+
+
+const ie = Object(_util__WEBPACK_IMPORTED_MODULE_2__["detectIE"])();
+class Carousel {
+  constructor(elem, options) {
+    this.elem = elem;
+    this.config = options ? options : {};
+    this.i = 0;
+    this.x0 = null;
+    this.locked = false;
+    this.sliderTranslateCoOr = 0;
+  }
+  /**
+   * Set the number indicators Number
+   *
+   * @param {number} carousel index - current carousel index
+   * @param {HTMLelement} indicator html - pass HTML containing the indicator
+   */
+
+
+  numIndicator(index, e) {
+    e.querySelector('.swiper-indicator__active-slider').innerText = index + 1;
+  }
+  /**
+   *
+   * Set active slider
+   *
+   * @param {number} carousel index - current carousel index
+   * @param {HTMLelement} sliders html - pass HTML containing the sliders
+   */
+
+
+  activeSlider(index, sliders) {
+    let a = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toArray"])(sliders.querySelectorAll('.swiper-slide'));
+    a.forEach(e => {
+      e.classList.remove('active');
+      e.querySelectorAll('a').forEach(a => a.tabIndex = -1); // disable focus on non active slider with hyperlinks
+
+      e.setAttribute('aria-hidden', 'true');
+    });
+    a[index].classList.toggle('active');
+    a[index].querySelectorAll('a').forEach(a => a.tabIndex = 0);
+    a[index].setAttribute('aria-hidden', 'false');
+  }
+  /**
+   *
+   * Toggle next button
+   *
+   * @param {number} carousel index - current carousel index
+   * @param {number} length of sliders -
+   * @param {event} user event - interaction event perform by user
+   */
+
+
+  toogleNextBtn(index, length, e) {
+    let nextBtn = this.checkEventType(e);
+
+    if (index + 1 === length) {
+      nextBtn.querySelector('.swiper-button-next button').disabled = true;
+      nextBtn.querySelector('.swiper-button-prev button').disabled = false;
+    } else if (this.i + 1 < length) {
+      nextBtn.querySelector('.swiper-button-next button').disabled = false;
+      nextBtn.querySelector('.swiper-button-prev button').disabled = false;
+    }
+
+    this.activeSlider(index, nextBtn);
+
+    if (!this.config.hidNumInd) {
+      this.numIndicator(index, nextBtn);
+    }
+  }
+  /**
+   *
+   * Toggle previous button
+   *
+   * @param {number} carousel index - current carousel index
+   * @param {number} length of sliders -
+   * @param {event} user event - interaction event perform by user
+   */
+
+
+  tooglePrevBtn(index, length, e) {
+    let prevBtn = this.checkEventType(e);
+
+    if (index + 1 === 1) {
+      prevBtn.querySelector('.swiper-button-prev button').disabled = true;
+      prevBtn.querySelector('.swiper-button-next button').disabled = false;
+    } else if (this.i + 1 > 1) {
+      prevBtn.querySelector('.swiper-button-prev button').disabled = false;
+      prevBtn.querySelector('.swiper-button-next button').disabled = false;
+    }
+
+    this.activeSlider(index, prevBtn);
+
+    if (!this.config.hidNumInd) {
+      this.numIndicator(index, prevBtn);
+    }
+  }
+  /**
+   *
+   * Move slide either forwards or backwards
+   *
+   * @param {event} user event - interaction event perform by user from onClick on btn or thumbnail
+   * @param {boolean} boolean for either next or pervious - boolean to check if next or previous is called
+   */
+
+
+  moveSlide(e, t) {
+    const sl = this.checkEventType(e).querySelector('.swiper-wrapper');
+
+    if (sl.classList.contains('smooth')) {
+      sl.classList.toggle('smooth');
+    }
+
+    if (!ie) {
+      if (this.config.defaultCarousel && e.target.tagName === 'INPUT') {
+        sl.style.setProperty('--i', this.i);
+      } else {
+        t ? sl.style.setProperty('--i', this.i != 0 ? this.i += 1 : this.i = 1) : sl.style.setProperty('--i', this.i != 0 ? this.i -= 1 : this.i = 1);
+      }
+
+      sl.classList.toggle('smooth');
+      t ? this.toogleNextBtn(this.i, sl.children.length, e) : this.tooglePrevBtn(this.i, sl.children.length, e);
+    } else {
+      let sliderWidthIndex = this.totalSliderWidth(e) / sl.children.length * this.i,
+          sliderWidth = this.totalSliderWidth(e) / sl.children.length;
+      t ? this.sliderTranslateCoOr -= sliderWidth : this.sliderTranslateCoOr += sliderWidth;
+      sl.classList.toggle('smooth');
+
+      if (this.config.defaultCarousel && e.target.tagName === 'INPUT') {
+        this.sliderTranslateCoOr = -sliderWidthIndex;
+        sl.style.setProperty('transform', 'translate(-' + sliderWidthIndex + 'px)');
+        sl.style.setProperty('--i', this.i);
+      } else {
+        sl.style.setProperty('transform', 'translate(' + this.sliderTranslateCoOr + 'px)');
+        t ? this.i != 0 ? this.i += 1 : this.i = 1 : this.i != 0 ? this.i -= 1 : this.i = 1;
+      }
+
+      t ? this.toogleNextBtn(this.i, sl.children.length, e) : this.tooglePrevBtn(this.i, sl.children.length, e);
+    }
+
+    if (this.config.defaultCarousel) {
+      this.activeThumbnail(this.i, e);
+    }
+  }
+  /**
+   *
+   * Next slide
+   *
+   * @param {event} user event - interaction event perform by user from onClick on btn or thumbnail
+   */
+
+
+  next(e) {
+    e.preventDefault();
+    this.moveSlide(e, true);
+  }
+  /**
+   *
+   * Prvious slide
+   *
+   * @param {event} user event - interaction event perform by user from onClick on btn or thumbnail
+   */
+
+
+  previous(e) {
+    e.preventDefault();
+    this.moveSlide(e, false);
+  }
+  /**
+   *
+   * Return touch points of either touch or mouse
+   *
+   * @param {event} user event - event on silder from either mouse or touch events
+   * @returns {event | object} - either return the event back or the object of touch events
+   */
+
+
+  unify(e) {
+    return e.changedTouches ? e.changedTouches[0] : e;
+  }
+  /**
+   *
+   * Start of slider move Set mousedown value to global and toggle smooth class for css transition on mouse down or touch start
+   *
+   * @param {event} user event - user action either mosuedown or touch start
+   */
+
+
+  lock(e) {
+    this.x0 = this.unify(e).clientX; //set mousedown clientX value
+
+    e.target.classList.toggle('smooth', !(this.locked = true));
+  }
+  /**
+   *
+   * Moving the slider - moving the slider trigger by mouse move or touch move
+   *
+   * @param {event} user event - mousetouch or touchmove
+   */
+
+
+  drag(e) {
+    if (this.i !== e.target.children.length - 1 && this.i !== 0) {
+      if (this.locked) {
+        e.target.style.setProperty('--tx', "".concat(Math.round(this.unify(e).clientX - this.x0), "px"));
+      }
+    }
+  }
+  /**
+   *
+   * Move slider
+   *
+   * @param {event} user event - mouseup or touchend
+   */
+
+
+  move(e) {
+    if (this.locked) {
+      let dx = this.unify(e).clientX - this.x0,
+          //dx is value calculate by using clientX mousedown and after value
+      s = Math.sign(dx),
+          //check if swipe is left or right by checking value is negative or positive
+      tx = getComputedStyle(e.target).getPropertyValue('--tx'),
+          p = parseInt(tx.replace(/\D/g, '')); // MAY use the drag length as a condition to move slider
+
+      if ((this.i > 0 || s < 0) && (this.i < e.target.children.length - 1 || s > 0) && (p > 100 || this.i === 0 || this.i === e.target.children.length - 1) //conditions to swip to slider
+      ) {
+          if (!ie) {
+            e.target.style.setProperty('--i', this.i -= s); //increment i (i repersent the slider)
+
+            e.target.style.setProperty('--tx', '0px'); //reset touch x value
+
+            e.target.classList.toggle('smooth', !(this.locked = false));
+            this.x0 = null;
+
+            if (s === -1) {
+              this.toogleNextBtn(this.i, e.target.children.length, e);
+            } else {
+              this.tooglePrevBtn(this.i, e.target.children.length, e);
+            }
+          } else {
+            this.animateSlider(e, s);
+            s === -1 ? this.toogleNextBtn(this.i, e.target.children.length, e) : this.tooglePrevBtn(this.i, e.target.children.length, e);
+          }
+
+          if (this.config.defaultCarousel) {
+            this.activeThumbnail(this.i, e);
+          }
+        }
+    }
+  }
+  /**
+   *
+   * Stop drag when mouse or touch move outside the slider element
+   *
+   * @param {event} user event - mouseup or touchend
+   */
+
+
+  stopDrag(e) {
+    e.target.style.setProperty('--tx', '0px');
+    e.stopPropagation();
+    e.target.classList.toggle('smooth', !(this.locked = false));
+  }
+  /**
+   *
+   * Check event type and passing the correct parent node
+   *
+   * @param {event} user event - either mouse, touch, click events and thumbnail click events
+   * @returns {HTMLSliderElement} -
+   */
+
+
+  checkEventType(e) {
+    if (e.target.parentElement.classList.contains('galleria-thumbnail')) {
+      return e.target.parentElement.parentElement.parentElement.parentElement;
+    } else {
+      switch (e.type) {
+        case 'mouseup':
+          return e.target.parentElement.parentElement;
+
+        case 'touchend':
+          return e.target.parentElement.parentElement;
+
+        default:
+          return e.target.parentElement.parentElement.parentElement;
+      }
+    }
+  }
+  /**
+   *
+   * For edge browsers calculate silders total width
+   *
+   * @param {event} user event -
+   * @returns {number} - total width of slider
+   */
+  //edge fall back cannot use CSS var inside a cal()
+
+
+  totalSliderWidth(e) {
+    const sliders = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toArray"])(this.checkEventType(e).querySelectorAll('.swiper-slide'));
+    let totalWidth = 0;
+    sliders.forEach(s => {
+      let style = window.getComputedStyle ? getComputedStyle(s, null) : s.currentStyle;
+      totalWidth += s.offsetWidth + parseInt(style.marginRight) || 0;
+    });
+    return totalWidth;
+  }
+  /**
+   *
+   * Animate slider by setting translate value
+   *
+   * @param {event} user event -
+   * @param {number}  - number either negative or a positive number
+   */
+
+
+  animateSlider(e, lr) {
+    let sliderWidth = this.totalSliderWidth(e) / e.target.children.length;
+    lr === -1 ? this.sliderTranslateCoOr -= sliderWidth : this.sliderTranslateCoOr += sliderWidth;
+    e.target.style.setProperty('transform', 'translate(' + this.sliderTranslateCoOr + 'px)');
+    e.target.classList.toggle('smooth');
+    this.i -= lr;
+  }
+  /**
+   *
+   * Adds and setups carousel controls
+   * e.g.
+   *
+   *  <div class="swiper-viewport">
+   *      <div class="swiper-container">
+   *
+   *          <ul class="swiper-wrapper">
+   *              <li class="swiper-slide">
+   *                  <div class="swiper-slide__image-wrapper">
+   *                      <img src="https://web2020.city.ac.uk/documentation/patterns/carousel/_DP57645_1920x1080.jpg" alt="Image">
+   *                  </div>
+   *                  <div class="swiper-slide__text">
+   *                      <p>We are a leading provider of healthcare .....</p>
+   *                  </div>
+   *              </li>
+   *              <li class="swiper-slide">
+   *                  <div class="swiper-slide__image-wrapper">
+   *                      <img class="lazy" src="https://web2020.city.ac.uk/documentation/patterns/carousel/_DP57645_1920x1080.jpg" alt="Image">
+   *                  </div>
+   *                  <div class="swiper-slide__text">
+   *                      <p>We are a leading provider of healthcare .....</p>
+   *                  </div>
+   *              </li>
+   *          </ul>
+   *
+   *      </div>
+   *  </div>
+   *
+   *@param {HTMLElement} elem - The element to carousel.
+   *@param {Object} object - Object containing setting to setup defualt carousel. if using full width carousel
+   * then do not pass in object unless you want to hide the number indicators.
+   * To intialise the defualt carousel pass this object
+   * {
+   *  defaultCarousel: true,
+   *  hidNumInd: true,
+   *  }
+   *
+   */
+
+
+  init() {
+    const lazyImages = [].slice.call(this.elem.querySelectorAll('img.lazy'));
+
+    if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
+      let lazyImageObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry, i) {
+          if (i === 0) {
+            entry.target.firstElementChild.classList.remove('lazy');
+          }
+
+          if (entry.isIntersecting) {
+            let lazyImage = entry.target.parentNode.nextSibling.firstElementChild.firstElementChild;
+            lazyImage.src = lazyImage.dataset.src;
+            lazyImage.classList.remove('lazy');
+            lazyImageObserver.unobserve(entry.target);
+          }
+        });
+      });
+      lazyImages.forEach(function (lazyImage, i, a) {
+        if (i !== a.length - 1) {
+          lazyImageObserver.observe(lazyImage.parentNode);
+        } else {
+          lazyImage.classList.remove('lazy');
+        }
+      });
+    }
+
+    const _C = this.elem.querySelector('.swiper-wrapper'),
+          numInd = document.createElement('div'),
+          numIndActiveSl = document.createElement('span'),
+          numIndSeparator = document.createElement('span'),
+          numbIndSlLength = document.createElement('span'),
+          buttonsWrap = document.createElement('div'),
+          prevBtnWrap = document.createElement('div'),
+          nextBtnWrap = document.createElement('div'),
+          nextBtn = document.createElement('BUTTON'),
+          prevBtn = document.createElement('BUTTON'); //setup carousel buttons
+
+
+    buttonsWrap.className = 'swiper-buttons-wrap';
+    prevBtnWrap.className = 'swiper-button-prev';
+    nextBtnWrap.className = 'swiper-button-next';
+    nextBtn.name = 'nextButton';
+    nextBtn.type = 'button';
+    nextBtn.className = 'fas fa-arrow-right swiper-slider-arrow arrow-right--btn-next';
+    nextBtn.setAttribute('aria-label', 'Next slider');
+    nextBtn.addEventListener('click', this.next.bind(this), false);
+    prevBtn.name = 'prevButton';
+    prevBtn.type = 'button';
+    prevBtn.className = 'fas fa-arrow-left swiper-slider-arrow arrow-left--btn-prev';
+    prevBtn.setAttribute('aria-label', 'Previous slider');
+    prevBtn.addEventListener('click', this.previous.bind(this), false);
+    prevBtn.disabled = true;
+    nextBtnWrap.appendChild(nextBtn);
+    prevBtnWrap.appendChild(prevBtn);
+    buttonsWrap.appendChild(prevBtnWrap);
+    buttonsWrap.appendChild(nextBtnWrap);
+
+    if (!this.config.hidNumInd) {
+      //perpare the indicators to append to html
+      numInd.className = 'swiper-indicator';
+      numIndActiveSl.className = 'swiper-indicator__active-slider';
+      numbIndSlLength.className = 'swiper-indicator__slider-length';
+      numIndActiveSl.innerText = this.i + 1;
+      numbIndSlLength.innerText = _C.children.length;
+      numIndSeparator.innerText = ' /';
+      numInd.appendChild(numIndActiveSl);
+      numInd.appendChild(numIndSeparator);
+      numInd.appendChild(numbIndSlLength);
+      this.elem.appendChild(numInd);
+    }
+
+    this.elem.appendChild(buttonsWrap);
+    this.config.sliderLength = _C.children.length;
+
+    if (this.config.defaultCarousel) {
+      this.elem.querySelector('.galleria-thumbnails-list').style.setProperty('--thumbnails', this.config.sliderLength);
+    }
+
+    _C.style.setProperty('--n', this.config.sliderLength); //add event listeners
+
+
+    _C.addEventListener('mousedown', this.lock.bind(this), false);
+
+    _C.addEventListener('touchstart', this.lock.bind(this), false);
+
+    _C.addEventListener('mousemove', this.drag.bind(this), false);
+
+    _C.addEventListener('touchmove', this.drag.bind(this), false);
+
+    _C.addEventListener('mouseup', this.move.bind(this), false);
+
+    _C.addEventListener('touchend', this.move.bind(this), false);
+
+    _C.addEventListener('mouseout', this.stopDrag.bind(this), false);
+
+    _C.firstElementChild.classList.toggle('active');
+
+    this.activeSlider(this.i, _C);
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/patterns/image-carousel/default-carousel/default-carousel-constructor.js":
+/*!**************************************************************************************!*\
+  !*** ./src/patterns/image-carousel/default-carousel/default-carousel-constructor.js ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Defaultcarousel; });
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+/* harmony import */ var _carousel_constructor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../carousel-constructor */ "./src/patterns/image-carousel/carousel-constructor.js");
+
+
+
+
+
+
+
+class Defaultcarousel extends _carousel_constructor__WEBPACK_IMPORTED_MODULE_4__["default"] {
+  constructor(elem, options) {
+    super(elem, options);
+  }
+
+  inital() {
+    super.init();
+    let self = this;
+    let thumbnails = [].slice.call(this.elem.querySelector('.galleria-thumbnails-list').querySelectorAll('li')); //edge work around intersectionObserver not triggering using isIntersecting
+
+    let options = {
+      rootMargin: '0px',
+      threshold: [0, 1]
+    },
+        edge = document.documentElement.classList.contains('edge');
+    let edgeThumbnailsObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.intersectionRatio === 1) {
+          entry.target.setAttribute('aria-hidden', 'false');
+        } else {
+          entry.target.setAttribute('aria-hidden', 'true');
+        }
+      });
+    }, options);
+    let thumbnailsObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.setAttribute('aria-hidden', 'false');
+        } else if (!entry.isIntersecting) {
+          entry.target.setAttribute('aria-hidden', 'true');
+        }
+      });
+    });
+    thumbnails.forEach(function (e, i) {
+      if (i === 0) {
+        e.classList.add('active');
+      }
+
+      e.addEventListener('click', function (t) {
+        self.onClickThunbnail(t, i);
+      }, false);
+      e.addEventListener('keyup', function (e) {
+        switch (e.keyCode) {
+          case 13:
+            self.onClickThunbnail(e, i);
+            break;
+
+          case 9:
+            self.translateThumbnails(i, e);
+        }
+      }, false);
+      e.setAttribute('aria-hidden', 'false');
+
+      if (_util__WEBPACK_IMPORTED_MODULE_3__["checkIntersectionObserver"] && !edge) {
+        thumbnailsObserver.observe(e);
+      } else if (_util__WEBPACK_IMPORTED_MODULE_3__["checkIntersectionObserver"] && edge) {
+        edgeThumbnailsObserver.observe(e);
+      }
+    });
+  }
+  /**
+   *
+   * Exported function for defualt caousel to preform when thumbnail it cliked on
+   * move slider forward or backwards
+   *
+   * @param {event} user event - onlcik event on thumbnail
+   * @param {number} thumbnail index -
+   */
+
+
+  onClickThunbnail(thumbnail, thumbindex) {
+    if (thumbindex > this.i) {
+      this.i = thumbindex;
+      this.next(thumbnail);
+    } else if (thumbindex < this.i) {
+      this.i = thumbindex;
+      this.previous(thumbnail);
+    }
+
+    this.activeThumbnail(thumbindex, thumbnail);
+  }
+  /**
+   *
+   * Set click on thumbnail to be active
+   *
+   * @param {number} thumbnail index -
+   * @param {event} user event - onlcik event on thumbnail
+   */
+
+
+  activeThumbnail(thumbindex, e) {
+    let thumbnail = this.checkEventType(e),
+        currentThumbnailSpan = document.createElement('span'),
+        listThumbnail = thumbnail.querySelector('.galleria-thumbnails-list').getElementsByTagName('li');
+    currentThumbnailSpan.innerText = 'Current thumbnail';
+    currentThumbnailSpan.className = 'galleria-thumbnail__current-thumbnail';
+
+    for (const li of listThumbnail) {
+      li.classList.remove('active');
+
+      if (li.querySelector('.galleria-thumbnail__current-thumbnail')) {
+        li.querySelector('.galleria-thumbnail__current-thumbnail').remove();
+      }
+    }
+    /*slider === 1
+     ? listThumbnail[thumbindex + 3].classList.add('fade')
+     : slider > lastTwoSlider
+     ? null
+     : listThumbnail[thumbindex + 2].classList.add('fade');*/
+
+
+    listThumbnail[thumbindex].classList.add('active');
+    listThumbnail[thumbindex].appendChild(currentThumbnailSpan);
+    this.translateThumbnails(thumbindex, e);
+  }
+  /**
+   *
+   * Move thumbnail
+   *
+   * @param {number} thumbnail index -
+   * @param {event} user event - onlcik event on thumbnail
+   */
+
+
+  translateThumbnails(thumbindex, e) {
+    let thumbnailLi = this.checkEventType(e).querySelector('.galleria-thumbnails-list'),
+        thumbnailLength = thumbnailLi.getElementsByTagName('li').length,
+        translate = 0;
+
+    if (thumbindex !== 0 && thumbnailLength > 4) {
+      let galleria = thumbnailLi.getElementsByTagName('li');
+      galleria.forEach((e, i) => {
+        if (i < thumbindex - 1) {
+          let style = window.getComputedStyle ? getComputedStyle(e, null) : e.currentStyle;
+          let width = parseInt(style.width) + parseInt(style.marginRight);
+          translate += width;
+        }
+      });
+
+      if (thumbindex >= 2) {
+        thumbnailLi.style.setProperty('transform', 'translate(-' + translate + 'px)');
+      } else {
+        thumbnailLi.style.setProperty('transform', 'translate(0px)');
+      }
+    }
+  }
+
+}
+
+/***/ }),
+
 /***/ "./src/patterns/image-carousel/default-carousel/default-carousel.js":
 /*!**************************************************************************!*\
   !*** ./src/patterns/image-carousel/default-carousel/default-carousel.js ***!
@@ -3833,12 +4680,7 @@ function finderConfig(url) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _image_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../image-carousel */ "./src/patterns/image-carousel/image-carousel.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
-
-
+/* harmony import */ var _default_carousel_constructor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./default-carousel-constructor */ "./src/patterns/image-carousel/default-carousel/default-carousel-constructor.js");
 
 
 
@@ -3894,61 +4736,11 @@ const className = 'carousel-gallery';
  */
 
 function carouselGallery(elem) {
-  Object(_image_carousel__WEBPACK_IMPORTED_MODULE_1__["init"])(elem, {
+  let dc = new _default_carousel_constructor__WEBPACK_IMPORTED_MODULE_0__["default"](elem, {
     defaultCarousel: true,
     hidNumInd: true
   });
-  let thumbnails = [].slice.call(elem.querySelector('.galleria-thumbnails-list').querySelectorAll('li')); //edge work around intersectionObserver not triggering using isIntersecting
-
-  let options = {
-    rootMargin: '0px',
-    threshold: [0, 1]
-  },
-      edge = document.documentElement.classList.contains('edge');
-  let edgeThumbnailsObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.intersectionRatio === 1) {
-        entry.target.setAttribute('aria-hidden', 'false');
-      } else {
-        entry.target.setAttribute('aria-hidden', 'true');
-      }
-    });
-  }, options);
-  let thumbnailsObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.setAttribute('aria-hidden', 'false');
-      } else if (!entry.isIntersecting) {
-        entry.target.setAttribute('aria-hidden', 'true');
-      }
-    });
-  });
-  thumbnails.forEach(function (e, i) {
-    if (i === 0) {
-      e.classList.add('active');
-    }
-
-    e.addEventListener('click', function (t) {
-      Object(_image_carousel__WEBPACK_IMPORTED_MODULE_1__["onClickThunbnail"])(t, i);
-    }, false);
-    e.addEventListener('keyup', function (e) {
-      switch (e.keyCode) {
-        case 13:
-          Object(_image_carousel__WEBPACK_IMPORTED_MODULE_1__["onClickThunbnail"])(e, i);
-          break;
-
-        case 9:
-          Object(_image_carousel__WEBPACK_IMPORTED_MODULE_1__["translateThumbnails"])(i, e);
-      }
-    }, false);
-    e.setAttribute('aria-hidden', 'false');
-
-    if (_util__WEBPACK_IMPORTED_MODULE_2__["checkIntersectionObserver"] && !edge) {
-      thumbnailsObserver.observe(e);
-    } else if (_util__WEBPACK_IMPORTED_MODULE_2__["checkIntersectionObserver"] && edge) {
-      edgeThumbnailsObserver.observe(e);
-    }
-  });
+  dc.inital();
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3962,587 +4754,21 @@ function carouselGallery(elem) {
 /*!*******************************************************!*\
   !*** ./src/patterns/image-carousel/image-carousel.js ***!
   \*******************************************************/
-/*! exports provided: init, onClickThunbnail, translateThumbnails, checkEventType, default */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "init", function() { return init; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onClickThunbnail", function() { return onClickThunbnail; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "translateThumbnails", function() { return translateThumbnails; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkEventType", function() { return checkEventType; });
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
-
-
-
+/* harmony import */ var _carousel_constructor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./carousel-constructor */ "./src/patterns/image-carousel/carousel-constructor.js");
 
 
 
 const className = 'swiper-container';
-const ie = Object(_util__WEBPACK_IMPORTED_MODULE_4__["detectIE"])();
-let i = 0,
-    x0 = null,
-    locked = false,
-    config = {},
-    sliderTranslateCoOr = 0;
-/**
- *
- * Adds and setups carousel controls
- * e.g.
- *
- *  <div class="swiper-viewport">
- *      <div class="swiper-container">
- *
- *          <ul class="swiper-wrapper">
- *              <li class="swiper-slide">
- *                  <div class="swiper-slide__image-wrapper">
- *                      <img src="https://web2020.city.ac.uk/documentation/patterns/carousel/_DP57645_1920x1080.jpg" alt="Image">
- *                  </div>
- *                  <div class="swiper-slide__text">
- *                      <p>We are a leading provider of healthcare .....</p>
- *                  </div>
- *              </li>
- *              <li class="swiper-slide">
- *                  <div class="swiper-slide__image-wrapper">
- *                      <img class="lazy" src="https://web2020.city.ac.uk/documentation/patterns/carousel/_DP57645_1920x1080.jpg" alt="Image">
- *                  </div>
- *                  <div class="swiper-slide__text">
- *                      <p>We are a leading provider of healthcare .....</p>
- *                  </div>
- *              </li>
- *          </ul>
- *
- *      </div>
- *  </div>
- *
- *@param {HTMLElement} elem - The element to carousel.
- *@param {Object} object - Object containing setting to setup defualt carousel. if using full width carousel
- * then do not pass in object unless you want to hide the number indicators.
- * To intialise the defualt carousel pass this object
- * {
- *  defaultCarousel: true,
- *  hidNumInd: true,
- *  }
- *
- */
 
-function init(elem, options) {
-  if (options) {
-    config = options;
-  } //inital setup
-  //lazy load images
-
-
-  const lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
-
-  if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
-    let lazyImageObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry, i) {
-        if (i === 0) {
-          entry.target.firstElementChild.classList.remove('lazy');
-        }
-
-        if (entry.isIntersecting) {
-          let lazyImage = entry.target.parentNode.nextSibling.firstElementChild.firstElementChild;
-          lazyImage.src = lazyImage.dataset.src;
-          lazyImage.classList.remove('lazy');
-          lazyImageObserver.unobserve(entry.target);
-        }
-      });
-    });
-    lazyImages.forEach(function (lazyImage, i, a) {
-      if (i !== a.length - 1) {
-        lazyImageObserver.observe(lazyImage.parentNode);
-      } else {
-        lazyImage.classList.remove('lazy');
-      }
-    });
-  }
-
-  const _C = elem.querySelector('.swiper-wrapper'),
-        numInd = document.createElement('div'),
-        numIndActiveSl = document.createElement('span'),
-        numIndSeparator = document.createElement('span'),
-        numbIndSlLength = document.createElement('span'),
-        buttonsWrap = document.createElement('div'),
-        prevBtnWrap = document.createElement('div'),
-        nextBtnWrap = document.createElement('div'),
-        nextBtn = document.createElement('BUTTON'),
-        prevBtn = document.createElement('BUTTON'); //setup carousel buttons
-
-
-  buttonsWrap.className = 'swiper-buttons-wrap';
-  prevBtnWrap.className = 'swiper-button-prev';
-  nextBtnWrap.className = 'swiper-button-next';
-  nextBtn.name = 'nextButton';
-  nextBtn.type = 'button';
-  nextBtn.className = 'fas fa-arrow-right swiper-slider-arrow arrow-right--btn-next';
-  nextBtn.setAttribute('aria-label', 'Next slider');
-  nextBtn.addEventListener('click', next, false);
-  prevBtn.name = 'prevButton';
-  prevBtn.type = 'button';
-  prevBtn.className = 'fas fa-arrow-left swiper-slider-arrow arrow-left--btn-prev';
-  prevBtn.setAttribute('aria-label', 'Previous slider');
-  prevBtn.addEventListener('click', previous, false);
-  prevBtn.disabled = true;
-  nextBtnWrap.appendChild(nextBtn);
-  prevBtnWrap.appendChild(prevBtn);
-  buttonsWrap.appendChild(prevBtnWrap);
-  buttonsWrap.appendChild(nextBtnWrap);
-
-  if (!config.hidNumInd) {
-    //perpare the indicators to append to html
-    numInd.className = 'swiper-indicator';
-    numIndActiveSl.className = 'swiper-indicator__active-slider';
-    numbIndSlLength.className = 'swiper-indicator__slider-length';
-    numIndActiveSl.innerText = i + 1;
-    numbIndSlLength.innerText = _C.children.length;
-    numIndSeparator.innerText = ' /';
-    numInd.appendChild(numIndActiveSl);
-    numInd.appendChild(numIndSeparator);
-    numInd.appendChild(numbIndSlLength);
-    elem.appendChild(numInd);
-  }
-
-  elem.appendChild(buttonsWrap);
-  config.sliderLength = _C.children.length;
-
-  if (config.defaultCarousel) {
-    elem.querySelector('.galleria-thumbnails-list').style.setProperty('--thumbnails', config.sliderLength);
-  }
-
-  _C.style.setProperty('--n', config.sliderLength); //add event listeners
-
-
-  _C.addEventListener('mousedown', lock, false);
-
-  _C.addEventListener('touchstart', lock, false);
-
-  _C.addEventListener('mousemove', drag, false);
-
-  _C.addEventListener('touchmove', drag, false);
-
-  _C.addEventListener('mouseup', move, false);
-
-  _C.addEventListener('touchend', move, false);
-
-  _C.addEventListener('mouseout', stopDrag, false);
-
-  _C.firstElementChild.classList.toggle('active');
-
-  activeSlider(i, _C);
+function init(elem) {
+  const c = new _carousel_constructor__WEBPACK_IMPORTED_MODULE_0__["default"](elem);
+  c.init();
 }
-/**
- * Set the number indicators Number
- *
- * @param {number} carousel index - current carousel index
- * @param {HTMLelement} indicator html - pass HTML containing the indicator
- */
-
-
-function numIndicator(index, e) {
-  e.querySelector('.swiper-indicator__active-slider').innerText = index + 1;
-}
-/**
- *
- * Set active slider
- *
- * @param {number} carousel index - current carousel index
- * @param {HTMLelement} sliders html - pass HTML containing the sliders
- */
-
-
-function activeSlider(index, sliders) {
-  let a = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toArray"])(sliders.querySelectorAll('.swiper-slide'));
-  a.forEach(e => {
-    e.classList.remove('active');
-    e.querySelectorAll('a').forEach(a => a.tabIndex = -1); // disable focus on non active slider with hyperlinks
-
-    e.setAttribute('aria-hidden', 'true');
-  });
-  a[index].classList.toggle('active');
-  a[index].querySelectorAll('a').forEach(a => a.tabIndex = 0);
-  a[index].setAttribute('aria-hidden', 'false');
-}
-/**
- *
- * Toggle next button
- *
- * @param {number} carousel index - current carousel index
- * @param {number} length of sliders -
- * @param {event} user event - interaction event perform by user
- */
-
-
-function toogleNextBtn(index, length, e) {
-  let nextBtn = checkEventType(e);
-
-  if (index + 1 === length) {
-    nextBtn.querySelector('.swiper-button-next button').disabled = true;
-    nextBtn.querySelector('.swiper-button-prev button').disabled = false;
-  } else if (i + 1 < length) {
-    nextBtn.querySelector('.swiper-button-next button').disabled = false;
-    nextBtn.querySelector('.swiper-button-prev button').disabled = false;
-  }
-
-  activeSlider(index, nextBtn);
-
-  if (!config.hidNumInd) {
-    numIndicator(index, nextBtn);
-  }
-}
-/**
- *
- * Toggle previous button
- *
- * @param {number} carousel index - current carousel index
- * @param {number} length of sliders -
- * @param {event} user event - interaction event perform by user
- */
-
-
-function tooglePrevBtn(index, length, e) {
-  let prevBtn = checkEventType(e);
-
-  if (index + 1 === 1) {
-    prevBtn.querySelector('.swiper-button-prev button').disabled = true;
-    prevBtn.querySelector('.swiper-button-next button').disabled = false;
-  } else if (i + 1 > 1) {
-    prevBtn.querySelector('.swiper-button-prev button').disabled = false;
-    prevBtn.querySelector('.swiper-button-next button').disabled = false;
-  }
-
-  activeSlider(index, prevBtn);
-
-  if (!config.hidNumInd) {
-    numIndicator(index, prevBtn);
-  }
-}
-/**
- *
- * Move slide either forwards or backwards
- *
- * @param {event} user event - interaction event perform by user from onClick on btn or thumbnail
- * @param {boolean} boolean for either next or pervious - boolean to check if next or previous is called
- */
-
-
-function moveSlide(e, t) {
-  const sl = checkEventType(e).querySelector('.swiper-wrapper');
-
-  if (sl.classList.contains('smooth')) {
-    sl.classList.toggle('smooth');
-  }
-
-  if (!ie) {
-    if (config.defaultCarousel && e.target.tagName === 'INPUT') {
-      sl.style.setProperty('--i', i);
-    } else {
-      t ? sl.style.setProperty('--i', i != 0 ? i += 1 : i = 1) : sl.style.setProperty('--i', i != 0 ? i -= 1 : i = 1);
-    }
-
-    sl.classList.toggle('smooth');
-    t ? toogleNextBtn(i, sl.children.length, e) : tooglePrevBtn(i, sl.children.length, e);
-  } else {
-    let sliderWidthIndex = totalSliderWidth(e) / sl.children.length * i,
-        sliderWidth = totalSliderWidth(e) / sl.children.length;
-    t ? sliderTranslateCoOr -= sliderWidth : sliderTranslateCoOr += sliderWidth;
-    sl.classList.toggle('smooth');
-
-    if (config.defaultCarousel && e.target.tagName === 'INPUT') {
-      sliderTranslateCoOr = -sliderWidthIndex;
-      sl.style.setProperty('transform', 'translate(-' + sliderWidthIndex + 'px)');
-      sl.style.setProperty('--i', i);
-    } else {
-      sl.style.setProperty('transform', 'translate(' + sliderTranslateCoOr + 'px)');
-      t ? i != 0 ? i += 1 : i = 1 : i != 0 ? i -= 1 : i = 1;
-    }
-
-    t ? toogleNextBtn(i, sl.children.length, e) : tooglePrevBtn(i, sl.children.length, e);
-  }
-
-  if (config.defaultCarousel) {
-    activeThumbnail(i, e);
-  }
-}
-/**
- *
- * Next slide
- *
- * @param {event} user event - interaction event perform by user from onClick on btn or thumbnail
- */
-
-
-function next(e) {
-  e.preventDefault();
-  moveSlide(e, true);
-}
-/**
- *
- * Prvious slide
- *
- * @param {event} user event - interaction event perform by user from onClick on btn or thumbnail
- */
-
-
-function previous(e) {
-  e.preventDefault();
-  moveSlide(e, false);
-}
-/**
- *
- * Return touch points of either touch or mouse
- *
- * @param {event} user event - event on silder from either mouse or touch events
- * @returns {event | object} - either return the event back or the object of touch events
- */
-
-
-function unify(e) {
-  return e.changedTouches ? e.changedTouches[0] : e;
-} //return touch points or event
-
-/**
- *
- * Start of slider move Set mousedown value to global and toggle smooth class for css transition on mouse down or touch start
- *
- * @param {event} user event - user action either mosuedown or touch start
- */
-
-
-function lock(e) {
-  x0 = unify(e).clientX; //set mousedown clientX value
-
-  e.target.classList.toggle('smooth', !(locked = true));
-}
-/**
- *
- * Moving the slider - moving the slider trigger by mouse move or touch move
- *
- * @param {event} user event - mousetouch or touchmove
- */
-
-
-function drag(e) {
-  //e.preventDefault();
-  if (i !== e.target.children.length - 1 && i !== 0) {
-    if (locked) {
-      e.target.style.setProperty('--tx', "".concat(Math.round(unify(e).clientX - x0), "px"));
-    }
-  }
-}
-/**
- *
- * Move slider
- *
- * @param {event} user event - mouseup or touchend
- */
-
-
-function move(e) {
-  if (locked) {
-    let dx = unify(e).clientX - x0,
-        //dx is value calculate by using clientX mousedown and after value
-    s = Math.sign(dx),
-        //check if swipe is left or right by checking value is negative or positive
-    tx = getComputedStyle(e.target).getPropertyValue('--tx'),
-        p = parseInt(tx.replace(/\D/g, '')); // MAY use the drag length as a condition to move slider
-
-    if ((i > 0 || s < 0) && (i < e.target.children.length - 1 || s > 0) && (p > 100 || i === 0 || i === e.target.children.length - 1) //conditions to swip to slider
-    ) {
-        if (!ie) {
-          e.target.style.setProperty('--i', i -= s); //increment i (i repersent the slider)
-
-          e.target.style.setProperty('--tx', '0px'); //reset touch x value
-
-          e.target.classList.toggle('smooth', !(locked = false));
-          x0 = null;
-
-          if (s === -1) {
-            toogleNextBtn(i, e.target.children.length, e);
-          } else {
-            tooglePrevBtn(i, e.target.children.length, e);
-          }
-        } else {
-          animateSlider(e, s);
-          s === -1 ? toogleNextBtn(i, e.target.children.length, e) : tooglePrevBtn(i, e.target.children.length, e);
-        }
-
-        if (config.defaultCarousel) {
-          activeThumbnail(i, e);
-        }
-      }
-  }
-}
-/**
- *
- * Stop drag when mouse or touch move outside the slider element
- *
- * @param {event} user event - mouseup or touchend
- */
-
-
-function stopDrag(e) {
-  e.target.style.setProperty('--tx', '0px');
-  e.stopPropagation();
-  e.target.classList.toggle('smooth', !(locked = false));
-}
-/**
- *
- * Check event type and passing the correct parent node
- *
- * @param {event} user event - either mouse, touch, click events and thumbnail click events
- * @returns {HTMLSliderElement} -
- */
-
-
-function checkEventType(e) {
-  if (e.target.parentElement.classList.contains('galleria-thumbnail')) {
-    return e.target.parentElement.parentElement.parentElement.parentElement;
-  } else {
-    switch (e.type) {
-      case 'mouseup':
-        return e.target.parentElement.parentElement;
-
-      case 'touchend':
-        return e.target.parentElement.parentElement;
-
-      default:
-        return e.target.parentElement.parentElement.parentElement;
-    }
-  }
-}
-/**
- *
- * For edge browsers calculate silders total width
- *
- * @param {event} user event -
- * @returns {number} - total width of slider
- */
-//edge fall back cannot use CSS var inside a cal()
-
-
-function totalSliderWidth(e) {
-  const sliders = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toArray"])(checkEventType(e).querySelectorAll('.swiper-slide'));
-  let totalWidth = 0;
-  sliders.forEach(s => {
-    let style = window.getComputedStyle ? getComputedStyle(s, null) : s.currentStyle;
-    totalWidth += s.offsetWidth + parseInt(style.marginRight) || 0;
-  });
-  return totalWidth;
-}
-/**
- *
- * Animate slider by setting translate value
- *
- * @param {event} user event -
- * @param {number}  - number either negative or a positive number
- */
-
-
-function animateSlider(e, lr) {
-  let sliderWidth = totalSliderWidth(e) / e.target.children.length;
-  lr === -1 ? sliderTranslateCoOr -= sliderWidth : sliderTranslateCoOr += sliderWidth;
-  e.target.style.setProperty('transform', 'translate(' + sliderTranslateCoOr + 'px)');
-  e.target.classList.toggle('smooth');
-  i -= lr;
-}
-/**
- *
- * Exported function for defualt caousel to preform when thumbnail it cliked on
- * move slider forward or backwards
- *
- * @param {event} user event - onlcik event on thumbnail
- * @param {number} thumbnail index -
- */
-
-
-function onClickThunbnail(thumbnail, thumbindex) {
-  if (thumbindex > i) {
-    i = thumbindex;
-    next(thumbnail);
-  } else if (thumbindex < i) {
-    i = thumbindex;
-    previous(thumbnail);
-  }
-
-  activeThumbnail(thumbindex, thumbnail);
-}
-/**
- *
- * Set click on thumbnail to be active
- *
- * @param {number} thumbnail index -
- * @param {event} user event - onlcik event on thumbnail
- */
-
-
-function activeThumbnail(thumbindex, e) {
-  let thumbnail = checkEventType(e),
-      currentThumbnailSpan = document.createElement('span'),
-      listThumbnail = thumbnail.querySelector('.galleria-thumbnails-list').getElementsByTagName('li');
-  currentThumbnailSpan.innerText = 'Current thumbnail';
-  currentThumbnailSpan.className = 'galleria-thumbnail__current-thumbnail';
-
-  for (const li of listThumbnail) {
-    li.classList.remove('active');
-
-    if (li.querySelector('.galleria-thumbnail__current-thumbnail')) {
-      li.querySelector('.galleria-thumbnail__current-thumbnail').remove();
-    }
-  }
-  /*slider === 1
-      ? listThumbnail[thumbindex + 3].classList.add('fade')
-      : slider > lastTwoSlider
-      ? null
-      : listThumbnail[thumbindex + 2].classList.add('fade');*/
-
-
-  listThumbnail[thumbindex].classList.add('active');
-  listThumbnail[thumbindex].appendChild(currentThumbnailSpan);
-  translateThumbnails(thumbindex, e);
-}
-/**
- *
- * Move thumbnail
- *
- * @param {number} thumbnail index -
- * @param {event} user event - onlcik event on thumbnail
- */
-
-
-function translateThumbnails(thumbindex, e) {
-  let thumbnailLi = checkEventType(e).querySelector('.galleria-thumbnails-list'),
-      thumbnailLength = thumbnailLi.getElementsByTagName('li').length,
-      translate = 0;
-
-  if (thumbindex !== 0 && thumbnailLength > 4) {
-    let galleria = thumbnailLi.getElementsByTagName('li');
-    galleria.forEach((e, i) => {
-      if (i < thumbindex - 1) {
-        let style = window.getComputedStyle ? getComputedStyle(e, null) : e.currentStyle;
-        let width = parseInt(style.width) + parseInt(style.marginRight);
-        translate += width;
-      }
-    });
-
-    if (thumbindex >= 2) {
-      thumbnailLi.style.setProperty('transform', 'translate(-' + translate + 'px)');
-    } else {
-      thumbnailLi.style.setProperty('transform', 'translate(0px)');
-    }
-  }
-}
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: init,
@@ -5390,6 +5616,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -5397,159 +5624,287 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * modal
  *
- * @module patterns/modal/modal
- * @author Daniel Miller <daniel.miller@city.ac.uk>
+ * @module patterns/pagination/pagination
+ * @author Web Development
  * @copyright City, University of London 2018
  *
  */
 
-const className = 'modal__popup';
-let modalBackground = document.createElement('div'),
-    trap;
+
+const className = 'modal',
+      bodyClassName = className + '__body';
+let trap;
 /**
- * Launch function: sets the modal attr to hidden, adds
- * elements to toggle the modal, adds event listeners to those
- * elements to toggle the modal and sets tab indexes
- * on all anchor elements
+ * launch function
  *
- * @param {HTMLElement} modal - the modal
- *
+ * @param {HTMLElement} modal - an HTML element with the modal class.
  */
 
 function launchModal(modal) {
-  let modalCustomClass = modal.getAttribute('data-class');
-  modal.setAttribute('data-hidden', true);
-  let linkElement = document.createElement('a');
-  linkElement.className = 'modal__trigger';
-  modalCustomClass ? linkElement.classList.add(modalCustomClass) : null;
-  linkElement.setAttribute('href', '#');
-  linkElement.textContent = modal.getAttribute('data-title');
-  modal.parentNode.prepend(linkElement);
-  let modalCloseElement = document.createElement('a');
-  modalCloseElement.className = 'modal__close fas fa-times';
-  modalCloseElement.setAttribute('href', '#');
-  modalCloseElement.setAttribute('aria--label', 'Close modal');
-  modal.querySelector('.modal__heading').parentNode.prepend(modalCloseElement);
-  addEventListeners(modal, linkElement, modalCloseElement);
-  setTabIndexes(modal, true);
-}
-/**
- * Add event listeners: adds all the required event listerners
- *
- * @param {HTMLElement} modal - the modal
- * @param {HTMLElement} linkElement - the modal trigger anchor
- * @param {HTMLElement} modalCloseElement - the modal close trigger
- *
- */
+  let dialogArray = [];
+  Array.from(modal.getElementsByTagName('li')).forEach((list, i) => {
+    const wrapper = document.createElement('div'),
+          listAnchor = document.createElement('a'),
+          listBody = Array.from(list.childNodes),
+          listHeader = list.firstElementChild,
+          customHeader = list.getAttribute('data-header'),
+          format = list.getAttribute('data-keepformat');
+    let title,
+        keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(format);
+    listAnchor.setAttribute('href', '#');
+    list.appendChild(wrapper);
+    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(wrapper, listBody);
+    wrapper.classList.add("".concat(bodyClassName));
 
-
-function addEventListeners(modal, linkElement, modalCloseElement) {
-  linkElement.addEventListener('click', openModal, false);
-  modalCloseElement.addEventListener('click', closeModal, false);
-  /*
-   * listen for escape key press and close
-   */
-
-  modal.addEventListener('keydown', e => {
-    if (e.keyCode === 27) {
-      closeModal(e);
+    if (keepFormat) {
+      listAnchor.appendChild(listHeader);
+    } else {
+      listAnchor.innerText = listHeader.innerText;
     }
-  });
-  /*
-   * listen for a click outside of modal inner and close
-   */
 
-  modal.addEventListener('click', e => {
-    if (e.target.classList.contains('modal__popup')) {
-      closeModal(e);
+    list.insertBefore(listAnchor, wrapper);
+
+    if (customHeader) {
+      title = customHeader;
+    } else {
+      title = listHeader.innerText;
     }
+
+    dialogArray.push({
+      title: title,
+      body: wrapper.innerHTML
+    });
+    listAnchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      createDialog(modal, "".concat(i), dialogArray);
+    });
   });
 }
 /**
- * Open modal: runs all the required functions
- * to open the modal
+ * function that creates a pop-up dialog, linked to click event in launchModal(modal)
  *
- * @param {event} e - click event
- *
- */
-
-
-function openModal(e) {
-  e.preventDefault();
-  let modal = e.target.nextElementSibling;
-  addBackgroundFade();
-  document.body.classList.add('modal--in', 'no-scroll');
-  modal.removeAttribute('data-hidden', true);
-  setTabIndexes(modal, false);
-  trapFocus(modal);
-}
-/**
- * Close modal: runs all the required functions
- * to close the modal
- *
- * @param {event} e - click event
+ * @param {HTMLElement} parent - an HTML element with the modal class.
+ * @param {number} position - position of the <li> in the <ul>
+ * @param {array} dialogArray - array of objects contaning title and body {title:title, body:body} to build dialog pager
  *
  */
 
 
-function closeModal(e) {
-  e.preventDefault();
-  let modal;
+function createDialog(parent, position, dialogArray) {
+  const slider = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(parent.getAttribute('data-slider'));
+  const closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
+    label: 'class',
+    val: 'modal__close fas fa-times'
+  }, {
+    label: 'aria-label',
+    val: 'Close modal'
+  }]);
+  const dialog = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'dialog modal__popup'
+  }, {
+    label: 'data-hidden',
+    val: 'false'
+  }, {
+    label: 'data-position',
+    val: "".concat(position)
+  }]);
+  const bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'modal__content'
+  }]);
+  const wrapperWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'modal__inner'
+  }, {
+    label: 'role',
+    val: 'role'
+  }]);
+  const dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('h2', [{
+    label: 'class',
+    val: 'modal__heading'
+  }]);
+  const dialogBody = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'modal__body-copy'
+  }]);
+  dialogTitle.innerText = dialogArray[position].title;
+  dialogBody.innerHTML = dialogArray[position].body;
+  bodyWrapper.appendChild(closeBtn);
+  bodyWrapper.appendChild(dialogTitle);
+  bodyWrapper.appendChild(dialogBody);
+  wrapperWrapper.appendChild(bodyWrapper);
+  dialog.appendChild(wrapperWrapper);
+  parent.appendChild(dialog);
+  const modalBackground = document.createElement('div');
 
-  if (e.target.classList.contains('modal__close')) {
-    modal = e.target.closest('.modal__popup');
-  } else {
-    modal = e.target;
-  }
-
-  document.body.classList.remove('modal--in', 'no-scroll');
-  modal.setAttribute('data-hidden', true);
-  setTabIndexes(modal, true);
-  trap.deactivate();
-}
-/**
- * Add background fade: adds the background fade element
- * to the body. Only adds once if element not in source
- *
- */
-
-
-function addBackgroundFade() {
   if (!document.body.contains(modalBackground)) {
     modalBackground.setAttribute('class', 'modal__background');
     document.body.appendChild(modalBackground);
   }
-}
-/**
- * Set tab indexes: when the modal is closed, the anchors
- * lose their tab indexes, when the modal is open, the
- * attr is removed so the user can tab through them
- *
- * @param {HTMLElement} modal - the modal
- * @param {boolean} removeTabIndex - no index or remove
- *
- */
 
-
-function setTabIndexes(modal, removeTabIndex) {
-  let elements = modal.querySelectorAll('a');
-  elements.forEach(function (el) {
-    if (removeTabIndex) {
-      el.setAttribute('tabindex', '-1');
-    } else {
-      el.removeAttribute('tabindex');
+  dialog.addEventListener('keydown', e => {
+    if (e.keyCode === 27) {
+      e.preventDefault();
+      closeDialog(dialog, modalBackground);
     }
   });
+  closeBtn.addEventListener('click', e => {
+    e.preventDefault();
+    e.stopPropagation();
+    closeDialog(dialog, modalBackground);
+  });
+  trapFocus(dialog);
+  document.body.classList.add('modal--in', 'no-scroll');
+
+  if (slider && dialogArray.length > 1) {
+    createControl(dialog, dialogArray);
+  }
 }
 /**
- * Trap focus: focus needs to be trapped inside the
- * modal when it's opened. This function takes care of
- * this
+ * function that creates pager button on dialog box
+ * this function is triggered by createDialog() if the HTML element with classname modal has data[slider] set to true
  *
- * @param {HTMLElement} modal - the modal
+ * @param {HTMLElement} dialog - an HTML element created by createDialog()
+ * @param {array} dialogArray - array of objects contaning title and body {title:title, body:body} to build dialog pager
  *
  */
 
+
+function createControl(dialog, dialogArray) {
+  let position = parseInt(dialog.getAttribute('data-position'));
+  const buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'modal__buttons modal__buttons--slider'
+  }]);
+  let buttonPrev = controlButton(dialogArray, position, 'left');
+  let buttonNext = controlButton(dialogArray, position, 'right');
+  buttonNext.addEventListener('click', e => {
+    e.preventDefault();
+    let pos = buttonNext.getAttribute('data-nextState');
+    addDialogEvent(dialog, dialogArray, pos);
+  });
+  buttonPrev.addEventListener('click', e => {
+    e.preventDefault();
+    let pos = buttonPrev.getAttribute('data-nextState');
+    addDialogEvent(dialog, dialogArray, pos);
+  });
+  buttonWrapper.appendChild(buttonPrev);
+  buttonWrapper.appendChild(buttonNext);
+  const dialogContent = dialog.querySelector('.modal__content');
+  dialogContent.appendChild(buttonWrapper);
+}
+/**
+ * function attached to control button (created by function 'createControl()') click event
+ * it rerenders title, body, button labels of dialog
+ *
+ * @param {HTMLElement} dialog - an HTML element created by createDialog()
+ * @param {array} dialogArray - array of objects contaning title and body {title:title, body:body} to build dialog pager
+ * @param {number} nextState - position of object in dialogArray that will be used to update dialog title, body, and button labels
+ *
+ */
+
+
+function addDialogEvent(dialog, dialogArray, nextState) {
+  nextState = parseInt(nextState);
+  dialog.querySelector('.modal__heading').innerText = dialogArray[nextState].title;
+  dialog.querySelector('.modal__body-copy').innerHTML = dialogArray[nextState].body;
+
+  if (nextState == 0) {
+    dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(dialogArray.length - 1));
+    dialog.querySelectorAll('.modal__underline-transition')[0].innerText = dialogArray[dialogArray.length - 1].title;
+    dialog.querySelectorAll('.modal__underline-transition')[1].innerText = dialogArray[nextState + 1].title;
+    dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', "".concat(nextState + 1));
+  } else if (nextState == dialogArray.length - 1) {
+    dialog.querySelectorAll('.modal__underline-transition')[0].innerText = dialogArray[nextState - 1].title;
+    dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(nextState - 1));
+    dialog.querySelectorAll('.modal__underline-transition')[1].innerText = dialogArray[0].title;
+    dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', '0');
+  } else {
+    dialog.querySelectorAll('.modal__underline-transition')[0].innerText = dialogArray[nextState - 1].title;
+    dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(nextState - 1));
+    dialog.querySelectorAll('.modal__underline-transition')[1].innerText = dialogArray[nextState + 1].title;
+    dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', "".concat(nextState + 1));
+  }
+}
+/**
+ * function that creates HTML structure of dialog control buttons
+ *
+ * @param {array} dialogArray - array of objects contaning title and body {title:title, body:body} to build dialog pager
+ * @param {number} position - position of the <li> in the <ul>, used to calculate nextState
+ * @param {string} direction - either "left" or "right", this will determine the type of icon being attached to the button
+ *
+ */
+
+
+function controlButton(dialogArray, position, direction) {
+  const button = document.createElement('button');
+  const buttonLabel = document.createElement('span');
+  buttonLabel.classList.add('modal__underline-transition');
+  let nextState = checkNextState(dialogArray, position, direction);
+  button.setAttribute('data-nextstate', "".concat(nextState));
+  buttonLabel.innerText = dialogArray[nextState].title;
+  const buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('span', [{
+    label: 'class',
+    val: "modal__buttons__icon far fa-long-arrow-".concat(direction)
+  }]);
+  button.appendChild(buttonLabel);
+  button.appendChild(buttonIcon);
+  return button;
+}
+/**
+ * function calculates and returns nextState
+ * it will be used to create click event of control button
+ *
+ * @param {array} dialogArray - array of objects contaning title and body {title:title, body:body} to build dialog pager
+ * @param {number} position - position of the <li> in the <ul>, used to calculate nextState
+ * @param {string} direction - either "left" or "right"
+ *
+ */
+
+
+function checkNextState(dialogArray, position, direction) {
+  const pos = parseInt("".concat(position));
+  let nextState;
+
+  if (pos == 0) {
+    if (direction === 'left') {
+      nextState = dialogArray.length - 1;
+    } else {
+      nextState = pos + 1;
+    }
+  } else if (pos == dialogArray.length - 1) {
+    if (direction === 'left') {
+      nextState = pos - 1;
+    } else {
+      nextState = 0;
+    }
+  } else {
+    if (direction === 'left') {
+      nextState = pos - 1;
+    } else {
+      nextState = pos + 1;
+    }
+  }
+
+  return nextState;
+}
+/**
+ * removes dialog from document
+ *
+ * @param {HTMLElement} dialog - HTML element created by created by function createDialog()
+ * @param {HTMLElement} background - background of dialog
+ *
+ */
+
+
+function closeDialog(dialog, background) {
+  dialog.parentNode.removeChild(dialog);
+  background.parentNode.removeChild(background);
+  document.body.classList.remove('modal--in', 'no-scroll');
+  trap.deactivate();
+}
 
 function trapFocus(modal) {
   let modalInner = modal.querySelector('.modal__inner');
@@ -7294,10 +7649,8 @@ function toggleLink(link, selected) {
   link.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].selected, selected);
 
   if (selected) {
-    //link.removeAttribute('tabindex');
     link.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current, true);
   } else {
-    link.setAttribute('tabindex', 0);
     link.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current);
   }
 }
@@ -7312,7 +7665,7 @@ function selectTab(newTab) {
   const tabs = newTab.closest(".".concat(className)),
         controls = tabs.querySelector(".".concat(linksClassName)),
         linkItems = Array.from(controls.querySelectorAll('li')),
-        panels = Array.from(tabs.parentNode.querySelectorAll("#".concat(tabs.id, " > .").concat(panelClassName)));
+        panels = Array.from(tabs.childNodes).filter(node => node.className && node.className === panelClassName);
   /**
    * Unselect every tab and related panel.
    */
@@ -7465,7 +7818,7 @@ function preparePanels(panels) {
 function launchTabs(tabs) {
   const controls = tabs.querySelector(".".concat(linksClassName)),
         linkItems = Array.from(controls.querySelectorAll('li')),
-        panels = Array.from(tabs.parentNode.querySelectorAll("#".concat(tabs.id, " > .").concat(panelClassName)));
+        panels = Array.from(tabs.childNodes).filter(node => node.className && node.className === panelClassName);
 
   if (linkItems.length === 1) {
     /**
