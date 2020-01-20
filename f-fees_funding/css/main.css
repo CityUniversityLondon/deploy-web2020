@@ -51378,15 +51378,20 @@ main .landing {
     text-align: center;
 }
 
-.course--pgt .wrapper--tabs__panel__body__domicile {
-    display: flex;
+@media (min-width: 433px) {
+    .course--pgt .wrapper--tabs__panel__body__domicile {
+        display: flex;
+    }
 }
 
-.course--pgt .tabs__panel__body__domicile {
-    flex: 1 0 33.33%;
+@media (min-width: 433px) {
+    .course--pgt .tabs__panel__body__domicile {
+        flex: 1 0 33.33%;
+    }
 }
 
-.course--pgt .tabs__panel__body__domicile p {
+.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees {
+    color: #5d184a;
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
@@ -51395,55 +51400,54 @@ main .landing {
     font-style: normal;
     font-weight: 600;
     margin-top: 1rem;
-    color: #5d184a;
     font-weight: 500;
 }
 
-.course--pgt .tabs__panel__body__domicile p i,
-.course--pgt .tabs__panel__body__domicile p em {
+.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees i,
+.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
-.course--pgt .tabs__panel__body__domicile p b,
-.course--pgt .tabs__panel__body__domicile p strong {
+.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees b,
+.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees strong {
     font-weight: inherit;
 }
 
-.course--pgt .tabs__panel__body__domicile p i,
-.course--pgt .tabs__panel__body__domicile p em {
+.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees i,
+.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees em {
     font-style: italic;
 }
 
-.course--pgt .tabs__panel__body__domicile p u {
+.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees u {
     text-decoration: none;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .course--pgt .tabs__panel__body__domicile p {
+    .course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees {
         letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .course--pgt .tabs__panel__body__domicile p {
+    .course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees {
         letter-spacing: -0.014em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .course--pgt .tabs__panel__body__domicile p {
+    .course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .course--pgt .tabs__panel__body__domicile p {
+    .course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees {
         letter-spacing: -0.017em;
     }
 }
 
-.course--pgt .tabs__panel__body__domicile p b,
-.course--pgt .tabs__panel__body__domicile p strong {
+.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees b,
+.course--pgt .tabs__panel__body__domicile p.tabs__panel__body__domicile__fees strong {
     font-weight: 600;
 }
 
@@ -51461,6 +51465,23 @@ main .landing {
 
 .course--pgt .tabs__panel__body__qualification-type {
     margin: 2.25rem 0;
+}
+
+.course--pgt .js .accordion > .accordion__body {
+    background-color: transparent;
+}
+
+.course--pgt__tabs .accordion {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+}
+
+@media (min-width: 901px) {
+    .course--pgt__tabs .accordion {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 .profile .content-wrapper {
