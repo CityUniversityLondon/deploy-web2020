@@ -21605,6 +21605,10 @@ Assign mixin:
     transform: translateX(-50%);
 }
 
+.banner-svg--wrapper__svg .hero-image img {
+    width: 17.5rem;
+}
+
 .banner-svg--wrapper__title {
     grid-column: 3/17;
     position: relative;
@@ -21644,6 +21648,17 @@ Assign mixin:
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.banner-svg--wrapper__title:after {
+    background-color: #d61726;
+    content: '';
+    display: block;
+    height: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    width: 3rem;
 }
 
 @media (max-width: 432px) {
