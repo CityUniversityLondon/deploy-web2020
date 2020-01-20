@@ -790,24 +790,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/cookie-notice/cookie-notice */ "./src/patterns/cookie-notice/cookie-notice.js");
 /* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
 /* harmony import */ var _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/finder/finder */ "./src/patterns/finder/finder.js");
-/* harmony import */ var _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/image-carousel/default-carousel/default-carousel */ "./src/patterns/image-carousel/default-carousel/default-carousel.js");
-/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
-/* harmony import */ var _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-slider */ "./src/patterns/key-info-box/key-info-slider.js");
-/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
-/* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
-/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
-/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
-/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
-/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
-/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
-/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
-/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
-/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
-/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
-/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/dropdown-filter/dropdown-filter */ "./src/patterns/dropdown-filter/dropdown-filter.js");
+/* harmony import */ var _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/finder/finder-mini */ "./src/patterns/finder/finder-mini.js");
+/* harmony import */ var _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/image-carousel/default-carousel/default-carousel */ "./src/patterns/image-carousel/default-carousel/default-carousel.js");
+/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
+/* harmony import */ var _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-slider */ "./src/patterns/key-info-box/key-info-slider.js");
+/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
+/* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
+/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
+/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
+/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
+/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
+/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
+/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
+/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
+/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
+/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
+/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/dropdown-filter/dropdown-filter */ "./src/patterns/dropdown-filter/dropdown-filter.js");
 
 
 /**
@@ -848,7 +849,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_28__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cookie_notice_cookie_notice__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_29__["default"]]);
 
 /***/ }),
 
@@ -2904,6 +2906,257 @@ finder__clear.propTypes = {
 
 /***/ }),
 
+/***/ "./src/patterns/finder/components/query/finder__query--mini.js":
+/*!*********************************************************************!*\
+  !*** ./src/patterns/finder/components/query/finder__query--mini.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../funnelback */ "./src/patterns/finder/funnelback.js");
+/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
+
+
+
+
+
+
+
+
+/**
+ * @module patterns/finder/components/finder__query
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+
+const maximumSuggestions = 5,
+      [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40];
+
+function highlightQueryTerm(suggestion, partialQuery) {
+  return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    className: "sr-only"
+  }, suggestion), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    "aria-hidden": "true"
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    className: "finder__suggestion"
+  }, suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()), partialQuery.length)), suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()) + partialQuery.length))));
+}
+/**
+ * Search input field and autocomplete.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+
+function finder__query(props) {
+  // save what they're typing
+  const [partialQuery, setPartialQuery] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(props.query.query); // Funnelback suggestions for the currently typed text
+
+  const [suggestions, setSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])([]); // Request token for calls to the Funnelback suggestions service, so we
+  // can cancel it
+
+  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])({
+    cancel: () => {}
+  }); // ref for the input field, so we can .focus() it
+
+  const [inputId] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(16).slice(-4)); // boolean to show or hide suggestions
+
+  const [showSuggestions, setShowSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(false);
+  Object(react__WEBPACK_IMPORTED_MODULE_5__["useEffect"])(() => {
+    setPartialQuery(props.query.query);
+  }, [props.updating]);
+  let textInput = null;
+
+  function focusInput() {
+    textInput.focus();
+  } // on clear, make a default request for results
+
+
+  const clearQuery = () => {
+    call.cancel();
+    setPartialQuery('');
+    setSuggestions([]);
+    focusInput();
+    const newQuery = props.query;
+    newQuery.query = '';
+    newQuery.sortBy = props.config.sort;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  const submitForm = () => {
+    window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?query=".concat(partialQuery));
+  };
+
+  const submitSuggestion = s => {
+    call.cancel();
+    const newQuery = props.query;
+    newQuery.query = s;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  const clear = partialQuery && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    clear: () => {
+      clearQuery();
+    }
+  }); // render suggestions
+  // TODO: probably should be refactored into a separate component
+
+  const suggestionsList = suggestions && suggestions.length > 0 && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
+    className: showSuggestions ? 'finder__query__suggestions show' : 'finder__query__suggestions hide'
+  }, [...new Set(suggestions)].slice(0, maximumSuggestions).map(suggestion => react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
+    key: suggestion
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+    type: "button",
+    onBlur: () => setShowSuggestions(false),
+    onFocus: () => setShowSuggestions(true),
+    onMouseDown: () => {
+      //for browsers because onBlur get excuted before onClick
+      setShowSuggestions(true);
+      setPartialQuery(suggestion);
+      setSuggestions([]);
+      focusInput();
+      submitSuggestion(suggestion); //passing suggestion because partialQuery value get overwritten for some reason.
+    },
+    onClick: () => {
+      //for mobile
+      setShowSuggestions(true);
+      setPartialQuery(suggestion);
+      setSuggestions([]);
+      focusInput();
+      submitSuggestion(suggestion); //passing suggestion because partialQuery value get overwritten for some reason.
+    },
+    onKeyDown: e => {
+      switch (e.keyCode) {
+        case keyCodeEscape:
+          e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
+          setSuggestions([]);
+          break;
+
+        case keyCodeUp:
+          if (e.target.parentNode.previousElementSibling && e.target.parentNode.previousElementSibling.querySelector('button')) {
+            e.preventDefault();
+            e.target.parentNode.previousElementSibling.querySelector('button').focus();
+          } else {
+            e.preventDefault();
+            e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
+          }
+
+          break;
+
+        case keyCodeDown:
+          e.preventDefault();
+
+          if (e.target.parentNode.nextElementSibling && e.target.parentNode.nextElementSibling.querySelector('button')) {
+            e.preventDefault();
+            e.target.parentNode.nextElementSibling.querySelector('button').focus();
+          }
+
+          break;
+      }
+    }
+  }, highlightQueryTerm(suggestion, partialQuery)))));
+  const input = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+    className: "finder__query__input"
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+    className: "finder__query__icon--wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    className: "finder__icon fal fa-search"
+  })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
+    className: "sr-only",
+    htmlFor: inputId
+  }, "Search ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
+    autoComplete: "off",
+    id: inputId,
+    name: "query",
+    placeholder: props.config.placeholder,
+    ref: input => {
+      textInput = input;
+    },
+    type: "text",
+    value: partialQuery,
+    onKeyDown: e => {
+      switch (e.keyCode) {
+        case keyCodeEscape:
+          clearQuery();
+          break;
+
+        case keyCodeDown:
+          if (suggestions && suggestions.length > 0) {
+            e.preventDefault();
+            e.target.parentNode.querySelector('.finder__query__suggestions button').focus();
+          }
+
+          break;
+      }
+    },
+    onFocus: () => setShowSuggestions(true),
+    onBlur: () => setShowSuggestions(false),
+    onChange: e => {
+      //clear old suggestions
+      setSuggestions([]); // keep  what they're typing
+
+      setPartialQuery(e.target.value);
+      /**
+       * if we have a request to the suggestions service in progress,
+       * cancel it. Stops old suggestions overwriting new ones because
+       * the requests can't keep up with fast typing.
+       */
+
+      call.cancel();
+
+      if (e.target.value) {
+        // input is populated, ask for suggestions
+        const [suggestionsPromise, newCall] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_6__["suggest"])(props.query.collection, e.target.value); // update our request cancel function for the new request
+
+        setCall({
+          cancel: () => {
+            newCall.cancel();
+          }
+        });
+        suggestionsPromise.then(data => setSuggestions(data)).catch(() => setSuggestions([]));
+      } else {
+        // input is empty, empty suggestions
+        setSuggestions([]);
+      }
+    }
+  }), suggestionsList, clear);
+  return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("fieldset", {
+    className: "finder__query"
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+    type: "submit",
+    className: "finder__query__submit",
+    onClick: () => submitForm()
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    className: "fal fa-search finder__query__submit__icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    className: "finder__query__submit__text"
+  }, "Find"))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (finder__query);
+
+/***/ }),
+
 /***/ "./src/patterns/finder/components/query/finder__query.js":
 /*!***************************************************************!*\
   !*** ./src/patterns/finder/components/query/finder__query.js ***!
@@ -3600,6 +3853,197 @@ finder__results__summary.propTypes = {
   update: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__summary);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/finder-mini.js":
+/*!********************************************!*\
+  !*** ./src/patterns/finder/finder-mini.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.assign */ "./node_modules/core-js/modules/es.object.assign.js");
+/* harmony import */ var core_js_modules_es_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_assign__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
+/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_web_url__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.url */ "./node_modules/core-js/modules/web.url.js");
+/* harmony import */ var core_js_modules_web_url__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_url__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./funnelback */ "./src/patterns/finder/funnelback.js");
+/* harmony import */ var _components_query_finder_query_mini__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/query/finder__query--mini */ "./src/patterns/finder/components/query/finder__query--mini.js");
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Universal finder
+ *
+ * Don't run this via patterns.js, it's a separate compilation.
+ *
+ * @module patterns/finder/finder
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+
+
+/**
+ * Retrieve current values for facets from the URL parameters.
+ *
+ * @param {object[]} facets Array of facet definitions.
+ * @param {object} params URLSearchParams object for the current page.
+ * @return {object} - Map of facet meta labels to their current value from the URL.
+ */
+
+function getFacetParams(facets, params) {
+  return facets.map(facet => {
+    const param = {};
+
+    if (params.get("meta_".concat(facet.meta, "_orsand"))) {
+      param[facet.meta] = params.get("meta_".concat(facet.meta, "_orsand"));
+    }
+
+    return param;
+  }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
+}
+/**
+ * Preserve the search state in the URL parameters.
+ *
+ * @param {string} currQuery The search query.
+ * @param {integer} currStartRank The start rank.
+ * @param {object[]} currFacets A map of facet meta labels to their values.
+ * @param {*} facetLabels Array of facet definitions.
+ */
+
+
+function replaceHistory(currQuery, currStartRank, currFacets, facetLabels) {
+  const params = new URLSearchParams(window.location.search);
+  currQuery !== '' ? params.set('query', currQuery) : params.delete('query');
+  currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
+  facetLabels.forEach(facet => {
+    if (currFacets[facet.meta]) {
+      params.set("meta_".concat(facet.meta, "_orsand"), currFacets[facet.meta]);
+    } else {
+      params.delete("meta_".concat(facet.meta, "_orsand"));
+    }
+  });
+  const hasParams = params.toString().length ? '?' : '';
+  window.history.replaceState({}, '', "".concat(window.location.pathname).concat(hasParams).concat(params.toString()));
+}
+/**
+ * Launch the universal Finder.
+ *
+ * @param {object} props The JSON configuration file for the Finder.
+ * @return {object} The React component to render.
+ */
+
+
+function Finder(props) {
+  const params = new URLSearchParams(window.location.search);
+  /**
+   * initial state for the Funnelback query, taken from URL parameters and
+   * configuration
+   **/
+
+  const initialQuery = {
+    collection: props.config.collection,
+    fixedFacets: props.config.fixedFacets,
+    query: params.get('query') || '',
+    sortBy: params.get('query') ? null : params.get('sort') || props.config.sort,
+    sortDirection: params.get('sortdirection') || props.config.sortDirection,
+    startRank: params.get('start_rank') || 1,
+    numRanks: params.get('num_ranks') || props.config.numRanks,
+    facets: getFacetParams(props.config.facetLabels, params)
+  }; // State objects for the Funnelback query and response
+
+  const [query, setQuery] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(initialQuery); // Boolean to indicate when a query is in progress
+
+  const [updating, setUpdating] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(true); // Request token from the Funnelback request object, so we can cancel if
+  // another request is triggered by the user
+
+  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])({
+    cancel: () => {}
+  }); // useEffect doesn't deep inspect objects, so we need an additional, plain
+  // state variable to indicate that the query state has changed and the
+  // component should render
+  // the value isn't important, it's just easy to toggle a bool back and forth
+
+  const [update, setUpdate] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(false); // Retrieve Funnelback results
+
+  Object(react__WEBPACK_IMPORTED_MODULE_8__["useEffect"])(() => {
+    // preserve the state
+    replaceHistory(query.query, query.startRank, query.facets, props.config.facetLabels); // indicate a request is in progress
+
+    setUpdating(true);
+    /**
+     * cancel any request already in progress
+     *
+     * async requests can return out of order
+     */
+
+    call.cancel(); // make a new, asynchronous request to Funnelback
+
+    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_10__["find"])(query.collection, query.fixedFacets, query.query, query.sortBy, query.sortDirection, query.startRank, query.numRanks, query.facets); // save the requestToken, so
+
+    setCall({
+      cancel: () => {
+        requestToken.cancel();
+      }
+    }); // when the response from Funnelback arrives,
+    // update the results and display them
+
+    request.then(() => {
+      setUpdating(false);
+    }).catch(() => {
+      setUpdating(false);
+    });
+  }, [update]); // update props so child components can update the query
+
+  const updater = {
+    query: newQuery => setQuery(newQuery),
+    results: newUpdate => setUpdate(newUpdate),
+    updateState: update
+  };
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("form", {
+    onSubmit: e => {
+      e.preventDefault();
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_query_finder_query_mini__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    config: props.config,
+    query: query,
+    update: updater,
+    updating: updating
+  }));
+}
+
+Finder.propTypes = {
+  config: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (Finder);
 
 /***/ }),
 
@@ -5648,7 +6092,8 @@ function launchModal(modal) {
           listBody = Array.from(list.childNodes),
           listHeader = list.firstElementChild,
           customHeader = list.getAttribute('data-header'),
-          format = list.getAttribute('data-keepformat');
+          format = list.getAttribute('data-keepformat'),
+          header = document.createElement('div');
     let title,
         keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(format);
     listAnchor.setAttribute('href', '#');
@@ -5657,12 +6102,22 @@ function launchModal(modal) {
     wrapper.classList.add("".concat(bodyClassName));
 
     if (keepFormat) {
-      listAnchor.appendChild(listHeader);
+      list.insertBefore(listHeader, wrapper);
+      listHeader.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        createDialog(modal, "".concat(i), dialogArray);
+      });
     } else {
       listAnchor.innerText = listHeader.innerText;
+      header.appendChild(listHeader);
+      list.insertBefore(listAnchor, wrapper);
+      listAnchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        createDialog(modal, "".concat(i), dialogArray);
+      });
     }
-
-    list.insertBefore(listAnchor, wrapper);
 
     if (customHeader) {
       title = customHeader;
@@ -5673,11 +6128,6 @@ function launchModal(modal) {
     dialogArray.push({
       title: title,
       body: wrapper.innerHTML
-    });
-    listAnchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      createDialog(modal, "".concat(i), dialogArray);
     });
   });
 }
