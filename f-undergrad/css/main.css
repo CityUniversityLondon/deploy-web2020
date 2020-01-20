@@ -40188,6 +40188,15 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     height: 100%;
 }
 
+.navigation--primary .navigation__level2 > li > a:after,
+.navigation--primary .navigation__level2 > li > .navigation__current > span:after {
+    font-family: "Font Awesome";
+    content: '\f054';
+    font-size: 0.875em;
+    font-weight: 300;
+    margin-left: 0.5rem;
+}
+
 .navigation--primary .navigation__level2 a {
     background-color: initial;
     background-image: initial;
@@ -40295,9 +40304,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .navigation--primary .navigation__level2 > li:first-of-type > .navigation__level3 {
-    border-left: 0.0625rem solid #494949;
     display: block;
-    margin-left: 0.5rem;
 }
 
 .navigation--primary .navigation__level3 > li {
@@ -40392,7 +40399,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 .navigation--primary .navigation__level3 a,
 .navigation--primary .navigation__level3 .navigation__current > span {
-    padding-left: 1.5rem;
+    padding-left: 0.5rem;
 }
 
 .navigation--primary .navigation__level1,
