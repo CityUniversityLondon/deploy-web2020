@@ -48313,15 +48313,15 @@ main .home {
     grid-column: 1/-1;
 }
 
-@media (min-width: 901px) {
-    .landing .banner .banner__standfirst {
-        grid-column: 8/18;
-    }
-}
-
 @media (min-width: 769px) {
     .landing .banner .banner__standfirst {
         grid-column: 2/-2;
+    }
+}
+
+@media (min-width: 901px) {
+    .landing .banner .banner__standfirst {
+        grid-column: 8/18;
     }
 }
 
@@ -48626,6 +48626,16 @@ main .home {
 @media (min-width: 901px) {
     .landing .landing__bottom h2 {
         text-align: center;
+    }
+}
+
+@media (min-width: 901px) {
+    .landing .landing__bottom .landing__bottom__related-content .related-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .landing .landing__bottom .landing__bottom__related-content .related-content .card {
+        width: calc(1 / 2 * 100%);
     }
 }
 
