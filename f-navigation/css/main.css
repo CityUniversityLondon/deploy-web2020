@@ -40899,6 +40899,18 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     padding-bottom: 1.5rem;
 }
 
+@media (hover: hover) {
+    .js .navigation--primary[data-open='false'] .navigation__level1 > li:hover .navigation__button > div:after {
+        color: #1e1e1e;
+    }
+    .js .navigation--primary[data-open='false'] .navigation__level1 > li:hover .navigation__button + .navigation--primary__menu {
+        box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
+        display: block;
+        margin-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
 .js .navigation__veil {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;

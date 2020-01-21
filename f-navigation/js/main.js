@@ -6437,6 +6437,7 @@ function createCloseAll(navigation, veil) {
       button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].expanded, 'false');
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(openText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     });
+    navigation.dataset.open = 'false';
     veil.dataset.on = 'false';
   };
 }
@@ -6455,6 +6456,7 @@ function createSectionToggle(button, closeAll, veil) {
     closeAll();
 
     if (open) {
+      button.closest(".".concat(classNameSpecific)).dataset.open = 'true';
       veil.dataset.on = 'true';
       button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].expanded, open);
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(closeText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
@@ -6657,6 +6659,7 @@ function launchPrimaryNavigation(navigation) {
   navigation.innerHTML = navigation.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
   const veil = document.createElement('div'),
         closeAll = createCloseAll(navigation, veil);
+  navigation.dataset.open = 'false';
   veil.className = veilClassName;
   veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
@@ -6674,7 +6677,17 @@ function launchPrimaryNavigation(navigation) {
       e.preventDefault();
       closeAll();
     }
-  }, true); // If the navigation is open, close it on click outside it.
+  }, true);
+  Array.from(navigation.querySelectorAll('.navigation__level1 > li')).forEach(section => section.addEventListener('mouseover', () => {
+    if (navigation.dataset.open === 'false') {
+      veil.dataset.on = 'true';
+    }
+  }, true));
+  Array.from(navigation.querySelectorAll('.navigation__level1 > li')).forEach(section => section.addEventListener('mouseleave', () => {
+    if (navigation.dataset.open === 'false') {
+      veil.dataset.on = 'false';
+    }
+  }, true)); // If the navigation is open, close it on click outside it.
 
   window.addEventListener('click', e => {
     if (navigation.querySelector(".".concat(buttonClassName, "[aria-expanded='true']")) && !e.target.closest(".".concat(classNameSpecific))) {
