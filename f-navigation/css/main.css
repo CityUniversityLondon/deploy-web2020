@@ -20055,8 +20055,8 @@ main p > img {
 
 main ol,
 main ul {
-    margin-left: 2.5rem;
-    max-width: calc(55ch - 2.5rem);
+    margin-left: 1.25rem;
+    max-width: calc(55ch - 1.25rem);
 }
 
 main dl {
