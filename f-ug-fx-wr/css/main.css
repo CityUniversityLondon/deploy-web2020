@@ -44434,16 +44434,16 @@ button
     border-bottom-color: #5d184a;
 }
 
-.js .tabs--grey-underline .tabs__panel__body .tabs__links {
+.js .tabs--grey-underline .tabs__panel__body .tabs .tabs__links {
     justify-content: left;
 }
 
-.js .tabs--grey-underline .tabs__panel__body .tabs__links li a[aria-selected='true'] span {
+.js .tabs--grey-underline .tabs__panel__body .tabs .tabs__links li a[aria-selected='true'] span {
     border-bottom-color: #d61726;
 }
 
-.js .tabs--grey-underline .tabs__panel__body .tabs__panel {
-    background: #f2f2f2 !important;
+.js .tabs--grey-underline .tabs__panel__body .tabs .tabs__panel {
+    background: #f2f2f2;
 }
 
 .timetable {
@@ -56012,6 +56012,11 @@ main .standard-content {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: -1;
+}
+
+.parallax ~ div, .parallax ~ section {
+    position: relative;
     z-index: -1;
 }
 
