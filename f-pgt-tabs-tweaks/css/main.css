@@ -51677,7 +51677,8 @@ main .landing {
 }
 
 .course--pgt p.tabs__panel__body__domicile__per-year {
-    font-weight: 600;
+    font-weight: 500;
+    color: #696969;
 }
 
 .course--pgt .tabs__panel__body__domicile {
@@ -51700,13 +51701,17 @@ main .landing {
     padding-bottom: 2rem;
 }
 
+.js .course--pgt .accordion > .accordion__heading + .accordion__body {
+    background-color: #ffffff;
+}
+
+.js .course--pgt .accordion.accordion--nested .accordion__heading + .accordion__body {
+    background-color: #f2f2f2;
+}
+
 .js .course--pgt .accordion > .accordion__heading {
     background-color: #ffffff;
     border-bottom-color: #d8d8d8;
-}
-
-.js .course--pgt .accordion > .accordion__heading + .accordion__body {
-    background-color: #ffffff;
 }
 
 .js .course--pgt .tabs {
