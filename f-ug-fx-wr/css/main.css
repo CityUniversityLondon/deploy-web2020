@@ -56002,8 +56002,6 @@ main .standard-content {
 .parallax {
     -webkit-clip-path: inset(0% 0% 0% 0%);
             clip-path: inset(0% 0% 0% 0%);
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 .parallax img {
