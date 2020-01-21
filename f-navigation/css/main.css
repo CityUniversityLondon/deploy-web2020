@@ -32899,7 +32899,7 @@ article figure figcaption a:active {
 @media (min-width: 1024px) {
     .global-header__utility {
         display: block;
-        grid-column-end: 21;
+        grid-column-end: 22;
         grid-column-start: 4;
         grid-row-end: 1;
         grid-row-start: 1;
@@ -33056,8 +33056,8 @@ article figure figcaption a:active {
 
 .global-header__search {
     grid-row-start: 1;
-    grid-column-start: 21;
-    grid-column-end: span 4;
+    grid-column-start: 22;
+    grid-column-end: span 3;
 }
 
 @media (max-width: 375px) {
@@ -33298,14 +33298,6 @@ article figure figcaption a:active {
 @media (min-width: 1024px) {
     .global-header__search > a,
     .global-header__search > button {
-        font-family: "Meta Sans", sans-serif;
-        font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-        font-size: 1.125rem;
-        line-height: 1.25;
-        letter-spacing: -0.008em;
-        font-style: normal;
-        font-weight: 600;
-        margin-top: 1rem;
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -33327,66 +33319,6 @@ article figure figcaption a:active {
         transition: background-color 0.6s;
         display: flex;
         height: 100%;
-        margin-top: 0;
-    }
-    .global-header__search > a i,
-    .global-header__search > a em,
-    .global-header__search > button i,
-    .global-header__search > button em {
-        font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-    }
-    .global-header__search > a b,
-    .global-header__search > a strong,
-    .global-header__search > button b,
-    .global-header__search > button strong {
-        font-weight: inherit;
-    }
-    .global-header__search > a i,
-    .global-header__search > a em,
-    .global-header__search > button i,
-    .global-header__search > button em {
-        font-style: italic;
-    }
-    .global-header__search > a u,
-    .global-header__search > button u {
-        text-decoration: none;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1919px) {
-    .global-header__search > a,
-    .global-header__search > button {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1920px) and (max-width: 3839px) {
-    .global-header__search > a,
-    .global-header__search > button {
-        letter-spacing: -0.014em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 3840px) and (max-width: 7679px) {
-    .global-header__search > a,
-    .global-header__search > button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 7680px) {
-    .global-header__search > a,
-    .global-header__search > button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 1024px) {
-    .global-header__search > a b,
-    .global-header__search > a strong,
-    .global-header__search > button b,
-    .global-header__search > button strong {
-        font-weight: 600;
     }
 }
 
@@ -33448,6 +33380,80 @@ article figure figcaption a:active {
     .global-header__search > button:hover {
         background-color: #9e111c;
         color: #ffffff;
+    }
+}
+
+@media (min-width: 1280px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        font-family: "Meta Sans", sans-serif;
+        font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+        font-size: 1.125rem;
+        line-height: 1.25;
+        letter-spacing: -0.008em;
+        font-style: normal;
+        font-weight: 600;
+        margin-top: 1rem;
+        margin-top: 0;
+    }
+    .global-header__search > a i,
+    .global-header__search > a em,
+    .global-header__search > button i,
+    .global-header__search > button em {
+        font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    }
+    .global-header__search > a b,
+    .global-header__search > a strong,
+    .global-header__search > button b,
+    .global-header__search > button strong {
+        font-weight: inherit;
+    }
+    .global-header__search > a i,
+    .global-header__search > a em,
+    .global-header__search > button i,
+    .global-header__search > button em {
+        font-style: italic;
+    }
+    .global-header__search > a u,
+    .global-header__search > button u {
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 1280px) and (min-width: 1280px) and (max-width: 1919px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1280px) and (min-width: 1920px) and (max-width: 3839px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 1280px) and (min-width: 3840px) and (max-width: 7679px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1280px) and (min-width: 7680px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1280px) {
+    .global-header__search > a b,
+    .global-header__search > a strong,
+    .global-header__search > button b,
+    .global-header__search > button strong {
+        font-weight: 600;
     }
 }
 
@@ -40899,18 +40905,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     padding-bottom: 1.5rem;
 }
 
-@media (hover: hover) {
-    .js .navigation--primary[data-open='false'] .navigation__level1 > li:hover .navigation__button > div:after {
-        color: #1e1e1e;
-    }
-    .js .navigation--primary[data-open='false'] .navigation__level1 > li:hover .navigation__button + .navigation--primary__menu {
-        box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
-        display: block;
-        margin-top: 1.5rem;
-        padding-bottom: 1.5rem;
-    }
-}
-
 .js .navigation__veil {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
@@ -42165,8 +42159,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-color: #ffffff;
-        background-image: linear-gradient(120deg, #d61726 0%, #d61726 100%);
+        background-image: linear-gradient(120deg, #ffffff 0%, #ffffff 100%);
         background-position: 0 100%;
         background-repeat: no-repeat;
         background-size: 100% 0;
@@ -42182,7 +42175,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         border-top-color: #cbcbcb;
         border-top-style: solid;
         border-top-width: 0.0625rem;
-        color: #1e1e1e;
+        color: #0c0c0e;
         font-weight: 450;
         transition: background-size 0.2s ease-in-out;
     }
@@ -42236,17 +42229,18 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-offset: 0.1875rem;
         outline-style: dotted;
         outline-width: 0.125rem;
-        background-color: #ffffff;
+        background-image: linear-gradient(120deg, #ffffff 0%, #ffffff 100%);
         border-bottom-color: #d61726;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #1e1e1e;
+        color: #0c0c0e;
         font-weight: 700;
     }
 }
 
 @media screen and (hover: hover) {
     .js .pagination__wrapper .pagination__controls button:hover {
+        background-image: linear-gradient(120deg, #d61726 0%, #d61726 100%);
         background-size: 100% 100%;
         color: #ffffff;
         font-weight: 450;
@@ -42259,6 +42253,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-offset: 0.1875rem;
         outline-style: dotted;
         outline-width: 0.125rem;
+        background-image: linear-gradient(120deg, #d61726 0%, #d61726 100%);
         background-size: 100% 100%;
         border-bottom-color: #d61726;
         border-bottom-style: solid;
@@ -42267,7 +42262,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         font-weight: 700;
     }
     .js .pagination__wrapper .pagination__controls button:disabled {
-        background-color: transparent;
         background-size: 100% 0;
         border-bottom-color: #cbcbcb;
         border-bottom-style: solid;
@@ -42281,7 +42275,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         padding-bottom: 0.0625rem;
     }
     .js .pagination__wrapper .pagination__controls button[aria-current] {
-        background-color: transparent;
         border-bottom-color: #cbcbcb;
         border-bottom-style: solid;
         border-bottom-width: 0.0625rem;
@@ -45904,7 +45897,7 @@ $profile-link-color-engaged
 }
 
 .finder__query {
-    background-color: #ffffff;
+    background-color: #d61726;
     margin-top: 1rem;
     padding: 1.5rem;
     position: relative;
@@ -45939,10 +45932,6 @@ $profile-link-color-engaged
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(45deg, #3e1031, #d61726);
-    border-style: solid;
-    border-width: 0.1875rem;
     display: flex;
     flex-grow: 1;
     font-weight: 450;
@@ -46012,7 +46001,7 @@ $profile-link-color-engaged
 }
 
 .finder__query__input:focus-within {
-    outline-color: #0c0c0e;
+    outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
@@ -46075,7 +46064,7 @@ $profile-link-color-engaged
 .finder__query__input input:focus {
     color: #1e1e1e;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     outline: 0;
 }
 
@@ -46202,9 +46191,9 @@ $profile-link-color-engaged
     padding-right: 1.5rem;
     padding-top: 0.5rem;
     transition: background-color 0.6s;
-    border-radius: 0;
-    box-shadow: none;
+    border-radius: 0.25rem;
     flex-shrink: 0;
+    font-weight: 500;
     margin-left: 1rem;
 }
 
@@ -46267,20 +46256,20 @@ $profile-link-color-engaged
 }
 
 .finder__query__submit:focus, .finder__query__submit:active {
-    outline-color: #0c0c0e;
+    outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
 .finder__query__submit, .finder__query__submit:focus, .finder__query__submit:active {
-    background-color: #d61726;
+    background-color: #5d184a;
     color: #ffffff;
 }
 
 @media (hover: hover) {
     .finder__query__submit:hover {
-        background-color: #9e111c;
+        background-color: #250020;
         color: #ffffff;
     }
 }
@@ -47332,6 +47321,11 @@ $profile-link-color-engaged
     display: inline-block;
 }
 
+.finder__results__summary {
+    border-bottom: 0.0625rem solid #a1a1a1;
+    padding-bottom: 1rem;
+}
+
 .finder__results__summary button {
     background-color: initial;
     background-image: initial;
@@ -47463,7 +47457,7 @@ $profile-link-color-engaged
 }
 
 @media (max-width: 1023px) {
-    .finder__results__summary__heading {
+    .finder__results .finder__results__summary {
         display: none;
     }
 }
@@ -47823,8 +47817,13 @@ $profile-link-color-engaged
     }
 }
 
-.finder__results__card a:hover:after {
-    background-color: #ffffff;
+@media (hover: hover) {
+    .finder__results__card a:hover {
+        background-color: #f2f2f2;
+    }
+    .finder__results__card a:hover:after {
+        background-color: #f2f2f2;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -47939,10 +47938,12 @@ $profile-link-color-engaged
     line-height: 1.625;
     letter-spacing: -0.005em;
     background-color: transparent;
-    border: 0.125rem solid #3e1031;
+    border-color: #cbcbcb;
+    border-style: solid;
+    border-width: 0.0625rem;
     bottom: 0.25rem;
     color: #0c0c0e;
-    font-weight: 600;
+    font-weight: 500;
     height: 3.25rem;
     position: relative;
     width: 100%;
@@ -47985,7 +47986,8 @@ $profile-link-color-engaged
 }
 
 .finder__select.finder__select--selected select {
-    background-color: #5d184a;
+    background-color: #9e111c;
+    border-color: #9e111c;
     color: #ffffff;
 }
 
@@ -48204,12 +48206,22 @@ $profile-link-color-engaged
 }
 
 @media (hover: hover) {
-    .finder__results__course a:hover, .finder__results__course a:active {
-        background-color: #ffffff;
+    .finder__results__course a:hover {
+        background-color: #f2f2f2;
         background-image: none;
         outline-color: transparent;
         outline-width: 0;
     }
+    .finder__results__course a:hover:after {
+        background-color: #f2f2f2;
+    }
+}
+
+.finder__results__course a:active {
+    background-color: #f2f2f2;
+    background-image: none;
+    outline-color: transparent;
+    outline-width: 0;
 }
 
 .finder__results__course a:focus {
@@ -50781,12 +50793,9 @@ main .landing {
     }
 }
 
-.listing {
-    background-image: linear-gradient(#f2f2f2, #e5e5e5);
-}
-
 .listing .banner-text {
     background-color: #f2f2f2;
+    background: linear-gradient(180deg, #d8d8d8 0%, #ffffff 100%);
     color: #0c0c0e;
 }
 
