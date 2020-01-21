@@ -44419,16 +44419,16 @@ button
 }
 
 @media screen and (min-width: 769px) and (min-width: 769px) {
-    .js .tabs--accordion .tabs .accordion {
+    .js .tabs--accordion .tabs .accordion--nested {
         display: block;
     }
 }
 
 .js .tabs--grey-underline .tabs__links li a span {
-    border-bottom-color: #e5e5e5;
+    border-bottom-color: #f2f2f2;
 }
 
-.js .tabs--grey-underline .tabs__links li a[aria-selected="true"] span {
+.js .tabs--grey-underline .tabs__links li a[aria-selected='true'] span {
     border-bottom-color: #5d184a;
 }
 
@@ -44436,8 +44436,12 @@ button
     justify-content: left;
 }
 
-.js .tabs--grey-underline .tabs__panel__body .tabs__links li a[aria-selected="true"] span {
+.js .tabs--grey-underline .tabs__panel__body .tabs__links li a[aria-selected='true'] span {
     border-bottom-color: #d61726;
+}
+
+.js .tabs--grey-underline .tabs__panel__body .tabs__panel {
+    background: #f2f2f2 !important;
 }
 
 .timetable {
