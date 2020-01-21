@@ -46252,7 +46252,9 @@ $profile-link-color-engaged
 }
 
 .finder__query__input .finder__clear .icon:before {
-    line-height: 2;
+    display: block;
+    margin-bottom: 0.75rem;
+    margin-top: 0.5rem;
 }
 
 .finder__query__input .finder__clear .finder__icon--close {
@@ -48152,6 +48154,7 @@ $profile-link-color-engaged
     background-color: #ffffff;
     color: #696969;
     font-weight: 450;
+    margin-bottom: 0.5rem;
     margin-top: 0.75rem;
 }
 
