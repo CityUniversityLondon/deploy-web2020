@@ -42496,6 +42496,8 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .promo-box__card__body img {
     min-width: 3.25rem;
     max-width: 3.25rem;
+    min-height: 3.25rem;
+    max-height: 3.25rem;
     display: block;
     margin-right: 1.25rem;
 }
