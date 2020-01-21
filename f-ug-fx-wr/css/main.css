@@ -56017,7 +56017,7 @@ main .standard-content {
 
 .parallax ~ div, .parallax ~ section {
     position: relative;
-    z-index: -1;
+    z-index: 0;
 }
 
 .course--ug__keyinfo__accordion {
