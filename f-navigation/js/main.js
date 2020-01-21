@@ -5479,7 +5479,7 @@ function prependIcon(anchor, className) {
   let node = document.createElement('span');
   node.className = 'fas ' + className + '  link-decorator';
   node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, true);
-  anchor.parentNode.prepend(node);
+  anchor.parentNode.insertBefore(node, anchor);
 }
 /**
  * Checks if anchor has to have external URL icon
