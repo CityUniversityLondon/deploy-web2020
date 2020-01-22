@@ -43437,7 +43437,12 @@ blockquote footer cite {
     width: 1.5rem;
     padding: 0;
     background: transparent;
-    border-color: #9f9f9f;
+    border: 0.125rem solid #696969;
+}
+
+.js .slider[data-slider-pager-style='circle'] .slider__controls__buttons button:hover, .js .slider[data-slider-pager-style='circle'] .slider__controls__buttons button:active {
+    border-color: #1e1e1e;
+    background: #1e1e1e;
 }
 
 .js .slider[data-slider-pager-style='circle'] .slider__controls__buttons button:before {
@@ -43449,14 +43454,15 @@ blockquote footer cite {
 }
 
 .js .slider[data-slider-pager-style='circle'] .slider__controls__buttons button.slider__controls__buttons__disabled {
-    background: #333333;
+    background: #1e1e1e;
+    border: 0.125rem solid #1e1e1e;
     opacity: 1;
     border: none;
     height: 1.75rem;
     width: 1.75rem;
 }
 
-.js .slider[data-slider-pager-style='circle'] .slider__controls__wrap {
+.js .slider[data-slider-pager-style='circle'] .slider__controls {
     justify-content: center;
 }
 
@@ -51786,6 +51792,23 @@ main .landing {
 .js .course--pgt .tabs .tabs__panel {
     background-color: #ffffff;
     border-top: none;
+}
+
+.js .slider[data-slider-pager-style='circle'] .slider__controls__wrap {
+    display: none;
+}
+
+.js .slider[data-slider-pager-style='circle'] .slider__slide {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .js .slider[data-slider-pager-style='circle'] .slider__slide {
+        display: none;
+    }
+    .js .slider[data-slider-pager-style='circle'] .slider__controls__wrap {
+        display: block;
+    }
 }
 
 .profile .content-wrapper {
