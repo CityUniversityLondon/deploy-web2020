@@ -32907,7 +32907,7 @@ article figure figcaption a:active {
 @media (min-width: 1024px) {
     .global-header__utility {
         display: block;
-        grid-column-end: 21;
+        grid-column-end: 22;
         grid-column-start: 4;
         grid-row-end: 1;
         grid-row-start: 1;
@@ -33064,8 +33064,8 @@ article figure figcaption a:active {
 
 .global-header__search {
     grid-row-start: 1;
-    grid-column-start: 21;
-    grid-column-end: span 4;
+    grid-column-start: 22;
+    grid-column-end: span 3;
 }
 
 @media (max-width: 375px) {
@@ -33308,11 +33308,12 @@ article figure figcaption a:active {
     .global-header__search > button {
         font-family: "Meta Sans", sans-serif;
         font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-        font-size: 1.125rem;
-        line-height: 1.25;
-        letter-spacing: -0.008em;
+        font-size: 1rem;
+        line-height: 1.625;
+        letter-spacing: -0.005em;
         font-style: normal;
         font-weight: 600;
+        line-height: 1.25;
         margin-top: 1rem;
         background-color: initial;
         background-image: initial;
@@ -33364,14 +33365,14 @@ article figure figcaption a:active {
 @media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1919px) {
     .global-header__search > a,
     .global-header__search > button {
-        letter-spacing: -0.011em;
+        letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 1920px) and (max-width: 3839px) {
     .global-header__search > a,
     .global-header__search > button {
-        letter-spacing: -0.014em;
+        letter-spacing: -0.013em;
     }
 }
 
@@ -33456,6 +33457,80 @@ article figure figcaption a:active {
     .global-header__search > button:hover {
         background-color: #9e111c;
         color: #ffffff;
+    }
+}
+
+@media (min-width: 1280px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        font-family: "Meta Sans", sans-serif;
+        font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+        font-size: 1.125rem;
+        line-height: 1.25;
+        letter-spacing: -0.008em;
+        font-style: normal;
+        font-weight: 600;
+        margin-top: 1rem;
+        margin-top: 0;
+    }
+    .global-header__search > a i,
+    .global-header__search > a em,
+    .global-header__search > button i,
+    .global-header__search > button em {
+        font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    }
+    .global-header__search > a b,
+    .global-header__search > a strong,
+    .global-header__search > button b,
+    .global-header__search > button strong {
+        font-weight: inherit;
+    }
+    .global-header__search > a i,
+    .global-header__search > a em,
+    .global-header__search > button i,
+    .global-header__search > button em {
+        font-style: italic;
+    }
+    .global-header__search > a u,
+    .global-header__search > button u {
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 1280px) and (min-width: 1280px) and (max-width: 1919px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1280px) and (min-width: 1920px) and (max-width: 3839px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 1280px) and (min-width: 3840px) and (max-width: 7679px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1280px) and (min-width: 7680px) {
+    .global-header__search > a,
+    .global-header__search > button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1280px) {
+    .global-header__search > a b,
+    .global-header__search > a strong,
+    .global-header__search > button b,
+    .global-header__search > button strong {
+        font-weight: 600;
     }
 }
 
@@ -46170,7 +46245,9 @@ $profile-link-color-engaged
 }
 
 .finder__query__input .finder__clear .icon:before {
-    line-height: 2;
+    display: block;
+    margin-bottom: 0.75rem;
+    margin-top: 0.5rem;
 }
 
 .finder__query__input .finder__clear .finder__icon--close {
@@ -48070,6 +48147,7 @@ $profile-link-color-engaged
     background-color: #ffffff;
     color: #696969;
     font-weight: 450;
+    margin-bottom: 0.5rem;
     margin-top: 0.75rem;
 }
 
