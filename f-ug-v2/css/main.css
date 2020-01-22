@@ -55921,14 +55921,6 @@ main .standard-content {
     }
 }
 
-.course--ug .course--ug__student-testimonials h2 {
-    grid-column: 1/-2;
-}
-
-.course--ug .course--ug__student-testimonials .unibuddy-card {
-    grid-column: 11/17;
-}
-
 .course--ug .course-info__wrapper {
     margin-bottom: 2rem;
 }
@@ -56786,4 +56778,65 @@ main .standard-content {
 .ug-text-table .ug-text-table__value span i,
 .ug-text-table .ug-text-table__value span em {
     font-style: italic;
+}
+
+.ug-career__testimonial {
+    background-color: #f2f2f2;
+}
+
+.courses--ug__facilities h2,
+.course--ug__student-coursework h2,
+.course--ug__student-testimonials__wrapper h2 {
+    border-bottom: 0.0625rem solid #cbcbcb;
+    padding-bottom: 0.5rem;
+}
+
+.courses--ug__facilities h2 .full-width-heading,
+.course--ug__student-coursework h2 .full-width-heading,
+.course--ug__student-testimonials__wrapper h2 .full-width-heading {
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .courses--ug__facilities h2 .full-width-heading,
+    .course--ug__student-coursework h2 .full-width-heading,
+    .course--ug__student-testimonials__wrapper h2 .full-width-heading {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .courses--ug__facilities h2 .full-width-heading,
+    .course--ug__student-coursework h2 .full-width-heading,
+    .course--ug__student-testimonials__wrapper h2 .full-width-heading {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+.courses--ug__facilities h2 .full-width-heading h2,
+.course--ug__student-coursework h2 .full-width-heading h2,
+.course--ug__student-testimonials__wrapper h2 .full-width-heading h2 {
+    grid-column: 2/-2;
+}
+
+.course--ug__student-testimonials__half:nth-of-type(1) {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 769px) {
+    .course--ug__student-testimonials__half:nth-of-type(1) {
+        grid-column: 1/12;
+    }
+}
+
+.course--ug__student-testimonials__half:nth-of-type(2) {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 769px) {
+    .course--ug__student-testimonials__half:nth-of-type(2) {
+        grid-column: 13/-1;
+    }
 }
