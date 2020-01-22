@@ -43418,10 +43418,6 @@ blockquote footer cite {
     color: #1e1e1e;
 }
 
-.js .slider[data-slider-pager-style='circle'] .slider__active-slide {
-    display: block;
-}
-
 .js .slider[data-slider-pager-style='circle'] .slider__controls__progress {
     display: none;
 }
@@ -51792,6 +51788,10 @@ main .landing {
 .js .course--pgt .tabs .tabs__panel {
     background-color: #ffffff;
     border-top: none;
+}
+
+.js .slider[data-slider-pager-style='circle'] .slider__active-slide {
+    display: block;
 }
 
 .js .slider[data-slider-pager-style='circle'] .slider__controls__wrap {
