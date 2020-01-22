@@ -43422,6 +43422,44 @@ blockquote footer cite {
     display: block;
 }
 
+.js .slider[data-slider-pager-style='circle'] .slider__controls__progress {
+    display: none;
+}
+
+.js .slider[data-slider-pager-style='circle'] .slider__controls__buttons {
+    display: flex;
+    align-items: center;
+}
+
+.js .slider[data-slider-pager-style='circle'] .slider__controls__buttons button {
+    border-radius: 100%;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 0;
+    background: transparent;
+    border-color: #9f9f9f;
+}
+
+.js .slider[data-slider-pager-style='circle'] .slider__controls__buttons button:before {
+    display: none;
+}
+
+.js .slider[data-slider-pager-style='circle'] .slider__controls__buttons button:first-child {
+    margin-left: 0;
+}
+
+.js .slider[data-slider-pager-style='circle'] .slider__controls__buttons button.slider__controls__buttons__disabled {
+    background: #333333;
+    opacity: 1;
+    border: none;
+    height: 1.75rem;
+    width: 1.75rem;
+}
+
+.js .slider[data-slider-pager-style='circle'] .slider__controls__wrap {
+    justify-content: center;
+}
+
 article .social-icon {
     background-color: initial;
     background-image: initial;
