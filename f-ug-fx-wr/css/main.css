@@ -56190,15 +56190,6 @@ main .standard-content {
 .course--ug .parallax {
     background-attachment: fixed;
     background-size: cover;
-    /*
-        img {
-            height: 100%;
-            object-fit: cover;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: z-index('below');
-        } */
 }
 
 .course--ug .course--ug__keyinfo__accordion {
