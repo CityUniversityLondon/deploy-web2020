@@ -45950,7 +45950,7 @@ $profile-link-color-engaged
 
 @media (min-width: 769px) {
     .chart--bar--horizontal__value {
-        min-width: none;
+        min-width: 0;
     }
 }
 
