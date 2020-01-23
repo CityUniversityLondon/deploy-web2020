@@ -57426,6 +57426,207 @@ main .standard-content {
     font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
+@media screen {
+    .js .ourse--ug .tabs__links {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .js .ourse--ug .tabs__links {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media screen {
+    .js .course--ug .accordion {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .js .course--ug .accordion {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .js .course--ug .accordion {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (min-width: 1441px) {
+    .js .course--ug .accordion {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .js .course--ug .tabs {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 901px) {
+    .js .course--ug .tabs {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 901px) {
+    .js .course--ug .tabs {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 1441px) {
+    .js .course--ug .tabs {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .js .course--ug .tabs .tabs__links {
+        display: none;
+    }
+    .js .course--ug .tabs .tabs__panel {
+        background-color: #ffffff;
+        border-top: 0;
+        padding: 0;
+    }
+    .js .course--ug .tabs .tabs__panel[hidden] {
+        display: block;
+    }
+    .js .course--ug .tabs .tabs__panel:not([hidden]) .tabs__panel__content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .js .course--ug .tabs .tabs__panel__heading {
+        text-align: center;
+    }
+    .js .course--ug .tabs .tabs__panel__heading:after {
+        background-color: #5d184a;
+        content: '';
+        display: block;
+        height: 0.25rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0.5rem;
+        width: 6rem;
+    }
+}
+
+@media screen {
+    .js main > .course--ug .tabs__panel:not([hidden]) {
+        padding: 0;
+    }
+    .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content {
+        grid-template-columns: repeat(24, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 432px) {
+    .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 432px) and (min-width: 901px) {
+    .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen {
+    .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__heading {
+        grid-row: 1;
+    }
+    .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
+        grid-row: 2;
+    }
+    .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__heading,
+    .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
+        grid-column: 1 / span 24;
+    }
+}
+
+@media screen and (min-width: 433px) and (max-width: 900px) {
+    .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__heading,
+    .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
+        grid-column: 5 / span 16;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__heading,
+    .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
+        grid-column: 7 / span 12;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .js main > .navigation--secondary + .course--ug .tabs__panel:not([hidden]) > .tabs__panel__content {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 768px) {
+    .js main > .navigation--secondary + .course--ug .tabs__panel:not([hidden]) > .tabs__panel__content {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 901px) {
+    .js main > .navigation--secondary + .course--ug .tabs__panel:not([hidden]) > .tabs__panel__content {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .js main > .navigation--secondary + .course--ug .tabs__panel:not([hidden]) > .tabs__panel__content .tabs__panel__heading,
+    .js main > .navigation--secondary + .course--ug .tabs__panel:not([hidden]) > .tabs__panel__content .tabs__panel__body {
+        grid-column: 4 / span 12;
+    }
+}
+
 @media (min-width: 1024px) {
     main > .course--ug .promo-box__wrapper {
         grid-template-columns: repeat(18, 1fr);
@@ -58215,18 +58416,25 @@ main .standard-content {
 .course--ug__usp__cta {
     background-color: #ffffff;
     display: block;
+    padding-bottom: 0.25rem 0 1rem;
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 769px) {
     .course--ug__usp__cta {
         display: flex;
-        justify-self: space-between;
+        justify-self: space-around;
     }
 }
 
 .course--ug__usp__cta p {
-    display: inline-block;
-    margin-right: 0.5rem;
+    display: block;
+}
+
+@media (min-width: 769px) {
+    .course--ug__usp__cta p {
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
 }
 
 .course--ug__usp__cta p:last-of-type {
