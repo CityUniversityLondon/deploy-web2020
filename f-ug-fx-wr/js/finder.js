@@ -1934,7 +1934,7 @@ function finder__results__summary(props) {
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     "aria-live": "polite",
     className: "finder__results__summary__heading"
-  }, props.query.query || Object.keys(props.query.facets).length > 0 ? 'Matching' : 'All', ' ', result, " (showing", ' ', props.totalMatching > props.numRanks && "".concat(props.currStart, "\u2013").concat(props.currEnd, " of "), props.totalMatching, " ", result, props.query.query && " for \u201C".concat(props.query.query, "\u201D"), ")"), searchHints);
+  }, props.query.query || Object.keys(props.query.facets).length > 0 ? 'Matching' : 'All', ' ', result, " (showing", ' ', props.totalMatching > props.numRanks && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "".concat(props.currStart, "\u2013").concat(props.currEnd)), props.totalMatching > props.numRanks && ' of ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.totalMatching), " ", result, props.query.query && " for \u201C".concat(props.query.query, "\u201D"), ")"), searchHints);
 }
 
 finder__results__summary.propTypes = {
