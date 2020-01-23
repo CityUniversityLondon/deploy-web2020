@@ -43669,6 +43669,11 @@ article .link-copy {
     }
 }
 
+.statistics-block .statistics-block__heading {
+    padding: 1rem;
+    text-align: center;
+}
+
 .statistics-block .ksp__items {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
