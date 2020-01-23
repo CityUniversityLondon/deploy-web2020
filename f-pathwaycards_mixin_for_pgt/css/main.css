@@ -22044,6 +22044,7 @@ Assign mixin:
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -22414,6 +22415,7 @@ Assign mixin:
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -23010,6 +23012,7 @@ Assign mixin:
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -23850,6 +23853,7 @@ Assign mixin:
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -23890,6 +23894,7 @@ Assign mixin:
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -23930,6 +23935,7 @@ Assign mixin:
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -23970,6 +23976,7 @@ Assign mixin:
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -24010,6 +24017,7 @@ Assign mixin:
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -24050,6 +24058,7 @@ Assign mixin:
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -24090,6 +24099,7 @@ Assign mixin:
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -24130,6 +24140,7 @@ Assign mixin:
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -24294,6 +24305,7 @@ Assign mixin:
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -24583,6 +24595,7 @@ Assign mixin:
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -47747,6 +47760,7 @@ $profile-link-color-engaged
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -49651,6 +49665,7 @@ $profile-link-color-engaged
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
@@ -52337,6 +52352,7 @@ main .landing {
     left: 0;
     width: 100%;
     height: 100%;
+    transition: transform 0.6s;
 }
 
 @media (hover: hover) {
