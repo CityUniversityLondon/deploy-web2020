@@ -56187,23 +56187,18 @@ main .standard-content {
     margin-top: 1.75rem;
 }
 
-.course--ug .course--ug > div:not(.parallax), .course--ug .course--ug > section, .course--ug .course--ug > header {
-    position: relative;
-    z-index: 1;
-}
-
 .course--ug .parallax {
-    -webkit-clip-path: inset(0% 0% 0% 0%);
-            clip-path: inset(0% 0% 0% 0%);
-}
-
-.course--ug .parallax img {
-    height: 100%;
-    object-fit: cover;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: -1;
+    background-attachment: fixed;
+    background-size: cover;
+    /*
+        img {
+            height: 100%;
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: z-index('below');
+        } */
 }
 
 .course--ug .course--ug__keyinfo__accordion {
