@@ -5479,7 +5479,7 @@ function prependIcon(anchor, className) {
   let node = document.createElement('span');
   node.className = 'fas ' + className + '  link-decorator';
   node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, true);
-  anchor.parentNode.prepend(node);
+  anchor.parentNode.insertBefore(node, anchor);
 }
 /**
  * Checks if anchor has to have external URL icon
@@ -6109,7 +6109,7 @@ function launchModal(modal) {
         createDialog(modal, "".concat(i), dialogArray);
       });
     } else {
-      listAnchor.innerText = listHeader.innerText;
+      listAnchor.textContent = listHeader.textContent;
       header.appendChild(listHeader);
       list.insertBefore(listAnchor, wrapper);
       listAnchor.addEventListener('click', function (e) {
@@ -6455,6 +6455,7 @@ function createSectionToggle(button, closeAll, veil) {
     closeAll();
 
     if (open) {
+      button.closest(".".concat(classNameSpecific)).dataset.open = 'true';
       veil.dataset.on = 'true';
       button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].expanded, open);
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(closeText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
