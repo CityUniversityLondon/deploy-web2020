@@ -58416,13 +58416,13 @@ main .standard-content {
 .course--ug__usp__cta {
     background-color: #ffffff;
     display: block;
-    padding-bottom: 0.25rem 0 1rem;
+    padding: 0.25rem 0 1rem;
 }
 
 @media (min-width: 769px) {
     .course--ug__usp__cta {
         display: flex;
-        justify-self: space-around;
+        justify-content: space-around;
     }
 }
 
