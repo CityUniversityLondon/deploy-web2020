@@ -20592,7 +20592,7 @@ Example HTML:
 }
 
 /* Provide a full-width heading area, where the bottom border is applied to give
-the impression for a full-width underline. As this extends beyond the regular grid,
+the impression for a full-width underline on larger screens. As this extends beyond the regular grid,
 the standard grid wrapper mixin is applied to the child element with class
 'full-width-heading'.
 
@@ -26312,25 +26312,13 @@ _:-ms-lang(x),
 }
 
 .footer-cards--pink80 h2 .full-width-heading {
-    grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 0;
-    display: grid;
+    grid-column: 1/-1;
 }
 
-@media (min-width: 768px) {
-    .footer-cards--pink80 h2 .full-width-heading {
-        grid-column-gap: 1rem;
+@media (min-width: 769px) {
+    .footer-cards--pink80 h2 .full-width-heading:first-child {
+        grid-column: 2/-2;
     }
-}
-
-@media (min-width: 901px) {
-    .footer-cards--pink80 h2 .full-width-heading {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-.footer-cards--pink80 h2 .full-width-heading h2 {
-    grid-column: 2/-2;
 }
 
 .cms-editor-warning {
@@ -51252,28 +51240,14 @@ main .landing {
 
 .wrapper--course--pgt__profiles__heading .full-width-heading,
 .wrapper--course--pgt__gallery__heading .full-width-heading {
-    grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 0;
-    display: grid;
+    grid-column: 1/-1;
 }
 
-@media (min-width: 768px) {
-    .wrapper--course--pgt__profiles__heading .full-width-heading,
-    .wrapper--course--pgt__gallery__heading .full-width-heading {
-        grid-column-gap: 1rem;
+@media (min-width: 769px) {
+    .wrapper--course--pgt__profiles__heading .full-width-heading:first-child,
+    .wrapper--course--pgt__gallery__heading .full-width-heading:first-child {
+        grid-column: 2/-2;
     }
-}
-
-@media (min-width: 901px) {
-    .wrapper--course--pgt__profiles__heading .full-width-heading,
-    .wrapper--course--pgt__gallery__heading .full-width-heading {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-.wrapper--course--pgt__profiles__heading .full-width-heading h2,
-.wrapper--course--pgt__gallery__heading .full-width-heading h2 {
-    grid-column: 2/-2;
 }
 
 @media (max-width: 1023px) {
@@ -51500,6 +51474,109 @@ main .landing {
     margin: auto;
 }
 
+@media (max-width: 1023px) {
+    .course--pgt__our-students {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .course--pgt__our-students {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.course--pgt__our-students .wrapper--course--pgt__our-students__heading {
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+    border-bottom: 0.0625rem solid #cbcbcb;
+    padding-bottom: 0.5rem;
+    grid-column: 1/-1;
+}
+
+@media (min-width: 768px) {
+    .course--pgt__our-students .wrapper--course--pgt__our-students__heading {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .course--pgt__our-students .wrapper--course--pgt__our-students__heading {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+.course--pgt__our-students .wrapper--course--pgt__our-students__heading .full-width-heading {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 769px) {
+    .course--pgt__our-students .wrapper--course--pgt__our-students__heading .full-width-heading:first-child {
+        grid-column: 2/-2;
+    }
+}
+
+.course--pgt__our-students .course--pgt__student-work {
+    grid-column: 1/-1;
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .course--pgt__our-students .course--pgt__student-work {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .course--pgt__our-students .course--pgt__student-work {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+.course--pgt__our-students .course--pgt__student-work .course--pgt__student-work__heading,
+.course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 769px) {
+    .course--pgt__our-students .course--pgt__student-work .course--pgt__student-work__heading,
+    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video {
+        grid-column: 2/-1;
+    }
+}
+
+@media (min-width: 769px) {
+    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video {
+        display: flex;
+    }
+    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video .embedded-video {
+        padding-left: 0;
+        flex: 1;
+    }
+    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video .embedded-video:last-of-type {
+        padding-right: 0;
+    }
+}
+
+.course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video .embedded-video {
+    padding-top: 0;
+}
+
+@media (max-width: 768px) {
+    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video .embedded-video {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
 .course--pgt__usp {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
@@ -51599,25 +51676,13 @@ main .landing {
 }
 
 .course--pgt__our-students .wrapper--course--pgt__our-students__heading .full-width-heading {
-    grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 0;
-    display: grid;
+    grid-column: 1/-1;
 }
 
-@media (min-width: 768px) {
-    .course--pgt__our-students .wrapper--course--pgt__our-students__heading .full-width-heading {
-        grid-column-gap: 1rem;
+@media (min-width: 769px) {
+    .course--pgt__our-students .wrapper--course--pgt__our-students__heading .full-width-heading:first-child {
+        grid-column: 2/-2;
     }
-}
-
-@media (min-width: 901px) {
-    .course--pgt__our-students .wrapper--course--pgt__our-students__heading .full-width-heading {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-.course--pgt__our-students .wrapper--course--pgt__our-students__heading .full-width-heading h2 {
-    grid-column: 2/-2;
 }
 
 .course--pgt__our-students .course--pgt__student-work {
