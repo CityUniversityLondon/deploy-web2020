@@ -827,11 +827,7 @@ function finder__filters(props) {
             query: props.query,
             responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
             update: props.update,
-            dependencies: props.config.facetLabels.filter(candidate => {
-              if (candidate.dependency === facet.meta) {
-                return candidate;
-              }
-            })
+            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
           });
 
         case 'toggle':
