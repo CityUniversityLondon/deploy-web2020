@@ -2150,9 +2150,11 @@ function Finder(props) {
   };
 
   const clear = () => {
-    const clearQuery = Object.assign({}, query);
-    clearQuery.facets = {};
-    setQuery(clearQuery);
+    const newQuery = query;
+    call.cancel();
+    newQuery.facets = {};
+    newQuery.startRank = 1;
+    setQuery(newQuery);
     setUpdate(!update);
   };
 
