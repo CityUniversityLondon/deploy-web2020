@@ -56890,6 +56890,10 @@ main .standard-content {
     }
 }
 
+main .standard-content .banner {
+    grid-column: 1 / -1;
+}
+
 @media (min-width: 1024px) {
     main .navigation--secondary + .standard-content {
         grid-column: 7 / span 18;
