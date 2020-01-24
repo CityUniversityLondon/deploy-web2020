@@ -57654,6 +57654,14 @@ main .standard-content {
     }
 }
 
+.course--ug__tabs__panel__inner--during {
+    grid-column: 2/-1;
+}
+
+.unibuddy-card {
+    margin-top: 3rem;
+}
+
 @media (min-width: 1024px) {
     main > .course--ug .promo-box__wrapper {
         grid-template-columns: repeat(18, 1fr);
@@ -58282,7 +58290,7 @@ main .standard-content {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-bottom: 4.25rem;
-    padding-top: 4.25rem;
+    padding-top: 1.5rem;
 }
 
 @media (min-width: 901px) {
