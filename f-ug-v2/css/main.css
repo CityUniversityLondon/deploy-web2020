@@ -57422,6 +57422,76 @@ main .standard-content {
     font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
+.ug-career__testimonial {
+    padding: 1rem;
+}
+
+.course--ug__usp__stats .statistics-block .ksp__items {
+    text-align: center;
+}
+
+.course--ug__usp__stats .statistics-block .ksp__items img {
+    margin: auto;
+}
+
+@media (max-width: 767px) {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items--3 {
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: '. a a a a .' '. b b b b .' '. c c c c .';
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items--3 {
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: '. a a a a a b b b b b .' '. . . c c c c c c . . .';
+    }
+}
+
+@media (min-width: 1281px) {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items--3 {
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-areas: '. a a a a a b b b b b b c c c c c .';
+    }
+}
+
+@media (max-width: 767px) {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items--2 {
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: '. a a a a .' '. b b b b .';
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items--2 {
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas: '. a a a a a b b b b b .';
+    }
+}
+
+@media (min-width: 1281px) {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items--2 {
+        grid-template-columns: repeat(18, 1fr);
+        grid-template-areas: '. . a a a a a a b b b b b b b . .';
+    }
+}
+
+.course--ug__usp__stats .statistics-block .ksp__item:nth-child(1) {
+    grid-area: a;
+}
+
+.course--ug__usp__stats .statistics-block .ksp__item:nth-child(2) {
+    grid-area: b;
+}
+
+.course--ug__usp__stats .statistics-block .ksp__item:nth-child(3) {
+    grid-area: c;
+}
+
 @media screen {
     .js .ourse--ug .tabs__links {
         margin-left: 1rem;
