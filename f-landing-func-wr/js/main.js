@@ -2462,15 +2462,13 @@ function finder__filters(props) {
     className: "finder__filters"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "finder__filters__heading"
-  }, "Filter ".concat(props.config.summariseAs.plural), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "finder__filters__heading__btn-icon"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_clear__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    clear: props.clear,
-    query: props.query
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "far fa-sliders-h icon",
     "aria-hidden": "true"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), "Filter ".concat(props.config.summariseAs.plural), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_clear__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    clear: props.clear,
+    query: props.query
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__wrapper--filters"
   }, props.config.facetLabels.map(facet => {
     if (dependencyMet(facet, props.query.facets)) {
@@ -2482,11 +2480,7 @@ function finder__filters(props) {
             query: props.query,
             responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
             update: props.update,
-            dependencies: props.config.facetLabels.filter(candidate => {
-              if (candidate.dependency === facet.meta) {
-                return candidate;
-              }
-            })
+            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
           });
 
         case 'toggle':
@@ -3838,7 +3832,7 @@ function finder__results__summary(props) {
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     "aria-live": "polite",
     className: "finder__results__summary__heading"
-  }, props.query.query || Object.keys(props.query.facets).length > 0 ? 'Matching' : 'All', ' ', result, " (showing", ' ', props.totalMatching > props.numRanks && "".concat(props.currStart, "\u2013").concat(props.currEnd, " of "), props.totalMatching, " ", result, props.query.query && " for \u201C".concat(props.query.query, "\u201D"), ")"), searchHints);
+  }, props.query.query || Object.keys(props.query.facets).length > 0 ? 'Matching' : 'All', ' ', result, " (showing", ' ', props.totalMatching > props.numRanks && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.currStart), "\u2013", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.currEnd), " of", ' '), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.totalMatching), " ", result, props.query.query && " for \u201C".concat(props.query.query, "\u201D"), ")"), searchHints);
 }
 
 finder__results__summary.propTypes = {
@@ -5479,7 +5473,7 @@ function prependIcon(anchor, className) {
   let node = document.createElement('span');
   node.className = 'fas ' + className + '  link-decorator';
   node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, true);
-  anchor.parentNode.prepend(node);
+  anchor.parentNode.insertBefore(node, anchor);
 }
 /**
  * Checks if anchor has to have external URL icon
@@ -6092,7 +6086,8 @@ function launchModal(modal) {
           listBody = Array.from(list.childNodes),
           listHeader = list.firstElementChild,
           customHeader = list.getAttribute('data-header'),
-          format = list.getAttribute('data-keepformat');
+          format = list.getAttribute('data-keepformat'),
+          header = document.createElement('div');
     let title,
         keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(format);
     listAnchor.setAttribute('href', '#');
@@ -6101,12 +6096,22 @@ function launchModal(modal) {
     wrapper.classList.add("".concat(bodyClassName));
 
     if (keepFormat) {
-      listAnchor.appendChild(listHeader);
+      list.insertBefore(listHeader, wrapper);
+      listHeader.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        createDialog(modal, "".concat(i), dialogArray);
+      });
     } else {
-      listAnchor.innerText = listHeader.innerText;
+      listAnchor.textContent = listHeader.textContent;
+      header.appendChild(listHeader);
+      list.insertBefore(listAnchor, wrapper);
+      listAnchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        createDialog(modal, "".concat(i), dialogArray);
+      });
     }
-
-    list.insertBefore(listAnchor, wrapper);
 
     if (customHeader) {
       title = customHeader;
@@ -6117,11 +6122,6 @@ function launchModal(modal) {
     dialogArray.push({
       title: title,
       body: wrapper.innerHTML
-    });
-    listAnchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      createDialog(modal, "".concat(i), dialogArray);
     });
   });
 }
@@ -6410,6 +6410,7 @@ const className = 'navigation',
       buttonClassName = className + '__button',
       openCloseTextClassName = buttonClassName + '__open-close',
       navigationTextClassName = buttonClassName + '__navigation',
+      headerClassName = classNameSpecific + '__menu__header',
       veilClassName = className + '__veil',
       openText = 'Open',
       closeText = 'Close',
@@ -6448,6 +6449,7 @@ function createSectionToggle(button, closeAll, veil) {
     closeAll();
 
     if (open) {
+      button.closest(".".concat(classNameSpecific)).dataset.open = 'true';
       veil.dataset.on = 'true';
       button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].expanded, open);
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(closeText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
@@ -6548,7 +6550,7 @@ function setupTabNext(navigation, closeAll, veil) {
       if (keyCodeTab === e.keyCode && !e.shiftKey) {
         e.preventDefault();
         toggleNextSection();
-        nextSectionButton.closest('.navigation--primary__level1').querySelector('.navigation--primary__menu__header a').focus();
+        nextSectionButton.closest('.navigation--primary__level1').querySelector(".".concat(headerClassName, " a")).focus();
       }
     }, true);
   });
@@ -6591,18 +6593,18 @@ function prepareLowerLevels(navigation) {
 
 
 function prepareHeaders(navigation) {
-  Array.from(navigation.querySelectorAll('.navigation--primary__menu__header')).forEach(header => {
+  Array.from(navigation.querySelectorAll(".".concat(headerClassName))).forEach(header => {
     const link = header.querySelector('a'),
           textWrapper = document.createElement('span');
 
     if (!link) {
       const currentPageWrapper = document.createElement('span'),
-            linkText = header.firstChild.wholeText.trim();
+            linkText = header.firstChild.wholeText.trim() + ' overview';
       textWrapper.appendChild(document.createTextNode(linkText));
       currentPageWrapper.appendChild(textWrapper);
       header.replaceChild(currentPageWrapper, header.firstChild);
     } else {
-      textWrapper.appendChild(link.firstChild.cloneNode(true));
+      textWrapper.innerText = link.innerText + ' overview';
       link.replaceChild(textWrapper, link.firstChild);
     }
   });
@@ -6616,7 +6618,7 @@ function prepareHeaders(navigation) {
 
 function addCloseButtons(navigation, closeAll) {
   Array.from(navigation.querySelectorAll('.navigation--primary__menu__content')).forEach(menu => {
-    const header = menu.querySelector('.navigation--primary__menu__header'),
+    const header = menu.querySelector(".".concat(headerClassName)),
           closeButtonWrapper = document.createElement('div'),
           closeButton = document.createElement('button'),
           closeButtonDiv = document.createElement('div'),

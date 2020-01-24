@@ -809,15 +809,13 @@ function finder__filters(props) {
     className: "finder__filters"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "finder__filters__heading"
-  }, "Filter ".concat(props.config.summariseAs.plural), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "finder__filters__heading__btn-icon"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_clear__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    clear: props.clear,
-    query: props.query
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "far fa-sliders-h icon",
     "aria-hidden": "true"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), "Filter ".concat(props.config.summariseAs.plural), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_clear__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    clear: props.clear,
+    query: props.query
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__wrapper--filters"
   }, props.config.facetLabels.map(facet => {
     if (dependencyMet(facet, props.query.facets)) {
@@ -829,11 +827,7 @@ function finder__filters(props) {
             query: props.query,
             responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
             update: props.update,
-            dependencies: props.config.facetLabels.filter(candidate => {
-              if (candidate.dependency === facet.meta) {
-                return candidate;
-              }
-            })
+            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
           });
 
         case 'toggle':
@@ -1934,7 +1928,7 @@ function finder__results__summary(props) {
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     "aria-live": "polite",
     className: "finder__results__summary__heading"
-  }, props.query.query || Object.keys(props.query.facets).length > 0 ? 'Matching' : 'All', ' ', result, " (showing", ' ', props.totalMatching > props.numRanks && "".concat(props.currStart, "\u2013").concat(props.currEnd, " of "), props.totalMatching, " ", result, props.query.query && " for \u201C".concat(props.query.query, "\u201D"), ")"), searchHints);
+  }, props.query.query || Object.keys(props.query.facets).length > 0 ? 'Matching' : 'All', ' ', result, " (showing", ' ', props.totalMatching > props.numRanks && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.currStart), "\u2013", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.currEnd), " of", ' '), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.totalMatching), " ", result, props.query.query && " for \u201C".concat(props.query.query, "\u201D"), ")"), searchHints);
 }
 
 finder__results__summary.propTypes = {
