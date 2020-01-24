@@ -58029,6 +58029,20 @@ main .standard-content {
     }
 }
 
+@media (max-width: 432px) {
+    .course--ug .featured-profiles-block {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 432px) and (min-width: 901px) {
+    .course--ug .featured-profiles-block {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
 .course--ug .course--ug__related-courses__wrapper {
     background: linear-gradient(360deg, white 0%, #f2f2f2 100%);
 }
@@ -58529,22 +58543,12 @@ main .standard-content {
     }
 }
 
-.course--ug__student-testimonials__half:nth-of-type(1) {
+.course--ug__student-testimonials__half {
     grid-column: 1/-1;
 }
 
 @media (min-width: 769px) {
-    .course--ug__student-testimonials__half:nth-of-type(1) {
-        grid-column: 1/12;
-    }
-}
-
-.course--ug__student-testimonials__half:nth-of-type(2) {
-    grid-column: 1/-1;
-}
-
-@media (min-width: 769px) {
-    .course--ug__student-testimonials__half:nth-of-type(2) {
-        grid-column: 13/-1;
+    .course--ug__student-testimonials__half {
+        grid-column: span 12;
     }
 }
