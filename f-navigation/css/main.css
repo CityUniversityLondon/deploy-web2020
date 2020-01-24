@@ -47010,14 +47010,9 @@ $profile-link-color-engaged
     }
 }
 
-.finder__filters__heading__btn-icon {
-    margin-left: 1rem;
-}
-
-.finder__filters__heading__btn-icon > .icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.finder__filters__heading .icon {
+    margin-right: 0.5rem;
+    margin-top: 0.25rem;
 }
 
 .finder__filters .finder__clear {
@@ -47085,7 +47080,7 @@ $profile-link-color-engaged
     font-weight: 450;
     max-width: 55ch;
     display: block;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: 0;
     text-align: left;
 }
@@ -47131,6 +47126,7 @@ $profile-link-color-engaged
 
 .finder__results__summary__heading span {
     color: #d61726;
+    font-weight: 700;
 }
 
 .finder__filters--mobile {
