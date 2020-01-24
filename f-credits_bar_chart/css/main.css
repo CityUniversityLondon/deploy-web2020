@@ -45945,13 +45945,7 @@ $profile-link-color-engaged
     align-items: center;
     height: 100%;
     display: flex;
-    min-width: 20%;
-}
-
-@media (min-width: 769px) {
-    .chart--bar--horizontal__value {
-        min-width: 0;
-    }
+    min-width: 25%;
 }
 
 .chart--bar--horizontal__value:after {
@@ -52253,6 +52247,18 @@ main .landing {
 .js .course--pgt .tabs .tabs__panel {
     background-color: #ffffff;
     border-top: none;
+}
+
+.chart--bar--horizontal__collection[data-label="course--pgt__msc"] {
+    width: 100%;
+}
+
+.chart--bar--horizontal__collection[data-label="course--pgt__pgdip"] {
+    width: 66%;
+}
+
+.chart--bar--horizontal__collection[data-label="course--pgt__pgcert"] {
+    width: 33%;
 }
 
 @media (max-width: 1023px) {
