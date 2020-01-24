@@ -22289,41 +22289,6 @@ Assign mixin:
     }
 }
 
-.card--contact .card--contact__header {
-    font-size: 1.125rem;
-    line-height: 1.25;
-    letter-spacing: -0.008em;
-    font-weight: 600;
-    margin-top: 0;
-    color: #696969;
-    border-bottom: 0.0625rem solid #e5e5e5;
-    padding-bottom: 0.5rem;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .card--contact .card--contact__header {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--contact .card--contact__header {
-        letter-spacing: -0.014em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--contact .card--contact__header {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--contact .card--contact__header {
-        letter-spacing: -0.017em;
-    }
-}
-
 .card--contact__name {
     margin-top: 1.5rem;
     font-weight: 600;
@@ -31244,10 +31209,6 @@ article figure figcaption a:active {
     .course-footer .course-footer__columns-two .course-footer__contact {
         flex-basis: 100%;
     }
-}
-
-.course-footer .card--contact .card--contact__header {
-    display: none;
 }
 
 .course-footer .useful-links {
@@ -58469,10 +58430,6 @@ main .standard-content {
     .course--ug .course--ug__footer .footer__contact--one-card .related-content {
         flex-basis: 100%;
     }
-}
-
-.course--ug .course--ug__footer .card--contact .card--contact__header {
-    display: none;
 }
 
 .course--ug .course--ug__footer .useful-links {

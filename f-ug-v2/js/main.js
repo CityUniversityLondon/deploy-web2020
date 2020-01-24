@@ -2246,6 +2246,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../results/finder__results__highlight__query */ "./src/patterns/finder/components/results/finder__results__highlight__query.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
 
 
 
@@ -2259,6 +2260,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * Render a Funnelback result as a course card.
  *
@@ -2267,6 +2269,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__course(props) {
+  const subtitle = props.details.metaData.type || props.details.metaData.level || null;
   const courseCode = props.details.metaData.code && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "finder__results__card__tag"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
@@ -2290,8 +2293,8 @@ function finder__results__course(props) {
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-fw fa-book-reader icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Method of study:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.method));
-  const location = props.details.metaData.location && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Method of study:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.method.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').slice(0, -1).join(', ') + ' or ' + Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').join(' or ')));
+  const location = props.details.metaData.location && props.query.facets.location && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "finder__results__card__tag"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-fw fa-map-marker-alt icon",
@@ -2316,7 +2319,7 @@ function finder__results__course(props) {
     className: "finder__results__card__heading underline-transition__title"
   }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__["default"])(props.details.title, props.query.query) : props.details.title), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "finder__results__card__description"
-  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__["default"])(props.details.metaData.level && props.details.metaData.level.replace(/_/g, ' '), props.query.query) : props.details.metaData.level && props.details.metaData.level), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__["default"])(props.details.metaData.c && props.details.metaData.c.replace(/_/g, ' '), props.query.query) : props.details.metaData.c && props.details.metaData.c), school, award, duration, courseCode, method, location)));
+  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__["default"])(subtitle && subtitle.replace(/_/g, ' '), props.query.query) : subtitle && subtitle), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__["default"])(props.details.metaData.c && props.details.metaData.c.replace(/_/g, ' '), props.query.query) : props.details.metaData.c && props.details.metaData.c), school, award, duration, courseCode, method, location)));
 }
 
 finder__results__course.propTypes = {
@@ -2480,11 +2483,7 @@ function finder__filters(props) {
             query: props.query,
             responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
             update: props.update,
-            dependencies: props.config.facetLabels.filter(candidate => {
-              if (candidate.dependency === facet.meta) {
-                return candidate;
-              }
-            })
+            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
           });
 
         case 'toggle':
@@ -8312,7 +8311,7 @@ function launchTabs(tabs) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8333,6 +8332,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detectIE", function() { return detectIE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkIntersectionObserver", function() { return checkIntersectionObserver; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createHTMLElement", function() { return createHTMLElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uppercaseFirstLetterLowercaseRest", function() { return uppercaseFirstLetterLowercaseRest; });
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
@@ -8604,6 +8604,9 @@ function createHTMLElement(type, attributes) {
     att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : el.setAttribute(att.label, att.val);
   });
   return el;
+}
+function uppercaseFirstLetterLowercaseRest(s) {
+  return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
 }
 
 /***/ }),
