@@ -45932,7 +45932,7 @@ $profile-link-color-engaged
     color: #ffffff;
 }
 
-.chart--bar--horizontal__collection span {
+.chart--bar--horizontal__category {
     position: absolute;
     right: 1rem;
 }
@@ -45945,18 +45945,24 @@ $profile-link-color-engaged
     align-items: center;
     height: 100%;
     display: flex;
-    min-width: 25%;
+    min-width: 30%;
 }
 
 .chart--bar--horizontal__value:after {
     content: '';
     position: absolute;
-    right: -0.4rem;
-    width: 0.4rem;
+    right: -0.5rem;
+    width: 0.5rem;
     height: 0px;
-    border-top: 0.4rem solid transparent;
-    border-bottom: 0.4rem solid transparent;
-    border-left: 0.4rem solid #cf44a7;
+    border-top: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+    border-left: 0.5rem solid #cf44a7;
+}
+
+@media (max-width: 1439px) {
+    .chart--bar--horizontal__value span[data-hidden='true'] {
+        display: none;
+    }
 }
 
 .chart--bar--horizontal.chart--pink .chart--bar--horizontal__value {
@@ -52249,15 +52255,15 @@ main .landing {
     border-top: none;
 }
 
-.chart--bar--horizontal__collection[data-label="course--pgt__msc"] {
+.chart--bar--horizontal__collection[data-label='course--pgt__msc'] {
     width: 100%;
 }
 
-.chart--bar--horizontal__collection[data-label="course--pgt__pgdip"] {
+.chart--bar--horizontal__collection[data-label='course--pgt__pgdip'] {
     width: 66%;
 }
 
-.chart--bar--horizontal__collection[data-label="course--pgt__pgcert"] {
+.chart--bar--horizontal__collection[data-label='course--pgt__pgcert'] {
     width: 33%;
 }
 
