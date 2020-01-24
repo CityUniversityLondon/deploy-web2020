@@ -6103,7 +6103,7 @@ function launchModal(modal) {
         createDialog(modal, "".concat(i), dialogArray);
       });
     } else {
-      listAnchor.innerText = listHeader.innerText;
+      listAnchor.textContent = listHeader.textContent;
       header.appendChild(listHeader);
       list.insertBefore(listAnchor, wrapper);
       listAnchor.addEventListener('click', function (e) {
