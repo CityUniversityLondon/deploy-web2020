@@ -3817,12 +3817,12 @@ function finder__results__summary(props) {
   if (props.totalMatching == 0) {
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "finder__results__summary"
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", null, "Your search did not match any ", props.summariseAs.plural, "."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Suggestions:"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try different keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try more general keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer filters"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", null, "Your search did not match any ", props.summariseAs.plural, "."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Suggestions:"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try different keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try more general keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer filters"), Object.keys(props.query.facets).length > 0 && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       type: "button",
       onClick: () => {
         props.clear();
       }
-    }, "Reset filters")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+    }, "Reset filters")), props.query.query && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       type: "button",
       onClick: () => {
         const newQuery = props.query;
