@@ -1342,9 +1342,9 @@ function finder__query(props) {
     setSuggestions([]);
     focusInput();
     const newQuery = props.query;
+    newQuery.misspelling = null;
     newQuery.query = '';
     newQuery.sortBy = props.config.sort;
-    newQuery.misspelling = null;
     newQuery.startRank = 1;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
@@ -1354,10 +1354,10 @@ function finder__query(props) {
     call.cancel();
     setSuggestions([]);
     const newQuery = props.query;
-    newQuery.query = query ? query : partialQuery ? partialQuery : '';
-    newQuery.startRank = 1;
-    newQuery.sortBy = partialQuery ? null : props.config.sort;
     newQuery.misspelling = null;
+    newQuery.query = query ? query : partialQuery ? partialQuery : '';
+    newQuery.sortBy = partialQuery ? null : props.config.sort;
+    newQuery.startRank = 1;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
   };
@@ -2150,7 +2150,7 @@ function Finder(props) {
         newQuery.query = newQueryText;
         newQuery.startRank = 1;
         setQuery(newQuery);
-        setUpdate(!update.updateState);
+        setUpdate(!update);
       }
     }).catch(() => {
       setResponse(initialResponse);

@@ -2927,7 +2927,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
 
 
 
@@ -2941,6 +2943,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2019
  */
+
 
 
 
@@ -3012,7 +3015,7 @@ function finder__query(props) {
     props.update.results(!props.update.updateState);
   };
 
-  const clear = partialQuery && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  const clear = partialQuery && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_8__["default"], {
     clear: () => {
       clearQuery();
     }
@@ -3152,6 +3155,12 @@ function finder__query(props) {
   }, "Find"))));
 }
 
+finder__query.propTypes = {
+  config: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  updating: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.bool
+};
 /* harmony default export */ __webpack_exports__["default"] = (finder__query);
 
 /***/ }),
@@ -3245,9 +3254,9 @@ function finder__query(props) {
     setSuggestions([]);
     focusInput();
     const newQuery = props.query;
+    newQuery.misspelling = null;
     newQuery.query = '';
     newQuery.sortBy = props.config.sort;
-    newQuery.misspelling = null;
     newQuery.startRank = 1;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
@@ -3257,10 +3266,10 @@ function finder__query(props) {
     call.cancel();
     setSuggestions([]);
     const newQuery = props.query;
-    newQuery.query = query ? query : partialQuery ? partialQuery : '';
-    newQuery.startRank = 1;
-    newQuery.sortBy = partialQuery ? null : props.config.sort;
     newQuery.misspelling = null;
+    newQuery.query = query ? query : partialQuery ? partialQuery : '';
+    newQuery.sortBy = partialQuery ? null : props.config.sort;
+    newQuery.startRank = 1;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
   };
@@ -4244,7 +4253,7 @@ function Finder(props) {
         newQuery.query = newQueryText;
         newQuery.startRank = 1;
         setQuery(newQuery);
-        setUpdate(!update.updateState);
+        setUpdate(!update);
       }
     }).catch(() => {
       setResponse(initialResponse);
