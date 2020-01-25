@@ -3514,6 +3514,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
 
 
 /**
@@ -3523,6 +3526,9 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
+
+
+const scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : 999;
 /**
  * Renders standard pagination controls patttern for the results.
  *
@@ -3541,6 +3547,7 @@ function finder__pagination(props) {
     newQuery.startRank = newStartRank;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
+    zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(props.element.querySelector('.finder__results'), scrollDuration);
   };
 
   pages.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -3616,6 +3623,7 @@ function finder__pagination(props) {
 
 finder__pagination.propTypes = {
   currStart: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   numRanks: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
   totalMatching: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
@@ -3674,23 +3682,7 @@ function finder__results(props) {
   }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Updating ", props.summariseAs.plural, "\u2026"));
 
   if (props.response) {
-    // Response may include spelling suggestion
-    const didYouMean = props.response.spell && props.response.spell.text && props.response.summary.totalMatching === 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_didyoumean__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      query: props.query,
-      text: props.response.spell.text,
-      update: props.update
-    }); // if we have more results than will fit on a single page, we need
-    // pagination
-
-    const pagination = props.response.summary.totalMatching > props.response.summary.numRanks && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      currStart: props.response.summary.currStart,
-      numRanks: props.response.summary.numRanks,
-      query: props.query,
-      totalMatching: props.response.summary.totalMatching,
-      update: props.update
-    }); // render either the results, or a spinner while we wait for Funnelback
-
-    const resultsContent = props.updating ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, updating) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_summary__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    const summary = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_summary__WEBPACK_IMPORTED_MODULE_5__["default"], {
       clear: props.clear,
       config: props.config,
       currEnd: props.response.summary.currEnd,
@@ -3700,7 +3692,25 @@ function finder__results(props) {
       summariseAs: props.summariseAs,
       totalMatching: props.response.summary.totalMatching,
       update: props.update
-    }), didYouMean, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    }); // Response may include spelling suggestion
+
+    const didYouMean = props.response.spell && props.response.spell.text && props.response.summary.totalMatching === 0 && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_didyoumean__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      query: props.query,
+      text: props.response.spell.text,
+      update: props.update
+    }); // if we have more results than will fit on a single page, we need
+    // pagination
+
+    const pagination = props.response.summary.totalMatching > props.response.summary.numRanks && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      currStart: props.response.summary.currStart,
+      element: props.element,
+      numRanks: props.response.summary.numRanks,
+      query: props.query,
+      totalMatching: props.response.summary.totalMatching,
+      update: props.update
+    }); // render either the results, or a spinner while we wait for Funnelback
+
+    const resultsContent = props.updating ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, updating) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, summary, didYouMean, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
       start: props.response.summary.currStart,
       className: "finder__results__list"
     }, props.response.bestBets.map(card => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -3724,13 +3734,14 @@ function finder__results(props) {
 }
 
 finder__results.propTypes = {
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   response: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
   update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
+  updating: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results);
 
@@ -4280,19 +4291,21 @@ function Finder(props) {
     update: updater,
     clear: clear
   }))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_results_finder_results__WEBPACK_IMPORTED_MODULE_14__["default"], {
+    clear: clear,
+    config: props.config,
+    element: props.element,
     query: query,
     response: funnelbackResponse,
     summariseAs: props.config.summariseAs,
     type: props.config.resultCard,
     update: updater,
-    updating: updating,
-    clear: clear,
-    config: props.config
+    updating: updating
   }));
 }
 
 Finder.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.object
+  config: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.object,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder);
 
