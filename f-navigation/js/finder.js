@@ -1060,7 +1060,7 @@ function finder__select(props) {
   }, []) : []; // count how many possible facets are not valid for the current query
   // and will be hidden
 
-  const hiddenFacets = allFacets.map(facet => facet.data).filter(facet => responseFacets.indexOf(facet) < 0).length;
+  const hiddenFacets = allFacets.map(facet => facet.data).filter(facet => responseFacets.indexOf(facet.toLowerCase()) < 0).length;
 
   const setFacet = value => {
     const newQuery = props.query,
@@ -1097,9 +1097,9 @@ function finder__select(props) {
       id: "meta".concat(props.facet.meta, "all"),
       name: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
     }, props.facet.noSelection), props.facet.values.map((value, i) => {
-      const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values.filter(responseFacetValue => responseFacetValue.data === value.data);
+      const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.toLowerCase());
 
-      if (currentValue === value.data || responseFacetDetails && responseFacetDetails[0]) {
+      if (currentValue.toLowerCase() === value.data.toLowerCase() || responseFacetDetails && responseFacetDetails[0]) {
         return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("option", {
           key: i,
           value: value.data,
