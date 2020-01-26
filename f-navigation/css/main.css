@@ -47330,7 +47330,6 @@ $profile-link-color-engaged
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
-    display: block;
     font-weight: 500;
     text-align: left;
 }
@@ -47685,10 +47684,6 @@ $profile-link-color-engaged
     display: none;
 }
 
-.finder__filters--mobile[data-open='true'] .finder__results__summary__heading {
-    display: none;
-}
-
 .finder__filters--mobile[data-open='false'] {
     text-align: right;
 }
@@ -47835,12 +47830,6 @@ $profile-link-color-engaged
 
 .finder .finder__results .pagination__controls {
     justify-content: center;
-}
-
-@media (max-width: 1023px) {
-    .finder__results .finder__results__summary {
-        display: none;
-    }
 }
 
 .finder__results__list {
