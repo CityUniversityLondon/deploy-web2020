@@ -2729,6 +2729,7 @@ function finder__select(props) {
 
     newQuery.startRank = 1;
     newQuery.misspelling = null;
+    newQuery.interacted = true;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
   };
@@ -2821,6 +2822,7 @@ function finder__toggle(props) {
     checked ? newQuery.facets[props.facet.meta] = newValue : delete newQuery.facets[props.facet.meta];
     newQuery.startRank = 1;
     newQuery.misspelling = null;
+    newQuery.interacted = true;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
   };
@@ -3258,6 +3260,7 @@ function finder__query(props) {
     newQuery.query = '';
     newQuery.sortBy = props.config.sort;
     newQuery.startRank = 1;
+    newQuery.interacted = true;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
   };
@@ -3270,6 +3273,7 @@ function finder__query(props) {
     newQuery.query = query ? query : partialQuery ? partialQuery : '';
     newQuery.sortBy = partialQuery ? null : props.config.sort;
     newQuery.startRank = 1;
+    newQuery.interacted = true;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
   };
@@ -3507,9 +3511,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
 
 
 /**
@@ -3519,9 +3520,6 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-
-
-const scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : 999;
 /**
  * Renders standard pagination controls patttern for the results.
  *
@@ -3539,9 +3537,9 @@ function finder__pagination(props) {
           newQuery = props.query;
     newQuery.startRank = newStartRank;
     newQuery.misspelling = null;
+    newQuery.interacted = true;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
-    zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(props.element.querySelector('.finder__results'), scrollDuration);
   };
 
   pages.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -3617,7 +3615,6 @@ function finder__pagination(props) {
 
 finder__pagination.propTypes = {
   currStart: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
-  element: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   numRanks: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
   totalMatching: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
@@ -3695,7 +3692,6 @@ function finder__results(props) {
 
     const pagination = props.response.summary.totalMatching > props.response.summary.numRanks && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], {
       currStart: props.response.summary.currStart,
-      element: props.element,
       numRanks: props.response.summary.numRanks,
       query: props.query,
       totalMatching: props.response.summary.totalMatching,
@@ -3727,7 +3723,6 @@ function finder__results(props) {
 
 finder__results.propTypes = {
   clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  element: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   response: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
@@ -3817,7 +3812,9 @@ function finder__results__summary(props) {
   if (props.totalMatching == 0) {
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "finder__results__summary"
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", null, "Your search did not match any ", props.summariseAs.plural, "."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Suggestions:"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try different keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try more general keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer filters"), Object.keys(props.query.facets).length > 0 && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+      className: "finder__results__summary__heading"
+    }, "Your search did not match any ", props.summariseAs.plural, "."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Suggestions:"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try different keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try more general keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer filters"), Object.keys(props.query.facets).length > 0 && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       type: "button",
       onClick: () => {
         props.clear();
@@ -3830,6 +3827,7 @@ function finder__results__summary(props) {
         newQuery.sortBy = props.config.sort;
         newQuery.misspelling = null;
         newQuery.startRank = 1;
+        newQuery.interacted = true;
         props.update.query(newQuery);
         props.update.results(!props.update.updateState);
       }
@@ -4088,6 +4086,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/filters/finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
 /* harmony import */ var _components_filters_finder_mobilefilters__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/filters/finder__mobilefilters */ "./src/patterns/finder/components/filters/finder__mobilefilters.js");
 /* harmony import */ var _components_results_finder_results__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/results/finder__results */ "./src/patterns/finder/components/results/finder__results.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -4117,6 +4118,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+const scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_18__["reduceMotion"])() ? 0 : 999;
 /**
  * Retrieve current values for facets from the URL parameters.
  *
@@ -4179,14 +4183,15 @@ function Finder(props) {
 
   const initialQuery = {
     collection: props.config.collection,
+    facets: getFacetParams(props.config.facetLabels, params),
     fixedFacets: props.config.fixedFacets,
-    query: params.get('query') || '',
+    interacted: false,
     misspelling: null,
+    numRanks: params.get('num_ranks') || props.config.numRanks,
+    query: params.get('query') || '',
     sortBy: params.get('query') ? null : params.get('sort') || props.config.sort,
     sortDirection: params.get('sortdirection') || props.config.sortDirection,
-    startRank: params.get('start_rank') || 1,
-    numRanks: params.get('num_ranks') || props.config.numRanks,
-    facets: getFacetParams(props.config.facetLabels, params)
+    startRank: params.get('start_rank') || 1
   };
   /**
    * Dummy, empty Funnelback response object for initial state.
@@ -4255,6 +4260,8 @@ function Finder(props) {
         setQuery(newQuery);
         setUpdate(!update);
       }
+    }).then(() => {
+      query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_17___default.a.center(props.element.querySelector('.finder__results h2'), scrollDuration);
     }).catch(() => {
       setResponse(initialResponse);
       setUpdating(false);
@@ -4273,6 +4280,7 @@ function Finder(props) {
     newQuery.facets = {};
     newQuery.startRank = 1;
     newQuery.misspelling = null;
+    newQuery.interacted = true;
     setQuery(newQuery);
     setUpdate(!update);
   };
@@ -4306,7 +4314,6 @@ function Finder(props) {
   }))), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_results_finder_results__WEBPACK_IMPORTED_MODULE_16__["default"], {
     clear: clear,
     config: props.config,
-    element: props.element,
     query: query,
     response: funnelbackResponse,
     summariseAs: props.config.summariseAs,
