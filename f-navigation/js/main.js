@@ -2508,8 +2508,7 @@ finder__filters.propTypes = {
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   response: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  mobile: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__filters);
 
@@ -2596,7 +2595,8 @@ function finder__mobilefilters(props) {
   }, "(", Object.keys(props.query.facets).length, ")")) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Filter");
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "finder__filters--mobile",
-    "data-open": display
+    "data-open": display,
+    ref: mobilefilters => filters = mobilefilters
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     type: "button",
     className: "finder__filters--mobile__toggle",
@@ -2608,10 +2608,7 @@ function finder__mobilefilters(props) {
     className: "far fa-sliders-h icon",
     "aria-hidden": "true"
   }), ' ', filtersCount)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "finder__filters--mobile__filters",
-    ref: mobilefilters => {
-      filters = mobilefilters;
-    }
+    className: "finder__filters--mobile__filters"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "finder__filters--mobile__filters__content"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_finder_filters__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -2619,9 +2616,8 @@ function finder__mobilefilters(props) {
     query: props.query,
     response: props.response,
     update: props.update,
-    clear: props.clear,
-    mobile: true
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    clear: props.clear
+  }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     type: "button",
     className: "finder__filters--mobile__apply",
     "aria-expanded": display,
@@ -2634,7 +2630,11 @@ function finder__mobilefilters(props) {
   }, props.updating ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-spinner fa-pulse icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Updating ", props.summariseAs.plural, "\u2026")) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(props.query.facets).length === 0 ? 'Close' : totalMatchingMessage)))))));
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "finder__filters--mobile__apply__text"
+  }, "Updating ", props.summariseAs.plural, "\u2026")) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "finder__filters--mobile__apply__text"
+  }, Object.keys(props.query.facets).length === 0 ? 'Close' : totalMatchingMessage)))));
 }
 
 finder__mobilefilters.propTypes = {
