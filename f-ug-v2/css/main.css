@@ -58647,14 +58647,6 @@ main .standard-content .banner {
     margin-right: 0;
 }
 
-@media (min-width: 769px) {
-    .course--ug .course--ug__usp__video {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 1rem;
-    }
-}
-
 @media (max-width: 432px) {
     .course--ug .featured-profiles-block {
         padding-left: 1.5rem;
@@ -58906,9 +58898,18 @@ main .standard-content .banner {
 }
 
 @media (min-width: 769px) {
-    .course--ug__usp__video {
+    .course--ug__usp__video,
+    .course--ug__student-coursework__videos {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .course--ug__facilities__video {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
         grid-column-gap: 1rem;
     }
 }
