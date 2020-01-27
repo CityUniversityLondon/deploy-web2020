@@ -47253,6 +47253,12 @@ $profile-link-color-engaged
     }
 }
 
+@media (min-width: 433px) {
+    .finder__filters__heading {
+        justify-content: space-around;
+    }
+}
+
 @media (min-width: 768px) {
     .finder__filters__heading {
         background-color: transparent;
