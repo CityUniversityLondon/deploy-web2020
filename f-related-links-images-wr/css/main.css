@@ -42954,6 +42954,7 @@ blockquote footer cite {
 
 .related-links--with-images a {
     margin-left: 0.5rem;
+    font-weight: 400;
 }
 
 .related-links--with-images a:after {
@@ -42963,6 +42964,7 @@ blockquote footer cite {
 
 .related-links--with-images.background--gray2 span:before, .related-links--with-images.background--purewhite span:before {
     color: #006bbd;
+    font-size: 1rem;
 }
 
 .related-links--with-images.background--gray2 a, .related-links--with-images.background--purewhite a {
@@ -43093,6 +43095,7 @@ blockquote footer cite {
 
 .related-links--with-images.background--pink80 span:before, .related-links--with-images.background--red70 span:before {
     color: #cbcbcb;
+    font-size: 1rem;
 }
 
 .related-links--with-images.background--pink80 a, .related-links--with-images.background--red70 a {
@@ -43213,41 +43216,6 @@ blockquote footer cite {
     display: inline-block;
 }
 
-/* 
-
-@mixin anchor-inline(
-    $color: $color-inline-link,
-    $visited: $color-inline-link--visited,
-    $hover: $color-text--dark,
-    $outline: $color-outline
-) 
-
-@include pathway-image-cards(
-        $color-pink80,
-        $color-purewhite,
-        $color-purewhite,
-        $color-pink60,
-        $color-gray4,
-        $color-gray4,
-        $color-purewhite,
-        $color-purewhite
-    );
-
-
-
-
-
-@mixin pathway-image-cards(
-    $background-color: $color-gray2,
-    $card-text-color: $color-nearblack,
-    $card-text-hover-color: $color-nearblack,
-    $card-background-hover-color: $color-gray1,
-    $card-heading-color: $color-gray7,
-    $card-heading-hover-color: $color-nearblack,
-    $section-title-color: $color-nearblack,
-    $outline-color: $color-nearblack)
-
-*/
 .show-more__button__container {
     margin-top: 2.5rem;
     text-align: center;
