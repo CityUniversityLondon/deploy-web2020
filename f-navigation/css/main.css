@@ -47792,6 +47792,12 @@ $profile-link-color-engaged
     }
 }
 
+.finder__filters--mobile[data-open='true'] .wrapper--finder__filters--mobile__apply {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
 .finder__filters--mobile[data-open='true'] .finder__filters--mobile__apply {
     background-color: #d61726;
     border: 0;
@@ -47800,8 +47806,6 @@ $profile-link-color-engaged
     padding-bottom: 1rem;
     padding-top: 1rem;
     width: 100%;
-    position: fixed;
-    bottom: 0;
 }
 
 .finder__filters--mobile[data-open='true'] .finder__filters--mobile__apply:hover, .finder__filters--mobile[data-open='true'] .finder__filters--mobile__apply:active {

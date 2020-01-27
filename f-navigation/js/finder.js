@@ -968,7 +968,9 @@ function finder__mobilefilters(props) {
     response: props.response,
     update: props.update,
     clear: props.clear
-  }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "wrapper--finder__filters--mobile__apply"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     type: "button",
     className: "finder__filters--mobile__apply",
     "aria-expanded": display,
@@ -985,7 +987,7 @@ function finder__mobilefilters(props) {
     className: "finder__filters--mobile__apply__text"
   }, "Updating ", props.summariseAs.plural, "\u2026")) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "finder__filters--mobile__apply__text"
-  }, Object.keys(props.query.facets).length === 0 ? 'Close' : totalMatchingMessage)))));
+  }, Object.keys(props.query.facets).length === 0 ? 'Close' : totalMatchingMessage))))));
 }
 
 finder__mobilefilters.propTypes = {
