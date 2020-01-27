@@ -52053,7 +52053,7 @@ main .landing:only-child .cta-block .cta-block__cta {
 }
 
 .wrapper--course--pgt__profiles__heading,
-.wrapper--course--pgt__gallery__heading {
+.wrapper--course--pgt__facilities__heading {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -52064,33 +52064,33 @@ main .landing:only-child .cta-block .cta-block__cta {
 
 @media (min-width: 768px) {
     .wrapper--course--pgt__profiles__heading,
-    .wrapper--course--pgt__gallery__heading {
+    .wrapper--course--pgt__facilities__heading {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 901px) {
     .wrapper--course--pgt__profiles__heading,
-    .wrapper--course--pgt__gallery__heading {
+    .wrapper--course--pgt__facilities__heading {
         grid-column-gap: 1.5rem;
     }
 }
 
 .wrapper--course--pgt__profiles__heading .full-width-heading,
-.wrapper--course--pgt__gallery__heading .full-width-heading {
+.wrapper--course--pgt__facilities__heading .full-width-heading {
     grid-column: 1/-1;
 }
 
 @media (min-width: 769px) {
     .wrapper--course--pgt__profiles__heading .full-width-heading:first-child,
-    .wrapper--course--pgt__gallery__heading .full-width-heading:first-child {
+    .wrapper--course--pgt__facilities__heading .full-width-heading:first-child {
         grid-column: 2/-2;
     }
 }
 
 @media (max-width: 1023px) {
     .wrapper--course--pgt__profiles__heading,
-    .wrapper--course--pgt__gallery__heading {
+    .wrapper--course--pgt__facilities__heading {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -52099,7 +52099,7 @@ main .landing:only-child .cta-block .cta-block__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .wrapper--course--pgt__profiles__heading,
-    .wrapper--course--pgt__gallery__heading {
+    .wrapper--course--pgt__facilities__heading {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
@@ -52581,8 +52581,8 @@ main .landing:only-child .cta-block .cta-block__cta {
 }
 
 .wrapper--course--pgt__whats-happening {
-    margin-top: 4.25rem;
-    margin-bottom: 4.25rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -52956,7 +52956,6 @@ main .landing:only-child .cta-block .cta-block__cta {
 }
 
 .course--pgt__related-courses {
-    padding-top: 4.25rem;
     padding-bottom: 4.25rem;
 }
 
@@ -53482,6 +53481,131 @@ main .landing:only-child .cta-block .cta-block__cta {
     .course--pgt .pathway-image-cards a img {
         transition: none;
     }
+}
+
+.course--pgt__facilities .wrapper--course--pgt__facilities__video {
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__video {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__video {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__video {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__video {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__video {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1441px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__video {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.course--pgt__facilities .wrapper--course--pgt__facilities__video .course--pgt__facilities__video__introduction {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 769px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__video .course--pgt__facilities__video__introduction {
+        grid-column: 2/8;
+    }
+}
+
+.course--pgt__facilities .wrapper--course--pgt__facilities__video .course--pgt__facilities__video__embed {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 769px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__video .course--pgt__facilities__video__embed {
+        grid-column: 9/-2;
+    }
+}
+
+.course--pgt__facilities .wrapper--course--pgt__facilities__video .course--pgt__facilities__video__embed .embedded-video {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.course--pgt__facilities .wrapper--course--pgt__facilities__gallery .wrapper--course--pgt__facilities__heading {
+    margin: 0;
+}
+
+.course--pgt__facilities .wrapper--course--pgt__facilities__gallery .course--pgt__facilities__gallery__introduction {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 769px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery .course--pgt__facilities__gallery__introduction {
+        grid-column: 2/-1;
+    }
+}
+
+.course--pgt__facilities .wrapper--course--pgt__facilities__gallery .swiper-viewport {
+    grid-column: 1/-1;
 }
 
 @media (max-width: 1023px) {
