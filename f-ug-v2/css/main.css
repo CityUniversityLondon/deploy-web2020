@@ -58750,6 +58750,17 @@ main .standard-content .banner {
     }
 }
 
+.course--ug .chart-row {
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .course--ug .chart-row {
+        display: flex;
+    }
+}
+
 @media (max-width: 767px) {
     .course--ug .chart__columns {
         display: flex;
@@ -58757,6 +58768,12 @@ main .standard-content .banner {
     .course--ug .chart__columns .chart--piechart,
     .course--ug .chart__columns .chart__legend {
         flex: 1;
+    }
+    .course--ug .chart__columns .chart--piechart {
+        margin-right: 1rem;
+    }
+    .course--ug .chart__columns .chart--piechart svg {
+        width: 5rem;
     }
     .course--ug .chart__columns .chart__legend {
         margin-top: 0;
@@ -59185,7 +59202,7 @@ main .standard-content .banner {
     }
 }
 
-@media screen {
+@media screen and (min-width: 769px) {
     .js .course--ug .accordion {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -59195,21 +59212,21 @@ main .standard-content .banner {
     }
 }
 
-@media screen and (min-width: 901px) {
+@media screen and (min-width: 769px) and (min-width: 901px) {
     .js .course--ug .accordion {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-@media screen and (min-width: 901px) {
+@media screen and (min-width: 769px) and (min-width: 901px) {
     .js .course--ug .accordion {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media screen and (min-width: 1441px) {
+@media screen and (min-width: 769px) and (min-width: 1441px) {
     .js .course--ug .accordion {
         margin-left: auto;
         margin-right: auto;
