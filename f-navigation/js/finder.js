@@ -932,10 +932,10 @@ function finder__mobilefilters(props) {
 
     if (display) {
       focusTrap.activate && focusTrap.activate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__["disableBodyScroll"])(getFilters());
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__["disableBodyScroll"])(getFilters().querySelector('.finder__filters--mobile__filters'));
     } else {
       focusTrap.deactivate && focusTrap.deactivate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__["enableBodyScroll"])(getFilters());
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__["enableBodyScroll"])(getFilters().querySelector('.finder__filters--mobile__filters'));
     }
   }, [display]);
   const totalMatching = props.response && props.response.summary && props.response.summary.totalMatching;
