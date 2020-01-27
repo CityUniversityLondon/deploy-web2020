@@ -46099,6 +46099,57 @@ $profile-link-color-engaged
     display: block;
 }
 
+.chart--bar--horizontal__collection {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+    position: relative;
+    align-items: center;
+    padding: 1.5rem 0.5rem;
+    color: #ffffff;
+}
+
+.chart--bar--horizontal__category {
+    position: absolute;
+    right: 1rem;
+}
+
+.chart--bar--horizontal__value {
+    padding: 1rem 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    height: 100%;
+    display: flex;
+    min-width: 30%;
+}
+
+.chart--bar--horizontal__value:after {
+    content: '';
+    position: absolute;
+    right: -0.5rem;
+    width: 0.5rem;
+    height: 0px;
+    border-top: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+    border-left: 0.5rem solid #cf44a7;
+}
+
+@media (max-width: 1439px) {
+    .chart--bar--horizontal__value span[data-hidden='true'] {
+        display: none;
+    }
+}
+
+.chart--bar--horizontal.chart--pink .chart--bar--horizontal__value {
+    background: #cf44a7;
+}
+
+.chart--bar--horizontal.chart--pink .chart--bar--horizontal__collection {
+    background: #5d184a;
+}
+
 @media (max-width: 1023px) {
     main > .lifelong-learning .embedded-video .youtube-video {
         margin-top: 1.25rem;
@@ -46197,7 +46248,6 @@ $profile-link-color-engaged
 
 .finder__query {
     background-color: #d61726;
-    margin-top: 1rem;
     padding: 1.5rem;
     position: relative;
 }
@@ -46209,9 +46259,8 @@ $profile-link-color-engaged
     height: 100%;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .finder__query {
-        margin-bottom: 1.5rem;
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
@@ -46231,6 +46280,7 @@ $profile-link-color-engaged
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
+    background-color: #ffffff;
     display: flex;
     flex-grow: 1;
     font-weight: 450;
@@ -46267,7 +46317,7 @@ $profile-link-color-engaged
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .finder__query__input {
         font-size: 1.266rem;
         line-height: 1.25;
@@ -46275,25 +46325,25 @@ $profile-link-color-engaged
     }
 }
 
-@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1919px) {
+@media (min-width: 768px) and (min-width: 1280px) and (max-width: 1919px) {
     .finder__query__input {
         letter-spacing: -0.013em;
     }
 }
 
-@media (min-width: 1024px) and (min-width: 1920px) and (max-width: 3839px) {
+@media (min-width: 768px) and (min-width: 1920px) and (max-width: 3839px) {
     .finder__query__input {
         letter-spacing: -0.015em;
     }
 }
 
-@media (min-width: 1024px) and (min-width: 3840px) and (max-width: 7679px) {
+@media (min-width: 768px) and (min-width: 3840px) and (max-width: 7679px) {
     .finder__query__input {
         letter-spacing: -0.017em;
     }
 }
 
-@media (min-width: 1024px) and (min-width: 7680px) {
+@media (min-width: 768px) and (min-width: 7680px) {
     .finder__query__input {
         letter-spacing: -0.017em;
     }
@@ -46437,7 +46487,7 @@ $profile-link-color-engaged
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .finder__query__input .finder__clear .icon {
         width: 1.5rem;
         height: 1.5rem;
@@ -46457,7 +46507,7 @@ $profile-link-color-engaged
     top: 0.25rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .finder__query__input .finder__clear .finder__icon--close {
         left: 0.25rem;
         top: 0.5rem;
@@ -46579,13 +46629,13 @@ $profile-link-color-engaged
     cursor: pointer;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .finder__query__submit {
         margin-left: 2rem;
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .finder__query__submit {
         padding: 1rem 1.25rem;
     }
@@ -46598,7 +46648,7 @@ $profile-link-color-engaged
     margin: auto;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .finder__query__submit .finder__query__submit__text {
         border: 0;
         clip: rect(0, 0, 0, 0);
@@ -46616,7 +46666,7 @@ $profile-link-color-engaged
     padding: 0 0.5rem 0 0;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .finder__query__submit .finder__query__submit__icon {
         display: block;
         padding: 0;
@@ -46996,7 +47046,7 @@ $profile-link-color-engaged
     display: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .finder__filters .finder__clear {
         font-size: 1rem;
         line-height: 1.625;
@@ -47029,31 +47079,31 @@ $profile-link-color-engaged
     }
 }
 
-@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1919px) {
+@media (min-width: 768px) and (min-width: 1280px) and (max-width: 1919px) {
     .finder__filters .finder__clear {
         letter-spacing: -0.008em;
     }
 }
 
-@media (min-width: 1024px) and (min-width: 1920px) and (max-width: 3839px) {
+@media (min-width: 768px) and (min-width: 1920px) and (max-width: 3839px) {
     .finder__filters .finder__clear {
         letter-spacing: -0.013em;
     }
 }
 
-@media (min-width: 1024px) and (min-width: 3840px) and (max-width: 7679px) {
+@media (min-width: 768px) and (min-width: 3840px) and (max-width: 7679px) {
     .finder__filters .finder__clear {
         letter-spacing: -0.017em;
     }
 }
 
-@media (min-width: 1024px) and (min-width: 7680px) {
+@media (min-width: 768px) and (min-width: 7680px) {
     .finder__filters .finder__clear {
         letter-spacing: -0.017em;
     }
 }
 
-@media (min-width: 1024px) and (hover: hover) {
+@media (min-width: 768px) and (hover: hover) {
     .finder__filters .finder__clear:hover {
         background-color: initial;
         background-image: initial;
@@ -47071,7 +47121,7 @@ $profile-link-color-engaged
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .finder__filters .finder__clear:focus, .finder__filters .finder__clear:active {
         background-color: initial;
         background-image: initial;
@@ -47102,7 +47152,7 @@ $profile-link-color-engaged
     }
 }
 
-@media (min-width: 1024px) and (hover: hover) {
+@media (min-width: 768px) and (hover: hover) {
     .finder__filters .finder__clear:hover {
         background-color: #d61726;
         border-color: #d61726;
@@ -47124,7 +47174,7 @@ $profile-link-color-engaged
     display: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .finder__filters--desktop .finder__filters {
         background-color: #ffffff;
         display: block;
@@ -47136,14 +47186,14 @@ $profile-link-color-engaged
     }
 }
 
-@media (min-width: 1024px) and (min-width: 1280px) {
+@media (min-width: 768px) and (min-width: 1280px) {
     .finder__filters--desktop .finder__filters .finder__filter,
     .finder__filters--desktop .finder__filters .finder__filters__clear--desktop {
         width: calc(25% - 1.5rem);
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .finder__filters--desktop .finder__filters .finder__filters__clear--desktop {
         margin-bottom: 1rem;
         margin-right: 1rem;
@@ -47151,7 +47201,7 @@ $profile-link-color-engaged
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .finder__filters__wrapper--filters {
         background-color: #ffffff;
         padding-left: 1.5rem;
@@ -47159,7 +47209,7 @@ $profile-link-color-engaged
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .finder__filters__wrapper--filters {
         display: flex;
         flex-direction: row;
@@ -47203,7 +47253,13 @@ $profile-link-color-engaged
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 433px) {
+    .finder__filters__heading {
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 768px) {
     .finder__filters__heading {
         background-color: transparent;
         justify-content: flex-start;
@@ -47224,9 +47280,93 @@ $profile-link-color-engaged
     padding-right: 1.5rem;
 }
 
+.finder__filters--mobile .finder__filters__heading {
+    padding: 0;
+}
+
+.finder__filters--mobile .finder__filters__heading > .icon,
+.finder__filters--mobile .finder__filters__heading > .finder__filters__heading__text {
+    padding: 0.5rem;
+}
+
 .finder__filters--mobile .finder__filters .finder__clear {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    transition: background-color 0.6s;
     display: block;
-    margin-right: 1rem;
+}
+
+@media (hover: hover) {
+    .finder__filters--mobile .finder__filters .finder__clear:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__filters--mobile .finder__filters .finder__clear:focus, .finder__filters--mobile .finder__filters .finder__clear:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.finder__filters--mobile .finder__filters .finder__clear, .finder__filters--mobile .finder__filters .finder__clear:focus, .finder__filters--mobile .finder__filters .finder__clear:active {
+    background-color: #d61726;
+    color: #ffffff;
+}
+
+.finder__filters--mobile .finder__filters .finder__clear:focus .finder__clear__text {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .finder__filters--mobile .finder__filters .finder__clear:hover {
+        background-color: #9e111c;
+        color: #ffffff;
+    }
+}
+
+.finder__filters--mobile .finder__filters .finder__clear .icon {
+    display: none;
 }
 
 .finder__filters--mobile .finder__filters__clear--desktop .finder__clear {
@@ -47279,9 +47419,10 @@ $profile-link-color-engaged
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
-    display: block;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
     font-weight: 500;
-    margin-top: 0;
     text-align: left;
 }
 
@@ -47324,7 +47465,61 @@ $profile-link-color-engaged
     font-style: italic;
 }
 
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .finder__results__summary__heading {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__summary__heading {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__summary__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__summary__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
 .finder__results__summary__heading span {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .finder__results__summary__heading span {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__summary__heading span {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__summary__heading span {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__summary__heading span {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__summary__heading span span {
     color: #d61726;
     font-weight: 700;
 }
@@ -47392,16 +47587,16 @@ $profile-link-color-engaged
     text-decoration: none;
 }
 
-.finder__filters--mobile .finder__filters--mobile__apply:focus, .finder__filters--mobile .finder__filters--mobile__apply:active {
+.finder__filters--mobile .finder__filters--mobile__apply, .finder__filters--mobile .finder__filters--mobile__apply:focus, .finder__filters--mobile .finder__filters--mobile__apply:active {
+    background-color: #d61726;
+    color: #ffffff;
+}
+
+.finder__filters--mobile .finder__filters--mobile__apply:focus .finder__filters--mobile__apply__text {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
-}
-
-.finder__filters--mobile .finder__filters--mobile__apply, .finder__filters--mobile .finder__filters--mobile__apply:focus, .finder__filters--mobile .finder__filters--mobile__apply:active {
-    background-color: #d61726;
-    color: #ffffff;
 }
 
 @media (hover: hover) {
@@ -47555,7 +47750,7 @@ $profile-link-color-engaged
     color: #d61726;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .finder__filters--mobile {
         display: none;
     }
@@ -47585,7 +47780,7 @@ $profile-link-color-engaged
     padding-bottom: 4.5rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .finder__filters--mobile[data-open='true'] .finder__filters {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -47632,10 +47827,6 @@ $profile-link-color-engaged
 }
 
 .finder__filters--mobile[data-open='true'] .finder__filters--mobile__toggle {
-    display: none;
-}
-
-.finder__filters--mobile[data-open='true'] .finder__results__summary__heading {
     display: none;
 }
 
@@ -47772,7 +47963,7 @@ $profile-link-color-engaged
     margin-right: 1.5rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .finder .finder__results {
         margin-top: 1rem;
     }
@@ -47785,12 +47976,6 @@ $profile-link-color-engaged
 
 .finder .finder__results .pagination__controls {
     justify-content: center;
-}
-
-@media (max-width: 1023px) {
-    .finder__results .finder__results__summary {
-        display: none;
-    }
 }
 
 .finder__results__list {
@@ -48158,7 +48343,7 @@ $profile-link-color-engaged
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .finder__results__card a {
         flex-direction: row;
     }
@@ -48249,7 +48434,7 @@ $profile-link-color-engaged
     position: relative;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .finder__select {
         margin-bottom: 0.5rem;
     }
@@ -48416,7 +48601,7 @@ $profile-link-color-engaged
     margin-bottom: 1rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .finder__results__course .clearing_label {
         min-width: 24%;
         order: 1;
@@ -48430,7 +48615,7 @@ $profile-link-color-engaged
     padding: 0.75rem;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .finder__results__course .clearing_label p {
         display: inline;
     }
@@ -48563,7 +48748,7 @@ $profile-link-color-engaged
     outline-width: 0;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .finder__results__course .underline-transition__title {
         margin-top: 0;
     }
@@ -51714,6 +51899,8 @@ main .landing:only-child .cta-block .cta-block__cta {
     background-color: #f2f2f2;
     background: linear-gradient(180deg, #d8d8d8 0%, #ffffff 100%);
     color: #0c0c0e;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
 }
 
 .news {
@@ -53213,6 +53400,18 @@ main .landing:only-child .cta-block .cta-block__cta {
 .js .course--pgt .tabs .tabs__panel {
     background-color: #ffffff;
     border-top: none;
+}
+
+.chart--bar--horizontal__collection[data-label='course--pgt__msc'] {
+    width: 100%;
+}
+
+.chart--bar--horizontal__collection[data-label='course--pgt__pgdip'] {
+    width: 66%;
+}
+
+.chart--bar--horizontal__collection[data-label='course--pgt__pgcert'] {
+    width: 33%;
 }
 
 .course--pgt .pathway-image-cards {
@@ -56888,6 +57087,10 @@ main .standard-content {
     main .standard-content {
         grid-column: 6 / span 14;
     }
+}
+
+main .standard-content .banner {
+    grid-column: 1 / -1;
 }
 
 @media (min-width: 1024px) {
