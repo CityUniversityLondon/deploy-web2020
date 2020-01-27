@@ -4226,7 +4226,8 @@ function Finder(props) {
      * async requests can return out of order
      */
 
-    call.cancel(); // make a new, asynchronous request to Funnelback
+    call.cancel();
+    query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_17___default.a.to(props.element.querySelector('.finder__results'), scrollDuration); // make a new, asynchronous request to Funnelback
 
     const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_12__["find"])(query.collection, query.fixedFacets, query.query, query.sortBy, query.sortDirection, query.startRank, query.numRanks, query.facets); // save the requestToken, so
 

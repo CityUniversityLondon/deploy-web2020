@@ -54618,10 +54618,66 @@ button
 }
 
 .profile .profile--global__tags__heading {
-    margin-bottom: 1.5rem;
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 450;
+    max-width: 55ch;
     color: #494949;
     font-weight: 700;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
     max-width: 55ch;
+}
+
+.profile .profile--global__tags__heading i,
+.profile .profile--global__tags__heading em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .profile .profile--global__tags__heading {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .profile .profile--global__tags__heading {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .profile .profile--global__tags__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .profile .profile--global__tags__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+.profile .profile--global__tags__heading b,
+.profile .profile--global__tags__heading strong {
+    font-weight: 700;
+}
+
+.profile .profile--global__tags__heading i,
+.profile .profile--global__tags__heading em {
+    font-style: italic;
 }
 
 @media (min-width: 768px) {
