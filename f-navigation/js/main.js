@@ -2468,7 +2468,9 @@ function finder__filters(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "far fa-sliders-h icon",
     "aria-hidden": "true"
-  }), "Filter ".concat(props.config.summariseAs.plural), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_clear__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "finder__filters__heading__text"
+  }, "Filter ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_clear__WEBPACK_IMPORTED_MODULE_3__["default"], {
     clear: props.clear,
     query: props.query
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2879,8 +2881,7 @@ function finder__clear(props) {
       props.clear();
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "far fa-fw fa-times icon",
-    "aria-label": "Clear input"
+    className: "far fa-fw fa-times icon"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "finder__clear__text"
   }, "Reset"));
@@ -3824,7 +3825,7 @@ function finder__results__summary(props) {
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
       "aria-live": "polite",
       className: "finder__results__summary__heading"
-    }, props.query.query || Object.keys(props.query.facets).length > 0 ? 'Matching' : 'All', ' ', result, " (showing", ' ', props.totalMatching > props.numRanks && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.currStart), "\u2013", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.currEnd), " of", ' '), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.totalMatching), " ", result, props.query.query && " for \u201C".concat(props.query.query, "\u201D"), ")"));
+    }, props.query.query || Object.keys(props.query.facets).length > 0 ? 'Matching' : 'All', ' ', result, ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "(showing", ' ', props.totalMatching > props.numRanks && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.currStart), "\u2013", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.currEnd), " of", ' '), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.totalMatching), " ", result, props.query.query && " for \u201C".concat(props.query.query, "\u201D"), ")")));
   }
 }
 

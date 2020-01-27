@@ -504,8 +504,7 @@ function finder__clear(props) {
       props.clear();
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "far fa-fw fa-times icon",
-    "aria-label": "Clear input"
+    className: "far fa-fw fa-times icon"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "finder__clear__text"
   }, "Reset"));
