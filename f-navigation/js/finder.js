@@ -924,6 +924,7 @@ function finder__mobilefilters(props) {
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
     if (!focusTrap.activate) {
       setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_5___default()(getFilters(), {
+        initialFocus: getFilters().querySelector('.finder__filters--mobile__apply'),
         onDeactivate: () => setDisplay(false),
         clickOutsideDeactivates: true
       }));

@@ -47795,7 +47795,7 @@ $profile-link-color-engaged
     padding-bottom: 1rem;
     padding-top: 1rem;
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 
