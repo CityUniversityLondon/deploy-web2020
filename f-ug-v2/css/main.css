@@ -58898,11 +58898,51 @@ main .standard-content .banner {
 }
 
 @media (min-width: 769px) {
-    .course--ug__usp__video,
-    .course--ug__student-coursework__videos {
+    .course--ug__usp__video {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 1rem;
+    }
+}
+
+.course--ug__student-coursework,
+.course--ug__facilities {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 901px) {
+    .course--ug__student-coursework,
+    .course--ug__facilities {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .course--ug__student-coursework,
+    .course--ug__facilities {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    .course--ug__student-coursework,
+    .course--ug__facilities {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    .course--ug__student-coursework,
+    .course--ug__facilities {
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -58910,6 +58950,14 @@ main .standard-content .banner {
     .course--ug__facilities__video {
         display: grid;
         grid-template-columns: 1fr 2fr;
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .course--ug__student-coursework__videos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         grid-column-gap: 1rem;
     }
 }
@@ -59105,6 +59153,42 @@ main .standard-content .banner {
     .course--ug__student-coursework h2 .full-width-heading:first-child,
     .course--ug__student-testimonials__wrapper h2 .full-width-heading:first-child {
         grid-column: 2/-2;
+    }
+}
+
+.courses--ug__facilities {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 901px) {
+    .courses--ug__facilities {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .courses--ug__facilities {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    .courses--ug__facilities {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    .courses--ug__facilities {
+        margin: 0;
+        padding: 0;
     }
 }
 
