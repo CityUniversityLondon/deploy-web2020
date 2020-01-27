@@ -2466,11 +2466,11 @@ function finder__filters(props) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "finder__filters__heading"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "finder__filters__heading__text"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "far fa-sliders-h icon",
     "aria-hidden": "true"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "finder__filters__heading__text"
-  }, "Filter ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_clear__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), ' ', "Filter ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_clear__WEBPACK_IMPORTED_MODULE_3__["default"], {
     clear: props.clear,
     query: props.query
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
