@@ -42952,6 +42952,10 @@ blockquote footer cite {
     max-width: unset;
 }
 
+.related-links--with-images {
+    padding: 0;
+}
+
 .related-links--with-images a {
     margin-left: 0.5rem;
     font-weight: 400;
@@ -43210,6 +43214,7 @@ blockquote footer cite {
 
 .related-links--with-images .pathway-image-cards__blocks {
     display: block;
+    padding: 0 2rem 2rem 2rem;
 }
 
 .related-links--with-images .pathway-image-cards__blocks p a {
