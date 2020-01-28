@@ -54203,6 +54203,10 @@ main .landing:only-child .cta-block .cta-block__cta {
     }
 }
 
+.profile .tabs--accordion {
+    grid-column: 2 / 18;
+}
+
 @media (max-width: 768px) {
     .profile .tabs--accordion {
         margin-left: 1rem;
@@ -55225,7 +55229,8 @@ button
 
 /* --- STAFF STYLES --- */
 @media (min-width: 1024px) {
-    .profile--staff {
+    .profile--staff,
+    .profile--academic {
         grid-column: 2 / span 16;
         display: grid;
         grid-template-columns: repeat(16, 1fr);
@@ -55234,19 +55239,22 @@ button
 }
 
 @media (min-width: 1024px) and (min-width: 768px) {
-    .profile--staff {
+    .profile--staff,
+    .profile--academic {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    .profile--staff {
+    .profile--staff,
+    .profile--academic {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (max-width: 1023px) {
-    .profile--staff {
+    .profile--staff,
+    .profile--academic {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -55256,21 +55264,24 @@ button
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    .profile--staff {
+    .profile--staff,
+    .profile--academic {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    .profile--staff {
+    .profile--staff,
+    .profile--academic {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
 @media (max-width: 1023px) and (min-width: 1441px) {
-    .profile--staff {
+    .profile--staff,
+    .profile--academic {
         margin-left: auto;
         margin-right: auto;
     }
