@@ -54621,6 +54621,43 @@ button
     padding: 1rem 0;
 }
 
+@media (max-width: 1023px) {
+    .profile .profile--global__tags {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .profile .profile--global__tags {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .profile .profile--global__tags {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1441px) {
+    .profile .profile--global__tags {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .profile .profile--global__tags {
+        grid-column: 4 / span 12;
+    }
+}
+
 .profile .profile--global__tags__heading {
     margin-bottom: 1.5rem;
     color: #494949;
