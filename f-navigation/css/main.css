@@ -47409,43 +47409,45 @@ $profile-link-color-engaged
 }
 
 .finder__results__summary__heading {
-    font-family: "Plex Sans", sans-serif;
-    /**
-     * IBM Plex OpenType stylistic sets:
-     *
-     * ss01: 0/1 double-storey/simple 'a'
-     * ss02: 0/1 double-storey/simple 'g'
-     * ss03: 0/1 plain/slashed '0'
-     * ss04: 0/1 plain/dotted '0'
-     */
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
-    font-size: 1rem;
-    line-height: 1.625;
-    letter-spacing: -0.005em;
-    font-style: normal;
-    font-weight: 450;
-    max-width: 55ch;
-    font-size: 1.266rem;
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-size: 1.424rem;
     line-height: 1.25;
-    letter-spacing: -0.011em;
-    font-weight: 500;
+    letter-spacing: -0.013em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
     text-align: left;
 }
 
 .finder__results__summary__heading i,
 .finder__results__summary__heading em {
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.finder__results__summary__heading b,
+.finder__results__summary__heading strong {
+    font-weight: inherit;
+}
+
+.finder__results__summary__heading i,
+.finder__results__summary__heading em {
+    font-style: italic;
+}
+
+.finder__results__summary__heading u {
+    text-decoration: none;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
     .finder__results__summary__heading {
-        letter-spacing: -0.008em;
+        letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .finder__results__summary__heading {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.016em;
     }
 }
 
@@ -47463,42 +47465,31 @@ $profile-link-color-engaged
 
 .finder__results__summary__heading b,
 .finder__results__summary__heading strong {
-    font-weight: 700;
-}
-
-.finder__results__summary__heading i,
-.finder__results__summary__heading em {
-    font-style: italic;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .finder__results__summary__heading {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .finder__results__summary__heading {
-        letter-spacing: -0.015em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .finder__results__summary__heading {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .finder__results__summary__heading {
-        letter-spacing: -0.017em;
-    }
+    font-weight: 600;
 }
 
 .finder__results__summary__heading span {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 450;
+    max-width: 55ch;
+}
+
+.finder__results__summary__heading span i,
+.finder__results__summary__heading span em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -47523,6 +47514,16 @@ $profile-link-color-engaged
     .finder__results__summary__heading span {
         letter-spacing: -0.017em;
     }
+}
+
+.finder__results__summary__heading span b,
+.finder__results__summary__heading span strong {
+    font-weight: 700;
+}
+
+.finder__results__summary__heading span i,
+.finder__results__summary__heading span em {
+    font-style: italic;
 }
 
 .finder__results__summary__heading span span {
