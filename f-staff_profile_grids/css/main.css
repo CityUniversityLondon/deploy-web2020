@@ -53992,7 +53992,7 @@ main .landing:only-child .cta-block .cta-block__cta {
         grid-column: 1 / span 18;
     }
     main .navigation--secondary + .profile .profile__banner__content {
-        grid-template-columns: 25% 2fr;
+        grid-template-columns: 1fr 2fr;
     }
     main .navigation--secondary + .profile .profile__banner__content h1 {
         align-self: flex-end;
@@ -55227,7 +55227,7 @@ button
     margin-bottom: 2rem;
 }
 
-/* --- STAFF STYLES --- */
+/* --- STAFF/ACADEMIC STYLES --- */
 @media (min-width: 1024px) {
     .profile--staff,
     .profile--academic {
