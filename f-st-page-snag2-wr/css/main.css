@@ -56890,7 +56890,7 @@ main .standard-content {
     }
 }
 
-main .standard-content .banner {
+main .standard-content .banner, main .standard-content .banner-text {
     grid-column: 1 / -1;
 }
 
