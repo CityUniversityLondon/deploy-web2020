@@ -54255,7 +54255,7 @@ main .landing:only-child .cta-block .cta-block__cta {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(2, auto);
-        padding-bottom: 2rem;
+        padding-bottom: 6rem;
     }
     main > .profile .profile__banner__content h1 {
         grid-column: span 3;
@@ -54358,7 +54358,7 @@ main .landing:only-child .cta-block .cta-block__cta {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(2, auto);
-        padding-bottom: 2rem;
+        padding-bottom: 6rem;
     }
     main > .profile .profile__banner__content h1 {
         grid-column: span 3;
@@ -54676,7 +54676,7 @@ main .landing:only-child .cta-block .cta-block__cta {
         max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-        margin-top: 1.25rem;
+        margin-top: 2.25rem;
     }
 }
 
@@ -55203,6 +55203,7 @@ button
 }
 
 .profile h2.profile--global__details__heading {
+    margin-top: 0;
     border-bottom: solid 0.125rem #e5e5e5;
 }
 
@@ -55313,18 +55314,18 @@ button
 }
 
 .profile .profile--global__contact-details {
-    margin-top: 1rem;
+    padding-top: 1rem;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     .profile .profile--global__contact-details {
-        grid-column: 1 / span 16;
+        grid-column: 2 / span 14;
     }
 }
 
 @media (min-width: 1280px) {
     .profile .profile--global__contact-details {
-        grid-column: 1 / span 8;
+        grid-column: 2 / span 6;
     }
 }
 
@@ -55364,15 +55365,15 @@ button
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     .profile .profile--global__other-contact-methods {
-        grid-column: 1 / span 16;
+        grid-column: 2 / span 14;
     }
 }
 
 @media (min-width: 1280px) {
     .profile .profile--global__other-contact-methods {
-        grid-column: 9 / span 8;
+        grid-column: 8 / span 8;
     }
 }
 
@@ -55801,6 +55802,18 @@ button
 }
 
 /* --- STAFF/ACADEMIC STYLES --- */
+.profile--staff,
+.profile--academic {
+    background: #ffffff;
+}
+
+@media (min-width: 768px) {
+    .profile--staff,
+    .profile--academic {
+        margin-top: -4rem;
+    }
+}
+
 @media (min-width: 1024px) {
     .profile--staff,
     .profile--academic {
