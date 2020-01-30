@@ -52405,7 +52405,7 @@ main .landing:only-child .cta-block .cta-block__cta {
 }
 
 .course--pgt__section-wrapper--gray {
-    margin: 2rem 0;
+    margin-bottom: 2rem;
 }
 
 .course--pgt .banner__overlay {
@@ -52707,7 +52707,7 @@ main .landing:only-child .cta-block .cta-block__cta {
 }
 
 .course--pgt__keyinfo {
-    margin-top: 2rem;
+    padding-top: 2rem;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -53331,7 +53331,7 @@ main .landing:only-child .cta-block .cta-block__cta {
 
 @media (min-width: 769px) {
     .wrapper--course--pgt__testimonials-unibuddy .course--pgt__testimonials {
-        grid-column: 2/11;
+        grid-column: 8/-2;
     }
 }
 
@@ -53359,12 +53359,21 @@ main .landing:only-child .cta-block .cta-block__cta {
 
 @media (min-width: 769px) {
     .wrapper--course--pgt__testimonials-unibuddy .course--pgt__unibuddy {
-        grid-column: 12/-2;
+        grid-column: 2/8;
     }
 }
 
 .wrapper--course--pgt__testimonials-unibuddy .course--pgt__unibuddy .unibuddy-card {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+}
+
+.wrapper--course--pgt__testimonials-unibuddy .course--pgt__testimonials .card--testimonial__photo {
+    margin-top: 0.75rem;
+    margin-left: 0;
+}
+
+.wrapper--course--pgt__testimonials-unibuddy .course--pgt__testimonials .card--testimonial__quote {
+    margin-top: 1rem;
 }
 
 .course--pgt__contact-cards .footer-cards {
