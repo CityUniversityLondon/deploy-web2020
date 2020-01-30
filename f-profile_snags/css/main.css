@@ -55129,6 +55129,10 @@ button
     }
 }
 
+.profile .profile--global__tags--nocontact {
+    margin-top: 0;
+}
+
 .profile .profile--global__tags__heading {
     font-family: "Plex Sans", sans-serif;
     /**
