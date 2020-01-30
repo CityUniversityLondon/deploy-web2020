@@ -53840,10 +53840,6 @@ main .landing:only-child .cta-block .cta-block__cta {
     border-top: none;
 }
 
-.js .course--pgt .tabs .tabs__panel .accordion {
-    display: block;
-}
-
 .chart--bar--horizontal__collection[data-label='course--pgt__msc'] {
     width: 100%;
 }
