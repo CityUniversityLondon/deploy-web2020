@@ -52405,7 +52405,7 @@ main .landing:only-child .cta-block .cta-block__cta {
 }
 
 .course--pgt__section-wrapper--gray {
-    margin: 2rem 0;
+    margin-bottom: 2rem;
 }
 
 .course--pgt .banner__overlay {
@@ -52707,7 +52707,7 @@ main .landing:only-child .cta-block .cta-block__cta {
 }
 
 .course--pgt__keyinfo {
-    margin-top: 2rem;
+    padding-top: 2rem;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
