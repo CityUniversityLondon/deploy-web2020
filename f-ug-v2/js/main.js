@@ -4220,6 +4220,7 @@ function Finder(props) {
     replaceHistory(query.query, query.startRank, query.facets, props.config.facetLabels); // indicate a request is in progress
 
     setUpdating(true);
+    query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_17___default.a.center(props.element.querySelector('.finder__results'), scrollDuration, -window.innerHeight / 10);
     /**
      * cancel any request already in progress
      *
