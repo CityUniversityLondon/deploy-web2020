@@ -57458,9 +57458,6 @@ main .standard-content .banner {
     main > .documentation.documentation--fullwidth {
         grid-column: 1 / span 24;
     }
-    main > .documentation.article--fullwidth article {
-        grid-column: 1 / span 24;
-    }
 }
 
 @media (min-width: 1024px) {
@@ -57473,7 +57470,10 @@ main .standard-content .banner {
     main .navigation--secondary + .documentation.documentation--fullwidth {
         grid-column: 7 / span 18;
     }
-    main .navigation--secondary + .documentation.article--fullwidth article {
+}
+
+@media (min-width: 1024px) {
+    .article--fullwidth main .navigation--secondary + .documentation {
         grid-column: 7 / -1;
     }
 }
