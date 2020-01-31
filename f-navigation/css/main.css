@@ -20055,8 +20055,8 @@ main p > img {
 
 main ol,
 main ul {
-    margin-left: 1.25rem;
-    max-width: calc(55ch - 1.25rem);
+    margin-left: 2.5rem;
+    max-width: calc(55ch - 2.5rem);
 }
 
 main dl {
@@ -42372,6 +42372,12 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         display: list-item;
         margin-top: 1rem;
     }
+    .js .paginated-list .page[data-open='true']:focus {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
     .js .paginated-list .page ul {
         list-style: disc;
     }
@@ -44461,8 +44467,8 @@ article .link-copy {
 }
 
 @media print {
-    .js .tabs .tabs__links,
-    .js .tabs--accordion .accordion {
+    .js .tabs > .tabs__links,
+    .js .tabs--accordion > .accordion {
         display: none;
     }
     .js .tabs .tabs__panel[hidden] {
@@ -44861,16 +44867,16 @@ article .link-copy {
 }
 
 @media screen and (max-width: 768px) {
-    .js .tabs--accordion .accordion {
+    .js .tabs--accordion > .accordion {
         display: block;
     }
-    .js .tabs--accordion .accordion__heading:first-child {
+    .js .tabs--accordion > .accordion .accordion__heading:first-child {
         border-top: 0.125rem solid #f2f2f2;
     }
-    .js .tabs--accordion .accordion__heading:first-child:focus {
+    .js .tabs--accordion > .accordion .accordion__heading:first-child:focus {
         border-top: 0.125rem dotted transparent;
     }
-    .js .tabs--accordion .accordion__heading {
+    .js .tabs--accordion > .accordion .accordion__heading {
         border-bottom-color: #f2f2f2;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
@@ -44878,41 +44884,47 @@ article .link-copy {
         outline-style: dotted;
         outline-width: 0.125rem;
     }
-    .js .tabs--accordion .accordion__heading:active {
+    .js .tabs--accordion > .accordion .accordion__heading:active {
         border-bottom-color: #f2f2f2;
         text-decoration: underline;
     }
-    .js .tabs--accordion .accordion__heading[data-open='true'] button .accordion__heading__text {
+    .js .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__text {
         background: #3e1031;
         color: #ffffff;
         text-decoration: underline;
     }
-    .js .tabs--accordion .accordion__heading[data-open='true'] button .accordion__heading__indicator {
+    .js .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__indicator {
         padding: 1rem 0.89rem;
     }
-    .js .tabs--accordion .accordion__heading[data-open='false']:focus button {
+    .js .tabs--accordion > .accordion .accordion__heading[data-open='false']:focus button {
         outline-color: #0c0c0e;
     }
-    .js .tabs--accordion .accordion__heading button {
+    .js .tabs--accordion > .accordion .accordion__heading button {
         padding: 0;
         display: block;
     }
 }
 
 @media screen and (max-width: 768px) and (hover: hover) {
-    .js .tabs--accordion .accordion__heading button:hover {
+    .js .tabs--accordion > .accordion .accordion__heading button:hover {
         background: #ffffff;
         color: #1e1e1e;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .js .tabs--accordion .accordion__heading button .accordion__heading__text {
+    .js
+.tabs--accordion
+> .accordion
+.accordion__heading
+button
+.accordion__heading__text {
         color: #1e1e1e;
         padding: 1rem;
     }
     .js
 .tabs--accordion
+> .accordion
 .accordion__heading
 button
 .accordion__heading__indicator {
@@ -44925,27 +44937,28 @@ button
     }
     .js
 .tabs--accordion
+> .accordion
 .accordion__heading
 button
 .accordion__heading__indicator:before {
         vertical-align: sub;
     }
-    .js .tabs--accordion .tabs {
+    .js .tabs--accordion > .tabs {
         display: none;
     }
 }
 
 @media screen and (min-width: 769px) {
-    .js .tabs--accordion .accordion {
+    .js .tabs--accordion > .accordion {
         display: none;
     }
-    .js .tabs--accordion .tabs {
+    .js .tabs--accordion > .tabs {
         display: block;
     }
 }
 
 @media screen and (min-width: 769px) and (min-width: 769px) {
-    .js .tabs--accordion .tabs .accordion--nested {
+    .js .tabs--accordion > .tabs .accordion--nested {
         display: block;
     }
 }
@@ -54668,8 +54681,13 @@ main .landing:only-child .cta-block .cta-block__cta {
     max-width: 55ch;
 }
 
-.profile .tabs--accordion .accordion__heading button .accordion__heading__indicator,
 .profile .tabs--accordion
+> .accordion
+.accordion__heading
+button
+.accordion__heading__indicator,
+.profile .tabs--accordion
+> .accordion
 .accordion__heading[data-open='true']
 button
 .accordion__heading__text {
@@ -55340,6 +55358,14 @@ button
 .profile .profile--global__other-contact-methods .profile--global__details__content i,
 .profile .profile--global__other-contact-methods .profile--global__details__content em {
     font-style: italic;
+}
+
+.profile .tabs--profile {
+    grid-column: 3 / -3;
+}
+
+.profile :not(.tabs) > .tabs__links {
+    display: none;
 }
 
 .profile .profile--global__details__content__name {
