@@ -51634,9 +51634,117 @@ main .landing {
     margin-top: 1.5rem;
 }
 
+main .landing header p {
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.625;
+    margin-top: 0.75rem;
+    max-width: 55ch;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    main .landing header p {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    main .landing header p {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    main .landing header p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    main .landing header p {
+        letter-spacing: -0.017em;
+    }
+}
+
+main .landing header p i,
+main .landing header p em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
 @media (min-width: 1280px) {
     main .landing {
         grid-column: 6 / span 14;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .landing .landing--functional__content__wrap {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    main .landing .landing--functional__content__wrap {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main .landing .landing--functional__content__wrap {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .landing .landing--functional__content__wrap .landing--functional__content {
+        grid-column: 4 / span 12;
+    }
+}
+
+@media (min-width: 433px) and (max-width: 1023px) {
+    main .landing--functional__content__wrap {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+        grid-template-columns: repeat(24, 1fr);
+        grid-column-gap: 0;
+    }
+}
+
+@media (min-width: 433px) and (max-width: 1023px) and (min-width: 768px) {
+    main .landing--functional__content__wrap {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 433px) and (max-width: 1023px) and (min-width: 901px) {
+    main .landing--functional__content__wrap {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 433px) and (max-width: 1023px) and (min-width: 768px) {
+    main .landing--functional__content__wrap {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 433px) and (max-width: 1023px) and (min-width: 901px) {
+    main .landing--functional__content__wrap {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 433px) and (max-width: 1023px) {
+    main .landing--functional__content__wrap .landing--functional__content {
+        grid-column: 7 / span 12;
     }
 }
 
@@ -51730,46 +51838,6 @@ main .landing:only-child .cta-block {
 
 main .landing:only-child .cta-block .cta-block__cta {
     margin-right: 1rem;
-}
-
-@media (min-width: 433px) and (max-width: 1023px) {
-    .landing--functional__content__wrap {
-        grid-template-columns: repeat(18, 1fr);
-        grid-column-gap: 0;
-        display: grid;
-        grid-template-columns: repeat(24, 1fr);
-        grid-column-gap: 0;
-    }
-}
-
-@media (min-width: 433px) and (max-width: 1023px) and (min-width: 768px) {
-    .landing--functional__content__wrap {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 433px) and (max-width: 1023px) and (min-width: 901px) {
-    .landing--functional__content__wrap {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-@media (min-width: 433px) and (max-width: 1023px) and (min-width: 768px) {
-    .landing--functional__content__wrap {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 433px) and (max-width: 1023px) and (min-width: 901px) {
-    .landing--functional__content__wrap {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-@media (min-width: 433px) and (max-width: 1023px) {
-    .landing--functional__content__wrap .landing--functional__content {
-        grid-column: 7 / span 12;
-    }
 }
 
 @media (max-width: 1023px) {
@@ -52418,7 +52486,7 @@ main .landing:only-child .cta-block .cta-block__cta {
 }
 
 .course--pgt__section-wrapper--gray {
-    margin: 2rem 0;
+    margin-bottom: 2rem;
 }
 
 .course--pgt .banner__overlay {
@@ -52720,7 +52788,7 @@ main .landing:only-child .cta-block .cta-block__cta {
 }
 
 .course--pgt__keyinfo {
-    margin-top: 2rem;
+    padding-top: 2rem;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -53344,7 +53412,7 @@ main .landing:only-child .cta-block .cta-block__cta {
 
 @media (min-width: 769px) {
     .wrapper--course--pgt__testimonials-unibuddy .course--pgt__testimonials {
-        grid-column: 2/11;
+        grid-column: 8/-2;
     }
 }
 
@@ -53372,12 +53440,21 @@ main .landing:only-child .cta-block .cta-block__cta {
 
 @media (min-width: 769px) {
     .wrapper--course--pgt__testimonials-unibuddy .course--pgt__unibuddy {
-        grid-column: 12/-2;
+        grid-column: 2/8;
     }
 }
 
 .wrapper--course--pgt__testimonials-unibuddy .course--pgt__unibuddy .unibuddy-card {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+}
+
+.wrapper--course--pgt__testimonials-unibuddy .course--pgt__testimonials .card--testimonial__photo {
+    margin-top: 0.75rem;
+    margin-left: 0;
+}
+
+.wrapper--course--pgt__testimonials-unibuddy .course--pgt__testimonials .card--testimonial__quote {
+    margin-top: 1rem;
 }
 
 .course--pgt__contact-cards .footer-cards {
@@ -54268,7 +54345,7 @@ main .landing:only-child .cta-block .cta-block__cta {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(2, auto);
-        padding-bottom: 2rem;
+        padding-bottom: 6rem;
     }
     main > .profile .profile__banner__content h1 {
         grid-column: span 3;
@@ -54371,7 +54448,7 @@ main .landing:only-child .cta-block .cta-block__cta {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat(2, auto);
-        padding-bottom: 2rem;
+        padding-bottom: 6rem;
     }
     main > .profile .profile__banner__content h1 {
         grid-column: span 3;
@@ -54450,6 +54527,43 @@ main .landing:only-child .cta-block .cta-block__cta {
     }
 }
 
+@media (max-width: 1023px) {
+    .profile--global__about-heading {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .profile--global__about-heading {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .profile--global__about-heading {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1441px) {
+    .profile--global__about-heading {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .profile--global__about-heading {
+        grid-column: 4 / span 12;
+    }
+}
+
 .profile {
     /* --- GLOBAL PROFILE STYLES --- */
     /* --- END GLOBAL PROFILE STYLES --- */
@@ -54464,7 +54578,7 @@ main .landing:only-child .cta-block .cta-block__cta {
 }
 
 .profile .standfirst {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .profile .wrapper--profile__contact {
@@ -54652,6 +54766,7 @@ main .landing:only-child .cta-block .cta-block__cta {
         max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+        margin-top: 2.25rem;
     }
 }
 
@@ -55109,6 +55224,10 @@ button
     }
 }
 
+.profile .profile--global__tags--nocontact {
+    margin-top: 0;
+}
+
 .profile .profile--global__tags__heading {
     font-family: "Plex Sans", sans-serif;
     /**
@@ -55182,19 +55301,74 @@ button
     margin: 0 1.5rem 0.75rem 0;
 }
 
-.profile .profile--global__details__heading {
-    padding-bottom: 0.5rem;
+.profile h2.profile--global__details__heading {
+    margin-top: 0;
     border-bottom: solid 0.125rem #e5e5e5;
 }
 
-.profile .profile--global__details__heading span:first-child {
+.profile h2.profile--global__details__heading span:first-child {
     font-size: 1rem;
 }
 
 .profile .profile--global__details__heading__text {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 450;
+    max-width: 55ch;
     color: #696969;
     margin-left: 0.5rem;
     font-weight: 700;
+}
+
+.profile .profile--global__details__heading__text i,
+.profile .profile--global__details__heading__text em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .profile .profile--global__details__heading__text {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .profile .profile--global__details__heading__text {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .profile .profile--global__details__heading__text {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .profile .profile--global__details__heading__text {
+        letter-spacing: -0.017em;
+    }
+}
+
+.profile .profile--global__details__heading__text b,
+.profile .profile--global__details__heading__text strong {
+    font-weight: 700;
+}
+
+.profile .profile--global__details__heading__text i,
+.profile .profile--global__details__heading__text em {
+    font-style: italic;
 }
 
 .profile .profile--global__details__content a span {
@@ -55239,18 +55413,18 @@ button
 }
 
 .profile .profile--global__contact-details {
-    margin-top: 2rem;
+    padding-top: 1rem;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     .profile .profile--global__contact-details {
-        grid-column: 1 / span 16;
+        grid-column: 2 / span 14;
     }
 }
 
 @media (min-width: 1280px) {
     .profile .profile--global__contact-details {
-        grid-column: 1 / span 8;
+        grid-column: 2 / span 6;
     }
 }
 
@@ -55286,19 +55460,19 @@ button
 
 @media (min-width: 768px) {
     .profile .profile--global__other-contact-methods {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     .profile .profile--global__other-contact-methods {
-        grid-column: 1 / span 16;
+        grid-column: 2 / span 14;
     }
 }
 
 @media (min-width: 1280px) {
     .profile .profile--global__other-contact-methods {
-        grid-column: 9 / span 8;
+        grid-column: 8 / span 8;
     }
 }
 
@@ -55522,7 +55696,7 @@ button
 .profile section.profile--alumni__contact {
     background: #ffffff;
     grid-column: 2 / span 16;
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -55735,6 +55909,18 @@ button
 }
 
 /* --- STAFF/ACADEMIC STYLES --- */
+.profile--staff,
+.profile--academic {
+    background: #ffffff;
+}
+
+@media (min-width: 768px) {
+    .profile--staff,
+    .profile--academic {
+        margin-top: -4rem;
+    }
+}
+
 @media (min-width: 1024px) {
     .profile--staff,
     .profile--academic {
@@ -57927,7 +58113,7 @@ main .standard-content {
     }
 }
 
-main .standard-content .banner {
+main .standard-content .banner, main .standard-content .banner-text {
     grid-column: 1 / -1;
 }
 
@@ -59199,6 +59385,9 @@ main .standard-content .banner {
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 1rem;
     }
+    .course--ug__usp__video .embedded-video {
+        padding: 0;
+    }
 }
 
 .course--ug__student-coursework,
@@ -59510,6 +59699,10 @@ main .standard-content .banner {
     margin: auto;
 }
 
+.course--ug__usp__stats .statistics-block .ksp__item__figure {
+    color: #5d184a;
+}
+
 @media (max-width: 767px) {
     .course--ug__usp__stats .statistics-block .ksp__items.ksp__items--3 {
         grid-template-rows: repeat(3, auto);
@@ -59566,6 +59759,10 @@ main .standard-content .banner {
 
 .course--ug__usp__stats .statistics-block .ksp__item:nth-child(3) {
     grid-area: c;
+}
+
+.course--ug__student-testimonials__half--unibuddy h3 {
+    color: #d61726;
 }
 
 @media screen {
