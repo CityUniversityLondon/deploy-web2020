@@ -504,8 +504,7 @@ function finder__clear(props) {
       props.clear();
     }
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "far fa-fw fa-times icon",
-    "aria-label": "Clear input"
+    className: "far fa-fw fa-times icon"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "finder__clear__text"
   }, "Reset"));
@@ -540,7 +539,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
 
 
 
@@ -554,6 +555,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2019
  */
+
 
 
 
@@ -625,7 +627,7 @@ function finder__query(props) {
     props.update.results(!props.update.updateState);
   };
 
-  const clear = partialQuery && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  const clear = partialQuery && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_8__["default"], {
     clear: () => {
       clearQuery();
     }
@@ -765,6 +767,12 @@ function finder__query(props) {
   }, "Find"))));
 }
 
+finder__query.propTypes = {
+  config: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  updating: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.bool
+};
 /* harmony default export */ __webpack_exports__["default"] = (finder__query);
 
 /***/ }),
@@ -1114,7 +1122,7 @@ function finderConfig(url) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1135,6 +1143,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "detectIE", function() { return detectIE; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkIntersectionObserver", function() { return checkIntersectionObserver; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createHTMLElement", function() { return createHTMLElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uppercaseFirstLetterLowercaseRest", function() { return uppercaseFirstLetterLowercaseRest; });
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
@@ -1406,6 +1415,9 @@ function createHTMLElement(type, attributes) {
     att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : el.setAttribute(att.label, att.val);
   });
   return el;
+}
+function uppercaseFirstLetterLowercaseRest(s) {
+  return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
 }
 
 /***/ }),
