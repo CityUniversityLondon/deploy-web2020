@@ -20053,10 +20053,14 @@ main p > img {
     margin-top: 0.75rem;
 }
 
-main ol,
-main ul {
+main ol {
     margin-left: 2.5rem;
     max-width: calc(55ch - 2.5rem);
+}
+
+main ul {
+    margin-left: 1.25rem;
+    max-width: calc(55ch - 1.25rem);
 }
 
 main dl {
