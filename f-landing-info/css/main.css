@@ -50850,6 +50850,10 @@ main .navigation--secondary + .landing .landing__middle1 p {
     padding: 2rem;
 }
 
+main .navigation--secondary + .landing .landing__middle1 .landing__middle1__pathway-image-cards h2 {
+    padding: 0;
+}
+
 main .navigation--secondary + .landing .landing_middle1_content {
     padding: 2rem;
 }
