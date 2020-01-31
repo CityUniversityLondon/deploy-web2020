@@ -43211,7 +43211,11 @@ blockquote footer cite {
 }
 
 .related-links--with-images__wrapper .related-links--with-images:not(:first-child) {
-    padding-left: 0.25rem;
+    padding-left: 2rem;
+}
+
+.related-links--with-images__wrapper .related-links--with-images h2 {
+    text-align: left;
 }
 
 .related-links--with-images__wrapper .related-links--with-images a {
@@ -43226,11 +43230,14 @@ blockquote footer cite {
 
 .related-links--with-images__wrapper .related-links--with-images .pathway-image-cards__blocks {
     display: block;
-    padding: 0 2rem 2rem 2rem;
+}
+
+.related-links--with-images__wrapper .related-links--with-images .pathway-image-cards__blocks p span {
+    display: inline;
 }
 
 .related-links--with-images__wrapper .related-links--with-images .pathway-image-cards__blocks p a {
-    display: inline-block;
+    display: inline;
 }
 
 .related-links--with-images__wrapper .pathway-image-cards {
@@ -57451,6 +57458,9 @@ main .standard-content .banner {
     main > .documentation.documentation--fullwidth {
         grid-column: 1 / span 24;
     }
+    main > .documentation.article--fullwidth article {
+        grid-column: 1 / span 24;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -57462,6 +57472,9 @@ main .standard-content .banner {
     }
     main .navigation--secondary + .documentation.documentation--fullwidth {
         grid-column: 7 / span 18;
+    }
+    main .navigation--secondary + .documentation.article--fullwidth article {
+        grid-column: 7 / -1;
     }
 }
 
