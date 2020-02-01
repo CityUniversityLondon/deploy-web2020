@@ -48344,32 +48344,38 @@ $profile-link-color-engaged
 
 @media (min-width: 768px) {
     .finder .finder__results {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .finder .finder__results .finder__results__summary,
+    .finder .finder__results .finder__results__updating,
+    .finder .finder__results .finder__results__didyoumean,
+    .finder .finder__results .pagination__wrapper {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    .finder .finder__results .finder__results__list {
         grid-template-columns: repeat(18, 1fr);
         grid-column-gap: 0;
         display: grid;
-        grid-template-rows: repeat(3, auto);
-        margin-left: 0;
-        margin-right: 0;
+        grid-auto-rows: auto;
     }
 }
 
 @media (min-width: 768px) and (min-width: 768px) {
-    .finder .finder__results {
+    .finder .finder__results .finder__results__list {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 768px) and (min-width: 901px) {
-    .finder .finder__results {
+    .finder .finder__results .finder__results__list {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 768px) {
-    .finder .finder__results .finder__results__summary,
-    .finder .finder__results .finder__results__updating,
-    .finder .finder__results .finder__results__list,
-    .finder .finder__results .pagination__wrapper {
+    .finder .finder__results .finder__results__list .finder__results__card {
         grid-column: 3 / -3;
     }
 }
