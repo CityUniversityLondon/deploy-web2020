@@ -4271,8 +4271,8 @@ function Finder(props) {
       setResponse(data);
       setUpdating(false);
 
-      if (funnelbackResponse.spell && funnelbackResponse.summary.totalMatching === 0) {
-        const newQueryText = funnelbackResponse.spell.text.split(/\|/)[0].trim(),
+      if (data.spell && data.summary.totalMatching === 0) {
+        const newQueryText = data.spell.text.split(/\|/)[0].trim(),
               newQuery = query;
         newQuery.misspelling = query.query;
         newQuery.query = newQueryText;
