@@ -46615,8 +46615,35 @@ $profile-link-color-engaged
     display: block;
 }
 
+@media (min-width: 768px) {
+    main > article .finder .finder__results__list {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+        grid-auto-rows: auto;
+    }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+    main > article .finder .finder__results__list {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (min-width: 901px) {
+    main > article .finder .finder__results__list {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    main > article .finder .finder__results__list .finder__results__card {
+        grid-column: 3 / -3;
+    }
+}
+
 @media (min-width: 1024px) {
-    main > .listing .banner-text__content {
+    main > article .banner-text .banner-text__content {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -46626,23 +46653,23 @@ $profile-link-color-engaged
 }
 
 @media (min-width: 1024px) and (min-width: 768px) {
-    main > .listing .banner-text__content {
+    main > article .banner-text .banner-text__content {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main > .listing .banner-text__content {
+    main > article .banner-text .banner-text__content {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
-    main > .listing .banner-text__content h1,
-    main > .listing .banner-text__content p {
+    main > article .banner-text .banner-text__content h1,
+    main > article .banner-text .banner-text__content p {
         grid-column: 3 / -3;
     }
-    main > .listing .finder {
+    main > article .finder {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -46650,54 +46677,99 @@ $profile-link-color-engaged
 }
 
 @media (min-width: 1024px) and (min-width: 768px) {
-    main > .listing .finder {
+    main > article .finder {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main > .listing .finder {
+    main > article .finder {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
-    main > .listing .finder .finder__query,
-    main > .listing .finder .finder__filters--desktop,
-    main > .listing .finder .finder__results {
+    main > article .finder .finder__query,
+    main > article .finder .finder__filters--desktop,
+    main > article .finder .finder__results {
         grid-column: 3 / -3;
     }
-    main > .listing .finder .finder__query {
+    main > article .finder .finder__query {
         margin-left: 0;
         margin-right: 0;
     }
-    main > .listing .finder .finder__filters--desktop .finder__filters__heading {
+    main > article .finder .finder__filters--desktop .finder__filters__heading {
         margin: 0;
         padding-left: 0;
         padding-right: 0;
     }
-    main > .listing .finder .finder__filters--desktop .finder__filters__wrapper--filters {
+    main > article .finder .finder__filters--desktop .finder__filters__wrapper--filters {
         margin: 0;
     }
-    main > .listing .finder .finder__results__summary {
+    main > article .finder .finder__results__summary {
         margin: 0;
+    }
+    main > article .finder .finder__results__list {
+        grid-template-columns: repeat(20, 1fr);
+        grid-column-gap: 0;
     }
 }
 
-@media (min-width: 1280px) {
-    main > .listing .banner-text__content h1,
-    main > .listing .banner-text__content p {
-        grid-column: 4 / -4;
+@media (min-width: 1024px) and (min-width: 768px) {
+    main > article .finder .finder__results__list {
+        grid-column-gap: 1rem;
     }
-    main > .listing .finder .finder__query,
-    main > .listing .finder .finder__filters--desktop,
-    main > .listing .finder .finder__results {
-        grid-column: 4 / -4;
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main > article .finder .finder__results__list {
+        grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
-    main .navigation--secondary + article .banner-text__content {
+    main > article .finder .finder__results__list .finder__results__card {
+        grid-column: 3 / -3;
+    }
+}
+
+@media (min-width: 1280px) {
+    main > article .banner-text .banner-text__content h1,
+    main > article .banner-text .banner-text__content p {
+        grid-column: 4 / -4;
+    }
+    main > article .finder .finder__query,
+    main > article .finder .finder__filters--desktop,
+    main > article .finder .finder__results {
+        grid-column: 4 / -4;
+    }
+    main > article .finder .finder__results__list {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 1280px) and (min-width: 768px) {
+    main > article .finder .finder__results__list {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1280px) and (min-width: 901px) {
+    main > article .finder .finder__results__list {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    main > article .finder .finder__results__list .finder__results__card {
+        grid-column: 3 / -3;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .navigation--secondary + article .banner-text .banner-text__content {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -46708,21 +46780,21 @@ $profile-link-color-engaged
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main .navigation--secondary + article .banner-text__content {
+    main .navigation--secondary + article .banner-text .banner-text__content {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main .navigation--secondary + article .banner-text__content {
+    main .navigation--secondary + article .banner-text .banner-text__content {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 1441px) {
-    main .navigation--secondary + article .banner-text__content {
+    main .navigation--secondary + article .banner-text .banner-text__content {
         margin-left: auto;
         margin-right: auto;
     }
@@ -46790,6 +46862,32 @@ $profile-link-color-engaged
     main .navigation--secondary + article .finder .finder__results__summary {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .navigation--secondary + article .finder .finder__results__list {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    main .navigation--secondary + article .finder .finder__results__list {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main .navigation--secondary + article .finder .finder__results__list {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .navigation--secondary + article .finder .finder__results__list .finder__results__card {
+        grid-column: 3 / -3;
     }
 }
 
@@ -48531,30 +48629,6 @@ $profile-link-color-engaged
     .finder .finder__results .pagination__wrapper {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
-    }
-    .finder .finder__results .finder__results__list {
-        grid-template-columns: repeat(18, 1fr);
-        grid-column-gap: 0;
-        display: grid;
-        grid-auto-rows: auto;
-    }
-}
-
-@media (min-width: 768px) and (min-width: 768px) {
-    .finder .finder__results .finder__results__list {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 768px) and (min-width: 901px) {
-    .finder .finder__results .finder__results__list {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .finder .finder__results .finder__results__list .finder__results__card {
-        grid-column: 3 / -3;
     }
 }
 
