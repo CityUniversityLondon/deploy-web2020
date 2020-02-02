@@ -2445,15 +2445,19 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__profile(props) {
-  // render school and department, if they have them
-  const school = (props.details.metaData.school || props.details.metaData.department) && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  const school = props.details.metaData.school && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__tag"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
-  }), ' ', props.details.metaData.school && props.details.metaData.school, props.details.metaData.school && props.details.metaData.department && ', ', props.details.metaData.department && props.details.metaData.department); // headshot, if they have a thumbnail
-
-  const headshot = props.details.metaData.thumbnail && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "School:"), " ", props.details.metaData.school),
+        department = props.details.metaData.department && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fas fa-fw fa-building icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Department:"), " ", props.details.metaData.department),
+        headshot = props.details.metaData.thumbnail && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "thumbnail__image-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: props.details.metaData.thumbnail,
@@ -2469,7 +2473,7 @@ function finder__results__profile(props) {
     className: "finder__results__card__heading underline-transition__title"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__description"
-  }, props.details.metaData.jobtitle), school)));
+  }, props.details.metaData.jobtitle), school, department)));
 }
 
 finder__results__profile.propTypes = {
