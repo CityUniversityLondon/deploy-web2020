@@ -46640,7 +46640,7 @@ $profile-link-color-engaged
 @media (min-width: 1024px) {
     main > .listing .banner-text__content h1,
     main > .listing .banner-text__content p {
-        grid-column: 4 / -4;
+        grid-column: 3 / -3;
     }
     main > .listing .finder {
         grid-template-columns: repeat(24, 1fr);
@@ -46665,7 +46665,7 @@ $profile-link-color-engaged
     main > .listing .finder .finder__query,
     main > .listing .finder .finder__filters--desktop,
     main > .listing .finder .finder__results {
-        grid-column: 4 / -4;
+        grid-column: 3 / -3;
     }
     main > .listing .finder .finder__query {
         margin-left: 0;
@@ -46681,6 +46681,18 @@ $profile-link-color-engaged
     }
     main > .listing .finder .finder__results__summary {
         margin: 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    main > .listing .banner-text__content h1,
+    main > .listing .banner-text__content p {
+        grid-column: 4 / -4;
+    }
+    main > .listing .finder .finder__query,
+    main > .listing .finder .finder__filters--desktop,
+    main > .listing .finder .finder__results {
+        grid-column: 4 / -4;
     }
 }
 
