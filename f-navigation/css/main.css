@@ -52344,6 +52344,21 @@ main .landing:only-child .cta-block .cta-block__cta {
     text-align: left;
 }
 
+@media (min-width: 1024px) {
+    main > .listing {
+        grid-column: 1 / span 24;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .navigation--secondary {
+        grid-column: 1 / span 6;
+    }
+    main .navigation--secondary + .listing {
+        grid-column: 7 / span 18;
+    }
+}
+
 .listing .banner-text {
     background-color: #f2f2f2;
     background: linear-gradient(180deg, #d8d8d8 0%, #ffffff 100%);
