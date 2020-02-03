@@ -148,12 +148,277 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([6,"vendor"]);
+/******/ 	deferredModules.push([6,"vendor","react"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
 /************************************************************************/
 /******/ ({
+
+/***/ "./node_modules/react-is/cjs/react-is.development.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-is/cjs/react-is.development.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/** @license React v16.12.0
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+
+
+if (true) {
+  (function() {
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+// The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+// nor polyfill, then a plain number is used for performance.
+var hasSymbol = typeof Symbol === 'function' && Symbol.for;
+var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
+var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
+var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
+var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
+var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
+var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
+var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+// (unstable) APIs that have been removed. Can we remove the symbols?
+
+var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
+var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
+var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
+var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
+var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
+var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
+var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
+var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
+
+function isValidElementType(type) {
+  return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+  type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE);
+}
+
+/**
+ * Forked from fbjs/warning:
+ * https://github.com/facebook/fbjs/blob/e66ba20ad5be433eb54423f2b097d829324d9de6/packages/fbjs/src/__forks__/warning.js
+ *
+ * Only change is we use console.warn instead of console.error,
+ * and do nothing when 'console' is not supported.
+ * This really simplifies the code.
+ * ---
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
+var lowPriorityWarningWithoutStack = function () {};
+
+{
+  var printWarning = function (format) {
+    for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    var argIndex = 0;
+    var message = 'Warning: ' + format.replace(/%s/g, function () {
+      return args[argIndex++];
+    });
+
+    if (typeof console !== 'undefined') {
+      console.warn(message);
+    }
+
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+
+  lowPriorityWarningWithoutStack = function (condition, format) {
+    if (format === undefined) {
+      throw new Error('`lowPriorityWarningWithoutStack(condition, format, ...args)` requires a warning ' + 'message argument');
+    }
+
+    if (!condition) {
+      for (var _len2 = arguments.length, args = new Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+        args[_key2 - 2] = arguments[_key2];
+      }
+
+      printWarning.apply(void 0, [format].concat(args));
+    }
+  };
+}
+
+var lowPriorityWarningWithoutStack$1 = lowPriorityWarningWithoutStack;
+
+function typeOf(object) {
+  if (typeof object === 'object' && object !== null) {
+    var $$typeof = object.$$typeof;
+
+    switch ($$typeof) {
+      case REACT_ELEMENT_TYPE:
+        var type = object.type;
+
+        switch (type) {
+          case REACT_ASYNC_MODE_TYPE:
+          case REACT_CONCURRENT_MODE_TYPE:
+          case REACT_FRAGMENT_TYPE:
+          case REACT_PROFILER_TYPE:
+          case REACT_STRICT_MODE_TYPE:
+          case REACT_SUSPENSE_TYPE:
+            return type;
+
+          default:
+            var $$typeofType = type && type.$$typeof;
+
+            switch ($$typeofType) {
+              case REACT_CONTEXT_TYPE:
+              case REACT_FORWARD_REF_TYPE:
+              case REACT_LAZY_TYPE:
+              case REACT_MEMO_TYPE:
+              case REACT_PROVIDER_TYPE:
+                return $$typeofType;
+
+              default:
+                return $$typeof;
+            }
+
+        }
+
+      case REACT_PORTAL_TYPE:
+        return $$typeof;
+    }
+  }
+
+  return undefined;
+} // AsyncMode is deprecated along with isAsyncMode
+
+var AsyncMode = REACT_ASYNC_MODE_TYPE;
+var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
+var ContextConsumer = REACT_CONTEXT_TYPE;
+var ContextProvider = REACT_PROVIDER_TYPE;
+var Element = REACT_ELEMENT_TYPE;
+var ForwardRef = REACT_FORWARD_REF_TYPE;
+var Fragment = REACT_FRAGMENT_TYPE;
+var Lazy = REACT_LAZY_TYPE;
+var Memo = REACT_MEMO_TYPE;
+var Portal = REACT_PORTAL_TYPE;
+var Profiler = REACT_PROFILER_TYPE;
+var StrictMode = REACT_STRICT_MODE_TYPE;
+var Suspense = REACT_SUSPENSE_TYPE;
+var hasWarnedAboutDeprecatedIsAsyncMode = false; // AsyncMode should be deprecated
+
+function isAsyncMode(object) {
+  {
+    if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+      hasWarnedAboutDeprecatedIsAsyncMode = true;
+      lowPriorityWarningWithoutStack$1(false, 'The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
+    }
+  }
+
+  return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
+}
+function isConcurrentMode(object) {
+  return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
+}
+function isContextConsumer(object) {
+  return typeOf(object) === REACT_CONTEXT_TYPE;
+}
+function isContextProvider(object) {
+  return typeOf(object) === REACT_PROVIDER_TYPE;
+}
+function isElement(object) {
+  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+}
+function isForwardRef(object) {
+  return typeOf(object) === REACT_FORWARD_REF_TYPE;
+}
+function isFragment(object) {
+  return typeOf(object) === REACT_FRAGMENT_TYPE;
+}
+function isLazy(object) {
+  return typeOf(object) === REACT_LAZY_TYPE;
+}
+function isMemo(object) {
+  return typeOf(object) === REACT_MEMO_TYPE;
+}
+function isPortal(object) {
+  return typeOf(object) === REACT_PORTAL_TYPE;
+}
+function isProfiler(object) {
+  return typeOf(object) === REACT_PROFILER_TYPE;
+}
+function isStrictMode(object) {
+  return typeOf(object) === REACT_STRICT_MODE_TYPE;
+}
+function isSuspense(object) {
+  return typeOf(object) === REACT_SUSPENSE_TYPE;
+}
+
+exports.typeOf = typeOf;
+exports.AsyncMode = AsyncMode;
+exports.ConcurrentMode = ConcurrentMode;
+exports.ContextConsumer = ContextConsumer;
+exports.ContextProvider = ContextProvider;
+exports.Element = Element;
+exports.ForwardRef = ForwardRef;
+exports.Fragment = Fragment;
+exports.Lazy = Lazy;
+exports.Memo = Memo;
+exports.Portal = Portal;
+exports.Profiler = Profiler;
+exports.StrictMode = StrictMode;
+exports.Suspense = Suspense;
+exports.isValidElementType = isValidElementType;
+exports.isAsyncMode = isAsyncMode;
+exports.isConcurrentMode = isConcurrentMode;
+exports.isContextConsumer = isContextConsumer;
+exports.isContextProvider = isContextProvider;
+exports.isElement = isElement;
+exports.isForwardRef = isForwardRef;
+exports.isFragment = isFragment;
+exports.isLazy = isLazy;
+exports.isMemo = isMemo;
+exports.isPortal = isPortal;
+exports.isProfiler = isProfiler;
+exports.isStrictMode = isStrictMode;
+exports.isSuspense = isSuspense;
+  })();
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/react-is/index.js":
+/*!****************************************!*\
+  !*** ./node_modules/react-is/index.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (false) {} else {
+  module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/react-is/cjs/react-is.development.js");
+}
+
+
+/***/ }),
 
 /***/ "./src/how-to-apply--pgt.js":
 /*!**********************************!*\
@@ -166,9 +431,14 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _patterns_how_to_apply_pgt_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns/how-to-apply/pgt-data */ "./src/patterns/how-to-apply/pgt-data.js");
-/* harmony import */ var edn_to_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! edn-to-js */ "./node_modules/edn-to-js/dist/main.js");
-/* harmony import */ var edn_to_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(edn_to_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _patterns_how_to_apply_how_to_apply_pgt__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/how-to-apply/how-to-apply--pgt */ "./src/patterns/how-to-apply/how-to-apply--pgt.js");
+/* harmony import */ var _patterns_how_to_apply_pgt_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/how-to-apply/pgt-data */ "./src/patterns/how-to-apply/pgt-data.js");
+/* harmony import */ var edn_to_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! edn-to-js */ "./node_modules/edn-to-js/dist/main.js");
+/* harmony import */ var edn_to_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(edn_to_js__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
@@ -179,29 +449,358 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2020
  */
-// import React from 'react';
-// import { render } from 'react-dom';
-// import HowToApply from './patterns/how-to-apply/how-to-apply--pgt';
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
   if (/(Trident|MSIE)/.test(navigator.userAgent)) {
     return;
   } else {
-    const howToApplyCTAs = document.querySelectorAll('.how-to-apply--pgt.how-to-apply--pgt--js');
+    const howToApplyCTAs = document.querySelectorAll('.how-to-apply--pgt--js');
     howToApplyCTAs && Array.from(howToApplyCTAs).forEach(howToApply => {
-      Object(_patterns_how_to_apply_pgt_data__WEBPACK_IMPORTED_MODULE_1__["howToApplyConfig"])(howToApply.dataset.config).then(config => {
-        console.log(edn_to_js__WEBPACK_IMPORTED_MODULE_2___default()(config)); // render(
-        //     <HowToApply
-        //         config={edn(config)}
-        //         element={howToApply}
-        //     />,
-        //     howToApply
-        // );
+      Object(_patterns_how_to_apply_pgt_data__WEBPACK_IMPORTED_MODULE_4__["howToApplyConfig"])(howToApply.dataset.config).then(config => {
+        Object(react_dom__WEBPACK_IMPORTED_MODULE_2__["render"])(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_patterns_how_to_apply_how_to_apply_pgt__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          config: edn_to_js__WEBPACK_IMPORTED_MODULE_5___default()(config),
+          element: howToApply
+        }), howToApply);
       });
     });
   }
 });
+
+/***/ }),
+
+/***/ "./src/patterns/how-to-apply/how-to-apply--pgt.js":
+/*!********************************************************!*\
+  !*** ./src/patterns/how-to-apply/how-to-apply--pgt.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js");
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+/**
+ * How to apply for postgraduate taught degrees
+ *
+ * Don't run this via patterns.js, it's a separate compilation.
+ *
+ * @module patterns/how-to-apply/how-to-apply--pgt
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+
+
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+/**
+ * Launch the how to apply modal.
+ *
+ * @param {object} props The JSON configuration file for the modal.
+ * @return {object} The React component to render.
+ */
+
+function HowToApply(props) {
+  const entryPoints = distilConfiguration(props.config),
+        initialPreferences = {
+    qualification: Object.keys(entryPoints).length === 1 ? Object.keys(entryPoints[0])[0] : null,
+    subject: null,
+    entry: null,
+    location: null
+  },
+        [modalVisible, setModalVisible] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+        [preferences, setPreferences] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(initialPreferences),
+        [question, setQuestion] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(nextQuestion(preferences, entryPoints)),
+        [multipleSubjects, setMultipleSubjects] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
+        [multipleEntryPoints, setMultipleEntryPoints] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
+        [multipleLocations, setMultipleLocations] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
+        qualificationQuestion = question === 'qualification' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose your qualification:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    className: "cta-block"
+  }, entryPoints.map((qualification, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "cta-block__cta",
+    key: 'qualification' + i
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: "basic-cta--bright",
+    onClick: () => {
+      const newPreferences = preferences;
+      newPreferences.qualification = Object.keys(qualification)[0];
+      const subjectOptions = qualification[newPreferences.qualification];
+
+      if (subjectOptions.length === 1) {
+        newPreferences.subject = 'UNIQUE';
+        setMultipleSubjects(false);
+      } else {
+        newPreferences.subject = null;
+        setMultipleSubjects(true);
+      }
+
+      setPreferences(newPreferences);
+      setQuestion(nextQuestion(newPreferences, entryPoints));
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(qualification)[0])))))),
+        subjectQuestion = question === 'subject' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose your entry point:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    className: "cta-block"
+  }, nextLevel(entryPoints, preferences.qualification).map((subject, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "cta-block__cta",
+    key: 'subject' + i
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: "basic-cta--bright",
+    onClick: () => {
+      const newPreferences = preferences;
+      newPreferences.subject = Object.keys(subject)[0];
+      const entryOptions = subject[newPreferences.subject];
+
+      if (entryOptions.length === 1) {
+        newPreferences.entry = Object.keys(entryOptions[0])[0];
+        setMultipleEntryPoints(false);
+      } else {
+        newPreferences.entry = null;
+        setMultipleEntryPoints(true);
+      }
+
+      setPreferences(newPreferences);
+      setQuestion(nextQuestion(newPreferences, entryPoints));
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(subject)[0])))))),
+        entryQuestion = question === 'entry' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose your entry point:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    className: "cta-block"
+  }, nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject).map((entryPoint, i) => {
+    const formattedDate = new Date(Object.keys(entryPoint)[0]);
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      className: "cta-block__cta",
+      key: 'entry-point' + i
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+      className: "basic-cta--bright",
+      onClick: () => {
+        const newPreferences = preferences;
+        newPreferences.entry = Object.keys(entryPoint)[0];
+        const locationOptions = entryPoint[newPreferences.entry];
+
+        if (locationOptions.length === 1) {
+          newPreferences.location = Object.keys(locationOptions[0])[0];
+          setMultipleLocations(false);
+        } else {
+          newPreferences.location = null;
+          setMultipleLocations(true);
+        }
+
+        setPreferences(newPreferences);
+        setQuestion(nextQuestion(newPreferences, entryPoints));
+      }
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, months[formattedDate.getMonth()], ' ', formattedDate.getFullYear())));
+  }))),
+        locationQuestion = question === 'location' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose your study location:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    className: "cta-block"
+  }, nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry).map((location, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "cta-block__cta",
+    key: 'entry-point' + i
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: "basic-cta--bright",
+    onClick: () => {
+      const newPreferences = preferences;
+      newPreferences.entry = Object.keys(location)[0];
+      setPreferences(newPreferences);
+      setQuestion(nextQuestion(newPreferences, entryPoints));
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(location)[0])))))),
+        applyQuestion = question === 'apply' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Apply online:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    className: "cta-block"
+  }, nextLevel(nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry), preferences.location).map((method, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "cta-block__cta",
+    key: 'method' + i
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+    className: "basic-cta--bright",
+    href: method[Object.keys(method)[0]]
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(method)[0], ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "far fa-external-link",
+    "aria-label": "(external link)"
+  }))))))),
+        qualificationsProgress = Object.keys(entryPoints).length > 1 && preferences.qualification && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    onClick: () => {
+      const newPreferences = preferences;
+      newPreferences.qualification = null;
+      newPreferences.subject = null;
+      newPreferences.entry = null;
+      newPreferences.location = null;
+      setPreferences(newPreferences);
+      setQuestion(nextQuestion(newPreferences, entryPoints));
+    }
+  }, preferences.qualification)),
+        subjectsProgress = multipleSubjects && preferences.subject && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    onClick: () => {
+      const newPreferences = preferences;
+      newPreferences.subject = null;
+      newPreferences.entry = null;
+      newPreferences.location = null;
+      setPreferences(newPreferences);
+      setQuestion(nextQuestion(newPreferences, entryPoints));
+    }
+  }, preferences.subject)),
+        entryPointsProgress = multipleEntryPoints && preferences.entry && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    onClick: () => {
+      const newPreferences = preferences;
+      newPreferences.entry = null;
+      newPreferences.location = null;
+      setPreferences(newPreferences);
+      setQuestion(nextQuestion(newPreferences, entryPoints));
+    }
+  }, months[new Date(preferences.entry).getMonth()], ' ', new Date(preferences.entry).getFullYear())),
+        locationsProgress = multipleLocations && preferences.location && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    onClick: () => {
+      const newPreferences = preferences;
+      newPreferences.location = null;
+      setPreferences(newPreferences);
+      setQuestion(nextQuestion(newPreferences, entryPoints));
+    }
+  }, preferences.location));
+  const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({});
+  let modalRef = null;
+
+  const getModal = () => modalRef;
+
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
+    if (!focusTrap.activate) {
+      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_4___default()(getModal(), {
+        initialFocus: getModal().querySelector('button:not(.how-to-apply--pgt--js__close), a'),
+        onDeactivate: () => setModalVisible(false),
+        clickOutsideDeactivates: true
+      }));
+    }
+
+    if (modalVisible) {
+      focusTrap.activate && focusTrap.activate();
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__["disableBodyScroll"])(getModal());
+    } else {
+      focusTrap.deactivate && focusTrap.deactivate();
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__["enableBodyScroll"])(getModal());
+    }
+  }, [modalVisible]);
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    className: "cta-block"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "cta-block__cta"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: "primary-cta-arrow--bright",
+    onClick: () => setModalVisible(true)
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Apply now")))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal",
+    "data-open": modalVisible,
+    ref: modal => modalRef = modal
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__content"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: "how-to-apply--pgt--js__close"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-times icon",
+    "aria-label": "Close",
+    onClick: () => setModalVisible(false)
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Apply now"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
+    className: "how-to-apply--pgt--js__modal__progress"
+  }, qualificationsProgress, subjectsProgress, entryPointsProgress, locationsProgress), qualificationQuestion, subjectQuestion, entryQuestion, locationQuestion, applyQuestion)));
+}
+
+const nextLevel = (arr, k) => arr.filter(i => Object.keys(i)[0] === k)[0][k];
+/**
+ * Condense the configuration options for easier access.
+ *
+ * @param {Object[]} config The JSONified entry points configuration.
+ * @return {Object[]} - The simplified configuration
+ */
+
+
+function distilConfiguration(config) {
+  return config.map(qualification => {
+    const qualificationHeader = qualification.header,
+          subjects = qualification.options.map(subject => {
+      const subjectHeader = subject.header,
+            entries = subject.options.map(entry => {
+        const entryHeader = entry.header,
+              locations = entry.options.map(location => {
+          const locationHeader = location.header,
+                methods = location.options.map(method => {
+            const methodHeader = method.header,
+                  applyLink = method.options.apply,
+                  methodObj = new Object();
+
+            if (methodHeader) {
+              methodObj[methodHeader] = applyLink;
+            } else {
+              methodObj['UNIQUE'] = applyLink;
+            }
+
+            return methodObj;
+          }),
+                locationObject = new Object();
+
+          if (locationHeader) {
+            locationObject[locationHeader] = methods;
+          } else {
+            locationObject['UNIQUE'] = methods;
+          }
+
+          return locationObject;
+        }),
+              entryObj = new Object();
+
+        if (entryHeader) {
+          entryObj[entryHeader] = locations;
+        } else {
+          entryObj['UNIQUE'] = locations;
+        }
+
+        return entryObj;
+      }),
+            subjectObj = new Object();
+
+      if (subjectHeader) {
+        subjectObj[subjectHeader] = entries;
+      } else {
+        subjectObj['UNIQUE'] = entries;
+      }
+
+      return subjectObj;
+    }),
+          qualificationObj = new Object();
+
+    if (qualificationHeader) {
+      qualificationObj[qualificationHeader] = subjects;
+    } else {
+      qualificationObj['UNIQUE'] = subjects;
+    }
+
+    return qualificationObj;
+  });
+}
+
+function nextQuestion(preferences) {
+  const question = preferences.qualification === null ? 'qualification' : preferences.subject === null ? 'subject' : preferences.entry === null ? 'entry' : preferences.location === null ? 'location' : 'apply';
+  return question;
+}
+
+HowToApply.propTypes = {
+  config: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.array,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (HowToApply);
 
 /***/ }),
 
