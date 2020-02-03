@@ -59080,7 +59080,7 @@ main .standard-content .banner, main .standard-content .banner-text {
 
 .course--ug__keyinfo__intro,
 .course--ug__keyinfo__details,
-.course--ug__keyinfo__accordion
+.course--ug__keyinfo__accordion,
 .course--ug__keyinfo__cta {
     background: linear-gradient(360deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
     padding: 1.75rem 1.75rem;
@@ -59089,8 +59089,8 @@ main .standard-content .banner, main .standard-content .banner-text {
 @media (max-width: 432px) {
     .course--ug__keyinfo__intro,
     .course--ug__keyinfo__details,
-    .course--ug__keyinfo__accordion
-.course--ug__keyinfo__cta {
+    .course--ug__keyinfo__accordion,
+    .course--ug__keyinfo__cta {
         grid-column: 1 / -1;
     }
 }
@@ -59098,8 +59098,8 @@ main .standard-content .banner, main .standard-content .banner-text {
 @media (min-width: 433px) {
     .course--ug__keyinfo__intro,
     .course--ug__keyinfo__details,
-    .course--ug__keyinfo__accordion
-.course--ug__keyinfo__cta {
+    .course--ug__keyinfo__accordion,
+    .course--ug__keyinfo__cta {
         grid-column: 2 / 12;
     }
 }
@@ -59107,8 +59107,8 @@ main .standard-content .banner, main .standard-content .banner-text {
 @media (min-width: 901px) {
     .course--ug__keyinfo__intro,
     .course--ug__keyinfo__details,
-    .course--ug__keyinfo__accordion
-.course--ug__keyinfo__cta {
+    .course--ug__keyinfo__accordion,
+    .course--ug__keyinfo__cta {
         grid-column: 3 / 17;
     }
 }
