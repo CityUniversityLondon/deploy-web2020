@@ -51520,8 +51520,13 @@ main .landing:only-child .landing__top__cta {
     padding: 0;
 }
 
+.landing__contact .card--contact .card--contact__key-info > .icon {
+    color: #ffffff;
+}
+
 .landing__contact__sec--heading {
     border-bottom: 0.125rem solid #7c2062;
+    padding-bottom: 0.5rem;
 }
 
 .landing__contact__sec--heading h2 {
