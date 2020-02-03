@@ -58817,10 +58817,6 @@ main .standard-content .banner, main .standard-content .banner-text {
     }
 }
 
-.course--ug .course-info__cta a:first-child {
-    margin-bottom: 1rem;
-}
-
 @media (max-width: 432px) {
     .course--ug .course--promo-cards__ranking--first,
     .course--ug .course--promo-cards__ranking--sec {
@@ -58889,6 +58885,21 @@ main .standard-content .banner, main .standard-content .banner-text {
     .course--ug .chart__columns {
         display: block;
     }
+}
+
+.course--ug__keyinfo__cta p {
+    display: block;
+}
+
+@media (min-width: 769px) {
+    .course--ug__keyinfo__cta p {
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
+}
+
+.course--ug__keyinfo__cta p:last-of-type {
+    margin-right: 0;
 }
 
 .js .course--ug .tabs {
@@ -59069,7 +59080,8 @@ main .standard-content .banner, main .standard-content .banner-text {
 
 .course--ug__keyinfo__intro,
 .course--ug__keyinfo__details,
-.course--ug__keyinfo__accordion {
+.course--ug__keyinfo__accordion
+.course--ug__keyinfo__cta {
     background: linear-gradient(360deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
     padding: 1.75rem 1.75rem;
 }
@@ -59077,7 +59089,8 @@ main .standard-content .banner, main .standard-content .banner-text {
 @media (max-width: 432px) {
     .course--ug__keyinfo__intro,
     .course--ug__keyinfo__details,
-    .course--ug__keyinfo__accordion {
+    .course--ug__keyinfo__accordion
+.course--ug__keyinfo__cta {
         grid-column: 1 / -1;
     }
 }
@@ -59085,7 +59098,8 @@ main .standard-content .banner, main .standard-content .banner-text {
 @media (min-width: 433px) {
     .course--ug__keyinfo__intro,
     .course--ug__keyinfo__details,
-    .course--ug__keyinfo__accordion {
+    .course--ug__keyinfo__accordion
+.course--ug__keyinfo__cta {
         grid-column: 2 / 12;
     }
 }
@@ -59093,7 +59107,8 @@ main .standard-content .banner, main .standard-content .banner-text {
 @media (min-width: 901px) {
     .course--ug__keyinfo__intro,
     .course--ug__keyinfo__details,
-    .course--ug__keyinfo__accordion {
+    .course--ug__keyinfo__accordion
+.course--ug__keyinfo__cta {
         grid-column: 3 / 17;
     }
 }
@@ -59251,48 +59266,17 @@ main .standard-content .banner, main .standard-content .banner-text {
     padding-bottom: 2.75rem;
 }
 
-.course--ug__usp__cta,
 .course--ug__usp__stats {
     background-color: #ffffff;
 }
 
-.course--ug__usp__cta li,
 .course--ug__usp__stats li {
     display: inline-block;
     list-style-type: none;
     margin-right: 0.5rem;
 }
 
-.course--ug__usp__cta li:last-of-type,
 .course--ug__usp__stats li:last-of-type {
-    margin-right: 0;
-}
-
-.course--ug__usp__cta {
-    background-color: #ffffff;
-    display: block;
-    padding: 0.25rem 0 1rem;
-}
-
-@media (min-width: 769px) {
-    .course--ug__usp__cta {
-        display: flex;
-        justify-content: space-around;
-    }
-}
-
-.course--ug__usp__cta p {
-    display: block;
-}
-
-@media (min-width: 769px) {
-    .course--ug__usp__cta p {
-        display: inline-block;
-        margin-right: 0.5rem;
-    }
-}
-
-.course--ug__usp__cta p:last-of-type {
     margin-right: 0;
 }
 
