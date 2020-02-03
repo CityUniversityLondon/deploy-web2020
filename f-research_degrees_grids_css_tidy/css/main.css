@@ -29772,13 +29772,18 @@ _:-ms-lang(x),
     transition: 0.6s;
 }
 
-.featured-profiles__heading,
-.wrapper--featured-profiles__heading-intro {
-    grid-column: 1/-1;
+@media (max-width: 767px) {
+    .wrapper--featured-profiles__profile .featured-profiles__profile {
+        margin-top: 1.25rem;
+    }
 }
 
-.featured-profiles-block--row,
-.featured-profiles-block--grid {
+.featured-profiles__heading,
+.wrapper--featured-profiles__heading-intro {
+    grid-column: 1 / -1;
+}
+
+.featured-profiles-block {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -29787,22 +29792,19 @@ _:-ms-lang(x),
 }
 
 @media (min-width: 768px) {
-    .featured-profiles-block--row,
-    .featured-profiles-block--grid {
+    .featured-profiles-block {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 901px) {
-    .featured-profiles-block--row,
-    .featured-profiles-block--grid {
+    .featured-profiles-block {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (max-width: 899px) {
-    .featured-profiles-block--row,
-    .featured-profiles-block--grid {
+    .featured-profiles-block {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -29812,37 +29814,32 @@ _:-ms-lang(x),
 }
 
 @media (max-width: 899px) and (min-width: 901px) {
-    .featured-profiles-block--row,
-    .featured-profiles-block--grid {
+    .featured-profiles-block {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (max-width: 899px) and (min-width: 901px) {
-    .featured-profiles-block--row,
-    .featured-profiles-block--grid {
+    .featured-profiles-block {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
 @media (max-width: 899px) and (min-width: 1441px) {
-    .featured-profiles-block--row,
-    .featured-profiles-block--grid {
+    .featured-profiles-block {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-.featured-profiles-block--row .wrapper--featured-profiles__profile,
-.featured-profiles-block--grid .wrapper--featured-profiles__profile {
+.featured-profiles-block .wrapper--featured-profiles__profile {
     grid-column: 1 / -1;
 }
 
 @media (min-width: 768px) {
-    .featured-profiles-block--row .wrapper--featured-profiles__profile,
-    .featured-profiles-block--grid .wrapper--featured-profiles__profile {
+    .featured-profiles-block .wrapper--featured-profiles__profile {
         grid-template-columns: repeat(3, 1fr);
         display: grid;
         grid-column-gap: 1rem;
@@ -29851,13 +29848,12 @@ _:-ms-lang(x),
 }
 
 @media (min-width: 901px) {
-    .featured-profiles-block--row .wrapper--featured-profiles__profile,
-    .featured-profiles-block--grid .wrapper--featured-profiles__profile {
+    .featured-profiles-block .wrapper--featured-profiles__profile {
         grid-column-gap: 1.5rem;
     }
 }
 
-.featured-profiles-block--grid .wrapper--featured-profiles__heading-intro {
+.featured-profiles-block .wrapper--featured-profiles__heading-intro {
     grid-column: 1 / -1;
 }
 
@@ -45218,13 +45214,18 @@ button
     transition: 0.6s;
 }
 
-.featured-profiles__heading,
-.wrapper--featured-profiles__heading-intro {
-    grid-column: 1/-1;
+@media (max-width: 767px) {
+    .wrapper--featured-profiles__profile .featured-profiles__profile {
+        margin-top: 1.25rem;
+    }
 }
 
-.featured-profiles-block--row,
-.featured-profiles-block--grid {
+.featured-profiles__heading,
+.wrapper--featured-profiles__heading-intro {
+    grid-column: 1 / -1;
+}
+
+.featured-profiles-block {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -45233,22 +45234,19 @@ button
 }
 
 @media (min-width: 768px) {
-    .featured-profiles-block--row,
-    .featured-profiles-block--grid {
+    .featured-profiles-block {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 901px) {
-    .featured-profiles-block--row,
-    .featured-profiles-block--grid {
+    .featured-profiles-block {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (max-width: 899px) {
-    .featured-profiles-block--row,
-    .featured-profiles-block--grid {
+    .featured-profiles-block {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -45258,37 +45256,32 @@ button
 }
 
 @media (max-width: 899px) and (min-width: 901px) {
-    .featured-profiles-block--row,
-    .featured-profiles-block--grid {
+    .featured-profiles-block {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (max-width: 899px) and (min-width: 901px) {
-    .featured-profiles-block--row,
-    .featured-profiles-block--grid {
+    .featured-profiles-block {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
 @media (max-width: 899px) and (min-width: 1441px) {
-    .featured-profiles-block--row,
-    .featured-profiles-block--grid {
+    .featured-profiles-block {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-.featured-profiles-block--row .wrapper--featured-profiles__profile,
-.featured-profiles-block--grid .wrapper--featured-profiles__profile {
+.featured-profiles-block .wrapper--featured-profiles__profile {
     grid-column: 1 / -1;
 }
 
 @media (min-width: 768px) {
-    .featured-profiles-block--row .wrapper--featured-profiles__profile,
-    .featured-profiles-block--grid .wrapper--featured-profiles__profile {
+    .featured-profiles-block .wrapper--featured-profiles__profile {
         grid-template-columns: repeat(3, 1fr);
         display: grid;
         grid-column-gap: 1rem;
@@ -45297,13 +45290,12 @@ button
 }
 
 @media (min-width: 901px) {
-    .featured-profiles-block--row .wrapper--featured-profiles__profile,
-    .featured-profiles-block--grid .wrapper--featured-profiles__profile {
+    .featured-profiles-block .wrapper--featured-profiles__profile {
         grid-column-gap: 1.5rem;
     }
 }
 
-.featured-profiles-block--grid .wrapper--featured-profiles__heading-intro {
+.featured-profiles-block .wrapper--featured-profiles__heading-intro {
     grid-column: 1 / -1;
 }
 
@@ -56043,6 +56035,12 @@ button
     }
 }
 
+@media (max-width: 768px) {
+    .wrapper--research-degree__pre-overview {
+        padding-top: 1rem;
+    }
+}
+
 @media (min-width: 1281px) {
     .wrapper--research-degree__pre-overview {
         padding-top: 1rem;
@@ -56525,6 +56523,13 @@ button
 
 .wrapper--research-degree__testimonials .research-degree__testimonials__content {
     display: block;
+    grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
+    .wrapper--research-degree__testimonials .research-degree__testimonials__content {
+        grid-column: 2 / 18;
+    }
 }
 
 @media (min-width: 901px) {
@@ -56603,21 +56608,60 @@ button
 
 .wrapper--research-degree__footer .research-degree__footer__useful-links {
     margin-top: 2rem;
-    grid-column: 14 / 18;
+    grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
+    .wrapper--research-degree__footer .research-degree__footer__useful-links {
+        grid-column: 14 / -1;
+    }
+}
+
+@media (min-width: 901px) {
+    .wrapper--research-degree__footer .research-degree__footer__useful-links {
+        grid-column: 14 / 18;
+    }
 }
 
 .wrapper--research-degree__footer .research-degree__footer__contact {
     max-width: none;
     margin: 0;
-    grid-column: 2 / 14;
+    grid-column: 1 / -1;
+}
+
+@media (min-width: 768px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact {
+        grid-column: 1 / 14;
+    }
 }
 
 @media (min-width: 768px) {
     .wrapper--research-degree__footer .research-degree__footer__contact {
         display: flex;
     }
+}
+
+@media (min-width: 768px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact li {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact li:first-child {
+        margin-right: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
     .wrapper--research-degree__footer .research-degree__footer__contact li:first-child {
         margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .wrapper--research-degree__footer .research-degree__footer__contact {
+        grid-column: 2 / 14;
     }
 }
 
