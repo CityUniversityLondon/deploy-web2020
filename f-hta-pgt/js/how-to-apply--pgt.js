@@ -639,7 +639,7 @@ function HowToApply(props) {
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
+    className: "fas fa-question icon"
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Qualification")) : preferences.qualification ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
@@ -666,7 +666,7 @@ function HowToApply(props) {
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
+    className: "fas fa-question icon"
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Route")) : preferences.subject ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
@@ -692,7 +692,7 @@ function HowToApply(props) {
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
+    className: "fas fa-question icon"
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Entry point")) : preferences.entry ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
@@ -717,7 +717,7 @@ function HowToApply(props) {
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
+    className: "fas fa-question icon"
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Location")) : preferences.location ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
@@ -745,7 +745,7 @@ function HowToApply(props) {
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
+    className: "fas fa-question icon"
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Method of study")),
