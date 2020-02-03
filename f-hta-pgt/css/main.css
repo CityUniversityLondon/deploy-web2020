@@ -34054,8 +34054,96 @@ article figure figcaption a:active {
     font-style: italic;
 }
 
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .cta-block {
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options {
+    list-style: none;
+    margin-left: 0;
     max-width: unset;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    transition: background-color 0.6s;
+    border-radius: 0.25rem;
+}
+
+@media (hover: hover) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:hover,
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:focus, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:active,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:focus,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:focus, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:active,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:focus,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:focus, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:active,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:focus,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:active {
+    background-color: #d61726;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:hover,
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:hover {
+        background-color: #9e111c;
+        color: #ffffff;
+    }
 }
 
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__close {

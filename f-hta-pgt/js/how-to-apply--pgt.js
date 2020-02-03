@@ -534,12 +534,10 @@ function HowToApply(props) {
         [multipleEntryPoints, setMultipleEntryPoints] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
         [multipleLocations, setMultipleLocations] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
         qualificationQuestion = question === 'qualification' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose your qualification:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "cta-block"
+    className: "how-to-apply--pgt--js__options"
   }, entryPoints.map((qualification, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "cta-block__cta",
     key: 'qualification' + i
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "basic-cta--bright",
     onClick: () => {
       const newPreferences = preferences;
       newPreferences.qualification = Object.keys(qualification)[0];
@@ -558,12 +556,10 @@ function HowToApply(props) {
     }
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(qualification)[0])))))),
         subjectQuestion = question === 'subject' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose your entry point:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "cta-block"
+    className: "how-to-apply--pgt--js__options"
   }, nextLevel(entryPoints, preferences.qualification).map((subject, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "cta-block__cta",
     key: 'subject' + i
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "basic-cta--bright",
     onClick: () => {
       const newPreferences = preferences;
       newPreferences.subject = Object.keys(subject)[0];
@@ -582,14 +578,12 @@ function HowToApply(props) {
     }
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(subject)[0])))))),
         entryQuestion = question === 'entry' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose your entry point:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "cta-block"
+    className: "how-to-apply--pgt--js__options"
   }, nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject).map((entryPoint, i) => {
     const formattedDate = new Date(Object.keys(entryPoint)[0]);
     return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-      className: "cta-block__cta",
       key: 'entry-point' + i
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-      className: "basic-cta--bright",
       onClick: () => {
         const newPreferences = preferences;
         newPreferences.entry = Object.keys(entryPoint)[0];
@@ -609,12 +603,10 @@ function HowToApply(props) {
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, months[formattedDate.getMonth()], ' ', formattedDate.getFullYear())));
   }))),
         locationQuestion = question === 'location' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose your study location:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "cta-block"
+    className: "how-to-apply--pgt--js__options"
   }, nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry).map((location, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "cta-block__cta",
     key: 'entry-point' + i
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "basic-cta--bright",
     onClick: () => {
       const newPreferences = preferences;
       newPreferences.entry = Object.keys(location)[0];
@@ -623,12 +615,10 @@ function HowToApply(props) {
     }
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(location)[0])))))),
         applyQuestion = question === 'apply' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Apply online:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "cta-block"
+    className: "how-to-apply--pgt--js__options"
   }, nextLevel(nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry), preferences.location).map((method, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "cta-block__cta",
     key: 'method' + i
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    className: "basic-cta--bright",
     href: method[Object.keys(method)[0]]
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(method)[0], ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "far fa-external-link",
@@ -673,14 +663,16 @@ function HowToApply(props) {
     }
   }, preferences.location));
   const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({});
-  let modalRef = null;
+  let modalRef = null,
+      modalContentRef = null;
 
-  const getModal = () => modalRef;
+  const getModal = () => modalRef,
+        getModalContent = () => modalContentRef;
 
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
     if (!focusTrap.activate) {
-      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_4___default()(getModal(), {
-        initialFocus: getModal().querySelector('button:not(.how-to-apply--pgt--js__close), a'),
+      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_4___default()(getModalContent(), {
+        initialFocus: getModalContent().querySelector('button:not(.how-to-apply--pgt--js__close), a'),
         onDeactivate: () => setModalVisible(false),
         clickOutsideDeactivates: true
       }));
@@ -706,7 +698,8 @@ function HowToApply(props) {
     "data-open": modalVisible,
     ref: modal => modalRef = modal
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "how-to-apply--pgt--js__modal__content"
+    className: "how-to-apply--pgt--js__modal__content",
+    ref: modalContent => modalContentRef = modalContent
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     className: "how-to-apply--pgt--js__close"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
