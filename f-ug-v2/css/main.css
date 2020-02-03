@@ -58887,6 +58887,18 @@ main .standard-content .banner, main .standard-content .banner-text {
     }
 }
 
+.course--ug__keyinfo__cta {
+    margin-bottom: 1.75rem;
+    border-top: 0.125rem solid #d8d8d8;
+}
+
+@media (min-width: 769px) {
+    .course--ug__keyinfo__cta {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
 .course--ug__keyinfo__cta p {
     display: block;
 }
@@ -59176,7 +59188,6 @@ main .standard-content .banner, main .standard-content .banner-text {
 
 .course--ug__keyinfo__accordion {
     border-top: 0.125rem solid #d8d8d8;
-    margin-bottom: 1.75rem;
 }
 
 .course--ug__keyinfo__accordion .accordion .accordion__heading {
