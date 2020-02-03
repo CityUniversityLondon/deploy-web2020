@@ -58892,7 +58892,7 @@ main .standard-content .banner, main .standard-content .banner-text {
     border-top: 0.125rem solid #d8d8d8;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 433px) {
     .course--ug__keyinfo__cta {
         display: flex;
         justify-content: space-between;
@@ -58906,12 +58906,26 @@ main .standard-content .banner, main .standard-content .banner-text {
 @media (min-width: 769px) {
     .course--ug__keyinfo__cta p {
         display: inline-block;
-        margin-right: 0.5rem;
+        margin-right: 1rem;
     }
 }
 
 .course--ug__keyinfo__cta p:last-of-type {
     margin-right: 0;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .course--ug__keyinfo__cta {
+        flex-wrap: wrap;
+    }
+    .course--ug__keyinfo__cta p {
+        flex-basis: 50%;
+        padding: 0 0.5rem;
+    }
+    .course--ug__keyinfo__cta p a {
+        text-align: center;
+        width: 100%;
+    }
 }
 
 .js .course--ug .tabs {
@@ -59159,10 +59173,50 @@ main .standard-content .banner, main .standard-content .banner-text {
 
 .course--ug__keyinfo__details .label {
     display: block;
-    font-family: "Meta Sans", sans-serif;
     color: #696969;
-    font-weight: 400;
     margin-bottom: 0.5rem;
+}
+
+.course--ug__keyinfo__details p,
+.course--ug__keyinfo__details span,
+.course--ug__keyinfo__details time {
+    font-family: "Meta Sans", sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    font-weight: 600;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .course--ug__keyinfo__details p,
+    .course--ug__keyinfo__details span,
+    .course--ug__keyinfo__details time {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .course--ug__keyinfo__details p,
+    .course--ug__keyinfo__details span,
+    .course--ug__keyinfo__details time {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .course--ug__keyinfo__details p,
+    .course--ug__keyinfo__details span,
+    .course--ug__keyinfo__details time {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .course--ug__keyinfo__details p,
+    .course--ug__keyinfo__details span,
+    .course--ug__keyinfo__details time {
+        letter-spacing: -0.017em;
+    }
 }
 
 .course--ug__keyinfo__details span:not(.label) {
@@ -59190,11 +59244,16 @@ main .standard-content .banner, main .standard-content .banner-text {
     border-top: 0.125rem solid #d8d8d8;
 }
 
-.course--ug__keyinfo__accordion .accordion .accordion__heading {
+.js .course--ug .course--ug__keyinfo__accordion .accordion {
+    margin: 0;
+    padding: 0;
+}
+
+.js .course--ug .course--ug__keyinfo__accordion .accordion .accordion__heading {
     background: #f2f2f2;
 }
 
-.course--ug__keyinfo__accordion .accordion .accordion__heading button {
+.js .course--ug .course--ug__keyinfo__accordion .accordion .accordion__heading button {
     color: #0c0c0e;
     font-weight: 500;
     font-size: 1rem;
@@ -59203,25 +59262,25 @@ main .standard-content .banner, main .standard-content .banner-text {
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .course--ug__keyinfo__accordion .accordion .accordion__heading button {
+    .js .course--ug .course--ug__keyinfo__accordion .accordion .accordion__heading button {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .course--ug__keyinfo__accordion .accordion .accordion__heading button {
+    .js .course--ug .course--ug__keyinfo__accordion .accordion .accordion__heading button {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .course--ug__keyinfo__accordion .accordion .accordion__heading button {
+    .js .course--ug .course--ug__keyinfo__accordion .accordion .accordion__heading button {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .course--ug__keyinfo__accordion .accordion .accordion__heading button {
+    .js .course--ug .course--ug__keyinfo__accordion .accordion .accordion__heading button {
         letter-spacing: -0.017em;
     }
 }
@@ -59687,7 +59746,7 @@ main .standard-content .banner, main .standard-content .banner-text {
 }
 
 @media screen {
-    .js .ourse--ug .tabs__links {
+    .js .course--ug .tabs__links {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -59695,7 +59754,7 @@ main .standard-content .banner, main .standard-content .banner-text {
 }
 
 @media screen and (min-width: 901px) {
-    .js .ourse--ug .tabs__links {
+    .js .course--ug .tabs__links {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
