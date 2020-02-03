@@ -34168,8 +34168,8 @@ article figure figcaption a:active {
     color: #696969;
     padding: 0.75rem;
     position: absolute;
-    right: 1px;
-    top: 1px;
+    right: 0;
+    top: 0;
 }
 
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__close:focus, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__close:active {
@@ -34186,10 +34186,6 @@ article figure figcaption a:active {
         background-color: #f2f2f2;
         color: #1e1e1e;
     }
-}
-
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__close:hover:before {
-    font-size: 1.075em;
 }
 
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__close:active {
@@ -53244,6 +53240,20 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
+.course--pgt .wrapper--course--pgt__introduction a,
+.course--pgt .wrapper--course--pgt__introduction button {
+    background-image: none;
+}
+
+.course--pgt .wrapper--course--pgt__introduction a:focus, .course--pgt .wrapper--course--pgt__introduction a:active,
+.course--pgt .wrapper--course--pgt__introduction button:focus,
+.course--pgt .wrapper--course--pgt__introduction button:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction {
     color: #ffffff;
     padding: 2rem 0;
@@ -53285,14 +53295,6 @@ main .landing:only-child .landing__top__cta {
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction {
         grid-column: 3/-3;
     }
-}
-
-.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction a {
-    background-image: none;
-}
-
-.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction a:focus, .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction a:active {
-    outline-color: #ffffff;
 }
 
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__year-select {
