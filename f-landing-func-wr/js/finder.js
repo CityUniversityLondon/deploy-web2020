@@ -532,8 +532,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _finder_results_course__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finder__results__course */ "./src/patterns/finder/components/cards/finder__results__course.js");
-/* harmony import */ var _finder_results_profile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__results__profile */ "./src/patterns/finder/components/cards/finder__results__profile.js");
+/* harmony import */ var _finder_results_centre__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finder__results__centre */ "./src/patterns/finder/components/cards/finder__results__centre.js");
+/* harmony import */ var _finder_results_course__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__results__course */ "./src/patterns/finder/components/cards/finder__results__course.js");
+/* harmony import */ var _finder_results_funding__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__results__funding */ "./src/patterns/finder/components/cards/finder__results__funding.js");
+/* harmony import */ var _finder_results_profile__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__results__profile */ "./src/patterns/finder/components/cards/finder__results__profile.js");
 
 
 /**
@@ -541,6 +543,8 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2019
  */
+
+
 
 
 
@@ -554,14 +558,26 @@ __webpack_require__.r(__webpack_exports__);
 
 function finder__results__course(props) {
   switch (props.type) {
+    case 'centre':
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_centre__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        details: props.details,
+        query: props.query
+      });
+
     case 'course':
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_course__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_course__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        details: props.details,
+        query: props.query
+      });
+
+    case 'funding':
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_funding__WEBPACK_IMPORTED_MODULE_4__["default"], {
         details: props.details,
         query: props.query
       });
 
     case 'profile':
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_profile__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_profile__WEBPACK_IMPORTED_MODULE_5__["default"], {
         details: props.details
       });
   }
@@ -576,6 +592,76 @@ finder__results__course.propTypes = {
 
 /***/ }),
 
+/***/ "./src/patterns/finder/components/cards/finder__results__centre.js":
+/*!*************************************************************************!*\
+  !*** ./src/patterns/finder/components/cards/finder__results__centre.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
+
+
+
+
+/**
+ * @module patterns/finder/components/cards/finder__results__centre
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+
+/**
+ * Render a Funnelback result as a centre card.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function finder__results__centre(props) {
+  const school = props.details.metaData.school && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "fas fa-fw fa-university icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
+        department = props.details.metaData.department && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "fas fa-fw fa-building icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Department:"), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(', and '))),
+        subject = props.details.metaData.related && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "finder__results__card__description"
+  }, props.details.metaData.related.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.related).split('|').slice(0, -1).join(', ') + ' and ' + Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.related).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.related).split('|').join(' and '));
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    className: "finder__results__card finder__results__centre"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: props.details.clickTrackingUrl
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "finder__results__card__details"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "finder__results__card__heading underline-transition__title"
+  }, props.details.title), subject, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department)));
+}
+
+finder__results__centre.propTypes = {
+  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (finder__results__centre);
+
+/***/ }),
+
 /***/ "./src/patterns/finder/components/cards/finder__results__course.js":
 /*!*************************************************************************!*\
   !*** ./src/patterns/finder/components/cards/finder__results__course.js ***!
@@ -585,17 +671,14 @@ finder__results__course.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../results/finder__results__highlight__query */ "./src/patterns/finder/components/results/finder__results__highlight__query.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
-
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../results/finder__results__highlight__query */ "./src/patterns/finder/components/results/finder__results__highlight__query.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
 
 
 
@@ -618,63 +701,141 @@ __webpack_require__.r(__webpack_exports__);
 
 function finder__results__course(props) {
   const subtitle = props.details.metaData.type || props.details.metaData.level || null;
-  const courseCode = props.details.metaData.code && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  const courseCode = props.details.metaData.code && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fal fa-fw fa-graduation-cap icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "fas fa-fw fa-graduation-cap icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Course code:"), " ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.code));
-  const award = props.details.metaData.qualification && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Course code:"), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.code));
+  const award = props.details.metaData.qualification && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fal fa-fw fa-award icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "fas fa-fw fa-award icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Award:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.qualification.split('|').length > 2 ? props.details.metaData.qualification.split('|').slice(0, -1).join(', ') + ' or ' + props.details.metaData.qualification.split('|').slice(-1) : props.details.metaData.qualification.split('|').join(' or ')));
-  const duration = props.details.metaData.duration && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Award:"), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.qualification.split('|').length > 2 ? props.details.metaData.qualification.split('|').slice(0, -1).join(', ') + ' or ' + props.details.metaData.qualification.split('|').slice(-1) : props.details.metaData.qualification.split('|').join(' or ')));
+  const duration = props.details.metaData.duration && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fal fa-fw fa-clock icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Duration:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.duration));
-  const method = props.details.metaData.method && props.query.facets.method && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Duration:"), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.duration));
+  const method = props.details.metaData.method && props.query.facets.method && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-book-reader icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Method of study:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.method.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').slice(0, -1).join(', ') + ' or ' + Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').join(' or ')));
-  const location = props.details.metaData.location && props.query.facets.location && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Method of study:"), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.method.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_4__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').slice(0, -1).join(', ') + ' or ' + Object(_util__WEBPACK_IMPORTED_MODULE_4__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_4__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').join(' or ')));
+  const location = props.details.metaData.location && props.query.facets.location && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-map-marker-alt icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Location:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.location));
-  const school = props.details.metaData.school && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Location:"), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.location));
+  const school = props.details.metaData.school && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "far fa-fw fa-building icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "School:"), " ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.school));
-  const clearing = props.details.metaData.clearing === '1' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school));
+  const clearing = props.details.metaData.clearing === '1' && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "clearing_label"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Available in clearing"));
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Available in clearing"));
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "finder__results__card finder__results__course"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.clickTrackingUrl
-  }, clearing, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, clearing, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "finder__results__card__heading underline-transition__title"
-  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__["default"])(props.details.title, props.query.query) : props.details.title), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.title, props.query.query) : props.details.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__description"
-  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__["default"])(subtitle && subtitle.replace(/_/g, ' '), props.query.query) : subtitle && subtitle), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__["default"])(props.details.metaData.c && props.details.metaData.c.replace(/_/g, ' '), props.query.query) : props.details.metaData.c && props.details.metaData.c), school, award, duration, courseCode, method, location)));
+  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(subtitle, props.query.query) : subtitle && subtitle), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.c, props.query.query) : props.details.metaData.c && props.details.metaData.c), school, award, duration, courseCode, method, location)));
 }
 
 finder__results__course.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
+  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__course);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/components/cards/finder__results__funding.js":
+/*!**************************************************************************!*\
+  !*** ./src/patterns/finder/components/cards/finder__results__funding.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
+
+
+
+
+/**
+ * @module patterns/finder/components/cards/finder__results__funding
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+
+/**
+ * Render a Funnelback result as a funding card.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function finder__results__funding(props) {
+  const school = props.details.metaData.school && props.query.facets.school && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "fas fa-fw fa-university icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', or ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', or '))),
+        hardship = props.details.metaData.hardship === '1' && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "hardship-label"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Hardship funding")),
+        programme = props.details.metaData.level && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "fas fa-fw fa-graduation-cap icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Funding for:"), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.level.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').slice(0, -1).join(', ') + ' or ' + Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').join(' or '))),
+        feestatus = props.details.metaData.feestatus && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "far fa-fw fa-globe-europe icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Fee status:"), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.feestatus.split('|').length > 2 ? props.details.metaData.feestatus.split('|').slice(0, -1).join(', ') + ' or ' + props.details.metaData.feestatus.split('|').slice(-1) : props.details.metaData.feestatus.split('|').join(' or ')));
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    className: "finder__results__card finder__results__funding"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: props.details.clickTrackingUrl
+  }, hardship, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "finder__results__card__details"
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "finder__results__card__heading underline-transition__title"
+  }, props.details.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "finder__results__card__description"
+  }, props.details.metaData.type), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), programme, feestatus, school)));
+}
+
+finder__results__funding.propTypes = {
+  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (finder__results__funding);
 
 /***/ }),
 
@@ -710,31 +871,35 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__profile(props) {
-  // render school and department, if they have them
-  const school = (props.details.metaData.E || props.details.metaData.D) && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  const school = props.details.metaData.school && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__tag"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fal fa-fw fa-university icon",
+    className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
-  }), ' ', props.details.metaData.E && props.details.metaData.E, props.details.metaData.E && props.details.metaData.D && ', ', props.details.metaData.D && props.details.metaData.D); // headshot, if they have a thumbnail
-
-  const headshot = props.details.metaData.K && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "School:"), " ", props.details.metaData.school),
+        department = props.details.metaData.department && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fas fa-fw fa-building icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Department:"), " ", props.details.metaData.department),
+        headshot = props.details.metaData.thumbnail && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "thumbnail__image-container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: props.details.metaData.K,
-    alt: ""
+    src: props.details.metaData.thumbnail,
+    alt: 'Photo of ' + props.details.metaData.title
   }));
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "finder__results__card finder__results__profile"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: '/fb' + props.details.clickTrackingUrl
+    href: props.details.clickTrackingUrl
   }, headshot, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__results__card__details"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "finder__results__card__heading underline-transition__title"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__description"
-  }, props.details.metaData.J), school)));
+  }, props.details.metaData.jobtitle), school, department)));
 }
 
 finder__results__profile.propTypes = {
@@ -1544,10 +1709,17 @@ finder__query.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
 
 
 /**
@@ -1565,12 +1737,32 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__didyoumean(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "No ", props.summariseAs.plural, " found for \u201C", props.query.misspelling, "\u201D. Searching instead for \u201C", props.query.query, "\u201D.");
+  const didyoumean = props.query.misspelling ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+    className: "finder__results__didyoumean"
+  }, "No ", props.summariseAs.plural, " found for \u201C", props.query.misspelling, "\u201D. Searching instead for \u201C", props.query.query, "\u201D.") : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+    className: "finder__results__didyoumean"
+  }, "Did you mean", ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    type: "button",
+    className: "finder__didyoumean__button",
+    onClick: () => {
+      const newQuery = props.query;
+      newQuery.query = props.response.spell.text.split(/\|/)[0].trim();
+      newQuery.startRank = 1;
+      newQuery.misspelling = null;
+      newQuery.interacted = true;
+      newQuery.facets = {};
+      props.update.query(newQuery);
+      props.update.results(!props.update.updateState);
+    }
+  }, "\u201C", props.response.spell.text.split(/\|/)[0].trim(), "\u201D"), "?");
+  return didyoumean;
 }
 
 finder__didyoumean.propTypes = {
-  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  response: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__didyoumean);
 
@@ -1762,9 +1954,11 @@ function finder__results(props) {
       totalMatching: props.response.summary.totalMatching,
       update: props.update
     });
-    const didYouMean = props.query.misspelling && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_didyoumean__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    const didYouMean = (props.query.misspelling || props.response.spell) && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_didyoumean__WEBPACK_IMPORTED_MODULE_4__["default"], {
       query: props.query,
-      summariseAs: props.summariseAs
+      summariseAs: props.summariseAs,
+      response: props.response,
+      update: props.update
     }); // if we have more results than will fit on a single page, we need
     // pagination
 
@@ -2139,7 +2333,7 @@ function Finder(props) {
       setResponse(data);
       setUpdating(false);
 
-      if (data.spell) {
+      if (data.spell && data.summary.totalMatching === 0) {
         const newQueryText = data.spell.text.split(/\|/)[0].trim(),
               newQuery = query;
         newQuery.misspelling = query.query;
