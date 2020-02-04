@@ -60910,10 +60910,6 @@ main .standard-content .banner, main .standard-content .banner-text {
     grid-area: c;
 }
 
-.course--ug__student-testimonials__half--unibuddy h3 {
-    color: #d61726;
-}
-
 @media screen {
     .js .course--ug .tabs__links {
         margin-left: 1rem;
