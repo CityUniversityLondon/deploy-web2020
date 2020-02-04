@@ -39675,6 +39675,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
+.modal__heading:hover {
+    cursor: pointer;
+}
+
 .modal__close {
     color: #696969;
     padding: 0.75rem;
@@ -40027,6 +40031,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .modal__buttons {
         display: flex;
     }
+}
+
+.js .modal li[data-keepformat="true"] h3:hover {
+    cursor: pointer;
 }
 
 .js .modal__body {
