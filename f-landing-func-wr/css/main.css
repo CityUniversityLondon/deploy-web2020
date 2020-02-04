@@ -25124,6 +25124,7 @@ Assign mixin:
     background: #ffffff;
     margin-bottom: 2rem;
     padding: 1.5rem;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
 .card--social-media__header div:first-child {
@@ -33922,6 +33923,651 @@ article figure figcaption a:active {
 .highlighted-content__info p:nth-child(n + 2),
 .highlighted-content__border p:nth-child(n + 2) {
     display: none;
+}
+
+.no-js .how-to-apply--pgt--no-js {
+    display: block;
+}
+
+.no-js .tabs .how-to-apply--pgt--js {
+    display: none;
+}
+
+.js .how-to-apply--pgt--no-js {
+    display: none;
+}
+
+.js .tabs .how-to-apply--pgt--js {
+    display: block;
+}
+
+.js .how-to-apply--pgt--js__modal {
+    display: none;
+}
+
+.js .how-to-apply--pgt--js__modal[data-open='true'] {
+    display: block;
+}
+
+.how-to-apply--pgt--js__modal {
+    background-color: rgba(30, 30, 30, 0.3);
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 6;
+}
+
+.how-to-apply--pgt--js__modal[data-on='true'] {
+    display: block;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content {
+    background-color: #ffffff;
+    box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
+    color: #0c0c0e;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.25rem;
+    max-height: calc(100% - 2.5rem);
+    overflow-y: scroll;
+    padding: 1.5rem;
+    position: relative;
+    text-align: left;
+    width: 90%;
+}
+
+@media (min-width: 768px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content {
+        margin-top: 15vh;
+        max-height: calc(100% - 30vh);
+    }
+}
+
+@media (min-width: 1024px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content {
+        width: 70%;
+    }
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__content-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 55ch;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content p {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 450;
+    max-width: 55ch;
+    text-align: left;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content p i,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content p em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content p {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content p {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content p {
+        letter-spacing: -0.017em;
+    }
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content p b,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content p strong {
+    font-weight: 700;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content p i,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content p em {
+    font-style: italic;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin-left: 0;
+    max-width: unset;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options li {
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 0.125rem;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    transition: background-color 0.6s, border-color 0.6s, color 0.6s;
+}
+
+@media (hover: hover) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:hover,
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:focus, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:active,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:focus,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:focus, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:active,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:focus,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:focus, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:active,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:focus,
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:active {
+    background-color: #ffffff;
+    border-color: #cbcbcb;
+    border-style: solid;
+    border-width: 0.125rem;
+    color: #0c0c0e;
+}
+
+@media (hover: hover) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options button:hover,
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:hover {
+        background-color: #cbcbcb;
+        border-color: #cbcbcb;
+        border-style: solid;
+        border-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__alternative a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__alternative a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__alternative a:focus, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__alternative a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__alternative a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__alternative a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__alternative a:focus, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__alternative a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__alternative a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #4c2c92;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__alternative a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__alternative a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__alternative a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__close {
+    color: #696969;
+    padding: 0.75rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__close:focus, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__close:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__close:hover {
+        background-image: none;
+        border: none;
+        background-color: #f2f2f2;
+        color: #1e1e1e;
+    }
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__close:active {
+    background-color: #f2f2f2;
+    color: #1e1e1e;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__close:focus {
+    color: #1e1e1e;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__close:active, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__close:focus {
+    outline-offset: 0;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__reset {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__reset button {
+    color: #d61726;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__reset button:focus, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__reset button:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__reset button:hover {
+        background-image: none;
+        border: none;
+        background-color: #f2f2f2;
+        color: #1e1e1e;
+    }
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__reset button:active {
+    background-color: #f2f2f2;
+    color: #1e1e1e;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__reset button:focus {
+    color: #1e1e1e;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__reset button:active, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__reset button:focus {
+    outline-offset: 0;
+}
+
+@media (min-width: 1024px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__reset {
+        display: none;
+    }
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        list-style: none;
+        margin-left: 0;
+        margin-top: 0;
+        max-width: unset;
+        text-align: left;
+    }
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li {
+        position: relative;
+        text-align: center;
+        width: 7rem;
+    }
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:not(:last-of-type) {
+        margin-right: 3rem;
+        margin-bottom: 1rem;
+    }
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__circle {
+        align-items: center;
+        border-radius: 100%;
+        border-width: 0.25rem;
+        display: flex;
+        height: 2.5rem;
+        justify-content: center;
+        margin: 0 auto;
+        width: 2.5rem;
+    }
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text {
+        font-family: "Plex Sans", sans-serif;
+        /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+        font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+        font-size: 1rem;
+        line-height: 1.625;
+        letter-spacing: -0.005em;
+        font-style: normal;
+        font-weight: 450;
+        max-width: 55ch;
+        font-size: 0.889rem;
+        line-height: 1.625;
+        letter-spacing: 0em;
+        color: #696969;
+        display: block;
+        font-weight: 450;
+        line-height: 1.25rem;
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text i,
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text em {
+        font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1919px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1920px) and (max-width: 3839px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 3840px) and (max-width: 7679px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 7680px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text b,
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text strong {
+        font-weight: 700;
+    }
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text i,
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text em {
+        font-style: italic;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1919px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1920px) and (max-width: 3839px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 3840px) and (max-width: 7679px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 7680px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__current .how-to-apply--pgt--js__modal__progress__circle {
+        background-color: #d61726;
+        border-color: #d61726;
+        border-style: solid;
+        color: #ffffff;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous:after {
+        background-color: #d61726;
+        content: ' ';
+        display: block;
+        height: 0.25rem;
+        left: 4.5rem;
+        position: absolute;
+        top: 1.25rem;
+        width: 10rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous button {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous button:hover {
+        background-color: #d61726;
+        color: #ffffff;
+    }
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous button:hover .icon:before {
+        content: '\f00d';
+    }
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous button:active, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous button:focus {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous .how-to-apply--pgt--js__modal__progress__circle {
+        background-color: #ffffff;
+        border-color: #d61726;
+        border-style: solid;
+        color: #d61726;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+        background-color: #d8d8d8;
+        content: ' ';
+        display: block;
+        height: 0.25rem;
+        right: 4.75rem;
+        position: absolute;
+        top: 1.25rem;
+        width: 7.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__next .how-to-apply--pgt--js__modal__progress__circle {
+        border-color: #d8d8d8;
+        border-style: dashed;
+    }
 }
 
 .swiper-viewport {
@@ -44102,6 +44748,11 @@ article .link-copy {
     }
 }
 
+.statistics-block .statistics-block__heading {
+    padding: 1rem;
+    text-align: center;
+}
+
 .statistics-block .ksp__items {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
@@ -51967,8 +52618,161 @@ main .landing header p em {
     }
 }
 
+main .navigation--secondary + .landing .landing__top__content {
+    padding: 2rem;
+}
+
+main .navigation--secondary + .landing .landing__top__content .landing__top__content--text {
+    grid-column: 1 / span -1;
+}
+
+main .navigation--secondary + .landing .landing__middle1 h2,
+main .navigation--secondary + .landing .landing__middle1 p {
+    padding: 2rem;
+}
+
+main .navigation--secondary + .landing .landing__middle1 .landing__middle1__pathway-image-cards h2 {
+    padding: 0;
+}
+
+main .navigation--secondary + .landing .landing_middle1_content {
+    padding: 2rem;
+}
+
 main .landing:only-child {
     grid-column: 1/-1;
+}
+
+main .landing:only-child .landing__top__content {
+    padding: 1rem 0 2rem 0;
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    main .landing:only-child .landing__top__content {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    main .landing:only-child .landing__top__content {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+main .landing:only-child .landing__top__content .landing__top__content--heading {
+    grid-column: 8/18;
+}
+
+@media (max-width: 900px) {
+    main .landing:only-child .landing__top__content .landing__top__content--heading {
+        grid-column: 2/-2;
+    }
+}
+
+main .landing:only-child .landing__top__content .landing__top__content--text {
+    grid-column: 8/18;
+}
+
+@media (max-width: 900px) {
+    main .landing:only-child .landing__top__content .landing__top__content--text {
+        grid-column: 2/-2;
+    }
+}
+
+main .landing:only-child .landing_middle1_content {
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+    margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+    main .landing:only-child .landing_middle1_content {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    main .landing:only-child .landing_middle1_content {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+main .landing:only-child .landing_middle1_content .landing__middle1__content--heading {
+    grid-column: 8/18;
+}
+
+@media (max-width: 900px) {
+    main .landing:only-child .landing_middle1_content .landing__middle1__content--heading {
+        grid-column: 2/-2;
+    }
+}
+
+main .landing:only-child .landing_middle1_content .landing__middle1__content--text {
+    grid-column: 8/18;
+}
+
+@media (max-width: 900px) {
+    main .landing:only-child .landing_middle1_content .landing__middle1__content--text {
+        grid-column: 2/-2;
+    }
+}
+
+main .landing:only-child .landing__middle1 {
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    main .landing:only-child .landing__middle1 {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    main .landing:only-child .landing__middle1 {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+main .landing:only-child .landing__middle1 > div {
+    grid-column: 1/-1;
+}
+
+main .landing:only-child .landing__middle1 .accordion {
+    grid-column: 8/18;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 899px) {
+    main .landing:only-child .landing__middle1 .accordion {
+        grid-column: 1/-1;
+    }
+}
+
+main .landing:only-child .landing__middle1 h2 {
+    grid-column: 8/18;
+}
+
+@media (max-width: 900px) {
+    main .landing:only-child .landing__middle1 h2 {
+        grid-column: 2/-2;
+    }
+}
+
+main .landing:only-child .landing__middle1 p {
+    grid-column: 8/18;
+}
+
+@media (max-width: 900px) {
+    main .landing:only-child .landing__middle1 p {
+        grid-column: 2/-2;
+    }
 }
 
 main .landing:only-child .banner {
@@ -52020,14 +52824,6 @@ main .landing:only-child .featured-profiles-block {
 
 main .landing:only-child .landing__top__cta {
     padding: 3rem 0;
-}
-
-main .landing:only-child .cta-block {
-    display: flex;
-}
-
-main .landing:only-child .cta-block .cta-block__cta {
-    margin-right: 1rem;
 }
 
 @media (max-width: 1023px) {
@@ -52139,145 +52935,21 @@ main .landing:only-child .cta-block .cta-block__cta {
     }
 }
 
-.landing__top__content {
-    padding: 1rem 0 2rem 0;
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-}
-
-@media (min-width: 768px) {
-    .landing__top__content {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .landing__top__content {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-.landing__top__content .landing__top__content--heading {
-    grid-column: 8/18;
-}
-
-@media (max-width: 900px) {
-    .landing__top__content .landing__top__content--heading {
-        grid-column: 2/-2;
-    }
-}
-
-.landing__top__content .landing__top__content--text {
-    grid-column: 8/18;
-}
-
-@media (max-width: 900px) {
-    .landing__top__content .landing__top__content--text {
-        grid-column: 2/-2;
-    }
-}
-
 .landing__top__cta {
     display: flex;
     justify-content: center;
 }
 
-.landing__middle1 {
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 0;
-    display: grid;
+.cta-block {
+    display: flex;
 }
 
-@media (min-width: 768px) {
-    .landing__middle1 {
-        grid-column-gap: 1rem;
-    }
+.cta-block .cta-block__cta {
+    margin-right: 1rem;
 }
 
-@media (min-width: 901px) {
-    .landing__middle1 {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-.landing__middle1 .landing__middle1__pathway-image-cards {
+.landing__middle1__pathway-image-cards {
     padding: 2rem;
-}
-
-.landing__middle1 > div {
-    grid-column: 1/-1;
-}
-
-.landing__middle1 .accordion {
-    grid-column: 8/18;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-@media (max-width: 899px) {
-    .landing__middle1 .accordion {
-        grid-column: 1/-1;
-    }
-}
-
-.landing__middle1 h2 {
-    grid-column: 8/18;
-}
-
-@media (max-width: 900px) {
-    .landing__middle1 h2 {
-        grid-column: 2/-2;
-    }
-}
-
-.landing__middle1 p {
-    grid-column: 8/18;
-}
-
-@media (max-width: 900px) {
-    .landing__middle1 p {
-        grid-column: 2/-2;
-    }
-}
-
-.landing_middle1_content {
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-    margin: 1rem 0;
-}
-
-@media (min-width: 768px) {
-    .landing_middle1_content {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .landing_middle1_content {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-.landing_middle1_content .landing__middle1__content--heading {
-    grid-column: 8/18;
-}
-
-@media (max-width: 900px) {
-    .landing_middle1_content .landing__middle1__content--heading {
-        grid-column: 2/-2;
-    }
-}
-
-.landing_middle1_content .landing__middle1__content--text {
-    grid-column: 8/18;
-}
-
-@media (max-width: 900px) {
-    .landing_middle1_content .landing__middle1__content--text {
-        grid-column: 2/-2;
-    }
 }
 
 .landing__middle2 > h2 {
@@ -52588,8 +53260,13 @@ main .landing:only-child .cta-block .cta-block__cta {
     padding: 0;
 }
 
+.landing__contact .card--contact .card--contact__key-info > .icon {
+    color: #ffffff;
+}
+
 .landing__contact__sec--heading {
     border-bottom: 0.125rem solid #7c2062;
+    padding-bottom: 0.5rem;
 }
 
 .landing__contact__sec--heading h2 {
@@ -52744,6 +53421,20 @@ main .landing:only-child .cta-block .cta-block__cta {
     }
 }
 
+.course--pgt .wrapper--course--pgt__introduction a,
+.course--pgt .wrapper--course--pgt__introduction button {
+    background-image: none;
+}
+
+.course--pgt .wrapper--course--pgt__introduction a:focus, .course--pgt .wrapper--course--pgt__introduction a:active,
+.course--pgt .wrapper--course--pgt__introduction button:focus,
+.course--pgt .wrapper--course--pgt__introduction button:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction {
     color: #ffffff;
     padding: 2rem 0;
@@ -52787,14 +53478,6 @@ main .landing:only-child .cta-block .cta-block__cta {
     }
 }
 
-.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction a {
-    background-image: none;
-}
-
-.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction a:focus, .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction a:active {
-    outline-color: #ffffff;
-}
-
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__year-select {
     grid-column: 3/10;
 }
@@ -52833,12 +53516,6 @@ main .landing:only-child .cta-block .cta-block__cta {
         grid-column: 3/-2;
         display: flex;
         justify-content: space-between;
-    }
-}
-
-@media (max-width: 768px) {
-    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--apply a {
-        display: block;
     }
 }
 
@@ -59406,6 +60083,20 @@ main .standard-content .banner, main .standard-content .banner-text {
     }
 }
 
+@media (min-width: 433px) and (max-width: 768px) {
+    .course--ug__keyinfo__cta {
+        flex-wrap: wrap;
+    }
+    .course--ug__keyinfo__cta p {
+        flex-basis: 50%;
+        padding: 0 0.5rem;
+    }
+    .course--ug__keyinfo__cta p a {
+        text-align: center;
+        width: 100%;
+    }
+}
+
 .js .course--ug .tabs {
     background: #ffffff;
     margin-top: 4rem;
@@ -60376,6 +61067,7 @@ main .standard-content .banner, main .standard-content .banner-text {
     }
     .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
         grid-row: 2;
+        margin-top: 2rem;
     }
     .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__heading,
     .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {

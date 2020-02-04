@@ -4562,28 +4562,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 const baseUrl = 'https://web2020.city.ac.uk/web-services',
       findRootUrl = '/funnelback-find',
       suggestRootUrl = '/funnelback-suggest',
-      httpOK = 200,
       timeout = 30000;
-/**
- * Asynchronous request to Funnelback web service.
- *
- * @param {object} config An axios configuration object.
- * @return {Promise} - A promise of a Funnelback response.
- */
-
-function axiosRequest(config) {
-  return axios__WEBPACK_IMPORTED_MODULE_1___default()(config).then(response => {
-    if (httpOK === response.status) {
-      return response.data;
-    } else {
-      throw "Bad response: ".concat(response.status);
-    }
-  }).catch(e => {
-    if (!axios__WEBPACK_IMPORTED_MODULE_1___default.a.isCancel(e)) {
-      Object(_util_js__WEBPACK_IMPORTED_MODULE_3__["gaEvent"])('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "axiosRequest ".concat(e.fileName, " (").concat(window.location, ")"), true);
-    }
-  });
-}
 /**
  * Funnelback search query.
  *
@@ -4596,7 +4575,6 @@ function axiosRequest(config) {
  * @param {object} [facets] A map of facets to query strings.
  * @return {Promise} - A promise of search results.
  */
-
 
 function find(collection, fixedFacets, query, sortBy, sortDirection, startRank, numRank, facets) {
   const fixedFacetParams = {};
@@ -4624,7 +4602,7 @@ function find(collection, fixedFacets, query, sortBy, sortDirection, startRank, 
       start_rank: startRank
     })
   };
-  return [axiosRequest(config), call];
+  return [Object(_util_js__WEBPACK_IMPORTED_MODULE_3__["axiosRequest"])(config), call];
 }
 /**
  * Funnelback suggestion query.
@@ -4647,7 +4625,7 @@ function suggest(collection, partialQuery) {
       partial_query: partialQuery
     }
   };
-  return [axiosRequest(config), call];
+  return [Object(_util_js__WEBPACK_IMPORTED_MODULE_3__["axiosRequest"])(config), call];
 }
 /**
  * Finder configuration.
@@ -4661,7 +4639,7 @@ function finderConfig(url) {
     timeout: timeout,
     url: url
   };
-  return axiosRequest(config);
+  return Object(_util_js__WEBPACK_IMPORTED_MODULE_3__["axiosRequest"])(config);
 }
 
 /***/ }),
@@ -8529,7 +8507,7 @@ function launchTabs(tabs) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, pxToRem, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8551,6 +8529,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "checkIntersectionObserver", function() { return checkIntersectionObserver; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createHTMLElement", function() { return createHTMLElement; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uppercaseFirstLetterLowercaseRest", function() { return uppercaseFirstLetterLowercaseRest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "axiosRequest", function() { return axiosRequest; });
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
@@ -8561,6 +8540,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
@@ -8583,6 +8564,7 @@ __webpack_require__.r(__webpack_exports__);
  * @param {string} s - A string that may be 'true'.
  * @returns {boolean} True if 'true'.
  */
+
 function toBool(s) {
   return s === 'true' ? true : false;
 }
@@ -8825,6 +8807,27 @@ function createHTMLElement(type, attributes) {
 }
 function uppercaseFirstLetterLowercaseRest(s) {
   return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+}
+/**
+ * Asynchronous request to Funnelback web service.
+ *
+ * @param {object} config An axios configuration object.
+ * @return {Promise} - A promise of a Funnelback response.
+ */
+
+function axiosRequest(config) {
+  const httpOK = 200;
+  return axios__WEBPACK_IMPORTED_MODULE_5___default()(config).then(response => {
+    if (httpOK === response.status) {
+      return response.data;
+    } else {
+      throw "Bad response: ".concat(response.status);
+    }
+  }).catch(e => {
+    if (!axios__WEBPACK_IMPORTED_MODULE_5___default.a.isCancel(e)) {
+      gaEvent('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "axiosRequest ".concat(e.fileName, " (").concat(window.location, ")"), true);
+    }
+  });
 }
 
 /***/ }),
