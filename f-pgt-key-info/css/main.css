@@ -53736,7 +53736,7 @@ main .landing:only-child .landing__top__cta {
 }
 
 .course--pgt__keyinfo {
-    padding-top: 3rem;
+    padding-top: 2rem;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -55041,7 +55041,7 @@ main .landing:only-child .landing__top__cta {
 }
 
 .js .course--pgt .tabs {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
 }
 
 .js .course--pgt .tabs .tabs__links {
