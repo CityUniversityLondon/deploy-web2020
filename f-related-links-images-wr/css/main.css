@@ -43230,6 +43230,7 @@ blockquote footer cite {
 
 .related-links--with-images__wrapper .related-links--with-images .pathway-image-cards__blocks {
     display: block;
+    margin-top: 0;
 }
 
 .related-links--with-images__wrapper .related-links--with-images .pathway-image-cards__blocks p span {
