@@ -52872,6 +52872,10 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
+.landing--functional .finder__query {
+    margin: 0;
+}
+
 .landing__top {
     margin-bottom: 1rem;
 }
