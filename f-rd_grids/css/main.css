@@ -40033,7 +40033,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
-.js .modal li[data-keepformat="true"] h3:hover {
+.js .modal li[data-keepformat='true'] h3:hover {
     cursor: pointer;
 }
 
