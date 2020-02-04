@@ -60422,6 +60422,7 @@ main .standard-content .banner, main .standard-content .banner-text {
     }
     .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
         grid-row: 2;
+        margin-top: 2rem;
     }
     .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__heading,
     .js main > .course--ug .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
