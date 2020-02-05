@@ -1973,7 +1973,9 @@ function insertSelect(items, parentElement) {
     selectBox.appendChild(option);
   }); // add change listner to newly created select box
 
-  selectBox.addEventListener('change', selectChange);
+  selectBox.addEventListener('change', selectChange); // dispatch event so first item is selected
+
+  selectBox.dispatchEvent(new Event('change'));
 }
 /**
  * Select change: respond to select change
