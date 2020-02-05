@@ -21536,11 +21536,11 @@ Assign mixin:
 @media (min-width: 769px) {
     .banner-standfirst-label .banner__standfirst {
         bottom: 4.5rem;
-        grid-column: 2 / 12;
+        grid-column: 2 / 24;
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1025px) {
     .banner-standfirst-label .banner__standfirst {
         bottom: 4.5rem;
         grid-column: 2 / 18;
@@ -22962,6 +22962,11 @@ Assign mixin:
 
 .card--event--portrait .card--event__price {
     text-align: right;
+    margin-top: 0.75rem;
+}
+
+.card--event--portrait .card--event__price span {
+    display: inline-block;
 }
 
 .card--event--portrait .card--event__date-time-text {
@@ -52600,24 +52605,36 @@ main .landing header p em {
 }
 
 @media (min-width: 433px) and (max-width: 1023px) {
-    main .landing--functional__content__wrap {
-        grid-template-columns: repeat(18, 1fr);
-        grid-column-gap: 0;
-        display: grid;
+    main .wrapper--finder__mini {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
+        display: grid;
     }
 }
 
 @media (min-width: 433px) and (max-width: 1023px) and (min-width: 768px) {
-    main .landing--functional__content__wrap {
+    main .wrapper--finder__mini {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 433px) and (max-width: 1023px) and (min-width: 901px) {
-    main .landing--functional__content__wrap {
+    main .wrapper--finder__mini {
         grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 433px) and (max-width: 1023px) {
+    main .wrapper--finder__mini .finder__mini {
+        grid-column: 2 / 24;
+    }
+    main .wrapper--finder__mini .landing--functional__finder__cta {
+        grid-column: 2 / 24;
+    }
+    main .landing--functional__content__wrap {
+        grid-template-columns: repeat(24, 1fr);
+        grid-column-gap: 0;
+        display: grid;
     }
 }
 
@@ -52642,6 +52659,46 @@ main .landing header p em {
 @media (min-width: 1024px) {
     main .navigation--secondary + .landing {
         grid-column: 7 / span 18;
+    }
+    main .navigation--secondary + .landing .wrapper--finder__mini {
+        grid-template-columns: repeat(24, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    main .navigation--secondary + .landing .wrapper--finder__mini {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main .navigation--secondary + .landing .wrapper--finder__mini {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    main .navigation--secondary + .landing .wrapper--finder__mini {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main .navigation--secondary + .landing .wrapper--finder__mini {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .navigation--secondary + .landing .wrapper--finder__mini .finder__mini {
+        grid-column: 3 / 17;
+    }
+    main .navigation--secondary + .landing .wrapper--finder__mini .landing--functional__finder__cta {
+        grid-column: 3 / 17;
     }
     main .navigation--secondary + .landing .landing--functional__content__wrap {
         grid-template-columns: repeat(18, 1fr);
@@ -52877,7 +52934,7 @@ main .landing:only-child .landing__top__cta {
 }
 
 @media (max-width: 1023px) {
-    .landing--functional__finder {
+    .landing--functional__finder .landing--functional__finder__tabs {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -52885,10 +52942,14 @@ main .landing:only-child .landing__top__cta {
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    .landing--functional__finder {
+    .landing--functional__finder .landing--functional__finder__tabs {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
+}
+
+.landing--functional__finder__tabs {
+    margin-top: 2rem;
 }
 
 @media (max-width: 431px) {
@@ -52920,6 +52981,25 @@ main .landing:only-child .landing__top__cta {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+@media (max-width: 431px) {
+    .wrapper--finder__mini {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 431px) and (min-width: 901px) {
+    .wrapper--finder__mini {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.landing--functional .finder__query {
+    margin: 0;
 }
 
 .landing__top {
