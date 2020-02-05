@@ -51723,27 +51723,6 @@ button
     transform: none;
 }
 
-@media (max-width: 768px) {
-    .content-hub--news-events .news-events .related-content {
-        -moz-columns: 1;
-             columns: 1;
-    }
-}
-
-@media (min-width: 769px) {
-    .content-hub--news-events .news-events .related-content {
-        -moz-columns: 2;
-             columns: 2;
-    }
-}
-
-@media (min-width: 901px) {
-    .content-hub--news-events .news-events .related-content {
-        -moz-columns: 3;
-             columns: 3;
-    }
-}
-
 .content-hub__block-three .news-events .related-content .card--event,
 .content-hub__block-three .news-events .related-content .card--news {
     -moz-column-break-inside: avoid;
@@ -51752,118 +51731,6 @@ button
     height: -moz-fit-content;
     height: fit-content;
     box-shadow: none;
-}
-
-@media (max-width: 768px) {
-    .content-hub__block-three
-.content-hub__block-three__research
-.related-content
-li:nth-of-type(1),
-    .content-hub__block-three
-.news-events
-.content-hub__block-three__research.case-study-only
-li:nth-of-type(1),
-    .content-hub__block-three
-.content-hub__block-three__happening
-li:nth-of-type(1) {
-        grid-column: 1/-1;
-    }
-}
-
-@media (min-width: 769px) {
-    .content-hub__block-three
-.content-hub__block-three__research
-.related-content
-li:nth-of-type(1),
-    .content-hub__block-three
-.news-events
-.content-hub__block-three__research.case-study-only
-li:nth-of-type(1),
-    .content-hub__block-three
-.content-hub__block-three__happening
-li:nth-of-type(1) {
-        grid-column: 1/7;
-    }
-}
-
-@media (max-width: 768px) {
-    .content-hub__block-three
-.content-hub__block-three__research
-.related-content
-li:nth-of-type(2),
-    .content-hub__block-three
-.news-events
-.content-hub__block-three__research.case-study-only
-li:nth-of-type(2),
-    .content-hub__block-three
-.content-hub__block-three__happening
-li:nth-of-type(2) {
-        grid-column: 1/-1;
-    }
-}
-
-@media (min-width: 769px) {
-    .content-hub__block-three
-.content-hub__block-three__research
-.related-content
-li:nth-of-type(2),
-    .content-hub__block-three
-.news-events
-.content-hub__block-three__research.case-study-only
-li:nth-of-type(2),
-    .content-hub__block-three
-.content-hub__block-three__happening
-li:nth-of-type(2) {
-        grid-column: 7/13;
-    }
-}
-
-@media (max-width: 768px) {
-    .content-hub__block-three
-.content-hub__block-three__research
-.related-content
-li:nth-of-type(3),
-    .content-hub__block-three
-.news-events
-.content-hub__block-three__research.case-study-only
-li:nth-of-type(3),
-    .content-hub__block-three
-.content-hub__block-three__happening
-li:nth-of-type(3) {
-        grid-column: 1/-1;
-    }
-}
-
-@media (min-width: 769px) {
-    .content-hub__block-three
-.content-hub__block-three__research
-.related-content
-li:nth-of-type(3),
-    .content-hub__block-three
-.news-events
-.content-hub__block-three__research.case-study-only
-li:nth-of-type(3),
-    .content-hub__block-three
-.content-hub__block-three__happening
-li:nth-of-type(3) {
-        grid-column: 4/10;
-    }
-}
-
-@media (min-width: 901px) {
-    .content-hub__block-three
-.content-hub__block-three__research
-.related-content
-li:nth-of-type(3),
-    .content-hub__block-three
-.news-events
-.content-hub__block-three__research.case-study-only
-li:nth-of-type(3),
-    .content-hub__block-three
-.content-hub__block-three__happening
-li:nth-of-type(3) {
-        grid-column: 13/-1;
-    }
 }
 
 .content-hub__block-three .news-events .related-content .card img {
@@ -52010,7 +51877,8 @@ li:nth-of-type(3) {
 }
 
 @media (min-width: 768px) {
-    .content-hub__block-three .news-events .content-hub__block-three__happening .related-content li:first-child {
+    .content-hub__block-three .news-events .content-hub__block-three__happening .related-content li:first-child,
+    .content-hub__block-three .news-events .content-hub__block-three__happening .related-content li:nth-child(2) {
         margin-right: 1.5rem;
     }
 }
