@@ -1960,15 +1960,22 @@ function insertSelect(items, parentElement) {
   option.text = parentElement.getAttribute('data-text');
   selectBox.appendChild(option); // iterate over each item and create/append select option
 
-  items.forEach(function (item) {
+  items.forEach(function (item, i) {
     let dataValue = item.getAttribute('data-value');
     let option = document.createElement('option');
     option.value = dataValue;
-    option.text = dataValue;
+    option.text = dataValue; // set first item in list as selected
+
+    if (i === 0) {
+      option.setAttribute('selected', 'selected');
+    }
+
     selectBox.appendChild(option);
   }); // add change listner to newly created select box
 
-  selectBox.addEventListener('change', selectChange);
+  selectBox.addEventListener('change', selectChange); // dispatch event so first item is selected
+
+  selectBox.dispatchEvent(new Event('change'));
 }
 /**
  * Select change: respond to select change
