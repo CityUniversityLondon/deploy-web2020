@@ -57,7 +57,7 @@
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// Promise = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		"finder-mini": 0
+/******/ 		"how-to-apply--pgt": 0
 /******/ 	};
 /******/
 /******/ 	var deferredModules = [];
@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([5,"vendor","react"]);
+/******/ 	deferredModules.push([6,"vendor","react"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -420,10 +420,10 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./src/finder-mini.js":
-/*!****************************!*\
-  !*** ./src/finder-mini.js ***!
-  \****************************/
+/***/ "./src/how-to-apply--pgt.js":
+/*!**********************************!*\
+  !*** ./src/how-to-apply--pgt.js ***!
+  \**********************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -435,18 +435,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/finder/finder-mini */ "./src/patterns/finder/finder-mini.js");
-/* harmony import */ var _patterns_finder_funnelback__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/finder/funnelback */ "./src/patterns/finder/funnelback.js");
+/* harmony import */ var _patterns_how_to_apply_how_to_apply_pgt__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/how-to-apply/how-to-apply--pgt */ "./src/patterns/how-to-apply/how-to-apply--pgt.js");
+/* harmony import */ var _patterns_how_to_apply_pgt_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/how-to-apply/pgt-data */ "./src/patterns/how-to-apply/pgt-data.js");
+/* harmony import */ var edn_to_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! edn-to-js */ "./node_modules/edn-to-js/dist/main.js");
+/* harmony import */ var edn_to_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(edn_to_js__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
 
 /**
- * Finder entry
+ * How to apply PGT entry
  *
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City, University of London 2020
  */
+
 
 
 
@@ -455,11 +458,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (/(Trident|MSIE)/.test(navigator.userAgent)) {
     return;
   } else {
-    Array.from(document.querySelectorAll('.wrapper--finder__mini')).forEach(finder => {
-      Object(_patterns_finder_funnelback__WEBPACK_IMPORTED_MODULE_4__["finderConfig"])(finder.dataset.config).then(config => {
-        Object(react_dom__WEBPACK_IMPORTED_MODULE_2__["render"])(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          config: config
-        }), finder);
+    const howToApplyCTAs = document.querySelectorAll('.how-to-apply--pgt--js');
+    howToApplyCTAs && Array.from(howToApplyCTAs).forEach(howToApply => {
+      Object(_patterns_how_to_apply_pgt_data__WEBPACK_IMPORTED_MODULE_4__["howToApplyConfig"])(howToApply.dataset.config).then(config => {
+        Object(react_dom__WEBPACK_IMPORTED_MODULE_2__["render"])(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_patterns_how_to_apply_how_to_apply_pgt__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          config: edn_to_js__WEBPACK_IMPORTED_MODULE_5___default()(config),
+          element: howToApply
+        }), howToApply);
       });
     });
   }
@@ -467,60 +472,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /***/ }),
 
-/***/ "./src/patterns/finder/components/query/finder__clear.js":
-/*!***************************************************************!*\
-  !*** ./src/patterns/finder/components/query/finder__clear.js ***!
-  \***************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/**
- * @module patterns/finder/components/finder__clear
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-/**
- * Clear input button.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__clear(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "finder__clear",
-    type: "button",
-    onClick: () => {
-      props.clear();
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "far fa-fw fa-times icon"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "finder__clear__text"
-  }, "Reset"));
-}
-
-finder__clear.propTypes = {
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__clear);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/query/finder__query--mini.js":
-/*!*********************************************************************!*\
-  !*** ./src/patterns/finder/components/query/finder__query--mini.js ***!
-  \*********************************************************************/
+/***/ "./src/patterns/how-to-apply/how-to-apply--pgt.js":
+/*!********************************************************!*\
+  !*** ./src/patterns/how-to-apply/how-to-apply--pgt.js ***!
+  \********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -528,570 +483,463 @@ finder__clear.propTypes = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
-
-
-
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js");
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
 
 
 /**
- * @module patterns/finder/components/finder__query
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-
-const maximumSuggestions = 5,
-      [keyCodeEscape, keyCodeUp, keyCodeDown] = [27, 38, 40];
-
-function highlightQueryTerm(suggestion, partialQuery) {
-  return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-    className: "sr-only"
-  }, suggestion), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-    "aria-hidden": "true"
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-    className: "finder__suggestion"
-  }, suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()), partialQuery.length)), suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()) + partialQuery.length))));
-}
-/**
- * Search input field and autocomplete.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-
-function finder__query(props) {
-  // save what they're typing
-  const [partialQuery, setPartialQuery] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(props.query.query); // Funnelback suggestions for the currently typed text
-
-  const [suggestions, setSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])([]); // Request token for calls to the Funnelback suggestions service, so we
-  // can cancel it
-
-  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])({
-    cancel: () => {}
-  }); // ref for the input field, so we can .focus() it
-
-  const [inputId] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(16).slice(-4)); // boolean to show or hide suggestions
-
-  const [showSuggestions, setShowSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(false);
-  Object(react__WEBPACK_IMPORTED_MODULE_5__["useEffect"])(() => {
-    setPartialQuery(props.query.query);
-  }, [props.updating]);
-  let textInput = null;
-
-  function focusInput() {
-    textInput.focus();
-  } // on clear, make a default request for results
-
-
-  const clearQuery = () => {
-    call.cancel();
-    setPartialQuery('');
-    setSuggestions([]);
-    focusInput();
-    const newQuery = props.query;
-    newQuery.query = '';
-    newQuery.sortBy = props.config.sort;
-    props.update.query(newQuery);
-    props.update.results(!props.update.updateState);
-  };
-
-  const submitForm = () => {
-    window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?query=".concat(partialQuery));
-  };
-
-  const submitSuggestion = s => {
-    call.cancel();
-    const newQuery = props.query;
-    newQuery.query = s;
-    props.update.query(newQuery);
-    props.update.results(!props.update.updateState);
-  };
-
-  const clear = partialQuery && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    clear: () => {
-      clearQuery();
-    }
-  }); // render suggestions
-  // TODO: probably should be refactored into a separate component
-
-  const suggestionsList = suggestions && suggestions.length > 0 && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
-    className: showSuggestions ? 'finder__query__suggestions show' : 'finder__query__suggestions hide'
-  }, [...new Set(suggestions)].slice(0, maximumSuggestions).map(suggestion => react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-    key: suggestion
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
-    type: "button",
-    onBlur: () => setShowSuggestions(false),
-    onFocus: () => setShowSuggestions(true),
-    onMouseDown: () => {
-      //for browsers because onBlur get excuted before onClick
-      setShowSuggestions(true);
-      setPartialQuery(suggestion);
-      setSuggestions([]);
-      focusInput();
-      submitSuggestion(suggestion); //passing suggestion because partialQuery value get overwritten for some reason.
-    },
-    onClick: () => {
-      //for mobile
-      setShowSuggestions(true);
-      setPartialQuery(suggestion);
-      setSuggestions([]);
-      focusInput();
-      submitSuggestion(suggestion); //passing suggestion because partialQuery value get overwritten for some reason.
-    },
-    onKeyDown: e => {
-      switch (e.keyCode) {
-        case keyCodeEscape:
-          e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
-          setSuggestions([]);
-          break;
-
-        case keyCodeUp:
-          if (e.target.parentNode.previousElementSibling && e.target.parentNode.previousElementSibling.querySelector('button')) {
-            e.preventDefault();
-            e.target.parentNode.previousElementSibling.querySelector('button').focus();
-          } else {
-            e.preventDefault();
-            e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
-          }
-
-          break;
-
-        case keyCodeDown:
-          e.preventDefault();
-
-          if (e.target.parentNode.nextElementSibling && e.target.parentNode.nextElementSibling.querySelector('button')) {
-            e.preventDefault();
-            e.target.parentNode.nextElementSibling.querySelector('button').focus();
-          }
-
-          break;
-      }
-    }
-  }, highlightQueryTerm(suggestion, partialQuery)))));
-  const input = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-    className: "finder__query__input"
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-    className: "finder__query__icon--wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-    className: "finder__icon fal fa-search"
-  })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
-    className: "sr-only",
-    htmlFor: inputId
-  }, "Search ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
-    autoComplete: "off",
-    id: inputId,
-    name: "query",
-    placeholder: props.config.placeholder,
-    ref: input => {
-      textInput = input;
-    },
-    type: "text",
-    value: partialQuery,
-    onKeyDown: e => {
-      switch (e.keyCode) {
-        case keyCodeEscape:
-          clearQuery();
-          break;
-
-        case keyCodeDown:
-          if (suggestions && suggestions.length > 0) {
-            e.preventDefault();
-            e.target.parentNode.querySelector('.finder__query__suggestions button').focus();
-          }
-
-          break;
-      }
-    },
-    onFocus: () => setShowSuggestions(true),
-    onBlur: () => setShowSuggestions(false),
-    onChange: e => {
-      //clear old suggestions
-      setSuggestions([]); // keep  what they're typing
-
-      setPartialQuery(e.target.value);
-      /**
-       * if we have a request to the suggestions service in progress,
-       * cancel it. Stops old suggestions overwriting new ones because
-       * the requests can't keep up with fast typing.
-       */
-
-      call.cancel();
-
-      if (e.target.value) {
-        // input is populated, ask for suggestions
-        const [suggestionsPromise, newCall] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_6__["suggest"])(props.query.collection, e.target.value); // update our request cancel function for the new request
-
-        setCall({
-          cancel: () => {
-            newCall.cancel();
-          }
-        });
-        suggestionsPromise.then(data => setSuggestions(data)).catch(() => setSuggestions([]));
-      } else {
-        // input is empty, empty suggestions
-        setSuggestions([]);
-      }
-    }
-  }), suggestionsList, clear);
-  return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("fieldset", {
-    className: "finder__query"
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
-    type: "submit",
-    className: "finder__query__submit",
-    onClick: () => submitForm()
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-    className: "fal fa-search finder__query__submit__icon",
-    "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-    className: "finder__query__submit__text"
-  }, "Find"))));
-}
-
-finder__query.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.bool
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__query);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/finder-mini.js":
-/*!********************************************!*\
-  !*** ./src/patterns/finder/finder-mini.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.assign */ "./node_modules/core-js/modules/es.object.assign.js");
-/* harmony import */ var core_js_modules_es_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_assign__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_web_url__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.url */ "./node_modules/core-js/modules/web.url.js");
-/* harmony import */ var core_js_modules_web_url__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_url__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var _components_query_finder_query_mini__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/query/finder__query--mini */ "./src/patterns/finder/components/query/finder__query--mini.js");
-
-
-
-
-
-
-
-
-
-
-
-/**
- * Universal finder
+ * How to apply for postgraduate taught degrees
  *
  * Don't run this via patterns.js, it's a separate compilation.
  *
- * @module patterns/finder/finder
+ * @module patterns/how-to-apply/how-to-apply--pgt
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City, University of London 2020
  */
 
 
 
 
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 /**
- * Retrieve current values for facets from the URL parameters.
+ * Launch the how to apply modal.
  *
- * @param {object[]} facets Array of facet definitions.
- * @param {object} params URLSearchParams object for the current page.
- * @return {object} - Map of facet meta labels to their current value from the URL.
- */
-
-function getFacetParams(facets, params) {
-  return facets.map(facet => {
-    const param = {};
-
-    if (params.get("meta_".concat(facet.meta, "_orsand"))) {
-      param[facet.meta] = params.get("meta_".concat(facet.meta, "_orsand"));
-    }
-
-    return param;
-  }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
-}
-/**
- * Preserve the search state in the URL parameters.
- *
- * @param {string} currQuery The search query.
- * @param {integer} currStartRank The start rank.
- * @param {object[]} currFacets A map of facet meta labels to their values.
- * @param {*} facetLabels Array of facet definitions.
- */
-
-
-function replaceHistory(currQuery, currStartRank, currFacets, facetLabels) {
-  const params = new URLSearchParams(window.location.search);
-  currQuery !== '' ? params.set('query', currQuery) : params.delete('query');
-  currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
-  facetLabels.forEach(facet => {
-    if (currFacets[facet.meta]) {
-      params.set("meta_".concat(facet.meta, "_orsand"), currFacets[facet.meta]);
-    } else {
-      params.delete("meta_".concat(facet.meta, "_orsand"));
-    }
-  });
-  const hasParams = params.toString().length ? '?' : '';
-  window.history.replaceState({}, '', "".concat(window.location.pathname).concat(hasParams).concat(params.toString()));
-}
-/**
- * Launch the universal Finder.
- *
- * @param {object} props The JSON configuration file for the Finder.
+ * @param {object} props The JSON configuration file for the modal.
  * @return {object} The React component to render.
  */
 
+function HowToApply(props) {
+  const entryPoints = distilConfiguration(props.config),
+        initialPreferences = {
+    qualification: Object.keys(entryPoints).length === 1 ? Object.keys(entryPoints[0])[0] : null,
+    subject: null,
+    entry: null,
+    location: null
+  },
+        [modalVisible, setModalVisible] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+        [preferences, setPreferences] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(initialPreferences),
+        [question, setQuestion] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(nextQuestion(preferences, entryPoints)),
+        [multipleSubjects, setMultipleSubjects] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
+        [multipleEntryPoints, setMultipleEntryPoints] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
+        [multipleLocations, setMultipleLocations] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
+        qualificationQuestion = question === 'qualification' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__content-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the qualification you wish to apply for:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    className: "how-to-apply--pgt--js__options"
+  }, entryPoints.map((qualification, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    key: 'qualification' + i
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    onClick: () => {
+      const newPreferences = preferences;
+      newPreferences.qualification = Object.keys(qualification)[0];
+      const subjectOptions = qualification[newPreferences.qualification];
 
-function Finder(props) {
-  const params = new URLSearchParams(window.location.search);
-  /**
-   * initial state for the Funnelback query, taken from URL parameters and
-   * configuration
-   **/
-
-  const initialQuery = {
-    collection: props.config.collection,
-    fixedFacets: props.config.fixedFacets,
-    query: params.get('query') || '',
-    sortBy: params.get('query') ? null : params.get('sort') || props.config.sort,
-    sortDirection: params.get('sortdirection') || props.config.sortDirection,
-    startRank: params.get('start_rank') || 1,
-    numRanks: params.get('num_ranks') || props.config.numRanks,
-    facets: getFacetParams(props.config.facetLabels, params)
-  }; // State objects for the Funnelback query and response
-
-  const [query, setQuery] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(initialQuery); // Boolean to indicate when a query is in progress
-
-  const [updating, setUpdating] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(true); // Request token from the Funnelback request object, so we can cancel if
-  // another request is triggered by the user
-
-  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])({
-    cancel: () => {}
-  }); // useEffect doesn't deep inspect objects, so we need an additional, plain
-  // state variable to indicate that the query state has changed and the
-  // component should render
-  // the value isn't important, it's just easy to toggle a bool back and forth
-
-  const [update, setUpdate] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(false); // Retrieve Funnelback results
-
-  Object(react__WEBPACK_IMPORTED_MODULE_8__["useEffect"])(() => {
-    // preserve the state
-    replaceHistory(query.query, query.startRank, query.facets, props.config.facetLabels); // indicate a request is in progress
-
-    setUpdating(true);
-    /**
-     * cancel any request already in progress
-     *
-     * async requests can return out of order
-     */
-
-    call.cancel(); // make a new, asynchronous request to Funnelback
-
-    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_10__["find"])(query.collection, query.fixedFacets, query.query, query.sortBy, query.sortDirection, query.startRank, query.numRanks, query.facets); // save the requestToken, so
-
-    setCall({
-      cancel: () => {
-        requestToken.cancel();
+      if (subjectOptions.length === 1) {
+        newPreferences.subject = 'UNIQUE';
+        setMultipleSubjects(false);
+      } else {
+        newPreferences.subject = null;
+        setMultipleSubjects(true);
       }
-    }); // when the response from Funnelback arrives,
-    // update the results and display them
 
-    request.then(() => {
-      setUpdating(false);
-    }).catch(() => {
-      setUpdating(false);
-    });
-  }, [update]); // update props so child components can update the query
-
-  const updater = {
-    query: newQuery => setQuery(newQuery),
-    results: newUpdate => setUpdate(newUpdate),
-    updateState: update
-  };
-  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("form", {
-    onSubmit: e => {
-      e.preventDefault();
+      setPreferences(newPreferences);
+      setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_query_finder_query_mini__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    config: props.config,
-    query: query,
-    update: updater,
-    updating: updating
-  }));
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(qualification)[0])))))),
+        subjectQuestion = question === 'subject' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__content-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the route you wish to apply for:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    className: "how-to-apply--pgt--js__options"
+  }, nextLevel(entryPoints, preferences.qualification).map((subject, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    key: 'subject' + i
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    onClick: () => {
+      const newPreferences = preferences;
+      newPreferences.subject = Object.keys(subject)[0];
+      const entryOptions = subject[newPreferences.subject];
+
+      if (entryOptions.length === 1) {
+        newPreferences.entry = Object.keys(entryOptions[0])[0];
+        setMultipleEntryPoints(false);
+      } else {
+        newPreferences.entry = null;
+        setMultipleEntryPoints(true);
+      }
+
+      setPreferences(newPreferences);
+      setQuestion(nextQuestion(newPreferences, entryPoints));
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(subject)[0])))))),
+        entryQuestion = question === 'entry' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__content-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the entry point you wish to apply for:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    className: "how-to-apply--pgt--js__options"
+  }, nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject).map((entryPoint, i) => {
+    const formattedDate = new Date(Object.keys(entryPoint)[0]);
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      key: 'entry-point' + i
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+      onClick: () => {
+        const newPreferences = preferences;
+        newPreferences.entry = Object.keys(entryPoint)[0];
+        const locationOptions = entryPoint[newPreferences.entry];
+
+        if (locationOptions.length === 1) {
+          newPreferences.location = Object.keys(locationOptions[0])[0];
+          setMultipleLocations(false);
+        } else {
+          newPreferences.location = null;
+          setMultipleLocations(true);
+        }
+
+        setPreferences(newPreferences);
+        setQuestion(nextQuestion(newPreferences, entryPoints));
+      }
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, months[formattedDate.getMonth()], ' ', formattedDate.getFullYear())));
+  }))),
+        locationQuestion = question === 'location' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__content-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose where you wish to study:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    className: "how-to-apply--pgt--js__options"
+  }, nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry).map((location, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    key: 'entry-point' + i
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    onClick: () => {
+      const newPreferences = preferences;
+      newPreferences.entry = Object.keys(location)[0];
+      setPreferences(newPreferences);
+      setQuestion(nextQuestion(newPreferences, entryPoints));
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(location)[0])))))),
+        applyQuestion = question === 'apply' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__content-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Apply online now:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    className: "how-to-apply--pgt--js__options"
+  }, nextLevel(nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry), preferences.location).map((method, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    key: 'method' + i
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+    href: method[Object.keys(method)[0]]
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(method)[0], ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "far fa-external-link",
+    "aria-label": "(external link)"
+  }))))))),
+        qualificationsProgress = Object.keys(entryPoints).length > 1 ? question === 'qualification' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "how-to-apply--pgt--js__modal__progress__current"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-question icon"
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__text"
+  }, "Qualification")) : preferences.qualification ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "how-to-apply--pgt--js__modal__progress__previous"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: "how-to-apply--pgt--js__modal__progress__circle",
+    onClick: () => {
+      const newPreferences = preferences;
+      newPreferences.qualification = null;
+      newPreferences.subject = null;
+      newPreferences.entry = null;
+      newPreferences.location = null;
+      setPreferences(newPreferences);
+      setQuestion(nextQuestion(newPreferences, entryPoints));
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-check icon",
+    "aria-label": "Back to choose qualification"
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__text"
+  }, preferences.qualification)) : null : null,
+        subjectsProgress = multipleSubjects ? question === 'subject' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "how-to-apply--pgt--js__modal__progress__current"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-question icon"
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__text"
+  }, "Route")) : preferences.subject ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "how-to-apply--pgt--js__modal__progress__previous"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: "how-to-apply--pgt--js__modal__progress__circle",
+    onClick: () => {
+      const newPreferences = preferences;
+      newPreferences.subject = null;
+      newPreferences.entry = null;
+      newPreferences.location = null;
+      setPreferences(newPreferences);
+      setQuestion(nextQuestion(newPreferences, entryPoints));
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-check icon",
+    "aria-label": "Back to choose study route"
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__text"
+  }, preferences.subject)) : null : null,
+        entryPointsProgress = multipleEntryPoints ? question === 'entry' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "how-to-apply--pgt--js__modal__progress__current"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-question icon"
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__text"
+  }, "Entry point")) : preferences.entry ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "how-to-apply--pgt--js__modal__progress__previous"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: "how-to-apply--pgt--js__modal__progress__circle",
+    onClick: () => {
+      const newPreferences = preferences;
+      newPreferences.entry = null;
+      newPreferences.location = null;
+      setPreferences(newPreferences);
+      setQuestion(nextQuestion(newPreferences, entryPoints));
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-check icon",
+    "aria-label": "Back to choose entry point"
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__text"
+  }, months[new Date(preferences.entry).getMonth()], ' ', new Date(preferences.entry).getFullYear())) : null : null,
+        locationsProgress = multipleLocations ? question === 'location' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "how-to-apply--pgt--js__modal__progress__current"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-question icon"
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__text"
+  }, "Location")) : preferences.location ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "how-to-apply--pgt--js__modal__progress__previous"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: "how-to-apply--pgt--js__modal__progress__circle",
+    onClick: () => {
+      const newPreferences = preferences;
+      newPreferences.location = null;
+      setPreferences(newPreferences);
+      setQuestion(nextQuestion(newPreferences, entryPoints));
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-check icon",
+    "aria-label": "Back to choose location"
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__text"
+  }, preferences.location)) : null : null,
+        nextStep = question !== 'apply' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "how-to-apply--pgt--js__modal__progress__next"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null))) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "how-to-apply--pgt--js__modal__progress__current how-to-apply--pgt--js__modal__progress__last"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-question icon"
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__text"
+  }, "Method of study")),
+        alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+    className: "how-to-apply--pgt--js__modal__alternative"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+    href: props.element.dataset.otherurl
+  }, "Apply to start in ", props.element.dataset.otheryear, ".")),
+        reset = JSON.stringify(preferences) !== JSON.stringify(initialPreferences) && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__reset"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    onClick: () => {
+      setPreferences(initialPreferences);
+      setQuestion(nextQuestion(initialPreferences, entryPoints));
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-redo"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Start again")));
+  const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({});
+  let modalRef = null,
+      modalContentRef = null;
+
+  const getModal = () => modalRef,
+        getModalContent = () => modalContentRef;
+
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
+    if (!focusTrap.activate) {
+      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_4___default()(getModalContent(), {
+        initialFocus: getModalContent().querySelector('.how-to-apply--pgt--js__options button, .how-to-apply--pgt--js__options a'),
+        onDeactivate: () => setModalVisible(false),
+        clickOutsideDeactivates: true
+      }));
+    }
+
+    if (modalVisible) {
+      focusTrap.activate && focusTrap.activate();
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__["disableBodyScroll"])(getModal());
+    } else {
+      focusTrap.deactivate && focusTrap.deactivate();
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__["enableBodyScroll"])(getModal());
+    }
+  }, [modalVisible]);
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    className: "cta-block"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "cta-block__cta"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: "primary-cta-arrow--bright",
+    onClick: () => setModalVisible(true)
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Apply now")))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal",
+    "data-open": modalVisible,
+    ref: modal => modalRef = modal
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__content",
+    ref: modalContent => modalContentRef = modalContent
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    className: "how-to-apply--pgt--js__close",
+    onClick: () => {
+      focusTrap.deactivate && focusTrap.deactivate();
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__["enableBodyScroll"])(getModal());
+      setModalVisible(false);
+    }
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-times icon",
+    "aria-label": "Close"
+  })), reset, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
+    className: "how-to-apply--pgt--js__modal__progress"
+  }, qualificationsProgress, subjectsProgress, entryPointsProgress, locationsProgress, nextStep), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__content-wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Applying to start in ", props.element.dataset.year), alternative), qualificationQuestion, subjectQuestion, entryQuestion, locationQuestion, applyQuestion)));
 }
 
-Finder.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.object
+const nextLevel = (arr, k) => arr.filter(i => Object.keys(i)[0] === k)[0][k];
+/**
+ * Condense the configuration options for easier access.
+ *
+ * @param {Object[]} config The JSONified entry points configuration.
+ * @return {Object[]} - The simplified configuration
+ */
+
+
+function distilConfiguration(config) {
+  return config.map(qualification => {
+    const qualificationHeader = qualification.header,
+          subjects = qualification.options.map(subject => {
+      const subjectHeader = subject.header,
+            entries = subject.options.map(entry => {
+        const entryHeader = entry.header,
+              locations = entry.options.map(location => {
+          const locationHeader = location.header,
+                methods = location.options.map(method => {
+            const methodHeader = method.header,
+                  applyLink = method.options.apply,
+                  methodObj = new Object();
+
+            if (methodHeader) {
+              methodObj[methodHeader] = applyLink;
+            } else {
+              methodObj['UNIQUE'] = applyLink;
+            }
+
+            return methodObj;
+          }),
+                locationObject = new Object();
+
+          if (locationHeader) {
+            locationObject[locationHeader] = methods;
+          } else {
+            locationObject['UNIQUE'] = methods;
+          }
+
+          return locationObject;
+        }),
+              entryObj = new Object();
+
+        if (entryHeader) {
+          entryObj[entryHeader] = locations;
+        } else {
+          entryObj['UNIQUE'] = locations;
+        }
+
+        return entryObj;
+      }),
+            subjectObj = new Object();
+
+      if (subjectHeader) {
+        subjectObj[subjectHeader] = entries;
+      } else {
+        subjectObj['UNIQUE'] = entries;
+      }
+
+      return subjectObj;
+    }),
+          qualificationObj = new Object();
+
+    if (qualificationHeader) {
+      qualificationObj[qualificationHeader] = subjects;
+    } else {
+      qualificationObj['UNIQUE'] = subjects;
+    }
+
+    return qualificationObj;
+  });
+}
+
+function nextQuestion(preferences) {
+  const question = preferences.qualification === null ? 'qualification' : preferences.subject === null ? 'subject' : preferences.entry === null ? 'entry' : preferences.location === null ? 'location' : 'apply';
+  return question;
+}
+
+HowToApply.propTypes = {
+  config: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.array,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (Finder);
+/* harmony default export */ __webpack_exports__["default"] = (HowToApply);
 
 /***/ }),
 
-/***/ "./src/patterns/finder/funnelback.js":
-/*!*******************************************!*\
-  !*** ./src/patterns/finder/funnelback.js ***!
-  \*******************************************/
-/*! exports provided: find, suggest, finderConfig */
+/***/ "./src/patterns/how-to-apply/pgt-data.js":
+/*!***********************************************!*\
+  !*** ./src/patterns/how-to-apply/pgt-data.js ***!
+  \***********************************************/
+/*! exports provided: howToApplyConfig */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "find", function() { return find; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "suggest", function() { return suggest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "finderConfig", function() { return finderConfig; });
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var https__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! https */ "./node_modules/https-browserify/index.js");
-/* harmony import */ var https__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(https__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util.js */ "./src/util.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "howToApplyConfig", function() { return howToApplyConfig; });
+/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util.js */ "./src/util.js");
 
-
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /**
- * Functions for making requests to Funnelback
+ * Functions to retrieve how to apply configuration.
  *
- * @module funnelback
+ * @module pgt-data
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City, University of London 2020
  */
 
-
-
+const timeout = 30000;
 /**
- * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
- */
-
-const baseUrl = 'https://web2020.city.ac.uk/web-services',
-      findRootUrl = '/funnelback-find',
-      suggestRootUrl = '/funnelback-suggest',
-      timeout = 30000;
-/**
- * Funnelback search query.
+ * How to apply configuration.
  *
- * @param {string} collection The Funnelback collection to query.
- * @param {string} [query] The query string.
- * @param {string} [sortBy] The field to sort by.
- * @param {string} sortDirection Sort 'asc'ending or 'desc'ending.
- * @param {integer} startRank The first result to return.
- * @param {integer} numRank The number of results to return.
- * @param {object} [facets] A map of facets to query strings.
- * @return {Promise} - A promise of search results.
- */
-
-function find(collection, fixedFacets, query, sortBy, sortDirection, startRank, numRank, facets) {
-  const fixedFacetParams = {};
-  fixedFacets.forEach(facet => {
-    fixedFacetParams["meta_".concat(facet.meta, "_sand")] = facet.value;
-  });
-  const facetParams = {},
-        facetKeys = Object.keys(facets);
-  facetKeys.forEach(key => facetParams["meta_".concat(key, "_sand")] = facets[key]);
-  const CancelToken = axios__WEBPACK_IMPORTED_MODULE_1___default.a.CancelToken,
-        call = CancelToken.source(),
-        config = {
-    baseURL: baseUrl,
-    cancelToken: call.token,
-    httpsAgent: new https__WEBPACK_IMPORTED_MODULE_2___default.a.Agent({
-      keepAlive: true
-    }),
-    url: findRootUrl,
-    timeout: timeout,
-    params: _objectSpread({}, fixedFacetParams, {}, facetParams, {
-      collection: collection,
-      num_ranks: numRank,
-      query: query,
-      sort: sortBy ? "".concat('desc' === sortDirection ? 'd' : '').concat(sortBy) : null,
-      start_rank: startRank
-    })
-  };
-  return [Object(_util_js__WEBPACK_IMPORTED_MODULE_3__["axiosRequest"])(config), call];
-}
-/**
- * Funnelback suggestion query.
- *
- * @param {string} collection The Funnelback collection to query.
- * @param {string} partialQuery The string to make suggestions for.
- * @return {Promise} - A promise of an array of suggestion strings.
- */
-
-function suggest(collection, partialQuery) {
-  const CancelToken = axios__WEBPACK_IMPORTED_MODULE_1___default.a.CancelToken,
-        call = CancelToken.source(),
-        config = {
-    baseURL: baseUrl,
-    cancelToken: call.token,
-    url: suggestRootUrl,
-    timeout: timeout,
-    params: {
-      collection: collection,
-      partial_query: partialQuery
-    }
-  };
-  return [Object(_util_js__WEBPACK_IMPORTED_MODULE_3__["axiosRequest"])(config), call];
-}
-/**
- * Finder configuration.
- *
- * @param {string} url The Finder configuration file.
+ * @param {string} url The HTA configuration file.
  * @return {Promise} - A promise of  configuration object.
  */
 
-function finderConfig(url) {
+function howToApplyConfig(url) {
   const config = {
     timeout: timeout,
     url: url
   };
-  return Object(_util_js__WEBPACK_IMPORTED_MODULE_3__["axiosRequest"])(config);
+  return Object(_util_js__WEBPACK_IMPORTED_MODULE_0__["axiosRequest"])(config);
 }
 
 /***/ }),
@@ -1425,39 +1273,17 @@ function axiosRequest(config) {
 
 /***/ }),
 
-/***/ 1:
-/*!**********************!*\
-  !*** util (ignored) ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 2:
-/*!**********************!*\
-  !*** util (ignored) ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 5:
-/*!**********************************!*\
-  !*** multi ./src/finder-mini.js ***!
-  \**********************************/
+/***/ 6:
+/*!****************************************!*\
+  !*** multi ./src/how-to-apply--pgt.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/rof/src/github.com/CityUniversityLondon/web2020/src/finder-mini.js */"./src/finder-mini.js");
+module.exports = __webpack_require__(/*! /home/rof/src/github.com/CityUniversityLondon/web2020/src/how-to-apply--pgt.js */"./src/how-to-apply--pgt.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=finder-mini.js.map
+//# sourceMappingURL=how-to-apply--pgt.js.map
