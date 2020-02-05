@@ -25434,9 +25434,9 @@ Assign mixin:
 
 .card--testimonial-feature {
     margin-top: 2rem;
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 0;
     display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 0;
     position: relative;
 }
 
@@ -25604,12 +25604,6 @@ _:-ms-lang(x),
 @media (max-width: 1279px) {
     .card--testimonial-feature__details__column:first-child {
         margin-right: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .card--testimonial-feature__details__column:first-child {
-        margin-right: 0;
     }
 }
 
