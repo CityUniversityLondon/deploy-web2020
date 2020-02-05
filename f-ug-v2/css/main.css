@@ -21536,11 +21536,11 @@ Assign mixin:
 @media (min-width: 769px) {
     .banner-standfirst-label .banner__standfirst {
         bottom: 4.5rem;
-        grid-column: 2 / 12;
+        grid-column: 2 / 24;
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1025px) {
     .banner-standfirst-label .banner__standfirst {
         bottom: 4.5rem;
         grid-column: 2 / 18;
@@ -22962,6 +22962,11 @@ Assign mixin:
 
 .card--event--portrait .card--event__price {
     text-align: right;
+    margin-top: 0.75rem;
+}
+
+.card--event--portrait .card--event__price span {
+    display: inline-block;
 }
 
 .card--event--portrait .card--event__date-time-text {
@@ -52563,24 +52568,36 @@ main .landing header p em {
 }
 
 @media (min-width: 433px) and (max-width: 1023px) {
-    main .landing--functional__content__wrap {
-        grid-template-columns: repeat(18, 1fr);
-        grid-column-gap: 0;
-        display: grid;
+    main .wrapper--finder__mini {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
+        display: grid;
     }
 }
 
 @media (min-width: 433px) and (max-width: 1023px) and (min-width: 768px) {
-    main .landing--functional__content__wrap {
+    main .wrapper--finder__mini {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 433px) and (max-width: 1023px) and (min-width: 901px) {
-    main .landing--functional__content__wrap {
+    main .wrapper--finder__mini {
         grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 433px) and (max-width: 1023px) {
+    main .wrapper--finder__mini .finder__mini {
+        grid-column: 2 / 24;
+    }
+    main .wrapper--finder__mini .landing--functional__finder__cta {
+        grid-column: 2 / 24;
+    }
+    main .landing--functional__content__wrap {
+        grid-template-columns: repeat(24, 1fr);
+        grid-column-gap: 0;
+        display: grid;
     }
 }
 
@@ -52605,6 +52622,46 @@ main .landing header p em {
 @media (min-width: 1024px) {
     main .navigation--secondary + .landing {
         grid-column: 7 / span 18;
+    }
+    main .navigation--secondary + .landing .wrapper--finder__mini {
+        grid-template-columns: repeat(24, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    main .navigation--secondary + .landing .wrapper--finder__mini {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main .navigation--secondary + .landing .wrapper--finder__mini {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    main .navigation--secondary + .landing .wrapper--finder__mini {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main .navigation--secondary + .landing .wrapper--finder__mini {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .navigation--secondary + .landing .wrapper--finder__mini .finder__mini {
+        grid-column: 3 / 17;
+    }
+    main .navigation--secondary + .landing .wrapper--finder__mini .landing--functional__finder__cta {
+        grid-column: 3 / 17;
     }
     main .navigation--secondary + .landing .landing--functional__content__wrap {
         grid-template-columns: repeat(18, 1fr);
@@ -52840,7 +52897,7 @@ main .landing:only-child .landing__top__cta {
 }
 
 @media (max-width: 1023px) {
-    .landing--functional__finder {
+    .landing--functional__finder .landing--functional__finder__tabs {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -52848,10 +52905,14 @@ main .landing:only-child .landing__top__cta {
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    .landing--functional__finder {
+    .landing--functional__finder .landing--functional__finder__tabs {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
+}
+
+.landing--functional__finder__tabs {
+    margin-top: 2rem;
 }
 
 @media (max-width: 431px) {
@@ -52883,6 +52944,25 @@ main .landing:only-child .landing__top__cta {
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+@media (max-width: 431px) {
+    .wrapper--finder__mini {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 431px) and (min-width: 901px) {
+    .wrapper--finder__mini {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.landing--functional .finder__query {
+    margin: 0;
 }
 
 .landing__top {
@@ -53099,6 +53179,14 @@ main .landing:only-child .landing__top__cta {
     color: #ffffff;
 }
 
+.landing__contact .landing__contact__sec .related-content .card--contact__key-info__wrap {
+    margin-top: 2rem;
+}
+
+.landing__contact .landing__contact__sec .related-content .card--contact__key-info {
+    margin-top: 0.75rem;
+}
+
 .landing__contact .landing__contact__sec .related-content .card--contact__key-info a {
     background-color: initial;
     background-image: initial;
@@ -53117,11 +53205,11 @@ main .landing:only-child .landing__top__cta {
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    background-image: linear-gradient(120deg, #919191 0%, #919191 100%);
-    border-bottom-color: #919191;
+    background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+    border-bottom-color: #cbcbcb;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #919191;
+    color: #cbcbcb;
 }
 
 @media (hover: hover) {
@@ -53167,7 +53255,7 @@ main .landing:only-child .landing__top__cta {
 @media (hover: hover) {
     .landing__contact .landing__contact__sec .related-content .card--contact__key-info a:hover {
         background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #919191 0%, #919191 100%);
+        background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
     }
 }
 
@@ -53179,34 +53267,34 @@ main .landing:only-child .landing__top__cta {
 }
 
 .landing__contact .landing__contact__sec .related-content .card--contact__key-info a:visited {
-    border-bottom-color: #919191;
+    border-bottom-color: #cbcbcb;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #919191;
+    color: #cbcbcb;
 }
 
 .landing__contact .landing__contact__sec .related-content .card--contact__key-info a:focus {
-    border-bottom-color: #919191;
+    border-bottom-color: #cbcbcb;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #919191;
+    color: #cbcbcb;
 }
 
 @media (hover: hover) {
     .landing__contact .landing__contact__sec .related-content .card--contact__key-info a:hover {
-        border-bottom-color: #919191;
+        border-bottom-color: #cbcbcb;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
+        color: #0c0c0e;
     }
 }
 
 .landing__contact .landing__contact__sec .related-content .card--contact__key-info a:active {
-    background-color: #919191;
-    border-bottom-color: #919191;
+    background-color: #cbcbcb;
+    border-bottom-color: #cbcbcb;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #ffffff;
+    color: #0c0c0e;
 }
 
 @media (min-width: 901px) {
@@ -53244,6 +53332,7 @@ main .landing:only-child .landing__top__cta {
 @media (max-width: 900px) {
     .landing__contact .landing__contact__sec .related-content li:nth-child(1) {
         border-bottom: 0.125rem solid #7c2062;
+        padding-bottom: 2rem;
     }
 }
 
@@ -53255,16 +53344,158 @@ main .landing:only-child .landing__top__cta {
     grid-column: 17 / span 8;
 }
 
+@media (max-width: 899px) {
+    .landing__contact .landing__contact__3rdcol {
+        margin-top: 2rem;
+    }
+}
+
 .landing__contact .landing__contact__3rdcol .unibuddy-card {
     background-color: #ffffff;
 }
 
-.landing__contact .landing__contact__3rdcol .card--findus {
-    background-color: #ffffff;
+.landing__contact .landing__contact__3rdcol .landing__contact__sec--heading {
+    color: #ffffff;
 }
 
-.landing__contact .landing__contact__3rdcol .card--findus:hover {
-    background-color: #ffffff;
+.landing__contact .landing__contact__3rdcol .card--findus a {
+    box-shadow: none;
+}
+
+.landing__contact .landing__contact__3rdcol .card--findus a:focus {
+    outline-color: #ffffff;
+}
+
+.landing__contact .landing__contact__3rdcol .card--findus .card--findus__content {
+    padding-top: 0;
+}
+
+@media (max-width: 899px) {
+    .landing__contact .landing__contact__3rdcol .card--findus .card--findus__content {
+        padding: 0;
+    }
+}
+
+.landing__contact .landing__contact__3rdcol .card--findus .card--findus__content__header {
+    display: none;
+}
+
+.landing__contact .landing__contact__3rdcol .card--findus .card--findus__content__name {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+@media (hover: hover) {
+    .landing__contact .landing__contact__3rdcol .card--findus .card--findus__content__name:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.landing__contact .landing__contact__3rdcol .card--findus .card--findus__content__name:focus, .landing__contact .landing__contact__3rdcol .card--findus .card--findus__content__name:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .landing__contact .landing__contact__3rdcol .card--findus .card--findus__content__name {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .landing__contact .landing__contact__3rdcol .card--findus .card--findus__content__name:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+    }
+}
+
+.landing__contact .landing__contact__3rdcol .card--findus .card--findus__content__name:focus, .landing__contact .landing__contact__3rdcol .card--findus .card--findus__content__name:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.landing__contact .landing__contact__3rdcol .card--findus .card--findus__content__name:visited {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+.landing__contact .landing__contact__3rdcol .card--findus .card--findus__content__name:focus {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+@media (hover: hover) {
+    .landing__contact .landing__contact__3rdcol .card--findus .card--findus__content__name:hover {
+        border-bottom-color: #cbcbcb;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #0c0c0e;
+    }
+}
+
+.landing__contact .landing__contact__3rdcol .card--findus .card--findus__content__name:active {
+    background-color: #cbcbcb;
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
+}
+
+.landing__contact .landing__contact__3rdcol .card--findus .card--findus__content__address {
+    color: #ffffff;
+}
+
+.landing__contact .landing__contact__3rdcol .card--findus .card--findus__content__address .icon {
+    color: #ffffff;
 }
 
 .landing__contact .card--contact {
@@ -55597,6 +55828,8 @@ main .landing:only-child .landing__top__cta {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
+        grid-auto-rows: -webkit-min-content;
+        grid-auto-rows: min-content;
         grid-column: 1 / span 24;
     }
 }
@@ -56581,12 +56814,6 @@ button
     transform: rotate(90deg);
 }
 
-@media (max-width: 767px) {
-    .profile .profile--global__personal-links {
-        margin-top: 3rem;
-    }
-}
-
 .profile .profile--global__personal-links ul {
     margin-left: 1.5rem;
 }
@@ -56626,7 +56853,7 @@ button
 }
 
 .profile .profile--global__other-contact-methods {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -56634,12 +56861,6 @@ button
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 2rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .profile .profile--global__other-contact-methods {
-        margin-top: 1rem;
     }
 }
 
@@ -56652,6 +56873,7 @@ button
 @media (min-width: 1280px) {
     .profile .profile--global__other-contact-methods {
         grid-column: 8 / span 8;
+        margin-top: 1rem;
     }
 }
 
@@ -56798,6 +57020,12 @@ button
     }
 }
 
+@media (max-width: 767px) {
+    .profile .profile--academic .profile--global__personal-links {
+        margin-top: 2rem;
+    }
+}
+
 @media (min-width: 1024px) {
     .profile .wrapper--profile__contact--press {
         margin: 0;
@@ -56876,6 +57104,7 @@ button
     background: #ffffff;
     grid-column: 2 / span 16;
     padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -56949,7 +57178,7 @@ button
 }
 
 .profile .profile--alumni__details .profile--global__details:nth-child(2) {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
