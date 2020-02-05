@@ -43707,7 +43707,7 @@ blockquote footer cite {
 }
 
 .related-links--with-images__wrapper {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .related-links--with-images__wrapper.background--gray2 span:before, .related-links--with-images__wrapper.background--purewhite span:before {
@@ -43956,22 +43956,28 @@ blockquote footer cite {
     color: #ffffff;
 }
 
-.related-links--with-images__wrapper .related-links--with-images__1-column, .related-links--with-images__wrapper .related-links--with-images__2-columns {
+.related-links--with-images__wrapper .related-links--with-images__2-columns {
     display: flex;
     flex-wrap: wrap;
 }
 
 .related-links--with-images__wrapper .related-links--with-images {
-    padding: 0;
+    padding: 1rem;
     flex-basis: 50%;
 }
 
-.related-links--with-images__wrapper .related-links--with-images:not(:first-child) {
-    padding-left: 2rem;
+@media (max-width: 767px) {
+    .related-links--with-images__wrapper .related-links--with-images {
+        flex-basis: 100%;
+    }
 }
 
 .related-links--with-images__wrapper .related-links--with-images h2 {
     text-align: left;
+}
+
+.related-links--with-images__wrapper .related-links--with-images img {
+    width: 100%;
 }
 
 .related-links--with-images__wrapper .related-links--with-images a {
