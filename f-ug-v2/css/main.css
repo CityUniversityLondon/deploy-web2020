@@ -43711,22 +43711,16 @@ blockquote footer cite {
     max-width: unset;
 }
 
-.related-links--with-images a {
-    margin-left: 0.5rem;
-    font-weight: 400;
+.related-links--with-images__wrapper {
+    padding: 1rem;
 }
 
-.related-links--with-images a:after {
-    display: none;
-    content: none;
-}
-
-.related-links--with-images.background--gray2 span:before, .related-links--with-images.background--purewhite span:before {
+.related-links--with-images__wrapper.background--gray2 span:before, .related-links--with-images__wrapper.background--purewhite span:before {
     color: #006bbd;
     font-size: 1rem;
 }
 
-.related-links--with-images.background--gray2 a, .related-links--with-images.background--purewhite a {
+.related-links--with-images__wrapper.background--gray2 a, .related-links--with-images__wrapper.background--purewhite a {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -43752,7 +43746,7 @@ blockquote footer cite {
 }
 
 @media (hover: hover) {
-    .related-links--with-images.background--gray2 a:hover, .related-links--with-images.background--purewhite a:hover {
+    .related-links--with-images__wrapper.background--gray2 a:hover, .related-links--with-images__wrapper.background--purewhite a:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -43769,7 +43763,7 @@ blockquote footer cite {
     }
 }
 
-.related-links--with-images.background--gray2 a:focus, .related-links--with-images.background--gray2 a:active, .related-links--with-images.background--purewhite a:focus, .related-links--with-images.background--purewhite a:active {
+.related-links--with-images__wrapper.background--gray2 a:focus, .related-links--with-images__wrapper.background--gray2 a:active, .related-links--with-images__wrapper.background--purewhite a:focus, .related-links--with-images__wrapper.background--purewhite a:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -43786,33 +43780,33 @@ blockquote footer cite {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .related-links--with-images.background--gray2 a, .related-links--with-images.background--purewhite a {
+    .related-links--with-images__wrapper.background--gray2 a, .related-links--with-images__wrapper.background--purewhite a {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .related-links--with-images.background--gray2 a:hover, .related-links--with-images.background--purewhite a:hover {
+    .related-links--with-images__wrapper.background--gray2 a:hover, .related-links--with-images__wrapper.background--purewhite a:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.related-links--with-images.background--gray2 a:focus, .related-links--with-images.background--gray2 a:active, .related-links--with-images.background--purewhite a:focus, .related-links--with-images.background--purewhite a:active {
+.related-links--with-images__wrapper.background--gray2 a:focus, .related-links--with-images__wrapper.background--gray2 a:active, .related-links--with-images__wrapper.background--purewhite a:focus, .related-links--with-images__wrapper.background--purewhite a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.related-links--with-images.background--gray2 a:visited, .related-links--with-images.background--purewhite a:visited {
+.related-links--with-images__wrapper.background--gray2 a:visited, .related-links--with-images__wrapper.background--purewhite a:visited {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
 }
 
-.related-links--with-images.background--gray2 a:focus, .related-links--with-images.background--purewhite a:focus {
+.related-links--with-images__wrapper.background--gray2 a:focus, .related-links--with-images__wrapper.background--purewhite a:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -43820,7 +43814,7 @@ blockquote footer cite {
 }
 
 @media (hover: hover) {
-    .related-links--with-images.background--gray2 a:hover, .related-links--with-images.background--purewhite a:hover {
+    .related-links--with-images__wrapper.background--gray2 a:hover, .related-links--with-images__wrapper.background--purewhite a:hover {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
@@ -43828,7 +43822,7 @@ blockquote footer cite {
     }
 }
 
-.related-links--with-images.background--gray2 a:active, .related-links--with-images.background--purewhite a:active {
+.related-links--with-images__wrapper.background--gray2 a:active, .related-links--with-images__wrapper.background--purewhite a:active {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -43836,28 +43830,28 @@ blockquote footer cite {
     color: #ffffff;
 }
 
-.related-links--with-images.background--purewhite {
+.related-links--with-images__wrapper.background--purewhite {
     background-color: #ffffff;
 }
 
-.related-links--with-images.background--pink80 {
+.related-links--with-images__wrapper.background--pink80 {
     background-color: #5d184a;
 }
 
-.related-links--with-images.background--red70 {
-    background-color: #9e111c;
+.related-links--with-images__wrapper.background--red60 {
+    background-color: #b91924;
 }
 
-.related-links--with-images.background--pink80 h2, .related-links--with-images.background--red70 h2 {
+.related-links--with-images__wrapper.background--pink80 h2, .related-links--with-images__wrapper.background--red60 h2 {
     color: #ffffff;
 }
 
-.related-links--with-images.background--pink80 span:before, .related-links--with-images.background--red70 span:before {
+.related-links--with-images__wrapper.background--pink80 span:before, .related-links--with-images__wrapper.background--red60 span:before {
     color: #cbcbcb;
     font-size: 1rem;
 }
 
-.related-links--with-images.background--pink80 a, .related-links--with-images.background--red70 a {
+.related-links--with-images__wrapper.background--pink80 a, .related-links--with-images__wrapper.background--red60 a {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -43883,7 +43877,7 @@ blockquote footer cite {
 }
 
 @media (hover: hover) {
-    .related-links--with-images.background--pink80 a:hover, .related-links--with-images.background--red70 a:hover {
+    .related-links--with-images__wrapper.background--pink80 a:hover, .related-links--with-images__wrapper.background--red60 a:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -43900,7 +43894,7 @@ blockquote footer cite {
     }
 }
 
-.related-links--with-images.background--pink80 a:focus, .related-links--with-images.background--pink80 a:active, .related-links--with-images.background--red70 a:focus, .related-links--with-images.background--red70 a:active {
+.related-links--with-images__wrapper.background--pink80 a:focus, .related-links--with-images__wrapper.background--pink80 a:active, .related-links--with-images__wrapper.background--red60 a:focus, .related-links--with-images__wrapper.background--red60 a:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -43917,33 +43911,33 @@ blockquote footer cite {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .related-links--with-images.background--pink80 a, .related-links--with-images.background--red70 a {
+    .related-links--with-images__wrapper.background--pink80 a, .related-links--with-images__wrapper.background--red60 a {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .related-links--with-images.background--pink80 a:hover, .related-links--with-images.background--red70 a:hover {
+    .related-links--with-images__wrapper.background--pink80 a:hover, .related-links--with-images__wrapper.background--red60 a:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
     }
 }
 
-.related-links--with-images.background--pink80 a:focus, .related-links--with-images.background--pink80 a:active, .related-links--with-images.background--red70 a:focus, .related-links--with-images.background--red70 a:active {
+.related-links--with-images__wrapper.background--pink80 a:focus, .related-links--with-images__wrapper.background--pink80 a:active, .related-links--with-images__wrapper.background--red60 a:focus, .related-links--with-images__wrapper.background--red60 a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.related-links--with-images.background--pink80 a:visited, .related-links--with-images.background--red70 a:visited {
+.related-links--with-images__wrapper.background--pink80 a:visited, .related-links--with-images__wrapper.background--red60 a:visited {
     border-bottom-color: #cbcbcb;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #cbcbcb;
 }
 
-.related-links--with-images.background--pink80 a:focus, .related-links--with-images.background--red70 a:focus {
+.related-links--with-images__wrapper.background--pink80 a:focus, .related-links--with-images__wrapper.background--red60 a:focus {
     border-bottom-color: #cbcbcb;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -43951,7 +43945,7 @@ blockquote footer cite {
 }
 
 @media (hover: hover) {
-    .related-links--with-images.background--pink80 a:hover, .related-links--with-images.background--red70 a:hover {
+    .related-links--with-images__wrapper.background--pink80 a:hover, .related-links--with-images__wrapper.background--red60 a:hover {
         border-bottom-color: #cbcbcb;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
@@ -43959,7 +43953,7 @@ blockquote footer cite {
     }
 }
 
-.related-links--with-images.background--pink80 a:active, .related-links--with-images.background--red70 a:active {
+.related-links--with-images__wrapper.background--pink80 a:active, .related-links--with-images__wrapper.background--red60 a:active {
     background-color: #cbcbcb;
     border-bottom-color: #cbcbcb;
     border-bottom-style: solid;
@@ -43967,12 +43961,55 @@ blockquote footer cite {
     color: #ffffff;
 }
 
-.related-links--with-images .pathway-image-cards__blocks {
-    display: block;
+.related-links--with-images__wrapper .related-links--with-images__2-columns {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.related-links--with-images .pathway-image-cards__blocks p a {
-    display: inline-block;
+.related-links--with-images__wrapper .related-links--with-images {
+    padding: 1rem;
+    flex-basis: 50%;
+}
+
+@media (max-width: 767px) {
+    .related-links--with-images__wrapper .related-links--with-images {
+        flex-basis: 100%;
+    }
+}
+
+.related-links--with-images__wrapper .related-links--with-images h2 {
+    text-align: left;
+}
+
+.related-links--with-images__wrapper .related-links--with-images img {
+    width: 100%;
+}
+
+.related-links--with-images__wrapper .related-links--with-images a {
+    margin-left: 0.5rem;
+    font-weight: 400;
+}
+
+.related-links--with-images__wrapper .related-links--with-images a:after {
+    display: none;
+    content: none;
+}
+
+.related-links--with-images__wrapper .related-links--with-images .pathway-image-cards__blocks {
+    display: block;
+    margin-top: 0;
+}
+
+.related-links--with-images__wrapper .related-links--with-images .pathway-image-cards__blocks p span {
+    display: inline;
+}
+
+.related-links--with-images__wrapper .related-links--with-images .pathway-image-cards__blocks p a {
+    display: inline;
+}
+
+.related-links--with-images__wrapper .pathway-image-cards {
+    background: inherit;
 }
 
 .show-more__button__container {
@@ -60109,6 +60146,12 @@ main .standard-content .banner, main .standard-content .banner-text {
     }
     main .navigation--secondary + .documentation.documentation--fullwidth {
         grid-column: 7 / span 18;
+    }
+}
+
+@media (min-width: 1024px) {
+    .article--fullwidth main .navigation--secondary + .documentation {
+        grid-column: 7 / -1;
     }
 }
 
