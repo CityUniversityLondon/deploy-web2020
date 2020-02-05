@@ -61248,6 +61248,10 @@ main .standard-content .banner, main .standard-content .banner-text {
     }
 }
 
+.course--ug__facilities__video__intro {
+    padding: 2rem 0;
+}
+
 @media (min-width: 769px) {
     .course--ug__student-coursework__videos {
         display: grid;
