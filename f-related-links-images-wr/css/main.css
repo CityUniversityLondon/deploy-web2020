@@ -43956,12 +43956,14 @@ blockquote footer cite {
     color: #ffffff;
 }
 
-.related-links--with-images__wrapper .related-links--with-images__1-column, .related-links--with-images__wrapper .related-links--with-images__2-columns, .related-links--with-images__wrapper .related-links--with-images__3-columns {
+.related-links--with-images__wrapper .related-links--with-images__1-column, .related-links--with-images__wrapper .related-links--with-images__2-columns {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .related-links--with-images__wrapper .related-links--with-images {
     padding: 0;
+    flex-basis: 50%;
 }
 
 .related-links--with-images__wrapper .related-links--with-images:not(:first-child) {
