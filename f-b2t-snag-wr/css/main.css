@@ -20847,9 +20847,7 @@ Assign mixin:
 }
 
 .back-to-top .back-to-top__button__arrow:before {
-    padding-top: 0.25rem;
     font-size: 0.625rem;
-    border-top: 0.125rem solid #ffffff;
 }
 
 .back-to-top[data-docked='false'] {
@@ -20918,15 +20916,14 @@ Assign mixin:
     border-radius: 50%;
     height: 2.556rem;
     margin: auto;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     position: relative;
     width: 2.556rem;
 }
 
 .back-to-top[data-docked='false'] .back-to-top__button__arrow:before {
-    border-top: 0.125rem solid #ffffff;
     font-size: 0.8125rem;
-    padding-top: 0.375rem;
+    display: block;
 }
 
 .back-to-top[data-docked='true'] a {

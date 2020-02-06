@@ -1621,6 +1621,7 @@ const pageHeight = 4,
 
 function initBacktoTop(backToTop) {
   const backToTopAnchor = backToTop.querySelectorAll('a')[0];
+  backToTop.querySelector('.back-to-top__button__arrow').innerText = 'top';
   window.addEventListener('load', function () {
     const documentHeight = document.body.clientHeight,
           backToTopDock = backToTop.offsetTop,
