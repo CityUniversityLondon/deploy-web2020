@@ -20926,6 +20926,10 @@ Assign mixin:
     display: block;
 }
 
+.back-to-top[data-docked='false'] .back-to-top__button__arrow__label {
+    font-family: "Plex Sans", sans-serif;
+}
+
 .back-to-top[data-docked='true'] a {
     background-color: initial;
     background-image: initial;

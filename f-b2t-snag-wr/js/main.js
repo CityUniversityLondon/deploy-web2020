@@ -1591,6 +1591,7 @@ function initSvgPathAnimation(animateSvg) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 /**
@@ -1600,6 +1601,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
  * @copyright City, University of London 2019
  */
+
 const className = 'back-to-top',
       viewPortHeight = window.innerHeight;
 /**
@@ -1618,7 +1620,13 @@ const scrollPos = 4;
 function initBacktoTop(backToTop) {
   const backToTopAnchor = backToTop.querySelectorAll('a')[0];
   window.addEventListener('load', function () {
-    backToTop.querySelector('.back-to-top__button__arrow').innerText = 'top'; // adds inner button label for if javascript enabled
+    backToTop.querySelector('.back-to-top__button__arrow').appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
+      label: 'content',
+      val: 'top'
+    }, {
+      label: 'class',
+      val: 'back-to-top__button__arrow__label'
+    }])); // adds inner button label for if javascript enabled
 
     backToTop.setAttribute('hidden', 'true');
     window.addEventListener('scroll', () => {
