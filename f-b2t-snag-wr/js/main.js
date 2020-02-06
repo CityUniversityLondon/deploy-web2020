@@ -1623,26 +1623,15 @@ function initBacktoTop(backToTop) {
   const backToTopAnchor = backToTop.querySelectorAll('a')[0];
   backToTop.querySelector('.back-to-top__button__arrow').innerText = 'top';
   window.addEventListener('load', function () {
-    const documentHeight = document.body.clientHeight,
-          backToTopDock = backToTop.offsetTop,
-          // deadzone is the 'area' when you scroll to the bottom of the
-    // page, where the back to top botton docks back into the footer
-    deadZone = backToTopDock - viewPortHeight;
+    const documentHeight = document.body.clientHeight;
 
-    if (documentHeight > viewPortHeight * pageHeight && deadZone > viewPortHeight * scrollPos + viewPortHeight) {
-      // this route is for pages long enough to have the back to top
-      // anchor stick to the right and eventually dock in the footer
-      // once you reach the bottom of the page
+    if (documentHeight > viewPortHeight * pageHeight) {
+      // implements back to top based on pageHeight parameters set above
       backToTop.setAttribute('hidden', 'true');
       window.addEventListener('scroll', () => {
         updateProgress(backToTopAnchor);
-        showAnchor(backToTop, deadZone);
+        showAnchor(backToTop);
       }, false);
-    } else if (documentHeight > viewPortHeight * pageHeight) {
-      // this route is for odd pages just long enough for anchor to appear
-      // in footer once scrolled down, but no long enough to have space
-      // for a sticky anchor to sit in the corner while scrolling.
-      backToTop.dataset.docked = 'true';
     }
   });
 }
@@ -1650,14 +1639,13 @@ function initBacktoTop(backToTop) {
  *  Anchor fading behaviour
  *
  * @param {HTMLElement} backToTop - back to top element.
- * @param {Number} deadZone - deadzone is the 'area' identified by vertical scroll position, when you scroll to the bottom of the page, where the back to top botton docks back into the footer.
  */
 
 
-function showAnchor(backToTop, deadZone) {
+function showAnchor(backToTop) {
   const positionOnScreen = window.pageYOffset;
 
-  if (positionOnScreen < deadZone && positionOnScreen > viewPortHeight * scrollPos) {
+  if (positionOnScreen > viewPortHeight * scrollPos) {
     // shows anchor when scrolled down far enough - see parameters
     backToTop.dataset.docked = 'false';
     backToTop.removeAttribute('hidden');
@@ -1665,10 +1653,6 @@ function showAnchor(backToTop, deadZone) {
     // hides anchor when close to top of the page
     backToTop.setAttribute('hidden', 'true');
     backToTop.dataset.docked = 'false';
-  } else if (positionOnScreen >= deadZone) {
-    // docks anchor in footer when reaching bottom of the page
-    backToTop.removeAttribute('hidden');
-    backToTop.dataset.docked = 'true';
   }
 }
 /**
