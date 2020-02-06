@@ -51046,10 +51046,33 @@ $profile-link-color-engaged
 
 .content-hub__block-one .banner {
     grid-column: 1/-1;
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
 }
 
-.content-hub__block-one .section {
-    margin: 1.5rem;
+@media (min-width: 768px) {
+    .content-hub__block-one .banner {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .content-hub__block-one .banner {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+.content-hub .banner__standfirst {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 769px) {
+    .content-hub .banner__standfirst {
+        grid-column: 3/-3;
+        bottom: 4.5rem;
+        margin-bottom: -4.5rem;
+    }
 }
 
 .content-hub .banner__standfirst h1 {
@@ -51063,34 +51086,58 @@ $profile-link-color-engaged
 }
 
 .content-hub__block-one .video-finder-wrapper {
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
     grid-area: vf-wrap;
     grid-column: 1/-1;
-    display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 1.5rem;
-    grid-template-rows: auto;
+    padding-bottom: 3rem;
     margin-top: 0;
     margin-bottom: -6rem;
 }
 
-@media (max-width: 432px) {
+@media (min-width: 768px) {
     .content-hub__block-one .video-finder-wrapper {
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: 'video video video video video video' 'finder finder finder finder finder finder';
-    }
-}
-
-@media (min-width: 433px) {
-    .content-hub__block-one .video-finder-wrapper {
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-areas: 'video video video video video video video video video video video video' 'finder finder finder finder finder finder finder finder finder finder finder finder';
+        grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 901px) {
     .content-hub__block-one .video-finder-wrapper {
-        grid-template-columns: repeat(18, 1fr);
-        grid-template-areas: ' . . . . video video video video video video video video video video . . . . ' ' . . . finder finder finder finder finder finder finder finder finder finder finder finder . . . ';
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-hub__block-one .video-finder-wrapper {
+        grid-column: 1/-1;
+        padding: 1.5rem 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 901px) {
+    .content-hub__block-one .video-finder-wrapper {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 901px) {
+    .content-hub__block-one .video-finder-wrapper {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 1441px) {
+    .content-hub__block-one .video-finder-wrapper {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -51101,8 +51148,15 @@ $profile-link-color-engaged
 }
 
 .content-hub__block-one .embedded-video {
-    grid-area: video;
-    padding-bottom: 0;
+    grid-column: 3/-3;
+    padding: 3rem 0;
+}
+
+@media (max-width: 768px) {
+    .content-hub__block-one .embedded-video {
+        grid-column: 1/-1;
+        padding: 0.5rem 0 1.5rem;
+    }
 }
 
 .content-hub__block-one .embedded-video .youtube-video {
@@ -51110,10 +51164,15 @@ $profile-link-color-engaged
 }
 
 .content-hub__block-one .explore {
-    grid-column: 1/-1;
+    grid-column: 2/-2;
     background: #ffffff;
     margin-top: 3rem;
-    padding: 2rem 9rem 3rem;
+}
+
+@media (max-width: 768px) {
+    .content-hub__block-one .explore {
+        grid-column: 1/-1;
+    }
 }
 
 @media (max-width: 1280px) {
@@ -51149,7 +51208,6 @@ $profile-link-color-engaged
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
     display: grid;
-    grid-column-gap: 1.5rem;
     grid-template-rows: auto;
 }
 
@@ -51201,12 +51259,13 @@ $profile-link-color-engaged
 @media (min-width: 433px) {
     .content-hub__block-two .careers {
         grid-template-areas: 'careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro ' 'pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway' 'job-title job-title job-title job-title job-title job-title employer employer employer employer employer employer';
+        grid-column: 1/-1;
     }
 }
 
 @media (min-width: 901px) {
     .content-hub__block-two .careers {
-        grid-template-areas: '. . . careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro . . . . . . . . . ' '. . . pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway . . . ' 'job-title job-title job-title job-title job-title job-title job-title job-title job-title employer employer employer employer employer employer employer employer employer ';
+        grid-template-areas: '. . . careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro . . . . . . . . . . . ' '. . . pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway . . . ' 'job-title job-title job-title job-title job-title job-title job-title job-title job-title job-title job-title job-title employer employer employer employer employer employer employer employer employer employer employer employer';
     }
 }
 
