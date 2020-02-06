@@ -1960,15 +1960,22 @@ function insertSelect(items, parentElement) {
   option.text = parentElement.getAttribute('data-text');
   selectBox.appendChild(option); // iterate over each item and create/append select option
 
-  items.forEach(function (item) {
+  items.forEach(function (item, i) {
     let dataValue = item.getAttribute('data-value');
     let option = document.createElement('option');
     option.value = dataValue;
-    option.text = dataValue;
+    option.text = dataValue; // set first item in list as selected
+
+    if (i === 0) {
+      option.setAttribute('selected', 'selected');
+    }
+
     selectBox.appendChild(option);
   }); // add change listner to newly created select box
 
-  selectBox.addEventListener('change', selectChange);
+  selectBox.addEventListener('change', selectChange); // dispatch event so first item is selected
+
+  selectBox.dispatchEvent(new Event('change'));
 }
 /**
  * Select change: respond to select change
@@ -2185,9 +2192,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _finder_results_centre__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finder__results__centre */ "./src/patterns/finder/components/cards/finder__results__centre.js");
-/* harmony import */ var _finder_results_course__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__results__course */ "./src/patterns/finder/components/cards/finder__results__course.js");
-/* harmony import */ var _finder_results_funding__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__results__funding */ "./src/patterns/finder/components/cards/finder__results__funding.js");
-/* harmony import */ var _finder_results_profile__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__results__profile */ "./src/patterns/finder/components/cards/finder__results__profile.js");
+/* harmony import */ var _finder_results_contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__results__contact */ "./src/patterns/finder/components/cards/finder__results__contact.js");
+/* harmony import */ var _finder_results_course__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__results__course */ "./src/patterns/finder/components/cards/finder__results__course.js");
+/* harmony import */ var _finder_results_funding__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__results__funding */ "./src/patterns/finder/components/cards/finder__results__funding.js");
+/* harmony import */ var _finder_results_profile__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__results__profile */ "./src/patterns/finder/components/cards/finder__results__profile.js");
 
 
 /**
@@ -2195,6 +2203,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2019
  */
+
 
 
 
@@ -2216,20 +2225,26 @@ function finder__results__course(props) {
         query: props.query
       });
 
+    case 'contact':
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_contact__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        details: props.details,
+        query: props.query
+      });
+
     case 'course':
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_course__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_course__WEBPACK_IMPORTED_MODULE_4__["default"], {
         details: props.details,
         query: props.query
       });
 
     case 'funding':
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_funding__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_funding__WEBPACK_IMPORTED_MODULE_5__["default"], {
         details: props.details,
         query: props.query
       });
 
     case 'profile':
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_profile__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_profile__WEBPACK_IMPORTED_MODULE_6__["default"], {
         details: props.details
       });
   }
@@ -2311,6 +2326,83 @@ finder__results__centre.propTypes = {
   query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__centre);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/components/cards/finder__results__contact.js":
+/*!**************************************************************************!*\
+  !*** ./src/patterns/finder/components/cards/finder__results__contact.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/finder/components/cards/finder__results__contact
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+/**
+ * Render a Funnelback result as a contact card.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function finder__results__contact(props) {
+  const department = props.details.metaData.department && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fas fa-fw fa-building icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Department:"), " ", props.details.metaData.department),
+        jobtitle = props.details.metaData.jobtitle && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "finder__results__card__description"
+  }, props.details.metaData.jobtitle),
+        email = props.details.metaData.email && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fas fa-fw fa-envelope icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Email:"), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: 'mailto:' + props.details.metaData.email
+  }, props.details.metaData.email)),
+        telephone = props.details.metaData.telephone && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fas fa-fw fa-phone fa-rotate-90 icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Telephone:"), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: 'tel:' + props.details.metaData.telephone
+  }, props.details.metaData.friendlytelephone)),
+        room = props.details.metaData.room && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fas fa-fw fa-door-open icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Room:"), " ", props.details.metaData.room);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "finder__results__card finder__results__contact"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "finder__results__card__details"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "finder__results__card__heading"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.title)), jobtitle, department, room, email, telephone));
+}
+
+finder__results__contact.propTypes = {
+  details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (finder__results__contact);
 
 /***/ }),
 
@@ -2515,8 +2607,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * Render a Funnelback result as a profile card.
- *
- * TODO: once the new collections are set up, standardise the metadata labels.
  *
  * @param {object} props React props.
  * @return {object} - React component.
@@ -4314,7 +4404,7 @@ const scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_18__["reduceMotion"
  */
 
 function getFacetParams(facets, params) {
-  return facets.map(facet => {
+  return facets && facets > 0 ? facets.map(facet => {
     const param = {};
 
     if (params.get("meta_".concat(facet.meta, "_sand"))) {
@@ -4322,7 +4412,7 @@ function getFacetParams(facets, params) {
     }
 
     return param;
-  }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
+  }).reduce((facetParams, facet) => Object.assign(facetParams, facet)) : [];
 }
 /**
  * Preserve the search state in the URL parameters.

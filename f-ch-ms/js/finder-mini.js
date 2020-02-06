@@ -455,7 +455,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (/(Trident|MSIE)/.test(navigator.userAgent)) {
     return;
   } else {
-    Array.from(document.querySelectorAll('.wrapper--finder__mini')).forEach(finder => {
+    Array.from(document.querySelectorAll('.finder__mini')).forEach(finder => {
       Object(_patterns_finder_funnelback__WEBPACK_IMPORTED_MODULE_4__["finderConfig"])(finder.dataset.config).then(config => {
         Object(react_dom__WEBPACK_IMPORTED_MODULE_2__["render"])(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_3__["default"], {
           config: config
