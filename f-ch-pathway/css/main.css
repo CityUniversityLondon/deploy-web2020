@@ -51431,7 +51431,7 @@ button
 
 @media (max-width: 768px) {
     .content-hub__block-one .video-finder-wrapper {
-        padding: 1.5rem 0 2.5rem;
+        padding: 1.5rem 0;
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
