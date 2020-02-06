@@ -1604,35 +1604,27 @@ const className = 'back-to-top',
       viewPortHeight = window.innerHeight;
 /**
  * Back to top anchor anchor only appears on long pages and when you have scrolled down long enough
+ * Please change the parameter below to alter the behaviour of the back to top anchor.
  *
- * Please change the parameters below to alter the behaviour of the back to top anchor.
- *
- * pageHeight - only appears on long pages which are 'X' times the viewport height.
  * scrollPos - sets how many viewport heights you need to scroll down for back to top to appear. 1 = 1 viewport height
  */
 
-const pageHeight = 4,
-      scrollPos = 4;
+const scrollPos = 4;
 /**
- *  Initialises back to top anchor for long pages only
  *
  * @param {HTMLElement} - selects back to top parent element, which is used in return to select children elements
  */
 
 function initBacktoTop(backToTop) {
   const backToTopAnchor = backToTop.querySelectorAll('a')[0];
-  backToTop.querySelector('.back-to-top__button__arrow').innerText = 'top';
   window.addEventListener('load', function () {
-    const documentHeight = document.body.clientHeight;
+    backToTop.querySelector('.back-to-top__button__arrow').innerText = 'top'; // adds inner button label for if javascript enabled
 
-    if (documentHeight > viewPortHeight * pageHeight) {
-      // implements back to top based on pageHeight parameters set above
-      backToTop.setAttribute('hidden', 'true');
-      window.addEventListener('scroll', () => {
-        updateProgress(backToTopAnchor);
-        showAnchor(backToTop);
-      }, false);
-    }
+    backToTop.setAttribute('hidden', 'true');
+    window.addEventListener('scroll', () => {
+      updateProgress(backToTopAnchor);
+      showAnchor(backToTop);
+    }, false);
   });
 }
 /**
