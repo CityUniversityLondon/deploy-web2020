@@ -51153,41 +51153,34 @@ button
 }
 
 .content-hub__block-two .careers {
-    grid-area: careers;
     padding: 1rem 0 0;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-    grid-column-gap: 1.5rem;
-    grid-template-rows: auto;
 }
 
-@media (max-width: 899px) {
+@media (max-width: 767px) {
     .content-hub__block-two .careers {
-        padding: 1rem 0 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }
 
-@media (min-width: 901px) {
+@media (max-width: 767px) and (min-width: 901px) {
     .content-hub__block-two .careers {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-@media (min-width: 901px) {
+@media (max-width: 767px) and (min-width: 901px) {
     .content-hub__block-two .careers {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media (min-width: 1441px) {
+@media (max-width: 767px) and (min-width: 1441px) {
     .content-hub__block-two .careers {
         margin-left: auto;
         margin-right: auto;
@@ -51196,36 +51189,40 @@ button
 
 @media (min-width: 768px) {
     .content-hub__block-two .careers {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+    .content-hub__block-two .careers {
         grid-column-gap: 1rem;
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 768px) and (min-width: 901px) {
     .content-hub__block-two .careers {
         grid-column-gap: 1.5rem;
     }
 }
 
-@media (max-width: 432px) {
-    .content-hub__block-two .careers {
-        grid-template-areas: 'careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro' 'pathway pathway pathway pathway pathway pathway' 'job-title job-title job-title job-title job-title job-title' 'employer employer employer employer employer employer';
-    }
-}
-
-@media (min-width: 433px) {
-    .content-hub__block-two .careers {
-        grid-template-areas: 'careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro ' 'pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway' 'job-title job-title job-title job-title job-title job-title employer employer employer employer employer employer';
+@media (min-width: 768px) {
+    .content-hub__block-two .careers__intro {
+        grid-column: 4 / 16;
     }
 }
 
 @media (min-width: 901px) {
-    .content-hub__block-two .careers {
-        grid-template-areas: '. . . careers-intro careers-intro careers-intro careers-intro careers-intro careers-intro . . . . . . . . . ' '. . . pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway pathway . . . ' 'job-title job-title job-title job-title job-title job-title job-title job-title job-title employer employer employer employer employer employer employer employer employer ';
+    .content-hub__block-two .careers__intro {
+        grid-column: 3 / 17;
     }
 }
 
-.content-hub__block-two .careers__intro {
-    grid-area: careers-intro;
+@media (min-width: 1281px) {
+    .content-hub__block-two .careers__intro {
+        grid-column: 4 / 16;
+    }
 }
 
 .content-hub__block-two .careers__job-titles {
@@ -51265,12 +51262,18 @@ button
     --negative-offset-tiny: calc(var(--pathway-offset) / -10);
     --negative-offset-small: calc(var(--pathway-offset) / -2);
     --negative-offset-large: calc(var(--negative-offset-small) * 2);
-    grid-area: pathway;
+}
+
+@media (min-width: 768px) {
+    .content-hub__block-two .pathway-cards {
+        grid-column: 4 / 16;
+    }
 }
 
 @media (min-width: 901px) {
     .content-hub__block-two .pathway-cards {
         margin-top: 7rem;
+        grid-column: 3 / 17;
     }
 }
 
@@ -51280,29 +51283,29 @@ button
     }
 }
 
-.content-hub__block-two .pathway-cards .card--pathway__block {
-    display: grid;
-    grid-template-rows: auto;
-    grid-column-gap: 0.5rem;
-}
-
-@media (max-width: 432px) {
-    .content-hub__block-two .pathway-cards .card--pathway__block {
-        grid-template-areas: 'pathway1 pathway1 pathway1 pathway1 pathway1 pathway1 ' 'pathway2 pathway2 pathway2 pathway2 pathway2 pathway2 ' 'pathway3 pathway3 pathway3 pathway3 pathway3 pathway3 ' 'pathway4 pathway4 pathway4 pathway4 pathway4 pathway4 ' 'pathway5 pathway5 pathway5 pathway5 pathway5 pathway5 ' 'pathway6 pathway6 pathway6 pathway6 pathway6 pathway6 ';
+@media (min-width: 1281px) {
+    .content-hub__block-two .pathway-cards {
+        grid-column: 4 / 16;
     }
 }
 
-@media (min-width: 433px) {
+@media (min-width: 768px) {
     .content-hub__block-two .pathway-cards .card--pathway__block {
-        grid-template-areas: 'pathway1 pathway1 pathway1 pathway1  pathway1 pathway1 pathway2 pathway2 pathway2 pathway2 pathway2 pathway2' 'pathway3 pathway3 pathway3 pathway3 pathway3 pathway3 pathway4 pathway4 pathway4 pathway4 pathway4 pathway4' 'pathway5 pathway5 pathway5 pathway5 pathway5 pathway5 pathway6 pathway6 pathway6 pathway6 pathway6 pathway6';
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 768px) and (min-width: 768px) {
     .content-hub__block-two .pathway-cards .card--pathway__block {
-        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (min-width: 901px) {
+    .content-hub__block-two .pathway-cards .card--pathway__block {
         grid-column-gap: 1.5rem;
-        grid-template-areas: 'pathway1 pathway1 pathway1 pathway1 pathway2 pathway2 pathway2 pathway2 pathway3 pathway3 pathway3 pathway3' 'pathway4 pathway4 pathway4 pathway4 pathway5 pathway5 pathway5 pathway5 pathway6 pathway6 pathway6 pathway6';
     }
 }
 
@@ -51365,22 +51368,10 @@ button
     }
 }
 
-.content-hub__block-two .pathway-cards .card:nth-of-type(1) {
-    grid-area: pathway1;
-}
-
-.content-hub__block-two .pathway-cards .card:nth-of-type(2) {
-    grid-area: pathway2;
-}
-
 @media (min-width: 901px) {
     .content-hub__block-two .pathway-cards .card:nth-of-type(2) {
         margin-top: var(--negative-offset-small);
     }
-}
-
-.content-hub__block-two .pathway-cards .card:nth-of-type(3) {
-    grid-area: pathway3;
 }
 
 @media (min-width: 901px) {
@@ -51389,22 +51380,10 @@ button
     }
 }
 
-.content-hub__block-two .pathway-cards .card:nth-of-type(4) {
-    grid-area: pathway4;
-}
-
-.content-hub__block-two .pathway-cards .card:nth-of-type(5) {
-    grid-area: pathway5;
-}
-
 @media (min-width: 901px) {
     .content-hub__block-two .pathway-cards .card:nth-of-type(5) {
         margin-top: var(--negative-offset-small);
     }
-}
-
-.content-hub__block-two .pathway-cards .card:nth-of-type(6) {
-    grid-area: pathway6;
 }
 
 @media (min-width: 901px) {
