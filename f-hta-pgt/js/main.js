@@ -863,15 +863,12 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -891,7 +888,7 @@ const className = 'accordion',
       headingTextClassName = headingClassName + '__text',
       headingIconClassName = headingClassName + '__indicator fal',
       bodyClassName = className + '__body',
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_4__["reduceMotion"])() ? 0 : 999,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : 999,
       scrollTo = true;
 /**
  * Sets a heading and the button nested within to be open or closed.
@@ -902,7 +899,7 @@ const className = 'accordion',
 
 function setSection(heading, open) {
   heading.dataset.open = open;
-  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, open);
 }
 /**
  * Open a section, calculate its height, then close it again.
@@ -944,7 +941,7 @@ function setupTransition(element, initialHeight) {
 
 
 function cleanupTransition(section) {
-  const open = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(section.previousElementSibling.dataset.open);
+  const open = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(section.previousElementSibling.dataset.open);
   section.style.height = null;
   section.dataset.closed = open ? 'false' : 'true';
 }
@@ -975,14 +972,13 @@ function buttonClick(button, headings, toggleOpen) {
     once: true
   });
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded))) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded))) {
     // Starting height is the current height
     setupTransition(accordionSection, accordionSection.offsetHeight + 'px'); // setTimeout lets the DOM recalculate before we continue, so the transition will fire
 
     setTimeout(() => {
       accordionSection.style.height = '0px';
     }, 0);
-    history.pushState(null, null, "".concat(window.location.pathname).concat(window.location.search));
     setSection(heading, false);
   } else {
     // Calclulate and save how big we're transitioning to
@@ -992,13 +988,7 @@ function buttonClick(button, headings, toggleOpen) {
 
     setTimeout(() => {
       accordionSection.style.height = sectionHeight;
-    }, 0); // If we already have history, replace it rather than adding to it.
-
-    if (window.location.hash) {
-      history.replaceState(null, null, '#' + heading.id);
-    } else {
-      history.pushState(null, null, '#' + heading.id);
-    }
+    }, 0);
 
     if (toggleOpen) {
       const sections = Array.from(heading.parentNode.parentNode.querySelectorAll("#".concat(heading.parentElement.id, " > .").concat(bodyClassName)));
@@ -1010,8 +1000,8 @@ function buttonClick(button, headings, toggleOpen) {
 
     setSection(heading, true);
 
-    if (scrollTo && !(Object(_util__WEBPACK_IMPORTED_MODULE_4__["verticallyInWindow"])(heading) && Object(_util__WEBPACK_IMPORTED_MODULE_4__["verticallyInWindow"])(accordionSection))) {
-      zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
+    if (scrollTo && !(Object(_util__WEBPACK_IMPORTED_MODULE_3__["verticallyInWindow"])(heading) && Object(_util__WEBPACK_IMPORTED_MODULE_3__["verticallyInWindow"])(accordionSection))) {
+      zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(heading, scrollDuration);
     }
   }
 }
@@ -1031,10 +1021,10 @@ function buttonFromHeading(heading) {
         iconSpan = document.createElement('span');
   textSpan.className = headingTextClassName;
   iconSpan.className = headingIconClassName;
-  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, true);
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, true);
   button.setAttribute('type', 'button');
   textSpan.appendChild(document.createTextNode(heading.textContent));
-  Object(_util__WEBPACK_IMPORTED_MODULE_4__["appendAll"])(wrapper, [textSpan, iconSpan]);
+  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(wrapper, [textSpan, iconSpan]);
   button.appendChild(wrapper);
   return button;
 }
@@ -1060,10 +1050,9 @@ function buttonFromHeading(heading) {
 
 
 function launchAccordion(accordion) {
-  const locationHash = window.location.hash.substr(1),
-        toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.toggleopen),
-        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.defaultopen),
-        allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_4__["toBool"])(accordion.dataset.allowsingle),
+  const toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(accordion.dataset.toggleopen),
+        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(accordion.dataset.defaultopen),
+        allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(accordion.dataset.allowsingle),
         headings = Array.from(accordion.parentNode.querySelectorAll("#".concat(accordion.id, " > .").concat(headingClassName)));
   let idLinked = false;
 
@@ -1071,30 +1060,18 @@ function launchAccordion(accordion) {
     /**
      * not enough content to accordion
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(accordion, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(accordion, className, false);
     return;
   }
 
   headings.forEach(heading => {
     const content = heading.nextElementSibling,
           button = buttonFromHeading(heading);
-    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].labelledBy, heading.id);
+    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].labelledBy, heading.id);
     content.setAttribute('role', 'region');
     heading.replaceChild(button, heading.firstChild);
-    /**
-     * if the location hash matches the heading's ID, we'll open that
-     * instead of the first section, or instead of leaving everything
-     * closed.
-     */
-
-    if (locationHash === heading.id) {
-      idLinked = true;
-      setSection(heading, true);
-    } else {
-      setSection(heading, false);
-      heading.nextElementSibling.dataset.closed = 'true';
-    }
-
+    setSection(heading, false);
+    heading.nextElementSibling.dataset.closed = 'true';
     button.addEventListener('click', () => buttonClick(button, headings, toggleOpen), true);
   });
   /* Show first item of accordion, if accordion is set to default open,
@@ -1960,15 +1937,22 @@ function insertSelect(items, parentElement) {
   option.text = parentElement.getAttribute('data-text');
   selectBox.appendChild(option); // iterate over each item and create/append select option
 
-  items.forEach(function (item) {
+  items.forEach(function (item, i) {
     let dataValue = item.getAttribute('data-value');
     let option = document.createElement('option');
     option.value = dataValue;
-    option.text = dataValue;
+    option.text = dataValue; // set first item in list as selected
+
+    if (i === 0) {
+      option.setAttribute('selected', 'selected');
+    }
+
     selectBox.appendChild(option);
   }); // add change listner to newly created select box
 
-  selectBox.addEventListener('change', selectChange);
+  selectBox.addEventListener('change', selectChange); // dispatch event so first item is selected
+
+  selectBox.dispatchEvent(new Event('change'));
 }
 /**
  * Select change: respond to select change
@@ -2185,9 +2169,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _finder_results_centre__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finder__results__centre */ "./src/patterns/finder/components/cards/finder__results__centre.js");
-/* harmony import */ var _finder_results_course__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__results__course */ "./src/patterns/finder/components/cards/finder__results__course.js");
-/* harmony import */ var _finder_results_funding__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__results__funding */ "./src/patterns/finder/components/cards/finder__results__funding.js");
-/* harmony import */ var _finder_results_profile__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__results__profile */ "./src/patterns/finder/components/cards/finder__results__profile.js");
+/* harmony import */ var _finder_results_contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__results__contact */ "./src/patterns/finder/components/cards/finder__results__contact.js");
+/* harmony import */ var _finder_results_course__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__results__course */ "./src/patterns/finder/components/cards/finder__results__course.js");
+/* harmony import */ var _finder_results_funding__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__results__funding */ "./src/patterns/finder/components/cards/finder__results__funding.js");
+/* harmony import */ var _finder_results_profile__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__results__profile */ "./src/patterns/finder/components/cards/finder__results__profile.js");
 
 
 /**
@@ -2195,6 +2180,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2019
  */
+
 
 
 
@@ -2216,20 +2202,26 @@ function finder__results__course(props) {
         query: props.query
       });
 
+    case 'contact':
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_contact__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        details: props.details,
+        query: props.query
+      });
+
     case 'course':
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_course__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_course__WEBPACK_IMPORTED_MODULE_4__["default"], {
         details: props.details,
         query: props.query
       });
 
     case 'funding':
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_funding__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_funding__WEBPACK_IMPORTED_MODULE_5__["default"], {
         details: props.details,
         query: props.query
       });
 
     case 'profile':
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_profile__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_profile__WEBPACK_IMPORTED_MODULE_6__["default"], {
         details: props.details
       });
   }
@@ -2311,6 +2303,83 @@ finder__results__centre.propTypes = {
   query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__centre);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/components/cards/finder__results__contact.js":
+/*!**************************************************************************!*\
+  !*** ./src/patterns/finder/components/cards/finder__results__contact.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/finder/components/cards/finder__results__contact
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+/**
+ * Render a Funnelback result as a contact card.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function finder__results__contact(props) {
+  const department = props.details.metaData.department && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fas fa-fw fa-building icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Department:"), " ", props.details.metaData.department),
+        jobtitle = props.details.metaData.jobtitle && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "finder__results__card__description"
+  }, props.details.metaData.jobtitle),
+        email = props.details.metaData.email && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fas fa-fw fa-envelope icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Email:"), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: 'mailto:' + props.details.metaData.email
+  }, props.details.metaData.email)),
+        telephone = props.details.metaData.telephone && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fas fa-fw fa-phone fa-rotate-90 icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Telephone:"), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: 'tel:' + props.details.metaData.telephone
+  }, props.details.metaData.friendlytelephone)),
+        room = props.details.metaData.room && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fas fa-fw fa-door-open icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Room:"), " ", props.details.metaData.room);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "finder__results__card finder__results__contact"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "finder__results__card__details"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "finder__results__card__heading"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.title)), jobtitle, department, room, email, telephone));
+}
+
+finder__results__contact.propTypes = {
+  details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (finder__results__contact);
 
 /***/ }),
 
@@ -2515,8 +2584,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * Render a Funnelback result as a profile card.
- *
- * TODO: once the new collections are set up, standardise the metadata labels.
  *
  * @param {object} props React props.
  * @return {object} - React component.
@@ -4314,7 +4381,7 @@ const scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_18__["reduceMotion"
  */
 
 function getFacetParams(facets, params) {
-  return facets.map(facet => {
+  return facets && facets > 0 ? facets.map(facet => {
     const param = {};
 
     if (params.get("meta_".concat(facet.meta, "_sand"))) {
@@ -4322,7 +4389,7 @@ function getFacetParams(facets, params) {
     }
 
     return param;
-  }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
+  }).reduce((facetParams, facet) => Object.assign(facetParams, facet)) : [];
 }
 /**
  * Preserve the search state in the URL parameters.
@@ -8286,17 +8353,17 @@ const className = 'tabs',
  *
  * Unselected tabs are removed from the tab order.
  *
- * @param {HTMLAnchorElement} link - The anchor element to toggle.
+ * @param {HTMLButtonElement} button - The anchor element to toggle.
  * @param {boolean} selected - Set the element to be selected?
  */
 
-function toggleLink(link, selected) {
-  link.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].selected, selected);
+function toggleButton(button, selected) {
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].selected, selected);
 
   if (selected) {
-    link.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current, true);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current, true);
   } else {
-    link.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current);
+    button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current);
   }
 }
 /**
@@ -8316,16 +8383,15 @@ function selectTab(newTab) {
    */
 
   linkItems.forEach(linkItem => {
-    toggleLink(linkItem.firstElementChild, false);
+    toggleButton(linkItem.firstElementChild, false);
   });
   panels.forEach(panel => panel.setAttribute('hidden', 'true'));
   /**
    * Select the requested tab.
    */
 
-  toggleLink(newTab, true);
-  tabs.querySelector(newTab.hash).removeAttribute('hidden');
-  history.pushState(null, null, newTab.hash);
+  toggleButton(newTab, true);
+  tabs.querySelector(newTab.dataset.hash).removeAttribute('hidden');
   /**
    * Move focus to the section and optionally scroll it into view.
    */
@@ -8374,7 +8440,7 @@ function keyEvents(e, tabs) {
     /**
      * Move focus into the tab content.
      */
-    tabs.querySelector(currentTab.hash).focus();
+    tabs.querySelector(currentTab.dataset.hash).focus();
   } else if (arrowUp === e.which) {
     /**
      * Move focus to the currently selected tab control.
@@ -8398,27 +8464,22 @@ function keyEvents(e, tabs) {
  * Set attributes and listeners for the tabbed section controls.
  *
  * @param {HTMLLIElement[]} linkItems - An array of list items containing the tab anchors.
- * @returns {boolean} A boolean indicating whether the current URL has an anchor pointing to a panel in this tabbed section.
  */
 
 
 function prepareLinks(linkItems) {
-  let idLinked = false;
   linkItems.forEach(linkItem => {
-    const link = linkItem.firstElementChild;
+    const link = linkItem.firstElementChild,
+          button = document.createElement('button');
     linkItem.setAttribute('role', 'presentation');
-    link.setAttribute('role', 'tab');
-
-    if (link.hash === window.location.hash) {
-      idLinked = link.hash;
-      toggleLink(link, true);
-    } else {
-      toggleLink(link, false);
-    }
-
-    link.addEventListener('click', e => selectTabEvent(e, link), true);
+    button.setAttribute('role', 'tab');
+    button.appendChild(link.firstElementChild);
+    button.dataset.hash = link.hash;
+    button.id = link.id;
+    linkItem.replaceChild(button, link);
+    toggleButton(button, false);
+    button.addEventListener('click', e => selectTabEvent(e, button), true);
   });
-  return idLinked;
 }
 /**
  * Set attributes for the tabbed section panels.
@@ -8475,23 +8536,12 @@ function launchTabs(tabs) {
 
   controls.setAttribute('role', 'tablist');
   preparePanels(panels);
-  const idLinked = prepareLinks(linkItems);
-  /**
-   * If the URL doesn't include a hash pointing to one of these tabs, we
-   * select the first one. Otherwise unhide the first tab.
-   */
-
-  if (!idLinked) {
-    toggleLink(linkItems[0].firstElementChild, true);
-    panels[0].removeAttribute('hidden');
-  } else {
-    const selectedTab = tabs.querySelector(idLinked);
-    selectedTab.removeAttribute('hidden');
-  }
+  prepareLinks(linkItems);
+  toggleButton(linkItems[0].firstElementChild, true);
+  panels[0].removeAttribute('hidden');
   /**
    * Enable keyboard access to tabs with the cursor keys.
    */
-
 
   tabs.addEventListener('keydown', e => keyEvents(e, tabs), true);
 }
