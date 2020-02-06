@@ -52127,7 +52127,6 @@ button
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
     display: grid;
-    background: #f2f2f2;
     margin-top: 5rem;
     padding-bottom: 2rem;
     position: relative;
