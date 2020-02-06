@@ -613,7 +613,7 @@ function HowToApply(props) {
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose where you wish to study:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
   }, nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry).map((location, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    key: 'entry-point' + i
+    key: 'location' + i
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: () => {
       const newPreferences = preferences;
@@ -637,15 +637,17 @@ function HowToApply(props) {
         qualificationsProgress = Object.keys(entryPoints).length > 1 ? question === 'qualification' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-question icon"
+    className: "fas fa-circle icon"
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Qualification")) : preferences.qualification ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, "Qualification"))) : preferences.qualification ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__previous"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "how-to-apply--pgt--js__modal__progress__circle",
+    className: "how-to-apply--pgt--js__modal__progress__wrapper",
     onClick: () => {
       const newPreferences = preferences;
       newPreferences.qualification = null;
@@ -656,23 +658,27 @@ function HowToApply(props) {
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-check icon",
     "aria-label": "Back to choose qualification"
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, preferences.qualification)) : null : null,
+  }, preferences.qualification))) : null : null,
         subjectsProgress = multipleSubjects ? question === 'subject' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-question icon"
+    className: "fas fa-circle icon"
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Route")) : preferences.subject ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, "Route"))) : preferences.subject ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__previous"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "how-to-apply--pgt--js__modal__progress__circle",
+    className: "how-to-apply--pgt--js__modal__progress__wrapper",
     onClick: () => {
       const newPreferences = preferences;
       newPreferences.subject = null;
@@ -682,23 +688,27 @@ function HowToApply(props) {
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-check icon",
     "aria-label": "Back to choose study route"
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, preferences.subject)) : null : null,
+  }, preferences.subject))) : null : null,
         entryPointsProgress = multipleEntryPoints ? question === 'entry' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-question icon"
+    className: "fas fa-circle icon"
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Entry point")) : preferences.entry ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, "Entry point"))) : preferences.entry ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__previous"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "how-to-apply--pgt--js__modal__progress__circle",
+    className: "how-to-apply--pgt--js__modal__progress__wrapper",
     onClick: () => {
       const newPreferences = preferences;
       newPreferences.entry = null;
@@ -707,23 +717,27 @@ function HowToApply(props) {
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-check icon",
     "aria-label": "Back to choose entry point"
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, months[new Date(preferences.entry).getMonth()], ' ', new Date(preferences.entry).getFullYear())) : null : null,
+  }, months[new Date(preferences.entry).getMonth()], ' ', new Date(preferences.entry).getFullYear()))) : null : null,
         locationsProgress = multipleLocations ? question === 'location' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-question icon"
+    className: "fas fa-circle icon"
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Location")) : preferences.location ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, "Location"))) : preferences.location ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__previous"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "how-to-apply--pgt--js__modal__progress__circle",
+    className: "how-to-apply--pgt--js__modal__progress__wrapper",
     onClick: () => {
       const newPreferences = preferences;
       newPreferences.location = null;
@@ -731,24 +745,96 @@ function HowToApply(props) {
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-check icon",
     "aria-label": "Back to choose location"
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, preferences.location)) : null : null,
+  }, preferences.location))) : null : null,
         nextStep = question !== 'apply' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__next"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null))) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-circle icon",
+    "aria-hidden": "true"
+  })))) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current how-to-apply--pgt--js__modal__progress__last"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-question icon"
+    className: "fas fa-circle icon"
   })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Method of study")),
+  }, "Method of study"))),
+        qualificationsProgressMobile = Object.keys(entryPoints).length > 1 && (question == 'qualification' || preferences.qualification) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: question === 'qualification' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: question === 'qualification' ? 'fas fa-circle icon' : 'fas fa-check icon'
+  })), question === 'qualification' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__text"
+  }, "Qualification"))) : null,
+        subjectsProgressMobile = multipleSubjects && (question == 'subject' || preferences.subject) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: question === 'subject' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: question === 'subject' ? 'fas fa-circle icon' : 'fas fa-check icon'
+  })), question === 'subject' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__text"
+  }, "Subject"))) : null,
+        entryPointsProgressMobile = multipleEntryPoints && (question == 'entry' || preferences.entry) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: question === 'entry' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: question === 'entry' ? 'fas fa-circle icon' : 'fas fa-check icon'
+  })), question === 'entry' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__text"
+  }, "Entry point"))) : null,
+        locationsProgressMobile = multipleLocations && (question == 'location' || preferences.location) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: question === 'location' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: question === 'location' ? 'fas fa-circle icon' : 'fas fa-check icon'
+  })), question === 'location' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__text"
+  }, "Location"))) : null,
+        nextStepMobile = question !== 'apply' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "how-to-apply--pgt--js__modal__progress__next"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-circle icon"
+  })))) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    className: "how-to-apply--pgt--js__modal__progress__current how-to-apply--pgt--js__modal__progress__last"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__wrapper"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__circle"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-circle icon"
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "how-to-apply--pgt--js__modal__progress__text"
+  }, "Method of study"))),
         alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "how-to-apply--pgt--js__modal__alternative"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -814,7 +900,9 @@ function HowToApply(props) {
     "aria-label": "Close"
   })), reset, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
     className: "how-to-apply--pgt--js__modal__progress"
-  }, qualificationsProgress, subjectsProgress, entryPointsProgress, locationsProgress, nextStep), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, qualificationsProgress, subjectsProgress, entryPointsProgress, locationsProgress, nextStep), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
+    className: "how-to-apply--pgt--js__modal__progress--mobile"
+  }, qualificationsProgressMobile, subjectsProgressMobile, entryPointsProgressMobile, locationsProgressMobile, nextStepMobile), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Applying to start in ", props.element.dataset.year), alternative), qualificationQuestion, subjectQuestion, entryQuestion, locationQuestion, applyQuestion)));
 }
