@@ -51189,7 +51189,7 @@ button
 
 @media (min-width: 768px) {
     .content-hub__block-two .careers {
-        grid-template-columns: repeat(18, 1fr);
+        grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
     }
@@ -51208,20 +51208,23 @@ button
 }
 
 @media (min-width: 768px) {
-    .content-hub__block-two .careers__intro {
-        grid-column: 4 / 16;
+    .content-hub__block-two .careers__intro,
+    .content-hub__block-two .pathway-cards {
+        grid-column: 5 / 21;
     }
 }
 
 @media (min-width: 901px) {
-    .content-hub__block-two .careers__intro {
-        grid-column: 3 / 17;
+    .content-hub__block-two .careers__intro,
+    .content-hub__block-two .pathway-cards {
+        grid-column: 3 / 23;
     }
 }
 
 @media (min-width: 1281px) {
-    .content-hub__block-two .careers__intro {
-        grid-column: 4 / 16;
+    .content-hub__block-two .careers__intro,
+    .content-hub__block-two .pathway-cards {
+        grid-column: 7 / 19;
     }
 }
 
@@ -51264,16 +51267,9 @@ button
     --negative-offset-large: calc(var(--negative-offset-small) * 2);
 }
 
-@media (min-width: 768px) {
-    .content-hub__block-two .pathway-cards {
-        grid-column: 4 / 16;
-    }
-}
-
 @media (min-width: 901px) {
     .content-hub__block-two .pathway-cards {
         margin-top: 7rem;
-        grid-column: 3 / 17;
     }
 }
 
@@ -51283,15 +51279,9 @@ button
     }
 }
 
-@media (min-width: 1281px) {
-    .content-hub__block-two .pathway-cards {
-        grid-column: 4 / 16;
-    }
-}
-
 @media (min-width: 768px) {
     .content-hub__block-two .pathway-cards .card--pathway__block {
-        grid-template-columns: repeat(18, 1fr);
+        grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
     }
@@ -51711,7 +51701,7 @@ button
 }
 
 .content-hub__block-three .news-events {
-    grid-template-columns: repeat(18, 1fr);
+    grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
     display: grid;
     background: #e5e5e5;
@@ -51754,8 +51744,9 @@ button
 }
 
 .content-hub__block-three .news-events .content-hub__block-three__happening {
-    grid-template-columns: repeat(18, 1fr);
+    grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
+    display: grid;
     display: grid;
     grid-column: 1 / -1;
 }
@@ -51809,6 +51800,7 @@ button
 
 .content-hub__block-three .news-events .content-hub__block-three__happening .related-content {
     grid-column: 1 / -1;
+    grid-column-gap: 0;
 }
 
 @media (max-width: 767px) {
@@ -51844,21 +51836,22 @@ button
 
 @media (min-width: 768px) {
     .content-hub__block-three .news-events .content-hub__block-three__happening .related-content {
-        grid-column: 2 / 18;
-        display: flex;
+        grid-column-gap: 1rem;
+        grid-column: 2 / 24;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (min-width: 768px) {
-    .content-hub__block-three .news-events .content-hub__block-three__happening .related-content li:first-child,
-    .content-hub__block-three .news-events .content-hub__block-three__happening .related-content li:nth-child(2) {
-        margin-right: 1.5rem;
+@media (min-width: 901px) {
+    .content-hub__block-three .news-events .content-hub__block-three__happening .related-content {
+        grid-column-gap: 1.5rem;
     }
 }
 
 .content-hub__block-three .news-events .content-separator {
     margin: 0 0 1rem 0;
-    grid-column: 6 / 14;
+    grid-column: 8 / 18;
 }
 
 .content-hub__block-three .news-events .content-hub__block-three__research__centres {
@@ -52065,7 +52058,7 @@ button
 }
 
 .content-hub__block-three .news-events .content-hub__block-three__research {
-    grid-template-columns: repeat(18, 1fr);
+    grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
     display: grid;
 }
@@ -52116,33 +52109,45 @@ h2.related-content__heading {
 Adjust grid layout when only case study(ies) exists in research section, i.e. no research studies.
 This will keep responsive behaviour in line with What's Happening cards below
 */
-.content-hub__block-three
-.news-events
-.content-hub__block-three__research.case-study-only {
-    grid-column: 1/-1;
-}
-
-.content-hub__block-three
-.news-events
-.content-hub__block-three__research.case-study-only .related-content {
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-    grid-column: 1/-1;
+.content-hub__block-three .news-events .content-hub__block-three__research.case-study-only {
+    grid-column: 1 / -1;
 }
 
 @media (min-width: 768px) {
-    .content-hub__block-three
-.news-events
-.content-hub__block-three__research.case-study-only .related-content {
+    .content-hub__block-three .news-events .content-hub__block-three__research.case-study-only {
+        grid-column: 2 / 24;
+        grid-template-columns: repeat(22, 1fr);
+        grid-column-gap: 0;
+    }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+    .content-hub__block-three .news-events .content-hub__block-three__research.case-study-only {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (min-width: 901px) {
+    .content-hub__block-three .news-events .content-hub__block-three__research.case-study-only {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+.content-hub__block-three .news-events .content-hub__block-three__research.case-study-only .related-content {
+    grid-column: 1 / -1;
+    grid-column-gap: 0;
+}
+
+@media (min-width: 768px) {
+    .content-hub__block-three .news-events .content-hub__block-three__research.case-study-only .related-content {
+        grid-template-columns: repeat(3, 1fr);
+        display: grid;
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 901px) {
-    .content-hub__block-three
-.news-events
-.content-hub__block-three__research.case-study-only .related-content {
+    .content-hub__block-three .news-events .content-hub__block-three__research.case-study-only .related-content {
         grid-column-gap: 1.5rem;
     }
 }
