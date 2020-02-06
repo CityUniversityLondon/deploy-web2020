@@ -51507,10 +51507,53 @@ button
     margin: 6rem 0 1rem;
 }
 
+@media (max-width: 767px) {
+    .content-hub__block-two {
+        background-image: linear-gradient(#f2f2f2, #ffffff);
+    }
+}
+
 .content-hub__block-two .careers {
     padding: 1rem 0 0;
     background-image: linear-gradient(#f2f2f2, #ffffff);
     margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .content-hub__block-two .careers {
+        background-image: linear-gradient(#f2f2f2, #ffffff);
+    }
+}
+
+@media (max-width: 767px) {
+    .content-hub__block-two .careers {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 901px) {
+    .content-hub__block-two .careers {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 901px) {
+    .content-hub__block-two .careers {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 1441px) {
+    .content-hub__block-two .careers {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media (min-width: 768px) {
@@ -54029,12 +54072,12 @@ main .landing:only-child .landing__top__cta {
 }
 
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__year-select {
-    grid-column: 3/10;
+    grid-column: 3 / 10;
 }
 
 @media (max-width: 768px) {
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__year-select {
-        grid-column: 1/-1;
+        grid-column: 1 / -1;
         text-align: center;
     }
 }
@@ -54042,6 +54085,12 @@ main .landing:only-child .landing__top__cta {
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__year-select p {
     font-weight: 500;
     font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__year-select p {
+        max-width: unset;
+    }
 }
 
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__year-select p a {
@@ -54056,7 +54105,7 @@ main .landing:only-child .landing__top__cta {
 }
 
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas {
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
     padding: 1rem 0;
     text-align: center;
 }
@@ -54070,8 +54119,24 @@ main .landing:only-child .landing__top__cta {
 }
 
 @media (max-width: 768px) {
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .course--pgt__introduction__ctas--apply > .cta-block,
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .course--pgt__introduction__ctas--video > .cta-block {
+        max-width: unset;
+    }
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .course--pgt__introduction__ctas--apply > .cta-block > .cta-block__cta,
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .course--pgt__introduction__ctas--video > .cta-block > .cta-block__cta {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: unset;
+    }
+}
+
+@media (max-width: 768px) {
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
+    }
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block__cta {
+        margin-top: 1.5rem;
     }
 }
 
@@ -54102,10 +54167,6 @@ main .landing:only-child .landing__top__cta {
         margin-left: 1rem;
         display: inline-block;
     }
-}
-
-.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block .outline-cta-arrow--dark {
-    display: inline-block;
 }
 
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block .outline-cta-arrow--dark:after {
@@ -54480,14 +54541,14 @@ main .landing:only-child .landing__top__cta {
 }
 
 .course--pgt__keyinfo .course--pgt__keyinfo__content ul.course--pgt__keyinfo__content__ctas {
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
     margin: 1rem 0;
     max-width: none;
 }
 
 @media (min-width: 769px) {
     .course--pgt__keyinfo .course--pgt__keyinfo__content ul.course--pgt__keyinfo__content__ctas {
-        grid-column: 3/-3;
+        grid-column: 3 / -3;
         display: flex;
     }
 }
