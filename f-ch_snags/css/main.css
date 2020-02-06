@@ -51208,21 +51208,30 @@ button
 }
 
 @media (min-width: 768px) {
-    .content-hub__block-two .careers__intro,
+    .content-hub__block-two .careers__intro {
+        grid-column: 3 / 23;
+    }
+}
+
+@media (min-width: 1281px) {
+    .content-hub__block-two .careers__intro {
+        grid-column: 4 / 22;
+    }
+}
+
+@media (min-width: 768px) {
     .content-hub__block-two .pathway-cards {
         grid-column: 5 / 21;
     }
 }
 
 @media (min-width: 901px) {
-    .content-hub__block-two .careers__intro,
     .content-hub__block-two .pathway-cards {
         grid-column: 3 / 23;
     }
 }
 
 @media (min-width: 1281px) {
-    .content-hub__block-two .careers__intro,
     .content-hub__block-two .pathway-cards {
         grid-column: 7 / 19;
     }
