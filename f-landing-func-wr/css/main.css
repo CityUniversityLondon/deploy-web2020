@@ -52797,7 +52797,7 @@ main .landing header p em {
     main .wrapper--finder__mini .finder__mini {
         grid-column: 2 / 24;
     }
-    main .wrapper--finder__mini .landing--functional__finder__cta {
+    main .wrapper--finder__mini .landing--functional__finder__cta__wrap {
         grid-column: 2 / 24;
     }
     main .landing--functional__content__wrap {
@@ -52866,7 +52866,7 @@ main .landing header p em {
     main .navigation--secondary + .landing .wrapper--finder__mini .finder__mini {
         grid-column: 3 / 17;
     }
-    main .navigation--secondary + .landing .wrapper--finder__mini .landing--functional__finder__cta {
+    main .navigation--secondary + .landing .wrapper--finder__mini .landing--functional__finder__cta__wrap {
         grid-column: 3 / 17;
     }
     main .navigation--secondary + .landing .landing--functional__content__wrap {
@@ -52955,6 +52955,15 @@ main .navigation--secondary + .landing .landing__middle1 > p {
 
 main .navigation--secondary + .landing .landing__middle1 .landing__middle1__pathway-image-cards h2 {
     padding: 0;
+}
+
+main .landing--functional__finder__cta {
+    margin-bottom: 0.75rem;
+}
+
+main .landing--functional__finder__cta a:after {
+    content: '\f061';
+    font-family: 'Font Awesome';
 }
 
 main .landing:only-child {
@@ -53161,6 +53170,28 @@ main .landing:only-child .landing__top__cta {
 
 .landing--functional__finder__tabs {
     margin-top: 2rem;
+}
+
+.landing--functional__finder__tabs .landing--functional__finder__tabs__heading {
+    text-align: center;
+    position: relative;
+}
+
+.landing--functional__finder__tabs .landing--functional__finder__tabs__heading:after {
+    content: '';
+    border-top: 0.125rem solid #e5e5e5;
+    width: 100%;
+    display: block;
+    top: 1rem;
+    position: absolute;
+    z-index: -1;
+}
+
+.landing--functional__finder__tabs .landing--functional__finder__tabs__heading h2 {
+    background: #ffffff;
+    display: inline;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 @media (max-width: 431px) {
