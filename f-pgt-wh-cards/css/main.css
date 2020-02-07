@@ -54299,6 +54299,16 @@ main .landing:only-child .landing__top__cta {
         margin-right: auto;
         max-width: unset;
     }
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .how-to-apply--pgt--js .cta-block__cta {
+        width: 100%;
+    }
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .how-to-apply--pgt--js .cta-block__cta .primary-cta-arrow--bright {
+        width: 100%;
+        text-align: center;
+    }
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .how-to-apply--pgt--js .cta-block__cta .primary-cta-arrow--bright span {
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 768px) {
