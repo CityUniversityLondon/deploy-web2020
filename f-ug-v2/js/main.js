@@ -4381,7 +4381,7 @@ const scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_18__["reduceMotion"
  */
 
 function getFacetParams(facets, params) {
-  return facets && facets > 0 ? facets.map(facet => {
+  return facets.map(facet => {
     const param = {};
 
     if (params.get("meta_".concat(facet.meta, "_sand"))) {
@@ -4389,7 +4389,7 @@ function getFacetParams(facets, params) {
     }
 
     return param;
-  }).reduce((facetParams, facet) => Object.assign(facetParams, facet)) : [];
+  }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
 }
 /**
  * Preserve the search state in the URL parameters.
@@ -4434,7 +4434,7 @@ function Finder(props) {
 
   const initialQuery = {
     collection: props.config.collection,
-    facets: getFacetParams(props.config.facetLabels, params),
+    facets: props.config.facetLabels.length > 0 ? getFacetParams(props.config.facetLabels, params) : {},
     fixedFacets: props.config.fixedFacets,
     interacted: false,
     misspelling: null,
