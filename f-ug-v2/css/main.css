@@ -54303,6 +54303,16 @@ main .landing:only-child .landing__top__cta {
         margin-right: auto;
         max-width: unset;
     }
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .how-to-apply--pgt--js .cta-block__cta {
+        width: 100%;
+    }
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .how-to-apply--pgt--js .cta-block__cta .primary-cta-arrow--bright {
+        width: 100%;
+        text-align: center;
+    }
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .how-to-apply--pgt--js .cta-block__cta .primary-cta-arrow--bright span {
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -54737,7 +54747,7 @@ main .landing:only-child .landing__top__cta {
     box-shadow: none;
 }
 
-.course--pgt__keyinfo .course--pgt__keyinfo__content ul.course--pgt__keyinfo__content__ctas li a:hover span, .course--pgt__keyinfo .course--pgt__keyinfo__content ul.course--pgt__keyinfo__content__ctas li a:focus span {
+.course--pgt__keyinfo .course--pgt__keyinfo__content ul.course--pgt__keyinfo__content__ctas li a:hover span {
     color: #ffffff;
 }
 
@@ -55223,25 +55233,22 @@ main .landing:only-child .landing__top__cta {
 
 .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content {
     grid-column: 1/-1;
-    display: flex;
-    flex: 1;
 }
 
-.wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content .card {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    box-shadow: none;
-}
-
-@media (min-width: 769px) {
-    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content .card:not(:last-child) {
-        margin-right: 1rem;
+@media (min-width: 768px) {
+    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content .card {
+        flex: 1;
     }
 }
 
-.wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content .card .card--news {
-    box-shadow: none;
+@media (min-width: 768px) and (min-width: 769px) {
+    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content .card:not(:last-of-type) {
+        margin-right: 1rem;
+    }
 }
 
 .wrapper--course--pgt__testimonials-unibuddy {
