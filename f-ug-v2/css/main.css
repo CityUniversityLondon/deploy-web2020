@@ -61796,6 +61796,12 @@ main .standard-content .banner, main .standard-content .banner-text {
     justify-content: space-between;
 }
 
+@media (max-width: 899px) {
+    .statistics-block--ug .ksp__items--ug {
+        flex-direction: column;
+    }
+}
+
 .statistics-block--ug .ksp__item--ug {
     flex: 1;
     margin-right: 1.5rem;
@@ -61836,7 +61842,7 @@ main .standard-content .banner, main .standard-content .banner-text {
 
 .ug-text-table .ug-text-table__prop {
     margin: 0 0.125rem;
-    flex-basis: 15%;
+    min-width: 5rem;
 }
 
 .ug-text-table .ug-text-table__prop span {
