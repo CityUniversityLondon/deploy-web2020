@@ -54743,7 +54743,7 @@ main .landing:only-child .landing__top__cta {
     box-shadow: none;
 }
 
-.course--pgt__keyinfo .course--pgt__keyinfo__content ul.course--pgt__keyinfo__content__ctas li a:hover span, .course--pgt__keyinfo .course--pgt__keyinfo__content ul.course--pgt__keyinfo__content__ctas li a:focus span {
+.course--pgt__keyinfo .course--pgt__keyinfo__content ul.course--pgt__keyinfo__content__ctas li a:hover span {
     color: #ffffff;
 }
 
