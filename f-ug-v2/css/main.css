@@ -61270,15 +61270,6 @@ main .standard-content .banner, main .standard-content .banner-text {
     margin-right: 0;
 }
 
-@media (min-width: 433px) and (max-width: 767px) {
-    .course--ug__keyinfo__cta p {
-        flex-wrap: wrap;
-    }
-    .course--ug__keyinfo__cta p p {
-        flex-basis: 50%;
-    }
-}
-
 @media (min-width: 433px) and (max-width: 768px) {
     .course--ug__keyinfo__cta {
         flex-wrap: wrap;
@@ -61286,6 +61277,7 @@ main .standard-content .banner, main .standard-content .banner-text {
     .course--ug__keyinfo__cta p {
         flex-basis: 50%;
         padding: 0 0.5rem;
+        margin: 1rem 0 0 0;
     }
     .course--ug__keyinfo__cta p a {
         text-align: center;
@@ -61390,6 +61382,19 @@ main .standard-content .banner, main .standard-content .banner-text {
     }
 }
 
+@media (max-width: 900px) {
+    .course--ug__student h2 {
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 432px) {
+    .course--ug__student-testimonials__wrapper {
+        margin: 0;
+        padding: 0;
+    }
+}
+
 @media (max-width: 1024px) {
     .course--ug__student-testimonials__wrapper {
         margin-left: 1rem;
@@ -61436,6 +61441,12 @@ main .standard-content .banner, main .standard-content .banner-text {
 @media (min-width: 901px) {
     .course--ug__student-testimonials__wrapper .course--ug__student-testimonials {
         grid-column-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 432px) {
+    .course--ug__student-testimonials__wrapper .course--ug__student-testimonials {
+        grid-column: 2 / 24;
     }
 }
 
