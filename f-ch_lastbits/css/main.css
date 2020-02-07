@@ -25601,12 +25601,6 @@ _:-ms-lang(x),
     margin-right: 1.5rem;
 }
 
-@media (max-width: 432px) {
-    .card--testimonial-feature__details__column:first-child {
-        display: none;
-    }
-}
-
 @media (max-width: 1279px) {
     .card--testimonial-feature__details__column:first-child {
         margin-right: 1rem;
@@ -52011,7 +52005,6 @@ button
 }
 
 .content-hub__block-two .testimonial {
-    grid-area: testimonial;
     margin-left: 1rem;
     margin-right: 1rem;
     max-width: 80rem;
@@ -52037,6 +52030,12 @@ button
     .content-hub__block-two .testimonial {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media (max-width: 432px) {
+    .content-hub__block-two .testimonial .card--testimonial-feature__details__column:first-child {
+        display: none;
     }
 }
 
