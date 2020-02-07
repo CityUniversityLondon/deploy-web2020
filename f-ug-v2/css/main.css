@@ -50612,6 +50612,10 @@ button
     outline-width: 0.125rem;
 }
 
+.dropdown-filter ul:first-of-type li {
+    list-style-type: none;
+}
+
 .generic {
     display: block;
 }
