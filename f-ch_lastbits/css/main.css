@@ -51877,7 +51877,6 @@ button
 @media (min-width: 901px) {
     .content-hub__block-two .pathway-cards .card {
         margin-bottom: var(--pathway-offset);
-        z-index: 1;
     }
 }
 
@@ -51893,6 +51892,7 @@ button
     /*
         Sets top stripe color
     */
+    z-index: 1;
 }
 
 .content-hub__block-two .pathway-cards .card a:after {
