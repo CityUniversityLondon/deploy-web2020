@@ -61971,21 +61971,21 @@ main .standard-content .banner, main .standard-content .banner-text {
 
 .courses--ug__facilities h2,
 .course--ug__student-coursework h2,
-.course--ug__student-testimonials__wrapper h2 {
+.course--ug__student h2 {
     border-bottom: 0.0625rem solid #cbcbcb;
     padding-bottom: 0.5rem;
 }
 
 .courses--ug__facilities h2 .full-width-heading,
 .course--ug__student-coursework h2 .full-width-heading,
-.course--ug__student-testimonials__wrapper h2 .full-width-heading {
+.course--ug__student h2 .full-width-heading {
     grid-column: 1/-1;
 }
 
 @media (min-width: 769px) {
     .courses--ug__facilities h2 .full-width-heading:first-child,
     .course--ug__student-coursework h2 .full-width-heading:first-child,
-    .course--ug__student-testimonials__wrapper h2 .full-width-heading:first-child {
+    .course--ug__student h2 .full-width-heading:first-child {
         grid-column: 2/-2;
     }
 }
@@ -62353,6 +62353,10 @@ main .standard-content .banner, main .standard-content .banner-text {
     grid-column: 2/-1;
 }
 
-.unibuddy-card {
+.course--ug__student-testimonials__half--unibuddy .unibuddy-card {
     margin-top: 3rem;
+}
+
+.course--ug__keyinfo__accordion .dropdown-filter ul:first-of-type {
+    margin: 0;
 }
