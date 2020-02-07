@@ -61388,13 +61388,6 @@ main .standard-content .banner, main .standard-content .banner-text {
     }
 }
 
-@media (max-width: 432px) {
-    .course--ug__student-testimonials__wrapper {
-        margin: 0;
-        padding: 0;
-    }
-}
-
 @media (max-width: 1024px) {
     .course--ug__student-testimonials__wrapper {
         margin-left: 1rem;
@@ -61426,33 +61419,29 @@ main .standard-content .banner, main .standard-content .banner-text {
     }
 }
 
-.course--ug__student-testimonials__wrapper .course--ug__student-testimonials {
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 0;
-    display: grid;
+@media (max-width: 900px) and (min-width: 1025px) {
+    .course--ug__student-testimonials__wrapper .course--ug__student-testimonials {
+        grid-template-columns: repeat(24, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 900px) and (min-width: 1025px) and (min-width: 768px) {
     .course--ug__student-testimonials__wrapper .course--ug__student-testimonials {
         grid-column-gap: 1rem;
     }
 }
 
-@media (min-width: 901px) {
+@media (max-width: 900px) and (min-width: 1025px) and (min-width: 901px) {
     .course--ug__student-testimonials__wrapper .course--ug__student-testimonials {
         grid-column-gap: 1.5rem;
     }
 }
 
-@media (max-width: 432px) {
+@media (min-width: 901px) {
     .course--ug__student-testimonials__wrapper .course--ug__student-testimonials {
-        grid-column: 2 / 24;
-    }
-}
-
-@media (max-width: 1024px) {
-    .course--ug__student-testimonials__wrapper .course--ug__student-testimonials {
-        grid-column: 1 / -1;
+        display: flex;
     }
 }
 
@@ -61462,21 +61451,16 @@ main .standard-content .banner, main .standard-content .banner-text {
     }
 }
 
-.course--ug__student-testimonials__wrapper .course--ug__student-testimonials .course--ug__student-testimonials__half {
-    grid-column: span 12;
-}
-
-@media (max-width: 1280px) and (min-width: 1025px) {
+@media (max-width: 900px) and (min-width: 1025px) {
     .course--ug__student-testimonials__wrapper .course--ug__student-testimonials .course--ug__student-testimonials__half {
         grid-column: 1 / -1;
         margin-bottom: 1rem;
     }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 901px) {
     .course--ug__student-testimonials__wrapper .course--ug__student-testimonials .course--ug__student-testimonials__half {
-        grid-column: 1 / -1;
-        margin-bottom: 1rem;
+        flex: 1;
     }
 }
 
