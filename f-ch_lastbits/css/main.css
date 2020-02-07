@@ -51681,22 +51681,19 @@ button
     margin: 6rem 0 1rem;
 }
 
-@media (max-width: 767px) {
+.content-hub__block-two {
+    background-image: linear-gradient(to bottom, #f2f2f2, #ffffff);
+}
+
+@media (min-width: 768px) {
     .content-hub__block-two {
-        background-image: linear-gradient(#f2f2f2, #ffffff);
+        background-image: none;
     }
 }
 
 .content-hub__block-two .careers {
     padding: 1rem 0 0;
-    background-image: linear-gradient(#f2f2f2, #ffffff);
     margin-bottom: 3rem;
-}
-
-@media (min-width: 768px) {
-    .content-hub__block-two .careers {
-        background-image: linear-gradient(#f2f2f2, #ffffff);
-    }
 }
 
 @media (max-width: 767px) {
@@ -51735,6 +51732,7 @@ button
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
+        background-image: linear-gradient(to bottom, #f2f2f2, #ffffff);
     }
 }
 
