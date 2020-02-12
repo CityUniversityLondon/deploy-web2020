@@ -1686,8 +1686,8 @@ function updateProgress(backToTopAnchor) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
@@ -1715,8 +1715,7 @@ const className = 'map-container';
 //CITY.visit = (function(CITY, $) {
 
 function initMap(mapWrapper, $) {
-  console.log("You didn't see me coming? hm"); // == PROPERTIES ==
-
+  // == PROPERTIES ==
   var
   /**
    * this object holds the properties and methods we want to return later
@@ -1728,7 +1727,7 @@ function initMap(mapWrapper, $) {
    * data source - relative to handle production and test environments
    * @var {String}
    */
-  dataSrc = 'https://www.city.ac.uk/about/campus-map/feeds/locations',
+  dataSrc = 'https://web2020.city.ac.uk/staging/development/walter/campus-map/locations',
 
   /**
    * Create a LatLng object containing the coordinate for the center of the map
@@ -2016,8 +2015,12 @@ function initMap(mapWrapper, $) {
    * @return {Object} marker - google maps marker
    */
   createMarker = function createMarker(markerConfig) {
-    console.log("function run: createMarker");
-    var listId = '#' + markerConfig.category,
+    console.log("function run: createMarker"); // var listId = '#' + markerConfig.category, >> walter maybe delete this now
+
+    var listId = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
+      label: 'id',
+      val: markerConfig.category
+    }]),
         listItem,
         marker,
         $li,
@@ -2094,14 +2097,17 @@ function initMap(mapWrapper, $) {
          },
      }); */
 
-    $a = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+    var anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
       label: 'html',
-      val: '<span>' + markerConfig.name + ' ' + markerConfig.buildingPrefix + '</span>'
+      val: '<span>sfsdf' + markerConfig.name + ' ' + markerConfig.buildingPrefix + '</span>'
     }, {
       label: 'href',
       val: '#'
-    }]); //add li item to list
-    //$li.append($a).appendTo(listId);
+    }]);
+    anchor.style.background = 'transparent url(' + markerConfig.icon + '?v=1123) no-repeat left center';
+    console.log("========= ".concat(anchor));
+    document.getElementById('content').appendChild(anchor); //add li item to list
+    //li.append($a).appendTo(listId);
 
     listId.appendChild($li).appendChild($a);
     return marker;
@@ -2124,19 +2130,34 @@ function initMap(mapWrapper, $) {
     }
   },
       // >>>
+  findChildText = function findChildText(node, name) {
+    var value = '';
+    /* 
+    node.children().each(function(child) {
+        if (child.nodeName == name) {
+            value = $(child).text();
+            return false;
+        }
+        return true;
+    });
+    return value;
+    */
 
-  /*
-  findChildText = function(node, name) {
-      var value = '';
-      node.children().each(function(child) {
-          if (child.nodeName == name) {
-              value = $(child).text();
-              return false;
-          }
-          return true;
-      });
-      return value;
-  },*/
+    let children = node.children;
+    let child;
+
+    for (child in children) {
+      if (child.nodeName == name) {
+        let content = child.textContent;
+        value = content.trim();
+        return false;
+      }
+
+      return true;
+    }
+
+    return value;
+  },
 
   /**
    * parses locations xml and creates markers
@@ -2147,6 +2168,9 @@ function initMap(mapWrapper, $) {
    */
   parseXml = function parseXml(xml, textStatus, jqXHR) {
     console.log("function run: parseXml");
+    var items = xml.getElementsByTagName('item');
+    console.log("items: ".concat(items.length)); //console.log(xml.getElementsBytagName('item').length);
+
     var index = 0,
         $self,
         marker,
@@ -2154,24 +2178,35 @@ function initMap(mapWrapper, $) {
         searchTags = [],
         searchIds = {}; // >>> re-write
 
-    xml.find('item').forEach(function (self) {
-      console.log("find....l");
-      $self = self;
+    items.forEach(function (item) {
+      console.log("cycling through items...");
+      $self = item;
       markerConfig.index = index + 1;
-      markerConfig.name = $self.find('title').text();
-      markerConfig.linkHref = $self.find('link').text();
-      markerConfig.description = $self.find('description').text();
+      markerConfig.name = $self.getElementsByTagName('title')[0].textContent;
+      console.log("markerConfig.name  is: ".concat(markerConfig.name));
+      markerConfig.linkHref = $self.getElementsByTagName('link')[0].textContent;
+      console.log("markerConfig.linkHref  is: ".concat(markerConfig.linkHref));
+      markerConfig.description = $self.getElementsByTagName('description')[0].textContent;
+      console.log("markerConfig.description is: ".concat(markerConfig.description));
       markerConfig.icon = findChildText($self, 'CUL:icon');
-      markerConfig.category = $self.find('category').text();
-      markerConfig.id = $self.find('guid').text(); //markerConfig.isPolygon = $self.find("[nodeName='georss:polygon']");
-      //with whitespace trimmed
+      console.log("markerConfig.icon is: ".concat(markerConfig.icon)); //markerConfig.category = $self.find('category').text();
 
-      markerConfig.buildingPrefix = findChildText($self, 'CUL:buildingPrefix').replace(/^\s+|\s+$/g, '');
-      markerConfig.hexColour = findChildText($self, 'CUL:hexColour').replace(/^\s+|\s+$/g, '');
+      markerConfig.category = $self.getElementsByTagName('category')[0].textContent;
+      console.log("markerConfig.category  is: ".concat(markerConfig.category)); //markerConfig.id = $self.find('guid').text();
+
+      markerConfig.id = $self.getElementsByTagName('guid')[0].textContent;
+      console.log("markerConfig.id  is: ".concat(markerConfig.id)); //markerConfig.isPolygon = $self.find("[nodeName='georss:polygon']");
+      //walter > been commented out
+
+      markerConfig.buildingPrefix = findChildText($self, 'CUL:buildingPrefix');
+      console.log("markerConfig.buildingPrefix is: ".concat(markerConfig.buildingPrefix));
+      markerConfig.hexColour = findChildText($self, 'CUL:hexColour');
+      console.log("markerConfig.hexColour  is: ".concat(markerConfig.hexColour));
       markerConfig.geoLat = findChildText($self, 'geo:lat');
+      console.log("markerConfig.geoLat is: ".concat(markerConfig.geoLat));
       markerConfig.geoLong = findChildText($self, 'geo:long');
-      markerConfig.point = new google.maps.LatLng(parseFloat(markerConfig.geoLat), parseFloat(markerConfig.geoLong));
-      console.log("this is marker config ".concat(markerConfig)); //call createmarker fn
+      console.log("markerConfig.geoLong is: ".concat(markerConfig.geoLong));
+      markerConfig.point = new google.maps.LatLng(parseFloat(markerConfig.geoLat), parseFloat(markerConfig.geoLong)); //call createmarker fn
 
       marker = createMarker(markerConfig);
 
@@ -2250,17 +2285,16 @@ function initMap(mapWrapper, $) {
 
     var xhr = new XMLHttpRequest();
 
-    xhr.onload = function () {
+    xhr.onreadystatechange = function () {
       console.log('ajax');
 
-      if (xhr.status === 200) {
-        console.log('if');
-        parseXml(xml);
+      if (xhr.readyState == 4 && xhr.status === 200) {
+        parseXml(xhr.responseXML);
       }
     };
 
     xhr.open("GET", dataSrc, true);
-    xhr.send();
+    xhr.send(null);
   },
 
   /**
@@ -2307,14 +2341,11 @@ function initMap(mapWrapper, $) {
     infoWindow: infoWindow,
     map: map
   };
-  console.log('end');
   loadXml();
   return returnObj;
 }
 
-; //run this
-// CITY.visit.init();
-
+;
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: initMap,
   launchQuery: ".".concat(className)
