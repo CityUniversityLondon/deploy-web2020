@@ -1869,7 +1869,7 @@ function initMap(mapWrapper, $) {
    * @return {Undefined}
    */
   clearOverlays = function clearOverlays(markersArray) {
-    console.log("function run: clearOverLyas");
+    console.log(">>  >>  function run: clearOverLyas");
     var i;
 
     if (markersArray) {
@@ -1887,7 +1887,7 @@ function initMap(mapWrapper, $) {
    * @return {Undefined}
    */
   hashChange = function hashChange(e) {
-    console.log("function run: handleChange");
+    console.log(">>  >>  function run: handleChange");
     var state = e.getState(),
         x,
         i,
@@ -1933,7 +1933,7 @@ function initMap(mapWrapper, $) {
    * @return {Undefined}
    */
   updateHash = function updateHash(caller) {
-    console.log("function run: updateHash");
+    console.log(">>  >>  function run: updateHash");
     var state = {},
         callerId = '';
 
@@ -1963,7 +1963,7 @@ function initMap(mapWrapper, $) {
    * @return {Undefined}
    */
   showOverlays = function showOverlays(markersArray) {
-    console.log("function run: showOverLays");
+    console.log(">>  >>  function run: showOverLays");
     var i;
 
     if (markersArray) {
@@ -1981,7 +1981,7 @@ function initMap(mapWrapper, $) {
    * @return {Undefined}
    */
   newCategory = function newCategory(name) {
-    console.log("function run: newCategory");
+    console.log(">>  >>  function run: newCategory");
     name.toggler = null; // walter replaced with name - was this
 
     name.markersArray = [];
@@ -1994,7 +1994,7 @@ function initMap(mapWrapper, $) {
    * @return {?}
    */
   initKmlLayers = function initKmlLayers(object) {
-    console.log("function run: initKMLLayers");
+    console.log(">>  >>  function run: initKMLLayers");
     object.forEach(function (obj) {
       var toggler = obj.toggler,
           overlay = new google.maps.KmlLayer(obj.src, {
@@ -2015,7 +2015,7 @@ function initMap(mapWrapper, $) {
    * @return {Object} marker - google maps marker
    */
   createMarker = function createMarker(markerConfig) {
-    console.log("function run: createMarker"); // var listId = '#' + markerConfig.category, >> walter maybe delete this now
+    console.log(">>  >>  function run: createMarker"); // var listId = '#' + markerConfig.category, >> walter maybe delete this now
 
     var listId = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
       label: 'id',
@@ -2040,8 +2040,9 @@ function initMap(mapWrapper, $) {
     if (markerConfig.buildingPrefix.length !== 0) {
       html += '<p class="building-prefix"><strong>Rooms beginning: ' + markerConfig.buildingPrefix + '</strong></p>';
       markerConfig.buildingPrefix = '(' + markerConfig.buildingPrefix + ')';
-    } //add description and close div element
+    }
 
+    console.log('======================='); //add description and close div element
 
     html += markerConfig.description + '</div>'; //create google maps marker
 
@@ -2097,26 +2098,25 @@ function initMap(mapWrapper, $) {
          },
      }); */
 
-    var anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+    var $a = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
       label: 'html',
-      val: '<span>sfsdf' + markerConfig.name + ' ' + markerConfig.buildingPrefix + '</span>'
+      val: '<span>' + markerConfig.name + ' ' + markerConfig.buildingPrefix + '</span>'
     }, {
       label: 'href',
       val: '#'
     }]);
-    anchor.style.background = 'transparent url(' + markerConfig.icon + '?v=1123) no-repeat left center';
-    console.log("========= ".concat(anchor));
-    document.getElementById('content').appendChild(anchor); //add li item to list
-    //li.append($a).appendTo(listId);
+    $a.style.background = 'transparent url(' + markerConfig.icon + '?v=1123) no-repeat left center'; //console.log(`========= ${$a}`)
+    //add li item to list
 
     listId.appendChild($li).appendChild($a);
+    document.getElementById('content').appendChild(listId);
     return marker;
   },
       //end fn.createMarker
   // Deletes all markers in the array by removing references to them
   //commented out to keep JSLint happy as this function is not currently used
   deleteOverlays = function deleteOverlays(markersArray) {
-    console.log("function run: deleteOverlays");
+    console.log(">>  >>  function run: deleteOverlays");
     var i;
 
     if (markersArray) {
@@ -2133,7 +2133,7 @@ function initMap(mapWrapper, $) {
   findChildText = function findChildText(node, name) {
     var value = '';
     /* 
-    node.children().each(function(child) {
+    node.children().eac h(function(child) {
         if (child.nodeName == name) {
             value = $(child).text();
             return false;
@@ -2145,13 +2145,18 @@ function initMap(mapWrapper, $) {
 
     let children = node.children;
     let child;
+    let content;
 
     for (child in children) {
       if (child.nodeName == name) {
         let content = child.textContent;
         value = content.trim();
         return false;
-      }
+      } // remove
+
+
+      content = child.textContent;
+      value = content.trim(); //
 
       return true;
     }
@@ -2167,7 +2172,7 @@ function initMap(mapWrapper, $) {
    * @return {?}
    */
   parseXml = function parseXml(xml, textStatus, jqXHR) {
-    console.log("function run: parseXml");
+    console.log(">>  >>  function run: parseXml");
     var items = xml.getElementsByTagName('item');
     console.log("items: ".concat(items.length)); //console.log(xml.getElementsBytagName('item').length);
 
@@ -2179,7 +2184,7 @@ function initMap(mapWrapper, $) {
         searchIds = {}; // >>> re-write
 
     items.forEach(function (item) {
-      console.log("cycling through items...");
+      console.log("...cycling through items...");
       $self = item;
       markerConfig.index = index + 1;
       markerConfig.name = $self.getElementsByTagName('title')[0].textContent;
@@ -2208,6 +2213,7 @@ function initMap(mapWrapper, $) {
       console.log("markerConfig.geoLong is: ".concat(markerConfig.geoLong));
       markerConfig.point = new google.maps.LatLng(parseFloat(markerConfig.geoLat), parseFloat(markerConfig.geoLong)); //call createmarker fn
 
+      console.log('>>>>>>>>>calls create marker func');
       marker = createMarker(markerConfig);
 
       if (markerConfig.category !== 'buildings') {
@@ -2273,7 +2279,7 @@ function initMap(mapWrapper, $) {
   },
       //end parse xml,
   loadXml = function loadXml() {
-    console.log("function run: loadXML"); //get locations.xml
+    console.log(">>  >>  function run: loadXML"); //get locations.xml
 
     /*
     $.ajax({
@@ -2286,7 +2292,7 @@ function initMap(mapWrapper, $) {
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
-      console.log('ajax');
+      console.log('a>>  >>  ajax');
 
       if (xhr.readyState == 4 && xhr.status === 200) {
         parseXml(xhr.responseXML);
@@ -2302,13 +2308,13 @@ function initMap(mapWrapper, $) {
    * @return {Undefined}
    */
   init = function init() {
-    console.log("function run: init");
+    console.log(">>  >>  function run: init");
     $mapContainer.classList.add('loading');
     $mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('i', [{
       label: 'class',
       val: 'fa fa-refresh fa-spin loading-fa-icon'
-    }]));
-    initKmlLayers(kmlLayers);
+    }])); //initKmlLayers(kmlLayers);
+
     loadXml(); //initalise accordion for filter
 
     /* walter don't need this for now
