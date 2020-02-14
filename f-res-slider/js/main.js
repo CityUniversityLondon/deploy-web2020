@@ -7724,38 +7724,63 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
      * increment. If there is, increase progress indicator and total slides by 1.
      */
 
-    console.log((updatedPosition - 1) % sliderIncrement);
     sliderIncrement = parseInt(sliderIncrement);
     let firstInGroup = false;
 
     if ((updatedPosition - 1) % sliderIncrement == 0) {
       firstInGroup = true;
-    } // If index position not first in group
+    } // If updated index position is not first in default grouping.
 
 
     if (!firstInGroup) {
       // Increase group position by 1 to account for extra slide
-      currentGroup += 1; // Not within final group of items and has a remainder -> add slide
+      currentGroup += 1;
+      /**
+       * Visible items occupy all of slide space in final group -> don't alter counter.
+       * Example:
+       * 4 items, index position 2
+       * User alters viewport to desktop -> items 2-4 will display
+       * No need to update desktop controller (displays 2/2)
+       */
 
-      if (sliderChildrenLength - updatedPosition > sliderIncrement && updatedPosition < sliderChildrenLength && (sliderChildrenLength - 1) % sliderIncrement !== 0) {
-        // Nothing seems to be happening with this condition....
+      if (sliderChildrenLength + 1 - updatedPosition == sliderIncrement && updatedPosition < sliderChildrenLength && (sliderChildrenLength - 1) % sliderIncrement == 0) {
+        totalSlidesDisplay.textContent = totalSlides;
+        currentGroup = totalSlides;
+      } else if (
+      /**
+       * Not within final group and only one slide in group -> add slide
+       * Example:
+       * 4 items, index position 2
+       * User alters viewport to tablet -> items 2-3 will display
+       * Update tablet controller (displays 2/3)
+       */
+      //
+      sliderChildrenLength - updatedPosition >= sliderIncrement && updatedPosition < sliderChildrenLength && (sliderChildrenLength - 1) % sliderIncrement !== 0) {
+        totalSlides += 1;
+        totalSlidesDisplay.textContent = totalSlides;
+      } else if (
+      /**
+       * Within final group and default slide total is 1 -> add slide
+       * Example:
+       * 2 items, index position 2
+       * User alters position to desktop -> item 2 will display
+       * Update desktop controller (displays 2/2)
+       */
+      sliderChildrenLength - updatedPosition < sliderIncrement && totalSlides == 1) {
+        totalSlides += 1;
+        totalSlidesDisplay.textContent = totalSlides;
+        currentGroup = totalSlides;
+      } else if (
+      /**
+       * Within final group and default slide total is >1 -> add slide
+       * Example
+       * Within final group and >1 slide in set -> add slide + increase current group counter
+       */
+      sliderChildrenLength - updatedPosition < sliderIncrement && totalSlides > 1 && updatedPosition !== sliderChildrenLength) {
         // totalSlides += 1;
-        // totalSlidesDisplay.textContent = totalSlides;
-        console.log('abc');
-      } else if ( // Visible items occupy all of slide space in final group -> don't alter counter. E.g. 4 items, position 2, expand to desktop
-      sliderChildrenLength + 1 - updatedPosition == sliderIncrement && updatedPosition < sliderChildrenLength && (sliderChildrenLength - 1) % sliderIncrement == 0) {
         totalSlidesDisplay.textContent = totalSlides;
-        currentGroup = totalSlides; // Not within final group of items and has no remainder -> don't add slide
-      } else if (sliderChildrenLength - updatedPosition >= sliderIncrement && updatedPosition < sliderChildrenLength && (sliderChildrenLength - 1) % sliderIncrement == 0) {// totalSlidesDisplay.textContent = totalSlides;
-        // Within final group and only one slide in group -> add slide
-      } else if (sliderChildrenLength - updatedPosition >= sliderIncrement && updatedPosition < sliderChildrenLength && (sliderChildrenLength - 1) % sliderIncrement !== 0) {
-        totalSlides += 1;
-        totalSlidesDisplay.textContent = totalSlides;
-      } else if (sliderChildrenLength - updatedPosition < sliderIncrement && totalSlides == 1) {
-        totalSlides += 1;
-        totalSlidesDisplay.textContent = totalSlides;
-        currentGroup = totalSlides; // Within final group and >1 slide in set -> add slide + increase current group counter
-      } else if (sliderChildrenLength - updatedPosition < sliderIncrement && totalSlides > 1) {
+        currentGroup = totalSlides;
+      } else if (updatedPosition == sliderChildrenLength) {
         totalSlides += 1;
         totalSlidesDisplay.textContent = totalSlides;
         currentGroup = totalSlides;
@@ -7768,6 +7793,16 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
     } else if (sliderChildrenLength == sliderIncrement && updatedPosition == 1) {
       totalSlidesDisplay.textContent = totalSlides;
     } else if (updatedPosition == 1) {
+      totalSlidesDisplay.textContent = totalSlides;
+    } else if (
+    /**
+     * Final group, no remainders
+     * Example:
+     * 4 items, position 3
+     * Tablet will display 3-4
+     * Tablet controller doesn't increase, displays 2/2
+     */
+    sliderChildrenLength - updatedPosition < sliderIncrement && updatedPosition > 1) {
       totalSlidesDisplay.textContent = totalSlides;
     }
     /**
