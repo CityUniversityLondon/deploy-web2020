@@ -7695,7 +7695,11 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
   let controlWraps = slider.querySelectorAll('.slider__controls__wrap');
 
   for (const controlWrap of controlWraps) {
-    // Increase/decrease progrees indicator based on button click.
+    if (controlWrap.getAttribute('data-display')) {
+      controlWrap.removeAttribute('data-display');
+    } // Increase/decrease progrees indicator based on button click.
+
+
     if (sliderDirection == 'forward') {
       updatedPosition = currentPosition + sliderIncrement;
     }
@@ -7772,27 +7776,50 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
         currentGroup = totalSlides;
       } else if (
       /**
-       * Within final group and default slide total is >1 -> add slide
-       * Example
-       * Within final group and >1 slide in set -> add slide + increase current group counter
+       * Within final group, index position not last in set, default slide total is >1 -> don't add slide
+       * Example:
+       * 4 items, index position 3
+       * Tablet displays items 3-4
+       * Tablet controller displays 2/2
        */
       sliderChildrenLength - updatedPosition < sliderIncrement && totalSlides > 1 && updatedPosition !== sliderChildrenLength) {
-        // totalSlides += 1;
         totalSlidesDisplay.textContent = totalSlides;
         currentGroup = totalSlides;
-      } else if (updatedPosition == sliderChildrenLength) {
+      } else if (
+      /**
+       * Index position is last in set -> add slide
+       * Example:
+       * 4 items, index position 4
+       * Tablet displays item 4
+       * Tablet controller displays 3/3
+       */
+      updatedPosition == sliderChildrenLength && sliderIncrement > 1) {
         totalSlides += 1;
         totalSlidesDisplay.textContent = totalSlides;
         currentGroup = totalSlides;
-      } else if (updatedPosition == sliderChildrenLength && sliderIncrement > 1) {
-        totalSlides += 1;
-        totalSlidesDisplay.textContent = totalSlides;
-        currentGroup = totalSlides;
-      } // First in group and index position is 1 -> don't add slide
+      }
+      /**
+       * FIRST IN GROUP CONDITIONS
+       */
 
-    } else if (sliderChildrenLength == sliderIncrement && updatedPosition == 1) {
+    } else if (
+    /**
+     * Reset to origianl slide count if first item active and matching and number of items equals increment
+     * Example:
+     * 3 items, index position 1
+     * Desktop display items 1-3
+     * Desktop controller displays 1/1
+     */
+    sliderChildrenLength == sliderIncrement && updatedPosition == 1) {
       totalSlidesDisplay.textContent = totalSlides;
     } else if (updatedPosition == 1) {
+      /**
+       * Reset to original slide count if first item active and matching and number of items equals increment
+       * Example:
+       * 3 items, index position 1
+       * Desktop display items 1-3
+       * Desktop controller displays 1/1
+       */
       totalSlidesDisplay.textContent = totalSlides;
     } else if (
     /**
@@ -7870,10 +7897,11 @@ function launchResponsiveSlider(slider) {
    * @param {String} deviceType
    * @param {Number} increment
    * @param {Number} currentPosition
+   * @param {Boolean} controllerDisplay
    */
 
 
-  function buildControls(deviceType, increment, currentPosition) {
+  function buildControls(deviceType, increment, currentPosition, controllerDisplay) {
     let slides = Math.ceil(sliderChildrenLength / increment);
     let sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
       label: 'class',
@@ -7893,6 +7921,9 @@ function launchResponsiveSlider(slider) {
     }, {
       label: 'data-slides',
       val: slides
+    }, {
+      label: 'data-display',
+      val: controllerDisplay
     }]);
     let sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
       label: 'class',
@@ -7969,9 +8000,29 @@ function launchResponsiveSlider(slider) {
   } // Build each type of controller (mobile, tablet, desktop)
 
 
-  sliderChildrenLength > 1 ? buildControls('mobile', 1, 1, false) : null;
-  sliderChildrenLength >= 2 ? buildControls('tablet', 2, 1, false) : null;
-  sliderChildrenLength >= 3 ? buildControls('desktop', 3, 1, false) : null;
+  console.log(sliderChildrenLength);
+
+  if (sliderChildrenLength == 2) {
+    buildControls('mobile', 1, 1, true);
+    buildControls('tablet', 2, 1, false);
+    buildControls('desktop', 3, 1, false);
+  }
+
+  if (sliderChildrenLength == 3) {
+    buildControls('mobile', 1, 1, true);
+    buildControls('tablet', 2, 1, true);
+    buildControls('desktop', 3, 1, false);
+  }
+
+  if (sliderChildrenLength == 3) {
+    buildControls('mobile', 1, 1, true);
+    buildControls('tablet', 2, 1, true);
+    buildControls('desktop', 3, 1, true);
+  } // buildControls('mobile', 1, 1, true);
+  // buildControls('tablet', 2, 1, true);
+  // buildControls('desktop', 3, 1, true);
+
+
   let controlWraps = slider.querySelectorAll('.slider__controls__wrap');
   /**
    * For each instance of the controls, update the current position data attribute when next previous/buttons
@@ -7987,7 +8038,8 @@ function launchResponsiveSlider(slider) {
 
     nextBtn.addEventListener('click', () => {
       //Get data attribute values from specific controller clicked.
-      let parentWrapper = nextBtn.closest('.slider__controls__wrap');
+      let parentWrapper = nextBtn.closest('.slider__controls__wrap'); // console.log(controlWrap);
+
       let sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
       let currentPosition = parseInt(parentWrapper.getAttribute('data-currentposition'));
       let sliderDirection = 'forward';

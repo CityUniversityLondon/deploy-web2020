@@ -44703,6 +44703,10 @@ blockquote footer cite {
     display: none;
 }
 
+.slider-responsive .slider__controls__wrap[data-display='false'] {
+    display: none;
+}
+
 .slider-responsive .slider__controls__progress {
     color: #696969;
     margin: 1rem 2rem 0 0;
