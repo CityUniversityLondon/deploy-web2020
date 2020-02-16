@@ -2209,50 +2209,50 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__course(props) {
-  var subtitle = props.details.metaData.type || props.details.metaData.level || null;
-  var courseCode = props.details.metaData.code && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "fas fa-fw fa-graduation-cap icon",
-    "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Course code:"), " ", react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.code));
-  var award = props.details.metaData.qualification && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+  var subtitle = props.details.metaData.type || props.details.metaData.level || null,
+      award = props.details.metaData.qualification && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
     className: "finder__results__card__tag"
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-fw fa-award icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Award:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.qualification.split('|').length > 2 ? props.details.metaData.qualification.split('|').slice(0, -1).join(', ') + ' or ' + props.details.metaData.qualification.split('|').slice(-1) : props.details.metaData.qualification.split('|').join(' or ')));
-  var duration = props.details.metaData.duration && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Award:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.qualification.split('|').length > 2 ? props.details.metaData.qualification.split('|').slice(0, -1).join(', ') + ' or ' + props.details.metaData.qualification.split('|').slice(-1) : props.details.metaData.qualification.split('|').join(' or '))),
+      duration = props.details.metaData.duration && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
     className: "finder__results__card__tag"
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fal fa-fw fa-clock icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Duration:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.duration));
-  var method = props.details.metaData.method && props.query.facets.method && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Duration:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.duration)),
+      method = props.details.metaData.method && props.query.facets.method && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
     className: "finder__results__card__tag"
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-fw fa-book-reader icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Method of study:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.method.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_6__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').slice(0, -1).join(', ') + ' or ' + Object(_util__WEBPACK_IMPORTED_MODULE_6__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_6__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').join(' or ')));
-  var location = props.details.metaData.location && props.query.facets.location && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Method of study:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.method.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_6__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').slice(0, -1).join(', ') + ' or ' + Object(_util__WEBPACK_IMPORTED_MODULE_6__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_6__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').join(' or '))),
+      location = props.details.metaData.location && props.query.facets.location && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
     className: "finder__results__card__tag"
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-fw fa-map-marker-alt icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Location:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.location));
-  var school = props.details.metaData.school && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Location:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.location)),
+      school = props.details.metaData.school && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
     className: "finder__results__card__tag"
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "School:"), " ", react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.school));
-  var clearing = props.details.metaData.clearing === '1' && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "School:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.school)),
+      clearing = props.details.metaData.clearing === '1' && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "clearing_label"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Available in clearing"));
-  var external = props.details.indexUrl.indexOf('www.cass.city.ac.uk') > 0 && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Available in clearing")),
+      external = props.details.indexUrl.indexOf('www.cass.city.ac.uk') > 0 && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-external-link icon",
     "aria-label": "(external link)"
-  }));
+  })),
+      courseCode = props.details.metaData.code && (['Undergraduate degree', 'Foundation course', 'Postgraduate taught degree'].some(s => props.details.metaData.level.indexOf(s) > 0) || props.query.query.indexOf(props.details.metaData.code) > 0) ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+    className: "finder__results__card__tag"
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    className: "fas fa-fw fa-graduation-cap icon",
+    "aria-hidden": "true"
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Course code:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.code.split('|').join('/'))) : null;
   return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     className: "finder__results__card finder__results__course"
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
@@ -2263,7 +2263,7 @@ function finder__results__course(props) {
     className: "finder__results__card__heading"
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "underline-transition__title"
-  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_5__["default"])(props.details.title, props.query.query) : props.details.title), external), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_5__["default"])(props.details.title, props.query.query) : props.details.title, external)), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
     className: "finder__results__card__description"
   }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_5__["default"])(subtitle, props.query.query) : subtitle && subtitle), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_5__["default"])(props.details.metaData.c, props.query.query) : props.details.metaData.c && props.details.metaData.c), school, award, duration, courseCode, method, location)));
 }
