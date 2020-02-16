@@ -662,11 +662,11 @@ function finder__results__course(props) {
       clearing = props.details.metaData.clearing === '1' && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "clearing_label"
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Available in clearing")),
-      external = props.details.indexUrl.indexOf('www.cass.city.ac.uk') > 0 && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      external = props.details.indexUrl.indexOf('www.cass.city.ac.uk') >= 0 && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-external-link icon",
     "aria-label": "(external link)"
   })),
-      courseCode = props.details.metaData.code && (['Undergraduate degree', 'Foundation course', 'Postgraduate taught degree'].some(s => props.details.metaData.level.indexOf(s) > 0) || props.query.query.indexOf(props.details.metaData.code) > 0) ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+      courseCode = props.details.metaData.code && (['Undergraduate degree', 'Foundation course', 'Postgraduate taught degree'].some(s => props.details.metaData.level.indexOf(s) >= 0) || props.query.query.indexOf(props.details.metaData.code) >= 0) ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
     className: "finder__results__card__tag"
   }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-fw fa-graduation-cap icon",
