@@ -7695,11 +7695,20 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
   let controlWraps = slider.querySelectorAll('.slider__controls__wrap');
 
   for (const controlWrap of controlWraps) {
-    if (controlWrap.getAttribute('data-display')) {
-      controlWrap.removeAttribute('data-display');
-    } // Increase/decrease progrees indicator based on button click.
-
-
+    // console.log('CP: ' + updatedPosition);
+    // console.log('L: ' + sliderChildrenLength);
+    // console.log('INC: ' + sliderIncrement);
+    //if (controlWrap.getAttribute('data-display')) {
+    // if (updatedPosition == 1 && (sliderChildrenLength == sliderIncrement)) {
+    //     controlWrap.setAttribute('data-display', 'false');
+    //     console.log('a')
+    // }
+    // else {
+    //     controlWrap.removeAttribute('data-display', 'true')
+    //     console.log('b')
+    // }
+    //}
+    // Increase/decrease progrees indicator based on button click.
     if (sliderDirection == 'forward') {
       updatedPosition = currentPosition + sliderIncrement;
     }
@@ -7812,6 +7821,7 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
      */
     sliderChildrenLength == sliderIncrement && updatedPosition == 1) {
       totalSlidesDisplay.textContent = totalSlides;
+      control.setAttribute('data-display', 'false');
     } else if (updatedPosition == 1) {
       /**
        * Reset to original slide count if first item active and matching and number of items equals increment
@@ -7831,6 +7841,10 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
      */
     sliderChildrenLength - updatedPosition < sliderIncrement && updatedPosition > 1) {
       totalSlidesDisplay.textContent = totalSlides;
+    }
+
+    if (updatedPosition > 1) {
+      control.setAttribute('data-display', 'true');
     }
     /**
      * If increment increase exceeds total slides' length, limit the current
@@ -8000,8 +8014,6 @@ function launchResponsiveSlider(slider) {
   } // Build each type of controller (mobile, tablet, desktop)
 
 
-  console.log(sliderChildrenLength);
-
   if (sliderChildrenLength == 2) {
     buildControls('mobile', 1, 1, true);
     buildControls('tablet', 2, 1, false);
@@ -8014,7 +8026,7 @@ function launchResponsiveSlider(slider) {
     buildControls('desktop', 3, 1, false);
   }
 
-  if (sliderChildrenLength == 3) {
+  if (sliderChildrenLength > 3) {
     buildControls('mobile', 1, 1, true);
     buildControls('tablet', 2, 1, true);
     buildControls('desktop', 3, 1, true);
