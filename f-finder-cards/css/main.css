@@ -47067,6 +47067,10 @@ button
     margin-right: 3.25rem;
 }
 
+.chart--piechart svg {
+    width: 100%;
+}
+
 .chart__legend {
     justify-content: center;
     display: flex;
@@ -49790,6 +49794,7 @@ button
     letter-spacing: 0em;
     color: #494949;
     margin-top: 0.75rem;
+    max-width: unset;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
