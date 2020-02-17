@@ -3061,14 +3061,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var core_js_modules_es_set__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.set */ "./node_modules/core-js/modules/es.set.js");
 /* harmony import */ var core_js_modules_es_set__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_set__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../funnelback */ "./src/patterns/finder/funnelback.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
+
 
 
 
@@ -3102,11 +3105,11 @@ var maximumSuggestions = 5,
     keyCodeDown = 40;
 
 function highlightQueryTerm(suggestion, partialQuery) {
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_7___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
     className: "sr-only"
-  }, suggestion), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  }, suggestion), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
     "aria-hidden": "true"
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
     className: "finder__suggestion"
   }, suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()), partialQuery.length)), suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()) + partialQuery.length))));
 }
@@ -3120,20 +3123,20 @@ function highlightQueryTerm(suggestion, partialQuery) {
 
 function finder__query(props) {
   // save what they're typing
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(props.query.query),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(props.query.query),
       _useState2 = _slicedToArray(_useState, 2),
       partialQuery = _useState2[0],
       setPartialQuery = _useState2[1]; // Funnelback suggestions for the currently typed text
 
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])([]),
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])([]),
       _useState4 = _slicedToArray(_useState3, 2),
       suggestions = _useState4[0],
       setSuggestions = _useState4[1]; // Request token for calls to the Funnelback suggestions service, so we
   // can cancel it
 
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])({
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])({
     cancel: () => {}
   }),
       _useState6 = _slicedToArray(_useState5, 2),
@@ -3143,17 +3146,17 @@ function finder__query(props) {
 
   var stringLength = 16,
       stringOffset = -4,
-      _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(stringLength).slice(stringOffset)),
+      _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(stringLength).slice(stringOffset)),
       _useState8 = _slicedToArray(_useState7, 1),
       inputId = _useState8[0]; // boolean to show or hide suggestions
 
 
-  var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(false),
+  var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(false),
       _useState10 = _slicedToArray(_useState9, 2),
       showSuggestions = _useState10[0],
       setShowSuggestions = _useState10[1];
 
-  Object(react__WEBPACK_IMPORTED_MODULE_7__["useEffect"])(() => {
+  Object(react__WEBPACK_IMPORTED_MODULE_8__["useEffect"])(() => {
     setPartialQuery(props.query.query);
   }, [props.updating]);
   var textInput = null;
@@ -3176,19 +3179,9 @@ function finder__query(props) {
   };
 
   var submitForm = () => {
-    console.log("test");
     var queryURL = '';
     var exclusions = ['Short courses', 'Professional development courses', 'City Health courses', 'In-house law courses'];
-    var courseLevel = document.getElementsByClassName('finder__mini')[0].getAttribute('data-level'); // capitalises first letter of labels so they in right format for URL query
-
-    function capataliseFirstChar(phrase) {
-      console.log("phrase is: ".concat(phrase));
-      var lower = phrase;
-      var upper = lower.charAt(0).toUpperCase() + lower.substring(1);
-      return upper;
-    }
-
-    ;
+    var courseLevel = document.getElementsByClassName('finder__mini')[0].getAttribute('data-level');
 
     function exclusion(level) {
       return level === courseLevel;
@@ -3196,13 +3189,10 @@ function finder__query(props) {
 
     function buildURL(level) {
       exclusions.filter(exclusion).length ? queryURL = 'meta_level_sand=Short+courses+and+professional+development&meta_type_sand=' + level : queryURL = 'meta_level_sand=' + level;
-      console.log(queryURL); //console.log(`props level:  ${props.level}`)
-      //window.location.replace(`https://web2020.city.ac.uk/prospective-students/courses?${queryURL}&query=${partialQuery}`);
+      window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?".concat(queryURL, "&query=").concat(partialQuery));
     }
 
-    ;
-    buildURL(courseLevel); //https://web2020.city.ac.uk/prospective-students/courses?meta_level_sand=Postgraduate+taught+degrees&query=health+course
-    //https://web2020.city.ac.uk/prospective-students/courses?meta_level_sand=Postgraduate+taught+degree&query=health+course
+    buildURL(courseLevel);
   };
 
   var submitSuggestion = s => {
@@ -3213,18 +3203,18 @@ function finder__query(props) {
     props.update.results(!props.update.updateState);
   };
 
-  var clear = partialQuery && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  var clear = partialQuery && react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_11__["default"], {
     clear: () => {
       clearQuery();
     }
   }); // render suggestions
   // TODO: probably should be refactored into a separate component
 
-  var suggestionsList = suggestions && suggestions.length > 0 && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
+  var suggestionsList = suggestions && suggestions.length > 0 && react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("ul", {
     className: showSuggestions ? 'finder__query__suggestions show' : 'finder__query__suggestions hide'
-  }, [...new Set(suggestions)].slice(0, maximumSuggestions).map(suggestion => react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+  }, [...new Set(suggestions)].slice(0, maximumSuggestions).map(suggestion => react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("li", {
     key: suggestion
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
     type: "button",
     onBlur: () => setShowSuggestions(false),
     onFocus: () => setShowSuggestions(true),
@@ -3277,16 +3267,16 @@ function finder__query(props) {
       }
     }
   }, highlightQueryTerm(suggestion, partialQuery)))));
-  var input = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+  var input = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
     className: "finder__query__input"
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
     className: "finder__query__icon--wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
     className: "finder__icon fal fa-search"
-  })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+  })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("label", {
     className: "sr-only",
     htmlFor: inputId
-  }, "Search ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+  }, "Search ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
     autoComplete: "off",
     id: inputId,
     name: "query",
@@ -3331,7 +3321,7 @@ function finder__query(props) {
 
       if (e.target.value) {
         // input is populated, ask for suggestions
-        var _suggest = Object(_funnelback__WEBPACK_IMPORTED_MODULE_8__["suggest"])(props.query.collection, e.target.value),
+        var _suggest = Object(_funnelback__WEBPACK_IMPORTED_MODULE_9__["suggest"])(props.query.collection, e.target.value),
             _suggest2 = _slicedToArray(_suggest, 2),
             suggestionsPromise = _suggest2[0],
             newCall = _suggest2[1]; // update our request cancel function for the new request
@@ -3349,25 +3339,25 @@ function finder__query(props) {
       }
     }
   }), suggestionsList, clear);
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("fieldset", {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("fieldset", {
     className: "finder__query"
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
     type: "submit",
     className: "finder__query__submit",
     onClick: () => submitForm()
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
     className: "fal fa-search finder__query__submit__icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
     className: "finder__query__submit__text"
   }, "Find"))));
 }
 
 finder__query.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.object,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.bool
+  config: prop_types__WEBPACK_IMPORTED_MODULE_10___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_10___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_10___default.a.object,
+  updating: prop_types__WEBPACK_IMPORTED_MODULE_10___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__query);
 
@@ -4360,8 +4350,7 @@ function Finder(props) {
     config: props.config,
     query: query,
     update: updater,
-    updating: updating //level={props.level}
-
+    updating: updating
   }));
 }
 
