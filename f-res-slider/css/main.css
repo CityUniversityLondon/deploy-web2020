@@ -3456,6 +3456,10 @@ readers do not read off random characters that represent icons */
     content: "\f6c6";
 }
 
+.fa-coffin-cross:before {
+    content: "\f951";
+}
+
 .fa-cog:before {
     content: "\f013";
 }
@@ -3870,6 +3874,10 @@ readers do not read off random characters that represent icons */
 
 .fa-dagger:before {
     content: "\f6cb";
+}
+
+.fa-dailymotion:before {
+    content: "\f952";
 }
 
 .fa-dashcube:before {
@@ -4844,6 +4852,10 @@ readers do not read off random characters that represent icons */
     content: "\f07b";
 }
 
+.fa-folder-download:before {
+    content: "\f953";
+}
+
 .fa-folder-minus:before {
     content: "\f65d";
 }
@@ -4862,6 +4874,10 @@ readers do not read off random characters that represent icons */
 
 .fa-folder-tree:before {
     content: "\f802";
+}
+
+.fa-folder-upload:before {
+    content: "\f954";
 }
 
 .fa-folders:before {
@@ -5940,6 +5956,10 @@ readers do not read off random characters that represent icons */
     content: "\f16d";
 }
 
+.fa-instagram-square:before {
+    content: "\f955";
+}
+
 .fa-integral:before {
     content: "\f667";
 }
@@ -6762,6 +6782,10 @@ readers do not read off random characters that represent icons */
 
 .fa-mixcloud:before {
     content: "\f289";
+}
+
+.fa-mixer:before {
+    content: "\f956";
 }
 
 .fa-mizuni:before {
@@ -8214,6 +8238,10 @@ readers do not read off random characters that represent icons */
 
 .fa-shoe-prints:before {
     content: "\f54b";
+}
+
+.fa-shopify:before {
+    content: "\f957";
 }
 
 .fa-shopping-bag:before {
@@ -9980,6 +10008,10 @@ readers do not read off random characters that represent icons */
     content: "\f235";
 }
 
+.fa-user-unlock:before {
+    content: "\f958";
+}
+
 .fa-user-visor:before {
     content: "\f94c";
 }
@@ -10553,7 +10585,7 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Pro 5.12.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Pro 5.12.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Commercial License)
  */
 @font-face {
@@ -12271,6 +12303,10 @@ readers do not read off random characters that represent icons */
     content: "\10f6c6";
 }
 
+.fad.fa-coffin-cross:after {
+    content: "\10f951";
+}
+
 .fad.fa-cog:after {
     content: "\10f013";
 }
@@ -13363,6 +13399,10 @@ readers do not read off random characters that represent icons */
     content: "\10f07b";
 }
 
+.fad.fa-folder-download:after {
+    content: "\10f953";
+}
+
 .fad.fa-folder-minus:after {
     content: "\10f65d";
 }
@@ -13381,6 +13421,10 @@ readers do not read off random characters that represent icons */
 
 .fad.fa-folder-tree:after {
     content: "\10f802";
+}
+
+.fad.fa-folder-upload:after {
+    content: "\10f954";
 }
 
 .fad.fa-folders:after {
@@ -17509,6 +17553,10 @@ readers do not read off random characters that represent icons */
 
 .fad.fa-user-times:after {
     content: "\10f235";
+}
+
+.fad.fa-user-unlock:after {
+    content: "\10f958";
 }
 
 .fad.fa-user-visor:after {
@@ -26562,310 +26610,6 @@ _:-ms-lang(x),
     .cms-editor .cms-editor-warning-remover:hover {
         background-color: #370612;
         color: #ffffff;
-    }
-}
-
-.js .cookie-notice {
-    display: none;
-}
-
-.js .cookie-notice p {
-    max-width: 55ch;
-    padding: 1.5rem;
-}
-
-.js .cookie-notice a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    transition: background-size 0.2s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    background-image: linear-gradient(120deg, #919191 0%, #919191 100%);
-    border-bottom-color: #919191;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #919191;
-    transition: color 0.3s ease;
-}
-
-@media (hover: hover) {
-    .js .cookie-notice a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.js .cookie-notice a:focus, .js .cookie-notice a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .js .cookie-notice a {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .js .cookie-notice a:hover {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #919191 0%, #919191 100%);
-    }
-}
-
-.js .cookie-notice a:focus, .js .cookie-notice a:active {
-    outline-color: #ffffff;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.js .cookie-notice a:visited {
-    border-bottom-color: #919191;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #919191;
-}
-
-.js .cookie-notice a:focus {
-    border-bottom-color: #919191;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #919191;
-}
-
-@media (hover: hover) {
-    .js .cookie-notice a:hover {
-        border-bottom-color: #919191;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        color: #ffffff;
-    }
-}
-
-.js .cookie-notice a:active {
-    background-color: #919191;
-    border-bottom-color: #919191;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #ffffff;
-}
-
-@media screen {
-    .js .cookie-notice[data-display='true'] {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.79rem;
-        line-height: 1.625;
-        letter-spacing: 0.005em;
-        background: rgba(12, 12, 14, 0.95);
-        bottom: 0;
-        color: #ffffff;
-        left: 0;
-        position: fixed;
-        width: 100vw;
-        z-index: 'inpage';
-    }
-}
-
-@media screen and (min-width: 1280px) and (max-width: 1919px) {
-    .js .cookie-notice[data-display='true'] {
-        letter-spacing: 0em;
-    }
-}
-
-@media screen and (min-width: 1920px) and (max-width: 3839px) {
-    .js .cookie-notice[data-display='true'] {
-        letter-spacing: -0.007em;
-    }
-}
-
-@media screen and (min-width: 3840px) and (max-width: 7679px) {
-    .js .cookie-notice[data-display='true'] {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media screen and (min-width: 7680px) {
-    .js .cookie-notice[data-display='true'] {
-        letter-spacing: -0.017em;
-    }
-}
-
-.js .cookie-notice button {
-    background: initial;
-    border-radius: 0.25rem;
-    border: none;
-    color: initial;
-    display: inline-flex;
-    font-weight: 600;
-    padding: 0.5rem 1.5rem;
-    position: relative;
-    transition: background-color 0.6s, transform 0.6s;
-    border: 0.125rem solid #d61726;
-    background: #d61726;
-    color: #ffffff;
-}
-
-.js .cookie-notice button:disabled {
-    cursor: default;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .js .cookie-notice button {
-        transition: none;
-    }
-}
-
-@media (max-width: 432px) {
-    .js .cookie-notice button {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-}
-
-.js .cookie-notice button span {
-    transition: transform 0.6s;
-}
-
-.js .cookie-notice button:after {
-    content: '\f061';
-    font-family: 'Font Awesome';
-    font-style: normal;
-    font-weight: normal;
-    opacity: 0;
-    position: absolute;
-    right: 1.5rem;
-    text-decoration: inherit;
-    transform: translateX(-0.75rem);
-    transition: background-color 0.6s, transform 0.6s;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .js .cookie-notice button:after {
-        transition: none;
-    }
-}
-
-.js .cookie-notice button:focus, .js .cookie-notice button:active {
-    background-color: transparent;
-    border: 0.125rem solid #d61726;
-    color: #ffffff;
-}
-
-.js .cookie-notice button:focus span, .js .cookie-notice button:active span {
-    transform: translateX(-0.75rem);
-}
-
-.js .cookie-notice button:focus:after, .js .cookie-notice button:active:after {
-    opacity: 1;
-    transform: translateX(0.75rem);
-}
-
-@media (hover: hover) {
-    .js .cookie-notice button:hover {
-        background-color: transparent;
-        border: 0.125rem solid #d61726;
-        color: #ffffff;
-    }
-    .js .cookie-notice button:hover span {
-        transform: translateX(-0.75rem);
-    }
-    .js .cookie-notice button:hover:after {
-        opacity: 1;
-        transform: translateX(0.75rem);
-    }
-}
-
-.js .cookie-notice button:disabled {
-    opacity: 0.7;
-}
-
-.js .cookie-notice button:disabled span {
-    transform: none;
-}
-
-.js .cookie-notice button:disabled:after {
-    opacity: 0;
-    transform: none;
-}
-
-.js .cookie-notice button:visited {
-    color: #ffffff;
-    border-color: #d61726;
-}
-
-.js .cookie-notice button:focus {
-    background: #d61726;
-    color: #ffffff;
-}
-
-.js .cookie-notice button:active, .js .cookie-notice button:focus {
-    border-color: #d61726;
-}
-
-.js .cookie-notice button:active:focus, .js .cookie-notice button:active:active, .js .cookie-notice button:focus:focus, .js .cookie-notice button:focus:active {
-    outline-color: #ffffff;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-@media (hover: hover) {
-    .js .cookie-notice button:hover, .js .cookie-notice button:active {
-        border-color: #d61726;
-        background-image: none;
-        background: transparent;
-    }
-}
-
-.js .cookie-notice button:disabled {
-    background: #d61726;
-    border: 0.125rem solid #d61726;
-}
-
-@media (max-width: 767px) {
-    .js .cookie-notice {
-        flex-direction: column;
-    }
-    .js .cookie-notice button {
-        margin-bottom: 1.5rem;
     }
 }
 
@@ -47325,6 +47069,10 @@ button
 
 .chart--piechart {
     margin-right: 3.25rem;
+}
+
+.chart--piechart svg {
+    width: 100%;
 }
 
 .chart__legend {
