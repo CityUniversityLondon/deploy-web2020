@@ -7910,19 +7910,6 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
     for (var _iterator = controlWraps[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
       var controlWrap = _step.value;
 
-      // console.log('CP: ' + updatedPosition);
-      // console.log('L: ' + sliderChildrenLength);
-      // console.log('INC: ' + sliderIncrement);
-      //if (controlWrap.getAttribute('data-display')) {
-      // if (updatedPosition == 1 && (sliderChildrenLength == sliderIncrement)) {
-      //     controlWrap.setAttribute('data-display', 'false');
-      //     console.log('a')
-      // }
-      // else {
-      //     controlWrap.removeAttribute('data-display', 'true')
-      //     console.log('b')
-      // }
-      //}
       // Increase/decrease progrees indicator based on button click.
       if (sliderDirection === 'forward') {
         updatedPosition = currentPosition + sliderIncrement;
@@ -8048,24 +8035,15 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
 
       } else if (
       /**
-       * Reset to origianl slide count if first item active and matching and number of items equals increment
+       * Reset to original slide count if first item active and matching and number of items equals increment
        * Example:
        * 3 items, index position 1
        * Desktop display items 1-3
-       * Desktop controller displays 1/1
+       * Desktop controller displays 1/1 but data-display attribute set to 'false' to stop this being visible
        */
       sliderChildrenLength === sliderIncrement && updatedPosition === 1) {
         totalSlidesDisplay.textContent = totalSlides;
         control.setAttribute('data-display', 'false');
-      } else if (updatedPosition === 1) {
-        /**
-         * Reset to original slide count if first item active and matching and number of items equals increment
-         * Example:
-         * 3 items, index position 1
-         * Desktop display items 1-3
-         * Desktop controller displays 1/1
-         */
-        totalSlidesDisplay.textContent = totalSlides;
       } else if (
       /**
        * Final group, no remainders
@@ -8077,6 +8055,11 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
       sliderChildrenLength - updatedPosition < sliderIncrement && updatedPosition > 1) {
         totalSlidesDisplay.textContent = totalSlides;
       }
+      /**
+       * There always needs to be a way to navigate back to first item in data
+       * set so controller should be visible to allow this behaviour.
+       */
+
 
       if (updatedPosition > 1) {
         control.setAttribute('data-display', 'true');
@@ -8299,10 +8282,7 @@ function launchResponsiveSlider(slider) {
     buildControls('mobile', 1, 1, true);
     buildControls('tablet', 2, 1, true);
     buildControls('desktop', 3, 1, true);
-  } // buildControls('mobile', 1, 1, true);
-  // buildControls('tablet', 2, 1, true);
-  // buildControls('desktop', 3, 1, true);
-
+  }
 
   var controlWraps = slider.querySelectorAll('.slider__controls__wrap');
   /**
