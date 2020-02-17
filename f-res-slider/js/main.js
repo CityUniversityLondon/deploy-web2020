@@ -7850,6 +7850,111 @@ __webpack_require__.r(__webpack_exports__);
 var className = 'slider-responsive';
 var sliderChildren, sliderChildrenLength, updatedPosition;
 /**
+ * Builds slider controls.
+ * @param {String} deviceType
+ * @param {Number} increment
+ * @param {Number} currentPosition
+ * @param {Boolean} controllerDisplay
+ */
+
+function buildControls(deviceType, increment, currentPosition, controllerDisplay, slider) {
+  var slides = Math.ceil(sliderChildrenLength / increment);
+  var sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'slider__controls__wrap'
+  }, {
+    label: 'data-device',
+    val: deviceType
+  }, {
+    label: 'data-increment',
+    val: increment
+  }, {
+    label: 'data-currentPosition',
+    val: currentPosition
+  }, {
+    label: 'data-length',
+    val: sliderChildrenLength
+  }, {
+    label: 'data-slides',
+    val: slides
+  }, {
+    label: 'data-display',
+    val: controllerDisplay
+  }]);
+  var sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'slider__controls'
+  }]);
+  var sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'slider__controls__progress'
+  }]);
+  var sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'slider__controls__buttons'
+  }]); // Slider progress
+
+  sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('span', [{
+    label: 'content',
+    val: '1'
+  }, {
+    label: 'class',
+    val: 'slide__controls__progress__active'
+  }]));
+  sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('span', [{
+    label: 'content',
+    val: '/'
+  }, {
+    label: 'class',
+    val: 'slide__controls__progress__separator'
+  }])); // Total slides display
+
+  sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('span', [{
+    label: 'content',
+    val: Math.ceil(sliderChildrenLength / increment)
+  }, {
+    label: 'class',
+    val: 'slide__controls__progress__total'
+  }])); // Next / previous buttons
+
+  sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
+    label: 'aria-label',
+    val: 'Previous item'
+  }, {
+    label: 'disabled',
+    val: true
+  }, {
+    label: 'class',
+    val: 'fas fa-arrow-left slider__controls__buttons__prev swiper-slider-arrow arrow-left--btn-prev'
+  }])); // If slider children items is equal to slider increment, disable next button by default.
+
+  if (sliderChildrenLength === increment) {
+    sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
+      label: 'aria-label',
+      val: 'Next item'
+    }, {
+      label: 'class',
+      val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-left--btn-next'
+    }, {
+      label: 'disabled',
+      val: true
+    }]));
+  } else {
+    sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
+      label: 'aria-label',
+      val: 'Next item'
+    }, {
+      label: 'class',
+      val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-left--btn-next'
+    }]));
+  }
+
+  sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
+  slider.appendChild(sliderControlsWrap);
+  sliderControls.appendChild(sliderButtons);
+  slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled');
+}
+/**
  * The number of items to display on each slide.
  *
  * @param {Number} sliderIncrement - Amount to increase/decrease visible listing index number.
@@ -7857,6 +7962,7 @@ var sliderChildren, sliderChildrenLength, updatedPosition;
  * @param {String} sliderDirection - Increase or decrease visible index number.
  * @param {Element} slider - The slider.
  */
+
 
 function itemsDisplay(sliderIncrement, currentPosition, sliderDirection, slider) {
   // Show next, or previous, group of listings based on button's slider direction
@@ -8143,14 +8249,7 @@ function launchResponsiveSlider(slider) {
         items[1] ? items[1].setAttribute('data-device', 'tablet') : null;
         items[2] ? items[2].setAttribute('data-device', 'desktop') : null;
       }
-    }
-    /**
-     * Builds slider controls.
-     * @param {String} deviceType
-     * @param {Number} increment
-     * @param {Number} currentPosition
-     * @param {Boolean} controllerDisplay
-     */
+    } // Build each type of controller (mobile, tablet, desktop)
 
   } catch (err) {
     _didIteratorError3 = true;
@@ -8167,121 +8266,22 @@ function launchResponsiveSlider(slider) {
     }
   }
 
-  function buildControls(deviceType, increment, currentPosition, controllerDisplay) {
-    var slides = Math.ceil(sliderChildrenLength / increment);
-    var sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'slider__controls__wrap'
-    }, {
-      label: 'data-device',
-      val: deviceType
-    }, {
-      label: 'data-increment',
-      val: increment
-    }, {
-      label: 'data-currentPosition',
-      val: currentPosition
-    }, {
-      label: 'data-length',
-      val: sliderChildrenLength
-    }, {
-      label: 'data-slides',
-      val: slides
-    }, {
-      label: 'data-display',
-      val: controllerDisplay
-    }]);
-    var sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'slider__controls'
-    }]);
-    var sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'slider__controls__progress'
-    }]);
-    var sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'slider__controls__buttons'
-    }]); // Slider progress
-
-    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('span', [{
-      label: 'content',
-      val: '1'
-    }, {
-      label: 'class',
-      val: 'slide__controls__progress__active'
-    }]));
-    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('span', [{
-      label: 'content',
-      val: '/'
-    }, {
-      label: 'class',
-      val: 'slide__controls__progress__separator'
-    }])); // Total slides display
-
-    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('span', [{
-      label: 'content',
-      val: Math.ceil(sliderChildrenLength / increment)
-    }, {
-      label: 'class',
-      val: 'slide__controls__progress__total'
-    }])); // Next / previous buttons
-
-    sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
-      label: 'aria-label',
-      val: 'Previous item'
-    }, {
-      label: 'disabled',
-      val: true
-    }, {
-      label: 'class',
-      val: 'fas fa-arrow-left slider__controls__buttons__prev swiper-slider-arrow arrow-left--btn-prev'
-    }])); // If slider children items is equal to slider increment, disable next button by default.
-
-    if (sliderChildrenLength === increment) {
-      sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
-        label: 'aria-label',
-        val: 'Next item'
-      }, {
-        label: 'class',
-        val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-left--btn-next'
-      }, {
-        label: 'disabled',
-        val: true
-      }]));
-    } else {
-      sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
-        label: 'aria-label',
-        val: 'Next item'
-      }, {
-        label: 'class',
-        val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-left--btn-next'
-      }]));
-    }
-
-    sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
-    slider.appendChild(sliderControlsWrap);
-    sliderControls.appendChild(sliderButtons);
-    slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled');
-  } // Build each type of controller (mobile, tablet, desktop)
-
-
   if (sliderChildrenLength === 2) {
-    buildControls('mobile', 1, 1, true);
-    buildControls('tablet', 2, 1, false);
-    buildControls('desktop', 3, 1, false);
+    buildControls('mobile', 1, 1, true, slider);
+    buildControls('tablet', 2, 1, false, slider);
+    buildControls('desktop', 3, 1, false, slider);
   }
 
   if (sliderChildrenLength === 3) {
-    buildControls('mobile', 1, 1, true);
-    buildControls('tablet', 2, 1, true);
-    buildControls('desktop', 3, 1, false);
+    buildControls('mobile', 1, 1, true, slider);
+    buildControls('tablet', 2, 1, true, slider);
+    buildControls('desktop', 3, 1, false, slider);
   }
 
   if (sliderChildrenLength > 3) {
-    buildControls('mobile', 1, 1, true);
-    buildControls('tablet', 2, 1, true);
-    buildControls('desktop', 3, 1, true);
+    buildControls('mobile', 1, 1, true, slider);
+    buildControls('tablet', 2, 1, true, slider);
+    buildControls('desktop', 3, 1, true, slider);
   }
 
   var controlWraps = slider.querySelectorAll('.slider__controls__wrap');
@@ -8305,8 +8305,7 @@ function launchResponsiveSlider(slider) {
 
       nextBtn.addEventListener('click', () => {
         //Get data attribute values from specific controller clicked.
-        var parentWrapper = nextBtn.closest('.slider__controls__wrap'); // console.log(controlWrap);
-
+        var parentWrapper = nextBtn.closest('.slider__controls__wrap');
         var sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
         var currentPosition = parseInt(parentWrapper.getAttribute('data-currentposition'));
         var sliderDirection = 'forward';
