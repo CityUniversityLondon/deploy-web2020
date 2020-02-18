@@ -2249,7 +2249,7 @@ function finder__results__course(props) {
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-fw fa-graduation-cap icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Course code:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.code.split('|').join('/'))) : null;
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Course code", props.details.metaData.code.split('|').length > 1 && 's', ":"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.code.split('|').join('/'))) : null;
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "finder__results__card finder__results__course"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -3176,7 +3176,20 @@ function finder__query(props) {
   };
 
   var submitForm = () => {
-    window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?query=".concat(partialQuery));
+    var queryURL = '';
+    var exclusions = ['Short courses', 'Professional development courses', 'City Health courses', 'In-house law courses'];
+    var courseLevel = document.getElementsByClassName('finder__mini')[0].getAttribute('data-level');
+
+    function exclusion(level) {
+      return level === courseLevel;
+    }
+
+    function buildURL(level) {
+      exclusions.filter(exclusion).length ? queryURL = 'meta_level_sand=Short+courses+and+professional+development&meta_type_sand=' + level : queryURL = 'meta_level_sand=' + level;
+      window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?".concat(queryURL, "&query=").concat(partialQuery));
+    }
+
+    buildURL(courseLevel);
   };
 
   var submitSuggestion = s => {
