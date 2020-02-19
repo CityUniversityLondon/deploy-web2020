@@ -1865,7 +1865,7 @@ function createMap(mapWrapper, $) {
     $a.style.background = 'transparent url(' + markerConfig.icon + '?v=1123) no-repeat left center'; //console.log(`========= ${$a}`)
     //add li item to list
 
-    listId.appendChild($li).appendChild($a); //document.getElementById('content').appendChild(listId);
+    listId ? listId.appendChild($li).appendChild($a) : null; //document.getElementById('content').appendChild(listId);
 
     return marker;
   },
@@ -1931,7 +1931,7 @@ function createMap(mapWrapper, $) {
 
       markerConfig.icon = findChildText($self, 'CUL:icon'); //console.log(`markerConfig.icon is: ${markerConfig.icon}`)
 
-      markerConfig.category = $self.getElementsByTagName('category')[0].textContent ? $self.getElementsByTagName('category')[0].textContent : 'content';
+      markerConfig.category = $self.getElementsByTagName('category')[0].textContent;
       console.log("markerConfig.category  is: ".concat(markerConfig.category));
       markerConfig.id = $self.getElementsByTagName('guid')[0].textContent; //console.log(`markerConfig.id  is: ${markerConfig.id}`)
       //markerConfig.isPolygon = $self.find("[nodeName='georss:polygon']");
