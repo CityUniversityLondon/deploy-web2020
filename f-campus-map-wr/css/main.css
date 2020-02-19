@@ -40161,24 +40161,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     width: 100%;
 }
 
-.modal--in.no-scroll .modal__background {
-    opacity: 0.3;
-}
-
-.modal__background {
-    background: #0c0c0e;
-    pointer-events: none;
-    height: 100%;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    position: fixed;
-    transition: opacity 0.35s ease;
-    width: 100%;
-    z-index: 4;
-}
-
-.js .modal__popup {
+.modal__popup {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
     display: none;
@@ -40187,34 +40170,57 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     right: 0;
     top: 0;
     z-index: 3;
-    align-items: center;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    left: 0;
-    opacity: 1;
-    pointer-events: auto;
+    display: block;
     position: fixed;
+    left: 0;
     top: 0;
-    width: 100%;
+    bottom: 0;
     z-index: 6;
 }
 
-.js .modal__popup[data-on='true'] {
+.modal__popup[data-on='true'] {
     display: block;
 }
 
-.modal__popup[data-hidden='true'] {
-    opacity: 0;
-    pointer-events: none;
+.modal__inner {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    max-height: calc(100% - 2.5rem);
+    max-width: 55ch;
+    overflow-y: scroll;
+    position: relative;
+    padding: 1.25rem 0;
+}
+
+@media (min-width: 768px) {
+    .modal__inner {
+        margin-top: 15vh;
+        max-height: calc(100% - 30vh);
+        padding: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .modal__inner {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .modal__inner {
+        width: 60%;
+    }
 }
 
 .modal__content {
     background: #ffffff;
-    border: none;
-    overflow-y: auto;
-    padding: 1.5rem 2.5rem 2.5rem;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem 2.5rem 2.5rem;
 }
 
 .modal__heading {
@@ -40259,10 +40265,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .modal__heading i,
 .modal__heading em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-}
-
-.modal__heading:hover {
-    cursor: pointer;
 }
 
 .modal__close {
@@ -40502,9 +40504,11 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
-.modal__buttons--slider button:hover .modal__underline-transition span {
-    background-image: linear-gradient(#d61726, #d61726);
-    background-size: 100% 0.125rem;
+@media (hover: hover) {
+    .modal__buttons--slider button:hover .modal__underline-transition span {
+        background-image: linear-gradient(#d61726, #d61726);
+        background-size: 100% 0.125rem;
+    }
 }
 
 .modal__buttons--slider button .modal__underline-transition {
@@ -40598,6 +40602,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     padding-bottom: 0.125rem;
 }
 
+.modal__buttons--slider button .modal__underline-transition:focus, .modal__buttons--slider button .modal__underline-transition:active {
+    outline: none;
+}
+
 .modal__buttons__icon {
     margin-top: 0.75rem;
 }
@@ -40617,10 +40625,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .modal__buttons {
         display: flex;
     }
-}
-
-.js .modal li[data-keepformat='true'] h3:hover {
-    cursor: pointer;
 }
 
 .js .modal__body {
@@ -49794,6 +49798,7 @@ button
     letter-spacing: 0em;
     color: #494949;
     margin-top: 0.75rem;
+    max-width: unset;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {

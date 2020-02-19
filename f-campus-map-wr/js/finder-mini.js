@@ -394,7 +394,20 @@ function finder__query(props) {
   };
 
   var submitForm = () => {
-    window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?query=".concat(partialQuery));
+    var queryURL = '';
+    var exclusions = ['Short courses', 'Professional development courses', 'City Health courses', 'In-house law courses'];
+    var courseLevel = document.getElementsByClassName('finder__mini')[0].getAttribute('data-level');
+
+    function exclusion(level) {
+      return level === courseLevel;
+    }
+
+    function buildURL(level) {
+      exclusions.filter(exclusion).length ? queryURL = 'meta_level_sand=Short+courses+and+professional+development&meta_type_sand=' + level : queryURL = 'meta_level_sand=' + level;
+      window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?".concat(queryURL, "&query=").concat(partialQuery));
+    }
+
+    buildURL(courseLevel);
   };
 
   var submitSuggestion = s => {
