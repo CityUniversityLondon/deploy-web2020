@@ -1431,9 +1431,12 @@ function updateProgress(backToTopAnchor) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
 
 
 
@@ -1515,6 +1518,7 @@ function createMap(mapWrapper, $) {
   infoWindow = new google.maps.InfoWindow({
     maxWidth: 400
   }),
+      // walter >> this was commented out already
 
   /* points = [
   new google.maps.LatLng(51.527701, -0.102509),
@@ -1635,6 +1639,7 @@ function createMap(mapWrapper, $) {
    */
   hashChange = function hashChange(e) {
     console.log(">>  >>  function run: hashChange");
+    console.log(" hashChange parameter is: ".concat(e));
     var state = e.getState(),
         x,
         i,
@@ -1642,13 +1647,12 @@ function createMap(mapWrapper, $) {
         ii,
         ee,
         marker; //loop over each marker in hash
-    //$.each(state, function(el, i) {
+    // walter >> review below
 
     state.forEach(function (el, i) {
       //no active marker - means an info window was closed
       if (el === '0') {
-        infoWindow.close(); //walter
-
+        infoWindow.close();
         return;
       } //loop over  bigBuildingsArray to find marker
 
@@ -1681,6 +1685,7 @@ function createMap(mapWrapper, $) {
    */
   updateHash = function updateHash(caller) {
     console.log(">>  >>  function run: updateHash");
+    console.log(">>  >>  ".concat(caller));
     var state = {},
         callerId = '';
 
@@ -1699,8 +1704,15 @@ function createMap(mapWrapper, $) {
     } else {
       //an infoWindow was closed
       state['0'] = 1;
+    } // walter >> for troubleshooting
+
+
+    for (var u in state) {
+      console.log("state updateHash is ".concat(u));
     } //push state - setting merge_mode to 2 means params argument completely replaces current state
-    // >>> bbq.pushState(state, 2); //walter removed $ BBQ?
+
+    /* walter  >>removed $ BBQ?
+    bbq.pushState(state, 2); */
 
   },
 
@@ -1742,7 +1754,7 @@ function createMap(mapWrapper, $) {
    */
   initKmlLayers = function initKmlLayers(layer) {
     console.log("function run - initKMLLayers");
-    console.log("object before"); //object.forEach(function(obj) {
+    console.log("object before");
 
     for (var key in layer) {
       // skip loop if the property is from prototype
@@ -1755,7 +1767,7 @@ function createMap(mapWrapper, $) {
       var overlay = new google.maps.KmlLayer(obj.src, {
         preserveViewport: obj.preserveViewport
       });
-      /*
+      /* walter >>
       disabled for now as tonggler empty - maybe even remove klmlyer as possible not required
         toggler.addEventListener("click", function(){
           console.log(`toggler`);
@@ -1820,7 +1832,7 @@ function createMap(mapWrapper, $) {
       return updateHash(marker);
     }); //create list element
 
-    $li = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('li', [{
+    $li = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', [{
       label: 'id',
       val: 'building-' + markerConfig.id
     }, {
@@ -1828,42 +1840,19 @@ function createMap(mapWrapper, $) {
       val: 'building'
     }]); //create a element with click handler to open infoWindow
 
-    /* code back up walter
-    
-    $a = $('<a />', {
-         href: '#',
-         html:
-             '<span>' +
-             markerConfig.name +
-             ' ' +
-             markerConfig.buildingPrefix +
-             '</span>',
-         click: function(e) {
-             updateHash(
-                 $(e.target)
-                     .parents('li')
-                     .attr('id')
-                     .replace('building-', '')
-             );
-             return false;
-         },
-         css: {
-             background:
-                 'transparent url(' +
-                 markerConfig.icon +
-                 '?v=1123) no-repeat left center',
-         },
-     }); */
-
-    var $a = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('a', [{
+    var $a = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
       label: 'html',
       val: '<span>' + markerConfig.name + ' ' + markerConfig.buildingPrefix + '</span>'
     }, {
       label: 'href',
       val: '#'
     }]);
-    $a.style.background = 'transparent url(' + markerConfig.icon + '?v=1123) no-repeat left center'; //console.log(`========= ${$a}`)
-    //add li item to list
+    $a.addEventListener("click", function (e) {
+      e.preventDefault();
+      updateHash(e.target.parentElement.parentElement.getAttribute("id").replace("building-", ""));
+      return false;
+    });
+    $a.style.background = 'transparent url(' + markerConfig.icon + '?v=1123) no-repeat left center'; //add li item to list
 
     listId ? listId.appendChild($li).appendChild($a) : null; //document.getElementById('content').appendChild(listId);
 
@@ -1910,15 +1899,13 @@ function createMap(mapWrapper, $) {
   parseXml = function parseXml(xml, textStatus, jqXHR) {
     console.log("function run - parseXml");
     var items = xml.getElementsByTagName('item');
-    console.log("items: ".concat(items.length)); //console.log(xml.getElementsBytagName('item').length);
-
+    console.log("items: ".concat(items.length));
     var index = 0,
         $self,
         marker,
         markerConfig = {},
         searchTags = [],
-        searchIds = {}; // >>> re-write
-
+        searchIds = {};
     items.forEach(function (item) {
       console.log("...cycling through items...");
       $self = item;
@@ -1935,7 +1922,7 @@ function createMap(mapWrapper, $) {
       console.log("markerConfig.category  is: ".concat(markerConfig.category));
       markerConfig.id = $self.getElementsByTagName('guid')[0].textContent; //console.log(`markerConfig.id  is: ${markerConfig.id}`)
       //markerConfig.isPolygon = $self.find("[nodeName='georss:polygon']");
-      //walter > been commented out
+      //walter >> been commented out
 
       markerConfig.buildingPrefix = findChildText($self, 'CUL:buildingPrefix'); //console.log(`markerConfig.buildingPrefix is: ${markerConfig.buildingPrefix}`)
 
@@ -1966,17 +1953,17 @@ function createMap(mapWrapper, $) {
         console.log("...if...");
         cityLayers[markerConfig.category].markersArray.push(marker);
       } else {
-        console.log("...else..."); // walter this is commented out for now.
-
-        /*cityLayers[markerConfig.category] = newCategory(
+        console.log("...else...");
+        /*walter >>  this is commented out for now. Not sure if this is needed
+        cityLayers[markerConfig.category] = newCategory(
             markerConfig.category
         ); */
       }
     }); //end iteration
 
     /*
+    walter >> commented out for now as using jquery UI
     searchBox
-    walter commented out for now as using jquery UI
     .autocomplete({
         source: searchTags,
         select: function(e) {
@@ -2011,8 +1998,8 @@ function createMap(mapWrapper, $) {
     // the event now, to handle the hash the page may have loaded with.
     //window.trigger('hashchange'); walter below;
 
-    location.hash += "6";
-    console.log("end?????????????");
+    location.hash += "8";
+    console.log("-----end------");
   },
       //end parse xml,
   loadXml = function loadXml() {
@@ -2037,36 +2024,29 @@ function createMap(mapWrapper, $) {
   init = function init() {
     console.log("function run: init");
     $mapContainer.classList.add('loading');
-    $mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('i', [{
+    $mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('i', [{
       label: 'class',
       val: 'fa fa-refresh fa-spin loading-fa-icon'
     }]));
     console.log("KLM obj layers: ".concat(kmlLayers));
     initKmlLayers(kmlLayers);
-    loadXml(); //initalise accordion for filter
-
-    /* walter don't need this for now
-    $('#filter').accordion({
-        collapsible: true,
-        autoHeight: false,
-        clearStyle: true,
-        active: false,
-    }); */
-    //scroll journey planner
+    loadXml(); //scroll journey planner
 
     document.getElementById("journey-link").addEventListener("click", function (e) {
       e.preventDefault();
-      /*
-       $('html, body').animate(
+      /* walter >> edited out for now
+      $('html, body').animate(
           {
               scrollTop: $('#journey-planner').offset().top,
           },
           1000
       );
-                   */
+      */
     });
   }; //END VARS
   //expose the bits we want to
+
+  /* walter >>  is this needed */
 
 
   returnObj = {
