@@ -6519,6 +6519,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 
@@ -6532,6 +6533,7 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2018
  *
  */
+
 
 
 var className = 'modal',
@@ -6759,8 +6761,15 @@ function controlButton(dialogArray, position, direction) {
     label: 'class',
     val: "modal__buttons__icon far fa-long-arrow-".concat(direction)
   }]);
-  button.appendChild(buttonLabel);
+
+  if (direction === 'left') {
+    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'previous item');
+  } else {
+    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'next item');
+  }
+
   button.appendChild(buttonIcon);
+  button.appendChild(buttonLabel);
   return button;
 }
 /**
