@@ -40156,12 +40156,12 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
-.modal--in.no-scroll {
+.dialog-in.no-scroll {
     position: fixed;
     width: 100%;
 }
 
-.modal__popup {
+.dialog {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
     display: none;
@@ -40178,7 +40178,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     z-index: 6;
 }
 
-.modal__popup[data-on='true'] {
+.dialog[data-on='true'] {
     display: block;
 }
 
@@ -40405,113 +40405,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     right: 0.75rem;
 }
 
-.modal__buttons--slider {
-    margin-top: 2.5rem;
-}
-
-.modal__buttons--slider button {
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    padding: 1rem;
-    align-items: center;
-    width: 50%;
-}
-
-.modal__buttons--slider button:focus, .modal__buttons--slider button:active {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .modal__buttons--slider button {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .modal__buttons--slider button {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .modal__buttons--slider button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .modal__buttons--slider button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 768px) {
-    .modal__buttons--slider button {
-        display: flex;
-        position: relative;
-    }
-}
-
-.modal__buttons--slider button:first-child {
-    position: relative;
-    text-align: left;
-    padding-left: 0;
-}
-
-@media (min-width: 768px) {
-    .modal__buttons--slider button:first-child {
-        padding-left: 1.5rem;
-    }
-}
-
-.modal__buttons--slider button:first-child:after {
-    content: '';
-    height: 100%;
-    width: 0.125rem;
-    background: #d61726;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-@media (min-width: 768px) {
-    .modal__buttons--slider button:first-child .modal__buttons__icon {
-        margin-right: 0.75rem;
-        left: 0;
-    }
-}
-
-.modal__buttons--slider button:last-child {
-    text-align: right;
-    padding-right: 0;
-    justify-content: flex-end;
-}
-
-@media (min-width: 768px) {
-    .modal__buttons--slider button:last-child {
-        padding-right: 1.5rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .modal__buttons--slider button:last-child .modal__buttons__icon {
-        margin-left: 0.75rem;
-        right: 0;
-    }
-}
-
-@media (hover: hover) {
-    .modal__buttons--slider button:hover .modal__underline-transition span {
-        background-image: linear-gradient(#d61726, #d61726);
-        background-size: 100% 0.125rem;
-    }
-}
-
-.modal__buttons--slider button .modal__underline-transition {
+.dialog__underline-transition {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -40525,17 +40419,17 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    color: #696969;
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-size: 0% 0.1875rem;
-    background-repeat: no-repeat;
-    transition: background-size 0.6s ease-in;
-    padding-bottom: 0.125rem;
+    background-image: none;
+    border-bottom-color: #0c0c0e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
+    position: relative;
+    text-align: left;
 }
 
 @media (hover: hover) {
-    .modal__buttons--slider button .modal__underline-transition:hover {
+    .dialog__underline-transition:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -40552,7 +40446,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
-.modal__buttons--slider button .modal__underline-transition:focus, .modal__buttons--slider button .modal__underline-transition:active {
+.dialog__underline-transition:focus, .dialog__underline-transition:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -40568,53 +40462,134 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     text-decoration: none;
 }
 
-.modal__buttons--slider button .modal__underline-transition:focus, .modal__buttons--slider button .modal__underline-transition:active {
+.dialog__underline-transition:focus, .dialog__underline-transition:active {
+    outline-color: transparent;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.dialog__underline-transition:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.dialog__underline-transition:focus {
+    border-bottom-color: #0c0c0e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
+}
+
+.dialog__underline-transition:visited {
+    border-bottom-color: #0c0c0e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
+}
+
+@media (hover: hover) {
+    .dialog__underline-transition:hover {
+        background-image: none;
+        border-bottom-color: #d61726;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #0c0c0e;
+    }
+}
+
+.dialog__underline-transition:active {
+    border-bottom-color: #d61726;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.dialog__slider-control {
+    color: #0c0c0e;
+    margin-top: 2.5rem;
+    display: flex;
+    max-width: 55ch;
+}
+
+.dialog__slider-control button {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    min-height: 4.5rem;
+    flex: 1;
+    display: flex;
+}
+
+.dialog__slider-control button:focus, .dialog__slider-control button:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.modal__buttons--slider button .modal__underline-transition:visited {
-    color: #696969;
+.dialog__slider-control button i,
+.dialog__slider-control button em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
-.modal__buttons--slider button .modal__underline-transition:focus {
-    color: #696969;
-    background-size: 100% 0.1875rem;
-}
-
-@media (hover: hover) {
-    .modal__buttons--slider button .modal__underline-transition:hover {
-        color: #1e1e1e;
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .dialog__slider-control button {
+        letter-spacing: -0.005em;
     }
 }
 
-.modal__buttons--slider button .modal__underline-transition span {
-    position: relative;
-    background-image: linear-gradient(#0c0c0e, #0c0c0e);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 0.125rem;
-    transition: background-size 0.6s ease-in;
-    padding-bottom: 0.125rem;
-}
-
-.modal__buttons--slider button .modal__underline-transition:focus, .modal__buttons--slider button .modal__underline-transition:active {
-    outline: none;
-}
-
-.modal__buttons__icon {
-    margin-top: 0.75rem;
-}
-
-@media (min-width: 768px) {
-    .modal__buttons__icon {
-        margin-top: 0;
-        position: absolute;
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .dialog__slider-control button {
+        letter-spacing: -0.01em;
     }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .dialog__slider-control button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .dialog__slider-control button {
+        letter-spacing: -0.017em;
+    }
+}
+
+.dialog__slider-control button:first-of-type {
+    border-right: 0.125rem solid #d61726;
+    flex-direction: row;
+    padding-right: 1.25rem;
+}
+
+.dialog__slider-control button:first-of-type .icon {
+    margin-right: 1.25rem;
+}
+
+.dialog__slider-control button:last-of-type {
+    flex-direction: row-reverse;
+    padding-left: 1.25rem;
+}
+
+.dialog__slider-control button:last-of-type .icon {
+    margin-left: 0.5rem;
+}
+
+.dialog__slider-control button span {
+    display: inline-block;
+}
+
+.dialog__slider-control .icon {
+    align-self: center;
 }
 
 .modal__buttons {

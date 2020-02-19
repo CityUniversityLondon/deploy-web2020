@@ -6668,7 +6668,7 @@ function createDialog(parent, position, dialogArray) {
     closeDialog(dialog);
   });
   trapFocus(dialog);
-  document.body.classList.add('modal--in', 'no-scroll');
+  document.body.classList.add('dialog-in', 'no-scroll');
 
   if (slider && dialogArray.length > 1) {
     createControl(dialog, dialogArray);
@@ -6688,7 +6688,7 @@ function createControl(dialog, dialogArray) {
   var position = parseInt(dialog.getAttribute('data-position'));
   var buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
     label: 'class',
-    val: 'modal__buttons modal__buttons--slider'
+    val: 'dialog__slider-control'
   }]);
   var buttonPrev = controlButton(dialogArray, position, 'left');
   var buttonNext = controlButton(dialogArray, position, 'right');
@@ -6753,13 +6753,13 @@ function addDialogEvent(dialog, dialogArray, nextState) {
 function controlButton(dialogArray, position, direction) {
   var button = document.createElement('button');
   var buttonLabel = document.createElement('span');
-  buttonLabel.classList.add('modal__underline-transition');
+  buttonLabel.classList.add('dialog__underline-transition');
   var nextState = checkNextState(dialogArray, position, direction);
   button.setAttribute('data-nextstate', "".concat(nextState));
   buttonLabel.innerText = dialogArray[nextState].title;
   var buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
     label: 'class',
-    val: "modal__buttons__icon far fa-long-arrow-".concat(direction)
+    val: "icon far fa-long-arrow-".concat(direction)
   }]);
 
   if (direction === 'left') {
@@ -6820,7 +6820,7 @@ function checkNextState(dialogArray, position, direction) {
 
 function closeDialog(dialog) {
   dialog.parentNode.removeChild(dialog);
-  document.body.classList.remove('modal--in', 'no-scroll');
+  document.body.classList.remove('dialog-in', 'no-scroll');
   trap.deactivate();
 }
 
