@@ -1431,12 +1431,9 @@ function updateProgress(backToTopAnchor) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -1459,8 +1456,9 @@ var className = 'map-container';
 //set up a holder module
 //CITY.visit = (function(CITY, $) {
 
-function initMap(mapWrapper, $) {
-  // == PROPERTIES ==
+function createMap(mapWrapper, $) {
+  console.log("function run - createMap"); // == PROPERTIES ==
+
   var
   /**
    * this object holds the properties and methods we want to return later
@@ -1592,7 +1590,11 @@ function initMap(mapWrapper, $) {
   kmlLayers = {
     cycleHire: {
       src: 'http://webapps.city.ac.uk/matrix/maps/cycle-hire.php',
-      toggler: document.getElementById('cycle-hire'),
+      //toggler: document.getElementById('cycle-hire'),
+      toggler: function () {
+        var myvariable = document.getElementById('cycle-hire');
+        return myvariable;
+      }(),
       preserveViewport: true
     },
     bikes: {
@@ -1632,7 +1634,7 @@ function initMap(mapWrapper, $) {
    * @return {Undefined}
    */
   hashChange = function hashChange(e) {
-    console.log(">>  >>  function run: handleChange");
+    console.log(">>  >>  function run: hashChange");
     var state = e.getState(),
         x,
         i,
@@ -1738,19 +1740,33 @@ function initMap(mapWrapper, $) {
    * @param {Object} object: Config object for KML
    * @return {?}
    */
-  initKmlLayers = function initKmlLayers(object) {
-    console.log(">>  >>  function run: initKMLLayers");
-    object.forEach(function (obj) {
-      var toggler = obj.toggler,
-          overlay = new google.maps.KmlLayer(obj.src, {
+  initKmlLayers = function initKmlLayers(layer) {
+    console.log("function run - initKMLLayers");
+    console.log("object before"); //object.forEach(function(obj) {
+
+    for (var key in layer) {
+      // skip loop if the property is from prototype
+      if (!layer.hasOwnProperty(key)) {} //end if
+
+
+      var obj = layer[key];
+      console.log("eyse yes ".concat(obj.toggler));
+      var toggler = obj.toggler;
+      var overlay = new google.maps.KmlLayer(obj.src, {
         preserveViewport: obj.preserveViewport
       });
-      toggler.addEventListener("click", function () {
-        //toggler.toggleClass('enabled');
-        overlay.setMap(toggler.classList.contains('enabled') ? map : null);
-        return false;
-      }); //end click fn
-    }); //end each
+      /*
+      disabled for now as tonggler empty - maybe even remove klmlyer as possible not required
+        toggler.addEventListener("click", function(){
+          console.log(`toggler`);
+          //toggler.toggleClass('enabled');
+          overlay.setMap(toggler.classList.contains('enabled') ? map : null);
+          return false;
+      }); //end click fn */
+    } // end for
+
+
+    console.log("obj after");
   },
       //end initKmlLayers
 
@@ -1760,12 +1776,9 @@ function initMap(mapWrapper, $) {
    * @return {Object} marker - google maps marker
    */
   createMarker = function createMarker(markerConfig) {
-    console.log(">>  >>  function run: createMarker"); // var listId = '#' + markerConfig.category, >> walter maybe delete this now
+    console.log("- function run - createMarker"); // var listId = '#' + markerConfig.category, >> walter maybe delete this now
 
-    var listId = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
-      label: 'id',
-      val: markerConfig.category
-    }]),
+    var listId = document.getElementById(markerConfig.category),
         listItem,
         marker,
         $li,
@@ -1806,9 +1819,8 @@ function initMap(mapWrapper, $) {
       //closure in a loop shizzle - I find this hard to get my head around - returning a closure seems to help
       return updateHash(marker);
     }); //create list element
-    ///// carry on Walter
 
-    $li = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', [{
+    $li = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('li', [{
       label: 'id',
       val: 'building-' + markerConfig.id
     }, {
@@ -1843,7 +1855,7 @@ function initMap(mapWrapper, $) {
          },
      }); */
 
-    var $a = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+    var $a = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('a', [{
       label: 'html',
       val: '<span>' + markerConfig.name + ' ' + markerConfig.buildingPrefix + '</span>'
     }, {
@@ -1853,8 +1865,8 @@ function initMap(mapWrapper, $) {
     $a.style.background = 'transparent url(' + markerConfig.icon + '?v=1123) no-repeat left center'; //console.log(`========= ${$a}`)
     //add li item to list
 
-    listId.appendChild($li).appendChild($a);
-    document.getElementById('content').appendChild(listId);
+    listId.appendChild($li).appendChild($a); //document.getElementById('content').appendChild(listId);
+
     return marker;
   },
       //end fn.createMarker
@@ -1876,34 +1888,13 @@ function initMap(mapWrapper, $) {
   },
       // >>>
   findChildText = function findChildText(node, name) {
+    console.log(">> function run - findChildText");
     var value = '';
-    /* 
-    node.children().eac h(function(child) {
-        if (child.nodeName == name) {
-            value = $(child).text();
-            return false;
-        }
-        return true;
-    });
-    return value;
-    */
+    var children = node.getElementsByTagName(name);
+    var childrenLength = node.getElementsByTagName(name).length;
 
-    var children = node.children;
-    var child;
-    var content;
-
-    for (child in children) {
-      if (child.nodeName == name) {
-        var _content = child.textContent;
-        value = _content.trim();
-        return false;
-      } // remove
-
-
-      content = child.textContent;
-      value = content.trim(); //
-
-      return true;
+    if (childrenLength > 0) {
+      value = children[0].textContent;
     }
 
     return value;
@@ -1917,7 +1908,7 @@ function initMap(mapWrapper, $) {
    * @return {?}
    */
   parseXml = function parseXml(xml, textStatus, jqXHR) {
-    console.log(">>  >>  function run: parseXml");
+    console.log("function run - parseXml");
     var items = xml.getElementsByTagName('item');
     console.log("items: ".concat(items.length)); //console.log(xml.getElementsBytagName('item').length);
 
@@ -1932,33 +1923,30 @@ function initMap(mapWrapper, $) {
       console.log("...cycling through items...");
       $self = item;
       markerConfig.index = index + 1;
-      markerConfig.name = $self.getElementsByTagName('title')[0].textContent;
-      console.log("markerConfig.name  is: ".concat(markerConfig.name));
-      markerConfig.linkHref = $self.getElementsByTagName('link')[0].textContent;
-      console.log("markerConfig.linkHref  is: ".concat(markerConfig.linkHref));
-      markerConfig.description = $self.getElementsByTagName('description')[0].textContent;
-      console.log("markerConfig.description is: ".concat(markerConfig.description));
-      markerConfig.icon = findChildText($self, 'CUL:icon');
-      console.log("markerConfig.icon is: ".concat(markerConfig.icon)); //markerConfig.category = $self.find('category').text();
+      markerConfig.name = $self.getElementsByTagName('title')[0].textContent; //console.log(`markerConfig.name  is: ${markerConfig.name }`)
 
-      markerConfig.category = $self.getElementsByTagName('category')[0].textContent;
-      console.log("markerConfig.category  is: ".concat(markerConfig.category)); //markerConfig.id = $self.find('guid').text();
+      markerConfig.linkHref = $self.getElementsByTagName('link')[0].textContent; //console.log(`markerConfig.linkHref  is: ${markerConfig.linkHref }`)
 
-      markerConfig.id = $self.getElementsByTagName('guid')[0].textContent;
-      console.log("markerConfig.id  is: ".concat(markerConfig.id)); //markerConfig.isPolygon = $self.find("[nodeName='georss:polygon']");
+      markerConfig.description = $self.getElementsByTagName('description')[0].textContent; //console.log(`markerConfig.description is: ${markerConfig.description}`)
+
+      markerConfig.icon = findChildText($self, 'CUL:icon'); //console.log(`markerConfig.icon is: ${markerConfig.icon}`)
+
+      markerConfig.category = $self.getElementsByTagName('category')[0].textContent ? $self.getElementsByTagName('category')[0].textContent : 'content';
+      console.log("markerConfig.category  is: ".concat(markerConfig.category));
+      markerConfig.id = $self.getElementsByTagName('guid')[0].textContent; //console.log(`markerConfig.id  is: ${markerConfig.id}`)
+      //markerConfig.isPolygon = $self.find("[nodeName='georss:polygon']");
       //walter > been commented out
 
-      markerConfig.buildingPrefix = findChildText($self, 'CUL:buildingPrefix');
-      console.log("markerConfig.buildingPrefix is: ".concat(markerConfig.buildingPrefix));
-      markerConfig.hexColour = findChildText($self, 'CUL:hexColour');
-      console.log("markerConfig.hexColour  is: ".concat(markerConfig.hexColour));
-      markerConfig.geoLat = findChildText($self, 'geo:lat');
-      console.log("markerConfig.geoLat is: ".concat(markerConfig.geoLat));
-      markerConfig.geoLong = findChildText($self, 'geo:long');
-      console.log("markerConfig.geoLong is: ".concat(markerConfig.geoLong));
+      markerConfig.buildingPrefix = findChildText($self, 'CUL:buildingPrefix'); //console.log(`markerConfig.buildingPrefix is: ${markerConfig.buildingPrefix}`)
+
+      markerConfig.hexColour = findChildText($self, 'CUL:hexColour'); //console.log(`markerConfig.hexColour  is: ${markerConfig.hexColour }`)
+
+      markerConfig.geoLat = findChildText($self, 'geo:lat'); //console.log(`markerConfig.geoLat is: ${markerConfig.geoLat}`)
+
+      markerConfig.geoLong = findChildText($self, 'geo:long'); //console.log(`markerConfig.geoLong is: ${markerConfig.geoLong}`);
+
       markerConfig.point = new google.maps.LatLng(parseFloat(markerConfig.geoLat), parseFloat(markerConfig.geoLong)); //call createmarker fn
 
-      console.log('>>>>>>>>>calls create marker func');
       marker = createMarker(markerConfig);
 
       if (markerConfig.category !== 'buildings') {
@@ -1975,27 +1963,36 @@ function initMap(mapWrapper, $) {
       searchIds[markerConfig.name] = markerConfig.id; //add returned marker to category array (if cat exisits)
 
       if (cityLayers[markerConfig.category]) {
+        console.log("...if...");
         cityLayers[markerConfig.category].markersArray.push(marker);
       } else {
-        cityLayers[markerConfig.category] = newCategory(markerConfig.category);
+        console.log("...else..."); // walter this is commented out for now.
+
+        /*cityLayers[markerConfig.category] = newCategory(
+            markerConfig.category
+        ); */
       }
     }); //end iteration
 
-    searchBox.autocomplete({
-      source: searchTags,
-      select: function select(e) {
-        setTimeout(function () {
-          var selected = searchBox.val();
-          searchBox.blur();
+    /*
+    searchBox
+    walter commented out for now as using jquery UI
+    .autocomplete({
+        source: searchTags,
+        select: function(e) {
+            setTimeout(function() {
+                var selected = searchBox.val();
+                searchBox.blur();
+                if (selected in searchIds) {
+                    updateHash(searchIds[selected]);
+                }
+            }, 0);
+        },
+    })
+    .focusin(function() {
+        searchBox.attr('value', '');
+    }); */
 
-          if (selected in searchIds) {
-            updateHash(searchIds[selected]);
-          }
-        }, 0);
-      }
-    }).focusin(function () {
-      searchBox.attr('value', '');
-    });
     document.getElementById("vs-button").addEventListener("click", function () {
       searchBox.focus();
     }); //clear marker when infoWIndow closed
@@ -2005,12 +2002,6 @@ function initMap(mapWrapper, $) {
     }); //so all markers in the buildingsArray initalially
 
     showOverlays(cityLayers.bigBuildingsArray);
-    /* walter 
-    $mapContainer
-        .removeClass('loading')
-        .children('.loading-fa-icon')
-        .remove(); */
-
     $mapContainer.classList.remove('loading');
     $mapContainer.querySelectorAll('.loading-fa-icon').forEach(function (i) {
       i.remove();
@@ -2020,25 +2011,16 @@ function initMap(mapWrapper, $) {
     // the event now, to handle the hash the page may have loaded with.
     //window.trigger('hashchange'); walter below;
 
-    location.hash += "";
+    location.hash += "6";
+    console.log("end?????????????");
   },
       //end parse xml,
   loadXml = function loadXml() {
-    console.log(">>  >>  function run: loadXML"); //get locations.xml
-
-    /*
-    $.ajax({
-        type: 'GET',
-        url: dataSrc,
-        dataType: 'xml',
-        success: parseXml,
-    }); */
+    console.log("function run - loadXml"); //get locations.xml
 
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function () {
-      console.log('a>>  >>  ajax');
-
       if (xhr.readyState == 4 && xhr.status === 200) {
         parseXml(xhr.responseXML);
       }
@@ -2053,13 +2035,14 @@ function initMap(mapWrapper, $) {
    * @return {Undefined}
    */
   init = function init() {
-    console.log(">>  >>  function run: init");
+    console.log("function run: init");
     $mapContainer.classList.add('loading');
-    $mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('i', [{
+    $mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('i', [{
       label: 'class',
       val: 'fa fa-refresh fa-spin loading-fa-icon'
-    }])); //initKmlLayers(kmlLayers);
-
+    }]));
+    console.log("KLM obj layers: ".concat(kmlLayers));
+    initKmlLayers(kmlLayers);
     loadXml(); //initalise accordion for filter
 
     /* walter don't need this for now
@@ -2092,13 +2075,13 @@ function initMap(mapWrapper, $) {
     infoWindow: infoWindow,
     map: map
   };
-  loadXml();
+  init();
   return returnObj;
 }
 
 ;
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: initMap,
+  launchFn: createMap,
   launchQuery: ".".concat(className)
 });
 
