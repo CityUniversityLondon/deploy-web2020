@@ -21361,6 +21361,61 @@ Assign mixin:
     height: 100%;
 }
 
+.banner__overlay.flex-wrapper--banner__overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.banner__overlay.flex-wrapper--banner__overlay .banner__overlay__heading--grid {
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .banner__overlay.flex-wrapper--banner__overlay .banner__overlay__heading--grid {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .banner__overlay.flex-wrapper--banner__overlay .banner__overlay__heading--grid {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .banner__overlay.flex-wrapper--banner__overlay .banner__overlay__heading--grid {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 901px) {
+    .banner__overlay.flex-wrapper--banner__overlay .banner__overlay__heading--grid {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 901px) {
+    .banner__overlay.flex-wrapper--banner__overlay .banner__overlay__heading--grid {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 1441px) {
+    .banner__overlay.flex-wrapper--banner__overlay .banner__overlay__heading--grid {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .banner__overlay__heading {
     text-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.3);
     margin-left: 1rem;
@@ -53922,58 +53977,6 @@ main .landing:only-child .landing__top__cta {
 
 .course--pgt .banner__overlay {
     background: linear-gradient(to top, #5d184a, transparent 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.course--pgt .banner__overlay .wrapper--banner__overlay_heading {
-    grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-}
-
-@media (min-width: 768px) {
-    .course--pgt .banner__overlay .wrapper--banner__overlay_heading {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .course--pgt .banner__overlay .wrapper--banner__overlay_heading {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-@media (max-width: 1024px) {
-    .course--pgt .banner__overlay .wrapper--banner__overlay_heading {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1024px) and (min-width: 901px) {
-    .course--pgt .banner__overlay .wrapper--banner__overlay_heading {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1024px) and (min-width: 901px) {
-    .course--pgt .banner__overlay .wrapper--banner__overlay_heading {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1024px) and (min-width: 1441px) {
-    .course--pgt .banner__overlay .wrapper--banner__overlay_heading {
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 
 .course--pgt .banner__overlay .banner__overlay__heading {
