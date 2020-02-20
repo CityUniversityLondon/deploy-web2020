@@ -6548,6 +6548,7 @@ var trap;
 
 function launchModal(modal) {
   var dialogArray = [];
+  var dialogTopic = modal.getAttribute('data-topic');
   Array.from(modal.getElementsByTagName('li')).forEach((list, i) => {
     var wrapper = document.createElement('div'),
         listAnchor = document.createElement('a'),
@@ -6555,7 +6556,8 @@ function launchModal(modal) {
         listHeader = list.firstElementChild,
         customHeader = list.getAttribute('data-header'),
         format = list.getAttribute('data-keepformat'),
-        header = document.createElement('div');
+        header = document.createElement('div'),
+        shortName = list.getAttribute('data-shortname');
     var title,
         keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(format);
     listAnchor.setAttribute('href', '#');
@@ -6589,7 +6591,9 @@ function launchModal(modal) {
 
     dialogArray.push({
       title: title,
-      body: wrapper.innerHTML
+      body: wrapper.innerHTML,
+      topic: dialogTopic,
+      shortname: shortName
     });
   });
 }
@@ -6633,7 +6637,11 @@ function createDialog(parent, position, dialogArray) {
     label: 'role',
     val: 'role'
   }]);
-  var dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('h2', [{
+  var dialogStrapline = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('p', [{
+    label: 'class',
+    val: 'dialog__strapline'
+  }]);
+  var dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('p', [{
     label: 'class',
     val: 'modal__heading'
   }]);
@@ -6643,7 +6651,9 @@ function createDialog(parent, position, dialogArray) {
   }]);
   dialogTitle.innerText = dialogArray[position].title;
   dialogBody.innerHTML = dialogArray[position].body;
+  dialogStrapline.innerHTML = dialogArray[position].topic;
   bodyWrapper.appendChild(closeBtn);
+  bodyWrapper.appendChild(dialogStrapline);
   bodyWrapper.appendChild(dialogTitle);
   bodyWrapper.appendChild(dialogBody);
   wrapperWrapper.appendChild(bodyWrapper);
@@ -6756,7 +6766,13 @@ function controlButton(dialogArray, position, direction) {
   buttonLabel.classList.add('dialog__underline-transition');
   var nextState = checkNextState(dialogArray, position, direction);
   button.setAttribute('data-nextstate', "".concat(nextState));
-  buttonLabel.innerText = dialogArray[nextState].title;
+
+  if (dialogArray[nextState].shortname) {
+    buttonLabel.innerText = dialogArray[nextState].shortname;
+  } else {
+    buttonLabel.innerText = dialogArray[nextState].title;
+  }
+
   var buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
     label: 'class',
     val: "icon far fa-long-arrow-".concat(direction)
