@@ -40686,6 +40686,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     display: none;
 }
 
+.no-js .modal li[data-keepformat='true'] a {
+    display: none;
+}
+
 .module-selector-wrapper {
     padding: 2.5rem 0;
 }
@@ -53936,45 +53940,6 @@ main .landing:only-child .landing__top__cta {
     margin-bottom: 2rem;
 }
 
-.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas {
-    display: block;
-}
-
-.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video span {
-    display: none;
-}
-
-.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block {
-    width: 100%;
-    max-width: unset;
-    margin: 2rem 0 0 0;
-}
-
-.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block li {
-    margin: 0;
-}
-
-.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block li a {
-    display: none;
-}
-
-.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block li figcaption {
-    text-align: left;
-    color: #ffffff;
-}
-
-.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block li figcaption span {
-    display: block;
-}
-
-.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block li figcaption time {
-    display: flex;
-}
-
-.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block li figcaption time .icon {
-    margin: 0.25rem 0.5rem 0 0;
-}
-
 .course--pgt .banner__overlay {
     background: linear-gradient(to top, #5d184a, transparent 100%);
 }
@@ -53995,6 +53960,7 @@ main .landing:only-child .landing__top__cta {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
+    padding-top: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -54037,6 +54003,13 @@ main .landing:only-child .landing__top__cta {
     .course--pgt .wrapper--course--pgt__introduction {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    .course--pgt .wrapper--course--pgt__introduction {
+        padding-bottom: 1rem;
+        margin-top: 0;
     }
 }
 
@@ -56031,6 +56004,42 @@ main .landing:only-child .landing__top__cta {
 .course--pgt__awards__content__duration__method-of-study,
 .course--pgt__awards__content__modules {
     margin: 0.25rem 0 1rem 2rem;
+}
+
+/** No JS **/
+@media (min-width: 769px) {
+    .no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction {
+        grid-column: 3/10;
+    }
+}
+
+.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas {
+    display: block;
+}
+
+.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video span {
+    display: none;
+}
+
+.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block {
+    margin: 2rem 0 0 0;
+}
+
+.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block li figcaption {
+    text-align: left;
+    color: #ffffff;
+}
+
+.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block li figcaption span {
+    display: block;
+}
+
+.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block li figcaption time {
+    display: flex;
+}
+
+.no-js .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block li figcaption time .icon {
+    margin: 0.25rem 0.5rem 0 0;
 }
 
 @media (max-width: 1023px) {
