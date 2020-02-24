@@ -630,6 +630,7 @@ var className = 'accordion',
     headingIconClassName = headingClassName + '__indicator fal',
     bodyClassName = className + '__body',
     oneSecond = 1000,
+    tenthOfASecond = 100,
     scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_4__["reduceMotion"])() ? 0 : oneSecond,
     scrollTo = true;
 /**
@@ -720,7 +721,7 @@ function buttonClick(button, headings, toggleOpen) {
 
     setTimeout(() => {
       accordionSection.style.height = '0px';
-    }, 0);
+    }, tenthOfASecond);
     setSection(heading, false);
   } else {
     // Calclulate and save how big we're transitioning to
@@ -730,7 +731,7 @@ function buttonClick(button, headings, toggleOpen) {
 
     setTimeout(() => {
       accordionSection.style.height = sectionHeight;
-    }, 0);
+    }, tenthOfASecond);
 
     if (toggleOpen) {
       var sections = Array.from(heading.parentNode.parentNode.querySelectorAll("#".concat(heading.parentElement.id, " > .").concat(bodyClassName)));
