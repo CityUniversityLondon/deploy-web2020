@@ -49168,10 +49168,8 @@ button
     display: none;
 }
 
-@media (min-width: 433px) {
-    .finder__filters--mobile[data-open='false'] {
-        text-align: right;
-    }
+.finder__filters--mobile[data-open='false'] {
+    text-align: right;
 }
 
 .finder__filters--mobile[data-open='false'] .finder__filters,
