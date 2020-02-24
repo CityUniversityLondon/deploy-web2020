@@ -6557,14 +6557,31 @@ function launchModal(modal) {
         listHeader = list.firstElementChild,
         customHeader = list.getAttribute('data-header'),
         format = list.getAttribute('data-keepformat'),
-        header = document.createElement('div'),
-        shortName = list.getAttribute('data-shortname');
+        header = document.createElement('div');
     var title,
-        keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(format);
+        keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(format),
+        shortName = list.getAttribute('data-shortname');
     listAnchor.setAttribute('href', '#');
     list.appendChild(wrapper);
     Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(wrapper, listBody);
     wrapper.classList.add("".concat(bodyClassName));
+
+    if (customHeader) {
+      title = customHeader;
+    } else {
+      title = listHeader.innerText;
+    }
+
+    if (shortName === null) {
+      shortName = listHeader.innerText;
+    }
+
+    dialogArray.push({
+      title: title,
+      body: wrapper.innerHTML,
+      topic: dialogTopic,
+      shortname: shortName
+    });
 
     if (keepFormat) {
       list.insertBefore(listHeader, wrapper);
@@ -6583,19 +6600,6 @@ function launchModal(modal) {
         createDialog(modal, "".concat(i), dialogArray);
       });
     }
-
-    if (customHeader) {
-      title = customHeader;
-    } else {
-      title = listHeader.innerText;
-    }
-
-    dialogArray.push({
-      title: title,
-      body: wrapper.innerHTML,
-      topic: dialogTopic,
-      shortname: shortName
-    });
   });
 }
 /**
@@ -6612,14 +6616,14 @@ function createDialog(parent, position, dialogArray) {
   var slider = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(parent.getAttribute('data-slider'));
   var closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('button', [{
     label: 'class',
-    val: 'modal__close fas fa-times'
+    val: 'dialog__close fas fa-times'
   }, {
     label: 'aria-label',
     val: 'Close modal'
   }]);
   var dialog = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
     label: 'class',
-    val: 'dialog modal__popup'
+    val: 'dialog'
   }, {
     label: 'data-hidden',
     val: 'false'
@@ -6629,11 +6633,11 @@ function createDialog(parent, position, dialogArray) {
   }]);
   var bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
     label: 'class',
-    val: 'modal__content'
+    val: 'dialog__content'
   }]);
   var wrapperWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
     label: 'class',
-    val: 'modal__inner'
+    val: 'dialog__inner'
   }, {
     label: 'role',
     val: 'role'
@@ -6644,11 +6648,11 @@ function createDialog(parent, position, dialogArray) {
   }]);
   var dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('p', [{
     label: 'class',
-    val: 'modal__heading'
+    val: 'dialog__heading'
   }]);
   var dialogBody = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
     label: 'class',
-    val: 'modal__body-copy'
+    val: 'dialog__body-copy'
   }]);
   dialogTitle.innerText = dialogArray[position].title;
   dialogBody.innerHTML = dialogArray[position].body;
@@ -6667,7 +6671,7 @@ function createDialog(parent, position, dialogArray) {
     }
   });
   dialog.addEventListener('click', e => {
-    if (e.target.classList.contains('modal__popup')) {
+    if (e.target.classList.contains('dialog')) {
       e.preventDefault();
       e.stopPropagation();
       closeDialog(dialog);
@@ -6715,7 +6719,7 @@ function createControl(dialog, dialogArray) {
   });
   buttonWrapper.appendChild(buttonPrev);
   buttonWrapper.appendChild(buttonNext);
-  var dialogContent = dialog.querySelector('.modal__content');
+  var dialogContent = dialog.querySelector('.dialog__content');
   dialogContent.appendChild(buttonWrapper);
 }
 /**
@@ -6731,23 +6735,23 @@ function createControl(dialog, dialogArray) {
 
 function addDialogEvent(dialog, dialogArray, nextState) {
   nextState = parseInt(nextState);
-  dialog.querySelector('.modal__heading').innerText = dialogArray[nextState].title;
-  dialog.querySelector('.modal__body-copy').innerHTML = dialogArray[nextState].body;
+  dialog.querySelector('.dialog__heading').innerText = dialogArray[nextState].title;
+  dialog.querySelector('.dialog__body-copy').innerHTML = dialogArray[nextState].body;
 
   if (nextState === 0) {
     dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(dialogArray.length - 1));
-    dialog.querySelectorAll('.modal__underline-transition')[0].innerText = dialogArray[dialogArray.length - 1].title;
-    dialog.querySelectorAll('.modal__underline-transition')[1].innerText = dialogArray[nextState + 1].title;
+    dialog.querySelectorAll('.dialog__underline-transition')[0].innerText = dialogArray[dialogArray.length - 1].shortname;
+    dialog.querySelectorAll('.dialog__underline-transition')[1].innerText = dialogArray[nextState + 1].shortname;
     dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', "".concat(nextState + 1));
   } else if (nextState === dialogArray.length - 1) {
-    dialog.querySelectorAll('.modal__underline-transition')[0].innerText = dialogArray[nextState - 1].title;
+    dialog.querySelectorAll('.dialog__underline-transition')[0].innerText = dialogArray[nextState - 1].shortname;
     dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(nextState - 1));
-    dialog.querySelectorAll('.modal__underline-transition')[1].innerText = dialogArray[0].title;
+    dialog.querySelectorAll('.dialog__underline-transition')[1].innerText = dialogArray[0].shortname;
     dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', '0');
   } else {
-    dialog.querySelectorAll('.modal__underline-transition')[0].innerText = dialogArray[nextState - 1].title;
+    dialog.querySelectorAll('.dialog__underline-transition')[0].innerText = dialogArray[nextState - 1].shortname;
     dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(nextState - 1));
-    dialog.querySelectorAll('.modal__underline-transition')[1].innerText = dialogArray[nextState + 1].title;
+    dialog.querySelectorAll('.dialog__underline-transition')[1].innerText = dialogArray[nextState + 1].shortname;
     dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', "".concat(nextState + 1));
   }
 }
@@ -6842,7 +6846,7 @@ function closeDialog(dialog) {
 }
 
 function trapFocus(modal) {
-  var modalInner = modal.querySelector('.modal__inner');
+  var modalInner = modal.querySelector('.dialog__inner');
   trap = focus_trap__WEBPACK_IMPORTED_MODULE_2___default()(modalInner, {
     clickOutsideDeactivates: true
   });

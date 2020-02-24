@@ -40237,7 +40237,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     display: block;
 }
 
-.modal__inner {
+.dialog__inner {
     display: block;
     width: 90%;
     margin-left: auto;
@@ -40251,7 +40251,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (min-width: 768px) {
-    .modal__inner {
+    .dialog__inner {
         margin-top: 15vh;
         max-height: calc(100% - 30vh);
         padding: 0;
@@ -40259,18 +40259,18 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (min-width: 1024px) {
-    .modal__inner {
+    .dialog__inner {
         width: 70%;
     }
 }
 
 @media (min-width: 1280px) {
-    .modal__inner {
+    .dialog__inner {
         width: 60%;
     }
 }
 
-.modal__content {
+.dialog__content {
     background: #ffffff;
     position: relative;
     margin-left: auto;
@@ -40278,7 +40278,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     padding: 1.5rem 2.5rem 2.5rem;
 }
 
-.modal__heading {
+.dialog__heading {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
@@ -40294,31 +40294,31 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .modal__heading {
+    .dialog__heading {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .modal__heading {
+    .dialog__heading {
         letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .modal__heading {
+    .dialog__heading {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .modal__heading {
+    .dialog__heading {
         letter-spacing: -0.017em;
     }
 }
 
-.modal__heading i,
-.modal__heading em {
+.dialog__heading i,
+.dialog__heading em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
@@ -40353,7 +40353,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
-.modal__close {
+.dialog__close {
     color: #696969;
     padding: 0.75rem;
     position: absolute;
@@ -40361,7 +40361,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     top: 0.125rem;
 }
 
-.modal__close:focus, .modal__close:active {
+.dialog__close:focus, .dialog__close:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
@@ -40369,7 +40369,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (hover: hover) {
-    .modal__close:hover {
+    .dialog__close:hover {
         background-image: none;
         border: none;
         background-color: #f2f2f2;
@@ -40377,24 +40377,24 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
-.modal__close:hover:before {
+.dialog__close:hover:before {
     font-size: 1.075em;
 }
 
-.modal__close:active {
+.dialog__close:active {
     background-color: #f2f2f2;
     color: #1e1e1e;
 }
 
-.modal__close:focus {
+.dialog__close:focus {
     color: #1e1e1e;
 }
 
-.modal__close:active, .modal__close:focus {
+.dialog__close:active, .dialog__close:focus {
     outline-offset: 0;
 }
 
-.modal__body-copy {
+.dialog__body-copy {
     margin-top: 1rem;
 }
 
@@ -54158,23 +54158,23 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
-.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .modal__inner {
+.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .dialog__inner {
     text-align: left;
     color: #1e1e1e;
     width: 90%;
 }
 
 @media (min-width: 769px) {
-    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .modal__inner {
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .dialog__inner {
         width: 60%;
     }
 }
 
-.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .modal__inner .modal__close {
+.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .dialog__inner .dialog__close {
     outline-offset: 0;
 }
 
-.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .modal__inner .modal__close:focus {
+.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .dialog__inner .dialog__close:focus {
     outline-color: #0c0c0e;
 }
 
