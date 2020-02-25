@@ -40714,7 +40714,8 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     display: none;
 }
 
-.no-js .modal li[data-keepformat='true'] a {
+.no-js .modal li[data-keepformat='true'] a,
+.no-js .modal li[data-keepformat='true'] button {
     display: none;
 }
 
