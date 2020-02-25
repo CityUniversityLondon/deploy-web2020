@@ -29673,7 +29673,6 @@ _:-ms-lang(x),
 
 .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
     visibility: visible;
-    display: block;
     color: #d61726;
 }
 
@@ -29699,6 +29698,7 @@ _:-ms-lang(x),
 }
 
 .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label .fa-long-arrow-right {
+    display: block;
     visibility: hidden;
     font-size: 1.602rem;
     font-weight: 300;
@@ -29754,7 +29754,6 @@ _:-ms-lang(x),
 
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
     visibility: visible;
-    display: block;
     color: #d61726;
 }
 
@@ -29780,6 +29779,7 @@ _:-ms-lang(x),
 }
 
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label .fa-long-arrow-right {
+    display: block;
     visibility: hidden;
     font-size: 1.602rem;
     font-weight: 300;
@@ -29835,7 +29835,6 @@ _:-ms-lang(x),
 
 .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
     visibility: visible;
-    display: block;
     color: #d61726;
 }
 
@@ -29861,6 +29860,7 @@ _:-ms-lang(x),
 }
 
 .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label .fa-long-arrow-right {
+    display: block;
     visibility: hidden;
     font-size: 1.602rem;
     font-weight: 300;
@@ -29916,7 +29916,6 @@ _:-ms-lang(x),
 
 .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
     visibility: visible;
-    display: block;
     color: #d61726;
 }
 
@@ -29942,6 +29941,7 @@ _:-ms-lang(x),
 }
 
 .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label .fa-long-arrow-right {
+    display: block;
     visibility: hidden;
     font-size: 1.602rem;
     font-weight: 300;
@@ -29997,7 +29997,6 @@ _:-ms-lang(x),
 
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
     visibility: visible;
-    display: block;
     color: #d61726;
 }
 
@@ -30023,6 +30022,7 @@ _:-ms-lang(x),
 }
 
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label .fa-long-arrow-right {
+    display: block;
     visibility: hidden;
     font-size: 1.602rem;
     font-weight: 300;
@@ -45969,7 +45969,6 @@ button
 
 .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
     visibility: visible;
-    display: block;
     color: #d61726;
 }
 
@@ -45995,6 +45994,7 @@ button
 }
 
 .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label .fa-long-arrow-right {
+    display: block;
     visibility: hidden;
     font-size: 1.602rem;
     font-weight: 300;
@@ -46050,7 +46050,6 @@ button
 
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
     visibility: visible;
-    display: block;
     color: #d61726;
 }
 
@@ -46076,6 +46075,7 @@ button
 }
 
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label .fa-long-arrow-right {
+    display: block;
     visibility: hidden;
     font-size: 1.602rem;
     font-weight: 300;
@@ -46131,7 +46131,6 @@ button
 
 .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
     visibility: visible;
-    display: block;
     color: #d61726;
 }
 
@@ -46157,6 +46156,7 @@ button
 }
 
 .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label .fa-long-arrow-right {
+    display: block;
     visibility: hidden;
     font-size: 1.602rem;
     font-weight: 300;
@@ -46212,7 +46212,6 @@ button
 
 .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
     visibility: visible;
-    display: block;
     color: #d61726;
 }
 
@@ -46238,6 +46237,7 @@ button
 }
 
 .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label .fa-long-arrow-right {
+    display: block;
     visibility: hidden;
     font-size: 1.602rem;
     font-weight: 300;
@@ -46293,7 +46293,6 @@ button
 
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
     visibility: visible;
-    display: block;
     color: #d61726;
 }
 
@@ -46319,6 +46318,7 @@ button
 }
 
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label .fa-long-arrow-right {
+    display: block;
     visibility: hidden;
     font-size: 1.602rem;
     font-weight: 300;
