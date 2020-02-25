@@ -6576,13 +6576,6 @@ function launchModal(modal) {
       shortName = listHeader.innerText;
     }
 
-    dialogArray.push({
-      title: title,
-      body: wrapper.innerHTML,
-      topic: dialogTopic,
-      shortname: shortName
-    });
-
     if (keepFormat) {
       list.insertBefore(listHeader, wrapper);
       listHeader.addEventListener('click', function (e) {
@@ -6600,6 +6593,13 @@ function launchModal(modal) {
         createDialog(modal, "".concat(i), dialogArray);
       });
     }
+
+    dialogArray.push({
+      title: title,
+      body: wrapper.innerHTML,
+      topic: dialogTopic,
+      shortname: shortName
+    });
   });
 }
 /**
@@ -6789,8 +6789,10 @@ function controlButton(dialogArray, position, direction) {
     buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'next item');
   }
 
+  var buttonLabelWrapper = document.createElement('div');
+  buttonLabelWrapper.appendChild(buttonLabel);
   button.appendChild(buttonIcon);
-  button.appendChild(buttonLabel);
+  button.appendChild(buttonLabelWrapper);
   return button;
 }
 /**

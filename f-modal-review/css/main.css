@@ -40511,7 +40511,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     border-bottom-width: 0.125rem;
     color: #0c0c0e;
     position: relative;
-    text-align: left;
 }
 
 @media (hover: hover) {
@@ -40613,6 +40612,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     min-height: 4.5rem;
     flex: 1;
     display: flex;
+    text-align: left;
 }
 
 .dialog__slider-control button:focus, .dialog__slider-control button:active {
@@ -40670,12 +40670,34 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     margin-left: 0.5rem;
 }
 
-.dialog__slider-control button span {
+.dialog__slider-control button .dialog__underline-transition {
+    display: inline;
+}
+
+.dialog__slider-control button .icon {
+    align-self: center;
     display: inline-block;
 }
 
-.dialog__slider-control .icon {
-    align-self: center;
+@media (max-width: 432px) {
+    .dialog__slider-control button:first-of-type {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+    .dialog__slider-control button:first-of-type .icon {
+        align-self: flex-start;
+    }
+    .dialog__slider-control button:last-of-type {
+        flex-direction: column-reverse;
+        text-align: right;
+        justify-content: flex-start;
+    }
+    .dialog__slider-control button:last-of-type .icon {
+        align-self: flex-end;
+    }
+    .dialog__slider-control button .icon {
+        margin-top: 0.5rem;
+    }
 }
 
 .modal__buttons {
