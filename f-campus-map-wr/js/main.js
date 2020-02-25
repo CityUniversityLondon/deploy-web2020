@@ -1640,69 +1640,71 @@ function createMap(mapWrapper, $) {
   hashChange = function hashChange(e) {
     console.log("> function run: hashChange");
     console.log(" hashChange parameter is: ".concat(e));
-    var state = e,
-        x,
+    var state = {
+      9541: "1"
+    },
+
+    /* e */
+    x,
         i,
         el,
         ii,
         ee,
         marker;
 
-    for (var i in state) {
-      console.log("#Change 1st check: state is: ".concat(i, "---------"));
-    }
+    for (var el in state) {
+      console.log("#Change 1st check: state is: ".concat(el, "---------"));
+      console.log("el in state is ".concat(typeof el)); //console.log(` e is ${e} typof: ${typeof e}`);
+      //loop over each marker in hash
+      // walter >> review below
+      // state.forEach(function(el, i) {
+      //no active marker - means an info window was closed
 
-    ;
-    console.log(" e is ".concat(e, " typof: ").concat(typeof e)); //loop over each marker in hash
-    // walter >> review below
-    // state.forEach(function(el, i) {
-    //no active marker - means an info window was closed
+      if (el === '0') {
+        console.log("if zzzzz");
+        infoWindow.close();
+        return;
+      } //loop over  bigBuildingsArray to find marker
+      //cityLayers.buildingsObj.forEach(function(ee, ii) {
 
-    if (e === '0') {
-      console.log("if zzzzz");
-      infoWindow.close();
-      return;
-    }
 
-    console.log(" ee is ".concat(ee, " typof: ").concat(typeof ee)); //loop over  bigBuildingsArray to find marker
-    //cityLayers.buildingsObj.forEach(function(ee, ii) {
+      for (var ee in cityLayers.buildingsObj) {
+        if (el === ee) {
+          var found = cityLayers.buildingsObj[ee]; //console.log(found);
 
-    var walter = cityLayers.buildingsObj;
-    console.log("items object");
-    console.log(walter);
+          console.log("---------------");
+          console.log("cityLayers.buildingsObj > >");
+          console.log(cityLayers.buildingsObjs);
+          console.log("---------------");
+          console.log("ee > >");
+          console.log("type of ee is ".concat(typeof ee));
+          console.log(ee);
+          console.log("---------------");
+          marker = found;
+          console.log("marker > >");
+          console.log("type of marker is ".concat(typeof marker));
+          console.log(marker); //open infoWindow for this marker
+          //clear all overlays first
 
-    for (var item in cityLayers.buildingsObj) {
-      if (item === e) {
-        var found = cityLayers.buildingsObj[item];
-        console.log("marker found!!!");
-        console.log(found);
-        console.log(found.animation);
-        found.animation = 3;
-        console.log(found.animation);
-        marker = item; //open infoWindow for this marker
-        //clear all overlays first
+          clearOverlays(cityLayers.bigMarkersArray); //make marker visible
 
-        clearOverlays(cityLayers.bigMarkersArray); //make marker visible
+          marker.setVisible(true); //set infoWindow content
 
-        marker.setVisible(true); //set infoWindow content
+          infoWindow.setContent(marker.infoHtml); //open the infoWindow centered on the marker
 
-        infoWindow.setContent(marker.infoHtml); //open the infoWindow centered on the marker
+          infoWindow.open(map, marker); //pan map to marker position
 
-        infoWindow.open(map, marker); //pan map to marker position
+          map.panTo(marker.position); //add marker to map
 
-        map.panTo(marker.position); //add marker to map
-
-        marker.setMap(map);
-      } else {
-        console.log("marker NOT");
+          marker.setMap(map);
+        } else {
+          console.log("marker NOT");
+        }
       }
-    } //});
-    // });
-
-
-    for (i in state) {
-      console.log("#Change 2nd check: state is: ".concat(i, " ---------"));
     }
+
+    ; //});
+    // });
   },
 
   /**
@@ -2018,22 +2020,22 @@ function createMap(mapWrapper, $) {
     //window.trigger('hashchange'); walter below;
     //location.hash += "8";
 
-    hashChange('75971');
+    hashChange();
   },
       //end parse xml,
   loadXml = function loadXml() {
-    console.log("> function run - loadXml"); //get locations.xml
+    console.log("> function run - loadXml xhttp"); //get locations.xml
 
-    var xhr = new XMLHttpRequest();
+    var xhttp = new XMLHttpRequest();
 
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState == 4 && xhr.status === 200) {
-        parseXml(xhr.responseXML);
+    xhttp.onreadystatechange = function () {
+      if (xhttp.readyState == 4 && xhttp.status === 200) {
+        parseXml(xhttp.responseXML);
       }
     };
 
-    xhr.open("GET", dataSrc, true);
-    xhr.send(null);
+    xhttp.open("GET", dataSrc, true);
+    xhttp.send(null);
   },
 
   /**
