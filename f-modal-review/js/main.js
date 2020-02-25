@@ -6521,6 +6521,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 /* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
@@ -6537,9 +6539,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var className = 'modal',
     bodyClassName = className + '__body',
-    keyCodeEscape = 27;
+    keyCodeEscape = 27,
+    oneSecond = 1000,
+    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : oneSecond,
+    scrollTo = true;
+;
 var trap;
 /**
  * launch function
@@ -6624,9 +6631,6 @@ function createDialog(parent, position, dialogArray) {
   var dialog = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog'
-  }, {
-    label: 'data-hidden',
-    val: 'false'
   }, {
     label: 'data-position',
     val: "".concat(position)
@@ -6842,9 +6846,14 @@ function checkNextState(dialogArray, position, direction) {
 
 
 function closeDialog(dialog) {
-  dialog.parentNode.removeChild(dialog);
+  var parent = dialog.parentNode;
+  parent.removeChild(dialog);
   document.body.classList.remove('dialog-in', 'no-scroll');
   trap.deactivate();
+
+  if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_3__["verticallyInWindow"])(parent)) {
+    zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.to(parent, scrollDuration);
+  }
 }
 
 function trapFocus(modal) {
