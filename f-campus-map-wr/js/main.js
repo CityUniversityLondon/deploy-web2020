@@ -1431,11 +1431,14 @@ function updateProgress(backToTopAnchor) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
 
 
 
@@ -1450,16 +1453,8 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 var className = 'map-container';
-/*** instructions for the jslint parser */
 
-/*global CITY, google, jQuery, window, console, document */
-
-/*** end instructions for the jslint parser */
-//unitN.js
-//set up a holder module
-//CITY.visit = (function(CITY, $) {
-
-function createMap(mapWrapper, $) {
+function createMap() {
   // == PROPERTIES ==
   var
   /**
@@ -1636,27 +1631,16 @@ function createMap(mapWrapper, $) {
    * @return {Undefined}
    */
   hashChange = function hashChange(e) {
-    console.log("> function run: hashChange");
-    console.log(" hashChange parameter is: ".concat(e));
-    var state = e
-    /* e9541: "1"*/
-    ,
+    var state = e,
         x,
         i,
         el,
         ii,
         ee,
-        marker; //for (var el in state){
-    //console.log(`#Change 1st check: state is: ${el}---------`)
-    // console.log(`el in state is ${typeof el}`)
-    //console.log(` e is ${e} typof: ${typeof e}`);
-    //loop over each marker in hash
-    // walter >> review below
-    // state.forEach(function(el, i) {
+        marker; // walter >> review below
     //no active marker - means an info window was closed
 
     if (el === '0') {
-      console.log("if zzzzz");
       infoWindow.close();
       return;
     } //loop over  bigBuildingsArray to find marker
@@ -1705,7 +1689,6 @@ function createMap(mapWrapper, $) {
       callerId = caller.id; //state[callerId] = 1;
     } else {
       //an infoWindow was closed
-      //state['0'] = 1;
       callerId = 0;
     } // walter add comment
 
@@ -1737,7 +1720,6 @@ function createMap(mapWrapper, $) {
    * @return {Undefined}
    */
   newCategory = function newCategory(name) {
-    console.log("> function run: newCategory");
     name.toggler = null; // walter replaced with name - was this
 
     name.markersArray = [];
@@ -1821,7 +1803,7 @@ function createMap(mapWrapper, $) {
       return updateHash(marker);
     }); //create list element
 
-    $li = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', [{
+    $li = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('li', [{
       label: 'id',
       val: 'building-' + markerConfig.id
     }, {
@@ -1829,7 +1811,7 @@ function createMap(mapWrapper, $) {
       val: 'building'
     }]); //create a element with click handler to open infoWindow
 
-    var $a = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+    var $a = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('a', [{
       label: 'html',
       val: '<span>' + markerConfig.name + ' ' + markerConfig.buildingPrefix + '</span>'
     }, {
@@ -1864,7 +1846,6 @@ function createMap(mapWrapper, $) {
   },
       // >>>
   findChildText = function findChildText(node, name) {
-    //console.log(`>> function run - findChildText`);
     var value = '';
     var children = node.getElementsByTagName(name);
     var childrenLength = node.getElementsByTagName(name).length;
@@ -1896,24 +1877,15 @@ function createMap(mapWrapper, $) {
       markerConfig.index = index + 1;
       markerConfig.name = $self.getElementsByTagName('title')[0].textContent;
       markerConfig.linkHref = $self.getElementsByTagName('link')[0].textContent;
-      markerConfig.description = $self.getElementsByTagName('description')[0].textContent; //console.log(`markerConfig.description is: ${markerConfig.description}`)
+      markerConfig.description = $self.getElementsByTagName('description')[0].textContent;
+      markerConfig.icon = findChildText($self, 'CUL:icon');
+      markerConfig.category = $self.getElementsByTagName('category')[0].textContent;
+      markerConfig.id = $self.getElementsByTagName('guid')[0].textContent; //markerConfig.isPolygon = $self.find("[nodeName='georss:polygon']"); always been commented out
 
-      markerConfig.icon = findChildText($self, 'CUL:icon'); //console.log(`markerConfig.icon is: ${markerConfig.icon}`)
-
-      markerConfig.category = $self.getElementsByTagName('category')[0].textContent; //console.log(`markerConfig.category  is: ${markerConfig.category }`)
-
-      markerConfig.id = $self.getElementsByTagName('guid')[0].textContent; //console.log(`markerConfig.id  is: ${markerConfig.id}`)
-      //markerConfig.isPolygon = $self.find("[nodeName='georss:polygon']");
-      //walter >> been commented out
-
-      markerConfig.buildingPrefix = findChildText($self, 'CUL:buildingPrefix'); //console.log(`markerConfig.buildingPrefix is: ${markerConfig.buildingPrefix}`)
-
-      markerConfig.hexColour = findChildText($self, 'CUL:hexColour'); //console.log(`markerConfig.hexColour  is: ${markerConfig.hexColour }`)
-
-      markerConfig.geoLat = findChildText($self, 'geo:lat'); //console.log(`markerConfig.geoLat is: ${markerConfig.geoLat}`)
-
-      markerConfig.geoLong = findChildText($self, 'geo:long'); //console.log(`markerConfig.geoLong is: ${markerConfig.geoLong}`);
-
+      markerConfig.buildingPrefix = findChildText($self, 'CUL:buildingPrefix');
+      markerConfig.hexColour = findChildText($self, 'CUL:hexColour');
+      markerConfig.geoLat = findChildText($self, 'geo:lat');
+      markerConfig.geoLong = findChildText($self, 'geo:long');
       markerConfig.point = new google.maps.LatLng(parseFloat(markerConfig.geoLat), parseFloat(markerConfig.geoLong)); //call createmarker fn
 
       marker = createMarker(markerConfig);
@@ -1928,7 +1900,13 @@ function createMap(mapWrapper, $) {
 
 
       cityLayers.buildingsObj[marker.id] = marker;
-      searchTags.push(markerConfig.name);
+      searchTags.push(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('a', [{
+        label: 'content',
+        val: markerConfig.name
+      }, {
+        label: 'data-id',
+        val: markerConfig.id
+      }]));
       searchIds[markerConfig.name] = markerConfig.id; //add returned marker to category array (if cat exisits)
 
       if (cityLayers[markerConfig.category]) {
@@ -1941,25 +1919,58 @@ function createMap(mapWrapper, $) {
       }
     }); //end iteration
 
-    /*
-        walter >> commented out for now as using jquery UI
-    searchBox
-        .autocomplete({
-            source: searchTags,
-            select: function(e) {
-                setTimeout(function() {
-                    var selected = searchBox.val();
-                    searchBox.blur();
-                    if (selected in searchIds) {
-                        updateHash(searchIds[selected]);
-                    }
-                }, 0);
-            },
-        })
-        .focusin(function() {
-            searchBox.attr('value', '');
-        }); */
+    function searchBoxInit() {
+      // creates HTML structure for suggestion list
+      var listWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
+        label: 'class',
+        val: 'query__suggestions__wrapper'
+      }]);
+      var list = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('ul', [{
+        label: 'id',
+        val: 'query__suggestions'
+      }, {
+        label: 'data-show',
+        val: false
+      }]);
+      searchTags.forEach(function (tag) {
+        var item = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('li', []);
+        tag.addEventListener('click', function () {
+          searchQueryIdFind(tag.getAttribute('data-id'), tag.textContent);
+        });
+        list.appendChild(item).appendChild(tag);
+      });
+      searchBox.parentElement.appendChild(listWrapper).appendChild(list); // listens for search queries
 
+      searchBox.addEventListener('keyup', function () {
+        var searchString = searchBox.value;
+        var list = document.getElementById('query__suggestions');
+        var find = document.getElementById('query__suggestions').querySelectorAll('li');
+
+        if (searchString.length > 0) {
+          list.setAttribute('data-show', true);
+          find.forEach(function (i) {
+            var label = i.querySelector('a').textContent;
+
+            if (label.indexOf(searchString) > -1) {
+              i.style.display = "block";
+            } else {
+              i.style.display = "none";
+            }
+          });
+        } else {
+          list.setAttribute('data-show', false);
+        }
+      });
+
+      function searchQueryIdFind(id, title) {
+        searchBox.value = title;
+        document.getElementById('query__suggestions').setAttribute('data-show', false);
+        hashChange(id);
+      }
+    }
+
+    ;
+    searchBoxInit();
     document.getElementById('vs-button').addEventListener('click', function () {
       searchBox.focus();
     }); //clear marker when infoWIndow closed
@@ -1982,7 +1993,6 @@ function createMap(mapWrapper, $) {
   },
       //end parse xml,
   loadXml = function loadXml() {
-    //get locations.xml
     var xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function () {
@@ -2001,7 +2011,7 @@ function createMap(mapWrapper, $) {
    */
   init = function init() {
     $mapContainer.classList.add('loading');
-    $mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('i', [{
+    $mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('i', [{
       label: 'class',
       val: 'fa fa-refresh fa-spin loading-fa-icon'
     }]));
@@ -2019,19 +2029,9 @@ function createMap(mapWrapper, $) {
       );
       */
     });
-  }; //END VARS
-  //expose the bits we want to
+  };
 
-  /* walter >>  is this needed 
-  returnObj = {
-      init: init,
-      cityLayers: cityLayers,
-      infoWindow: infoWindow,
-      map: map,
-  };*/
-
-
-  init(); //return returnObj;
+  init();
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
