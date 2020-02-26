@@ -29658,26 +29658,25 @@ _:-ms-lang(x),
     border-bottom: 0;
 }
 
+@media (hover: hover) {
+    .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
+        background: #ffffff;
+    }
+    .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
+        color: #1e1e1e;
+        border-bottom-color: #1e1e1e;
+    }
+    .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p {
+        color: #1e1e1e;
+    }
+    .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right {
+        visibility: visible;
+        color: #d61726;
+    }
+}
+
 .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
     outline-color: #ffffff;
-}
-
-.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
-    background: #ffffff;
-}
-
-.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label h3 {
-    color: #1e1e1e;
-    border-bottom-color: #1e1e1e;
-}
-
-.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label p {
-    color: #1e1e1e;
-}
-
-.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
-    visibility: visible;
-    color: #d61726;
 }
 
 .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__image {
@@ -29743,26 +29742,25 @@ _:-ms-lang(x),
     border-bottom: 0;
 }
 
+@media (hover: hover) {
+    .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
+        background: #ffffff;
+    }
+    .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
+        color: #1e1e1e;
+        border-bottom-color: #1e1e1e;
+    }
+    .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p {
+        color: #1e1e1e;
+    }
+    .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right {
+        visibility: visible;
+        color: #d61726;
+    }
+}
+
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
     outline-color: #ffffff;
-}
-
-.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
-    background: #ffffff;
-}
-
-.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label h3 {
-    color: #1e1e1e;
-    border-bottom-color: #1e1e1e;
-}
-
-.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label p {
-    color: #1e1e1e;
-}
-
-.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
-    visibility: visible;
-    color: #d61726;
 }
 
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__image {
@@ -29828,26 +29826,25 @@ _:-ms-lang(x),
     border-bottom: 0;
 }
 
+@media (hover: hover) {
+    .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
+        background: #3e1031;
+    }
+    .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
+        color: #ffffff;
+        border-bottom-color: #ffffff;
+    }
+    .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p {
+        color: #ffffff;
+    }
+    .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right {
+        visibility: visible;
+        color: #d61726;
+    }
+}
+
 .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
     outline-color: #0c0c0e;
-}
-
-.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
-    background: #3e1031;
-}
-
-.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label h3 {
-    color: #ffffff;
-    border-bottom-color: #ffffff;
-}
-
-.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label p {
-    color: #ffffff;
-}
-
-.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
-    visibility: visible;
-    color: #d61726;
 }
 
 .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__image {
@@ -29913,26 +29910,25 @@ _:-ms-lang(x),
     border-bottom: 0;
 }
 
+@media (hover: hover) {
+    .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
+        background: #3e1031;
+    }
+    .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
+        color: #ffffff;
+        border-bottom-color: #ffffff;
+    }
+    .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p {
+        color: #ffffff;
+    }
+    .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right {
+        visibility: visible;
+        color: #d61726;
+    }
+}
+
 .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
     outline-color: #0c0c0e;
-}
-
-.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
-    background: #3e1031;
-}
-
-.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label h3 {
-    color: #ffffff;
-    border-bottom-color: #ffffff;
-}
-
-.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label p {
-    color: #ffffff;
-}
-
-.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
-    visibility: visible;
-    color: #d61726;
 }
 
 .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__image {
@@ -29998,26 +29994,25 @@ _:-ms-lang(x),
     border-bottom: 0;
 }
 
+@media (hover: hover) {
+    .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
+        background: #3e1031;
+    }
+    .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
+        color: #ffffff;
+        border-bottom-color: #ffffff;
+    }
+    .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p {
+        color: #ffffff;
+    }
+    .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right {
+        visibility: visible;
+        color: #d61726;
+    }
+}
+
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
     outline-color: #0c0c0e;
-}
-
-.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
-    background: #3e1031;
-}
-
-.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label h3 {
-    color: #ffffff;
-    border-bottom-color: #ffffff;
-}
-
-.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label p {
-    color: #ffffff;
-}
-
-.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
-    visibility: visible;
-    color: #d61726;
 }
 
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__image {
@@ -45974,26 +45969,25 @@ button
     border-bottom: 0;
 }
 
+@media (hover: hover) {
+    .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
+        background: #ffffff;
+    }
+    .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
+        color: #1e1e1e;
+        border-bottom-color: #1e1e1e;
+    }
+    .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p {
+        color: #1e1e1e;
+    }
+    .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right {
+        visibility: visible;
+        color: #d61726;
+    }
+}
+
 .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
     outline-color: #ffffff;
-}
-
-.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
-    background: #ffffff;
-}
-
-.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label h3 {
-    color: #1e1e1e;
-    border-bottom-color: #1e1e1e;
-}
-
-.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label p {
-    color: #1e1e1e;
-}
-
-.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
-    visibility: visible;
-    color: #d61726;
 }
 
 .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__image {
@@ -46059,26 +46053,25 @@ button
     border-bottom: 0;
 }
 
+@media (hover: hover) {
+    .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
+        background: #ffffff;
+    }
+    .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
+        color: #1e1e1e;
+        border-bottom-color: #1e1e1e;
+    }
+    .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p {
+        color: #1e1e1e;
+    }
+    .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right {
+        visibility: visible;
+        color: #d61726;
+    }
+}
+
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
     outline-color: #ffffff;
-}
-
-.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
-    background: #ffffff;
-}
-
-.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label h3 {
-    color: #1e1e1e;
-    border-bottom-color: #1e1e1e;
-}
-
-.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label p {
-    color: #1e1e1e;
-}
-
-.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
-    visibility: visible;
-    color: #d61726;
 }
 
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__image {
@@ -46144,26 +46137,25 @@ button
     border-bottom: 0;
 }
 
+@media (hover: hover) {
+    .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
+        background: #3e1031;
+    }
+    .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
+        color: #ffffff;
+        border-bottom-color: #ffffff;
+    }
+    .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p {
+        color: #ffffff;
+    }
+    .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right {
+        visibility: visible;
+        color: #d61726;
+    }
+}
+
 .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
     outline-color: #0c0c0e;
-}
-
-.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
-    background: #3e1031;
-}
-
-.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label h3 {
-    color: #ffffff;
-    border-bottom-color: #ffffff;
-}
-
-.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label p {
-    color: #ffffff;
-}
-
-.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
-    visibility: visible;
-    color: #d61726;
 }
 
 .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__image {
@@ -46229,26 +46221,25 @@ button
     border-bottom: 0;
 }
 
+@media (hover: hover) {
+    .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
+        background: #3e1031;
+    }
+    .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
+        color: #ffffff;
+        border-bottom-color: #ffffff;
+    }
+    .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p {
+        color: #ffffff;
+    }
+    .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right {
+        visibility: visible;
+        color: #d61726;
+    }
+}
+
 .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
     outline-color: #0c0c0e;
-}
-
-.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
-    background: #3e1031;
-}
-
-.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label h3 {
-    color: #ffffff;
-    border-bottom-color: #ffffff;
-}
-
-.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label p {
-    color: #ffffff;
-}
-
-.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
-    visibility: visible;
-    color: #d61726;
 }
 
 .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__image {
@@ -46314,26 +46305,25 @@ button
     border-bottom: 0;
 }
 
+@media (hover: hover) {
+    .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
+        background: #3e1031;
+    }
+    .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
+        color: #ffffff;
+        border-bottom-color: #ffffff;
+    }
+    .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p {
+        color: #ffffff;
+    }
+    .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right {
+        visibility: visible;
+        color: #d61726;
+    }
+}
+
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
     outline-color: #0c0c0e;
-}
-
-.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
-    background: #3e1031;
-}
-
-.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label h3 {
-    color: #ffffff;
-    border-bottom-color: #ffffff;
-}
-
-.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label p, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label p {
-    color: #ffffff;
-}
-
-.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label .fa-long-arrow-right, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within .featured-profiles__profile__label .fa-long-arrow-right {
-    visibility: visible;
-    color: #d61726;
 }
 
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__image {
