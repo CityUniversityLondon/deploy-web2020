@@ -29658,6 +29658,10 @@ _:-ms-lang(x),
     border-bottom: 0;
 }
 
+.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
+    outline-color: #ffffff;
+}
+
 .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
     background: #ffffff;
 }
@@ -29737,6 +29741,10 @@ _:-ms-lang(x),
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile {
     background: #1e1e1e;
     border-bottom: 0;
+}
+
+.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
+    outline-color: #ffffff;
 }
 
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
@@ -29820,6 +29828,10 @@ _:-ms-lang(x),
     border-bottom: 0;
 }
 
+.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
+    outline-color: #0c0c0e;
+}
+
 .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
     background: #3e1031;
 }
@@ -29901,6 +29913,10 @@ _:-ms-lang(x),
     border-bottom: 0;
 }
 
+.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
+    outline-color: #0c0c0e;
+}
+
 .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
     background: #3e1031;
 }
@@ -29980,6 +29996,10 @@ _:-ms-lang(x),
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile {
     background: #e5e5e5;
     border-bottom: 0;
+}
+
+.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
+    outline-color: #0c0c0e;
 }
 
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
@@ -45954,6 +45974,10 @@ button
     border-bottom: 0;
 }
 
+.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
+    outline-color: #ffffff;
+}
+
 .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
     background: #ffffff;
 }
@@ -46033,6 +46057,10 @@ button
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile {
     background: #1e1e1e;
     border-bottom: 0;
+}
+
+.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
+    outline-color: #ffffff;
 }
 
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
@@ -46116,6 +46144,10 @@ button
     border-bottom: 0;
 }
 
+.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
+    outline-color: #0c0c0e;
+}
+
 .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
     background: #3e1031;
 }
@@ -46197,6 +46229,10 @@ button
     border-bottom: 0;
 }
 
+.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
+    outline-color: #0c0c0e;
+}
+
 .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
     background: #3e1031;
 }
@@ -46276,6 +46312,10 @@ button
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile {
     background: #e5e5e5;
     border-bottom: 0;
+}
+
+.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:active, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus {
+    outline-color: #0c0c0e;
 }
 
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover, .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:focus-within {
