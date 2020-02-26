@@ -6667,24 +6667,25 @@ function createDialog(parent, position, dialogArray) {
   bodyWrapper.appendChild(dialogBody);
   wrapperWrapper.appendChild(bodyWrapper);
   dialog.appendChild(wrapperWrapper);
-  parent.appendChild(dialog);
+  var main = document.querySelector('main');
+  main.appendChild(dialog);
   dialog.addEventListener('keydown', e => {
     if (e.keyCode === keyCodeEscape) {
       e.preventDefault();
-      closeDialog(dialog);
+      closeDialog(dialog, parent);
     }
   });
   dialog.addEventListener('click', e => {
     if (e.target.classList.contains('dialog')) {
       e.preventDefault();
       e.stopPropagation();
-      closeDialog(dialog);
+      closeDialog(dialog, parent);
     }
   });
   closeBtn.addEventListener('click', e => {
     e.preventDefault();
     e.stopPropagation();
-    closeDialog(dialog);
+    closeDialog(dialog, parent);
   });
   trapFocus(dialog);
   document.body.classList.add('dialog-in', 'no-scroll');
@@ -6845,14 +6846,14 @@ function checkNextState(dialogArray, position, direction) {
  */
 
 
-function closeDialog(dialog) {
+function closeDialog(dialog, modal) {
   var parent = dialog.parentNode;
   parent.removeChild(dialog);
   document.body.classList.remove('dialog-in', 'no-scroll');
   trap.deactivate();
 
-  if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_3__["verticallyInWindow"])(parent)) {
-    zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.to(parent, scrollDuration);
+  if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_3__["verticallyInWindow"])(modal)) {
+    zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.to(modal, scrollDuration);
   }
 }
 
