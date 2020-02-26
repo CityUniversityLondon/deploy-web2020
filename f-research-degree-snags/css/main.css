@@ -35888,7 +35888,7 @@ article figure figcaption a:active {
 .key-information--research__main__dates thead,
 .key-information--research__main__dates tbody {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1.5rem;
 }
 
@@ -35902,10 +35902,8 @@ article figure figcaption a:active {
 .key-information--research__main__dates tr {
     display: flex;
     grid-column: 1 / 3;
-}
-
-.key-information--research__main__dates tr:nth-of-type(2n + 2) {
-    background: #e5e5e5;
+    border-bottom: solid #d8d8d8 0.0625rem;
+    padding: 0.125rem 0;
 }
 
 .key-information--research__main__dates tr th {
@@ -35973,6 +35971,13 @@ article figure figcaption a:active {
 }
 
 @media (max-width: 899px) {
+    .key-information--research__main__duration {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0;
+    }
+}
+
+@media (max-width: 431px) {
     .key-information--research__main__duration {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 0;
