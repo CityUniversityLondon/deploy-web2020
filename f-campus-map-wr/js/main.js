@@ -1459,32 +1459,26 @@ function createMap() {
   // == PROPERTIES ==
   var
   /**
-   * this object holds the properties and methods we want to return later
-   * @var {Object}
-   */
-  returnObj = {},
-
-  /**
    * data source - relative to handle production and test environments
-   * @var {String}
+   * @let {String}
    */
   dataSrc = 'https://web2020.city.ac.uk/staging/development/walter/campus-map/locations',
 
   /**
    * Create a LatLng object containing the coordinate for the center of the map
-   * @var {Object}
+   * @let {Object}
    */
   latlng = new google.maps.LatLng(51.527761, -0.103283),
 
   /**
    * jQuery object for map canvas
-   * @var {Object}
+   * @let {Object}
    */
   $mapContainer = document.getElementById('map-container'),
 
   /**
    * an object literal containing the properties we want to pass to the map
-   * @var {Object}
+   * @let {Object}
    */
   mapOptions = {
     zoom: 17,
@@ -1501,25 +1495,25 @@ function createMap() {
 
   /**
    * Call the constructor, thereby initializing the map  as soon as possible
-   * @var {Object}: Google maps Map object
+   * @let {Object}: Google maps Map object
    */
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions),
       searchBox = document.getElementById('map-search'),
 
   /**
    * initlaise infoWindow
-   * @var {Object}: Google maps InfoWindow object
+   * @let {Object}: Google maps InfoWindow object
    */
   infoWindow = new google.maps.InfoWindow({
     maxWidth: 400
   }),
-      // walter >> this was commented out already
+      // This was commented out already
 
   /* points = [
   new google.maps.LatLng(51.527701, -0.102509),
   new google.maps.LatLng(51.521870, -0.090356)
   ];
-   for (var i = 0; i < points.length; i++) {
+   for (let i = 0; i < points.length; i++) {
   marker = new google.maps.Marker({
   position: points[i],
   animation: google.maps.Animation.DROP
@@ -1530,7 +1524,7 @@ function createMap() {
   /**
    * cityLayers object literal containing skeleton options for City related things - parsing the xml file adds to this
    * it is where we keep arrays of markers to use when clearing/setting things on the map
-   * @var {Object}:
+   * @let {Object}:
    */
   cityLayers = {
     // array to hold each google marker object - for each University location
@@ -1584,16 +1578,12 @@ function createMap() {
 
   /**
    * kmlLayers object - kml files containing useful third party location information
-   * @var {Object}:
+   * @let {Object}:
    */
   kmlLayers = {
     cycleHire: {
       src: 'http://webapps.city.ac.uk/matrix/maps/cycle-hire.php',
-      //toggler: document.getElementById('cycle-hire'),
-      toggler: function () {
-        var myvariable = document.getElementById('cycle-hire');
-        return myvariable;
-      }(),
+      toggler: document.getElementById('cycle-hire'),
       preserveViewport: true
     },
     bikes: {
@@ -1606,15 +1596,15 @@ function createMap() {
       toggler: document.getElementById('cash-points'),
       preserveViewport: true
     }
-  },
-      // == METHODS ==
+  }; // == METHODS ==
 
   /**
    * Removes the overlays from the map, but keeps them in the array
    * @param {Array} markersArray: a collections of markers
    * @return {Undefined}
    */
-  clearOverlays = function clearOverlays(markersArray) {
+
+  function clearOverlays(markersArray) {
     var i;
 
     if (markersArray) {
@@ -1624,33 +1614,21 @@ function createMap() {
         }
       }
     }
-  },
+  }
 
+  ;
   /**
    * the hashChange handler - listens for hash changes and then does cool stuff
-   * @param {Object} e: the window hashchange event
+   * @param {string} id of building: the window hashchange event
    * @return {Undefined}
    */
-  hashChange = function hashChange(e) {
-    var state = e,
-        x,
-        i,
-        el,
-        ii,
-        ee,
-        marker; // walter >> review below
-    //no active marker - means an info window was closed
 
-    if (el === '0') {
-      infoWindow.close();
-      return;
-    } //loop over  bigBuildingsArray to find marker
-    //cityLayers.buildingsObj.forEach(function(ee, ii) {
+  function hashChange(id) {
+    var marker; //loop over  bigBuildingsArray to find marker
 
-
-    for (var ee in cityLayers.buildingsObj) {
-      if (e === ee) {
-        var found = cityLayers.buildingsObj[ee];
+    for (var building in cityLayers.buildingsObj) {
+      if (id === building) {
+        var found = cityLayers.buildingsObj[building];
         marker = found; //open infoWindow for this marker
         //clear all overlays first
 
@@ -1667,16 +1645,17 @@ function createMap() {
         marker.setMap(map);
       }
     }
-  },
+  }
 
+  ;
   /**
    * the updateHash called when a marker, infoWindow or marker link is clicked - updates hash
    * @param {Object || String} caller: the marker, marker link or infoWindow firing the event
    * @return {Undefined}
    */
-  updateHash = function updateHash(caller) {
-    var state = {},
-        callerId = '';
+
+  function updateHash(caller) {
+    var callerId = '';
 
     if (!caller) {
       return;
@@ -1691,19 +1670,20 @@ function createMap() {
     } else {
       //an infoWindow was closed
       callerId = 0;
-    } // walter add comment
-
+    }
 
     location.hash = callerId;
     hashChange(callerId);
-  },
+  }
 
+  ;
   /**
    * Shows any overlays currently in the array
    * @param {Array} markersArray: a collection of markers
    * @return {Undefined}
    */
-  showOverlays = function showOverlays(markersArray) {
+
+  function showOverlays(markersArray) {
     var i;
 
     if (markersArray) {
@@ -1713,26 +1693,30 @@ function createMap() {
         }
       }
     }
-  },
+  }
 
+  ;
   /**
    * creates a new category of place in CityLayers object
    * @param {String} name: the new name of the category ?
    * @return {Undefined}
    */
-  newCategory = function newCategory(name) {
+
+  function newCategory(name) {
     name.toggler = null; // walter replaced with name - was this
 
     name.markersArray = [];
     name.zoomLevel = 17;
-  },
+  }
 
+  ;
   /**
    *  loop through each kmllayer adding checked behaviour
    * @param {Object} object: Config object for KML
    * @return {?}
    */
-  initKmlLayers = function initKmlLayers(layer) {
+
+  function initKmlLayers(layer) {
     for (var key in layer) {
       // skip loop if the property is from prototype
       if (!layer.hasOwnProperty(key)) {} //end if
@@ -1743,8 +1727,8 @@ function createMap() {
       var overlay = new google.maps.KmlLayer(obj.src, {
         preserveViewport: obj.preserveViewport
       });
-      /* walter >>
-      disabled for now as tonggler empty - maybe even remove klmlyer as possible not required
+      /* 
+      Disabled for now as toggler empty - maybe even remove klmlyer as possible not required
         toggler.addEventListener("click", function(){
           console.log(`toggler`);
           //toggler.toggleClass('enabled');
@@ -1753,23 +1737,22 @@ function createMap() {
       }); //end click fn */
     } // end for
 
-  },
-      //end initKmlLayers
+  }
+
+  ; //end initKmlLayers
 
   /**
    *  creates individual markers, builds a corresponding filter item, binds a infoWindow to marker with html
-   * @param {Object} markerConfig: an object containing various marker configuration options
+   * @param {Object} markerConfig: an object containing letious marker configuration options
    * @return {Object} marker - google maps marker
    */
-  createMarker = function createMarker(markerConfig) {
-    // var listId = '#' + markerConfig.category, >> walter maybe delete this now
+
+  function createMarker(markerConfig) {
+    // let listId = '#' + markerConfig.category, >> walter maybe delete this now
     var listId = document.getElementById(markerConfig.category),
         listItem,
         marker,
-        $li,
-        $a,
-        markerId,
-        prefixHtml,
+        anchor,
         html = ''; //build html for infoWindow
     //if has link
 
@@ -1804,7 +1787,7 @@ function createMap() {
       return updateHash(marker);
     }); //create list element
 
-    $li = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('li', [{
+    listItem = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('li', [{
       label: 'id',
       val: 'building-' + markerConfig.id
     }, {
@@ -1812,27 +1795,29 @@ function createMap() {
       val: 'building'
     }]); //create a element with click handler to open infoWindow
 
-    var $a = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('a', [{
+    anchor = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('a', [{
       label: 'html',
       val: '<span>' + markerConfig.name + ' ' + markerConfig.buildingPrefix + '</span>'
     }, {
       label: 'href',
       val: '#'
     }]);
-    $a.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function (e) {
       e.preventDefault();
       updateHash(e.target.parentElement.parentElement.getAttribute('id').replace('building-', ''));
       return false;
     });
-    $a.style.background = 'transparent url(' + markerConfig.icon + '?v=1123) no-repeat left center'; //add li item to list
+    anchor.style.background = 'transparent url(' + markerConfig.icon + '?v=1123) no-repeat left center'; //add li item to list
 
-    listId ? listId.appendChild($li).appendChild($a) : null;
+    listId ? listId.appendChild(listItem).appendChild(anchor) : null;
     return marker;
-  },
-      //end fn.createMarker
+  }
+
+  ; //end fn.createMarker
   // Deletes all markers in the array by removing references to them
   //commented out to keep JSLint happy as this function is not currently used
-  deleteOverlays = function deleteOverlays(markersArray) {
+
+  function deleteOverlays(markersArray) {
     var i;
 
     if (markersArray) {
@@ -1844,9 +1829,11 @@ function createMap() {
 
       markersArray.length = 0;
     }
-  },
-      // >>>
-  findChildText = function findChildText(node, name) {
+  }
+
+  ;
+
+  function findChildText(node, name) {
     var value = '';
     var children = node.getElementsByTagName(name);
     var childrenLength = node.getElementsByTagName(name).length;
@@ -1856,8 +1843,9 @@ function createMap() {
     }
 
     return value;
-  },
+  }
 
+  ;
   /**
    * parses locations xml and creates markers
    * @param {Object} xml: xml returned from Ajax request
@@ -1865,7 +1853,8 @@ function createMap() {
    * @param {Object} textStatus: standard ajax reposnse
    * @return {?}
    */
-  parseXml = function parseXml(xml, textStatus, jqXHR) {
+
+  function parseXml(xml) {
     var items = xml.getElementsByTagName('item');
     var index = 0,
         $self,
@@ -1913,7 +1902,7 @@ function createMap() {
       if (cityLayers[markerConfig.category]) {
         cityLayers[markerConfig.category].markersArray.push(marker);
       } else {
-        /* walter >>  this is commented out for now. Not sure if this is needed
+        /* Commented out for now. Not sure if this is needed
             cityLayers[markerConfig.category] = newCategory(
                 markerConfig.category
             ); */
@@ -1933,6 +1922,11 @@ function createMap() {
         label: 'data-show',
         val: false
       }]);
+      /**
+       * creates list of anchors contaning building info below:
+       * @tag {HTMLelement} anchor containing building name and id
+       */
+
       searchTags.forEach(function (tag) {
         var item = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('li', []);
         tag.addEventListener('click', function () {
@@ -1945,7 +1939,7 @@ function createMap() {
       searchBox.addEventListener('keyup', function () {
         var searchString = searchBox.value;
         var list = document.getElementById('query__suggestions');
-        var find = document.getElementById('query__suggestions').querySelectorAll('li');
+        var find = document.getElementById('query__suggestions').querySelectorAll('li'); // if a query is presesnt it show / hides relevant buildings using CSS instead of recreateing DOM elements all the time to help with performance
 
         if (searchString.length > 0) {
           list.setAttribute('data-show', true);
@@ -1971,7 +1965,8 @@ function createMap() {
     }
 
     ;
-    searchBoxInit();
+    searchBoxInit(); // Walter >> needs reviewing if needed or to be changed this vs-butto below
+
     document.getElementById('vs-button').addEventListener('click', function () {
       searchBox.focus();
     }); //clear marker when infoWIndow closed
@@ -1988,12 +1983,13 @@ function createMap() {
 
     window.addEventListener('hashchange', hashChange); // Since the event is only triggered when the hash changes, we need to trigger
     // the event now, to handle the hash the page may have loaded with.
-    //window.trigger('hashchange'); walter below;
 
     hashChange(location.hash.replace('#', ''));
-  },
-      //end parse xml,
-  loadXml = function loadXml() {
+  }
+
+  ; //end parse xml,
+
+  function loadXml() {
     var xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function () {
@@ -2004,37 +2000,29 @@ function createMap() {
 
     xhttp.open('GET', dataSrc, true);
     xhttp.send(null);
-  },
+  }
 
+  ;
   /**
    * init fn
    * @return {Undefined}
    */
-  init = function init() {
+
+  function init() {
     $mapContainer.classList.add('loading');
     $mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('i', [{
       label: 'class',
       val: 'fa fa-refresh fa-spin loading-fa-icon'
     }]));
     initKmlLayers(kmlLayers);
-    loadXml(); //scroll journey planner
+    loadXml();
+  }
 
-    document.getElementById('journey-link').addEventListener('click', function (e) {
-      e.preventDefault();
-      /* walter >> edited out for now
-      $('html, body').animate(
-      {
-          scrollTop: $('#journey-planner').offset().top,
-      },
-      1000
-      );
-      */
-    });
-  };
-
+  ;
   init();
 }
 
+;
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: createMap,
   launchQuery: ".".concat(className)
