@@ -51116,7 +51116,8 @@ button
     }
 }
 
-.case-study--business .case-study__knowledge .cta {
+.case-study--business .case-study__knowledge .cta,
+.case-study--business .case-study__collaborative .cta {
     margin: 1.25rem 0 3rem 0;
 }
 
