@@ -630,6 +630,7 @@ var className = 'accordion',
     headingIconClassName = headingClassName + '__indicator fal',
     bodyClassName = className + '__body',
     oneSecond = 1000,
+    tenthOfASecond = 100,
     scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_4__["reduceMotion"])() ? 0 : oneSecond,
     scrollTo = true;
 /**
@@ -720,7 +721,7 @@ function buttonClick(button, headings, toggleOpen) {
 
     setTimeout(() => {
       accordionSection.style.height = '0px';
-    }, 0);
+    }, tenthOfASecond);
     setSection(heading, false);
   } else {
     // Calclulate and save how big we're transitioning to
@@ -730,7 +731,7 @@ function buttonClick(button, headings, toggleOpen) {
 
     setTimeout(() => {
       accordionSection.style.height = sectionHeight;
-    }, 0);
+    }, tenthOfASecond);
 
     if (toggleOpen) {
       var sections = Array.from(heading.parentNode.parentNode.querySelectorAll("#".concat(heading.parentElement.id, " > .").concat(bodyClassName)));
@@ -2176,17 +2177,14 @@ finder__results__contact.propTypes = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
 /* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../results/finder__results__highlight__query */ "./src/patterns/finder/components/results/finder__results__highlight__query.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
-
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../results/finder__results__highlight__query */ "./src/patterns/finder/components/results/finder__results__highlight__query.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
 
 
 
@@ -2210,67 +2208,67 @@ __webpack_require__.r(__webpack_exports__);
 
 function finder__results__course(props) {
   var subtitle = props.details.metaData.type || props.details.metaData.level || null,
-      award = props.details.metaData.qualification && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+      award = props.details.metaData.qualification && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-fw fa-award icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Award:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.qualification.split('|').length > 2 ? props.details.metaData.qualification.split('|').slice(0, -1).join(', ') + ' or ' + props.details.metaData.qualification.split('|').slice(-1) : props.details.metaData.qualification.split('|').join(' or '))),
-      duration = props.details.metaData.duration && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Award", props.details.metaData.qualification.split('|').length > 1 && 's', ":"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.qualification.split('|').join(', '))),
+      duration = props.details.metaData.duration && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fal fa-fw fa-clock icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Duration:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.duration)),
-      method = props.details.metaData.method && props.query.facets.method && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Duration:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.duration)),
+      method = props.details.metaData.method && (props.query.facets.method || props.query.query.indexOf(props.details.metaData.method) >= 0 || props.details.metaData.method.indexOf('Online') >= 0) && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-fw fa-book-reader icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Method of study:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.method.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_6__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').slice(0, -1).join(', ') + ' or ' + Object(_util__WEBPACK_IMPORTED_MODULE_6__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_6__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').join(' or '))),
-      location = props.details.metaData.location && props.query.facets.location && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Method", props.details.metaData.method.split('|').length > 1 && 's', ' ', "of study:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').join(', '))),
+      location = props.details.metaData.location && props.query.facets.location && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-fw fa-map-marker-alt icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Location:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.location)),
-      school = props.details.metaData.school && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Location:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.location)),
+      school = props.details.metaData.school && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "School:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.school)),
-      clearing = props.details.metaData.clearing === '1' && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "School:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.school)),
+      clearing = props.details.metaData.clearing === '1' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "clearing_label"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Available in clearing")),
-      external = props.details.indexUrl.indexOf('cass.city.ac.uk') >= 0 && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Available in clearing")),
+      external = props.details.indexUrl.indexOf('cass.city.ac.uk') >= 0 && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-external-link icon",
     "aria-label": "(external link)"
   })),
-      courseCode = props.details.metaData.code && (['Undergraduate degree', 'Foundation course', 'Postgraduate taught degree'].some(s => props.details.metaData.level.indexOf(s) >= 0) || props.query.query.indexOf(props.details.metaData.code) >= 0) ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+      courseCode = props.details.metaData.code && (['Undergraduate degree', 'Foundation course', 'Postgraduate taught degree'].some(s => props.details.metaData.level.indexOf(s) >= 0) || props.query.query.indexOf(props.details.metaData.code) >= 0) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-fw fa-graduation-cap icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Course code:"), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.code.split('|').join('/'))) : null;
-  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Course code", props.details.metaData.code.split('|').length > 1 && 's', ":"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.code.split('|').join('/'))) : null;
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "finder__results__card finder__results__course"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: props.details.clickTrackingUrl
-  }, clearing, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+  }, clearing, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
     className: "finder__results__card__heading"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "underline-transition__title"
-  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_5__["default"])(props.details.title, props.query.query) : props.details.title, external)), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__["default"])(props.details.title, props.query.query) : props.details.title, external)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "finder__results__card__description"
-  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_5__["default"])(subtitle, props.query.query) : subtitle && subtitle), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_5__["default"])(props.details.metaData.c, props.query.query) : props.details.metaData.c && props.details.metaData.c), school, award, duration, courseCode, method, location)));
+  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__["default"])(subtitle, props.query.query) : subtitle && subtitle), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__["default"])(props.details.metaData.c, props.query.query) : props.details.metaData.c && props.details.metaData.c), school, award, duration, courseCode, method, location)));
 }
 
 finder__results__course.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
+  details: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__course);
 
@@ -3179,7 +3177,20 @@ function finder__query(props) {
   };
 
   var submitForm = () => {
-    window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?query=".concat(partialQuery));
+    var queryURL = '';
+    var exclusions = ['Short courses', 'Professional development courses', 'City Health courses', 'In-house law courses'];
+    var courseLevel = document.getElementsByClassName('finder__mini')[0].getAttribute('data-level');
+
+    function exclusion(level) {
+      return level === courseLevel;
+    }
+
+    function buildURL(level) {
+      exclusions.filter(exclusion).length ? queryURL = 'meta_level_sand=Short+courses+and+professional+development&meta_type_sand=' + level : queryURL = 'meta_level_sand=' + level;
+      window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?".concat(queryURL, "&query=").concat(partialQuery));
+    }
+
+    buildURL(courseLevel);
   };
 
   var submitSuggestion = s => {
@@ -6509,6 +6520,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
@@ -6524,9 +6538,14 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
+
+
 var className = 'modal',
     bodyClassName = className + '__body',
-    keyCodeEscape = 27;
+    keyCodeEscape = 27,
+    oneSecond = 1000,
+    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : oneSecond,
+    scrollTo = true;
 var trap;
 /**
  * launch function
@@ -6536,6 +6555,7 @@ var trap;
 
 function launchModal(modal) {
   var dialogArray = [];
+  var dialogTopic = modal.getAttribute('data-topic');
   Array.from(modal.getElementsByTagName('li')).forEach((list, i) => {
     var wrapper = document.createElement('div'),
         listAnchor = document.createElement('a'),
@@ -6545,11 +6565,22 @@ function launchModal(modal) {
         format = list.getAttribute('data-keepformat'),
         header = document.createElement('div');
     var title,
-        keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(format);
+        keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(format),
+        shortName = list.getAttribute('data-shortname');
     listAnchor.setAttribute('href', '#');
     list.appendChild(wrapper);
     Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(wrapper, listBody);
     wrapper.classList.add("".concat(bodyClassName));
+
+    if (customHeader) {
+      title = customHeader;
+    } else {
+      title = listHeader.innerText;
+    }
+
+    if (shortName === null) {
+      shortName = listHeader.innerText;
+    }
 
     if (keepFormat) {
       list.insertBefore(listHeader, wrapper);
@@ -6569,15 +6600,11 @@ function launchModal(modal) {
       });
     }
 
-    if (customHeader) {
-      title = customHeader;
-    } else {
-      title = listHeader.innerText;
-    }
-
     dialogArray.push({
       title: title,
-      body: wrapper.innerHTML
+      body: wrapper.innerHTML,
+      topic: dialogTopic,
+      shortname: shortName
     });
   });
 }
@@ -6595,68 +6622,72 @@ function createDialog(parent, position, dialogArray) {
   var slider = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(parent.getAttribute('data-slider'));
   var closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('button', [{
     label: 'class',
-    val: 'modal__close fas fa-times'
+    val: 'dialog__close fas fa-times'
   }, {
     label: 'aria-label',
     val: 'Close modal'
   }]);
   var dialog = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
     label: 'class',
-    val: 'dialog modal__popup'
-  }, {
-    label: 'data-hidden',
-    val: 'false'
+    val: 'dialog'
   }, {
     label: 'data-position',
     val: "".concat(position)
   }]);
   var bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
     label: 'class',
-    val: 'modal__content'
+    val: 'dialog__content'
   }]);
   var wrapperWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
     label: 'class',
-    val: 'modal__inner'
+    val: 'dialog__inner'
   }, {
     label: 'role',
     val: 'role'
   }]);
-  var dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('h2', [{
+  var dialogStrapline = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('p', [{
     label: 'class',
-    val: 'modal__heading'
+    val: 'dialog__strapline'
+  }]);
+  var dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('p', [{
+    label: 'class',
+    val: 'dialog__heading'
   }]);
   var dialogBody = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
     label: 'class',
-    val: 'modal__body-copy'
+    val: 'dialog__body-copy'
   }]);
   dialogTitle.innerText = dialogArray[position].title;
   dialogBody.innerHTML = dialogArray[position].body;
+  dialogStrapline.innerHTML = dialogArray[position].topic;
   bodyWrapper.appendChild(closeBtn);
+  bodyWrapper.appendChild(dialogStrapline);
   bodyWrapper.appendChild(dialogTitle);
   bodyWrapper.appendChild(dialogBody);
   wrapperWrapper.appendChild(bodyWrapper);
   dialog.appendChild(wrapperWrapper);
-  parent.appendChild(dialog);
+  var main = document.querySelector('main');
+  main.appendChild(dialog);
   dialog.addEventListener('keydown', e => {
     if (e.keyCode === keyCodeEscape) {
       e.preventDefault();
-      closeDialog(dialog);
+      closeDialog(dialog, parent);
     }
   });
   dialog.addEventListener('click', e => {
-    if (e.target.classList.contains('modal__popup')) {
+    if (e.target.classList.contains('dialog')) {
       e.preventDefault();
       e.stopPropagation();
-      closeDialog(dialog);
+      closeDialog(dialog, parent);
     }
   });
   closeBtn.addEventListener('click', e => {
     e.preventDefault();
     e.stopPropagation();
-    closeDialog(dialog);
+    closeDialog(dialog, parent);
   });
   trapFocus(dialog);
-  document.body.classList.add('modal--in', 'no-scroll');
+  document.body.classList.add('dialog-in', 'no-scroll');
 
   if (slider && dialogArray.length > 1) {
     createControl(dialog, dialogArray);
@@ -6676,7 +6707,7 @@ function createControl(dialog, dialogArray) {
   var position = parseInt(dialog.getAttribute('data-position'));
   var buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
     label: 'class',
-    val: 'modal__buttons modal__buttons--slider'
+    val: 'dialog__slider-control'
   }]);
   var buttonPrev = controlButton(dialogArray, position, 'left');
   var buttonNext = controlButton(dialogArray, position, 'right');
@@ -6692,7 +6723,7 @@ function createControl(dialog, dialogArray) {
   });
   buttonWrapper.appendChild(buttonPrev);
   buttonWrapper.appendChild(buttonNext);
-  var dialogContent = dialog.querySelector('.modal__content');
+  var dialogContent = dialog.querySelector('.dialog__content');
   dialogContent.appendChild(buttonWrapper);
 }
 /**
@@ -6708,23 +6739,23 @@ function createControl(dialog, dialogArray) {
 
 function addDialogEvent(dialog, dialogArray, nextState) {
   nextState = parseInt(nextState);
-  dialog.querySelector('.modal__heading').innerText = dialogArray[nextState].title;
-  dialog.querySelector('.modal__body-copy').innerHTML = dialogArray[nextState].body;
+  dialog.querySelector('.dialog__heading').innerText = dialogArray[nextState].title;
+  dialog.querySelector('.dialog__body-copy').innerHTML = dialogArray[nextState].body;
 
   if (nextState === 0) {
     dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(dialogArray.length - 1));
-    dialog.querySelectorAll('.modal__underline-transition')[0].innerText = dialogArray[dialogArray.length - 1].title;
-    dialog.querySelectorAll('.modal__underline-transition')[1].innerText = dialogArray[nextState + 1].title;
+    dialog.querySelectorAll('.dialog__underline-transition')[0].innerText = dialogArray[dialogArray.length - 1].shortname;
+    dialog.querySelectorAll('.dialog__underline-transition')[1].innerText = dialogArray[nextState + 1].shortname;
     dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', "".concat(nextState + 1));
   } else if (nextState === dialogArray.length - 1) {
-    dialog.querySelectorAll('.modal__underline-transition')[0].innerText = dialogArray[nextState - 1].title;
+    dialog.querySelectorAll('.dialog__underline-transition')[0].innerText = dialogArray[nextState - 1].shortname;
     dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(nextState - 1));
-    dialog.querySelectorAll('.modal__underline-transition')[1].innerText = dialogArray[0].title;
+    dialog.querySelectorAll('.dialog__underline-transition')[1].innerText = dialogArray[0].shortname;
     dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', '0');
   } else {
-    dialog.querySelectorAll('.modal__underline-transition')[0].innerText = dialogArray[nextState - 1].title;
+    dialog.querySelectorAll('.dialog__underline-transition')[0].innerText = dialogArray[nextState - 1].shortname;
     dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(nextState - 1));
-    dialog.querySelectorAll('.modal__underline-transition')[1].innerText = dialogArray[nextState + 1].title;
+    dialog.querySelectorAll('.dialog__underline-transition')[1].innerText = dialogArray[nextState + 1].shortname;
     dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', "".concat(nextState + 1));
   }
 }
@@ -6741,16 +6772,31 @@ function addDialogEvent(dialog, dialogArray, nextState) {
 function controlButton(dialogArray, position, direction) {
   var button = document.createElement('button');
   var buttonLabel = document.createElement('span');
-  buttonLabel.classList.add('modal__underline-transition');
+  buttonLabel.classList.add('dialog__underline-transition');
   var nextState = checkNextState(dialogArray, position, direction);
   button.setAttribute('data-nextstate', "".concat(nextState));
-  buttonLabel.innerText = dialogArray[nextState].title;
+
+  if (dialogArray[nextState].shortname) {
+    buttonLabel.innerText = dialogArray[nextState].shortname;
+  } else {
+    buttonLabel.innerText = dialogArray[nextState].title;
+  }
+
   var buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
     label: 'class',
-    val: "modal__buttons__icon far fa-long-arrow-".concat(direction)
+    val: "icon far fa-long-arrow-".concat(direction)
   }]);
-  button.appendChild(buttonLabel);
+
+  if (direction === 'left') {
+    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'previous item');
+  } else {
+    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'next item');
+  }
+
+  var buttonLabelWrapper = document.createElement('div');
+  buttonLabelWrapper.appendChild(buttonLabel);
   button.appendChild(buttonIcon);
+  button.appendChild(buttonLabelWrapper);
   return button;
 }
 /**
@@ -6799,14 +6845,19 @@ function checkNextState(dialogArray, position, direction) {
  */
 
 
-function closeDialog(dialog) {
-  dialog.parentNode.removeChild(dialog);
-  document.body.classList.remove('modal--in', 'no-scroll');
+function closeDialog(dialog, modal) {
+  var parent = dialog.parentNode;
+  parent.removeChild(dialog);
+  document.body.classList.remove('dialog-in', 'no-scroll');
   trap.deactivate();
+
+  if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_3__["verticallyInWindow"])(modal)) {
+    zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.to(modal, scrollDuration);
+  }
 }
 
 function trapFocus(modal) {
-  var modalInner = modal.querySelector('.modal__inner');
+  var modalInner = modal.querySelector('.dialog__inner');
   trap = focus_trap__WEBPACK_IMPORTED_MODULE_2___default()(modalInner, {
     clickOutsideDeactivates: true
   });
@@ -8147,7 +8198,7 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
        * Desktop display items 1-3
        * Desktop controller displays 1/1 but data-display attribute set to 'false' to stop this being visible
        */
-      sliderChildrenLength === sliderIncrement && updatedPosition === 1) {
+      sliderChildrenLength <= sliderIncrement && updatedPosition === 1) {
         totalSlidesDisplay.textContent = totalSlides;
         control.setAttribute('data-display', 'false');
       } else if (
