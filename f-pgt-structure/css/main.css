@@ -56026,22 +56026,26 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
-.wrapper--course--pgt__awards__content__duration__qualification-type {
+.course--pgt__tabs #structure-content .wrapper--course--pgt__awards__content__duration__qualification-type {
     border: 0.0625rem solid #d8d8d8;
     background-color: #f2f2f2;
     padding: 0.5rem 1rem;
     margin: 0.75rem 0;
 }
 
-.course--pgt__awards__content__duration__qualification-type,
-.wrapper--course--pgt__awards__content__duration__method-of-study,
-.course--pgt__awards__content__credits {
+.course--pgt__tabs #structure-content .course--pgt__awards__content__duration__qualification-type,
+.course--pgt__tabs #structure-content .wrapper--course--pgt__awards__content__duration__method-of-study,
+.course--pgt__tabs #structure-content .course--pgt__awards__content__credits {
     border-bottom: 0.0625rem solid #d8d8d8;
     padding-bottom: 0.75rem;
 }
 
-.course--pgt__awards__content__duration__method-of-study,
-.wrapper--course--pgt__awards__content__modules ul {
+.course--pgt__tabs #structure-content .course--pgt__awards__content__duration__qualification-type {
+    padding-bottom: 0.5rem;
+}
+
+.course--pgt__tabs #structure-content .course--pgt__awards__content__duration__method-of-study,
+.course--pgt__tabs #structure-content .wrapper--course--pgt__awards__content__modules ul {
     margin: 0.25rem 0 1rem 2.75rem;
 }
 
