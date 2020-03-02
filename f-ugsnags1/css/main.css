@@ -43401,12 +43401,23 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     background-color: #d61726;
     background-image: linear-gradient(to right, #d61726, #5d184a);
     color: #ffffff;
-    padding: 0.75rem 2rem 2rem;
+    padding-top: 0.75rem;
+    padding-bottom: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
 }
 
 @media (min-width: 901px) {
     .promo-box {
-        padding: 0.75rem 5rem 2rem 5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .promo-box {
+        padding-left: 5rem;
+        padding-right: 5rem;
     }
 }
 
@@ -61310,10 +61321,11 @@ main .standard-content .banner-text {
 .course--ug__keyinfo__details,
 .course--ug__keyinfo__accordion,
 .course--ug__keyinfo__cta {
-    background: linear-gradient(360deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 100%);
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    background: #ffffff;
     padding-bottom: 1rem;
+    padding-top: 1rem;
     border: 0.0625rem solid #d8d8d8;
 }
 
@@ -61361,6 +61373,15 @@ main .standard-content .banner-text {
     background-color: transparent;
     color: #0c0c0e;
     border: 0.125rem solid #bebebe;
+}
+
+.course--ug__keyinfo__accordion,
+.course--ug__keyinfo__cta {
+    padding-bottom: 1.75rem;
+}
+
+.course--ug__keyinfo__intro {
+    padding-top: 0.25rem;
 }
 
 @media (min-width: 901px) {
@@ -61455,7 +61476,7 @@ main .standard-content .banner-text {
 .course--ug__keyinfo__wrapper {
     margin-top: 2rem;
     display: grid;
-    background-color: #f2f2f2;
+    background-image: linear-gradient(to bottom, #f2f2f2, #d8d8d8);
 }
 
 .course--ug__keyinfo__details__ucas-code {
