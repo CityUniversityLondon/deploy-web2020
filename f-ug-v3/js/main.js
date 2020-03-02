@@ -6546,7 +6546,6 @@ var className = 'modal',
     oneSecond = 1000,
     scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : oneSecond,
     scrollTo = true;
-;
 var trap;
 /**
  * launch function
