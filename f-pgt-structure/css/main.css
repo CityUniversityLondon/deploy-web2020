@@ -56037,11 +56037,18 @@ main .landing:only-child .landing__top__cta {
 .course--pgt__tabs #structure-content .wrapper--course--pgt__awards__content__duration__method-of-study,
 .course--pgt__tabs #structure-content .course--pgt__awards__content__credits {
     border-bottom: 0.0625rem solid #d8d8d8;
+    padding-bottom: 0.75rem;
 }
 
 .course--pgt__tabs #structure-content .course--pgt__awards__content__duration__method-of-study,
 .course--pgt__tabs #structure-content .wrapper--course--pgt__awards__content__modules ul {
     margin: 0.25rem 0 1rem 2.75rem;
+}
+
+@media (max-width: 768px) {
+    .course--pgt__tabs #structure-content .course--pgt__awards__content__credits p:last-of-type {
+        margin-bottom: 0;
+    }
 }
 
 /** No JS **/
