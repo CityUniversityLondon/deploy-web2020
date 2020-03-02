@@ -21166,7 +21166,7 @@ Assign mixin:
 }
 
 .back-to-top a:focus {
-    outline: 0.125rem dotted #a1a1a1;
+    outline: 0.125rem dotted #0c0c0e;
     border-bottom-width: 0;
 }
 
