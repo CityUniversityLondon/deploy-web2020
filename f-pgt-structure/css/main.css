@@ -56037,11 +56037,6 @@ main .landing:only-child .landing__top__cta {
 .course--pgt__tabs #structure-content .wrapper--course--pgt__awards__content__duration__method-of-study,
 .course--pgt__tabs #structure-content .course--pgt__awards__content__credits {
     border-bottom: 0.0625rem solid #d8d8d8;
-    padding-bottom: 0.75rem;
-}
-
-.course--pgt__tabs #structure-content .course--pgt__awards__content__duration__qualification-type {
-    padding-bottom: 0.5rem;
 }
 
 .course--pgt__tabs #structure-content .course--pgt__awards__content__duration__method-of-study,
