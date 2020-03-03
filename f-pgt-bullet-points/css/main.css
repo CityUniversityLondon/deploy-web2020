@@ -50553,15 +50553,11 @@ button
     margin-left: 0;
 }
 
-.dropdown-filter ul.data-group li:first-of-type {
+.dropdown-filter ul.data-group li {
     list-style-type: none;
 }
 
-.dropdown-filter ul.data-group ul li {
-    list-style-type: disc;
-}
-
-.dropdown-filter ul.data-group ul li:first-of-type {
+.dropdown-filter ul.data-group li ul li {
     list-style-type: disc;
 }
 
