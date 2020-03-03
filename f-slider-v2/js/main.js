@@ -8477,6 +8477,17 @@ function createSliderButton(slider) {
 
   if (sliderControl === 'off') {
     return true;
+  } else if (sliderControl === null || sliderControl === undefined) {
+    sliderControl = 'default';
+  }
+
+  if (sliderControl === 'default') {
+    var buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
+      label: 'class',
+      val: 'slider-block__control__buttons'
+    }]);
+    var controlWrapper = slider.querySelector('.slider-block__control');
+    controlWrapper.appendChild(buttonWrapper);
   }
 }
 
