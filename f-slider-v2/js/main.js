@@ -8363,7 +8363,9 @@ function setVisibility(slider, total) {
   var sliderType = slider.getAttribute('data-type'),
       perPageTablet = 2,
       // if this needs to be customisable in the future then it could come from a data attribute with set default values
-  perPageDesk = 3;
+  perPageDesk = 3,
+      totalTablet,
+      totalDesk;
   var slides = [...slider.children];
 
   if (sliderType === null || sliderType === undefined) {
@@ -8385,10 +8387,12 @@ function setVisibility(slider, total) {
     var deskSlides = Object(_util__WEBPACK_IMPORTED_MODULE_4__["arraySlicer"])(slides, perPageDesk);
     slicedArrayIterator(tabletSlides, 'data-pagetablet', 'data-visibletablet');
     slicedArrayIterator(deskSlides, 'data-pagedesk', 'data-visibledesk');
+    totalTablet = tabletSlides.length;
+    totalDesk = deskSlides.length;
   }
 
   slider.parentNode.classList.add("slider-block--".concat(sliderType));
-  createProgressTracker(slider, sliderType);
+  createProgressTracker(slider, sliderType, total, totalTablet, totalDesk);
 }
 
 function slicedArrayIterator(arr, pageAttr, visibilityAttr) {
@@ -8407,14 +8411,62 @@ function slicedArrayIterator(arr, pageAttr, visibilityAttr) {
   }
 }
 
-function createProgressTracker(slider, sliderType) {
+function createProgressTracker(slider, sliderType, total, totalTablet, totalDesk) {
   var sliderProgress = slider.getAttribute('data-progress');
+  var sliderControl = slider.getAttribute('data-control');
+
+  if (sliderProgress !== 'off' && sliderControl !== 'off') {
+    var wrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
+      label: 'class',
+      val: 'slider-block__control'
+    }]);
+    slider.appendChild(wrapper);
+  }
 
   if (sliderProgress === 'off') {
     createSliderButton();
     return true;
   } else if (sliderProgress === null || sliderProgress === undefined) {
     sliderProgress = 'default';
+  }
+
+  if (sliderProgress === 'default') {
+    var progress = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
+      label: 'class',
+      val: 'slider-block__control__progress'
+    }]);
+
+    var _wrapper = slider.querySelector('.slider-block__control');
+
+    _wrapper.appendChild(progress);
+
+    var firstPage = document.createElement('span');
+    firstPage.innerText = '1';
+    var separator = document.createElement('span');
+    separator.innerText = '/';
+    var lastPage = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
+      label: 'data-visible',
+      val: 'true'
+    }]);
+    lastPage.innerText = total;
+    progress.appendChild(firstPage);
+    progress.appendChild(separator);
+    progress.appendChild(lastPage);
+
+    if (sliderType === 'tablet') {
+      var lastPageTablet = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
+        label: 'data-visibletablet',
+        val: 'true'
+      }]);
+      lastPageTablet.innerText = totalTablet;
+      var lastPageDesk = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
+        label: 'data-visibledesk',
+        val: 'true'
+      }]);
+      lastPageDesk.innerText = totalDesk;
+      progress.appendChild(lastPageTablet);
+      progress.appendChild(lastPageDesk);
+    }
   }
 
   createSliderButton(slider);
