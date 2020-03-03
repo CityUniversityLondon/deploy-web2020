@@ -50366,6 +50366,10 @@ button
     list-style-type: none;
 }
 
+.dropdown-filter ul.data-group li ul {
+    margin-left: 1.25rem;
+}
+
 .dropdown-filter ul.data-group li ul li {
     list-style-type: disc;
 }
@@ -61345,7 +61349,9 @@ main .standard-content .banner-text {
     margin-top: 0.25rem;
 }
 
-.course--ug__student-testimonials__wrapper .course--ug__student-testimonials .course--ug__student-testimonials__half .card--testimonial .card--testimonial__text .card--testimonial__quote {
+.course--ug__student-testimonials__wrapper .course--ug__student-testimonials .course--ug__student-testimonials__half .card--testimonial
+.card--testimonial__text
+.card--testimonial__quote {
     margin-top: 0.75rem;
 }
 
@@ -62247,8 +62253,4 @@ main .standard-content .banner-text {
 
 .course--ug__student-testimonials__half--unibuddy .unibuddy-card {
     margin-top: 1rem;
-}
-
-.course--ug__keyinfo__accordion .dropdown-filter ul:first-of-type {
-    margin: 0;
 }
