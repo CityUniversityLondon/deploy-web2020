@@ -8488,6 +8488,24 @@ function createSliderButton(slider) {
     }]);
     var controlWrapper = slider.querySelector('.slider-block__control');
     controlWrapper.appendChild(buttonWrapper);
+    var buttonPrev = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('button', [{
+      label: 'class',
+      val: 'fas fa-arrow-left'
+    }, {
+      label: 'disabled',
+      val: 'true'
+    }]);
+    buttonPrev.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'previous item');
+    var buttonNext = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('button', [{
+      label: 'class',
+      val: 'fas fa-arrow-right'
+    }, {
+      label: 'disabled',
+      val: 'false'
+    }]);
+    buttonNext.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
+    buttonWrapper.appendChild(buttonPrev);
+    buttonWrapper.appendChild(buttonNext);
   }
 }
 
