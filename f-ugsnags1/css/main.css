@@ -61369,7 +61369,7 @@ main .standard-content .banner-text {
 .course--ug__keyinfo__details .select-filter,
 .course--ug__keyinfo__accordion .select-filter,
 .course--ug__keyinfo__cta .select-filter {
-    background-color: transparent;
+    background-color: #ffffff;
     color: #0c0c0e;
     border: 0.125rem solid #bebebe;
 }
