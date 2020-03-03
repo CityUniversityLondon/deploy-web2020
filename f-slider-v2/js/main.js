@@ -8356,36 +8356,55 @@ function launchSlider(slider) {
   }]);
   slider.parentNode.insertBefore(wrapper, slider);
   wrapper.appendChild(slider);
-  hideSlides(slider, totalSlides);
+  setVisibility(slider, totalSlides);
 }
 
-function hideSlides(slider, total) {
+function setVisibility(slider, total) {
   var sliderType = slider.getAttribute('data-type'),
       perPageTablet = 2,
-      perPageDesk = 3;
-  console.log(sliderType);
+      // if this needs to be customisable in the future then it could come from a data attribute with set default values
+  perPageDesk = 3;
+  var slides = [...slider.children];
 
   if (sliderType === null || sliderType === undefined) {
     sliderType = 'default';
   }
 
-  if (sliderType === 'default' || sliderType === 'mobile') {
-    Array.from(slider.getElementsByTagName('li')).forEach((el, i) => {
-      el.setAttribute('data-page', "".concat(i));
+  Array.from(slider.getElementsByTagName('li')).forEach((el, i) => {
+    el.setAttribute('data-page', "".concat(i));
 
-      if (i === 0) {
-        el.setAttribute('data-visible', 'true');
-      } else {
-        el.setAttribute('data-visible', 'false');
-      }
-    });
-  } else if (sliderType === 'tablet') {
-    var tabletArray = [];
-    var el = [...slider.children];
+    if (i === 0) {
+      el.setAttribute('data-visible', 'true');
+    } else {
+      el.setAttribute('data-visible', 'false');
+    }
+  });
+
+  if (sliderType === 'tablet') {
+    var tabletSlides = Object(_util__WEBPACK_IMPORTED_MODULE_4__["arraySlicer"])(slides, perPageTablet);
+    var deskSlides = Object(_util__WEBPACK_IMPORTED_MODULE_4__["arraySlicer"])(slides, perPageDesk);
+    slicedArrayIterator(tabletSlides, 'data-pagetablet', 'data-visibletablet');
+    slicedArrayIterator(deskSlides, 'data-pagedesk', 'data-visibledesk');
   }
 
   slider.parentNode.classList.add("slider-block--".concat(sliderType));
   createProgressTracker(slider, sliderType);
+}
+
+function slicedArrayIterator(arr, pageAttr, visibilityAttr) {
+  for (var i = 0; i < arr.length; i++) {
+    var subArray = arr[i];
+
+    for (var j = 0; j < subArray.length; j++) {
+      subArray[j].setAttribute(pageAttr, "".concat(i));
+
+      if (i === 0) {
+        subArray[j].setAttribute(visibilityAttr, 'true');
+      } else {
+        subArray[j].setAttribute(visibilityAttr, 'false');
+      }
+    }
+  }
 }
 
 function createProgressTracker(slider, sliderType) {
@@ -9026,7 +9045,7 @@ function launchTabs(tabs) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, arraySlicer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9048,6 +9067,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createHTMLElement", function() { return createHTMLElement; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uppercaseFirstLetterLowercaseRest", function() { return uppercaseFirstLetterLowercaseRest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "axiosRequest", function() { return axiosRequest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "arraySlicer", function() { return arraySlicer; });
 /* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
 /* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
@@ -9355,6 +9375,24 @@ function axiosRequest(config) {
       gaEvent('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "axiosRequest ".concat(e.fileName, " (").concat(window.location, ")"), true);
     }
   });
+}
+/**
+ * Array slicer
+ *
+ * @param {array} arr - array to be split up into subarrays
+ * @param {number} len - max number items that goes into each subarray
+ */
+
+function arraySlicer(arr, len) {
+  var newArray = [],
+      i = 0,
+      n = arr.length;
+
+  while (i < n) {
+    newArray.push(arr.slice(i, i += len));
+  }
+
+  return newArray;
 }
 
 /***/ }),
