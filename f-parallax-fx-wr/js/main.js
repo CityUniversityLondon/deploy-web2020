@@ -1274,9 +1274,10 @@ __webpack_require__.r(__webpack_exports__);
 var className = 'parallax';
 
 function initParallax(parallax) {
-  console.log('parallax'); //alert(window.navigator.userAgent);
+  console.log('parallax');
+  alert(window.navigator.userAgent);
 
-  if (window.navigator.userAgent.indexOf('ipad') > 0 || window.navigator.userAgent.indexOf('iphone') > 0) {
+  if (window.navigator.userAgent.indexOf('iPad') > 0 || window.navigator.userAgent.indexOf('iPhone') > 0) {
     console.log("IOS detected");
     alert('IOS detected');
     window.addEventListener('load', function () {
