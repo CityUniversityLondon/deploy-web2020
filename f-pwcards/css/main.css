@@ -24253,7 +24253,7 @@ Assign mixin:
 }
 
 .pathway-image-cards {
-    background-color: #ffffff;
+    background-color: transparent;
     padding: 2rem;
 }
 
@@ -24281,6 +24281,12 @@ Assign mixin:
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+}
+
+@media (max-width: 1023px) {
+    .pathway-image-cards a {
+        background: #f2f2f2;
+    }
 }
 
 .pathway-image-cards a:visited {
@@ -55737,6 +55743,12 @@ main .landing:only-child .landing__top__cta {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
+}
+
+@media (max-width: 1023px) {
+    .course--pgt .pathway-image-cards a {
+        background: #9c287b;
+    }
 }
 
 .course--pgt .pathway-image-cards a:visited {
