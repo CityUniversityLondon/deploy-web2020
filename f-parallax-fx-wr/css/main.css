@@ -60918,27 +60918,9 @@ main .standard-content .banner-text {
 }
 
 .course--ug .parallax {
-    background-position-x: center;
-    background-position-y: 300px;
-}
-
-@media (min-width: 1280px) {
-    .course--ug .parallax--mobile {
-        display: none;
-    }
-}
-
-@media (max-width: 1279px) {
-    .course--ug .parallax--mobile {
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        bottom: 0;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        z-index: -1;
-    }
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
 .course--ug .course--promo-cards {

@@ -1250,11 +1250,14 @@ function init(elm) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+
 
 
 
@@ -1270,44 +1273,48 @@ __webpack_require__.r(__webpack_exports__);
 
 var className = 'parallax';
 
-function parallax(parallax) {
-  console.log('parallax');
+function initParallax(parallax) {
+  console.log('parallax'); //alert(window.navigator.userAgent);
 
-  window.onload = function () {
-    var imageSrc = parallax.style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2').split(',')[0]; // I just broke it up on newlines for readability        
-
-    var image = new Image();
-    image.src = imageSrc;
-    var width = image.width,
-        height = image.height;
-    console.log('width =' + width + ', height = ' + height);
-    window.addEventListener('scroll', function () {
-      //console.log('scroll detected');
-      var y = parallax.style.backgroundPositionY;
-      var yoff = window.pageYOffset; // console.log(`scroll top is ${x} & window is ${yoff}`);
-
-      parallax.style.backgroundPositionY = height / 2 + yoff + "px";
-      console.log("background position Y is ".concat(y));
+  if (window.navigator.userAgent.indexOf('ipad') > 0 || window.navigator.userAgent.indexOf('iphone') > 0) {
+    alert('IOSversion');
+    window.addEventListener('load', function () {
+      imageDimensions();
     });
-  };
 
-  alert(window.navigator.userAgent);
+    function imageDimensions() {
+      var imageSrc = parallax.style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2').split(',')[0];
+      var image = new Image();
+      image.src = imageSrc;
+      var width = image.width,
+          height = image.height;
+      scroll(height);
+    }
 
-  if (iosVersion >= 7) {
-    alert('IOSversion > 7');
+    function scroll(backgroundImageHeight) {
+      window.addEventListener('scroll', function () {
+        var positionOnScreen = window.pageYOffset;
+        var viewPortHeight = window.innerHeight;
+        var parallaxHeight = parallax.offsetHeight;
+        var parallaxStart = parallax.offsetTop;
+        var headerHeight = document.getElementsByClassName('global-header')[0].offsetHeight + document.getElementsByClassName('breadcrumbs')[0].offsetHeight;
+        var startZone = parallaxStart + headerHeight - viewPortHeight;
+        var endZone = parallaxStart + parallaxHeight + headerHeight;
+
+        if (positionOnScreen > startZone && positionOnScreen < endZone) {
+          var winYoffset = window.pageYOffset;
+          parallax.style.backgroundPositionY = (parallaxHeight - backgroundImageHeight) / 2 + winYoffset + "px";
+        }
+
+        ;
+      });
+    }
   }
 }
 
 ;
-/*
-   $(document).scroll(function() {
-       //parallax.css('background-position', '0px ' + $(document).scrollTop() + 'px');
-       parallax.style.backgroundPosition = '0' + parallax.scrollTop() + 'px';
-       
-   });*/
-
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: parallax,
+  launchFn: initParallax,
   launchQuery: ".".concat(className)
 });
 
