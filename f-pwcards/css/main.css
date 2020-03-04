@@ -24321,7 +24321,7 @@ Assign mixin:
 }
 
 .pathway-image-cards a:after {
-    border: 0.0625rem solid #f2f2f2;
+    border: 0.0625rem solid rgba(12, 12, 14, 0.2);
 }
 
 .pathway-image-cards a p,
@@ -55783,7 +55783,7 @@ main .landing:only-child .landing__top__cta {
 }
 
 .course--pgt .pathway-image-cards a:after {
-    border: 0.0625rem solid #f2f2f2;
+    border: 0.0625rem solid rgba(12, 12, 14, 0.2);
 }
 
 .course--pgt .pathway-image-cards a p,
