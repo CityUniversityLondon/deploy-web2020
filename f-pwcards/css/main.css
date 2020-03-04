@@ -55913,8 +55913,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (hover: hover) {
     .course--pgt .pathway-image-cards a:hover .underline-transition__title {
-        color: #cbcbcb;
-        background-image: linear-gradient(#cbcbcb, #cbcbcb);
+        color: #ffffff;
+        background-image: linear-gradient(#ffffff, #ffffff);
         background-size: 100% 0.1875rem;
     }
 }
