@@ -8343,56 +8343,98 @@ var className = 'slider-v';
 
 function launchSlider(slider) {
   var sliderChildren = [...slider.children],
-      totalSlides = sliderChildren.length;
+      totalSlides = sliderChildren.length,
+      perPageTablet = 2,
+      // if this needs to be customisable in the future then it could come from a data attribute with set default values
+  perPageDesk = 3,
+      maxTablet = Math.ceil(totalSlides / perPageTablet),
+      maxDesk = Math.ceil(totalSlides / perPageDesk);
+  var sliderObject = {
+    default: {
+      totalSlides: totalSlides,
+      maxItem: 1,
+      pageAttr: 'data-page',
+      visAttr: 'data-visible'
+    },
+    tablet: {
+      totalSlides: maxTablet,
+      maxItem: perPageTablet,
+      pageAttr: 'data-pagetablet',
+      visAttr: 'data-visibletablet'
+    },
+    desk: {
+      totalSlides: maxDesk,
+      maxItem: perPageDesk,
+      pageAttr: 'data-pagedesk',
+      visAttr: 'data-visibledesk'
+    }
+  };
 
   if (totalSlides < 2) {
     Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(slider, className, false);
     return true;
   }
 
-  var wrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
-    label: 'class',
-    val: 'slider-block'
-  }]);
-  slider.parentNode.insertBefore(wrapper, slider);
-  wrapper.appendChild(slider);
-  setVisibility(slider, totalSlides);
-}
-
-function setVisibility(slider, total) {
   var sliderType = slider.getAttribute('data-type'),
-      perPageTablet = 2,
-      // if this needs to be customisable in the future then it could come from a data attribute with set default values
-  perPageDesk = 3,
-      totalTablet,
-      totalDesk;
-  var slides = [...slider.children];
+      sliderControl = slider.getAttribute('data-control'),
+      sliderProgress = slider.getAttribute('data-progress');
 
-  if (sliderType === null || sliderType === undefined) {
+  if (sliderType === null) {
     sliderType = 'default';
   }
 
+  if (sliderControl === null) {
+    sliderControl = 'default';
+  }
+
+  if (sliderProgress === null) {
+    sliderProgress = 'default';
+  }
+
+  var wrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: "slider-block, slider-block--".concat(sliderType)
+  }]);
+  slider.parentNode.insertBefore(wrapper, slider);
+  wrapper.appendChild(slider);
+
+  if (sliderProgress !== 'off' && sliderControl !== 'off') {
+    var controlWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
+      label: 'class',
+      val: 'slider-block__control'
+    }]);
+    wrapper.appendChild(controlWrapper);
+  }
+
+  setVisibility(slider, sliderType, sliderObject);
+
+  if (sliderProgress !== 'off') {
+    createProgressTracker(slider, sliderType, sliderObject);
+  }
+
+  if (sliderControl !== 'off') {
+    createSliderButton(slider, sliderControl, sliderObject);
+  }
+}
+
+function setVisibility(slider, sliderType, sliderObject) {
   Array.from(slider.getElementsByTagName('li')).forEach((el, i) => {
-    el.setAttribute('data-page', "".concat(i));
+    el.setAttribute(sliderObject.default.pageAttr, "".concat(i));
 
     if (i === 0) {
-      el.setAttribute('data-visible', 'true');
+      el.setAttribute(sliderObject.default.visAttr, 'true');
     } else {
-      el.setAttribute('data-visible', 'false');
+      el.setAttribute(sliderObject.default.visAttr, 'false');
     }
   });
 
   if (sliderType === 'tablet') {
-    var tabletSlides = Object(_util__WEBPACK_IMPORTED_MODULE_4__["arraySlicer"])(slides, perPageTablet);
-    var deskSlides = Object(_util__WEBPACK_IMPORTED_MODULE_4__["arraySlicer"])(slides, perPageDesk);
-    slicedArrayIterator(tabletSlides, 'data-pagetablet', 'data-visibletablet');
-    slicedArrayIterator(deskSlides, 'data-pagedesk', 'data-visibledesk');
-    totalTablet = tabletSlides.length;
-    totalDesk = deskSlides.length;
+    var el = [...slider.children];
+    var tabletSlides = Object(_util__WEBPACK_IMPORTED_MODULE_4__["arraySlicer"])(el, sliderObject.tablet.maxItem);
+    var deskSlides = Object(_util__WEBPACK_IMPORTED_MODULE_4__["arraySlicer"])(el, sliderObject.desk.maxItem);
+    slicedArrayIterator(tabletSlides, sliderObject.tablet.pageAttr, sliderObject.tablet.visAttr);
+    slicedArrayIterator(deskSlides, sliderObject.desk.pageAttr, sliderObject.desk.visAttr);
   }
-
-  slider.parentNode.classList.add("slider-block--".concat(sliderType));
-  createProgressTracker(slider, sliderType, total, totalTablet, totalDesk);
 }
 
 function slicedArrayIterator(arr, pageAttr, visibilityAttr) {
@@ -8411,82 +8453,49 @@ function slicedArrayIterator(arr, pageAttr, visibilityAttr) {
   }
 }
 
-function createProgressTracker(slider, sliderType, total, totalTablet, totalDesk) {
-  var sliderProgress = slider.getAttribute('data-progress');
-  var sliderControl = slider.getAttribute('data-control');
+function createProgressTracker(slider, sliderType, sliderObject) {
+  var wrapper = slider.parentNode.querySelector('.slider-block__control');
+  var progress = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'slider-block__control__progress'
+  }]);
+  wrapper.appendChild(progress);
+  var firstPage = document.createElement('span');
+  firstPage.innerText = '1';
+  var separator = document.createElement('span');
+  separator.innerText = '/';
+  var lastPage = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
+    label: sliderObject.default.visAttr,
+    val: 'true'
+  }]);
+  lastPage.innerText = sliderObject.default.totalSlides;
+  progress.appendChild(firstPage);
+  progress.appendChild(separator);
+  progress.appendChild(lastPage);
 
-  if (sliderProgress !== 'off' && sliderControl !== 'off') {
-    var wrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'slider-block__control'
-    }]);
-    slider.appendChild(wrapper);
-  }
-
-  if (sliderProgress === 'off') {
-    createSliderButton();
-    return true;
-  } else if (sliderProgress === null || sliderProgress === undefined) {
-    sliderProgress = 'default';
-  }
-
-  if (sliderProgress === 'default') {
-    var progress = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'slider-block__control__progress'
-    }]);
-
-    var _wrapper = slider.querySelector('.slider-block__control');
-
-    _wrapper.appendChild(progress);
-
-    var firstPage = document.createElement('span');
-    firstPage.innerText = '1';
-    var separator = document.createElement('span');
-    separator.innerText = '/';
-    var lastPage = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
-      label: 'data-visible',
+  if (sliderType === 'tablet') {
+    var lastPageTablet = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
+      label: sliderObject.tablet.visAttr,
       val: 'true'
     }]);
-    lastPage.innerText = total;
-    progress.appendChild(firstPage);
-    progress.appendChild(separator);
-    progress.appendChild(lastPage);
-
-    if (sliderType === 'tablet') {
-      var lastPageTablet = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
-        label: 'data-visibletablet',
-        val: 'true'
-      }]);
-      lastPageTablet.innerText = totalTablet;
-      var lastPageDesk = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
-        label: 'data-visibledesk',
-        val: 'true'
-      }]);
-      lastPageDesk.innerText = totalDesk;
-      progress.appendChild(lastPageTablet);
-      progress.appendChild(lastPageDesk);
-    }
+    lastPageTablet.innerText = sliderObject.tablet.totalSlides;
+    var lastPageDesk = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
+      label: sliderObject.desk.visAttr,
+      val: 'true'
+    }]);
+    lastPageDesk.innerText = sliderObject.desk.totalSlides;
+    progress.appendChild(lastPageTablet);
+    progress.appendChild(lastPageDesk);
   }
-
-  createSliderButton(slider);
 }
 
-function createSliderButton(slider) {
-  var sliderControl = slider.getAttribute('data-control');
-
-  if (sliderControl === 'off') {
-    return true;
-  } else if (sliderControl === null || sliderControl === undefined) {
-    sliderControl = 'default';
-  }
-
+function createSliderButton(slider, sliderControl, sliderObject) {
   if (sliderControl === 'default') {
     var buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
       label: 'class',
       val: 'slider-block__control__buttons'
     }]);
-    var controlWrapper = slider.querySelector('.slider-block__control');
+    var controlWrapper = slider.parentNode.querySelector('.slider-block__control');
     controlWrapper.appendChild(buttonWrapper);
     var buttonPrev = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('button', [{
       label: 'class',
@@ -8494,14 +8503,17 @@ function createSliderButton(slider) {
     }, {
       label: 'disabled',
       val: 'true'
+    }, {
+      label: 'type',
+      val: 'button'
     }]);
     buttonPrev.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'previous item');
     var buttonNext = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('button', [{
       label: 'class',
       val: 'fas fa-arrow-right'
     }, {
-      label: 'disabled',
-      val: 'false'
+      label: 'type',
+      val: 'button'
     }]);
     buttonNext.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
     buttonWrapper.appendChild(buttonPrev);
