@@ -1277,7 +1277,8 @@ function initParallax(parallax) {
   console.log('parallax'); //alert(window.navigator.userAgent);
 
   if (window.navigator.userAgent.indexOf('ipad') > 0 || window.navigator.userAgent.indexOf('iphone') > 0) {
-    alert('IOSversion');
+    console.log("IOS detected");
+    alert('IOS detected');
     window.addEventListener('load', function () {
       imageDimensions();
     });
