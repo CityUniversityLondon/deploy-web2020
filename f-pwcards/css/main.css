@@ -24289,10 +24289,6 @@ Assign mixin:
     }
 }
 
-.pathway-image-cards a:visited {
-    color: #0c0c0e;
-}
-
 .pathway-image-cards a:hover, .pathway-image-cards a:active, .pathway-image-cards a:focus {
     background-image: none;
     background-color: transparent;
@@ -55751,10 +55747,6 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
-.course--pgt .pathway-image-cards a:visited {
-    color: #ffffff;
-}
-
 .course--pgt .pathway-image-cards a:hover, .course--pgt .pathway-image-cards a:active, .course--pgt .pathway-image-cards a:focus {
     background-image: none;
     background-color: transparent;
@@ -55783,7 +55775,7 @@ main .landing:only-child .landing__top__cta {
 }
 
 .course--pgt .pathway-image-cards a:after {
-    border: 0.0625rem solid rgba(12, 12, 14, 0.2);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.2);
 }
 
 .course--pgt .pathway-image-cards a p,
@@ -55900,22 +55892,22 @@ main .landing:only-child .landing__top__cta {
 }
 
 .course--pgt .pathway-image-cards a .underline-transition__title {
-    background-image: linear-gradient(#cbcbcb, #cbcbcb);
+    background-image: linear-gradient(#ffffff, #ffffff);
     background-position: 0% 100%;
     background-repeat: no-repeat;
     background-size: 0% 0.1875rem;
-    color: #cbcbcb;
+    color: #ffffff;
     transition: background-size 0.6s ease-in;
     display: inline;
     padding-bottom: 0.125rem;
 }
 
 .course--pgt .pathway-image-cards a:visited .underline-transition__title {
-    color: #cbcbcb;
+    color: #ffffff;
 }
 
 .course--pgt .pathway-image-cards a:focus .underline-transition__title {
-    color: #cbcbcb;
+    color: #ffffff;
     background-size: 100% 0.1875rem;
 }
 
