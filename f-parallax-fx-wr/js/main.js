@@ -1311,6 +1311,9 @@ function initParallax(parallax) {
         ;
       });
     }
+  } else {
+    alert("fixed");
+    parallax.style.backgroundAttachment = "fixed";
   }
 }
 
