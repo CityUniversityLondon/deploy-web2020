@@ -1263,7 +1263,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- *  Animates content section to fade in and upwards on down scroll
+ *  Parallax fixed scrolling effect
  *
  * @module patterns/animations/parallax
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
@@ -1277,7 +1277,8 @@ var className = 'parallax';
  */
 
 function initParallax(parallax) {
-  alert(window.navigator.userAgent); // Checks for iPhone and iPads
+  alert(window.navigator.userAgent);
+  var parallaxHeight = parallax.offsetHeight; // Checks for iPhone and iPads
 
   if (window.navigator.userAgent.indexOf('iPad') > 0 || window.navigator.userAgent.indexOf('iPhone') > 0) {
     // Window load help for correct values fo be captured
@@ -1291,7 +1292,7 @@ function initParallax(parallax) {
       image.src = imageSrc;
       var width = image.width,
           height = image.height;
-      parallaxEffect(height);
+      parallaxEffect(height, parallaxHeight);
     }
     /**
      * ParallaxEffect - once the HTML element containing parallax comes into view when scrolling
@@ -1302,11 +1303,10 @@ function initParallax(parallax) {
      */
 
 
-    function parallaxEffect(backgroundImageHeight) {
+    function parallaxEffect(backgroundImageHeight, parallaxHeight) {
       window.addEventListener('scroll', function () {
         var positionOnScreen = window.pageYOffset;
         var viewPortHeight = window.innerHeight;
-        var parallaxHeight = parallax.offsetHeight;
         var parallaxStart = parallax.offsetTop;
         var headerHeight = document.getElementsByClassName('global-header')[0].offsetHeight + document.getElementsByClassName('breadcrumbs')[0].offsetHeight;
         var startZone = parallaxStart + headerHeight - viewPortHeight;
