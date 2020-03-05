@@ -24253,7 +24253,6 @@ Assign mixin:
 }
 
 .pathway-image-cards {
-    background-color: transparent;
     padding: 2rem;
 }
 
@@ -24468,6 +24467,225 @@ Assign mixin:
 
 @media (prefers-reduced-motion: reduce) {
     .pathway-image-cards a img {
+        transition: none;
+    }
+}
+
+.pathway-image-cards.background--pink80 {
+    padding: 2rem;
+}
+
+.pathway-image-cards.background--pink80 h2,
+.pathway-image-cards.background--pink80 h3 {
+    color: #ffffff;
+    text-align: center;
+}
+
+.pathway-image-cards.background--pink80 a {
+    display: block;
+    transition: none;
+    color: #ffffff;
+    position: relative;
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (max-width: 1023px) {
+    .pathway-image-cards.background--pink80 a {
+        background: #9c287b;
+    }
+}
+
+.pathway-image-cards.background--pink80 a:hover, .pathway-image-cards.background--pink80 a:active, .pathway-image-cards.background--pink80 a:focus {
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.pathway-image-cards.background--pink80 a:hover p,
+.pathway-image-cards.background--pink80 a:hover span, .pathway-image-cards.background--pink80 a:active p,
+.pathway-image-cards.background--pink80 a:active span, .pathway-image-cards.background--pink80 a:focus p,
+.pathway-image-cards.background--pink80 a:focus span {
+    color: #ffffff;
+}
+
+.pathway-image-cards.background--pink80 a:focus, .pathway-image-cards.background--pink80 a:active {
+    outline: none;
+}
+
+.pathway-image-cards.background--pink80 a:focus:after, .pathway-image-cards.background--pink80 a:active:after {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.pathway-image-cards.background--pink80 a:after {
+    border: 0.0625rem solid rgba(255, 255, 255, 0.2);
+}
+
+.pathway-image-cards.background--pink80 a p,
+.pathway-image-cards.background--pink80 a span {
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .pathway-image-cards.background--pink80 a:hover {
+        background-image: none;
+    }
+    .pathway-image-cards.background--pink80 a:hover img {
+        transform: scale(1.04);
+    }
+    .pathway-image-cards.background--pink80 a:hover .thumbnail__image-container:after {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
+.pathway-image-cards.background--pink80 a .thumbnail__image-container {
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease-in;
+    width: 9rem;
+    height: 8rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pathway-image-cards.background--pink80 a .thumbnail__image-container {
+        transition: none;
+    }
+}
+
+.pathway-image-cards.background--pink80 a .thumbnail__image-container:after {
+    background-color: transparent;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: background-color 0.2s ease-in;
+    width: 100%;
+}
+
+.pathway-image-cards.background--pink80 a .thumbnail__image-container img {
+    transition: transform 0.2s ease-in;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pathway-image-cards.background--pink80 a .thumbnail__image-container img {
+        transition: none;
+    }
+}
+
+.pathway-image-cards.background--pink80 a:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+}
+
+@media (hover: hover) {
+    .pathway-image-cards.background--pink80 a:hover:after {
+        background-color: #9c287b;
+        transform: scale(1.05);
+        z-index: -1;
+    }
+}
+
+.pathway-image-cards.background--pink80 a .card__inner {
+    z-index: 0;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .pathway-image-cards.background--pink80 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.pathway-image-cards.background--pink80 a:focus, .pathway-image-cards.background--pink80 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.pathway-image-cards.background--pink80 a .underline-transition__title {
+    background-image: linear-gradient(#ffffff, #ffffff);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 0.1875rem;
+    color: #ffffff;
+    transition: background-size 0.6s ease-in;
+    display: inline;
+    padding-bottom: 0.125rem;
+}
+
+.pathway-image-cards.background--pink80 a:visited .underline-transition__title {
+    color: #ffffff;
+}
+
+.pathway-image-cards.background--pink80 a:focus .underline-transition__title {
+    color: #ffffff;
+    background-size: 100% 0.1875rem;
+}
+
+@media (hover: hover) {
+    .pathway-image-cards.background--pink80 a:hover .underline-transition__title {
+        color: #ffffff;
+        background-image: linear-gradient(#ffffff, #ffffff);
+        background-size: 100% 0.1875rem;
+    }
+}
+
+.pathway-image-cards.background--pink80 a img {
+    transition: transform 0.2s ease-in;
+    width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pathway-image-cards.background--pink80 a img {
         transition: none;
     }
 }
@@ -55711,7 +55929,6 @@ main .landing:only-child .landing__top__cta {
 }
 
 .course--pgt .pathway-image-cards {
-    background-color: #5d184a;
     padding: 2rem;
 }
 
