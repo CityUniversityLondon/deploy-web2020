@@ -1265,22 +1265,25 @@ __webpack_require__.r(__webpack_exports__);
 /**
  *  Animates content section to fade in and upwards on down scroll
  *
- * @module paint-layouts/case-study-transition-effects/content-section
+ * @module patterns/animations/parallax
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
+ * @copyright City, University of London 2019
  */
 var className = 'parallax';
+/**
+ * This is a custom parallax overide for iPad and iPhones which doesn't support the CSS parallax
+ *  mothod of using the "background-attachment: fixed" property. Apple doesn't support this
+ * for performance reasons.
+ */
 
 function initParallax(parallax) {
-  console.log('parallax');
-  alert(window.navigator.userAgent);
+  alert(window.navigator.userAgent); // Checks for iPhone and iPads
 
   if (window.navigator.userAgent.indexOf('iPad') > 0 || window.navigator.userAgent.indexOf('iPhone') > 0) {
-    console.log("IOS detected");
-    alert('IOS detected V3');
+    // Window load help for correct values fo be captured
     window.addEventListener('load', function () {
       imageDimensions();
-    });
+    }); // gets background image dimensions
 
     function imageDimensions() {
       var imageSrc = parallax.style.backgroundImage.replace(/url\((['"])?(.*?)\1\)/gi, '$2').split(',')[0];
@@ -1288,10 +1291,18 @@ function initParallax(parallax) {
       image.src = imageSrc;
       var width = image.width,
           height = image.height;
-      scroll(height);
+      parallaxEffect(height);
     }
+    /**
+     * ParallaxEffect - once the HTML element containing parallax comes into view when scrolling
+     * the effect kicks in. Once you scroll past the element it stops. The effect is based on the background
+     * positioning set to center
+     *
+     * @param {string} backgroundImageHeight - background image height.
+     */
 
-    function scroll(backgroundImageHeight) {
+
+    function parallaxEffect(backgroundImageHeight) {
       window.addEventListener('scroll', function () {
         var positionOnScreen = window.pageYOffset;
         var viewPortHeight = window.innerHeight;
@@ -1302,21 +1313,18 @@ function initParallax(parallax) {
         var endZone = parallaxStart + parallaxHeight + headerHeight;
 
         if (positionOnScreen > startZone && positionOnScreen < endZone) {
-          var winYoffset = window.pageYOffset;
-          parallax.style.backgroundPositionY = (parallaxHeight - backgroundImageHeight) / 2 + winYoffset + "px";
+          var winYoffset = window.pageYOffset - parallaxStart;
+          parallax.style.backgroundPositionY = (parallaxHeight - backgroundImageHeight) / 2 + winYoffset + 'px';
         }
-
-        ;
       });
     }
   } else {
-    alert("fixed V3");
-    parallax.style.backgroundAttachment = "fixed";
-    parallax.style.backgroundSize = "cover";
+    // For all other devices the following sets up CSS to accompany the CSS mothod of "background-attachment: fixed"
+    parallax.style.backgroundAttachment = 'fixed';
+    parallax.style.backgroundSize = 'cover';
   }
 }
 
-;
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: initParallax,
   launchQuery: ".".concat(className)
