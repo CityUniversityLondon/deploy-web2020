@@ -1279,7 +1279,7 @@ function initParallax(parallax) {
 
   if (window.navigator.userAgent.indexOf('iPad') > 0 || window.navigator.userAgent.indexOf('iPhone') > 0) {
     console.log("IOS detected");
-    alert('IOS detected');
+    alert('IOS detected V2');
     window.addEventListener('load', function () {
       imageDimensions();
     });
@@ -1312,8 +1312,9 @@ function initParallax(parallax) {
       });
     }
   } else {
-    alert("fixed");
+    alert("fixed V2");
     parallax.style.backgroundAttachment = "fixed";
+    parallax.style.backgroundSize = "cover";
   }
 }
 
