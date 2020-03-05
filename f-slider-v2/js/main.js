@@ -8343,34 +8343,34 @@ var className = 'slider-v';
 
 function launchSlider(slider) {
   var sliderChildren = [...slider.children],
-      totalSlides = sliderChildren.length,
+      totalItems = sliderChildren.length,
       perPageTablet = 2,
       // if this needs to be customisable in the future then it could come from a data attribute with set default values
   perPageDesk = 3,
-      maxTablet = Math.ceil(totalSlides / perPageTablet),
-      maxDesk = Math.ceil(totalSlides / perPageDesk);
+      maxTablet = Math.ceil(totalItems / perPageTablet),
+      maxDesk = Math.ceil(totalItems / perPageDesk);
   var sliderObject = {
     default: {
-      totalSlides: totalSlides,
+      totalPages: totalItems,
       maxItem: 1,
       pageAttr: 'data-page',
       visAttr: 'data-visible'
     },
     tablet: {
-      totalSlides: maxTablet,
+      totalPages: maxTablet,
       maxItem: perPageTablet,
       pageAttr: 'data-pagetablet',
       visAttr: 'data-visibletablet'
     },
     desk: {
-      totalSlides: maxDesk,
+      totalPages: maxDesk,
       maxItem: perPageDesk,
       pageAttr: 'data-pagedesk',
       visAttr: 'data-visibledesk'
     }
   };
 
-  if (totalSlides < 2) {
+  if (totalItems < 2) {
     Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(slider, className, false);
     return true;
   }
@@ -8468,7 +8468,7 @@ function createProgressTracker(slider, sliderType, sliderObject) {
     label: sliderObject.default.visAttr,
     val: 'true'
   }]);
-  lastPage.innerText = sliderObject.default.totalSlides;
+  lastPage.innerText = sliderObject.default.totalPages;
   progress.appendChild(firstPage);
   progress.appendChild(separator);
   progress.appendChild(lastPage);
@@ -8478,12 +8478,12 @@ function createProgressTracker(slider, sliderType, sliderObject) {
       label: sliderObject.tablet.visAttr,
       val: 'true'
     }]);
-    lastPageTablet.innerText = sliderObject.tablet.totalSlides;
+    lastPageTablet.innerText = sliderObject.tablet.totalPages;
     var lastPageDesk = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
       label: sliderObject.desk.visAttr,
       val: 'true'
     }]);
-    lastPageDesk.innerText = sliderObject.desk.totalSlides;
+    lastPageDesk.innerText = sliderObject.desk.totalPages;
     progress.appendChild(lastPageTablet);
     progress.appendChild(lastPageDesk);
   }
@@ -8499,27 +8499,39 @@ function createSliderButton(slider, sliderControl, sliderObject) {
     controlWrapper.appendChild(buttonWrapper);
     var buttonPrev = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('button', [{
       label: 'class',
-      val: 'fas fa-arrow-left'
+      val: 'fas fa-arrow-left prev'
     }, {
       label: 'disabled',
       val: 'true'
     }, {
       label: 'type',
       val: 'button'
+    }, {
+      label: 'data-next',
+      val: -1
     }]);
     buttonPrev.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'previous item');
     var buttonNext = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('button', [{
       label: 'class',
-      val: 'fas fa-arrow-right'
+      val: 'fas fa-arrow-right next'
     }, {
       label: 'type',
       val: 'button'
+    }, {
+      label: 'data-next',
+      val: 1
     }]);
     buttonNext.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
+    buttonNext.addEventListener('click', function (e) {
+      e.preventDefault();
+      defaultEvent(this, slider, 'next', sliderObject);
+    });
     buttonWrapper.appendChild(buttonPrev);
     buttonWrapper.appendChild(buttonNext);
   }
 }
+
+function defaultEvent(button, slider, direction, sliderObject) {}
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchSlider,
