@@ -54804,6 +54804,12 @@ main .landing:only-child .landing__top__cta {
     padding: 1rem 1.5rem 1rem;
 }
 
+.wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper .statistics-block__heading {
+    margin-top: 0;
+    text-align: left;
+    padding: 0;
+}
+
 .wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper .ksp__items {
     margin: 0;
 }
