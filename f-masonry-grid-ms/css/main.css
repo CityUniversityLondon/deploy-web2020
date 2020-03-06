@@ -46921,12 +46921,13 @@ button
     margin: 1rem 0;
 }
 
-.imageColLayout.imageColLayout--2, .imageColLayout.imageColLayout--3, .imageColLayout.imageColLayout--4 {
-    display: flex;
-}
-
-.imageColLayout.imageColLayout--2 .imageColLayout--card:not(:last-of-type), .imageColLayout.imageColLayout--3 .imageColLayout--card:not(:last-of-type), .imageColLayout.imageColLayout--4 .imageColLayout--card:not(:last-of-type) {
-    padding-right: 1rem;
+@media (min-width: 901px) {
+    .imageColLayout.imageColLayout--2, .imageColLayout.imageColLayout--3, .imageColLayout.imageColLayout--4 {
+        display: flex;
+    }
+    .imageColLayout.imageColLayout--2 .imageColLayout--card:not(:last-of-type), .imageColLayout.imageColLayout--3 .imageColLayout--card:not(:last-of-type), .imageColLayout.imageColLayout--4 .imageColLayout--card:not(:last-of-type) {
+        padding-right: 1rem;
+    }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
