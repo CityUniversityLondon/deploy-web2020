@@ -164,19 +164,16 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.from */ "./node_modules/core-js/modules/es.array.from.js");
-/* harmony import */ var core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _patterns_how_to_apply_how_to_apply_pgt__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/how-to-apply/how-to-apply--pgt */ "./src/patterns/how-to-apply/how-to-apply--pgt.js");
-/* harmony import */ var _patterns_how_to_apply_pgt_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/how-to-apply/pgt-data */ "./src/patterns/how-to-apply/pgt-data.js");
-/* harmony import */ var edn_to_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! edn-to-js */ "./node_modules/edn-to-js/dist/main.js");
-/* harmony import */ var edn_to_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(edn_to_js__WEBPACK_IMPORTED_MODULE_6__);
-
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _patterns_how_to_apply_how_to_apply_pgt__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/how-to-apply/how-to-apply--pgt */ "./src/patterns/how-to-apply/how-to-apply--pgt.js");
+/* harmony import */ var _patterns_how_to_apply_pgt_data__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/how-to-apply/pgt-data */ "./src/patterns/how-to-apply/pgt-data.js");
+/* harmony import */ var edn_to_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! edn-to-js */ "./node_modules/edn-to-js/dist/main.js");
+/* harmony import */ var edn_to_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(edn_to_js__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
@@ -198,9 +195,9 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     var howToApplyCTAs = document.querySelectorAll('.how-to-apply--pgt--js');
     howToApplyCTAs && Array.from(howToApplyCTAs).forEach(howToApply => {
-      Object(_patterns_how_to_apply_pgt_data__WEBPACK_IMPORTED_MODULE_5__["howToApplyConfig"])(howToApply.dataset.config).then(config => {
-        Object(react_dom__WEBPACK_IMPORTED_MODULE_3__["render"])(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_patterns_how_to_apply_how_to_apply_pgt__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          config: edn_to_js__WEBPACK_IMPORTED_MODULE_6___default()(config),
+      Object(_patterns_how_to_apply_pgt_data__WEBPACK_IMPORTED_MODULE_4__["howToApplyConfig"])(howToApply.dataset.config).then(config => {
+        Object(react_dom__WEBPACK_IMPORTED_MODULE_2__["render"])(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_patterns_how_to_apply_how_to_apply_pgt__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          config: edn_to_js__WEBPACK_IMPORTED_MODULE_5___default()(config),
           element: howToApply
         }), howToApply);
       });
@@ -221,31 +218,20 @@ document.addEventListener('DOMContentLoaded', () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js");
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js");
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
 
-
-
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 /**
  * How to apply for postgraduate taught degrees
@@ -276,37 +262,19 @@ function HowToApply(props) {
     entry: null,
     location: null
   },
-      _useState = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
-      _useState2 = _slicedToArray(_useState, 2),
-      modalVisible = _useState2[0],
-      setModalVisible = _useState2[1],
-      _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(initialPreferences),
-      _useState4 = _slicedToArray(_useState3, 2),
-      preferences = _useState4[0],
-      setPreferences = _useState4[1],
-      _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(nextQuestion(preferences, entryPoints)),
-      _useState6 = _slicedToArray(_useState5, 2),
-      question = _useState6[0],
-      setQuestion = _useState6[1],
-      _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(true),
-      _useState8 = _slicedToArray(_useState7, 2),
-      multipleSubjects = _useState8[0],
-      setMultipleSubjects = _useState8[1],
-      _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(true),
-      _useState10 = _slicedToArray(_useState9, 2),
-      multipleEntryPoints = _useState10[0],
-      setMultipleEntryPoints = _useState10[1],
-      _useState11 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(true),
-      _useState12 = _slicedToArray(_useState11, 2),
-      multipleLocations = _useState12[0],
-      setMultipleLocations = _useState12[1],
-      qualificationQuestion = question === 'qualification' && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      [modalVisible, setModalVisible] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+      [preferences, setPreferences] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(initialPreferences),
+      [question, setQuestion] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(nextQuestion(preferences, entryPoints)),
+      [multipleSubjects, setMultipleSubjects] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
+      [multipleEntryPoints, setMultipleEntryPoints] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
+      [multipleLocations, setMultipleLocations] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
+      qualificationQuestion = question === 'qualification' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Choose the qualification you wish to apply for:")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the qualification you wish to apply for:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, entryPoints.map((qualification, i) => react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+  }, entryPoints.map((qualification, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     key: 'qualification' + i
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: () => {
       var newPreferences = preferences;
       newPreferences.qualification = Object.keys(qualification)[0];
@@ -323,14 +291,14 @@ function HowToApply(props) {
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, Object.keys(qualification)[0])))))),
-      subjectQuestion = question === 'subject' && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(qualification)[0])))))),
+      subjectQuestion = question === 'subject' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Choose the route you wish to apply for:")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the route you wish to apply for:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, nextLevel(entryPoints, preferences.qualification).map((subject, i) => react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+  }, nextLevel(entryPoints, preferences.qualification).map((subject, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     key: 'subject' + i
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: () => {
       var newPreferences = preferences;
       newPreferences.subject = Object.keys(subject)[0];
@@ -347,16 +315,16 @@ function HowToApply(props) {
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, Object.keys(subject)[0])))))),
-      entryQuestion = question === 'entry' && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(subject)[0])))))),
+      entryQuestion = question === 'entry' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Choose the entry point you wish to apply for:")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the entry point you wish to apply for:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
   }, nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject).map((entryPoint, i) => {
     var formattedDate = new Date(Object.keys(entryPoint)[0]);
-    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
       key: 'entry-point' + i
-    }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
       onClick: () => {
         var newPreferences = preferences;
         newPreferences.entry = Object.keys(entryPoint)[0];
@@ -373,47 +341,47 @@ function HowToApply(props) {
         setPreferences(newPreferences);
         setQuestion(nextQuestion(newPreferences, entryPoints));
       }
-    }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, months[formattedDate.getUTCMonth()], ' ', formattedDate.getUTCFullYear())));
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, months[formattedDate.getUTCMonth()], ' ', formattedDate.getUTCFullYear())));
   }))),
-      locationQuestion = question === 'location' && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      locationQuestion = question === 'location' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Choose where you wish to study:")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose where you wish to study:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry).map((location, i) => react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+  }, nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry).map((location, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     key: 'location' + i
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: () => {
       var newPreferences = preferences;
       newPreferences.entry = Object.keys(location)[0];
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, Object.keys(location)[0])))))),
-      applyQuestion = question === 'apply' && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(location)[0])))))),
+      applyQuestion = question === 'apply' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Apply online now:")), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Apply online now:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, nextLevel(nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry), preferences.location).map((method, i) => react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+  }, nextLevel(nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry), preferences.location).map((method, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     key: 'method' + i
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: method[Object.keys(method)[0]]
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, Object.keys(method)[0], ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(method)[0], ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "far fa-external-link",
     "aria-label": "(external link)"
   }))))))),
-      qualificationsProgress = Object.keys(entryPoints).length > 1 ? question === 'qualification' ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      qualificationsProgress = Object.keys(entryPoints).length > 1 ? question === 'qualification' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Qualification"))) : preferences.qualification ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+  }, "Qualification"))) : preferences.qualification ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__previous"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper",
     onClick: () => {
       var newPreferences = preferences;
@@ -424,27 +392,27 @@ function HowToApply(props) {
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-check icon",
     "aria-label": "Back to choose qualification"
-  })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, preferences.qualification))) : null : null,
-      subjectsProgress = multipleSubjects ? question === 'subject' ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      subjectsProgress = multipleSubjects ? question === 'subject' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Route"))) : preferences.subject ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+  }, "Route"))) : preferences.subject ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__previous"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper",
     onClick: () => {
       var newPreferences = preferences;
@@ -454,27 +422,27 @@ function HowToApply(props) {
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-check icon",
     "aria-label": "Back to choose study route"
-  })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, preferences.subject))) : null : null,
-      entryPointsProgress = multipleEntryPoints ? question === 'entry' ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      entryPointsProgress = multipleEntryPoints ? question === 'entry' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Entry point"))) : preferences.entry ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+  }, "Entry point"))) : preferences.entry ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__previous"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper",
     onClick: () => {
       var newPreferences = preferences;
@@ -483,27 +451,27 @@ function HowToApply(props) {
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-check icon",
     "aria-label": "Back to choose entry point"
-  })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, months[new Date(preferences.entry).getUTCMonth()], ' ', new Date(preferences.entry).getUTCFullYear()))) : null : null,
-      locationsProgress = multipleLocations ? question === 'location' ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      locationsProgress = multipleLocations ? question === 'location' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Location"))) : preferences.location ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+  }, "Location"))) : preferences.location ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__previous"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper",
     onClick: () => {
       var newPreferences = preferences;
@@ -511,127 +479,122 @@ function HowToApply(props) {
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-check icon",
     "aria-label": "Back to choose location"
-  })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, preferences.location))) : null : null,
-      nextStep = question !== 'apply' ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      nextStep = question !== 'apply' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__next"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon",
     "aria-hidden": "true"
-  })))) : react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+  })))) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current how-to-apply--pgt--js__modal__progress__last"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Method of study"))),
-      qualificationsProgressMobile = Object.keys(entryPoints).length > 1 && (question === 'qualification' || preferences.qualification) ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      qualificationsProgressMobile = Object.keys(entryPoints).length > 1 && (question === 'qualification' || preferences.qualification) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: question === 'qualification' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: question === 'qualification' ? 'fas fa-circle icon' : 'fas fa-check icon'
-  })), question === 'qualification' && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  })), question === 'qualification' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Qualification"))) : null,
-      subjectsProgressMobile = multipleSubjects && (question === 'subject' || preferences.subject) ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      subjectsProgressMobile = multipleSubjects && (question === 'subject' || preferences.subject) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: question === 'subject' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: question === 'subject' ? 'fas fa-circle icon' : 'fas fa-check icon'
-  })), question === 'subject' && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  })), question === 'subject' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Subject"))) : null,
-      entryPointsProgressMobile = multipleEntryPoints && (question === 'entry' || preferences.entry) ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      entryPointsProgressMobile = multipleEntryPoints && (question === 'entry' || preferences.entry) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: question === 'entry' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: question === 'entry' ? 'fas fa-circle icon' : 'fas fa-check icon'
-  })), question === 'entry' && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  })), question === 'entry' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Entry point"))) : null,
-      locationsProgressMobile = multipleLocations && (question === 'location' || preferences.location) ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      locationsProgressMobile = multipleLocations && (question === 'location' || preferences.location) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: question === 'location' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: question === 'location' ? 'fas fa-circle icon' : 'fas fa-check icon'
-  })), question === 'location' && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  })), question === 'location' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Location"))) : null,
-      nextStepMobile = question !== 'apply' ? react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      nextStepMobile = question !== 'apply' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__next"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon"
-  })))) : react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+  })))) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current how-to-apply--pgt--js__modal__progress__last"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Method of study"))),
-      alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+      alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "how-to-apply--pgt--js__modal__alternative"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: props.element.dataset.otherurl
   }, "Apply to start in ", props.element.dataset.otheryear, ".")),
-      reset = JSON.stringify(preferences) !== JSON.stringify(initialPreferences) && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      reset = JSON.stringify(preferences) !== JSON.stringify(initialPreferences) && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__reset"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: () => {
       setPreferences(initialPreferences);
       setQuestion(nextQuestion(initialPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-redo"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Start again")));
-
-  var _useState13 = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({}),
-      _useState14 = _slicedToArray(_useState13, 2),
-      focusTrap = _useState14[0],
-      setFocusTrap = _useState14[1];
-
+  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Start again")));
+  var [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({});
   var modalRef = null,
       modalContentRef = null;
 
   var getModal = () => modalRef,
       getModalContent = () => modalContentRef;
 
-  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(() => {
+  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
     if (!focusTrap.activate) {
-      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_5___default()(getModalContent(), {
+      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_4___default()(getModalContent(), {
         initialFocus: getModalContent().querySelector('.how-to-apply--pgt--js__options button, .how-to-apply--pgt--js__options a'),
         onDeactivate: () => setModalVisible(false),
         clickOutsideDeactivates: true
@@ -640,43 +603,43 @@ function HowToApply(props) {
 
     if (modalVisible) {
       focusTrap.activate && focusTrap.activate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__["disableBodyScroll"])(getModal());
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__["disableBodyScroll"])(getModal());
     } else {
       focusTrap.deactivate && focusTrap.deactivate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__["enableBodyScroll"])(getModal());
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__["enableBodyScroll"])(getModal());
     }
   }, [modalVisible]);
-  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "cta-block"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "cta-block__cta"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     className: "primary-cta-arrow--bright",
     onClick: () => setModalVisible(true)
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Apply now")))), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Apply now")))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal",
     "data-open": modalVisible,
     ref: modal => modalRef = modal
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content",
     ref: modalContent => modalContentRef = modalContent
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     className: "how-to-apply--pgt--js__close",
     onClick: () => {
       focusTrap.deactivate && focusTrap.deactivate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__["enableBodyScroll"])(getModal());
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__["enableBodyScroll"])(getModal());
       setModalVisible(false);
     }
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-times icon",
     "aria-label": "Close"
-  })), reset, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ol", {
+  })), reset, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
     className: "how-to-apply--pgt--js__modal__progress"
-  }, qualificationsProgress, subjectsProgress, entryPointsProgress, locationsProgress, nextStep), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ol", {
+  }, qualificationsProgress, subjectsProgress, entryPointsProgress, locationsProgress, nextStep), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
     className: "how-to-apply--pgt--js__modal__progress--mobile"
-  }, qualificationsProgressMobile, subjectsProgressMobile, entryPointsProgressMobile, locationsProgressMobile, nextStepMobile), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+  }, qualificationsProgressMobile, subjectsProgressMobile, entryPointsProgressMobile, locationsProgressMobile, nextStepMobile), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h2", null, "Applying to start in ", props.element.dataset.year), alternative), qualificationQuestion, subjectQuestion, entryQuestion, locationQuestion, applyQuestion)));
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Applying to start in ", props.element.dataset.year), alternative), qualificationQuestion, subjectQuestion, entryQuestion, locationQuestion, applyQuestion)));
 }
 
 var nextLevel = (arr, k) => arr.filter(i => Object.keys(i)[0] === k)[0][k];
@@ -758,8 +721,8 @@ function nextQuestion(preferences) {
 }
 
 HowToApply.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.array,
-  element: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
+  config: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.array,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (HowToApply);
 
@@ -862,14 +825,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 /**
  * Useful utility functions
  *
@@ -953,11 +908,7 @@ function verticallyInWindow(elem) {
 function parametersToObject(parameterString) {
   var parameters = {};
   parameterString.substr(1).split('&').forEach(parameter => {
-    var _parameter$split = parameter.split('='),
-        _parameter$split2 = _slicedToArray(_parameter$split, 2),
-        k = _parameter$split2[0],
-        v = _parameter$split2[1];
-
+    var [k, v] = parameter.split('=');
     parameters[k] = v;
   });
   return parameters;

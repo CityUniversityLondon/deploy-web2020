@@ -42794,11 +42794,12 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary > .navigation--secondary__header {
         font-family: "Meta Sans", sans-serif;
         font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-        font-size: 1.125rem;
-        line-height: 1.25;
-        letter-spacing: -0.008em;
+        font-size: 1rem;
+        line-height: 1.625;
+        letter-spacing: -0.005em;
         font-style: normal;
         font-weight: 600;
+        line-height: 1.25;
         margin-top: 1rem;
         background-color: #ffffff;
         color: #0c0c0e;
@@ -42824,13 +42825,13 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 @media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1919px) {
     .navigation--secondary > .navigation--secondary__header {
-        letter-spacing: -0.011em;
+        letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 1920px) and (max-width: 3839px) {
     .navigation--secondary > .navigation--secondary__header {
-        letter-spacing: -0.014em;
+        letter-spacing: -0.013em;
     }
 }
 
