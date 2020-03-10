@@ -8117,7 +8117,10 @@ function createProgressTracker(slider, sliderType, sliderObject) {
     val: 'slider-block__control__progress'
   }]);
   wrapper.appendChild(progress);
-  var firstPage = document.createElement('span');
+  var firstPage = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
+    label: 'class',
+    val: 'currentPage'
+  }]);
   firstPage.innerText = '1';
   var separator = document.createElement('span');
   separator.innerText = '/';
@@ -8198,13 +8201,17 @@ function defaultEvent(button, slider, sliderObject) {
       nextSlide = slider.querySelector('[' + sliderObject.default.pageAttr + '= "' + nextPage + '"]'),
       page = parseInt(currentSlide.getAttribute(sliderObject.default.pageAttr)),
       prevButton = button.parentNode.querySelector('.prev'),
-      nextButton = button.parentNode.querySelector('.next');
+      nextButton = button.parentNode.querySelector('.next'),
+      counterEl = slider.parentNode.querySelector('.currentPage');
+  var counterValue = parseInt(counterEl.innerText);
   currentSlide.setAttribute("".concat(sliderObject.default.visAttr), false);
   nextSlide.setAttribute("".concat(sliderObject.default.visAttr), true);
 
   if (button.classList.contains('next')) {
     button.setAttribute('data-next', page + 2);
     prevButton.setAttribute('data-next', page);
+    counterValue++;
+    counterEl.innerText = counterValue;
 
     if (page === 0) {
       prevButton.removeAttribute('disabled');
@@ -8214,6 +8221,8 @@ function defaultEvent(button, slider, sliderObject) {
   } else {
     button.setAttribute('data-next', page - 2);
     nextButton.setAttribute('data-next', page);
+    counterValue--;
+    counterEl.innerText = counterValue;
 
     if (page === 1) {
       prevButton.setAttribute('disabled', true);
