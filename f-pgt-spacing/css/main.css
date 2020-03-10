@@ -54822,7 +54822,7 @@ main .landing:only-child .landing__top__cta {
 
 .wrapper--course--pgt__student-life {
     margin: 0 0 0;
-    padding: 0 0 0 1rem;
+    padding: 0;
 }
 
 .wrapper--course--pgt__student-life .course--pgt__student-life {
