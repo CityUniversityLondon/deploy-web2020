@@ -53248,6 +53248,29 @@ main .landing:only-child .landing__top__cta {
     padding-right: 2rem;
 }
 
+.landing--functional__finder__tabs__columns.columns-2 {
+    -moz-column-count: 2;
+         column-count: 2;
+}
+
+.landing--functional__finder__tabs__columns.columns-3 {
+    -moz-column-count: 3;
+         column-count: 3;
+}
+
+@media (max-width: 767px) {
+    .landing--functional__finder__tabs__columns.columns-3 {
+        -moz-column-count: 2;
+             column-count: 2;
+    }
+}
+
+.landing--functional__finder__tabs__columns li {
+    margin-bottom: 0.75rem;
+    margin-top: 0;
+    display: table;
+}
+
 @media (max-width: 431px) {
     .landing--functional__content {
         margin-left: 1rem;
