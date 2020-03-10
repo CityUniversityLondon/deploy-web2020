@@ -25403,8 +25403,7 @@ Assign mixin:
     margin-top: 0;
 }
 
-.card--testimonial .card--testimonial__text .card--testimonial__quote:before,
-.card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+.card--testimonial .card--testimonial__text .card--testimonial__quote:before, .card--testimonial .card--testimonial__text .card--testimonial__quote:after {
     font-size: 1.266rem;
     line-height: 1.25;
     letter-spacing: -0.011em;
@@ -25428,64 +25427,55 @@ Assign mixin:
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
-    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before, .card--testimonial .card--testimonial__text .card--testimonial__quote:after {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
-    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before, .card--testimonial .card--testimonial__text .card--testimonial__quote:after {
         letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
-    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before, .card--testimonial .card--testimonial__text .card--testimonial__quote:after {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
-    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before, .card--testimonial .card--testimonial__text .card--testimonial__quote:after {
         letter-spacing: -0.017em;
     }
 }
 
 .card--testimonial .card--testimonial__text .card--testimonial__quote:before i,
-.card--testimonial .card--testimonial__text .card--testimonial__quote:before em,
-.card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after i,
-.card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after em {
+.card--testimonial .card--testimonial__text .card--testimonial__quote:before em, .card--testimonial .card--testimonial__text .card--testimonial__quote:after i,
+.card--testimonial .card--testimonial__text .card--testimonial__quote:after em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
-    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before, .card--testimonial .card--testimonial__text .card--testimonial__quote:after {
         letter-spacing: -0.016em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
-    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before, .card--testimonial .card--testimonial__text .card--testimonial__quote:after {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
-    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before, .card--testimonial .card--testimonial__text .card--testimonial__quote:after {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--testimonial .card--testimonial__text .card--testimonial__quote:before,
-    .card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote:before, .card--testimonial .card--testimonial__text .card--testimonial__quote:after {
         letter-spacing: -0.017em;
     }
 }
@@ -25497,7 +25487,7 @@ Assign mixin:
     top: -0.5rem;
 }
 
-.card--testimonial .card--testimonial__text .card--testimonial__quote :last-child:after {
+.card--testimonial .card--testimonial__text .card--testimonial__quote:after {
     content: '”';
 }
 
@@ -46887,6 +46877,15 @@ button
     margin: 1rem 0;
 }
 
+@media (min-width: 901px) {
+    .imageColLayout.imageColLayout--2, .imageColLayout.imageColLayout--3, .imageColLayout.imageColLayout--4 {
+        display: flex;
+    }
+    .imageColLayout.imageColLayout--2 .imageColLayout--card:not(:last-of-type), .imageColLayout.imageColLayout--3 .imageColLayout--card:not(:last-of-type), .imageColLayout.imageColLayout--4 .imageColLayout--card:not(:last-of-type) {
+        padding-right: 1rem;
+    }
+}
+
 @media (min-width: 433px) and (max-width: 900px) {
     .imageColLayout {
         -moz-column-count: 2;
@@ -54472,7 +54471,7 @@ main .landing:only-child .landing__top__cta {
 }
 
 .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__standfirst {
-    padding: 1.75rem;
+    padding: 1rem 1.5rem;
     background: #ffffff;
     margin: 0 0 2rem;
 }
@@ -54483,7 +54482,7 @@ main .landing:only-child .landing__top__cta {
 
 .course--pgt__keyinfo .course--pgt__keyinfo__content .wrapper--course--pgt__keyinfo__content__date-location {
     background: #ffffff;
-    padding: 1rem 1.75rem 1rem;
+    padding: 1rem 1.5rem 1rem;
 }
 
 .course--pgt__keyinfo .course--pgt__keyinfo__content .wrapper--course--pgt__keyinfo__content__date-location .course--pgt__keyinfo__content__date-location {
@@ -54740,26 +54739,26 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
-.course--pgt__usp {
+.wrapper--course--pgt__usp {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
 }
 
 @media (min-width: 768px) {
-    .course--pgt__usp {
+    .wrapper--course--pgt__usp {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 901px) {
-    .course--pgt__usp {
+    .wrapper--course--pgt__usp {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (max-width: 1023px) {
-    .course--pgt__usp {
+    .wrapper--course--pgt__usp {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -54769,68 +54768,76 @@ main .landing:only-child .landing__top__cta {
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__usp {
+    .wrapper--course--pgt__usp {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__usp {
+    .wrapper--course--pgt__usp {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
 @media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__usp {
+    .wrapper--course--pgt__usp {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-.course--pgt__usp .course--pgt__usp__content {
+.wrapper--course--pgt__usp .course--pgt__usp {
     grid-column: 1/-1;
 }
 
 @media (min-width: 769px) {
-    .course--pgt__usp .course--pgt__usp__content {
+    .wrapper--course--pgt__usp .course--pgt__usp {
         grid-column: 3/-3;
     }
 }
 
-.course--pgt__usp .course--pgt__usp__content .course--pgt__usp__heading {
+.wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .course--pgt__usp__heading {
     font-weight: 300;
     margin-bottom: 1rem;
 }
 
-.course--pgt__usp .course--pgt__usp__content .statistics-block {
-    padding: 1rem 0;
+.wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block {
+    margin-top: 2rem;
     background: #ffffff;
 }
 
-.course--pgt__usp .course--pgt__usp__content .statistics-block .ksp__items {
-    margin: 0 0.75rem;
+.wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper {
+    padding: 1rem 1.5rem 1rem;
 }
 
-.course--pgt__usp .course--pgt__usp__content .statistics-block .ksp__items.ksp__items--2 {
+.wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper .statistics-block__heading {
+    margin-top: 0;
+    text-align: left;
+    padding: 0;
+}
+
+.wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper .ksp__items {
+    margin: 0;
+}
+
+.wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper .ksp__items.ksp__items--2 {
     grid-template-areas: 'a a a a a a' 'b b b b b b';
 }
 
 @media (min-width: 769px) {
-    .course--pgt__usp .course--pgt__usp__content .statistics-block .ksp__items.ksp__items--2 {
+    .wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper .ksp__items.ksp__items--2 {
         grid-template-areas: 'a a a a a a b b b b b b';
     }
 }
 
-@media (min-width: 1025px) {
-    .course--pgt__usp .course--pgt__usp__content .statistics-block .ksp__items.ksp__items--2 {
-        grid-template-areas: 'a a a a a a a a a b b b b b b b b b';
-    }
+.wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper .ksp__items .ksp__item__icon {
+    margin: 0 auto;
 }
 
-.course--pgt__usp .course--pgt__usp__content .statistics-block .ksp__items .ksp__item__icon {
-    margin: 0 auto;
+.wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper .ksp__items .ksp__item {
+    padding: 0 1rem 0 0;
 }
 
 .course--pgt__our-students .wrapper--course--pgt__our-students__heading {
