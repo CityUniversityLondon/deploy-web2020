@@ -54025,9 +54025,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1024px) {
     .course--pgt .wrapper--course--pgt__introduction {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -54035,22 +54032,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1024px) and (min-width: 901px) {
     .course--pgt .wrapper--course--pgt__introduction {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1024px) and (min-width: 901px) {
-    .course--pgt .wrapper--course--pgt__introduction {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1024px) and (min-width: 1441px) {
-    .course--pgt .wrapper--course--pgt__introduction {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -54233,9 +54216,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .course--pgt__promo__content {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -54243,22 +54223,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .course--pgt__promo__content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__promo__content {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__promo__content {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -54312,9 +54278,6 @@ main .landing:only-child .landing__top__cta {
 @media (max-width: 1023px) {
     .wrapper--course--pgt__profiles__heading,
     .wrapper--course--pgt__facilities__heading {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -54323,24 +54286,8 @@ main .landing:only-child .landing__top__cta {
 @media (max-width: 1023px) and (min-width: 901px) {
     .wrapper--course--pgt__profiles__heading,
     .wrapper--course--pgt__facilities__heading {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .wrapper--course--pgt__profiles__heading,
-    .wrapper--course--pgt__facilities__heading {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .wrapper--course--pgt__profiles__heading,
-    .wrapper--course--pgt__facilities__heading {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -54350,18 +54297,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .course--pgt__profiles__content {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__profiles__content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
     }
 }
 
@@ -54372,10 +54309,10 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__profiles__content {
-        margin-left: auto;
-        margin-right: auto;
+@media (max-width: 1023px) {
+    .course--pgt__profiles__content .featured-profiles-block {
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -54407,9 +54344,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .course--pgt__keyinfo {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -54417,22 +54351,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .course--pgt__keyinfo {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__keyinfo {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__keyinfo {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -54644,9 +54564,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .course--pgt__our-students .wrapper--course--pgt__our-students__heading {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -54654,22 +54571,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .course--pgt__our-students .wrapper--course--pgt__our-students__heading {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__our-students .wrapper--course--pgt__our-students__heading {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__our-students .wrapper--course--pgt__our-students__heading {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -54693,9 +54596,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .course--pgt__our-students .course--pgt__student-work {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -54703,22 +54603,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .course--pgt__our-students .course--pgt__student-work {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__our-students .course--pgt__student-work {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__our-students .course--pgt__student-work {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -54790,9 +54676,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .course--pgt__usp {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -54800,22 +54683,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .course--pgt__usp {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__usp {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__usp {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -54953,7 +54822,7 @@ main .landing:only-child .landing__top__cta {
 
 .wrapper--course--pgt__student-life {
     margin: 0 0 0;
-    padding: 1rem 0 2rem;
+    padding: 0 0 0 1rem;
 }
 
 .wrapper--course--pgt__student-life .course--pgt__student-life {
@@ -54976,18 +54845,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .wrapper--course--pgt__student-life .course--pgt__student-life {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .wrapper--course--pgt__student-life .course--pgt__student-life {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
     }
 }
 
@@ -54998,21 +54857,14 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .wrapper--course--pgt__student-life .course--pgt__student-life {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 .wrapper--course--pgt__student-life .course--pgt__student-life .pathway-image-cards {
     grid-column: 1/-1;
+    padding: 0;
 }
 
 @media (min-width: 769px) {
     .wrapper--course--pgt__student-life .course--pgt__student-life .pathway-image-cards {
         grid-column: 2/-2;
-        padding: 0;
     }
 }
 
@@ -55043,9 +54895,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .wrapper--course--pgt__whats-happening {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -55053,22 +54902,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .wrapper--course--pgt__whats-happening {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .wrapper--course--pgt__whats-happening {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .wrapper--course--pgt__whats-happening {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -55160,9 +54995,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .wrapper--course--pgt__testimonials-unibuddy {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -55170,22 +55002,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .wrapper--course--pgt__testimonials-unibuddy {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .wrapper--course--pgt__testimonials-unibuddy {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .wrapper--course--pgt__testimonials-unibuddy {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -55409,16 +55227,15 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1024px) {
     .course--pgt__related-courses {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }
 
 @media (max-width: 1024px) and (min-width: 901px) {
     .course--pgt__related-courses {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
@@ -55453,18 +55270,9 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .course--pgt__tabs {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__tabs {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
+        margin: 0;
     }
 }
 
@@ -55472,13 +55280,6 @@ main .landing:only-child .landing__top__cta {
     .course--pgt__tabs {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__tabs {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -56031,9 +55832,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -56041,22 +55839,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
