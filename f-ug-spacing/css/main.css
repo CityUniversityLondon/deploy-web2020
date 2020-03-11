@@ -61921,6 +61921,10 @@ main .standard-content .banner-text {
     padding: 1rem;
 }
 
+.course--ug__usp__stats .statistics-block {
+    padding: 1rem 0;
+}
+
 .course--ug__usp__stats .statistics-block .ksp__items {
     text-align: center;
 }
