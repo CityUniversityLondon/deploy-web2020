@@ -44681,6 +44681,98 @@ blockquote footer cite {
     color: #1e1e1e;
 }
 
+.slider-block__control__progress span {
+    color: #d61726;
+    font-size: 0.79rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.slider-block__control__progress span:nth-of-type(1),
+.slider-block__control__progress span:nth-of-type(2) {
+    color: #696969;
+    margin-right: 0.1875rem;
+}
+
+.slider-block__control__buttons button {
+    color: #d61726;
+    border: 0.0625rem solid #d61726;
+    padding: 0.75rem;
+    font-weight: 400;
+}
+
+@media (hover: hover) {
+    .slider-block__control__buttons button:hover {
+        color: #ffffff;
+        background: #d61726;
+    }
+}
+
+.slider-block__control__buttons button:focus, .slider-block__control__buttons button:active {
+    color: #ffffff;
+    background: #d61726;
+}
+
+.slider-block__control__buttons button:focus:focus, .slider-block__control__buttons button:focus:active, .slider-block__control__buttons button:active:focus, .slider-block__control__buttons button:active:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.slider-block__control__buttons button:disabled {
+    color: #696969;
+    background: #ffffff;
+    border: none;
+    opacity: 0.7;
+}
+
+.slider-block__control__buttons button:nth-of-type(1) {
+    margin-right: 1rem;
+}
+
+.slider-block [data-visible="false"] {
+    display: none;
+}
+
+.slider-block--mobile [data-visible="false"] {
+    display: block;
+}
+
+@media (max-width: 432px) {
+    .slider-block--mobile [data-visible="false"] {
+        display: none;
+    }
+}
+
+.slider-block--tablet [data-visible="false"] {
+    display: block;
+}
+
+@media (max-width: 432px) {
+    .slider-block--tablet [data-visible="false"] {
+        display: none;
+    }
+}
+
+@media (max-width: 432px) {
+    .slider-block--tablet .slider-block__control__buttons button[data-visible] {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .slider-block--tablet .slider-block__control__buttons button[data-visibletablet] {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 769px) {
+    .slider-block--tablet .slider-block__control__buttons button[data-visibledesk] {
+        display: inline-block;
+    }
+}
+
 article .social-icon {
     background-color: initial;
     background-image: initial;

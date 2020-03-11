@@ -7973,14 +7973,17 @@ function launchResponsiveSlider(slider) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
+/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+
 
 
 
@@ -8011,24 +8014,27 @@ function launchSlider(slider) {
       totalPages: totalItems,
       maxItem: 1,
       pageAttr: 'data-page',
-      visAttr: 'data-visible'
+      visAttr: 'data-visible',
+      increment: 1
     },
     tablet: {
       totalPages: maxTablet,
       maxItem: perPageTablet,
       pageAttr: 'data-pagetablet',
-      visAttr: 'data-visibletablet'
+      visAttr: 'data-visibletablet',
+      increment: perPageTablet
     },
     desk: {
       totalPages: maxDesk,
       maxItem: perPageDesk,
       pageAttr: 'data-pagedesk',
-      visAttr: 'data-visibledesk'
+      visAttr: 'data-visibledesk',
+      increment: perPageDesk
     }
   };
 
   if (totalItems < 2) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(slider, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(slider, className, false);
     return true;
   }
 
@@ -8036,27 +8042,27 @@ function launchSlider(slider) {
       sliderControl = slider.getAttribute('data-control'),
       sliderProgress = slider.getAttribute('data-progress');
 
-  if (sliderType === null) {
+  if (!sliderType) {
     sliderType = 'default';
   }
 
-  if (sliderControl === null) {
+  if (!sliderControl) {
     sliderControl = 'default';
   }
 
-  if (sliderProgress === null) {
+  if (!sliderProgress) {
     sliderProgress = 'default';
   }
 
-  var wrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
+  var wrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
     label: 'class',
-    val: "slider-block, slider-block--".concat(sliderType)
+    val: "slider-block slider-block--".concat(sliderType)
   }]);
   slider.parentNode.insertBefore(wrapper, slider);
   wrapper.appendChild(slider);
 
   if (sliderProgress !== 'off' && sliderControl !== 'off') {
-    var controlWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
+    var controlWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
       label: 'class',
       val: 'slider-block__control'
     }]);
@@ -8070,7 +8076,7 @@ function launchSlider(slider) {
   }
 
   if (sliderControl !== 'off') {
-    createSliderButton(slider, sliderControl, sliderObject);
+    createSliderButton(slider, sliderControl, sliderType, sliderObject);
   }
 }
 
@@ -8087,8 +8093,8 @@ function setVisibility(slider, sliderType, sliderObject) {
 
   if (sliderType === 'tablet') {
     var el = [...slider.children];
-    var tabletSlides = Object(_util__WEBPACK_IMPORTED_MODULE_3__["arraySlicer"])(el, sliderObject.tablet.maxItem);
-    var deskSlides = Object(_util__WEBPACK_IMPORTED_MODULE_3__["arraySlicer"])(el, sliderObject.desk.maxItem);
+    var tabletSlides = Object(_util__WEBPACK_IMPORTED_MODULE_4__["arraySlicer"])(el, sliderObject.tablet.maxItem);
+    var deskSlides = Object(_util__WEBPACK_IMPORTED_MODULE_4__["arraySlicer"])(el, sliderObject.desk.maxItem);
     slicedArrayIterator(tabletSlides, sliderObject.tablet.pageAttr, sliderObject.tablet.visAttr);
     slicedArrayIterator(deskSlides, sliderObject.desk.pageAttr, sliderObject.desk.visAttr);
   }
@@ -8112,19 +8118,19 @@ function slicedArrayIterator(arr, pageAttr, visibilityAttr) {
 
 function createProgressTracker(slider, sliderType, sliderObject) {
   var wrapper = slider.parentNode.querySelector('.slider-block__control');
-  var progress = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
+  var progress = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'slider-block__control__progress'
   }]);
   wrapper.appendChild(progress);
-  var firstPage = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
-    label: 'class',
-    val: 'currentPage'
+  var firstPage = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
+    label: 'data-currentpage',
+    val: true
   }]);
   firstPage.innerText = '1';
   var separator = document.createElement('span');
   separator.innerText = '/';
-  var lastPage = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
+  var lastPage = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
     label: sliderObject.default.visAttr,
     val: true
   }]);
@@ -8134,12 +8140,12 @@ function createProgressTracker(slider, sliderType, sliderObject) {
   progress.appendChild(lastPage);
 
   if (sliderType === 'tablet') {
-    var lastPageTablet = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
+    var lastPageTablet = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
       label: sliderObject.tablet.visAttr,
       val: true
     }]);
     lastPageTablet.innerText = sliderObject.tablet.totalPages;
-    var lastPageDesk = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
+    var lastPageDesk = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
       label: sliderObject.desk.visAttr,
       val: true
     }]);
@@ -8149,63 +8155,83 @@ function createProgressTracker(slider, sliderType, sliderObject) {
   }
 }
 
-function createSliderButton(slider, sliderControl, sliderObject) {
+function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
   if (sliderControl === 'default') {
-    var buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
+    var buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
       label: 'class',
       val: 'slider-block__control__buttons'
     }]);
     var controlWrapper = slider.parentNode.querySelector('.slider-block__control');
     controlWrapper.appendChild(buttonWrapper);
-    var buttonPrev = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('button', [{
-      label: 'class',
-      val: 'fas fa-arrow-left prev'
-    }, {
-      label: 'disabled',
-      val: 'true'
-    }, {
-      label: 'type',
-      val: 'button'
-    }, {
-      label: 'data-next',
-      val: -1
-    }]);
-    buttonPrev.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'previous item');
-    var buttonNext = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('button', [{
-      label: 'class',
-      val: 'fas fa-arrow-right next'
-    }, {
-      label: 'type',
-      val: 'button'
-    }, {
-      label: 'data-next',
-      val: 1
-    }]);
-    buttonNext.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'next item');
-    buttonNext.addEventListener('click', function (e) {
-      e.preventDefault();
-      defaultEvent(this, slider, sliderObject);
+    var buttonPrev = createButtonElement('fas fa-arrow-left prev', 'default', sliderObject);
+    var buttonNext = createButtonElement('fas fa-arrow-right next', 'default', sliderObject);
+    buttonNext.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
+    buttonNext.addEventListener('click', function () {
+      defaultEvent(this, slider, 'default', sliderObject);
     });
-    buttonPrev.addEventListener('click', function (e) {
-      e.preventDefault();
-      defaultEvent(this, slider, sliderObject);
+    buttonPrev.addEventListener('click', function () {
+      defaultEvent(this, slider, 'default', sliderObject);
     });
     buttonWrapper.appendChild(buttonPrev);
     buttonWrapper.appendChild(buttonNext);
+
+    if (sliderType === 'tablet') {
+      var buttonPrevTablet = createButtonElement('fas fa-arrow-left prev', 'tablet', sliderObject),
+          buttonNextTablet = createButtonElement('fas fa-arrow-right next', 'tablet', sliderObject),
+          buttonPrevDesk = createButtonElement('fas fa-arrow-left prev', 'desk', sliderObject),
+          buttonNextDesk = createButtonElement('fas fa-arrow-right next', 'desk', sliderObject);
+      buttonWrapper.appendChild(buttonPrevTablet);
+      buttonWrapper.appendChild(buttonNextTablet);
+      buttonWrapper.appendChild(buttonPrevDesk);
+      buttonWrapper.appendChild(buttonNextDesk);
+    }
   }
 }
 
-function defaultEvent(button, slider, sliderObject) {
-  var currentSlide = slider.querySelector("[".concat(sliderObject.default.visAttr, " = 'true']")),
+function createButtonElement(classname, type, sliderObject) {
+  var value;
+
+  if (classname.indexOf('prev') !== -1) {
+    value = -1;
+  } else {
+    value = 1;
+  }
+
+  var button = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('button', [{
+    label: 'class',
+    val: classname
+  }, {
+    label: 'type',
+    val: 'button'
+  }, {
+    label: 'data-next',
+    val: value
+  }, {
+    label: "".concat(sliderObject[type].visAttr),
+    val: true
+  }]);
+
+  if (classname.indexOf('prev') !== -1) {
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'previous item');
+    button.setAttribute('disabled', true);
+  } else {
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
+  }
+
+  return button;
+}
+
+function defaultEvent(button, slider, type, sliderObject) {
+  var currentSlide = slider.querySelector("[".concat(sliderObject[type].visAttr, " = 'true']")),
       nextPage = button.getAttribute('data-next'),
-      nextSlide = slider.querySelector('[' + sliderObject.default.pageAttr + '= "' + nextPage + '"]'),
-      page = parseInt(currentSlide.getAttribute(sliderObject.default.pageAttr)),
+      nextSlide = slider.querySelector('[' + sliderObject[type].pageAttr + '= "' + nextPage + '"]'),
+      page = parseInt(currentSlide.getAttribute(sliderObject[type].pageAttr)),
       prevButton = button.parentNode.querySelector('.prev'),
       nextButton = button.parentNode.querySelector('.next'),
-      counterEl = slider.parentNode.querySelector('.currentPage');
+      counterEl = slider.parentNode.querySelector('span[data-currentpage]');
   var counterValue = parseInt(counterEl.innerText);
-  currentSlide.setAttribute("".concat(sliderObject.default.visAttr), false);
-  nextSlide.setAttribute("".concat(sliderObject.default.visAttr), true);
+  currentSlide.setAttribute("".concat(sliderObject[type].visAttr), false);
+  nextSlide.setAttribute("".concat(sliderObject[type].visAttr), true);
 
   if (button.classList.contains('next')) {
     button.setAttribute('data-next', page + 2);
@@ -8215,7 +8241,7 @@ function defaultEvent(button, slider, sliderObject) {
 
     if (page === 0) {
       prevButton.removeAttribute('disabled');
-    } else if (page + 2 === parseInt(sliderObject.default.totalPages)) {
+    } else if (page + 2 === parseInt(sliderObject[type].totalPages)) {
       nextButton.setAttribute('disabled', true);
     }
   } else {
@@ -8226,11 +8252,13 @@ function defaultEvent(button, slider, sliderObject) {
 
     if (page === 1) {
       prevButton.setAttribute('disabled', true);
-    } else if (page + 2 === parseInt(sliderObject.default.totalPages)) {
+    } else if (page + 2 === parseInt(sliderObject[type].totalPages)) {
       nextButton.removeAttribute('disabled');
     }
   }
 }
+
+function tabletEvent(button, slider, sliderObject) {}
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchSlider,
