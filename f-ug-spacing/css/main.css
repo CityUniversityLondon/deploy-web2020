@@ -61022,6 +61022,7 @@ main .standard-content .banner-text {
 
 .course--ug .featured-profiles-block {
     margin: 0;
+    padding: 0 0 1rem 0;
 }
 
 @media (max-width: 432px) {
@@ -61151,8 +61152,8 @@ main .standard-content .banner-text {
 .course--ug__related-courses {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    padding-bottom: 4.25rem;
-    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 
 @media (min-width: 901px) {
@@ -61927,6 +61928,7 @@ main .standard-content .banner-text {
 @media (min-width: 769px) {
     .courses--ug__facilities {
         margin: 0;
+        padding: 0;
     }
 }
 
@@ -61956,6 +61958,10 @@ main .standard-content .banner-text {
     color: #5d184a;
 }
 
+.course--ug__usp__stats .statistics-block .ksp__items {
+    margin: 0;
+}
+
 @media (max-width: 767px) {
     .course--ug__usp__stats .statistics-block .ksp__items.ksp__items--3 {
         grid-template-rows: repeat(3, auto);
@@ -61980,7 +61986,7 @@ main .standard-content .banner-text {
 }
 
 @media (max-width: 767px) {
-    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items--2 {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--2 {
         grid-template-rows: repeat(3, auto);
         grid-template-columns: repeat(6, 1fr);
         grid-template-areas: '. a a a a .' '. b b b b .';
@@ -61988,7 +61994,7 @@ main .standard-content .banner-text {
 }
 
 @media (min-width: 768px) and (max-width: 1280px) {
-    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items--2 {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--2 {
         grid-template-rows: repeat(2, auto);
         grid-template-columns: repeat(12, 1fr);
         grid-template-areas: '. a a a a a b b b b b .';
@@ -61996,21 +62002,21 @@ main .standard-content .banner-text {
 }
 
 @media (min-width: 1281px) {
-    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items--2 {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--2 {
         grid-template-columns: repeat(18, 1fr);
         grid-template-areas: '. . a a a a a a b b b b b b b . .';
     }
 }
 
-.course--ug__usp__stats .statistics-block .ksp__item:nth-child(1) {
+.course--ug__usp__stats .statistics-block .ksp__items .ksp__item:nth-child(1) {
     grid-area: a;
 }
 
-.course--ug__usp__stats .statistics-block .ksp__item:nth-child(2) {
+.course--ug__usp__stats .statistics-block .ksp__items .ksp__item:nth-child(2) {
     grid-area: b;
 }
 
-.course--ug__usp__stats .statistics-block .ksp__item:nth-child(3) {
+.course--ug__usp__stats .statistics-block .ksp__items .ksp__item:nth-child(3) {
     grid-area: c;
 }
 
@@ -62057,6 +62063,12 @@ main .standard-content .banner-text {
     .js .course--ug .accordion {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media screen {
+    .js .course--ug .tabs {
+        margin-top: 0;
     }
 }
 
