@@ -21765,6 +21765,12 @@ Assign mixin:
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .banner-svg--wrapper__title {
+        padding-bottom: 2rem;
+    }
+}
+
 .banner-svg--wrapper__title h1,
 .banner-svg--wrapper__title p {
     margin-left: 1rem;
@@ -47235,6 +47241,7 @@ button
 .youtube-video__caption-element--text,
 .youtube-video__caption-element--time {
     display: block;
+    margin-top: 0.5rem;
 }
 
 @media (min-width: 768px) {
@@ -60813,6 +60820,7 @@ main .standard-content .banner-text {
 }
 
 .course--ug .course-info__wrapper .course-info {
+    z-index: 1;
     grid-column: 2/-2;
 }
 
@@ -60875,7 +60883,7 @@ main .standard-content .banner-text {
 
 @media (max-width: 900px) {
     .course--ug .course-info__wrapper .course-info .course-info__year .start-date {
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 }
 
