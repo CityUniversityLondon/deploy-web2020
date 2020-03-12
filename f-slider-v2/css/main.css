@@ -44694,7 +44694,7 @@ blockquote footer cite {
     margin-right: 0.1875rem;
 }
 
-.slider-block__control__buttons button {
+.slider-block__control__buttons--default button {
     color: #d61726;
     border: 0.0625rem solid #d61726;
     padding: 0.75rem;
@@ -44702,33 +44702,51 @@ blockquote footer cite {
 }
 
 @media (hover: hover) {
-    .slider-block__control__buttons button:hover {
+    .slider-block__control__buttons--default button:hover {
         color: #ffffff;
         background: #d61726;
     }
 }
 
-.slider-block__control__buttons button:focus, .slider-block__control__buttons button:active {
+.slider-block__control__buttons--default button:focus, .slider-block__control__buttons--default button:active {
     color: #ffffff;
     background: #d61726;
 }
 
-.slider-block__control__buttons button:focus:focus, .slider-block__control__buttons button:focus:active, .slider-block__control__buttons button:active:focus, .slider-block__control__buttons button:active:active {
+.slider-block__control__buttons--default button:focus:focus, .slider-block__control__buttons--default button:focus:active, .slider-block__control__buttons--default button:active:focus, .slider-block__control__buttons--default button:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.slider-block__control__buttons button:disabled {
+.slider-block__control__buttons--default button:disabled {
     color: #696969;
     background: #ffffff;
     border: none;
     opacity: 0.7;
 }
 
-.slider-block__control__buttons button:nth-of-type(1) {
+.slider-block__control__buttons--default button:nth-of-type(1) {
     margin-right: 1rem;
+}
+
+.slider-block__control__buttons--dot button {
+    display: inline-block;
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 1.5rem;
+    border-bottom-width: 0;
+    background-color: #696969;
+    cursor: pointer;
+}
+
+.slider-block__control__buttons--dot button[aria-expanded='true'] {
+    background-color: #1e1e1e;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: none;
 }
 
 .slider-block [data-visible="false"] {
@@ -44771,17 +44789,6 @@ blockquote footer cite {
     .slider-block--tablet .slider-block__control__buttons button[data-visibledesk] {
         display: inline-block;
     }
-}
-
-.slider-block__control__buttons--dot button {
-    display: block;
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
-    margin-bottom: 24px;
-    cursor: pointer;
-    border-bottom-width: 0;
-    background-color: #0c0c0e;
 }
 
 article .social-icon {

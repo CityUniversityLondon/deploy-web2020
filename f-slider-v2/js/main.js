@@ -8175,6 +8175,7 @@ function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
     });
     buttonWrapper.appendChild(buttonPrev);
     buttonWrapper.appendChild(buttonNext);
+    buttonWrapper.classList.add('slider-block__control__buttons--default');
 
     if (sliderType === 'tablet') {
       var buttonPrevTablet = createButtonElement('fas fa-arrow-left prev', 'tablet', sliderObject),
@@ -8273,7 +8274,7 @@ function createSliderDot(slider, sliderType, wrapper, sliderObject) {
       val: i
     }, {
       label: 'aria-label',
-      val: "Open slide ".concat(i)
+      val: "Open slide ".concat(i + 1)
     }, {
       label: 'type',
       val: 'button'
@@ -8287,8 +8288,25 @@ function createSliderDot(slider, sliderType, wrapper, sliderObject) {
       dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].expanded, 'false');
     }
 
+    dot.addEventListener('click', function () {
+      dotEvent(this, slider, wrapper);
+    });
     wrapper.appendChild(dot);
   }
+}
+
+function dotEvent(dot, slider, parent) {
+  var dots = parent.querySelectorAll('button');
+  var slides = [...slider.children]; // let activeSlice = parent.
+
+  dots.forEach(el => {
+    el.removeAttribute('disabled');
+    el.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].expanded, 'false');
+    el.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current, 'slide');
+  });
+  dot.setAttribute('disabled', true);
+  dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current, 'slide');
+  dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].expanded, 'true');
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
