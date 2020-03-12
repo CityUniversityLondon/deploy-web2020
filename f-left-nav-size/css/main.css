@@ -32139,7 +32139,7 @@ article figure figcaption a:active {
 
 .global-footer .global-footer__content__section--location__cta, .global-footer .global-footer__content__section--location__cta:focus, .global-footer .global-footer__content__section--location__cta:active {
     background-color: transparent;
-    border-color: #d61726;
+    border-color: #e93745;
     border-style: solid;
     border-width: 0.125rem;
     color: #ffffff;
@@ -32147,8 +32147,8 @@ article figure figcaption a:active {
 
 @media (hover: hover) {
     .global-footer .global-footer__content__section--location__cta:hover {
-        background-color: #d61726;
-        border-color: #d61726;
+        background-color: #e93745;
+        border-color: #e93745;
         border-style: solid;
         border-width: 0.125rem;
         color: #ffffff;
