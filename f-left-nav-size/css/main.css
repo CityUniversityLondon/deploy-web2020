@@ -31259,10 +31259,10 @@ article figure figcaption a:active {
 
 @media (hover: hover) {
     .global-footer .global-footer__social-media a:hover {
-        border-color: #d61726;
+        border-color: #e93745;
     }
     .global-footer .global-footer__social-media a:hover .icon {
-        color: #d61726;
+        color: #e93745;
     }
 }
 
