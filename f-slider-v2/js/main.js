@@ -8061,7 +8061,7 @@ function launchSlider(slider) {
   slider.parentNode.insertBefore(wrapper, slider);
   wrapper.appendChild(slider);
 
-  if (sliderProgress !== 'off' && sliderControl !== 'off') {
+  if (sliderProgress !== 'off' || sliderControl !== 'off') {
     var controlWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
       label: 'class',
       val: 'slider-block__control'
@@ -8156,13 +8156,14 @@ function createProgressTracker(slider, sliderType, sliderObject) {
 }
 
 function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
+  var buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'slider-block__control__buttons'
+  }]);
+  var controlWrapper = slider.parentNode.querySelector('.slider-block__control');
+  controlWrapper.appendChild(buttonWrapper);
+
   if (sliderControl === 'default') {
-    var buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'slider-block__control__buttons'
-    }]);
-    var controlWrapper = slider.parentNode.querySelector('.slider-block__control');
-    controlWrapper.appendChild(buttonWrapper);
     var buttonPrev = createButtonElement('fas fa-arrow-left prev', 'default', sliderObject);
     var buttonNext = createButtonElement('fas fa-arrow-right next', 'default', sliderObject);
     buttonNext.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
@@ -8185,6 +8186,10 @@ function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
       buttonWrapper.appendChild(buttonPrevDesk);
       buttonWrapper.appendChild(buttonNextDesk);
     }
+  }
+
+  if (sliderControl === 'dot') {
+    createSliderDot(slider, sliderType, buttonWrapper, sliderObject);
   }
 }
 
@@ -8258,7 +8263,33 @@ function defaultEvent(button, slider, type, sliderObject) {
   }
 }
 
-function tabletEvent(button, slider, sliderObject) {}
+function createSliderDot(slider, sliderType, wrapper, sliderObject) {
+  var slidesTotal = sliderObject[sliderType].totalPages;
+  wrapper.classList.add('slider-block__control__buttons--dot');
+
+  for (var i = 0; i < slidesTotal; i++) {
+    var dot = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('button', [{
+      label: 'data-page',
+      val: i
+    }, {
+      label: 'aria-label',
+      val: "Open slide ".concat(i)
+    }, {
+      label: 'type',
+      val: 'button'
+    }]);
+
+    if (i === 0) {
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current, 'slide');
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].expanded, 'true');
+      dot.setAttribute('disabled', 'true');
+    } else {
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].expanded, 'false');
+    }
+
+    wrapper.appendChild(dot);
+  }
+}
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchSlider,

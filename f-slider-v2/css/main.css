@@ -44773,6 +44773,17 @@ blockquote footer cite {
     }
 }
 
+.slider-block__control__buttons--dot button {
+    display: block;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin-bottom: 24px;
+    cursor: pointer;
+    border-bottom-width: 0;
+    background-color: #0c0c0e;
+}
+
 article .social-icon {
     background-color: initial;
     background-image: initial;
