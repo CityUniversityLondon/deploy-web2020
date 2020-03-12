@@ -32677,7 +32677,7 @@ article figure figcaption a:active {
     .global-footer .back-to-top[data-docked='true'] {
         grid-column-end: span 8;
         grid-column-start: 17;
-        grid-row-start: 4;
+        grid-row-start: 5;
     }
 }
 
