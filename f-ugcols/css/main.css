@@ -62303,8 +62303,13 @@ main .standard-content .banner-text {
     }
 }
 
+.course--ug__related-links .card--pathway-image__container {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .course--ug__related-links .card--pathway-image__container {
+        display: block;
         flex: 0 0 40%;
     }
 }
@@ -62316,6 +62321,12 @@ main .standard-content .banner-text {
 .course--ug__related-links .related-links--with-images h3 {
     color: #ffffff;
     text-align: left;
+}
+
+.course--ug__related-links .related-links--with-images a {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
 }
 
 .course--ug__related-links .related-links--with-images a:focus, .course--ug__related-links .related-links--with-images a:active {
