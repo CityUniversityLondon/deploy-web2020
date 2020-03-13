@@ -24244,6 +24244,12 @@ Assign mixin:
     margin-top: 2rem;
 }
 
+@media (max-width: 1024px) {
+    .pathway-image-cards__blocks {
+        grid-row-gap: 2rem;
+    }
+}
+
 @media (min-width: 768px) {
     .pathway-image-cards__blocks {
         grid-template-columns: auto auto;
@@ -26221,21 +26227,15 @@ _:-ms-lang(x),
 }
 
 .footer-cards {
-    padding: 2rem 2rem;
-}
-
-@media (min-width: 901px) {
-    .footer-cards {
-        padding: 2rem 5rem;
-    }
+    padding: 1rem 1rem 2rem;
 }
 
 .footer-cards h2 {
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 .footer-cards h2:nth-of-type(2n) {
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .footer-cards__contact {
@@ -26265,12 +26265,6 @@ _:-ms-lang(x),
 
 .footer-cards__contact__name {
     margin-bottom: 0.25rem;
-}
-
-@media (min-width: 768px) {
-    .footer-cards__contact__name {
-        margin-bottom: 2rem;
-    }
 }
 
 .footer-cards--pink80 {
@@ -38284,12 +38278,12 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level6 > li > .menu__controls > button[aria-expanded='true'] .menu__button__icon:before {
         content: '\f068';
     }
-    .menu .menu__level1 li.menu__current > .menu__controls > span > span,
-    .menu .menu__level2 li.menu__current > .menu__controls > span > span,
-    .menu .menu__level3 li.menu__current > .menu__controls > span > span,
-    .menu .menu__level4 li.menu__current > .menu__controls > span > span,
-    .menu .menu__level5 li.menu__current > .menu__controls > span > span,
-    .menu .menu__level6 li.menu__current > .menu__controls > span > span {
+    .menu .menu__level1 li.menu__current > .menu__controls > a > span,
+    .menu .menu__level2 li.menu__current > .menu__controls > a > span,
+    .menu .menu__level3 li.menu__current > .menu__controls > a > span,
+    .menu .menu__level4 li.menu__current > .menu__controls > a > span,
+    .menu .menu__level5 li.menu__current > .menu__controls > a > span,
+    .menu .menu__level6 li.menu__current > .menu__controls > a > span {
         display: inline;
         border-bottom: 0.125rem solid #d61726;
     }
@@ -40238,6 +40232,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     padding: 0;
 }
 
+.js .menu .menu__content__header.menu__content__header--current > a > span {
+    border-bottom: 0.125rem solid #d61726;
+}
+
 .js .menu .menu__content__header span {
     display: block;
     padding: 0.5rem;
@@ -41387,11 +41385,11 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     border-bottom-width: 0.125rem;
 }
 
-.navigation--primary .navigation__level2 .navigation__current > span {
+.navigation--primary .navigation__level2 .navigation__current > a {
     align-items: center;
 }
 
-.navigation--primary .navigation__level2 .navigation__current > span > span {
+.navigation--primary .navigation__level2 .navigation__current > a > span {
     border-bottom-color: #d61726;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -41785,12 +41783,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     display: inline;
 }
 
-.navigation--primary .navigation--primary__menu__header > span > span {
-    border-bottom-color: #d61726;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-}
-
 .navigation--primary .navigation--primary__menu__header a {
     background-color: initial;
     background-image: initial;
@@ -41873,6 +41865,12 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 .navigation--primary .navigation__hierarchy .navigation--primary__menu__header span {
     border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.navigation--primary .navigation__current .navigation--primary__menu__header span {
+    border-bottom-color: #d61726;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
 }
@@ -42058,10 +42056,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         padding-right: 0.25rem;
         padding-top: 0.25rem;
     }
-    .navigation--secondary .navigation__level3 li.navigation__current > .navigation__controls > span > span,
-    .navigation--secondary .navigation__level4 li.navigation__current > .navigation__controls > span > span,
-    .navigation--secondary .navigation__level5 li.navigation__current > .navigation__controls > span > span,
-    .navigation--secondary .navigation__level6 li.navigation__current > .navigation__controls > span > span {
+    .navigation--secondary .navigation__level3 li.navigation__current > .navigation__controls > a > span,
+    .navigation--secondary .navigation__level4 li.navigation__current > .navigation__controls > a > span,
+    .navigation--secondary .navigation__level5 li.navigation__current > .navigation__controls > a > span,
+    .navigation--secondary .navigation__level6 li.navigation__current > .navigation__controls > a > span {
         display: inline;
         border-bottom: 0.125rem solid #d61726;
     }
@@ -43085,7 +43083,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-style: dotted;
         outline-width: 0.125rem;
     }
-    .navigation--secondary > .navigation--secondary__header > span > span {
+    .navigation--secondary > .navigation--secondary__header.navigation--secondary__header--current > a > span {
         border-bottom: 0.125rem solid #d61726;
     }
     .navigation--secondary .navigation__controls {
@@ -54100,10 +54098,6 @@ main .landing:only-child .landing__top__cta {
     font-weight: 600;
 }
 
-.course--pgt__section-wrapper--gray {
-    margin-bottom: 2rem;
-}
-
 .course--pgt .banner__overlay {
     background: linear-gradient(to top, #5d184a, transparent 100%);
 }
@@ -54141,9 +54135,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1024px) {
     .course--pgt .wrapper--course--pgt__introduction {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -54151,22 +54142,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1024px) and (min-width: 901px) {
     .course--pgt .wrapper--course--pgt__introduction {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1024px) and (min-width: 901px) {
-    .course--pgt .wrapper--course--pgt__introduction {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1024px) and (min-width: 1441px) {
-    .course--pgt .wrapper--course--pgt__introduction {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -54349,18 +54326,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .course--pgt__promo__content {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__promo__content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
     }
 }
 
@@ -54371,16 +54338,9 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__promo__content {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 .course--pgt__promo__content .promo-box {
     grid-column: 1/-1;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 @media (min-width: 769px) {
@@ -54428,35 +54388,9 @@ main .landing:only-child .landing__top__cta {
 @media (max-width: 1023px) {
     .wrapper--course--pgt__profiles__heading,
     .wrapper--course--pgt__facilities__heading {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .wrapper--course--pgt__profiles__heading,
-    .wrapper--course--pgt__facilities__heading {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .wrapper--course--pgt__profiles__heading,
-    .wrapper--course--pgt__facilities__heading {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .wrapper--course--pgt__profiles__heading,
-    .wrapper--course--pgt__facilities__heading {
-        margin-left: auto;
-        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 1rem 1.5rem 0 1.5rem;
     }
 }
 
@@ -54466,18 +54400,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .course--pgt__profiles__content {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__profiles__content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
     }
 }
 
@@ -54488,11 +54412,14 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__profiles__content {
-        margin-left: auto;
-        margin-right: auto;
-    }
+.course--pgt__profiles__content .featured-profiles-block {
+    margin: 0;
+    padding: 0;
+}
+
+.course--pgt__profiles__content .wrapper--featured-profiles__heading-intro,
+.course--pgt__profiles__content .wrapper--featured-profiles__profile {
+    margin-top: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -54502,8 +54429,12 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
+.course--pgt__profiles__content .wrapper--featured-profiles__heading-intro {
+    margin-top: 0;
+}
+
 .course--pgt__keyinfo {
-    padding-top: 2rem;
+    padding-top: 1rem;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -54523,9 +54454,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .course--pgt__keyinfo {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -54533,22 +54461,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .course--pgt__keyinfo {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__keyinfo {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__keyinfo {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -54620,7 +54534,7 @@ main .landing:only-child .landing__top__cta {
 .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__standfirst {
     padding: 1rem 1.5rem;
     background: #ffffff;
-    margin: 0 0 2rem;
+    margin: 0 0 1rem;
 }
 
 .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__standfirst .course--pgt__keyinfo__content__heading {
@@ -54636,11 +54550,13 @@ main .landing:only-child .landing__top__cta {
     background: #ffffff;
     padding-top: 0.75rem;
     padding-bottom: 1rem;
+    border-bottom: 0.125rem solid #d8d8d8;
 }
 
-@media (min-width: 769px) {
+@media (max-width: 768px) {
     .course--pgt__keyinfo .course--pgt__keyinfo__content .wrapper--course--pgt__keyinfo__content__date-location .course--pgt__keyinfo__content__date-location {
-        border-bottom: 0.125rem solid #d8d8d8;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.25rem;
     }
 }
 
@@ -54760,9 +54676,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .course--pgt__our-students .wrapper--course--pgt__our-students__heading {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -54770,22 +54683,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .course--pgt__our-students .wrapper--course--pgt__our-students__heading {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__our-students .wrapper--course--pgt__our-students__heading {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__our-students .wrapper--course--pgt__our-students__heading {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -54809,9 +54708,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .course--pgt__our-students .course--pgt__student-work {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -54819,22 +54715,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .course--pgt__our-students .course--pgt__student-work {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__our-students .course--pgt__student-work {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__our-students .course--pgt__student-work {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -54906,9 +54788,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .wrapper--course--pgt__usp {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -54916,22 +54795,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .wrapper--course--pgt__usp {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .wrapper--course--pgt__usp {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .wrapper--course--pgt__usp {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -54943,6 +54808,10 @@ main .landing:only-child .landing__top__cta {
     .wrapper--course--pgt__usp .course--pgt__usp {
         grid-column: 3/-3;
     }
+}
+
+.wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content {
+    margin-top: 1rem;
 }
 
 .wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .course--pgt__usp__heading {
@@ -55076,8 +54945,8 @@ main .landing:only-child .landing__top__cta {
 }
 
 .wrapper--course--pgt__student-life {
-    margin: 1rem 0 0 0;
-    padding: 1rem 0 2rem;
+    margin: 0 0 0;
+    padding: 0 0 2rem;
 }
 
 .wrapper--course--pgt__student-life .course--pgt__student-life {
@@ -55100,18 +54969,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .wrapper--course--pgt__student-life .course--pgt__student-life {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .wrapper--course--pgt__student-life .course--pgt__student-life {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
     }
 }
 
@@ -55122,21 +54981,14 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .wrapper--course--pgt__student-life .course--pgt__student-life {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 .wrapper--course--pgt__student-life .course--pgt__student-life .pathway-image-cards {
     grid-column: 1/-1;
+    padding: 0;
 }
 
 @media (min-width: 769px) {
     .wrapper--course--pgt__student-life .course--pgt__student-life .pathway-image-cards {
         grid-column: 2/-2;
-        padding: 0;
     }
 }
 
@@ -55149,7 +55001,7 @@ main .landing:only-child .landing__top__cta {
 
 @media (min-width: 769px) {
     .wrapper--course--pgt__whats-happening {
-        padding: 1rem 0 3rem;
+        padding: 1rem 0 1rem;
     }
 }
 
@@ -55167,9 +55019,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .wrapper--course--pgt__whats-happening {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -55177,22 +55026,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .wrapper--course--pgt__whats-happening {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .wrapper--course--pgt__whats-happening {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .wrapper--course--pgt__whats-happening {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -55239,26 +55074,27 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
-.wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content {
+.wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content.slider-responsive {
     grid-column: 1/-1;
 }
 
 @media (min-width: 768px) {
-    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content {
+    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content.slider-responsive {
         display: flex;
         flex-wrap: wrap;
     }
-    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content .card {
-        flex: 1;
-        height: -webkit-fit-content;
-        height: -moz-fit-content;
-        height: fit-content;
-        margin-top: 1rem;
-    }
 }
 
-@media (min-width: 768px) and (min-width: 769px) {
-    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content .card:not(:last-of-type) {
+.wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content.slider-responsive .slider__slide {
+    flex: 1;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 769px) {
+    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content.slider-responsive .slider__slide:not(:last-of-type) {
         margin-right: 1rem;
     }
 }
@@ -55267,7 +55103,7 @@ main .landing:only-child .landing__top__cta {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -55284,9 +55120,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .wrapper--course--pgt__testimonials-unibuddy {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -55294,22 +55127,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .wrapper--course--pgt__testimonials-unibuddy {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .wrapper--course--pgt__testimonials-unibuddy {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .wrapper--course--pgt__testimonials-unibuddy {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -55352,7 +55171,7 @@ main .landing:only-child .landing__top__cta {
 }
 
 .wrapper--course--pgt__testimonials-unibuddy .course--pgt__unibuddy .unibuddy-card {
-    margin-top: 1.5rem;
+    margin-top: 0.75rem;
 }
 
 .wrapper--course--pgt__testimonials-unibuddy .course--pgt__testimonials .card--testimonial__photo {
@@ -55528,21 +55347,20 @@ main .landing:only-child .landing__top__cta {
 }
 
 .course--pgt__related-courses {
-    padding: 2rem 0 4.25rem;
+    padding: 1rem 0 1rem;
 }
 
 @media (max-width: 1024px) {
     .course--pgt__related-courses {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }
 
 @media (max-width: 1024px) and (min-width: 901px) {
     .course--pgt__related-courses {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
@@ -55572,23 +55390,14 @@ main .landing:only-child .landing__top__cta {
 }
 
 .course--pgt__tabs {
-    margin: 2rem 1rem 2rem;
+    margin: 1rem;
 }
 
 @media (max-width: 1023px) {
     .course--pgt__tabs {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__tabs {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
+        margin: 0;
     }
 }
 
@@ -55596,13 +55405,6 @@ main .landing:only-child .landing__top__cta {
     .course--pgt__tabs {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__tabs {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -55835,6 +55637,10 @@ main .landing:only-child .landing__top__cta {
     background-color: #ffffff;
 }
 
+.js .course--pgt .accordion.accordion--nested {
+    padding-bottom: 0;
+}
+
 .js .course--pgt .accordion.accordion--nested .accordion__heading + .accordion__body {
     background-color: #f2f2f2;
 }
@@ -55845,7 +55651,7 @@ main .landing:only-child .landing__top__cta {
 }
 
 .js .course--pgt .tabs {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .js .course--pgt .tabs .tabs__links {
@@ -56155,9 +55961,6 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) {
     .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -56165,22 +55968,8 @@ main .landing:only-child .landing__top__cta {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
