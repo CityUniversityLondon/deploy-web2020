@@ -62297,6 +62297,13 @@ main .standard-content .banner-text {
     margin-top: 1rem;
 }
 
+@media (min-width: 1025px) {
+    .course--ug__related-links .related-links--with-images__wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 @media (min-width: 768px) {
     .course--ug__related-links .card--pathway-image {
         display: flex;
@@ -62328,6 +62335,7 @@ main .standard-content .banner-text {
     font-weight: 600;
     margin-top: 1rem;
     text-align: left;
+    margin-top: 0;
     color: #ffffff;
 }
 
