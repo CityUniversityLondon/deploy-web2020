@@ -62318,9 +62318,65 @@ main .standard-content .banner-text {
     background: #5d184a;
 }
 
-.course--ug__related-links .related-links--with-images h3 {
-    color: #ffffff;
+.course--ug__related-links .related-links--with-images .underline-transition__title {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-size: 1.602rem;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
     text-align: left;
+    color: #ffffff;
+}
+
+.course--ug__related-links .related-links--with-images .underline-transition__title i,
+.course--ug__related-links .related-links--with-images .underline-transition__title em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.course--ug__related-links .related-links--with-images .underline-transition__title b,
+.course--ug__related-links .related-links--with-images .underline-transition__title strong {
+    font-weight: inherit;
+}
+
+.course--ug__related-links .related-links--with-images .underline-transition__title i,
+.course--ug__related-links .related-links--with-images .underline-transition__title em {
+    font-style: italic;
+}
+
+.course--ug__related-links .related-links--with-images .underline-transition__title u {
+    text-decoration: none;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .course--ug__related-links .related-links--with-images .underline-transition__title {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .course--ug__related-links .related-links--with-images .underline-transition__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .course--ug__related-links .related-links--with-images .underline-transition__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .course--ug__related-links .related-links--with-images .underline-transition__title {
+        letter-spacing: -0.017em;
+    }
+}
+
+.course--ug__related-links .related-links--with-images .underline-transition__title b,
+.course--ug__related-links .related-links--with-images .underline-transition__title strong {
+    font-weight: 600;
 }
 
 .course--ug__related-links .related-links--with-images a {
