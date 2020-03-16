@@ -44896,11 +44896,12 @@ blockquote footer cite {
     display: block;
 }
 
+.slider-block--mobile .slider-block__control__buttons--dot {
+    display: none;
+}
+
 @media (max-width: 432px) {
     .slider-block--mobile [data-visible='false'] {
-        display: none;
-    }
-    .slider-block--mobile .slider-block__control__buttons--dot {
         display: none;
     }
 }
