@@ -8050,6 +8050,7 @@ function launchSlider(slider) {
       maxItem: 1,
       pageAttr: 'data-page',
       visAttr: 'data-visible',
+      counterAttr: 'data-currentdefault',
       increment: 1
     },
     mobile: {
@@ -8057,6 +8058,7 @@ function launchSlider(slider) {
       maxItem: 1,
       pageAttr: 'data-page',
       visAttr: 'data-visible',
+      counterAttr: 'data-currentdefault',
       increment: 1
     },
     tablet: {
@@ -8064,6 +8066,7 @@ function launchSlider(slider) {
       maxItem: perPageTablet,
       pageAttr: 'data-pagetablet',
       visAttr: 'data-visibletablet',
+      counterAttr: 'data-currenttablet',
       increment: perPageTablet
     },
     desk: {
@@ -8071,6 +8074,7 @@ function launchSlider(slider) {
       maxItem: perPageDesk,
       pageAttr: 'data-pagedesk',
       visAttr: 'data-visibledesk',
+      counterAttr: 'data-currentdesk',
       increment: perPageDesk
     }
   };
@@ -8166,11 +8170,14 @@ function createProgressTracker(slider, sliderType, sliderObject) {
   }]);
   wrapper.appendChild(progress);
   var firstPage = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
-    label: 'data-currentpage',
+    label: 'data-currentdefault',
     val: true
   }]);
   firstPage.innerText = '1';
-  var separator = document.createElement('span');
+  var separator = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
+    label: 'data-currentseparator',
+    val: true
+  }]);
   separator.innerText = '/';
   var lastPage = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
     label: sliderObject.default.visAttr,
@@ -8194,6 +8201,24 @@ function createProgressTracker(slider, sliderType, sliderObject) {
     lastPageDesk.innerText = sliderObject.desk.totalPages;
     progress.appendChild(lastPageTablet);
     progress.appendChild(lastPageDesk);
+    var firstPageTablet = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
+      label: 'data-currenttablet',
+      val: true
+    }, {
+      label: 'data-visibleTable',
+      val: true
+    }]);
+    firstPageTablet.innerText = '1';
+    var firstPageDesk = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
+      label: 'data-currentdesk',
+      val: true
+    }, {
+      label: 'data-visibleDesk',
+      val: true
+    }]);
+    firstPageDesk.innerText = '1';
+    progress.insertBefore(firstPageTablet, separator);
+    progress.insertBefore(firstPageDesk, separator);
   }
 }
 
@@ -8224,6 +8249,18 @@ function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
           buttonNextTablet = createButtonElement('fas fa-arrow-right next', 'tablet', sliderObject),
           buttonPrevDesk = createButtonElement('fas fa-arrow-left prev', 'desk', sliderObject),
           buttonNextDesk = createButtonElement('fas fa-arrow-right next', 'desk', sliderObject);
+      buttonPrevTablet.addEventListener('click', function () {
+        defaultEvent(this, slider, 'tablet', sliderObject);
+      });
+      buttonNextTablet.addEventListener('click', function () {
+        defaultEvent(this, slider, 'tablet', sliderObject);
+      });
+      buttonPrevDesk.addEventListener('click', function () {
+        defaultEvent(this, slider, 'desk', sliderObject);
+      });
+      buttonNextDesk.addEventListener('click', function () {
+        defaultEvent(this, slider, 'desk', sliderObject);
+      });
       buttonWrapper.appendChild(buttonPrevTablet);
       buttonWrapper.appendChild(buttonNextTablet);
       buttonWrapper.appendChild(buttonPrevDesk);
@@ -8276,7 +8313,8 @@ function defaultEvent(button, slider, type, sliderObject) {
       page = parseInt(currentSlide.getAttribute(sliderObject[type].pageAttr)),
       prevButton = button.parentNode.querySelector('.prev'),
       nextButton = button.parentNode.querySelector('.next'),
-      counterEl = slider.parentNode.querySelector('span[data-currentpage]');
+      counterAttr = sliderObject[type].counterAttr,
+      counterEl = slider.parentNode.querySelector("span[".concat(counterAttr, "]"));
   var counterValue = parseInt(counterEl.innerText);
   currentSlide.setAttribute("".concat(sliderObject[type].visAttr), false);
   nextSlide.setAttribute("".concat(sliderObject[type].visAttr), true);
