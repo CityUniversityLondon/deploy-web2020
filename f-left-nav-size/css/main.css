@@ -33320,9 +33320,6 @@ figure figcaption a:active {
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
-    font-size: 1.125rem;
-    line-height: 1.25;
-    letter-spacing: -0.008em;
     align-items: center;
     display: inline-flex;
     flex-direction: row;
@@ -33370,33 +33367,36 @@ figure figcaption a:active {
     font-style: italic;
 }
 
-@media (min-width: 1280px) and (max-width: 1919px) {
+@media (max-width: 1023px) {
+    .global-header__search .global-header__search__wrapper {
+        font-size: 1.125rem;
+        line-height: 1.25;
+        letter-spacing: -0.008em;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1280px) and (max-width: 1919px) {
     .global-header__search .global-header__search__wrapper {
         letter-spacing: -0.011em;
     }
 }
 
-@media (min-width: 1920px) and (max-width: 3839px) {
+@media (max-width: 1023px) and (min-width: 1920px) and (max-width: 3839px) {
     .global-header__search .global-header__search__wrapper {
         letter-spacing: -0.014em;
     }
 }
 
-@media (min-width: 3840px) and (max-width: 7679px) {
+@media (max-width: 1023px) and (min-width: 3840px) and (max-width: 7679px) {
     .global-header__search .global-header__search__wrapper {
         letter-spacing: -0.017em;
     }
 }
 
-@media (min-width: 7680px) {
+@media (max-width: 1023px) and (min-width: 7680px) {
     .global-header__search .global-header__search__wrapper {
         letter-spacing: -0.017em;
-    }
-}
-
-@media (max-width: 1023px) {
-    .global-header__search .global-header__search__wrapper {
-        flex-direction: column;
     }
 }
 
@@ -33516,11 +33516,6 @@ figure figcaption a:active {
     }
 }
 
-.global-header__search > a .global-header__search__icon,
-.global-header__search > button .global-header__search__icon {
-    font-size: inherit;
-}
-
 .global-header__search > a .global-header__search__text,
 .global-header__search > button .global-header__search__text {
     font-size: 0.889rem;
@@ -33558,6 +33553,10 @@ figure figcaption a:active {
 }
 
 @media (max-width: 1023px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search > button .global-header__search__icon {
+        font-size: inherit;
+    }
     .global-header__search > a .global-header__search__text,
     .global-header__search > button .global-header__search__text {
         margin-top: 0.25rem;
