@@ -30576,7 +30576,7 @@ _:-ms-lang(x),
     color: #ffffff;
 }
 
-article figure a {
+figure a {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -30594,7 +30594,7 @@ article figure a {
 }
 
 @media (hover: hover) {
-    article figure a:hover {
+    figure a:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -30611,7 +30611,7 @@ article figure a {
     }
 }
 
-article figure a:focus, article figure a:active {
+figure a:focus, figure a:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -30627,21 +30627,21 @@ article figure a:focus, article figure a:active {
     text-decoration: none;
 }
 
-article figure a:focus {
+figure a:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-article figure a:active {
+figure a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-article figure figcaption {
+figure figcaption {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
@@ -30652,30 +30652,30 @@ article figure figcaption {
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    article figure figcaption {
+    figure figcaption {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    article figure figcaption {
+    figure figcaption {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    article figure figcaption {
+    figure figcaption {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    article figure figcaption {
+    figure figcaption {
         letter-spacing: -0.017em;
     }
 }
 
-article figure figcaption a {
+figure figcaption a {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -30698,7 +30698,7 @@ article figure figcaption a {
 }
 
 @media (hover: hover) {
-    article figure figcaption a:hover {
+    figure figcaption a:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -30715,7 +30715,7 @@ article figure figcaption a {
     }
 }
 
-article figure figcaption a:focus, article figure figcaption a:active {
+figure figcaption a:focus, figure figcaption a:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -30731,14 +30731,14 @@ article figure figcaption a:focus, article figure figcaption a:active {
     text-decoration: none;
 }
 
-article figure figcaption a:focus, article figure figcaption a:active {
+figure figcaption a:focus, figure figcaption a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-article figure figcaption a:before {
+figure figcaption a:before {
     background: #d61726;
     bottom: -0.125rem;
     content: '';
@@ -30752,23 +30752,23 @@ article figure figcaption a:before {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    article figure figcaption a:before {
+    figure figcaption a:before {
         transition: none;
     }
 }
 
-article figure figcaption a:before {
+figure figcaption a:before {
     transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
 }
 
-article figure figcaption a:focus {
+figure figcaption a:focus {
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #1e1e1e;
 }
 
-article figure figcaption a:visited {
+figure figcaption a:visited {
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -30776,21 +30776,21 @@ article figure figcaption a:visited {
 }
 
 @media (hover: hover) {
-    article figure figcaption a:hover {
+    figure figcaption a:hover {
         background-image: none;
         border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
     }
-    article figure figcaption a:hover:before {
+    figure figcaption a:hover:before {
         opacity: 1;
         width: 100%;
         transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     }
 }
 
-article figure figcaption a:active {
+figure figcaption a:active {
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -30801,7 +30801,7 @@ article figure figcaption a:active {
 }
 
 @media (max-width: 432px) {
-    article figure.figure--svg img {
+    figure.figure--svg img {
         padding-bottom: 100vw;
     }
 }
@@ -47241,7 +47241,6 @@ button
 .youtube-video__caption-element--text,
 .youtube-video__caption-element--time {
     display: block;
-    margin-top: 0.5rem;
 }
 
 @media (min-width: 768px) {
