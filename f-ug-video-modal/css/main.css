@@ -60823,13 +60823,13 @@ main .standard-content .banner-text {
     grid-column: 2/-2;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
     .course--ug .course-info__wrapper .course-info {
         grid-column: 1/-1;
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1281px) {
     .course--ug .course-info__wrapper .course-info {
         display: flex;
         justify-content: space-between;
@@ -60844,6 +60844,12 @@ main .standard-content .banner-text {
 @media (max-width: 432px) {
     .course--ug .course-info__wrapper .course-info .course-info__year {
         display: block;
+    }
+}
+
+@media (max-width: 1280px) {
+    .course--ug .course-info__wrapper .course-info .course-info__year {
+        margin-bottom: 2rem;
     }
 }
 
@@ -60880,17 +60886,11 @@ main .standard-content .banner-text {
     }
 }
 
-@media (max-width: 900px) {
-    .course--ug .course-info__wrapper .course-info .course-info__year .start-date {
-        margin-bottom: 2rem;
-    }
-}
-
 .course--ug .course-info__wrapper .course-info .course-info__year .start-date .next-year {
     text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
     .course--ug .course-info__wrapper .course-info .course-info__video {
         text-align: center;
     }
