@@ -33283,6 +33283,8 @@ figure figcaption a:active {
 
 @media (min-width: 1024px) {
     .global-header__controls {
+        align-self: stretch;
+        display: flex;
         grid-column-end: span 3;
         grid-column-start: 22;
         grid-row-end: 1;
@@ -33293,6 +33295,12 @@ figure figcaption a:active {
 @media (max-width: 1023px) {
     .global-header__search {
         margin: 0.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .global-header__search {
+        width: 100%;
     }
 }
 
