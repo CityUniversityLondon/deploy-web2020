@@ -21823,11 +21823,6 @@ Assign mixin:
 }
 
 .breadcrumbs ol {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
     border-top: 0.125rem solid #f2f2f2;
     display: flex;
     flex-wrap: wrap;
@@ -21836,21 +21831,46 @@ Assign mixin:
     padding-top: 0.5rem;
 }
 
-@media (min-width: 901px) {
+@media (max-width: 432px) {
+    .breadcrumbs ol {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 432px) and (min-width: 901px) {
     .breadcrumbs ol {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 433px) {
+    .breadcrumbs ol {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 433px) and (min-width: 901px) {
+    .breadcrumbs ol {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 433px) and (min-width: 901px) {
     .breadcrumbs ol {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 433px) and (min-width: 1441px) {
     .breadcrumbs ol {
         margin-left: auto;
         margin-right: auto;
@@ -32764,14 +32784,7 @@ article figure figcaption a:active {
     }
 }
 
-@media (max-width: 375px) {
-    .header-logo {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-    }
-}
-
-@media (min-width: 376px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
     .header-logo {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -33028,13 +33041,7 @@ article figure figcaption a:active {
     grid-column-end: span 3;
 }
 
-@media (max-width: 375px) {
-    .global-header__search {
-        margin-right: 0.5rem;
-    }
-}
-
-@media (min-width: 376px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
     .global-header__search {
         margin-right: 1.5rem;
     }
@@ -33494,8 +33501,8 @@ article figure figcaption a:active {
     }
 }
 
-.global-header__search > a .global-header__search__icon,
-.global-header__search > button .global-header__search__icon {
+.global-header__search > a .global-header__search__text,
+.global-header__search > button .global-header__search__text {
     margin-left: 0.5rem;
 }
 
@@ -39784,6 +39791,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     padding-right: 1.5rem;
     padding-top: 0.5rem;
     transition: background-color 0.6s;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
 }
 
 @media (hover: hover) {
@@ -39825,7 +39836,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     color: #ffffff;
 }
 
-.js .menu[data-open='true'] > .menu__display__button > button:focus .menu__button__text {
+.js .menu[data-open='true'] > .menu__display__button > button:focus .menu__display__button__button__wrapper {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: dotted;
@@ -39863,14 +39874,19 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .js .menu > .menu__display__button {
-    height: 100%;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
 }
 
-.js .menu > .menu__display__button > button > div {
-    min-width: 4.25rem;
+@media (min-width: 1024px) {
+    .js .menu > .menu__display__button {
+        height: 100%;
+    }
 }
 
-.js .menu > .menu__display__button > button {
+.js .menu > .menu__display__button .menu__display__button__button {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1rem;
@@ -39902,63 +39918,66 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    height: 100%;
     justify-content: center;
     margin-top: 0;
     min-height: 44px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
     width: 100%;
 }
 
-.js .menu > .menu__display__button > button i,
-.js .menu > .menu__display__button > button em {
+.js .menu > .menu__display__button .menu__display__button__button i,
+.js .menu > .menu__display__button .menu__display__button__button em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
-.js .menu > .menu__display__button > button b,
-.js .menu > .menu__display__button > button strong {
+.js .menu > .menu__display__button .menu__display__button__button b,
+.js .menu > .menu__display__button .menu__display__button__button strong {
     font-weight: inherit;
 }
 
-.js .menu > .menu__display__button > button i,
-.js .menu > .menu__display__button > button em {
+.js .menu > .menu__display__button .menu__display__button__button i,
+.js .menu > .menu__display__button .menu__display__button__button em {
     font-style: italic;
 }
 
-.js .menu > .menu__display__button > button u {
+.js .menu > .menu__display__button .menu__display__button__button u {
     text-decoration: none;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .js .menu > .menu__display__button > button {
+    .js .menu > .menu__display__button .menu__display__button__button {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .js .menu > .menu__display__button > button {
+    .js .menu > .menu__display__button .menu__display__button__button {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .js .menu > .menu__display__button > button {
+    .js .menu > .menu__display__button .menu__display__button__button {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .js .menu > .menu__display__button > button {
+    .js .menu > .menu__display__button .menu__display__button__button {
         letter-spacing: -0.017em;
     }
 }
 
-.js .menu > .menu__display__button > button b,
-.js .menu > .menu__display__button > button strong {
+.js .menu > .menu__display__button .menu__display__button__button b,
+.js .menu > .menu__display__button .menu__display__button__button strong {
     font-weight: 600;
 }
 
 @media (hover: hover) {
-    .js .menu > .menu__display__button > button:hover {
+    .js .menu > .menu__display__button .menu__display__button__button:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -39975,7 +39994,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
-.js .menu > .menu__display__button > button:focus, .js .menu > .menu__display__button > button:active {
+.js .menu > .menu__display__button .menu__display__button__button:focus, .js .menu > .menu__display__button .menu__display__button__button:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -39991,12 +40010,12 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     text-decoration: none;
 }
 
-.js .menu > .menu__display__button > button, .js .menu > .menu__display__button > button:focus, .js .menu > .menu__display__button > button:active {
+.js .menu > .menu__display__button .menu__display__button__button, .js .menu > .menu__display__button .menu__display__button__button:focus, .js .menu > .menu__display__button .menu__display__button__button:active {
     background-color: #d61726;
     color: #ffffff;
 }
 
-.js .menu > .menu__display__button > button:focus .menu__button__text {
+.js .menu > .menu__display__button .menu__display__button__button:focus .menu__display__button__button__wrapper {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: dotted;
@@ -40004,56 +40023,72 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (hover: hover) {
-    .js .menu > .menu__display__button > button:hover {
+    .js .menu > .menu__display__button .menu__display__button__button:hover {
         background-color: #9e111c;
         color: #ffffff;
     }
 }
 
 @media (max-width: 432px) {
-    .js .menu > .menu__display__button > button {
+    .js .menu > .menu__display__button .menu__display__button__button {
         font-size: 0.889rem;
         line-height: 1.625;
         letter-spacing: 0em;
+        height: 4rem;
+        width: 4rem;
     }
 }
 
 @media (max-width: 432px) and (min-width: 1280px) and (max-width: 1919px) {
-    .js .menu > .menu__display__button > button {
+    .js .menu > .menu__display__button .menu__display__button__button {
         letter-spacing: -0.005em;
     }
 }
 
 @media (max-width: 432px) and (min-width: 1920px) and (max-width: 3839px) {
-    .js .menu > .menu__display__button > button {
+    .js .menu > .menu__display__button .menu__display__button__button {
         letter-spacing: -0.01em;
     }
 }
 
 @media (max-width: 432px) and (min-width: 3840px) and (max-width: 7679px) {
-    .js .menu > .menu__display__button > button {
+    .js .menu > .menu__display__button .menu__display__button__button {
         letter-spacing: -0.017em;
     }
 }
 
 @media (max-width: 432px) and (min-width: 7680px) {
-    .js .menu > .menu__display__button > button {
+    .js .menu > .menu__display__button .menu__display__button__button {
         letter-spacing: -0.017em;
     }
 }
 
-.js .menu > .menu__display__button > button div {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
+@media (min-width: 433px) {
+    .js .menu > .menu__display__button .menu__display__button__button {
+        height: 100%;
+    }
 }
 
-.js .menu > .menu__display__button > button .menu__button__icon {
-    margin-left: 0.5rem;
-}
-
-.js .menu > .menu__display__button > button .menu__button__icon:before {
+.js .menu > .menu__display__button .menu__display__button__button .menu__button__icon:before {
     content: '\f0c9';
+}
+
+@media (max-width: 1023px) {
+    .js .menu > .menu__display__button .menu__display__button__button__wrapper {
+        align-items: center;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .js .menu > .menu__display__button .menu__display__button__button__wrapper {
+        min-width: 4.25rem;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .js .menu .menu__content__header {
