@@ -33600,8 +33600,8 @@ figure figcaption a:active {
         background-color: #d61726;
         color: #ffffff;
     }
-    .global-header__search > a:focus .global-header__search__text,
-    .global-header__search > button:focus .global-header__search__text {
+    .global-header__search > a:focus .global-header__search__wrapper,
+    .global-header__search > button:focus .global-header__search__wrapper {
         outline-color: #ffffff;
         outline-offset: 0.1875rem;
         outline-style: dotted;
