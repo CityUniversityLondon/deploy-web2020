@@ -45105,6 +45105,22 @@ article .link-copy {
     }
 }
 
+.statistics-block .ksp__items .ksp__item:nth-child(1) {
+    grid-area: a;
+}
+
+.statistics-block .ksp__items .ksp__item:nth-child(2) {
+    grid-area: b;
+}
+
+.statistics-block .ksp__items .ksp__item:nth-child(3) {
+    grid-area: c;
+}
+
+.statistics-block .ksp__items .ksp__item:nth-child(4) {
+    grid-area: d;
+}
+
 .statistics-block .ksp__items .ksp__item {
     padding: 1rem;
     margin: 0.5rem 0;
@@ -45339,41 +45355,27 @@ article .link-copy {
 @media (max-width: 767px) {
     .statistics-block .ksp__items.ksp__items--2 {
         grid-template-rows: repeat(2, auto);
-        grid-template-areas: 'a a a a a a' 'b b b b b b';
+        grid-template-areas: 'a a a a a a a a a a a a' 'b b b b b b b b b b b b';
     }
 }
 
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
     .statistics-block .ksp__items.ksp__items--2 {
-        grid-template-areas: '. a a a a a b b b b b .';
+        grid-template-areas: 'a a a a a a a a a b b b b b b b b b';
     }
-}
-
-@media (min-width: 1281px) {
-    .statistics-block .ksp__items.ksp__items--2 {
-        grid-template-areas: '. . a a a a a a a b b b b b b b . .';
-    }
-}
-
-.statistics-block .ksp__items.ksp__items--2 .ksp__item:nth-child(1) {
-    grid-area: a;
-}
-
-.statistics-block .ksp__items.ksp__items--2 .ksp__item:nth-child(2) {
-    grid-area: b;
 }
 
 @media (max-width: 767px) {
     .statistics-block .ksp__items.ksp__items--3 {
         grid-template-rows: repeat(3, auto);
-        grid-template-areas: 'a a a a a a' 'b b b b b b' 'c c c c c c';
+        grid-template-areas: 'a a a a a a a a a a a a' 'b b b b b b b b b b b b' 'c c c c c c c c c c c c';
     }
 }
 
 @media (min-width: 768px) and (max-width: 1280px) {
     .statistics-block .ksp__items.ksp__items--3 {
         grid-template-rows: repeat(2, auto);
-        grid-template-areas: '. a a a a a b b b b b .' '. . . c c c c c c . . .';
+        grid-template-areas: 'a a a a a a a a a b b b b b b b b b ' '. . . . . c c c c c c c c . . . . .';
     }
     .statistics-block .ksp__items.ksp__items--3 .ksp__item:nth-child(2) {
         border-right: 0;
@@ -45385,59 +45387,25 @@ article .link-copy {
 
 @media (min-width: 1281px) {
     .statistics-block .ksp__items.ksp__items--3 {
-        grid-template-areas: '. . . a a a a b b b b c c c c . . .';
+        grid-template-areas: 'a a a a a a b b b b b b b c c c c c c';
     }
-}
-
-.statistics-block .ksp__items.ksp__items--3 .ksp__item:nth-child(1) {
-    grid-area: a;
-}
-
-.statistics-block .ksp__items.ksp__items--3 .ksp__item:nth-child(2) {
-    grid-area: b;
-}
-
-.statistics-block .ksp__items.ksp__items--3 .ksp__item:nth-child(3) {
-    grid-area: c;
 }
 
 @media (max-width: 767px) {
     .statistics-block .ksp__items.ksp__items--4 {
         grid-template-rows: repeat(4, auto);
-        grid-template-areas: 'a a a a a a' 'b b b b b b' 'c c c c c c' 'd d d d d d';
+        grid-template-areas: 'a a a a a a a a a a a a' 'b b b b b b b b b b b b' 'c c c c c c c c c c c c' 'd d d d d d d d d d d d';
     }
 }
 
-@media (min-width: 768px) and (max-width: 1280px) {
+@media (min-width: 768px) {
     .statistics-block .ksp__items.ksp__items--4 {
         grid-template-rows: repeat(2, auto);
-        grid-template-areas: '. a a a a a b b b b b .' '. c c c c c d d d d d .';
+        grid-template-areas: 'a a a a a a a a a b b b b b b b b b' 'c c c c c c c c c d d d d d d d d d';
     }
     .statistics-block .ksp__items.ksp__items--4 .ksp__item:nth-child(2) {
         border-right: 0;
     }
-}
-
-@media (min-width: 1281px) {
-    .statistics-block .ksp__items.ksp__items--4 {
-        grid-template-areas: '. a a a a b b b b c c c c d d d d .';
-    }
-}
-
-.statistics-block .ksp__items.ksp__items--4 .ksp__item:nth-child(1) {
-    grid-area: a;
-}
-
-.statistics-block .ksp__items.ksp__items--4 .ksp__item:nth-child(2) {
-    grid-area: b;
-}
-
-.statistics-block .ksp__items.ksp__items--4 .ksp__item:nth-child(3) {
-    grid-area: c;
-}
-
-.statistics-block .ksp__items.ksp__items--4 .ksp__item:nth-child(4) {
-    grid-area: d;
 }
 
 @media print {
