@@ -32328,7 +32328,7 @@ figure figcaption a:active {
     text-decoration: none;
     background-color: transparent;
     border-style: solid;
-    border-width: 0.125rem;
+    border-width: 0.0625rem;
     display: inline-block;
     padding-bottom: 0.5rem;
     padding-left: 1.5rem;
@@ -32383,7 +32383,7 @@ figure figcaption a:active {
     background-color: transparent;
     border-color: #e93745;
     border-style: solid;
-    border-width: 0.125rem;
+    border-width: 0.0625rem;
     color: #ffffff;
 }
 
@@ -32392,7 +32392,7 @@ figure figcaption a:active {
         background-color: #d61726;
         border-color: #d61726;
         border-style: solid;
-        border-width: 0.125rem;
+        border-width: 0.0625rem;
         color: #ffffff;
     }
 }
@@ -33017,8 +33017,6 @@ figure figcaption a:active {
         align-self: center;
         margin-left: 1rem;
         margin-right: 1.5rem;
-        max-height: 4rem;
-        width: 6rem;
     }
 }
 
@@ -33105,7 +33103,8 @@ figure figcaption a:active {
 }
 
 .header-logo a .logo {
-    width: 10rem;
+    max-height: 5rem;
+    width: 9rem;
 }
 
 .global-header__utility {
@@ -33305,15 +33304,25 @@ figure figcaption a:active {
 }
 
 .global-header__search .global-header__search__wrapper {
-    font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 450;
+    max-width: 55ch;
+    font-size: 1.125rem;
     line-height: 1.25;
-    margin-top: 1rem;
+    letter-spacing: -0.008em;
     align-items: center;
     display: inline-flex;
     flex-direction: row;
@@ -33324,21 +33333,7 @@ figure figcaption a:active {
 
 .global-header__search .global-header__search__wrapper i,
 .global-header__search .global-header__search__wrapper em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-}
-
-.global-header__search .global-header__search__wrapper b,
-.global-header__search .global-header__search__wrapper strong {
-    font-weight: inherit;
-}
-
-.global-header__search .global-header__search__wrapper i,
-.global-header__search .global-header__search__wrapper em {
-    font-style: italic;
-}
-
-.global-header__search .global-header__search__wrapper u {
-    text-decoration: none;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -33367,7 +33362,36 @@ figure figcaption a:active {
 
 .global-header__search .global-header__search__wrapper b,
 .global-header__search .global-header__search__wrapper strong {
-    font-weight: 600;
+    font-weight: 700;
+}
+
+.global-header__search .global-header__search__wrapper i,
+.global-header__search .global-header__search__wrapper em {
+    font-style: italic;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .global-header__search .global-header__search__wrapper {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .global-header__search .global-header__search__wrapper {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .global-header__search .global-header__search__wrapper {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .global-header__search .global-header__search__wrapper {
+        letter-spacing: -0.017em;
+    }
 }
 
 @media (max-width: 1023px) {
@@ -33404,7 +33428,7 @@ figure figcaption a:active {
         text-decoration: none;
         background-color: transparent;
         border-style: solid;
-        border-width: 0.125rem;
+        border-width: 0.0625rem;
         display: inline-block;
         padding-bottom: 0.5rem;
         padding-left: 1.5rem;
@@ -33463,9 +33487,9 @@ figure figcaption a:active {
     .global-header__search > button:focus,
     .global-header__search > button:active {
         background-color: transparent;
-        border-color: #696969;
+        border-color: #a1a1a1;
         border-style: solid;
-        border-width: 0.125rem;
+        border-width: 0.0625rem;
         color: #0c0c0e;
     }
     .global-header__search > a:focus .global-header__search__wrapper,
@@ -33484,48 +33508,59 @@ figure figcaption a:active {
 @media (max-width: 1023px) and (hover: hover) {
     .global-header__search > a:hover,
     .global-header__search > button:hover {
-        background-color: #696969;
-        border-color: #696969;
+        background-color: #a1a1a1;
+        border-color: #a1a1a1;
         border-style: solid;
-        border-width: 0.125rem;
+        border-width: 0.0625rem;
         color: #ffffff;
     }
 }
 
-@media (max-width: 432px) {
-    .global-header__search > a,
-    .global-header__search > button {
-        font-size: 0.889rem;
-        line-height: 1.625;
-        letter-spacing: 0em;
-    }
+.global-header__search > a .global-header__search__icon,
+.global-header__search > button .global-header__search__icon {
+    font-size: inherit;
 }
 
-@media (max-width: 432px) and (min-width: 1280px) and (max-width: 1919px) {
-    .global-header__search > a,
-    .global-header__search > button {
+.global-header__search > a .global-header__search__text,
+.global-header__search > button .global-header__search__text {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    font-weight: 500;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .global-header__search > a .global-header__search__text,
+    .global-header__search > button .global-header__search__text {
         letter-spacing: -0.005em;
     }
 }
 
-@media (max-width: 432px) and (min-width: 1920px) and (max-width: 3839px) {
-    .global-header__search > a,
-    .global-header__search > button {
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .global-header__search > a .global-header__search__text,
+    .global-header__search > button .global-header__search__text {
         letter-spacing: -0.01em;
     }
 }
 
-@media (max-width: 432px) and (min-width: 3840px) and (max-width: 7679px) {
-    .global-header__search > a,
-    .global-header__search > button {
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .global-header__search > a .global-header__search__text,
+    .global-header__search > button .global-header__search__text {
         letter-spacing: -0.017em;
     }
 }
 
-@media (max-width: 432px) and (min-width: 7680px) {
-    .global-header__search > a,
-    .global-header__search > button {
+@media (min-width: 7680px) {
+    .global-header__search > a .global-header__search__text,
+    .global-header__search > button .global-header__search__text {
         letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 1023px) {
+    .global-header__search > a .global-header__search__text,
+    .global-header__search > button .global-header__search__text {
+        margin-top: 0.25rem;
     }
 }
 
@@ -34157,7 +34192,7 @@ figure figcaption a:active {
     text-decoration: none;
     background-color: #ffffff;
     border-style: solid;
-    border-width: 0.125rem;
+    border-width: 0.0625rem;
     display: inline-block;
     padding-bottom: 0.5rem;
     padding-left: 1.5rem;
@@ -34219,7 +34254,7 @@ figure figcaption a:active {
     background-color: #ffffff;
     border-color: #cbcbcb;
     border-style: solid;
-    border-width: 0.125rem;
+    border-width: 0.0625rem;
     color: #0c0c0e;
 }
 
@@ -34229,7 +34264,7 @@ figure figcaption a:active {
         background-color: #cbcbcb;
         border-color: #cbcbcb;
         border-style: solid;
-        border-width: 0.125rem;
+        border-width: 0.0625rem;
         color: #ffffff;
     }
 }
@@ -40079,6 +40114,22 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .js .menu > .menu__display__button .menu__display__button__button {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 450;
+    max-width: 55ch;
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
@@ -40113,6 +40164,45 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     padding-right: 0;
     padding-top: 0;
     width: 4rem;
+}
+
+.js .menu > .menu__display__button .menu__display__button__button i,
+.js .menu > .menu__display__button .menu__display__button__button em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .js .menu > .menu__display__button .menu__display__button__button {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .js .menu > .menu__display__button .menu__display__button__button {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .js .menu > .menu__display__button .menu__display__button__button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .js .menu > .menu__display__button .menu__display__button__button {
+        letter-spacing: -0.017em;
+    }
+}
+
+.js .menu > .menu__display__button .menu__display__button__button b,
+.js .menu > .menu__display__button .menu__display__button__button strong {
+    font-weight: 700;
+}
+
+.js .menu > .menu__display__button .menu__display__button__button i,
+.js .menu > .menu__display__button .menu__display__button__button em {
+    font-style: italic;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -40192,40 +40282,72 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
+.js .menu > .menu__display__button .menu__display__button__button .menu__button__icon {
+    font-size: inherit;
+}
+
 .js .menu > .menu__display__button .menu__display__button__button .menu__button__icon:before {
     content: '\f0c9';
 }
 
+.js .menu > .menu__display__button .menu__display__button__button .menu__button__text {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .js .menu > .menu__display__button .menu__display__button__button .menu__button__text {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .js .menu > .menu__display__button .menu__display__button__button .menu__button__text {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .js .menu > .menu__display__button .menu__display__button__button .menu__button__text {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .js .menu > .menu__display__button .menu__display__button__button .menu__button__text {
+        letter-spacing: -0.017em;
+    }
+}
+
 .js .menu > .menu__display__button .menu__display__button__button__wrapper {
-    font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 450;
+    max-width: 55ch;
+    font-size: 1.125rem;
     line-height: 1.25;
-    margin-top: 1rem;
+    letter-spacing: -0.008em;
     margin-top: 0;
 }
 
 .js .menu > .menu__display__button .menu__display__button__button__wrapper i,
 .js .menu > .menu__display__button .menu__display__button__button__wrapper em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-}
-
-.js .menu > .menu__display__button .menu__display__button__button__wrapper b,
-.js .menu > .menu__display__button .menu__display__button__button__wrapper strong {
-    font-weight: inherit;
-}
-
-.js .menu > .menu__display__button .menu__display__button__button__wrapper i,
-.js .menu > .menu__display__button .menu__display__button__button__wrapper em {
-    font-style: italic;
-}
-
-.js .menu > .menu__display__button .menu__display__button__button__wrapper u {
-    text-decoration: none;
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -40254,7 +40376,36 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 .js .menu > .menu__display__button .menu__display__button__button__wrapper b,
 .js .menu > .menu__display__button .menu__display__button__button__wrapper strong {
-    font-weight: 600;
+    font-weight: 700;
+}
+
+.js .menu > .menu__display__button .menu__display__button__button__wrapper i,
+.js .menu > .menu__display__button .menu__display__button__button__wrapper em {
+    font-style: italic;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .js .menu > .menu__display__button .menu__display__button__button__wrapper {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .js .menu > .menu__display__button .menu__display__button__button__wrapper {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .js .menu > .menu__display__button .menu__display__button__button__wrapper {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .js .menu > .menu__display__button .menu__display__button__button__wrapper {
+        letter-spacing: -0.017em;
+    }
 }
 
 @media (max-width: 1023px) {
@@ -48710,7 +48861,7 @@ button
         text-decoration: none;
         background-color: #ffffff;
         border-style: solid;
-        border-width: 0.125rem;
+        border-width: 0.0625rem;
         display: inline-block;
         padding-bottom: 0.5rem;
         padding-left: 1.5rem;
@@ -48791,7 +48942,7 @@ button
         background-color: #ffffff;
         border-color: #d61726;
         border-style: solid;
-        border-width: 0.125rem;
+        border-width: 0.0625rem;
         color: #d61726;
     }
 }
@@ -48801,7 +48952,7 @@ button
         background-color: #d61726;
         border-color: #d61726;
         border-style: solid;
-        border-width: 0.125rem;
+        border-width: 0.0625rem;
         color: #ffffff;
     }
 }
@@ -49335,7 +49486,7 @@ button
     text-decoration: none;
     background-color: #ffffff;
     border-style: solid;
-    border-width: 0.125rem;
+    border-width: 0.0625rem;
     display: inline-block;
     padding-bottom: 0.5rem;
     padding-left: 1.5rem;
@@ -49393,7 +49544,7 @@ button
     background-color: #ffffff;
     border-color: #0c0c0e;
     border-style: solid;
-    border-width: 0.125rem;
+    border-width: 0.0625rem;
     color: #0c0c0e;
 }
 
@@ -49402,7 +49553,7 @@ button
         background-color: #0c0c0e;
         border-color: #0c0c0e;
         border-style: solid;
-        border-width: 0.125rem;
+        border-width: 0.0625rem;
         color: #ffffff;
     }
 }
