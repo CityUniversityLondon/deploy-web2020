@@ -33015,8 +33015,12 @@ figure figcaption a:active {
 @media (max-width: 1023px) {
     .header-logo {
         align-self: center;
-        margin-left: 1rem;
-        margin-right: 1.5rem;
+        justify-content: flex-start;
+        padding-bottom: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+        width: 10rem;
     }
 }
 
@@ -33045,6 +33049,7 @@ figure figcaption a:active {
     text-decoration: none;
     display: inline-block;
     display: inline-block;
+    height: 4rem;
 }
 
 @media (hover: hover) {
@@ -33103,8 +33108,13 @@ figure figcaption a:active {
 }
 
 .header-logo a .logo {
-    max-height: 5rem;
-    width: 9rem;
+    width: 100%;
+}
+
+@media (max-width: 1023px) {
+    .header-logo a .logo {
+        height: 100%;
+    }
 }
 
 .global-header__utility {
@@ -33276,7 +33286,7 @@ figure figcaption a:active {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: flex-end;
-        width: 100%;
+        width: 50%;
     }
 }
 
