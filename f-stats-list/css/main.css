@@ -44900,6 +44900,9 @@ blockquote footer cite {
     .slider-block--mobile [data-visible='false'] {
         display: none;
     }
+    .slider-block--mobile .slider-block__control__buttons--dot {
+        display: none;
+    }
 }
 
 .slider-block--responsive [data-visible='false'] {

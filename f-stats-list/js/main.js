@@ -8231,8 +8231,8 @@ function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
   controlWrapper.appendChild(buttonWrapper);
 
   if (sliderControl === 'default') {
-    var buttonPrev = createButtonElement('fas fa-arrow-left prev', 'default', sliderObject);
-    var buttonNext = createButtonElement('fas fa-arrow-right next', 'default', sliderObject);
+    var buttonPrev = createButtonElement('fas fa-arrow-left prev prev--default', 'default', sliderObject);
+    var buttonNext = createButtonElement('fas fa-arrow-right next next--default', 'default', sliderObject);
     buttonNext.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
     buttonNext.addEventListener('click', function () {
       defaultEvent(this, slider, 'default', sliderObject);
@@ -8245,10 +8245,10 @@ function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
     buttonWrapper.classList.add('slider-block__control__buttons--default');
 
     if (sliderType === 'responsive') {
-      var buttonPrevTablet = createButtonElement('fas fa-arrow-left prev', 'tablet', sliderObject),
-          buttonNextTablet = createButtonElement('fas fa-arrow-right next', 'tablet', sliderObject),
-          buttonPrevDesk = createButtonElement('fas fa-arrow-left prev', 'desk', sliderObject),
-          buttonNextDesk = createButtonElement('fas fa-arrow-right next', 'desk', sliderObject);
+      var buttonPrevTablet = createButtonElement('fas fa-arrow-left prev prev--tablet', 'tablet', sliderObject),
+          buttonNextTablet = createButtonElement('fas fa-arrow-right next next--tablet', 'tablet', sliderObject),
+          buttonPrevDesk = createButtonElement('fas fa-arrow-left prev--desk', 'desk', sliderObject),
+          buttonNextDesk = createButtonElement('fas fa-arrow-right next--desk', 'desk', sliderObject);
       buttonPrevTablet.addEventListener('click', function () {
         defaultEvent(this, slider, 'tablet', sliderObject);
       });
@@ -8307,17 +8307,21 @@ function createButtonElement(classname, type, sliderObject) {
 }
 
 function defaultEvent(button, slider, type, sliderObject) {
-  var currentSlide = slider.querySelector("[".concat(sliderObject[type].visAttr, " = 'true']")),
+  var currentSlide = Array.from(slider.querySelectorAll("[".concat(sliderObject[type].visAttr, " = 'true']"))),
       nextPage = button.getAttribute('data-next'),
-      nextSlide = slider.querySelector('[' + sliderObject[type].pageAttr + '= "' + nextPage + '"]'),
-      page = parseInt(currentSlide.getAttribute(sliderObject[type].pageAttr)),
-      prevButton = button.parentNode.querySelector('.prev'),
-      nextButton = button.parentNode.querySelector('.next'),
+      nextSlide = Array.from(slider.querySelectorAll('[' + sliderObject[type].pageAttr + '= "' + nextPage + '"]')),
+      page = parseInt(currentSlide[0].getAttribute(sliderObject[type].pageAttr)),
+      prevButton = button.parentNode.querySelector(".prev--".concat(type)),
+      nextButton = button.parentNode.querySelector(".next--".concat(type)),
       counterAttr = sliderObject[type].counterAttr,
       counterEl = slider.parentNode.querySelector("span[".concat(counterAttr, "]"));
   var counterValue = parseInt(counterEl.innerText);
-  currentSlide.setAttribute("".concat(sliderObject[type].visAttr), false);
-  nextSlide.setAttribute("".concat(sliderObject[type].visAttr), true);
+  currentSlide.forEach(el => {
+    el.setAttribute("".concat(sliderObject[type].visAttr), false);
+  });
+  nextSlide.forEach(el => {
+    el.setAttribute("".concat(sliderObject[type].visAttr), true);
+  });
 
   if (button.classList.contains('next')) {
     button.setAttribute('data-next', page + 2);
