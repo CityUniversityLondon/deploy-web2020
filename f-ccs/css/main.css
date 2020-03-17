@@ -22379,6 +22379,20 @@ Assign mixin:
     padding: 1rem 4rem 1rem 4rem;
 }
 
+@media (max-width: 767px) {
+    .contact-cards {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 901px) {
+    .contact-cards {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
 .contact-cards.background--pink80 h3 {
     color: #ffffff;
 }
@@ -22502,8 +22516,10 @@ Assign mixin:
     transform: rotate(90deg);
 }
 
-.card--contact__key-info__wrap {
-    display: flex;
+@media (min-width: 768px) {
+    .card--contact__key-info__wrap {
+        display: flex;
+    }
 }
 
 .card--contact__key-info__wrap .card--contact__key-info__wrap__col:nth-child(1) {
