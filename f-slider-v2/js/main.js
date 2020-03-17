@@ -8048,6 +8048,7 @@ function launchSlider(slider) {
   var sliderObject = {
     default: {
       totalPages: totalItems,
+      endPosition: totalItems - 1,
       maxItem: 1,
       pageAttr: 'data-page',
       visAttr: 'data-visible',
@@ -8056,6 +8057,7 @@ function launchSlider(slider) {
     },
     mobile: {
       totalPages: totalItems,
+      endPosition: totalItems - 1,
       maxItem: 1,
       pageAttr: 'data-page',
       visAttr: 'data-visible',
@@ -8064,6 +8066,7 @@ function launchSlider(slider) {
     },
     tablet: {
       totalPages: maxTablet,
+      endPosition: maxTablet - 1,
       maxItem: perPageTablet,
       pageAttr: 'data-pagetablet',
       visAttr: 'data-visibletablet',
@@ -8072,6 +8075,7 @@ function launchSlider(slider) {
     },
     desk: {
       totalPages: maxDesk,
+      endPosition: maxDesk - 1,
       maxItem: perPageDesk,
       pageAttr: 'data-pagedesk',
       visAttr: 'data-visibledesk',
@@ -8172,6 +8176,9 @@ function createProgressTracker(slider, sliderType, sliderObject) {
   wrapper.appendChild(progress);
   var firstPage = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
     label: 'data-currentdefault',
+    val: true
+  }, {
+    label: 'data-visible',
     val: true
   }]);
   firstPage.innerText = '1';
@@ -8311,11 +8318,9 @@ function defaultEvent(button, slider, type, sliderObject) {
   var currentSlide = Array.from(slider.querySelectorAll("[".concat(sliderObject[type].visAttr, " = 'true']"))),
       nextPage = button.getAttribute('data-next'),
       nextSlide = Array.from(slider.querySelectorAll('[' + sliderObject[type].pageAttr + '= "' + nextPage + '"]')),
-      page = parseInt(currentSlide[0].getAttribute(sliderObject[type].pageAttr)),
       prevButton = button.parentNode.querySelector(".prev--".concat(type)),
       nextButton = button.parentNode.querySelector(".next--".concat(type)),
-      counterAttr = sliderObject[type].counterAttr,
-      counterEl = slider.parentNode.querySelector("span[".concat(counterAttr, "]"));
+      counterEl = slider.parentNode.querySelector("span[".concat(sliderObject[type].counterAttr, "]"));
   var counterValue = parseInt(counterEl.innerText);
   currentSlide.forEach(el => {
     el.setAttribute("".concat(sliderObject[type].visAttr), false);
@@ -8324,28 +8329,38 @@ function defaultEvent(button, slider, type, sliderObject) {
     el.setAttribute("".concat(sliderObject[type].visAttr), true);
   });
 
-  if (button.classList.contains('next')) {
-    button.setAttribute('data-next', page + 2);
-    prevButton.setAttribute('data-next', page);
+  if (button.classList.contains("next--".concat(type))) {
+    var nextAttr = parseInt(button.getAttribute('data-next'));
+
+    if (nextAttr === sliderObject[type].endPosition) {
+      button.setAttribute('disabled', true);
+    }
+
+    nextAttr++;
+    button.setAttribute('data-next', nextAttr);
+    var prevAttr = parseInt(prevButton.getAttribute('data-next'));
+    prevAttr++;
+    prevButton.setAttribute('data-next', prevAttr);
+    prevButton.removeAttribute('disabled');
     counterValue++;
     counterEl.innerText = counterValue;
-
-    if (page === 0) {
-      prevButton.removeAttribute('disabled');
-    } else if (page + 2 === parseInt(sliderObject[type].totalPages)) {
-      nextButton.setAttribute('disabled', true);
-    }
   } else {
-    button.setAttribute('data-next', page - 2);
-    nextButton.setAttribute('data-next', page);
+    var _prevAttr = parseInt(button.getAttribute('data-next'));
+
+    if (_prevAttr === 0) {
+      button.setAttribute('disabled', true);
+    }
+
+    _prevAttr--;
+    button.setAttribute('data-next', _prevAttr);
+
+    var _nextAttr = parseInt(nextButton.getAttribute('data-next'));
+
+    _nextAttr--;
+    nextButton.setAttribute('data-next', _nextAttr);
+    nextButton.removeAttribute('disabled');
     counterValue--;
     counterEl.innerText = counterValue;
-
-    if (page === 1) {
-      prevButton.setAttribute('disabled', true);
-    } else if (page + 2 === parseInt(sliderObject[type].totalPages)) {
-      nextButton.removeAttribute('disabled');
-    }
   }
 }
 
