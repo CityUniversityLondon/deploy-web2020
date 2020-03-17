@@ -51925,29 +51925,6 @@ button
     font-weight: 600;
 }
 
-@media (min-width: 768px) {
-    .case-study__contact-details__card .related-content {
-        display: flex;
-    }
-}
-
-.case-study__contact-details__card .related-content .card:nth-child(2) {
-    margin-top: 1rem;
-}
-
-@media (min-width: 768px) {
-    .case-study__contact-details__card .related-content .card:nth-child(2) {
-        margin-top: 0;
-    }
-}
-
-@media (min-width: 768px) {
-    .case-study__contact-details__card .related-content .card {
-        width: 50%;
-        margin-right: 1.5rem;
-    }
-}
-
 @media (min-width: 1024px) {
     main .content-hub {
         grid-column: 1 / span 24;
