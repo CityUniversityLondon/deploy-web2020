@@ -22393,6 +22393,7 @@ Assign mixin:
     }
 }
 
+.contact-cards.background--pink80 h2,
 .contact-cards.background--pink80 h3 {
     color: #ffffff;
 }
@@ -22409,30 +22410,45 @@ Assign mixin:
 
 .contact-cards.background--pink80 .card--contact {
     color: #ffffff;
-    border-bottom-color: #70255d;
-}
-
-.contact-cards.background--pink80 .contact-cards__header {
-    border-bottom-color: #70255d;
+    border-top-color: #70255d;
 }
 
 .contact-cards.background--pink80 .icon {
     color: #ffffff;
 }
 
+.contact-cards.background--gray2 h2,
+.contact-cards.background--gray2 h3 {
+    color: #0c0c0e;
+}
+
+.contact-cards.background--gray2 a {
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+}
+
+.contact-cards.background--gray2 a:hover {
+    color: #0c0c0e;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+}
+
+.contact-cards.background--gray2 .card--contact {
+    color: #0c0c0e;
+    border-top-color: #c9c1bc;
+}
+
+.contact-cards.background--gray2 .icon {
+    color: #d61726;
+}
+
 .card--contact {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     background: transparent;
-    border-bottom: 0.125rem solid;
+    border-top: 0.125rem solid;
 }
 
 .card--contact:last-child {
     border-bottom: none;
-}
-
-.contact-cards__header {
-    padding-bottom: 1rem;
-    border-bottom: 0.125rem solid;
 }
 
 .card--contact__name {
@@ -22481,7 +22497,6 @@ Assign mixin:
 }
 
 .card--contact__key-info .icon {
-    color: #d61726;
     margin-right: 0.5rem;
     font-size: 1rem;
     line-height: 1.625;
