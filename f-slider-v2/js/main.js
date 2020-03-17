@@ -8052,8 +8052,7 @@ function launchSlider(slider) {
       maxItem: 1,
       pageAttr: 'data-page',
       visAttr: 'data-visible',
-      counterAttr: 'data-currentdefault',
-      increment: 1
+      counterAttr: 'data-currentdefault'
     },
     mobile: {
       totalPages: totalItems,
@@ -8061,8 +8060,7 @@ function launchSlider(slider) {
       maxItem: 1,
       pageAttr: 'data-page',
       visAttr: 'data-visible',
-      counterAttr: 'data-currentdefault',
-      increment: 1
+      counterAttr: 'data-currentdefault'
     },
     tablet: {
       totalPages: maxTablet,
@@ -8070,8 +8068,7 @@ function launchSlider(slider) {
       maxItem: perPageTablet,
       pageAttr: 'data-pagetablet',
       visAttr: 'data-visibletablet',
-      counterAttr: 'data-currenttablet',
-      increment: perPageTablet
+      counterAttr: 'data-currenttablet'
     },
     desk: {
       totalPages: maxDesk,
@@ -8079,8 +8076,7 @@ function launchSlider(slider) {
       maxItem: perPageDesk,
       pageAttr: 'data-pagedesk',
       visAttr: 'data-visibledesk',
-      counterAttr: 'data-currentdesk',
-      increment: perPageDesk
+      counterAttr: 'data-currentdesk'
     }
   };
 
@@ -8253,26 +8249,31 @@ function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
     buttonWrapper.classList.add('slider-block__control__buttons--default');
 
     if (sliderType === 'responsive') {
-      var buttonPrevTablet = createButtonElement('fas fa-arrow-left prev prev--tablet', 'tablet', sliderObject),
-          buttonNextTablet = createButtonElement('fas fa-arrow-right next next--tablet', 'tablet', sliderObject),
-          buttonPrevDesk = createButtonElement('fas fa-arrow-left prev--desk', 'desk', sliderObject),
-          buttonNextDesk = createButtonElement('fas fa-arrow-right next--desk', 'desk', sliderObject);
-      buttonPrevTablet.addEventListener('click', function () {
-        defaultEvent(this, slider, 'tablet', sliderObject);
-      });
-      buttonNextTablet.addEventListener('click', function () {
-        defaultEvent(this, slider, 'tablet', sliderObject);
-      });
-      buttonPrevDesk.addEventListener('click', function () {
-        defaultEvent(this, slider, 'desk', sliderObject);
-      });
-      buttonNextDesk.addEventListener('click', function () {
-        defaultEvent(this, slider, 'desk', sliderObject);
-      });
-      buttonWrapper.appendChild(buttonPrevTablet);
-      buttonWrapper.appendChild(buttonNextTablet);
-      buttonWrapper.appendChild(buttonPrevDesk);
-      buttonWrapper.appendChild(buttonNextDesk);
+      if (sliderObject.default.totalPages > "".concat(sliderObject.tablet.maxItem)) {
+        var buttonPrevTablet = createButtonElement('fas fa-arrow-left prev prev--tablet', 'tablet', sliderObject),
+            buttonNextTablet = createButtonElement('fas fa-arrow-right next next--tablet', 'tablet', sliderObject);
+        buttonPrevTablet.addEventListener('click', function () {
+          defaultEvent(this, slider, 'tablet', sliderObject);
+        });
+        buttonNextTablet.addEventListener('click', function () {
+          defaultEvent(this, slider, 'tablet', sliderObject);
+        });
+        buttonWrapper.appendChild(buttonPrevTablet);
+        buttonWrapper.appendChild(buttonNextTablet);
+      }
+
+      if (sliderObject.default.totalPages > "".concat(sliderObject.desk.maxItem)) {
+        var buttonPrevDesk = createButtonElement('fas fa-arrow-left prev--desk', 'desk', sliderObject),
+            buttonNextDesk = createButtonElement('fas fa-arrow-right next--desk', 'desk', sliderObject);
+        buttonPrevDesk.addEventListener('click', function () {
+          defaultEvent(this, slider, 'desk', sliderObject);
+        });
+        buttonNextDesk.addEventListener('click', function () {
+          defaultEvent(this, slider, 'desk', sliderObject);
+        });
+        buttonWrapper.appendChild(buttonPrevDesk);
+        buttonWrapper.appendChild(buttonNextDesk);
+      }
     }
   }
 
