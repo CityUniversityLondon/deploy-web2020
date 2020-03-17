@@ -22393,6 +22393,30 @@ Assign mixin:
     }
 }
 
+.contact-cards h2,
+.contact-cards h3 {
+    color: #0c0c0e;
+}
+
+.contact-cards a {
+    color: #006bbd;
+    border-bottom-color: #006bbd;
+}
+
+.contact-cards a:hover {
+    color: #0c0c0e;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+}
+
+.contact-cards .card--contact {
+    color: #0c0c0e;
+    border-top-color: #c9c1bc;
+}
+
+.contact-cards .icon {
+    color: #d61726;
+}
+
 .contact-cards.background--pink80 h2,
 .contact-cards.background--pink80 h3 {
     color: #ffffff;
@@ -22415,30 +22439,6 @@ Assign mixin:
 
 .contact-cards.background--pink80 .icon {
     color: #ffffff;
-}
-
-.contact-cards.background--gray2 h2,
-.contact-cards.background--gray2 h3 {
-    color: #0c0c0e;
-}
-
-.contact-cards.background--gray2 a {
-    color: #006bbd;
-    border-bottom-color: #006bbd;
-}
-
-.contact-cards.background--gray2 a:hover {
-    color: #0c0c0e;
-    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-}
-
-.contact-cards.background--gray2 .card--contact {
-    color: #0c0c0e;
-    border-top-color: #c9c1bc;
-}
-
-.contact-cards.background--gray2 .icon {
-    color: #d61726;
 }
 
 .card--contact {
