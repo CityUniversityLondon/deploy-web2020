@@ -6180,6 +6180,7 @@ var className = 'menu',
     veilClassName = className + '__veil',
     contentClassName = className + '__content',
     contentHeaderClassName = contentClassName + '__header',
+    currentPage = contentHeaderClassName + '--current',
     controlsClassName = className + '__controls',
     buttonDisplayClassName = className + '__display__button',
     buttonClassName = className + '__button',
@@ -6247,6 +6248,8 @@ function toggleMenu(button, setMenu, trap, veil) {
 function createMenuToggle(label, button, setMenu, veil) {
   var buttonWrapper = document.createElement('div'),
       menu = label.closest(".".concat(className));
+  button.className = 'menu__display__button__button';
+  buttonWrapper.className = 'menu__display__button__button__wrapper';
   button.setAttribute('type', 'button');
   button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hasPopup, 'menu');
   Array.from(label.childNodes).forEach(child => buttonWrapper.appendChild(child));
@@ -6258,7 +6261,7 @@ function createMenuToggle(label, button, setMenu, veil) {
      * last in the DOM and is visible.
      */
     initialFocus: () => {
-      var open = Array.from(menu.querySelectorAll([".".concat(contentHeaderClassName, " > span"), ".".concat(currentClassName, " > .").concat(controlsClassName, " > a"), ".".concat(hierarchyClassName, " > .").concat(controlsClassName, " > a"), ".".concat(level1ClassName, " > ul > li:first-of-type > .").concat(controlsClassName, " > a")].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_2__["isVisible"])(elem));
+      var open = Array.from(menu.querySelectorAll([".".concat(contentHeaderClassName, " > span"), ".".concat(currentClassName, " > .").concat(controlsClassName, " > a"), ".".concat(hierarchyClassName, " > .").concat(controlsClassName, " > a"), ".".concat(level1ClassName, " > ul > li:first-of-type > .").concat(controlsClassName, " > a"), ".".concat(currentPage, " > a")].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_2__["isVisible"])(elem));
       return open[open.length - 1];
     },
     onDeactivate: () => toggleMenu(button, setMenu, trap, veil),
@@ -6348,7 +6351,7 @@ function launchModal(modal) {
   var dialogTopic = modal.getAttribute('data-topic');
   Array.from(modal.getElementsByTagName('li')).forEach((list, i) => {
     var wrapper = document.createElement('div'),
-        listAnchor = document.createElement('a'),
+        listButton = document.createElement('button'),
         listBody = Array.from(list.childNodes),
         listHeader = list.firstElementChild,
         customHeader = list.getAttribute('data-header'),
@@ -6357,7 +6360,9 @@ function launchModal(modal) {
     var title,
         keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(format),
         shortName = list.getAttribute('data-shortname');
-    listAnchor.setAttribute('href', '#');
+    listButton.classList.add('modal__button');
+    listButton.setAttribute('type', 'button');
+    listButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'open dialog');
     list.appendChild(wrapper);
     Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(wrapper, listBody);
     wrapper.classList.add("".concat(bodyClassName));
@@ -6374,18 +6379,14 @@ function launchModal(modal) {
 
     if (keepFormat) {
       list.insertBefore(listHeader, wrapper);
-      listHeader.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
+      listHeader.addEventListener('click', function () {
         createDialog(modal, "".concat(i), dialogArray);
       });
     } else {
-      listAnchor.textContent = listHeader.textContent;
+      listButton.textContent = listHeader.textContent;
       header.appendChild(listHeader);
-      list.insertBefore(listAnchor, wrapper);
-      listAnchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
+      list.insertBefore(listButton, wrapper);
+      listButton.addEventListener('click', function () {
         createDialog(modal, "".concat(i), dialogArray);
       });
     }
