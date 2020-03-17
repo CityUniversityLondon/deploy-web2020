@@ -6112,38 +6112,19 @@ function prepareSubNavigation(navigationItem, rootClass) {
 
 
 function prepareNavigation(navigation, rootClass) {
-  var controlsClassName = rootClass + '__controls',
-      currentClassName = rootClass + '__current';
+  var controlsClassName = rootClass + '__controls';
   Array.from(navigation.querySelectorAll('li')).forEach(navigationItem => {
     var link = navigationItem.querySelector('a'),
         subNavigation = navigationItem.querySelector('ul'),
         linkText = 'Visit ' + navigationItem.dataset.title,
         textWrapper = document.createElement('span'),
-        currentPageWrapper = document.createElement('span'),
         controlsWrapper = document.createElement('div');
     controlsWrapper.className = controlsClassName;
-    /**
-     * To format the current page the same as a link, we need to double-wrap
-     * it in spans. To programmatically focus it, we need to give it a
-     * tabindex.
-     *
-     * Actual links only need one span.
-     */
-
-    if (navigationItem.className.indexOf(currentClassName) >= 0) {
-      textWrapper.appendChild(navigationItem.firstChild.cloneNode(true));
-      currentPageWrapper.appendChild(textWrapper);
-      currentPageWrapper.setAttribute('tabindex', -1);
-      navigationItem.replaceChild(controlsWrapper, navigationItem.firstChild);
-      controlsWrapper.appendChild(currentPageWrapper);
-    } else {
-      textWrapper.appendChild(link.firstChild.cloneNode(true));
-      link.replaceChild(textWrapper, link.firstChild);
-      link.title = linkText;
-      navigationItem.replaceChild(controlsWrapper, link);
-      controlsWrapper.appendChild(link);
-    }
-
+    textWrapper.appendChild(link.firstChild.cloneNode(true));
+    link.replaceChild(textWrapper, link.firstChild);
+    link.title = linkText;
+    navigationItem.replaceChild(controlsWrapper, link);
+    controlsWrapper.appendChild(link);
     subNavigation && subNavigation.firstElementChild && prepareSubNavigation(navigationItem, rootClass);
   });
 }
@@ -6275,7 +6256,7 @@ function createMenuToggle(label, button, setMenu, veil) {
      * last in the DOM and is visible.
      */
     initialFocus: () => {
-      var open = Array.from(menu.querySelectorAll([".".concat(contentHeaderClassName, " > span"), ".".concat(currentClassName, " > .").concat(controlsClassName, " > span"), ".".concat(hierarchyClassName, " > .").concat(controlsClassName, " > a"), ".".concat(level1ClassName, " > ul > li:first-of-type > .").concat(controlsClassName, " > a")].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_2__["isVisible"])(elem));
+      var open = Array.from(menu.querySelectorAll([".".concat(contentHeaderClassName, " > span"), ".".concat(currentClassName, " > .").concat(controlsClassName, " > a"), ".".concat(hierarchyClassName, " > .").concat(controlsClassName, " > a"), ".".concat(level1ClassName, " > ul > li:first-of-type > .").concat(controlsClassName, " > a")].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_2__["isVisible"])(elem));
       return open[open.length - 1];
     },
     onDeactivate: () => toggleMenu(button, setMenu, trap, veil),
@@ -6687,15 +6668,12 @@ function trapFocus(modal) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 
@@ -6711,7 +6689,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var className = 'navigation',
-    currentClassName = className + '__current',
     classNameSpecific = className + '--primary',
     topLevelClassName = classNameSpecific + '__section-text',
     buttonClassName = className + '__button',
@@ -6736,7 +6713,7 @@ function createCloseAll(navigation, veil) {
   return () => {
     var buttons = Array.from(navigation.querySelectorAll('.navigation--primary__level1 > .navigation__button'));
     buttons.forEach(button => {
-      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, 'false');
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(openText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     });
     veil.dataset.on = 'false';
@@ -6753,13 +6730,13 @@ function createCloseAll(navigation, veil) {
 
 function createSectionToggle(button, closeAll, veil) {
   return () => {
-    var open = !Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded));
+    var open = !Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded));
     closeAll();
 
     if (open) {
       button.closest(".".concat(classNameSpecific)).dataset.open = 'true';
       veil.dataset.on = 'true';
-      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, open);
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(closeText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     }
   };
@@ -6784,8 +6761,8 @@ function prepareTopLevel(navigation, veil, closeAll) {
         toggleSection = createSectionToggle(button, closeAll, veil); // LIs have tabindex so they're accessible with no JS, remove it
 
     el.removeAttribute('tabindex');
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].owns, el.nextElementSibling.id);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, 'false');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].owns, el.nextElementSibling.id);
     button.setAttribute('type', 'button');
     button.id = el.nextElementSibling.id + '-button';
     button.className = buttonClassName;
@@ -6794,7 +6771,7 @@ function prepareTopLevel(navigation, veil, closeAll) {
     srNavigationSpan.className = navigationTextClassName;
     srNavigationSpan.appendChild(document.createTextNode(navigationText));
     button.addEventListener('click', () => toggleSection(), true);
-    Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(buttonDiv, [srOpenCloseSpan, document.createTextNode(' '), el, document.createTextNode(' '), srNavigationSpan]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(buttonDiv, [srOpenCloseSpan, document.createTextNode(' '), el, document.createTextNode(' '), srNavigationSpan]);
     button.append(buttonDiv);
     listItem.prepend(button);
   });
@@ -6814,7 +6791,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
       restButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:first-of-type) > .navigation__button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   firstButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
       closeAll();
     }
   });
@@ -6824,7 +6801,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
         lastNavigationAnchor = previousSection.querySelector('.navigation__level2 > li:last-of-type > a') ? previousSection.querySelector('.navigation__level2 > li:last-of-type > a') : previousSection.querySelector('.navigation__level2 > li:last-of-type').previousElementSibling.querySelector('a'),
         togglePreviousSection = createSectionToggle(previousSectionButton, closeAll, veil);
     thisSectionButton.addEventListener('keydown', e => {
-      if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
+      if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
         e.preventDefault();
         togglePreviousSection();
         lastNavigationAnchor.focus();
@@ -6847,7 +6824,7 @@ function setupTabNext(navigation, closeAll, veil) {
       restSectionsCloseButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:last-of-type) .wrapper--navigation--primary__menu__close button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   closeButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded)) && keyCodeTab === e.keyCode && !e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && keyCodeTab === e.keyCode && !e.shiftKey) {
       closeAll();
     }
   });
@@ -6874,23 +6851,8 @@ function prepareLowerLevels(navigation) {
   Array.from(navigation.querySelectorAll('.navigation__level2 li')).forEach(navigationItem => {
     var link = navigationItem.querySelector('a'),
         textWrapper = document.createElement('span');
-    /**
-     * To format the current page the same as a link, we need to
-     * double-wrap.
-     *
-     * Actual links only need one span.
-     */
-
-    if (navigationItem.className.indexOf(currentClassName) >= 0) {
-      var currentPageWrapper = document.createElement('span'),
-          linkText = navigationItem.firstChild.wholeText.trim();
-      textWrapper.appendChild(document.createTextNode(linkText));
-      currentPageWrapper.appendChild(textWrapper);
-      navigationItem.replaceChild(currentPageWrapper, navigationItem.firstChild);
-    } else {
-      textWrapper.appendChild(link.firstChild.cloneNode(true));
-      link.replaceChild(textWrapper, link.firstChild);
-    }
+    textWrapper.appendChild(link.firstChild.cloneNode(true));
+    link.replaceChild(textWrapper, link.firstChild);
   });
 }
 /**
@@ -6935,11 +6897,11 @@ function addCloseButtons(navigation, closeAll) {
         text = 'Close ' + header.innerText.trim() + ' menu';
     closeButtonText.appendChild(document.createTextNode(text));
     closeButtonText.className = 'navigation--primary__menu__close__text';
-    closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
+    closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
     closeButtonIcon.className = 'fas fa-fw fa-times navigation--primary__menu__close__icon';
     closeButtonWrapper.className = 'wrapper--navigation--primary__menu__close';
     closeButton.className = 'navigation--primary__menu__close';
-    Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
     closeButton.appendChild(closeButtonDiv);
     closeButton.setAttribute('type', 'button');
     closeButton.title = text;
@@ -6963,7 +6925,7 @@ function launchPrimaryNavigation(navigation) {
   var veil = document.createElement('div'),
       closeAll = createCloseAll(navigation, veil);
   veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   prepareTopLevel(navigation, veil, closeAll);
   prepareLowerLevels(navigation, veil);
