@@ -62584,6 +62584,10 @@ main .standard-content .banner-text {
     padding: 1rem 0;
 }
 
+.course--ug__usp__stats .statistics-block ul.slider {
+    max-width: 100%;
+}
+
 .course--ug__usp__stats .statistics-block .ksp__items {
     text-align: center;
 }
