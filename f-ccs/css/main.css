@@ -22403,11 +22403,6 @@ Assign mixin:
     border-bottom-color: #006bbd;
 }
 
-.contact-cards a:hover {
-    color: #ffffff;
-    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-}
-
 .contact-cards a:focus, .contact-cards a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
@@ -22415,9 +22410,14 @@ Assign mixin:
     outline-width: 0.125rem;
 }
 
+.contact-cards a:hover {
+    color: #ffffff;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+}
+
 .contact-cards .card--contact {
     color: #0c0c0e;
-    border-top-color: #c9c1bc;
+    border-top: 0.0625rem solid rgba(12, 12, 14, 0.2);
 }
 
 .contact-cards .icon {
@@ -22434,11 +22434,6 @@ Assign mixin:
     border-bottom-color: #cbcbcb;
 }
 
-.contact-cards.background--pink80 a:hover {
-    color: #0c0c0e;
-    background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
-}
-
 .contact-cards.background--pink80 a:focus, .contact-cards.background--pink80 a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
@@ -22446,9 +22441,14 @@ Assign mixin:
     outline-width: 0.125rem;
 }
 
+.contact-cards.background--pink80 a:hover {
+    color: #0c0c0e;
+    background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+}
+
 .contact-cards.background--pink80 .card--contact {
     color: #ffffff;
-    border-top-color: #70255d;
+    border-top: 0.0625rem solid rgba(255, 255, 255, 0.2);
 }
 
 .contact-cards.background--pink80 .icon {
@@ -61047,7 +61047,7 @@ main .standard-content .banner-text {
         grid-column: 1 / span 6;
     }
     main .navigation--secondary + .documentation {
-        grid-column: 10 / span 12;
+        grid-column: 8 / span 17;
     }
     main .navigation--secondary + .documentation.documentation--fullwidth {
         grid-column: 7 / span 18;
