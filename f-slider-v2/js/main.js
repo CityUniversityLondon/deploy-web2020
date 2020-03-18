@@ -8165,65 +8165,37 @@ function slicedArrayIterator(arr, pageAttr, visibilityAttr) {
 
 function createProgressTracker(slider, sliderType, sliderObject) {
   var wrapper = slider.parentNode.querySelector('.slider-block__control');
+  createProgressElements(wrapper, 'default', sliderObject);
+
+  if (sliderType === 'responsive') {
+    if (sliderObject.default.totalPages > "".concat(sliderObject.tablet.maxItem)) {
+      createProgressElements(wrapper, 'tablet', sliderObject);
+    }
+
+    if (sliderObject.default.totalPages > "".concat(sliderObject.tablet.maxItem)) {
+      createProgressElements(wrapper, 'desk', sliderObject);
+    }
+  }
+}
+
+function createProgressElements(wrapper, type, sliderObject) {
   var progress = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
     label: 'class',
-    val: 'slider-block__control__progress'
+    val: "slider-block__control__progress slider-block__control__progress--".concat(type)
   }]);
   wrapper.appendChild(progress);
   var firstPage = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
-    label: 'data-currentdefault',
-    val: true
-  }, {
-    label: 'data-visible',
+    label: "".concat(sliderObject[type].counterAttr),
     val: true
   }]);
   firstPage.innerText = '1';
-  var separator = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
-    label: 'data-currentseparator',
-    val: true
-  }]);
+  var separator = document.createElement('span');
   separator.innerText = '/';
-  var lastPage = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
-    label: sliderObject.default.visAttr,
-    val: true
-  }]);
-  lastPage.innerText = sliderObject.default.totalPages;
+  var lastPage = document.createElement('span');
+  lastPage.innerText = "".concat(sliderObject[type].totalPages);
   progress.appendChild(firstPage);
   progress.appendChild(separator);
   progress.appendChild(lastPage);
-
-  if (sliderType === 'responsive') {
-    var lastPageTablet = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
-      label: sliderObject.tablet.visAttr,
-      val: true
-    }]);
-    lastPageTablet.innerText = sliderObject.tablet.totalPages;
-    var lastPageDesk = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
-      label: sliderObject.desk.visAttr,
-      val: true
-    }]);
-    lastPageDesk.innerText = sliderObject.desk.totalPages;
-    progress.appendChild(lastPageTablet);
-    progress.appendChild(lastPageDesk);
-    var firstPageTablet = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
-      label: 'data-currenttablet',
-      val: true
-    }, {
-      label: 'data-visibleTable',
-      val: true
-    }]);
-    firstPageTablet.innerText = '1';
-    var firstPageDesk = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('span', [{
-      label: 'data-currentdesk',
-      val: true
-    }, {
-      label: 'data-visibleDesk',
-      val: true
-    }]);
-    firstPageDesk.innerText = '1';
-    progress.insertBefore(firstPageTablet, separator);
-    progress.insertBefore(firstPageDesk, separator);
-  }
 }
 
 function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
