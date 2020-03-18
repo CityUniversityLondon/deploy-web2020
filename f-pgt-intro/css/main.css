@@ -54583,6 +54583,28 @@ main .landing:only-child .landing__top__cta {
     font-weight: 600;
 }
 
+.course--pgt__profiles_heading,
+.course--pgt__our-students_heading,
+.course--pgt__facilities__heading {
+    grid-column: 1/-1;
+    border-bottom: 0.0625rem solid #cbcbcb;
+    padding-bottom: 0.5rem;
+}
+
+.course--pgt__profiles_heading .full-width-heading,
+.course--pgt__our-students_heading .full-width-heading,
+.course--pgt__facilities__heading .full-width-heading {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 769px) {
+    .course--pgt__profiles_heading .full-width-heading:first-child,
+    .course--pgt__our-students_heading .full-width-heading:first-child,
+    .course--pgt__facilities__heading .full-width-heading:first-child {
+        grid-column: 2/-2;
+    }
+}
+
 .course--pgt .banner__overlay {
     background: linear-gradient(to top, #5d184a, transparent 100%);
 }
@@ -54883,36 +54905,36 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
-.course--pgt__profiles__content {
+.course--pgt__profiles {
     grid-column: 1/-1;
 }
 
 @media (max-width: 1023px) {
-    .course--pgt__profiles__content {
+    .course--pgt__profiles {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__profiles__content {
+    .course--pgt__profiles {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-.course--pgt__profiles__content .featured-profiles-block {
+.course--pgt__profiles .featured-profiles-block {
     margin: 0;
     padding: 0;
 }
 
-.course--pgt__profiles__content .wrapper--featured-profiles__heading-intro,
-.course--pgt__profiles__content .wrapper--featured-profiles__profile {
+.course--pgt__profiles .wrapper--featured-profiles__heading-intro,
+.course--pgt__profiles .wrapper--featured-profiles__profile {
     margin-top: 1rem;
     grid-column: 1/-1;
 }
 
-.course--pgt__profiles__content .wrapper--featured-profiles__heading-intro {
+.course--pgt__profiles .wrapper--featured-profiles__heading-intro {
     margin-top: 0;
 }
 
@@ -55175,6 +55197,7 @@ main .landing:only-child .landing__top__cta {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
+    grid-column: 1/-1;
 }
 
 @media (min-width: 768px) {
@@ -55186,20 +55209,6 @@ main .landing:only-child .landing__top__cta {
 @media (min-width: 901px) {
     .course--pgt__our-students .course--pgt__student-work {
         grid-column-gap: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) {
-    .course--pgt__our-students .course--pgt__student-work {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__our-students .course--pgt__student-work {
-        padding-left: 2rem;
-        padding-right: 2rem;
     }
 }
 
@@ -55345,92 +55354,91 @@ main .landing:only-child .landing__top__cta {
     padding: 0 1rem 0 0;
 }
 
-.course--pgt__our-students .wrapper--course--pgt__our-students__heading {
-    grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-    border-bottom: 0.0625rem solid #cbcbcb;
-    padding-bottom: 0.5rem;
-    grid-column: 1/-1;
-}
-
-@media (min-width: 768px) {
-    .course--pgt__our-students .wrapper--course--pgt__our-students__heading {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .course--pgt__our-students .wrapper--course--pgt__our-students__heading {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-.course--pgt__our-students .wrapper--course--pgt__our-students__heading .full-width-heading {
-    grid-column: 1/-1;
-}
-
-@media (min-width: 769px) {
-    .course--pgt__our-students .wrapper--course--pgt__our-students__heading .full-width-heading:first-child {
-        grid-column: 2/-2;
-    }
-}
-
-.course--pgt__our-students .course--pgt__student-work {
-    grid-column: 1/-1;
+.course--pgt__our-students {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
 }
 
 @media (min-width: 768px) {
-    .course--pgt__our-students .course--pgt__student-work {
+    .course--pgt__our-students {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 901px) {
-    .course--pgt__our-students .course--pgt__student-work {
+    .course--pgt__our-students {
         grid-column-gap: 1.5rem;
     }
 }
 
-.course--pgt__our-students .course--pgt__student-work .course--pgt__student-work__heading,
-.course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video {
+@media (max-width: 1023px) {
+    .course--pgt__our-students {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .course--pgt__our-students {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.course--pgt__our-students h2 {
+    grid-column: 1/-1;
+}
+
+.course--pgt__our-students .course--pgt__testimonials {
     grid-column: 1/-1;
 }
 
 @media (min-width: 769px) {
-    .course--pgt__our-students .course--pgt__student-work .course--pgt__student-work__heading,
-    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video {
-        grid-column: 2/-1;
+    .course--pgt__our-students .course--pgt__testimonials {
+        grid-column: 8/-1;
     }
+}
+
+.course--pgt__our-students .course--pgt__testimonials .slider {
+    grid-column: 1/-1;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.course--pgt__our-students .course--pgt__testimonials .slider li {
+    margin-top: 0;
+}
+
+.course--pgt__our-students .course--pgt__testimonials .slider li picture {
+    margin-left: 0;
+}
+
+.course--pgt__our-students .course--pgt__unibuddy {
+    grid-column: 1/-1;
+    margin-bottom: 1rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
 }
 
 @media (min-width: 769px) {
-    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video {
-        display: flex;
-    }
-    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video .embedded-video {
-        padding-left: 0;
-        flex: 1;
-    }
-    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video .embedded-video:last-of-type {
-        padding-right: 0;
+    .course--pgt__our-students .course--pgt__unibuddy {
+        grid-column: 1/8;
     }
 }
 
-.course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video .embedded-video {
-    padding-top: 0;
+.course--pgt__our-students .course--pgt__unibuddy .unibuddy-card {
+    margin-top: 0.75rem;
 }
 
-@media (max-width: 768px) {
-    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video .embedded-video {
-        padding-left: 0;
-        padding-right: 0;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
+.course--pgt__our-students .course--pgt__testimonials .card--testimonial__photo {
+    margin-top: 0.75rem;
+    margin-left: 0;
+}
+
+.course--pgt__our-students .course--pgt__testimonials .card--testimonial__quote {
+    margin-top: 1rem;
 }
 
 .wrapper--course--pgt__student-life {
@@ -55586,90 +55594,6 @@ main .landing:only-child .landing__top__cta {
     .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content.slider-responsive .slider__slide:not(:last-of-type) {
         margin-right: 1rem;
     }
-}
-
-.wrapper--course--pgt__testimonials-unibuddy {
-    grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-    margin-bottom: 1rem;
-}
-
-@media (min-width: 768px) {
-    .wrapper--course--pgt__testimonials-unibuddy {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .wrapper--course--pgt__testimonials-unibuddy {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) {
-    .wrapper--course--pgt__testimonials-unibuddy {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .wrapper--course--pgt__testimonials-unibuddy {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-.wrapper--course--pgt__testimonials-unibuddy .course--pgt__testimonials {
-    grid-column: 1/-1;
-}
-
-@media (min-width: 769px) {
-    .wrapper--course--pgt__testimonials-unibuddy .course--pgt__testimonials {
-        grid-column: 8/-2;
-    }
-}
-
-.wrapper--course--pgt__testimonials-unibuddy .course--pgt__testimonials .slider {
-    grid-column: 1/-1;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.wrapper--course--pgt__testimonials-unibuddy .course--pgt__testimonials .slider li {
-    margin-top: 0;
-}
-
-.wrapper--course--pgt__testimonials-unibuddy .course--pgt__testimonials .slider li picture {
-    margin-left: 0;
-}
-
-.wrapper--course--pgt__testimonials-unibuddy .course--pgt__unibuddy {
-    grid-column: 1/-1;
-    margin-bottom: 1rem;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-}
-
-@media (min-width: 769px) {
-    .wrapper--course--pgt__testimonials-unibuddy .course--pgt__unibuddy {
-        grid-column: 1/8;
-    }
-}
-
-.wrapper--course--pgt__testimonials-unibuddy .course--pgt__unibuddy .unibuddy-card {
-    margin-top: 0.75rem;
-}
-
-.wrapper--course--pgt__testimonials-unibuddy .course--pgt__testimonials .card--testimonial__photo {
-    margin-top: 0.75rem;
-    margin-left: 0;
-}
-
-.wrapper--course--pgt__testimonials-unibuddy .course--pgt__testimonials .card--testimonial__quote {
-    margin-top: 1rem;
 }
 
 .course--pgt__contact-cards .footer-cards {
@@ -56360,7 +56284,41 @@ main .landing:only-child .landing__top__cta {
     margin-top: 1rem;
 }
 
+.course--pgt__facilities {
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .course--pgt__facilities {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .course--pgt__facilities {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    .course--pgt__facilities {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .course--pgt__facilities {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
 .course--pgt__facilities .wrapper--course--pgt__facilities__video {
+    grid-column: 1/-1;
+    margin-top: 0.5rem;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -56375,6 +56333,20 @@ main .landing:only-child .landing__top__cta {
 @media (min-width: 901px) {
     .course--pgt__facilities .wrapper--course--pgt__facilities__video {
         grid-column-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__video {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 901px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__video {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
@@ -56404,35 +56376,7 @@ main .landing:only-child .landing__top__cta {
 }
 
 .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
-    grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-}
-
-@media (min-width: 768px) {
-    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) {
-    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
+    grid-column: 1/-1;
 }
 
 .course--pgt__facilities .wrapper--course--pgt__facilities__gallery .wrapper--course--pgt__facilities__heading {
