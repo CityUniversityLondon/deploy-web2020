@@ -61047,7 +61047,7 @@ main .standard-content .banner-text {
         grid-column: 1 / span 6;
     }
     main .navigation--secondary + .documentation {
-        grid-column: 8 / span 17;
+        grid-column: 7 / span 18;
     }
     main .navigation--secondary + .documentation.documentation--fullwidth {
         grid-column: 7 / span 18;
