@@ -45159,91 +45159,6 @@ blockquote footer cite {
     cursor: auto;
 }
 
-.slider {
-    display: flex;
-    flex-direction: column;
-}
-
-.slider__active-slide {
-    display: flex;
-}
-
-.slider__slide {
-    display: none;
-}
-
-.slider__controls__wrap {
-    grid-column: 6 / 14;
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 1rem 0;
-}
-
-.slider__controls {
-    display: flex;
-    align-self: flex-end;
-}
-
-.slider__controls__progress {
-    color: #696969;
-    margin: 1rem 2rem 0 0;
-    font-size: 0.79rem;
-    font-weight: 500;
-}
-
-.slide__controls__progress__active {
-    color: #d61726;
-}
-
-.slider__controls__buttons__next,
-.slider__controls__buttons__prev {
-    border: 0.0625rem solid #1e1e1e;
-    padding: 0.75rem 0.5rem;
-    background: #ffffff;
-    margin-left: 1rem;
-}
-
-.slider__controls__buttons__next:focus, .slider__controls__buttons__next:active,
-.slider__controls__buttons__prev:focus,
-.slider__controls__buttons__prev:active {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-@media (hover: hover) {
-    .slider__controls__buttons__next:hover,
-    .slider__controls__buttons__prev:hover {
-        background: #3e1031;
-        color: #ffffff;
-    }
-}
-
-.slider__controls__buttons__next:focus, .slider__controls__buttons__next:active,
-.slider__controls__buttons__prev:focus,
-.slider__controls__buttons__prev:active {
-    color: #ffffff;
-    background: #3e1031;
-    outline-offset: 0;
-}
-
-.slider__controls__buttons__next:before,
-.slider__controls__buttons__prev:before {
-    font-weight: 400;
-}
-
-.l .slider__controls__buttons__disabled {
-    border: none;
-    color: #1e1e1e;
-    opacity: 0.7;
-}
-
-.l .slider__controls__buttons__disabled:hover {
-    background: #ffffff;
-    color: #1e1e1e;
-}
-
 .slider-block__control__progress span {
     color: #d61726;
     font-size: 0.79rem;
@@ -45365,16 +45280,88 @@ blockquote footer cite {
     .slider-block--mobile [data-visible='false'] {
         display: none;
     }
-}
-
-.slider-block--responsive [data-visible='false'] {
-    display: block;
+    .slider-block--mobile .slider-block__control__buttons--dot {
+        display: block;
+    }
 }
 
 @media (max-width: 432px) {
-    .slider-block--responsive [data-visible='false'] {
+    .slider-block--responsive [data-visible] {
         display: none;
     }
+    .slider-block--responsive [data-visibletablet] {
+        display: none;
+    }
+    .slider-block--responsive [data-visibledesk] {
+        display: none;
+    }
+    .slider-block--responsive [data-visible='true'] {
+        display: block;
+    }
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .slider-block--responsive [data-visible] {
+        display: none;
+    }
+    .slider-block--responsive [data-visibletablet] {
+        display: none;
+    }
+    .slider-block--responsive [data-visibledesk] {
+        display: none;
+    }
+    .slider-block--responsive [data-visibletablet='true'] {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .slider-block--responsive [data-visible] {
+        display: none;
+    }
+    .slider-block--responsive [data-visibletablet] {
+        display: none;
+    }
+    .slider-block--responsive [data-visibledesk] {
+        display: none;
+    }
+    .slider-block--responsive [data-visibledesk='true'] {
+        display: block;
+    }
+}
+
+.slider-block--responsive .slider-block__control__progress--default {
+    display: none;
+}
+
+@media (max-width: 432px) {
+    .slider-block--responsive .slider-block__control__progress--default {
+        display: block;
+    }
+}
+
+.slider-block--responsive .slider-block__control__progress--tablet {
+    display: none;
+}
+
+@media (min-width: 433px) and (max-width: 768px) {
+    .slider-block--responsive .slider-block__control__progress--tablet {
+        display: block;
+    }
+}
+
+.slider-block--responsive .slider-block__control__progress--desk {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .slider-block--responsive .slider-block__control__progress--desk {
+        display: block;
+    }
+}
+
+.slider-block--responsive .slider-block__control__buttons button {
+    display: none;
 }
 
 @media (max-width: 432px) {

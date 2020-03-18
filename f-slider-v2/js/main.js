@@ -8031,7 +8031,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/slider/slider
  * @author Web Development
- * @copyright City, University of London 2018
+ * @copyright City, University of London 2020
  */
 
 
@@ -8207,8 +8207,8 @@ function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
   controlWrapper.appendChild(buttonWrapper);
 
   if (sliderControl === 'default') {
-    var buttonPrev = createButtonElement('fas fa-arrow-left prev prev--default', 'default', sliderObject);
-    var buttonNext = createButtonElement('fas fa-arrow-right next next--default', 'default', sliderObject);
+    var buttonPrev = createButtonElement('fas fa-arrow-left prev--default', 'default', sliderObject);
+    var buttonNext = createButtonElement('fas fa-arrow-right next--default', 'default', sliderObject);
     buttonNext.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
     buttonNext.addEventListener('click', function () {
       defaultEvent(this, slider, 'default', sliderObject);
@@ -8222,8 +8222,8 @@ function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
 
     if (sliderType === 'responsive') {
       if (sliderObject.default.totalPages > "".concat(sliderObject.tablet.maxItem)) {
-        var buttonPrevTablet = createButtonElement('fas fa-arrow-left prev prev--tablet', 'tablet', sliderObject),
-            buttonNextTablet = createButtonElement('fas fa-arrow-right next next--tablet', 'tablet', sliderObject);
+        var buttonPrevTablet = createButtonElement('fas fa-arrow-left prev--tablet', 'tablet', sliderObject),
+            buttonNextTablet = createButtonElement('fas fa-arrow-right next--tablet', 'tablet', sliderObject);
         buttonPrevTablet.addEventListener('click', function () {
           defaultEvent(this, slider, 'tablet', sliderObject);
         });
