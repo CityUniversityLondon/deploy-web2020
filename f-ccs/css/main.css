@@ -22404,8 +22404,15 @@ Assign mixin:
 }
 
 .contact-cards a:hover {
-    color: #0c0c0e;
+    color: #ffffff;
     background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+}
+
+.contact-cards a:focus, .contact-cards a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
 }
 
 .contact-cards .card--contact {
@@ -22430,6 +22437,13 @@ Assign mixin:
 .contact-cards.background--pink80 a:hover {
     color: #0c0c0e;
     background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+}
+
+.contact-cards.background--pink80 a:focus, .contact-cards.background--pink80 a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
 }
 
 .contact-cards.background--pink80 .card--contact {
