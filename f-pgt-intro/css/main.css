@@ -21368,9 +21368,6 @@ Assign mixin:
 
 @media (max-width: 1024px) {
     .banner__overlay.flex-wrapper--banner__overlay .banner__overlay__heading--grid {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -21378,22 +21375,8 @@ Assign mixin:
 
 @media (max-width: 1024px) and (min-width: 901px) {
     .banner__overlay.flex-wrapper--banner__overlay .banner__overlay__heading--grid {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1024px) and (min-width: 901px) {
-    .banner__overlay.flex-wrapper--banner__overlay .banner__overlay__heading--grid {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1024px) and (min-width: 1441px) {
-    .banner__overlay.flex-wrapper--banner__overlay .banner__overlay__heading--grid {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -54739,13 +54722,15 @@ main .landing:only-child .landing__top__cta {
         max-width: unset;
     }
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .course--pgt__introduction__ctas--apply > .cta-block > .cta-block__cta,
-    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .course--pgt__introduction__ctas--video > .cta-block > .cta-block__cta {
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .course--pgt__introduction__ctas--apply > .cta-block li,
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .course--pgt__introduction__ctas--video > .cta-block > .cta-block__cta,
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .course--pgt__introduction__ctas--video > .cta-block li {
         margin-left: auto;
         margin-right: auto;
         max-width: unset;
     }
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .how-to-apply--pgt--js .cta-block__cta {
-        width: 100%;
+        width: auto;
     }
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .how-to-apply--pgt--js .cta-block__cta .primary-cta-arrow--bright {
         width: 100%;
@@ -54753,6 +54738,12 @@ main .landing:only-child .landing__top__cta {
     }
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .how-to-apply--pgt--js .cta-block__cta .primary-cta-arrow--bright span {
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 432px) {
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .how-to-apply--pgt--js .cta-block__cta {
+        width: 100%;
     }
 }
 
@@ -55218,13 +55209,6 @@ main .landing:only-child .landing__top__cta {
 }
 
 @media (min-width: 769px) {
-    .course--pgt__our-students .course--pgt__student-work .course--pgt__student-work__heading,
-    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video {
-        grid-column: 2/-1;
-    }
-}
-
-@media (min-width: 769px) {
     .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video {
         display: flex;
     }
@@ -55252,12 +55236,6 @@ main .landing:only-child .landing__top__cta {
 
 .course--pgt__our-students .course--pgt__student-work .imageColLayout {
     grid-column: 1/-1;
-}
-
-@media (min-width: 769px) {
-    .course--pgt__our-students .course--pgt__student-work .imageColLayout {
-        grid-column: 2/-1;
-    }
 }
 
 .wrapper--course--pgt__usp {
@@ -56034,6 +56012,7 @@ main .landing:only-child .landing__top__cta {
 
 .js .course--pgt .tabs {
     padding-bottom: 1rem;
+    bottom: 0;
 }
 
 .js .course--pgt .tabs .tabs__links {
