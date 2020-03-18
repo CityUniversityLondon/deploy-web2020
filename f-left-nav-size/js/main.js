@@ -6349,7 +6349,7 @@ function launchModal(modal) {
   var dialogTopic = modal.getAttribute('data-topic');
   Array.from(modal.getElementsByTagName('li')).forEach((list, i) => {
     var wrapper = document.createElement('div'),
-        listAnchor = document.createElement('a'),
+        listButton = document.createElement('button'),
         listBody = Array.from(list.childNodes),
         listHeader = list.firstElementChild,
         customHeader = list.getAttribute('data-header'),
@@ -6358,7 +6358,9 @@ function launchModal(modal) {
     var title,
         keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(format),
         shortName = list.getAttribute('data-shortname');
-    listAnchor.setAttribute('href', '#');
+    listButton.classList.add('modal__button');
+    listButton.setAttribute('type', 'button');
+    listButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'open dialog');
     list.appendChild(wrapper);
     Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(wrapper, listBody);
     wrapper.classList.add("".concat(bodyClassName));
@@ -6375,18 +6377,14 @@ function launchModal(modal) {
 
     if (keepFormat) {
       list.insertBefore(listHeader, wrapper);
-      listHeader.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
+      listHeader.addEventListener('click', function () {
         createDialog(modal, "".concat(i), dialogArray);
       });
     } else {
-      listAnchor.textContent = listHeader.textContent;
+      listButton.textContent = listHeader.textContent;
       header.appendChild(listHeader);
-      list.insertBefore(listAnchor, wrapper);
-      listAnchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
+      list.insertBefore(listButton, wrapper);
+      listButton.addEventListener('click', function () {
         createDialog(modal, "".concat(i), dialogArray);
       });
     }
