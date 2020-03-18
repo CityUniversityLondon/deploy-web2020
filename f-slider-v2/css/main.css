@@ -45159,6 +45159,16 @@ blockquote footer cite {
     cursor: auto;
 }
 
+.slider-block__control {
+    display: flex;
+    justify-content: end;
+}
+
+.slider-block__control__progress {
+    margin: 1rem 2rem 0 0;
+    display: inline-block;
+}
+
 .slider-block__control__progress span {
     color: #d61726;
     font-size: 0.79rem;
@@ -45170,6 +45180,10 @@ blockquote footer cite {
 .slider-block__control__progress span:nth-of-type(2) {
     color: #696969;
     margin-right: 0.1875rem;
+}
+
+.slider-block__control__buttons {
+    display: inline-block;
 }
 
 .slider-block__control__buttons--default button {
@@ -45211,6 +45225,7 @@ blockquote footer cite {
 
 .slider-block__control__buttons--dot {
     display: flex;
+    margin: 0 auto;
 }
 
 .slider-block__control__buttons--dot button {
@@ -45241,7 +45256,7 @@ blockquote footer cite {
 .slider-block__control__buttons--dot button:active, .slider-block__control__buttons--dot button:focus {
     box-shadow: 0 0 0 0.25rem #1e1e1e;
     transition: all 0.2s ease;
-    border: 0.125rem dashed #ffffff;
+    border: 0.125rem dotted #ffffff;
     background-color: #1e1e1e;
 }
 
