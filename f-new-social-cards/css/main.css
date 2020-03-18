@@ -25452,6 +25452,20 @@ Assign mixin:
     margin-bottom: 2rem;
     padding: 1.5rem;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.2s;
+}
+
+.card--social-media:hover {
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.35);
+}
+
+.card--social-media:hover .card--social-media__source-title {
+    background-color: #d61726;
+    color: #ffffff;
+}
+
+.card--social-media:hover .card--social-media__source-title span {
+    color: #ffffff;
 }
 
 .card--social-media__header div:first-child {
@@ -25468,12 +25482,21 @@ Assign mixin:
     }
 }
 
-.card--social-media__header span {
-    margin-right: 0.25rem;
+.card--social-media__source-title {
+    border: 0.125rem solid #d61726;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    transition: background 0.2s, color 0.2s;
 }
 
-.card--social-media__source-title span.fa-twitter {
-    color: #19c3fe;
+.card--social-media__source-title span {
+    color: #1e1e1e;
+    padding: 0.5rem;
+    transition: color 0.2s;
+}
+
+.card--social-media__source-title .fa-facebook-f {
+    padding: 0.5rem 0.65rem;
 }
 
 .card--social-media__source__link span {
@@ -25482,6 +25505,34 @@ Assign mixin:
 
 .card--social-media__content {
     margin: 1.75rem 0;
+    color: #1e1e1e;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .card--social-media__content {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--social-media__content {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--social-media__content {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--social-media__content {
+        letter-spacing: -0.017em;
+    }
 }
 
 .card--social-media__controls a {
@@ -25499,13 +25550,54 @@ Assign mixin:
 }
 
 .card--social-media__time-info {
-    margin-top: 1.75rem;
-    border-top: 0.125rem solid #d8d8d8;
-    padding-top: 1.25rem;
     color: #696969;
     font-style: italic;
-    padding-top: 1rem;
-    border-top: solid 0.125rem #d8d8d8;
+}
+
+.card--social-media__footer {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    color: #696969;
+    margin-top: 1rem;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .card--social-media__footer {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--social-media__footer {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--social-media__footer {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--social-media__footer {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--social-media-instagram {
+    padding: initial;
+}
+
+.card--social-media-instagram .card--social-media__header {
+    position: absolute;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.card--social-media-instagram .card--social-media__footer {
+    padding: 0 1.5rem 1.5rem 1.5rem;
 }
 
 .card--testimonial {
