@@ -55440,6 +55440,12 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
+@media (max-width: 767px) {
+    .wrapper--course--pgt__student-life .course--pgt__student-life {
+        margin-top: 1rem;
+    }
+}
+
 .wrapper--course--pgt__student-life .course--pgt__student-life .pathway-image-cards {
     grid-column: 1/-1;
     padding: 0;
