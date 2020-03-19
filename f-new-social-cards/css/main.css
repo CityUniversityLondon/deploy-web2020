@@ -25468,6 +25468,13 @@ Assign mixin:
     color: #ffffff;
 }
 
+.card--social-media:focus:focus, .card--social-media:focus:active, .card--social-media:active:focus, .card--social-media:active:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
 .card--social-media__header {
     display: flex;
 }
