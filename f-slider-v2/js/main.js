@@ -7969,6 +7969,14 @@ function slicedArrayIterator(arr, pageAttr, visibilityAttr) {
     }
   }
 }
+/**
+* Called by the innitial launch function. It adds a progress bar/ page counter to the slider
+*
+* @param {HTMLElement} slider - an HTML element with the slider class.
+* @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+*/
+
 
 function createProgressTracker(slider, sliderType, sliderObject) {
   var wrapper = slider.parentNode.querySelector('.slider-block__control');
@@ -7984,6 +7992,14 @@ function createProgressTracker(slider, sliderType, sliderObject) {
     }
   }
 }
+/**
+* Called by the createProgressTracker() function. It generates the HTML elements for the progress bar
+*
+* @param {HTMLElement} wrapper - an HTML element with the slider-block__control class.
+* @param {string} type - it tells you which key to use from the sliderObject
+* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+*/
+
 
 function createProgressElements(wrapper, type, sliderObject) {
   var progress = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
@@ -8004,6 +8020,15 @@ function createProgressElements(wrapper, type, sliderObject) {
   progress.appendChild(separator);
   progress.appendChild(lastPage);
 }
+/**
+* Called by the innitial launch function. It adds control buttons to the slider
+*
+* @param {HTMLElement} slider - an HTML element with the slider class.
+* @param {string} sliderControl - determines what type of buttons to add to the slider
+* @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+*/
+
 
 function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
   var buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('div', [{
@@ -8060,6 +8085,14 @@ function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
     createSliderDot(slider, sliderType, buttonWrapper, sliderObject);
   }
 }
+/**
+* Creates HTML elements for the control buttons
+*
+* @param {string} classname - classname to be added to the button being generated
+* @param {string} type - it tells you which key to use from the sliderObject
+* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+*/
+
 
 function createButtonElement(classname, type, sliderObject) {
   var value;
@@ -8093,6 +8126,16 @@ function createButtonElement(classname, type, sliderObject) {
 
   return button;
 }
+/**
+* Event listener attached to default buttons
+*
+* @param {HTMLElement} slider - an HTML element with the slider class
+* @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+* @param {HTMLElement} wrapper - parent-wrapper HTML of buttons
+* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+*
+*/
+
 
 function defaultEvent(button, slider, type, sliderObject) {
   var currentSlide = Array.from(slider.querySelectorAll("[".concat(sliderObject[type].visAttr, " = 'true']"))),
@@ -8143,6 +8186,15 @@ function defaultEvent(button, slider, type, sliderObject) {
     counterEl.innerText = counterValue;
   }
 }
+/**
+* Creates HTML elements for the control buttons (called only if type = 'dot')
+*
+* @param {HTMLElement} slider - an HTML element with the slider class
+* @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+* @param {HTMLElement} wrapper - parent-wrapper HTML of buttons
+* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+*/
+
 
 function createSliderDot(slider, sliderType, wrapper, sliderObject) {
   var slidesTotal = sliderObject[sliderType].totalPages;
@@ -8174,6 +8226,14 @@ function createSliderDot(slider, sliderType, wrapper, sliderObject) {
     wrapper.appendChild(dot);
   }
 }
+/**
+* Event listener added to control buttons (if control type is 'dot')
+*
+* @param {HTMLElement} dot - HTML element the event listener is attached to
+* @param {HTMLElement} slider - an HTML element with the slider class
+* @param {HTMLElement} parent - parent-wrapper HTML element of buttons (dots)
+*/
+
 
 function dotEvent(dot, slider, parent) {
   var dots = parent.querySelectorAll('button'),
