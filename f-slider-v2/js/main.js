@@ -7814,6 +7814,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var className = 'slider';
+/**
+ * initial function that creates an object called sliderObject, this object will hold the necessary parameters to create the right
+ * behaviour for each slider customisation types
+ * it also calls 3 further functions: setVisibility() createProgressTracker() createSliderButton()
+ *
+ * @param {HTMLElement} slider - an HTML element with the slider class.
+ * 
+ */
 
 function launchSlider(slider) {
   var sliderChildren = [...slider.children],
@@ -7904,6 +7912,18 @@ function launchSlider(slider) {
     createSliderButton(slider, sliderControl, sliderType, sliderObject);
   }
 }
+/**
+ * setting visibility
+ * this function sets adds data attributes to <li> elements within slider, this attribute will be used by CSS to determine 
+ * if slides are visible or not on page load. This data attribute will be used to turn visibility on/off with the slider buttons'
+ * event listener
+ *
+ * @param {HTMLElement} slider - an HTML element with the slider class.
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ * 
+ */
+
 
 function setVisibility(slider, sliderType, sliderObject) {
   Array.from(slider.getElementsByTagName('li')).forEach((el, i) => {
@@ -7924,6 +7944,15 @@ function setVisibility(slider, sliderType, sliderObject) {
     slicedArrayIterator(deskSlides, sliderObject.desk.pageAttr, sliderObject.desk.visAttr);
   }
 }
+/**
+ * array iterator to set the same visibility attribute for groups of slides
+ * this is necessary when you want to have different number of slides visible on different screen sizes
+ *
+ * @param {array} arr - array that will be iterated
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ */
+
 
 function slicedArrayIterator(arr, pageAttr, visibilityAttr) {
   for (var i = 0; i < arr.length; i++) {
