@@ -44093,9 +44093,14 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .promo-content__wrap {
-    border: 2px solid blue;
     display: flex;
     flex-direction: row;
+}
+
+@media (max-width: 767px) {
+    .promo-content__wrap {
+        flex-direction: column;
+    }
 }
 
 .promo-content__wrap .promo-content__2col {
@@ -44107,9 +44112,12 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .promo-content__wrap .promo-content__2col .promo-content__long-text {
-    border: 1px dotted orange;
     margin-left: 0;
     margin-top: 1rem;
+}
+
+.promo-content__wrap .promo-content__1col:first-child {
+    margin-right: 2rem;
 }
 
 .promo-content__short-text {
