@@ -25547,6 +25547,10 @@ Assign mixin:
     }
 }
 
+.card--social-media__content--url {
+    color: #d61726;
+}
+
 .card--social-media__controls a {
     color: #696969;
     border-bottom: none;
