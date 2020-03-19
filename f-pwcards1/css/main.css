@@ -24380,16 +24380,22 @@ Assign mixin:
     border: none;
 }
 
-.pathway-image-cards a:hover, .pathway-image-cards a:active, .pathway-image-cards a:focus {
+@media (hover: hover) {
+    .pathway-image-cards a:hover {
+        background-image: none;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        z-index: 1;
+    }
+}
+
+.pathway-image-cards a:active, .pathway-image-cards a:focus {
     background-image: none;
     background-color: transparent;
     border: none;
     outline: none;
     z-index: 1;
-}
-
-.pathway-image-cards a:focus, .pathway-image-cards a:active {
-    outline: none;
 }
 
 .pathway-image-cards a img {
