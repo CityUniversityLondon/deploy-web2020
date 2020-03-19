@@ -54930,7 +54930,7 @@ main .landing:only-child .landing__top__cta {
 }
 
 .course--pgt__keyinfo {
-    padding-top: 1rem;
+    padding: 1rem 1.5rem;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -54964,12 +54964,6 @@ main .landing:only-child .landing__top__cta {
 
 .course--pgt__keyinfo .course--pgt__keyinfo__content {
     grid-column: 1/-1;
-}
-
-@media (min-width: 769px) {
-    .course--pgt__keyinfo .course--pgt__keyinfo__content {
-        grid-column: 3/-3;
-    }
 }
 
 .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item {
@@ -55239,6 +55233,7 @@ main .landing:only-child .landing__top__cta {
 }
 
 .wrapper--course--pgt__usp {
+    padding: 0 1.5rem;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -55274,23 +55269,12 @@ main .landing:only-child .landing__top__cta {
     grid-column: 1/-1;
 }
 
-@media (min-width: 769px) {
-    .wrapper--course--pgt__usp .course--pgt__usp {
-        grid-column: 3/-3;
-    }
-}
-
-.wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content {
-    margin-top: 1rem;
-}
-
 .wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .course--pgt__usp__heading {
     font-weight: 300;
     margin-bottom: 1rem;
 }
 
 .wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block {
-    margin-top: 1rem;
     background: #ffffff;
 }
 
@@ -55750,10 +55734,22 @@ main .landing:only-child .landing__top__cta {
 }
 
 .course--pgt__tabs {
-    margin: 1rem;
+    margin: 0 0.75rem;
 }
 
 @media (max-width: 1023px) {
+    .course--pgt__tabs {
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 899px) {
+    .course--pgt__tabs {
+        margin: 0 0.75rem;
+    }
+}
+
+@media (max-width: 767px) {
     .course--pgt__tabs {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -55761,7 +55757,7 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
-@media (max-width: 1023px) and (min-width: 901px) {
+@media (max-width: 767px) and (min-width: 901px) {
     .course--pgt__tabs {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -56016,6 +56012,7 @@ main .landing:only-child .landing__top__cta {
 
 .js .course--pgt .tabs .tabs__links {
     background-color: #ffffff;
+    margin-top: 0.75rem;
 }
 
 .js .course--pgt .tabs .tabs__panel {
