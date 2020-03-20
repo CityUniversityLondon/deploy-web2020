@@ -44092,34 +44092,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     font-weight: 600;
 }
 
-.promo-content__wrap {
-    display: flex;
-    flex-direction: row;
-}
-
-@media (max-width: 767px) {
-    .promo-content__wrap {
-        flex-direction: column;
-    }
-}
-
-.promo-content__wrap .promo-content__2col {
-    flex-direction: column;
-}
-
-.promo-content__wrap .promo-content__2col:first-child {
-    margin-right: 2rem;
-}
-
-.promo-content__wrap .promo-content__2col .promo-content__long-text {
-    margin-left: 0;
-    margin-top: 1rem;
-}
-
-.promo-content__wrap .promo-content__1col:first-child {
-    margin-right: 2rem;
-}
-
 .promo-content__short-text {
     color: #541b85;
 }
@@ -44127,6 +44099,32 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 @media (min-width: 769px) {
     .promo-content__long-text {
         margin-top: 0.75rem;
+    }
+}
+
+.promo-content__2col--2logos {
+    display: flex;
+    flex-direction: column;
+}
+
+.promo-content__2col--2logos .promo-content__logo__wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.promo-content__2col--2logos .promo-content__logo__wrap .promo-content__logo:first-child {
+    margin-right: 2rem;
+}
+
+@media (max-width: 431px) {
+    .promo-content__2col--2logos .promo-content__logo__wrap .promo-content__logo:first-child {
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .promo-content__2col--2logos .promo-content__logo__wrap .promo-content__logo {
+        max-width: 50%;
     }
 }
 
@@ -44154,32 +44152,26 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
-.promo-content__graphic {
+.promo-content__logo {
     margin-top: 0.75rem;
 }
 
-.promo-content__graphic span {
+.promo-content__logo span {
     color: #541b85;
 }
 
-.promo-content__graphic span.fad {
+.promo-content__logo span.fad {
     font-size: 3rem;
 }
 
-@media (min-width: 769px) and (max-width: 1279px) {
-    .promo-content__graphic {
-        max-width: 13rem;
+@media (max-width: 1279px) {
+    .promo-content__logo {
+        max-width: 14rem;
     }
 }
 
-.promo-content__graphic img {
-    max-width: 14.44rem;
-}
-
-@media (min-width: 769px) and (max-width: 1279px) {
-    .promo-content__graphic img {
-        max-width: 100%;
-    }
+.promo-content__logo img {
+    max-width: 100%;
 }
 
 .promo-content--icon-graphic .promo-content__graphic {
