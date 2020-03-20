@@ -22119,6 +22119,12 @@ Assign mixin:
     }
 }
 
+@media (max-width: 1023px) {
+    .card--casestudy a {
+        background-color: #f2f2f2;
+    }
+}
+
 .card--casestudy a:after {
     content: '';
     position: absolute;
@@ -22133,7 +22139,7 @@ Assign mixin:
 @media (hover: hover) {
     .card--casestudy a:hover:after {
         background-color: #f2f2f2;
-        transform: scale(1.03);
+        transform: scale(1.05);
         z-index: -1;
     }
 }
@@ -22218,6 +22224,9 @@ Assign mixin:
     .card--casestudy a:hover {
         background-image: none;
     }
+    .card--casestudy a:hover .card__arrow-link {
+        background-color: #d61726;
+    }
 }
 
 .card--casestudy a:visited .title {
@@ -22237,8 +22246,8 @@ Assign mixin:
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
-    border-bottom: 0.125rem solid #696969;
     display: inline;
+    border-bottom: 0.125rem solid #696969;
 }
 
 .card--casestudy a .card__title i,
@@ -22311,6 +22320,16 @@ Assign mixin:
     .card--casestudy a .card__title {
         letter-spacing: -0.017em;
     }
+}
+
+.card--casestudy a .card__arrow-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.75rem;
+    background-color: #0c0c0e;
+    color: #ffffff;
+    transition: background-color 0.2s ease-in;
 }
 
 .card--casestudy a p {
@@ -22464,6 +22483,12 @@ Assign mixin:
     position: relative;
 }
 
+@media (max-width: 1023px) {
+    .card--course {
+        background-color: #f2f2f2;
+    }
+}
+
 .card--course:after {
     content: '';
     position: absolute;
@@ -22478,7 +22503,7 @@ Assign mixin:
 @media (hover: hover) {
     .card--course:hover:after {
         background-color: #f2f2f2;
-        transform: scale(1.03);
+        transform: scale(1.05);
         z-index: -1;
     }
 }
@@ -23074,6 +23099,12 @@ Assign mixin:
     position: relative;
 }
 
+@media (max-width: 1023px) {
+    .card--event--landscape {
+        background-color: #f2f2f2;
+    }
+}
+
 .card--event--landscape:after {
     content: '';
     position: absolute;
@@ -23088,7 +23119,7 @@ Assign mixin:
 @media (hover: hover) {
     .card--event--landscape:hover:after {
         background-color: #f2f2f2;
-        transform: scale(1.03);
+        transform: scale(1.05);
         z-index: -1;
     }
 }
@@ -23674,6 +23705,9 @@ Assign mixin:
     .card--pathway:hover {
         background-image: none;
     }
+    .card--pathway:hover .card__arrow-link {
+        background-color: #d61726;
+    }
 }
 
 .card--pathway:visited .title {
@@ -23693,8 +23727,8 @@ Assign mixin:
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
-    border-bottom: 0.125rem solid #696969;
     display: inline;
+    border-bottom: 0.125rem solid #696969;
 }
 
 .card--pathway .card__title i,
@@ -23767,6 +23801,16 @@ Assign mixin:
     .card--pathway .card__title {
         letter-spacing: -0.017em;
     }
+}
+
+.card--pathway .card__arrow-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.75rem;
+    background-color: #0c0c0e;
+    color: #ffffff;
+    transition: background-color 0.2s ease-in;
 }
 
 .card--pathway p {
@@ -23921,6 +23965,12 @@ Assign mixin:
     */
 }
 
+@media (max-width: 1023px) {
+    .card--pathway--blue {
+        background-color: #5fd8fe;
+    }
+}
+
 .card--pathway--blue:after {
     content: '';
     position: absolute;
@@ -23970,6 +24020,12 @@ Assign mixin:
     */
 }
 
+@media (max-width: 1023px) {
+    .card--pathway--purple {
+        background-color: #b382ec;
+    }
+}
+
 .card--pathway--purple:after {
     content: '';
     position: absolute;
@@ -24017,6 +24073,12 @@ Assign mixin:
     /*
         Sets top stripe color
     */
+}
+
+@media (max-width: 1023px) {
+    .card--pathway--pink {
+        background-color: #df82c4;
+    }
 }
 
 .card--pathway--pink:after {
@@ -24068,6 +24130,12 @@ Assign mixin:
     */
 }
 
+@media (max-width: 1023px) {
+    .card--pathway--green {
+        background-color: #b9d698;
+    }
+}
+
 .card--pathway--green:after {
     content: '';
     position: absolute;
@@ -24115,6 +24183,12 @@ Assign mixin:
     /*
         Sets top stripe color
     */
+}
+
+@media (max-width: 1023px) {
+    .card--pathway--purple {
+        background-color: #b382ec;
+    }
 }
 
 .card--pathway--purple:after {
@@ -24166,6 +24240,12 @@ Assign mixin:
     */
 }
 
+@media (max-width: 1023px) {
+    .card--pathway--pink {
+        background-color: #df82c4;
+    }
+}
+
 .card--pathway--pink:after {
     content: '';
     position: absolute;
@@ -24215,6 +24295,12 @@ Assign mixin:
     */
 }
 
+@media (max-width: 1023px) {
+    .card--pathway--teal {
+        background-color: #7fd6df;
+    }
+}
+
 .card--pathway--teal:after {
     content: '';
     position: absolute;
@@ -24262,6 +24348,12 @@ Assign mixin:
     /*
         Sets top stripe color
     */
+}
+
+@media (max-width: 1023px) {
+    .card--pathway--yellow {
+        background-color: #ffef2b;
+    }
 }
 
 .card--pathway--yellow:after {
@@ -24444,6 +24536,12 @@ Assign mixin:
 @media (prefers-reduced-motion: reduce) {
     .pathway-image-cards a .thumbnail__image-container img {
         transition: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .pathway-image-cards a {
+        background-color: #f2f2f2;
     }
 }
 
@@ -24671,6 +24769,12 @@ Assign mixin:
 @media (prefers-reduced-motion: reduce) {
     .pathway-image-cards.background--pink80 a .thumbnail__image-container img {
         transition: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .pathway-image-cards.background--pink80 a {
+        background-color: #9c287b;
     }
 }
 
@@ -24963,6 +25067,12 @@ Assign mixin:
     }
 }
 
+@media (max-width: 1023px) {
+    .card--related-course a {
+        background-color: #f2f2f2;
+    }
+}
+
 .card--related-course a:after {
     content: '';
     position: absolute;
@@ -24977,7 +25087,7 @@ Assign mixin:
 @media (hover: hover) {
     .card--related-course a:hover:after {
         background-color: #f2f2f2;
-        transform: scale(1.03);
+        transform: scale(1.05);
         z-index: -1;
     }
 }
@@ -25004,6 +25114,9 @@ Assign mixin:
     .card--related-course a:hover {
         background-image: none;
     }
+    .card--related-course a:hover .card__arrow-link {
+        background-color: #d61726;
+    }
 }
 
 .card--related-course a:visited .title {
@@ -25023,8 +25136,8 @@ Assign mixin:
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
-    border-bottom: 0.125rem solid #696969;
     display: inline;
+    border-bottom: 0.125rem solid #696969;
 }
 
 .card--related-course a .card__title i,
@@ -25097,6 +25210,16 @@ Assign mixin:
     .card--related-course a .card__title {
         letter-spacing: -0.017em;
     }
+}
+
+.card--related-course a .card__arrow-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.75rem;
+    background-color: #0c0c0e;
+    color: #ffffff;
+    transition: background-color 0.2s ease-in;
 }
 
 .card--related-course a p {
@@ -50128,6 +50251,12 @@ button
     }
 }
 
+@media (max-width: 1023px) {
+    .finder__results__card a {
+        background-color: #f2f2f2;
+    }
+}
+
 .finder__results__card a:after {
     content: '';
     position: absolute;
@@ -50142,7 +50271,7 @@ button
 @media (hover: hover) {
     .finder__results__card a:hover:after {
         background-color: #f2f2f2;
-        transform: scale(1.03);
+        transform: scale(1.05);
         z-index: -1;
     }
 }
@@ -50169,6 +50298,9 @@ button
     .finder__results__card a:hover {
         background-image: none;
     }
+    .finder__results__card a:hover .card__arrow-link {
+        background-color: #d61726;
+    }
 }
 
 .finder__results__card a:visited .title {
@@ -50188,8 +50320,8 @@ button
     line-height: 1.25;
     letter-spacing: -0.008em;
     color: #696969;
-    border-bottom: 0.125rem solid #696969;
     display: inline;
+    border-bottom: 0.125rem solid #696969;
 }
 
 .finder__results__card a .card__title i,
@@ -50262,6 +50394,16 @@ button
     .finder__results__card a .card__title {
         letter-spacing: -0.017em;
     }
+}
+
+.finder__results__card a .card__arrow-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.75rem;
+    background-color: #0c0c0e;
+    color: #ffffff;
+    transition: background-color 0.2s ease-in;
 }
 
 .finder__results__card a p {
@@ -52362,6 +52504,12 @@ button
         Sets top stripe color
     */
     z-index: 1;
+}
+
+@media (max-width: 1023px) {
+    .content-hub__block-two .pathway-cards .card a {
+        background-color: #d61726;
+    }
 }
 
 .content-hub__block-two .pathway-cards .card a:after {
@@ -56238,6 +56386,12 @@ main .landing:only-child .landing__top__cta {
 @media (prefers-reduced-motion: reduce) {
     .course--pgt .pathway-image-cards a .thumbnail__image-container img {
         transition: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .course--pgt .pathway-image-cards a {
+        background-color: #9c287b;
     }
 }
 
