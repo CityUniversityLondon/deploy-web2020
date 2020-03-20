@@ -54833,6 +54833,7 @@ main .landing:only-child .landing__top__cta {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
+    padding: 0 1.5rem;
 }
 
 @media (min-width: 768px) {
