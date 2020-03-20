@@ -22245,9 +22245,9 @@ Assign mixin:
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
-    color: #696969;
+    color: #0c0c0e;
     display: inline;
-    border-bottom: 0.125rem solid #696969;
+    border-bottom: 0.125rem solid #0c0c0e;
 }
 
 .card--casestudy a .card__title i,
@@ -23726,9 +23726,9 @@ Assign mixin:
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
-    color: #696969;
+    color: #0c0c0e;
     display: inline;
-    border-bottom: 0.125rem solid #696969;
+    border-bottom: 0.125rem solid #0c0c0e;
 }
 
 .card--pathway .card__title i,
@@ -25135,9 +25135,9 @@ Assign mixin:
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
-    color: #696969;
+    color: #0c0c0e;
     display: inline;
-    border-bottom: 0.125rem solid #696969;
+    border-bottom: 0.125rem solid #0c0c0e;
 }
 
 .card--related-course a .card__title i,
@@ -50319,9 +50319,9 @@ button
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
-    color: #696969;
+    color: #0c0c0e;
     display: inline;
-    border-bottom: 0.125rem solid #696969;
+    border-bottom: 0.125rem solid #0c0c0e;
 }
 
 .finder__results__card a .card__title i,
