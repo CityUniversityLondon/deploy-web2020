@@ -58662,8 +58662,10 @@ button
     grid-column: 1 / -1;
 }
 
-.research-degree__overview__content .research-degree__overview__content__apply-links {
-    display: flex;
+@media (min-width: 768px) {
+    .research-degree__overview__content .research-degree__overview__content__apply-links {
+        display: flex;
+    }
 }
 
 .research-degree__overview__content .research-degree__overview__content__apply-links .cta-block {
@@ -58672,8 +58674,13 @@ button
 
 .research-degree__overview__content .research-degree__overview__content__apply-links .cta-block li,
 .research-degree__overview__content .research-degree__overview__content__apply-links .cta-block button,
-.research-degree__overview__content .research-degree__overview__content__apply-links .cta-block a {
+.research-degree__overview__content .research-degree__overview__content__apply-links .cta-block a,
+.research-degree__overview__content .research-degree__overview__content__apply-links .cta-block span {
     width: 100%;
+}
+
+.research-degree__overview__content .research-degree__overview__content__apply-links .cta-block li {
+    text-align: center;
 }
 
 .wrapper--research-degree__research-projects {
