@@ -22157,6 +22157,7 @@ Assign mixin:
 .card--casestudy a .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 @media (hover: hover) {
@@ -22533,6 +22534,7 @@ Assign mixin:
 .card--course .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 .card--course p {
@@ -23152,6 +23154,7 @@ Assign mixin:
 .card--event--landscape .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 @media (min-width: 769px) {
@@ -24030,6 +24033,7 @@ Assign mixin:
 .card--pathway--blue .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 .card--pathway--blue:before {
@@ -24088,6 +24092,7 @@ Assign mixin:
 .card--pathway--purple .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 .card--pathway--purple:before {
@@ -24146,6 +24151,7 @@ Assign mixin:
 .card--pathway--pink .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 .card--pathway--pink:before {
@@ -24204,6 +24210,7 @@ Assign mixin:
 .card--pathway--green .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 .card--pathway--green:before {
@@ -24262,6 +24269,7 @@ Assign mixin:
 .card--pathway--purple .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 .card--pathway--purple:before {
@@ -24320,6 +24328,7 @@ Assign mixin:
 .card--pathway--pink .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 .card--pathway--pink:before {
@@ -24378,6 +24387,7 @@ Assign mixin:
 .card--pathway--teal .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 .card--pathway--teal:before {
@@ -24436,6 +24446,7 @@ Assign mixin:
 .card--pathway--yellow .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 .card--pathway--yellow:before {
@@ -24628,6 +24639,7 @@ Assign mixin:
 .pathway-image-cards a .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 @media (hover: hover) {
@@ -24864,6 +24876,7 @@ Assign mixin:
 .pathway-image-cards.background--pink80 a .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 @media (hover: hover) {
@@ -25162,6 +25175,7 @@ Assign mixin:
 .card--related-course a .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 .card--related-course a:hover, .card--related-course a:active, .card--related-course a:focus {
@@ -50358,6 +50372,7 @@ button
 .finder__results__card a .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 .finder__results__card a:hover, .finder__results__card a:active, .finder__results__card a:focus {
@@ -52625,6 +52640,7 @@ button
 .content-hub__block-two .pathway-cards .card a .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 .content-hub__block-two .pathway-cards .card a:before {
@@ -56511,6 +56527,7 @@ main .landing:only-child .landing__top__cta {
 .course--pgt .pathway-image-cards a .card__inner {
     z-index: 0;
     position: relative;
+    padding-bottom: 1rem;
 }
 
 @media (hover: hover) {
