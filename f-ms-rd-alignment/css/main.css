@@ -58763,14 +58763,14 @@ button
 @media (min-width: 768px) {
     .wrapper--research-degree__promo-box,
     .research-degree__overview {
-        grid-column: 2 / 18;
+        grid-column: 2/-2;
     }
 }
 
 @media (min-width: 1281px) {
     .wrapper--research-degree__promo-box,
     .research-degree__overview {
-        grid-column: 3 / 17;
+        grid-column: 3/-3;
     }
 }
 
@@ -58792,19 +58792,15 @@ button
     }
 }
 
-.wrapper--research-degree__research-projects .research-degree__research-projects h2.research-degree__research-projects__heading {
-    margin-top: 2.5rem;
-}
-
 @media (min-width: 768px) {
     .wrapper--research-degree__research-projects .research-degree__research-projects {
-        grid-column: 1 / -1;
+        grid-column: 1/-1;
     }
 }
 
 @media (min-width: 901px) {
     .wrapper--research-degree__research-projects .research-degree__research-projects {
-        grid-column: 2 / 18;
+        grid-column: 2/-2;
     }
 }
 
@@ -58898,7 +58894,7 @@ button
 
 .research-degree__overview .research-degree__overview__content .show-more,
 .research-degree__overview .research-degree__overview__content .accordion {
-    grid-column: 1 / -1;
+    grid-column: 1/-1;
 }
 
 @media (min-width: 768px) {
@@ -58956,11 +58952,11 @@ button
 }
 
 .wrapper--research-degree__testimonials h2 {
-    grid-column: 1 / -1;
+    grid-column: 1/-1;
 }
 
 .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider {
-    grid-column: 1 / -1;
+    grid-column: 1/-1;
 }
 
 .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider .slider__active-slide {
