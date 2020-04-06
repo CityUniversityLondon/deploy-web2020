@@ -62483,8 +62483,10 @@ main .standard-content .banner-text {
     }
 }
 
-.js .course--ug .tabs .tabs__links li button {
-    height: 5rem;
+@media (min-width: 1281px) {
+    .js .course--ug .tabs .tabs__links li button {
+        height: 5rem;
+    }
 }
 
 .course--ug .parallax {
