@@ -48849,19 +48849,19 @@ button
 }
 
 .chart--purple path:nth-child(3) {
-    stroke: #3f1464;
+    stroke: #2a0d43;
 }
 
 .chart--purple .chart__legend__item:nth-child(3) .fa.fa-circle {
-    color: #3f1464;
+    color: #2a0d43;
 }
 
 .chart--purple path:nth-child(4) {
-    stroke: #11334c;
+    stroke: #00294a;
 }
 
 .chart--purple .chart__legend__item:nth-child(4) .fa.fa-circle {
-    color: #11334c;
+    color: #00294a;
 }
 
 .chart--red path:nth-child(1) {
@@ -48873,27 +48873,27 @@ button
 }
 
 .chart--red path:nth-child(2) {
-    stroke: #6c953c;
+    stroke: #0177a0;
 }
 
 .chart--red .chart__legend__item:nth-child(2) .fa.fa-circle {
-    color: #6c953c;
+    color: #0177a0;
 }
 
 .chart--red path:nth-child(3) {
-    stroke: #039cab;
+    stroke: #5b0b1b;
 }
 
 .chart--red .chart__legend__item:nth-child(3) .fa.fa-circle {
-    color: #039cab;
+    color: #5b0b1b;
 }
 
 .chart--red path:nth-child(4) {
-    stroke: #004a51;
+    stroke: #00294a;
 }
 
 .chart--red .chart__legend__item:nth-child(4) .fa.fa-circle {
-    color: #004a51;
+    color: #00294a;
 }
 
 .chart--pink path:nth-child(1) {
@@ -48913,19 +48913,19 @@ button
 }
 
 .chart--pink path:nth-child(3) {
-    stroke: #5d184a;
+    stroke: #3e1031;
 }
 
 .chart--pink .chart__legend__item:nth-child(3) .fa.fa-circle {
-    color: #5d184a;
+    color: #3e1031;
 }
 
 .chart--pink path:nth-child(4) {
-    stroke: #005058;
+    stroke: #00393f;
 }
 
 .chart--pink .chart__legend__item:nth-child(4) .fa.fa-circle {
-    color: #005058;
+    color: #00393f;
 }
 
 .chart-row {
