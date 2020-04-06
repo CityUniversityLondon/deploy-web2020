@@ -47088,6 +47088,8 @@ article .link-copy {
         max-width: unset;
         text-align: center;
         margin-right: 0.75rem;
+        display: flex;
+        align-items: flex-end;
     }
     .js .tabs .tabs__links li:last-of-type {
         margin-right: 0;
@@ -47134,7 +47136,6 @@ article .link-copy {
         border-width: 0.125rem;
         color: #696969;
         display: block;
-        height: 100%;
         overflow: hidden;
         padding: 0;
         position: relative;
