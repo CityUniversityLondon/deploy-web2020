@@ -63872,7 +63872,10 @@ main .standard-content .banner-text {
     .js main > .course--ug .tabs__panel:not([hidden]) .tabs .tabs .tabs__panel__body {
         margin-top: 1.25rem;
     }
-    .js main > .course--ug .tabs--accordion .accordion ul[data-topic='Year 1'] button, .js main > .course--ug .tabs--accordion .accordion ul[data-topic='Year 2'] button, .js main > .course--ug .tabs--accordion .accordion ul[data-topic='Year 3'] button, .js main > .course--ug .tabs--accordion .accordion ul[data-topic='Year 4'] button {
+    .js main > .course--ug .tabs--accordion .accordion ul[data-topic='Year 1'] button,
+    .js main > .course--ug .tabs--accordion .accordion ul[data-topic='Year 2'] button,
+    .js main > .course--ug .tabs--accordion .accordion ul[data-topic='Year 3'] button,
+    .js main > .course--ug .tabs--accordion .accordion ul[data-topic='Year 4'] button {
         text-align: left;
         vertical-align: middle;
     }
