@@ -62484,7 +62484,7 @@ main .standard-content .banner-text {
 }
 
 .js .course--ug .tabs .tabs__links li button {
-    min-height: 5rem;
+    height: 5rem;
 }
 
 .course--ug .parallax {
