@@ -48833,27 +48833,27 @@ button
 }
 
 .chart--purple path:nth-child(1) {
-    stroke: #8e3bbb;
+    stroke: #832c9e;
 }
 
 .chart--purple .chart__legend__item:nth-child(1) .fa.fa-circle {
-    color: #8e3bbb;
+    color: #832c9e;
 }
 
 .chart--purple path:nth-child(2) {
-    stroke: #3f1464;
+    stroke: #0177a0;
 }
 
 .chart--purple .chart__legend__item:nth-child(2) .fa.fa-circle {
-    color: #3f1464;
+    color: #0177a0;
 }
 
 .chart--purple path:nth-child(3) {
-    stroke: #0194c7;
+    stroke: #3f1464;
 }
 
 .chart--purple .chart__legend__item:nth-child(3) .fa.fa-circle {
-    color: #0194c7;
+    color: #3f1464;
 }
 
 .chart--purple path:nth-child(4) {
@@ -48865,27 +48865,27 @@ button
 }
 
 .chart--red path:nth-child(1) {
-    stroke: #e93745;
+    stroke: #d61726;
 }
 
 .chart--red .chart__legend__item:nth-child(1) .fa.fa-circle {
-    color: #e93745;
+    color: #d61726;
 }
 
 .chart--red path:nth-child(2) {
-    stroke: #790b21;
+    stroke: #6c953c;
 }
 
 .chart--red .chart__legend__item:nth-child(2) .fa.fa-circle {
-    color: #790b21;
+    color: #6c953c;
 }
 
 .chart--red path:nth-child(3) {
-    stroke: #93bf60;
+    stroke: #039cab;
 }
 
 .chart--red .chart__legend__item:nth-child(3) .fa.fa-circle {
-    color: #93bf60;
+    color: #039cab;
 }
 
 .chart--red path:nth-child(4) {
@@ -48897,27 +48897,27 @@ button
 }
 
 .chart--pink path:nth-child(1) {
-    stroke: #cf44a7;
+    stroke: #bb3094;
 }
 
 .chart--pink .chart__legend__item:nth-child(1) .fa.fa-circle {
-    color: #cf44a7;
+    color: #bb3094;
 }
 
 .chart--pink path:nth-child(2) {
-    stroke: #5d184a;
+    stroke: #039cab;
 }
 
 .chart--pink .chart__legend__item:nth-child(2) .fa.fa-circle {
-    color: #5d184a;
+    color: #039cab;
 }
 
 .chart--pink path:nth-child(3) {
-    stroke: #19b5c5;
+    stroke: #5d184a;
 }
 
 .chart--pink .chart__legend__item:nth-child(3) .fa.fa-circle {
-    color: #19b5c5;
+    color: #5d184a;
 }
 
 .chart--pink path:nth-child(4) {
