@@ -7961,6 +7961,20 @@ function launchSlider(slider) {
     createSliderButton(slider, sliderControl, sliderType, sliderObject);
   }
 
+  setSwipe(slider, sliderType, sliderObject, sliderControl);
+}
+/**
+ * setup swipe listeners
+ * this function add events listener to calculate touch direction
+ *
+ * @param {HTMLElement} slider - an HTML element with the slider class.
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ * @param {string} sliderControl - type of control- determines is the control is dot
+ */
+
+
+function setSwipe(slider, sliderType, sliderObject, sliderControl) {
   let t = null;
   slider.addEventListener('mousedown', swipeDown, false);
   slider.addEventListener('touchstart', swipeDown, false);
