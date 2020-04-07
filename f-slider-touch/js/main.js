@@ -7721,12 +7721,13 @@ function launchResponsiveSlider(slider) {
 /*!******************************************************************!*\
   !*** ./src/patterns/slider/custom_counter/slider_dot_counter.js ***!
   \******************************************************************/
-/*! exports provided: createSliderDot */
+/*! exports provided: createSliderDot, dotEvent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createSliderDot", function() { return createSliderDot; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dotEvent", function() { return dotEvent; });
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
@@ -7751,13 +7752,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
-* Creates HTML elements for the control buttons (called only if type = 'dot')
-*
-* @param {HTMLElement} slider - an HTML element with the slider class
-* @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
-* @param {HTMLElement} wrapper - parent-wrapper HTML of buttons
-* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
-*/
+ * Creates HTML elements for the control buttons (called only if type = 'dot')
+ *
+ * @param {HTMLElement} slider - an HTML element with the slider class
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {HTMLElement} wrapper - parent-wrapper HTML of buttons
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ */
 
 function createSliderDot(slider, sliderType, wrapper, sliderObject) {
   let slidesTotal = sliderObject[sliderType].totalPages;
@@ -7790,12 +7791,12 @@ function createSliderDot(slider, sliderType, wrapper, sliderObject) {
   }
 }
 /**
-* Event listener added to control buttons (if control type is 'dot')
-*
-* @param {HTMLElement} dot - HTML element the event listener is attached to
-* @param {HTMLElement} slider - an HTML element with the slider class
-* @param {HTMLElement} parent - parent-wrapper HTML element of buttons (dots)
-*/
+ * Event listener added to control buttons (if control type is 'dot')
+ *
+ * @param {HTMLElement} dot - HTML element the event listener is attached to
+ * @param {HTMLElement} slider - an HTML element with the slider class
+ * @param {HTMLElement} parent - parent-wrapper HTML element of buttons (dots)
+ */
 
 function dotEvent(dot, slider, parent) {
   let dots = parent.querySelectorAll('button'),
@@ -7963,10 +7964,29 @@ function launchSlider(slider) {
   slider.addEventListener('mouseup', function (e) {
     e.preventDefault();
     let swipe = Math.sign(t(e));
-    let btn = swipe === -1 ? slider.nextSibling.lastChild.firstChild : swipe === 1 ? slider.nextSibling.lastChild.lastChild : null;
 
-    if (btn && !btn.disabled) {
-      defaultEvent(btn, slider, sliderControl, sliderObject);
+    if (sliderControl === 'dot') {
+      let btnWrap = slider.nextSibling,
+          curBtn = btnWrap.querySelector('[aria-expanded="true"]'),
+          actionBtn = null;
+
+      if (curBtn.nextSibling && curBtn.previousSibling) {
+        actionBtn = swipe === -1 ? curBtn.previousSibling : swipe === 1 ? curBtn.nextSibling : null;
+        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_5__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
+      } else if (!curBtn.nextSibling) {
+        actionBtn = swipe === -1 ? curBtn.previousSibling : swipe === 1 ? curBtn.parentElement.childNodes[0] : null;
+        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_5__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
+      } else {
+        let btnLength = btnWrap.firstChild.childNodes.length;
+        actionBtn = swipe === -1 ? curBtn.parentElement.childNodes[btnLength - 1] : swipe === 1 ? curBtn.nextSibling : null;
+        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_5__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
+      }
+    } else {
+      let btn = swipe === -1 ? slider.nextSibling.lastChild.firstChild : swipe === 1 ? slider.nextSibling.lastChild.lastChild : null;
+
+      if (btn && !btn.disabled) {
+        defaultEvent(btn, slider, sliderType, sliderObject);
+      }
     }
   }, false);
 }
