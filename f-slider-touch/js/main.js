@@ -7962,11 +7962,17 @@ function launchSlider(slider) {
   }
 
   let t = null;
-  slider.addEventListener('mousedown', function (e) {
+  slider.addEventListener('mousedown', swipeDown, false);
+  slider.addEventListener('touchstart', swipeDown, false);
+  slider.addEventListener('mouseup', swipeUp, false);
+  slider.addEventListener('touchend', swipeUp, false);
+
+  function swipeDown(e) {
     e.preventDefault();
     t = Object(_image_carousel_swipe__WEBPACK_IMPORTED_MODULE_6__["swipeCal"])(e);
-  }, false);
-  slider.addEventListener('mouseup', function (e) {
+  }
+
+  function swipeUp(e) {
     e.preventDefault();
     let swipe = Math.sign(t(e));
 
@@ -7993,7 +7999,7 @@ function launchSlider(slider) {
         defaultEvent(btn, slider, sliderType, sliderObject);
       }
     }
-  }, false);
+  }
 }
 /**
  * setting visibility
