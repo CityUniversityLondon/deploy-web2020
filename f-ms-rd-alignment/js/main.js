@@ -528,22 +528,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/finder/finder-mini */ "./src/patterns/finder/finder-mini.js");
 /* harmony import */ var _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/image-carousel/default-carousel/default-carousel */ "./src/patterns/image-carousel/default-carousel/default-carousel.js");
 /* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
-/* harmony import */ var _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-slider */ "./src/patterns/key-info-box/key-info-slider.js");
-/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
-/* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
-/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
-/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
-/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
-/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
-/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
-/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
-/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
-/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
-/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
-/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/dropdown-filter/dropdown-filter */ "./src/patterns/dropdown-filter/dropdown-filter.js");
+/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
+/* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
+/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
+/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
+/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
+/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
+/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
+/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
+/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
+/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
+/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
+/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/dropdown-filter/dropdown-filter */ "./src/patterns/dropdown-filter/dropdown-filter.js");
 
 
 /**
@@ -583,8 +582,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_28__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_27__["default"]]);
 
 /***/ }),
 
@@ -1795,7 +1793,7 @@ function finder__results__bestbet(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__results__card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "finder__results__card__heading underline-transition__title"
+    className: "card__title finder__results__card__heading"
   }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__description"
   }, props.details.description))));
@@ -1974,10 +1972,8 @@ function finder__results__casestudy(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "underline-transition__title"
-  }, props.details.title)), subtitle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department, centre)));
+    className: "card__title finder__results__card__heading"
+  }, props.details.title), subtitle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department, centre)));
 }
 
 finder__results__casestudy.propTypes = {
@@ -2045,10 +2041,8 @@ function finder__results__centre(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "underline-transition__title"
-  }, props.details.title)), subject, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department)));
+    className: "card__title finder__results__card__heading"
+  }, props.details.title), subject, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department)));
 }
 
 finder__results__centre.propTypes = {
@@ -2125,8 +2119,8 @@ function finder__results__contact(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__results__card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.title)), jobtitle, department, room, email, telephone));
+    className: "card__title finder__results__card__heading"
+  }, props.details.title), jobtitle, department, room, email, telephone));
 }
 
 finder__results__contact.propTypes = {
@@ -2225,10 +2219,8 @@ function finder__results__course(props) {
   }, clearing, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "underline-transition__title"
-  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.title, props.query.query) : props.details.title, external)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "card__title finder__results__card__heading"
+  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.title, props.query.query) : props.details.title, external), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__description"
   }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(subtitle, props.query.query) : subtitle && subtitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.c, props.query.query) : props.details.metaData.c && props.details.metaData.c), school, award, duration, courseCode, method, location)));
 }
@@ -2305,10 +2297,8 @@ function finder__results__funding(props) {
   }, hardship, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "underline-transition__title"
-  }, props.details.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "card__title finder__results__card__heading"
+  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__description"
   }, props.details.metaData.type), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), programme, feestatus, school)));
 }
@@ -2374,10 +2364,8 @@ function finder__results__contact(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "underline-transition__title"
-  }, props.details.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department)));
+    className: "card__title finder__results__card__heading"
+  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department)));
 }
 
 finder__results__contact.propTypes = {
@@ -2440,10 +2428,8 @@ function finder__results__news(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "underline-transition__title"
-  }, props.details.title)), dateString, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), hashtags)));
+    className: "card__title finder__results__card__heading"
+  }, props.details.title), dateString, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), hashtags)));
 }
 
 finder__results__news.propTypes = {
@@ -2508,10 +2494,8 @@ function finder__results__profile(props) {
   }, headshot, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__results__card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "underline-transition__title"
-  }, props.details.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "card__title finder__results__card__heading"
+  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__description"
   }, props.details.metaData.jobtitle), school, department)));
 }
@@ -5431,224 +5415,6 @@ function init(elem) {
 
 /***/ }),
 
-/***/ "./src/patterns/key-info-box/key-info-slider.js":
-/*!******************************************************!*\
-  !*** ./src/patterns/key-info-box/key-info-slider.js ***!
-  \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.promise */ "./node_modules/core-js/modules/es.promise.js");
-/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
-
-
-/**
- * Key information box
- *
- * @module patterns/key-info-box/key-info-box
- * @author Mark Skinsley <mark.skinsley@city.ac.uk>
- * @copyright City, University of London 2019
- */
-
-const className = 'key-information--lifelong-learning';
-let listings = document.querySelector('.key-information--lifelong-learning > ul'),
-    batchQuantity = 3,
-    contentToggles = Array.from(document.querySelectorAll('.content-toggle button')),
-    contentSliders = document.querySelectorAll('.content-slider'),
-    browserWidth = document.documentElement.scrollWidth,
-    prevBtn = document.getElementById('key-info-previous-item'),
-    nextBtn = document.getElementById('key-info-next-item'),
-    // listingHeight = '',
-listingDates = document.querySelectorAll('.key-information--lifelong-learning > ul > li'),
-    listingsVisible = [],
-    defaultDuration = 2000,
-    edgeOffset = 100; // Zen scroll setup
-
-zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
-
-function dateTabIndex() {
-  for (const listingDate of listingDates) {
-    listingDate.setAttribute('tabindex', '-1');
-  }
-} // Visible listings: needed to decide if more content still to be loaded.
-
-
-function calculateVisibleListings() {
-  listingsVisible = [];
-  Array.from(listings.children).forEach(elem => {
-    if (!elem.classList.contains('hide')) {
-      listingsVisible.push(elem);
-    }
-  });
-} // Initial listings display
-
-
-function defaultListingsDisplay() {
-  const listElements = Array.from(listings.children);
-  listElements.forEach((elem, i) => {
-    i > batchQuantity - 1 ? elem.classList.add('hide') : elem.style.display = 'grid';
-  });
-}
-/**
- * Launches Key Info slider pattern. Pass in how many listings should display per batch,
- * i.e. each time user selects 'Load more'.
- *  */
-
-
-function launchKeyInfo(batchQuantity) {
-  const digit = document.querySelector('.key-information--lifelong-learning__current__digit');
-  let counter = 0; // Mobile: Show listing entry based on navigation button clicks
-
-  function listingDisplay() {
-    Array.from(listings.children).forEach((listing, i) => {
-      if (browserWidth < 768 && Array.from(listings.children).length > 1) {
-        i === counter ? listing.style.display = 'block' : listing.style.display = 'none';
-      }
-
-      listing.setAttribute('data-id', "listing-".concat(i));
-    });
-  } // Mobile: Enable/disable navigation buttons based on position of listing in collection
-
-
-  function navBtnState() {
-    if (counter === 0) {
-      prevBtn.setAttribute('disabled', true);
-      nextBtn.removeAttribute('disabled');
-    } else if (counter > 0 && counter < Array.from(listings.children).length - 1) {
-      prevBtn.removeAttribute('disabled');
-      nextBtn.removeAttribute('disabled');
-    } else {
-      nextBtn.setAttribute('disabled', true);
-      prevBtn.removeAttribute('disabled');
-    }
-  } // // Mobile: Set mobile listings navigation buttons to correct position based on listing height
-  // function navBtnPosition() {
-  //     Array.from(listings.children).forEach((listing, i) => {
-  //         if (counter === i) {
-  //             listingHeight = listing.dataset.height;
-  //         }
-  //     });
-  // }
-  // Run regardless of viewport size
-
-
-  dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
-
-  if (browserWidth >= 768) {
-    if (Array.from(listings.children).length > batchQuantity) {
-      listingDisplay();
-      defaultListingsDisplay();
-      calculateVisibleListings();
-      contentToggles.forEach(contentToggle => {
-        contentToggle.addEventListener('click', e => {
-          // This will increase with each 'Load more' click, so visible listings
-          // must be captured before any further listings are made visible
-          let preExpandListingsVisible = listingsVisible.length;
-          e.preventDefault();
-
-          if (preExpandListingsVisible < Array.from(listings.children).length) {
-            Array.from(listings.children).forEach((elem, i) => {
-              let targetListing = document.querySelector("[data-id='listing-".concat(preExpandListingsVisible, "']"));
-              let listingsVisibleLength = parseInt(listingsVisible.length) + batchQuantity;
-              const listingsLength = Array.from(listings.children).length;
-              let remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
-
-              zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(targetListing, 200);
-              targetListing.focus(); // let targetListingDate = targetListing.querySelectorAll(
-              //     '.key-info__date'
-              // );
-              // Final batch of listings, zen scroll to 'load more' button and offset
-
-              if (remainingItems <= 0) {
-                zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(contentToggle, 200);
-                contentToggle.style.display = 'none';
-              } // targetListingDate[0].focus();
-              // Bring in newly visible listings in two phases to allow for opacity transition
-
-
-              if (i < preExpandListingsVisible + batchQuantity) {
-                const promise = new Promise(resolve => {
-                  resolve(elem.style.display = 'grid');
-                });
-                promise.then(() => {
-                  elem.classList.remove('hide');
-                }); // Calculating visible listings must run here after display properties are updated
-
-                promise.then(() => {
-                  calculateVisibleListings();
-                });
-              }
-            });
-          }
-        }, false);
-      });
-    } else {
-      contentToggles.forEach(elem => {
-        elem.style.display = 'none';
-      });
-    } // Mobile: one listing visible at a time
-
-  } else if (browserWidth < 768 && Array.from(listings.children).length > 1) {
-    Array.from(listings.children).forEach((listing, i) => {
-      // Capture listing height and set to data attribute
-      listing.style.display = 'block';
-      listing.dataset.height = listing.offsetHeight;
-      listing.style.display = 'none'; // On load, set mobile navigation buttons at correct height
-      // counter === 0 && i === 0 ? navBtnPosition() : null;
-
-      i > 0 ? listing.style.display = 'none' : listing.style.display = 'block';
-    });
-    Array.from(contentSliders).forEach(contentSlider => {
-      contentSlider.removeAttribute('hidden');
-    });
-    navBtnState();
-    prevBtn.addEventListener('click', () => {
-      counter = counter - 1;
-      navBtnState(); // navBtnPosition();
-
-      listingDisplay();
-      digit.innerText = counter + 1;
-    });
-    nextBtn.addEventListener('click', () => {
-      counter = counter + 1;
-      navBtnState(); // navBtnPosition();
-
-      listingDisplay();
-      digit.innerText = counter + 1;
-    });
-  } else if (browserWidth < 768 && Array.from(listings.children).length === 1) {
-    Array.from(listings.children).forEach((listing, i) => {
-      i > 0 ? listing.style.display = 'none' : listing.style.display = 'block';
-    });
-  }
-}
-
-function launchKeyInfoSlider() {
-  launchKeyInfo(batchQuantity);
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchKeyInfoSlider,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
 /***/ "./src/patterns/link-finder/link-finder.js":
 /*!*************************************************!*\
   !*** ./src/patterns/link-finder/link-finder.js ***!
@@ -7923,6 +7689,109 @@ function launchResponsiveSlider(slider) {
 
 /***/ }),
 
+/***/ "./src/patterns/slider/custom_counter/slider_dot_counter.js":
+/*!******************************************************************!*\
+  !*** ./src/patterns/slider/custom_counter/slider_dot_counter.js ***!
+  \******************************************************************/
+/*! exports provided: createSliderDot */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createSliderDot", function() { return createSliderDot; });
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../aria-attributes */ "./src/aria-attributes.js");
+
+
+
+
+
+
+/**
+ * 'dot' style counter customisation for global slider
+ *
+ * @module patterns/slider/slider/custom_counter
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+/**
+* Creates HTML elements for the control buttons (called only if type = 'dot')
+*
+* @param {HTMLElement} slider - an HTML element with the slider class
+* @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+* @param {HTMLElement} wrapper - parent-wrapper HTML of buttons
+* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+*/
+
+function createSliderDot(slider, sliderType, wrapper, sliderObject) {
+  let slidesTotal = sliderObject[sliderType].totalPages;
+  wrapper.classList.add('slider-block__control__buttons--dot');
+
+  for (let i = 0; i < slidesTotal; i++) {
+    let dot = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('button', [{
+      label: 'data-page',
+      val: i
+    }, {
+      label: 'aria-label',
+      val: "Open slide ".concat(i + 1)
+    }, {
+      label: 'type',
+      val: 'button'
+    }]);
+
+    if (i === 0) {
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'slide');
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'true');
+      dot.setAttribute('disabled', 'true');
+    } else {
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
+    }
+
+    dot.addEventListener('click', function () {
+      dotEvent(this, slider, wrapper);
+    });
+    wrapper.appendChild(dot);
+  }
+}
+/**
+* Event listener added to control buttons (if control type is 'dot')
+*
+* @param {HTMLElement} dot - HTML element the event listener is attached to
+* @param {HTMLElement} slider - an HTML element with the slider class
+* @param {HTMLElement} parent - parent-wrapper HTML element of buttons (dots)
+*/
+
+function dotEvent(dot, slider, parent) {
+  let dots = parent.querySelectorAll('button'),
+      slides = [...slider.children],
+      active = dot.getAttribute('data-page');
+  dots.forEach(el => {
+    el.removeAttribute('disabled');
+    el.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
+    el.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'slide');
+  });
+  dot.setAttribute('disabled', true);
+  dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'slide');
+  dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'true');
+  slides.forEach(el => {
+    el.setAttribute('data-visible', false);
+
+    if (active === el.getAttribute('data-page')) {
+      el.setAttribute('data-visible', true);
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./src/patterns/slider/slider.js":
 /*!***************************************!*\
   !*** ./src/patterns/slider/slider.js ***!
@@ -7939,6 +7808,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./custom_counter/slider_dot_counter */ "./src/patterns/slider/custom_counter/slider_dot_counter.js");
 
 
 
@@ -7946,158 +7817,389 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Slider
+ * Global slider
  *
  * @module patterns/slider/slider
- * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
+ * @author Web Development
+ * @copyright City, University of London 2020
  */
+
+
 
 const className = 'slider';
 /**
- * Creates a slider when adding slider class to an ul element. The li elements are the slides.
+ * initial function that creates an object called sliderObject, this object will hold the necessary parameters to create the right
+ * behaviour for each slider customisation types
+ * it also calls 3 further functions: setVisibility() createProgressTracker() createSliderButton()
  *
- * @param {className} slider - class name of Ul element containing li (slides).
+ * @param {HTMLElement} slider - an HTML element with the slider class.
+ * 
  */
 
-function initSlider(slider) {
-  // slider items count
-  let sliderChildren = [...slider.children];
-  let sliderChildrenLength = sliderChildren.length;
-
-  if (sliderChildrenLength < 2) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(slider, className, false);
-    return;
-  }
-
-  for (const sliderChild of sliderChildren.entries()) {
-    if (sliderChild[0] < 1) {
-      sliderChild[1].classList.add('slider__active-slide');
-    } else {
-      // only displays first slide and hides rest
-      sliderChild[1].classList.add('slider__slide');
+function launchSlider(slider) {
+  const sliderChildren = [...slider.children],
+        totalItems = sliderChildren.length,
+        perPageTablet = 2,
+        // if this needs to be customisable in the future then it could come from a data attribute with set default values
+  perPageDesk = 3,
+        maxTablet = Math.ceil(totalItems / perPageTablet),
+        maxDesk = Math.ceil(totalItems / perPageDesk);
+  const sliderObject = {
+    default: {
+      totalPages: totalItems,
+      endPosition: totalItems - 1,
+      maxItem: 1,
+      pageAttr: 'data-page',
+      visAttr: 'data-visible',
+      counterAttr: 'data-currentdefault'
+    },
+    mobile: {
+      totalPages: totalItems,
+      endPosition: totalItems - 1,
+      maxItem: 1,
+      pageAttr: 'data-page',
+      visAttr: 'data-visible',
+      counterAttr: 'data-currentdefault'
+    },
+    tablet: {
+      totalPages: maxTablet,
+      endPosition: maxTablet - 1,
+      maxItem: perPageTablet,
+      pageAttr: 'data-pagetablet',
+      visAttr: 'data-visibletablet',
+      counterAttr: 'data-currenttablet'
+    },
+    desk: {
+      totalPages: maxDesk,
+      endPosition: maxDesk - 1,
+      maxItem: perPageDesk,
+      pageAttr: 'data-pagedesk',
+      visAttr: 'data-visibledesk',
+      counterAttr: 'data-currentdesk'
     }
+  };
+
+  if (totalItems < 2) {
+    Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(slider, className, false);
+    return true;
   }
-  /* generates controls */
 
+  let sliderType = slider.getAttribute('data-type'),
+      sliderControl = slider.getAttribute('data-control'),
+      sliderProgress = slider.getAttribute('data-progress');
 
-  let sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
+  if (!sliderType) {
+    sliderType = 'default';
+  }
+
+  if (!sliderControl) {
+    sliderControl = 'default';
+  }
+
+  if (!sliderProgress) {
+    sliderProgress = 'default';
+  }
+
+  let wrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
     label: 'class',
-    val: 'slider__controls__wrap'
+    val: "slider-block slider-block--".concat(sliderType)
   }]);
-  let sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
-    label: 'class',
-    val: 'slider__controls'
-  }]);
-  let sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
-    label: 'class',
-    val: 'slider__controls__progress'
-  }]);
-  let sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
-    label: 'class',
-    val: 'slider__controls__buttons'
-  }]); // generates progress
+  slider.parentNode.insertBefore(wrapper, slider);
+  wrapper.appendChild(slider);
 
-  sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
-    label: 'content',
-    val: '1'
-  }, {
-    label: 'class',
-    val: 'slide__controls__progress__active'
-  }]));
-  sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
-    label: 'content',
-    val: ' /'
-  }, {
-    label: 'class',
-    val: 'slide__controls__progress__separator'
-  }]));
-  sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
-    label: 'content',
-    val: sliderChildrenLength
-  }, {
-    label: 'class',
-    val: 'slide__controls__progress__total'
-  }]));
-  sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
-  slider.appendChild(sliderControlsWrap); // generates buttons
+  if (sliderProgress !== 'off' || sliderControl !== 'off') {
+    let controlWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
+      label: 'class',
+      val: 'slider-block__control'
+    }]);
+    wrapper.appendChild(controlWrapper);
+  }
 
-  sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('button', [{
-    label: 'aria-label',
-    val: 'Previous item'
-  }, {
-    label: 'disabled',
-    val: 'true'
-  }, {
-    label: 'class',
-    val: 'fas fa-arrow-left slider__controls__buttons__prev swiper-slider-arrow arrow-left--btn-prev'
-  }]));
-  sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('button', [{
-    label: 'aria-label',
-    val: 'Next item'
-  }, {
-    label: 'class',
-    val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-right--btn-next'
-  }]));
-  sliderControls.appendChild(sliderButtons);
-  slider.querySelector('.slider__controls__buttons__prev').classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
+  setVisibility(slider, sliderType, sliderObject);
 
-  slider.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
-    handleSlideChange(-1, slider, sliderChildrenLength, sliderChildren);
-  });
-  slider.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
-    handleSlideChange(1, slider, sliderChildrenLength, sliderChildren);
-  });
+  if (sliderProgress !== 'off') {
+    createProgressTracker(slider, sliderType, sliderObject);
+  }
+
+  if (sliderControl !== 'off') {
+    createSliderButton(slider, sliderControl, sliderType, sliderObject);
+  }
 }
 /**
- * Handles direction of slide when sliding left or right
+ * setting visibility
+ * this function sets adds data attributes to <li> elements within slider, this attribute will be used by CSS to determine 
+ * if slides are visible or not on page load. This data attribute will be used to turn visibility on/off with the slider buttons'
+ * event listener
  *
- * @param {number} direction - either 1 (next) or -1 (prev)
- * @param {className} slider - class name of Ul element containing li (slides).
- * * @param {number} sliderChildrenLength - number of element children of class name above.
- * * @param {Element} sliderChildren - the slides / li  elements.
+ * @param {HTMLElement} slider - an HTML element with the slider class.
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ * 
  */
 
 
-function handleSlideChange(direction, slider, sliderChildrenLength, sliderChildren) {
-  // gets position of active slide
-  let activeSlide = parseInt(slider.querySelector('.slide__controls__progress__active').innerText);
-  let newSlide = activeSlide + direction; // ensures you don't slide past first and last slide
+function setVisibility(slider, sliderType, sliderObject) {
+  Array.from(slider.getElementsByTagName('li')).forEach((el, i) => {
+    el.setAttribute(sliderObject.default.pageAttr, "".concat(i));
 
-  if (newSlide !== 0 && !(newSlide > sliderChildrenLength)) {
-    // udpates progress
-    slider.querySelector('.slide__controls__progress__active').innerHTML = newSlide;
-    sliderChildren.forEach(function (item, i) {
-      //displays new slide
-      if (i === newSlide - 1) {
-        item.classList.remove('slider__slide');
-        item.classList.add('slider__active-slide');
+    if (i === 0) {
+      el.setAttribute(sliderObject.default.visAttr, true);
+    } else {
+      el.setAttribute(sliderObject.default.visAttr, false);
+    }
+  });
+
+  if (sliderType === 'responsive') {
+    const el = [...slider.children];
+    let tabletSlides = Object(_util__WEBPACK_IMPORTED_MODULE_3__["arraySlicer"])(el, sliderObject.tablet.maxItem);
+    let deskSlides = Object(_util__WEBPACK_IMPORTED_MODULE_3__["arraySlicer"])(el, sliderObject.desk.maxItem);
+    slicedArrayIterator(tabletSlides, sliderObject.tablet.pageAttr, sliderObject.tablet.visAttr);
+    slicedArrayIterator(deskSlides, sliderObject.desk.pageAttr, sliderObject.desk.visAttr);
+  }
+}
+/**
+ * array iterator to set the same visibility attribute for groups of slides
+ * this is necessary when you want to have different number of slides visible on different screen sizes
+ *
+ * @param {array} arr - array that will be iterated
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ */
+
+
+function slicedArrayIterator(arr, pageAttr, visibilityAttr) {
+  for (let i = 0; i < arr.length; i++) {
+    let subArray = arr[i];
+
+    for (let j = 0; j < subArray.length; j++) {
+      subArray[j].setAttribute(pageAttr, "".concat(i));
+
+      if (i === 0) {
+        subArray[j].setAttribute(visibilityAttr, 'true');
       } else {
-        item.classList.remove('slider__active-slide');
-        item.classList.add('slider__slide');
+        subArray[j].setAttribute(visibilityAttr, 'false');
       }
-    }); // disables next & prev buttons when reaching beginning or end of slides
+    }
+  }
+}
+/**
+* Called by the innitial launch function. It adds a progress bar/ page counter to the slider
+*
+* @param {HTMLElement} slider - an HTML element with the slider class.
+* @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+*/
 
-    if (newSlide === 1) {
-      slider.querySelector('.slider__controls__buttons__prev').classList.add('slider__controls__buttons__disabled');
-      slider.querySelector('.slider__controls__buttons__prev').setAttribute('disabled', true);
-    } else {
-      slider.querySelector('.slider__controls__buttons__prev').classList.remove('slider__controls__buttons__disabled');
-      slider.querySelector('.slider__controls__buttons__prev').removeAttribute('disabled');
+
+function createProgressTracker(slider, sliderType, sliderObject) {
+  const wrapper = slider.parentNode.querySelector('.slider-block__control');
+  createProgressElements(wrapper, 'default', sliderObject);
+
+  if (sliderType === 'responsive') {
+    if (sliderObject.default.totalPages > "".concat(sliderObject.tablet.maxItem)) {
+      createProgressElements(wrapper, 'tablet', sliderObject);
     }
 
-    if (newSlide === sliderChildrenLength) {
-      slider.querySelector('.slider__controls__buttons__next').classList.add('slider__controls__buttons__disabled');
-      slider.querySelector('.slider__controls__buttons__next').setAttribute('disabled', true);
-    } else {
-      slider.querySelector('.slider__controls__buttons__next').classList.remove('slider__controls__buttons__disabled');
-      slider.querySelector('.slider__controls__buttons__next').removeAttribute('disabled');
+    if (sliderObject.default.totalPages > "".concat(sliderObject.tablet.maxItem)) {
+      createProgressElements(wrapper, 'desk', sliderObject);
     }
+  }
+}
+/**
+* Called by the createProgressTracker() function. It generates the HTML elements for the progress bar
+*
+* @param {HTMLElement} wrapper - an HTML element with the slider-block__control class.
+* @param {string} type - it tells you which key to use from the sliderObject
+* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+*/
+
+
+function createProgressElements(wrapper, type, sliderObject) {
+  let progress = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: "slider-block__control__progress slider-block__control__progress--".concat(type)
+  }]);
+  wrapper.appendChild(progress);
+  let firstPage = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
+    label: "".concat(sliderObject[type].counterAttr),
+    val: true
+  }]);
+  firstPage.innerText = '1';
+  let separator = document.createElement('span');
+  separator.innerText = '/';
+  let lastPage = document.createElement('span');
+  lastPage.innerText = "".concat(sliderObject[type].totalPages);
+  progress.appendChild(firstPage);
+  progress.appendChild(separator);
+  progress.appendChild(lastPage);
+}
+/**
+* Called by the innitial launch function. It adds control buttons to the slider
+*
+* @param {HTMLElement} slider - an HTML element with the slider class.
+* @param {string} sliderControl - determines what type of buttons to add to the slider
+* @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+*/
+
+
+function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
+  const buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'slider-block__control__buttons'
+  }]);
+  const controlWrapper = slider.parentNode.querySelector('.slider-block__control');
+  controlWrapper.appendChild(buttonWrapper);
+
+  if (sliderControl === 'default') {
+    let buttonPrev = createButtonElement('fas fa-arrow-left prev--default', 'default', sliderObject);
+    let buttonNext = createButtonElement('fas fa-arrow-right next--default', 'default', sliderObject);
+    buttonNext.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'next item');
+    buttonNext.addEventListener('click', function () {
+      defaultEvent(this, slider, 'default', sliderObject);
+    });
+    buttonPrev.addEventListener('click', function () {
+      defaultEvent(this, slider, 'default', sliderObject);
+    });
+    buttonWrapper.appendChild(buttonPrev);
+    buttonWrapper.appendChild(buttonNext);
+    buttonWrapper.classList.add('slider-block__control__buttons--default');
+
+    if (sliderType === 'responsive') {
+      if (sliderObject.default.totalPages > "".concat(sliderObject.tablet.maxItem)) {
+        let buttonPrevTablet = createButtonElement('fas fa-arrow-left prev--tablet', 'tablet', sliderObject),
+            buttonNextTablet = createButtonElement('fas fa-arrow-right next--tablet', 'tablet', sliderObject);
+        buttonPrevTablet.addEventListener('click', function () {
+          defaultEvent(this, slider, 'tablet', sliderObject);
+        });
+        buttonNextTablet.addEventListener('click', function () {
+          defaultEvent(this, slider, 'tablet', sliderObject);
+        });
+        buttonWrapper.appendChild(buttonPrevTablet);
+        buttonWrapper.appendChild(buttonNextTablet);
+      }
+
+      if (sliderObject.default.totalPages > "".concat(sliderObject.desk.maxItem)) {
+        let buttonPrevDesk = createButtonElement('fas fa-arrow-left prev--desk', 'desk', sliderObject),
+            buttonNextDesk = createButtonElement('fas fa-arrow-right next--desk', 'desk', sliderObject);
+        buttonPrevDesk.addEventListener('click', function () {
+          defaultEvent(this, slider, 'desk', sliderObject);
+        });
+        buttonNextDesk.addEventListener('click', function () {
+          defaultEvent(this, slider, 'desk', sliderObject);
+        });
+        buttonWrapper.appendChild(buttonPrevDesk);
+        buttonWrapper.appendChild(buttonNextDesk);
+      }
+    }
+  }
+
+  if (sliderControl === 'dot') {
+    Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_5__["createSliderDot"])(slider, sliderType, buttonWrapper, sliderObject);
+  }
+}
+/**
+* Creates HTML elements for the control buttons
+*
+* @param {string} classname - classname to be added to the button being generated
+* @param {string} type - it tells you which key to use from the sliderObject
+* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+*/
+
+
+function createButtonElement(classname, type, sliderObject) {
+  let value;
+
+  if (classname.indexOf('prev') !== -1) {
+    value = -1;
+  } else {
+    value = 1;
+  }
+
+  let button = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('button', [{
+    label: 'class',
+    val: classname
+  }, {
+    label: 'type',
+    val: 'button'
+  }, {
+    label: 'data-next',
+    val: value
+  }, {
+    label: "".concat(sliderObject[type].visAttr),
+    val: true
+  }]);
+
+  if (classname.indexOf('prev') !== -1) {
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'previous item');
+    button.setAttribute('disabled', true);
+  } else {
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'next item');
+  }
+
+  return button;
+}
+/**
+* Event listener attached to default buttons
+*
+* @param {HTMLElement} slider - an HTML element with the slider class
+* @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+* @param {HTMLElement} wrapper - parent-wrapper HTML of buttons
+* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+*
+*/
+
+
+function defaultEvent(button, slider, type, sliderObject) {
+  const currentSlide = Array.from(slider.querySelectorAll("[".concat(sliderObject[type].visAttr, " = 'true']"))),
+        nextPage = button.getAttribute('data-next'),
+        nextSlide = Array.from(slider.querySelectorAll('[' + sliderObject[type].pageAttr + '= "' + nextPage + '"]')),
+        prevButton = button.parentNode.querySelector(".prev--".concat(type)),
+        nextButton = button.parentNode.querySelector(".next--".concat(type)),
+        counterEl = slider.parentNode.querySelector("span[".concat(sliderObject[type].counterAttr, "]"));
+  let counterValue = parseInt(counterEl.innerText);
+  currentSlide.forEach(el => {
+    el.setAttribute("".concat(sliderObject[type].visAttr), false);
+  });
+  nextSlide.forEach(el => {
+    el.setAttribute("".concat(sliderObject[type].visAttr), true);
+  });
+
+  if (button.classList.contains("next--".concat(type))) {
+    let nextAttr = parseInt(button.getAttribute('data-next'));
+
+    if (nextAttr === sliderObject[type].endPosition) {
+      button.setAttribute('disabled', true);
+    }
+
+    nextAttr++;
+    button.setAttribute('data-next', nextAttr);
+    let prevAttr = parseInt(prevButton.getAttribute('data-next'));
+    prevAttr++;
+    prevButton.setAttribute('data-next', prevAttr);
+    prevButton.removeAttribute('disabled');
+    counterValue++;
+    counterEl.innerText = counterValue;
+  } else {
+    let prevAttr = parseInt(button.getAttribute('data-next'));
+
+    if (prevAttr === 0) {
+      button.setAttribute('disabled', true);
+    }
+
+    prevAttr--;
+    button.setAttribute('data-next', prevAttr);
+    let nextAttr = parseInt(nextButton.getAttribute('data-next'));
+    nextAttr--;
+    nextButton.setAttribute('data-next', nextAttr);
+    nextButton.removeAttribute('disabled');
+    counterValue--;
+    counterEl.innerText = counterValue;
   }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: initSlider,
+  launchFn: launchSlider,
   launchQuery: ".".concat(className)
 });
 
@@ -8506,7 +8608,7 @@ function launchTabs(tabs) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatReactDate */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatReactDate, arraySlicer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8529,6 +8631,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uppercaseFirstLetterLowercaseRest", function() { return uppercaseFirstLetterLowercaseRest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "axiosRequest", function() { return axiosRequest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatReactDate", function() { return formatReactDate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "arraySlicer", function() { return arraySlicer; });
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
@@ -8849,6 +8952,24 @@ function formatReactDate(date) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("time", {
     dateTime: date.toISOString().split('T')[0]
   }, days[date.getUTCDay()], ", ", date.getUTCDate(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", null, daySuffix(date.getUTCDate())), ' ', months[date.getUTCMonth()], " ", date.getUTCFullYear());
+}
+/**
+ * Array slicer
+ *
+ * @param {array} arr - array to be split up into subarrays
+ * @param {number} len - max number items that goes into each subarray
+ */
+
+function arraySlicer(arr, len) {
+  let newArray = [],
+      i = 0,
+      n = arr.length;
+
+  while (i < n) {
+    newArray.push(arr.slice(i, i += len));
+  }
+
+  return newArray;
 }
 
 /***/ }),
