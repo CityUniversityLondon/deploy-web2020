@@ -55975,7 +55975,22 @@ ul.news__hashtags li a:active {
 }
 
 .news__social-icons {
-    margin: 1.5rem 0 2.5rem 0;
+    margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .news__social-icons {
+        margin: 2rem 0;
+    }
+}
+
+.news__social-icons p {
+    font-weight: 600;
+    margin-right: 1rem;
+}
+
+.news__social-icons ul {
+    margin: 0 0 2.5rem 0;
     display: flex;
     flex-direction: row;
 }
@@ -55983,11 +55998,6 @@ ul.news__hashtags li a:active {
 .news__social-icons li {
     list-style: none;
     margin-right: 0.5rem;
-}
-
-.news__social-icons li:first-child {
-    font-weight: 600;
-    margin-right: 1rem;
 }
 
 .course--pgt__profiles_heading,
