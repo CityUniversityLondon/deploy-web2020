@@ -55880,20 +55880,29 @@ main .landing:only-child .landing__top__cta {
 .news__hashtags__title {
     color: #696969;
     font-weight: 600;
+    margin-top: 1.5rem;
 }
 
 ul.news__hashtags {
     margin-left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    ul.news__hashtags {
+        flex-direction: row;
+    }
 }
 
 ul.news__hashtags li {
     list-style: none;
     margin: 0 0 1.5rem 0;
+    display: inline-flex;
 }
 
 @media (min-width: 768px) {
     ul.news__hashtags li {
-        display: inline-block;
         margin: 0 1rem 0 0;
     }
 }
@@ -55955,6 +55964,30 @@ ul.news__hashtags li a:focus, ul.news__hashtags li a:active {
 
 ul.news__hashtags li a:hover {
     border: 0.125rem solid #0c0c0e;
+}
+
+ul.news__hashtags li a:focus {
+    border: 0.125rem solid #0c0c0e;
+}
+
+ul.news__hashtags li a:active {
+    border: 0.125rem solid #0c0c0e;
+}
+
+.news__social-icons {
+    margin: 1.5rem 0 2.5rem 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.news__social-icons li {
+    list-style: none;
+    margin-right: 0.5rem;
+}
+
+.news__social-icons li:first-child {
+    font-weight: 600;
+    margin-right: 1rem;
 }
 
 .course--pgt__profiles_heading,
