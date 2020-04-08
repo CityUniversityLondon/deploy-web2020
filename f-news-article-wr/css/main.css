@@ -55779,10 +55779,11 @@ main > .news {
 
 @media (min-width: 1024px) {
     main > .news {
-        grid-column: 6 / span 14;
+        grid-column: 1/-1 !important;
     }
     main > .news.news--fullwidth {
         grid-column: 1 / span 24;
+        /* dimitra said never navigation thus always full width*/
     }
 }
 
@@ -55791,16 +55792,12 @@ main > .news {
         grid-column: 1 / span 6;
     }
     main .navigation--secondary + .news {
-        grid-column: 10 / span 12;
+        grid-column: 7 / -1;
     }
 }
 
-.news .banner h1, .news .banner .standfirst {
+.news .banner h1 {
     text-align: left;
-}
-
-.news .banner .standfirst {
-    margin-left: 0;
 }
 
 .news__summary p {
@@ -55845,11 +55842,12 @@ main > .news {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
-.news__published__wrap {
+.news__body__published__wrap {
     border-top: 0.0625rem solid #cbcbcb;
+    padding-top: 2rem;
 }
 
-.news__published {
+.news__body__published {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
@@ -55857,30 +55855,30 @@ main > .news {
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .news__published {
+    .news__body__published {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .news__published {
+    .news__body__published {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .news__published {
+    .news__body__published {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .news__published {
+    .news__body__published {
         letter-spacing: -0.017em;
     }
 }
 
-.news__published span {
+.news__body__published span {
     font-weight: 600;
 }
 
