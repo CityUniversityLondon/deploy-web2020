@@ -48832,6 +48832,14 @@ button
     margin-left: 0.5rem;
 }
 
+.chart--piechart {
+    stroke: url(#pattern);
+}
+
+.chart__legend__item {
+    color: url(#pattern);
+}
+
 .chart--blue path:nth-child(1) {
     stroke: #0194c7;
 }
@@ -48846,22 +48854,6 @@ button
 
 .chart--blue .chart__legend__item:nth-child(2) .fa.fa-circle {
     color: #001323;
-}
-
-.chart--blue path:nth-child(3) {
-    stroke: #696969;
-}
-
-.chart--blue .chart__legend__item:nth-child(3) .fa.fa-circle {
-    color: #696969;
-}
-
-.chart--blue path:nth-child(4) {
-    stroke: #286760;
-}
-
-.chart--blue .chart__legend__item:nth-child(4) .fa.fa-circle {
-    color: #286760;
 }
 
 .chart--red path:nth-child(1) {
@@ -48880,22 +48872,6 @@ button
     color: #5b0b1b;
 }
 
-.chart--red path:nth-child(3) {
-    stroke: #696969;
-}
-
-.chart--red .chart__legend__item:nth-child(3) .fa.fa-circle {
-    color: #696969;
-}
-
-.chart--red path:nth-child(4) {
-    stroke: #7c2062;
-}
-
-.chart--red .chart__legend__item:nth-child(4) .fa.fa-circle {
-    color: #7c2062;
-}
-
 .chart--pink path:nth-child(1) {
     stroke: #bb3094;
 }
@@ -48910,22 +48886,6 @@ button
 
 .chart--pink .chart__legend__item:nth-child(2) .fa.fa-circle {
     color: #3e1031;
-}
-
-.chart--pink path:nth-child(3) {
-    stroke: #696969;
-}
-
-.chart--pink .chart__legend__item:nth-child(3) .fa.fa-circle {
-    color: #696969;
-}
-
-.chart--pink path:nth-child(4) {
-    stroke: #541b85;
-}
-
-.chart--pink .chart__legend__item:nth-child(4) .fa.fa-circle {
-    color: #541b85;
 }
 
 .chart-row {
