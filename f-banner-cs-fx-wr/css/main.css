@@ -21807,6 +21807,9 @@ Assign mixin:
     main .banner-standfirst-label .banner__image {
         grid-column: 1 / span 24;
     }
+    main .banner-standfirst-label .banner__standfirst {
+        grid-column: 3 / 23;
+    }
 }
 
 @media (min-width: 1024px) {
