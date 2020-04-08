@@ -55927,6 +55927,10 @@ main > .news {
     grid-column: 2 / 24;
 }
 
+.news__body__video {
+    grid-column: 2 / 24;
+}
+
 .course--pgt__profiles_heading,
 .course--pgt__our-students_heading,
 .course--pgt__facilities__heading {
