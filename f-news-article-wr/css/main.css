@@ -21801,8 +21801,14 @@ Assign mixin:
 }
 
 @media (min-width: 1024px) {
+    main .banner-standfirst-label {
+        display: grid;
+    }
     main .banner-standfirst-label .banner__image {
         grid-column: 1 / span 24;
+    }
+    main .banner-standfirst-label .banner__standfirst {
+        grid-column: 3 / 23;
     }
 }
 
@@ -54685,6 +54691,32 @@ main .landing header p em {
 @media (min-width: 1024px) {
     main .landing .landing--functional__content__wrap .landing--functional__content {
         grid-column: 4 / span 12;
+    }
+    main .landing .wrapper--finder__mini {
+        grid-template-columns: repeat(24, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    main .landing .wrapper--finder__mini {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main .landing .wrapper--finder__mini {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .landing .wrapper--finder__mini .landing--functional__finder__cta__wrap {
+        grid-column: 4 / 22;
+    }
+    main .landing .wrapper--finder__mini .finder__mini {
+        grid-column: 4 / 22;
     }
 }
 
