@@ -48832,14 +48832,6 @@ button
     margin-left: 0.5rem;
 }
 
-.chart--piechart {
-    stroke: url(#pattern);
-}
-
-.chart__legend__item {
-    color: url(#pattern);
-}
-
 .chart--blue path:nth-child(1) {
     stroke: #0194c7;
 }
