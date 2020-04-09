@@ -56000,6 +56000,23 @@ ul.news__hashtags li a:active {
     margin-right: 0.5rem;
 }
 
+.news__related-courses {
+    margin: 2rem 0;
+}
+
+.news__related-subjects {
+    display: none;
+}
+
+.news__related-academics .card--profile {
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.news__related-news {
+    margin-bottom: 2rem;
+}
+
 .course--pgt__profiles_heading,
 .course--pgt__our-students_heading,
 .course--pgt__facilities__heading {
