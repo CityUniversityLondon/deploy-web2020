@@ -20840,11 +20840,9 @@ Example HTML:
 }
 
 .standard-grid-wrapper {
-    grid-template-columns: repeat(24, 1fr);
+    grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -20856,13 +20854,6 @@ Example HTML:
 @media (min-width: 901px) {
     .standard-grid-wrapper {
         grid-column-gap: 1.5rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .standard-grid-wrapper {
-        padding-left: 2rem;
-        padding-right: 2rem;
     }
 }
 
@@ -21526,6 +21517,17 @@ Assign mixin:
 
 .banner__image {
     height: 100%;
+    position: relative;
+}
+
+.banner__image:after {
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -21537,12 +21539,6 @@ Assign mixin:
 @media (min-width: 769px) {
     .banner__image {
         max-height: 480px;
-    }
-}
-
-@media (min-width: 900px) {
-    .banner__image {
-        max-height: 280px;
     }
 }
 
@@ -21578,8 +21574,9 @@ Assign mixin:
 
 .banner__overlay {
     background: linear-gradient(to top, #303030, transparent 100%);
-    width: 100%;
     height: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .banner__overlay.flex-wrapper--banner__overlay {
@@ -21632,6 +21629,7 @@ Assign mixin:
     flex-direction: column;
     justify-content: flex-end;
     padding-bottom: 2rem;
+    height: inherit;
 }
 
 @media (min-width: 901px) {
@@ -34093,7 +34091,6 @@ figure figcaption a:active {
     text-decoration: none;
     display: inline-block;
     display: inline-block;
-    height: 4rem;
 }
 
 @media (hover: hover) {
@@ -34144,6 +34141,12 @@ figure figcaption a:active {
     outline-width: 0.125rem;
 }
 
+@media (max-width: 1023px) {
+    .header-logo a {
+        height: 4rem;
+    }
+}
+
 @media (min-width: 1024px) {
     .header-logo a {
         margin-bottom: 1.5rem;
@@ -34168,7 +34171,6 @@ figure figcaption a:active {
 @media (min-width: 1024px) {
     .global-header__utility {
         display: block;
-        font-weight: 500;
         grid-column-end: 22;
         grid-column-start: 4;
         grid-row-end: 1;
@@ -36199,7 +36201,7 @@ figure figcaption a:active {
     right: 9rem;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 901px) {
     .swiper-indicator {
         bottom: 3rem;
         right: 1rem;
@@ -36222,7 +36224,7 @@ figure figcaption a:active {
     z-index: 1;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 901px) {
     .swiper-buttons-wrap {
         bottom: 2.5rem;
         right: -7rem;
@@ -46311,7 +46313,7 @@ blockquote footer cite {
 .slider-block__control {
     display: flex;
     justify-content: flex-end;
-    margin: 1rem 0;
+    padding: 1rem 0;
 }
 
 .slider-block__control__progress {
@@ -46369,7 +46371,7 @@ blockquote footer cite {
     opacity: 0.7;
 }
 
-.slider-block__control__buttons--default button[class*="prev--"] {
+.slider-block__control__buttons--default button[class*='prev--'] {
     margin-right: 1rem;
 }
 
@@ -46392,7 +46394,7 @@ blockquote footer cite {
 }
 
 .slider-block__control__buttons--dot button:before {
-    content: "";
+    content: '';
     position: absolute;
     left: -0.25rem;
     top: -0.23rem;
@@ -47097,6 +47099,8 @@ article .link-copy {
         max-width: unset;
         text-align: center;
         margin-right: 0.75rem;
+        display: flex;
+        align-items: flex-end;
     }
     .js .tabs .tabs__links li:last-of-type {
         margin-right: 0;
@@ -47143,7 +47147,6 @@ article .link-copy {
         border-width: 0.125rem;
         color: #696969;
         display: block;
-        height: 100%;
         overflow: hidden;
         padding: 0;
         position: relative;
@@ -55222,6 +55225,12 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
+@media (max-width: 768px) {
+    .landing__top .ksp__items {
+        padding: 2rem;
+    }
+}
+
 .landing__top__cta {
     display: flex;
     justify-content: center;
@@ -57904,7 +57913,7 @@ main .landing:only-child .landing__top__cta {
         grid-column: 1;
     }
     main .navigation--secondary + .profile .profile__banner__content .profile__banner__content__details {
-        grid-column: 1;
+        grid-column: 1 / span 2;
     }
     main .navigation--secondary + .profile .profile__banner__content picture ~ h1,
     main .navigation--secondary + .profile .profile__banner__content picture ~ .profile__banner__content__details {
@@ -58574,7 +58583,8 @@ button
 
 .profile .profile--global__tags {
     margin-top: 3rem;
-    padding: 1rem 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 
 @media (max-width: 1023px) {
@@ -58637,7 +58647,7 @@ button
     max-width: 55ch;
     color: #494949;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     margin-top: 0;
     max-width: 55ch;
 }
@@ -58692,7 +58702,34 @@ button
 }
 
 .profile .profile--global__tags__labels .cta-block__cta {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
     margin: 0 1.5rem 0.75rem 0;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .profile .profile--global__tags__labels .cta-block__cta {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .profile .profile--global__tags__labels .cta-block__cta {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .profile .profile--global__tags__labels .cta-block__cta {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .profile .profile--global__tags__labels .cta-block__cta {
+        letter-spacing: -0.017em;
+    }
 }
 
 .profile h2.profile--global__details__heading {
@@ -59412,6 +59449,14 @@ button
     background: #303030;
 }
 
+.research-degree .banner__image:after {
+    background-image: linear-gradient(to top, #303030, transparent 100%);
+}
+
+.research-degree .banner__overlay {
+    background: #303030;
+}
+
 .research-degree__standfirst-block {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
@@ -59436,52 +59481,35 @@ button
     margin: 2.5rem 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
     .research-degree__standfirst {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
-@media (max-width: 767px) and (min-width: 901px) {
-    .research-degree__standfirst {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 767px) and (min-width: 901px) {
+@media (max-width: 1023px) and (min-width: 901px) {
     .research-degree__standfirst {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media (max-width: 767px) and (min-width: 1441px) {
-    .research-degree__standfirst {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 @media (min-width: 768px) {
     .research-degree__standfirst {
-        grid-column: 2 / 18;
+        grid-column: 2/-2;
     }
 }
 
 @media (min-width: 901px) {
     .research-degree__standfirst {
-        grid-column: 3 / 17;
+        grid-column: 3/-2;
     }
 }
 
 @media (min-width: 1281px) {
     .research-degree__standfirst {
-        grid-column: 4 / 16;
+        grid-column: 4/-3;
     }
 }
 
@@ -59490,25 +59518,7 @@ button
 }
 
 .wrapper--research-degree__pre-overview {
-    padding-bottom: 1rem;
-}
-
-@media (min-width: 433px) {
-    .wrapper--research-degree__pre-overview {
-        padding-bottom: 10rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .wrapper--research-degree__pre-overview {
-        padding-top: 1rem;
-    }
-}
-
-@media (min-width: 1281px) {
-    .wrapper--research-degree__pre-overview {
-        padding-top: 1rem;
-    }
+    padding: 1rem 0;
 }
 
 @media (min-width: 768px) {
@@ -59537,75 +59547,73 @@ button
     }
 }
 
-@media (max-width: 767px) {
-    .wrapper--research-degree__key-information,
-    .wrapper--research-degree__org-units-research-centres,
-    .wrapper--research-degree__promo-box,
-    .research-degree__overview__content,
+@media (max-width: 1023px) {
+    .wrapper--research-degree__pre-overview,
+    .wrapper--research-degree__overview,
     .wrapper--research-degree__research-projects {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
-@media (max-width: 767px) and (min-width: 901px) {
-    .wrapper--research-degree__key-information,
-    .wrapper--research-degree__org-units-research-centres,
-    .wrapper--research-degree__promo-box,
-    .research-degree__overview__content,
-    .wrapper--research-degree__research-projects {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 767px) and (min-width: 901px) {
-    .wrapper--research-degree__key-information,
-    .wrapper--research-degree__org-units-research-centres,
-    .wrapper--research-degree__promo-box,
-    .research-degree__overview__content,
+@media (max-width: 1023px) and (min-width: 901px) {
+    .wrapper--research-degree__pre-overview,
+    .wrapper--research-degree__overview,
     .wrapper--research-degree__research-projects {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media (max-width: 767px) and (min-width: 1441px) {
-    .wrapper--research-degree__key-information,
-    .wrapper--research-degree__org-units-research-centres,
+@media (max-width: 1023px) {
     .wrapper--research-degree__promo-box,
-    .research-degree__overview__content,
     .wrapper--research-degree__research-projects {
-        margin-left: auto;
-        margin-right: auto;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .wrapper--research-degree__promo-box,
+    .wrapper--research-degree__research-projects {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
 @media (min-width: 768px) {
-    .wrapper--research-degree__key-information,
-    .wrapper--research-degree__org-units-research-centres {
-        grid-column: 2 / 18;
+    .wrapper--research-degree__key-information {
+        grid-column: 3/-3;
     }
 }
 
-@media (min-width: 1281px) {
-    .wrapper--research-degree__key-information,
-    .wrapper--research-degree__org-units-research-centres {
-        grid-column: 4 / 16;
-    }
-}
-
-.wrapper--research-degree__students {
-    margin-top: 2rem;
+.wrapper--research-degree__org-units-research-centres,
+.wrapper--research-degree__key-information,
+.research-degree__testimonials__content,
+.research-degree__overview__content {
+    grid-column: 1/-1;
 }
 
 @media (min-width: 768px) {
-    .wrapper--research-degree__students {
-        margin-top: 3rem;
+    .wrapper--research-degree__org-units-research-centres,
+    .wrapper--research-degree__key-information,
+    .research-degree__testimonials__content,
+    .research-degree__overview__content {
+        grid-column: 2/-2;
     }
+}
+
+@media (min-width: 901px) {
+    .wrapper--research-degree__org-units-research-centres,
+    .wrapper--research-degree__key-information,
+    .research-degree__testimonials__content,
+    .research-degree__overview__content {
+        grid-column: 3/-3;
+    }
+}
+
+.wrapper--research-degree__students .featured-profiles-block {
+    margin: 0;
 }
 
 .wrapper--featured-profiles__profile {
@@ -59619,44 +59627,54 @@ button
 @media (min-width: 768px) {
     .wrapper--research-degree__promo-box,
     .research-degree__overview {
-        grid-column: 2 / 18;
+        grid-column: 2/-2;
     }
 }
 
 @media (min-width: 1281px) {
     .wrapper--research-degree__promo-box,
     .research-degree__overview {
-        grid-column: 3 / 17;
+        grid-column: 3/-3;
+    }
+}
+
+.wrapper--research-degree__research-projects {
+    padding-top: 1rem;
+}
+
+@media (max-width: 1023px) {
+    .wrapper--research-degree__research-projects {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .wrapper--research-degree__research-projects {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
 @media (min-width: 768px) {
-    .research-degree__research-projects {
-        grid-column: 1 / -1;
+    .wrapper--research-degree__research-projects .research-degree__research-projects {
+        grid-column: 1/-1;
     }
 }
 
 @media (min-width: 901px) {
-    .research-degree__research-projects {
-        grid-column: 2 / 18;
+    .wrapper--research-degree__research-projects .research-degree__research-projects {
+        grid-column: 2/-2;
     }
 }
 
-.research-degree__org-units-research-centres {
-    grid-column: 1/-1;
+.wrapper--research-degree__research-projects .research-degree__research-projects .slider {
+    display: flex;
 }
 
-@media (min-width: 769px) {
-    .research-degree__org-units-research-centres {
-        grid-column: 2 / 12;
-        margin-top: 1rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .research-degree__org-units-research-centres {
-        grid-column: 5 / 15;
-    }
+.research-degree__org-units-research-centres ul.research-centres {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .research-degree__org-units-research-centres .research-degree__org-units-research-centres__org-units__label:after {
@@ -59684,50 +59702,33 @@ button
     list-style-type: none;
 }
 
-.wrapper--research-degree__key-information .key-information--research {
-    grid-column: 1/-1;
-    margin: 0.25rem 0 2.25rem 0;
-}
-
-@media (min-width: 769px) {
-    .wrapper--research-degree__key-information .key-information--research {
-        grid-column: 2 / 12;
-    }
-}
-
-@media (min-width: 901px) {
-    .wrapper--research-degree__key-information .key-information--research {
-        grid-column: 5 / 15;
-    }
-}
-
 .wrapper--research-degree__key-information .key-information--research .key-information--research__main {
     margin-top: 1rem;
 }
 
+.wrapper--research-degree__promo-box {
+    margin-top: 1rem;
+    padding: 0;
+}
+
 .wrapper--research-degree__promo-box .promo-content {
     grid-column: 1/-1;
-    margin: 0 0 3rem 0;
+    margin: 0;
 }
 
 @media (min-width: 769px) {
     .wrapper--research-degree__promo-box .promo-content {
-        grid-column: 2 / 12;
-    }
-}
-
-@media (min-width: 901px) {
-    .wrapper--research-degree__promo-box .promo-content {
-        grid-column: 4 / 16;
+        margin-bottom: 1rem;
     }
 }
 
 .research-degree__overview {
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    grid-column: 1/-1;
+    grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
-    padding-top: 1.5rem;
-    margin-bottom: 4rem;
+    display: grid;
 }
 
 @media (min-width: 768px) {
@@ -59737,31 +59738,6 @@ button
 }
 
 @media (min-width: 901px) {
-    .research-degree__overview {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-@media (min-width: 433px) {
-    .research-degree__overview {
-        margin-top: -8rem;
-    }
-}
-
-@media (min-width: 1280px) {
-    .research-degree__overview {
-        grid-template-columns: repeat(14, 1fr);
-        grid-column-gap: 0;
-    }
-}
-
-@media (min-width: 1280px) and (min-width: 768px) {
-    .research-degree__overview {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 1280px) and (min-width: 901px) {
     .research-degree__overview {
         grid-column-gap: 1.5rem;
     }
@@ -59780,60 +59756,9 @@ button
     margin: 0.25rem auto 1rem auto;
 }
 
-.research-degree__overview .research-degree__overview__content {
-    grid-column: 1 / -1;
-}
-
-@media (min-width: 768px) {
-    .research-degree__overview .research-degree__overview__content {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-column-gap: 0;
-        grid-column: 3 / 15;
-    }
-}
-
-@media (min-width: 768px) and (min-width: 768px) {
-    .research-degree__overview .research-degree__overview__content {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 768px) and (min-width: 901px) {
-    .research-degree__overview .research-degree__overview__content {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .research-degree__overview .research-degree__overview__content {
-        grid-column: 3 / 15;
-    }
-}
-
-@media (min-width: 1281px) {
-    .research-degree__overview .research-degree__overview__content {
-        grid-template-columns: repeat(10, 1fr);
-        grid-column-gap: 0;
-        grid-column: 3 / 13;
-    }
-}
-
-@media (min-width: 1281px) and (min-width: 768px) {
-    .research-degree__overview .research-degree__overview__content {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 1281px) and (min-width: 901px) {
-    .research-degree__overview .research-degree__overview__content {
-        grid-column-gap: 1.5rem;
-    }
-}
-
 .research-degree__overview .research-degree__overview__content .show-more,
 .research-degree__overview .research-degree__overview__content .accordion {
-    grid-column: 1 / -1;
+    grid-column: 1/-1;
 }
 
 @media (min-width: 768px) {
@@ -59896,8 +59821,28 @@ button
     margin-top: 2.5rem;
 }
 
+.wrapper--research-degree__research-projects .slider {
+    display: flex;
+}
+
+.wrapper--research-degree__research-projects .slider li {
+    flex-basis: 33%;
+}
+
+@media (max-width: 768px) {
+    .wrapper--research-degree__research-projects .slider li {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 432px) {
+    .wrapper--research-degree__research-projects .slider li {
+        flex-basis: 100%;
+    }
+}
+
 .wrapper--research-degree__testimonials {
-    margin-top: 4rem;
+    margin-top: 1rem;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -59915,256 +59860,47 @@ button
     }
 }
 
-@media (max-width: 899px) {
+@media (max-width: 1023px) {
     .wrapper--research-degree__testimonials {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
-@media (max-width: 899px) and (min-width: 901px) {
-    .wrapper--research-degree__testimonials {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 901px) {
+@media (max-width: 1023px) and (min-width: 901px) {
     .wrapper--research-degree__testimonials {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media (max-width: 899px) and (min-width: 1441px) {
-    .wrapper--research-degree__testimonials {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 .wrapper--research-degree__testimonials h2 {
-    grid-column: 1 / -1;
+    grid-column: 1/-1;
 }
 
-.wrapper--research-degree__testimonials .research-degree__testimonials__content {
-    display: block;
-    grid-column: 1 / -1;
-}
-
-@media (min-width: 768px) {
-    .wrapper--research-degree__testimonials .research-degree__testimonials__content {
-        grid-column: 2 / 18;
-    }
-}
-
-@media (min-width: 901px) {
-    .wrapper--research-degree__testimonials .research-degree__testimonials__content {
-        grid-column: 3 / 17;
-    }
-}
-
-@media (max-width: 432px) {
-    .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider {
-        display: block;
-    }
-}
-
-@media (min-width: 433px) {
-    .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider {
-        grid-column: 1 / -1;
-    }
+.wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider {
+    grid-column: 1/-1;
 }
 
 .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider .slider__active-slide {
-    grid-column: 1 / -1;
+    grid-column: 1/-1;
 }
 
 @media (min-width: 769px) {
     .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider .slider__active-slide {
-        grid-column: 2 / -2;
+        grid-column: 2/-2;
     }
 }
 
 @media (min-width: 901px) {
     .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider .slider__active-slide {
-        grid-column: 3 / 14;
+        grid-column: 3/-4;
     }
 }
 
 .wrapper--research-degree__testimonials .research-degree__testimonials__content .related-content.slider .slider__controls__wrap {
     margin: 1rem 0;
-    grid-column: 7 / -1;
-}
-
-.wrapper--research-degree__footer {
-    padding: 2rem 0;
-}
-
-@media (max-width: 899px) {
-    .wrapper--research-degree__footer {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 901px) {
-    .wrapper--research-degree__footer {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 901px) {
-    .wrapper--research-degree__footer {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 1441px) {
-    .wrapper--research-degree__footer {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-.wrapper--research-degree__footer .research-degree__footer__useful-links {
-    margin-top: 2rem;
-    grid-column: 1 / -1;
-}
-
-@media (min-width: 768px) {
-    .wrapper--research-degree__footer .research-degree__footer__useful-links {
-        grid-column: 14 / -1;
-    }
-}
-
-@media (min-width: 901px) {
-    .wrapper--research-degree__footer .research-degree__footer__useful-links {
-        grid-column: 14 / 18;
-    }
-}
-
-.wrapper--research-degree__footer .research-degree__footer__contact {
-    max-width: none;
-    margin: 0;
-    grid-column: 1 / -1;
-}
-
-@media (min-width: 768px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact {
-        grid-column: 1 / 14;
-    }
-}
-
-@media (min-width: 768px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact {
-        display: flex;
-    }
-}
-
-@media (min-width: 768px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact li {
-        flex-basis: 100%;
-    }
-}
-
-@media (min-width: 768px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact li:first-child {
-        margin-right: 1rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact li:first-child {
-        margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact {
-        grid-column: 2 / 14;
-    }
-}
-
-.wrapper--research-degree__footer .research-degree__footer__contact--two-cards {
-    grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-}
-
-@media (min-width: 768px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact--two-cards {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact--two-cards {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-.wrapper--research-degree__footer .research-degree__footer__contact--one-card .research-degree__footer__contact--one-column {
-    grid-column: 1 / -1;
-}
-
-@media (min-width: 769px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact--one-card .research-degree__footer__contact--one-column {
-        grid-column: 1 / 7;
-    }
-}
-
-.wrapper--research-degree__footer .research-degree__footer__contact--one-card .research-degree__footer__useful-links {
-    grid-column: 1 / -1;
-}
-
-@media (min-width: 769px) {
-    .wrapper--research-degree__footer .research-degree__footer__contact--one-card .research-degree__footer__useful-links {
-        grid-column: 7 / 13;
-    }
-}
-
-.research-degree__footer__useful-links h3 {
-    font-size: 1.125rem;
-    line-height: 1.25;
-    letter-spacing: -0.008em;
-    font-weight: 600;
-    margin-top: 0;
-    color: #696969;
-    border-bottom: 0.0625rem solid #e5e5e5;
-    padding-bottom: 0.5rem;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .research-degree__footer__useful-links h3 {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .research-degree__footer__useful-links h3 {
-        letter-spacing: -0.014em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .research-degree__footer__useful-links h3 {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .research-degree__footer__useful-links h3 {
-        letter-spacing: -0.017em;
-    }
+    grid-column: 7/-1;
 }
 
 .search {
@@ -60606,8 +60342,12 @@ button
     }
 }
 
+.lifelong-learning .banner__image:after {
+    background-image: linear-gradient(to top, #5d184a, transparent 100%);
+}
+
 .lifelong-learning .banner__overlay {
-    background: linear-gradient(to top, #5d184a, transparent 100%);
+    background: #5d184a;
 }
 
 .lifelong-learning .wrapper--key-information--lifelong-learning {
@@ -62477,6 +62217,21 @@ main .standard-content .banner-text {
     background-size: cover;
 }
 
+@media (max-width: 1023px) {
+    .course--ug .standard-grid-wrapper {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .course--ug .standard-grid-wrapper {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
 .course--ug .course--promo-cards {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
@@ -62668,14 +62423,14 @@ main .standard-content .banner-text {
     padding: 0 0 1rem 0;
 }
 
-@media (max-width: 432px) {
+@media (max-width: 768px) {
     .course--ug .featured-profiles-block {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
-@media (max-width: 432px) and (min-width: 901px) {
+@media (max-width: 768px) and (min-width: 901px) {
     .course--ug .featured-profiles-block {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -62685,6 +62440,15 @@ main .standard-content .banner-text {
 @media (max-width: 767px) {
     .course--ug .accordion .show-more__text[data-hidden='true']:after {
         background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f2f2f2 90%);
+    }
+}
+
+@media (max-width: 768px) {
+    .course--ug .accordion {
+        background: #ffffff;
+    }
+    .course--ug .accordion .show-more__text[data-hidden='true']:after {
+        background-image: none;
     }
 }
 
@@ -62786,6 +62550,13 @@ main .standard-content .banner-text {
 
 .js .accordion > .accordion__heading {
     border-bottom-color: transparent;
+}
+
+@media (max-width: 899px) {
+    .js .accordion > .accordion__heading[data-open='true'] + .accordion__body p.ksp__item__overline,
+    .js .accordion > .accordion__heading[data-open='true'] + .accordion__body p.ksp__item__figure {
+        margin: 0;
+    }
 }
 
 .course--ug__related-courses__wrapper {
@@ -63015,7 +62786,7 @@ main .standard-content .banner-text {
         flex-basis: 50%;
     }
     .course--ug__keyinfo__details--column:nth-child(3) {
-        margin-top: 1.75rem;
+        margin-top: 1rem;
     }
 }
 
@@ -63024,7 +62795,7 @@ main .standard-content .banner-text {
         flex-basis: 100%;
     }
     .course--ug__keyinfo__details--column:nth-child(2) {
-        margin-top: 1.75rem;
+        margin-top: 1rem;
     }
 }
 
@@ -63175,25 +62946,26 @@ main .standard-content .banner-text {
 
 .course--ug__section-wrapper--grey {
     background-color: #f2f2f2;
+    padding-top: 1rem;
 }
 
 .course--ug__section-wrapper--grey .tabs--accordion {
-    grid-column: 2 / 24;
+    grid-column: 2 / 18;
 }
 
 @media (max-width: 1023px) {
     .course--ug__section-wrapper--grey .tabs--accordion {
-        grid-column: 1/-1;
+        grid-column: 1 / -1;
     }
 }
 
 .course--ug__usp {
-    grid-column: 2 / 24;
+    grid-column: 2 / 18;
 }
 
 @media (max-width: 1023px) {
     .course--ug__usp {
-        grid-column: 1/-1;
+        grid-column: 1 / -1;
     }
 }
 
@@ -63347,9 +63119,21 @@ main .standard-content .banner-text {
     margin-right: 1.5rem;
 }
 
+@media (max-width: 899px) {
+    .statistics-block--ug .ksp__item--ug {
+        margin: 0.5rem 0 0.5rem;
+    }
+}
+
 .statistics-block--ug .ksp__item__figure {
     font-weight: 300;
     color: #d61726;
+}
+
+@media (max-width: 899px) {
+    .statistics-block--ug .ksp__item__figure {
+        margin-top: 0;
+    }
 }
 
 .statistics-block--ug .ksp__item__overline {
@@ -63510,6 +63294,27 @@ main .standard-content .banner-text {
     background-color: #f2f2f2;
 }
 
+@media (min-width: 769px) {
+    .ug-career__testimonial {
+        margin-top: 2rem;
+    }
+}
+
+.ug-career__testimonial .card--testimonial .card--testimonial__text .card--testimonial__quote,
+.ug-career__testimonial .card--testimonial .card--testimonial__photo {
+    margin-top: 0;
+}
+
+.ug-career__testimonial .card--testimonial__photo {
+    margin-top: 0;
+}
+
+@media (min-width: 769px) {
+    .ug-career__testimonial .card--testimonial__text {
+        padding-right: 1rem;
+    }
+}
+
 .courses--ug__facilities h2,
 .course--ug__student-coursework h2,
 .course--ug__student h2 {
@@ -63561,7 +63366,12 @@ main .standard-content .banner-text {
 
 .course--ug__usp__stats {
     padding: 1rem 1.5rem;
-    margin-top: 1.5rem;
+}
+
+@media (min-width: 901px) {
+    .course--ug__usp__stats {
+        margin-top: 1.5rem;
+    }
 }
 
 .course--ug__usp__stats .course--ug__usp__stats__heading {
@@ -63909,19 +63719,21 @@ main .standard-content .banner-text {
     margin-top: 1rem;
 }
 
-.course--ug__related-links .related-links--with-images__wrapper {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+@media (max-width: 1023px) {
+    .course--ug__related-links .related-links--with-images__wrapper {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 }
 
-@media (min-width: 901px) {
+@media (max-width: 1023px) and (min-width: 901px) {
     .course--ug__related-links .related-links--with-images__wrapper {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     .course--ug__related-links .related-links--with-images__wrapper {
         padding-left: 0;
         padding-right: 0;
