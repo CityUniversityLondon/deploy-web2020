@@ -21801,13 +21801,13 @@ Assign mixin:
 }
 
 @media (min-width: 1024px) {
-    main .banner-standfirst-label {
+    main > article .banner-standfirst-label {
         display: grid;
     }
-    main .banner-standfirst-label .banner__image {
+    main > article .banner-standfirst-label .banner__image {
         grid-column: 1 / span 24;
     }
-    main .banner-standfirst-label .banner__standfirst {
+    main > article .banner-standfirst-label .banner__standfirst {
         grid-column: 3 / 23;
     }
 }
@@ -21815,6 +21815,9 @@ Assign mixin:
 @media (min-width: 1024px) {
     main .navigation--secondary + article .banner-standfirst-label .banner__image {
         grid-column: 1 / span 18;
+    }
+    main .navigation--secondary + article .banner-standfirst-label .banner__standfirst {
+        grid-column: 3 / 17;
     }
 }
 
