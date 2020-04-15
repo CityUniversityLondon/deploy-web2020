@@ -21645,6 +21645,13 @@ Assign mixin:
     }
 }
 
+@media (min-width: 1441px) {
+    .banner__overlay__heading {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media (max-width: 900px) {
     .banner__overlay__heading {
         padding-bottom: 1rem;
