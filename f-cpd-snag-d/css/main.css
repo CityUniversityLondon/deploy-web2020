@@ -60387,6 +60387,9 @@ button
     main .navigation--secondary + .lifelong-learning .lifelong-learning__testimonials .related-content {
         grid-column: 1 / span 18;
     }
+    main .navigation--secondary + .lifelong-learning .lifelong-learning__testimonials .slider-block {
+        grid-column: 4/16;
+    }
 }
 
 .lifelong-learning .banner-text {
