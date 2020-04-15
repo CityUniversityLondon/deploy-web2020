@@ -573,7 +573,7 @@ function HowToApply(props) {
     className: "how-to-apply--pgt--js__modal__alternative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: props.element.dataset.otherurl
-  }, "Apply to start in ", props.element.dataset.otheryear, ".")),
+  }, props.element.dataset.otheryear, " entry is also available.")),
         reset = JSON.stringify(preferences) !== JSON.stringify(initialPreferences) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__reset"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
