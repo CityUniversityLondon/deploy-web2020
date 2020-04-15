@@ -56127,13 +56127,37 @@ main > .news {
     display: none;
 }
 
+.news .news__related-academics {
+    border-bottom: 0.0625rem solid #cbcbcb;
+}
+
 .news .news__related-academics .card--profile {
     padding: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .news .news__related-news {
     margin-bottom: 2rem;
+    display: none;
+}
+
+.news .news__related-subjects,
+.news .news__related-centres,
+.news .news__schools {
+    padding-bottom: 1.25rem;
+    border-bottom: 0.0625rem solid #cbcbcb;
+}
+
+.news .news__related-subjects ul,
+.news .news__related-centres ul,
+.news .news__schools ul {
+    margin-left: 0;
+}
+
+.news .news__related-subjects li,
+.news .news__related-centres li,
+.news .news__schools li {
+    list-style: none;
 }
 
 .course--pgt__profiles_heading,
