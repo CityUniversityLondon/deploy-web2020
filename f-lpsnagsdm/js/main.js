@@ -1528,8 +1528,11 @@ function devcorate(elem, param, value) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 
@@ -1584,17 +1587,17 @@ function insertSelect(items, parentElement) {
   selectBox.className = 'select-filter';
   parentElement.prepend(selectBox); // get and add default select text
 
-  let option = document.createElement('option');
-  option.text = parentElement.getAttribute('data-text');
-  selectBox.appendChild(option); // iterate over each item and create/append select option
+  const noSelection = document.createElement('option');
+  noSelection.text = parentElement.getAttribute('data-text');
+  selectBox.appendChild(noSelection); // iterate over each item and create/append select option
 
-  items.forEach(function (item, i) {
-    let dataValue = item.getAttribute('data-value');
-    let option = document.createElement('option');
+  Array.from(items).sort((a, b) => a.dataset.value < b.dataset.value ? -1 : a.dataset.value > b.dataset.value ? 1 : 0).forEach(item => {
+    const dataValue = item.dataset.value,
+          option = document.createElement('option');
     option.value = dataValue;
     option.text = dataValue; // set first item in list as selected
 
-    if (i === 0) {
+    if (item.dataset.default === 'true') {
       option.setAttribute('selected', 'selected');
     }
 
