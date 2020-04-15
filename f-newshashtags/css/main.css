@@ -56004,10 +56004,6 @@ ul.news__hashtags li a:active {
     margin: 2rem 0;
 }
 
-.news__related-subjects {
-    display: none;
-}
-
 .news__related-academics {
     border-bottom: 0.0625rem solid #cbcbcb;
 }
@@ -56022,15 +56018,21 @@ ul.news__hashtags li a:active {
     display: none;
 }
 
+.news__related-subjects,
+.news__related-centres,
 .news__schools {
     padding-bottom: 1.25rem;
     border-bottom: 0.0625rem solid #cbcbcb;
 }
 
+.news__related-subjects ul,
+.news__related-centres ul,
 .news__schools ul {
     margin-left: 0;
 }
 
+.news__related-subjects li,
+.news__related-centres li,
 .news__schools li {
     list-style: none;
 }
