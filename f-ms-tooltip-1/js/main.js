@@ -542,8 +542,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
 /* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
 /* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/tooltip/image-credit/image-credit'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-!(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/tooltip/social-share/social-share'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
+/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
 
 
 /**
@@ -584,7 +584,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_7__["default"], !(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/tooltip/image-credit/image-credit'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), !(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/tooltip/social-share/social-share'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_28__["default"]]);
 
 /***/ }),
 
@@ -8553,6 +8553,141 @@ function launchTabs(tabs) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchTabs,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/tooltip/image-credit/image-credit.js":
+/*!***********************************************************!*\
+  !*** ./src/patterns/tooltip/image-credit/image-credit.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+
+
+
+const className = 'hero-image';
+
+function showCredit(e) {
+  let tooltipWrapper = e.target.closest('.wrapper--tooltip__label');
+  tooltipWrapper.getAttribute('data-selected') === 'false' ? tooltipWrapper.setAttribute('data-selected', 'true') : tooltipWrapper.setAttribute('data-selected', 'false');
+}
+
+function launchBannerTooltip(banner) {
+  // Create tooltip elements
+  const tooltipWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'wrapper--tooltip__label'
+  }, {
+    label: 'data-selected',
+    val: false
+  }]);
+  const iconBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
+    label: 'class',
+    val: 'tooltip tooltip--image-credit'
+  }, {
+    label: 'aria-label',
+    val: 'Show image credit'
+  }]);
+  const iconSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
+    label: 'class',
+    val: 'tooltip__icon icon fas fa-info-circle'
+  }, {
+    label: 'aria-label',
+    val: 'Information icon'
+  }]);
+  const labelSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
+    label: 'class',
+    val: 'tooltip__label'
+  }]);
+  const labelAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
+  const labelAnchorTextAttr = banner.getAttribute('data-image-author');
+  const labelAnchorText = document.createTextNode(labelAnchorTextAttr);
+  const labelAnchorRefAttr = banner.getAttribute('data-image-link');
+  labelAnchor.href = labelAnchorRefAttr; // Append tooltip elements to banner
+
+  iconBtn.appendChild(iconSpan);
+  labelAnchor.appendChild(labelAnchorText);
+  labelSpan.appendChild(labelAnchor);
+  tooltipWrapper.appendChild(labelSpan);
+  tooltipWrapper.appendChild(iconBtn);
+  banner.appendChild(tooltipWrapper);
+  iconBtn.addEventListener('click', e => {
+    showCredit(e);
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchBannerTooltip,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/tooltip/social-share/social-share.js":
+/*!***********************************************************!*\
+  !*** ./src/patterns/tooltip/social-share/social-share.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+const className = 'fa-link';
+
+function copyIconToClipboard(elem) {
+  const copy = elem;
+  copy.parentNode.parentNode.style.position = 'relative';
+  copy.addEventListener('mouseover', e => {
+    let t = document.createElement('div');
+    let link = document.createElement('span');
+    let url = window.location.href;
+    t.className = 'tooltip';
+    link.className = 'link-copy';
+    let textlink = document.createTextNode(url);
+    let textnode = document.createTextNode('Copy link');
+    t.appendChild(textnode);
+    link.appendChild(textlink);
+    t.appendChild(link);
+    e.target.parentElement.parentElement.appendChild(t);
+    e.target.parentElement.parentElement.classList.add('copyLink');
+  });
+  copy.addEventListener('click', e => {
+    e.preventDefault();
+    let text = e.target.parentElement.parentElement.querySelector('.link-copy');
+    let range = document.createRange();
+    range.selectNode(text);
+    window.getSelection().addRange(range);
+
+    try {
+      // Now that we've selected the anchor text, execute the copy command
+      let successful = document.execCommand('copy');
+      let msg = successful ? 'successful' : 'unsuccessful';
+      e.target.parentElement.parentElement.querySelector('.tooltip').textContent = 'Link Copied';
+      e.target.parentElement.parentElement.querySelector('.tooltip').classList.add(msg);
+    } catch (err) {
+      throw new Error(e);
+    } // Remove the selections - NOTE: Should use
+    // removeRange(range) when it is supported
+
+
+    window.getSelection().removeAllRanges();
+  });
+  copy.addEventListener('mouseout', e => {
+    //remove element from mouseover
+    e.target.parentElement.parentElement.querySelector('.tooltip').remove();
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: copyIconToClipboard,
   launchQuery: ".".concat(className)
 });
 
