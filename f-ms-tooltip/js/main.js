@@ -2654,8 +2654,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _finder_filters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js");
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.es6.js");
 
 
 
@@ -5049,6 +5048,14 @@ class Carousel {
           lazyImage.classList.remove('lazy');
         }
       });
+    } else {
+      lazyImages.forEach(e => {
+        if (e.dataset.src) {
+          e.src = e.dataset.src;
+        }
+
+        e.classList.remove('lazy');
+      });
     }
 
     const _C = this.elem.querySelector('.swiper-wrapper'),
@@ -5856,13 +5863,16 @@ function listenForNavigationToggles(subNavigation, rootClass) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _menu_formatters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menu-formatters */ "./src/patterns/menu/menu-formatters.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _menu_formatters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./menu-formatters */ "./src/patterns/menu/menu-formatters.js");
+
 
 
 
@@ -5906,7 +5916,7 @@ function menuSetter(menu, button) {
     const buttonText = button.querySelector(".".concat(buttonTextClassName));
     menu.dataset.open = open;
     buttonText.innerText = open ? 'Close' : 'Menu';
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, open);
   };
 
   return setMenu;
@@ -5924,9 +5934,9 @@ function menuSetter(menu, button) {
 
 
 function toggleMenu(button, setMenu, trap, veil) {
-  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded);
+  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded);
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(expanded)) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(expanded)) {
     trap.deactivate();
     veil.dataset.on = 'false';
     setMenu(false);
@@ -5955,17 +5965,17 @@ function createMenuToggle(label, button, setMenu, veil) {
   button.className = 'menu__display__button__button';
   buttonWrapper.className = 'menu__display__button__button__wrapper';
   button.setAttribute('type', 'button');
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hasPopup, 'menu');
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hasPopup, 'menu');
   Array.from(label.childNodes).forEach(child => buttonWrapper.appendChild(child));
   button.appendChild(buttonWrapper);
-  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(menu, {
+  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_2___default()(menu, {
     /**
      * Initial focus should be whichever of: the current page; a menu item
      * in the asset lineage or; the first item in the last column appears
      * last in the DOM and is visible.
      */
     initialFocus: () => {
-      const open = Array.from(menu.querySelectorAll([".".concat(contentHeaderClassName, " > span"), ".".concat(currentClassName, " > .").concat(controlsClassName, " > a"), ".".concat(hierarchyClassName, " > .").concat(controlsClassName, " > a"), ".".concat(level1ClassName, " > ul > li:first-of-type > .").concat(controlsClassName, " > a"), ".".concat(currentPage, " > a")].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_2__["isVisible"])(elem));
+      const open = Array.from(menu.querySelectorAll([".".concat(contentHeaderClassName, " > span"), ".".concat(currentClassName, " > .").concat(controlsClassName, " > a"), ".".concat(hierarchyClassName, " > .").concat(controlsClassName, " > a"), ".".concat(level1ClassName, " > ul > li:first-of-type > .").concat(controlsClassName, " > a"), ".".concat(currentPage, " > a")].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_3__["isVisible"])(elem));
       return open[open.length - 1];
     },
     onDeactivate: () => toggleMenu(button, setMenu, trap, veil),
@@ -5982,19 +5992,19 @@ function createMenuToggle(label, button, setMenu, veil) {
 
 function launchMenu(menu) {
   // During testing only: remove 'under construction' indicators globally
-  // menu.innerHTML = menu.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
+  menu.innerHTML = menu.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
   const label = menu.querySelector(".".concat(buttonDisplayClassName)),
         button = document.createElement('button'),
         veil = document.createElement('div'),
         setMenu = menuSetter(menu, button);
   veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   createMenuToggle(label, button, setMenu, veil);
   label.appendChild(button);
   setMenu(false);
-  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_4__["prepareNavigation"])(menu.querySelector(".".concat(level1ClassName)), className);
-  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_4__["listenForNavigationToggles"])(menu.querySelector(".".concat(level1ClassName)), className);
+  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_5__["prepareNavigation"])(menu.querySelector(".".concat(level1ClassName)), className);
+  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_5__["listenForNavigationToggles"])(menu.querySelector(".".concat(level1ClassName)), className);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -6379,12 +6389,15 @@ function trapFocus(modal) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+
 
 
 
@@ -6424,7 +6437,7 @@ function createCloseAll(navigation, veil) {
   return () => {
     const buttons = Array.from(navigation.querySelectorAll('.navigation--primary__level1 > .navigation__button'));
     buttons.forEach(button => {
-      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, 'false');
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(openText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     });
     veil.dataset.on = 'false';
@@ -6441,13 +6454,13 @@ function createCloseAll(navigation, veil) {
 
 function createSectionToggle(button, closeAll, veil) {
   return () => {
-    const open = !Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded));
+    const open = !Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded));
     closeAll();
 
     if (open) {
       button.closest(".".concat(classNameSpecific)).dataset.open = 'true';
       veil.dataset.on = 'true';
-      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, open);
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(closeText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     }
   };
@@ -6472,8 +6485,8 @@ function prepareTopLevel(navigation, veil, closeAll) {
           toggleSection = createSectionToggle(button, closeAll, veil); // LIs have tabindex so they're accessible with no JS, remove it
 
     el.removeAttribute('tabindex');
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, 'false');
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].owns, el.nextElementSibling.id);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].owns, el.nextElementSibling.id);
     button.setAttribute('type', 'button');
     button.id = el.nextElementSibling.id + '-button';
     button.className = buttonClassName;
@@ -6482,7 +6495,7 @@ function prepareTopLevel(navigation, veil, closeAll) {
     srNavigationSpan.className = navigationTextClassName;
     srNavigationSpan.appendChild(document.createTextNode(navigationText));
     button.addEventListener('click', () => toggleSection(), true);
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(buttonDiv, [srOpenCloseSpan, document.createTextNode(' '), el, document.createTextNode(' '), srNavigationSpan]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(buttonDiv, [srOpenCloseSpan, document.createTextNode(' '), el, document.createTextNode(' '), srNavigationSpan]);
     button.append(buttonDiv);
     listItem.prepend(button);
   });
@@ -6502,7 +6515,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
         restButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:first-of-type) > .navigation__button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   firstButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
       closeAll();
     }
   });
@@ -6512,7 +6525,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
           lastNavigationAnchor = previousSection.querySelector('.navigation__level2 > li:last-of-type > a') ? previousSection.querySelector('.navigation__level2 > li:last-of-type > a') : previousSection.querySelector('.navigation__level2 > li:last-of-type').previousElementSibling.querySelector('a'),
           togglePreviousSection = createSectionToggle(previousSectionButton, closeAll, veil);
     thisSectionButton.addEventListener('keydown', e => {
-      if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
+      if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
         e.preventDefault();
         togglePreviousSection();
         lastNavigationAnchor.focus();
@@ -6535,7 +6548,7 @@ function setupTabNext(navigation, closeAll, veil) {
         restSectionsCloseButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:last-of-type) .wrapper--navigation--primary__menu__close button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   closeButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && keyCodeTab === e.keyCode && !e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded)) && keyCodeTab === e.keyCode && !e.shiftKey) {
       closeAll();
     }
   });
@@ -6608,11 +6621,11 @@ function addCloseButtons(navigation, closeAll) {
           text = 'Close ' + header.innerText.trim() + ' menu';
     closeButtonText.appendChild(document.createTextNode(text));
     closeButtonText.className = 'navigation--primary__menu__close__text';
-    closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+    closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
     closeButtonIcon.className = 'fas fa-fw fa-times navigation--primary__menu__close__icon';
     closeButtonWrapper.className = 'wrapper--navigation--primary__menu__close';
     closeButton.className = 'navigation--primary__menu__close';
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
     closeButton.appendChild(closeButtonDiv);
     closeButton.setAttribute('type', 'button');
     closeButton.title = text;
@@ -6630,13 +6643,11 @@ function addCloseButtons(navigation, closeAll) {
 
 function launchPrimaryNavigation(navigation) {
   // During testing only: remove 'under construction' indicators globally
-  // navigation.innerHTML = navigation.innerHTML
-  //     .replace(/\(\( /g, '')
-  //     .replace(/ \)\)/g, '');
+  navigation.innerHTML = navigation.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
   const veil = document.createElement('div'),
         closeAll = createCloseAll(navigation, veil);
   veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   prepareTopLevel(navigation, veil, closeAll);
   prepareLowerLevels(navigation, veil);
@@ -6677,7 +6688,11 @@ function launchPrimaryNavigation(navigation) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../menu/menu-formatters */ "./src/patterns/menu/menu-formatters.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _menu_menu_formatters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menu/menu-formatters */ "./src/patterns/menu/menu-formatters.js");
+
+
 
 
 /**
@@ -6698,11 +6713,9 @@ const className = 'navigation',
 
 function launchSecondaryNavigation(navigation) {
   // During testing only: remove 'under construction' indicators globally
-  // navigation.innerHTML = navigation.innerHTML
-  //     .replace(/\(\( /g, '')
-  //     .replace(/ \)\)/g, '');
-  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__["prepareNavigation"])(navigation, className);
-  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__["listenForNavigationToggles"])(navigation, className);
+  navigation.innerHTML = navigation.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
+  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_1__["prepareNavigation"])(navigation, className);
+  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_1__["listenForNavigationToggles"])(navigation, className);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -7725,13 +7738,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
-* Creates HTML elements for the control buttons (called only if type = 'dot')
-*
-* @param {HTMLElement} slider - an HTML element with the slider class
-* @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
-* @param {HTMLElement} wrapper - parent-wrapper HTML of buttons
-* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
-*/
+ * Creates HTML elements for the control buttons (called only if type = 'dot')
+ *
+ * @param {HTMLElement} slider - an HTML element with the slider class
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {HTMLElement} wrapper - parent-wrapper HTML of buttons
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ */
 
 function createSliderDot(slider, sliderType, wrapper, sliderObject) {
   let slidesTotal = sliderObject[sliderType].totalPages;
@@ -7764,12 +7777,12 @@ function createSliderDot(slider, sliderType, wrapper, sliderObject) {
   }
 }
 /**
-* Event listener added to control buttons (if control type is 'dot')
-*
-* @param {HTMLElement} dot - HTML element the event listener is attached to
-* @param {HTMLElement} slider - an HTML element with the slider class
-* @param {HTMLElement} parent - parent-wrapper HTML element of buttons (dots)
-*/
+ * Event listener added to control buttons (if control type is 'dot')
+ *
+ * @param {HTMLElement} dot - HTML element the event listener is attached to
+ * @param {HTMLElement} slider - an HTML element with the slider class
+ * @param {HTMLElement} parent - parent-wrapper HTML element of buttons (dots)
+ */
 
 function dotEvent(dot, slider, parent) {
   let dots = parent.querySelectorAll('button'),
@@ -7835,7 +7848,7 @@ const className = 'slider';
  * it also calls 3 further functions: setVisibility() createProgressTracker() createSliderButton()
  *
  * @param {HTMLElement} slider - an HTML element with the slider class.
- * 
+ *
  */
 
 function launchSlider(slider) {
@@ -7929,14 +7942,14 @@ function launchSlider(slider) {
 }
 /**
  * setting visibility
- * this function sets adds data attributes to <li> elements within slider, this attribute will be used by CSS to determine 
+ * this function sets adds data attributes to <li> elements within slider, this attribute will be used by CSS to determine
  * if slides are visible or not on page load. This data attribute will be used to turn visibility on/off with the slider buttons'
  * event listener
  *
  * @param {HTMLElement} slider - an HTML element with the slider class.
  * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
  * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
- * 
+ *
  */
 
 
@@ -7985,12 +7998,12 @@ function slicedArrayIterator(arr, pageAttr, visibilityAttr) {
   }
 }
 /**
-* Called by the innitial launch function. It adds a progress bar/ page counter to the slider
-*
-* @param {HTMLElement} slider - an HTML element with the slider class.
-* @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
-* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
-*/
+ * Called by the innitial launch function. It adds a progress bar/ page counter to the slider
+ *
+ * @param {HTMLElement} slider - an HTML element with the slider class.
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ */
 
 
 function createProgressTracker(slider, sliderType, sliderObject) {
@@ -8008,12 +8021,12 @@ function createProgressTracker(slider, sliderType, sliderObject) {
   }
 }
 /**
-* Called by the createProgressTracker() function. It generates the HTML elements for the progress bar
-*
-* @param {HTMLElement} wrapper - an HTML element with the slider-block__control class.
-* @param {string} type - it tells you which key to use from the sliderObject
-* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
-*/
+ * Called by the createProgressTracker() function. It generates the HTML elements for the progress bar
+ *
+ * @param {HTMLElement} wrapper - an HTML element with the slider-block__control class.
+ * @param {string} type - it tells you which key to use from the sliderObject
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ */
 
 
 function createProgressElements(wrapper, type, sliderObject) {
@@ -8036,13 +8049,13 @@ function createProgressElements(wrapper, type, sliderObject) {
   progress.appendChild(lastPage);
 }
 /**
-* Called by the innitial launch function. It adds control buttons to the slider
-*
-* @param {HTMLElement} slider - an HTML element with the slider class.
-* @param {string} sliderControl - determines what type of buttons to add to the slider
-* @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
-* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
-*/
+ * Called by the innitial launch function. It adds control buttons to the slider
+ *
+ * @param {HTMLElement} slider - an HTML element with the slider class.
+ * @param {string} sliderControl - determines what type of buttons to add to the slider
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ */
 
 
 function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
@@ -8101,12 +8114,12 @@ function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
   }
 }
 /**
-* Creates HTML elements for the control buttons
-*
-* @param {string} classname - classname to be added to the button being generated
-* @param {string} type - it tells you which key to use from the sliderObject
-* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
-*/
+ * Creates HTML elements for the control buttons
+ *
+ * @param {string} classname - classname to be added to the button being generated
+ * @param {string} type - it tells you which key to use from the sliderObject
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ */
 
 
 function createButtonElement(classname, type, sliderObject) {
@@ -8142,14 +8155,14 @@ function createButtonElement(classname, type, sliderObject) {
   return button;
 }
 /**
-* Event listener attached to default buttons
-*
-* @param {HTMLElement} slider - an HTML element with the slider class
-* @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
-* @param {HTMLElement} wrapper - parent-wrapper HTML of buttons
-* @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
-*
-*/
+ * Event listener attached to default buttons
+ *
+ * @param {HTMLElement} slider - an HTML element with the slider class
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {HTMLElement} wrapper - parent-wrapper HTML of buttons
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ *
+ */
 
 
 function defaultEvent(button, slider, type, sliderObject) {
