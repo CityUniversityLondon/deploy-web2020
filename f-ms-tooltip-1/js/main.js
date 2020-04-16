@@ -8570,56 +8570,77 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
 
 
+/**
+ * Image credit
+ *
+ * @module patterns/tooltip/image-credit
+ * @author Web Development
+ * @copyright City, University of London
+ */
 
 const className = 'hero-image';
+/**
+ * Respond to button clicks - open if closed, close if open.
+ *
+ * @param {event} e - The information icon click event.
+ */
 
 function showCredit(e) {
   let tooltipWrapper = e.target.closest('.wrapper--tooltip__label');
   tooltipWrapper.getAttribute('data-selected') === 'false' ? tooltipWrapper.setAttribute('data-selected', 'true') : tooltipWrapper.setAttribute('data-selected', 'false');
 }
+/**
+ * Create an accreditation tooltip from the data attributes of a banner image.
+ *
+ * @param {HTMLElement} banner - A banner image.
+ */
+
 
 function launchBannerTooltip(banner) {
-  // Create tooltip elements
-  const tooltipWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
-    label: 'class',
-    val: 'wrapper--tooltip__label'
-  }, {
-    label: 'data-selected',
-    val: false
-  }]);
-  const iconBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
-    label: 'class',
-    val: 'tooltip tooltip--image-credit'
-  }, {
-    label: 'aria-label',
-    val: 'Show image credit'
-  }]);
-  const iconSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
-    label: 'class',
-    val: 'tooltip__icon icon fas fa-info-circle'
-  }, {
-    label: 'aria-label',
-    val: 'Information icon'
-  }]);
-  const labelSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
-    label: 'class',
-    val: 'tooltip__label'
-  }]);
-  const labelAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
   const labelAnchorTextAttr = banner.getAttribute('data-image-author');
-  const labelAnchorText = document.createTextNode(labelAnchorTextAttr);
-  const labelAnchorRefAttr = banner.getAttribute('data-image-link');
-  labelAnchor.href = labelAnchorRefAttr; // Append tooltip elements to banner
 
-  iconBtn.appendChild(iconSpan);
-  labelAnchor.appendChild(labelAnchorText);
-  labelSpan.appendChild(labelAnchor);
-  tooltipWrapper.appendChild(labelSpan);
-  tooltipWrapper.appendChild(iconBtn);
-  banner.appendChild(tooltipWrapper);
-  iconBtn.addEventListener('click', e => {
-    showCredit(e);
-  });
+  if (labelAnchorTextAttr) {
+    // Create tooltip elements
+    const tooltipWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
+      label: 'class',
+      val: 'wrapper--tooltip__label'
+    }, {
+      label: 'data-selected',
+      val: false
+    }]);
+    const iconBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
+      label: 'class',
+      val: 'tooltip tooltip--image-credit'
+    }, {
+      label: 'aria-label',
+      val: 'Show image credit'
+    }]);
+    const iconSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
+      label: 'class',
+      val: 'tooltip__icon icon fas fa-info-circle'
+    }, {
+      label: 'aria-label',
+      val: 'Information icon'
+    }]);
+    const labelSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
+      label: 'class',
+      val: 'tooltip__label'
+    }]);
+    const labelAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
+    const labelAnchorText = document.createTextNode(labelAnchorTextAttr);
+    const labelAnchorRefAttr = banner.getAttribute('data-image-link');
+    labelAnchor.href = labelAnchorRefAttr; // Append tooltip elements to banner
+
+    iconBtn.appendChild(iconSpan);
+    labelAnchor.appendChild(labelAnchorText);
+    labelSpan.appendChild(labelAnchor);
+    tooltipWrapper.appendChild(labelSpan);
+    tooltipWrapper.appendChild(iconBtn);
+    banner.appendChild(tooltipWrapper);
+    iconBtn.addEventListener('click', e => {
+      showCredit(e);
+    });
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
