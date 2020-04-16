@@ -56124,6 +56124,10 @@ main > .news {
     margin: 2rem 0;
 }
 
+.news .news__related-courses .card--related-course a {
+    width: 100%;
+}
+
 .news .news__related-academics {
     border-bottom: 0.0625rem solid #cbcbcb;
 }
