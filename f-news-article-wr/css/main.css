@@ -55825,6 +55825,12 @@ main > .news {
     main > .news {
         grid-column: 1/-1 !important;
     }
+    main > .news .news__body, main > .news .news__body__video, main > .news .news__hashtags__wrap, main > .news .news__social-icons, main > .news .news__related-courses, main > .news .news__related-subjects, main > .news .news__related-academics, main > .news .news__schools, main > .news .news__related-centres, main > .news .news__related-news, main > .news .news__related-people {
+        grid-column: 7 / 19;
+    }
+    main > .news .news__contact {
+        grid-column: 1  / -1;
+    }
     main > .news.news--fullwidth {
         grid-column: 1 / span 24;
         /* dimitra said never navigation thus always full width*/
@@ -55987,12 +55993,7 @@ main > .news {
     padding: 0;
 }
 
-.news .news__body {
-    grid-column: 7 / 19;
-}
-
 .news .news__body__video {
-    grid-column: 7 / 19;
     padding-top: 1.5rem;
 }
 
@@ -56121,10 +56122,6 @@ main > .news {
 
 .news .news__related-courses {
     margin: 2rem 0;
-}
-
-.news .news__related-subjects {
-    display: none;
 }
 
 .news .news__related-academics {
