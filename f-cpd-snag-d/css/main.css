@@ -21028,7 +21028,7 @@ Assign mixin:
         border-bottom: 0.125rem dotted #0c0c0e;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body p {
-        margin: 1rem 0;
+        margin: 0.5rem 0;
     }
     .js .accordion > .accordion__heading[data-open='true'] + .accordion__body:focus, .js .accordion > .accordion__heading[data-open='true'] + .accordion__body:active {
         border-style: dotted;
@@ -26656,6 +26656,47 @@ p.card--course__key-info .icon {
     margin-top: 2rem;
     position: relative;
     padding-left: 0.75rem;
+    font-size: 1.266rem;
+    line-height: 1.25;
+    letter-spacing: -0.011em;
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.625;
+    margin-top: 0.75rem;
+    max-width: 55ch;
+    line-height: 1.802;
+    color: #1e1e1e;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--testimonial .card--testimonial__text .card--testimonial__quote {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--testimonial .card--testimonial__text .card--testimonial__quote i,
+.card--testimonial .card--testimonial__text .card--testimonial__quote em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .card--testimonial .card--testimonial__text .card--testimonial__quote p {
@@ -60792,6 +60833,36 @@ button
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.lifelong-learning .lifelong-learning__tutors .card--profile__jobtitle {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .lifelong-learning .lifelong-learning__tutors .card--profile__jobtitle {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .lifelong-learning .lifelong-learning__tutors .card--profile__jobtitle {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .lifelong-learning .lifelong-learning__tutors .card--profile__jobtitle {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .lifelong-learning .lifelong-learning__tutors .card--profile__jobtitle {
+        letter-spacing: -0.017em;
+    }
 }
 
 .lifelong-learning .lifelong-learning__video {
