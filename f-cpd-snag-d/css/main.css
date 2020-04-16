@@ -25777,7 +25777,6 @@ p.card--course__key-info .icon {
 }
 
 .card--profile__thumbnail {
-    border-radius: 100%;
     max-width: 7rem;
     max-height: 6rem;
     margin-top: 0.5rem;
@@ -60459,6 +60458,7 @@ button
     background-color: #f2f2f2;
     border-bottom: 0.125rem solid #d8d8d8;
     padding-bottom: 2rem;
+    overflow: auto;
 }
 
 .lifelong-learning .wrapper--lifelong-learning__introduction {
