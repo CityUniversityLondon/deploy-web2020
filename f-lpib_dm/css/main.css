@@ -55806,6 +55806,12 @@ main .landing:only-child .landing__top__cta {
 
 @media (min-width: 1024px) {
     .landing .related-content.slider {
+        grid-column: 4 / -4;
+    }
+}
+
+@media (min-width: 1281px) {
+    .landing .related-content.slider {
         grid-column: 6 / -6;
     }
 }
