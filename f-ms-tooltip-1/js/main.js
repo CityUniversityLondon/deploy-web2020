@@ -8571,7 +8571,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Image credit
+ * Image accreditation tooltip
  *
  * @module patterns/tooltip/image-credit
  * @author Web Development
@@ -8579,8 +8579,9 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 const className = 'hero-image';
+let authorElement, sourceElement;
 /**
- * Respond to button clicks - open if closed, close if open.
+ * Respond to button clicks - open if closed, close if opened.
  *
  * @param {event} e - The information icon click event.
  */
@@ -8589,23 +8590,29 @@ function showCredit(e) {
   let tooltipWrapper = e.target.closest('.wrapper--tooltip__label');
   tooltipWrapper.getAttribute('data-selected') === 'false' ? tooltipWrapper.setAttribute('data-selected', 'true') : tooltipWrapper.setAttribute('data-selected', 'false');
 }
+/**
+ * Create label(s) to go alongside the information icon.
+ *
+ * @param {string} el - Blank variable that is returned as an HTML element after function is complete.
+ * @param {string} elText - Label's link or link text value.
+ * @param {url} elUrl - Label's link value.
+ */
 
-function createLabels(elName, el, elUrl, c) {
-  if (elName) {
-    const elText = document.createTextNode(elName);
+
+function createLabel(el, elText, elUrl) {
+  if (elText) {
+    const elTextNode = document.createTextNode(elText);
 
     if (elUrl) {
       el = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
       el.href = elUrl;
-      el.appendChild(elText);
-      c = el;
+      el.appendChild(elTextNode);
     } else {
       el = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', []);
-      el.appendChild(elText);
-      c = el;
+      el.appendChild(elTextNode);
     }
 
-    return c;
+    return el;
   }
 }
 /**
@@ -8617,13 +8624,12 @@ function createLabels(elName, el, elUrl, c) {
 
 function launchBannerTooltip(banner) {
   const tooltipDisplay = banner.getAttribute('data-tooltip-display'),
-        authorName = banner.getAttribute('data-author-name'),
+        authorText = banner.getAttribute('data-author-name'),
         authorUrl = banner.getAttribute('data-author-url'),
-        sourceName = banner.getAttribute('data-source-name'),
+        sourceText = banner.getAttribute('data-source-name'),
         sourceUrl = banner.getAttribute('data-source-url');
 
   if (tooltipDisplay === 'true') {
-    // Create tooltip elements
     const tooltipWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
       label: 'class',
       val: 'wrapper--tooltip__label'
@@ -8648,49 +8654,27 @@ function launchBannerTooltip(banner) {
     const labelSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
       label: 'class',
       val: 'tooltip__label'
-    }]); // Define label elements here for correct scope when appending to DOM
+    }]); // Build labels
 
-    let authorElement, sourceElement; // if (authorName) {
-    //     const authorText = document.createTextNode(authorName);
-    //     if (authorUrl) {
-    //         authorElement = createHTMLElement('a', []);
-    //         authorElement.href = authorUrl;
-    //         authorElement.appendChild(authorText);
-    //     } else {
-    //         authorElement = createHTMLElement('span', []);
-    //         authorElement.appendChild(authorText);
-    //     }
-    // }
-
-    let a = createLabels(authorName, authorElement, authorUrl);
-    let b = createLabels(sourceName, sourceElement, sourceUrl); // if (sourceName) {
-    //     const sourceText = document.createTextNode(sourceName);
-    //     if (sourceUrl) {
-    //         sourceElement = createHTMLElement('a', []);
-    //         sourceElement.href = sourceUrl;
-    //         sourceElement.appendChild(sourceText);
-    //     } else {
-    //         sourceElement = createHTMLElement('span', []);
-    //         sourceElement.appendChild(sourceText);
-    //     }
-    // }
-    // Append tooltip elements to banner
+    let author = createLabel(authorElement, authorText, authorUrl);
+    let source = createLabel(sourceElement, sourceText, sourceUrl); // Append tooltip elements to banner
 
     iconBtn.appendChild(iconSpan);
-    authorName && !sourceName ? labelSpan.appendChild(a) : null;
-    sourceName && !authorName ? labelSpan.appendChild(b) : null; // Add divider if author and source names exist
+    authorText && !sourceText ? labelSpan.appendChild(author) : null;
+    sourceText && !authorText ? labelSpan.appendChild(source) : null; // Add divider if author and source text values exist
 
-    if (authorName && sourceName) {
-      labelSpan.appendChild(a);
+    if (authorText && sourceText) {
+      labelSpan.appendChild(author);
       const dividerText = document.createTextNode(' / ');
       labelSpan.appendChild(dividerText);
-      labelSpan.appendChild(b);
+      labelSpan.appendChild(source);
     }
 
     tooltipWrapper.appendChild(labelSpan);
     tooltipWrapper.appendChild(iconBtn); // Only append tooltip if at least one name is supplied (author or source)
 
-    authorName || sourceName ? banner.appendChild(tooltipWrapper) : null;
+    authorText || sourceText ? banner.appendChild(tooltipWrapper) : null; // Show/hide icon label(s) on click
+
     iconBtn.addEventListener('click', e => {
       showCredit(e);
     });
