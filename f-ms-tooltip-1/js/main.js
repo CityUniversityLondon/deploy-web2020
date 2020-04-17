@@ -8597,9 +8597,13 @@ function showCredit(e) {
 
 
 function launchBannerTooltip(banner) {
-  const labelAnchorTextAttr = banner.getAttribute('data-image-author');
+  const tooltipDisplay = banner.getAttribute('data-tooltip-display'),
+        authorName = banner.getAttribute('data-author-name'),
+        authorUrl = banner.getAttribute('data-author-url'),
+        sourceName = banner.getAttribute('data-source-name'),
+        sourceUrl = banner.getAttribute('data-source-url');
 
-  if (labelAnchorTextAttr) {
+  if (tooltipDisplay === 'true') {
     // Create tooltip elements
     const tooltipWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
       label: 'class',
@@ -8625,15 +8629,36 @@ function launchBannerTooltip(banner) {
     const labelSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
       label: 'class',
       val: 'tooltip__label'
-    }]);
-    const labelAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
-    const labelAnchorText = document.createTextNode(labelAnchorTextAttr);
-    const labelAnchorRefAttr = banner.getAttribute('data-image-link');
-    labelAnchor.href = labelAnchorRefAttr; // Append tooltip elements to banner
+    }]); // For scoping when appending elements, define these variables here
+
+    let authorAnchor, sourceAnchor;
+
+    if (authorName) {
+      const authorAnchorText = document.createTextNode(authorName);
+      authorAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
+      authorAnchor.href = authorUrl;
+      authorAnchor.appendChild(authorAnchorText);
+    }
+
+    if (sourceName) {
+      const sourceAnchorText = document.createTextNode(sourceName);
+      sourceAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
+      sourceAnchor.href = sourceUrl;
+      sourceAnchor.appendChild(sourceAnchorText);
+    } // Append tooltip elements to banner
+
 
     iconBtn.appendChild(iconSpan);
-    labelAnchor.appendChild(labelAnchorText);
-    labelSpan.appendChild(labelAnchor);
+    authorName && !sourceName ? labelSpan.appendChild(authorAnchor) : null;
+    sourceName && !authorName ? labelSpan.appendChild(sourceAnchor) : null;
+
+    if (authorName && sourceName) {
+      labelSpan.appendChild(authorAnchor);
+      const dividerText = document.createTextNode(' / ');
+      labelSpan.appendChild(dividerText);
+      labelSpan.appendChild(sourceAnchor);
+    }
+
     tooltipWrapper.appendChild(labelSpan);
     tooltipWrapper.appendChild(iconBtn);
     banner.appendChild(tooltipWrapper);
