@@ -8626,42 +8626,55 @@ function launchBannerTooltip(banner) {
       label: 'aria-label',
       val: 'Information icon'
     }]);
-    const labelSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
+    const labelSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
       label: 'class',
       val: 'tooltip__label'
-    }]); // For scoping when appending elements, define these variables here
+    }]); // Define here for correct scope when appending to DOM
 
-    let authorAnchor, sourceAnchor;
+    let authorElement, sourceElement;
 
     if (authorName) {
-      const authorAnchorText = document.createTextNode(authorName);
-      authorAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
-      authorAnchor.href = authorUrl;
-      authorAnchor.appendChild(authorAnchorText);
+      const authorText = document.createTextNode(authorName);
+
+      if (authorUrl) {
+        authorElement = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
+        authorElement.href = authorUrl;
+        authorElement.appendChild(authorText);
+      } else {
+        authorElement = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', []);
+        authorElement.appendChild(authorText);
+      }
     }
 
     if (sourceName) {
-      const sourceAnchorText = document.createTextNode(sourceName);
-      sourceAnchor = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
-      sourceAnchor.href = sourceUrl;
-      sourceAnchor.appendChild(sourceAnchorText);
+      const sourceText = document.createTextNode(sourceName);
+
+      if (sourceUrl) {
+        sourceElement = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
+        sourceElement.href = sourceUrl;
+        sourceElement.appendChild(sourceText);
+      } else {
+        sourceElement = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', []);
+        sourceElement.appendChild(sourceText);
+      }
     } // Append tooltip elements to banner
 
 
     iconBtn.appendChild(iconSpan);
-    authorName && !sourceName ? labelSpan.appendChild(authorAnchor) : null;
-    sourceName && !authorName ? labelSpan.appendChild(sourceAnchor) : null;
+    authorName && !sourceName ? labelSpan.appendChild(authorElement) : null;
+    sourceName && !authorName ? labelSpan.appendChild(sourceElement) : null; // Add divider if author and source names exist
 
     if (authorName && sourceName) {
-      labelSpan.appendChild(authorAnchor);
+      labelSpan.appendChild(authorElement);
       const dividerText = document.createTextNode(' / ');
       labelSpan.appendChild(dividerText);
-      labelSpan.appendChild(sourceAnchor);
+      labelSpan.appendChild(sourceElement);
     }
 
     tooltipWrapper.appendChild(labelSpan);
-    tooltipWrapper.appendChild(iconBtn);
-    banner.appendChild(tooltipWrapper);
+    tooltipWrapper.appendChild(iconBtn); // Only append tooltip if at least one name is supplied (author or source)
+
+    authorName || sourceName ? banner.appendChild(tooltipWrapper) : null;
     iconBtn.addEventListener('click', e => {
       showCredit(e);
     });

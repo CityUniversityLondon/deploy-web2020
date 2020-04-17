@@ -46615,14 +46615,10 @@ blockquote footer cite {
 
 .wrapper--tooltip__label .tooltip__label {
     padding: 0.5rem;
-}
-
-.wrapper--tooltip__label span {
-    padding: 0.5rem;
     color: #ffffff;
 }
 
-.wrapper--tooltip__label span a {
+.wrapper--tooltip__label .tooltip__label a {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -46645,7 +46641,7 @@ blockquote footer cite {
 }
 
 @media (hover: hover) {
-    .wrapper--tooltip__label span a:hover {
+    .wrapper--tooltip__label .tooltip__label a:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -46662,7 +46658,7 @@ blockquote footer cite {
     }
 }
 
-.wrapper--tooltip__label span a:focus, .wrapper--tooltip__label span a:active {
+.wrapper--tooltip__label .tooltip__label a:focus, .wrapper--tooltip__label .tooltip__label a:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -46678,25 +46674,25 @@ blockquote footer cite {
     text-decoration: none;
 }
 
-.wrapper--tooltip__label span a:focus, .wrapper--tooltip__label span a:active {
+.wrapper--tooltip__label .tooltip__label a:focus, .wrapper--tooltip__label .tooltip__label a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.wrapper--tooltip__label span a:before {
+.wrapper--tooltip__label .tooltip__label a:before {
     transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
 }
 
-.wrapper--tooltip__label span a:focus {
+.wrapper--tooltip__label .tooltip__label a:focus {
     border-bottom-color: #ffffff;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
 }
 
-.wrapper--tooltip__label span a:visited {
+.wrapper--tooltip__label .tooltip__label a:visited {
     border-bottom-color: #d8d8d8;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -46704,7 +46700,7 @@ blockquote footer cite {
 }
 
 @media (hover: hover) {
-    .wrapper--tooltip__label span a:hover {
+    .wrapper--tooltip__label .tooltip__label a:hover {
         background-image: none;
         border-bottom-color: #ffffff;
         border-bottom-style: solid;
@@ -46713,7 +46709,7 @@ blockquote footer cite {
     }
 }
 
-.wrapper--tooltip__label span a:active {
+.wrapper--tooltip__label .tooltip__label a:active {
     border-bottom-color: #ffffff;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
