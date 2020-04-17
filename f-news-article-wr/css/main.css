@@ -55803,10 +55803,10 @@ main > .news {
     main > .news {
         grid-column: 1/-1 !important;
     }
-    main > .news .news__body, main > .news .news__body__video, main > .news .news__hashtags__wrap, main > .news .news__social-icons, main > .news .news__related-courses, main > .news .news__related-subjects, main > .news .news__related-academics, main > .news .news__schools, main > .news .news__related-centres, main > .news .news__related-news, main > .news .news__related-people {
+    main > .news .news__body, main > .news .news__body__video, main > .news .news__hashtags__wrap, main > .news .news__social-icons, main > .news .news__related-courses, main > .news .news__related-subjects, main > .news .news__related-academics, main > .news .news__schools, main > .news .news__related-centres, main > .news .news__related-events, main > .news .news__related-people {
         grid-column: 7 / 19;
     }
-    main > .news .news__contact {
+    main > .news .news__contact, main > .news .news__related-news {
         grid-column: 1  / -1;
     }
     main > .news.news--fullwidth {
@@ -56117,7 +56117,6 @@ main > .news {
 
 .news .news__related-news {
     margin-bottom: 2rem;
-    display: none;
 }
 
 .news .news__related-subjects,
@@ -56137,6 +56136,24 @@ main > .news {
 .news .news__related-centres li,
 .news .news__schools li {
     list-style: none;
+}
+
+.news .news__related-news {
+    background: #f2f2f2;
+}
+
+.news .news__related-news h2 {
+    text-align: center;
+}
+
+.news .news__related-news .related-content {
+    display: flex;
+}
+
+.news .news__related-news .related-content .card--news {
+    flex: 1;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
 }
 
 .course--pgt__profiles_heading,
