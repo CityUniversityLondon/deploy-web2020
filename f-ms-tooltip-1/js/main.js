@@ -8589,6 +8589,25 @@ function showCredit(e) {
   let tooltipWrapper = e.target.closest('.wrapper--tooltip__label');
   tooltipWrapper.getAttribute('data-selected') === 'false' ? tooltipWrapper.setAttribute('data-selected', 'true') : tooltipWrapper.setAttribute('data-selected', 'false');
 }
+
+function createLabels(elName, el, elUrl, c) {
+  if (elName) {
+    const elText = document.createTextNode(elName);
+
+    if (elUrl) {
+      el = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
+      el.href = elUrl;
+      el.appendChild(elText);
+      c = el;
+    } else {
+      el = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', []);
+      el.appendChild(elText);
+      c = el;
+    }
+
+    return c;
+  }
+}
 /**
  * Create an accreditation tooltip from the data attributes of a banner image.
  *
@@ -8629,46 +8648,43 @@ function launchBannerTooltip(banner) {
     const labelSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
       label: 'class',
       val: 'tooltip__label'
-    }]); // Define here for correct scope when appending to DOM
+    }]); // Define label elements here for correct scope when appending to DOM
 
-    let authorElement, sourceElement;
+    let authorElement, sourceElement; // if (authorName) {
+    //     const authorText = document.createTextNode(authorName);
+    //     if (authorUrl) {
+    //         authorElement = createHTMLElement('a', []);
+    //         authorElement.href = authorUrl;
+    //         authorElement.appendChild(authorText);
+    //     } else {
+    //         authorElement = createHTMLElement('span', []);
+    //         authorElement.appendChild(authorText);
+    //     }
+    // }
 
-    if (authorName) {
-      const authorText = document.createTextNode(authorName);
-
-      if (authorUrl) {
-        authorElement = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
-        authorElement.href = authorUrl;
-        authorElement.appendChild(authorText);
-      } else {
-        authorElement = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', []);
-        authorElement.appendChild(authorText);
-      }
-    }
-
-    if (sourceName) {
-      const sourceText = document.createTextNode(sourceName);
-
-      if (sourceUrl) {
-        sourceElement = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
-        sourceElement.href = sourceUrl;
-        sourceElement.appendChild(sourceText);
-      } else {
-        sourceElement = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', []);
-        sourceElement.appendChild(sourceText);
-      }
-    } // Append tooltip elements to banner
-
+    let a = createLabels(authorName, authorElement, authorUrl);
+    let b = createLabels(sourceName, sourceElement, sourceUrl); // if (sourceName) {
+    //     const sourceText = document.createTextNode(sourceName);
+    //     if (sourceUrl) {
+    //         sourceElement = createHTMLElement('a', []);
+    //         sourceElement.href = sourceUrl;
+    //         sourceElement.appendChild(sourceText);
+    //     } else {
+    //         sourceElement = createHTMLElement('span', []);
+    //         sourceElement.appendChild(sourceText);
+    //     }
+    // }
+    // Append tooltip elements to banner
 
     iconBtn.appendChild(iconSpan);
-    authorName && !sourceName ? labelSpan.appendChild(authorElement) : null;
-    sourceName && !authorName ? labelSpan.appendChild(sourceElement) : null; // Add divider if author and source names exist
+    authorName && !sourceName ? labelSpan.appendChild(a) : null;
+    sourceName && !authorName ? labelSpan.appendChild(b) : null; // Add divider if author and source names exist
 
     if (authorName && sourceName) {
-      labelSpan.appendChild(authorElement);
+      labelSpan.appendChild(a);
       const dividerText = document.createTextNode(' / ');
       labelSpan.appendChild(dividerText);
-      labelSpan.appendChild(sourceElement);
+      labelSpan.appendChild(b);
     }
 
     tooltipWrapper.appendChild(labelSpan);
