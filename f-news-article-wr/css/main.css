@@ -55807,6 +55807,10 @@ main > .news {
 }
 
 @media (max-width: 1023px) {
+    main > .news .banner__standfirst h1,
+    main > .news .banner__standfirst .labels {
+        grid-column: 3 / 21;
+    }
     main > .news .news__summary,
     main > .news .news__published__wrap,
     main > .news .news__feature-video,
@@ -55854,6 +55858,10 @@ main > .news {
 }
 
 @media (max-width: 767px) {
+    main > .news .banner__standfirst h1,
+    main > .news .banner__standfirst .labels {
+        grid-column: 3 / 23;
+    }
     main > .news .news__summary,
     main > .news .news__published__wrap,
     main > .news .news__feature-video,
