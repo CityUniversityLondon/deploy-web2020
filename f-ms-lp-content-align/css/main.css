@@ -54957,23 +54957,39 @@ main .landing:only-child .landing_middle1_content {
     }
 }
 
-main .landing:only-child .landing_middle1_content .landing__middle1__content--heading {
-    grid-column: 8/18;
+main .landing:only-child .landing_middle1_content .landing__middle1__content--heading,
+main .landing:only-child .landing_middle1_content .landing__middle1__content--text {
+    grid-column: 7/-7;
 }
 
-@media (max-width: 900px) {
-    main .landing:only-child .landing_middle1_content .landing__middle1__content--heading {
-        grid-column: 2/-2;
+@media (max-width: 1440px) {
+    main .landing:only-child .landing_middle1_content .landing__middle1__content--heading,
+    main .landing:only-child .landing_middle1_content .landing__middle1__content--text {
+        grid-column: 6/-6;
     }
 }
 
-main .landing:only-child .landing_middle1_content .landing__middle1__content--text {
-    grid-column: 8/18;
+@media (max-width: 1280px) {
+    main .landing:only-child .landing_middle1_content .landing__middle1__content--heading,
+    main .landing:only-child .landing_middle1_content .landing__middle1__content--text {
+        grid-column: 5/-5;
+    }
 }
 
 @media (max-width: 900px) {
+    main .landing:only-child .landing_middle1_content .landing__middle1__content--heading,
     main .landing:only-child .landing_middle1_content .landing__middle1__content--text {
-        grid-column: 2/-2;
+        grid-column: 1/-1;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 901px) {
+    main .landing:only-child .landing_middle1_content .landing__middle1__content--heading,
+    main .landing:only-child .landing_middle1_content .landing__middle1__content--text {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
@@ -54999,56 +55015,54 @@ main .landing:only-child .landing__middle1 > div {
     grid-column: 1/-1;
 }
 
-main .landing:only-child .landing__middle1 .accordion {
+main .landing:only-child .landing__middle1 .accordion,
+main .landing:only-child .landing__middle1 h2,
+main .landing:only-child .landing__middle1 p {
     grid-column: 7/-7;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
 }
 
 @media (max-width: 1440px) {
-    main .landing:only-child .landing__middle1 .accordion {
+    main .landing:only-child .landing__middle1 .accordion,
+    main .landing:only-child .landing__middle1 h2,
+    main .landing:only-child .landing__middle1 p {
         grid-column: 6/-6;
     }
 }
 
 @media (max-width: 1280px) {
-    main .landing:only-child .landing__middle1 .accordion {
+    main .landing:only-child .landing__middle1 .accordion,
+    main .landing:only-child .landing__middle1 h2,
+    main .landing:only-child .landing__middle1 p {
         grid-column: 5/-5;
     }
 }
 
 @media (max-width: 900px) {
-    main .landing:only-child .landing__middle1 .accordion {
+    main .landing:only-child .landing__middle1 .accordion,
+    main .landing:only-child .landing__middle1 h2,
+    main .landing:only-child .landing__middle1 p {
         grid-column: 1/-1;
+    }
+}
+
+main .landing:only-child .landing__middle1 .accordion {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+    main .landing:only-child .landing__middle1 .accordion,
+    main .landing:only-child .landing__middle1 h2 {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
 @media (max-width: 900px) and (min-width: 901px) {
-    main .landing:only-child .landing__middle1 .accordion {
+    main .landing:only-child .landing__middle1 .accordion,
+    main .landing:only-child .landing__middle1 h2 {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-main .landing:only-child .landing__middle1 h2 {
-    grid-column: 8/18;
-}
-
-@media (max-width: 900px) {
-    main .landing:only-child .landing__middle1 h2 {
-        grid-column: 2/-2;
-    }
-}
-
-main .landing:only-child .landing__middle1 p {
-    grid-column: 8/18;
-}
-
-@media (max-width: 900px) {
-    main .landing:only-child .landing__middle1 p {
-        grid-column: 2/-2;
     }
 }
 
