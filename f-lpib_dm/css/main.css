@@ -55650,12 +55650,6 @@ main .landing:only-child .landing__top__cta {
     grid-column: 17 / span 8;
 }
 
-@media (max-width: 899px) {
-    .landing__contact .landing__contact__3rdcol {
-        margin-top: 2rem;
-    }
-}
-
 .landing__contact .landing__contact__3rdcol .unibuddy-card {
     background-color: #ffffff;
 }
@@ -55808,10 +55802,21 @@ main .landing:only-child .landing__top__cta {
     background: initial;
     box-shadow: initial;
     padding: 0;
+    border-top: 0;
 }
 
 .landing__contact .card--contact .card--contact__key-info > .icon {
     color: #ffffff;
+}
+
+@media (min-width: 1024px) {
+    .landing__contact .card--contact__key-info {
+        word-break: normal;
+    }
+}
+
+.landing__contact .card--contact__key-info__wrap__col:nth-child(1) {
+    margin-right: 2rem;
 }
 
 .landing__contact__sec--heading {
