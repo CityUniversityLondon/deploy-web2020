@@ -54844,7 +54844,21 @@ main .navigation--secondary + .landing .landing__top__content {
 
 main .navigation--secondary + .landing .landing__top__content .landing__top__content--text,
 main .navigation--secondary + .landing .landing__top__content .landing__top__content--heading {
-    grid-column: 4/ -4;
+    grid-column: 3/-3;
+}
+
+@media (max-width: 1280px) {
+    main .navigation--secondary + .landing .landing__top__content .landing__top__content--text,
+    main .navigation--secondary + .landing .landing__top__content .landing__top__content--heading {
+        grid-column: 2/-2;
+    }
+}
+
+@media (max-width: 900px) {
+    main .navigation--secondary + .landing .landing__top__content .landing__top__content--text,
+    main .navigation--secondary + .landing .landing__top__content .landing__top__content--heading {
+        grid-column: 1/-1;
+    }
 }
 
 main .navigation--secondary + .landing .landing_middle1_content {
@@ -54868,7 +54882,28 @@ main .navigation--secondary + .landing .landing_middle1_content {
 
 main .navigation--secondary + .landing .landing_middle1_content .landing__middle1__content--heading,
 main .navigation--secondary + .landing .landing_middle1_content .landing__middle1__content--text {
-    grid-column: 4/ -4;
+    grid-column: 4/-4;
+}
+
+@media (max-width: 1440px) {
+    main .navigation--secondary + .landing .landing_middle1_content .landing__middle1__content--heading,
+    main .navigation--secondary + .landing .landing_middle1_content .landing__middle1__content--text {
+        grid-column: 3/-3;
+    }
+}
+
+@media (max-width: 1280px) {
+    main .navigation--secondary + .landing .landing_middle1_content .landing__middle1__content--heading,
+    main .navigation--secondary + .landing .landing_middle1_content .landing__middle1__content--text {
+        grid-column: 2/-2;
+    }
+}
+
+@media (max-width: 900px) {
+    main .navigation--secondary + .landing .landing_middle1_content .landing__middle1__content--heading,
+    main .navigation--secondary + .landing .landing_middle1_content .landing__middle1__content--text {
+        grid-column: 1/-1;
+    }
 }
 
 main .navigation--secondary + .landing .landing__middle1 > h2 {
