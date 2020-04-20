@@ -573,7 +573,7 @@ function HowToApply(props) {
     className: "how-to-apply--pgt--js__modal__alternative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: props.element.dataset.otherurl
-  }, "Apply to start in ", props.element.dataset.otheryear, ".")),
+  }, props.element.dataset.otheryear, " entry is also available.")),
         reset = JSON.stringify(preferences) !== JSON.stringify(initialPreferences) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__reset"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
@@ -638,7 +638,9 @@ function HowToApply(props) {
     className: "how-to-apply--pgt--js__modal__progress--mobile"
   }, qualificationsProgressMobile, subjectsProgressMobile, entryPointsProgressMobile, locationsProgressMobile, nextStepMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Applying to start in ", props.element.dataset.year), alternative), qualificationQuestion, subjectQuestion, entryQuestion, locationQuestion, applyQuestion)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Start in ", props.element.dataset.year)), qualificationQuestion, subjectQuestion, entryQuestion, locationQuestion, applyQuestion, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__content-wrapper"
+  }, alternative))));
 }
 
 const nextLevel = (arr, k) => arr.filter(i => Object.keys(i)[0] === k)[0][k];
