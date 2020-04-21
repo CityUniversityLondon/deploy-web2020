@@ -56624,10 +56624,6 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
-.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block .cta-block__cta .outline-cta-arrow--dark:after {
-    content: '\f144' !important;
-}
-
 .course--pgt__promo__content {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
@@ -63092,6 +63088,8 @@ main .standard-content .banner-text {
 
 .course--ug__keyinfo__cta p {
     display: block;
+    text-align: center;
+    width: 100%;
 }
 
 @media (min-width: 433px) {
@@ -63106,25 +63104,8 @@ main .standard-content .banner-text {
 }
 
 .course--ug__keyinfo__cta p a {
-    padding: 0.5rem 2.25rem;
-}
-
-@media (max-width: 1024px) {
-    .course--ug__keyinfo__cta p a {
-        padding: 0.5rem 3rem;
-    }
-}
-
-@media (max-width: 900px) {
-    .course--ug__keyinfo__cta p a {
-        padding: 0.5rem 3rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .course--ug__keyinfo__cta p a {
-        padding: 0.5rem 1.5rem;
-    }
+    padding: 0.5rem;
+    display: block;
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
