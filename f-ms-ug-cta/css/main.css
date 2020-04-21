@@ -28648,7 +28648,7 @@ _:-ms-lang(x),
 }
 
 .outline-cta-arrow--bright:after {
-    content: "a";
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -28794,7 +28794,7 @@ _:-ms-lang(x),
 }
 
 .outline-cta--bright:after {
-    content: "a";
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -30402,7 +30402,7 @@ _:-ms-lang(x),
 }
 
 .outline-cta--bright-square:after {
-    content: "a";
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -30565,7 +30565,7 @@ _:-ms-lang(x),
 }
 
 .outline-cta--bright-red-ol:after {
-    content: "a";
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -30728,7 +30728,7 @@ _:-ms-lang(x),
 }
 
 .outline-cta--mixed-red-gray:after {
-    content: "a";
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
