@@ -41909,7 +41909,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     margin-right: auto;
     margin-top: 2.5rem;
     max-height: calc(100% - 2.5rem);
-    max-width: 55ch;
     overflow-y: scroll;
     position: relative;
 }
@@ -41939,6 +41938,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     margin-left: auto;
     margin-right: auto;
     padding: 2rem 2.5rem 2.5rem;
+}
+
+.dialog__content p {
+    max-width: 55ch;
 }
 
 .dialog__close {
