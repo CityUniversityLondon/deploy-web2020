@@ -27994,7 +27994,7 @@ _:-ms-lang(x),
 }
 
 .primary-cta-arrow--bright:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -28143,7 +28143,7 @@ _:-ms-lang(x),
 }
 
 .primary-cta--bright:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -28335,7 +28335,7 @@ _:-ms-lang(x),
 }
 
 .primary-cta-arrow--dark:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -28471,7 +28471,7 @@ _:-ms-lang(x),
 }
 
 .primary-cta--dark:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -28648,7 +28648,7 @@ _:-ms-lang(x),
 }
 
 .outline-cta-arrow--bright:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -28794,7 +28794,7 @@ _:-ms-lang(x),
 }
 
 .outline-cta--bright:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -28951,7 +28951,7 @@ _:-ms-lang(x),
 }
 
 .outline-cta-arrow--dark:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -29097,7 +29097,7 @@ _:-ms-lang(x),
 }
 
 .outline-cta--dark:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -29259,7 +29259,7 @@ _:-ms-lang(x),
 }
 
 .basic-cta--bright:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -29453,7 +29453,7 @@ _:-ms-lang(x),
 }
 
 .basic-cta--dark:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -29684,7 +29684,7 @@ _:-ms-lang(x),
 }
 
 .primary-cta--grey--bright:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -29881,7 +29881,7 @@ _:-ms-lang(x),
 }
 
 .basic-cta--lifelong-learning-primary:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -30030,7 +30030,7 @@ _:-ms-lang(x),
 }
 
 .basic-cta--lifelong-learning-secondary:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -30220,7 +30220,7 @@ _:-ms-lang(x),
 }
 
 .primary-cta--grey--bright:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -30402,7 +30402,7 @@ _:-ms-lang(x),
 }
 
 .outline-cta--bright-square:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -30565,7 +30565,7 @@ _:-ms-lang(x),
 }
 
 .outline-cta--bright-red-ol:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -30728,7 +30728,7 @@ _:-ms-lang(x),
 }
 
 .outline-cta--mixed-red-gray:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -30845,6 +30845,143 @@ _:-ms-lang(x),
 
 .outline-cta--mixed-red-gray:active span, .outline-cta--mixed-red-gray:focus span, .outline-cta--mixed-red-gray:hover span {
     transform: none;
+}
+
+.outline-cta-play--bright {
+    background: initial;
+    border-radius: 0.25rem;
+    border: none;
+    color: initial;
+    display: inline-flex;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    transition: background-color 0.6s, transform 0.6s;
+    border: 0.125rem solid red;
+    background: red;
+    color: white;
+}
+
+.outline-cta-play--bright:after {
+    content: '\144';
+}
+
+.outline-cta-play--bright:disabled {
+    cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .outline-cta-play--bright {
+        transition: none;
+    }
+}
+
+@media (max-width: 432px) {
+    .outline-cta-play--bright {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.outline-cta-play--bright span {
+    transition: transform 0.6s;
+}
+
+.outline-cta-play--bright:after {
+    content: "";
+    font-family: 'Font Awesome';
+    font-style: normal;
+    font-weight: normal;
+    opacity: 0;
+    position: absolute;
+    right: 1.5rem;
+    text-decoration: inherit;
+    transform: translateX(-0.75rem);
+    transition: background-color 0.6s, transform 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .outline-cta-play--bright:after {
+        transition: none;
+    }
+}
+
+.outline-cta-play--bright:focus, .outline-cta-play--bright:active {
+    background-color: transparent;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+}
+
+.outline-cta-play--bright:focus span, .outline-cta-play--bright:active span {
+    transform: translateX(-0.75rem);
+}
+
+.outline-cta-play--bright:focus:after, .outline-cta-play--bright:active:after {
+    opacity: 1;
+    transform: translateX(0.75rem);
+}
+
+@media (hover: hover) {
+    .outline-cta-play--bright:hover {
+        background-color: transparent;
+        border: 0.125rem solid #d61726;
+        color: #ffffff;
+    }
+    .outline-cta-play--bright:hover span {
+        transform: translateX(-0.75rem);
+    }
+    .outline-cta-play--bright:hover:after {
+        opacity: 1;
+        transform: translateX(0.75rem);
+    }
+}
+
+.outline-cta-play--bright:disabled {
+    opacity: 0.7;
+}
+
+.outline-cta-play--bright:disabled span {
+    transform: none;
+}
+
+.outline-cta-play--bright:disabled:after {
+    opacity: 0;
+    transform: none;
+}
+
+.outline-cta-play--bright:visited {
+    color: white;
+    border-color: red;
+}
+
+.outline-cta-play--bright:focus {
+    background: red;
+    color: white;
+}
+
+.outline-cta-play--bright:active, .outline-cta-play--bright:focus {
+    border-color: red;
+}
+
+.outline-cta-play--bright:active:focus, .outline-cta-play--bright:active:active, .outline-cta-play--bright:focus:focus, .outline-cta-play--bright:focus:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .outline-cta-play--bright:hover, .outline-cta-play--bright:active {
+        border-color: red;
+        background-image: none;
+        background: transparent;
+    }
+}
+
+.outline-cta-play--bright:disabled {
+    background: red;
+    border: 0.125rem solid red;
 }
 
 .featured-profiles-block {
@@ -31594,7 +31731,7 @@ _:-ms-lang(x),
 }
 
 .feedback .feedback__direct button:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -36941,7 +37078,7 @@ figure figcaption a:active {
 
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:after,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -38258,7 +38395,7 @@ h3 .linked-heading__icons {
 }
 
 .anchor-cta-like:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -38670,7 +38807,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a span {
 }
 
 ul.cta-like-anchor-block li.cta-like-anchor a:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -39003,7 +39140,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor a span {
 }
 
 ul.cta-like-anchor-inline li.cta-like-anchor a:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -54001,7 +54138,7 @@ button
 }
 
 .content-hub__block-two .testimonial .cta-block li.further-info a:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -56333,7 +56470,7 @@ main .landing:only-child .landing__top__cta {
 }
 
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block .cta-block__cta .outline-cta-arrow--dark:after {
-    content: '\f144';
+    content: '\f144' !important;
 }
 
 .course--pgt__promo__content {
@@ -61160,7 +61297,7 @@ button
 }
 
 .lifelong-learning .lifelong-learning__contact .cta-block li a:after {
-    content: '\f061';
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -61374,7 +61511,7 @@ button
         transition: transform 0.6s;
     }
     .js .lifelong-learning .modal__trigger:after {
-        content: '\f061';
+        content: "";
         font-family: 'Font Awesome';
         font-style: normal;
         font-weight: normal;
