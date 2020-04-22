@@ -56251,12 +56251,10 @@ main > .news {
 }
 
 .news .news__related-news .related-content {
-    display: flex;
     margin-top: 1rem;
 }
 
 .news .news__related-news .related-content .card--news {
-    flex-basis: 33%;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
 }
