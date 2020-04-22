@@ -55817,6 +55817,7 @@ main > .news {
     main > .news .news__feature-image,
     main > .news .news__body,
     main > .news .news__body__video,
+    main > .news .news__body__carousel,
     main > .news .news__hashtags__wrap,
     main > .news .news__social-icons,
     main > .news .news__related-courses,
@@ -55868,6 +55869,7 @@ main > .news {
     main > .news .news__feature-image,
     main > .news .news__body,
     main > .news .news__body__video,
+    main > .news .news__body__carousel,
     main > .news .news__hashtags__wrap,
     main > .news .news__social-icons,
     main > .news .news__related-courses,
@@ -55912,6 +55914,7 @@ main > .news {
     }
     main > .news .news__body,
     main > .news .news__body__video,
+    main > .news .news__body__carousel,
     main > .news .news__hashtags__wrap,
     main > .news .news__social-icons,
     main > .news .news__related-courses,
@@ -56073,6 +56076,12 @@ main > .news {
 
 .news .news__body__video {
     padding-top: 1.5rem;
+}
+
+.news .news__body__carousel {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
 }
 
 .news .news__hashtags__title {
