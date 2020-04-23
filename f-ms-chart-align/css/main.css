@@ -49151,6 +49151,11 @@ button
     }
 }
 
+.chart-row .chart-row__group-heading,
+.chart-row .chart-row__group-intro {
+    flex-basis: 100%;
+}
+
 .chart-row .chart {
     margin-bottom: 2rem;
     margin-right: 2rem;
