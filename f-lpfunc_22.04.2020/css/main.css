@@ -54872,7 +54872,7 @@ main .landing header p em {
 
 @media (min-width: 1024px) {
     main .landing .landing--functional__content__wrap .landing--functional__content {
-        grid-column: 5 / span 16;
+        grid-column: 7 / span 12;
     }
     main .landing .wrapper--finder__mini {
         grid-template-columns: repeat(24, 1fr);
