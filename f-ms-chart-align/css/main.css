@@ -49036,10 +49036,6 @@ button
     margin-left: 0.5rem;
 }
 
-.chart--piechart {
-    stroke: url(#pattern);
-}
-
 .chart--blue path:nth-child(1) {
     stroke: #0194c7;
 }
@@ -49124,37 +49120,40 @@ button
     }
 }
 
+.chart-row.chart-row--columns1 .chart__title {
+    display: none;
+}
+
 @media (min-width: 768px) {
-    .chart-row.chart-row--columns1 .chart {
-        flex-basis: 100%;
+    .chart-row.chart-row--columns1 {
+        display: block;
     }
-    .chart-row.chart-row--columns2 .chart {
-        flex-basis: 50%;
+    .chart-row.chart-row--columns1 .chart {
+        margin-top: 2rem;
+    }
+    .chart-row.chart-row--columns1 .chart .chart__columns {
+        display: flex;
+    }
+    .chart-row.chart-row--columns2 .chart, .chart-row.chart-row--columns4 .chart {
+        flex-basis: 45%;
+    }
+    .chart-row.chart-row--columns2 .chart:nth-child(even), .chart-row.chart-row--columns4 .chart:nth-child(even) {
+        margin-right: 0;
     }
     .chart-row.chart-row--columns3 .chart {
         flex-basis: 33%;
     }
+    .chart-row.chart-row--columns3 .chart:nth-of-type(3) {
+        margin-right: 0;
+    }
     .chart-row.chart-row--columns4 {
         flex-wrap: wrap;
-    }
-    .chart-row.chart-row--columns4 .chart {
-        flex-basis: 50%;
     }
 }
 
 .chart-row .chart {
     margin-bottom: 2rem;
     margin-right: 2rem;
-}
-
-.chart-row .chart:last-child {
-    margin-right: 0;
-}
-
-@media (min-width: 768px) {
-    .chart-row .chart {
-        flex: 0 0 20%;
-    }
 }
 
 .chart--piechart {
@@ -62767,12 +62766,6 @@ main .standard-content .banner-text {
 .course--ug .chart-row {
     margin: 0;
     padding: 0;
-}
-
-@media (min-width: 768px) {
-    .course--ug .chart-row {
-        display: flex;
-    }
 }
 
 @media (max-width: 767px) {
