@@ -55395,16 +55395,15 @@ main .landing:only-child .landing__top__cta {
     }
 }
 
-@media (max-width: 900px) {
-    .landing--functional__content .embedded-video .embedded-video-details__heading,
-    .landing--functional__video .embedded-video .embedded-video-details__heading {
-        text-align: center;
-    }
-    .landing--functional__content .embedded-video .embedded-video-details__heading:after,
-    .landing--functional__video .embedded-video .embedded-video-details__heading:after {
-        margin-left: auto;
-        margin-right: auto;
-    }
+.landing--functional__content .embedded-video .embedded-video-details__heading,
+.landing--functional__video .embedded-video .embedded-video-details__heading {
+    text-align: center;
+}
+
+.landing--functional__content .embedded-video .embedded-video-details__heading:after,
+.landing--functional__video .embedded-video .embedded-video-details__heading:after {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .embedded-video-details__description {
