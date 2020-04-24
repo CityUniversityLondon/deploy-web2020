@@ -27554,6 +27554,10 @@ _:-ms-lang(x),
     margin-right: 1rem;
 }
 
+.footer-cards__contact .icon--phone {
+    transform: rotate(90deg);
+}
+
 @media (min-width: 768px) {
     .footer-cards__contact {
         display: flex;
