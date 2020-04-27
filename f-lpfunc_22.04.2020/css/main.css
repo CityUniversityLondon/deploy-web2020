@@ -55305,8 +55305,13 @@ main .landing:only-child .landing__top__cta {
     margin-top: 2rem;
 }
 
+ul.landing--functional__finder__tabs__columns {
+    max-width: none;
+}
+
 ul.landing--functional__finder__tabs__columns li {
     list-style: none;
+    margin-bottom: 2rem;
 }
 
 ul.landing--functional__finder__tabs__columns li a {
@@ -55460,6 +55465,34 @@ ul.landing--functional__finder__tabs__columns li a:active {
     content: '\f075';
 }
 
+.landing--functional__finder__tabs .icon__arts_and_media:before {
+    content: '\f618';
+}
+
+.landing--functional__finder__tabs .icon__health:before {
+    content: '\f5f8';
+}
+
+.landing--functional__finder__tabs .icon__politics_and_law:before {
+    content: '\f0e3';
+}
+
+.landing--functional__finder__tabs .icon__computing_and_computer_science:before {
+    content: '\f108';
+}
+
+.landing--functional__finder__tabs .icon__engineering:before {
+    content: '\f013';
+}
+
+.landing--functional__finder__tabs .icon__mathematics:before {
+    content: '\f64c';
+}
+
+.landing--functional__finder__tabs .icon__psychology:before {
+    content: '\f0c0';
+}
+
 @media (min-width: 1024px) {
     .landing--functional__finder__tabs .tabs {
         grid-column: 4 / 22;
@@ -55469,7 +55502,7 @@ ul.landing--functional__finder__tabs__columns li a:active {
 .landing--functional__finder__tabs .tabs .tabs__panel {
     border-top: none;
     border: 0.0625rem solid #d8d8d8;
-    padding: 0.75rem 1.25rem 1.75rem 1.25rem;
+    padding: 1rem 1.25rem 1.75rem 1.25rem;
 }
 
 .landing--functional__finder__tabs .tabs .tabs__links {
@@ -55493,6 +55526,12 @@ ul.landing--functional__finder__tabs__columns li a:active {
 .landing--functional__finder__tabs__columns.columns-2 {
     -moz-column-count: 2;
          column-count: 2;
+}
+
+@media (min-width: 1024px) {
+    .landing--functional__finder__tabs__columns.columns-2 {
+        width: 70%;
+    }
 }
 
 .landing--functional__finder__tabs__columns.columns-3 {
