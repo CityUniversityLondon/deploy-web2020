@@ -55307,11 +55307,13 @@ main .landing:only-child .landing__top__cta {
 
 ul.landing--functional__finder__tabs__columns {
     max-width: none;
+    margin-left: 0;
 }
 
 ul.landing--functional__finder__tabs__columns li {
     list-style: none;
     margin-bottom: 2rem;
+    margin-top: 0;
 }
 
 ul.landing--functional__finder__tabs__columns li a {
@@ -55425,6 +55427,43 @@ ul.landing--functional__finder__tabs__columns li a:active {
     color: #ffffff;
 }
 
+ul.landing--functional__finder__tabs__columns.columns-2 {
+    -moz-column-count: 1;
+         column-count: 1;
+}
+
+@media (min-width: 768px) {
+    ul.landing--functional__finder__tabs__columns.columns-2 {
+        -moz-column-count: 2;
+             column-count: 2;
+    }
+}
+
+@media (min-width: 1024px) {
+    ul.landing--functional__finder__tabs__columns.columns-2 {
+        width: 70%;
+    }
+}
+
+ul.landing--functional__finder__tabs__columns.columns-3 {
+    -moz-column-count: 1;
+         column-count: 1;
+}
+
+@media (min-width: 768px) {
+    ul.landing--functional__finder__tabs__columns.columns-3 {
+        -moz-column-count: 2;
+             column-count: 2;
+    }
+}
+
+@media (min-width: 1025px) {
+    ul.landing--functional__finder__tabs__columns.columns-3 {
+        -moz-column-count: 3;
+             column-count: 3;
+    }
+}
+
 .landing--functional__finder__tabs {
     margin-top: 2rem;
 }
@@ -55519,36 +55558,13 @@ ul.landing--functional__finder__tabs__columns li a:active {
 }
 
 .landing--functional__finder__tabs .landing--functional__finder__tabs__heading {
-    margin-right: 2rem;
     font-weight: 600;
 }
 
-.landing--functional__finder__tabs__columns.columns-2 {
-    -moz-column-count: 2;
-         column-count: 2;
-}
-
-@media (min-width: 1024px) {
-    .landing--functional__finder__tabs__columns.columns-2 {
-        width: 70%;
+@media (min-width: 768px) {
+    .landing--functional__finder__tabs .landing--functional__finder__tabs__heading {
+        margin-right: 2rem;
     }
-}
-
-.landing--functional__finder__tabs__columns.columns-3 {
-    -moz-column-count: 3;
-         column-count: 3;
-}
-
-@media (max-width: 767px) {
-    .landing--functional__finder__tabs__columns.columns-3 {
-        -moz-column-count: 2;
-             column-count: 2;
-    }
-}
-
-.landing--functional__finder__tabs__columns li {
-    margin-bottom: 0.75rem;
-    margin-top: 0;
 }
 
 @media (max-width: 1023px) {
