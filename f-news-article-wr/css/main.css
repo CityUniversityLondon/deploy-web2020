@@ -25712,6 +25712,33 @@ p.card--course__key-info .icon {
 
 .card--profile__name {
     color: #1e1e1e;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .card--profile__name {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--profile__name {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--profile__name {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--profile__name {
+        letter-spacing: -0.017em;
+    }
 }
 
 .card--profile__jobtitle {
