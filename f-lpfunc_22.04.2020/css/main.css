@@ -55583,13 +55583,29 @@ ul.landing--functional__finder__tabs__columns.columns-3 {
     padding: 0;
 }
 
-.landing--functional__finder__tabs .landing--functional__finder__tabs__heading {
+.landing--functional__finder__tabs .landing--functional__finder__tabs__heading--nested,
+.landing--functional__finder__tabs .landing--functional__finder__tabs__heading--above {
     font-weight: 600;
 }
 
+.landing--functional__finder__tabs .landing--functional__finder__tabs__heading--nested {
+    display: none;
+}
+
 @media (min-width: 768px) {
-    .landing--functional__finder__tabs .landing--functional__finder__tabs__heading {
+    .landing--functional__finder__tabs .landing--functional__finder__tabs__heading--nested {
+        display: block;
         margin-right: 2rem;
+    }
+}
+
+.landing--functional__finder__tabs .landing--functional__finder__tabs__heading--above {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .landing--functional__finder__tabs .landing--functional__finder__tabs__heading--above {
+        display: block;
     }
 }
 
