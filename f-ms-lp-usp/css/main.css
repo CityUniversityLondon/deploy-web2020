@@ -46733,19 +46733,15 @@ article .link-copy {
     margin-right: 1rem;
     max-width: 80rem;
     max-width: none;
-    padding: 1rem 1.5rem 1rem;
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
 }
 
 @media (min-width: 901px) {
     .statistics-block .ksp__items {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 767px) {
-    .statistics-block .ksp__items {
-        text-align: center;
     }
 }
 
