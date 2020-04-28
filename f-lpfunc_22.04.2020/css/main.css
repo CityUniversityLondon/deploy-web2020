@@ -55532,6 +55532,26 @@ ul.landing--functional__finder__tabs__columns.columns-3 {
     content: '\f0c0';
 }
 
+.landing--functional__finder__tabs .icon__class-based:before {
+    content: '\f63d';
+}
+
+.landing--functional__finder__tabs .icon__full-time:before {
+    content: '\f017';
+}
+
+.landing--functional__finder__tabs .icon__part-time:before {
+    content: '\f4fd';
+}
+
+.landing--functional__finder__tabs .icon__online:before {
+    content: '\f109';
+}
+
+.landing--functional__finder__tabs .icon__workshop:before {
+    content: '\f685';
+}
+
 @media (min-width: 768px) {
     .landing--functional__finder__tabs .tabs {
         grid-column: 2 / 24;
