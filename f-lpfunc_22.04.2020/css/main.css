@@ -55482,11 +55482,41 @@ ul.landing--functional__finder__tabs__columns.columns-3 {
     }
 }
 
-.landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon:before {
+.landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon span, .landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon:before {
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
     margin-right: 0.5rem;
     color: #d61726;
-    font-family: "Font Awesome";
     font-weight: 300;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon span, .landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon:before {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon span, .landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon:before {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon span, .landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon:before {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon span, .landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon:before {
+        letter-spacing: -0.017em;
+    }
+}
+
+.landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon:before {
+    font-family: "Font Awesome";
     text-align: center;
 }
 
