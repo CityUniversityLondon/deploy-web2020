@@ -46718,8 +46718,8 @@ article .link-copy {
 }
 
 @media (max-width: 767px) {
-    .statistics-block .statistics-block .content-wrapper {
-        margin: 0;
+    .statistics-block {
+        padding: 1rem 1.5rem;
     }
 }
 
@@ -46733,6 +46733,7 @@ article .link-copy {
     margin-right: 1rem;
     max-width: 80rem;
     max-width: none;
+    padding: 1rem 1.5rem 1rem;
 }
 
 @media (min-width: 901px) {
@@ -46744,7 +46745,7 @@ article .link-copy {
 
 @media (max-width: 767px) {
     .statistics-block .ksp__items {
-        margin: 1rem 0;
+        text-align: center;
     }
 }
 
@@ -46975,6 +46976,7 @@ article .link-copy {
 @media (max-width: 767px) {
     .statistics-block .ksp__items .ksp__item__icon {
         margin: 0;
+        display: inline;
     }
 }
 
@@ -56656,7 +56658,13 @@ main .landing:only-child .landing__top__cta {
 }
 
 .wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper {
-    padding: 1rem 1.5rem 1rem;
+    padding: 1rem 1.5rem;
+}
+
+@media (max-width: 767px) {
+    .wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper {
+        padding: 1rem 0;
+    }
 }
 
 .wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper .statistics-block__heading {
@@ -56676,7 +56684,6 @@ main .landing:only-child .landing__top__cta {
 
 .wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper .ksp__items .ksp__item {
     list-style: none;
-    text-align: center;
 }
 
 .course--pgt__our-students {
@@ -63489,10 +63496,6 @@ main .standard-content .banner-text {
 
 .course--ug__usp__stats .statistics-block ul.slider {
     max-width: 100%;
-}
-
-.course--ug__usp__stats .statistics-block .ksp__items {
-    text-align: center;
 }
 
 .course--ug__usp__stats .statistics-block .ksp__items img {
