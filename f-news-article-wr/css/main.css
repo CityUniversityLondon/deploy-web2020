@@ -56112,6 +56112,10 @@ main > .news {
     padding-top: 1.5rem;
 }
 
+.news .news__body__video .embedded-video {
+    padding: 0;
+}
+
 .news .news__body__carousel {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
