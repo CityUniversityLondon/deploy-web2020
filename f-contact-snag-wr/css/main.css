@@ -22834,7 +22834,7 @@ Assign mixin:
 .card--contact {
     padding-bottom: 1rem;
     background: transparent;
-    border-top: 0.125rem solid;
+    border-top: 0.0625rem solid;
 }
 
 .card--contact:last-child {
