@@ -6094,55 +6094,56 @@ let trap;
 function launchModal(modal) {
   let dialogArray = [];
   const dialogTopic = modal.getAttribute('data-topic');
-  let items = modal.querySelectorAll('[data-modalcontent="true"]');
-  Array.from(items).forEach((list, i) => {
-    const wrapper = document.createElement('div'),
-          listButton = document.createElement('button'),
-          listBody = Array.from(list.childNodes),
-          listHeader = list.firstElementChild,
-          customHeader = list.getAttribute('data-header'),
-          format = list.getAttribute('data-keepformat'),
-          header = document.createElement('div');
-    let title,
-        keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(format),
-        shortName = list.getAttribute('data-shortname');
-    listButton.classList.add('modal__button');
-    listButton.setAttribute('type', 'button');
-    listButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'open dialog');
-    list.appendChild(wrapper);
-    Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(wrapper, listBody);
-    wrapper.classList.add("".concat(bodyClassName));
+  Array.from(modal.getElementsByTagName('li')).forEach((list, i) => {
+    if (list.dataset.modalcontent === 'true') {
+      const wrapper = document.createElement('div'),
+            listButton = document.createElement('button'),
+            listBody = Array.from(list.childNodes),
+            listHeader = list.firstElementChild,
+            customHeader = list.getAttribute('data-header'),
+            format = list.getAttribute('data-keepformat'),
+            header = document.createElement('div');
+      let title,
+          keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(format),
+          shortName = list.getAttribute('data-shortname');
+      listButton.classList.add('modal__button');
+      listButton.setAttribute('type', 'button');
+      listButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'open dialog');
+      list.appendChild(wrapper);
+      Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(wrapper, listBody);
+      wrapper.classList.add("".concat(bodyClassName));
 
-    if (customHeader) {
-      title = customHeader;
-    } else {
-      title = listHeader.innerText;
-    }
+      if (customHeader) {
+        title = customHeader;
+      } else {
+        title = listHeader.innerText;
+      }
 
-    if (shortName === null) {
-      shortName = listHeader.innerText;
-    }
+      if (shortName === null) {
+        shortName = listHeader.innerText;
+      }
 
-    if (keepFormat) {
-      list.insertBefore(listHeader, wrapper);
-      listHeader.addEventListener('click', function () {
-        createDialog(modal, "".concat(i), dialogArray);
+      if (keepFormat) {
+        list.insertBefore(listHeader, wrapper);
+        listHeader.addEventListener('click', function () {
+          createDialog(modal, "".concat(i), dialogArray);
+        });
+      } else {
+        listButton.textContent = listHeader.textContent;
+        header.appendChild(listHeader);
+        list.insertBefore(listButton, wrapper);
+        listButton.addEventListener('click', function () {
+          createDialog(modal, "".concat(i), dialogArray);
+        });
+      }
+
+      dialogArray.push({
+        title: title,
+        body: wrapper.innerHTML,
+        topic: dialogTopic,
+        shortname: shortName
       });
-    } else {
-      listButton.textContent = listHeader.textContent;
-      header.appendChild(listHeader);
-      list.insertBefore(listButton, wrapper);
-      listButton.addEventListener('click', function () {
-        createDialog(modal, "".concat(i), dialogArray);
-      });
     }
-
-    dialogArray.push({
-      title: title,
-      body: wrapper.innerHTML,
-      topic: dialogTopic,
-      shortname: shortName
-    });
   });
 }
 /**
