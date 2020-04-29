@@ -6095,7 +6095,7 @@ function launchModal(modal) {
   let dialogArray = [];
   const dialogTopic = modal.getAttribute('data-topic');
   Array.from(modal.getElementsByTagName('li')).forEach((list, i) => {
-    if (list.dataset.modalcontent === 'true') {
+    if (!list.dataset.modalcontent || list.dataset.modalcontent === 'true') {
       const wrapper = document.createElement('div'),
             listButton = document.createElement('button'),
             listBody = Array.from(list.childNodes),
