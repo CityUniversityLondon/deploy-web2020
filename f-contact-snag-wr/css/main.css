@@ -22834,7 +22834,7 @@ Assign mixin:
 .card--contact {
     padding-bottom: 1rem;
     background: transparent;
-    border-top: 0.0625rem solid;
+    border-top: 0.0625rem solid rgba(12, 12, 14, 0.2);
 }
 
 .card--contact:last-child {
@@ -22891,6 +22891,7 @@ Assign mixin:
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
+    color: #d61726;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
