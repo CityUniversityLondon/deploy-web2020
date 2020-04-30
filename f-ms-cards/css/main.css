@@ -31217,6 +31217,10 @@ _:-ms-lang(x),
     margin-left: 1rem;
 }
 
+.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label.featured-profiles__profile__label--full-width {
+    flex-basis: 100%;
+}
+
 .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label h3 {
     display: inline;
     color: #cbcbcb;
@@ -31299,6 +31303,10 @@ _:-ms-lang(x),
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label {
     flex-basis: 60%;
     margin-left: 1rem;
+}
+
+.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label.featured-profiles__profile__label--full-width {
+    flex-basis: 100%;
 }
 
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label h3 {
@@ -31385,6 +31393,10 @@ _:-ms-lang(x),
     margin-left: 1rem;
 }
 
+.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label.featured-profiles__profile__label--full-width {
+    flex-basis: 100%;
+}
+
 .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label h3 {
     display: inline;
     color: #0c0c0e;
@@ -31469,6 +31481,10 @@ _:-ms-lang(x),
     margin-left: 1rem;
 }
 
+.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label.featured-profiles__profile__label--full-width {
+    flex-basis: 100%;
+}
+
 .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label h3 {
     display: inline;
     color: #0c0c0e;
@@ -31551,6 +31567,10 @@ _:-ms-lang(x),
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label {
     flex-basis: 60%;
     margin-left: 1rem;
+}
+
+.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label.featured-profiles__profile__label--full-width {
+    flex-basis: 100%;
 }
 
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label h3 {
@@ -48464,6 +48484,10 @@ button
     margin-left: 1rem;
 }
 
+.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label.featured-profiles__profile__label--full-width {
+    flex-basis: 100%;
+}
+
 .featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label h3 {
     display: inline;
     color: #cbcbcb;
@@ -48546,6 +48570,10 @@ button
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label {
     flex-basis: 60%;
     margin-left: 1rem;
+}
+
+.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label.featured-profiles__profile__label--full-width {
+    flex-basis: 100%;
 }
 
 .featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label h3 {
@@ -48632,6 +48660,10 @@ button
     margin-left: 1rem;
 }
 
+.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label.featured-profiles__profile__label--full-width {
+    flex-basis: 100%;
+}
+
 .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label h3 {
     display: inline;
     color: #0c0c0e;
@@ -48716,6 +48748,10 @@ button
     margin-left: 1rem;
 }
 
+.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label.featured-profiles__profile__label--full-width {
+    flex-basis: 100%;
+}
+
 .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label h3 {
     display: inline;
     color: #0c0c0e;
@@ -48798,6 +48834,10 @@ button
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label {
     flex-basis: 60%;
     margin-left: 1rem;
+}
+
+.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label.featured-profiles__profile__label--full-width {
+    flex-basis: 100%;
 }
 
 .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile .featured-profiles__profile__label h3 {
