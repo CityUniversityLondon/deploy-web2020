@@ -6056,10 +6056,10 @@ function launchMenu(menu) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
 
@@ -6082,7 +6082,7 @@ const className = 'modal',
       bodyClassName = className + '__body',
       keyCodeEscape = 27,
       oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = true;
 let trap;
 /**
@@ -6095,53 +6095,55 @@ function launchModal(modal) {
   let dialogArray = [];
   const dialogTopic = modal.getAttribute('data-topic');
   Array.from(modal.getElementsByTagName('li')).forEach((list, i) => {
-    const wrapper = document.createElement('div'),
-          listButton = document.createElement('button'),
-          listBody = Array.from(list.childNodes),
-          listHeader = list.firstElementChild,
-          customHeader = list.getAttribute('data-header'),
-          format = list.getAttribute('data-keepformat'),
-          header = document.createElement('div');
-    let title,
-        keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(format),
-        shortName = list.getAttribute('data-shortname');
-    listButton.classList.add('modal__button');
-    listButton.setAttribute('type', 'button');
-    listButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'open dialog');
-    list.appendChild(wrapper);
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(wrapper, listBody);
-    wrapper.classList.add("".concat(bodyClassName));
+    if (!list.dataset.modalcontent || list.dataset.modalcontent === 'true') {
+      const wrapper = document.createElement('div'),
+            listButton = document.createElement('button'),
+            listBody = Array.from(list.childNodes),
+            listHeader = list.firstElementChild,
+            customHeader = list.getAttribute('data-header'),
+            format = list.getAttribute('data-keepformat'),
+            header = document.createElement('div');
+      let title,
+          keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(format),
+          shortName = list.getAttribute('data-shortname');
+      listButton.classList.add('modal__button');
+      listButton.setAttribute('type', 'button');
+      listButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'open dialog');
+      list.appendChild(wrapper);
+      Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(wrapper, listBody);
+      wrapper.classList.add("".concat(bodyClassName));
 
-    if (customHeader) {
-      title = customHeader;
-    } else {
-      title = listHeader.innerText;
-    }
+      if (customHeader) {
+        title = customHeader;
+      } else {
+        title = listHeader.innerText;
+      }
 
-    if (shortName === null) {
-      shortName = listHeader.innerText;
-    }
+      if (shortName === null) {
+        shortName = listHeader.innerText;
+      }
 
-    if (keepFormat) {
-      list.insertBefore(listHeader, wrapper);
-      listHeader.addEventListener('click', function () {
-        createDialog(modal, "".concat(i), dialogArray);
+      if (keepFormat) {
+        list.insertBefore(listHeader, wrapper);
+        listHeader.addEventListener('click', function () {
+          createDialog(modal, "".concat(i), dialogArray);
+        });
+      } else {
+        listButton.textContent = listHeader.textContent;
+        header.appendChild(listHeader);
+        list.insertBefore(listButton, wrapper);
+        listButton.addEventListener('click', function () {
+          createDialog(modal, "".concat(i), dialogArray);
+        });
+      }
+
+      dialogArray.push({
+        title: title,
+        body: wrapper.innerHTML,
+        topic: dialogTopic,
+        shortname: shortName
       });
-    } else {
-      listButton.textContent = listHeader.textContent;
-      header.appendChild(listHeader);
-      list.insertBefore(listButton, wrapper);
-      listButton.addEventListener('click', function () {
-        createDialog(modal, "".concat(i), dialogArray);
-      });
     }
-
-    dialogArray.push({
-      title: title,
-      body: wrapper.innerHTML,
-      topic: dialogTopic,
-      shortname: shortName
-    });
   });
 }
 /**
@@ -6155,41 +6157,41 @@ function launchModal(modal) {
 
 
 function createDialog(parent, position, dialogArray) {
-  const slider = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(parent.getAttribute('data-slider'));
-  const closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
+  const slider = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(parent.getAttribute('data-slider'));
+  const closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('button', [{
     label: 'class',
     val: 'dialog__close fas fa-times'
   }, {
     label: 'aria-label',
     val: 'Close modal'
   }]);
-  const dialog = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+  const dialog = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog'
   }, {
     label: 'data-position',
     val: "".concat(position)
   }]);
-  const bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+  const bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__content'
   }]);
-  const wrapperWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+  const wrapperWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__inner'
   }, {
     label: 'role',
     val: 'role'
   }]);
-  const dialogStrapline = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('p', [{
+  const dialogStrapline = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('p', [{
     label: 'class',
     val: 'dialog__strapline'
   }]);
-  const dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('p', [{
+  const dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('p', [{
     label: 'class',
     val: 'dialog__heading'
   }]);
-  const dialogBody = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+  const dialogBody = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__body-copy'
   }]);
@@ -6247,7 +6249,7 @@ function createDialog(parent, position, dialogArray) {
 
 function createControl(dialog, dialogArray) {
   let position = parseInt(dialog.getAttribute('data-position'));
-  const buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+  const buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__slider-control'
   }]);
@@ -6324,15 +6326,15 @@ function controlButton(dialogArray, position, direction) {
     buttonLabel.innerText = dialogArray[nextState].title;
   }
 
-  const buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('span', [{
+  const buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('span', [{
     label: 'class',
     val: "icon far fa-long-arrow-".concat(direction)
   }]);
 
   if (direction === 'left') {
-    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'previous item');
+    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'previous item');
   } else {
-    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'next item');
+    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'next item');
   }
 
   const buttonLabelWrapper = document.createElement('div');
@@ -6391,14 +6393,14 @@ function closeDialog(dialog, modal) {
   const parent = dialog.parentNode;
   parent.removeChild(dialog);
 
-  if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_2__["verticallyInWindow"])(modal)) {
+  if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_1__["verticallyInWindow"])(modal)) {
     zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(modal, scrollDuration);
   }
 }
 
 function trapFocus(modal) {
   let modalInner = modal.querySelector('.dialog__inner');
-  trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalInner, {
+  trap = focus_trap__WEBPACK_IMPORTED_MODULE_3___default()(modalInner, {
     clickOutsideDeactivates: true
   });
   trap.activate();
@@ -7855,8 +7857,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./custom_counter/slider_dot_counter */ "./src/patterns/slider/custom_counter/slider_dot_counter.js");
+/* harmony import */ var _custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./custom_counter/slider_dot_counter */ "./src/patterns/slider/custom_counter/slider_dot_counter.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 /* harmony import */ var _image_carousel_swipe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../image-carousel/swipe */ "./src/patterns/image-carousel/swipe.js");
 
 
@@ -8010,14 +8012,14 @@ function setSwipe(slider, sliderType, sliderObject, sliderControl) {
 
       if (curBtn.nextSibling && curBtn.previousSibling) {
         actionBtn = swipe === -1 ? curBtn.previousSibling : swipe === 1 ? curBtn.nextSibling : null;
-        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_5__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
+        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
       } else if (!curBtn.nextSibling) {
         actionBtn = swipe === -1 ? curBtn.previousSibling : swipe === 1 ? curBtn.parentElement.childNodes[0] : null;
-        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_5__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
+        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
       } else {
         let btnLength = btnWrap.firstChild.childNodes.length;
         actionBtn = swipe === -1 ? curBtn.parentElement.childNodes[btnLength - 1] : swipe === 1 ? curBtn.nextSibling : null;
-        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_5__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
+        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
       }
     } else {
       let btn = swipe === -1 ? slider.nextSibling.lastChild.firstChild : swipe === 1 ? slider.nextSibling.lastChild.lastChild : null;
@@ -8157,7 +8159,7 @@ function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
   if (sliderControl === 'default') {
     let buttonPrev = createButtonElement('fas fa-arrow-left prev--default', 'default', sliderObject);
     let buttonNext = createButtonElement('fas fa-arrow-right next--default', 'default', sliderObject);
-    buttonNext.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'next item');
+    buttonNext.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
     buttonNext.addEventListener('click', function () {
       defaultEvent(this, slider, 'default', sliderObject);
     });
@@ -8198,7 +8200,7 @@ function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
   }
 
   if (sliderControl === 'dot') {
-    Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_5__["createSliderDot"])(slider, sliderType, buttonWrapper, sliderObject);
+    Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["createSliderDot"])(slider, sliderType, buttonWrapper, sliderObject);
   }
 }
 /**
@@ -8234,10 +8236,10 @@ function createButtonElement(classname, type, sliderObject) {
   }]);
 
   if (classname.indexOf('prev') !== -1) {
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'previous item');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'previous item');
     button.setAttribute('disabled', true);
   } else {
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'next item');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
   }
 
   return button;
