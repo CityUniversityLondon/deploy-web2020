@@ -55561,59 +55561,59 @@ ul.landing--functional__finder__tabs__columns.columns-3 {
     text-align: center;
 }
 
-.landing--functional__finder__tabs .icon__business:before {
+.landing--functional__finder__tabs .icon--business:before {
     content: '\f0b1';
 }
 
-.landing--functional__finder__tabs .icon__languages:before {
+.landing--functional__finder__tabs .icon--languages:before {
     content: '\f075';
 }
 
-.landing--functional__finder__tabs .icon__arts_and_media:before {
+.landing--functional__finder__tabs .icon--arts_and_media:before {
     content: '\f618';
 }
 
-.landing--functional__finder__tabs .icon__health:before {
+.landing--functional__finder__tabs .icon--health:before {
     content: '\f5f8';
 }
 
-.landing--functional__finder__tabs .icon__politics_and_law:before {
+.landing--functional__finder__tabs .icon--politics_and_law:before {
     content: '\f0e3';
 }
 
-.landing--functional__finder__tabs .icon__computing_and_computer_science:before {
+.landing--functional__finder__tabs .icon--computing_and_computer_science:before {
     content: '\f108';
 }
 
-.landing--functional__finder__tabs .icon__engineering:before {
+.landing--functional__finder__tabs .icon--engineering:before {
     content: '\f013';
 }
 
-.landing--functional__finder__tabs .icon__mathematics:before {
+.landing--functional__finder__tabs .icon--mathematics:before {
     content: '\f64c';
 }
 
-.landing--functional__finder__tabs .icon__psychology:before {
+.landing--functional__finder__tabs .icon--psychology:before {
     content: '\f0c0';
 }
 
-.landing--functional__finder__tabs .icon__class-based:before {
+.landing--functional__finder__tabs .icon--class-based:before {
     content: '\f63d';
 }
 
-.landing--functional__finder__tabs .icon__full-time:before {
+.landing--functional__finder__tabs .icon--full-time:before {
     content: '\f017';
 }
 
-.landing--functional__finder__tabs .icon__part-time:before {
+.landing--functional__finder__tabs .icon--part-time:before {
     content: '\f4fd';
 }
 
-.landing--functional__finder__tabs .icon__online:before {
+.landing--functional__finder__tabs .icon--online:before {
     content: '\f109';
 }
 
-.landing--functional__finder__tabs .icon__workshop:before {
+.landing--functional__finder__tabs .icon--workshop:before {
     content: '\f685';
 }
 
