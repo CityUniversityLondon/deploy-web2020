@@ -22849,7 +22849,7 @@ Assign mixin:
 .card--contact__key-info {
     display: flex;
     word-break: break-word;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .card--contact__key-info span {
