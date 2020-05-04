@@ -193,10 +193,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (/(Trident|MSIE)/.test(navigator.userAgent)) {
     return;
   } else {
-    var howToApplyCTAs = document.querySelectorAll('.how-to-apply--pgt--js');
+    const howToApplyCTAs = document.querySelectorAll('.how-to-apply--pgt--js');
     howToApplyCTAs && Array.from(howToApplyCTAs).forEach(howToApply => {
       Object(_patterns_how_to_apply_pgt_data__WEBPACK_IMPORTED_MODULE_4__["howToApplyConfig"])(howToApply.dataset.config).then(config => {
-        Object(react_dom__WEBPACK_IMPORTED_MODULE_2__["render"])(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_patterns_how_to_apply_how_to_apply_pgt__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        Object(react_dom__WEBPACK_IMPORTED_MODULE_2__["render"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_patterns_how_to_apply_how_to_apply_pgt__WEBPACK_IMPORTED_MODULE_3__["default"], {
           config: edn_to_js__WEBPACK_IMPORTED_MODULE_5___default()(config),
           element: howToApply
         }), howToApply);
@@ -226,8 +226,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js");
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.es6.js");
 
 
 
@@ -246,7 +245,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 /**
  * Launch the how to apply modal.
  *
@@ -255,30 +254,30 @@ var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
  */
 
 function HowToApply(props) {
-  var entryPoints = distilConfiguration(props.config),
-      initialPreferences = {
+  const entryPoints = distilConfiguration(props.config),
+        initialPreferences = {
     qualification: Object.keys(entryPoints).length === 1 ? Object.keys(entryPoints[0])[0] : null,
     subject: null,
     entry: null,
     location: null
   },
-      [modalVisible, setModalVisible] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
-      [preferences, setPreferences] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(initialPreferences),
-      [question, setQuestion] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(nextQuestion(preferences, entryPoints)),
-      [multipleSubjects, setMultipleSubjects] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
-      [multipleEntryPoints, setMultipleEntryPoints] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
-      [multipleLocations, setMultipleLocations] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
-      qualificationQuestion = question === 'qualification' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        [modalVisible, setModalVisible] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+        [preferences, setPreferences] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(initialPreferences),
+        [question, setQuestion] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(nextQuestion(preferences, entryPoints)),
+        [multipleSubjects, setMultipleSubjects] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
+        [multipleEntryPoints, setMultipleEntryPoints] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
+        [multipleLocations, setMultipleLocations] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
+        qualificationQuestion = question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the qualification you wish to apply for:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the qualification you wish to apply for:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, entryPoints.map((qualification, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, entryPoints.map((qualification, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     key: 'qualification' + i
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: () => {
-      var newPreferences = preferences;
+      const newPreferences = preferences;
       newPreferences.qualification = Object.keys(qualification)[0];
-      var subjectOptions = qualification[newPreferences.qualification];
+      const subjectOptions = qualification[newPreferences.qualification];
 
       if (subjectOptions.length === 1) {
         newPreferences.subject = 'UNIQUE';
@@ -291,18 +290,18 @@ function HowToApply(props) {
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(qualification)[0])))))),
-      subjectQuestion = question === 'subject' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(qualification)[0])))))),
+        subjectQuestion = question === 'subject' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the route you wish to apply for:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the route you wish to apply for:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, nextLevel(entryPoints, preferences.qualification).map((subject, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, nextLevel(entryPoints, preferences.qualification).map((subject, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     key: 'subject' + i
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: () => {
-      var newPreferences = preferences;
+      const newPreferences = preferences;
       newPreferences.subject = Object.keys(subject)[0];
-      var entryOptions = subject[newPreferences.subject];
+      const entryOptions = subject[newPreferences.subject];
 
       if (entryOptions.length === 1) {
         newPreferences.entry = Object.keys(entryOptions[0])[0];
@@ -315,20 +314,20 @@ function HowToApply(props) {
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(subject)[0])))))),
-      entryQuestion = question === 'entry' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(subject)[0])))))),
+        entryQuestion = question === 'entry' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the entry point you wish to apply for:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the entry point you wish to apply for:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
   }, nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject).map((entryPoint, i) => {
-    var formattedDate = new Date(Object.keys(entryPoint)[0]);
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    const formattedDate = new Date(Object.keys(entryPoint)[0]);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
       key: 'entry-point' + i
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
       onClick: () => {
-        var newPreferences = preferences;
+        const newPreferences = preferences;
         newPreferences.entry = Object.keys(entryPoint)[0];
-        var locationOptions = entryPoint[newPreferences.entry];
+        const locationOptions = entryPoint[newPreferences.entry];
 
         if (locationOptions.length === 1) {
           newPreferences.location = Object.keys(locationOptions[0])[0];
@@ -341,50 +340,50 @@ function HowToApply(props) {
         setPreferences(newPreferences);
         setQuestion(nextQuestion(newPreferences, entryPoints));
       }
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, months[formattedDate.getUTCMonth()], ' ', formattedDate.getUTCFullYear())));
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, months[formattedDate.getUTCMonth()], ' ', formattedDate.getUTCFullYear())));
   }))),
-      locationQuestion = question === 'location' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        locationQuestion = question === 'location' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose where you wish to study:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose where you wish to study:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry).map((location, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry).map((location, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     key: 'location' + i
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: () => {
-      var newPreferences = preferences;
+      const newPreferences = preferences;
       newPreferences.entry = Object.keys(location)[0];
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(location)[0])))))),
-      applyQuestion = question === 'apply' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(location)[0])))))),
+        applyQuestion = question === 'apply' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Apply online now:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Apply online now:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, nextLevel(nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry), preferences.location).map((method, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, nextLevel(nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry), preferences.location).map((method, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     key: 'method' + i
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: method[Object.keys(method)[0]]
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(method)[0], ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(method)[0], ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "far fa-external-link",
     "aria-label": "(external link)"
   }))))))),
-      qualificationsProgress = Object.keys(entryPoints).length > 1 ? question === 'qualification' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+        qualificationsProgress = Object.keys(entryPoints).length > 1 ? question === 'qualification' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Qualification"))) : preferences.qualification ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, "Qualification"))) : preferences.qualification ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__previous"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper",
     onClick: () => {
-      var newPreferences = preferences;
+      const newPreferences = preferences;
       newPreferences.qualification = null;
       newPreferences.subject = null;
       newPreferences.entry = null;
@@ -392,205 +391,205 @@ function HowToApply(props) {
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-check icon",
     "aria-label": "Back to choose qualification"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, preferences.qualification))) : null : null,
-      subjectsProgress = multipleSubjects ? question === 'subject' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+        subjectsProgress = multipleSubjects ? question === 'subject' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Route"))) : preferences.subject ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, "Route"))) : preferences.subject ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__previous"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper",
     onClick: () => {
-      var newPreferences = preferences;
+      const newPreferences = preferences;
       newPreferences.subject = null;
       newPreferences.entry = null;
       newPreferences.location = null;
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-check icon",
     "aria-label": "Back to choose study route"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, preferences.subject))) : null : null,
-      entryPointsProgress = multipleEntryPoints ? question === 'entry' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+        entryPointsProgress = multipleEntryPoints ? question === 'entry' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Entry point"))) : preferences.entry ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, "Entry point"))) : preferences.entry ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__previous"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper",
     onClick: () => {
-      var newPreferences = preferences;
+      const newPreferences = preferences;
       newPreferences.entry = null;
       newPreferences.location = null;
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-check icon",
     "aria-label": "Back to choose entry point"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, months[new Date(preferences.entry).getUTCMonth()], ' ', new Date(preferences.entry).getUTCFullYear()))) : null : null,
-      locationsProgress = multipleLocations ? question === 'location' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+        locationsProgress = multipleLocations ? question === 'location' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Location"))) : preferences.location ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, "Location"))) : preferences.location ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__previous"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper",
     onClick: () => {
-      var newPreferences = preferences;
+      const newPreferences = preferences;
       newPreferences.location = null;
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-check icon",
     "aria-label": "Back to choose location"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, preferences.location))) : null : null,
-      nextStep = question !== 'apply' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+        nextStep = question !== 'apply' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__next"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon",
     "aria-hidden": "true"
-  })))) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  })))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current how-to-apply--pgt--js__modal__progress__last"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Method of study"))),
-      qualificationsProgressMobile = Object.keys(entryPoints).length > 1 && (question === 'qualification' || preferences.qualification) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+        qualificationsProgressMobile = Object.keys(entryPoints).length > 1 && (question === 'qualification' || preferences.qualification) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: question === 'qualification' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: question === 'qualification' ? 'fas fa-circle icon' : 'fas fa-check icon'
-  })), question === 'qualification' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  })), question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Qualification"))) : null,
-      subjectsProgressMobile = multipleSubjects && (question === 'subject' || preferences.subject) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+        subjectsProgressMobile = multipleSubjects && (question === 'subject' || preferences.subject) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: question === 'subject' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: question === 'subject' ? 'fas fa-circle icon' : 'fas fa-check icon'
-  })), question === 'subject' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  })), question === 'subject' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Subject"))) : null,
-      entryPointsProgressMobile = multipleEntryPoints && (question === 'entry' || preferences.entry) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+        entryPointsProgressMobile = multipleEntryPoints && (question === 'entry' || preferences.entry) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: question === 'entry' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: question === 'entry' ? 'fas fa-circle icon' : 'fas fa-check icon'
-  })), question === 'entry' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  })), question === 'entry' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Entry point"))) : null,
-      locationsProgressMobile = multipleLocations && (question === 'location' || preferences.location) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+        locationsProgressMobile = multipleLocations && (question === 'location' || preferences.location) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: question === 'location' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: question === 'location' ? 'fas fa-circle icon' : 'fas fa-check icon'
-  })), question === 'location' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  })), question === 'location' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Location"))) : null,
-      nextStepMobile = question !== 'apply' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+        nextStepMobile = question !== 'apply' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__next"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon"
-  })))) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  })))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current how-to-apply--pgt--js__modal__progress__last"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Method of study"))),
-      alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+        alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "how-to-apply--pgt--js__modal__alternative"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: props.element.dataset.otherurl
-  }, "Apply to start in ", props.element.dataset.otheryear, ".")),
-      reset = JSON.stringify(preferences) !== JSON.stringify(initialPreferences) && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, props.element.dataset.otheryear, " entry is also available.")),
+        reset = JSON.stringify(preferences) !== JSON.stringify(initialPreferences) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__reset"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: () => {
       setPreferences(initialPreferences);
       setQuestion(nextQuestion(initialPreferences, entryPoints));
     }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-redo"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Start again")));
-  var [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({});
-  var modalRef = null,
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Start again")));
+  const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({});
+  let modalRef = null,
       modalContentRef = null;
 
-  var getModal = () => modalRef,
-      getModalContent = () => modalContentRef;
+  const getModal = () => modalRef,
+        getModalContent = () => modalContentRef;
 
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
     if (!focusTrap.activate) {
@@ -609,40 +608,42 @@ function HowToApply(props) {
       Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__["enableBodyScroll"])(getModal());
     }
   }, [modalVisible]);
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "cta-block"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "cta-block__cta"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     className: "primary-cta-arrow--bright",
     onClick: () => setModalVisible(true)
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Apply now")))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Apply now")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal",
     "data-open": modalVisible,
     ref: modal => modalRef = modal
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content",
     ref: modalContent => modalContentRef = modalContent
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     className: "how-to-apply--pgt--js__close",
     onClick: () => {
       focusTrap.deactivate && focusTrap.deactivate();
       Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__["enableBodyScroll"])(getModal());
       setModalVisible(false);
     }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-times icon",
     "aria-label": "Close"
-  })), reset, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
+  })), reset, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
     className: "how-to-apply--pgt--js__modal__progress"
-  }, qualificationsProgress, subjectsProgress, entryPointsProgress, locationsProgress, nextStep), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
+  }, qualificationsProgress, subjectsProgress, entryPointsProgress, locationsProgress, nextStep), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
     className: "how-to-apply--pgt--js__modal__progress--mobile"
-  }, qualificationsProgressMobile, subjectsProgressMobile, entryPointsProgressMobile, locationsProgressMobile, nextStepMobile), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, qualificationsProgressMobile, subjectsProgressMobile, entryPointsProgressMobile, locationsProgressMobile, nextStepMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Applying to start in ", props.element.dataset.year), alternative), qualificationQuestion, subjectQuestion, entryQuestion, locationQuestion, applyQuestion)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Start in ", props.element.dataset.year)), qualificationQuestion, subjectQuestion, entryQuestion, locationQuestion, applyQuestion, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__content-wrapper"
+  }, alternative))));
 }
 
-var nextLevel = (arr, k) => arr.filter(i => Object.keys(i)[0] === k)[0][k];
+const nextLevel = (arr, k) => arr.filter(i => Object.keys(i)[0] === k)[0][k];
 /**
  * Condense the configuration options for easier access.
  *
@@ -653,17 +654,17 @@ var nextLevel = (arr, k) => arr.filter(i => Object.keys(i)[0] === k)[0][k];
 
 function distilConfiguration(config) {
   return config.map(qualification => {
-    var qualificationHeader = qualification.header,
-        subjects = qualification.options.map(subject => {
-      var subjectHeader = subject.header,
-          entries = subject.options.map(entry => {
-        var entryHeader = entry.header,
-            locations = entry.options.map(location => {
-          var locationHeader = location.header,
-              methods = location.options.map(method => {
-            var methodHeader = method.header,
-                applyLink = method.options.apply,
-                methodObj = new Object();
+    const qualificationHeader = qualification.header,
+          subjects = qualification.options.map(subject => {
+      const subjectHeader = subject.header,
+            entries = subject.options.map(entry => {
+        const entryHeader = entry.header,
+              locations = entry.options.map(location => {
+          const locationHeader = location.header,
+                methods = location.options.map(method => {
+            const methodHeader = method.header,
+                  applyLink = method.options.apply,
+                  methodObj = new Object();
 
             if (methodHeader) {
               methodObj[methodHeader] = applyLink;
@@ -673,7 +674,7 @@ function distilConfiguration(config) {
 
             return methodObj;
           }),
-              locationObject = new Object();
+                locationObject = new Object();
 
           if (locationHeader) {
             locationObject[locationHeader] = methods;
@@ -683,7 +684,7 @@ function distilConfiguration(config) {
 
           return locationObject;
         }),
-            entryObj = new Object();
+              entryObj = new Object();
 
         if (entryHeader) {
           entryObj[entryHeader] = locations;
@@ -693,7 +694,7 @@ function distilConfiguration(config) {
 
         return entryObj;
       }),
-          subjectObj = new Object();
+            subjectObj = new Object();
 
       if (subjectHeader) {
         subjectObj[subjectHeader] = entries;
@@ -703,7 +704,7 @@ function distilConfiguration(config) {
 
       return subjectObj;
     }),
-        qualificationObj = new Object();
+          qualificationObj = new Object();
 
     if (qualificationHeader) {
       qualificationObj[qualificationHeader] = subjects;
@@ -716,7 +717,7 @@ function distilConfiguration(config) {
 }
 
 function nextQuestion(preferences) {
-  var question = preferences.qualification === null ? 'qualification' : preferences.subject === null ? 'subject' : preferences.entry === null ? 'entry' : preferences.location === null ? 'location' : 'apply';
+  const question = preferences.qualification === null ? 'qualification' : preferences.subject === null ? 'subject' : preferences.entry === null ? 'entry' : preferences.location === null ? 'location' : 'apply';
   return question;
 }
 
@@ -749,7 +750,7 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2020
  */
 
-var timeout = 30000;
+const timeout = 30000;
 /**
  * How to apply configuration.
  *
@@ -758,7 +759,7 @@ var timeout = 30000;
  */
 
 function howToApplyConfig(url) {
-  var config = {
+  const config = {
     timeout: timeout,
     url: url
   };
@@ -771,7 +772,7 @@ function howToApplyConfig(url) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatReactDate */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatReactDate, arraySlicer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -794,28 +795,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uppercaseFirstLetterLowercaseRest", function() { return uppercaseFirstLetterLowercaseRest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "axiosRequest", function() { return axiosRequest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatReactDate", function() { return formatReactDate; });
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "arraySlicer", function() { return arraySlicer; });
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -845,8 +841,8 @@ function toBool(s) {
   return s === 'true' ? true : false;
 }
 
-var partialMatchFn = m => s => s.indexOf(m) < 0,
-    fullMatchFn = m => s => s !== m;
+const partialMatchFn = m => s => s.indexOf(m) < 0,
+      fullMatchFn = m => s => s !== m;
 /**
  * Remove a class name from an HTML element.
  *
@@ -857,7 +853,7 @@ var partialMatchFn = m => s => s.indexOf(m) < 0,
 
 
 function removeClass(elem, className, removePartials) {
-  var matchFn = removePartials ? partialMatchFn(className) : fullMatchFn(className);
+  const matchFn = removePartials ? partialMatchFn(className) : fullMatchFn(className);
   elem.className = elem.className.split(/\s+/).filter(s => matchFn(s)).join(' ');
 }
 /**
@@ -872,7 +868,7 @@ function removeClass(elem, className, removePartials) {
  */
 
 function reduceMotion() {
-  var reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   return reducedMotionQuery.matches ? true : false;
 }
 /**
@@ -906,9 +902,9 @@ function verticallyInWindow(elem) {
  */
 
 function parametersToObject(parameterString) {
-  var parameters = {};
+  const parameters = {};
   parameterString.substr(1).split('&').forEach(parameter => {
-    var [k, v] = parameter.split('=');
+    const [k, v] = parameter.split('=');
     parameters[k] = v;
   });
   return parameters;
@@ -922,9 +918,9 @@ function parametersToObject(parameterString) {
 
 function objectToParameters(parameterObj) {
   if (Object.keys(parameterObj).length > 0) {
-    var parameters = '?';
+    let parameters = '?';
 
-    for (var key in parameterObj) {
+    for (const key in parameterObj) {
       parameters.length !== 1 && (parameters += '&');
       parameters += key + '=' + parameterObj[key];
     }
@@ -973,7 +969,7 @@ function appendAll(elem, children) {
  */
 
 function numberFromString(string) {
-  var number = string.replace(/\D/g, '');
+  let number = string.replace(/\D/g, '');
   return number;
 }
 /**
@@ -983,9 +979,9 @@ function numberFromString(string) {
  */
 
 function isMobile() {
-  var screen = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 432;
-  var viewPortWidth = window.innerWidth;
-  var mobileScreen = screen;
+  let screen = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 432;
+  const viewPortWidth = window.innerWidth;
+  const mobileScreen = screen;
 
   if (viewPortWidth < mobileScreen) {
     return true;
@@ -999,9 +995,9 @@ function isMobile() {
  */
 
 function toArray(obj) {
-  var array = []; // iterate backwards ensuring that length is an UInt32
+  let array = []; // iterate backwards ensuring that length is an UInt32
 
-  for (var i = obj.length >>> 0; i--;) {
+  for (let i = obj.length >>> 0; i--;) {
     array[i] = obj[i];
   }
 
@@ -1012,27 +1008,27 @@ function toArray(obj) {
  */
 
 function detectIE() {
-  var ua = window.navigator.userAgent,
-      versionLength = 10,
-      msie = ua.indexOf('MSIE '),
-      msieVersionOffset = 5;
+  const ua = window.navigator.userAgent,
+        versionLength = 10,
+        msie = ua.indexOf('MSIE '),
+        msieVersionOffset = 5;
 
   if (msie > 0) {
     // IE 10 or older => return version number
     return parseInt(ua.substring(msie + msieVersionOffset, ua.indexOf('.', msie)), versionLength);
   }
 
-  var trident = ua.indexOf('Trident/'),
-      tridentVersionOffset = 3;
+  const trident = ua.indexOf('Trident/'),
+        tridentVersionOffset = 3;
 
   if (trident > 0) {
     // IE 11 => return version number
-    var rv = ua.indexOf('rv:');
+    let rv = ua.indexOf('rv:');
     return parseInt(ua.substring(rv + tridentVersionOffset, ua.indexOf('.', rv)), versionLength);
   }
 
-  var edge = ua.indexOf('Edge/'),
-      edgeVersionOffset = 5;
+  const edge = ua.indexOf('Edge/'),
+        edgeVersionOffset = 5;
 
   if (edge > 0) {
     // Edge (IE 12+) => return version number
@@ -1063,7 +1059,7 @@ function checkIntersectionObserver() {
  */
 
 function createHTMLElement(type, attributes) {
-  var el = document.createElement(type);
+  let el = document.createElement(type);
   attributes.map(function (att) {
     att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : att.label === 'html' ? el.innerHTML = att.val : el.setAttribute(att.label, att.val);
   });
@@ -1080,15 +1076,15 @@ function uppercaseFirstLetterLowercaseRest(s) {
  */
 
 function axiosRequest(config) {
-  var httpOK = 200;
-  return axios__WEBPACK_IMPORTED_MODULE_8___default()(config).then(response => {
+  const httpOK = 200;
+  return axios__WEBPACK_IMPORTED_MODULE_6___default()(config).then(response => {
     if (httpOK === response.status) {
       return response.data;
     } else {
       throw "Bad response: ".concat(response.status);
     }
   }).catch(e => {
-    if (!axios__WEBPACK_IMPORTED_MODULE_8___default.a.isCancel(e)) {
+    if (!axios__WEBPACK_IMPORTED_MODULE_6___default.a.isCancel(e)) {
       gaEvent('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "axiosRequest ".concat(e.fileName, " (").concat(window.location, ")"), true);
     }
   });
@@ -1101,9 +1097,9 @@ function axiosRequest(config) {
  */
 
 function daySuffix(day) {
-  var eleventh = 11,
-      thirteenth = 13,
-      lastDigit = day.toString().slice(-1);
+  const eleventh = 11,
+        thirteenth = 13,
+        lastDigit = day.toString().slice(-1);
   return day >= eleventh || day <= thirteenth ? 'th' : lastDigit === '1' ? 'st' : lastDigit === '2' ? 'nd' : lastDigit === '3' ? 'rd' : 'th';
 }
 /**
@@ -1115,11 +1111,29 @@ function daySuffix(day) {
 
 
 function formatReactDate(date) {
-  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-      days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("time", {
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("time", {
     dateTime: date.toISOString().split('T')[0]
-  }, days[date.getUTCDay()], ", ", date.getUTCDate(), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("sup", null, daySuffix(date.getUTCDate())), ' ', months[date.getUTCMonth()], " ", date.getUTCFullYear());
+  }, days[date.getUTCDay()], ", ", date.getUTCDate(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", null, daySuffix(date.getUTCDate())), ' ', months[date.getUTCMonth()], " ", date.getUTCFullYear());
+}
+/**
+ * Array slicer
+ *
+ * @param {array} arr - array to be split up into subarrays
+ * @param {number} len - max number items that goes into each subarray
+ */
+
+function arraySlicer(arr, len) {
+  let newArray = [],
+      i = 0,
+      n = arr.length;
+
+  while (i < n) {
+    newArray.push(arr.slice(i, i += len));
+  }
+
+  return newArray;
 }
 
 /***/ }),

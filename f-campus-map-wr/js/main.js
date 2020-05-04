@@ -181,13 +181,13 @@ __webpack_require__.r(__webpack_exports__);
  * @param {Object} Object - Pass options to customise IntersectionObserver see docs
  */
 function actionOnScroll(element, action) {
-  var repeat = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-  var options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {
+  let repeat = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+  let options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {
     threshold: [0, 0.1, 1]
   };
 
   if (element && typeof element !== 'undefined' && element !== null) {
-    var actionOnScrollAction = function actionOnScrollAction(entries) {
+    let actionOnScrollAction = function actionOnScrollAction(entries) {
       entries.forEach(entry => {
         //what to do with element depending on action type
         if (entry.isIntersecting) {
@@ -206,7 +206,7 @@ function actionOnScroll(element, action) {
     }; //intialise observer and observer element
 
 
-    var observer = new IntersectionObserver(actionOnScrollAction, options);
+    let observer = new IntersectionObserver(actionOnScrollAction, options);
     observer.observe(element);
   }
 }
@@ -240,7 +240,7 @@ __webpack_require__.r(__webpack_exports__);
  * @readonly
  * @enum {string}
  */
-var aria = {
+const aria = {
   /** Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application. */
   activeDescendant: 'aria-activedescendant',
 
@@ -399,19 +399,16 @@ var aria = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tryCatch", function() { return tryCatch; });
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns */ "./src/patterns.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./util */ "./src/util.js");
-/* harmony import */ var _patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/devcorate/devcorate */ "./src/patterns/devcorate/devcorate.js");
-/* harmony import */ var _patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/tabs/prepareAccordionTabs */ "./src/patterns/tabs/prepareAccordionTabs.js");
-
+/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
+/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns */ "./src/patterns.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./util */ "./src/util.js");
+/* harmony import */ var _patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/devcorate/devcorate */ "./src/patterns/devcorate/devcorate.js");
+/* harmony import */ var _patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/tabs/prepareAccordionTabs */ "./src/patterns/tabs/prepareAccordionTabs.js");
 
 
 
@@ -428,7 +425,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var edgeVersion = 12;
+const edgeVersion = 12;
 /**
  * try a function, log the error if it throws an exception.
  *
@@ -440,7 +437,7 @@ function tryCatch(f) {
     return f();
   } catch (e) {
     // console.log(e);
-    Object(_util__WEBPACK_IMPORTED_MODULE_5__["gaEvent"])('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "Pattern launch ".concat(e.fileName, " (").concat(window.location, ")"), true);
+    Object(_util__WEBPACK_IMPORTED_MODULE_4__["gaEvent"])('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "Pattern launch ".concat(e.fileName, " (").concat(window.location, ")"), true);
   }
 }
 /**
@@ -456,7 +453,7 @@ function launchPattern(pattern) {
   if (typeof pattern === 'function') {
     tryCatch(pattern);
   } else if (pattern.launchQuery) {
-    var {
+    const {
       launchFn,
       launchQuery
     } = pattern;
@@ -472,7 +469,7 @@ function launchPattern(pattern) {
 
 function accordionizeTabs(root) {
   Array.from(root.querySelectorAll('.tabs')).filter(elem => elem.className.indexOf('.tabs-no-js')).forEach(elem => {
-    var potential = tryCatch(() => Object(_patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_7__["default"])(elem));
+    const potential = tryCatch(() => Object(_patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_6__["default"])(elem));
     potential && accordionizeTabs(potential);
   });
 }
@@ -490,8 +487,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }, false);
     // }
     Array.from(document.getElementsByTagName('html')).forEach(html => {
-      var ie = Object(_util__WEBPACK_IMPORTED_MODULE_5__["detectIE"])();
-      Object(_util__WEBPACK_IMPORTED_MODULE_5__["removeClass"])(html, 'no-js', false);
+      let ie = Object(_util__WEBPACK_IMPORTED_MODULE_4__["detectIE"])();
+      Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(html, 'no-js', false);
 
       if (ie >= edgeVersion) {
         html.className = (html.className + ' js ' + 'edge').trim();
@@ -500,10 +497,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
     accordionizeTabs(document);
-    _patterns__WEBPACK_IMPORTED_MODULE_4__["default"].forEach(launchPattern);
-    var parameters = Object(_util__WEBPACK_IMPORTED_MODULE_5__["parametersToObject"])(location.search);
-    parameters['dev'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_6__["devcorate"])(document.querySelector('body'), 'dev', parameters['dev']);
-    parameters['rel'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_6__["devcorate"])(document.querySelector('body'), 'rel', parameters['rel']);
+    _patterns__WEBPACK_IMPORTED_MODULE_3__["default"].forEach(launchPattern);
+    const parameters = Object(_util__WEBPACK_IMPORTED_MODULE_4__["parametersToObject"])(location.search);
+    parameters['dev'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_5__["devcorate"])(document.querySelector('body'), 'dev', parameters['dev']);
+    parameters['rel'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_5__["devcorate"])(document.querySelector('body'), 'rel', parameters['rel']);
   }
 }, false);
 
@@ -525,29 +522,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
 /* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
 /* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
-/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
+/* harmony import */ var _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/dropdown-filter/dropdown-filter */ "./src/patterns/dropdown-filter/dropdown-filter.js");
 /* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
 /* harmony import */ var _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/finder/finder */ "./src/patterns/finder/finder.js");
 /* harmony import */ var _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/finder/finder-mini */ "./src/patterns/finder/finder-mini.js");
 /* harmony import */ var _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/image-carousel/default-carousel/default-carousel */ "./src/patterns/image-carousel/default-carousel/default-carousel.js");
 /* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
-/* harmony import */ var _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/key-info-box/key-info-slider */ "./src/patterns/key-info-box/key-info-slider.js");
-/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
-/* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
-/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
-/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
-/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
-/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
-/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
-/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
-/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
-/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
-/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
-/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/dropdown-filter/dropdown-filter */ "./src/patterns/dropdown-filter/dropdown-filter.js");
-/* harmony import */ var _patterns_campus_map_campus_map__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/campus-map/campus-map */ "./src/patterns/campus-map/campus-map.js");
+/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
+/* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
+/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
+/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
+/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
+/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
+/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
+/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
+/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
+/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
+/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
+/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_campus_map_campus_map__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/campus-map/campus-map */ "./src/patterns/campus-map/campus-map.js");
+/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
+/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
 
 
 /**
@@ -589,7 +586,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_key_info_box_key_info_slider__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_campus_map_campus_map__WEBPACK_IMPORTED_MODULE_29__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_campus_map_campus_map__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_29__["default"]]);
 
 /***/ }),
 
@@ -622,15 +619,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var className = 'accordion',
-    headingClassName = className + '__heading',
-    headingTextClassName = headingClassName + '__text',
-    headingIconClassName = headingClassName + '__indicator fal',
-    bodyClassName = className + '__body',
-    oneSecond = 1000,
-    tenthOfASecond = 100,
-    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : oneSecond,
-    scrollTo = true;
+const className = 'accordion',
+      headingClassName = className + '__heading',
+      headingTextClassName = headingClassName + '__text',
+      headingIconClassName = headingClassName + '__indicator fal',
+      bodyClassName = className + '__body',
+      oneSecond = 1000,
+      tenthOfASecond = 100,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : oneSecond,
+      scrollTo = true;
 /**
  * Sets a heading and the button nested within to be open or closed.
  *
@@ -653,10 +650,10 @@ function setSection(heading, open) {
 
 
 function calculateAccordionBodyHeight(heading) {
-  var section = heading.nextElementSibling;
+  const section = heading.nextElementSibling;
   setSection(heading, true);
   section.dataset.closed = 'false';
-  var height = section.offsetHeight + 'px';
+  const height = section.offsetHeight + 'px';
   setSection(heading, false);
   section.dataset.closed = 'true';
   return height;
@@ -682,7 +679,7 @@ function setupTransition(element, initialHeight) {
 
 
 function cleanupTransition(section) {
-  var open = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(section.previousElementSibling.dataset.open);
+  const open = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(section.previousElementSibling.dataset.open);
   section.style.height = null;
   section.dataset.closed = open ? 'false' : 'true';
 }
@@ -700,8 +697,8 @@ function cleanupTransition(section) {
 
 
 function buttonClick(button, headings, toggleOpen) {
-  var heading = button.parentNode,
-      accordionSection = heading.nextElementSibling;
+  const heading = button.parentNode,
+        accordionSection = heading.nextElementSibling;
   /**
    * After we've transitioned the opening/closing, we want to revert to
    * letting the CSS size the element. Add a listener to do this that will
@@ -723,7 +720,7 @@ function buttonClick(button, headings, toggleOpen) {
     setSection(heading, false);
   } else {
     // Calclulate and save how big we're transitioning to
-    var sectionHeight = calculateAccordionBodyHeight(heading); // Starting height is 0
+    const sectionHeight = calculateAccordionBodyHeight(heading); // Starting height is 0
 
     setupTransition(accordionSection, '0px'); // setTimeout lets the DOM recalculate before we continue, so the transition will fire
 
@@ -732,7 +729,7 @@ function buttonClick(button, headings, toggleOpen) {
     }, tenthOfASecond);
 
     if (toggleOpen) {
-      var sections = Array.from(heading.parentNode.parentNode.querySelectorAll("#".concat(heading.parentElement.id, " > .").concat(bodyClassName)));
+      const sections = Array.from(heading.parentNode.parentNode.querySelectorAll("#".concat(heading.parentElement.id, " > .").concat(bodyClassName)));
       headings.forEach(heading => setSection(heading, false));
       sections.filter(section => section.id !== accordionSection.id).forEach(section => {
         section.dataset.closed = 'true';
@@ -755,11 +752,11 @@ function buttonClick(button, headings, toggleOpen) {
 
 
 function buttonFromHeading(heading) {
-  var button = document.createElement('button'),
-      // Chrome can't apply grid layout to buttons, need to wrap contents
+  const button = document.createElement('button'),
+        // Chrome can't apply grid layout to buttons, need to wrap contents
   wrapper = document.createElement('div'),
-      textSpan = document.createElement('span'),
-      iconSpan = document.createElement('span');
+        textSpan = document.createElement('span'),
+        iconSpan = document.createElement('span');
   textSpan.className = headingTextClassName;
   iconSpan.className = headingIconClassName;
   iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, true);
@@ -791,11 +788,11 @@ function buttonFromHeading(heading) {
 
 
 function launchAccordion(accordion) {
-  var toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(accordion.dataset.toggleopen),
-      defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(accordion.dataset.defaultopen),
-      allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(accordion.dataset.allowsingle),
-      headings = Array.from(accordion.parentNode.querySelectorAll("#".concat(accordion.id, " > .").concat(headingClassName)));
-  var idLinked = false;
+  const toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(accordion.dataset.toggleopen),
+        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(accordion.dataset.defaultopen),
+        allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(accordion.dataset.allowsingle),
+        headings = Array.from(accordion.parentNode.querySelectorAll("#".concat(accordion.id, " > .").concat(headingClassName)));
+  let idLinked = false;
 
   if (!(allowSingle || headings.length > 1)) {
     /**
@@ -806,8 +803,8 @@ function launchAccordion(accordion) {
   }
 
   headings.forEach(heading => {
-    var content = heading.nextElementSibling,
-        button = buttonFromHeading(heading);
+    const content = heading.nextElementSibling,
+          button = buttonFromHeading(heading);
     content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].labelledBy, heading.id);
     content.setAttribute('role', 'region');
     heading.replaceChild(button, heading.firstChild);
@@ -855,16 +852,16 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019!
  */
 
-var className = 'content-fade-in';
+const className = 'content-fade-in';
 
 function contentFadeIn(contentFadein) {
-  var viewPortHeight = window.innerHeight; // calculates viewport height
+  const viewPortHeight = window.innerHeight; // calculates viewport height
 
   if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
     contentFadein.classList.add('content-fade-in--start');
     window.addEventListener('scroll', function () {
-      var elemOffset = contentFadein.offsetTop;
-      var screenPos = window.pageYOffset; // calculates scroll position
+      const elemOffset = contentFadein.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
 
       if (screenPos > elemOffset - viewPortHeight + 10 && !contentFadein.className.includes('content-fade-in--complete')) {
         contentFadein.classList.add('content-fade-in--complete');
@@ -904,7 +901,7 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019!
  */
 
-var className = 'content-separator-container';
+const className = 'content-separator-container';
 /**
  *
  * @param {HTMLElement} contentSeparatorContainer: the separator is the
@@ -913,15 +910,15 @@ var className = 'content-separator-container';
  */
 
 function contentSeparator(contentSeparatorContainer) {
-  var viewPortHeight = window.innerHeight; // calculates viewport height
+  const viewPortHeight = window.innerHeight; // calculates viewport height
 
-  var el = insertElement(contentSeparatorContainer);
+  let el = insertElement(contentSeparatorContainer);
 
   if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
     el.classList.add('content-separator--transition-start');
     window.addEventListener('scroll', function () {
-      var elemOffset = el.offsetTop;
-      var screenPos = window.pageYOffset; // calculates scroll position
+      const elemOffset = el.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
 
       if (screenPos > elemOffset - viewPortHeight + 20 && !el.className.includes('content-separator--transition-complete')) {
         el.classList.add('content-separator--transition-complete');
@@ -940,7 +937,7 @@ function contentSeparator(contentSeparatorContainer) {
 
 
 function insertElement(contentSeparatorContainer) {
-  var el = document.createElement('div');
+  let el = document.createElement('div');
   el.setAttribute('class', 'content-separator');
   contentSeparatorContainer.prepend(el);
   return el;
@@ -977,19 +974,19 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019!
  */
 
-var className = 'content-slide-up';
+const className = 'content-slide-up';
 
 function contentSlideUp(contentSlideup) {
-  var viewPortHeight = window.innerHeight; // calculates viewport height
+  const viewPortHeight = window.innerHeight; // calculates viewport height
 
   if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
     contentSlideup.classList.add('content-slideup--start');
     window.addEventListener('scroll', function () {
-      var screenPos = window.pageYOffset; // calculates scroll position
+      const screenPos = window.pageYOffset; // calculates scroll position
 
-      var elemOffsetTop = contentSlideup.offsetTop; // calculates element offset from top to the page
+      const elemOffsetTop = contentSlideup.offsetTop; // calculates element offset from top to the page
 
-      var parentElemHeight = contentSlideup.parentElement.offsetHeight - parseInt(window.getComputedStyle(contentSlideup.parentElement, null).getPropertyValue('padding-bottom')) - parseInt(window.getComputedStyle(contentSlideup.parentElement, null).getPropertyValue('padding-top'));
+      const parentElemHeight = contentSlideup.parentElement.offsetHeight - parseInt(window.getComputedStyle(contentSlideup.parentElement, null).getPropertyValue('padding-bottom')) - parseInt(window.getComputedStyle(contentSlideup.parentElement, null).getPropertyValue('padding-top'));
 
       if (screenPos > elemOffsetTop - viewPortHeight - parentElemHeight * 70 / 100 && !contentSlideup.className.includes('content-slideup--end')) {
         contentSlideup.classList.add('content-slideup--end');
@@ -1029,16 +1026,16 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019!
  */
 
-var className = 'image-expand';
+const className = 'image-expand';
 
 function imageExpand(image) {
   if (!Object(_util__WEBPACK_IMPORTED_MODULE_1__["isMobile"])()) {
-    var viewPortHeight = window.innerHeight; // calculates viewport height
+    const viewPortHeight = window.innerHeight; // calculates viewport height
 
     image.classList.add('image-expand--start');
     window.addEventListener('scroll', function () {
-      var elemOffset = image.offsetTop;
-      var screenPos = window.pageYOffset; // calculates scroll position
+      const elemOffset = image.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
 
       if (screenPos > elemOffset - viewPortHeight + 100 && !image.className.includes('image-expand--complete')) {
         image.classList.add('image-expand--complete');
@@ -1063,18 +1060,16 @@ function imageExpand(image) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_match__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.match */ "./node_modules/core-js/modules/es.string.match.js");
-/* harmony import */ var core_js_modules_es_string_match__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_match__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _action_on_scroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../action-on-scroll */ "./src/action-on-scroll.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_es_string_match__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.match */ "./node_modules/core-js/modules/es.string.match.js");
+/* harmony import */ var core_js_modules_es_string_match__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_match__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _action_on_scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../action-on-scroll */ "./src/action-on-scroll.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
 
 
 
@@ -1083,9 +1078,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-var className = 'animate-number',
-    DURATION = 1500; // set duration variable 1500 ms increase if want longer animation
+const className = 'animate-number',
+      DURATION = 1500; // set duration variable 1500 ms increase if want longer animation
 
 /**
  *
@@ -1096,7 +1090,7 @@ var className = 'animate-number',
  */
 
 function findNumberContainer(widget) {
-  var nested = widget.querySelector('.animate--number__number');
+  const nested = widget.querySelector('.animate--number__number');
   return typeof nested !== 'undefined' && nested !== null ? nested : widget;
 }
 /**
@@ -1113,10 +1107,10 @@ function findNumberContainer(widget) {
 
 
 function initNumberAnimation(widget) {
-  var startStr = widget.dataset.animationNumberStart || '0';
-  var start = parseFloat(startStr);
-  var numberContainer = findNumberContainer(widget);
-  var numberStr = numberContainer.innerHTML.trim().replace(/,/g, '');
+  const startStr = widget.dataset.animationNumberStart || '0';
+  const start = parseFloat(startStr);
+  const numberContainer = findNumberContainer(widget);
+  const numberStr = numberContainer.innerHTML.trim().replace(/,/g, '');
 
   if (numberStr.match(/^-?[0-9,]+(\.[0-9,]+])?/)) {
     widget.dataset.animationNumberValue = parseFloat(numberStr);
@@ -1138,32 +1132,32 @@ function initNumberAnimation(widget) {
 
 
 function runNumberAnimation(widget) {
-  var numberContainer = findNumberContainer(widget);
-  var isFloat = widget.dataset.animationNumberFloat;
-  var value = parseInt(widget.dataset.animationNumberValue);
+  const numberContainer = findNumberContainer(widget);
+  const isFloat = widget.dataset.animationNumberFloat;
+  const value = parseInt(widget.dataset.animationNumberValue);
 
   if (value !== 0) {
-    var first = true;
-    var startTime = 0;
-    var startValue = parseInt(widget.dataset.animationNumberStart);
-    var lastValue = 0;
+    let first = true;
+    let startTime = 0;
+    let startValue = parseInt(widget.dataset.animationNumberStart);
+    let lastValue = 0;
     /**
      * function to run animation
      *
      * @param {timestamp} time stamp - time stamp from requestAnimationFrame API
      */
 
-    var f = timestamp => {
+    const f = timestamp => {
       if (first) {
         startTime = timestamp;
         first = false;
       }
 
-      var t = (timestamp - startTime) / DURATION; // difference in time between two discrete points in time divied by duration
+      const t = (timestamp - startTime) / DURATION; // difference in time between two discrete points in time divied by duration
 
-      var finish = t >= 1;
-      var k = finish ? 1 : 1 - Math.pow(1 - t, 4);
-      var v = k * (value - startValue) + startValue;
+      const finish = t >= 1;
+      let k = finish ? 1 : 1 - Math.pow(1 - t, 4);
+      let v = k * (value - startValue) + startValue;
 
       if (isFloat) {
         v = Math.round(v);
@@ -1212,12 +1206,12 @@ function runNumberAnimation(widget) {
 
 
 function init(elm) {
-  var lazyNumbers = [].slice.call(elm.querySelectorAll('.animate--number'));
+  const lazyNumbers = [].slice.call(elm.querySelectorAll('.animate--number'));
   /**
    * check if browser support IntersectionObserver api
    */
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_6__["checkIntersectionObserver"])()) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_5__["checkIntersectionObserver"])()) {
     lazyNumbers.forEach(function (lazyUnit) {
       initNumberAnimation(lazyUnit);
       /**
@@ -1225,7 +1219,7 @@ function init(elm) {
        * to animate when element is intersecting
        */
 
-      Object(_action_on_scroll__WEBPACK_IMPORTED_MODULE_5__["actionOnScroll"])(lazyUnit, runNumberAnimation);
+      Object(_action_on_scroll__WEBPACK_IMPORTED_MODULE_4__["actionOnScroll"])(lazyUnit, runNumberAnimation);
     });
   }
 }
@@ -1259,7 +1253,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author adapted by Walter Reyneke <walter.reyneke@city.ac.uk> from CASS polaris
  * @copyright City, University of London 2019!
  */
-var className = 'animate-svg';
+const className = 'animate-svg';
 /**
  * This animation targets SVG paths. When in scrolling distance the path will animated from a starting position of zero till the full length of the path is shown.
  *
@@ -1268,21 +1262,21 @@ var className = 'animate-svg';
  */
 
 function initSvgPathAnimation(animateSvg) {
-  var viewPortHeight = window.innerHeight; // calculates viewport height
+  const viewPortHeight = window.innerHeight; // calculates viewport height
 
   window.addEventListener('DOMContentLoaded', () => {
     var paths = animateSvg.querySelectorAll('.animate--svg-path'); // prepares the animation
 
     paths.forEach(path => {
-      var length = path.getTotalLength() + 'px';
+      let length = path.getTotalLength() + 'px';
       path.classList.add('animate--svg-path--jsinit');
       path.style.strokeDashoffset = length;
       path.style.strokeDasharray = "".concat(length, ", ").concat(length);
     }); // starts animation when in scrolling view
 
     window.addEventListener('scroll', function () {
-      var elemOffset = animateSvg.offsetTop;
-      var screenPos = window.pageYOffset; // calculates scroll position
+      const elemOffset = animateSvg.offsetTop;
+      const screenPos = window.pageYOffset; // calculates scroll position
 
       if (screenPos > elemOffset - viewPortHeight + 30) {
         paths.forEach(function (path) {
@@ -1323,8 +1317,8 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 
-var className = 'back-to-top',
-    viewPortHeight = window.innerHeight;
+const className = 'back-to-top',
+      viewPortHeight = window.innerHeight;
 /**
  * Back to top anchor anchor only appears on long pages and when you have scrolled down long enough
  * Please change the parameter below to alter the behaviour of the back to top anchor.
@@ -1332,14 +1326,14 @@ var className = 'back-to-top',
  * scrollPos - sets how many viewport heights you need to scroll down for back to top to appear. 1 = 1 viewport height
  */
 
-var scrollPos = 4;
+const scrollPos = 4;
 /**
  *
  * @param {HTMLElement} - selects back to top parent element, which is used in return to select children elements
  */
 
 function initBacktoTop(backToTop) {
-  var backToTopAnchor = backToTop.querySelectorAll('a')[0];
+  const backToTopAnchor = backToTop.querySelectorAll('a')[0];
   window.addEventListener('load', function () {
     backToTop.querySelector('.back-to-top__button__arrow').appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
       label: 'content',
@@ -1364,7 +1358,7 @@ function initBacktoTop(backToTop) {
 
 
 function showAnchor(backToTop) {
-  var positionOnScreen = window.pageYOffset;
+  const positionOnScreen = window.pageYOffset;
 
   if (positionOnScreen > viewPortHeight * scrollPos) {
     // shows anchor when scrolled down far enough - see parameters
@@ -1385,14 +1379,14 @@ function showAnchor(backToTop) {
 
 function updateProgress(backToTopAnchor) {
   // Setting up SVG animation
-  var progressPath = backToTopAnchor.querySelector('path'),
-      pathLength = progressPath.getTotalLength();
+  const progressPath = backToTopAnchor.querySelector('path'),
+        pathLength = progressPath.getTotalLength();
   progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
   progressPath.style.strokeDashoffset = pathLength; // Calculate values
 
-  var scroll = window.pageYOffset,
-      height = document.documentElement.scrollHeight - window.innerHeight,
-      progress = pathLength - scroll * pathLength / height; // Updates progress bar
+  const scroll = window.pageYOffset,
+        height = document.documentElement.scrollHeight - window.innerHeight,
+        progress = pathLength - scroll * pathLength / height; // Updates progress bar
 
   progressPath.style.strokeDashoffset = progress;
 }
@@ -1413,14 +1407,11 @@ function updateProgress(backToTopAnchor) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -1434,11 +1425,11 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 
-var className = 'map-container';
+const className = 'map-container';
 
 function createMap() {
   // == PROPERTIES ==
-  var
+  let
   /**
    * data source - relative to handle production and test environments
    * @let {String}
@@ -1586,7 +1577,7 @@ function createMap() {
    */
 
   function clearOverlays(markersArray) {
-    var i;
+    let i;
 
     if (markersArray) {
       for (i in markersArray) {
@@ -1605,11 +1596,11 @@ function createMap() {
    */
 
   function hashChange(id) {
-    var marker; //loop over  bigBuildingsArray to find marker
+    let marker; //loop over  bigBuildingsArray to find marker
 
-    for (var building in cityLayers.buildingsObj) {
+    for (let building in cityLayers.buildingsObj) {
       if (id === building) {
-        var found = cityLayers.buildingsObj[building];
+        let found = cityLayers.buildingsObj[building];
         marker = found; //open infoWindow for this marker
         //clear all overlays first
 
@@ -1636,7 +1627,7 @@ function createMap() {
    */
 
   function updateHash(caller) {
-    var callerId = '';
+    let callerId = '';
 
     if (!caller) {
       return;
@@ -1665,7 +1656,7 @@ function createMap() {
    */
 
   function showOverlays(markersArray) {
-    var i;
+    let i;
 
     if (markersArray) {
       for (i in markersArray) {
@@ -1698,14 +1689,14 @@ function createMap() {
    */
 
   function initKmlLayers(layer) {
-    for (var key in layer) {
+    for (let key in layer) {
       // skip loop if the property is from prototype
       if (!layer.hasOwnProperty(key)) {} //end if
 
 
-      var obj = layer[key];
-      var toggler = obj.toggler;
-      var overlay = new google.maps.KmlLayer(obj.src, {
+      let obj = layer[key];
+      let toggler = obj.toggler;
+      let overlay = new google.maps.KmlLayer(obj.src, {
         preserveViewport: obj.preserveViewport
       });
       /* 
@@ -1730,7 +1721,7 @@ function createMap() {
 
   function createMarker(markerConfig) {
     // let listId = '#' + markerConfig.category, >> walter maybe delete this now
-    var listId = document.getElementById(markerConfig.category),
+    let listId = document.getElementById(markerConfig.category),
         listItem,
         marker,
         anchor,
@@ -1768,7 +1759,7 @@ function createMap() {
       return updateHash(marker);
     }); //create list element
 
-    listItem = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('li', [{
+    listItem = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', [{
       label: 'id',
       val: 'building-' + markerConfig.id
     }, {
@@ -1776,7 +1767,7 @@ function createMap() {
       val: 'building'
     }]); //create a element with click handler to open infoWindow
 
-    anchor = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('a', [{
+    anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
       label: 'html',
       val: '<span>' + markerConfig.name + ' ' + markerConfig.buildingPrefix + '</span>'
     }, {
@@ -1799,7 +1790,7 @@ function createMap() {
   //commented out to keep JSLint happy as this function is not currently used
 
   function deleteOverlays(markersArray) {
-    var i;
+    let i;
 
     if (markersArray) {
       for (i in markersArray) {
@@ -1815,9 +1806,9 @@ function createMap() {
   ;
 
   function findChildText(node, name) {
-    var value = '';
-    var children = node.getElementsByTagName(name);
-    var childrenLength = node.getElementsByTagName(name).length;
+    let value = '';
+    let children = node.getElementsByTagName(name);
+    let childrenLength = node.getElementsByTagName(name).length;
 
     if (childrenLength > 0) {
       value = children[0].textContent;
@@ -1836,8 +1827,8 @@ function createMap() {
    */
 
   function parseXml(xml) {
-    var items = xml.getElementsByTagName('item');
-    var index = 0,
+    let items = xml.getElementsByTagName('item');
+    let index = 0,
         $self,
         marker,
         markerConfig = {},
@@ -1871,7 +1862,7 @@ function createMap() {
 
 
       cityLayers.buildingsObj[marker.id] = marker;
-      searchTags.push(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('a', [{
+      searchTags.push(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
         label: 'content',
         val: markerConfig.name
       }, {
@@ -1892,11 +1883,11 @@ function createMap() {
 
     function searchBoxInit() {
       // creates HTML structure for suggestion list
-      var listWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
+      let listWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
         label: 'class',
         val: 'query__suggestions__wrapper'
       }]);
-      var list = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('ul', [{
+      let list = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
         label: 'id',
         val: 'query__suggestions'
       }, {
@@ -1909,7 +1900,7 @@ function createMap() {
        */
 
       searchTags.forEach(function (tag) {
-        var item = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('li', []);
+        let item = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', []);
         tag.addEventListener('click', function () {
           searchQueryIdFind(tag.getAttribute('data-id'), tag.textContent);
         });
@@ -1918,14 +1909,14 @@ function createMap() {
       searchBox.parentElement.appendChild(listWrapper).appendChild(list); // listens for search queries
 
       searchBox.addEventListener('keyup', function () {
-        var searchString = searchBox.value;
-        var list = document.getElementById('query__suggestions');
-        var find = document.getElementById('query__suggestions').querySelectorAll('li'); // if a query is presesnt it show / hides relevant buildings using CSS instead of recreateing DOM elements all the time to help with performance
+        let searchString = searchBox.value;
+        let list = document.getElementById('query__suggestions');
+        let find = document.getElementById('query__suggestions').querySelectorAll('li'); // if a query is presesnt it show / hides relevant buildings using CSS instead of recreateing DOM elements all the time to help with performance
 
         if (searchString.length > 0) {
           list.setAttribute('data-show', true);
           find.forEach(function (i) {
-            var label = i.querySelector('a').textContent;
+            let label = i.querySelector('a').textContent;
 
             if (label.indexOf(searchString) > -1) {
               i.style.display = "block";
@@ -1971,7 +1962,7 @@ function createMap() {
   ; //end parse xml,
 
   function loadXml() {
-    var xhttp = new XMLHttpRequest();
+    let xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function () {
       if (xhttp.readyState == 4 && xhttp.status === 200) {
@@ -1991,7 +1982,7 @@ function createMap() {
 
   function init() {
     $mapContainer.classList.add('loading');
-    $mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('i', [{
+    $mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('i', [{
       label: 'class',
       val: 'fa fa-refresh fa-spin loading-fa-icon'
     }]));
@@ -2035,10 +2026,10 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2018
  */
 
-var className = 'cms-editor',
-    warningClass = className + '-warning',
-    buttonClass = warningClass + '-remover',
-    wrapperClass = 'wrapper--' + buttonClass;
+const className = 'cms-editor',
+      warningClass = className + '-warning',
+      buttonClass = warningClass + '-remover',
+      wrapperClass = 'wrapper--' + buttonClass;
 /**
  * Create a warning remover button.
  *
@@ -2046,7 +2037,7 @@ var className = 'cms-editor',
  */
 
 function createButton() {
-  var button = document.createElement('button');
+  const button = document.createElement('button');
   button.className = buttonClass;
   button.setAttribute('type', 'button');
   button.appendChild(document.createTextNode('Remove CMS editor warnings'));
@@ -2065,11 +2056,11 @@ function createButton() {
 
 
 function launchRemover(elem) {
-  var warnings = Array.from(elem.querySelectorAll(".".concat(warningClass)));
+  const warnings = Array.from(elem.querySelectorAll(".".concat(warningClass)));
 
   if (warnings.length) {
-    var button = createButton(),
-        wrapper = document.createElement('div');
+    const button = createButton(),
+          wrapper = document.createElement('div');
     button.addEventListener('click', () => {
       warnings.forEach(w => w.parentNode.removeChild(w));
       button.parentNode.removeChild(button);
@@ -2127,7 +2118,7 @@ __webpack_require__.r(__webpack_exports__);
 function devcorate(elem, param, value) {
   Array.from(elem.querySelectorAll('a')).forEach(anchor => {
     if (anchor.origin === window.location.origin) {
-      var parameters = anchor.search ? Object(_util__WEBPACK_IMPORTED_MODULE_2__["parametersToObject"])(anchor.search) : {};
+      const parameters = anchor.search ? Object(_util__WEBPACK_IMPORTED_MODULE_2__["parametersToObject"])(anchor.search) : {};
       parameters[param] = value;
       anchor.href = "".concat(anchor.origin).concat(anchor.pathname).concat(Object(_util__WEBPACK_IMPORTED_MODULE_2__["objectToParameters"])(parameters)).concat(anchor.hash);
     }
@@ -2145,8 +2136,11 @@ function devcorate(elem, param, value) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 
@@ -2158,7 +2152,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2019
  */
-var className = 'dropdown-filter';
+const className = 'dropdown-filter';
 /**
  * Entry function: loops through and hides list items, sets up event listener on
  * child select box
@@ -2168,7 +2162,7 @@ var className = 'dropdown-filter';
 
 function prepareDropdown(element) {
   // only get direct children
-  var listItems = element.querySelectorAll('ul.data-group > li'); // hide list items
+  const listItems = element.querySelectorAll('ul.data-group > li'); // hide list items
 
   hideListItems(listItems); // insert the select box to toggle items
 
@@ -2197,21 +2191,21 @@ function hideListItems(items) {
 
 
 function insertSelect(items, parentElement) {
-  var selectBox = document.createElement('select');
+  const selectBox = document.createElement('select');
   selectBox.className = 'select-filter';
   parentElement.prepend(selectBox); // get and add default select text
 
-  var option = document.createElement('option');
-  option.text = parentElement.getAttribute('data-text');
-  selectBox.appendChild(option); // iterate over each item and create/append select option
+  const noSelection = document.createElement('option');
+  noSelection.text = parentElement.getAttribute('data-text');
+  selectBox.appendChild(noSelection); // iterate over each item and create/append select option
 
-  items.forEach(function (item, i) {
-    var dataValue = item.getAttribute('data-value');
-    var option = document.createElement('option');
+  Array.from(items).sort((a, b) => a.dataset.value < b.dataset.value ? -1 : a.dataset.value > b.dataset.value ? 1 : 0).forEach(item => {
+    const dataValue = item.dataset.value,
+          option = document.createElement('option');
     option.value = dataValue;
     option.text = dataValue; // set first item in list as selected
 
-    if (i === 0) {
+    if (item.dataset.default === 'true') {
       option.setAttribute('selected', 'selected');
     }
 
@@ -2231,9 +2225,9 @@ function insertSelect(items, parentElement) {
 
 function selectChange(e) {
   // get the ul containing the list items
-  var dataGroup = e.target.nextElementSibling; // get direct list items
+  const dataGroup = e.target.nextElementSibling; // get direct list items
 
-  var listItems = dataGroup.querySelectorAll('ul.data-group > li'); // hide all items before displaying chosen item
+  const listItems = dataGroup.querySelectorAll('ul.data-group > li'); // hide all items before displaying chosen item
 
   hideListItems(listItems); // if first option selected, return
 
@@ -2242,7 +2236,7 @@ function selectChange(e) {
   } // get the list item corresponding to the select value chosen
 
 
-  var targetListItem = dataGroup.querySelector('li[data-value=' + e.target.value + ']'); // remove data-hidden
+  const targetListItem = dataGroup.querySelector('li[data-value=' + e.target.value + ']'); // remove data-hidden
 
   targetListItem.removeAttribute('data-hidden');
 }
@@ -2283,8 +2277,8 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-var className = 'feedback',
-    feedbackPage = '/feedback';
+const className = 'feedback',
+      feedbackPage = '/feedback';
 /**
  * Push a Google Analytics page feedback event into the data layer queue.
  *
@@ -2304,11 +2298,11 @@ function sendFeedback(action, value) {
 
 function handleNo(container) {
   sendFeedback('Not useful', 0);
-  var message = document.createElement('p'),
-      messagePrefix = document.createTextNode('We’re sorry to hear that, please consider '),
-      linkText = document.createTextNode('sending us some feedback'),
-      link = document.createElement('a'),
-      messageSuffix = document.createTextNode(' so we can make it better.');
+  const message = document.createElement('p'),
+        messagePrefix = document.createTextNode('We’re sorry to hear that, please consider '),
+        linkText = document.createTextNode('sending us some feedback'),
+        link = document.createElement('a'),
+        messageSuffix = document.createTextNode(' so we can make it better.');
   container.childNodes.forEach(elem => container.removeChild(elem));
   link.href = feedbackPage;
   link.appendChild(linkText);
@@ -2325,8 +2319,8 @@ function handleNo(container) {
 
 function handleYes(container) {
   sendFeedback('Useful', 1);
-  var message = document.createElement('p'),
-      messageText = document.createTextNode('Thanks! Your feedback will be used to improve our website.');
+  const message = document.createElement('p'),
+        messageText = document.createTextNode('Thanks! Your feedback will be used to improve our website.');
   container.childNodes.forEach(elem => container.removeChild(elem));
   message.appendChild(messageText);
   message.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].live, 'polite');
@@ -2342,14 +2336,14 @@ function handleYes(container) {
 
 
 function launchFeedback(elem) {
-  var questionText = document.createTextNode('Is this page useful?'),
-      directFeedbackWrapper = document.createElement('div'),
-      directFeedbackForm = document.createElement('form'),
-      directFeedbackFieldset = document.createElement('fieldset'),
-      questionLegend = document.createElement('legend'),
-      buttonWrapper = document.createElement('div'),
-      yesButton = document.createElement('button'),
-      noButton = document.createElement('button');
+  const questionText = document.createTextNode('Is this page useful?'),
+        directFeedbackWrapper = document.createElement('div'),
+        directFeedbackForm = document.createElement('form'),
+        directFeedbackFieldset = document.createElement('fieldset'),
+        questionLegend = document.createElement('legend'),
+        buttonWrapper = document.createElement('div'),
+        yesButton = document.createElement('button'),
+        noButton = document.createElement('button');
   yesButton.setAttribute('type', 'button');
   yesButton.appendChild(document.createTextNode('Yes'));
   yesButton.addEventListener('click', () => handleYes(directFeedbackWrapper), true);
@@ -2403,15 +2397,15 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__bestbet(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "finder__results__card finder__results__bestbet"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: props.details.clickTrackingUrl
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "finder__results__card__heading underline-transition__title"
-  }, props.details.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "card__title finder__results__card__heading"
+  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__description"
   }, props.details.description))));
 }
@@ -2471,46 +2465,46 @@ __webpack_require__.r(__webpack_exports__);
 function finder__results__course(props) {
   switch (props.type) {
     case 'casestudy':
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_casestudy__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_casestudy__WEBPACK_IMPORTED_MODULE_2__["default"], {
         details: props.details
       });
 
     case 'centre':
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_centre__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_centre__WEBPACK_IMPORTED_MODULE_3__["default"], {
         details: props.details,
         query: props.query
       });
 
     case 'contact':
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_contact__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_contact__WEBPACK_IMPORTED_MODULE_4__["default"], {
         details: props.details,
         query: props.query
       });
 
     case 'course':
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_course__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_course__WEBPACK_IMPORTED_MODULE_5__["default"], {
         details: props.details,
         query: props.query
       });
 
     case 'funding':
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_funding__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_funding__WEBPACK_IMPORTED_MODULE_6__["default"], {
         details: props.details,
         query: props.query
       });
 
     case 'news':
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_news__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_news__WEBPACK_IMPORTED_MODULE_8__["default"], {
         details: props.details
       });
 
     case 'profile':
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_profile__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_profile__WEBPACK_IMPORTED_MODULE_9__["default"], {
         details: props.details
       });
 
     default:
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_generic__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_generic__WEBPACK_IMPORTED_MODULE_7__["default"], {
         details: props.details
       });
   }
@@ -2534,15 +2528,12 @@ finder__results__course.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -2562,44 +2553,42 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__casestudy(props) {
-  var subtitle = props.details.metaData.status ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  const subtitle = props.details.metaData.status ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__description"
-  }, props.details.metaData.status) : props.details.metaData.type && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }, props.details.metaData.status) : props.details.metaData.type && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__description"
   }, props.details.metaData.type),
-      school = props.details.metaData.school && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+        school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "School:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
-      department = props.details.metaData.department && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
+        department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-building icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Department:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(', and '))),
-      centre = props.details.metaData.centre && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Department:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(', and '))),
+        centre = props.details.metaData.centre && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-vial icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Research centre:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.centre.split('|').length > 2 ? props.details.metaData.centre.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.centre.split('|').slice(-1) : props.details.metaData.centre.split('|').join(', and ')));
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Research centre:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.centre.split('|').length > 2 ? props.details.metaData.centre.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.centre.split('|').slice(-1) : props.details.metaData.centre.split('|').join(', and ')));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "finder__results__card finder__results__casestudy"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.clickTrackingUrl
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "underline-transition__title"
-  }, props.details.title)), subtitle, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department, centre)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "card__title finder__results__card__heading"
+  }, props.details.title), subtitle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department, centre)));
 }
 
 finder__results__casestudy.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
+  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__casestudy);
 
@@ -2614,16 +2603,13 @@ finder__results__casestudy.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
-
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
 
 
 
@@ -2644,37 +2630,35 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__centre(props) {
-  var school = props.details.metaData.school && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  const school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "School:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
-      department = props.details.metaData.department && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
+        department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-building icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Department:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(', and '))),
-      subject = props.details.metaData.related && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Department:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(', and '))),
+        subject = props.details.metaData.related && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__description"
-  }, props.details.metaData.related.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_4__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.related).split('|').slice(0, -1).join(', ') + ' and ' + Object(_util__WEBPACK_IMPORTED_MODULE_4__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.related).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_4__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.related).split('|').join(' and '));
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, props.details.metaData.related.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.related).split('|').slice(0, -1).join(', ') + ' and ' + Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.related).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.related).split('|').join(' and '));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "finder__results__card finder__results__centre"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.clickTrackingUrl
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "underline-transition__title"
-  }, props.details.title)), subject, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "card__title finder__results__card__heading"
+  }, props.details.title), subject, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department)));
 }
 
 finder__results__centre.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
+  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__centre);
 
@@ -2710,44 +2694,44 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__contact(props) {
-  var department = props.details.metaData.department && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  const department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-fw fa-building icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Department:"), " ", props.details.metaData.department),
-      jobtitle = props.details.metaData.jobtitle && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Department:"), " ", props.details.metaData.department),
+        jobtitle = props.details.metaData.jobtitle && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__description"
   }, props.details.metaData.jobtitle),
-      email = props.details.metaData.email && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        email = props.details.metaData.email && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-fw fa-envelope icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Email:"), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Email:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: 'mailto:' + props.details.metaData.email
   }, props.details.metaData.email)),
-      telephone = props.details.metaData.telephone && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        telephone = props.details.metaData.telephone && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-fw fa-phone fa-rotate-90 icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Telephone:"), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Telephone:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: 'tel:' + props.details.metaData.telephone
   }, props.details.metaData.friendlytelephone)),
-      room = props.details.metaData.room && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+        room = props.details.metaData.room && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-fw fa-door-open icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Room:"), " ", props.details.metaData.room);
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Room:"), " ", props.details.metaData.room);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "finder__results__card finder__results__contact"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.title)), jobtitle, department, room, email, telephone));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "card__title finder__results__card__heading"
+  }, props.details.title), jobtitle, department, room, email, telephone));
 }
 
 finder__results__contact.propTypes = {
@@ -2766,17 +2750,14 @@ finder__results__contact.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../results/finder__results__highlight__query */ "./src/patterns/finder/components/results/finder__results__highlight__query.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
-
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../results/finder__results__highlight__query */ "./src/patterns/finder/components/results/finder__results__highlight__query.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
 
 
 
@@ -2798,68 +2779,66 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__course(props) {
-  var subtitle = props.details.metaData.type || props.details.metaData.level || null,
-      award = props.details.metaData.qualification && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  const subtitle = props.details.metaData.type || props.details.metaData.level || null,
+        award = props.details.metaData.qualification && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-award icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Award", props.details.metaData.qualification.split('|').length > 1 && 's', ":"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.qualification.split('|').join(', '))),
-      duration = props.details.metaData.duration && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Award", props.details.metaData.qualification.split('|').length > 1 && 's', ":"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.qualification.split('|').join(', '))),
+        duration = props.details.metaData.duration && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fal fa-fw fa-clock icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Duration:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.duration)),
-      method = props.details.metaData.method && (props.query.facets.method || props.query.query.indexOf(props.details.metaData.method) >= 0 || props.details.metaData.method.indexOf('Online') >= 0) && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Duration:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.duration)),
+        method = props.details.metaData.method && (props.query.facets.method || props.query.query.indexOf(props.details.metaData.method) >= 0 || props.details.metaData.method.indexOf('Online') >= 0) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-book-reader icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Method", props.details.metaData.method.split('|').length > 1 && 's', ' ', "of study:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').join(', '))),
-      location = props.details.metaData.location && props.query.facets.location && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Method", props.details.metaData.method.split('|').length > 1 && 's', ' ', "of study:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, Object(_util__WEBPACK_IMPORTED_MODULE_4__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').join(', '))),
+        location = props.details.metaData.location && props.query.facets.location && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-map-marker-alt icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Location:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.location)),
-      school = props.details.metaData.school && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Location:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.location)),
+        school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "School:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.school)),
-      clearing = props.details.metaData.clearing === '1' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school)),
+        clearing = props.details.metaData.clearing === '1' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "clearing_label"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Available in clearing")),
-      external = props.details.indexUrl.indexOf('cass.city.ac.uk') >= 0 && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Available in clearing")),
+        external = props.details.indexUrl.indexOf('cass.city.ac.uk') >= 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-external-link icon",
     "aria-label": "(external link)"
   })),
-      courseCode = props.details.metaData.code && (['Undergraduate degree', 'Foundation course', 'Postgraduate taught degree'].some(s => props.details.metaData.level.indexOf(s) >= 0) || props.query.query.indexOf(props.details.metaData.code) >= 0) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+        courseCode = props.details.metaData.code && (['Undergraduate degree', 'Foundation course', 'Postgraduate taught degree'].some(s => props.details.metaData.level.indexOf(s) >= 0) || props.query.query.indexOf(props.details.metaData.code) >= 0) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-graduation-cap icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Course code", props.details.metaData.code.split('|').length > 1 && 's', ":"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.code.split('|').join('/'))) : null;
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Course code", props.details.metaData.code.split('|').length > 1 && 's', ":"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.code.split('|').join('/'))) : null;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "finder__results__card finder__results__course"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.clickTrackingUrl
-  }, clearing, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, clearing, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "underline-transition__title"
-  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__["default"])(props.details.title, props.query.query) : props.details.title, external)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "card__title finder__results__card__heading"
+  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.title, props.query.query) : props.details.title, external), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__description"
-  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__["default"])(subtitle, props.query.query) : subtitle && subtitle), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_4__["default"])(props.details.metaData.c, props.query.query) : props.details.metaData.c && props.details.metaData.c), school, award, duration, courseCode, method, location)));
+  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(subtitle, props.query.query) : subtitle && subtitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.c, props.query.query) : props.details.metaData.c && props.details.metaData.c), school, award, duration, courseCode, method, location)));
 }
 
 finder__results__course.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
+  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__course);
 
@@ -2874,16 +2853,13 @@ finder__results__course.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
-
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
 
 
 
@@ -2904,45 +2880,43 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__funding(props) {
-  var school = props.details.metaData.school && props.query.facets.school && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  const school = props.details.metaData.school && props.query.facets.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "School:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', or ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', or '))),
-      hardship = props.details.metaData.hardship === '1' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', or ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', or '))),
+        hardship = props.details.metaData.hardship === '1' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "hardship-label"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Hardship funding")),
-      programme = props.details.metaData.level && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Hardship funding")),
+        programme = props.details.metaData.level && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-graduation-cap icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Funding for:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.level.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_4__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').slice(0, -1).join(', ') + ' or ' + Object(_util__WEBPACK_IMPORTED_MODULE_4__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_4__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').join(' or '))),
-      feestatus = props.details.metaData.feestatus && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Funding for:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.level.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').slice(0, -1).join(', ') + ' or ' + Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').join(' or '))),
+        feestatus = props.details.metaData.feestatus && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "far fa-fw fa-globe-europe icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Fee status:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.feestatus.split('|').length > 2 ? props.details.metaData.feestatus.split('|').slice(0, -1).join(', ') + ' or ' + props.details.metaData.feestatus.split('|').slice(-1) : props.details.metaData.feestatus.split('|').join(' or ')));
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Fee status:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.feestatus.split('|').length > 2 ? props.details.metaData.feestatus.split('|').slice(0, -1).join(', ') + ' or ' + props.details.metaData.feestatus.split('|').slice(-1) : props.details.metaData.feestatus.split('|').join(' or ')));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "finder__results__card finder__results__funding"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.clickTrackingUrl
-  }, hardship, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, hardship, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "underline-transition__title"
-  }, props.details.title)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "card__title finder__results__card__heading"
+  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__description"
-  }, props.details.metaData.type), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), programme, feestatus, school)));
+  }, props.details.metaData.type), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), programme, feestatus, school)));
 }
 
 finder__results__funding.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
+  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__funding);
 
@@ -2957,15 +2931,12 @@ finder__results__funding.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -2985,33 +2956,31 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__contact(props) {
-  var school = props.details.metaData.school && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  const school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "School:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
-      department = props.details.metaData.department && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
+        department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-building icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Department:"), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(', and ')));
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Department:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(', and ')));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "finder__results__card finder__results__generic"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.clickTrackingUrl
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "underline-transition__title"
-  }, props.details.title)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "card__title finder__results__card__heading"
+  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department)));
 }
 
 finder__results__contact.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
+  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__results__contact);
 
@@ -3053,27 +3022,25 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__news(props) {
-  var formattedDate = Object(_util__WEBPACK_IMPORTED_MODULE_3__["formatReactDate"])(new Date(props.details.metaData.d)),
-      dateString = props.details.metaData.d && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  const formattedDate = Object(_util__WEBPACK_IMPORTED_MODULE_3__["formatReactDate"])(new Date(props.details.metaData.d)),
+        dateString = props.details.metaData.d && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__description"
   }, formattedDate),
-      hashtags = props.details.metaData.hashtagtext && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+        hashtags = props.details.metaData.hashtagtext && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fad fa-fw fa-hashtag icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Hashtag", props.details.metaData.hashtagtext.split('|').length > 1 && 's', ":"), ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.hashtagtext.split('|').join(', ')));
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Hashtag", props.details.metaData.hashtagtext.split('|').length > 1 && 's', ":"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.hashtagtext.split('|').join(', ')));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "finder__results__card finder__results__generic"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.clickTrackingUrl
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "underline-transition__title"
-  }, props.details.title)), dateString, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), hashtags)));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "card__title finder__results__card__heading"
+  }, props.details.title), dateString, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), hashtags)));
 }
 
 finder__results__news.propTypes = {
@@ -3113,35 +3080,33 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__profile(props) {
-  var school = props.details.metaData.school && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  const school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "School:"), " ", props.details.metaData.school),
-      department = props.details.metaData.department && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "School:"), " ", props.details.metaData.school),
+        department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__tag"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-fw fa-building icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Department:"), " ", props.details.metaData.department),
-      headshot = props.details.metaData.thumbnail && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Department:"), " ", props.details.metaData.department),
+        headshot = props.details.metaData.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "thumbnail__image-container"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: props.details.metaData.thumbnail,
     alt: 'Photo of ' + props.details.metaData.title
   }));
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "finder__results__card finder__results__profile"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: props.details.clickTrackingUrl
-  }, headshot, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, headshot, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__results__card__details"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "finder__results__card__heading"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "underline-transition__title"
-  }, props.details.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "card__title finder__results__card__heading"
+  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__card__description"
   }, props.details.metaData.jobtitle), school, department)));
 }
@@ -3162,18 +3127,14 @@ finder__results__profile.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _finder_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__select */ "./src/patterns/finder/components/filters/finder__select.js");
-/* harmony import */ var _query_finder_clear__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../query/finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
-/* harmony import */ var _finder_toggle__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__toggle */ "./src/patterns/finder/components/filters/finder__toggle.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _finder_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finder__select */ "./src/patterns/finder/components/filters/finder__select.js");
+/* harmony import */ var _query_finder_clear__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../query/finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
+/* harmony import */ var _finder_toggle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__toggle */ "./src/patterns/finder/components/filters/finder__toggle.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
 
 
 /**
@@ -3197,7 +3158,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function dependencyMet(facet, facetMap) {
-  var setFacets = Object.keys(facetMap);
+  const setFacets = Object.keys(facetMap);
 
   if (!facet.dependency) {
     return true;
@@ -3218,31 +3179,31 @@ function dependencyMet(facet, facetMap) {
 
 
 function finder__filters(props) {
-  var clearFilters = Object.keys(props.query.facets).length > 0 && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  const clearFilters = Object.keys(props.query.facets).length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__clear--desktop"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_query_finder_clear__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_clear__WEBPACK_IMPORTED_MODULE_3__["default"], {
     clear: props.clear,
     query: props.query
   }));
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "finder__filters__heading"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "finder__filters__heading__text"
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "far fa-sliders-h icon",
     "aria-hidden": "true"
-  }), ' ', "Filter ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_query_finder_clear__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), ' ', "Filter ".concat(props.config.summariseAs.plural)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_query_finder_clear__WEBPACK_IMPORTED_MODULE_3__["default"], {
     clear: props.clear,
     query: props.query
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__wrapper--filters"
   }, props.config.facetLabels.map(facet => {
     if (dependencyMet(facet, props.query.facets)) {
       switch (facet.type) {
         case 'select':
-          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_select__WEBPACK_IMPORTED_MODULE_2__["default"], {
             key: facet.meta,
             facet: facet,
             query: props.query,
@@ -3252,7 +3213,7 @@ function finder__filters(props) {
           });
 
         case 'toggle':
-          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_toggle__WEBPACK_IMPORTED_MODULE_5__["default"], {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_toggle__WEBPACK_IMPORTED_MODULE_4__["default"], {
             key: facet.meta,
             facet: facet,
             query: props.query,
@@ -3261,22 +3222,22 @@ function finder__filters(props) {
           });
 
         default:
-          Object(_util__WEBPACK_IMPORTED_MODULE_6__["gaEvent"])('jsError', 'JavaScript error', 'finder__filters()', 'Unknown filter type in finder__filters.js', true);
+          Object(_util__WEBPACK_IMPORTED_MODULE_5__["gaEvent"])('jsError', 'JavaScript error', 'finder__filters()', 'Unknown filter type in finder__filters.js', true);
       }
     } else {
       return null;
     }
-  }), clearFilters, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }), clearFilters, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__filters__nofilters"
   }, "No filters are valid for the current query."))));
 }
 
 finder__filters.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  response: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func
+  config: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  response: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__filters);
 
@@ -3302,8 +3263,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _finder_filters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js");
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.es6.js");
 
 
 
@@ -3332,11 +3292,11 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__mobilefilters(props) {
-  var [display, setDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false);
-  var [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({});
-  var filters = null;
+  const [display, setDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false);
+  const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({});
+  let filters = null;
 
-  var getFilters = () => filters; // trap tab focus when the filters are open
+  const getFilters = () => filters; // trap tab focus when the filters are open
 
 
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
@@ -3356,54 +3316,54 @@ function finder__mobilefilters(props) {
       Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__["enableBodyScroll"])(getFilters().querySelector('.finder__filters--mobile__filters'));
     }
   }, [display]);
-  var totalMatching = props.response && props.response.summary && props.response.summary.totalMatching;
-  var result = totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural;
-  var totalMatchingMessage = totalMatching ? "Show ".concat(totalMatching, " ").concat(result) : 'Close';
-  var filtersCount = Object.keys(props.query.facets).length > 0 ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Filters", ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  const totalMatching = props.response && props.response.summary && props.response.summary.totalMatching;
+  const result = totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural;
+  const totalMatchingMessage = totalMatching ? "Show ".concat(totalMatching, " ").concat(result) : 'Close';
+  const filtersCount = Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Filters", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "finder__mobilefilters__toggle__filterNo"
-  }, "(", Object.keys(props.query.facets).length, ")")) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Filter");
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, "(", Object.keys(props.query.facets).length, ")")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Filter");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "finder__filters--mobile",
     "data-open": display,
     ref: mobilefilters => filters = mobilefilters
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     type: "button",
     className: "finder__filters--mobile__toggle",
     "aria-haspopup": true,
     "aria-expanded": display,
     onClick: () => setDisplay(!display),
     "data-filters-applied": Object.keys(props.query.facets).length !== 0 ? true : false
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "far fa-sliders-h icon",
     "aria-hidden": "true"
-  }), ' ', filtersCount)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }), ' ', filtersCount)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "finder__filters--mobile__filters"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "finder__filters--mobile__filters__content"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_finder_filters__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_finder_filters__WEBPACK_IMPORTED_MODULE_4__["default"], {
     config: props.config,
     query: props.query,
     response: props.response,
     update: props.update,
     clear: props.clear
-  }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "wrapper--finder__filters--mobile__apply"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     type: "button",
     className: "finder__filters--mobile__apply",
     "aria-expanded": display,
     onClick: () => setDisplay(!display),
     disabled: props.updating
-  }, Object.keys(props.query.facets).length === 0 ? null : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, Object.keys(props.query.facets).length === 0 ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "far fa-chevron-left"
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     "aria-live": "polite"
-  }, props.updating ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-spinner fa-pulse icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "finder__filters--mobile__apply__text"
-  }, "Updating ", props.summariseAs.plural, "\u2026")) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, "Updating ", props.summariseAs.plural, "\u2026")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "finder__filters--mobile__apply__text"
   }, Object.keys(props.query.facets).length === 0 ? 'Close' : totalMatchingMessage))))));
 }
@@ -3430,22 +3390,16 @@ finder__mobilefilters.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
-
-
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
@@ -3461,27 +3415,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function finder__select(props) {
-  var stringLength = 16,
-      stringOffset = -4,
-      randomNumber = Math.random().toString(stringLength).slice(stringOffset),
-      currentValue = props.query.facets[props.facet.meta] || ''; // reduce the facet configuration to an array of all possible values for
+  const stringLength = 16,
+        stringOffset = -4,
+        randomNumber = Math.random().toString(stringLength).slice(stringOffset),
+        currentValue = props.query.facets[props.facet.meta] || ''; // reduce the facet configuration to an array of all possible values for
   // the facet
 
-  var allFacets = props.facet.values.reduce((acc, data) => {
+  const allFacets = props.facet.values.reduce((acc, data) => {
     return [...acc, data];
   }, []); // reduce the Funnelback response for the facet to an array of valid
   // values for the current query
 
-  var responseFacets = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values ? props.responseFacet[0].categories[0].values.reduce((acc, data) => {
+  const responseFacets = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values ? props.responseFacet[0].categories[0].values.reduce((acc, data) => {
     return [...acc, data.data];
   }, []) : []; // count how many possible facets are not valid for the current query
   // and will be hidden
 
-  var hiddenFacets = allFacets.map(facet => facet.data).filter(facet => responseFacets.indexOf(facet.toLowerCase()) < 0).length;
+  const hiddenFacets = allFacets.map(facet => facet.data).filter(facet => responseFacets.indexOf(facet.toLowerCase()) < 0).length;
 
-  var setFacet = value => {
-    var newQuery = props.query,
-        newValue = value;
+  const setFacet = value => {
+    const newQuery = props.query,
+          newValue = value;
     props.dependencies.map(facet => {
       delete newQuery.facets[facet.meta];
     });
@@ -3500,25 +3454,25 @@ function finder__select(props) {
   };
 
   if (props.facet.values.length > hiddenFacets) {
-    return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
       className: "finder__filter finder__select ".concat(currentValue && 'finder__select--selected')
-    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
       className: "finder__select__overline",
       htmlFor: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
-    }, props.facet.name), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("select", {
+    }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("select", {
       name: props.facet.name,
       id: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber),
       onChange: e => setFacet(e.target.value),
       value: currentValue
-    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("option", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("option", {
       value: "",
       id: "meta".concat(props.facet.meta, "all"),
       name: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
     }, props.facet.noSelection), props.facet.values.map((value, i) => {
-      var responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.toLowerCase());
+      const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.toLowerCase());
 
       if (currentValue.toLowerCase() === value.data.toLowerCase() || responseFacetDetails && responseFacetDetails[0]) {
-        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("option", {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("option", {
           key: i,
           value: value.data,
           id: "meta".concat(props.facet.meta).concat(i),
@@ -3534,11 +3488,11 @@ function finder__select(props) {
 }
 
 finder__select.propTypes = {
-  facet: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
-  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object),
-  update: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
-  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object)
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object)
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__select);
 
@@ -3555,17 +3509,14 @@ finder__select.propTypes = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
-
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
@@ -3581,14 +3532,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function finder__toggle(props) {
-  var stringLength = 16,
-      stringOffset = -4,
-      randomNumber = Math.random().toString(stringLength).slice(stringOffset);
+  const stringLength = 16,
+        stringOffset = -4,
+        randomNumber = Math.random().toString(stringLength).slice(stringOffset);
 
-  var setFacet = e => {
-    var newQuery = props.query,
-        newValue = e.target.value,
-        checked = e.target.checked;
+  const setFacet = e => {
+    const newQuery = props.query,
+          newValue = e.target.value,
+          checked = e.target.checked;
     checked ? newQuery.facets[props.facet.meta] = newValue : delete newQuery.facets[props.facet.meta];
     newQuery.startRank = 1;
     newQuery.misspelling = null;
@@ -3597,30 +3548,30 @@ function finder__toggle(props) {
     props.update.results(!props.update.updateState);
   };
 
-  var idString = "".concat(props.facet.name, "-").concat(randomNumber);
-  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("fieldset", {
+  const idString = "".concat(props.facet.name, "-").concat(randomNumber);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("fieldset", {
     className: "finder__filter finder__togglebox"
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "finder__toggle"
-  }, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
     htmlFor: idString
-  }, props.facet.values[0].label, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("input", {
+  }, props.facet.values[0].label, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
     type: "checkbox",
     id: idString,
     name: props.facet.name,
     value: props.facet.values[0].data,
     onChange: e => setFacet(e),
     checked: props.query.facets[props.facet.meta] ? true : false
-  }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "toggle ".concat(props.query.facets[props.facet.meta] ? 'toggle--open' : 'toggle--close')
   }))));
 }
 
 finder__toggle.propTypes = {
-  facet: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
-  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object),
-  update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__toggle);
 
@@ -3656,15 +3607,15 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__clear(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "finder__clear",
     type: "button",
     onClick: () => {
       props.clear();
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "far fa-fw fa-times icon"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "finder__clear__text"
   }, "Reset"));
 }
@@ -3685,28 +3636,22 @@ finder__clear.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
-
-
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../funnelback */ "./src/patterns/finder/funnelback.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
 
 
 
@@ -3724,17 +3669,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var maximumSuggestions = 5,
-    keyCodeEscape = 27,
-    keyCodeUp = 38,
-    keyCodeDown = 40;
+const maximumSuggestions = 5,
+      keyCodeEscape = 27,
+      keyCodeUp = 38,
+      keyCodeDown = 40;
 
 function highlightQueryTerm(suggestion, partialQuery) {
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_7___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
     className: "sr-only"
-  }, suggestion), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  }, suggestion), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
     "aria-hidden": "true"
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
     className: "finder__suggestion"
   }, suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()), partialQuery.length)), suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()) + partialQuery.length))));
 }
@@ -3748,46 +3693,46 @@ function highlightQueryTerm(suggestion, partialQuery) {
 
 function finder__query(props) {
   // save what they're typing
-  var [partialQuery, setPartialQuery] = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(props.query.query); // Funnelback suggestions for the currently typed text
+  const [partialQuery, setPartialQuery] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(props.query.query); // Funnelback suggestions for the currently typed text
 
-  var [suggestions, setSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])([]); // Request token for calls to the Funnelback suggestions service, so we
+  const [suggestions, setSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])([]); // Request token for calls to the Funnelback suggestions service, so we
   // can cancel it
 
-  var [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])({
+  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])({
     cancel: () => {}
   }); // ref for the input field, so we can .focus() it
 
-  var stringLength = 16,
-      stringOffset = -4,
-      [inputId] = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(stringLength).slice(stringOffset)); // boolean to show or hide suggestions
+  const stringLength = 16,
+        stringOffset = -4,
+        [inputId] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(stringLength).slice(stringOffset)); // boolean to show or hide suggestions
 
-  var [showSuggestions, setShowSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(false);
-  Object(react__WEBPACK_IMPORTED_MODULE_7__["useEffect"])(() => {
+  const [showSuggestions, setShowSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(false);
+  Object(react__WEBPACK_IMPORTED_MODULE_5__["useEffect"])(() => {
     setPartialQuery(props.query.query);
   }, [props.updating]);
-  var textInput = null;
+  let textInput = null;
 
   function focusInput() {
     textInput.focus();
   } // on clear, make a default request for results
 
 
-  var clearQuery = () => {
+  const clearQuery = () => {
     call.cancel();
     setPartialQuery('');
     setSuggestions([]);
     focusInput();
-    var newQuery = props.query;
+    const newQuery = props.query;
     newQuery.query = '';
     newQuery.sortBy = props.config.sort;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
   };
 
-  var submitForm = () => {
-    var queryURL = '';
-    var exclusions = ['Short courses', 'Professional development courses', 'City Health courses', 'In-house law courses'];
-    var courseLevel = document.getElementsByClassName('finder__mini')[0].getAttribute('data-level');
+  const submitForm = () => {
+    let queryURL = '';
+    let exclusions = ['Short courses', 'Professional development courses', 'City Health courses', 'In-house law courses'];
+    let courseLevel = document.getElementsByClassName('finder__mini')[0].getAttribute('data-level');
 
     function exclusion(level) {
       return level === courseLevel;
@@ -3801,26 +3746,26 @@ function finder__query(props) {
     buildURL(courseLevel);
   };
 
-  var submitSuggestion = s => {
+  const submitSuggestion = s => {
     call.cancel();
-    var newQuery = props.query;
+    const newQuery = props.query;
     newQuery.query = s;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
   };
 
-  var clear = partialQuery && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_10__["default"], {
+  const clear = partialQuery && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_8__["default"], {
     clear: () => {
       clearQuery();
     }
   }); // render suggestions
   // TODO: probably should be refactored into a separate component
 
-  var suggestionsList = suggestions && suggestions.length > 0 && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
+  const suggestionsList = suggestions && suggestions.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
     className: showSuggestions ? 'finder__query__suggestions show' : 'finder__query__suggestions hide'
-  }, [...new Set(suggestions)].slice(0, maximumSuggestions).map(suggestion => react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+  }, [...new Set(suggestions)].slice(0, maximumSuggestions).map(suggestion => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
     key: suggestion
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
     type: "button",
     onBlur: () => setShowSuggestions(false),
     onFocus: () => setShowSuggestions(true),
@@ -3873,16 +3818,16 @@ function finder__query(props) {
       }
     }
   }, highlightQueryTerm(suggestion, partialQuery)))));
-  var input = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+  const input = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
     className: "finder__query__input"
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
     className: "finder__query__icon--wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
     className: "finder__icon fal fa-search"
-  })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
     className: "sr-only",
     htmlFor: inputId
-  }, "Search ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+  }, "Search ".concat(props.config.summariseAs.plural)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
     autoComplete: "off",
     id: inputId,
     name: "query",
@@ -3927,7 +3872,7 @@ function finder__query(props) {
 
       if (e.target.value) {
         // input is populated, ask for suggestions
-        var [suggestionsPromise, newCall] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_8__["suggest"])(props.query.collection, e.target.value); // update our request cancel function for the new request
+        const [suggestionsPromise, newCall] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_6__["suggest"])(props.query.collection, e.target.value); // update our request cancel function for the new request
 
         setCall({
           cancel: () => {
@@ -3941,25 +3886,25 @@ function finder__query(props) {
       }
     }
   }), suggestionsList, clear);
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("fieldset", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("fieldset", {
     className: "finder__query"
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, input, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
     type: "submit",
     className: "finder__query__submit",
     onClick: () => submitForm()
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
     className: "fal fa-search finder__query__submit__icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
     className: "finder__query__submit__text"
   }, "Find"))));
 }
 
 finder__query.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.object,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.bool
+  config: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  updating: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__query);
 
@@ -3974,26 +3919,20 @@ finder__query.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
-
-
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../funnelback */ "./src/patterns/finder/funnelback.js");
+/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
 
 
 
@@ -4010,19 +3949,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var maximumSuggestions = 5,
-    keyCodeEscape = 27,
-    keyCodeUp = 38,
-    keyCodeDown = 40,
-    keyCodeEnd = 35,
-    keyCodeHome = 36;
+const maximumSuggestions = 5,
+      keyCodeEscape = 27,
+      keyCodeUp = 38,
+      keyCodeDown = 40,
+      keyCodeEnd = 35,
+      keyCodeHome = 36;
 
 function highlightQueryTerm(suggestion, partialQuery) {
-  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
     className: "sr-only"
-  }, suggestion), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+  }, suggestion), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
     "aria-hidden": "true"
-  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
     className: "finder__suggestion"
   }, suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()), partialQuery.length)), suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()) + partialQuery.length))));
 }
@@ -4036,36 +3975,36 @@ function highlightQueryTerm(suggestion, partialQuery) {
 
 function finder__query(props) {
   // save what they're typing
-  var [partialQuery, setPartialQuery] = Object(react__WEBPACK_IMPORTED_MODULE_6__["useState"])(props.query.query); // Funnelback suggestions for the currently typed text
+  const [partialQuery, setPartialQuery] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(props.query.query); // Funnelback suggestions for the currently typed text
 
-  var [suggestions, setSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_6__["useState"])([]); // Request token for calls to the Funnelback suggestions service, so we
+  const [suggestions, setSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])([]); // Request token for calls to the Funnelback suggestions service, so we
   // can cancel it
 
-  var [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_6__["useState"])({
+  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])({
     cancel: () => {}
   }); // ref for the input field, so we can .focus() it
 
-  var stringLength = 16,
-      stringOffset = -4,
-      [inputId] = Object(react__WEBPACK_IMPORTED_MODULE_6__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(stringLength).slice(stringOffset));
-  var [showSuggestions, setShowSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_6__["useState"])(false),
-      [activeSuggestionID, setActiveSuggestionID] = Object(react__WEBPACK_IMPORTED_MODULE_6__["useState"])('');
-  Object(react__WEBPACK_IMPORTED_MODULE_6__["useEffect"])(() => {
+  const stringLength = 16,
+        stringOffset = -4,
+        [inputId] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(stringLength).slice(stringOffset));
+  const [showSuggestions, setShowSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(false),
+        [activeSuggestionID, setActiveSuggestionID] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])('');
+  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(() => {
     setPartialQuery(props.query.query);
   }, [props.updating]);
-  var textInput = null;
+  let textInput = null;
 
   function focusInput() {
     textInput.focus();
   } // on clear, make a default request for results
 
 
-  var clearQuery = () => {
+  const clearQuery = () => {
     call.cancel();
     setPartialQuery('');
     setSuggestions([]);
     focusInput();
-    var newQuery = props.query;
+    const newQuery = props.query;
     newQuery.misspelling = null;
     newQuery.query = '';
     newQuery.sortBy = props.config.sort;
@@ -4075,10 +4014,10 @@ function finder__query(props) {
     props.update.results(!props.update.updateState);
   };
 
-  var submitForm = query => {
+  const submitForm = query => {
     call.cancel();
     setSuggestions([]);
-    var newQuery = props.query;
+    const newQuery = props.query;
     newQuery.misspelling = null;
     newQuery.query = query ? query : partialQuery ? partialQuery : '';
     newQuery.sortBy = partialQuery ? null : props.config.sort;
@@ -4088,13 +4027,13 @@ function finder__query(props) {
     props.update.results(!props.update.updateState);
   };
 
-  var clear = partialQuery && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  const clear = partialQuery && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_7__["default"], {
     clear: () => {
       clearQuery();
     }
   });
 
-  var submitSuggestion = suggestion => {
+  const submitSuggestion = suggestion => {
     setShowSuggestions(false);
     setSuggestions([]);
     focusInput();
@@ -4102,16 +4041,16 @@ function finder__query(props) {
   }; // render suggestions
 
 
-  var suggestionsList = suggestions && suggestions.length > 0 && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", {
+  const suggestionsList = suggestions && suggestions.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("ul", {
     role: "listbox",
     "aria-label": "Search suggestions",
     "aria-activedescendant": activeSuggestionID,
     className: showSuggestions ? 'finder__query__suggestions show' : 'finder__query__suggestions hide'
-  }, [...new Set(suggestions)].slice(0, maximumSuggestions).map((suggestion, i) => react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
+  }, [...new Set(suggestions)].slice(0, maximumSuggestions).map((suggestion, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
     key: suggestion,
     role: "option",
     id: inputId + '--' + i
-  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("button", {
     type: "button",
     onBlur: () => {
       setActiveSuggestionID('');
@@ -4179,17 +4118,17 @@ function finder__query(props) {
       }
     }
   }, highlightQueryTerm(suggestion, partialQuery)))));
-  var input = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+  const input = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "finder__query__input"
-  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "finder__query__icon--wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
     className: "finder__icon fal fa-search icon",
     "aria-hidden": "true"
-  })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("label", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
     className: "sr-only",
     htmlFor: inputId
-  }, "Search ".concat(props.config.summariseAs.plural)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
+  }, "Search ".concat(props.config.summariseAs.plural)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("input", {
     autoComplete: "off",
     id: inputId,
     name: "query",
@@ -4235,7 +4174,7 @@ function finder__query(props) {
 
       if (e.target.value) {
         // input is populated, ask for suggestions
-        var [suggestionsPromise, newCall] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_8__["suggest"])(props.query.collection, e.target.value); // update our request cancel function for the new request
+        const [suggestionsPromise, newCall] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_6__["suggest"])(props.query.collection, e.target.value); // update our request cancel function for the new request
 
         setCall({
           cancel: () => {
@@ -4249,25 +4188,25 @@ function finder__query(props) {
       }
     }
   }), suggestionsList, clear);
-  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("fieldset", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("fieldset", {
     className: "finder__query"
-  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, input, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", null, input, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("button", {
     type: "submit",
     className: "finder__query__submit",
     onClick: () => submitForm()
-  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
     className: "fal fa-search finder__query__submit__icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
     className: "finder__query__submit__text"
   }, "Find"))));
 }
 
 finder__query.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.bool
+  config: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  updating: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__query);
 
@@ -4310,15 +4249,15 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__didyoumean(props) {
-  var didyoumean = props.query.misspelling ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  const didyoumean = props.query.misspelling ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "finder__results__didyoumean"
-  }, "No ", props.summariseAs.plural, " found for \u201C", props.query.misspelling, "\u201D. Searching instead for \u201C", props.query.query, "\u201D.") : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  }, "No ", props.summariseAs.plural, " found for \u201C", props.query.misspelling, "\u201D. Searching instead for \u201C", props.query.query, "\u201D.") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "finder__results__didyoumean"
-  }, "Did you mean", ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, "Did you mean", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     type: "button",
     className: "finder__didyoumean__button",
     onClick: () => {
-      var newQuery = props.query;
+      const newQuery = props.query;
       newQuery.query = props.response.spell.text.split(/\|/)[0].trim();
       newQuery.startRank = 1;
       newQuery.misspelling = null;
@@ -4371,13 +4310,13 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__pagination(props) {
-  var numberOfPages = Math.ceil(props.totalMatching / props.numRanks),
-      currentPage = Math.ceil(props.currStart / props.numRanks),
-      pages = [];
+  const numberOfPages = Math.ceil(props.totalMatching / props.numRanks),
+        currentPage = Math.ceil(props.currStart / props.numRanks),
+        pages = [];
 
-  var changePage = pageNumber => {
-    var newStartRank = 1 + (pageNumber - 1) * props.numRanks,
-        newQuery = props.query;
+  const changePage = pageNumber => {
+    const newStartRank = 1 + (pageNumber - 1) * props.numRanks,
+          newQuery = props.query;
     newQuery.startRank = newStartRank;
     newQuery.misspelling = null;
     newQuery.interacted = true;
@@ -4385,7 +4324,7 @@ function finder__pagination(props) {
     props.update.results(!props.update.updateState);
   };
 
-  pages.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "pagination__controls__button--prev",
     key: "prev",
     type: "button",
@@ -4393,10 +4332,10 @@ function finder__pagination(props) {
     onClick: () => {
       changePage(currentPage - 1);
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Previous page")));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Previous page")));
 
-  var _loop = function _loop(page) {
-    var className = void 0;
+  for (let page = 1; page <= numberOfPages; page++) {
+    let className;
 
     switch (page - numberOfPages) {
       case 0:
@@ -4411,7 +4350,7 @@ function finder__pagination(props) {
         className = 'pagination__controls__element pagination__controls__button';
     }
 
-    pages.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       "aria-current": page === currentPage ? 'page' : null,
       "aria-expanded": page === currentPage ? true : false,
       "aria-label": "Open page ".concat(page),
@@ -4424,26 +4363,22 @@ function finder__pagination(props) {
       onClick: () => {
         changePage(page);
       }
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, page)));
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, page)));
 
     if (page === 1) {
-      pages.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         key: "firstEllipsis",
         className: "pagination__controls__element pagination__controls__ellipsis pagination__controls__ellipsis--first"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u2026")));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u2026")));
     } else if (page === numberOfPages - 1) {
-      pages.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         key: "lastEllipsis",
         className: "pagination__controls__element pagination__controls__ellipsis pagination__controls__ellipsis--last"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u2026")));
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u2026")));
     }
-  };
-
-  for (var page = 1; page <= numberOfPages; page++) {
-    _loop(page);
   }
 
-  pages.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "pagination__controls__button--next",
     key: "next",
     type: "button",
@@ -4451,10 +4386,10 @@ function finder__pagination(props) {
     onClick: () => {
       changePage(currentPage + 1);
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Next page")));
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Next page")));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "pagination__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
     className: "pagination__controls",
     "data-pagecount": numberOfPages
   }, pages));
@@ -4511,16 +4446,16 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results(props) {
-  var updating = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  const updating = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__updating",
     "aria-live": "polite"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-spinner fa-pulse icon",
     "aria-hidden": "true"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Updating ", props.summariseAs.plural, "\u2026"));
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Updating ", props.summariseAs.plural, "\u2026"));
 
   if (props.response) {
-    var summary = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_summary__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    const summary = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_summary__WEBPACK_IMPORTED_MODULE_5__["default"], {
       clear: props.clear,
       config: props.config,
       currEnd: props.response.summary.currEnd,
@@ -4531,7 +4466,7 @@ function finder__results(props) {
       totalMatching: props.response.summary.totalMatching,
       update: props.update
     });
-    var didYouMean = (props.query.misspelling || props.response.spell) && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_didyoumean__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    const didYouMean = (props.query.misspelling || props.response.spell) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_didyoumean__WEBPACK_IMPORTED_MODULE_4__["default"], {
       query: props.query,
       summariseAs: props.summariseAs,
       response: props.response,
@@ -4539,7 +4474,7 @@ function finder__results(props) {
     }); // if we have more results than will fit on a single page, we need
     // pagination
 
-    var pagination = props.response.summary.totalMatching > props.response.summary.numRanks && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    const pagination = props.response.summary.totalMatching > props.response.summary.numRanks && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], {
       currStart: props.response.summary.currStart,
       numRanks: props.response.summary.numRanks,
       query: props.query,
@@ -4547,24 +4482,24 @@ function finder__results(props) {
       update: props.update
     }); // render either the results, or a spinner while we wait for Funnelback
 
-    var resultsContent = props.updating ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, updating) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, didYouMean, summary, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, didYouMean, summary, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
       start: props.response.summary.currStart,
       className: "finder__results__list"
-    }, props.response.bestBets.map(card => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }, props.response.bestBets.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_3__["default"], {
       details: card,
       key: card.docNum
-    })), props.response.results.map(card => react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    })), props.response.results.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
       bestBet: false,
       details: card,
       key: card.docNum,
       type: props.type,
       query: props.query
     }))), pagination);
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "finder__results"
     }, resultsContent);
   } else {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "finder__results"
     }, updating);
   }
@@ -4601,17 +4536,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var formatLabel = (label, value) => {
+const formatLabel = (label, value) => {
   if (value) {
     return label;
   }
 
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, label.split(value).reduce((prev, current, i) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, label.split(value).reduce((prev, current, i) => {
     if (!i) {
       return [current];
     }
 
-    return prev.concat(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    return prev.concat( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
       className: "highlightText",
       key: value + current
     }, value), current);
@@ -4656,23 +4591,23 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__summary(props) {
-  var result = props.totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural,
-      formatter = new Intl.NumberFormat('en-GB');
+  const result = props.totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural,
+        formatter = new Intl.NumberFormat('en-GB');
 
   if (props.totalMatching === 0) {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "finder__results__summary"
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
       className: "finder__results__summary__heading"
-    }, "Your search did not match any ", props.summariseAs.plural, "."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Suggestions:"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try different keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try more general keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer keywords"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer filters"), Object.keys(props.query.facets).length > 0 && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+    }, "Your search did not match any ", props.summariseAs.plural, "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Suggestions:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try different keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try more general keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer filters"), Object.keys(props.query.facets).length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       type: "button",
       onClick: () => {
         props.clear();
       }
-    }, "Reset filters")), props.query.query && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+    }, "Reset filters")), props.query.query && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
       type: "button",
       onClick: () => {
-        var newQuery = props.query;
+        const newQuery = props.query;
         newQuery.query = '';
         newQuery.sortBy = props.config.sort;
         newQuery.misspelling = null;
@@ -4683,12 +4618,12 @@ function finder__results__summary(props) {
       }
     }, "Reset query"))));
   } else {
-    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "finder__results__summary"
-    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
       "aria-live": "polite",
       className: "finder__results__summary__heading"
-    }, props.query.query || Object.keys(props.query.facets).length > 0 ? 'Matching' : 'All', ' ', result, ' ', react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "(showing", ' ', props.totalMatching > props.numRanks && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, formatter.format(props.currStart)), "\u2013", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, formatter.format(props.currEnd)), ' ', "of", ' '), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, formatter.format(props.totalMatching)), ' ', result, props.query.query && " for \u201C".concat(props.query.query, "\u201D"), ")")));
+    }, props.query.query || Object.keys(props.query.facets).length > 0 ? 'Matching' : 'All', ' ', result, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "(showing", ' ', props.totalMatching > props.numRanks && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, formatter.format(props.currStart)), "\u2013", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, formatter.format(props.currEnd)), ' ', "of", ' '), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, formatter.format(props.totalMatching)), ' ', result, props.query.query && " for \u201C".concat(props.query.query, "\u201D"), ")")));
   }
 }
 
@@ -4772,7 +4707,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function getFacetParams(facets, params) {
   return facets.map(facet => {
-    var param = {};
+    const param = {};
 
     if (params.get("meta_".concat(facet.meta, "_orsand"))) {
       param[facet.meta] = params.get("meta_".concat(facet.meta, "_orsand"));
@@ -4792,7 +4727,7 @@ function getFacetParams(facets, params) {
 
 
 function replaceHistory(currQuery, currStartRank, currFacets, facetLabels) {
-  var params = new URLSearchParams(window.location.search);
+  const params = new URLSearchParams(window.location.search);
   currQuery !== '' ? params.set('query', currQuery) : params.delete('query');
   currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
   facetLabels.forEach(facet => {
@@ -4802,7 +4737,7 @@ function replaceHistory(currQuery, currStartRank, currFacets, facetLabels) {
       params.delete("meta_".concat(facet.meta, "_orsand"));
     }
   });
-  var hasParams = params.toString().length ? '?' : '';
+  const hasParams = params.toString().length ? '?' : '';
   window.history.replaceState({}, '', "".concat(window.location.pathname).concat(hasParams).concat(params.toString()));
 }
 /**
@@ -4814,13 +4749,13 @@ function replaceHistory(currQuery, currStartRank, currFacets, facetLabels) {
 
 
 function Finder(props) {
-  var params = new URLSearchParams(window.location.search);
+  const params = new URLSearchParams(window.location.search);
   /**
    * initial state for the Funnelback query, taken from URL parameters and
    * configuration
    **/
 
-  var initialQuery = {
+  const initialQuery = {
     collection: props.config.collection,
     fixedFacets: props.config.fixedFacets,
     query: params.get('query') || '',
@@ -4831,19 +4766,19 @@ function Finder(props) {
     facets: getFacetParams(props.config.facetLabels, params)
   }; // State objects for the Funnelback query and response
 
-  var [query, setQuery] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(initialQuery); // Boolean to indicate when a query is in progress
+  const [query, setQuery] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(initialQuery); // Boolean to indicate when a query is in progress
 
-  var [updating, setUpdating] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(true); // Request token from the Funnelback request object, so we can cancel if
+  const [updating, setUpdating] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(true); // Request token from the Funnelback request object, so we can cancel if
   // another request is triggered by the user
 
-  var [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])({
+  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])({
     cancel: () => {}
   }); // useEffect doesn't deep inspect objects, so we need an additional, plain
   // state variable to indicate that the query state has changed and the
   // component should render
   // the value isn't important, it's just easy to toggle a bool back and forth
 
-  var [update, setUpdate] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(false); // Retrieve Funnelback results
+  const [update, setUpdate] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(false); // Retrieve Funnelback results
 
   Object(react__WEBPACK_IMPORTED_MODULE_8__["useEffect"])(() => {
     // preserve the state
@@ -4858,7 +4793,7 @@ function Finder(props) {
 
     call.cancel(); // make a new, asynchronous request to Funnelback
 
-    var [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_10__["find"])(query.collection, query.fixedFacets, query.query, query.sortBy, query.sortDirection, query.startRank, query.numRanks, query.facets); // save the requestToken, so
+    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_10__["find"])(query.collection, query.fixedFacets, query.query, query.sortBy, query.sortDirection, query.startRank, query.numRanks, query.facets); // save the requestToken, so
 
     setCall({
       cancel: () => {
@@ -4874,16 +4809,16 @@ function Finder(props) {
     });
   }, [update]); // update props so child components can update the query
 
-  var updater = {
+  const updater = {
     query: newQuery => setQuery(newQuery),
     results: newUpdate => setUpdate(newUpdate),
     updateState: update
   };
-  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("form", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("form", {
     onSubmit: e => {
       e.preventDefault();
     }
-  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_query_finder_query_mini__WEBPACK_IMPORTED_MODULE_11__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_query_finder_query_mini__WEBPACK_IMPORTED_MODULE_11__["default"], {
     config: props.config,
     query: query,
     update: updater,
@@ -4970,9 +4905,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var oneSecond = 1000,
-    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_18__["reduceMotion"])() ? 0 : oneSecond,
-    screenOffsetRatio = 10;
+const oneSecond = 1000,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_18__["reduceMotion"])() ? 0 : oneSecond,
+      screenOffsetRatio = 10;
 /**
  * Retrieve current values for facets from the URL parameters.
  *
@@ -4983,7 +4918,7 @@ var oneSecond = 1000,
 
 function getFacetParams(facets, params) {
   return facets.map(facet => {
-    var param = {};
+    const param = {};
 
     if (params.get("meta_".concat(facet.meta, "_sand"))) {
       param[facet.meta] = params.get("meta_".concat(facet.meta, "_sand"));
@@ -5004,7 +4939,7 @@ function getFacetParams(facets, params) {
 
 function replaceHistory(currQuery, currStartRank, currFacets, facetLabels) {
   if (window) {
-    var params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(window.location.search);
     currQuery !== '' ? params.set('query', currQuery) : params.delete('query');
     currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
     facetLabels.forEach(facet => {
@@ -5014,7 +4949,7 @@ function replaceHistory(currQuery, currStartRank, currFacets, facetLabels) {
         params.delete("meta_".concat(facet.meta, "_sand"));
       }
     });
-    var hasParams = params.toString().length ? '?' : '';
+    const hasParams = params.toString().length ? '?' : '';
     window.history.replaceState({}, '', "".concat(window.location.pathname).concat(hasParams).concat(params.toString()));
   }
 }
@@ -5027,13 +4962,13 @@ function replaceHistory(currQuery, currStartRank, currFacets, facetLabels) {
 
 
 function Finder(props) {
-  var params = new URLSearchParams(window.location.search);
+  const params = new URLSearchParams(window.location.search);
   /**
    * initial state for the Funnelback query, taken from URL parameters and
    * configuration
    **/
 
-  var initialQuery = {
+  const initialQuery = {
     collection: props.config.collection,
     facets: props.config.facetLabels.length > 0 ? getFacetParams(props.config.facetLabels, params) : {},
     fixedFacets: props.config.fixedFacets,
@@ -5049,7 +4984,7 @@ function Finder(props) {
    * Dummy, empty Funnelback response object for initial state.
    */
 
-  var initialResponse = {
+  const initialResponse = {
     bestBets: [],
     facets: [],
     results: [],
@@ -5062,20 +4997,20 @@ function Finder(props) {
     }
   }; // State objects for the Funnelback query and response
 
-  var [query, setQuery] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(initialQuery);
-  var [funnelbackResponse, setResponse] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(initialResponse); // Boolean to indicate when a query is in progress
+  const [query, setQuery] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(initialQuery);
+  const [funnelbackResponse, setResponse] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(initialResponse); // Boolean to indicate when a query is in progress
 
-  var [updating, setUpdating] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(true); // Request token from the Funnelback request object, so we can cancel if
+  const [updating, setUpdating] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(true); // Request token from the Funnelback request object, so we can cancel if
   // another request is triggered by the user
 
-  var [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])({
+  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])({
     cancel: () => {}
   }); // useEffect doesn't deep inspect objects, so we need an additional, plain
   // state variable to indicate that the query state has changed and the
   // component should render
   // the value isn't important, it's just easy to toggle a bool back and forth
 
-  var [update, setUpdate] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(false); // Retrieve Funnelback results
+  const [update, setUpdate] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(false); // Retrieve Funnelback results
 
   Object(react__WEBPACK_IMPORTED_MODULE_10__["useEffect"])(() => {
     // preserve the state
@@ -5091,7 +5026,7 @@ function Finder(props) {
 
     call.cancel(); // make a new, asynchronous request to Funnelback
 
-    var [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_12__["find"])(query.collection, query.fixedFacets, query.query, query.sortBy, query.sortDirection, query.startRank, query.numRanks, query.facets); // save the requestToken, so
+    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_12__["find"])(query.collection, query.fixedFacets, query.query, query.sortBy, query.sortDirection, query.startRank, query.numRanks, query.facets); // save the requestToken, so
 
     setCall({
       cancel: () => {
@@ -5105,8 +5040,8 @@ function Finder(props) {
       setUpdating(false);
 
       if (data.spell && data.summary.totalMatching === 0) {
-        var newQueryText = data.spell.text.split(/\|/)[0].trim(),
-            newQuery = query;
+        const newQueryText = data.spell.text.split(/\|/)[0].trim(),
+              newQuery = query;
         newQuery.misspelling = query.query;
         newQuery.query = newQueryText;
         newQuery.startRank = 1;
@@ -5121,14 +5056,14 @@ function Finder(props) {
     });
   }, [update]); // update props so child components can update the query
 
-  var updater = {
+  const updater = {
     query: newQuery => setQuery(newQuery),
     results: newUpdate => setUpdate(newUpdate),
     updateState: update
   };
 
-  var clear = () => {
-    var newQuery = query;
+  const clear = () => {
+    const newQuery = query;
     call.cancel();
     newQuery.facets = {};
     newQuery.startRank = 1;
@@ -5138,17 +5073,17 @@ function Finder(props) {
     setUpdate(!update);
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("form", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("form", {
     className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
     onSubmit: e => {
       e.preventDefault();
     }
-  }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_13__["default"], {
     config: props.config,
     query: query,
     update: updater,
     updating: updating
-  }), props.config.facetLabels.length > 0 && react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_filters_finder_mobilefilters__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  }), props.config.facetLabels.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_filters_finder_mobilefilters__WEBPACK_IMPORTED_MODULE_15__["default"], {
     config: props.config,
     query: query,
     response: funnelbackResponse,
@@ -5156,15 +5091,15 @@ function Finder(props) {
     updating: updating,
     summariseAs: props.config.summariseAs,
     clear: clear
-  }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
     className: "finder__filters--desktop"
-  }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_14__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_14__["default"], {
     config: props.config,
     query: query,
     response: funnelbackResponse,
     update: updater,
     clear: clear
-  }))), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_results_finder_results__WEBPACK_IMPORTED_MODULE_16__["default"], {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_results_finder_results__WEBPACK_IMPORTED_MODULE_16__["default"], {
     clear: clear,
     config: props.config,
     query: query,
@@ -5227,10 +5162,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
  */
 
-var baseUrl = 'https://web2020.city.ac.uk/web-services',
-    findRootUrl = '/funnelback-find',
-    suggestRootUrl = '/funnelback-suggest',
-    timeout = 30000;
+const baseUrl = 'https://web2020.city.ac.uk/web-services',
+      findRootUrl = '/funnelback-find',
+      suggestRootUrl = '/funnelback-suggest',
+      timeout = 30000;
 /**
  * Funnelback search query.
  *
@@ -5245,16 +5180,16 @@ var baseUrl = 'https://web2020.city.ac.uk/web-services',
  */
 
 function find(collection, fixedFacets, query, sortBy, sortDirection, startRank, numRank, facets) {
-  var fixedFacetParams = {};
+  const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
     fixedFacetParams["meta_".concat(facet.meta, "_sand")] = facet.value;
   });
-  var facetParams = {},
-      facetKeys = Object.keys(facets);
+  const facetParams = {},
+        facetKeys = Object.keys(facets);
   facetKeys.forEach(key => facetParams["meta_".concat(key, "_sand")] = facets[key]);
-  var CancelToken = axios__WEBPACK_IMPORTED_MODULE_1___default.a.CancelToken,
-      call = CancelToken.source(),
-      config = {
+  const CancelToken = axios__WEBPACK_IMPORTED_MODULE_1___default.a.CancelToken,
+        call = CancelToken.source(),
+        config = {
     baseURL: baseUrl,
     cancelToken: call.token,
     httpsAgent: new https__WEBPACK_IMPORTED_MODULE_2___default.a.Agent({
@@ -5281,9 +5216,9 @@ function find(collection, fixedFacets, query, sortBy, sortDirection, startRank, 
  */
 
 function suggest(collection, partialQuery) {
-  var CancelToken = axios__WEBPACK_IMPORTED_MODULE_1___default.a.CancelToken,
-      call = CancelToken.source(),
-      config = {
+  const CancelToken = axios__WEBPACK_IMPORTED_MODULE_1___default.a.CancelToken,
+        call = CancelToken.source(),
+        config = {
     baseURL: baseUrl,
     cancelToken: call.token,
     url: suggestRootUrl,
@@ -5303,7 +5238,7 @@ function suggest(collection, partialQuery) {
  */
 
 function finderConfig(url) {
-  var config = {
+  const config = {
     timeout: timeout,
     url: url
   };
@@ -5322,20 +5257,17 @@ function finderConfig(url) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Carousel; });
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
 
 
-
-var ie = Object(_util__WEBPACK_IMPORTED_MODULE_3__["detectIE"])();
+const ie = Object(_util__WEBPACK_IMPORTED_MODULE_2__["detectIE"])();
 class Carousel {
   constructor(elem, options) {
     this.elem = elem;
@@ -5366,7 +5298,7 @@ class Carousel {
 
 
   activeSlider(index, sliders) {
-    var a = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toArray"])(sliders.querySelectorAll('.swiper-slide'));
+    let a = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toArray"])(sliders.querySelectorAll('.swiper-slide'));
     a.forEach(e => {
       e.classList.remove('active');
       e.querySelectorAll('a').forEach(a => a.tabIndex = -1); // disable focus on non active slider with hyperlinks
@@ -5388,7 +5320,7 @@ class Carousel {
 
 
   toogleNextBtn(index, length, e) {
-    var nextBtn = this.checkEventType(e);
+    let nextBtn = this.checkEventType(e);
 
     if (index + 1 === length) {
       nextBtn.querySelector('.swiper-button-next button').disabled = true;
@@ -5415,7 +5347,7 @@ class Carousel {
 
 
   tooglePrevBtn(index, length, e) {
-    var prevBtn = this.checkEventType(e);
+    let prevBtn = this.checkEventType(e);
 
     if (index + 1 === 1) {
       prevBtn.querySelector('.swiper-button-prev button').disabled = true;
@@ -5441,7 +5373,7 @@ class Carousel {
 
 
   moveSlide(e, t) {
-    var sl = this.checkEventType(e).querySelector('.swiper-wrapper');
+    const sl = this.checkEventType(e).querySelector('.swiper-wrapper');
 
     if (sl.classList.contains('smooth')) {
       sl.classList.toggle('smooth');
@@ -5457,7 +5389,7 @@ class Carousel {
       sl.classList.toggle('smooth');
       t ? this.toogleNextBtn(this.i, sl.children.length, e) : this.tooglePrevBtn(this.i, sl.children.length, e);
     } else {
-      var sliderWidthIndex = this.totalSliderWidth(e) / sl.children.length * this.i,
+      let sliderWidthIndex = this.totalSliderWidth(e) / sl.children.length * this.i,
           sliderWidth = this.totalSliderWidth(e) / sl.children.length;
       t ? this.sliderTranslateCoOr -= sliderWidth : this.sliderTranslateCoOr += sliderWidth;
       sl.classList.toggle('smooth');
@@ -5552,7 +5484,7 @@ class Carousel {
 
   move(e) {
     if (this.locked) {
-      var dx = this.unify(e).clientX - this.x0,
+      let dx = this.unify(e).clientX - this.x0,
           //dx is value calculate by using clientX mousedown and after value
       s = Math.sign(dx),
           //check if swipe is left or right by checking value is negative or positive
@@ -5634,10 +5566,10 @@ class Carousel {
 
 
   totalSliderWidth(e) {
-    var sliders = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toArray"])(this.checkEventType(e).querySelectorAll('.swiper-slide'));
-    var totalWidth = 0;
+    const sliders = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toArray"])(this.checkEventType(e).querySelectorAll('.swiper-slide'));
+    let totalWidth = 0;
     sliders.forEach(s => {
-      var style = window.getComputedStyle ? getComputedStyle(s, null) : s.currentStyle;
+      let style = window.getComputedStyle ? getComputedStyle(s, null) : s.currentStyle;
       totalWidth += s.offsetWidth + parseInt(style.marginRight) || 0;
     });
     return totalWidth;
@@ -5652,7 +5584,7 @@ class Carousel {
 
 
   animateSlider(e, lr) {
-    var sliderWidth = this.totalSliderWidth(e) / e.target.children.length;
+    let sliderWidth = this.totalSliderWidth(e) / e.target.children.length;
     lr === -1 ? this.sliderTranslateCoOr -= sliderWidth : this.sliderTranslateCoOr += sliderWidth;
     e.target.style.setProperty('transform', 'translate(' + this.sliderTranslateCoOr + 'px)');
     e.target.classList.toggle('smooth');
@@ -5701,17 +5633,17 @@ class Carousel {
 
 
   init() {
-    var lazyImages = [].slice.call(this.elem.querySelectorAll('img.lazy'));
+    const lazyImages = [].slice.call(this.elem.querySelectorAll('img.lazy'));
 
     if ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
-      var lazyImageObserver = new IntersectionObserver(function (entries) {
+      let lazyImageObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry, i) {
           if (i === 0) {
             entry.target.firstElementChild.classList.remove('lazy');
           }
 
           if (entry.isIntersecting) {
-            var lazyImage = entry.target.parentNode.nextSibling.firstElementChild.firstElementChild;
+            let lazyImage = entry.target.parentNode.nextSibling.firstElementChild.firstElementChild;
             lazyImage.src = lazyImage.dataset.src;
             lazyImage.classList.remove('lazy');
             lazyImageObserver.unobserve(entry.target);
@@ -5725,18 +5657,26 @@ class Carousel {
           lazyImage.classList.remove('lazy');
         }
       });
+    } else {
+      lazyImages.forEach(e => {
+        if (e.dataset.src) {
+          e.src = e.dataset.src;
+        }
+
+        e.classList.remove('lazy');
+      });
     }
 
-    var _C = this.elem.querySelector('.swiper-wrapper'),
-        numInd = document.createElement('div'),
-        numIndActiveSl = document.createElement('span'),
-        numIndSeparator = document.createElement('span'),
-        numbIndSlLength = document.createElement('span'),
-        buttonsWrap = document.createElement('div'),
-        prevBtnWrap = document.createElement('div'),
-        nextBtnWrap = document.createElement('div'),
-        nextBtn = document.createElement('BUTTON'),
-        prevBtn = document.createElement('BUTTON'); //setup carousel buttons
+    const _C = this.elem.querySelector('.swiper-wrapper'),
+          numInd = document.createElement('div'),
+          numIndActiveSl = document.createElement('span'),
+          numIndSeparator = document.createElement('span'),
+          numbIndSlLength = document.createElement('span'),
+          buttonsWrap = document.createElement('div'),
+          prevBtnWrap = document.createElement('div'),
+          nextBtnWrap = document.createElement('div'),
+          nextBtn = document.createElement('BUTTON'),
+          prevBtn = document.createElement('BUTTON'); //setup carousel buttons
 
 
     buttonsWrap.className = 'swiper-buttons-wrap';
@@ -5817,14 +5757,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Defaultcarousel; });
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
-/* harmony import */ var _carousel_constructor__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../carousel-constructor */ "./src/patterns/image-carousel/carousel-constructor.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+/* harmony import */ var _carousel_constructor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../carousel-constructor */ "./src/patterns/image-carousel/carousel-constructor.js");
 
 
 
@@ -5832,25 +5770,24 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-var keyCodeTab = 9,
-    keyCodeEnter = 13;
-class Defaultcarousel extends _carousel_constructor__WEBPACK_IMPORTED_MODULE_5__["default"] {
+const keyCodeTab = 9,
+      keyCodeEnter = 13;
+class Defaultcarousel extends _carousel_constructor__WEBPACK_IMPORTED_MODULE_4__["default"] {
   constructor(elem, options) {
     super(elem, options);
   }
 
   inital() {
     super.init();
-    var self = this;
-    var thumbnails = [].slice.call(this.elem.querySelector('.galleria-thumbnails-list').querySelectorAll('li')); //edge work around intersectionObserver not triggering using isIntersecting
+    let self = this;
+    let thumbnails = [].slice.call(this.elem.querySelector('.galleria-thumbnails-list').querySelectorAll('li')); //edge work around intersectionObserver not triggering using isIntersecting
 
-    var options = {
+    let options = {
       rootMargin: '0px',
       threshold: [0, 1]
     },
         edge = document.documentElement.classList.contains('edge');
-    var edgeThumbnailsObserver = new IntersectionObserver(function (entries) {
+    let edgeThumbnailsObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.intersectionRatio === 1) {
           entry.target.setAttribute('aria-hidden', 'false');
@@ -5859,7 +5796,7 @@ class Defaultcarousel extends _carousel_constructor__WEBPACK_IMPORTED_MODULE_5__
         }
       });
     }, options);
-    var thumbnailsObserver = new IntersectionObserver(function (entries) {
+    let thumbnailsObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.setAttribute('aria-hidden', 'false');
@@ -5892,9 +5829,9 @@ class Defaultcarousel extends _carousel_constructor__WEBPACK_IMPORTED_MODULE_5__
       }, false);
       e.setAttribute('aria-hidden', 'false');
 
-      if (_util__WEBPACK_IMPORTED_MODULE_4__["checkIntersectionObserver"] && !edge) {
+      if (_util__WEBPACK_IMPORTED_MODULE_3__["checkIntersectionObserver"] && !edge) {
         thumbnailsObserver.observe(e);
-      } else if (_util__WEBPACK_IMPORTED_MODULE_4__["checkIntersectionObserver"] && edge) {
+      } else if (_util__WEBPACK_IMPORTED_MODULE_3__["checkIntersectionObserver"] && edge) {
         edgeThumbnailsObserver.observe(e);
       }
     });
@@ -5930,13 +5867,13 @@ class Defaultcarousel extends _carousel_constructor__WEBPACK_IMPORTED_MODULE_5__
 
 
   activeThumbnail(thumbindex, e) {
-    var thumbnail = this.checkEventType(e),
+    let thumbnail = this.checkEventType(e),
         currentThumbnailSpan = document.createElement('span'),
         listThumbnail = thumbnail.querySelector('.galleria-thumbnails-list').getElementsByTagName('li');
     currentThumbnailSpan.innerText = 'Current thumbnail';
     currentThumbnailSpan.className = 'galleria-thumbnail__current-thumbnail';
 
-    for (var li of listThumbnail) {
+    for (const li of listThumbnail) {
       li.classList.remove('active');
 
       if (li.querySelector('.galleria-thumbnail__current-thumbnail')) {
@@ -5964,16 +5901,16 @@ class Defaultcarousel extends _carousel_constructor__WEBPACK_IMPORTED_MODULE_5__
 
 
   translateThumbnails(thumbindex, e) {
-    var thumbnailLi = this.checkEventType(e).querySelector('.galleria-thumbnails-list'),
+    let thumbnailLi = this.checkEventType(e).querySelector('.galleria-thumbnails-list'),
         thumbnailLength = thumbnailLi.getElementsByTagName('li').length,
         translate = 0;
 
     if (thumbindex !== 0 && thumbnailLength > 4) {
-      var galleria = thumbnailLi.getElementsByTagName('li');
+      let galleria = thumbnailLi.getElementsByTagName('li');
       galleria.forEach((e, i) => {
         if (i < thumbindex - 1) {
-          var style = window.getComputedStyle ? getComputedStyle(e, null) : e.currentStyle;
-          var width = parseInt(style.width) + parseInt(style.marginRight);
+          let style = window.getComputedStyle ? getComputedStyle(e, null) : e.currentStyle;
+          let width = parseInt(style.width) + parseInt(style.marginRight);
           translate += width;
         }
       });
@@ -6003,7 +5940,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var className = 'carousel-gallery';
+const className = 'carousel-gallery';
 /**
  *
  * Init the defualt gallery
@@ -6055,7 +5992,7 @@ var className = 'carousel-gallery';
  */
 
 function carouselGallery(elem) {
-  var dc = new _default_carousel_constructor__WEBPACK_IMPORTED_MODULE_0__["default"](elem, {
+  let dc = new _default_carousel_constructor__WEBPACK_IMPORTED_MODULE_0__["default"](elem, {
     defaultCarousel: true,
     hidNumInd: true
   });
@@ -6082,10 +6019,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var className = 'swiper-container';
+const className = 'swiper-container';
 
 function init(elem) {
-  var c = new _carousel_constructor__WEBPACK_IMPORTED_MODULE_0__["default"](elem);
+  const c = new _carousel_constructor__WEBPACK_IMPORTED_MODULE_0__["default"](elem);
   c.init();
 }
 
@@ -6096,221 +6033,31 @@ function init(elem) {
 
 /***/ }),
 
-/***/ "./src/patterns/key-info-box/key-info-slider.js":
-/*!******************************************************!*\
-  !*** ./src/patterns/key-info-box/key-info-slider.js ***!
-  \******************************************************/
-/*! exports provided: default */
+/***/ "./src/patterns/image-carousel/swipe.js":
+/*!**********************************************!*\
+  !*** ./src/patterns/image-carousel/swipe.js ***!
+  \**********************************************/
+/*! exports provided: swipeCal */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.promise */ "./node_modules/core-js/modules/es.promise.js");
-/* harmony import */ var core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "swipeCal", function() { return swipeCal; });
 
 
-
-
-
-
-
-/**
- * Key information box
- *
- * @module patterns/key-info-box/key-info-box
- * @author Mark Skinsley <mark.skinsley@city.ac.uk>
- * @copyright City, University of London 2019
- */
-
-var className = 'key-information--lifelong-learning';
-var listings = document.querySelector('.key-information--lifelong-learning > ul'),
-    batchQuantity = 3,
-    contentToggles = Array.from(document.querySelectorAll('.content-toggle button')),
-    contentSliders = document.querySelectorAll('.content-slider'),
-    browserWidth = document.documentElement.scrollWidth,
-    prevBtn = document.getElementById('key-info-previous-item'),
-    nextBtn = document.getElementById('key-info-next-item'),
-    // listingHeight = '',
-listingDates = document.querySelectorAll('.key-information--lifelong-learning > ul > li'),
-    listingsVisible = [],
-    defaultDuration = 2000,
-    edgeOffset = 100; // Zen scroll setup
-
-zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.setup(defaultDuration, edgeOffset); // Add '-1' tabindex to all listing dates. Will give screenreaders context
-
-function dateTabIndex() {
-  for (var listingDate of listingDates) {
-    listingDate.setAttribute('tabindex', '-1');
-  }
-} // Visible listings: needed to decide if more content still to be loaded.
-
-
-function calculateVisibleListings() {
-  listingsVisible = [];
-  Array.from(listings.children).forEach(elem => {
-    if (!elem.classList.contains('hide')) {
-      listingsVisible.push(elem);
-    }
-  });
-} // Initial listings display
-
-
-function defaultListingsDisplay() {
-  var listElements = Array.from(listings.children);
-  listElements.forEach((elem, i) => {
-    i > batchQuantity - 1 ? elem.classList.add('hide') : elem.style.display = 'grid';
-  });
-}
-/**
- * Launches Key Info slider pattern. Pass in how many listings should display per batch,
- * i.e. each time user selects 'Load more'.
- *  */
-
-
-function launchKeyInfo(batchQuantity) {
-  var digit = document.querySelector('.key-information--lifelong-learning__current__digit');
-  var counter = 0; // Mobile: Show listing entry based on navigation button clicks
-
-  function listingDisplay() {
-    Array.from(listings.children).forEach((listing, i) => {
-      if (browserWidth < 768 && Array.from(listings.children).length > 1) {
-        i === counter ? listing.style.display = 'block' : listing.style.display = 'none';
-      }
-
-      listing.setAttribute('data-id', "listing-".concat(i));
-    });
-  } // Mobile: Enable/disable navigation buttons based on position of listing in collection
-
-
-  function navBtnState() {
-    if (counter === 0) {
-      prevBtn.setAttribute('disabled', true);
-      nextBtn.removeAttribute('disabled');
-    } else if (counter > 0 && counter < Array.from(listings.children).length - 1) {
-      prevBtn.removeAttribute('disabled');
-      nextBtn.removeAttribute('disabled');
-    } else {
-      nextBtn.setAttribute('disabled', true);
-      prevBtn.removeAttribute('disabled');
-    }
-  } // // Mobile: Set mobile listings navigation buttons to correct position based on listing height
-  // function navBtnPosition() {
-  //     Array.from(listings.children).forEach((listing, i) => {
-  //         if (counter === i) {
-  //             listingHeight = listing.dataset.height;
-  //         }
-  //     });
-  // }
-  // Run regardless of viewport size
-
-
-  dateTabIndex(); // Desktop: Toggle control listings when more than three listings exist
-
-  if (browserWidth >= 768) {
-    if (Array.from(listings.children).length > batchQuantity) {
-      listingDisplay();
-      defaultListingsDisplay();
-      calculateVisibleListings();
-      contentToggles.forEach(contentToggle => {
-        contentToggle.addEventListener('click', e => {
-          // This will increase with each 'Load more' click, so visible listings
-          // must be captured before any further listings are made visible
-          var preExpandListingsVisible = listingsVisible.length;
-          e.preventDefault();
-
-          if (preExpandListingsVisible < Array.from(listings.children).length) {
-            Array.from(listings.children).forEach((elem, i) => {
-              var targetListing = document.querySelector("[data-id='listing-".concat(preExpandListingsVisible, "']"));
-              var listingsVisibleLength = parseInt(listingsVisible.length) + batchQuantity;
-              var listingsLength = Array.from(listings.children).length;
-              var remainingItems = parseInt(listingsLength - listingsVisibleLength); // Zen scroll to first listing of newly visible listings and focus on date
-
-              zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(targetListing, 200);
-              targetListing.focus(); // let targetListingDate = targetListing.querySelectorAll(
-              //     '.key-info__date'
-              // );
-              // Final batch of listings, zen scroll to 'load more' button and offset
-
-              if (remainingItems <= 0) {
-                zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(contentToggle, 200);
-                contentToggle.style.display = 'none';
-              } // targetListingDate[0].focus();
-              // Bring in newly visible listings in two phases to allow for opacity transition
-
-
-              if (i < preExpandListingsVisible + batchQuantity) {
-                var promise = new Promise(resolve => {
-                  resolve(elem.style.display = 'grid');
-                });
-                promise.then(() => {
-                  elem.classList.remove('hide');
-                }); // Calculating visible listings must run here after display properties are updated
-
-                promise.then(() => {
-                  calculateVisibleListings();
-                });
-              }
-            });
-          }
-        }, false);
-      });
-    } else {
-      contentToggles.forEach(elem => {
-        elem.style.display = 'none';
-      });
-    } // Mobile: one listing visible at a time
-
-  } else if (browserWidth < 768 && Array.from(listings.children).length > 1) {
-    Array.from(listings.children).forEach((listing, i) => {
-      // Capture listing height and set to data attribute
-      listing.style.display = 'block';
-      listing.dataset.height = listing.offsetHeight;
-      listing.style.display = 'none'; // On load, set mobile navigation buttons at correct height
-      // counter === 0 && i === 0 ? navBtnPosition() : null;
-
-      i > 0 ? listing.style.display = 'none' : listing.style.display = 'block';
-    });
-    Array.from(contentSliders).forEach(contentSlider => {
-      contentSlider.removeAttribute('hidden');
-    });
-    navBtnState();
-    prevBtn.addEventListener('click', () => {
-      counter = counter - 1;
-      navBtnState(); // navBtnPosition();
-
-      listingDisplay();
-      digit.innerText = counter + 1;
-    });
-    nextBtn.addEventListener('click', () => {
-      counter = counter + 1;
-      navBtnState(); // navBtnPosition();
-
-      listingDisplay();
-      digit.innerText = counter + 1;
-    });
-  } else if (browserWidth < 768 && Array.from(listings.children).length === 1) {
-    Array.from(listings.children).forEach((listing, i) => {
-      i > 0 ? listing.style.display = 'none' : listing.style.display = 'block';
-    });
-  }
+function unify(e) {
+  return e.changedTouches ? e.changedTouches[0] : e;
 }
 
-function launchKeyInfoSlider() {
-  launchKeyInfo(batchQuantity);
+function mousePosition(event) {
+  return unify(event).clientX;
 }
 
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchKeyInfoSlider,
-  launchQuery: ".".concat(className)
-});
+function swipeCal(x) {
+  return function (y) {
+    return mousePosition(x) - mousePosition(y);
+  };
+}
 
 /***/ }),
 
@@ -6323,14 +6070,11 @@ function launchKeyInfoSlider() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 
@@ -6344,7 +6088,7 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 
-var className = 'link-finder';
+const className = 'link-finder';
 /**
  * Function that prepends icon to anchor paramater
  *
@@ -6353,9 +6097,9 @@ var className = 'link-finder';
  */
 
 function prependIcon(anchor, className) {
-  var node = document.createElement('span');
+  let node = document.createElement('span');
   node.className = 'fas ' + className + '  link-decorator';
-  node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, true);
+  node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, true);
   anchor.parentNode.insertBefore(node, anchor);
 }
 /**
@@ -6366,10 +6110,10 @@ function prependIcon(anchor, className) {
 
 
 function findExternalLink(anchor) {
-  if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && !anchor.parentElement.className.includes('cta-like-anchor') && anchor.className !== 'social-icon' && !anchor.className.includes('cta') && !anchor.parentElement.className.includes('cta-block') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
-    var node = document.createElement('span');
+  if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && !anchor.parentElement.className.includes('cta-like-anchor') && anchor.className !== 'social-icon' && !anchor.className.includes('cta') && !anchor.parentElement.className.includes('cta-block') && !anchor.parentElement.className.includes('card') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
+    let node = document.createElement('span');
     node.className = 'far fa-external-link inline-external-link';
-    node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, '(external link)');
+    node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, '(external link)');
     anchor.appendChild(node);
   }
 }
@@ -6382,7 +6126,7 @@ function findExternalLink(anchor) {
 
 
 function findDocumentLinks(anchor) {
-  var fileTypes = {
+  const fileTypes = {
     pdf: 'pdf',
     docx: 'word',
     doc: 'word',
@@ -6390,10 +6134,10 @@ function findDocumentLinks(anchor) {
     xls: 'excel'
   };
 
-  for (var key in fileTypes) {
+  for (let key in fileTypes) {
     if (anchor.href.indexOf('.' + key) !== -1) {
       prependIcon(anchor, 'fa-file-' + fileTypes[key]);
-      var anchorText = anchor.textContent;
+      let anchorText = anchor.textContent;
       anchorText += ' [' + key.toUpperCase() + ']';
       anchor.textContent = null;
       anchor.textContent = anchorText;
@@ -6411,7 +6155,7 @@ function findDocumentLinks(anchor) {
 
 
 function findLinks(e) {
-  var anchors = e.querySelectorAll('a');
+  const anchors = e.querySelectorAll('a');
   anchors.forEach(function (anchor) {
     findDocumentLinks(anchor);
     findExternalLink(anchor);
@@ -6458,8 +6202,8 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-var className = 'load-more';
-var hashedUrl = window.location.hash,
+const className = 'load-more';
+let hashedUrl = window.location.hash,
     loadMoreId;
 /**
  * Control what items will display based on wrapper's 'data-listings-show' data attribute.
@@ -6470,7 +6214,7 @@ var hashedUrl = window.location.hash,
  */
 
 function itemsDisplay(items, visibleItems, loadMoreBtn) {
-  for (var item of items.entries()) {
+  for (const item of items.entries()) {
     item[1].setAttribute('tabindex', '-1');
 
     if (item[0] >= visibleItems) {
@@ -6499,9 +6243,9 @@ function itemsDisplay(items, visibleItems, loadMoreBtn) {
 
 
 function scrollToItem(items, visibleItems, itemsIncrement) {
-  var targetItem = visibleItems - itemsIncrement;
+  let targetItem = visibleItems - itemsIncrement;
 
-  for (var item of items.entries()) {
+  for (const item of items.entries()) {
     if (item[0] === targetItem) {
       item[1].focus();
       zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(item[1]);
@@ -6525,7 +6269,7 @@ function scrollToItem(items, visibleItems, itemsIncrement) {
 
 
 function pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
-  var targetListingUrlParam = visibleItems - (itemsIncrement - 1);
+  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
   history.pushState('', '', "#".concat(parentType).concat(wrapperId, "-").concat(childrenType).concat(targetListingUrlParam));
 }
 /**
@@ -6540,12 +6284,12 @@ function pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIn
 
 
 function replaceUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
-  var targetListingUrlParam = visibleItems - (itemsIncrement - 1);
+  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
   history.replaceState('', '', "#".concat(parentType).concat(wrapperId, "-").concat(childrenType).concat(targetListingUrlParam));
 }
 
 function launchLoadMore(e) {
-  var wrapperId = e.getAttribute('id'),
+  let wrapperId = e.getAttribute('id'),
       items = e.querySelectorAll('.item'),
       itemsIncrement = parseInt(e.dataset.increment),
       loadMoreBtn = e.querySelector('.content-toggle button'),
@@ -6557,11 +6301,11 @@ function launchLoadMore(e) {
    */
 
   e.setAttribute('data-items-visible', itemsIncrement);
-  var visibleItems = parseInt(e.getAttribute('data-items-visible')); // Load correct number of items based on URL hash
+  let visibleItems = parseInt(e.getAttribute('data-items-visible')); // Load correct number of items based on URL hash
 
   if (hashedUrl) {
-    var hashedUrlParts = hashedUrl.split('-');
-    var activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[1]));
+    let hashedUrlParts = hashedUrl.split('-');
+    let activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[1]));
     visibleItems = activeItem + (itemsIncrement - 1);
     e.setAttribute('data-items-visible', visibleItems);
     itemsDisplay(items, visibleItems, loadMoreBtn);
@@ -6582,21 +6326,21 @@ function launchLoadMore(e) {
   }); // Back/forward browser clicks.
 
   window.onpopstate = () => {
-    var loadMoreIdElement = document.getElementById(loadMoreId); // Must re-assign variable on pop state change
+    let loadMoreIdElement = document.getElementById(loadMoreId); // Must re-assign variable on pop state change
 
     hashedUrl = window.location.hash;
 
     if (hashedUrl) {
       // Capture latest hash
-      var updatedUrlParts = window.location.hash.split('-');
-      var currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(updatedUrlParts[1]));
+      let updatedUrlParts = window.location.hash.split('-');
+      let currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(updatedUrlParts[1]));
       currentItem = currentItem + (itemsIncrement - 1);
       visibleItems = currentItem;
       e.setAttribute('data-items-visible', visibleItems);
       itemsDisplay(items, visibleItems, loadMoreBtn);
       scrollToItem(items, visibleItems, itemsIncrement);
     } else {
-      var relatedItems = loadMoreIdElement.querySelectorAll('.item');
+      let relatedItems = loadMoreIdElement.querySelectorAll('.item');
       visibleItems = itemsIncrement;
       itemsDisplay(items, visibleItems, loadMoreBtn);
       e.setAttribute('data-items-visible', itemsIncrement);
@@ -6623,15 +6367,12 @@ function launchLoadMore(e) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prepareNavigation", function() { return prepareNavigation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "listenForNavigationToggles", function() { return listenForNavigationToggles; });
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 
@@ -6646,8 +6387,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var oneSecond = 1000,
-    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : oneSecond;
+const oneSecond = 1000,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond;
 /**
  * Set sub-menu button attributes for the open/closed state.
  *
@@ -6657,15 +6398,15 @@ var oneSecond = 1000,
  */
 
 function setNavigationItemButtonDetails(button, open, rootClass) {
-  var navigationItem = button.closest('li'),
-      sectionText = navigationItem.dataset.title + ' section',
-      buttonClassName = rootClass + '__button',
-      buttonTextClassName = buttonClassName + '__text',
-      textSpan = button.querySelector(".".concat(buttonTextClassName)),
-      text = open ? 'Close ' : 'Open ';
+  const navigationItem = button.closest('li'),
+        sectionText = navigationItem.dataset.title + ' section',
+        buttonClassName = rootClass + '__button',
+        buttonTextClassName = buttonClassName + '__text',
+        textSpan = button.querySelector(".".concat(buttonTextClassName)),
+        text = open ? 'Close ' : 'Open ';
   open && Array.from(button.closest('ul').querySelectorAll('button')).forEach(button => setNavigationItemButtonDetails(button, false, rootClass));
   navigationItem.dataset.open = open;
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, open);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
   button.title = text + sectionText;
   textSpan.innerText = text + sectionText;
 }
@@ -6675,9 +6416,9 @@ function setNavigationItemButtonDetails(button, open, rootClass) {
 
 
 function toggleSubNavigation(button, rootClass) {
-  var expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded);
-  Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(expanded) ? setNavigationItemButtonDetails(button, false, rootClass) : setNavigationItemButtonDetails(button, true, rootClass);
-  zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.intoView(button.closest('li'), scrollDuration);
+  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded);
+  Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(expanded) ? setNavigationItemButtonDetails(button, false, rootClass) : setNavigationItemButtonDetails(button, true, rootClass);
+  zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.intoView(button.closest('li'), scrollDuration);
 }
 /**
  * Decorate sub-navigation element with the appropriate attributes.
@@ -6688,21 +6429,21 @@ function toggleSubNavigation(button, rootClass) {
 
 
 function prepareSubNavigation(navigationItem, rootClass) {
-  var navigationItemBtn = document.createElement('button'),
-      iconSpan = document.createElement('span'),
-      textSpan = document.createElement('span'),
-      controlsClassName = rootClass + '__controls',
-      buttonClassName = rootClass + '__button',
-      buttonTextClassName = buttonClassName + '__text',
-      buttonIconClassName = buttonClassName + '__icon',
-      currentClassName = rootClass + '__current',
-      hierarchyClassName = rootClass + '__hierarchy',
-      controlsWrapper = navigationItem.querySelector(".".concat(controlsClassName));
+  const navigationItemBtn = document.createElement('button'),
+        iconSpan = document.createElement('span'),
+        textSpan = document.createElement('span'),
+        controlsClassName = rootClass + '__controls',
+        buttonClassName = rootClass + '__button',
+        buttonTextClassName = buttonClassName + '__text',
+        buttonIconClassName = buttonClassName + '__icon',
+        currentClassName = rootClass + '__current',
+        hierarchyClassName = rootClass + '__hierarchy',
+        controlsWrapper = navigationItem.querySelector(".".concat(controlsClassName));
   navigationItemBtn.setAttribute('type', 'button');
-  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
   iconSpan.className = "".concat(buttonIconClassName, " fal fa-fw");
   textSpan.className = "".concat(buttonTextClassName);
-  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(navigationItemBtn, [iconSpan, textSpan]);
+  Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(navigationItemBtn, [iconSpan, textSpan]);
   controlsWrapper.appendChild(navigationItemBtn);
 
   if (navigationItem.className.indexOf(currentClassName) >= 0 || navigationItem.className.indexOf(hierarchyClassName) >= 0) {
@@ -6721,13 +6462,13 @@ function prepareSubNavigation(navigationItem, rootClass) {
 
 
 function prepareNavigation(navigation, rootClass) {
-  var controlsClassName = rootClass + '__controls';
+  const controlsClassName = rootClass + '__controls';
   Array.from(navigation.querySelectorAll('li')).forEach(navigationItem => {
-    var link = navigationItem.querySelector('a'),
-        subNavigation = navigationItem.querySelector('ul'),
-        linkText = 'Visit ' + navigationItem.dataset.title,
-        textWrapper = document.createElement('span'),
-        controlsWrapper = document.createElement('div');
+    const link = navigationItem.querySelector('a'),
+          subNavigation = navigationItem.querySelector('ul'),
+          linkText = 'Visit ' + navigationItem.dataset.title,
+          textWrapper = document.createElement('span'),
+          controlsWrapper = document.createElement('div');
     controlsWrapper.className = controlsClassName;
     textWrapper.appendChild(link.firstChild.cloneNode(true));
     link.replaceChild(textWrapper, link.firstChild);
@@ -6759,13 +6500,16 @@ function listenForNavigationToggles(subNavigation, rootClass) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _menu_formatters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menu-formatters */ "./src/patterns/menu/menu-formatters.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _menu_formatters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./menu-formatters */ "./src/patterns/menu/menu-formatters.js");
+
 
 
 
@@ -6781,18 +6525,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var className = 'menu',
-    hierarchyClassName = className + '__hierarchy',
-    currentClassName = className + '__current',
-    veilClassName = className + '__veil',
-    contentClassName = className + '__content',
-    contentHeaderClassName = contentClassName + '__header',
-    currentPage = contentHeaderClassName + '--current',
-    controlsClassName = className + '__controls',
-    buttonDisplayClassName = className + '__display__button',
-    buttonClassName = className + '__button',
-    level1ClassName = className + '__level1',
-    buttonTextClassName = buttonClassName + '__text';
+const className = 'menu',
+      hierarchyClassName = className + '__hierarchy',
+      currentClassName = className + '__current',
+      veilClassName = className + '__veil',
+      contentClassName = className + '__content',
+      contentHeaderClassName = contentClassName + '__header',
+      currentPage = contentHeaderClassName + '--current',
+      controlsClassName = className + '__controls',
+      buttonDisplayClassName = className + '__display__button',
+      buttonClassName = className + '__button',
+      level1ClassName = className + '__level1',
+      buttonTextClassName = buttonClassName + '__text';
 /**
  * Creates a function for setting a menu to be open or closed.
  *
@@ -6805,11 +6549,11 @@ function menuSetter(menu, button) {
   /**
    * @param {boolean} open - Set the menu to be open?
    */
-  var setMenu = open => {
-    var buttonText = button.querySelector(".".concat(buttonTextClassName));
+  const setMenu = open => {
+    const buttonText = button.querySelector(".".concat(buttonTextClassName));
     menu.dataset.open = open;
     buttonText.innerText = open ? 'Close' : 'Menu';
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, open);
   };
 
   return setMenu;
@@ -6827,9 +6571,9 @@ function menuSetter(menu, button) {
 
 
 function toggleMenu(button, setMenu, trap, veil) {
-  var expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded);
+  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded);
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(expanded)) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(expanded)) {
     trap.deactivate();
     veil.dataset.on = 'false';
     setMenu(false);
@@ -6853,22 +6597,22 @@ function toggleMenu(button, setMenu, trap, veil) {
 
 
 function createMenuToggle(label, button, setMenu, veil) {
-  var buttonWrapper = document.createElement('div'),
-      menu = label.closest(".".concat(className));
+  const buttonWrapper = document.createElement('div'),
+        menu = label.closest(".".concat(className));
   button.className = 'menu__display__button__button';
   buttonWrapper.className = 'menu__display__button__button__wrapper';
   button.setAttribute('type', 'button');
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hasPopup, 'menu');
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hasPopup, 'menu');
   Array.from(label.childNodes).forEach(child => buttonWrapper.appendChild(child));
   button.appendChild(buttonWrapper);
-  var trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(menu, {
+  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_2___default()(menu, {
     /**
      * Initial focus should be whichever of: the current page; a menu item
      * in the asset lineage or; the first item in the last column appears
      * last in the DOM and is visible.
      */
     initialFocus: () => {
-      var open = Array.from(menu.querySelectorAll([".".concat(contentHeaderClassName, " > span"), ".".concat(currentClassName, " > .").concat(controlsClassName, " > a"), ".".concat(hierarchyClassName, " > .").concat(controlsClassName, " > a"), ".".concat(level1ClassName, " > ul > li:first-of-type > .").concat(controlsClassName, " > a"), ".".concat(currentPage, " > a")].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_2__["isVisible"])(elem));
+      const open = Array.from(menu.querySelectorAll([".".concat(contentHeaderClassName, " > span"), ".".concat(currentClassName, " > .").concat(controlsClassName, " > a"), ".".concat(hierarchyClassName, " > .").concat(controlsClassName, " > a"), ".".concat(level1ClassName, " > ul > li:first-of-type > .").concat(controlsClassName, " > a"), ".".concat(currentPage, " > a")].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_3__["isVisible"])(elem));
       return open[open.length - 1];
     },
     onDeactivate: () => toggleMenu(button, setMenu, trap, veil),
@@ -6885,19 +6629,19 @@ function createMenuToggle(label, button, setMenu, veil) {
 
 function launchMenu(menu) {
   // During testing only: remove 'under construction' indicators globally
-  // menu.innerHTML = menu.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
-  var label = menu.querySelector(".".concat(buttonDisplayClassName)),
-      button = document.createElement('button'),
-      veil = document.createElement('div'),
-      setMenu = menuSetter(menu, button);
+  menu.innerHTML = menu.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
+  const label = menu.querySelector(".".concat(buttonDisplayClassName)),
+        button = document.createElement('button'),
+        veil = document.createElement('div'),
+        setMenu = menuSetter(menu, button);
   veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   createMenuToggle(label, button, setMenu, veil);
   label.appendChild(button);
   setMenu(false);
-  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_4__["prepareNavigation"])(menu.querySelector(".".concat(level1ClassName)), className);
-  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_4__["listenForNavigationToggles"])(menu.querySelector(".".concat(level1ClassName)), className);
+  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_5__["prepareNavigation"])(menu.querySelector(".".concat(level1ClassName)), className);
+  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_5__["listenForNavigationToggles"])(menu.querySelector(".".concat(level1ClassName)), className);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -6918,10 +6662,10 @@ function launchMenu(menu) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
 
@@ -6940,13 +6684,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var className = 'modal',
-    bodyClassName = className + '__body',
-    keyCodeEscape = 27,
-    oneSecond = 1000,
-    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
-    scrollTo = true;
-var trap;
+const className = 'modal',
+      bodyClassName = className + '__body',
+      keyCodeEscape = 27,
+      oneSecond = 1000,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
+      scrollTo = true;
+let trap;
 /**
  * launch function
  *
@@ -6954,56 +6698,58 @@ var trap;
  */
 
 function launchModal(modal) {
-  var dialogArray = [];
-  var dialogTopic = modal.getAttribute('data-topic');
+  let dialogArray = [];
+  const dialogTopic = modal.getAttribute('data-topic');
   Array.from(modal.getElementsByTagName('li')).forEach((list, i) => {
-    var wrapper = document.createElement('div'),
-        listButton = document.createElement('button'),
-        listBody = Array.from(list.childNodes),
-        listHeader = list.firstElementChild,
-        customHeader = list.getAttribute('data-header'),
-        format = list.getAttribute('data-keepformat'),
-        header = document.createElement('div');
-    var title,
-        keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(format),
-        shortName = list.getAttribute('data-shortname');
-    listButton.classList.add('modal__button');
-    listButton.setAttribute('type', 'button');
-    listButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'open dialog');
-    list.appendChild(wrapper);
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(wrapper, listBody);
-    wrapper.classList.add("".concat(bodyClassName));
+    if (!list.dataset.modalcontent || list.dataset.modalcontent === 'true') {
+      const wrapper = document.createElement('div'),
+            listButton = document.createElement('button'),
+            listBody = Array.from(list.childNodes),
+            listHeader = list.firstElementChild,
+            customHeader = list.getAttribute('data-header'),
+            format = list.getAttribute('data-keepformat'),
+            header = document.createElement('div');
+      let title,
+          keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(format),
+          shortName = list.getAttribute('data-shortname');
+      listButton.classList.add('modal__button');
+      listButton.setAttribute('type', 'button');
+      listButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'open dialog');
+      list.appendChild(wrapper);
+      Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(wrapper, listBody);
+      wrapper.classList.add("".concat(bodyClassName));
 
-    if (customHeader) {
-      title = customHeader;
-    } else {
-      title = listHeader.innerText;
-    }
+      if (customHeader) {
+        title = customHeader;
+      } else {
+        title = listHeader.innerText;
+      }
 
-    if (shortName === null) {
-      shortName = listHeader.innerText;
-    }
+      if (shortName === null) {
+        shortName = listHeader.innerText;
+      }
 
-    if (keepFormat) {
-      list.insertBefore(listHeader, wrapper);
-      listHeader.addEventListener('click', function () {
-        createDialog(modal, "".concat(i), dialogArray);
+      if (keepFormat) {
+        list.insertBefore(listHeader, wrapper);
+        listHeader.addEventListener('click', function () {
+          createDialog(modal, "".concat(i), dialogArray);
+        });
+      } else {
+        listButton.textContent = listHeader.textContent;
+        header.appendChild(listHeader);
+        list.insertBefore(listButton, wrapper);
+        listButton.addEventListener('click', function () {
+          createDialog(modal, "".concat(i), dialogArray);
+        });
+      }
+
+      dialogArray.push({
+        title: title,
+        body: wrapper.innerHTML,
+        topic: dialogTopic,
+        shortname: shortName
       });
-    } else {
-      listButton.textContent = listHeader.textContent;
-      header.appendChild(listHeader);
-      list.insertBefore(listButton, wrapper);
-      listButton.addEventListener('click', function () {
-        createDialog(modal, "".concat(i), dialogArray);
-      });
     }
-
-    dialogArray.push({
-      title: title,
-      body: wrapper.innerHTML,
-      topic: dialogTopic,
-      shortname: shortName
-    });
   });
 }
 /**
@@ -7017,41 +6763,41 @@ function launchModal(modal) {
 
 
 function createDialog(parent, position, dialogArray) {
-  var slider = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(parent.getAttribute('data-slider'));
-  var closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
+  const slider = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(parent.getAttribute('data-slider'));
+  const closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('button', [{
     label: 'class',
     val: 'dialog__close fas fa-times'
   }, {
     label: 'aria-label',
     val: 'Close modal'
   }]);
-  var dialog = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+  const dialog = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog'
   }, {
     label: 'data-position',
     val: "".concat(position)
   }]);
-  var bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+  const bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__content'
   }]);
-  var wrapperWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+  const wrapperWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__inner'
   }, {
     label: 'role',
     val: 'role'
   }]);
-  var dialogStrapline = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('p', [{
+  const dialogStrapline = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('p', [{
     label: 'class',
     val: 'dialog__strapline'
   }]);
-  var dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('p', [{
+  const dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('p', [{
     label: 'class',
     val: 'dialog__heading'
   }]);
-  var dialogBody = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+  const dialogBody = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__body-copy'
   }]);
@@ -7064,11 +6810,13 @@ function createDialog(parent, position, dialogArray) {
   bodyWrapper.appendChild(dialogBody);
   wrapperWrapper.appendChild(bodyWrapper);
   dialog.appendChild(wrapperWrapper);
-  var main = document.querySelector('main');
+  const main = document.querySelector('main');
   main.appendChild(dialog);
   dialog.addEventListener('keydown', e => {
     if (e.keyCode === keyCodeEscape) {
       e.preventDefault();
+      document.body.classList.remove('dialog-in', 'no-scroll');
+      trap.deactivate();
       closeDialog(dialog, parent);
     }
   });
@@ -7076,6 +6824,8 @@ function createDialog(parent, position, dialogArray) {
     if (e.target.classList.contains('dialog')) {
       e.preventDefault();
       e.stopPropagation();
+      document.body.classList.remove('dialog-in', 'no-scroll');
+      trap.deactivate();
       closeDialog(dialog, parent);
     }
   });
@@ -7083,6 +6833,8 @@ function createDialog(parent, position, dialogArray) {
     e.preventDefault();
     e.stopPropagation();
     closeDialog(dialog, parent);
+    document.body.classList.remove('dialog-in', 'no-scroll');
+    trap.deactivate();
   });
   trapFocus(dialog);
   document.body.classList.add('dialog-in', 'no-scroll');
@@ -7102,26 +6854,26 @@ function createDialog(parent, position, dialogArray) {
 
 
 function createControl(dialog, dialogArray) {
-  var position = parseInt(dialog.getAttribute('data-position'));
-  var buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+  let position = parseInt(dialog.getAttribute('data-position'));
+  const buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__slider-control'
   }]);
-  var buttonPrev = controlButton(dialogArray, position, 'left');
-  var buttonNext = controlButton(dialogArray, position, 'right');
+  let buttonPrev = controlButton(dialogArray, position, 'left');
+  let buttonNext = controlButton(dialogArray, position, 'right');
   buttonNext.addEventListener('click', e => {
     e.preventDefault();
-    var pos = buttonNext.getAttribute('data-nextState');
+    let pos = buttonNext.getAttribute('data-nextState');
     addDialogEvent(dialog, dialogArray, pos);
   });
   buttonPrev.addEventListener('click', e => {
     e.preventDefault();
-    var pos = buttonPrev.getAttribute('data-nextState');
+    let pos = buttonPrev.getAttribute('data-nextState');
     addDialogEvent(dialog, dialogArray, pos);
   });
   buttonWrapper.appendChild(buttonPrev);
   buttonWrapper.appendChild(buttonNext);
-  var dialogContent = dialog.querySelector('.dialog__content');
+  const dialogContent = dialog.querySelector('.dialog__content');
   dialogContent.appendChild(buttonWrapper);
 }
 /**
@@ -7168,10 +6920,10 @@ function addDialogEvent(dialog, dialogArray, nextState) {
 
 
 function controlButton(dialogArray, position, direction) {
-  var button = document.createElement('button');
-  var buttonLabel = document.createElement('span');
+  const button = document.createElement('button');
+  const buttonLabel = document.createElement('span');
   buttonLabel.classList.add('dialog__underline-transition');
-  var nextState = checkNextState(dialogArray, position, direction);
+  let nextState = checkNextState(dialogArray, position, direction);
   button.setAttribute('data-nextstate', "".concat(nextState));
 
   if (dialogArray[nextState].shortname) {
@@ -7180,18 +6932,18 @@ function controlButton(dialogArray, position, direction) {
     buttonLabel.innerText = dialogArray[nextState].title;
   }
 
-  var buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('span', [{
+  const buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('span', [{
     label: 'class',
     val: "icon far fa-long-arrow-".concat(direction)
   }]);
 
   if (direction === 'left') {
-    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'previous item');
+    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'previous item');
   } else {
-    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'next item');
+    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'next item');
   }
 
-  var buttonLabelWrapper = document.createElement('div');
+  const buttonLabelWrapper = document.createElement('div');
   buttonLabelWrapper.appendChild(buttonLabel);
   button.appendChild(buttonIcon);
   button.appendChild(buttonLabelWrapper);
@@ -7209,8 +6961,8 @@ function controlButton(dialogArray, position, direction) {
 
 
 function checkNextState(dialogArray, position, direction) {
-  var pos = parseInt("".concat(position));
-  var nextState;
+  const pos = parseInt("".concat(position));
+  let nextState;
 
   if (pos === 0) {
     if (direction === 'left') {
@@ -7244,19 +6996,17 @@ function checkNextState(dialogArray, position, direction) {
 
 
 function closeDialog(dialog, modal) {
-  var parent = dialog.parentNode;
+  const parent = dialog.parentNode;
   parent.removeChild(dialog);
-  document.body.classList.remove('dialog-in', 'no-scroll');
-  trap.deactivate();
 
-  if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_2__["verticallyInWindow"])(modal)) {
+  if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_1__["verticallyInWindow"])(modal)) {
     zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(modal, scrollDuration);
   }
 }
 
 function trapFocus(modal) {
-  var modalInner = modal.querySelector('.dialog__inner');
-  trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalInner, {
+  let modalInner = modal.querySelector('.dialog__inner');
+  trap = focus_trap__WEBPACK_IMPORTED_MODULE_3___default()(modalInner, {
     clickOutsideDeactivates: true
   });
   trap.activate();
@@ -7278,12 +7028,15 @@ function trapFocus(modal) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+
 
 
 
@@ -7298,19 +7051,19 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-var className = 'navigation',
-    classNameSpecific = className + '--primary',
-    topLevelClassName = classNameSpecific + '__section-text',
-    buttonClassName = className + '__button',
-    openCloseTextClassName = buttonClassName + '__open-close',
-    navigationTextClassName = buttonClassName + '__navigation',
-    headerClassName = classNameSpecific + '__menu__header',
-    veilClassName = className + '__veil',
-    openText = 'Open',
-    closeText = 'Close',
-    navigationText = 'navigation section',
-    keyCodeTab = 9,
-    keyCodeEscape = 27;
+const className = 'navigation',
+      classNameSpecific = className + '--primary',
+      topLevelClassName = classNameSpecific + '__section-text',
+      buttonClassName = className + '__button',
+      openCloseTextClassName = buttonClassName + '__open-close',
+      navigationTextClassName = buttonClassName + '__navigation',
+      headerClassName = classNameSpecific + '__menu__header',
+      veilClassName = className + '__veil',
+      openText = 'Open',
+      closeText = 'Close',
+      navigationText = 'navigation section',
+      keyCodeTab = 9,
+      keyCodeEscape = 27;
 /**
  * Return a function to toggle everything closed.
  *
@@ -7321,9 +7074,9 @@ var className = 'navigation',
 
 function createCloseAll(navigation, veil) {
   return () => {
-    var buttons = Array.from(navigation.querySelectorAll('.navigation--primary__level1 > .navigation__button'));
+    const buttons = Array.from(navigation.querySelectorAll('.navigation--primary__level1 > .navigation__button'));
     buttons.forEach(button => {
-      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, 'false');
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(openText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     });
     veil.dataset.on = 'false';
@@ -7340,13 +7093,13 @@ function createCloseAll(navigation, veil) {
 
 function createSectionToggle(button, closeAll, veil) {
   return () => {
-    var open = !Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded));
+    const open = !Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded));
     closeAll();
 
     if (open) {
       button.closest(".".concat(classNameSpecific)).dataset.open = 'true';
       veil.dataset.on = 'true';
-      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, open);
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(closeText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     }
   };
@@ -7361,18 +7114,18 @@ function createSectionToggle(button, closeAll, veil) {
 
 
 function prepareTopLevel(navigation, veil, closeAll) {
-  var topLevels = Array.from(navigation.querySelectorAll(".".concat(topLevelClassName)));
+  const topLevels = Array.from(navigation.querySelectorAll(".".concat(topLevelClassName)));
   topLevels.forEach(el => {
-    var listItem = el.parentNode,
-        button = document.createElement('button'),
-        buttonDiv = document.createElement('div'),
-        srOpenCloseSpan = document.createElement('span'),
-        srNavigationSpan = document.createElement('span'),
-        toggleSection = createSectionToggle(button, closeAll, veil); // LIs have tabindex so they're accessible with no JS, remove it
+    const listItem = el.parentNode,
+          button = document.createElement('button'),
+          buttonDiv = document.createElement('div'),
+          srOpenCloseSpan = document.createElement('span'),
+          srNavigationSpan = document.createElement('span'),
+          toggleSection = createSectionToggle(button, closeAll, veil); // LIs have tabindex so they're accessible with no JS, remove it
 
     el.removeAttribute('tabindex');
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, 'false');
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].owns, el.nextElementSibling.id);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].owns, el.nextElementSibling.id);
     button.setAttribute('type', 'button');
     button.id = el.nextElementSibling.id + '-button';
     button.className = buttonClassName;
@@ -7381,7 +7134,7 @@ function prepareTopLevel(navigation, veil, closeAll) {
     srNavigationSpan.className = navigationTextClassName;
     srNavigationSpan.appendChild(document.createTextNode(navigationText));
     button.addEventListener('click', () => toggleSection(), true);
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(buttonDiv, [srOpenCloseSpan, document.createTextNode(' '), el, document.createTextNode(' '), srNavigationSpan]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(buttonDiv, [srOpenCloseSpan, document.createTextNode(' '), el, document.createTextNode(' '), srNavigationSpan]);
     button.append(buttonDiv);
     listItem.prepend(button);
   });
@@ -7397,21 +7150,21 @@ function prepareTopLevel(navigation, veil, closeAll) {
 
 
 function setupTabPrevious(navigation, closeAll, veil) {
-  var firstButton = navigation.querySelector('.navigation--primary__level1:first-of-type > .navigation__button'),
-      restButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:first-of-type) > .navigation__button')); // If we tab out of the open, first menu into the other header content, close the menu.
+  const firstButton = navigation.querySelector('.navigation--primary__level1:first-of-type > .navigation__button'),
+        restButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:first-of-type) > .navigation__button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   firstButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
       closeAll();
     }
   });
   restButtons.forEach(thisSectionButton => {
-    var previousSection = thisSectionButton.parentElement.previousElementSibling,
-        previousSectionButton = previousSection.querySelector('button'),
-        lastNavigationAnchor = previousSection.querySelector('.navigation__level2 > li:last-of-type > a') ? previousSection.querySelector('.navigation__level2 > li:last-of-type > a') : previousSection.querySelector('.navigation__level2 > li:last-of-type').previousElementSibling.querySelector('a'),
-        togglePreviousSection = createSectionToggle(previousSectionButton, closeAll, veil);
+    const previousSection = thisSectionButton.parentElement.previousElementSibling,
+          previousSectionButton = previousSection.querySelector('button'),
+          lastNavigationAnchor = previousSection.querySelector('.navigation__level2 > li:last-of-type > a') ? previousSection.querySelector('.navigation__level2 > li:last-of-type > a') : previousSection.querySelector('.navigation__level2 > li:last-of-type').previousElementSibling.querySelector('a'),
+          togglePreviousSection = createSectionToggle(previousSectionButton, closeAll, veil);
     thisSectionButton.addEventListener('keydown', e => {
-      if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
+      if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
         e.preventDefault();
         togglePreviousSection();
         lastNavigationAnchor.focus();
@@ -7430,17 +7183,17 @@ function setupTabPrevious(navigation, closeAll, veil) {
 
 
 function setupTabNext(navigation, closeAll, veil) {
-  var closeButton = navigation.querySelector('.navigation--primary__level1:last-of-type .wrapper--navigation--primary__menu__close button'),
-      restSectionsCloseButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:last-of-type) .wrapper--navigation--primary__menu__close button')); // If we tab out of the open, first menu into the other header content, close the menu.
+  const closeButton = navigation.querySelector('.navigation--primary__level1:last-of-type .wrapper--navigation--primary__menu__close button'),
+        restSectionsCloseButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:last-of-type) .wrapper--navigation--primary__menu__close button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   closeButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && keyCodeTab === e.keyCode && !e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded)) && keyCodeTab === e.keyCode && !e.shiftKey) {
       closeAll();
     }
   });
   restSectionsCloseButtons.forEach(closeButton => {
-    var nextSectionButton = closeButton.closest('.navigation--primary__level1').nextElementSibling.querySelector('button'),
-        toggleNextSection = createSectionToggle(nextSectionButton, closeAll, veil);
+    const nextSectionButton = closeButton.closest('.navigation--primary__level1').nextElementSibling.querySelector('button'),
+          toggleNextSection = createSectionToggle(nextSectionButton, closeAll, veil);
     closeButton.addEventListener('keydown', e => {
       if (keyCodeTab === e.keyCode && !e.shiftKey) {
         e.preventDefault();
@@ -7459,8 +7212,8 @@ function setupTabNext(navigation, closeAll, veil) {
 
 function prepareLowerLevels(navigation) {
   Array.from(navigation.querySelectorAll('.navigation__level2 li')).forEach(navigationItem => {
-    var link = navigationItem.querySelector('a'),
-        textWrapper = document.createElement('span');
+    const link = navigationItem.querySelector('a'),
+          textWrapper = document.createElement('span');
     textWrapper.appendChild(link.firstChild.cloneNode(true));
     link.replaceChild(textWrapper, link.firstChild);
   });
@@ -7474,12 +7227,12 @@ function prepareLowerLevels(navigation) {
 
 function prepareHeaders(navigation) {
   Array.from(navigation.querySelectorAll(".".concat(headerClassName))).forEach(header => {
-    var link = header.querySelector('a'),
-        textWrapper = document.createElement('span');
+    const link = header.querySelector('a'),
+          textWrapper = document.createElement('span');
 
     if (!link) {
-      var currentPageWrapper = document.createElement('span'),
-          linkText = header.firstChild.wholeText.trim() + ' overview';
+      const currentPageWrapper = document.createElement('span'),
+            linkText = header.firstChild.wholeText.trim() + ' overview';
       textWrapper.appendChild(document.createTextNode(linkText));
       currentPageWrapper.appendChild(textWrapper);
       header.replaceChild(currentPageWrapper, header.firstChild);
@@ -7498,20 +7251,20 @@ function prepareHeaders(navigation) {
 
 function addCloseButtons(navigation, closeAll) {
   Array.from(navigation.querySelectorAll('.navigation--primary__menu__content')).forEach(menu => {
-    var header = menu.querySelector(".".concat(headerClassName)),
-        closeButtonWrapper = document.createElement('div'),
-        closeButton = document.createElement('button'),
-        closeButtonDiv = document.createElement('div'),
-        closeButtonText = document.createElement('span'),
-        closeButtonIcon = document.createElement('span'),
-        text = 'Close ' + header.innerText.trim() + ' menu';
+    const header = menu.querySelector(".".concat(headerClassName)),
+          closeButtonWrapper = document.createElement('div'),
+          closeButton = document.createElement('button'),
+          closeButtonDiv = document.createElement('div'),
+          closeButtonText = document.createElement('span'),
+          closeButtonIcon = document.createElement('span'),
+          text = 'Close ' + header.innerText.trim() + ' menu';
     closeButtonText.appendChild(document.createTextNode(text));
     closeButtonText.className = 'navigation--primary__menu__close__text';
-    closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+    closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
     closeButtonIcon.className = 'fas fa-fw fa-times navigation--primary__menu__close__icon';
     closeButtonWrapper.className = 'wrapper--navigation--primary__menu__close';
     closeButton.className = 'navigation--primary__menu__close';
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
     closeButton.appendChild(closeButtonDiv);
     closeButton.setAttribute('type', 'button');
     closeButton.title = text;
@@ -7529,13 +7282,11 @@ function addCloseButtons(navigation, closeAll) {
 
 function launchPrimaryNavigation(navigation) {
   // During testing only: remove 'under construction' indicators globally
-  // navigation.innerHTML = navigation.innerHTML
-  //     .replace(/\(\( /g, '')
-  //     .replace(/ \)\)/g, '');
-  var veil = document.createElement('div'),
-      closeAll = createCloseAll(navigation, veil);
+  navigation.innerHTML = navigation.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
+  const veil = document.createElement('div'),
+        closeAll = createCloseAll(navigation, veil);
   veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   prepareTopLevel(navigation, veil, closeAll);
   prepareLowerLevels(navigation, veil);
@@ -7576,7 +7327,11 @@ function launchPrimaryNavigation(navigation) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../menu/menu-formatters */ "./src/patterns/menu/menu-formatters.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _menu_menu_formatters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menu/menu-formatters */ "./src/patterns/menu/menu-formatters.js");
+
+
 
 
 /**
@@ -7587,8 +7342,8 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 
-var className = 'navigation',
-    classNameSpecific = className + '--secondary';
+const className = 'navigation',
+      classNameSpecific = className + '--secondary';
 /**
  * Transform the Matrix-generated navigation lists into an interactive menu.
  *
@@ -7597,11 +7352,9 @@ var className = 'navigation',
 
 function launchSecondaryNavigation(navigation) {
   // During testing only: remove 'under construction' indicators globally
-  // navigation.innerHTML = navigation.innerHTML
-  //     .replace(/\(\( /g, '')
-  //     .replace(/ \)\)/g, '');
-  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__["prepareNavigation"])(navigation, className);
-  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__["listenForNavigationToggles"])(navigation, className);
+  navigation.innerHTML = navigation.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
+  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_1__["prepareNavigation"])(navigation, className);
+  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_1__["listenForNavigationToggles"])(navigation, className);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -7620,14 +7373,11 @@ function launchSecondaryNavigation(navigation) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _pagination_pagination_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../pagination/pagination.js */ "./src/patterns/pagination/pagination.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes.js */ "./src/aria-attributes.js");
-
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _pagination_pagination_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pagination/pagination.js */ "./src/patterns/pagination/pagination.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes.js */ "./src/aria-attributes.js");
 
 
 
@@ -7642,10 +7392,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var className = 'paginated-list',
-    minimumPage = 1,
-    defaultPage = 8,
-    maximumPage = 12;
+const className = 'paginated-list',
+      minimumPage = 1,
+      defaultPage = 8,
+      maximumPage = 12;
 /**
  * Ensure the page size is within the defined range.
  *
@@ -7679,13 +7429,13 @@ function launchPaginatedList(list) {
      * not a list, remove the classname
      * to avoid conflicting styles then bail
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(list, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(list, className, false);
     return;
   }
 
-  var pageSizeSetting = Number.parseInt(list.dataset.pagesize) ? Number.parseInt(list.dataset.pagesize) : defaultPage,
-      listItems = Array.from(list.children),
-      pageSize = setPageSize(pageSizeSetting);
+  const pageSizeSetting = Number.parseInt(list.dataset.pagesize) ? Number.parseInt(list.dataset.pagesize) : defaultPage,
+        listItems = Array.from(list.children),
+        pageSize = setPageSize(pageSizeSetting);
 
   if (listItems.length <= pageSize) {
     /**
@@ -7693,11 +7443,11 @@ function launchPaginatedList(list) {
      * remove the classname to avoid conflicting
      * styles then bail
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(list, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(list, className, false);
     return;
   }
 
-  var pages = [],
+  const pages = [],
 
   /** ordered lists can be reversed.
    * if the original was reversed,
@@ -7712,13 +7462,13 @@ function launchPaginatedList(list) {
    */
   start = list.tagName === 'OL' && list.hasAttribute('start') ? Number.parseInt(list.hasAttribute('start')) : reversed ? listItems.length : 1;
   list.setAttribute('role', 'presentation');
-  var pageNumber = 0,
+  let pageNumber = 0,
       pageItems = listItems.slice(0, pageSize);
   /* loop through items while we can still make a page */
 
-  var _loop = function _loop() {
-    var page = document.createElement('li'),
-        newList = list.tagName === 'UL' ? document.createElement('ul') : document.createElement('ol');
+  while (pageItems.length > 0) {
+    const page = document.createElement('li'),
+          newList = list.tagName === 'UL' ? document.createElement('ul') : document.createElement('ol');
     /**
      * set start attribute and keep reversed attribute
      * on ordered lists
@@ -7737,24 +7487,20 @@ function launchPaginatedList(list) {
 
     pageItems.forEach(listItem => newList.appendChild(listItem));
     page.appendChild(newList);
-    page.className = _pagination_pagination_js__WEBPACK_IMPORTED_MODULE_2__["pageClassName"];
+    page.className = _pagination_pagination_js__WEBPACK_IMPORTED_MODULE_1__["pageClassName"];
     page.setAttribute('tabindex', -1);
-    page.setAttribute(_aria_attributes_js__WEBPACK_IMPORTED_MODULE_4__["default"].label, "Page ".concat(pageNumber + 1));
+    page.setAttribute(_aria_attributes_js__WEBPACK_IMPORTED_MODULE_3__["default"].label, "Page ".concat(pageNumber + 1));
     pages.push(page);
     /* try to fetch another page */
 
     ++pageNumber;
     pageItems = listItems.slice(pageSize * pageNumber, pageSize * pageNumber + pageSize);
-  };
-
-  while (pageItems.length > 0) {
-    _loop();
   }
   /* add the pages to the original list in bulk */
 
 
   pages.forEach(page => list.appendChild(page));
-  Object(_pagination_pagination_js__WEBPACK_IMPORTED_MODULE_2__["addPagination"])(list, listItems.length);
+  Object(_pagination_pagination_js__WEBPACK_IMPORTED_MODULE_1__["addPagination"])(list, listItems.length);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -7798,19 +7544,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var className = 'pagination',
-    pageClassName = 'page',
-    wrapperClassName = className + '__wrapper',
-    controlsClassName = className + '__controls',
-    controlsElementClassName = controlsClassName + '__element',
-    ellipsisClassName = controlsClassName + '__ellipsis',
-    buttonClassName = controlsClassName + '__button',
-    summaryClassName = className + '__summary',
-    nextPrevRegEx = /pagination__controls__button--(next|prev)/,
-    maximumButtonsToDisplay = 6,
-    oneSecond = 1000,
-    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : oneSecond,
-    minimumPagesRequiringEllipsis = 2;
+const className = 'pagination',
+      pageClassName = 'page',
+      wrapperClassName = className + '__wrapper',
+      controlsClassName = className + '__controls',
+      controlsElementClassName = controlsClassName + '__element',
+      ellipsisClassName = controlsClassName + '__ellipsis',
+      buttonClassName = controlsClassName + '__button',
+      summaryClassName = className + '__summary',
+      nextPrevRegEx = /pagination__controls__button--(next|prev)/,
+      maximumButtonsToDisplay = 6,
+      oneSecond = 1000,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : oneSecond,
+      minimumPagesRequiringEllipsis = 2;
 /**
  * Creates a function for enabling/disabling the next/previous page buttons when
  * there's nothing for them to do.
@@ -7828,7 +7574,7 @@ function createToggleNextPrev(next, prev, pageCount) {
    *
    * @param {number} pageNumber - The current page number.
    */
-  var toggleNextPrev = pageNumber => {
+  const toggleNextPrev = pageNumber => {
     pageCount === pageNumber ? next.setAttribute('disabled', 'true') : next.removeAttribute('disabled');
     1 === pageNumber ? prev.setAttribute('disabled', 'true') : prev.removeAttribute('disabled');
   };
@@ -7848,7 +7594,7 @@ function setProximity(pageCount, controls, pageNumber) {
   if (pageCount > maximumButtonsToDisplay) {
     controls.forEach(function (button) {
       if (!button.className.match(nextPrevRegEx)) {
-        var buttonNumber = Number.parseInt(button.dataset.page);
+        const buttonNumber = Number.parseInt(button.dataset.page);
         button.dataset.proximity = buttonNumber - pageNumber;
       }
     });
@@ -7902,12 +7648,12 @@ function createOpenPage(pages, controls, toggleNextPrev) {
    * @param {boolean} [focus] - Focus the newly-opened page? Defaults to false.
    * @param {boolean} [scrollTo] - Scroll to the top of the newly-opened page? Defaults to false.
    */
-  var openPage = (pageNumber, focus, scrollTo) => {
-    var pagesArray = Array.from(pages.querySelectorAll(".".concat(pageClassName))),
-        controlsArray = Array.from(controls.querySelectorAll('button'));
+  const openPage = (pageNumber, focus, scrollTo) => {
+    const pagesArray = Array.from(pages.querySelectorAll(".".concat(pageClassName))),
+          controlsArray = Array.from(controls.querySelectorAll('button'));
     closeAll(pagesArray, controlsArray);
-    var page = pages.querySelector(".".concat(pageClassName, ":nth-of-type(").concat(pageNumber, ")")),
-        button = controls.querySelector("[data-page=\"".concat(pageNumber, "\"]"));
+    const page = pages.querySelector(".".concat(pageClassName, ":nth-of-type(").concat(pageNumber, ")")),
+          button = controls.querySelector("[data-page=\"".concat(pageNumber, "\"]"));
     setProximity(pagesArray.length, controlsArray, pageNumber);
     toggleNextPrev(pageNumber);
     page.dataset.open = true;
@@ -7932,8 +7678,8 @@ function createNextPrevOpenPage(controls, newPageFn, openPage) {
   /**
    * Returns a function that responds to next/previous button clicks.
    */
-  var nextPrevOpenPage = () => {
-    var currentPage = Number.parseInt(controls.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, "=\"true\"]")).dataset.page);
+  const nextPrevOpenPage = () => {
+    const currentPage = Number.parseInt(controls.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, "=\"true\"]")).dataset.page);
     openPage(newPageFn(currentPage), true, false);
   };
 
@@ -7949,7 +7695,7 @@ function createNextPrevOpenPage(controls, newPageFn, openPage) {
 
 
 function setSummaryText(summary, pageCount, itemCount) {
-  var summaryText = "".concat(pageCount, " pages)");
+  let summaryText = "".concat(pageCount, " pages)");
 
   if (itemCount && Number.parseInt(itemCount)) {
     summaryText = "(".concat(itemCount, " items on ") + summaryText;
@@ -7982,8 +7728,8 @@ function prepareNextPrev(next, prev, controls, pageCount, openPage) {
     text: 'Previous page',
     newPageFn: pageNumber => pageNumber > 1 && pageNumber - 1
   }].forEach(button => {
-    var btn = button.button,
-        btnSpan = document.createElement('span');
+    const btn = button.button,
+          btnSpan = document.createElement('span');
     btn.className = button.class;
     btn.setAttribute('type', 'button');
     btnSpan.appendChild(document.createTextNode(button.text));
@@ -8001,8 +7747,8 @@ function prepareNextPrev(next, prev, controls, pageCount, openPage) {
 
 
 function createPageButton(pageNumber, totalPages) {
-  var button = document.createElement('button'),
-      buttonSpan = document.createElement('span');
+  const button = document.createElement('button'),
+        buttonSpan = document.createElement('span');
   buttonSpan.appendChild(document.createTextNode(pageNumber));
   button.dataset.page = pageNumber;
   button.setAttribute('type', 'button');
@@ -8035,19 +7781,19 @@ function createPageButton(pageNumber, totalPages) {
 
 
 function addPagination(elem, itemCount) {
-  var wrapper = document.createElement('div'),
-      pages = Array.from(elem.querySelectorAll(".".concat(pageClassName))),
-      controls = document.createElement('nav'),
-      next = document.createElement('button'),
-      prev = document.createElement('button'),
-      pageButtons = [],
-      summary = document.createElement('p'),
-      toggleNextPrev = createToggleNextPrev(next, prev, pages.length),
-      openPage = createOpenPage(elem, controls, toggleNextPrev),
-      ellipsisFirst = document.createElement('span'),
-      ellipsisFirstInner = document.createElement('span'),
-      ellipsisLast = document.createElement('span'),
-      ellipsisLastInner = document.createElement('span');
+  const wrapper = document.createElement('div'),
+        pages = Array.from(elem.querySelectorAll(".".concat(pageClassName))),
+        controls = document.createElement('nav'),
+        next = document.createElement('button'),
+        prev = document.createElement('button'),
+        pageButtons = [],
+        summary = document.createElement('p'),
+        toggleNextPrev = createToggleNextPrev(next, prev, pages.length),
+        openPage = createOpenPage(elem, controls, toggleNextPrev),
+        ellipsisFirst = document.createElement('span'),
+        ellipsisFirstInner = document.createElement('span'),
+        ellipsisLast = document.createElement('span'),
+        ellipsisLastInner = document.createElement('span');
 
   if (!pages.length > 1) {
     /**
@@ -8068,8 +7814,8 @@ function addPagination(elem, itemCount) {
   prepareNextPrev(next, prev, controls, pages.length, openPage);
   pageButtons.push(prev);
 
-  var _loop = function _loop(pageNumber) {
-    var pageButton = createPageButton(pageNumber, pages.length);
+  for (let pageNumber = 1; pageNumber <= pages.length; pageNumber++) {
+    const pageButton = createPageButton(pageNumber, pages.length);
     pageButton.addEventListener('click', () => openPage(pageNumber, true, false));
 
     if (pages.length > minimumPagesRequiringEllipsis && pageNumber === pages.length) {
@@ -8081,10 +7827,6 @@ function addPagination(elem, itemCount) {
     if (pages.length > minimumPagesRequiringEllipsis && pageNumber === 1) {
       pageButtons.push(ellipsisFirst);
     }
-  };
-
-  for (var pageNumber = 1; pageNumber <= pages.length; pageNumber++) {
-    _loop(pageNumber);
   }
 
   pageButtons.push(next);
@@ -8136,7 +7878,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-var className = 'show-more';
+const className = 'show-more';
 /**
  * innitial function on page load; it hides text container of 'show-more' DOM element, and calles
  * createShowMoreButton(element) function to create a control button
@@ -8145,7 +7887,7 @@ var className = 'show-more';
  */
 
 function showMore(element) {
-  var showMoreTextElements = document.querySelectorAll('.show-more__text');
+  let showMoreTextElements = document.querySelectorAll('.show-more__text');
   showMoreTextElements.forEach(element => {
     element.setAttribute('data-hidden', 'true');
   });
@@ -8160,27 +7902,25 @@ function showMore(element) {
 
 function handleShowMoreClick(e) {
   e.preventDefault();
-  var parent = e.currentTarget.parentNode.parentNode.parentNode;
-  var showMoreText = parent.querySelector('.show-more__text');
-  var showMoreAnchorLinkText = parent.querySelector('.show-more__link-text');
-  var hiddenElement = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(showMoreText.dataset.hidden);
+  let parent = e.currentTarget.parentNode.parentNode.parentNode;
+  let showMoreText = parent.querySelector('.show-more__text');
+  let showMoreAnchorLinkText = parent.querySelector('.show-more__link-text');
+  let hiddenElement = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(showMoreText.dataset.hidden);
 
   if (hiddenElement) {
     e.currentTarget.setAttribute('data-open', 'true');
     showMoreText.setAttribute('data-hidden', 'false');
     showMoreAnchorLinkText.textContent = 'Show less';
     showMoreText.style.maxHeight = '100%';
-    var headingElement = parent.querySelector('h2');
+    let headingElement = parent.querySelector('h2');
     headingElement.scrollIntoView();
   } else {
     e.currentTarget.setAttribute('data-open', 'false');
     showMoreText.setAttribute('data-hidden', 'true');
     showMoreAnchorLinkText.textContent = 'Show more';
     showMoreText.style.maxHeight = null;
-
-    var _headingElement = parent.querySelector('h2');
-
-    _headingElement.scrollIntoView();
+    let headingElement = parent.querySelector('h2');
+    headingElement.scrollIntoView();
   }
 }
 /**
@@ -8201,31 +7941,31 @@ function handleShowMoreClick(e) {
 
 
 function createShowMoreButton(element) {
-  var showMoreButtonDiv = document.createElement('div');
+  let showMoreButtonDiv = document.createElement('div');
   showMoreButtonDiv.classList.add('show-more__button__container');
-  var showMoreButton = document.createElement('span');
+  let showMoreButton = document.createElement('span');
   showMoreButton.classList.add('show-more__button');
   showMoreButtonDiv.appendChild(showMoreButton);
-  var showMoreAnchor = document.createElement('a');
+  let showMoreAnchor = document.createElement('a');
   showMoreAnchor.setAttribute('href', '');
   showMoreAnchor.addEventListener('click', handleShowMoreClick);
   showMoreButton.appendChild(showMoreAnchor);
   element.appendChild(showMoreButtonDiv);
-  var plusIcon = document.createElement('span');
+  let plusIcon = document.createElement('span');
   plusIcon.classList.add('icon');
   plusIcon.classList.add('fal');
   plusIcon.classList.add('fa-plus-circle');
   plusIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
-  var minusIcon = document.createElement('span');
+  let minusIcon = document.createElement('span');
   minusIcon.classList.add('icon');
   minusIcon.classList.add('fal');
   minusIcon.classList.add('fa-minus-circle');
   minusIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
-  var showMoreText = document.createElement('span');
+  let showMoreText = document.createElement('span');
   showMoreText.classList.add('show-more__link-text');
   showMoreText.appendChild(document.createTextNode('Show more'));
-  var dataTitle = element.getAttribute('data-title');
-  var srTextElement = document.createElement('span');
+  let dataTitle = element.getAttribute('data-title');
+  let srTextElement = document.createElement('span');
   srTextElement.appendChild(document.createTextNode('about ' + dataTitle));
   srTextElement.classList.add('sr-only');
   showMoreAnchor.appendChild(plusIcon);
@@ -8268,8 +8008,8 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 
-var className = 'slider-responsive';
-var sliderChildren, sliderChildrenLength, updatedPosition;
+const className = 'slider-responsive';
+let sliderChildren, sliderChildrenLength, updatedPosition;
 /**
  * The number of items to display on each slide.
  *
@@ -8284,7 +8024,7 @@ function itemsDisplay(sliderIncrement, currentPosition, sliderDirection, slider)
   sliderDirection === 'forward' ? updatedPosition = parseInt(currentPosition + sliderIncrement) : updatedPosition = parseInt(currentPosition - sliderIncrement); // Prevent updated index position dropping below 1
 
   updatedPosition < 1 ? updatedPosition = 1 : null;
-  var items = slider.querySelectorAll('li');
+  let items = slider.querySelectorAll('li');
   /**
    * Loop through all slides, adding data-device attributes to items based on their
    * position within the list. The CSS will target what to show/hide at different breakpoints.
@@ -8295,7 +8035,7 @@ function itemsDisplay(sliderIncrement, currentPosition, sliderDirection, slider)
    * <li data-device="desktop"></li>
    */
 
-  for (var i = 0; i < items.length; i++) {
+  for (let i = 0; i < items.length; i++) {
     // Check item exists before adding data attribute to prevent errors
     items[i].getAttribute('data-device') ? items[i].removeAttribute('data-device') : null;
     items[updatedPosition - 1] ? items[updatedPosition - 1].setAttribute('data-device', 'mobile') : null;
@@ -8322,9 +8062,9 @@ function itemsDisplay(sliderIncrement, currentPosition, sliderDirection, slider)
 
 
 function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slider) {
-  var controlWraps = slider.querySelectorAll('.slider__controls__wrap');
+  let controlWraps = slider.querySelectorAll('.slider__controls__wrap');
 
-  for (var controlWrap of controlWraps) {
+  for (const controlWrap of controlWraps) {
     // Increase/decrease progrees indicator based on button click.
     if (sliderDirection === 'forward') {
       updatedPosition = currentPosition + sliderIncrement;
@@ -8342,19 +8082,19 @@ function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slide
   } // Update properties on all controls, not just the active control
 
 
-  for (var control of controlWraps) {
+  for (const control of controlWraps) {
     control.setAttribute('data-currentposition', updatedPosition);
     sliderIncrement = control.getAttribute('data-increment');
-    var currentGroup = updatedPosition / sliderIncrement;
-    var progressIndicator = control.querySelector('.slide__controls__progress__active');
-    var totalSlides = parseInt(control.getAttribute('data-slides'));
-    var totalSlidesDisplay = control.querySelector('.slide__controls__progress__total');
+    let currentGroup = updatedPosition / sliderIncrement;
+    let progressIndicator = control.querySelector('.slide__controls__progress__active');
+    let totalSlides = parseInt(control.getAttribute('data-slides'));
+    let totalSlidesDisplay = control.querySelector('.slide__controls__progress__total');
     /**
      * Check if there is a remainder when dividing the current listing position by it's controller's
      * increment. If there is, increase progress indicator and total slides by 1.
      */
 
-    var firstInGroup = false;
+    let firstInGroup = false;
 
     if ((updatedPosition - 1) % sliderIncrement === 0) {
       firstInGroup = true;
@@ -8425,15 +8165,15 @@ function launchResponsiveSlider(slider) {
     return;
   }
 
-  for (var sliderChild of sliderChildren.entries()) {
+  for (const sliderChild of sliderChildren.entries()) {
     sliderChild[1].classList.add('slider__slide');
-    var items = slider.querySelectorAll('li');
+    let items = slider.querySelectorAll('li');
     /**
      * Add data attribute to first three listings. This will control what is visible on load,
      * depending on device type.
      **/
 
-    for (var i = 0; i <= 2 || i < sliderChildrenLength; i++) {
+    for (let i = 0; i <= 2 || i < sliderChildrenLength; i++) {
       items[0] ? items[0].setAttribute('data-device', 'mobile') : null;
       items[1] ? items[1].setAttribute('data-device', 'tablet') : null;
       items[2] ? items[2].setAttribute('data-device', 'desktop') : null;
@@ -8448,8 +8188,8 @@ function launchResponsiveSlider(slider) {
 
 
   function buildControls(deviceType, increment, currentPosition) {
-    var slides = Math.ceil(sliderChildrenLength / increment);
-    var sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+    let slides = Math.ceil(sliderChildrenLength / increment);
+    let sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
       label: 'class',
       val: 'slider__controls__wrap'
     }, {
@@ -8468,15 +8208,15 @@ function launchResponsiveSlider(slider) {
       label: 'data-slides',
       val: slides
     }]);
-    var sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+    let sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
       label: 'class',
       val: 'slider__controls'
     }]);
-    var sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+    let sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
       label: 'class',
       val: 'slider__controls__progress'
     }]);
-    var sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+    let sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
       label: 'class',
       val: 'slider__controls__buttons'
     }]); // Slider progress
@@ -8546,14 +8286,14 @@ function launchResponsiveSlider(slider) {
   sliderChildrenLength > 1 ? buildControls('mobile', 1, 1, false) : null;
   sliderChildrenLength >= 2 ? buildControls('tablet', 2, 1, false) : null;
   sliderChildrenLength >= 3 ? buildControls('desktop', 3, 1, false) : null;
-  var controlWraps = slider.querySelectorAll('.slider__controls__wrap');
+  let controlWraps = slider.querySelectorAll('.slider__controls__wrap');
   /**
    * For each instance of the controls, update the current position data attribute when next previous/buttons
    * are selected. This means if the viewport changes, the correct value is passed to each control.
    */
 
-  var _loop = function _loop(controlWrap) {
-    var nextBtn = controlWrap.querySelector('.slider__controls__buttons__next');
+  for (const controlWrap of controlWraps) {
+    let nextBtn = controlWrap.querySelector('.slider__controls__buttons__next');
     /**
      * Slide content display. Isolate event listener to specific controller clicked. This is needed
      * to apply data attributes to the correct listings regardless of which controller is clicked.
@@ -8561,19 +8301,19 @@ function launchResponsiveSlider(slider) {
 
     nextBtn.addEventListener('click', () => {
       //Get data attribute values from specific controller clicked.
-      var parentWrapper = nextBtn.closest('.slider__controls__wrap');
-      var sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
-      var currentPosition = parseInt(parentWrapper.getAttribute('data-currentposition'));
-      var sliderDirection = 'forward';
+      let parentWrapper = nextBtn.closest('.slider__controls__wrap');
+      let sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
+      let currentPosition = parseInt(parentWrapper.getAttribute('data-currentposition'));
+      let sliderDirection = 'forward';
       itemsDisplay(sliderIncrement, currentPosition, sliderDirection, slider);
     }); // Controller display. When user clicks, update each slider's progress indicator.
 
     controlWrap.querySelector('.slider__controls__buttons__next').addEventListener('click', () => {
-      var currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
-      var sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
+      let currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
+      let sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
       progressUpdate(sliderIncrement, currentPosition, 'forward', slider);
     });
-    var prevBtn = controlWrap.querySelector('.slider__controls__buttons__prev');
+    let prevBtn = controlWrap.querySelector('.slider__controls__buttons__prev');
     /**
      * Slide content display. Isolate event listener to specific controller clicked. This is needed
      * to apply data attributes to the correct listings regardless of which controller is clicked.
@@ -8581,22 +8321,18 @@ function launchResponsiveSlider(slider) {
 
     prevBtn.addEventListener('click', () => {
       //Get data attribute values from specific controller clicked.
-      var parentWrapper = prevBtn.closest('.slider__controls__wrap');
-      var sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
-      var currentPosition = parseInt(parentWrapper.getAttribute('data-currentposition'));
-      var sliderDirection = 'back';
+      let parentWrapper = prevBtn.closest('.slider__controls__wrap');
+      let sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
+      let currentPosition = parseInt(parentWrapper.getAttribute('data-currentposition'));
+      let sliderDirection = 'back';
       itemsDisplay(sliderIncrement, currentPosition, sliderDirection, slider);
     }); // Update all controllers' values accordingly
 
     controlWrap.querySelector('.slider__controls__buttons__prev').addEventListener('click', () => {
-      var currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
-      var sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
+      let currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
+      let sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
       progressUpdate(sliderIncrement, currentPosition, 'back', slider);
     });
-  };
-
-  for (var controlWrap of controlWraps) {
-    _loop(controlWrap);
   }
 }
 
@@ -8604,6 +8340,110 @@ function launchResponsiveSlider(slider) {
   launchFn: launchResponsiveSlider,
   launchQuery: ".".concat(className)
 });
+
+/***/ }),
+
+/***/ "./src/patterns/slider/custom_counter/slider_dot_counter.js":
+/*!******************************************************************!*\
+  !*** ./src/patterns/slider/custom_counter/slider_dot_counter.js ***!
+  \******************************************************************/
+/*! exports provided: createSliderDot, dotEvent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createSliderDot", function() { return createSliderDot; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dotEvent", function() { return dotEvent; });
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../aria-attributes */ "./src/aria-attributes.js");
+
+
+
+
+
+
+/**
+ * 'dot' style counter customisation for global slider
+ *
+ * @module patterns/slider/slider/custom_counter
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+/**
+ * Creates HTML elements for the control buttons (called only if type = 'dot')
+ *
+ * @param {HTMLElement} slider - an HTML element with the slider class
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {HTMLElement} wrapper - parent-wrapper HTML of buttons
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ */
+
+function createSliderDot(slider, sliderType, wrapper, sliderObject) {
+  let slidesTotal = sliderObject[sliderType].totalPages;
+  wrapper.classList.add('slider-block__control__buttons--dot');
+
+  for (let i = 0; i < slidesTotal; i++) {
+    let dot = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('button', [{
+      label: 'data-page',
+      val: i
+    }, {
+      label: 'aria-label',
+      val: "Open slide ".concat(i + 1)
+    }, {
+      label: 'type',
+      val: 'button'
+    }]);
+
+    if (i === 0) {
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'slide');
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'true');
+      dot.setAttribute('disabled', 'true');
+    } else {
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
+    }
+
+    dot.addEventListener('click', function () {
+      dotEvent(this, slider, wrapper);
+    });
+    wrapper.appendChild(dot);
+  }
+}
+/**
+ * Event listener added to control buttons (if control type is 'dot')
+ *
+ * @param {HTMLElement} dot - HTML element the event listener is attached to
+ * @param {HTMLElement} slider - an HTML element with the slider class
+ * @param {HTMLElement} parent - parent-wrapper HTML element of buttons (dots)
+ */
+
+function dotEvent(dot, slider, parent) {
+  let dots = parent.querySelectorAll('button'),
+      slides = [...slider.children],
+      active = dot.getAttribute('data-page');
+  dots.forEach(el => {
+    el.removeAttribute('disabled');
+    el.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
+    el.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'slide');
+  });
+  dot.setAttribute('disabled', true);
+  dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'slide');
+  dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'true');
+  slides.forEach(el => {
+    el.setAttribute('data-visible', false);
+
+    if (active === el.getAttribute('data-page')) {
+      el.setAttribute('data-visible', true);
+    }
+  });
+}
 
 /***/ }),
 
@@ -8623,6 +8463,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./custom_counter/slider_dot_counter */ "./src/patterns/slider/custom_counter/slider_dot_counter.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _image_carousel_swipe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../image-carousel/swipe */ "./src/patterns/image-carousel/swipe.js");
 
 
 
@@ -8630,222 +8473,444 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Slider
+ * Global slider
  *
  * @module patterns/slider/slider
- * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
+ * @author Web Development
+ * @copyright City, University of London 2020
  */
 
-var className = 'slider';
+
+
+
+const className = 'slider';
 /**
- * Creates a slider when adding slider class to an ul element. The li elements are the slides.
+ * initial function that creates an object called sliderObject, this object will hold the necessary parameters to create the right
+ * behaviour for each slider customisation types
+ * it also calls 3 further functions: setVisibility() createProgressTracker() createSliderButton()
  *
- * @param {className} slider - class name of Ul element containing li (slides).
+ * @param {HTMLElement} slider - an HTML element with the slider class.
+ *
  */
 
-function initSlider(slider) {
-  // slider items count
-  var sliderChildren = [...slider.children];
-  var sliderChildrenLength = sliderChildren.length;
+function launchSlider(slider) {
+  const sliderChildren = [...slider.children],
+        totalItems = sliderChildren.length,
+        perPageTablet = 2,
+        // if this needs to be customisable in the future then it could come from a data attribute with set default values
+  perPageDesk = 3,
+        maxTablet = Math.ceil(totalItems / perPageTablet),
+        maxDesk = Math.ceil(totalItems / perPageDesk);
+  const sliderObject = {
+    default: {
+      totalPages: totalItems,
+      endPosition: totalItems - 1,
+      maxItem: 1,
+      pageAttr: 'data-page',
+      visAttr: 'data-visible',
+      counterAttr: 'data-currentdefault'
+    },
+    mobile: {
+      totalPages: totalItems,
+      endPosition: totalItems - 1,
+      maxItem: 1,
+      pageAttr: 'data-page',
+      visAttr: 'data-visible',
+      counterAttr: 'data-currentdefault'
+    },
+    tablet: {
+      totalPages: maxTablet,
+      endPosition: maxTablet - 1,
+      maxItem: perPageTablet,
+      pageAttr: 'data-pagetablet',
+      visAttr: 'data-visibletablet',
+      counterAttr: 'data-currenttablet'
+    },
+    desk: {
+      totalPages: maxDesk,
+      endPosition: maxDesk - 1,
+      maxItem: perPageDesk,
+      pageAttr: 'data-pagedesk',
+      visAttr: 'data-visibledesk',
+      counterAttr: 'data-currentdesk'
+    }
+  };
 
-  if (sliderChildrenLength < 2) {
+  if (totalItems < 2) {
     Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(slider, className, false);
-    return;
+    return true;
   }
 
-  for (var sliderChild of sliderChildren.entries()) {
-    if (sliderChild[0] < 1) {
-      sliderChild[1].classList.add('slider__active-slide');
-    } else {
-      // only displays first slide and hides rest
-      sliderChild[1].classList.add('slider__slide');
-    }
+  let sliderType = slider.getAttribute('data-type'),
+      sliderControl = slider.getAttribute('data-control'),
+      sliderProgress = slider.getAttribute('data-progress');
+
+  if (!sliderType) {
+    sliderType = 'default';
   }
-  /* generates controls */
 
+  if (!sliderControl) {
+    sliderControl = 'default';
+  }
 
-  var sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
+  if (!sliderProgress) {
+    sliderProgress = 'default';
+  }
+
+  let wrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
     label: 'class',
-    val: 'slider__controls__wrap'
+    val: "slider-block slider-block--".concat(sliderType)
   }]);
-  var sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
-    label: 'class',
-    val: 'slider__controls'
-  }]);
-  var sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
-    label: 'class',
-    val: 'slider__controls__progress'
-  }]);
-  var sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
-    label: 'class',
-    val: 'slider__controls__buttons'
-  }]); // generates progress
+  slider.parentNode.insertBefore(wrapper, slider);
+  wrapper.appendChild(slider);
 
-  sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
-    label: 'content',
-    val: '1'
-  }, {
-    label: 'class',
-    val: 'slide__controls__progress__active'
-  }]));
-  sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
-    label: 'content',
-    val: ' /'
-  }, {
-    label: 'class',
-    val: 'slide__controls__progress__separator'
-  }]));
-  sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
-    label: 'content',
-    val: sliderChildrenLength
-  }, {
-    label: 'class',
-    val: 'slide__controls__progress__total'
-  }]));
-  sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
-  slider.appendChild(sliderControlsWrap); // generates buttons
+  if (sliderProgress !== 'off' || sliderControl !== 'off') {
+    let controlWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
+      label: 'class',
+      val: 'slider-block__control'
+    }]);
+    wrapper.appendChild(controlWrapper);
+  }
 
-  sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('button', [{
-    label: 'aria-label',
-    val: 'Previous item'
-  }, {
-    label: 'disabled',
-    val: 'true'
-  }, {
-    label: 'class',
-    val: 'fas fa-arrow-left slider__controls__buttons__prev swiper-slider-arrow arrow-left--btn-prev'
-  }]));
-  sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('button', [{
-    label: 'aria-label',
-    val: 'Next item'
-  }, {
-    label: 'class',
-    val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-right--btn-next'
-  }]));
-  sliderControls.appendChild(sliderButtons);
-  slider.querySelector('.slider__controls__buttons__prev').classList.add('slider__controls__buttons__disabled'); // Adds event listener to buttons
+  setVisibility(slider, sliderType, sliderObject);
 
-  slider.querySelector('.slider__controls__buttons__prev').addEventListener('click', function () {
-    handleSlideChange(-1, slider, sliderChildrenLength, sliderChildren);
-  });
-  slider.querySelector('.slider__controls__buttons__next').addEventListener('click', function () {
-    handleSlideChange(1, slider, sliderChildrenLength, sliderChildren);
-  });
+  if (sliderProgress !== 'off') {
+    createProgressTracker(slider, sliderType, sliderObject);
+  }
+
+  if (sliderControl !== 'off') {
+    createSliderButton(slider, sliderControl, sliderType, sliderObject);
+  }
+
+  setSwipe(slider, sliderType, sliderObject, sliderControl);
 }
 /**
- * Handles direction of slide when sliding left or right
+ * setup swipe listeners
+ * this function add events listener to calculate touch direction
  *
- * @param {number} direction - either 1 (next) or -1 (prev)
- * @param {className} slider - class name of Ul element containing li (slides).
- * * @param {number} sliderChildrenLength - number of element children of class name above.
- * * @param {Element} sliderChildren - the slides / li  elements.
+ * @param {HTMLElement} slider - an HTML element with the slider class.
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ * @param {string} sliderControl - type of control- determines is the control is dot
  */
 
 
-function handleSlideChange(direction, slider, sliderChildrenLength, sliderChildren) {
-  // gets position of active slide
-  var activeSlide = parseInt(slider.querySelector('.slide__controls__progress__active').innerText);
-  var newSlide = activeSlide + direction; // ensures you don't slide past first and last slide
+function setSwipe(slider, sliderType, sliderObject, sliderControl) {
+  let t = null;
+  slider.addEventListener('mousedown', swipeDown, false);
+  slider.addEventListener('touchstart', swipeDown, false);
+  slider.addEventListener('mouseup', swipeUp, false);
+  slider.addEventListener('touchend', swipeUp, false);
 
-  if (newSlide !== 0 && !(newSlide > sliderChildrenLength)) {
-    // udpates progress
-    slider.querySelector('.slide__controls__progress__active').innerHTML = newSlide;
-    sliderChildren.forEach(function (item, i) {
-      //displays new slide
-      if (i === newSlide - 1) {
-        item.classList.remove('slider__slide');
-        item.classList.add('slider__active-slide');
+  function swipeDown(e) {
+    e.preventDefault();
+    t = Object(_image_carousel_swipe__WEBPACK_IMPORTED_MODULE_6__["swipeCal"])(e);
+  }
+
+  function swipeUp(e) {
+    e.preventDefault();
+    let swipe = Math.sign(t(e));
+
+    if (sliderControl === 'dot') {
+      let btnWrap = slider.nextSibling,
+          curBtn = btnWrap.querySelector('[aria-expanded="true"]'),
+          actionBtn = null;
+
+      if (curBtn.nextSibling && curBtn.previousSibling) {
+        actionBtn = swipe === -1 ? curBtn.previousSibling : swipe === 1 ? curBtn.nextSibling : null;
+        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
+      } else if (!curBtn.nextSibling) {
+        actionBtn = swipe === -1 ? curBtn.previousSibling : swipe === 1 ? curBtn.parentElement.childNodes[0] : null;
+        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
       } else {
-        item.classList.remove('slider__active-slide');
-        item.classList.add('slider__slide');
+        let btnLength = btnWrap.firstChild.childNodes.length;
+        actionBtn = swipe === -1 ? curBtn.parentElement.childNodes[btnLength - 1] : swipe === 1 ? curBtn.nextSibling : null;
+        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
       }
-    }); // disables next & prev buttons when reaching beginning or end of slides
-
-    if (newSlide === 1) {
-      slider.querySelector('.slider__controls__buttons__prev').classList.add('slider__controls__buttons__disabled');
-      slider.querySelector('.slider__controls__buttons__prev').setAttribute('disabled', true);
     } else {
-      slider.querySelector('.slider__controls__buttons__prev').classList.remove('slider__controls__buttons__disabled');
-      slider.querySelector('.slider__controls__buttons__prev').removeAttribute('disabled');
+      let btn = swipe === -1 ? slider.nextSibling.lastChild.firstChild : swipe === 1 ? slider.nextSibling.lastChild.lastChild : null;
+
+      if (btn && !btn.disabled) {
+        defaultEvent(btn, slider, sliderType, sliderObject);
+      }
+    }
+  }
+}
+/**
+ * setting visibility
+ * this function sets adds data attributes to <li> elements within slider, this attribute will be used by CSS to determine
+ * if slides are visible or not on page load. This data attribute will be used to turn visibility on/off with the slider buttons'
+ * event listener
+ *
+ * @param {HTMLElement} slider - an HTML element with the slider class.
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ *
+ */
+
+
+function setVisibility(slider, sliderType, sliderObject) {
+  Array.from(slider.getElementsByTagName('li')).forEach((el, i) => {
+    el.setAttribute(sliderObject.default.pageAttr, "".concat(i));
+
+    if (i === 0) {
+      el.setAttribute(sliderObject.default.visAttr, true);
+    } else {
+      el.setAttribute(sliderObject.default.visAttr, false);
+    }
+  });
+
+  if (sliderType === 'responsive') {
+    const el = [...slider.children];
+    let tabletSlides = Object(_util__WEBPACK_IMPORTED_MODULE_3__["arraySlicer"])(el, sliderObject.tablet.maxItem);
+    let deskSlides = Object(_util__WEBPACK_IMPORTED_MODULE_3__["arraySlicer"])(el, sliderObject.desk.maxItem);
+    slicedArrayIterator(tabletSlides, sliderObject.tablet.pageAttr, sliderObject.tablet.visAttr);
+    slicedArrayIterator(deskSlides, sliderObject.desk.pageAttr, sliderObject.desk.visAttr);
+  }
+}
+/**
+ * array iterator to set the same visibility attribute for groups of slides
+ * this is necessary when you want to have different number of slides visible on different screen sizes
+ *
+ * @param {array} arr - array that will be iterated
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ */
+
+
+function slicedArrayIterator(arr, pageAttr, visibilityAttr) {
+  for (let i = 0; i < arr.length; i++) {
+    let subArray = arr[i];
+
+    for (let j = 0; j < subArray.length; j++) {
+      subArray[j].setAttribute(pageAttr, "".concat(i));
+
+      if (i === 0) {
+        subArray[j].setAttribute(visibilityAttr, 'true');
+      } else {
+        subArray[j].setAttribute(visibilityAttr, 'false');
+      }
+    }
+  }
+}
+/**
+ * Called by the innitial launch function. It adds a progress bar/ page counter to the slider
+ *
+ * @param {HTMLElement} slider - an HTML element with the slider class.
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ */
+
+
+function createProgressTracker(slider, sliderType, sliderObject) {
+  const wrapper = slider.parentNode.querySelector('.slider-block__control');
+  createProgressElements(wrapper, 'default', sliderObject);
+
+  if (sliderType === 'responsive') {
+    if (sliderObject.default.totalPages > "".concat(sliderObject.tablet.maxItem)) {
+      createProgressElements(wrapper, 'tablet', sliderObject);
     }
 
-    if (newSlide === sliderChildrenLength) {
-      slider.querySelector('.slider__controls__buttons__next').classList.add('slider__controls__buttons__disabled');
-      slider.querySelector('.slider__controls__buttons__next').setAttribute('disabled', true);
-    } else {
-      slider.querySelector('.slider__controls__buttons__next').classList.remove('slider__controls__buttons__disabled');
-      slider.querySelector('.slider__controls__buttons__next').removeAttribute('disabled');
+    if (sliderObject.default.totalPages > "".concat(sliderObject.tablet.maxItem)) {
+      createProgressElements(wrapper, 'desk', sliderObject);
     }
+  }
+}
+/**
+ * Called by the createProgressTracker() function. It generates the HTML elements for the progress bar
+ *
+ * @param {HTMLElement} wrapper - an HTML element with the slider-block__control class.
+ * @param {string} type - it tells you which key to use from the sliderObject
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ */
+
+
+function createProgressElements(wrapper, type, sliderObject) {
+  let progress = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: "slider-block__control__progress slider-block__control__progress--".concat(type)
+  }]);
+  wrapper.appendChild(progress);
+  let firstPage = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
+    label: "".concat(sliderObject[type].counterAttr),
+    val: true
+  }]);
+  firstPage.innerText = '1';
+  let separator = document.createElement('span');
+  separator.innerText = '/';
+  let lastPage = document.createElement('span');
+  lastPage.innerText = "".concat(sliderObject[type].totalPages);
+  progress.appendChild(firstPage);
+  progress.appendChild(separator);
+  progress.appendChild(lastPage);
+}
+/**
+ * Called by the innitial launch function. It adds control buttons to the slider
+ *
+ * @param {HTMLElement} slider - an HTML element with the slider class.
+ * @param {string} sliderControl - determines what type of buttons to add to the slider
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ */
+
+
+function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
+  const buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'slider-block__control__buttons'
+  }]);
+  const controlWrapper = slider.parentNode.querySelector('.slider-block__control');
+  controlWrapper.appendChild(buttonWrapper);
+
+  if (sliderControl === 'default') {
+    let buttonPrev = createButtonElement('fas fa-arrow-left prev--default', 'default', sliderObject);
+    let buttonNext = createButtonElement('fas fa-arrow-right next--default', 'default', sliderObject);
+    buttonNext.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
+    buttonNext.addEventListener('click', function () {
+      defaultEvent(this, slider, 'default', sliderObject);
+    });
+    buttonPrev.addEventListener('click', function () {
+      defaultEvent(this, slider, 'default', sliderObject);
+    });
+    buttonWrapper.appendChild(buttonPrev);
+    buttonWrapper.appendChild(buttonNext);
+    buttonWrapper.classList.add('slider-block__control__buttons--default');
+
+    if (sliderType === 'responsive') {
+      if (sliderObject.default.totalPages > "".concat(sliderObject.tablet.maxItem)) {
+        let buttonPrevTablet = createButtonElement('fas fa-arrow-left prev--tablet', 'tablet', sliderObject),
+            buttonNextTablet = createButtonElement('fas fa-arrow-right next--tablet', 'tablet', sliderObject);
+        buttonPrevTablet.addEventListener('click', function () {
+          defaultEvent(this, slider, 'tablet', sliderObject);
+        });
+        buttonNextTablet.addEventListener('click', function () {
+          defaultEvent(this, slider, 'tablet', sliderObject);
+        });
+        buttonWrapper.appendChild(buttonPrevTablet);
+        buttonWrapper.appendChild(buttonNextTablet);
+      }
+
+      if (sliderObject.default.totalPages > "".concat(sliderObject.desk.maxItem)) {
+        let buttonPrevDesk = createButtonElement('fas fa-arrow-left prev--desk', 'desk', sliderObject),
+            buttonNextDesk = createButtonElement('fas fa-arrow-right next--desk', 'desk', sliderObject);
+        buttonPrevDesk.addEventListener('click', function () {
+          defaultEvent(this, slider, 'desk', sliderObject);
+        });
+        buttonNextDesk.addEventListener('click', function () {
+          defaultEvent(this, slider, 'desk', sliderObject);
+        });
+        buttonWrapper.appendChild(buttonPrevDesk);
+        buttonWrapper.appendChild(buttonNextDesk);
+      }
+    }
+  }
+
+  if (sliderControl === 'dot') {
+    Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["createSliderDot"])(slider, sliderType, buttonWrapper, sliderObject);
+  }
+}
+/**
+ * Creates HTML elements for the control buttons
+ *
+ * @param {string} classname - classname to be added to the button being generated
+ * @param {string} type - it tells you which key to use from the sliderObject
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ */
+
+
+function createButtonElement(classname, type, sliderObject) {
+  let value;
+
+  if (classname.indexOf('prev') !== -1) {
+    value = -1;
+  } else {
+    value = 1;
+  }
+
+  let button = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('button', [{
+    label: 'class',
+    val: classname
+  }, {
+    label: 'type',
+    val: 'button'
+  }, {
+    label: 'data-next',
+    val: value
+  }, {
+    label: "".concat(sliderObject[type].visAttr),
+    val: true
+  }]);
+
+  if (classname.indexOf('prev') !== -1) {
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'previous item');
+    button.setAttribute('disabled', true);
+  } else {
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
+  }
+
+  return button;
+}
+/**
+ * Event listener attached to default buttons
+ *
+ * @param {HTMLElement} slider - an HTML element with the slider class
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {HTMLElement} wrapper - parent-wrapper HTML of buttons
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ *
+ */
+
+
+function defaultEvent(button, slider, type, sliderObject) {
+  const currentSlide = Array.from(slider.querySelectorAll("[".concat(sliderObject[type].visAttr, " = 'true']"))),
+        nextPage = button.getAttribute('data-next'),
+        nextSlide = Array.from(slider.querySelectorAll('[' + sliderObject[type].pageAttr + '= "' + nextPage + '"]')),
+        prevButton = button.parentNode.querySelector(".prev--".concat(type)),
+        nextButton = button.parentNode.querySelector(".next--".concat(type)),
+        counterEl = slider.parentNode.querySelector("span[".concat(sliderObject[type].counterAttr, "]"));
+  let counterValue = parseInt(counterEl.innerText);
+  currentSlide.forEach(el => {
+    el.setAttribute("".concat(sliderObject[type].visAttr), false);
+  });
+  nextSlide.forEach(el => {
+    el.setAttribute("".concat(sliderObject[type].visAttr), true);
+  });
+
+  if (button.classList.contains("next--".concat(type))) {
+    let nextAttr = parseInt(button.getAttribute('data-next'));
+
+    if (nextAttr === sliderObject[type].endPosition) {
+      button.setAttribute('disabled', true);
+    }
+
+    nextAttr++;
+    button.setAttribute('data-next', nextAttr);
+    let prevAttr = parseInt(prevButton.getAttribute('data-next'));
+    prevAttr++;
+    prevButton.setAttribute('data-next', prevAttr);
+    prevButton.removeAttribute('disabled');
+    counterValue++;
+    counterEl.innerText = counterValue;
+  } else {
+    let prevAttr = parseInt(button.getAttribute('data-next'));
+
+    if (prevAttr === 0) {
+      button.setAttribute('disabled', true);
+    }
+
+    prevAttr--;
+    button.setAttribute('data-next', prevAttr);
+    let nextAttr = parseInt(nextButton.getAttribute('data-next'));
+    nextAttr--;
+    nextButton.setAttribute('data-next', nextAttr);
+    nextButton.removeAttribute('disabled');
+    counterValue--;
+    counterEl.innerText = counterValue;
   }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: initSlider,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
-/***/ "./src/patterns/social-icon/social-icon.js":
-/*!*************************************************!*\
-  !*** ./src/patterns/social-icon/social-icon.js ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-
-var className = 'fa-link';
-
-function copyIconToClipboard(elem) {
-  var copy = elem;
-  copy.parentNode.parentNode.style.position = 'relative';
-  copy.addEventListener('mouseover', e => {
-    var t = document.createElement('div');
-    var link = document.createElement('span');
-    var url = window.location.href;
-    t.className = 'tooltip';
-    link.className = 'link-copy';
-    var textlink = document.createTextNode(url);
-    var textnode = document.createTextNode('Copy link');
-    t.appendChild(textnode);
-    link.appendChild(textlink);
-    t.appendChild(link);
-    e.target.parentElement.parentElement.appendChild(t);
-    e.target.parentElement.parentElement.classList.add('copyLink');
-  });
-  copy.addEventListener('click', e => {
-    e.preventDefault();
-    var text = e.target.parentElement.parentElement.querySelector('.link-copy');
-    var range = document.createRange();
-    range.selectNode(text);
-    window.getSelection().addRange(range);
-
-    try {
-      // Now that we've selected the anchor text, execute the copy command
-      var successful = document.execCommand('copy');
-      var msg = successful ? 'successful' : 'unsuccessful';
-      e.target.parentElement.parentElement.querySelector('.tooltip').textContent = 'Link Copied';
-      e.target.parentElement.parentElement.querySelector('.tooltip').classList.add(msg);
-    } catch (err) {
-      throw new Error(e);
-    } // Remove the selections - NOTE: Should use
-    // removeRange(range) when it is supported
-
-
-    window.getSelection().removeAllRanges();
-  });
-  copy.addEventListener('mouseout', e => {
-    //remove element from mouseover
-    e.target.parentElement.parentElement.querySelector('.tooltip').remove();
-  });
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: copyIconToClipboard,
+  launchFn: launchSlider,
   launchQuery: ".".concat(className)
 });
 
@@ -8880,9 +8945,9 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-var className = 'tabs',
-    panelClassName = className + '__panel',
-    linksClassName = className + '__links';
+const className = 'tabs',
+      panelClassName = className + '__panel',
+      linksClassName = className + '__links';
 /**
  * Add accordion functionality for mobile.
  *
@@ -8890,8 +8955,8 @@ var className = 'tabs',
  */
 
 function accordionize(tabs) {
-  var wrapper = document.createElement('div'),
-      accordion = document.createElement('div');
+  const wrapper = document.createElement('div'),
+        accordion = document.createElement('div');
   wrapper.className = 'tabs--accordion';
   accordion.className = 'accordion';
   accordion.id = "accordion".concat(tabs.dataset.assetid);
@@ -8901,11 +8966,11 @@ function accordionize(tabs) {
   accordion.dataset.tabs = tabs.dataset.tabs;
   accordion.dataset.toggleopen = 'true';
   Array.from(tabs.parentNode.querySelectorAll("#".concat(tabs.id, " > .").concat(panelClassName))).forEach(panel => {
-    var heading = panel.querySelector(".".concat(panelClassName, "__heading")),
-        body = panel.querySelector(".".concat(panelClassName, "__body")),
-        accordionHeading = document.createElement("h".concat(accordion.dataset.level)),
-        accordionSection = document.createElement('div'),
-        accordionWrapper = document.createElement('div');
+    const heading = panel.querySelector(".".concat(panelClassName, "__heading")),
+          body = panel.querySelector(".".concat(panelClassName, "__body")),
+          accordionHeading = document.createElement("h".concat(accordion.dataset.level)),
+          accordionSection = document.createElement('div'),
+          accordionWrapper = document.createElement('div');
     accordionHeading.className = 'accordion__heading';
     accordionHeading.id = "accordion".concat(tabs.dataset.assetid, "-header").concat(panel.dataset.assetid);
     accordionHeading.dataset.tabid = panel.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].labelledBy);
@@ -8924,9 +8989,9 @@ function accordionize(tabs) {
 }
 
 function prepareAccordionTabs(tabs) {
-  var controls = tabs.querySelector(".".concat(linksClassName)),
-      linkItems = Array.from(controls.querySelectorAll('li')),
-      numberOfTabs = Number.parseInt(tabs.dataset.mobiletabs);
+  const controls = tabs.querySelector(".".concat(linksClassName)),
+        linkItems = Array.from(controls.querySelectorAll('li')),
+        numberOfTabs = Number.parseInt(tabs.dataset.mobiletabs);
 
   if (linkItems.length > numberOfTabs && (!tabs.dataset.neveraccordion || !tabs.dataset.neveraccordion === 'true')) {
     return accordionize(tabs);
@@ -8968,19 +9033,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var className = 'tabs',
-    panelClassName = className + '__panel',
-    contentClassName = panelClassName + '__content',
-    linksClassName = className + '__links',
-    endKey = 35,
-    homeKey = 36,
-    arrowLeft = 37,
-    arrowUp = 38,
-    arrowRight = 39,
-    arrowDown = 40,
-    oneSecond = 1000,
-    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
-    scrollTo = false;
+const className = 'tabs',
+      panelClassName = className + '__panel',
+      contentClassName = panelClassName + '__content',
+      linksClassName = className + '__links',
+      endKey = 35,
+      homeKey = 36,
+      arrowLeft = 37,
+      arrowUp = 38,
+      arrowRight = 39,
+      arrowDown = 40,
+      oneSecond = 1000,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
+      scrollTo = false;
 /**
  * Set the attributes of a tab to be selected or not selected.
  *
@@ -9007,10 +9072,10 @@ function toggleButton(button, selected) {
 
 
 function selectTab(newTab) {
-  var tabs = newTab.closest(".".concat(className)),
-      controls = tabs.querySelector(".".concat(linksClassName)),
-      linkItems = Array.from(controls.querySelectorAll('li')),
-      panels = Array.from(tabs.childNodes).filter(node => node.className && node.className === panelClassName);
+  const tabs = newTab.closest(".".concat(className)),
+        controls = tabs.querySelector(".".concat(linksClassName)),
+        linkItems = Array.from(controls.querySelectorAll('li')),
+        panels = Array.from(tabs.childNodes).filter(node => node.className && node.className === panelClassName);
   /**
    * Unselect every tab and related panel.
    */
@@ -9053,9 +9118,9 @@ function selectTabEvent(e, newTab) {
 
 
 function keyEvents(e, tabs) {
-  var currentTab = tabs.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].selected, "=\"true\"]")),
-      currentTabLI = currentTab.parentNode;
-  var newTab = null;
+  const currentTab = tabs.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].selected, "=\"true\"]")),
+        currentTabLI = currentTab.parentNode;
+  let newTab = null;
 
   if (arrowLeft === e.which) {
     /**
@@ -9102,8 +9167,8 @@ function keyEvents(e, tabs) {
 
 function prepareLinks(linkItems) {
   linkItems.forEach(linkItem => {
-    var link = linkItem.firstElementChild,
-        button = document.createElement('button');
+    const link = linkItem.firstElementChild,
+          button = document.createElement('button');
     linkItem.setAttribute('role', 'presentation');
     button.setAttribute('role', 'tab');
     button.appendChild(link.firstElementChild);
@@ -9123,8 +9188,8 @@ function prepareLinks(linkItems) {
 
 function preparePanels(panels) {
   panels.forEach(panel => {
-    var wrapper = document.createElement('div'),
-        panelElements = Array.from(panel.children);
+    const wrapper = document.createElement('div'),
+          panelElements = Array.from(panel.children);
     wrapper.className = contentClassName;
     panelElements.forEach(element => wrapper.appendChild(element));
     panel.appendChild(wrapper);
@@ -9155,9 +9220,9 @@ function preparePanels(panels) {
 
 
 function launchTabs(tabs) {
-  var controls = tabs.querySelector(".".concat(linksClassName)),
-      linkItems = Array.from(controls.querySelectorAll('li')),
-      panels = Array.from(tabs.childNodes).filter(node => node.className && node.className === panelClassName);
+  const controls = tabs.querySelector(".".concat(linksClassName)),
+        linkItems = Array.from(controls.querySelectorAll('li')),
+        panels = Array.from(tabs.childNodes).filter(node => node.className && node.className === panelClassName);
 
   if (linkItems.length === 1) {
     /**
@@ -9186,11 +9251,205 @@ function launchTabs(tabs) {
 
 /***/ }),
 
+/***/ "./src/patterns/tooltip/image-credit/image-credit.js":
+/*!***********************************************************!*\
+  !*** ./src/patterns/tooltip/image-credit/image-credit.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+
+
+/**
+ * Image accreditation tooltip
+ *
+ * @module patterns/tooltip/image-credit
+ * @author Web Development
+ * @copyright City, University of London
+ */
+
+const className = 'hero-image';
+let authorElement, sourceElement;
+/**
+ * Respond to button clicks - open if closed, close if opened.
+ *
+ * @param {event} e - The information icon click event.
+ */
+
+function showCredit(e) {
+  let tooltipWrapper = e.target.closest('.wrapper--tooltip__label');
+  tooltipWrapper.getAttribute('data-selected') === 'false' ? tooltipWrapper.setAttribute('data-selected', 'true') : tooltipWrapper.setAttribute('data-selected', 'false');
+}
+/**
+ * Create label(s) to go alongside the information icon.
+ *
+ * @param {string} el - Blank variable that is returned as an HTML element after function is complete.
+ * @param {string} elText - Label's link or link text value.
+ * @param {url} elUrl - Label's link value.
+ */
+
+
+function createLabel(el, elText, elUrl) {
+  if (elText) {
+    const elTextNode = document.createTextNode(elText);
+
+    if (elUrl) {
+      el = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
+      el.href = elUrl;
+      el.appendChild(elTextNode);
+    } else {
+      el = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', []);
+      el.appendChild(elTextNode);
+    }
+
+    return el;
+  }
+}
+/**
+ * Create an accreditation tooltip from the data attributes of a banner image.
+ *
+ * @param {HTMLElement} banner - A banner image.
+ */
+
+
+function launchBannerTooltip(banner) {
+  const tooltipDisplay = banner.getAttribute('data-tooltip-display'),
+        authorText = banner.getAttribute('data-author-name'),
+        authorUrl = banner.getAttribute('data-author-url'),
+        sourceText = banner.getAttribute('data-source-name'),
+        sourceUrl = banner.getAttribute('data-source-url');
+
+  if (tooltipDisplay === 'true') {
+    const tooltipWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
+      label: 'class',
+      val: 'wrapper--tooltip__label'
+    }, {
+      label: 'data-selected',
+      val: false
+    }]);
+    const iconBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
+      label: 'class',
+      val: 'tooltip tooltip--image-credit'
+    }, {
+      label: 'aria-label',
+      val: 'Show image credit'
+    }]);
+    const iconSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
+      label: 'class',
+      val: 'tooltip__icon icon fas fa-info-circle'
+    }, {
+      label: 'aria-label',
+      val: 'Information icon'
+    }]);
+    const labelSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
+      label: 'class',
+      val: 'tooltip__label'
+    }]); // Build labels
+
+    let author = createLabel(authorElement, authorText, authorUrl);
+    let source = createLabel(sourceElement, sourceText, sourceUrl); // Append tooltip elements to banner
+
+    iconBtn.appendChild(iconSpan);
+    authorText && !sourceText ? labelSpan.appendChild(author) : null;
+    sourceText && !authorText ? labelSpan.appendChild(source) : null; // Add divider if author and source text values exist
+
+    if (authorText && sourceText) {
+      labelSpan.appendChild(author);
+      const dividerText = document.createTextNode(' / ');
+      labelSpan.appendChild(dividerText);
+      labelSpan.appendChild(source);
+    }
+
+    tooltipWrapper.appendChild(labelSpan);
+    tooltipWrapper.appendChild(iconBtn); // Only append tooltip if at least one name is supplied (author or source)
+
+    authorText || sourceText ? banner.appendChild(tooltipWrapper) : null; // Show/hide icon label(s) on click
+
+    iconBtn.addEventListener('click', e => {
+      showCredit(e);
+    });
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchBannerTooltip,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/tooltip/social-share/social-share.js":
+/*!***********************************************************!*\
+  !*** ./src/patterns/tooltip/social-share/social-share.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+const className = 'fa-link';
+
+function copyIconToClipboard(elem) {
+  const copy = elem;
+  copy.parentNode.parentNode.style.position = 'relative';
+  copy.addEventListener('mouseover', e => {
+    let t = document.createElement('div');
+    let link = document.createElement('span');
+    let url = window.location.href;
+    t.className = 'tooltip';
+    link.className = 'link-copy';
+    let textlink = document.createTextNode(url);
+    let textnode = document.createTextNode('Copy link');
+    t.appendChild(textnode);
+    link.appendChild(textlink);
+    t.appendChild(link);
+    e.target.parentElement.parentElement.appendChild(t);
+    e.target.parentElement.parentElement.classList.add('copyLink');
+  });
+  copy.addEventListener('click', e => {
+    e.preventDefault();
+    let text = e.target.parentElement.parentElement.querySelector('.link-copy');
+    let range = document.createRange();
+    range.selectNode(text);
+    window.getSelection().addRange(range);
+
+    try {
+      // Now that we've selected the anchor text, execute the copy command
+      let successful = document.execCommand('copy');
+      let msg = successful ? 'successful' : 'unsuccessful';
+      e.target.parentElement.parentElement.querySelector('.tooltip').textContent = 'Link Copied';
+      e.target.parentElement.parentElement.querySelector('.tooltip').classList.add(msg);
+    } catch (err) {
+      throw new Error(e);
+    } // Remove the selections - NOTE: Should use
+    // removeRange(range) when it is supported
+
+
+    window.getSelection().removeAllRanges();
+  });
+  copy.addEventListener('mouseout', e => {
+    //remove element from mouseover
+    e.target.parentElement.parentElement.querySelector('.tooltip').remove();
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: copyIconToClipboard,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
 /***/ "./src/util.js":
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatReactDate */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatReactDate, arraySlicer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9213,28 +9472,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uppercaseFirstLetterLowercaseRest", function() { return uppercaseFirstLetterLowercaseRest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "axiosRequest", function() { return axiosRequest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatReactDate", function() { return formatReactDate; });
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.index-of */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.slice */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "arraySlicer", function() { return arraySlicer; });
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -9264,8 +9518,8 @@ function toBool(s) {
   return s === 'true' ? true : false;
 }
 
-var partialMatchFn = m => s => s.indexOf(m) < 0,
-    fullMatchFn = m => s => s !== m;
+const partialMatchFn = m => s => s.indexOf(m) < 0,
+      fullMatchFn = m => s => s !== m;
 /**
  * Remove a class name from an HTML element.
  *
@@ -9276,7 +9530,7 @@ var partialMatchFn = m => s => s.indexOf(m) < 0,
 
 
 function removeClass(elem, className, removePartials) {
-  var matchFn = removePartials ? partialMatchFn(className) : fullMatchFn(className);
+  const matchFn = removePartials ? partialMatchFn(className) : fullMatchFn(className);
   elem.className = elem.className.split(/\s+/).filter(s => matchFn(s)).join(' ');
 }
 /**
@@ -9291,7 +9545,7 @@ function removeClass(elem, className, removePartials) {
  */
 
 function reduceMotion() {
-  var reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   return reducedMotionQuery.matches ? true : false;
 }
 /**
@@ -9325,9 +9579,9 @@ function verticallyInWindow(elem) {
  */
 
 function parametersToObject(parameterString) {
-  var parameters = {};
+  const parameters = {};
   parameterString.substr(1).split('&').forEach(parameter => {
-    var [k, v] = parameter.split('=');
+    const [k, v] = parameter.split('=');
     parameters[k] = v;
   });
   return parameters;
@@ -9341,9 +9595,9 @@ function parametersToObject(parameterString) {
 
 function objectToParameters(parameterObj) {
   if (Object.keys(parameterObj).length > 0) {
-    var parameters = '?';
+    let parameters = '?';
 
-    for (var key in parameterObj) {
+    for (const key in parameterObj) {
       parameters.length !== 1 && (parameters += '&');
       parameters += key + '=' + parameterObj[key];
     }
@@ -9392,7 +9646,7 @@ function appendAll(elem, children) {
  */
 
 function numberFromString(string) {
-  var number = string.replace(/\D/g, '');
+  let number = string.replace(/\D/g, '');
   return number;
 }
 /**
@@ -9402,9 +9656,9 @@ function numberFromString(string) {
  */
 
 function isMobile() {
-  var screen = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 432;
-  var viewPortWidth = window.innerWidth;
-  var mobileScreen = screen;
+  let screen = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 432;
+  const viewPortWidth = window.innerWidth;
+  const mobileScreen = screen;
 
   if (viewPortWidth < mobileScreen) {
     return true;
@@ -9418,9 +9672,9 @@ function isMobile() {
  */
 
 function toArray(obj) {
-  var array = []; // iterate backwards ensuring that length is an UInt32
+  let array = []; // iterate backwards ensuring that length is an UInt32
 
-  for (var i = obj.length >>> 0; i--;) {
+  for (let i = obj.length >>> 0; i--;) {
     array[i] = obj[i];
   }
 
@@ -9431,27 +9685,27 @@ function toArray(obj) {
  */
 
 function detectIE() {
-  var ua = window.navigator.userAgent,
-      versionLength = 10,
-      msie = ua.indexOf('MSIE '),
-      msieVersionOffset = 5;
+  const ua = window.navigator.userAgent,
+        versionLength = 10,
+        msie = ua.indexOf('MSIE '),
+        msieVersionOffset = 5;
 
   if (msie > 0) {
     // IE 10 or older => return version number
     return parseInt(ua.substring(msie + msieVersionOffset, ua.indexOf('.', msie)), versionLength);
   }
 
-  var trident = ua.indexOf('Trident/'),
-      tridentVersionOffset = 3;
+  const trident = ua.indexOf('Trident/'),
+        tridentVersionOffset = 3;
 
   if (trident > 0) {
     // IE 11 => return version number
-    var rv = ua.indexOf('rv:');
+    let rv = ua.indexOf('rv:');
     return parseInt(ua.substring(rv + tridentVersionOffset, ua.indexOf('.', rv)), versionLength);
   }
 
-  var edge = ua.indexOf('Edge/'),
-      edgeVersionOffset = 5;
+  const edge = ua.indexOf('Edge/'),
+        edgeVersionOffset = 5;
 
   if (edge > 0) {
     // Edge (IE 12+) => return version number
@@ -9482,7 +9736,7 @@ function checkIntersectionObserver() {
  */
 
 function createHTMLElement(type, attributes) {
-  var el = document.createElement(type);
+  let el = document.createElement(type);
   attributes.map(function (att) {
     att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : att.label === 'html' ? el.innerHTML = att.val : el.setAttribute(att.label, att.val);
   });
@@ -9499,15 +9753,15 @@ function uppercaseFirstLetterLowercaseRest(s) {
  */
 
 function axiosRequest(config) {
-  var httpOK = 200;
-  return axios__WEBPACK_IMPORTED_MODULE_8___default()(config).then(response => {
+  const httpOK = 200;
+  return axios__WEBPACK_IMPORTED_MODULE_6___default()(config).then(response => {
     if (httpOK === response.status) {
       return response.data;
     } else {
       throw "Bad response: ".concat(response.status);
     }
   }).catch(e => {
-    if (!axios__WEBPACK_IMPORTED_MODULE_8___default.a.isCancel(e)) {
+    if (!axios__WEBPACK_IMPORTED_MODULE_6___default.a.isCancel(e)) {
       gaEvent('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "axiosRequest ".concat(e.fileName, " (").concat(window.location, ")"), true);
     }
   });
@@ -9520,9 +9774,9 @@ function axiosRequest(config) {
  */
 
 function daySuffix(day) {
-  var eleventh = 11,
-      thirteenth = 13,
-      lastDigit = day.toString().slice(-1);
+  const eleventh = 11,
+        thirteenth = 13,
+        lastDigit = day.toString().slice(-1);
   return day >= eleventh || day <= thirteenth ? 'th' : lastDigit === '1' ? 'st' : lastDigit === '2' ? 'nd' : lastDigit === '3' ? 'rd' : 'th';
 }
 /**
@@ -9534,11 +9788,29 @@ function daySuffix(day) {
 
 
 function formatReactDate(date) {
-  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-      days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("time", {
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("time", {
     dateTime: date.toISOString().split('T')[0]
-  }, days[date.getUTCDay()], ", ", date.getUTCDate(), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("sup", null, daySuffix(date.getUTCDate())), ' ', months[date.getUTCMonth()], " ", date.getUTCFullYear());
+  }, days[date.getUTCDay()], ", ", date.getUTCDate(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", null, daySuffix(date.getUTCDate())), ' ', months[date.getUTCMonth()], " ", date.getUTCFullYear());
+}
+/**
+ * Array slicer
+ *
+ * @param {array} arr - array to be split up into subarrays
+ * @param {number} len - max number items that goes into each subarray
+ */
+
+function arraySlicer(arr, len) {
+  let newArray = [],
+      i = 0,
+      n = arr.length;
+
+  while (i < n) {
+    newArray.push(arr.slice(i, i += len));
+  }
+
+  return newArray;
 }
 
 /***/ }),

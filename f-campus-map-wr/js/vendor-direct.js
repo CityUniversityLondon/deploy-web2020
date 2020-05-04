@@ -1,16 +1,238 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendor-direct"],{
 
-/***/ "./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js":
+/***/ "./node_modules/body-scroll-lock/lib/bodyScrollLock.es6.js":
 /*!*****************************************************************!*\
-  !*** ./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js ***!
+  !*** ./node_modules/body-scroll-lock/lib/bodyScrollLock.es6.js ***!
   \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: disableBodyScroll, clearAllBodyScrollLocks, enableBodyScroll */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!function(e,t){if(true)!(__WEBPACK_AMD_DEFINE_ARRAY__ = [exports], __WEBPACK_AMD_DEFINE_FACTORY__ = (t),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else { var o; }}(this,function(exports){"use strict";function r(e){if(Array.isArray(e)){for(var t=0,o=Array(e.length);t<e.length;t++)o[t]=e[t];return o}return Array.from(e)}Object.defineProperty(exports,"__esModule",{value:!0});var l=!1;if("undefined"!=typeof window){var e={get passive(){l=!0}};window.addEventListener("testPassive",null,e),window.removeEventListener("testPassive",null,e)}var d="undefined"!=typeof window&&window.navigator&&window.navigator.platform&&/iP(ad|hone|od)/.test(window.navigator.platform),c=[],u=!1,a=-1,s=void 0,v=void 0,f=function(t){return c.some(function(e){return!(!e.options.allowTouchMove||!e.options.allowTouchMove(t))})},m=function(e){var t=e||window.event;return!!f(t.target)||(1<t.touches.length||(t.preventDefault&&t.preventDefault(),!1))},o=function(){setTimeout(function(){void 0!==v&&(document.body.style.paddingRight=v,v=void 0),void 0!==s&&(document.body.style.overflow=s,s=void 0)})};exports.disableBodyScroll=function(i,e){if(d){if(!i)return void console.error("disableBodyScroll unsuccessful - targetElement must be provided when calling disableBodyScroll on IOS devices.");if(i&&!c.some(function(e){return e.targetElement===i})){var t={targetElement:i,options:e||{}};c=[].concat(r(c),[t]),i.ontouchstart=function(e){1===e.targetTouches.length&&(a=e.targetTouches[0].clientY)},i.ontouchmove=function(e){var t,o,n,r;1===e.targetTouches.length&&(o=i,r=(t=e).targetTouches[0].clientY-a,!f(t.target)&&(o&&0===o.scrollTop&&0<r?m(t):(n=o)&&n.scrollHeight-n.scrollTop<=n.clientHeight&&r<0?m(t):t.stopPropagation()))},u||(document.addEventListener("touchmove",m,l?{passive:!1}:void 0),u=!0)}}else{n=e,setTimeout(function(){if(void 0===v){var e=!!n&&!0===n.reserveScrollBarGap,t=window.innerWidth-document.documentElement.clientWidth;e&&0<t&&(v=document.body.style.paddingRight,document.body.style.paddingRight=t+"px")}void 0===s&&(s=document.body.style.overflow,document.body.style.overflow="hidden")});var o={targetElement:i,options:e||{}};c=[].concat(r(c),[o])}var n},exports.clearAllBodyScrollLocks=function(){d?(c.forEach(function(e){e.targetElement.ontouchstart=null,e.targetElement.ontouchmove=null}),u&&(document.removeEventListener("touchmove",m,l?{passive:!1}:void 0),u=!1),c=[],a=-1):(o(),c=[])},exports.enableBodyScroll=function(t){if(d){if(!t)return void console.error("enableBodyScroll unsuccessful - targetElement must be provided when calling enableBodyScroll on IOS devices.");t.ontouchstart=null,t.ontouchmove=null,c=c.filter(function(e){return e.targetElement!==t}),u&&0===c.length&&(document.removeEventListener("touchmove",m,l?{passive:!1}:void 0),u=!1)}else(c=c.filter(function(e){return e.targetElement!==t})).length||o()}});
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disableBodyScroll", function() { return disableBodyScroll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearAllBodyScrollLocks", function() { return clearAllBodyScrollLocks; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "enableBodyScroll", function() { return enableBodyScroll; });
+
+
+// Older browsers don't support event options, feature detect it.
+
+// Adopted and modified solution from Bohdan Didukh (2017)
+// https://stackoverflow.com/questions/41594997/ios-10-safari-prevent-scrolling-behind-a-fixed-overlay-and-maintain-scroll-posi
+
+let hasPassiveEvents = false;
+if (typeof window !== 'undefined') {
+  const passiveTestOptions = {
+    get passive() {
+      hasPassiveEvents = true;
+      return undefined;
+    }
+  };
+  window.addEventListener('testPassive', null, passiveTestOptions);
+  window.removeEventListener('testPassive', null, passiveTestOptions);
+}
+
+const isIosDevice = typeof window !== 'undefined' && window.navigator && window.navigator.platform && (/iP(ad|hone|od)/.test(window.navigator.platform) || window.navigator.platform === 'MacIntel' && window.navigator.maxTouchPoints > 1);
+
+
+let locks = [];
+let documentListenerAdded = false;
+let initialClientY = -1;
+let previousBodyOverflowSetting;
+let previousBodyPaddingRight;
+
+// returns true if `el` should be allowed to receive touchmove events.
+const allowTouchMove = el => locks.some(lock => {
+  if (lock.options.allowTouchMove && lock.options.allowTouchMove(el)) {
+    return true;
+  }
+
+  return false;
+});
+
+const preventDefault = rawEvent => {
+  const e = rawEvent || window.event;
+
+  // For the case whereby consumers adds a touchmove event listener to document.
+  // Recall that we do document.addEventListener('touchmove', preventDefault, { passive: false })
+  // in disableBodyScroll - so if we provide this opportunity to allowTouchMove, then
+  // the touchmove event on document will break.
+  if (allowTouchMove(e.target)) {
+    return true;
+  }
+
+  // Do not prevent if the event has more than one touch (usually meaning this is a multi touch gesture like pinch to zoom).
+  if (e.touches.length > 1) return true;
+
+  if (e.preventDefault) e.preventDefault();
+
+  return false;
+};
+
+const setOverflowHidden = options => {
+  // Setting overflow on body/documentElement synchronously in Desktop Safari slows down
+  // the responsiveness for some reason. Setting within a setTimeout fixes this.
+  setTimeout(() => {
+    // If previousBodyPaddingRight is already set, don't set it again.
+    if (previousBodyPaddingRight === undefined) {
+      const reserveScrollBarGap = !!options && options.reserveScrollBarGap === true;
+      const scrollBarGap = window.innerWidth - document.documentElement.clientWidth;
+
+      if (reserveScrollBarGap && scrollBarGap > 0) {
+        previousBodyPaddingRight = document.body.style.paddingRight;
+        document.body.style.paddingRight = `${scrollBarGap}px`;
+      }
+    }
+
+    // If previousBodyOverflowSetting is already set, don't set it again.
+    if (previousBodyOverflowSetting === undefined) {
+      previousBodyOverflowSetting = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+    }
+  });
+};
+
+const restoreOverflowSetting = () => {
+  // Setting overflow on body/documentElement synchronously in Desktop Safari slows down
+  // the responsiveness for some reason. Setting within a setTimeout fixes this.
+  setTimeout(() => {
+    if (previousBodyPaddingRight !== undefined) {
+      document.body.style.paddingRight = previousBodyPaddingRight;
+
+      // Restore previousBodyPaddingRight to undefined so setOverflowHidden knows it
+      // can be set again.
+      previousBodyPaddingRight = undefined;
+    }
+
+    if (previousBodyOverflowSetting !== undefined) {
+      document.body.style.overflow = previousBodyOverflowSetting;
+
+      // Restore previousBodyOverflowSetting to undefined
+      // so setOverflowHidden knows it can be set again.
+      previousBodyOverflowSetting = undefined;
+    }
+  });
+};
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight#Problems_and_solutions
+const isTargetElementTotallyScrolled = targetElement => targetElement ? targetElement.scrollHeight - targetElement.scrollTop <= targetElement.clientHeight : false;
+
+const handleScroll = (event, targetElement) => {
+  const clientY = event.targetTouches[0].clientY - initialClientY;
+
+  if (allowTouchMove(event.target)) {
+    return false;
+  }
+
+  if (targetElement && targetElement.scrollTop === 0 && clientY > 0) {
+    // element is at the top of its scroll.
+    return preventDefault(event);
+  }
+
+  if (isTargetElementTotallyScrolled(targetElement) && clientY < 0) {
+    // element is at the bottom of its scroll.
+    return preventDefault(event);
+  }
+
+  event.stopPropagation();
+  return true;
+};
+
+const disableBodyScroll = (targetElement, options) => {
+  if (isIosDevice) {
+    // targetElement must be provided, and disableBodyScroll must not have been
+    // called on this targetElement before.
+    if (!targetElement) {
+      // eslint-disable-next-line no-console
+      console.error('disableBodyScroll unsuccessful - targetElement must be provided when calling disableBodyScroll on IOS devices.');
+      return;
+    }
+
+    if (targetElement && !locks.some(lock => lock.targetElement === targetElement)) {
+      const lock = {
+        targetElement,
+        options: options || {}
+      };
+
+      locks = [...locks, lock];
+
+      targetElement.ontouchstart = event => {
+        if (event.targetTouches.length === 1) {
+          // detect single touch.
+          initialClientY = event.targetTouches[0].clientY;
+        }
+      };
+      targetElement.ontouchmove = event => {
+        if (event.targetTouches.length === 1) {
+          // detect single touch.
+          handleScroll(event, targetElement);
+        }
+      };
+
+      if (!documentListenerAdded) {
+        document.addEventListener('touchmove', preventDefault, hasPassiveEvents ? { passive: false } : undefined);
+        documentListenerAdded = true;
+      }
+    }
+  } else {
+    setOverflowHidden(options);
+    const lock = {
+      targetElement,
+      options: options || {}
+    };
+
+    locks = [...locks, lock];
+  }
+};
+
+const clearAllBodyScrollLocks = () => {
+  if (isIosDevice) {
+    // Clear all locks ontouchstart/ontouchmove handlers, and the references.
+    locks.forEach(lock => {
+      lock.targetElement.ontouchstart = null;
+      lock.targetElement.ontouchmove = null;
+    });
+
+    if (documentListenerAdded) {
+      document.removeEventListener('touchmove', preventDefault, hasPassiveEvents ? { passive: false } : undefined);
+      documentListenerAdded = false;
+    }
+
+    locks = [];
+
+    // Reset initial clientY.
+    initialClientY = -1;
+  } else {
+    restoreOverflowSetting();
+    locks = [];
+  }
+};
+
+const enableBodyScroll = targetElement => {
+  if (isIosDevice) {
+    if (!targetElement) {
+      // eslint-disable-next-line no-console
+      console.error('enableBodyScroll unsuccessful - targetElement must be provided when calling enableBodyScroll on IOS devices.');
+      return;
+    }
+
+    targetElement.ontouchstart = null;
+    targetElement.ontouchmove = null;
+
+    locks = locks.filter(lock => lock.targetElement !== targetElement);
+
+    if (documentListenerAdded && locks.length === 0) {
+      document.removeEventListener('touchmove', preventDefault, hasPassiveEvents ? { passive: false } : undefined);
+
+      documentListenerAdded = false;
+    }
+  } else {
+    locks = locks.filter(lock => lock.targetElement !== targetElement);
+    if (!locks.length) {
+      restoreOverflowSetting();
+    }
+  }
+};
+
 
 
 /***/ }),
