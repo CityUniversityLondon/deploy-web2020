@@ -21870,7 +21870,7 @@ Assign mixin:
     letter-spacing: 0em;
     color: #696969;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
