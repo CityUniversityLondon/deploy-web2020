@@ -55849,8 +55849,6 @@ main > .news {
     main > .news .news__summary,
     main > .news .news__wrap,
     main > .news .news__body,
-    main > .news .news__body__video,
-    main > .news .news__body__carousel,
     main > .news .news__hashtags__wrap,
     main > .news .news__social-icons,
     main > .news .news__related-courses,
@@ -55899,8 +55897,6 @@ main > .news {
     main > .news .news__summary,
     main > .news .news__wrap,
     main > .news .news__body,
-    main > .news .news__body__video,
-    main > .news .news__body__carousel,
     main > .news .news__hashtags__wrap,
     main > .news .news__social-icons,
     main > .news .news__related-courses,
@@ -55938,12 +55934,8 @@ main > .news {
 
 @media (min-width: 1024px) {
     main > .news .news__summary,
-    main > .news .news__wrap {
-        grid-column: 5 / 21;
-    }
+    main > .news .news__wrap,
     main > .news .news__body,
-    main > .news .news__body__video,
-    main > .news .news__body__carousel,
     main > .news .news__hashtags__wrap,
     main > .news .news__social-icons,
     main > .news .news__related-courses,
@@ -55972,10 +55964,6 @@ main > .news {
     main .navigation--secondary + .news {
         grid-column: 7 / -1;
     }
-}
-
-.news .banner h1 {
-    text-align: left;
 }
 
 .news .banner__standfirst {
@@ -56096,30 +56084,8 @@ main > .news {
     }
 }
 
-.news .news__feature-video {
-    padding-top: 0.75rem;
-}
-
-.news .news__feature-video .embedded-video {
-    padding: 0;
-}
-
 .news .news__body p {
     font-family: "Plex Serif", serif;
-}
-
-.news .news__body__video {
-    padding-top: 1.5rem;
-}
-
-.news .news__body__video .embedded-video {
-    padding: 0;
-}
-
-.news .news__body__carousel {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    overflow: hidden;
 }
 
 .news .news__hashtags__title {
@@ -56194,8 +56160,8 @@ main > .news {
 .news .news__related-subjects li:before,
 .news .news__related-centres li:before,
 .news .news__schools li:before {
-    content: "\f0a9";
-    font-family: "Font Awesome";
+    content: '\f0a9';
+    font-family: 'Font Awesome';
     display: inline-block;
     color: #d61726;
     margin-right: 0.5rem;
