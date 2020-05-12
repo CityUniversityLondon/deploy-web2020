@@ -55907,6 +55907,24 @@ main > .news {
     main > .news .news__related-events,
     main > .news .news__related-people {
         grid-column: 3 / 23;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 767px) and (max-width: 432px) {
+    main > .news .news__summary,
+    main > .news .news__wrap,
+    main > .news .news__body,
+    main > .news .news__hashtags__wrap,
+    main > .news .news__social-icons,
+    main > .news .news__related-courses,
+    main > .news .news__related-subjects,
+    main > .news .news__related-academics,
+    main > .news .news__schools,
+    main > .news .news__related-centres,
+    main > .news .news__related-events,
+    main > .news .news__related-people {
+        grid-column: 2 / 24;
     }
 }
 
@@ -56198,6 +56216,18 @@ main > .news {
     flex-basis: 33%;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .news .news__related-news .related-content .card--news {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 432px) {
+    .news .news__related-news .related-content .card--news {
+        flex-basis: 100%;
+    }
 }
 
 .news .news__contact {
