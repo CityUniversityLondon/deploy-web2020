@@ -56088,6 +56088,17 @@ main > .news {
     font-family: "Plex Serif", serif;
 }
 
+.news .news__body .embedded-video {
+    margin-top: 1.5rem;
+    padding: 0;
+}
+
+.news .news__body .carousel-gallery-default {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
 .news .news__hashtags__title {
     color: #696969;
     font-weight: 600;
@@ -56165,6 +56176,7 @@ main > .news {
     display: inline-block;
     color: #d61726;
     margin-right: 0.5rem;
+    font-weight: 100;
 }
 
 .news .news__related-news {
@@ -56178,10 +56190,12 @@ main > .news {
 }
 
 .news .news__related-news .related-content {
+    display: flex;
     margin-top: 1rem;
 }
 
 .news .news__related-news .related-content .card--news {
+    flex-basis: 33%;
     margin-left: 0.75rem;
     margin-right: 0.75rem;
 }
