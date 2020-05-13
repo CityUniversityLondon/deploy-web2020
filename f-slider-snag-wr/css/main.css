@@ -46654,7 +46654,7 @@ blockquote footer cite {
 }
 
 .slider-block__control__buttons--dot button:active:before, .slider-block__control__buttons--dot button:focus:before {
-    border: 0.15rem dotted #1e1e1e;
+    border: 0.125rem dotted #1e1e1e;
 }
 
 .slider-block__control__buttons--dot button[aria-expanded='true'] {
