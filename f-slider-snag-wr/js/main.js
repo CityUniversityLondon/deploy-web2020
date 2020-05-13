@@ -7904,7 +7904,8 @@ function launchSlider(slider) {
       pageAttr: 'data-page',
       visAttr: 'data-visible',
       counterAttr: 'data-currentdefault',
-      tabIndex: 'tabindex'
+      tabIndex: 'tabindex',
+      ariaLabel: 'aria-label'
     },
     mobile: {
       totalPages: totalItems,
@@ -7913,7 +7914,8 @@ function launchSlider(slider) {
       pageAttr: 'data-page',
       visAttr: 'data-visible',
       counterAttr: 'data-currentdefault',
-      tabIndex: 'tabindex'
+      tabIndex: 'tabindex',
+      ariaLabel: 'aria-label'
     },
     tablet: {
       totalPages: maxTablet,
@@ -7922,7 +7924,8 @@ function launchSlider(slider) {
       pageAttr: 'data-pagetablet',
       visAttr: 'data-visibletablet',
       counterAttr: 'data-currenttablet',
-      tabIndex: 'tabindex'
+      tabIndex: 'tabindex',
+      ariaLabel: 'aria-label'
     },
     desk: {
       totalPages: maxDesk,
@@ -7931,7 +7934,8 @@ function launchSlider(slider) {
       pageAttr: 'data-pagedesk',
       visAttr: 'data-visibledesk',
       counterAttr: 'data-currentdesk',
-      tabIndex: 'tabindex'
+      tabIndex: 'tabindex',
+      ariaLabel: 'aria-label'
     }
   };
 
@@ -8052,6 +8056,7 @@ function setVisibility(slider, sliderType, sliderObject) {
   Array.from(slider.getElementsByTagName('li')).forEach((el, i) => {
     el.setAttribute(sliderObject.default.pageAttr, "".concat(i));
     el.setAttribute(sliderObject.default.tabIndex, "-1");
+    el.setAttribute(sliderObject.default.ariaLabel, "Slide ".concat(i + 1));
 
     if (i === 0) {
       el.setAttribute(sliderObject.default.visAttr, true);
