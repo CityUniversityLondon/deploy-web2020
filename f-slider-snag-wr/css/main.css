@@ -46688,6 +46688,13 @@ blockquote footer cite {
     display: none;
 }
 
+.slider-block [data-control='dot'] > *:focus {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
 .slider-block--mobile [data-visible='false'] {
     display: block;
 }
