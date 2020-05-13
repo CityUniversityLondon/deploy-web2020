@@ -518,7 +518,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./patterns/accordion/accordion */ "./src/patterns/accordion/accordion.js");
 /* harmony import */ var _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns/back-to-top/back-to-top */ "./src/patterns/back-to-top/back-to-top.js");
 /* harmony import */ var _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/image-carousel/image-carousel */ "./src/patterns/image-carousel/image-carousel.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/charts/charts'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/charts/charts */ "./src/patterns/charts/charts.js");
 /* harmony import */ var _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/cms-editor-warning/cms-editor-warning */ "./src/patterns/cms-editor-warning/cms-editor-warning.js");
 /* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
 /* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
@@ -586,7 +586,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], !(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/charts/charts'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_29__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_29__["default"]]);
 
 /***/ }),
 
@@ -1393,6 +1393,82 @@ function updateProgress(backToTopAnchor) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: initBacktoTop,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/charts/charts.js":
+/*!***************************************!*\
+  !*** ./src/patterns/charts/charts.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+
+/**
+ * Chart
+ *
+ * @module patterns/chart/chart
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+const className = 'chart--bar--horizontal';
+let collectionMaxValue;
+
+function setMaxWidth(chartGroup) {
+  // Isolate each chart instance
+  let charts = chartGroup.querySelectorAll('.chart--bar--horizontal__collection'),
+      singleBarTotals = []; // Find total and segment value of each chart
+
+  for (const a of charts) {
+    let singleBarTotal = a.querySelector('[data-bar-total]');
+    singleBarTotal = singleBarTotal.dataset.barTotal;
+    singleBarTotal = parseInt(singleBarTotal); // Get highest value total value; the other bars will be proportional to this
+
+    singleBarTotals.push(singleBarTotal);
+  } // Set maximum value as data attribute on collection
+
+
+  collectionMaxValue = Math.max(...singleBarTotals);
+  chartGroup.setAttribute('data-chart-group-max', collectionMaxValue);
+}
+
+function calcBarWidths(chartGroup) {
+  let charts = chartGroup.querySelectorAll('.chart--bar--horizontal__collection');
+
+  for (const a of charts) {
+    let singleBarTotal = a.querySelector('[data-bar-total]'),
+        singleBarSegment = a.querySelector('[data-bar-segment]'); // Calculate total bar and segment widths relative to collection max value
+
+    let AsingleBarTotal = singleBarTotal.dataset.barTotal;
+    AsingleBarTotal = parseInt(AsingleBarTotal);
+    let AsingleBarSegment = singleBarSegment.dataset.barSegment;
+    AsingleBarSegment = parseInt(AsingleBarSegment);
+    let barWidth = Math.round(AsingleBarTotal / collectionMaxValue * 100),
+        segmentWidth = Math.round(AsingleBarSegment / AsingleBarTotal * 100);
+    a.setAttribute('data-bar-width', "".concat(barWidth, "%"));
+    singleBarSegment.setAttribute('data-segment-width', "".concat(segmentWidth, "%"));
+  }
+}
+
+function launchChart(chartGroup) {
+  setMaxWidth(chartGroup);
+  calcBarWidths(chartGroup);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchChart,
   launchQuery: ".".concat(className)
 });
 
