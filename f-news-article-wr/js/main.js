@@ -522,7 +522,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
 /* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
 /* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
-/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
+/* harmony import */ var _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/dropdown-filter/dropdown-filter */ "./src/patterns/dropdown-filter/dropdown-filter.js");
 /* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
 /* harmony import */ var _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/finder/finder */ "./src/patterns/finder/finder.js");
 /* harmony import */ var _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/finder/finder-mini */ "./src/patterns/finder/finder-mini.js");
@@ -540,9 +540,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
 /* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
 /* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
-/* harmony import */ var _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/social-icon/social-icon */ "./src/patterns/social-icon/social-icon.js");
+/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
 /* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/dropdown-filter/dropdown-filter */ "./src/patterns/dropdown-filter/dropdown-filter.js");
+/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
+/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
 
 
 /**
@@ -582,7 +583,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_social_icon_social_icon__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_27__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_28__["default"]]);
 
 /***/ }),
 
@@ -2655,7 +2657,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _finder_filters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.es6.js");
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.mjs");
 
 
 
@@ -4589,7 +4591,7 @@ function find(collection, fixedFacets, query, sortBy, sortDirection, startRank, 
     }),
     url: findRootUrl,
     timeout: timeout,
-    params: _objectSpread({}, fixedFacetParams, {}, facetParams, {
+    params: _objectSpread(_objectSpread(_objectSpread({}, fixedFacetParams), facetParams), {}, {
       collection: collection,
       num_ranks: numRank,
       query: query,
@@ -5425,6 +5427,34 @@ function init(elem) {
 
 /***/ }),
 
+/***/ "./src/patterns/image-carousel/swipe.js":
+/*!**********************************************!*\
+  !*** ./src/patterns/image-carousel/swipe.js ***!
+  \**********************************************/
+/*! exports provided: swipeCal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "swipeCal", function() { return swipeCal; });
+
+
+function unify(e) {
+  return e.changedTouches ? e.changedTouches[0] : e;
+}
+
+function mousePosition(event) {
+  return unify(event).clientX;
+}
+
+function swipeCal(x) {
+  return function (y) {
+    return mousePosition(x) - mousePosition(y);
+  };
+}
+
+/***/ }),
+
 /***/ "./src/patterns/link-finder/link-finder.js":
 /*!*************************************************!*\
   !*** ./src/patterns/link-finder/link-finder.js ***!
@@ -6026,10 +6056,10 @@ function launchMenu(menu) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
 
@@ -6052,7 +6082,7 @@ const className = 'modal',
       bodyClassName = className + '__body',
       keyCodeEscape = 27,
       oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = true;
 let trap;
 /**
@@ -6065,53 +6095,55 @@ function launchModal(modal) {
   let dialogArray = [];
   const dialogTopic = modal.getAttribute('data-topic');
   Array.from(modal.getElementsByTagName('li')).forEach((list, i) => {
-    const wrapper = document.createElement('div'),
-          listButton = document.createElement('button'),
-          listBody = Array.from(list.childNodes),
-          listHeader = list.firstElementChild,
-          customHeader = list.getAttribute('data-header'),
-          format = list.getAttribute('data-keepformat'),
-          header = document.createElement('div');
-    let title,
-        keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(format),
-        shortName = list.getAttribute('data-shortname');
-    listButton.classList.add('modal__button');
-    listButton.setAttribute('type', 'button');
-    listButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'open dialog');
-    list.appendChild(wrapper);
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(wrapper, listBody);
-    wrapper.classList.add("".concat(bodyClassName));
+    if (!list.dataset.modalcontent || list.dataset.modalcontent === 'true') {
+      const wrapper = document.createElement('div'),
+            listButton = document.createElement('button'),
+            listBody = Array.from(list.childNodes),
+            listHeader = list.firstElementChild,
+            customHeader = list.getAttribute('data-header'),
+            format = list.getAttribute('data-keepformat'),
+            header = document.createElement('div');
+      let title,
+          keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(format),
+          shortName = list.getAttribute('data-shortname');
+      listButton.classList.add('modal__button');
+      listButton.setAttribute('type', 'button');
+      listButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'open dialog');
+      list.appendChild(wrapper);
+      Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(wrapper, listBody);
+      wrapper.classList.add("".concat(bodyClassName));
 
-    if (customHeader) {
-      title = customHeader;
-    } else {
-      title = listHeader.innerText;
-    }
+      if (customHeader) {
+        title = customHeader;
+      } else {
+        title = listHeader.innerText;
+      }
 
-    if (shortName === null) {
-      shortName = listHeader.innerText;
-    }
+      if (shortName === null) {
+        shortName = listHeader.innerText;
+      }
 
-    if (keepFormat) {
-      list.insertBefore(listHeader, wrapper);
-      listHeader.addEventListener('click', function () {
-        createDialog(modal, "".concat(i), dialogArray);
+      if (keepFormat) {
+        list.insertBefore(listHeader, wrapper);
+        listHeader.addEventListener('click', function () {
+          createDialog(modal, "".concat(i), dialogArray);
+        });
+      } else {
+        listButton.textContent = listHeader.textContent;
+        header.appendChild(listHeader);
+        list.insertBefore(listButton, wrapper);
+        listButton.addEventListener('click', function () {
+          createDialog(modal, "".concat(i), dialogArray);
+        });
+      }
+
+      dialogArray.push({
+        title: title,
+        body: wrapper.innerHTML,
+        topic: dialogTopic,
+        shortname: shortName
       });
-    } else {
-      listButton.textContent = listHeader.textContent;
-      header.appendChild(listHeader);
-      list.insertBefore(listButton, wrapper);
-      listButton.addEventListener('click', function () {
-        createDialog(modal, "".concat(i), dialogArray);
-      });
     }
-
-    dialogArray.push({
-      title: title,
-      body: wrapper.innerHTML,
-      topic: dialogTopic,
-      shortname: shortName
-    });
   });
 }
 /**
@@ -6125,41 +6157,41 @@ function launchModal(modal) {
 
 
 function createDialog(parent, position, dialogArray) {
-  const slider = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(parent.getAttribute('data-slider'));
-  const closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
+  const slider = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(parent.getAttribute('data-slider'));
+  const closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('button', [{
     label: 'class',
     val: 'dialog__close fas fa-times'
   }, {
     label: 'aria-label',
     val: 'Close modal'
   }]);
-  const dialog = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+  const dialog = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog'
   }, {
     label: 'data-position',
     val: "".concat(position)
   }]);
-  const bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+  const bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__content'
   }]);
-  const wrapperWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+  const wrapperWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__inner'
   }, {
     label: 'role',
     val: 'role'
   }]);
-  const dialogStrapline = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('p', [{
+  const dialogStrapline = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('p', [{
     label: 'class',
     val: 'dialog__strapline'
   }]);
-  const dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('p', [{
+  const dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('p', [{
     label: 'class',
     val: 'dialog__heading'
   }]);
-  const dialogBody = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+  const dialogBody = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__body-copy'
   }]);
@@ -6217,7 +6249,7 @@ function createDialog(parent, position, dialogArray) {
 
 function createControl(dialog, dialogArray) {
   let position = parseInt(dialog.getAttribute('data-position'));
-  const buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+  const buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__slider-control'
   }]);
@@ -6294,15 +6326,15 @@ function controlButton(dialogArray, position, direction) {
     buttonLabel.innerText = dialogArray[nextState].title;
   }
 
-  const buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('span', [{
+  const buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('span', [{
     label: 'class',
     val: "icon far fa-long-arrow-".concat(direction)
   }]);
 
   if (direction === 'left') {
-    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'previous item');
+    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'previous item');
   } else {
-    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'next item');
+    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'next item');
   }
 
   const buttonLabelWrapper = document.createElement('div');
@@ -6361,14 +6393,14 @@ function closeDialog(dialog, modal) {
   const parent = dialog.parentNode;
   parent.removeChild(dialog);
 
-  if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_2__["verticallyInWindow"])(modal)) {
+  if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_1__["verticallyInWindow"])(modal)) {
     zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(modal, scrollDuration);
   }
 }
 
 function trapFocus(modal) {
   let modalInner = modal.querySelector('.dialog__inner');
-  trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(modalInner, {
+  trap = focus_trap__WEBPACK_IMPORTED_MODULE_3___default()(modalInner, {
     clickOutsideDeactivates: true
   });
   trap.activate();
@@ -7709,12 +7741,13 @@ function launchResponsiveSlider(slider) {
 /*!******************************************************************!*\
   !*** ./src/patterns/slider/custom_counter/slider_dot_counter.js ***!
   \******************************************************************/
-/*! exports provided: createSliderDot */
+/*! exports provided: createSliderDot, dotEvent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createSliderDot", function() { return createSliderDot; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dotEvent", function() { return dotEvent; });
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
@@ -7824,8 +7857,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
 /* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./custom_counter/slider_dot_counter */ "./src/patterns/slider/custom_counter/slider_dot_counter.js");
+/* harmony import */ var _custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./custom_counter/slider_dot_counter */ "./src/patterns/slider/custom_counter/slider_dot_counter.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _image_carousel_swipe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../image-carousel/swipe */ "./src/patterns/image-carousel/swipe.js");
 
 
 
@@ -7839,6 +7873,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2020
  */
+
 
 
 
@@ -7939,6 +7974,60 @@ function launchSlider(slider) {
 
   if (sliderControl !== 'off') {
     createSliderButton(slider, sliderControl, sliderType, sliderObject);
+  }
+
+  setSwipe(slider, sliderType, sliderObject, sliderControl);
+}
+/**
+ * setup swipe listeners
+ * this function add events listener to calculate touch direction
+ *
+ * @param {HTMLElement} slider - an HTML element with the slider class.
+ * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
+ * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ * @param {string} sliderControl - type of control- determines is the control is dot
+ */
+
+
+function setSwipe(slider, sliderType, sliderObject, sliderControl) {
+  let t = null;
+  slider.addEventListener('mousedown', swipeDown, false);
+  slider.addEventListener('touchstart', swipeDown, false);
+  slider.addEventListener('mouseup', swipeUp, false);
+  slider.addEventListener('touchend', swipeUp, false);
+
+  function swipeDown(e) {
+    e.preventDefault();
+    t = Object(_image_carousel_swipe__WEBPACK_IMPORTED_MODULE_6__["swipeCal"])(e);
+  }
+
+  function swipeUp(e) {
+    e.preventDefault();
+    let swipe = Math.sign(t(e));
+
+    if (sliderControl === 'dot') {
+      let btnWrap = slider.nextSibling,
+          curBtn = btnWrap.querySelector('[aria-expanded="true"]'),
+          actionBtn = null;
+
+      if (curBtn.nextSibling && curBtn.previousSibling) {
+        actionBtn = swipe === -1 ? curBtn.previousSibling : swipe === 1 ? curBtn.nextSibling : null;
+        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
+      } else if (!curBtn.nextSibling) {
+        actionBtn = swipe === -1 ? curBtn.previousSibling : swipe === 1 ? curBtn.parentElement.childNodes[0] : null;
+        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
+      } else {
+        let btnLength = btnWrap.firstChild.childNodes.length;
+        actionBtn = swipe === -1 ? curBtn.parentElement.childNodes[btnLength - 1] : swipe === 1 ? curBtn.nextSibling : null;
+        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
+      }
+    } else {
+      let btn = swipe === -1 ? slider.nextSibling.lastChild.firstChild : swipe === 1 ? slider.nextSibling.lastChild.lastChild : null;
+
+      if (btn && !btn.disabled) {
+        defaultEvent(btn, slider, sliderType, sliderObject);
+      }
+    }
   }
 }
 /**
@@ -8070,7 +8159,7 @@ function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
   if (sliderControl === 'default') {
     let buttonPrev = createButtonElement('fas fa-arrow-left prev--default', 'default', sliderObject);
     let buttonNext = createButtonElement('fas fa-arrow-right next--default', 'default', sliderObject);
-    buttonNext.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'next item');
+    buttonNext.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
     buttonNext.addEventListener('click', function () {
       defaultEvent(this, slider, 'default', sliderObject);
     });
@@ -8111,7 +8200,7 @@ function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
   }
 
   if (sliderControl === 'dot') {
-    Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_5__["createSliderDot"])(slider, sliderType, buttonWrapper, sliderObject);
+    Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["createSliderDot"])(slider, sliderType, buttonWrapper, sliderObject);
   }
 }
 /**
@@ -8147,10 +8236,10 @@ function createButtonElement(classname, type, sliderObject) {
   }]);
 
   if (classname.indexOf('prev') !== -1) {
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'previous item');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'previous item');
     button.setAttribute('disabled', true);
   } else {
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'next item');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
   }
 
   return button;
@@ -8216,70 +8305,6 @@ function defaultEvent(button, slider, type, sliderObject) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchSlider,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
-/***/ "./src/patterns/social-icon/social-icon.js":
-/*!*************************************************!*\
-  !*** ./src/patterns/social-icon/social-icon.js ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-
-const className = 'fa-link';
-
-function copyIconToClipboard(elem) {
-  const copy = elem;
-  copy.parentNode.parentNode.style.position = 'relative';
-  copy.addEventListener('mouseover', e => {
-    let t = document.createElement('div');
-    let link = document.createElement('span');
-    let url = window.location.href;
-    t.className = 'tooltip';
-    link.className = 'link-copy';
-    let textlink = document.createTextNode(url);
-    let textnode = document.createTextNode('Copy link');
-    t.appendChild(textnode);
-    link.appendChild(textlink);
-    t.appendChild(link);
-    e.target.parentElement.parentElement.appendChild(t);
-    e.target.parentElement.parentElement.classList.add('copyLink');
-  });
-  copy.addEventListener('click', e => {
-    e.preventDefault();
-    let text = e.target.parentElement.parentElement.querySelector('.link-copy');
-    let range = document.createRange();
-    range.selectNode(text);
-    window.getSelection().addRange(range);
-
-    try {
-      // Now that we've selected the anchor text, execute the copy command
-      let successful = document.execCommand('copy');
-      let msg = successful ? 'successful' : 'unsuccessful';
-      e.target.parentElement.parentElement.querySelector('.tooltip').textContent = 'Link Copied';
-      e.target.parentElement.parentElement.querySelector('.tooltip').classList.add(msg);
-    } catch (err) {
-      throw new Error(e);
-    } // Remove the selections - NOTE: Should use
-    // removeRange(range) when it is supported
-
-
-    window.getSelection().removeAllRanges();
-  });
-  copy.addEventListener('mouseout', e => {
-    //remove element from mouseover
-    e.target.parentElement.parentElement.querySelector('.tooltip').remove();
-  });
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: copyIconToClipboard,
   launchQuery: ".".concat(className)
 });
 
@@ -8615,6 +8640,200 @@ function launchTabs(tabs) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchTabs,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/tooltip/image-credit/image-credit.js":
+/*!***********************************************************!*\
+  !*** ./src/patterns/tooltip/image-credit/image-credit.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+
+
+/**
+ * Image accreditation tooltip
+ *
+ * @module patterns/tooltip/image-credit
+ * @author Web Development
+ * @copyright City, University of London
+ */
+
+const className = 'hero-image';
+let authorElement, sourceElement;
+/**
+ * Respond to button clicks - open if closed, close if opened.
+ *
+ * @param {event} e - The information icon click event.
+ */
+
+function showCredit(e) {
+  let tooltipWrapper = e.target.closest('.wrapper--tooltip__label');
+  tooltipWrapper.getAttribute('data-selected') === 'false' ? tooltipWrapper.setAttribute('data-selected', 'true') : tooltipWrapper.setAttribute('data-selected', 'false');
+}
+/**
+ * Create label(s) to go alongside the information icon.
+ *
+ * @param {string} el - Blank variable that is returned as an HTML element after function is complete.
+ * @param {string} elText - Label's link or link text value.
+ * @param {url} elUrl - Label's link value.
+ */
+
+
+function createLabel(el, elText, elUrl) {
+  if (elText) {
+    const elTextNode = document.createTextNode(elText);
+
+    if (elUrl) {
+      el = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
+      el.href = elUrl;
+      el.appendChild(elTextNode);
+    } else {
+      el = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', []);
+      el.appendChild(elTextNode);
+    }
+
+    return el;
+  }
+}
+/**
+ * Create an accreditation tooltip from the data attributes of a banner image.
+ *
+ * @param {HTMLElement} banner - A banner image.
+ */
+
+
+function launchBannerTooltip(banner) {
+  const tooltipDisplay = banner.getAttribute('data-tooltip-display'),
+        authorText = banner.getAttribute('data-author-name'),
+        authorUrl = banner.getAttribute('data-author-url'),
+        sourceText = banner.getAttribute('data-source-name'),
+        sourceUrl = banner.getAttribute('data-source-url');
+
+  if (tooltipDisplay === 'true') {
+    const tooltipWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
+      label: 'class',
+      val: 'wrapper--tooltip__label'
+    }, {
+      label: 'data-selected',
+      val: false
+    }]);
+    const iconBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
+      label: 'class',
+      val: 'tooltip tooltip--image-credit'
+    }, {
+      label: 'aria-label',
+      val: 'Show image credit'
+    }]);
+    const iconSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
+      label: 'class',
+      val: 'tooltip__icon icon fas fa-info-circle'
+    }, {
+      label: 'aria-label',
+      val: 'Information icon'
+    }]);
+    const labelSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
+      label: 'class',
+      val: 'tooltip__label'
+    }]); // Build labels
+
+    let author = createLabel(authorElement, authorText, authorUrl);
+    let source = createLabel(sourceElement, sourceText, sourceUrl); // Append tooltip elements to banner
+
+    iconBtn.appendChild(iconSpan);
+    authorText && !sourceText ? labelSpan.appendChild(author) : null;
+    sourceText && !authorText ? labelSpan.appendChild(source) : null; // Add divider if author and source text values exist
+
+    if (authorText && sourceText) {
+      labelSpan.appendChild(author);
+      const dividerText = document.createTextNode(' / ');
+      labelSpan.appendChild(dividerText);
+      labelSpan.appendChild(source);
+    }
+
+    tooltipWrapper.appendChild(labelSpan);
+    tooltipWrapper.appendChild(iconBtn); // Only append tooltip if at least one name is supplied (author or source)
+
+    authorText || sourceText ? banner.appendChild(tooltipWrapper) : null; // Show/hide icon label(s) on click
+
+    iconBtn.addEventListener('click', e => {
+      showCredit(e);
+    });
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchBannerTooltip,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/tooltip/social-share/social-share.js":
+/*!***********************************************************!*\
+  !*** ./src/patterns/tooltip/social-share/social-share.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+const className = 'fa-link';
+
+function copyIconToClipboard(elem) {
+  const copy = elem;
+  copy.parentNode.parentNode.style.position = 'relative';
+  copy.addEventListener('mouseover', e => {
+    let t = document.createElement('div');
+    let link = document.createElement('span');
+    let url = window.location.href;
+    t.className = 'tooltip';
+    link.className = 'link-copy';
+    let textlink = document.createTextNode(url);
+    let textnode = document.createTextNode('Copy link');
+    t.appendChild(textnode);
+    link.appendChild(textlink);
+    t.appendChild(link);
+    e.target.parentElement.parentElement.appendChild(t);
+    e.target.parentElement.parentElement.classList.add('copyLink');
+  });
+  copy.addEventListener('click', e => {
+    e.preventDefault();
+    let text = e.target.parentElement.parentElement.querySelector('.link-copy');
+    let range = document.createRange();
+    range.selectNode(text);
+    window.getSelection().addRange(range);
+
+    try {
+      // Now that we've selected the anchor text, execute the copy command
+      let successful = document.execCommand('copy');
+      let msg = successful ? 'successful' : 'unsuccessful';
+      e.target.parentElement.parentElement.querySelector('.tooltip').textContent = 'Link Copied';
+      e.target.parentElement.parentElement.querySelector('.tooltip').classList.add(msg);
+    } catch (err) {
+      throw new Error(e);
+    } // Remove the selections - NOTE: Should use
+    // removeRange(range) when it is supported
+
+
+    window.getSelection().removeAllRanges();
+  });
+  copy.addEventListener('mouseout', e => {
+    //remove element from mouseover
+    e.target.parentElement.parentElement.querySelector('.tooltip').remove();
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: copyIconToClipboard,
   launchQuery: ".".concat(className)
 });
 

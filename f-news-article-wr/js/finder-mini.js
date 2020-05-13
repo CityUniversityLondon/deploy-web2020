@@ -804,7 +804,7 @@ function find(collection, fixedFacets, query, sortBy, sortDirection, startRank, 
     }),
     url: findRootUrl,
     timeout: timeout,
-    params: _objectSpread({}, fixedFacetParams, {}, facetParams, {
+    params: _objectSpread(_objectSpread(_objectSpread({}, fixedFacetParams), facetParams), {}, {
       collection: collection,
       num_ranks: numRank,
       query: query,
