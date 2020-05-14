@@ -56809,15 +56809,22 @@ ul.landing--functional__finder__tabs__columns.columns-3 {
     padding-top: 1.5rem;
 }
 
-.listing .finder__query,
-.listing .finder__filters--mobile,
-.listing .finder__filters--desktop {
-    margin-top: -4rem;
+@media (max-width: 1023px) {
+    .listing .finder__filters--mobile[data-open='false'] {
+        margin-top: -4rem;
+    }
+    .listing .finder__query ~ .finder__filters--mobile[data-open='false'] {
+        margin-top: 0;
+    }
 }
 
-.listing .finder__query ~ .finder__filters--mobile,
-.listing .finder__query ~ .finder__filters--desktop {
-    margin-top: unset;
+@media (min-width: 1024px) {
+    .listing .finder__filters--desktop {
+        margin-top: -4rem;
+    }
+    .listing .finder__query ~ .finder__filters--desktop {
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 1023px) {
