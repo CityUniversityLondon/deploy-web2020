@@ -1472,16 +1472,11 @@ function calcBarWidths(chartGroup) {
 
     a.setAttribute('data-bar-width', "".concat(barWidth));
     singleBarSegment.setAttribute('data-segment-width', "".concat(segmentWidth));
-    let maxSegmentWidth = Math.max(...maxSegmentWidths); // let segmentElements = a.querySelectorAll('[data-bar-segment]');
-
-    for (const b of segmentElements) {
-      let c = parseInt(b.dataset.relativeWidth);
-
-      if (c === maxSegmentWidth) {
-        b.setAttribute('showUnits', 'true');
-      }
-    }
   }
+
+  let maxSegmentWidth = Math.max(...maxSegmentWidths);
+  let d = chartGroup.querySelector("[data-relative-width=\"".concat(maxSegmentWidth, "\"]"));
+  d;
 }
 
 function launchChart(chartGroup) {
