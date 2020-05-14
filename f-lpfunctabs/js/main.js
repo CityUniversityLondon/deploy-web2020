@@ -3125,19 +3125,12 @@ function finder__query(props) {
 
   const submitForm = () => {
     let queryURL = '';
-    let exclusions = ['Short courses', 'Professional development courses', 'City Health courses', 'In-house law courses'];
-    let courseLevel = document.getElementsByClassName('finder__mini')[0].getAttribute('data-level');
-
-    function exclusion(level) {
-      return level === courseLevel;
-    }
-
-    function buildURL(level) {
-      exclusions.filter(exclusion).length ? queryURL = 'meta_level_sand=Short+courses+and+professional+development&meta_type_sand=' + level : queryURL = 'meta_level_sand=' + level;
-      window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?".concat(queryURL, "&query=").concat(partialQuery));
-    }
-
-    buildURL(courseLevel);
+    let finderMiniElement = document.getElementsByClassName('finder__mini')[0];
+    let courseLevel = finderMiniElement.getAttribute('data-level');
+    let courseSubject = finderMiniElement.getAttribute('data-subject');
+    let courseType = finderMiniElement.getAttribute('data-type');
+    queryURL = 'meta_level_sand=' + courseLevel + '&meta_subject_sand=' + courseSubject + '&meta_type_sand=' + courseType;
+    window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?".concat(queryURL, "&query=").concat(partialQuery));
   };
 
   const submitSuggestion = s => {
