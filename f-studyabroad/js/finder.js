@@ -871,6 +871,7 @@ function finder__results__module(props) {
     className: "fas fa-fw fa-map-marker-alt icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Location:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.location)),
+        title = props.details.metaData.code ? props.details.metaData.code + ' ' + props.details.title : props.details.title,
         school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
@@ -906,7 +907,7 @@ function finder__results__module(props) {
     className: "finder__results__card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "card__title finder__results__card__heading"
-  }, props.details.metaData.code, " ", props.details.title), topic, term, school, department, location, specification));
+  }, title), topic, term, school, department, location, specification));
 }
 
 finder__results__module.propTypes = {
