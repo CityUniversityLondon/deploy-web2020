@@ -1457,8 +1457,8 @@ function calcBarWidths(chartGroup) {
     AsingleBarSegment = parseInt(AsingleBarSegment);
     let barWidth = Math.round(AsingleBarTotal / collectionMaxValue * 100),
         segmentWidth = Math.round(AsingleBarSegment / AsingleBarTotal * 100);
-    a.setAttribute('data-bar-width', "".concat(barWidth, "%"));
-    singleBarSegment.setAttribute('data-segment-width', "".concat(segmentWidth, "%"));
+    a.setAttribute('data-bar-width', "".concat(barWidth));
+    singleBarSegment.setAttribute('data-segment-width', "".concat(segmentWidth));
   }
 }
 
