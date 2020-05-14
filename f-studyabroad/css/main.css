@@ -50818,7 +50818,6 @@ button
 
 @media (min-width: 768px) {
     .finder__filters--desktop .finder__filters {
-        background-color: #ffffff;
         display: block;
     }
     .finder__filters--desktop .finder__filters .finder__filter,
