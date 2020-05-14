@@ -56813,7 +56813,7 @@ ul.landing--functional__finder__tabs__columns.columns-3 {
         margin-top: -4rem;
     }
     .listing .finder__query ~ .finder__filters--mobile[data-open='false'] {
-        margin-top: 0;
+        margin-top: unset;
     }
 }
 
@@ -56822,7 +56822,7 @@ ul.landing--functional__finder__tabs__columns.columns-3 {
         margin-top: -4rem;
     }
     .listing .finder__query ~ .finder__filters--desktop {
-        margin-top: 0;
+        margin-top: unset;
     }
 }
 
