@@ -56813,8 +56813,15 @@ ul.landing--functional__finder__tabs__columns.columns-3 {
     padding-top: 1.5rem;
 }
 
-.listing .finder__query {
+.listing .finder__query,
+.listing .finder__filters--mobile,
+.listing .finder__filters--desktop {
     margin-top: -4rem;
+}
+
+.listing .finder__query ~ .finder__filters--mobile,
+.listing .finder__query ~ .finder__filters--desktop {
+    margin-top: unset;
 }
 
 @media (max-width: 1023px) {
