@@ -1446,6 +1446,7 @@ function setMaxWidth(chartGroup) {
 
 function calcBarWidths(chartGroup) {
   let charts = chartGroup.querySelectorAll('.chart--bar--horizontal__collection');
+  let maxSegmentWidths = [];
 
   for (const a of charts) {
     let singleBarTotal = a.querySelector('[data-bar-total]'),
@@ -1456,9 +1457,30 @@ function calcBarWidths(chartGroup) {
     let AsingleBarSegment = singleBarSegment.dataset.barSegment;
     AsingleBarSegment = parseInt(AsingleBarSegment);
     let barWidth = Math.round(AsingleBarTotal / collectionMaxValue * 100),
-        segmentWidth = Math.round(AsingleBarSegment / AsingleBarTotal * 100);
+        segmentWidth = Math.round(AsingleBarSegment / AsingleBarTotal * 100); // Calculate percentage space of parent container and set units to widest segment
+
+    let relativeWidth = Math.round(segmentWidth * barWidth / 100);
+    singleBarSegment.setAttribute('data-relative-width', "".concat(relativeWidth)); // Target segment with highest relative width
+
+    let segmentElements = a.querySelectorAll('[data-bar-segment]');
+
+    for (const b of segmentElements) {
+      let segmentWidths = b.dataset.relativeWidth;
+      let AsegmentWidths = parseInt(segmentWidths);
+      maxSegmentWidths.push(AsegmentWidths);
+    }
+
     a.setAttribute('data-bar-width', "".concat(barWidth));
     singleBarSegment.setAttribute('data-segment-width', "".concat(segmentWidth));
+    let maxSegmentWidth = Math.max(...maxSegmentWidths); // let segmentElements = a.querySelectorAll('[data-bar-segment]');
+
+    for (const b of segmentElements) {
+      let c = parseInt(b.dataset.relativeWidth);
+
+      if (c === maxSegmentWidth) {
+        b.setAttribute('showUnits', 'true');
+      }
+    }
   }
 }
 
