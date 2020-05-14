@@ -50429,10 +50429,6 @@ button
     color: #ffffff;
 }
 
-.finder__filter {
-    background-color: #ffffff;
-}
-
 .finder__filter legend {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
