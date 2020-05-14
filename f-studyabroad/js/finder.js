@@ -2537,17 +2537,18 @@ function Finder(props) {
     setUpdate(!update);
   };
 
+  const queryElement = props.config.noQuery && props.config.noQuery === true ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_13__["default"], {
+    config: props.config,
+    query: query,
+    update: updater,
+    updating: updating
+  });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("form", {
     className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
     onSubmit: e => {
       e.preventDefault();
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_13__["default"], {
-    config: props.config,
-    query: query,
-    update: updater,
-    updating: updating
-  }), props.config.facetLabels.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_filters_finder_mobilefilters__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  }, queryElement, props.config.facetLabels.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_filters_finder_mobilefilters__WEBPACK_IMPORTED_MODULE_15__["default"], {
     config: props.config,
     query: query,
     response: funnelbackResponse,
