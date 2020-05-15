@@ -23642,8 +23642,30 @@ p.card--course__key-info .icon {
 
 .card--event--landscape {
     padding: 1rem;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in;
     background: transparent;
     position: relative;
+}
+
+@media (hover: hover) {
+    .card--event--landscape:hover {
+        background-color: #f2f2f2;
+    }
+}
+
+.card--event--landscape:active {
+    background-color: #f2f2f2;
+}
+
+.card--event--landscape:focus {
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 1024px) {
+    .card--event--landscape {
+        background-color: #f2f2f2;
+    }
 }
 
 @media (min-width: 769px) {
@@ -57167,29 +57189,14 @@ ul.landing--functional__finder__tabs__columns.columns-3 {
     width: 33%;
 }
 
-.course--pgt .pathway-image-cards {
-    /*
-    @include pathway-image-cards(
-        $color-purewhite,
-        $color-purewhite,
-        $color-pink60,
-        $color-purewhite,
-        $color-purewhite,
-        $color-purewhite,
-        $color-purewhite,
-        $border-color: rgba($color-purewhite, 0.2)
-    );
-    */
-}
-
 .course--pgt .pathway-image-cards h2,
 .course--pgt .pathway-image-cards h3 {
-    color: #0c0c0e;
+    color: #ffffff;
 }
 
 .course--pgt .pathway-image-cards a {
     color: #ffffff;
-    border: 0.0625rem solid #f2f2f2;
+    border: 0.0625rem solid #9c287b;
     background-color: transparent;
     transition: background-color 0.2s ease-in;
 }
@@ -57274,7 +57281,7 @@ ul.landing--functional__finder__tabs__columns.columns-3 {
 @media (hover: hover) {
     .course--pgt .pathway-image-cards a:hover {
         color: #ffffff;
-        border-bottom: 0.0625rem solid #f2f2f2;
+        border-bottom: 0.0625rem solid #9c287b;
     }
     .course--pgt .pathway-image-cards a:hover p,
     .course--pgt .pathway-image-cards a:hover span {
@@ -57284,8 +57291,8 @@ ul.landing--functional__finder__tabs__columns.columns-3 {
 
 .course--pgt .pathway-image-cards a:active {
     color: #ffffff;
-    outline-color: #0c0c0e;
-    border-bottom: 0.0625rem solid #f2f2f2;
+    outline-color: #ffffff;
+    border-bottom: 0.0625rem solid #9c287b;
 }
 
 .course--pgt .pathway-image-cards a:active p,
@@ -57295,8 +57302,8 @@ ul.landing--functional__finder__tabs__columns.columns-3 {
 
 .course--pgt .pathway-image-cards a:focus {
     color: #ffffff;
-    outline-color: #0c0c0e;
-    border-bottom: 0.0625rem solid #f2f2f2;
+    outline-color: #ffffff;
+    border-bottom: 0.0625rem solid #9c287b;
 }
 
 .course--pgt .pathway-image-cards a:focus p,
