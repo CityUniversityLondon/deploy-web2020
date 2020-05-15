@@ -24270,16 +24270,16 @@ p.card--course__key-info .icon {
 
 @media (hover: hover) {
     .card--pathway:hover {
-        border: none;
+        border: 0.0625rem solid #5fd8fe;
     }
 }
 
 .card--pathway:active {
-    border: none;
+    border: 0.0625rem solid #5fd8fe;
 }
 
 .card--pathway:focus {
-    border: none;
+    border: 0.0625rem solid #5fd8fe;
 }
 
 .card--pathway:before {
