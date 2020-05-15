@@ -49880,6 +49880,8 @@ button
 .chart--bar--horizontal__category {
     position: absolute;
     right: 1rem;
+    margin-left: 4rem;
+    text-align: center;
 }
 
 .chart--bar--horizontal__value {
