@@ -1445,8 +1445,9 @@ function setMaxWidth(chartGroup) {
 }
 
 function calcBarWidths(chartGroup) {
-  let charts = chartGroup.querySelectorAll('.chart--bar--horizontal__collection');
-  let maxSegmentWidths = [];
+  let charts = chartGroup.querySelectorAll('.chart--bar--horizontal__collection'),
+      maxSegmentWidths = [],
+      chartCollectionUnits = chartGroup.dataset.units;
 
   for (const a of charts) {
     let singleBarTotal = a.querySelector('[data-bar-total]'),
@@ -1465,8 +1466,8 @@ function calcBarWidths(chartGroup) {
     let segmentElements = a.querySelectorAll('[data-bar-segment]');
 
     for (const b of segmentElements) {
-      let segmentWidths = b.dataset.relativeWidth;
-      let AsegmentWidths = parseInt(segmentWidths);
+      let segmentWidths = b.dataset.relativeWidth,
+          AsegmentWidths = parseInt(segmentWidths);
       maxSegmentWidths.push(AsegmentWidths);
     }
 
@@ -1474,9 +1475,11 @@ function calcBarWidths(chartGroup) {
     singleBarSegment.setAttribute('data-segment-width', "".concat(segmentWidth));
   }
 
-  let maxSegmentWidth = Math.max(...maxSegmentWidths);
-  let d = chartGroup.querySelector("[data-relative-width=\"".concat(maxSegmentWidth, "\"]"));
-  d;
+  let maxSegmentWidth = Math.max(...maxSegmentWidths),
+      widestSegment = chartGroup.querySelector("[data-relative-width=\"".concat(maxSegmentWidth, "\"]")),
+      widestSegmentLabel = widestSegment.querySelectorAll('span'); // Only append units once even if segment widths are equal on multiple bars
+
+  widestSegmentLabel[0].append(" ".concat(chartCollectionUnits));
 }
 
 function launchChart(chartGroup) {
