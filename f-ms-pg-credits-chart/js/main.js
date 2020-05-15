@@ -1417,7 +1417,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Chart
+ * Horizontal bar chart with proportional segments.
  *
  * @module patterns/chart/chart
  * @author Web Development
@@ -1425,66 +1425,116 @@ __webpack_require__.r(__webpack_exports__);
  */
 const className = 'chart--bar--horizontal';
 let collectionMaxValue;
+/**
+ * Find each chart collection's maximum bar value and set as a global variable.
+ * This will be used to benchmark the collection's constituent charts' relative width against.
+ *
+ * Example scenario: Apple yields per year
+ * Bar 1 (Year 1) = 100 apples
+ * Bar 2 (Year 2) = 200 apples
+ * Bar 3 (Year 3) =  50 apples
+ *
+ * Result: Chart collection maximum = 200.
+ *
+ * @param {HTMLElement} chartCollection - A collection of horizontal bar charts.
+ */
 
-function setMaxWidth(chartGroup) {
-  // Isolate each chart instance
-  let charts = chartGroup.querySelectorAll('.chart--bar--horizontal__collection'),
-      singleBarTotals = []; // Find total and segment value of each chart
+function setCollectionMaxValue(chartCollection) {
+  let charts = chartCollection.querySelectorAll('.chart--bar--horizontal__collection'),
+      singleBarTotals = [];
 
-  for (const a of charts) {
-    let singleBarTotal = a.querySelector('[data-bar-total]');
-    singleBarTotal = singleBarTotal.dataset.barTotal;
-    singleBarTotal = parseInt(singleBarTotal); // Get highest value total value; the other bars will be proportional to this
-
+  for (const chart of charts) {
+    let singleBarTotal = chart.querySelector('[data-bar-total]');
+    singleBarTotal = parseInt(singleBarTotal.dataset.barTotal);
     singleBarTotals.push(singleBarTotal);
-  } // Set maximum value as data attribute on collection
-
-
-  collectionMaxValue = Math.max(...singleBarTotals);
-  chartGroup.setAttribute('data-chart-group-max', collectionMaxValue);
-}
-
-function calcBarWidths(chartGroup) {
-  let charts = chartGroup.querySelectorAll('.chart--bar--horizontal__collection'),
-      maxSegmentWidths = [],
-      chartCollectionUnits = chartGroup.dataset.units;
-
-  for (const a of charts) {
-    let singleBarTotal = a.querySelector('[data-bar-total]'),
-        singleBarSegment = a.querySelector('[data-bar-segment]'); // Calculate total bar and segment widths relative to collection max value
-
-    let AsingleBarTotal = singleBarTotal.dataset.barTotal;
-    AsingleBarTotal = parseInt(AsingleBarTotal);
-    let AsingleBarSegment = singleBarSegment.dataset.barSegment;
-    AsingleBarSegment = parseInt(AsingleBarSegment);
-    let barWidth = Math.round(AsingleBarTotal / collectionMaxValue * 100),
-        segmentWidth = Math.round(AsingleBarSegment / AsingleBarTotal * 100); // Calculate percentage space of parent container and set units to widest segment
-
-    let relativeWidth = Math.round(segmentWidth * barWidth / 100);
-    singleBarSegment.setAttribute('data-relative-width', "".concat(relativeWidth)); // Target segment with highest relative width
-
-    let segmentElements = a.querySelectorAll('[data-bar-segment]');
-
-    for (const b of segmentElements) {
-      let segmentWidths = b.dataset.relativeWidth,
-          AsegmentWidths = parseInt(segmentWidths);
-      maxSegmentWidths.push(AsegmentWidths);
-    }
-
-    a.setAttribute('data-bar-width', "".concat(barWidth));
-    singleBarSegment.setAttribute('data-segment-width', "".concat(segmentWidth));
   }
 
-  let maxSegmentWidth = Math.max(...maxSegmentWidths),
-      widestSegment = chartGroup.querySelector("[data-relative-width=\"".concat(maxSegmentWidth, "\"]")),
+  collectionMaxValue = Math.max(...singleBarTotals);
+}
+/**
+ * Build bar charts with segment values.
+ *
+ * @param {HTMLElement} chartCollection - A collection of horizontal bar charts.
+ */
+
+
+function buildBars(chartCollection) {
+  let charts = chartCollection.querySelectorAll('.chart--bar--horizontal__collection'),
+      segmentWidths = [],
+      chartCollectionUnits = chartCollection.dataset.units;
+
+  for (const chart of charts) {
+    let singleBarTotalEls = chart.querySelector('[data-bar-total]'),
+        singleBarSegmentEls = chart.querySelector('[data-bar-segment]'),
+        singleBarTotal = parseInt(singleBarTotalEls.dataset.barTotal),
+        singleBarSegment = parseInt(singleBarSegmentEls.dataset.barSegment);
+    /**
+     * Set bar widths relative to collection maximum value. Display as
+     * numbers (0-100) to allow CSS to set percentage widths.
+     *
+     * Example: Apple yields per year (maximum 200)
+     * Bar 1 (Year 1) => (100/200 * 100) =  50
+     * Bar 2 (Year 2) => (200/200 * 100) = 100
+     * Bar 3 (Year 3) => ( 50/200 * 100) =  25
+     */
+
+    let barWidth = Math.round(singleBarTotal / collectionMaxValue * 100),
+        segmentWidth = Math.round(singleBarSegment / singleBarTotal * 100);
+    chart.setAttribute('data-bar-width', "".concat(barWidth));
+    /**
+     * Create data attributes for:
+     *   1. Segment width proportional to bar
+     *   2. Segment width relative to collection width
+     *
+     * Display as numbers (0-100) to allow CSS to set percentage widths.
+     *
+     * Example: Variety of apples as part of overall yield (max 200).
+     * Bar 1
+     *      Braeburn: 50, total yield: 100
+     *      Segment relative to bar => (50/100) * 100 = 50
+     *      Segment relative to collection => (50/200) * 100 = 25
+     * Bar 2
+     *      Braeburn: 40, total yield: 200
+     *      Segment relative to bar => (40/200) * 100 = 20
+     *      Segment relative to collection => (40/200) * 100 = 20
+     * Bar 3
+     *      Braeburn: 5, total yield: 50
+     *      Segment relative to bar => (5/50) * 100 = 10
+     *      Segment relative to collection => (5/200) * 100 = 2.5
+     */
+
+    let relativeWidth = Math.round(segmentWidth * barWidth / 100);
+    singleBarSegmentEls.setAttribute('data-relative-width', "".concat(relativeWidth));
+    let segments = chart.querySelectorAll('[data-bar-segment]');
+
+    for (const segment of segments) {
+      let segmentRelativeWidths = parseInt(segment.dataset.relativeWidth);
+      segmentWidths.push(segmentRelativeWidths);
+    }
+
+    singleBarSegmentEls.setAttribute('data-segment-width', "".concat(segmentWidth));
+  }
+  /**
+   * Apply units label to segment with largest relative width, not just a segment's
+   * absolute value.
+   *
+   * Example:
+   * Bar 1 => Segment width: 50%, chart width: 50%, relative layout width: 25%
+   * Bar 2 => Segment width: 30%, chart width: 90%, relative layout width: 27%
+   * Units label would be output to bar 2.
+   */
+
+
+  let largestSegmentWidth = Math.max(...segmentWidths),
+      widestSegment = chartCollection.querySelector("[data-relative-width=\"".concat(largestSegmentWidth, "\"]")),
       widestSegmentLabel = widestSegment.querySelectorAll('span'); // Only append units once even if segment widths are equal on multiple bars
 
   widestSegmentLabel[0].append(" ".concat(chartCollectionUnits));
 }
 
-function launchChart(chartGroup) {
-  setMaxWidth(chartGroup);
-  calcBarWidths(chartGroup);
+function launchChart(chartCollection) {
+  setCollectionMaxValue(chartCollection);
+  buildBars(chartCollection);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
