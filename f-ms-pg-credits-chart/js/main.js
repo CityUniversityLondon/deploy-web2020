@@ -1521,13 +1521,14 @@ function buildBars(chartCollection) {
    * Example:
    * Bar 1 => Segment width: 50%, chart width: 50%, relative layout width: 25%
    * Bar 2 => Segment width: 30%, chart width: 90%, relative layout width: 27%
-   * Units label would be output to bar 2.
+   *
+   * Result: Units label added to segment in Bar 2.
    */
 
 
   let largestSegmentWidth = Math.max(...segmentWidths),
       widestSegment = chartCollection.querySelector("[data-relative-width=\"".concat(largestSegmentWidth, "\"]")),
-      widestSegmentLabel = widestSegment.querySelectorAll('span'); // Only append units once even if segment widths are equal on multiple bars
+      widestSegmentLabel = widestSegment.querySelectorAll('span'); // Only append units once, even if segment widths are equal on multiple bars
 
   widestSegmentLabel[0].append(" ".concat(chartCollectionUnits));
 }
