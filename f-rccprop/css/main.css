@@ -22289,7 +22289,7 @@ Assign mixin:
 .card--casestudy a {
     display: inline-block;
     background-color: transparent;
-    transition: background-color 0.6s ease-in;
+    transition: background-color 0.2s ease-in;
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -22372,14 +22372,16 @@ Assign mixin:
     }
 }
 
+.card--casestudy a:active {
+    background-color: #f2f2f2;
+}
+
+.card--casestudy a:focus {
+    background-color: #f2f2f2;
+}
+
 @media (max-width: 1024px) {
     .card--casestudy a {
-        background-color: #f2f2f2;
-    }
-    .card--casestudy a:active {
-        background-color: #f2f2f2;
-    }
-    .card--casestudy a:focus {
         background-color: #f2f2f2;
     }
 }
@@ -22897,7 +22899,7 @@ Assign mixin:
     position: relative;
     padding: 1rem;
     background-color: transparent;
-    transition: background-color 0.6s ease-in;
+    transition: background-color 0.2s ease-in;
 }
 
 .card--course:visited .card__title {
@@ -23073,14 +23075,16 @@ Assign mixin:
     }
 }
 
+.card--course:active {
+    background-color: #f2f2f2;
+}
+
+.card--course:focus {
+    background-color: #f2f2f2;
+}
+
 @media (max-width: 1024px) {
     .card--course {
-        background-color: #f2f2f2;
-    }
-    .card--course:active {
-        background-color: #f2f2f2;
-    }
-    .card--course:focus {
         background-color: #f2f2f2;
     }
 }
@@ -24158,7 +24162,7 @@ p.card--course__key-info .icon {
     text-decoration: none;
     border: 0.0625rem solid #e5e5e5;
     background-color: transparent;
-    transition: background-color 0.6s ease-in;
+    transition: background-color 0.2s ease-in;
     display: block;
     padding: 0 1rem 1rem 1rem;
     margin-bottom: 1.5rem;
@@ -24266,8 +24270,16 @@ p.card--course__key-info .icon {
 
 @media (hover: hover) {
     .card--pathway:hover {
-        border-bottom: 0.0625rem solid #e5e5e5;
+        border: none;
     }
+}
+
+.card--pathway:active {
+    border: none;
+}
+
+.card--pathway:focus {
+    border: none;
 }
 
 .card--pathway:before {
@@ -24276,19 +24288,21 @@ p.card--course__key-info .icon {
 
 @media (hover: hover) {
     .card--pathway:hover {
-        background-color: #f2f2f2;
+        background-color: #5fd8fe;
     }
+}
+
+.card--pathway:active {
+    background-color: #5fd8fe;
+}
+
+.card--pathway:focus {
+    background-color: #5fd8fe;
 }
 
 @media (max-width: 1024px) {
     .card--pathway {
-        background-color: #f2f2f2;
-    }
-    .card--pathway:active {
-        background-color: #f2f2f2;
-    }
-    .card--pathway:focus {
-        background-color: #f2f2f2;
+        background-color: #5fd8fe;
     }
 }
 
@@ -24351,48 +24365,9 @@ p.card--course__key-info .icon {
 
 .pathway-image-cards a {
     color: #0c0c0e;
-}
-
-@media (max-width: 1023px) {
-    .pathway-image-cards a {
-        background: #f2f2f2;
-    }
-}
-
-.pathway-image-cards a:hover {
-    color: #0c0c0e;
-}
-
-.pathway-image-cards a:hover p,
-.pathway-image-cards a:hover span {
-    color: #0c0c0e;
-}
-
-.pathway-image-cards a:active {
-    color: #0c0c0e;
-}
-
-.pathway-image-cards a:active p,
-.pathway-image-cards a:active span {
-    color: #0c0c0e;
-}
-
-.pathway-image-cards a:focus {
-    color: #0c0c0e;
-}
-
-.pathway-image-cards a:focus p,
-.pathway-image-cards a:focus span {
-    color: #0c0c0e;
-}
-
-.pathway-image-cards a .card--pathway-image__text-content__heading-text {
-    border-bottom: 0.125rem solid #0c0c0e;
-}
-
-.pathway-image-cards a p,
-.pathway-image-cards a span {
-    color: #0c0c0e;
+    border: 0.0625rem solid #f2f2f2;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in;
 }
 
 @media (hover: hover) {
@@ -24446,26 +24421,91 @@ p.card--course__key-info .icon {
     }
 }
 
+@media (hover: hover) {
+    .pathway-image-cards a:hover {
+        background-color: #f2f2f2;
+    }
+}
+
+.pathway-image-cards a:active {
+    background-color: #f2f2f2;
+}
+
+.pathway-image-cards a:focus {
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 1024px) {
+    .pathway-image-cards a {
+        background-color: #f2f2f2;
+    }
+}
+
+@media (max-width: 1023px) {
+    .pathway-image-cards a {
+        background: #f2f2f2;
+    }
+}
+
+@media (hover: hover) {
+    .pathway-image-cards a:hover {
+        color: #0c0c0e;
+        border-bottom: 0.0625rem solid #f2f2f2;
+    }
+    .pathway-image-cards a:hover p,
+    .pathway-image-cards a:hover span {
+        color: #0c0c0e;
+    }
+}
+
+.pathway-image-cards a:active {
+    color: #0c0c0e;
+    outline-color: #0c0c0e;
+    border-bottom: 0.0625rem solid #f2f2f2;
+}
+
+.pathway-image-cards a:active p,
+.pathway-image-cards a:active span {
+    color: #0c0c0e;
+}
+
+.pathway-image-cards a:focus {
+    color: #0c0c0e;
+    outline-color: #0c0c0e;
+    border-bottom: 0.0625rem solid #f2f2f2;
+}
+
+.pathway-image-cards a:focus p,
+.pathway-image-cards a:focus span {
+    color: #0c0c0e;
+}
+
+.pathway-image-cards a .card--pathway-image__text-content__heading-text {
+    border-bottom: 0.125rem solid #0c0c0e;
+}
+
+.pathway-image-cards a p,
+.pathway-image-cards a span {
+    color: #0c0c0e;
+}
+
 .pathway-image-cards a {
     display: block;
-    transition: none;
     position: relative;
 }
 
 @media (hover: hover) {
     .pathway-image-cards a:hover {
         background-image: none;
-        background-color: transparent;
-        border: none;
-        outline: none;
     }
 }
 
-.pathway-image-cards a:active, .pathway-image-cards a:focus {
+.pathway-image-cards a:active {
     background-image: none;
-    background-color: transparent;
-    border: none;
-    outline: none;
+}
+
+.pathway-image-cards a:focus {
+    background-image: none;
 }
 
 .pathway-image-cards a img {
@@ -24481,53 +24521,14 @@ p.card--course__key-info .icon {
 
 .pathway-image-cards.background--pink80 h2,
 .pathway-image-cards.background--pink80 h3 {
-    color: #0c0c0e;
+    color: #ffffff;
 }
 
 .pathway-image-cards.background--pink80 a {
     color: #ffffff;
-}
-
-@media (max-width: 1023px) {
-    .pathway-image-cards.background--pink80 a {
-        background: #9c287b;
-    }
-}
-
-.pathway-image-cards.background--pink80 a:hover {
-    color: #ffffff;
-}
-
-.pathway-image-cards.background--pink80 a:hover p,
-.pathway-image-cards.background--pink80 a:hover span {
-    color: #ffffff;
-}
-
-.pathway-image-cards.background--pink80 a:active {
-    color: #ffffff;
-}
-
-.pathway-image-cards.background--pink80 a:active p,
-.pathway-image-cards.background--pink80 a:active span {
-    color: #ffffff;
-}
-
-.pathway-image-cards.background--pink80 a:focus {
-    color: #ffffff;
-}
-
-.pathway-image-cards.background--pink80 a:focus p,
-.pathway-image-cards.background--pink80 a:focus span {
-    color: #ffffff;
-}
-
-.pathway-image-cards.background--pink80 a .card--pathway-image__text-content__heading-text {
-    border-bottom: 0.125rem solid #ffffff;
-}
-
-.pathway-image-cards.background--pink80 a p,
-.pathway-image-cards.background--pink80 a span {
-    color: #ffffff;
+    border: 0.0625rem solid #9c287b;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in;
 }
 
 @media (hover: hover) {
@@ -24579,6 +24580,74 @@ p.card--course__key-info .icon {
     .pathway-image-cards.background--pink80 a .thumbnail__image-container img {
         transition: none;
     }
+}
+
+@media (hover: hover) {
+    .pathway-image-cards.background--pink80 a:hover {
+        background-color: #9c287b;
+    }
+}
+
+.pathway-image-cards.background--pink80 a:active {
+    background-color: #9c287b;
+}
+
+.pathway-image-cards.background--pink80 a:focus {
+    background-color: #9c287b;
+}
+
+@media (max-width: 1024px) {
+    .pathway-image-cards.background--pink80 a {
+        background-color: #9c287b;
+    }
+}
+
+@media (max-width: 1023px) {
+    .pathway-image-cards.background--pink80 a {
+        background: #9c287b;
+    }
+}
+
+@media (hover: hover) {
+    .pathway-image-cards.background--pink80 a:hover {
+        color: #ffffff;
+        border-bottom: 0.0625rem solid #9c287b;
+    }
+    .pathway-image-cards.background--pink80 a:hover p,
+    .pathway-image-cards.background--pink80 a:hover span {
+        color: #ffffff;
+    }
+}
+
+.pathway-image-cards.background--pink80 a:active {
+    color: #ffffff;
+    outline-color: #ffffff;
+    border-bottom: 0.0625rem solid #9c287b;
+}
+
+.pathway-image-cards.background--pink80 a:active p,
+.pathway-image-cards.background--pink80 a:active span {
+    color: #ffffff;
+}
+
+.pathway-image-cards.background--pink80 a:focus {
+    color: #ffffff;
+    outline-color: #ffffff;
+    border-bottom: 0.0625rem solid #9c287b;
+}
+
+.pathway-image-cards.background--pink80 a:focus p,
+.pathway-image-cards.background--pink80 a:focus span {
+    color: #ffffff;
+}
+
+.pathway-image-cards.background--pink80 a .card--pathway-image__text-content__heading-text {
+    border-bottom: 0.125rem solid #ffffff;
+}
+
+.pathway-image-cards.background--pink80 a p,
+.pathway-image-cards.background--pink80 a span {
+    color: #ffffff;
 }
 
 .card--pathway-image h2,
@@ -25009,6 +25078,7 @@ p.card--course__key-info .icon {
 }
 
 .card--related-course .card__inner {
+    margin-bottom: 1rem;
     display: block;
 }
 
@@ -50753,7 +50823,7 @@ button
     outline-width: 0;
     text-decoration: none;
     background-color: transparent;
-    transition: background-color 0.6s ease-in;
+    transition: background-color 0.2s ease-in;
     position: relative;
     padding: 1rem;
     padding: 1rem;
@@ -50767,14 +50837,16 @@ button
     }
 }
 
+.finder__results__card a:active {
+    background-color: #f2f2f2;
+}
+
+.finder__results__card a:focus {
+    background-color: #f2f2f2;
+}
+
 @media (max-width: 1024px) {
     .finder__results__card a {
-        background-color: #f2f2f2;
-    }
-    .finder__results__card a:active {
-        background-color: #f2f2f2;
-    }
-    .finder__results__card a:focus {
         background-color: #f2f2f2;
     }
 }
@@ -51003,9 +51075,7 @@ button
         background-image: none;
         outline-color: transparent;
         outline-width: 0;
-    }
-    .finder__results__card a:hover:after {
-        background-color: #f2f2f2;
+        border-bottom: none;
     }
 }
 
@@ -51014,12 +51084,14 @@ button
     background-image: none;
     outline-color: transparent;
     outline-width: 0;
+    border-bottom: none;
 }
 
 .finder__results__card a:focus {
     background-image: none;
     outline-color: transparent;
     outline-width: 0;
+    border-bottom: none;
 }
 
 @media (min-width: 768px) {
@@ -57117,48 +57189,9 @@ ul.landing--functional__finder__tabs__columns.columns-3 {
 
 .course--pgt .pathway-image-cards a {
     color: #ffffff;
-}
-
-@media (max-width: 1023px) {
-    .course--pgt .pathway-image-cards a {
-        background: #9c287b;
-    }
-}
-
-.course--pgt .pathway-image-cards a:hover {
-    color: #ffffff;
-}
-
-.course--pgt .pathway-image-cards a:hover p,
-.course--pgt .pathway-image-cards a:hover span {
-    color: #ffffff;
-}
-
-.course--pgt .pathway-image-cards a:active {
-    color: #ffffff;
-}
-
-.course--pgt .pathway-image-cards a:active p,
-.course--pgt .pathway-image-cards a:active span {
-    color: #ffffff;
-}
-
-.course--pgt .pathway-image-cards a:focus {
-    color: #ffffff;
-}
-
-.course--pgt .pathway-image-cards a:focus p,
-.course--pgt .pathway-image-cards a:focus span {
-    color: #ffffff;
-}
-
-.course--pgt .pathway-image-cards a .card--pathway-image__text-content__heading-text {
-    border-bottom: 0.125rem solid #ffffff;
-}
-
-.course--pgt .pathway-image-cards a p,
-.course--pgt .pathway-image-cards a span {
-    color: #ffffff;
+    border: 0.0625rem solid #f2f2f2;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in;
 }
 
 @media (hover: hover) {
@@ -57210,6 +57243,74 @@ ul.landing--functional__finder__tabs__columns.columns-3 {
     .course--pgt .pathway-image-cards a .thumbnail__image-container img {
         transition: none;
     }
+}
+
+@media (hover: hover) {
+    .course--pgt .pathway-image-cards a:hover {
+        background-color: #9c287b;
+    }
+}
+
+.course--pgt .pathway-image-cards a:active {
+    background-color: #9c287b;
+}
+
+.course--pgt .pathway-image-cards a:focus {
+    background-color: #9c287b;
+}
+
+@media (max-width: 1024px) {
+    .course--pgt .pathway-image-cards a {
+        background-color: #9c287b;
+    }
+}
+
+@media (max-width: 1023px) {
+    .course--pgt .pathway-image-cards a {
+        background: #9c287b;
+    }
+}
+
+@media (hover: hover) {
+    .course--pgt .pathway-image-cards a:hover {
+        color: #ffffff;
+        border-bottom: 0.0625rem solid #f2f2f2;
+    }
+    .course--pgt .pathway-image-cards a:hover p,
+    .course--pgt .pathway-image-cards a:hover span {
+        color: #ffffff;
+    }
+}
+
+.course--pgt .pathway-image-cards a:active {
+    color: #ffffff;
+    outline-color: #0c0c0e;
+    border-bottom: 0.0625rem solid #f2f2f2;
+}
+
+.course--pgt .pathway-image-cards a:active p,
+.course--pgt .pathway-image-cards a:active span {
+    color: #ffffff;
+}
+
+.course--pgt .pathway-image-cards a:focus {
+    color: #ffffff;
+    outline-color: #0c0c0e;
+    border-bottom: 0.0625rem solid #f2f2f2;
+}
+
+.course--pgt .pathway-image-cards a:focus p,
+.course--pgt .pathway-image-cards a:focus span {
+    color: #ffffff;
+}
+
+.course--pgt .pathway-image-cards a .card--pathway-image__text-content__heading-text {
+    border-bottom: 0.125rem solid #ffffff;
+}
+
+.course--pgt .pathway-image-cards a p,
+.course--pgt .pathway-image-cards a span {
+    color: #ffffff;
 }
 
 .course--pgt .pathway-image-cards h2 {
