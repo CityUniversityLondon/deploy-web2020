@@ -53061,10 +53061,6 @@ button
     }
 }
 
-.content-hub__block-two .pathway-cards .card a {
-    z-index: 1;
-}
-
 @media (hover: hover) {
     .content-hub__block-two .pathway-cards .card a:hover .card__inner p {
         color: #ffffff;
