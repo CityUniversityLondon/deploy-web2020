@@ -25209,7 +25209,10 @@ p.card--course__key-info .icon {
 }
 
 .pathway-image-cards {
-    padding: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .pathway-image-cards h2,
@@ -25358,6 +25361,13 @@ p.card--course__key-info .icon {
     z-index: 0;
     position: relative;
     padding-bottom: 1rem;
+}
+
+@media (min-width: 901px) {
+    .pathway-image-cards {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 .pathway-image-cards a {
@@ -55397,20 +55407,6 @@ main .navigation--secondary + .landing .landing__top__content--text {
     margin-top: 1rem;
 }
 
-@media (max-width: 1023px) {
-    main .navigation--secondary + .landing .landing__top__content--text {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    main .navigation--secondary + .landing .landing__top__content--text {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
 main .navigation--secondary + .landing .landing_middle1_content {
     padding: 2rem;
 }
@@ -55484,7 +55480,7 @@ main .landing {
 }
 
 main .landing .landing__top__content {
-    padding: 1rem 0 2rem 0;
+    margin: 1rem 0 2rem 0;
 }
 
 @media (max-width: 1023px) {
