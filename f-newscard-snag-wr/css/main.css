@@ -23968,116 +23968,6 @@ p.card--course__key-info .icon {
     }
 }
 
-.card--news__button {
-    display: inline-flex;
-    position: relative;
-    top: -1.25rem;
-    left: 1.75rem;
-    align-items: center;
-    color: #ffffff;
-    background: #d61726;
-    padding: 0.5rem 1rem;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    font-weight: 600;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .card--news__button {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--news__button {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--news__button {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--news__button {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--news__button:visited {
-    color: #ffffff;
-}
-
-.card--news__button:active, .card--news__button:focus {
-    background: #b91924;
-    color: #ffffff;
-}
-
-@media (hover: hover) {
-    .card--news__button:hover {
-        background: #b91924;
-    }
-    .card--news__button:hover .card--news__button__icons span:nth-child(1) {
-        animation: slide-right-out 600ms;
-        display: none;
-        visibility: hidden;
-        opacity: 0;
-    }
-    .card--news__button:hover .card--news__button__icons span:nth-child(2) {
-        display: inherit;
-        visibility: visible;
-        opacity: 1;
-        animation: slide-left-in 600ms;
-    }
-}
-
-.card--news__button .card--news__button__icons {
-    text-align: right;
-    width: 2.5rem;
-}
-
-.card--news__button .card--news__button__icons span {
-    margin-left: 1rem;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    font-weight: 600;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .card--news__button .card--news__button__icons span {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--news__button .card--news__button__icons span {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--news__button .card--news__button__icons span {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--news__button .card--news__button__icons span {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--news__button .card--news__button__icons span:nth-child(1) {
-    animation: slide-right-out 600ms;
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-}
-
 .card--news__title-link a {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
@@ -24216,7 +24106,7 @@ p.card--course__key-info .icon {
 }
 
 .card--news__content {
-    padding: 0 1.75rem 1.75rem 1.75rem;
+    padding: 1.75rem;
 }
 
 .card--news__description p {
