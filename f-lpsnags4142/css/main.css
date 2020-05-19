@@ -56807,6 +56807,7 @@ ul.landing--functional__finder__tabs__columns li a:active {
     background: initial;
     box-shadow: initial;
     padding: 0;
+    border-top: none;
 }
 
 .landing__contact .card--contact .card--contact__key-info > .icon {
