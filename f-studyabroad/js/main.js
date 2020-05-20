@@ -2428,31 +2428,21 @@ function finder__results__module(props) {
     className: "fas fa-fw fa-map-marker-alt icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Location:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.location)),
-        title = props.details.metaData.code ? props.details.metaData.code + ' ' + props.details.title : props.details.title,
-        school = props.details.metaData.school && props.query.facets.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+        title = props.details.metaData.code ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "finder__results__card--module__code"
+  }, props.details.metaData.code), props.details.title) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, props.details.title),
+        school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
-        code = props.details.metaData.code && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "far fa-fw fa-file icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Module code:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.code)),
         term = props.details.metaData.term && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "far fa-fw fa-calendar icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Term:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.term.split('|').length > 2 ? 'All year' : props.details.metaData.term.split('|').join(' or '))),
-        department = props.details.metaData.department && props.query.facets.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-fw fa-building icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Department:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(', and '))),
         topic = props.details.metaData.related && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__description"
   }, props.details.metaData.related),
@@ -2465,12 +2455,12 @@ function finder__results__module(props) {
     href: props.details.metaData.specification
   }, "Download module specification"));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    className: "finder__results__card finder__results__contact"
+    className: "finder__results__card finder__results__card--module"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__results__card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "card__title finder__results__card__heading"
-  }, title), topic, term, code, school, department, location, specification));
+  }, title), topic, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c), term, school, location, specification));
 }
 
 finder__results__module.propTypes = {
@@ -3226,19 +3216,12 @@ function finder__query(props) {
 
   const submitForm = () => {
     let queryURL = '';
-    let exclusions = ['Short courses', 'Professional development courses', 'City Health courses', 'In-house law courses'];
-    let courseLevel = document.getElementsByClassName('finder__mini')[0].getAttribute('data-level');
-
-    function exclusion(level) {
-      return level === courseLevel;
-    }
-
-    function buildURL(level) {
-      exclusions.filter(exclusion).length ? queryURL = 'meta_level_sand=Short+courses+and+professional+development&meta_type_sand=' + level : queryURL = 'meta_level_sand=' + level;
-      window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?".concat(queryURL, "&query=").concat(partialQuery));
-    }
-
-    buildURL(courseLevel);
+    let finderMiniElement = document.getElementsByClassName('finder__mini')[0];
+    let courseLevel = finderMiniElement.getAttribute('data-level');
+    let courseSubject = finderMiniElement.getAttribute('data-subject');
+    let courseType = finderMiniElement.getAttribute('data-type');
+    queryURL = 'meta_level_sand=' + courseLevel + '&meta_subject_sand=' + courseSubject + '&meta_type_sand=' + courseType;
+    window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?".concat(queryURL, "&query=").concat(partialQuery));
   };
 
   const submitSuggestion = s => {
@@ -7937,6 +7920,7 @@ function dotEvent(dot, slider, parent) {
 
     if (active === el.getAttribute('data-page')) {
       el.setAttribute('data-visible', true);
+      el.focus();
     }
   });
 }
@@ -8004,7 +7988,9 @@ function launchSlider(slider) {
       maxItem: 1,
       pageAttr: 'data-page',
       visAttr: 'data-visible',
-      counterAttr: 'data-currentdefault'
+      counterAttr: 'data-currentdefault',
+      tabIndex: 'tabindex',
+      ariaLabel: 'aria-label'
     },
     mobile: {
       totalPages: totalItems,
@@ -8012,7 +7998,9 @@ function launchSlider(slider) {
       maxItem: 1,
       pageAttr: 'data-page',
       visAttr: 'data-visible',
-      counterAttr: 'data-currentdefault'
+      counterAttr: 'data-currentdefault',
+      tabIndex: 'tabindex',
+      ariaLabel: 'aria-label'
     },
     tablet: {
       totalPages: maxTablet,
@@ -8020,7 +8008,9 @@ function launchSlider(slider) {
       maxItem: perPageTablet,
       pageAttr: 'data-pagetablet',
       visAttr: 'data-visibletablet',
-      counterAttr: 'data-currenttablet'
+      counterAttr: 'data-currenttablet',
+      tabIndex: 'tabindex',
+      ariaLabel: 'aria-label'
     },
     desk: {
       totalPages: maxDesk,
@@ -8028,7 +8018,9 @@ function launchSlider(slider) {
       maxItem: perPageDesk,
       pageAttr: 'data-pagedesk',
       visAttr: 'data-visibledesk',
-      counterAttr: 'data-currentdesk'
+      counterAttr: 'data-currentdesk',
+      tabIndex: 'tabindex',
+      ariaLabel: 'aria-label'
     }
   };
 
@@ -8148,6 +8140,8 @@ function setSwipe(slider, sliderType, sliderObject, sliderControl) {
 function setVisibility(slider, sliderType, sliderObject) {
   Array.from(slider.getElementsByTagName('li')).forEach((el, i) => {
     el.setAttribute(sliderObject.default.pageAttr, "".concat(i));
+    el.setAttribute(sliderObject.default.tabIndex, "-1");
+    el.setAttribute(sliderObject.default.ariaLabel, "Slide ".concat(i + 1));
 
     if (i === 0) {
       el.setAttribute(sliderObject.default.visAttr, true);
