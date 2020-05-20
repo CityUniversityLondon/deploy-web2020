@@ -21520,15 +21520,6 @@ Assign mixin:
     height: 100%;
 }
 
-.banner__image:after {
-    bottom: 0;
-    content: '';
-    height: 100%;
-    left: 0;
-    position: absolute;
-    width: 100%;
-}
-
 @media (max-width: 768px) {
     .banner__image {
         max-height: 320px;
@@ -21898,18 +21889,6 @@ Assign mixin:
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-}
-
-.banner__image {
-    position: relative;
-}
-
-.banner__image:after {
-    background-image: linear-gradient(to top, #303030, transparent);
-}
-
-.banner__overlay {
-    background-color: #303030;
 }
 
 .breadcrumbs {
@@ -55110,6 +55089,24 @@ main .landing .landing__standfirst p {
     grid-column: 7 / 19;
 }
 
+main .landing .banner .banner__image {
+    position: relative;
+}
+
+main .landing .banner .banner__image:after {
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-image: linear-gradient(to top, #303030, transparent);
+}
+
+main .landing .banner .banner__overlay {
+    background-color: #303030;
+}
+
 @media (min-width: 768px) {
     main .wrapper--finder__mini {
         grid-template-columns: repeat(24, 1fr);
@@ -55546,6 +55543,24 @@ main .landing:only-child .landing__middle1 p {
 
 main .landing:only-child .banner {
     grid-template-areas: initial;
+}
+
+main .landing:only-child .banner .banner__image {
+    position: relative;
+}
+
+main .landing:only-child .banner .banner__image:after {
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-image: linear-gradient(to top, #303030, transparent);
+}
+
+main .landing:only-child .banner .banner__overlay {
+    background-color: #303030;
 }
 
 main .landing:only-child .banner .banner__image {
@@ -56901,6 +56916,12 @@ ul.landing--functional__finder__tabs__columns li a:active {
 }
 
 .course--pgt .banner__image:after {
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
     background-image: linear-gradient(to top, #5d184a, transparent);
 }
 
@@ -60542,6 +60563,12 @@ button
 }
 
 .research-degree .banner__image:after {
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
     background-image: linear-gradient(to top, #303030, transparent);
 }
 
@@ -61439,6 +61466,12 @@ button
 }
 
 .lifelong-learning .banner__image:after {
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
     background-image: linear-gradient(to top, #5d184a, transparent);
 }
 
