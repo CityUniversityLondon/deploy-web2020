@@ -21576,6 +21576,7 @@ Assign mixin:
     height: 100%;
     position: relative;
     width: 100%;
+    padding: 1rem 0;
 }
 
 .banner__overlay.flex-wrapper--banner__overlay {
@@ -21617,17 +21618,16 @@ Assign mixin:
 }
 
 .banner__overlay__heading {
-    text-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.3);
     margin-left: 1rem;
     margin-right: 1rem;
     max-width: 80rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    padding-bottom: 1rem;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 2rem;
     height: inherit;
 }
 
@@ -21645,10 +21645,8 @@ Assign mixin:
     }
 }
 
-@media (max-width: 900px) {
-    .banner__overlay__heading {
-        padding-bottom: 1rem;
-    }
+.banner__overlay__heading h1 {
+    text-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.3);
 }
 
 .banner--center .banner__overlay .banner__overlay__heading {
