@@ -865,7 +865,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function finder__results__module(props) {
-  const location = props.details.metaData.location && props.query.facets.location && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  const location = props.details.metaData.location && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__results__card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-map-marker-alt icon",
