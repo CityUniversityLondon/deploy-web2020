@@ -21454,7 +21454,6 @@ Assign mixin:
     main > article .banner .banner__image,
     main > article .banner .banner__image + .banner__overlay {
         grid-column: 1 / span 24;
-        grid-row: 1;
     }
 }
 
