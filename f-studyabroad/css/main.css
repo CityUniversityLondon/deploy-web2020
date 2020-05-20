@@ -52278,10 +52278,16 @@ button
     }
 }
 
+.finder__results__card .icon {
+    color: #d61726;
+}
+
+.finder__results__card--module,
 .finder__results__contact {
     margin-top: 0;
 }
 
+.finder__results__card--module a,
 .finder__results__contact a {
     background-color: initial;
     background-image: initial;
@@ -52324,6 +52330,7 @@ button
 }
 
 @media (hover: hover) {
+    .finder__results__card--module a:hover,
     .finder__results__contact a:hover {
         background-color: initial;
         background-image: initial;
@@ -52341,7 +52348,9 @@ button
     }
 }
 
-.finder__results__contact a:focus, .finder__results__contact a:active {
+.finder__results__card--module a:focus, .finder__results__card--module a:active,
+.finder__results__contact a:focus,
+.finder__results__contact a:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -52358,25 +52367,30 @@ button
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .finder__results__card--module a,
     .finder__results__contact a {
         transition: none;
     }
 }
 
 @media (hover: hover) {
+    .finder__results__card--module a:hover,
     .finder__results__contact a:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.finder__results__contact a:focus, .finder__results__contact a:active {
+.finder__results__card--module a:focus, .finder__results__card--module a:active,
+.finder__results__contact a:focus,
+.finder__results__contact a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
+.finder__results__card--module a:visited,
 .finder__results__contact a:visited {
     border-bottom-color: #4c2c92;
     border-bottom-style: solid;
@@ -52384,6 +52398,7 @@ button
     color: #4c2c92;
 }
 
+.finder__results__card--module a:focus,
 .finder__results__contact a:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -52392,6 +52407,7 @@ button
 }
 
 @media (hover: hover) {
+    .finder__results__card--module a:hover,
     .finder__results__contact a:hover {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
@@ -52400,6 +52416,7 @@ button
     }
 }
 
+.finder__results__card--module a:active,
 .finder__results__contact a:active {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
@@ -52408,14 +52425,12 @@ button
     color: #ffffff;
 }
 
+.finder__results__card--module a:after,
 .finder__results__contact a:after {
     content: unset;
 }
 
-.finder__results__contact .icon {
-    color: #d61726;
-}
-
+.finder__results__card--module .finder__results__card__tag,
 .finder__results__contact .finder__results__card__tag {
     font-size: 0.889rem;
     line-height: 1.625;
@@ -52425,29 +52440,34 @@ button
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
+    .finder__results__card--module .finder__results__card__tag,
     .finder__results__contact .finder__results__card__tag {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card--module .finder__results__card__tag,
     .finder__results__contact .finder__results__card__tag {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card--module .finder__results__card__tag,
     .finder__results__contact .finder__results__card__tag {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
+    .finder__results__card--module .finder__results__card__tag,
     .finder__results__contact .finder__results__card__tag {
         letter-spacing: -0.017em;
     }
 }
 
+.finder__results__card--module .finder__results__card__tag .icon,
 .finder__results__contact .finder__results__card__tag .icon {
     margin-right: 0.5rem;
 }
