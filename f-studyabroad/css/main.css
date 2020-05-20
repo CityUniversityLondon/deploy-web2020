@@ -50695,7 +50695,7 @@ button
      */
     font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
     border-right: 0.0625rem solid #cbcbcb;
-    font-weight: 600;
+    font-weight: 500;
     margin-right: 0.5rem;
     padding-right: 0.5rem;
 }
