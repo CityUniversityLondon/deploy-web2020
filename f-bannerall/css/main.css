@@ -55137,48 +55137,6 @@ main .home {
     }
 }
 
-main .landing header p {
-    font-size: 1.266rem;
-    line-height: 1.25;
-    letter-spacing: -0.011em;
-    font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 1.625;
-    margin-top: 0.75rem;
-    max-width: 55ch;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    main .landing header p {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    main .landing header p {
-        letter-spacing: -0.015em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    main .landing header p {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    main .landing header p {
-        letter-spacing: -0.017em;
-    }
-}
-
-main .landing header p i,
-main .landing header p em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-}
-
 @media (min-width: 1280px) {
     main .landing {
         grid-column: 6 / span 14;
