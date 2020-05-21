@@ -21577,6 +21577,12 @@ Assign mixin:
     padding: 1rem 0;
 }
 
+@media (max-width: 767px) {
+    .banner__overlay {
+        grid-row: 2;
+    }
+}
+
 .banner__overlay.flex-wrapper--banner__overlay {
     display: flex;
     flex-direction: column;
@@ -55111,7 +55117,7 @@ main .landing .banner .banner__image:after {
     background-image: linear-gradient(to top, #303030, transparent);
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 767px) {
     main .landing .banner .banner__overlay {
         background-color: #303030;
     }
@@ -55569,7 +55575,7 @@ main .landing:only-child .banner .banner__image:after {
     background-image: linear-gradient(to top, #303030, transparent);
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 767px) {
     main .landing:only-child .banner .banner__overlay {
         background-color: #303030;
     }
@@ -56937,7 +56943,7 @@ ul.landing--functional__finder__tabs__columns li a:active {
     background-image: linear-gradient(to top, #5d184a, transparent);
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 767px) {
     .course--pgt .banner__overlay {
         background-color: #5d184a;
     }
@@ -60586,7 +60592,7 @@ button
     background-image: linear-gradient(to top, #303030, transparent);
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 767px) {
     .research-degree .banner__overlay {
         background-color: #303030;
     }
@@ -61491,7 +61497,7 @@ button
     background-image: linear-gradient(to top, #5d184a, transparent);
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 767px) {
     .lifelong-learning .banner__overlay {
         background-color: #5d184a;
     }
