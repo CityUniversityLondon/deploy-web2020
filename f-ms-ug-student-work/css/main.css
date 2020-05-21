@@ -64232,6 +64232,14 @@ main .standard-content .banner-text {
     }
 }
 
+.course--ug__student-coursework .imageColLayout {
+    margin-top: 0;
+}
+
+.course--ug__student-coursework .imageColLayout figure {
+    margin-top: 1rem;
+}
+
 .statistics-block--ug .ksp__items--ug {
     display: flex;
     justify-content: space-between;
