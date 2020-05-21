@@ -55118,6 +55118,10 @@ main .landing:not(.landing--functional) .banner .banner__image:after {
     }
 }
 
+main .landing:not(.landing--functional) .banner .banner-text {
+    background-color: #303030;
+}
+
 @media (min-width: 768px) {
     main .wrapper--finder__mini {
         grid-template-columns: repeat(24, 1fr);
@@ -55574,6 +55578,10 @@ main .landing:only-child .banner .banner__image:after {
     main .landing:only-child .banner .banner__overlay {
         background-color: #303030;
     }
+}
+
+main .landing:only-child .banner .banner-text {
+    background-color: #303030;
 }
 
 main .landing:only-child .banner .banner__image {
@@ -56942,6 +56950,10 @@ ul.landing--functional__finder__tabs__columns li a:active {
     .course--pgt .banner__overlay {
         background-color: #5d184a;
     }
+}
+
+.course--pgt .banner-text {
+    background-color: #5d184a;
 }
 
 .course--pgt .banner__overlay .banner__overlay__heading {
@@ -60593,6 +60605,10 @@ button
     }
 }
 
+.research-degree .banner-text {
+    background-color: #303030;
+}
+
 .research-degree__standfirst-block {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
@@ -61496,6 +61512,10 @@ button
     .lifelong-learning .banner__overlay {
         background-color: #5d184a;
     }
+}
+
+.lifelong-learning .banner-text {
+    background-color: #5d184a;
 }
 
 .lifelong-learning .wrapper--key-information--lifelong-learning {
