@@ -64204,47 +64204,6 @@ main .standard-content .banner-text {
     }
 }
 
-.course--ug__student-coursework,
-.course--ug__facilities {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
-
-@media (min-width: 901px) {
-    .course--ug__student-coursework,
-    .course--ug__facilities {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .course--ug__student-coursework,
-    .course--ug__facilities {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (min-width: 1441px) {
-    .course--ug__student-coursework,
-    .course--ug__facilities {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (min-width: 769px) {
-    .course--ug__student-coursework,
-    .course--ug__facilities {
-        margin: 0;
-        padding: 0;
-    }
-}
-
 @media (min-width: 769px) {
     .course--ug__facilities__video {
         display: grid;
@@ -64262,7 +64221,7 @@ main .standard-content .banner-text {
 }
 
 .course--ug__student-coursework .course--ug__student-coursework__videos .embedded-video {
-    padding: 1rem 0;
+    padding: 0.5rem 0 1.5rem;
 }
 
 @media (min-width: 769px) {
