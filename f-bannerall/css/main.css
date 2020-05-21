@@ -21511,12 +21511,6 @@ Assign mixin:
     }
 }
 
-@media (min-width: 1024px) and (min-width: 1024px) {
-    main .navigation--secondary + article .banner .banner__overlay {
-        background-color: transparent;
-    }
-}
-
 .banner {
     position: relative;
     overflow: hidden;
