@@ -22685,15 +22685,23 @@ Assign mixin:
 }
 
 .card--casestudy--alternative .card--casestudy--alternative__thumbnail {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    width: 17rem;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+    width: 14rem;
+    height: 20rem;
+    overflow: hidden;
+}
+
+.card--casestudy--alternative .card--casestudy--alternative__thumbnail img {
+    max-height: 100%;
+    max-width: inherit;
 }
 
 .card--casestudy--alternative .card--casestudy--alternative__content {
     background: #00294a;
-    width: 17rem;
+    width: 14rem;
     padding: 1.5rem;
+    height: 20rem;
 }
 
 .card--casestudy--alternative .card--casestudy--alternative__content:active {
@@ -22705,7 +22713,7 @@ Assign mixin:
     font-size: 0.79rem;
     line-height: 1.625;
     letter-spacing: 0.005em;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -22732,6 +22740,10 @@ Assign mixin:
     }
 }
 
+.card--casestudy--alternative .card--casestudy--alternative__title {
+    margin-bottom: 1.25rem;
+}
+
 .card--casestudy--alternative .card--casestudy--alternative__title p {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
@@ -22740,7 +22752,6 @@ Assign mixin:
     letter-spacing: -0.008em;
     color: #ffffff;
     border-color: #ffffff;
-    margin-bottom: 1.5rem;
     border-bottom: 0.125rem solid #ffffff;
     display: inline;
 }
