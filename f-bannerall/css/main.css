@@ -55098,11 +55098,11 @@ main .landing .landing__standfirst p {
     grid-column: 7 / 19;
 }
 
-main .landing .banner .banner__image {
+main .landing:not(.landing--functional) .banner .banner__image {
     position: relative;
 }
 
-main .landing .banner .banner__image:after {
+main .landing:not(.landing--functional) .banner .banner__image:after {
     bottom: 0;
     content: '';
     height: 100%;
@@ -55113,7 +55113,7 @@ main .landing .banner .banner__image:after {
 }
 
 @media (max-width: 767px) {
-    main .landing .banner .banner__overlay {
+    main .landing:not(.landing--functional) .banner .banner__overlay {
         background-color: #303030;
     }
 }
