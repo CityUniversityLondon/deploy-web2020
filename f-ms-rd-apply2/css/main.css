@@ -60924,6 +60924,22 @@ button
     grid-column: 1/-1;
 }
 
+.no-js .research-degree__overview__content .research-degree__overview__content__apply-links {
+    display: none;
+}
+
+.no-js .research-degree__overview__content .research-degree__overview__content__apply-links.research-degree__overview__content__apply-links--multiple-pathways {
+    display: none;
+}
+
+.no-js .how-to-apply--research--no-js {
+    display: block;
+}
+
+.js .how-to-apply--research--no-js {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .research-degree__overview__content .research-degree__overview__content__apply-links {
         display: flex;
