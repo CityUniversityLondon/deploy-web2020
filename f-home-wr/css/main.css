@@ -55324,6 +55324,24 @@ main .home .home__statistics h2 {
     text-align: center;
 }
 
+main .home .home__research {
+    display: flex;
+    flex-direction: row;
+}
+
+main .home .home__research .home__research__content .home__research__content__links ul {
+    list-style: none;
+}
+
+main .home .home__research .home__research__content .home__research__content__links ul li:before {
+    content: '\f0a9';
+    font-family: 'Font Awesome';
+    display: inline-block;
+    color: #d61726;
+    margin-right: 0.5rem;
+    font-weight: 100;
+}
+
 main .home .home__whats-happening {
     padding: 1.75rem;
 }
