@@ -400,18 +400,33 @@ const aria = {
 __webpack_require__.r(__webpack_exports__);
 
 
+/**
+ * Research apply CTA (no modal)
+ *
+ * @module patterns/accordion/accordion
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
 const className = 'cta-block__cta--no-modal';
+/**
+ * Disables modal behaviour on research degree apply CTA where one date exists
+ * for a method of study and modal of multiple start dates is not required. Pass
+ * relevant URL path to CTA so it behaves as a standard anchor.
+ *
+ * @param {HTMLElement} cta - A standard research apply CTA (no modal).
+ */
 
-function launchResearchApply(cta) {
-  let applyUrl = cta.querySelector('a.cta-block__cta__path');
-  let applyUrlHref = applyUrl.getAttribute('href');
-  let researchApplyLink = cta.querySelector('.research-appy-link');
-  researchApplyLink.setAttribute('href', applyUrlHref);
-  applyUrl.remove();
+function launchResearchApplyCta(cta) {
+  let applyAnchor = cta.querySelector('.cta-block__cta__path'),
+      applyAnchorHref = applyAnchor.getAttribute('href'),
+      applyCta = cta.querySelector('.research-apply-link');
+  applyCta.setAttribute('href', applyAnchorHref); // Remove duplicate anchor, as href is now placed on apply CTA
+
+  applyAnchor.remove();
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchResearchApply,
+  launchFn: launchResearchApplyCta,
   launchQuery: ".".concat(className)
 });
 
