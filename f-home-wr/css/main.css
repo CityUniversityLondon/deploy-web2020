@@ -22682,7 +22682,6 @@ Assign mixin:
 .card--casestudy--alternative {
     display: flex;
     flex-direction: row;
-    margin: 1.75rem;
 }
 
 @media (max-width: 431px) {
@@ -55329,6 +55328,10 @@ main .home .home__research {
     flex-direction: row;
 }
 
+main .home .home__research .home__research__content {
+    flex: 1;
+}
+
 main .home .home__research .home__research__content .home__research__content__links ul {
     list-style: none;
 }
@@ -55340,6 +55343,10 @@ main .home .home__research .home__research__content .home__research__content__li
     color: #d61726;
     margin-right: 0.5rem;
     font-weight: 100;
+}
+
+main .home .home__research .home__research__card {
+    flex: 1;
 }
 
 main .home .home__whats-happening {
