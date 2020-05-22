@@ -64224,7 +64224,7 @@ main .standard-content .banner-text {
     padding: 0.5rem 0 1.5rem;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 901px) {
     .course--ug__student-coursework .course--ug__student-coursework__videos {
         display: grid;
         grid-template-columns: 1fr 1fr;
