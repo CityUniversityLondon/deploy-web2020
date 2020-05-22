@@ -22685,44 +22685,41 @@ Assign mixin:
     margin: 1.75rem;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 431px) {
     .card--casestudy--alternative {
         flex-direction: column;
     }
 }
 
 .card--casestudy--alternative .card--casestudy--alternative__thumbnail {
-    padding-top: 1.75rem;
-    padding-bottom: 1.75rem;
+    margin-top: 1.75rem;
+    margin-bottom: 1.75rem;
     width: 14rem;
-    height: 20rem;
     overflow: hidden;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 431px) {
     .card--casestudy--alternative .card--casestudy--alternative__thumbnail {
         width: auto;
-        padding: 0;
-        margin-left: 1.75rem;
-        margin-right: 1.75rem;
+        margin: 0 1.75rem;
         height: 15rem;
     }
 }
 
 .card--casestudy--alternative .card--casestudy--alternative__thumbnail img {
-    max-height: 100%;
+    min-height: 100%;
     max-width: inherit;
+    width: 100%;
 }
 
 .card--casestudy--alternative .card--casestudy--alternative__content {
     background: #00294a;
     width: 17rem;
     padding: 1.5rem;
-    height: 20rem;
     overflow: hidden;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 431px) {
     .card--casestudy--alternative .card--casestudy--alternative__content {
         width: 100%;
         height: auto;
