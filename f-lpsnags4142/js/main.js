@@ -3125,19 +3125,12 @@ function finder__query(props) {
 
   const submitForm = () => {
     let queryURL = '';
-    let exclusions = ['Short courses', 'Professional development courses', 'City Health courses', 'In-house law courses'];
-    let courseLevel = document.getElementsByClassName('finder__mini')[0].getAttribute('data-level');
-
-    function exclusion(level) {
-      return level === courseLevel;
-    }
-
-    function buildURL(level) {
-      exclusions.filter(exclusion).length ? queryURL = 'meta_level_sand=Short+courses+and+professional+development&meta_type_sand=' + level : queryURL = 'meta_level_sand=' + level;
-      window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?".concat(queryURL, "&query=").concat(partialQuery));
-    }
-
-    buildURL(courseLevel);
+    let finderMiniElement = document.getElementsByClassName('finder__mini')[0];
+    let courseLevel = finderMiniElement.getAttribute('data-level');
+    let courseSubject = finderMiniElement.getAttribute('data-subject');
+    let courseType = finderMiniElement.getAttribute('data-type');
+    queryURL = 'meta_level_sand=' + courseLevel + '&meta_subject_sand=' + courseSubject + '&meta_type_sand=' + courseType;
+    window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?".concat(queryURL, "&query=").concat(partialQuery));
   };
 
   const submitSuggestion = s => {
@@ -7835,6 +7828,7 @@ function dotEvent(dot, slider, parent) {
 
     if (active === el.getAttribute('data-page')) {
       el.setAttribute('data-visible', true);
+      el.focus();
     }
   });
 }
@@ -7902,7 +7896,9 @@ function launchSlider(slider) {
       maxItem: 1,
       pageAttr: 'data-page',
       visAttr: 'data-visible',
-      counterAttr: 'data-currentdefault'
+      counterAttr: 'data-currentdefault',
+      tabIndex: 'tabindex',
+      ariaLabel: 'aria-label'
     },
     mobile: {
       totalPages: totalItems,
@@ -7910,7 +7906,9 @@ function launchSlider(slider) {
       maxItem: 1,
       pageAttr: 'data-page',
       visAttr: 'data-visible',
-      counterAttr: 'data-currentdefault'
+      counterAttr: 'data-currentdefault',
+      tabIndex: 'tabindex',
+      ariaLabel: 'aria-label'
     },
     tablet: {
       totalPages: maxTablet,
@@ -7918,7 +7916,9 @@ function launchSlider(slider) {
       maxItem: perPageTablet,
       pageAttr: 'data-pagetablet',
       visAttr: 'data-visibletablet',
-      counterAttr: 'data-currenttablet'
+      counterAttr: 'data-currenttablet',
+      tabIndex: 'tabindex',
+      ariaLabel: 'aria-label'
     },
     desk: {
       totalPages: maxDesk,
@@ -7926,7 +7926,9 @@ function launchSlider(slider) {
       maxItem: perPageDesk,
       pageAttr: 'data-pagedesk',
       visAttr: 'data-visibledesk',
-      counterAttr: 'data-currentdesk'
+      counterAttr: 'data-currentdesk',
+      tabIndex: 'tabindex',
+      ariaLabel: 'aria-label'
     }
   };
 
@@ -8046,6 +8048,8 @@ function setSwipe(slider, sliderType, sliderObject, sliderControl) {
 function setVisibility(slider, sliderType, sliderObject) {
   Array.from(slider.getElementsByTagName('li')).forEach((el, i) => {
     el.setAttribute(sliderObject.default.pageAttr, "".concat(i));
+    el.setAttribute(sliderObject.default.tabIndex, "-1");
+    el.setAttribute(sliderObject.default.ariaLabel, "Slide ".concat(i + 1));
 
     if (i === 0) {
       el.setAttribute(sliderObject.default.visAttr, true);
