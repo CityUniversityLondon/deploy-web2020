@@ -52818,11 +52818,6 @@ button
     background-repeat: no-repeat;
 }
 
-.home__research__wrap {
-    background: green;
-    border: thin solid blue;
-}
-
 @media (max-width: 1023px) {
     main > .case-study .wrapper__case-study__overview__main {
         margin-left: 1rem;
