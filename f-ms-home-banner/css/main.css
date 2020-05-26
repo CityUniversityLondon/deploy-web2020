@@ -55157,10 +55157,17 @@ main .home .banner--home {
 
 main .home .banner--home .banner__intro {
     grid-column: 2/10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 main .home .banner--home .banner__media {
     grid-column: 10/-1;
+}
+
+main .home .banner--home .banner__media picture {
+    line-height: 0;
 }
 
 main .landing header p {
