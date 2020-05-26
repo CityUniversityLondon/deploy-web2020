@@ -389,6 +389,49 @@ const aria = {
 
 /***/ }),
 
+/***/ "./src/how-to-apply--research.js":
+/*!***************************************!*\
+  !*** ./src/how-to-apply--research.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+/**
+ * Research apply CTA (no modal)
+ *
+ * @module patterns/accordion/accordion
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+const className = 'cta-block__cta--no-modal';
+/**
+ * Disables modal behaviour on research degree apply CTA where one date exists
+ * for a method of study and modal of multiple start dates is not required. Pass
+ * relevant URL path to CTA so it behaves as a standard anchor.
+ *
+ * @param {HTMLElement} cta - A standard research apply CTA (no modal).
+ */
+
+function launchResearchApplyCta(cta) {
+  let applyAnchor = cta.querySelector('.cta-block__cta__path'),
+      applyAnchorHref = applyAnchor.getAttribute('href'),
+      applyCta = cta.querySelector('.research-apply-link');
+  applyCta.setAttribute('href', applyAnchorHref); // Remove duplicate anchor, as href is now placed on apply CTA
+
+  applyAnchor.remove();
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchResearchApplyCta,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
 /***/ "./src/main.js":
 /*!*********************!*\
   !*** ./src/main.js ***!
@@ -518,32 +561,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./patterns/accordion/accordion */ "./src/patterns/accordion/accordion.js");
 /* harmony import */ var _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns/back-to-top/back-to-top */ "./src/patterns/back-to-top/back-to-top.js");
 /* harmony import */ var _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/image-carousel/image-carousel */ "./src/patterns/image-carousel/image-carousel.js");
-/* harmony import */ var _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/cms-editor-warning/cms-editor-warning */ "./src/patterns/cms-editor-warning/cms-editor-warning.js");
-/* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
-/* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
-/* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
-/* harmony import */ var _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/dropdown-filter/dropdown-filter */ "./src/patterns/dropdown-filter/dropdown-filter.js");
-/* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
-/* harmony import */ var _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/finder/finder */ "./src/patterns/finder/finder.js");
-/* harmony import */ var _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/finder/finder-mini */ "./src/patterns/finder/finder-mini.js");
-/* harmony import */ var _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/image-carousel/default-carousel/default-carousel */ "./src/patterns/image-carousel/default-carousel/default-carousel.js");
-/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
-/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
-/* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
-/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
-/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
-/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
-/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
-/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
-/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
-/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
-/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
-/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
-/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
-/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
+/* harmony import */ var _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/charts/charts */ "./src/patterns/charts/charts.js");
+/* harmony import */ var _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/cms-editor-warning/cms-editor-warning */ "./src/patterns/cms-editor-warning/cms-editor-warning.js");
+/* harmony import */ var _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/animation/content-fade-in/content-fade-in */ "./src/patterns/animation/content-fade-in/content-fade-in.js");
+/* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
+/* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
+/* harmony import */ var _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/dropdown-filter/dropdown-filter */ "./src/patterns/dropdown-filter/dropdown-filter.js");
+/* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
+/* harmony import */ var _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/finder/finder */ "./src/patterns/finder/finder.js");
+/* harmony import */ var _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/finder/finder-mini */ "./src/patterns/finder/finder-mini.js");
+/* harmony import */ var _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/image-carousel/default-carousel/default-carousel */ "./src/patterns/image-carousel/default-carousel/default-carousel.js");
+/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
+/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
+/* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
+/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
+/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
+/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
+/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
+/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
+/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
+/* harmony import */ var _how_to_apply_research__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./how-to-apply--research */ "./src/how-to-apply--research.js");
+/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
+/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
+/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
+/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
+/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
 
 
 /**
@@ -584,7 +629,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_28__["default"]]);
+
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_30__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_22__["default"]]);
 
 /***/ }),
 
@@ -1391,6 +1438,153 @@ function updateProgress(backToTopAnchor) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: initBacktoTop,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/charts/charts.js":
+/*!***************************************!*\
+  !*** ./src/patterns/charts/charts.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+
+/**
+ * Horizontal bar chart with proportional segments.
+ *
+ * @module patterns/chart/chart
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+const className = 'chart--bar--horizontal';
+let collectionMaxValue;
+/**
+ * Find each chart collection's maximum bar value and set as a global variable.
+ * This will be used to benchmark the collection's constituent charts' relative width against.
+ *
+ * Example scenario: Apple yields per year
+ * Bar 1 (Year 1) = 100 apples
+ * Bar 2 (Year 2) = 200 apples
+ * Bar 3 (Year 3) =  50 apples
+ *
+ * Result: Chart collection maximum = 200.
+ *
+ * @param {HTMLElement} chartCollection - A collection of horizontal bar charts.
+ */
+
+function setCollectionMaxValue(chartCollection) {
+  let charts = chartCollection.querySelectorAll('.chart--bar--horizontal__collection'),
+      singleBarTotals = [];
+
+  for (const chart of charts) {
+    let singleBarTotal = chart.querySelector('[data-bar-total]');
+    singleBarTotal = parseInt(singleBarTotal.dataset.barTotal);
+    singleBarTotals.push(singleBarTotal);
+  }
+
+  collectionMaxValue = Math.max(...singleBarTotals);
+}
+/**
+ * Build bar charts with segment values.
+ *
+ * @param {HTMLElement} chartCollection - A collection of horizontal bar charts.
+ */
+
+
+function buildBars(chartCollection) {
+  let charts = chartCollection.querySelectorAll('.chart--bar--horizontal__collection'),
+      segmentWidths = [],
+      chartCollectionUnits = chartCollection.dataset.units;
+
+  for (const chart of charts) {
+    let singleBarTotalEls = chart.querySelector('[data-bar-total]'),
+        singleBarSegmentEls = chart.querySelector('[data-bar-segment]'),
+        singleBarTotal = parseInt(singleBarTotalEls.dataset.barTotal),
+        singleBarSegment = parseInt(singleBarSegmentEls.dataset.barSegment);
+    /**
+     * Set bar widths relative to collection maximum value. Display as
+     * numbers (0-100) to allow CSS to set percentage widths.
+     *
+     * Example: Apple yields per year (maximum 200)
+     * Bar 1 (Year 1) => (100/200 * 100) =  50
+     * Bar 2 (Year 2) => (200/200 * 100) = 100
+     * Bar 3 (Year 3) => ( 50/200 * 100) =  25
+     */
+
+    let barWidth = Math.round(singleBarTotal / collectionMaxValue * 100),
+        segmentWidth = Math.round(singleBarSegment / singleBarTotal * 100);
+    chart.setAttribute('data-bar-width', "".concat(barWidth));
+    /**
+     * Create data attributes for:
+     *   1. Segment width proportional to bar
+     *   2. Segment width relative to collection width
+     *
+     * Display as numbers (0-100) to allow CSS to set percentage widths.
+     *
+     * Example: Variety of apples as part of overall yield (max 200).
+     * Bar 1
+     *      Braeburn: 50, total yield: 100
+     *      Segment relative to bar => (50/100) * 100 = 50
+     *      Segment relative to collection => (50/200) * 100 = 25
+     * Bar 2
+     *      Braeburn: 40, total yield: 200
+     *      Segment relative to bar => (40/200) * 100 = 20
+     *      Segment relative to collection => (40/200) * 100 = 20
+     * Bar 3
+     *      Braeburn: 5, total yield: 50
+     *      Segment relative to bar => (5/50) * 100 = 10
+     *      Segment relative to collection => (5/200) * 100 = 2.5
+     */
+
+    let relativeWidth = Math.round(segmentWidth * barWidth / 100);
+    singleBarSegmentEls.setAttribute('data-relative-width', "".concat(relativeWidth));
+    let segments = chart.querySelectorAll('[data-bar-segment]');
+
+    for (const segment of segments) {
+      let segmentRelativeWidths = parseInt(segment.dataset.relativeWidth);
+      segmentWidths.push(segmentRelativeWidths);
+    }
+
+    singleBarSegmentEls.setAttribute('data-segment-width', "".concat(segmentWidth));
+  }
+  /**
+   * Apply units label to segment with largest relative width, not just a segment's
+   * absolute value.
+   *
+   * Example:
+   * Bar 1 => Segment width: 50%, chart width: 50%, relative layout width: 25%
+   * Bar 2 => Segment width: 30%, chart width: 90%, relative layout width: 27%
+   *
+   * Result: Units label added to segment in Bar 2.
+   */
+
+
+  let largestSegmentWidth = Math.max(...segmentWidths),
+      widestSegment = chartCollection.querySelector("[data-relative-width=\"".concat(largestSegmentWidth, "\"]")),
+      widestSegmentLabel = widestSegment.querySelectorAll('span'); // Only append units once, even if segment widths are equal on multiple bars
+
+  widestSegmentLabel[0].append(" ".concat(chartCollectionUnits));
+}
+
+function launchChart(chartCollection) {
+  setCollectionMaxValue(chartCollection);
+  buildBars(chartCollection);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchChart,
   launchQuery: ".".concat(className)
 });
 
