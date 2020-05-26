@@ -52760,15 +52760,17 @@ button
    
    body{
      font:normal 75% Arial, Helvetica, sans-serif;
+
+
    }
    
-   canvas{
+   canvas{  
      display:block;
      vertical-align:bottom;
    }
    
    */
-/* ---- stats.js ---- */
+/* ------ stats.js ---------- */
 .count-particles {
     background: #000022;
     position: absolute;
@@ -52776,7 +52778,7 @@ button
     left: 0;
     width: 80px;
     color: #13E8E9;
-    font-size: .8em;
+    font-size: 0.8em;
     text-align: left;
     text-indent: 4px;
     line-height: 14px;
@@ -52810,11 +52812,10 @@ button
     width: 100%;
     height: 100%;
     background-color: #b61924;
-    /*background-image: url('');*/
+    background-image: url("");
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    /*background: red;*/
 }
 
 .home__research__wrap {
