@@ -50567,7 +50567,6 @@ button
     content: '';
     height: 1.25rem;
     position: absolute;
-    right: 0;
     transition: transform 0.6s;
     width: 1.25rem;
 }
@@ -50577,7 +50576,7 @@ input[checked] + .finder__toggle__indicator {
 }
 
 input[checked] + .finder__toggle__indicator:before {
-    right: unset;
+    right: 0;
 }
 
 .finder__results__card--module__code {
