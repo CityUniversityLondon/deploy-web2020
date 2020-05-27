@@ -50507,19 +50507,64 @@ button
 }
 
 .finder__checkbox {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
     align-items: center;
-    background-color: #ffffff;
+    background-color: #f2f2f2;
+    border-color: #cbcbcb;
+    border-radius: 0.25rem;
+    border-style: solid;
+    border-width: 0.125rem;
+    color: #0c0c0e;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    font-weight: 450;
     height: 3.25rem;
     justify-content: space-between;
     margin-bottom: 1rem;
     margin-top: 0.75rem;
-    padding-bottom: 1rem;
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-    padding-top: 1rem;
+    position: relative;
+}
+
+.finder__checkbox i,
+.finder__checkbox em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .finder__checkbox {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__checkbox {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__checkbox {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__checkbox {
+        letter-spacing: -0.017em;
+    }
 }
 
 .finder__checkbox:focus-within {
@@ -50531,36 +50576,34 @@ button
 
 .finder__checkbox label {
     display: flex;
-    flex-basis: 70%;
-    font-weight: 450;
-    margin-right: 1rem;
+    overflow: hidden;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-top: 1rem;
+    white-space: nowrap;
 }
 
 .finder__checkbox input {
     height: 0;
+    left: 0;
     opacity: 0;
+    position: absolute;
+    top: 0;
     width: 0;
 }
 
-.finder__checkbox input:checked + .toggle:before {
-    transform: translateX(0.625rem);
-}
-
-.finder__checkbox input:focus + .toggle {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
 .finder__checkbox__indicator {
-    background-color: #f2f2f2;
+    background-color: #696969;
     border-radius: 3rem;
     border: 0.0625rem solid #696969;
     cursor: pointer;
     display: inline-block;
     flex-basis: 2.25rem;
+    flex-shrink: 0;
     height: 1.375rem;
+    margin-bottom: 1rem;
+    margin-right: 0.25rem;
+    margin-top: 1rem;
     position: relative;
     width: 2.25rem;
 }
@@ -50821,20 +50864,24 @@ input[checked] + .finder__checkbox__indicator:before {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .finder__filters__wrapper--filters {
         background-color: #ffffff;
+    }
+}
+
+@media (max-width: 1023px) {
+    .finder__filters__wrapper--filters {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     .finder__filters__wrapper--filters {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        padding-left: 1.5rem;
     }
 }
 
@@ -52004,6 +52051,10 @@ label:not(.finder__filters__label--always) {
     outline-color: transparent;
     outline-width: 0;
     border-bottom: none;
+}
+
+.finder__results__card a:visited .finder__results__card__heading {
+    color: #0c0c0e;
 }
 
 @media (min-width: 768px) {
