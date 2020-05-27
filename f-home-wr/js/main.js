@@ -1301,28 +1301,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const className = 'particle-animation'; // page top
 
-/* -----------------------------------------------
-/* Author : Vincent Garreau  - vincentgarreau.com
-/* MIT license: http://opensource.org/licenses/MIT
-/* Demo / Generator : vincentgarreau.com/particles.js
-/* GitHub : github.com/VincentGarreau/particles.js
-/* How to use? : Check the GitHub README
-/* v2.0.0
-/* ----------------------------------------------- */
-//const className = 'content-fade-in';
-const className = 'home__research__wrap';
-/* -----------------------------------------------
-/* Author : Vincent Garreau  - vincentgarreau.com
-/* MIT license: http://opensource.org/licenses/MIT
-/* Demo / Generator : vincentgarreau.com/particles.js
-/* GitHub : github.com/VincentGarreau/particles.js
-/* How to use? : Check the GitHub README
-/* v2.0.0
-/* ----------------------------------------------- */
-// page top
-
-var test = function test() {
+var initParticles = function initParticles() {
   /* -----------------------------------------------
   /* Author : Vincent Garreau  - vincentgarreau.com
   /* MIT license: http://opensource.org/licenses/MIT
@@ -1351,7 +1332,7 @@ var test = function test() {
           }
         },
         color: {
-          value: '#AA1225' ///'#fff'
+          value: '#e5e5e5' ///'#fff'
 
         },
         shape: {
@@ -1370,17 +1351,19 @@ var test = function test() {
           }
         },
         opacity: {
-          value: 0.5,
+          value: 0.8,
+          //0.5
           random: false,
           anim: {
             enable: false,
             speed: 1,
-            opacity_min: 0.1,
+            opacity_min: 0.4,
+            //0.1
             sync: false
           }
         },
         size: {
-          value: 30,
+          value: 7,
           //3
           random: true,
           anim: {
@@ -1394,10 +1377,12 @@ var test = function test() {
         line_linked: {
           enable: true,
           distance: 150,
-          color: '#AA1225',
+          color: '#e5e5e5',
           //'#a1a1a1'
-          opacity: 0.4,
-          width: 1
+          opacity: 0.9,
+          //0.4
+          width: 2 //1
+
         },
         move: {
           enable: true,
@@ -2731,7 +2716,7 @@ var test = function test() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: test,
+  launchFn: initParticles,
   launchQuery: ".".concat(className)
 }); /// page bottom
 
