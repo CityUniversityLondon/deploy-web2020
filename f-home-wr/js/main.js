@@ -1303,7 +1303,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'particle-animation'; // page top
 
-var initParticles = function initParticles() {
+var initParticles = function initParticles(backgroundEl) {
   /* -----------------------------------------------
   /* Author : Vincent Garreau  - vincentgarreau.com
   /* MIT license: http://opensource.org/licenses/MIT
@@ -1312,9 +1312,10 @@ var initParticles = function initParticles() {
   /* How to use? : Check the GitHub README
   /* v2.0.0
   /* ----------------------------------------------- */
-  var pJS = function pJS(tag_id, params) {
-    console.log('func pjs run');
-    var canvas_el = document.querySelector('#' + tag_id + ' > .particles-js-canvas-el');
+  var pJS = function pJS(tag_id, params, backgroundEl) {
+    console.log('func pjs run'); //var canvas_el = document.querySelector('.'+tag_id+' > .particle-animation-canvas-el');
+
+    var canvas_el = backgroundEl.querySelector('.particle-animation-canvas-el');
     /* particles.js variables with default values */
 
     this.pJS = {
@@ -2644,25 +2645,26 @@ var initParticles = function initParticles() {
 
   window.pJSDom = [];
 
-  window.particlesJS = function (tag_id, params) {
+  window.particlesJS = function (tag_id, params, backgroundEl) {
     //console.log(params);
 
     /* no string id? so it's object params, and set the id with default id */
     if (typeof tag_id != 'string') {
       params = tag_id;
-      tag_id = 'particles-js';
+      tag_id = 'particle-animation';
     }
     /* no id? set the id to default id */
 
 
     if (!tag_id) {
-      tag_id = 'particles-js';
+      tag_id = 'particle-animation';
     }
     /* pJS elements */
 
 
-    var pJS_tag = document.getElementById(tag_id),
-        pJS_canvas_class = 'particles-js-canvas-el',
+    var pJS_tag = backgroundEl,
+        //document.getElementById(tag_id)
+    pJS_canvas_class = 'particle-animation-canvas-el',
         exist_canvas = pJS_tag.getElementsByClassName(pJS_canvas_class);
     /* remove canvas if exists into the pJS target tag */
 
@@ -2682,11 +2684,11 @@ var initParticles = function initParticles() {
     canvas_el.style.height = "100%";
     /* append canvas */
 
-    var canvas = document.getElementById(tag_id).appendChild(canvas_el);
+    var canvas = backgroundEl.appendChild(canvas_el);
     /* launch particle.js */
 
     if (canvas != null) {
-      pJSDom.push(new pJS(tag_id, params));
+      pJSDom.push(new pJS(tag_id, params, backgroundEl));
     }
   };
 
@@ -2712,7 +2714,7 @@ var initParticles = function initParticles() {
   }; /// json start
 
 
-  particlesJS("particles-js");
+  particlesJS("particle-animation", null, backgroundEl);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = ({
