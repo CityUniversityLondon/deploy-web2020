@@ -49569,8 +49569,28 @@ button
     main > article .finder .finder__results__list .finder__results__card {
         grid-column: 3 / -3;
     }
+    main > article .finder .finder__results__list.finder__results__list--three-up {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
     main > article .finder .finder__results__list.finder__results__list--three-up .finder__results__card {
-        grid-column: span 3;
+        grid-column: unset;
+        width: calc(33% - 1.5rem);
+    }
+}
+
+main > article .finder .finder__results__list.finder__results__list--three-up {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+}
+
+@media (min-width: 901px) {
+    main > article .finder .finder__results__list.finder__results__list--three-up {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
@@ -49663,8 +49683,12 @@ button
     main > article .finder .finder__results__list .finder__results__card {
         grid-column: 3 / -3;
     }
+    main > article .finder .finder__results__list.finder__results__list--three-up {
+        display: flex;
+    }
     main > article .finder .finder__results__list.finder__results__list--three-up .finder__results__card {
-        grid-column: span 3;
+        grid-column: unset;
+        width: calc(50% - 1.5rem);
     }
 }
 
@@ -49701,8 +49725,12 @@ button
     main > article .finder .finder__results__list .finder__results__card {
         grid-column: 3 / -3;
     }
+    main > article .finder .finder__results__list.finder__results__list--three-up {
+        display: flex;
+    }
     main > article .finder .finder__results__list.finder__results__list--three-up .finder__results__card {
-        grid-column: span 3;
+        grid-column: unset;
+        width: calc(33% - 1.5rem);
     }
 }
 
@@ -49827,8 +49855,11 @@ button
     main .navigation--secondary + article .finder .finder__results__list .finder__results__card {
         grid-column: 3 / -3;
     }
+    main .navigation--secondary + article .finder .finder__results__list.finder__results__list--three-up {
+        display: flex;
+    }
     main .navigation--secondary + article .finder .finder__results__list.finder__results__list--three-up .finder__results__card {
-        grid-column: span 3;
+        grid-column: unset;
     }
 }
 
@@ -50627,7 +50658,6 @@ button
     content: '';
     height: 1.25rem;
     position: absolute;
-    transition: transform 0.6s;
     width: 1.25rem;
 }
 
@@ -52205,12 +52235,12 @@ label:not(.finder__filters__label--always) {
 }
 
 .finder__results__card--module,
-.finder__results__contact {
+.finder__results__card--contact {
     margin-top: 0;
 }
 
 .finder__results__card--module a,
-.finder__results__contact a {
+.finder__results__card--contact a {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -52253,7 +52283,7 @@ label:not(.finder__filters__label--always) {
 
 @media (hover: hover) {
     .finder__results__card--module a:hover,
-    .finder__results__contact a:hover {
+    .finder__results__card--contact a:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -52271,8 +52301,8 @@ label:not(.finder__filters__label--always) {
 }
 
 .finder__results__card--module a:focus, .finder__results__card--module a:active,
-.finder__results__contact a:focus,
-.finder__results__contact a:active {
+.finder__results__card--contact a:focus,
+.finder__results__card--contact a:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -52290,22 +52320,22 @@ label:not(.finder__filters__label--always) {
 
 @media (prefers-reduced-motion: reduce) {
     .finder__results__card--module a,
-    .finder__results__contact a {
+    .finder__results__card--contact a {
         transition: none;
     }
 }
 
 @media (hover: hover) {
     .finder__results__card--module a:hover,
-    .finder__results__contact a:hover {
+    .finder__results__card--contact a:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
 .finder__results__card--module a:focus, .finder__results__card--module a:active,
-.finder__results__contact a:focus,
-.finder__results__contact a:active {
+.finder__results__card--contact a:focus,
+.finder__results__card--contact a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
@@ -52313,7 +52343,7 @@ label:not(.finder__filters__label--always) {
 }
 
 .finder__results__card--module a:visited,
-.finder__results__contact a:visited {
+.finder__results__card--contact a:visited {
     border-bottom-color: #4c2c92;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -52321,7 +52351,7 @@ label:not(.finder__filters__label--always) {
 }
 
 .finder__results__card--module a:focus,
-.finder__results__contact a:focus {
+.finder__results__card--contact a:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -52330,7 +52360,7 @@ label:not(.finder__filters__label--always) {
 
 @media (hover: hover) {
     .finder__results__card--module a:hover,
-    .finder__results__contact a:hover {
+    .finder__results__card--contact a:hover {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
@@ -52339,7 +52369,7 @@ label:not(.finder__filters__label--always) {
 }
 
 .finder__results__card--module a:active,
-.finder__results__contact a:active {
+.finder__results__card--contact a:active {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -52348,12 +52378,12 @@ label:not(.finder__filters__label--always) {
 }
 
 .finder__results__card--module a:after,
-.finder__results__contact a:after {
+.finder__results__card--contact a:after {
     content: unset;
 }
 
 .finder__results__card--module .finder__results__card__tag,
-.finder__results__contact .finder__results__card__tag {
+.finder__results__card--contact .finder__results__card__tag {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
@@ -52363,34 +52393,34 @@ label:not(.finder__filters__label--always) {
 
 @media (min-width: 1280px) and (max-width: 1919px) {
     .finder__results__card--module .finder__results__card__tag,
-    .finder__results__contact .finder__results__card__tag {
+    .finder__results__card--contact .finder__results__card__tag {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .finder__results__card--module .finder__results__card__tag,
-    .finder__results__contact .finder__results__card__tag {
+    .finder__results__card--contact .finder__results__card__tag {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
     .finder__results__card--module .finder__results__card__tag,
-    .finder__results__contact .finder__results__card__tag {
+    .finder__results__card--contact .finder__results__card__tag {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
     .finder__results__card--module .finder__results__card__tag,
-    .finder__results__contact .finder__results__card__tag {
+    .finder__results__card--contact .finder__results__card__tag {
         letter-spacing: -0.017em;
     }
 }
 
 .finder__results__card--module .finder__results__card__tag .icon,
-.finder__results__contact .finder__results__card__tag .icon {
+.finder__results__card--contact .finder__results__card__tag .icon {
     margin-right: 0.5rem;
 }
 
@@ -52569,32 +52599,47 @@ label:not(.finder__filters__label--always) {
     outline-width: 0.125rem;
 }
 
-.finder__results__course .clearing_label {
+.finder__results__card--course .clearing_label {
     margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
-    .finder__results__course .clearing_label {
+    .finder__results__card--course .clearing_label {
         min-width: 24%;
         order: 1;
     }
 }
 
-.finder__results__course .clearing_label p {
+.finder__results__card--course .clearing_label p {
     background-color: #f1c70b;
-    font-weight: bold;
+    font-weight: 700;
     margin-top: 0;
     padding: 0.75rem;
 }
 
 @media (max-width: 767px) {
-    .finder__results__course .clearing_label p {
+    .finder__results__card--course .clearing_label p {
         display: inline;
     }
 }
 
-.finder__results__course .clearing_label p span {
+.finder__results__card--course .clearing_label p span {
     margin-left: 0.5rem;
+}
+
+.finder__results__card.finder__results__card--accommodation {
+    border-bottom: 0;
+}
+
+.finder__results__card.finder__results__card--accommodation .finder__results__card__heading {
+    display: block;
+    margin-top: 1rem;
+}
+
+.finder__results__card.finder__results__card--accommodation a {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .logos-list--nolinks {
@@ -57120,7 +57165,7 @@ ul.landing--functional__finder__tabs__columns li a:active {
     color: #0c0c0e;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .listing .finder__filters--mobile[data-open='false'] {
         margin-top: -4rem;
     }
@@ -57129,7 +57174,7 @@ ul.landing--functional__finder__tabs__columns li a:active {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .listing .finder__filters--desktop {
         margin-top: -4rem;
     }
