@@ -2797,6 +2797,81 @@ finder__results__profile.propTypes = {
 
 /***/ }),
 
+/***/ "./src/patterns/finder/components/filters/finder__checkbox.js":
+/*!********************************************************************!*\
+  !*** ./src/patterns/finder/components/filters/finder__checkbox.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+/**
+ * @module patterns/finder/components/finder__checkbox
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+
+function finder__checkbox(props) {
+  const stringLength = 16,
+        stringOffset = -4,
+        randomNumber = Math.random().toString(stringLength).slice(stringOffset),
+        toggleChecked = (props.facet.meta in props.query.facets);
+
+  const toggleFacet = () => {
+    const newQuery = props.query;
+    props.dependencies.map(facet => {
+      delete newQuery.facets[facet.meta];
+    });
+    toggleChecked ? delete newQuery.facets[props.facet.meta] : newQuery.facets[props.facet.meta] = props.facet.checkedValue;
+    newQuery.startRank = 1;
+    newQuery.misspelling = null;
+    newQuery.interacted = true;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "finder__filter finder__checkbox"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+    className: "finder__filters__label--always",
+    htmlFor: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
+  }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+    type: "checkbox",
+    id: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber),
+    name: "meta_".concat(props.facet.meta, "_sand"),
+    value: props.facet.checkedValue,
+    onChange: () => toggleFacet(),
+    defaultChecked: toggleChecked
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "finder__checkbox__indicator",
+    onClick: () => toggleFacet()
+  }));
+}
+
+finder__checkbox.propTypes = {
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object)
+};
+/* harmony default export */ __webpack_exports__["default"] = (finder__checkbox);
+
+/***/ }),
+
 /***/ "./src/patterns/finder/components/filters/finder__filters.js":
 /*!*******************************************************************!*\
   !*** ./src/patterns/finder/components/filters/finder__filters.js ***!
@@ -2812,7 +2887,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _finder_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finder__select */ "./src/patterns/finder/components/filters/finder__select.js");
 /* harmony import */ var _query_finder_clear__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../query/finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
-/* harmony import */ var _finder_toggle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__toggle */ "./src/patterns/finder/components/filters/finder__toggle.js");
+/* harmony import */ var _finder_checkbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__checkbox */ "./src/patterns/finder/components/filters/finder__checkbox.js");
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
 
 
@@ -2891,8 +2966,8 @@ function finder__filters(props) {
             dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
           });
 
-        case 'toggle':
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_toggle__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        case 'checkbox':
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_checkbox__WEBPACK_IMPORTED_MODULE_4__["default"], {
             key: facet.meta,
             facet: facet,
             query: props.query,
@@ -3175,78 +3250,6 @@ finder__select.propTypes = {
   dependencies: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object)
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__select);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/filters/finder__toggle.js":
-/*!******************************************************************!*\
-  !*** ./src/patterns/finder/components/filters/finder__toggle.js ***!
-  \******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-
-/**
- * @module patterns/finder/components/finder__toggle
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-function finder__toggle(props) {
-  const stringLength = 16,
-        stringOffset = -4,
-        randomNumber = Math.random().toString(stringLength).slice(stringOffset),
-        toggleChecked = (props.facet.meta in props.query.facets);
-
-  const toggleFacet = () => {
-    const newQuery = props.query;
-    toggleChecked ? delete newQuery.facets[props.facet.meta] : newQuery.facets[props.facet.meta] = props.facet.checkedValue;
-    newQuery.startRank = 1;
-    newQuery.misspelling = null;
-    newQuery.interacted = true;
-    props.update.query(newQuery);
-    props.update.results(!props.update.updateState);
-  };
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__filter finder__toggle"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
-    className: "finder__filters__label--always",
-    htmlFor: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
-  }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
-    type: "checkbox",
-    id: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber),
-    name: "meta_".concat(props.facet.meta, "_sand"),
-    value: props.facet.checkedValue,
-    onChange: () => toggleFacet(),
-    defaultChecked: toggleChecked
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "finder__toggle__indicator",
-    onClick: () => toggleFacet()
-  }));
-}
-
-finder__toggle.propTypes = {
-  facet: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object),
-  update: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object)
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__toggle);
 
 /***/ }),
 

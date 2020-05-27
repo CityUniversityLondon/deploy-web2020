@@ -50506,7 +50506,7 @@ button
     margin-top: 0.25rem;
 }
 
-.finder__toggle {
+.finder__checkbox {
     align-items: center;
     background-color: #ffffff;
     display: flex;
@@ -50522,38 +50522,38 @@ button
     padding-top: 1rem;
 }
 
-.finder__toggle:focus-within {
+.finder__checkbox:focus-within {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.finder__toggle label {
+.finder__checkbox label {
     display: flex;
     flex-basis: 70%;
     font-weight: 450;
     margin-right: 1rem;
 }
 
-.finder__toggle input {
+.finder__checkbox input {
     height: 0;
     opacity: 0;
     width: 0;
 }
 
-.finder__toggle input:checked + .toggle:before {
+.finder__checkbox input:checked + .toggle:before {
     transform: translateX(0.625rem);
 }
 
-.finder__toggle input:focus + .toggle {
+.finder__checkbox input:focus + .toggle {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.finder__toggle__indicator {
+.finder__checkbox__indicator {
     background-color: #f2f2f2;
     border-radius: 3rem;
     border: 0.0625rem solid #696969;
@@ -50565,7 +50565,7 @@ button
     width: 2.25rem;
 }
 
-.finder__toggle__indicator:before {
+.finder__checkbox__indicator:before {
     background-color: #ffffff;
     border-radius: 50%;
     border: 0.0625rem solid;
@@ -50576,11 +50576,11 @@ button
     width: 1.25rem;
 }
 
-input[checked] + .finder__toggle__indicator {
+input[checked] + .finder__checkbox__indicator {
     background-color: #f1c70b;
 }
 
-input[checked] + .finder__toggle__indicator:before {
+input[checked] + .finder__checkbox__indicator:before {
     right: 0;
 }
 
