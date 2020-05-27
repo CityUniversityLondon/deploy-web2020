@@ -51809,6 +51809,97 @@ label:not(.finder__filters__label--always) {
     }
 }
 
+.finder__results__card .finder__results__card__description {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 450;
+    max-width: 55ch;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    color: #d61726;
+    margin-top: 0.5rem;
+}
+
+.finder__results__card .finder__results__card__description i,
+.finder__results__card .finder__results__card__description em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card .finder__results__card__description b,
+.finder__results__card .finder__results__card__description strong {
+    font-weight: 700;
+}
+
+.finder__results__card .finder__results__card__description i,
+.finder__results__card .finder__results__card__description em {
+    font-style: italic;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card .icon {
+    color: #d61726;
+}
+
 .finder__results__card a {
     background-color: initial;
     background-image: initial;
@@ -52141,97 +52232,6 @@ label:not(.finder__filters__label--always) {
 .finder__results__card a .finder__results__card__tag .icon {
     color: #d61726;
     margin-right: 0.5rem;
-}
-
-.finder__results__card__description {
-    font-family: "Plex Sans", sans-serif;
-    /**
-     * IBM Plex OpenType stylistic sets:
-     *
-     * ss01: 0/1 double-storey/simple 'a'
-     * ss02: 0/1 double-storey/simple 'g'
-     * ss03: 0/1 plain/slashed '0'
-     * ss04: 0/1 plain/dotted '0'
-     */
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
-    font-size: 1rem;
-    line-height: 1.625;
-    letter-spacing: -0.005em;
-    font-style: normal;
-    font-weight: 450;
-    max-width: 55ch;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    color: #d61726;
-    margin-top: 0.5rem;
-}
-
-.finder__results__card__description i,
-.finder__results__card__description em {
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .finder__results__card__description {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .finder__results__card__description {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .finder__results__card__description {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .finder__results__card__description {
-        letter-spacing: -0.017em;
-    }
-}
-
-.finder__results__card__description b,
-.finder__results__card__description strong {
-    font-weight: 700;
-}
-
-.finder__results__card__description i,
-.finder__results__card__description em {
-    font-style: italic;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .finder__results__card__description {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .finder__results__card__description {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .finder__results__card__description {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .finder__results__card__description {
-        letter-spacing: -0.017em;
-    }
-}
-
-.finder__results__card .icon {
-    color: #d61726;
 }
 
 .finder__results__card--module,
