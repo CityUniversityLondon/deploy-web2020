@@ -55162,11 +55162,11 @@ main .home .banner--home .banner__intro {
     transform: translateY(-50%);
 }
 
-main .home .banner--home .banner__media {
+main .home .banner--home .banner__video {
     grid-column: 10/-1;
 }
 
-main .home .banner--home .banner__media picture {
+main .home .banner--home .banner__video picture {
     line-height: 0;
 }
 
