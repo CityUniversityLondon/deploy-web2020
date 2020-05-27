@@ -50636,7 +50636,7 @@ input[checked] + .finder__checkbox__indicator {
 }
 
 input[checked] + .finder__checkbox__indicator:before {
-    right: 0.0625rem;
+    right: 0;
 }
 
 .finder__results__card--module__code {
