@@ -49569,6 +49569,9 @@ button
     main > article .finder .finder__results__list .finder__results__card {
         grid-column: 3 / -3;
     }
+    main > article .finder .finder__results__list.finder__results__list--three-up .finder__results__card {
+        grid-column: span 3;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -49660,6 +49663,9 @@ button
     main > article .finder .finder__results__list .finder__results__card {
         grid-column: 3 / -3;
     }
+    main > article .finder .finder__results__list.finder__results__list--three-up .finder__results__card {
+        grid-column: span 3;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -49694,6 +49700,9 @@ button
 @media (min-width: 1280px) {
     main > article .finder .finder__results__list .finder__results__card {
         grid-column: 3 / -3;
+    }
+    main > article .finder .finder__results__list.finder__results__list--three-up .finder__results__card {
+        grid-column: span 3;
     }
 }
 
@@ -49817,6 +49826,9 @@ button
 @media (min-width: 1024px) {
     main .navigation--secondary + article .finder .finder__results__list .finder__results__card {
         grid-column: 3 / -3;
+    }
+    main .navigation--secondary + article .finder .finder__results__list.finder__results__list--three-up .finder__results__card {
+        grid-column: span 3;
     }
 }
 
