@@ -49576,7 +49576,7 @@ button
     }
     main > article .finder .finder__results__list.finder__results__list--three-up .finder__results__card {
         grid-column: unset;
-        width: calc(33% - 1.5rem);
+        width: calc(33% - 1rem);
     }
 }
 
@@ -49687,7 +49687,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
     main > article .finder .finder__results__list.finder__results__list--three-up .finder__results__card {
         grid-column: unset;
-        width: calc(50% - 1.5rem);
+        width: calc(50% - 1rem);
     }
 }
 
@@ -49729,7 +49729,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
     main > article .finder .finder__results__list.finder__results__list--three-up .finder__results__card {
         grid-column: unset;
-        width: calc(33% - 1.5rem);
+        width: calc(33% - 1rem);
     }
 }
 
@@ -50904,7 +50904,7 @@ input[checked] + .finder__checkbox__indicator:before {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .finder__filters__wrapper--filters {
         background-color: #ffffff;
     }
@@ -50917,7 +50917,7 @@ input[checked] + .finder__checkbox__indicator:before {
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .finder__filters__wrapper--filters {
         display: flex;
         flex-direction: row;
@@ -52630,13 +52630,44 @@ label:not(.finder__filters__label--always) {
 
 @media (min-width: 768px) {
     .finder__results__card.finder__results__card--accommodation {
-        margin-right: 1.5rem;
+        margin-right: 1rem;
     }
 }
 
 .finder__results__card.finder__results__card--accommodation .finder__results__card__heading {
     display: block;
     margin-top: 1rem;
+}
+
+.finder__results__card.finder__results__card--accommodation .finder__results__card__tag {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    color: #0c0c0e;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .finder__results__card.finder__results__card--accommodation .finder__results__card__tag {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card.finder__results__card--accommodation .finder__results__card__tag {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card.finder__results__card--accommodation .finder__results__card__tag {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card.finder__results__card--accommodation .finder__results__card__tag {
+        letter-spacing: -0.017em;
+    }
 }
 
 .finder__results__card.finder__results__card--accommodation a {
