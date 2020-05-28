@@ -52626,7 +52626,12 @@ label:not(.finder__filters__label--always) {
 
 .finder__results__card.finder__results__card--accommodation {
     border-bottom: 0;
-    margin-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .finder__results__card.finder__results__card--accommodation {
+        margin-right: 1.5rem;
+    }
 }
 
 .finder__results__card.finder__results__card--accommodation .finder__results__card__heading {
