@@ -54898,13 +54898,66 @@ div.widget-123_test_ {
 }
 
 main .home {
-    margin-top: 1.5rem;
+    grid-column: 1 / span 24;
 }
 
-@media (min-width: 1024px) {
-    main .home {
-        grid-column: 1 / span 24;
+main .home .home__research__wrap {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+}
+
+@media (min-width: 768px) {
+    main .home .home__research__wrap {
+        grid-column-gap: 1rem;
     }
+}
+
+@media (min-width: 901px) {
+    main .home .home__research__wrap {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+main .home .home__research__wrap .home__research__content {
+    grid-column: 4 / 13;
+}
+
+main .home .home__research__wrap .home__research__card {
+    grid-column: 13 / 22;
+    overflow: hidden;
+}
+
+@media (max-width: 1280px) {
+    main .home .home__research__wrap .home__research__content {
+        grid-column: 3/ 13;
+    }
+    main .home .home__research__wrap .home__research__card {
+        grid-column: 13 / 23;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 1024px) {
+    main .home .home__research__wrap .home__research__content, main .home .home__research__wrap .home__research__card {
+        grid-column: 5/ 21;
+    }
+}
+
+@media (max-width: 432px) {
+    main .home .home__research__wrap .home__research__content, main .home .home__research__wrap .home__research__card {
+        grid-column: 3/ 22;
+    }
+}
+
+@media (max-width: 900px) {
+    main .home .home__research__wrap .home__research__content, main .home .home__research__wrap .home__research__card {
+        grid-column: 4/ 22;
+    }
+}
+
+main .home {
+    margin-top: 1.5rem;
 }
 
 main .home .home__statistics h2 {
@@ -54915,34 +54968,17 @@ main .home .home__research__wrap {
     overflow: hidden;
 }
 
-main .home .home__research__container {
-    margin: 2rem;
-}
-
-main .home .home__research {
-    display: flex;
-    flex-direction: row;
-}
-
-main .home .home__research .home__research__content {
-    flex: 1;
-}
-
-main .home .home__research .home__research__content .home__research__content__links ul {
+main .home .home__research__wrap .home__research__content .home__research__content__links ul {
     list-style: none;
 }
 
-main .home .home__research .home__research__content .home__research__content__links ul li:before {
+main .home .home__research__wrap .home__research__content .home__research__content__links ul li:before {
     content: '\f0a9';
     font-family: 'Font Awesome';
     display: inline-block;
     color: #d61726;
     margin-right: 0.5rem;
     font-weight: 100;
-}
-
-main .home .home__research .home__research__card {
-    flex: 1;
 }
 
 main .home .home__whats-happening {
