@@ -49638,6 +49638,10 @@ button
     outline-width: 0.125rem;
 }
 
+.embedded-video.embedded-video--autoplay .embedded-video--autoplay__controller-btn:hover {
+    background-color: #e5e5e5;
+}
+
 .embedded-video.embedded-video--autoplay .embedded-video--autoplay__controller-btn[data-status='play'] .embedded-video--autoplay__controller-btn__icon:after {
     content: '\f144';
 }
@@ -55197,11 +55201,25 @@ main .home {
 }
 
 main .home .banner--home {
+    position: relative;
+    overflow: hidden;
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
     display: grid;
     background-color: #3e1031;
     color: #ffffff;
+}
+
+main .home .banner--home:before {
+    content: '';
+    background: url(https://web2020.city.ac.uk/_media/web2020/images/reusable-content/reusable-components/ribbon.svg) 0 0 no-repeat;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(270deg) scale(-1.2, -1.05) skew(0deg, 5deg);
+    width: 103%;
+    height: 100%;
+    right: 28%;
+    top: 62%;
 }
 
 @media (min-width: 768px) {
@@ -55221,6 +55239,7 @@ main .home .banner--home .banner__intro {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 2;
 }
 
 main .home .banner--home .banner__intro .primary-cta-arrow--bright:focus {
@@ -55230,10 +55249,16 @@ main .home .banner--home .banner__intro .primary-cta-arrow--bright:focus {
 main .home .banner--home .banner__video {
     margin-top: 0;
     grid-column: 10/-1;
+    z-index: 0;
 }
 
 main .home .banner--home .banner__video .embedded-video {
     padding: 0;
+}
+
+main .home .banner__ribbon {
+    position: absolute;
+    transform: rotate(280deg) scale(-1, -1);
 }
 
 main .landing header p {
