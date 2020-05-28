@@ -52457,6 +52457,7 @@ label:not(.finder__filters__label--always) {
     border-width: 0.125rem;
     bottom: 0.25rem;
     color: #0c0c0e;
+    cursor: pointer;
     font-weight: 450;
     height: 3.25rem;
     position: relative;
