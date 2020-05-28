@@ -8899,14 +8899,18 @@ function createController(video) {
   }, {
     label: 'data-status',
     val: 'pause'
+  }, {
+    label: 'aria-label',
+    val: 'Pause video'
   }]);
   controllerBtn.append(controllerIcon);
   video.append(controllerBtn);
 }
 
 function toggleController(video, status) {
+  let videoEl = video.querySelector('.embedded-video--autoplay__video');
   const controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn');
-  status === 'pause' ? controllerBtn.dataset.status = 'play' : controllerBtn.dataset.status = 'pause';
+  status === 'pause' ? (controllerBtn.dataset.status = 'play', controllerBtn.setAttribute('aria-label', 'Play video'), videoEl.pause()) : (controllerBtn.dataset.status = 'pause', controllerBtn.setAttribute('aria-label', 'Pause video'), videoEl.play());
 }
 
 function launchAutoplayVideo(video) {

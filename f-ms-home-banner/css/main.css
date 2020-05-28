@@ -49628,6 +49628,7 @@ button
     bottom: 0;
     right: 0;
     padding: 0.75rem;
+    margin: 0.125rem;
 }
 
 .embedded-video.embedded-video--autoplay .embedded-video--autoplay__controller-btn[data-status='play'] .embedded-video--autoplay__controller-btn__icon:after {
@@ -49642,20 +49643,20 @@ button
     color: #0c0c0e;
     font-weight: 300;
     font-family: 'Font Awesome';
-    font-size: 1.424rem;
+    font-size: 1.802rem;
     line-height: 1.25;
-    letter-spacing: -0.013em;
+    letter-spacing: -0.016em;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
     .embedded-video.embedded-video--autoplay .embedded-video--autoplay__controller-btn .embedded-video--autoplay__controller-btn__icon {
-        letter-spacing: -0.015em;
+        letter-spacing: -0.016em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .embedded-video.embedded-video--autoplay .embedded-video--autoplay__controller-btn .embedded-video--autoplay__controller-btn__icon {
-        letter-spacing: -0.016em;
+        letter-spacing: -0.017em;
     }
 }
 
@@ -55216,6 +55217,7 @@ main .home .banner--home .banner__intro {
 }
 
 main .home .banner--home .banner__video {
+    margin-top: 0;
     grid-column: 10/-1;
 }
 
