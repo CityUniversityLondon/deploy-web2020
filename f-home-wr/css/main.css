@@ -52724,20 +52724,13 @@ button
     opacity: 1;
 }
 
-.particle-animation {
-    position: relative;
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-}
-
-canvas {
+#particles-js canvas {
     display: block;
     vertical-align: bottom;
     position: absolute;
     top: 0;
     z-index: -1;
+    left: 0;
 }
 
 @media (max-width: 1023px) {
@@ -54966,6 +54959,7 @@ main .home .home__statistics h2 {
 
 main .home .home__research__wrap {
     overflow: hidden;
+    position: relative;
 }
 
 main .home .home__research__wrap .home__research__content .home__research__content__links ul {
