@@ -51565,6 +51565,16 @@ label:not(.finder__filters__label--always) {
     padding-bottom: 1rem;
 }
 
+@media (min-width: 768px) {
+    .finder__results__summary {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}
+
 .finder__results__summary button {
     background-color: initial;
     background-image: initial;
@@ -52635,6 +52645,40 @@ label:not(.finder__filters__label--always) {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+}
+
+.wrapper--finder__sort--desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .wrapper--finder__sort--desktop {
+        display: block;
+    }
+    .wrapper--finder__sort--desktop .finder__sort {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        margin-top: 0;
+    }
+    .wrapper--finder__sort--desktop .finder__sort label {
+        flex-shrink: 0;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0;
+    }
+}
+
+.wrapper--finder__sort--mobile {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .wrapper--finder__sort--mobile {
+        display: none;
+    }
 }
 
 .logos-list--nolinks {

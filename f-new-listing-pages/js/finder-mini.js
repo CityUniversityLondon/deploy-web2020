@@ -349,7 +349,7 @@ function finder__query(props) {
     focusInput();
     const newQuery = props.query;
     newQuery.query = '';
-    newQuery.sortBy = props.config.sort;
+    newQuery.sortType = props.config.sort[0].type;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
   };
@@ -645,8 +645,7 @@ function Finder(props) {
     collection: props.config.collection,
     fixedFacets: props.config.fixedFacets,
     query: params.get('query') || '',
-    sortBy: params.get('query') ? null : params.get('sort') || props.config.sort,
-    sortDirection: params.get('sortdirection') || props.config.sortDirection,
+    sortType: params.get('query') ? null : params.get('sort') || props.config.sort,
     startRank: params.get('start_rank') || 1,
     numRanks: params.get('num_ranks') || props.config.numRanks,
     facets: getFacetParams(props.config.facetLabels, params)
@@ -679,7 +678,7 @@ function Finder(props) {
 
     call.cancel(); // make a new, asynchronous request to Funnelback
 
-    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_10__["find"])(query.collection, query.fixedFacets, query.query, query.sortBy, query.sortDirection, query.startRank, query.numRanks, query.facets); // save the requestToken, so
+    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_10__["find"])(query.collection, query.fixedFacets, query.query, query.sortType, query.startRank, query.numRanks, query.facets); // save the requestToken, so
 
     setCall({
       cancel: () => {
@@ -771,15 +770,14 @@ const baseUrl = 'https://web2020.city.ac.uk/web-services',
  *
  * @param {string} collection The Funnelback collection to query.
  * @param {string} [query] The query string.
- * @param {string} [sortBy] The field to sort by.
- * @param {string} sortDirection Sort 'asc'ending or 'desc'ending.
+ * @param {string} [sortType] The field to sort by.
  * @param {integer} startRank The first result to return.
  * @param {integer} numRank The number of results to return.
  * @param {object} [facets] A map of facets to query strings.
  * @return {Promise} - A promise of search results.
  */
 
-function find(collection, fixedFacets, query, sortBy, sortDirection, startRank, numRank, facets) {
+function find(collection, fixedFacets, query, sortType, startRank, numRank, facets) {
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
     fixedFacetParams["meta_".concat(facet.meta, "_sand")] = facet.value;
@@ -801,7 +799,7 @@ function find(collection, fixedFacets, query, sortBy, sortDirection, startRank, 
       collection: collection,
       num_ranks: numRank,
       query: query,
-      sort: sortBy ? "".concat('desc' === sortDirection ? 'd' : '').concat(sortBy) : null,
+      sort: sortType || null,
       start_rank: startRank
     })
   };
