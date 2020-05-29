@@ -55201,25 +55201,13 @@ main .home {
 }
 
 main .home .banner--home {
-    position: relative;
-    overflow: hidden;
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
     display: grid;
+    position: relative;
+    overflow: hidden;
     background-color: #3e1031;
     color: #ffffff;
-}
-
-main .home .banner--home:before {
-    content: '';
-    background: url(https://web2020.city.ac.uk/_media/web2020/images/reusable-content/reusable-components/ribbon.svg) 0 0 no-repeat;
-    position: absolute;
-    z-index: 1;
-    transform: rotate(270deg) scale(-1.2, -1.05) skew(0deg, 5deg);
-    width: 103%;
-    height: 100%;
-    right: 28%;
-    top: 62%;
 }
 
 @media (min-width: 768px) {
@@ -55234,12 +55222,57 @@ main .home .banner--home:before {
     }
 }
 
+@media (max-width: 767px) {
+    main .home .banner--home {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 901px) {
+    main .home .banner--home {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    main .home .banner--home:before {
+        content: '';
+        background: url(https://web2020.city.ac.uk/_media/web2020/images/reusable-content/reusable-components/ribbon.svg) 0 0 no-repeat;
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .home .banner--home:before {
+        transform: rotate(270deg) scale(-1.2, -1.05) skew(0deg, 5deg);
+        width: 103%;
+        height: 100%;
+        right: 28%;
+        top: 62%;
+    }
+}
+
 main .home .banner--home .banner__intro {
-    grid-column: 2/10;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
+    grid-column: 1/-1;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    main .home .banner--home .banner__intro {
+        grid-column: 3/-3;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .home .banner--home .banner__intro {
+        grid-column: 2/10;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
 }
 
 main .home .banner--home .banner__intro .primary-cta-arrow--bright:focus {
@@ -55247,13 +55280,37 @@ main .home .banner--home .banner__intro .primary-cta-arrow--bright:focus {
 }
 
 main .home .banner--home .banner__video {
+    grid-column: 1/-1;
     margin-top: 0;
-    grid-column: 10/-1;
-    z-index: 0;
 }
 
-main .home .banner--home .banner__video .embedded-video {
+@media (min-width: 768px) and (max-width: 1023px) {
+    main .home .banner--home .banner__video {
+        grid-column: 3/-3;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .home .banner--home .banner__video {
+        grid-column: 10/-1;
+        z-index: 0;
+    }
+}
+
+main .home .banner--home .banner__video.embedded-video {
     padding: 0;
+}
+
+@media (min-width: 1024px) {
+    main .home .banner--home .banner__video.embedded-video--youtube {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    main .home .banner--home .banner__video.embedded-video--autoplay {
+        display: none;
+    }
 }
 
 main .home .banner__ribbon {
