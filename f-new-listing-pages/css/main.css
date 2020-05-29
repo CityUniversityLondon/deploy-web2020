@@ -49586,12 +49586,20 @@ button
 }
 
 main > article .finder .finder__results__list.finder__results__list--three-up {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: unset;
 }
 
-@media (min-width: 901px) {
+@media (min-width: 433px) {
+    main > article .finder .finder__results__list.finder__results__list--three-up {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (min-width: 433px) and (min-width: 901px) {
     main > article .finder .finder__results__list.finder__results__list--three-up {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
