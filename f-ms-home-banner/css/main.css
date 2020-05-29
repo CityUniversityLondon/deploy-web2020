@@ -55375,6 +55375,7 @@ main .home .wrapper--embedded-video--autoplay__caption {
 main .home .wrapper--embedded-video--autoplay__caption .embedded-video--autoplay__caption {
     grid-column: -10/-1;
     color: #696969;
+    text-align: right;
 }
 
 @media (max-width: 1023px) {
