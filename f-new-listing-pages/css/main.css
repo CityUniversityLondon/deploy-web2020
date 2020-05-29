@@ -51562,7 +51562,7 @@ label:not(.finder__filters__label--always) {
 
 .finder__results__summary {
     border-bottom: 0.0625rem solid #cbcbcb;
-    padding-bottom: 1rem;
+    padding-bottom: 0.25rem;
 }
 
 @media (min-width: 768px) {
