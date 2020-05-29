@@ -55247,7 +55247,7 @@ main .home .banner--home {
         background: url(https://web2020.city.ac.uk/_media/web2020/images/reusable-content/reusable-components/ribbon.svg) 0 0 no-repeat;
         position: absolute;
         z-index: 0;
-        transform: rotate(180deg) scale(1.8, 1.95) skew(-17deg, 0deg);
+        transform: rotate(180deg) scale(1.8, 2.15) skew(-17deg, 0deg);
         width: 103%;
         height: 100%;
         right: 20%;
