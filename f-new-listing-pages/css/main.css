@@ -50858,9 +50858,9 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 @media (min-width: 768px) {
     .finder__filters--desktop .finder__filters .finder__filters__clear--desktop {
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
         margin-right: 1rem;
-        margin-top: 0.75rem;
+        margin-top: 0.25rem;
     }
 }
 
