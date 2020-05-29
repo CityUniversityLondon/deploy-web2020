@@ -1304,6 +1304,11 @@ button {
     touch-action: manipulation;
 }
 
+input,
+label {
+    cursor: pointer;
+}
+
 ::-moz-focus-inner {
     padding: 0;
     border: 0;

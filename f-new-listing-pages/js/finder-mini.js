@@ -236,7 +236,7 @@ function finder__clear(props) {
     className: "finder__clear",
     type: "button",
     onClick: () => {
-      props.clear();
+      props.clear(props.resetSort);
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "far fa-fw fa-times icon"
@@ -246,7 +246,8 @@ function finder__clear(props) {
 }
 
 finder__clear.propTypes = {
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+  resetSort: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__clear);
 
