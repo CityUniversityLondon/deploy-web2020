@@ -55295,6 +55295,28 @@ main .home .banner--home .banner__video {
     }
 }
 
+@media (min-width: 1024px) {
+    main .home .banner--home .banner__intro .banner__intro__heading {
+        padding-right: 1rem;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1279px) {
+    main .home .banner--home .banner__intro .banner__intro__heading {
+        font-weight: 700;
+    }
+}
+
+main .home .banner--home .banner__intro .banner__intro__subheading {
+    margin: 1.5rem 0 1rem;
+}
+
+@media (max-width: 1023px) {
+    main .home .banner--home .banner__intro .primary-cta-arrow--bright {
+        margin-bottom: 1.5rem;
+    }
+}
+
 main .home .banner--home .banner__intro .primary-cta-arrow--bright:focus {
     outline-color: #ffffff;
 }
