@@ -52476,11 +52476,20 @@ label:not(.finder__filters__label--always) {
     outline-width: 0.125rem;
 }
 
-.finder__select.finder__select--selected select {
+.finder__select:not(.finder__sort).finder__select--selected select {
     background-color: #b91924;
     border-color: #b91924;
     color: #ffffff;
     font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .finder__sort.finder__select--selected select {
+        background-color: #b91924;
+        border-color: #b91924;
+        color: #ffffff;
+        font-weight: 600;
+    }
 }
 
 @-moz-document url-prefix() {

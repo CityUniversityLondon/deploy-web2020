@@ -3086,7 +3086,7 @@ function finder__filters(props) {
     "aria-hidden": "true"
   }), ' ', "Filter ".concat(props.config.summariseAs.plural)), clearFiltersMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__filters__wrapper--filters"
-  }, sort, props.config.facetLabels.map(facet => {
+  }, props.config.facetLabels.map(facet => {
     if (dependencyMet(facet, props.query.facets)) {
       switch (facet.type) {
         case 'select':
@@ -3115,9 +3115,9 @@ function finder__filters(props) {
     } else {
       return null;
     }
-  }), clearFiltersDesktop, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "finder__filters__nofilters"
-  }, "No filters are valid for the current query."))));
+  }, "No filters are valid for the current query."), clearFiltersDesktop, sort)));
 }
 
 finder__filters.propTypes = {
