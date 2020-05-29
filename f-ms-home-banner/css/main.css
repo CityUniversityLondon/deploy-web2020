@@ -55354,6 +55354,35 @@ main .home .banner--home .banner__video.embedded-video figcaption {
     }
 }
 
+main .home .wrapper--embedded-video--autoplay__caption {
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    main .home .wrapper--embedded-video--autoplay__caption {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    main .home .wrapper--embedded-video--autoplay__caption {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+main .home .wrapper--embedded-video--autoplay__caption .embedded-video--autoplay__caption {
+    grid-column: -10/-1;
+    color: #696969;
+}
+
+@media (max-width: 1023px) {
+    main .home .wrapper--embedded-video--autoplay__caption .embedded-video--autoplay__caption {
+        display: none;
+    }
+}
+
 main .home .banner__ribbon {
     position: absolute;
     transform: rotate(280deg) scale(-1, -1);
