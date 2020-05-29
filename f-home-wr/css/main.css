@@ -54960,6 +54960,14 @@ main .home .home__statistics h2 {
 main .home .home__research__wrap {
     overflow: hidden;
     position: relative;
+    padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
+}
+
+@media (max-width: 1024px) {
+    main .home .home__research__wrap .home__research__content {
+        margin-bottom: 2.75rem;
+    }
 }
 
 main .home .home__research__wrap .home__research__content .home__research__content__links ul {
