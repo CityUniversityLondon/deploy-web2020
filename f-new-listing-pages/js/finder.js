@@ -1615,9 +1615,7 @@ function finder__select(props) {
       if (currentValue.toLowerCase() === value.data.toLowerCase() || responseFacetDetails && responseFacetDetails[0]) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("option", {
           key: i,
-          value: value.data,
-          id: "meta".concat(props.facet.meta).concat(i),
-          name: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
+          value: value.data
         }, value.label, currentValue !== value.data ? responseFacetDetails[0].count > 0 && " (".concat(responseFacetDetails[0].count, ")") : '');
       } else {
         return null;
@@ -1703,9 +1701,7 @@ function finder__sort(props) {
   }, props.config.sort.map((sortType, i) => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("option", {
       key: i,
-      value: sortType.type,
-      id: "sort".concat(randomNumber).concat(i),
-      name: "sort--".concat(randomNumber)
+      value: sortType.type
     }, sortType.label);
   })));
 }
@@ -1880,7 +1876,7 @@ function finder__query(props) {
     const newQuery = props.query;
     newQuery.misspelling = null;
     newQuery.query = query ? query : partialQuery ? partialQuery : '';
-    newQuery.sortType = partialQuery ? null : props.config.sort[0].type;
+    newQuery.sortType = partialQuery ? '' : props.config.sort[0].type;
     newQuery.startRank = 1;
     newQuery.interacted = true;
     props.update.query(newQuery);
@@ -2621,7 +2617,7 @@ function replaceHistory(currQuery, currStartRank, currFacets, currSort, facetLab
     const params = new URLSearchParams(window.location.search);
     currQuery !== '' ? params.set('query', currQuery) : params.delete('query');
     currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
-    currSort !== defaultSort ? params.set('sort', currSort) : params.delete('sort');
+    currSort !== defaultSort && currSort !== '' ? params.set('sort', currSort) : params.delete('sort');
     facetLabels.forEach(facet => {
       if (currFacets[facet.meta]) {
         params.set("meta_".concat(facet.meta, "_sand"), currFacets[facet.meta]);
@@ -2656,7 +2652,7 @@ function Finder(props) {
     misspelling: null,
     numRanks: params.get('num_ranks') || props.config.numRanks,
     query: params.get('query') || '',
-    sortType: params.get('query') ? null : params.get('sort') || props.config.sort[0].type,
+    sortType: params.get('query') ? '' : params.get('sort') || props.config.sort[0].type,
     startRank: params.get('start_rank') || 1
   };
   /**
@@ -2884,7 +2880,7 @@ function find(collection, fixedFacets, query, sortType, startRank, numRank, face
       collection: collection,
       num_ranks: numRank,
       query: query,
-      sort: sortType || null,
+      sort: sortType || '',
       start_rank: startRank
     })
   };

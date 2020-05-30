@@ -646,7 +646,7 @@ function Finder(props) {
     collection: props.config.collection,
     fixedFacets: props.config.fixedFacets,
     query: params.get('query') || '',
-    sortType: params.get('query') ? null : params.get('sort') || props.config.sort,
+    sortType: params.get('query') ? '' : params.get('sort') || props.config.sort,
     startRank: params.get('start_rank') || 1,
     numRanks: params.get('num_ranks') || props.config.numRanks,
     facets: getFacetParams(props.config.facetLabels, params)
@@ -800,7 +800,7 @@ function find(collection, fixedFacets, query, sortType, startRank, numRank, face
       collection: collection,
       num_ranks: numRank,
       query: query,
-      sort: sortType || null,
+      sort: sortType || '',
       start_rank: startRank
     })
   };
