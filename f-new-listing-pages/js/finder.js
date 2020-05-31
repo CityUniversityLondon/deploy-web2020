@@ -1838,7 +1838,9 @@ function finder__tag(props) {
     "aria-hidden": "true"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "finder__tag__text"
-  }, props.facet.name, ":", ' ', props.facet.values.filter(value => value.data === props.query.facets[props.facet.meta])[0].label))) : null;
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "sr-only"
+  }, "Remove filter for "), props.facet.name, ":", ' ', props.facet.values.filter(value => value.data === props.query.facets[props.facet.meta])[0].label))) : null;
 }
 
 finder__tag.propTypes = {
