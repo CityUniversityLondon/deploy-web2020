@@ -50615,25 +50615,25 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .finder__checkbox .finder__checkbox__indicator {
+    align-items: center;
     background-color: #ffffff;
     border-color: #cbcbcb;
     border-style: solid;
     border-width: 0.125rem;
     color: #0c0c0e;
-    height: 2rem;
-    width: 2.25rem;
-}
-
-.finder__checkbox input:checked + .finder__checkbox__indicator {
-    align-items: center;
-    background-color: #b91924;
-    border-color: #b91924;
-    color: #ffffff;
     cursor: pointer;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    height: 2rem;
     justify-content: center;
+    width: 2.25rem;
+}
+
+.finder__checkbox input:checked + .finder__checkbox__indicator {
+    background-color: #b91924;
+    border-color: #b91924;
+    color: #ffffff;
 }
 
 .finder__results__card--module__code {
