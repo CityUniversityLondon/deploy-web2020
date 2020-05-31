@@ -3013,10 +3013,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _finder_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__select */ "./src/patterns/finder/components/filters/finder__select.js");
-/* harmony import */ var _finder_reset__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__reset */ "./src/patterns/finder/components/filters/finder__reset.js");
-/* harmony import */ var _finder_sort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__sort */ "./src/patterns/finder/components/filters/finder__sort.js");
-/* harmony import */ var _finder_checkbox__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__checkbox */ "./src/patterns/finder/components/filters/finder__checkbox.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
+/* harmony import */ var _finder_checkbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__checkbox */ "./src/patterns/finder/components/filters/finder__checkbox.js");
+/* harmony import */ var _finder_tag__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__tag */ "./src/patterns/finder/components/filters/finder__tag.js");
+/* harmony import */ var _finder_reset__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__reset */ "./src/patterns/finder/components/filters/finder__reset.js");
+/* harmony import */ var _finder_sort__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__sort */ "./src/patterns/finder/components/filters/finder__sort.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
 
 
 
@@ -3026,6 +3027,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2019
  */
+
 
 
 
@@ -3066,17 +3068,17 @@ function dependencyMet(facet, facetMap) {
 function finder__filters(props) {
   const clearFiltersDesktop = Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__filters__reset finder__filters__reset--desktop"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_reset__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_reset__WEBPACK_IMPORTED_MODULE_6__["default"], {
     clear: props.clear,
     resetSort: false
   })) : null,
-        clearFiltersMobile = Object.keys(props.query.facets).length > 0 || props.query.sortType !== props.config.sort[0].type ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_reset__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        clearFiltersMobile = Object.keys(props.query.facets).length > 0 || props.query.sortType !== props.config.sort[0].type ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_reset__WEBPACK_IMPORTED_MODULE_6__["default"], {
     clear: props.clear,
     resetSort: true
   }) : null;
   const sort = props.config.sort.length > 1 && props.config.displaySort ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "wrapper--finder__sort--mobile"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_sort__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_sort__WEBPACK_IMPORTED_MODULE_7__["default"], {
     config: props.config,
     query: props.query,
     update: props.update
@@ -3106,7 +3108,17 @@ function finder__filters(props) {
           });
 
         case 'checkbox':
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_checkbox__WEBPACK_IMPORTED_MODULE_6__["default"], {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_checkbox__WEBPACK_IMPORTED_MODULE_4__["default"], {
+            key: facet.meta,
+            facet: facet,
+            query: props.query,
+            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
+            update: props.update,
+            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
+          });
+
+        case 'tag':
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_tag__WEBPACK_IMPORTED_MODULE_5__["default"], {
             key: facet.meta,
             facet: facet,
             query: props.query,
@@ -3116,7 +3128,7 @@ function finder__filters(props) {
           });
 
         default:
-          Object(_util__WEBPACK_IMPORTED_MODULE_7__["gaEvent"])('jsError', 'JavaScript error', 'finder__filters()', 'Unknown filter type in finder__filters.js', true);
+          Object(_util__WEBPACK_IMPORTED_MODULE_8__["gaEvent"])('jsError', 'JavaScript error', 'finder__filters()', 'Unknown filter type in finder__filters.js', true);
       }
     } else {
       return null;
@@ -3496,7 +3508,8 @@ function finder__sort(props) {
     props.update.results(!props.update.updateState);
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  const validSorts = props.config.sort.filter(sortType => sortType.type === '' ? props.query.query !== '' || Object.keys(props.query.facets).length > 0 || props.query.sortType === '' ? true : false : true);
+  return validSorts.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "finder__sort finder__select".concat(props.query.sortType !== props.config.sort[0].type ? ' finder__select--selected' : '')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
     className: "finder__select__overline",
@@ -3506,12 +3519,12 @@ function finder__sort(props) {
     id: "sort--".concat(randomNumber),
     onChange: e => setSort(e.target.value),
     value: props.query.sortType
-  }, props.config.sort.map((sortType, i) => {
+  }, validSorts.map((sortType, i) => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("option", {
       key: i,
       value: sortType.type
     }, sortType.label);
-  })));
+  }))) : null;
 }
 
 finder__sort.propTypes = {
@@ -3520,6 +3533,73 @@ finder__sort.propTypes = {
   update: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__sort);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/components/filters/finder__tag.js":
+/*!***************************************************************!*\
+  !*** ./src/patterns/finder/components/filters/finder__tag.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+/**
+ * @module patterns/finder/components/finder__tag
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+
+function finder__tag(props) {
+  const deleteFacet = () => {
+    const newQuery = props.query;
+    props.dependencies.map(facet => {
+      delete newQuery.facets[facet.meta];
+    });
+    delete newQuery.facets[props.facet.meta];
+    newQuery.startRank = 1;
+    newQuery.misspelling = null;
+    newQuery.interacted = true;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  return props.query.facets[props.facet.meta] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "finder__filter finder__tag"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    onClick: () => deleteFacet()
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fa-fw far fa-times icon",
+    "aria-hidden": "true"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "finder__tag__text"
+  }, props.facet.name, ":", ' ', props.facet.values.filter(value => value.data === props.query.facets[props.facet.meta])[0].label))) : null;
+}
+
+finder__tag.propTypes = {
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object)
+};
+/* harmony default export */ __webpack_exports__["default"] = (finder__tag);
 
 /***/ }),
 
@@ -3563,7 +3643,7 @@ function finder__clear(props) {
     className: "fad fa-fw fa-times-circle icon "
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "finder__clear__text"
-  }, "Reset"));
+  }, "Clear query"));
 }
 
 finder__clear.propTypes = {
