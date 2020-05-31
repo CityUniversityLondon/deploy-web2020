@@ -239,7 +239,7 @@ function finder__clear(props) {
       props.clear(props.resetSort);
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "far fa-fw fa-times icon"
+    className: "fad fa-fw fa-times-circle icon "
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "finder__clear__text"
   }, "Reset"));

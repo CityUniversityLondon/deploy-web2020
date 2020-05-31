@@ -50079,12 +50079,16 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .finder__query__input .finder__clear {
-    cursor: pointer;
-    height: 2rem;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 2.25rem;
+    justify-content: center;
     position: absolute;
-    right: 1rem;
+    right: 0.5rem;
     top: 0.5rem;
-    width: 2rem;
+    width: 2.25rem;
 }
 
 .finder__query__input .finder__clear:focus {
@@ -50106,45 +50110,12 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .finder__query__input .finder__clear .icon {
-    background-color: #f2f2f2;
-    border-radius: 50%;
-    color: #696969;
-    height: 2rem;
-    position: relative;
-    width: 2rem;
-}
-
-@media (hover: hover) {
-    .finder__query__input .finder__clear .icon:hover {
-        cursor: pointer;
-    }
-}
-
-@media (max-width: 767px) {
-    .finder__query__input .finder__clear .icon {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-}
-
-.finder__query__input .finder__clear .icon:before {
-    display: block;
-    margin-bottom: 0.75rem;
-    margin-top: 0.5rem;
-}
-
-.finder__query__input .finder__clear .finder__icon--close {
-    background-color: transparent;
-    left: 0;
-    position: relative;
-    top: 0.25rem;
-}
-
-@media (min-width: 768px) {
-    .finder__query__input .finder__clear .finder__icon--close {
-        left: 0.25rem;
-        top: 0.5rem;
-    }
+    --fa-primary-color: #696969;
+    --fa-primary-opacity: 1;
+    --fa-secondary-color: #f2f2f2;
+    --fa-secondary-opacity: 1;
+    letter-spacing: 0;
+    line-height: 1;
 }
 
 .finder__query__icon--wrapper {
@@ -50632,12 +50603,37 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .finder__checkbox input {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
 }
 
 .finder__checkbox input:focus {
     outline: none;
+}
+
+.finder__checkbox .finder__checkbox__indicator {
+    background-color: #ffffff;
+    border-color: #cbcbcb;
+    border-style: solid;
+    border-width: 0.125rem;
+    color: #0c0c0e;
+    height: 2rem;
+    width: 2.25rem;
+}
+
+.finder__checkbox input:checked + .finder__checkbox__indicator {
+    align-items: center;
+    background-color: #b91924;
+    border-color: #b91924;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .finder__results__card--module__code {
@@ -50724,7 +50720,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 @media (min-width: 768px) {
-    .finder__filters .finder__clear {
+    .finder__filters .finder__reset {
         font-size: 1rem;
         line-height: 1.625;
         letter-spacing: -0.005em;
@@ -50757,31 +50753,31 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 @media (min-width: 768px) and (min-width: 1280px) and (max-width: 1919px) {
-    .finder__filters .finder__clear {
+    .finder__filters .finder__reset {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 768px) and (min-width: 1920px) and (max-width: 3839px) {
-    .finder__filters .finder__clear {
+    .finder__filters .finder__reset {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 768px) and (min-width: 3840px) and (max-width: 7679px) {
-    .finder__filters .finder__clear {
+    .finder__filters .finder__reset {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 768px) and (min-width: 7680px) {
-    .finder__filters .finder__clear {
+    .finder__filters .finder__reset {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 768px) and (hover: hover) {
-    .finder__filters .finder__clear:hover {
+    .finder__filters .finder__reset:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -50799,7 +50795,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 @media (min-width: 768px) {
-    .finder__filters .finder__clear:focus, .finder__filters .finder__clear:active {
+    .finder__filters .finder__reset:focus, .finder__filters .finder__reset:active {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -50814,13 +50810,13 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
         outline-width: 0;
         text-decoration: none;
     }
-    .finder__filters .finder__clear:focus, .finder__filters .finder__clear:active {
+    .finder__filters .finder__reset:focus, .finder__filters .finder__reset:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
         outline-style: dotted;
         outline-width: 0.125rem;
     }
-    .finder__filters .finder__clear, .finder__filters .finder__clear:focus, .finder__filters .finder__clear:active {
+    .finder__filters .finder__reset, .finder__filters .finder__reset:focus, .finder__filters .finder__reset:active {
         background-color: #ffffff;
         border-color: #d61726;
         border-style: solid;
@@ -50830,7 +50826,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 @media (min-width: 768px) and (hover: hover) {
-    .finder__filters .finder__clear:hover {
+    .finder__filters .finder__reset:hover {
         background-color: #d61726;
         border-color: #d61726;
         border-style: solid;
@@ -50856,7 +50852,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
         display: block;
     }
     .finder__filters--desktop .finder__filters .finder__filter,
-    .finder__filters--desktop .finder__filters .finder__filters__clear--desktop {
+    .finder__filters--desktop .finder__filters .finder__filters__reset--desktop {
         width: calc(33% - 1rem);
         margin-right: 1rem;
     }
@@ -50864,13 +50860,13 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 @media (min-width: 768px) and (min-width: 1280px) {
     .finder__filters--desktop .finder__filters .finder__filter,
-    .finder__filters--desktop .finder__filters .finder__filters__clear--desktop {
+    .finder__filters--desktop .finder__filters .finder__filters__reset--desktop {
         width: calc(25% - 1rem);
     }
 }
 
 @media (min-width: 768px) {
-    .finder__filters--desktop .finder__filters .finder__filters__clear--desktop {
+    .finder__filters--desktop .finder__filters .finder__filters__reset--desktop {
         margin-bottom: 0.75rem;
         margin-right: 1rem;
         margin-top: 0.25rem;
@@ -50951,7 +50947,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     margin-top: 0.25rem;
 }
 
-.finder__filters .finder__clear {
+.finder__filters .finder__reset {
     display: none;
 }
 
@@ -50969,7 +50965,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     padding: 0.5rem;
 }
 
-.finder__filters--mobile .finder__filters .finder__clear {
+.finder__filters--mobile .finder__filters .finder__reset {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -50993,7 +50989,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 @media (hover: hover) {
-    .finder__filters--mobile .finder__filters .finder__clear:hover {
+    .finder__filters--mobile .finder__filters .finder__reset:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -51010,7 +51006,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
-.finder__filters--mobile .finder__filters .finder__clear:focus, .finder__filters--mobile .finder__filters .finder__clear:active {
+.finder__filters--mobile .finder__filters .finder__reset:focus, .finder__filters--mobile .finder__filters .finder__reset:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -51026,12 +51022,12 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     text-decoration: none;
 }
 
-.finder__filters--mobile .finder__filters .finder__clear, .finder__filters--mobile .finder__filters .finder__clear:focus, .finder__filters--mobile .finder__filters .finder__clear:active {
+.finder__filters--mobile .finder__filters .finder__reset, .finder__filters--mobile .finder__filters .finder__reset:focus, .finder__filters--mobile .finder__filters .finder__reset:active {
     background-color: #d61726;
     color: #ffffff;
 }
 
-.finder__filters--mobile .finder__filters .finder__clear:focus .finder__clear__text {
+.finder__filters--mobile .finder__filters .finder__reset:focus .finder__reset__text {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: dotted;
@@ -51039,27 +51035,27 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 @media (hover: hover) {
-    .finder__filters--mobile .finder__filters .finder__clear:hover {
+    .finder__filters--mobile .finder__filters .finder__reset:hover {
         background-color: #9e111c;
         color: #ffffff;
     }
 }
 
 @media (min-width: 433px) {
-    .finder__filters--mobile .finder__filters .finder__clear {
+    .finder__filters--mobile .finder__filters .finder__reset {
         margin-left: 2.5rem;
     }
 }
 
-.finder__filters--mobile .finder__filters .finder__clear .icon {
+.finder__filters--mobile .finder__filters .finder__reset .icon {
     display: none;
 }
 
-.finder__filters--mobile .finder__filters__clear--desktop .finder__clear {
+.finder__filters--mobile .finder__filters__reset--desktop .finder__reset {
     display: none;
 }
 
-.finder__filters__clear--desktop .finder__clear {
+.finder__filters__reset--desktop .finder__reset {
     display: block;
 }
 
@@ -51085,7 +51081,7 @@ label:not(.finder__filters__label--always) {
     margin-bottom: 1rem;
 }
 
-.finder__filters__clear--desktop + .finder__filters__nofilters,
+.finder__filters__reset--desktop + .finder__filters__nofilters,
 .finder__filter + .finder__filters__nofilters {
     display: none;
 }
@@ -52441,7 +52437,6 @@ label:not(.finder__filters__label--always) {
     border-width: 0.125rem;
     bottom: 0.25rem;
     color: #0c0c0e;
-    cursor: pointer;
     font-weight: 450;
     height: 3.25rem;
     position: relative;
@@ -52557,15 +52552,6 @@ label:not(.finder__filters__label--always) {
     font-weight: 450;
     margin-bottom: 0.5rem;
     margin-top: 0.75rem;
-}
-
-.finder__icon--close {
-    background-color: #f2f2f2;
-    color: #1e1e1e;
-}
-
-.finder__icon--close__wrapper {
-    font-weight: 450;
 }
 
 .edge .finder__query__input input:focus {
