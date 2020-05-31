@@ -1832,7 +1832,8 @@ function finder__tag(props) {
   return props.query.facets[props.facet.meta] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "finder__filter finder__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    onClick: () => deleteFacet()
+    onClick: () => deleteFacet(),
+    type: "button"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fa-fw far fa-times icon",
     "aria-hidden": "true"
