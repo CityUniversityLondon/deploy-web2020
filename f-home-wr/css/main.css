@@ -52660,6 +52660,55 @@ button
     list-style-type: none;
 }
 
+.promo-area {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+}
+
+@media (min-width: 768px) {
+    .promo-area {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .promo-area {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+.promo-area.layout__left--full .promo-area__content {
+    grid-column: 2 / 13;
+}
+
+.promo-area.layout__left--full .promo-area__image {
+    position: absolute;
+    width: 100%;
+}
+
+.promo-area.layout__left--full .promo-area__image img {
+    width: 100%;
+}
+
+.promo-area .promo-area__content {
+    padding: 4rem 2rem;
+    margin-top: 2rem;
+    z-index: 1;
+    color: #ffffff;
+    margin-bottom: -2rem;
+}
+
+.promo-area .promo-area__content .promo-area__heading {
+    margin-top: 0;
+}
+
+.promo-area .promo-area__image {
+    height: 100%;
+    overflow: hidden;
+}
+
 .generic {
     display: block;
 }
