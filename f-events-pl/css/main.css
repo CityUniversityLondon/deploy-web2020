@@ -55057,7 +55057,7 @@ div.widget-123_test_ {
     }
     main .navigation--secondary + .event .event__info {
         grid-column: 2 / span 16;
-        margin-top: -4rem;
+        margin-top: -2rem;
     }
     main .navigation--secondary + .event .content {
         grid-column: 1 / span 18;
@@ -55219,6 +55219,19 @@ div.widget-123_test_ {
     margin-top: 1rem;
 }
 
+.event__info--cta__bottom__recurring {
+    display: inline;
+}
+
+.event__info--cta__bottom__recurring .fa-redo {
+    margin-right: 0.5rem;
+}
+
+.event__info--cta__bottom__separator:after {
+    content: '|';
+    padding: 0 0.5rem;
+}
+
 .event__agenda {
     list-style-type: none;
     margin-top: 0;
@@ -55253,6 +55266,14 @@ div.widget-123_test_ {
     margin-left: 0;
 }
 
+.event__speakers li:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 1rem;
+    border-bottom: 1px dotted #696969;
+}
+
 .event__speakers__name,
 .event__speakers__description {
     display: block;
@@ -55270,6 +55291,7 @@ div.widget-123_test_ {
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
+    margin-right: 0.5rem;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -55294,6 +55316,131 @@ div.widget-123_test_ {
     .event__speakers__details span {
         letter-spacing: -0.017em;
     }
+}
+
+.event__contact-details {
+    padding: 1rem 1rem 2rem;
+    background-color: #9e111c;
+    color: #ffffff;
+}
+
+.event__contact-details h2 {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+.event__contact-details .icon {
+    margin-right: 1rem;
+}
+
+.event__contact-details a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+@media (hover: hover) {
+    .event__contact-details a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.event__contact-details a:focus, .event__contact-details a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .event__contact-details a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .event__contact-details a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+    }
+}
+
+.event__contact-details a:focus, .event__contact-details a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.event__contact-details a:visited {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+.event__contact-details a:focus {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+@media (hover: hover) {
+    .event__contact-details a:hover {
+        border-bottom-color: #cbcbcb;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #0c0c0e;
+    }
+}
+
+.event__contact-details a:active {
+    background-color: #cbcbcb;
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
 }
 
 .event-calendar {
