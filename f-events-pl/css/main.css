@@ -1304,6 +1304,11 @@ button {
     touch-action: manipulation;
 }
 
+input,
+label {
+    cursor: pointer;
+}
+
 ::-moz-focus-inner {
     padding: 0;
     border: 0;
@@ -21927,6 +21932,121 @@ Assign mixin:
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+/**
+  Used in UG paint layout
+**/
+.banner-svg {
+    background: linear-gradient(to bottom, #e5e5e5, #ffffff 75%);
+}
+
+.banner-svg--wrapper {
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .banner-svg--wrapper {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .banner-svg--wrapper {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .banner-svg--wrapper {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.banner-svg--wrapper__svg {
+    grid-column: 3/23;
+    position: relative;
+}
+
+.banner-svg--wrapper__svg .hero-image {
+    height: 14rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.banner-svg--wrapper__svg .hero-image img {
+    width: 17.5rem;
+}
+
+.banner-svg--wrapper__title {
+    grid-column: 3/23;
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .banner-svg--wrapper__title {
+        padding-bottom: 2rem;
+    }
+}
+
+.banner-svg--wrapper__title h1,
+.banner-svg--wrapper__title p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 901px) {
+    .banner-svg--wrapper__title h1,
+    .banner-svg--wrapper__title p {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .banner-svg--wrapper__title h1,
+    .banner-svg--wrapper__title p {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    .banner-svg--wrapper__title h1,
+    .banner-svg--wrapper__title p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.banner-svg--wrapper__title:after {
+    background-color: #d61726;
+    content: '';
+    display: block;
+    height: 0.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    width: 3rem;
+}
+
+@media (max-width: 900px) {
+    .banner-svg--wrapper__title,
+    .banner-svg--wrapper__svg {
+        grid-column: 1/-1;
+    }
 }
 
 .breadcrumbs {
@@ -45812,7 +45932,7 @@ blockquote footer cite {
     right: 0;
     top: 0;
     background-color: #1e1e1e;
-    z-index: 2;
+    z-index: 1;
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
@@ -49454,6 +49574,36 @@ button
     main > article .finder .finder__results__list .finder__results__card {
         grid-column: 3 / -3;
     }
+    main > article .finder .finder__results__list.finder__results__list--three-up {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    main > article .finder .finder__results__list.finder__results__list--three-up .finder__results__card {
+        grid-column: unset;
+        width: calc(33% - 1rem);
+    }
+}
+
+main > article .finder .finder__results__list.finder__results__list--three-up {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: unset;
+}
+
+@media (min-width: 433px) {
+    main > article .finder .finder__results__list.finder__results__list--three-up {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (min-width: 433px) and (min-width: 901px) {
+    main > article .finder .finder__results__list.finder__results__list--three-up {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -49545,6 +49695,13 @@ button
     main > article .finder .finder__results__list .finder__results__card {
         grid-column: 3 / -3;
     }
+    main > article .finder .finder__results__list.finder__results__list--three-up {
+        display: flex;
+    }
+    main > article .finder .finder__results__list.finder__results__list--three-up .finder__results__card {
+        grid-column: unset;
+        width: calc(50% - 1rem);
+    }
 }
 
 @media (min-width: 1280px) {
@@ -49579,6 +49736,13 @@ button
 @media (min-width: 1280px) {
     main > article .finder .finder__results__list .finder__results__card {
         grid-column: 3 / -3;
+    }
+    main > article .finder .finder__results__list.finder__results__list--three-up {
+        display: flex;
+    }
+    main > article .finder .finder__results__list.finder__results__list--three-up .finder__results__card {
+        grid-column: unset;
+        width: calc(33% - 1rem);
     }
 }
 
@@ -49702,6 +49866,12 @@ button
 @media (min-width: 1024px) {
     main .navigation--secondary + article .finder .finder__results__list .finder__results__card {
         grid-column: 3 / -3;
+    }
+    main .navigation--secondary + article .finder .finder__results__list.finder__results__list--three-up {
+        display: flex;
+    }
+    main .navigation--secondary + article .finder .finder__results__list.finder__results__list--three-up .finder__results__card {
+        grid-column: unset;
     }
 }
 
@@ -49909,12 +50079,16 @@ button
 }
 
 .finder__query__input .finder__clear {
-    cursor: pointer;
-    height: 2rem;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 2.25rem;
+    justify-content: center;
     position: absolute;
-    right: 1rem;
+    right: 0.5rem;
     top: 0.5rem;
-    width: 2rem;
+    width: 2.25rem;
 }
 
 .finder__query__input .finder__clear:focus {
@@ -49936,45 +50110,12 @@ button
 }
 
 .finder__query__input .finder__clear .icon {
-    background-color: #f2f2f2;
-    border-radius: 50%;
-    color: #696969;
-    height: 2rem;
-    position: relative;
-    width: 2rem;
-}
-
-@media (hover: hover) {
-    .finder__query__input .finder__clear .icon:hover {
-        cursor: pointer;
-    }
-}
-
-@media (max-width: 767px) {
-    .finder__query__input .finder__clear .icon {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-}
-
-.finder__query__input .finder__clear .icon:before {
-    display: block;
-    margin-bottom: 0.75rem;
-    margin-top: 0.5rem;
-}
-
-.finder__query__input .finder__clear .finder__icon--close {
-    background-color: transparent;
-    left: 0;
-    position: relative;
-    top: 0.25rem;
-}
-
-@media (min-width: 768px) {
-    .finder__query__input .finder__clear .finder__icon--close {
-        left: 0.25rem;
-        top: 0.5rem;
-    }
+    --fa-primary-color: #696969;
+    --fa-primary-opacity: 1;
+    --fa-secondary-color: #f2f2f2;
+    --fa-secondary-opacity: 1;
+    letter-spacing: 0;
+    line-height: 1;
 }
 
 .finder__query__icon--wrapper {
@@ -50246,10 +50387,6 @@ button
     color: #ffffff;
 }
 
-.finder__filter {
-    background-color: #ffffff;
-}
-
 .finder__filter legend {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
@@ -50395,57 +50532,130 @@ button
     margin-top: 0.25rem;
 }
 
-.finder__togglebox {
-    background-color: #ffffff;
-    padding: 1rem;
-}
-
-.finder__toggle label {
+.finder__checkbox {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    align-items: center;
+    color: #0c0c0e;
     display: flex;
-    font-weight: bold;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-weight: 450;
+    height: 3.25rem;
+    margin-bottom: 0.75rem;
+    margin-top: 0.25rem;
+    position: relative;
 }
 
-.finder__toggle input {
-    height: 0;
-    opacity: 0;
-    width: 0;
+.finder__checkbox i,
+.finder__checkbox em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
-.finder__toggle input:checked + .toggle:before {
-    transform: translateX(0.625rem);
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .finder__checkbox {
+        letter-spacing: -0.008em;
+    }
 }
 
-.finder__toggle input:focus + .toggle {
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__checkbox {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__checkbox {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__checkbox {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__checkbox:focus-within {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.toggle {
-    background-color: #f2f2f2;
-    border-radius: 3rem;
-    border: 0.0625rem solid #696969;
-    display: inline-block;
-    height: 1.375rem;
-    position: relative;
-    transition: background-color 0.2s;
-    width: 2rem;
+.finder__checkbox label {
+    display: flex;
+    overflow: hidden;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-top: 1rem;
 }
 
-.toggle:before {
-    background-color: #ffffff;
-    border-radius: 50%;
-    border: 0.0625rem solid;
-    content: '';
-    height: 1.25rem;
+.finder__checkbox input {
+    height: 0;
+    left: 0;
     position: absolute;
-    transition: transform 0.3s;
-    width: 1.25rem;
+    top: 0;
+    width: 0;
 }
 
-.toggle--open {
-    background-color: #f1c70b;
+.finder__checkbox input:focus {
+    outline: none;
+}
+
+.finder__checkbox .finder__checkbox__indicator {
+    align-items: center;
+    background-color: #ffffff;
+    border-color: #cbcbcb;
+    border-style: solid;
+    border-width: 0.125rem;
+    color: #0c0c0e;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 2rem;
+    justify-content: center;
+    width: 2.25rem;
+}
+
+.finder__checkbox input:checked + .finder__checkbox__indicator {
+    background-color: #b91924;
+    border-color: #b91924;
+    color: #ffffff;
+}
+
+.finder__results__card--module__code {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    border-right: 0.0625rem solid #cbcbcb;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.finder__results__card--module__code i,
+.finder__results__card--module__code em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
 .finder__query__suggestions {
@@ -50510,7 +50720,7 @@ button
 }
 
 @media (min-width: 768px) {
-    .finder__filters .finder__clear {
+    .finder__filters .finder__reset {
         font-size: 1rem;
         line-height: 1.625;
         letter-spacing: -0.005em;
@@ -50543,31 +50753,31 @@ button
 }
 
 @media (min-width: 768px) and (min-width: 1280px) and (max-width: 1919px) {
-    .finder__filters .finder__clear {
+    .finder__filters .finder__reset {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 768px) and (min-width: 1920px) and (max-width: 3839px) {
-    .finder__filters .finder__clear {
+    .finder__filters .finder__reset {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 768px) and (min-width: 3840px) and (max-width: 7679px) {
-    .finder__filters .finder__clear {
+    .finder__filters .finder__reset {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 768px) and (min-width: 7680px) {
-    .finder__filters .finder__clear {
+    .finder__filters .finder__reset {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 768px) and (hover: hover) {
-    .finder__filters .finder__clear:hover {
+    .finder__filters .finder__reset:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -50585,7 +50795,7 @@ button
 }
 
 @media (min-width: 768px) {
-    .finder__filters .finder__clear:focus, .finder__filters .finder__clear:active {
+    .finder__filters .finder__reset:focus, .finder__filters .finder__reset:active {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -50600,13 +50810,13 @@ button
         outline-width: 0;
         text-decoration: none;
     }
-    .finder__filters .finder__clear:focus, .finder__filters .finder__clear:active {
+    .finder__filters .finder__reset:focus, .finder__filters .finder__reset:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
         outline-style: dotted;
         outline-width: 0.125rem;
     }
-    .finder__filters .finder__clear, .finder__filters .finder__clear:focus, .finder__filters .finder__clear:active {
+    .finder__filters .finder__reset, .finder__filters .finder__reset:focus, .finder__filters .finder__reset:active {
         background-color: #ffffff;
         border-color: #d61726;
         border-style: solid;
@@ -50616,7 +50826,7 @@ button
 }
 
 @media (min-width: 768px) and (hover: hover) {
-    .finder__filters .finder__clear:hover {
+    .finder__filters .finder__reset:hover {
         background-color: #d61726;
         border-color: #d61726;
         border-style: solid;
@@ -50625,8 +50835,125 @@ button
     }
 }
 
+.finder__filters .finder__tag button {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-color: #b91924;
+    border-style: solid;
+    border-width: 0.0625rem;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    transition: background-color 0.6s, border-color 0.6s, color 0.6s;
+    height: 3.25rem;
+    margin-bottom: 0.75rem;
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .finder__filters .finder__tag button {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__filters .finder__tag button {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__filters .finder__tag button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__filters .finder__tag button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (hover: hover) {
+    .finder__filters .finder__tag button:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.finder__filters .finder__tag button:focus, .finder__filters .finder__tag button:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.finder__filters .finder__tag button:focus, .finder__filters .finder__tag button:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.finder__filters .finder__tag button, .finder__filters .finder__tag button:focus, .finder__filters .finder__tag button:active {
+    background-color: #b91924;
+    border-color: #b91924;
+    border-style: solid;
+    border-width: 0.0625rem;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .finder__filters .finder__tag button:hover {
+        background-color: #790b21;
+        border-color: #790b21;
+        border-style: solid;
+        border-width: 0.0625rem;
+        color: #ffffff;
+    }
+}
+
 .finder__filters fieldset:last-child .finder__select {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .finder__filters--mobile .finder__filters {
@@ -50639,34 +50966,41 @@ button
 
 @media (min-width: 768px) {
     .finder__filters--desktop .finder__filters {
-        background-color: #ffffff;
         display: block;
     }
     .finder__filters--desktop .finder__filters .finder__filter,
-    .finder__filters--desktop .finder__filters .finder__filters__clear--desktop {
-        width: calc(33% - 1.5rem);
-        margin-right: 1.5rem;
+    .finder__filters--desktop .finder__filters .finder__filters__reset--desktop {
+        margin-right: 1rem;
+    }
+    .finder__filters--desktop .finder__filters .finder__filter:not(.finder__tag),
+    .finder__filters--desktop .finder__filters .finder__filters__reset--desktop {
+        width: calc(33% - 1rem);
     }
 }
 
 @media (min-width: 768px) and (min-width: 1280px) {
-    .finder__filters--desktop .finder__filters .finder__filter,
-    .finder__filters--desktop .finder__filters .finder__filters__clear--desktop {
-        width: calc(25% - 1.5rem);
+    .finder__filters--desktop .finder__filters .finder__filter:not(.finder__tag),
+    .finder__filters--desktop .finder__filters .finder__filters__reset--desktop {
+        width: calc(25% - 1rem);
     }
 }
 
 @media (min-width: 768px) {
-    .finder__filters--desktop .finder__filters .finder__filters__clear--desktop {
-        margin-bottom: 1rem;
+    .finder__filters--desktop .finder__filters .finder__filters__reset--desktop {
+        margin-bottom: 0.75rem;
         margin-right: 1rem;
-        margin-top: 0.75rem;
+        margin-top: 0.25rem;
     }
 }
 
 @media (max-width: 767px) {
     .finder__filters__wrapper--filters {
         background-color: #ffffff;
+    }
+}
+
+@media (max-width: 1023px) {
+    .finder__filters__wrapper--filters {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -50677,7 +51011,6 @@ button
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        padding-left: 1.5rem;
     }
 }
 
@@ -50687,7 +51020,7 @@ button
     letter-spacing: -0.013em;
     background-color: #d8d8d8;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 0;
     padding: 0.75rem 1.5rem;
 }
@@ -50725,7 +51058,7 @@ button
 @media (min-width: 768px) {
     .finder__filters__heading {
         background-color: transparent;
-        justify-content: flex-start;
+        justify-content: space-between;
     }
 }
 
@@ -50734,7 +51067,7 @@ button
     margin-top: 0.25rem;
 }
 
-.finder__filters .finder__clear {
+.finder__filters .finder__reset {
     display: none;
 }
 
@@ -50752,7 +51085,7 @@ button
     padding: 0.5rem;
 }
 
-.finder__filters--mobile .finder__filters .finder__clear {
+.finder__filters--mobile .finder__filters .finder__reset {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -50776,7 +51109,7 @@ button
 }
 
 @media (hover: hover) {
-    .finder__filters--mobile .finder__filters .finder__clear:hover {
+    .finder__filters--mobile .finder__filters .finder__reset:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -50793,7 +51126,7 @@ button
     }
 }
 
-.finder__filters--mobile .finder__filters .finder__clear:focus, .finder__filters--mobile .finder__filters .finder__clear:active {
+.finder__filters--mobile .finder__filters .finder__reset:focus, .finder__filters--mobile .finder__filters .finder__reset:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -50809,12 +51142,12 @@ button
     text-decoration: none;
 }
 
-.finder__filters--mobile .finder__filters .finder__clear, .finder__filters--mobile .finder__filters .finder__clear:focus, .finder__filters--mobile .finder__filters .finder__clear:active {
+.finder__filters--mobile .finder__filters .finder__reset, .finder__filters--mobile .finder__filters .finder__reset:focus, .finder__filters--mobile .finder__filters .finder__reset:active {
     background-color: #d61726;
     color: #ffffff;
 }
 
-.finder__filters--mobile .finder__filters .finder__clear:focus .finder__clear__text {
+.finder__filters--mobile .finder__filters .finder__reset:focus .finder__reset__text {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: dotted;
@@ -50822,27 +51155,27 @@ button
 }
 
 @media (hover: hover) {
-    .finder__filters--mobile .finder__filters .finder__clear:hover {
+    .finder__filters--mobile .finder__filters .finder__reset:hover {
         background-color: #9e111c;
         color: #ffffff;
     }
 }
 
 @media (min-width: 433px) {
-    .finder__filters--mobile .finder__filters .finder__clear {
+    .finder__filters--mobile .finder__filters .finder__reset {
         margin-left: 2.5rem;
     }
 }
 
-.finder__filters--mobile .finder__filters .finder__clear .icon {
+.finder__filters--mobile .finder__filters .finder__reset .icon {
     display: none;
 }
 
-.finder__filters--mobile .finder__filters__clear--desktop .finder__clear {
+.finder__filters--mobile .finder__filters__reset--desktop .finder__reset {
     display: none;
 }
 
-.finder__filters__clear--desktop .finder__clear {
+.finder__filters__reset--desktop .finder__reset {
     display: block;
 }
 
@@ -50850,7 +51183,9 @@ button
     display: flex;
 }
 
-.finder__filters--desktop .finder__filters label {
+.finder__filters--desktop
+.finder__filters
+label:not(.finder__filters__label--always) {
     border: 0;
     clip: rect(0, 0, 0, 0);
     height: 1px;
@@ -50866,7 +51201,7 @@ button
     margin-bottom: 1rem;
 }
 
-.finder__filters__clear--desktop + .finder__filters__nofilters,
+.finder__filters__reset--desktop + .finder__filters__nofilters,
 .finder__filter + .finder__filters__nofilters {
     display: none;
 }
@@ -51356,7 +51691,17 @@ button
 
 .finder__results__summary {
     border-bottom: 0.0625rem solid #cbcbcb;
-    padding-bottom: 1rem;
+    padding-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+    .finder__results__summary {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
 }
 
 .finder__results__summary button {
@@ -51548,7 +51893,6 @@ button
     margin-top: 2rem;
     padding-bottom: 2rem;
     position: relative;
-    z-index: 0;
 }
 
 .finder__results__card:last-of-type {
@@ -51559,6 +51903,97 @@ button
     .finder__results__card .thumbnail__image-container {
         margin-right: 1rem;
     }
+}
+
+.finder__results__card .finder__results__card__description {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 450;
+    max-width: 55ch;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    color: #d61726;
+    margin-top: 0.5rem;
+}
+
+.finder__results__card .finder__results__card__description i,
+.finder__results__card .finder__results__card__description em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card .finder__results__card__description b,
+.finder__results__card .finder__results__card__description strong {
+    font-weight: 700;
+}
+
+.finder__results__card .finder__results__card__description i,
+.finder__results__card .finder__results__card__description em {
+    font-style: italic;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card .finder__results__card__description {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card .icon {
+    color: #d61726;
 }
 
 .finder__results__card a {
@@ -51847,96 +52282,13 @@ button
     border-bottom: none;
 }
 
+.finder__results__card a:visited .finder__results__card__heading {
+    color: #0c0c0e;
+}
+
 @media (min-width: 768px) {
     .finder__results__card a {
         flex-direction: row;
-    }
-}
-
-.finder__results__card a .finder__results__card__description {
-    font-family: "Plex Sans", sans-serif;
-    /**
-     * IBM Plex OpenType stylistic sets:
-     *
-     * ss01: 0/1 double-storey/simple 'a'
-     * ss02: 0/1 double-storey/simple 'g'
-     * ss03: 0/1 plain/slashed '0'
-     * ss04: 0/1 plain/dotted '0'
-     */
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
-    font-size: 1rem;
-    line-height: 1.625;
-    letter-spacing: -0.005em;
-    font-style: normal;
-    font-weight: 450;
-    max-width: 55ch;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    color: #d61726;
-    margin-top: 0.5rem;
-}
-
-.finder__results__card a .finder__results__card__description i,
-.finder__results__card a .finder__results__card__description em {
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .finder__results__card a .finder__results__card__description {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .finder__results__card a .finder__results__card__description {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .finder__results__card a .finder__results__card__description {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .finder__results__card a .finder__results__card__description {
-        letter-spacing: -0.017em;
-    }
-}
-
-.finder__results__card a .finder__results__card__description b,
-.finder__results__card a .finder__results__card__description strong {
-    font-weight: 700;
-}
-
-.finder__results__card a .finder__results__card__description i,
-.finder__results__card a .finder__results__card__description em {
-    font-style: italic;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .finder__results__card a .finder__results__card__description {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .finder__results__card a .finder__results__card__description {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .finder__results__card a .finder__results__card__description {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .finder__results__card a .finder__results__card__description {
-        letter-spacing: -0.017em;
     }
 }
 
@@ -51978,11 +52330,13 @@ button
     margin-right: 0.5rem;
 }
 
-.finder__results__contact {
+.finder__results__card--module,
+.finder__results__card--contact {
     margin-top: 0;
 }
 
-.finder__results__contact a {
+.finder__results__card--module a,
+.finder__results__card--contact a {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -52024,7 +52378,8 @@ button
 }
 
 @media (hover: hover) {
-    .finder__results__contact a:hover {
+    .finder__results__card--module a:hover,
+    .finder__results__card--contact a:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -52041,7 +52396,9 @@ button
     }
 }
 
-.finder__results__contact a:focus, .finder__results__contact a:active {
+.finder__results__card--module a:focus, .finder__results__card--module a:active,
+.finder__results__card--contact a:focus,
+.finder__results__card--contact a:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -52058,33 +52415,39 @@ button
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .finder__results__contact a {
+    .finder__results__card--module a,
+    .finder__results__card--contact a {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .finder__results__contact a:hover {
+    .finder__results__card--module a:hover,
+    .finder__results__card--contact a:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.finder__results__contact a:focus, .finder__results__contact a:active {
+.finder__results__card--module a:focus, .finder__results__card--module a:active,
+.finder__results__card--contact a:focus,
+.finder__results__card--contact a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.finder__results__contact a:visited {
+.finder__results__card--module a:visited,
+.finder__results__card--contact a:visited {
     border-bottom-color: #4c2c92;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #4c2c92;
 }
 
-.finder__results__contact a:focus {
+.finder__results__card--module a:focus,
+.finder__results__card--contact a:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -52092,7 +52455,8 @@ button
 }
 
 @media (hover: hover) {
-    .finder__results__contact a:hover {
+    .finder__results__card--module a:hover,
+    .finder__results__card--contact a:hover {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
@@ -52100,7 +52464,8 @@ button
     }
 }
 
-.finder__results__contact a:active {
+.finder__results__card--module a:active,
+.finder__results__card--contact a:active {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -52108,103 +52473,13 @@ button
     color: #ffffff;
 }
 
-.finder__results__contact a:after {
+.finder__results__card--module a:after,
+.finder__results__card--contact a:after {
     content: unset;
 }
 
-.finder__results__contact .finder__results__card__description {
-    font-family: "Plex Sans", sans-serif;
-    /**
-     * IBM Plex OpenType stylistic sets:
-     *
-     * ss01: 0/1 double-storey/simple 'a'
-     * ss02: 0/1 double-storey/simple 'g'
-     * ss03: 0/1 plain/slashed '0'
-     * ss04: 0/1 plain/dotted '0'
-     */
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
-    font-size: 1rem;
-    line-height: 1.625;
-    letter-spacing: -0.005em;
-    font-style: normal;
-    font-weight: 450;
-    max-width: 55ch;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    color: #d61726;
-    margin-top: 0.5rem;
-}
-
-.finder__results__contact .finder__results__card__description i,
-.finder__results__contact .finder__results__card__description em {
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .finder__results__contact .finder__results__card__description {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .finder__results__contact .finder__results__card__description {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .finder__results__contact .finder__results__card__description {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .finder__results__contact .finder__results__card__description {
-        letter-spacing: -0.017em;
-    }
-}
-
-.finder__results__contact .finder__results__card__description b,
-.finder__results__contact .finder__results__card__description strong {
-    font-weight: 700;
-}
-
-.finder__results__contact .finder__results__card__description i,
-.finder__results__contact .finder__results__card__description em {
-    font-style: italic;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .finder__results__contact .finder__results__card__description {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .finder__results__contact .finder__results__card__description {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .finder__results__contact .finder__results__card__description {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .finder__results__contact .finder__results__card__description {
-        letter-spacing: -0.017em;
-    }
-}
-
-.finder__results__contact .icon,
-.finder__results__contact .finder__results__card__description {
-    color: #d61726;
-}
-
-.finder__results__contact .finder__results__card__tag {
+.finder__results__card--module .finder__results__card__tag,
+.finder__results__card--contact .finder__results__card__tag {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
@@ -52213,30 +52488,35 @@ button
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .finder__results__contact .finder__results__card__tag {
+    .finder__results__card--module .finder__results__card__tag,
+    .finder__results__card--contact .finder__results__card__tag {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .finder__results__contact .finder__results__card__tag {
+    .finder__results__card--module .finder__results__card__tag,
+    .finder__results__card--contact .finder__results__card__tag {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .finder__results__contact .finder__results__card__tag {
+    .finder__results__card--module .finder__results__card__tag,
+    .finder__results__card--contact .finder__results__card__tag {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .finder__results__contact .finder__results__card__tag {
+    .finder__results__card--module .finder__results__card__tag,
+    .finder__results__card--contact .finder__results__card__tag {
         letter-spacing: -0.017em;
     }
 }
 
-.finder__results__contact .finder__results__card__tag .icon {
+.finder__results__card--module .finder__results__card__tag .icon,
+.finder__results__card--contact .finder__results__card__tag .icon {
     margin-right: 0.5rem;
 }
 
@@ -52247,7 +52527,7 @@ button
 .finder__select {
     color: #0c0c0e;
     height: auto;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     position: relative;
 }
 
@@ -52319,11 +52599,20 @@ button
     outline-width: 0.125rem;
 }
 
-.finder__select.finder__select--selected select {
+.finder__select:not(.finder__sort).finder__select--selected select {
     background-color: #b91924;
     border-color: #b91924;
     color: #ffffff;
     font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .finder__sort.finder__select--selected select {
+        background-color: #b91924;
+        border-color: #b91924;
+        color: #ffffff;
+        font-weight: 600;
+    }
 }
 
 @-moz-document url-prefix() {
@@ -52385,15 +52674,6 @@ button
     margin-top: 0.75rem;
 }
 
-.finder__icon--close {
-    background-color: #f2f2f2;
-    color: #1e1e1e;
-}
-
-.finder__icon--close__wrapper {
-    font-weight: 450;
-}
-
 .edge .finder__query__input input:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
@@ -52415,32 +52695,118 @@ button
     outline-width: 0.125rem;
 }
 
-.finder__results__course .clearing_label {
+.finder__results__card--course .clearing_label {
     margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
-    .finder__results__course .clearing_label {
+    .finder__results__card--course .clearing_label {
         min-width: 24%;
         order: 1;
     }
 }
 
-.finder__results__course .clearing_label p {
+.finder__results__card--course .clearing_label p {
     background-color: #f1c70b;
-    font-weight: bold;
+    font-weight: 700;
     margin-top: 0;
     padding: 0.75rem;
 }
 
 @media (max-width: 767px) {
-    .finder__results__course .clearing_label p {
+    .finder__results__card--course .clearing_label p {
         display: inline;
     }
 }
 
-.finder__results__course .clearing_label p span {
+.finder__results__card--course .clearing_label p span {
     margin-left: 0.5rem;
+}
+
+.finder__results__card.finder__results__card--accommodation {
+    border-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .finder__results__card.finder__results__card--accommodation {
+        margin-right: 1rem;
+    }
+}
+
+.finder__results__card.finder__results__card--accommodation .finder__results__card__heading {
+    display: block;
+    margin-top: 1rem;
+}
+
+.finder__results__card.finder__results__card--accommodation .finder__results__card__tag {
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    color: #0c0c0e;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .finder__results__card.finder__results__card--accommodation .finder__results__card__tag {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .finder__results__card.finder__results__card--accommodation .finder__results__card__tag {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .finder__results__card.finder__results__card--accommodation .finder__results__card__tag {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .finder__results__card.finder__results__card--accommodation .finder__results__card__tag {
+        letter-spacing: -0.017em;
+    }
+}
+
+.finder__results__card.finder__results__card--accommodation a {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.wrapper--finder__sort--desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .wrapper--finder__sort--desktop {
+        display: block;
+    }
+    .wrapper--finder__sort--desktop .finder__sort {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        margin-top: 0;
+    }
+    .wrapper--finder__sort--desktop .finder__sort label {
+        flex-shrink: 0;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0;
+    }
+}
+
+.wrapper--finder__sort--mobile {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .wrapper--finder__sort--mobile {
+        display: none;
+    }
 }
 
 .logos-list--nolinks {
@@ -57054,6 +57420,159 @@ ul.landing--functional__finder__tabs__columns li a:active {
 
 .listing .finder__query {
     margin-top: -4rem;
+}
+
+.listing .wrapper--listing__content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-color: #3e1031;
+    color: #ffffff;
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+}
+
+@media (min-width: 901px) {
+    .listing .wrapper--listing__content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.listing .wrapper--listing__content .card--contact {
+    border-top: 0;
+}
+
+.listing .wrapper--listing__content .card--contact .icon {
+    color: #ffffff;
+}
+
+.listing .wrapper--listing__content .card--contact a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+@media (hover: hover) {
+    .listing .wrapper--listing__content .card--contact a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.listing .wrapper--listing__content .card--contact a:focus, .listing .wrapper--listing__content .card--contact a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .listing .wrapper--listing__content .card--contact a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .listing .wrapper--listing__content .card--contact a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+    }
+}
+
+.listing .wrapper--listing__content .card--contact a:focus, .listing .wrapper--listing__content .card--contact a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.listing .wrapper--listing__content .card--contact a:visited {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+.listing .wrapper--listing__content .card--contact a:focus {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+@media (hover: hover) {
+    .listing .wrapper--listing__content .card--contact a:hover {
+        border-bottom-color: #cbcbcb;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #0c0c0e;
+    }
+}
+
+.listing .wrapper--listing__content .card--contact a:active {
+    background-color: #cbcbcb;
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
+}
+
+@media (max-width: 767px) {
+    .listing .finder__filters--mobile[data-open='false'] {
+        margin-top: -4rem;
+    }
+    .listing .finder__query ~ .finder__filters--mobile[data-open='false'] {
+        margin-top: unset;
+    }
+}
+
+@media (min-width: 768px) {
+    .listing .finder__filters--desktop {
+        margin-top: -4rem;
+    }
+    .listing .finder__query ~ .finder__filters--desktop {
+        margin-top: unset;
+    }
 }
 
 main > .news {
@@ -64466,23 +64985,34 @@ main .standard-content .banner-text {
 }
 
 .course--ug__related-courses {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-}
-
-@media (min-width: 901px) {
-    .course--ug__related-courses {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
+    padding: 1rem 0;
 }
 
 .course--ug__related-courses .related-content {
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 0;
     display: grid;
     margin-top: 1rem;
-    grid-template-columns: auto auto;
+}
+
+@media (min-width: 768px) {
+    .course--ug__related-courses .related-content {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .course--ug__related-courses .related-content {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+.course--ug__related-courses .related-content .card--related-course:nth-child(odd) {
+    grid-column: 2/10;
+}
+
+.course--ug__related-courses .related-content .card--related-course:nth-child(even) {
+    grid-column: 10/-2;
 }
 
 @media (max-width: 899px) {
