@@ -20598,6 +20598,11 @@ main table td em {
     font-style: italic;
 }
 
+/* Banned embeds – these are not accessible so cannot be allowed on the website. */
+iframe[src*='issuu'], iframe[src*='prezi'] {
+    display: none !important;
+}
+
 .form fieldset {
     border: none;
     margin: 0;
