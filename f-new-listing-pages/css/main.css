@@ -50603,6 +50603,9 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .finder__checkbox input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     height: 0;
     left: 0;
     position: absolute;
