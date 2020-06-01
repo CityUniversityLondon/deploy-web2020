@@ -49836,20 +49836,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 @media (min-width: 1024px) {
     main .navigation--secondary + article .finder .finder__results__summary {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
+        margin: 0;
     }
-}
-
-@media (min-width: 1024px) and (min-width: 901px) {
-    main .navigation--secondary + article .finder .finder__results__summary {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 1024px) {
     main .navigation--secondary + article .finder .finder__results__list {
         grid-template-columns: repeat(18, 1fr);
         grid-column-gap: 0;
@@ -50961,6 +50949,12 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
+@media (max-width: 767px) {
+    .finder__filters .finder__tag button {
+        height: unset;
+    }
+}
+
 .finder__filters fieldset:last-child .finder__select {
     margin-bottom: 0.75rem;
 }
@@ -51833,6 +51827,9 @@ label:not(.finder__filters__label--always) {
         margin-left: 0;
         margin-right: 0;
     }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
     .finder .finder__results .finder__results__summary,
     .finder .finder__results .finder__results__updating,
     .finder .finder__results .finder__results__didyoumean,
