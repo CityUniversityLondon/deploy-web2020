@@ -51698,13 +51698,17 @@ label:not(.finder__filters__label--always) {
 }
 
 @media (min-width: 768px) {
-    .finder__results__summary {
+    .finder__results__summary:not(.finder__results__summary--noresults) {
         align-items: center;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
     }
+}
+
+.finder__results__summary .finder__results__summary--noresults {
+    border-bottom: 0;
 }
 
 .finder__results__summary button {
