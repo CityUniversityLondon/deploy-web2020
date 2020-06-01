@@ -1305,7 +1305,8 @@ button {
 }
 
 input,
-label {
+label,
+select {
     cursor: pointer;
 }
 
