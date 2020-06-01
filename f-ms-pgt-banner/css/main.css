@@ -58039,6 +58039,10 @@ main > .news {
     }
 }
 
+.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__year-select p.course--pgt__introduction__year-select__other {
+    margin-top: 0;
+}
+
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__year-select p a {
     background-color: initial;
     background-image: initial;
