@@ -55209,13 +55209,9 @@ div.widget-123_test_ {
     }
 }
 
-main .home {
-    margin-top: 1.5rem;
-}
-
 @media (min-width: 1024px) {
     main .home {
-        grid-column: 1 / span 24;
+        grid-column: 1/-1;
     }
 }
 
@@ -55346,6 +55342,7 @@ main .home .banner--home .banner__video {
 }
 
 main .home .banner--home .banner__video.embedded-video {
+    display: block;
     padding: 0;
 }
 
