@@ -32150,7 +32150,8 @@ figure a:active {
     outline-width: 0.125rem;
 }
 
-figure figcaption {
+figure figcaption,
+.figcaption-like {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
@@ -32160,30 +32161,35 @@ figure figcaption {
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    figure figcaption {
+    figure figcaption,
+    .figcaption-like {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    figure figcaption {
+    figure figcaption,
+    .figcaption-like {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    figure figcaption {
+    figure figcaption,
+    .figcaption-like {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    figure figcaption {
+    figure figcaption,
+    .figcaption-like {
         letter-spacing: -0.017em;
     }
 }
 
-figure figcaption a {
+figure figcaption a,
+.figcaption-like a {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -32206,7 +32212,8 @@ figure figcaption a {
 }
 
 @media (hover: hover) {
-    figure figcaption a:hover {
+    figure figcaption a:hover,
+    .figcaption-like a:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -32223,7 +32230,9 @@ figure figcaption a {
     }
 }
 
-figure figcaption a:focus, figure figcaption a:active {
+figure figcaption a:focus, figure figcaption a:active,
+.figcaption-like a:focus,
+.figcaption-like a:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -32239,14 +32248,17 @@ figure figcaption a:focus, figure figcaption a:active {
     text-decoration: none;
 }
 
-figure figcaption a:focus, figure figcaption a:active {
+figure figcaption a:focus, figure figcaption a:active,
+.figcaption-like a:focus,
+.figcaption-like a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-figure figcaption a:before {
+figure figcaption a:before,
+.figcaption-like a:before {
     background: #d61726;
     bottom: -0.125rem;
     content: '';
@@ -32260,23 +32272,27 @@ figure figcaption a:before {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    figure figcaption a:before {
+    figure figcaption a:before,
+    .figcaption-like a:before {
         transition: none;
     }
 }
 
-figure figcaption a:before {
+figure figcaption a:before,
+.figcaption-like a:before {
     transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
 }
 
-figure figcaption a:focus {
+figure figcaption a:focus,
+.figcaption-like a:focus {
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #1e1e1e;
 }
 
-figure figcaption a:visited {
+figure figcaption a:visited,
+.figcaption-like a:visited {
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -32284,21 +32300,24 @@ figure figcaption a:visited {
 }
 
 @media (hover: hover) {
-    figure figcaption a:hover {
+    figure figcaption a:hover,
+    .figcaption-like a:hover {
         background-image: none;
         border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
         color: #1e1e1e;
     }
-    figure figcaption a:hover:before {
+    figure figcaption a:hover:before,
+    .figcaption-like a:hover:before {
         opacity: 1;
         width: 100%;
         transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
     }
 }
 
-figure figcaption a:active {
+figure figcaption a:active,
+.figcaption-like a:active {
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -55301,12 +55320,6 @@ main .home .banner--home .banner__video {
     }
 }
 
-@media (min-width: 900px) and (max-width: 1279px) {
-    main .home .banner--home .banner__intro .banner__intro__heading {
-        font-weight: 700;
-    }
-}
-
 main .home .banner--home .banner__intro .banner__intro__subheading {
     margin: 1.5rem 0 1rem;
 }
@@ -55339,7 +55352,7 @@ main .home .banner--home .banner__video.embedded-video {
 main .home .banner--home .banner__video.embedded-video figcaption {
     color: #ffffff;
     text-align: right;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
 }
 
 @media (min-width: 1024px) {
@@ -55376,6 +55389,7 @@ main .home .wrapper--embedded-video--autoplay__caption .embedded-video--autoplay
     grid-column: -10/-1;
     color: #696969;
     text-align: right;
+    margin-top: 0.25rem;
 }
 
 @media (max-width: 1023px) {
