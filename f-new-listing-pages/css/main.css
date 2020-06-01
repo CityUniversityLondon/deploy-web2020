@@ -50849,7 +50849,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    background-color: #b91924;
+    background-color: #f2f2f2;
     border-style: solid;
     border-width: 0.0625rem;
     display: inline-block;
@@ -50932,20 +50932,20 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .finder__filters .finder__tag button, .finder__filters .finder__tag button:focus, .finder__filters .finder__tag button:active {
-    background-color: #b91924;
-    border-color: #b91924;
+    background-color: #f2f2f2;
+    border-color: #f2f2f2;
     border-style: solid;
     border-width: 0.0625rem;
-    color: #ffffff;
+    color: #0c0c0e;
 }
 
 @media (hover: hover) {
     .finder__filters .finder__tag button:hover {
-        background-color: #790b21;
-        border-color: #790b21;
+        background-color: #d8d8d8;
+        border-color: #d8d8d8;
         border-style: solid;
         border-width: 0.0625rem;
-        color: #ffffff;
+        color: #0c0c0e;
     }
 }
 
@@ -50953,6 +50953,10 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     .finder__filters .finder__tag button {
         height: unset;
     }
+}
+
+.finder__filters .finder__tag button .icon {
+    color: #b91924;
 }
 
 .finder__filters fieldset:last-child .finder__select {
