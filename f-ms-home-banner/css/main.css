@@ -55273,11 +55273,23 @@ main .home .banner--home {
 @media (min-width: 1024px) {
     main .home .banner--home:before {
         z-index: 1;
-        transform: rotate(270deg) scale(-1.2, -1.05) skew(0deg, 5deg);
         width: 103%;
         height: 100%;
-        right: 28%;
         top: 62%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    main .home .banner--home:before {
+        transform: rotate(270deg) scale(-1.25, -1) skew(0deg, 5deg);
+        right: 22%;
+    }
+}
+
+@media (min-width: 1280px) {
+    main .home .banner--home:before {
+        transform: rotate(270deg) scale(-1.2, -1.05) skew(0deg, 5deg);
+        right: 28%;
     }
 }
 
@@ -55302,11 +55314,22 @@ main .home .banner--home .banner__video {
 
 @media (min-width: 1024px) {
     main .home .banner--home .banner__intro {
-        grid-column: 2/10;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    main .home .banner--home .banner__intro {
+        grid-column: 2/11;
+    }
+}
+
+@media (min-width: 1280px) {
+    main .home .banner--home .banner__intro {
+        grid-column: 2/10;
     }
 }
 
@@ -55336,8 +55359,19 @@ main .home .banner--home .banner__video {
 
 @media (min-width: 1024px) {
     main .home .banner--home .banner__video {
-        grid-column: 10/-1;
         z-index: 0;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    main .home .banner--home .banner__video {
+        grid-column: 11/-1;
+    }
+}
+
+@media (min-width: 1280px) {
+    main .home .banner--home .banner__video {
+        grid-column: 10/-1;
     }
 }
 
