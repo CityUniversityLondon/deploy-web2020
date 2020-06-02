@@ -8918,10 +8918,15 @@ function launchAutoplayVideo(video) {
         plays = parseInt(videoEl.dataset.maxPlays);
   loopVideo(video, plays);
   createController(video);
-  let controller = video.querySelector('.embedded-video--autoplay__controller-btn');
-  controller.addEventListener('click', () => {
-    let controllerStatus = controller.dataset.status;
+  let controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn');
+  controllerBtn.addEventListener('click', () => {
+    let controllerStatus = controllerBtn.dataset.status;
     toggleController(video, controllerStatus);
+  }); // When video finishes autoplaying, switch controller from pause to play
+
+  videoEl.addEventListener('ended', () => {
+    controllerBtn.dataset.status = 'play';
+    controllerBtn.setAttribute('aria-label', 'Play video');
   });
 }
 

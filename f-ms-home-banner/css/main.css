@@ -49646,8 +49646,9 @@ button
     position: absolute;
     bottom: 0;
     right: 0;
-    padding: 0.75rem 1rem;
     margin: 0.125rem;
+    width: 2.75rem;
+    height: 2.75rem;
 }
 
 .embedded-video.embedded-video--autoplay .embedded-video--autoplay__controller-btn:focus {
@@ -55263,7 +55264,7 @@ main .home .banner--home {
         position: absolute;
         z-index: 0;
         transform: rotate(180deg) scale(1.8, 2.15) skew(-17deg, 0deg);
-        width: 103%;
+        width: 104%;
         height: 100%;
         right: 20%;
         bottom: 100%;
