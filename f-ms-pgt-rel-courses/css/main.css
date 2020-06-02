@@ -58856,12 +58856,6 @@ main > .news {
     }
 }
 
-@media (min-width: 769px) {
-    .wrapper--course--pgt__whats-happening {
-        padding: 2rem 0;
-    }
-}
-
 @media (max-width: 1023px) {
     .wrapper--course--pgt__whats-happening {
         padding-left: 1.5rem;
@@ -59129,35 +59123,41 @@ main > .news {
 }
 
 .course--pgt__related-courses .related-content {
-    grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 0;
-    display: grid;
     grid-column-gap: 0;
     margin-top: 1rem;
 }
 
 @media (min-width: 768px) {
     .course--pgt__related-courses .related-content {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+    .course--pgt__related-courses .related-content {
         grid-column-gap: 1rem;
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 768px) and (min-width: 901px) {
     .course--pgt__related-courses .related-content {
         grid-column-gap: 1.5rem;
     }
 }
 
-.course--pgt__related-courses .related-content .card--related-course:nth-child(odd) {
-    grid-column: 2/10;
-}
-
-.course--pgt__related-courses .related-content .card--related-course:nth-child(even) {
-    grid-column: 10/-2;
-}
-
 .course--pgt__related-courses .related-content .card--related-course a {
     display: block;
+}
+
+@media (min-width: 768px) {
+    .course--pgt__related-courses .related-content .card--related-course:nth-child(odd) {
+        grid-column: 1/10;
+    }
+    .course--pgt__related-courses .related-content .card--related-course:nth-child(even) {
+        grid-column: 10/-1;
+    }
 }
 
 .course--pgt__tabs {
@@ -64786,34 +64786,40 @@ main .standard-content .banner-text {
 }
 
 .course--ug__related-courses .related-content {
-    grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 0;
-    display: grid;
     margin-top: 1rem;
 }
 
 @media (min-width: 768px) {
     .course--ug__related-courses .related-content {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+    .course--ug__related-courses .related-content {
         grid-column-gap: 1rem;
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 768px) and (min-width: 901px) {
     .course--ug__related-courses .related-content {
         grid-column-gap: 1.5rem;
     }
 }
 
-.course--ug__related-courses .related-content .card--related-course:nth-child(odd) {
-    grid-column: 2/10;
-}
-
-.course--ug__related-courses .related-content .card--related-course:nth-child(even) {
-    grid-column: 10/-2;
-}
-
 .course--ug__related-courses .related-content .card--related-course a {
     display: block;
+}
+
+@media (min-width: 768px) {
+    .course--ug__related-courses .related-content .card--related-course:nth-child(odd) {
+        grid-column: 2/10;
+    }
+    .course--ug__related-courses .related-content .card--related-course:nth-child(even) {
+        grid-column: 10/-2;
+    }
 }
 
 @media (max-width: 767px) {
