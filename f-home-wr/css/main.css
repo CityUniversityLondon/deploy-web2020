@@ -52729,14 +52729,22 @@ button
     }
 }
 
-.promo-area__wrap .promo-area.layout__left--split {
+.promo-area__wrap .promo-area.layout__left--split, .promo-area__wrap .promo-area.layout__right--split {
     margin-top: 4rem;
+}
+
+.promo-area__wrap .promo-area.layout__left--split .promo-area__content, .promo-area__wrap .promo-area.layout__right--split .promo-area__content {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.promo-area__wrap .promo-area.layout__left--split .promo-area__image figure, .promo-area__wrap .promo-area.layout__left--split .promo-area__image picture, .promo-area__wrap .promo-area.layout__left--split .promo-area__image img, .promo-area__wrap .promo-area.layout__right--split .promo-area__image figure, .promo-area__wrap .promo-area.layout__right--split .promo-area__image picture, .promo-area__wrap .promo-area.layout__right--split .promo-area__image img {
+    height: 100%;
+    margin: 0;
 }
 
 .promo-area__wrap .promo-area.layout__left--split .promo-area__content {
     grid-column: 1 / 13;
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 @media (max-width: 1024px) {
@@ -52763,9 +52771,44 @@ button
     margin-top: -4rem;
 }
 
-.promo-area__wrap .promo-area.layout__left--split .promo-area__image figure, .promo-area__wrap .promo-area.layout__left--split .promo-area__image picture, .promo-area__wrap .promo-area.layout__left--split .promo-area__image img {
-    height: 100%;
-    margin: 0;
+.promo-area__wrap .promo-area.layout__right--split .promo-area__content {
+    grid-column: 13 / 24;
+}
+
+@media (max-width: 1280px) {
+    .promo-area__wrap .promo-area.layout__right--split .promo-area__content {
+        grid-column: 13 / -1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .promo-area__wrap .promo-area.layout__right--split .promo-area__content {
+        grid-column: 2 / 18;
+    }
+}
+
+@media (max-width: 768px) {
+    .promo-area__wrap .promo-area.layout__right--split .promo-area__content {
+        grid-column: 2 / 13;
+    }
+}
+
+@media (max-width: 432px) {
+    .promo-area__wrap .promo-area.layout__right--split .promo-area__content {
+        grid-column: 4 / 22;
+    }
+}
+
+.promo-area__wrap .promo-area.layout__right--split .promo-area__image {
+    grid-column: 2 / 15;
+    margin-top: -4rem;
+    padding-right: 2rem;
+}
+
+@media (max-width: 1280px) {
+    .promo-area__wrap .promo-area.layout__right--split .promo-area__image {
+        grid-column: 1 / 15;
+    }
 }
 
 .promo-area__wrap .promo-area .promo-area__content {
