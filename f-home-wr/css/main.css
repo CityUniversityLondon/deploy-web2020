@@ -52730,6 +52730,12 @@ button
 }
 
 @media (max-width: 767px) {
+    .promo-area__wrap .promo-area.layout__right--full, .promo-area__wrap .promo-area.layout__left--full {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
     .promo-area__wrap .promo-area.layout__right--full img, .promo-area__wrap .promo-area.layout__left--full img {
         height: auto;
         width: auto;
