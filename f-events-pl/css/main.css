@@ -55037,11 +55037,12 @@ div.widget-123_test_ {
 }
 
 @media (min-width: 1024px) {
-    main .navigation--secondary + .event .banner-text {
+    main .navigation--secondary + .event .banner {
         grid-column: 1 / span 18;
     }
     main .navigation--secondary + .event .event__info {
         grid-column: 2 / span 16;
+        z-index: 0;
     }
     main .navigation--secondary + .event .content {
         grid-column: 1 / span 18;
@@ -55408,6 +55409,60 @@ div.widget-123_test_ {
 
 .event__sponsors li {
     width: 40%;
+}
+
+.event__sponsors a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (hover: hover) {
+    .event__sponsors a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.event__sponsors a:focus, .event__sponsors a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.event__guide {
+    margin: 1rem 0;
 }
 
 .event__contact-details {
