@@ -52713,13 +52713,13 @@ button
 
 @media (max-width: 1024px) {
     .promo-area__wrap .promo-area.layout__right--full .promo-area__content {
-        grid-column: 24 / 8;
+        grid-column: 8 / 24;
     }
 }
 
 @media (max-width: 768px) {
     .promo-area__wrap .promo-area.layout__right--full .promo-area__content {
-        grid-column: 24 / 13;
+        grid-column: 13 / 24;
     }
 }
 
@@ -52733,21 +52733,15 @@ button
     grid-column: 2 / 13;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
     .promo-area__wrap .promo-area.layout__left--split .promo-area__content {
         grid-column: 1 / 13;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
     .promo-area__wrap .promo-area.layout__left--split .promo-area__content {
         grid-column: 1 / 15;
-    }
-}
-
-@media (max-width: 768px) {
-    .promo-area__wrap .promo-area.layout__left--split .promo-area__content {
-        grid-column: 1 / 17;
     }
 }
 
@@ -52757,27 +52751,21 @@ button
     padding-left: 2rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
     .promo-area__wrap .promo-area.layout__left--split .promo-area__image {
         grid-column: 11 / 25;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
     .promo-area__wrap .promo-area.layout__left--split .promo-area__image {
         grid-column: 8 / 25;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 899px) {
     .promo-area__wrap .promo-area.layout__left--split .promo-area__image {
         grid-column: 11 / 25;
-    }
-}
-
-@media (max-width: 768px) {
-    .promo-area__wrap .promo-area.layout__left--split .promo-area__image {
-        grid-column: 9 / 25;
     }
 }
 
@@ -52785,19 +52773,19 @@ button
     grid-column: 13 / 24;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
     .promo-area__wrap .promo-area.layout__right--split .promo-area__content {
         grid-column: 13 / -1;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
     .promo-area__wrap .promo-area.layout__right--split .promo-area__content {
         grid-column: 11 / -1;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .promo-area__wrap .promo-area.layout__right--split .promo-area__content {
         grid-column: 9 / -1;
     }
@@ -52809,13 +52797,13 @@ button
     padding-right: 2rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
     .promo-area__wrap .promo-area.layout__right--split .promo-area__image {
         grid-column: 1 / 15;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
     .promo-area__wrap .promo-area.layout__right--split .promo-area__image {
         grid-column: 1 / 18;
     }
@@ -52825,12 +52813,6 @@ button
     .promo-area__wrap .promo-area.layout__right--split .promo-area__image {
         grid-column: 1 / 15;
         padding-right: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .promo-area__wrap .promo-area.layout__right--split .promo-area__image {
-        grid-column: 1 / 17;
     }
 }
 
@@ -52844,14 +52826,14 @@ button
     margin-bottom: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 899px) {
     .promo-area__wrap .promo-area.layout__left--split .promo-area__content .promo-area__cta, .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__cta {
         display: block;
         text-align: center;
     }
 }
 
-@media (max-width: 432px) {
+@media (max-width: 767px) {
     .promo-area__wrap .promo-area.layout__left--split .promo-area__content, .promo-area__wrap .promo-area.layout__right--split .promo-area__content {
         grid-column: 2 / 24;
         padding: 1rem 0;
@@ -52865,7 +52847,7 @@ button
     }
 }
 
-@media (max-width: 432px) {
+@media (max-width: 767px) {
     .promo-area__wrap .promo-area.layout__left--split .promo-area__image, .promo-area__wrap .promo-area.layout__right--split .promo-area__image {
         display: none;
     }
@@ -55281,6 +55263,21 @@ main .home {
 
 main .home .home__statistics h2 {
     text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    main .home .promo-area__wrap {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (min-width: 901px) {
+    main .home .promo-area__wrap {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 main .home .home__research__wrap {
