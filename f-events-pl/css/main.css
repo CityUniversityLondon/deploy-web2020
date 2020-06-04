@@ -55042,7 +55042,6 @@ div.widget-123_test_ {
     }
     main .navigation--secondary + .event .event__info {
         grid-column: 2 / span 16;
-        z-index: 0;
     }
     main .navigation--secondary + .event .content {
         grid-column: 1 / span 18;
@@ -55077,6 +55076,15 @@ div.widget-123_test_ {
     .event .content {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    .event .banner__overlay__heading {
+        padding-bottom: 4rem;
+    }
+    .event .event__info {
+        z-index: 0;
     }
 }
 
