@@ -1746,7 +1746,8 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2019
  */
-const className = 'dropdown-filter';
+const className = 'dropdown-filter'; // let defaultVisibility = '';
+
 /**
  * Entry function: loops through and hides list items, sets up event listener on
  * child select box
@@ -1756,11 +1757,15 @@ const className = 'dropdown-filter';
 
 function prepareDropdown(element) {
   // only get direct children
-  const listItems = element.querySelectorAll('ul.data-group > li'); // hide list items
+  const listItems = element.querySelectorAll('ul.data-group > li'),
+        defaultVisibility = element.dataset.showFirst; // console.log('launch: ' + defaultVisibility);
+  // hide list items
 
-  hideListItems(listItems); // insert the select box to toggle items
+  hideListItems(listItems, defaultVisibility); // insert the select box to toggle items
 
-  insertSelect(listItems, element);
+  insertSelect(listItems, element, defaultVisibility);
+  let select = element.querySelector('.select-filter');
+  select.addEventListener('change', selectChange);
 }
 /**
  * Hide list items: both functions require all list items to be hidden.
@@ -1770,11 +1775,26 @@ function prepareDropdown(element) {
  */
 
 
-function hideListItems(items) {
+function hideListItems(items, defaultVisibility) {
   // hide list items
-  items.forEach(function (item) {
-    item.setAttribute('data-hidden', 'true');
-  });
+  // console.log(defaultVisibility);
+  if (defaultVisibility === 'true') {
+    let itemsArray = Array.from(items);
+    itemsArray[0].setAttribute('data-hidden', 'false');
+
+    for (var i = 1; i < itemsArray.length; i++) {
+      itemsArray[i].setAttribute('data-hidden', 'true');
+    } //     item.setAttribute('data-hidden', 'true');
+    // });
+
+
+    defaultVisibility = 'false'; // console.log('a');
+  } else {
+    items.forEach(function (item) {
+      item.setAttribute('data-hidden', 'true');
+    });
+    defaultVisibility = 'false'; // console.log('b');
+  }
 }
 /**
  * Insert select: build and add the select box to source
@@ -1785,6 +1805,7 @@ function hideListItems(items) {
 
 
 function insertSelect(items, parentElement) {
+  // console.log('insert: ' + defaultVisibility);
   const selectBox = document.createElement('select');
   selectBox.className = 'select-filter';
   parentElement.prepend(selectBox); // get and add default select text
@@ -1826,10 +1847,9 @@ function insertSelect(items, parentElement) {
 
     selectBox.appendChild(option);
   }); // add change listner to newly created select box
-
-  selectBox.addEventListener('change', selectChange); // dispatch event so first item is selected
-
-  selectBox.dispatchEvent(new Event('change'));
+  // selectBox.addEventListener('change', selectChange);
+  // dispatch event so first item is selected
+  // selectBox.dispatchEvent(new Event('change'));
 } // End insertSelect function
 
 /**
@@ -1839,13 +1859,19 @@ function insertSelect(items, parentElement) {
  */
 
 
-function selectChange(e) {
+function selectChange(e, defaultVisibility) {
   // get the ul containing the list items
-  const dataGroup = e.target.nextElementSibling; // get direct list items
+  const dataGroup = e.target.nextElementSibling;
+  defaultVisibility = 'false'; // get direct list items
 
-  const listItems = dataGroup.querySelectorAll('ul.data-group > li'); // hide all items before displaying chosen item
+  const listItems = dataGroup.querySelectorAll('ul.data-group > li');
 
-  hideListItems(listItems); // if first option selected, return
+  for (const listItem of listItems) {
+    listItem.removeAttribute('data-hidden');
+  } // hide all items before displaying chosen item
+
+
+  hideListItems(listItems, defaultVisibility); // if first option selected, return
 
   if (e.srcElement.selectedIndex === 0) {
     return;
