@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([5,"core","vendor-dependencies","react","axios"]);
+/******/ 	deferredModules.push([5,"vendor-dependencies","core","react","axios"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -1216,7 +1216,7 @@ function arraySlicer(arr, len) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 1:
 /*!**********************!*\
   !*** util (ignored) ***!
   \**********************/
@@ -1227,7 +1227,7 @@ function arraySlicer(arr, len) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 2:
 /*!**********************!*\
   !*** util (ignored) ***!
   \**********************/

@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([2,"core","vendor-dependencies","react","axios","vendor-direct"]);
+/******/ 	deferredModules.push([4,"vendor-dependencies","core","react","axios","vendor-direct"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -3436,19 +3436,18 @@ function arraySlicer(arr, len) {
 
 /***/ }),
 
-/***/ 2:
-/*!*****************************!*\
-  !*** multi ./src/finder.js ***!
-  \*****************************/
+/***/ 1:
+/*!**********************!*\
+  !*** util (ignored) ***!
+  \**********************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__(/*! /home/rof/src/github.com/CityUniversityLondon/web2020/src/finder.js */"./src/finder.js");
-
+/* (ignored) */
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!**********************!*\
   !*** util (ignored) ***!
   \**********************/
@@ -3460,13 +3459,14 @@ module.exports = __webpack_require__(/*! /home/rof/src/github.com/CityUniversity
 /***/ }),
 
 /***/ 4:
-/*!**********************!*\
-  !*** util (ignored) ***!
-  \**********************/
+/*!*****************************!*\
+  !*** multi ./src/finder.js ***!
+  \*****************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-/* (ignored) */
+module.exports = __webpack_require__(/*! /home/rof/src/github.com/CityUniversityLondon/web2020/src/finder.js */"./src/finder.js");
+
 
 /***/ })
 
