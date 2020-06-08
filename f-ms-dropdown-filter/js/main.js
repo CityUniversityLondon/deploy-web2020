@@ -1808,28 +1808,33 @@ function insertSelect(items, parentElement) {
   const noSelection = document.createElement('option');
   noSelection.text = parentElement.getAttribute('data-text');
   selectBox.appendChild(noSelection);
-  let firstItemOverride, lastItemOverride; // Initial sort: by dataset.value
+  let firstItemOverride, lastItemOverride; // Sort by dataset.value if filter is configured to sort alphabetically
 
-  let orderedArray = Array.from(items).sort((a, b) => a.dataset.value < b.dataset.value ? -1 : a.dataset.value > b.dataset.value ? 1 : 0); // Find items with first/last position overrides
+  if (parentElement.dataset.alphabetical === 'true') {
+    items = Array.from(items).sort((a, b) => a.dataset.value < b.dataset.value ? -1 : a.dataset.value > b.dataset.value ? 1 : 0);
+  } else {
+    items = [...items];
+  } // Find items with first/last position overrides
 
-  for (const o of orderedArray) {
+
+  for (const o of items) {
     o.dataset.first === 'true' ? firstItemOverride = o : null;
     o.dataset.last === 'true' ? lastItemOverride = o : null;
   }
 
-  const orderedArrayLength = orderedArray.length; // Remove item with dataset.first='true' from original position in array
+  const itemsLength = items.length; // Remove item with dataset.first='true' from original position in array
 
-  let firstPositionOriginal = orderedArray.indexOf(firstItemOverride);
-  orderedArray.splice(firstPositionOriginal, 1); // Remove item with dataset.last='true' from original position in array
+  let firstPositionOriginal = items.indexOf(firstItemOverride);
+  items.splice(firstPositionOriginal, 1); // Remove item with dataset.last='true' from original position in array
 
-  let lastPositionOriginal = orderedArray.indexOf(lastItemOverride);
-  orderedArray.splice(lastPositionOriginal, 1); // Put item with dataset.first='true' at start of array
+  let lastPositionOriginal = items.indexOf(lastItemOverride);
+  items.splice(lastPositionOriginal, 1); // Put item with dataset.first='true' at start of array
 
-  orderedArray.splice(0, 0, firstItemOverride); // Put item with dataset.last='true' at end of array
+  items.splice(0, 0, firstItemOverride); // Put item with dataset.last='true' at end of array
 
-  orderedArray.splice(orderedArrayLength, 0, lastItemOverride); // iterate over each item and create/append select option
+  items.splice(itemsLength, 0, lastItemOverride); // iterate over each item and create/append select option
 
-  Array.from(orderedArray).forEach(item => {
+  Array.from(items).forEach(item => {
     const dataValue = item.dataset.value,
           dataName = item.dataset.name,
           option = document.createElement('option');
