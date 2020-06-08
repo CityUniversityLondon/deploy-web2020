@@ -1824,15 +1824,21 @@ function insertSelect(items, parentElement) {
 
   const itemsLength = items.length; // Remove item with dataset.first='true' from original position in array
 
-  let firstPositionOriginal = items.indexOf(firstItemOverride);
-  items.splice(firstPositionOriginal, 1); // Remove item with dataset.last='true' from original position in array
+  if (firstItemOverride) {
+    let firstPositionOriginal = items.indexOf(firstItemOverride);
+    items.splice(firstPositionOriginal, 1); // Put item with dataset.first='true' at start of array
 
-  let lastPositionOriginal = items.indexOf(lastItemOverride);
-  items.splice(lastPositionOriginal, 1); // Put item with dataset.first='true' at start of array
+    items.splice(0, 0, firstItemOverride);
+  } // Remove item with dataset.last='true' from original position in array
 
-  items.splice(0, 0, firstItemOverride); // Put item with dataset.last='true' at end of array
 
-  items.splice(itemsLength, 0, lastItemOverride); // iterate over each item and create/append select option
+  if (lastItemOverride) {
+    let lastPositionOriginal = items.indexOf(lastItemOverride);
+    items.splice(lastPositionOriginal, 1); // Put item with dataset.last='true' at end of array
+
+    items.splice(itemsLength, 0, lastItemOverride);
+  } // iterate over each item and create/append select option
+
 
   Array.from(items).forEach(item => {
     const dataValue = item.dataset.value,
