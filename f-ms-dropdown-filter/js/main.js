@@ -1802,8 +1802,9 @@ function hideListItems(items, defaultVisibility) {
 
 function insertSelect(items, parentElement) {
   const selectBox = document.createElement('select');
+  const fieldset = parentElement.querySelector('.dropdown-filter__select');
   selectBox.className = 'select-filter';
-  parentElement.prepend(selectBox); // get and add default select text
+  fieldset.prepend(selectBox); // get and add default select text
 
   const noSelection = document.createElement('option');
   noSelection.text = parentElement.getAttribute('data-text');
@@ -1863,7 +1864,8 @@ function insertSelect(items, parentElement) {
 
 function selectChange(e) {
   // get the ul containing the list items
-  const dataGroup = e.target.nextElementSibling; // get direct list items
+  const dropdownFilter = e.target.closest('.dropdown-filter');
+  const dataGroup = dropdownFilter.querySelector('.data-group'); // get direct list items
 
   const listItems = dataGroup.querySelectorAll('ul.data-group > li');
 
