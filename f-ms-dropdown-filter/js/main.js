@@ -1757,13 +1757,13 @@ const className = 'dropdown-filter';
 function prepareDropdown(element) {
   // only get direct children
   const listItems = element.querySelectorAll('ul.data-group > li'),
-        defaultVisibility = element.dataset.showFirst; // hide list items
+        defaultVisibility = element.dataset.firstItemShow; // hide list items
 
   hideListItems(listItems, defaultVisibility); // insert the select box to toggle items
 
   insertSelect(listItems, element, defaultVisibility); // Display list items on select change
 
-  const select = element.querySelector('.select-filter');
+  const select = element.querySelector('.dropdown-filter__select');
   select.addEventListener('change', selectChange);
 }
 /**
@@ -1802,9 +1802,11 @@ function hideListItems(items, defaultVisibility) {
 
 function insertSelect(items, parentElement) {
   const selectBox = document.createElement('select');
-  const fieldset = parentElement.querySelector('.dropdown-filter__select');
-  selectBox.className = 'select-filter';
-  fieldset.prepend(selectBox); // get and add default select text
+  const selectWrapper = parentElement.querySelector('.wrapper--dropdown-filter__select');
+  const labelName = parentElement.dataset.labelName;
+  selectBox.className = 'dropdown-filter__select';
+  selectBox.setAttribute('name', labelName);
+  selectWrapper.append(selectBox); // get and add default select text
 
   const noSelection = document.createElement('option');
   noSelection.text = parentElement.getAttribute('data-text');

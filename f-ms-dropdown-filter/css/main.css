@@ -52847,6 +52847,10 @@ label:not(.finder__filters__label--always) {
     display: none;
 }
 
+.dropdown-filter .wrapper--dropdown-filter__select {
+    display: flex;
+}
+
 .dropdown-filter select {
     font-family: "Plex Sans", sans-serif;
     /**
