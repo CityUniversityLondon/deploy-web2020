@@ -55239,10 +55239,6 @@ div.widget-123_test_ {
     margin-top: 0;
 }
 
-.event__info ul li:nth-child(odd) {
-    margin-right: 4%;
-}
-
 @media (min-width: 433px) {
     .event__info ul {
         display: flex;
@@ -55250,6 +55246,20 @@ div.widget-123_test_ {
     }
     .event__info ul li {
         width: 44%;
+    }
+    .event__info ul li:nth-of-type(1) {
+        order: 1;
+        margin-right: 4%;
+    }
+    .event__info ul li:nth-of-type(2) {
+        order: 3;
+        margin-right: 4%;
+    }
+    .event__info ul li:nth-of-type(3) {
+        order: 2;
+    }
+    .event__info ul li:nth-of-type(4) {
+        order: 4;
     }
 }
 
