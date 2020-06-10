@@ -1747,6 +1747,7 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 const className = 'dropdown-filter';
+let showAll = '';
 /**
  * Entry function: loops through and hides list items, sets up event listener on
  * child select box
@@ -1757,11 +1758,13 @@ const className = 'dropdown-filter';
 function prepareDropdown(element) {
   // only get direct children
   const listItems = element.querySelectorAll('ul.data-group > li'),
-        defaultVisibility = element.dataset.firstItemShow; // hide list items
+        defaultVisibility = element.dataset.firstItemShow; // Check if all items should be showed on load
 
-  hideListItems(listItems, defaultVisibility); // insert the select box to toggle items
+  showAll = element.dataset.showAll; // hide list items
 
-  insertSelect(listItems, element, defaultVisibility); // Display list items on select change
+  hideListItems(listItems, defaultVisibility, showAll); // insert the select box to toggle items
+
+  insertSelect(listItems, element, defaultVisibility, showAll); // Display list items on select change
 
   const select = element.querySelector('.dropdown-filter__select');
   select.addEventListener('change', selectChange);
@@ -1775,18 +1778,22 @@ function prepareDropdown(element) {
  */
 
 
-function hideListItems(items, defaultVisibility) {
+function hideListItems(items, defaultVisibility, showAll) {
   // Check whether dropdown should show/hide first item
-  if (defaultVisibility === 'true') {
+  if (defaultVisibility === 'true' && showAll === 'false') {
     let itemsArray = Array.from(items);
     itemsArray[0].setAttribute('data-hidden', 'false');
 
     for (var i = 1; i < itemsArray.length; i++) {
       itemsArray[i].setAttribute('data-hidden', 'true');
     }
-  } else {
+  } else if (defaultVisibility === 'false' && showAll === 'false') {
     items.forEach(function (item) {
       item.setAttribute('data-hidden', 'true');
+    });
+  } else if (showAll === 'true') {
+    items.forEach(function (item) {
+      item.setAttribute('data-hidden', 'false');
     });
   }
 
@@ -1803,9 +1810,12 @@ function hideListItems(items, defaultVisibility) {
 function insertSelect(items, parentElement) {
   const selectBox = document.createElement('select');
   const selectWrapper = parentElement.querySelector('.wrapper--dropdown-filter__select');
-  const labelName = parentElement.dataset.labelName;
+  const labelValue = parentElement.dataset.labelName;
+  const labelElement = parentElement.querySelector('label');
+  const labelText = labelElement.textContent;
   selectBox.className = 'dropdown-filter__select';
-  selectBox.setAttribute('name', labelName);
+  selectBox.setAttribute('id', labelValue);
+  selectBox.setAttribute('name', labelText);
   selectWrapper.append(selectBox); // get and add default select text
 
   const noSelection = document.createElement('option');
@@ -1825,13 +1835,17 @@ function insertSelect(items, parentElement) {
     o.dataset.last === 'true' ? lastItemOverride = o : null;
   }
 
-  const itemsLength = items.length; // Remove item with dataset.first='true' from original position in array
+  const itemsLength = items.length;
+  let showAllOption = document.createElement('li');
+  showAllOption.dataset.name = 'Show all';
+  showAllOption.dataset.value = 'show-all';
+  items.splice(0, 0, showAllOption); // Remove item with dataset.first='true' from original position in array
 
   if (firstItemOverride) {
     let firstPositionOriginal = items.indexOf(firstItemOverride);
     items.splice(firstPositionOriginal, 1); // Put item with dataset.first='true' at start of array
 
-    items.splice(0, 0, firstItemOverride);
+    items.splice(1, 0, firstItemOverride);
   } // Remove item with dataset.last='true' from original position in array
 
 
@@ -1876,16 +1890,24 @@ function selectChange(e) {
   } // hide all items before displaying chosen item
 
 
-  hideListItems(listItems); // if first option selected, return
+  showAll = 'false';
+  hideListItems(listItems, showAll); // if first option selected, return
 
   if (e.srcElement.selectedIndex === 0) {
     return;
   } // get the list item corresponding to the select value chosen
 
 
-  const targetListItem = dataGroup.querySelector('li[data-value=' + e.target.value + ']'); // remove data-hidden
+  const targetListItem = dataGroup.querySelector('li.data-group__item[data-value=' + e.target.value + ']');
+  const otherListItems = dataGroup.querySelectorAll('li.data-group__item:not([data-value=' + e.target.value + '])');
 
-  targetListItem.removeAttribute('data-hidden');
+  if (e.target.value !== 'show-all') {
+    targetListItem.removeAttribute('data-hidden');
+
+    for (const o of otherListItems) {
+      o.setAttribute('data-hidden', 'true');
+    }
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
