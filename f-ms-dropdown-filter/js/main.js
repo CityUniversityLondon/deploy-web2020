@@ -1807,7 +1807,7 @@ function hideListItems(items, defaultVisibility, showAll) {
  */
 
 
-function insertSelect(items, parentElement) {
+function insertSelect(items, parentElement, defaultVisibility) {
   const selectBox = document.createElement('select');
   const selectWrapper = parentElement.querySelector('.wrapper--dropdown-filter__select');
   const labelValue = parentElement.dataset.labelName;
@@ -1869,14 +1869,14 @@ function insertSelect(items, parentElement) {
           dataName = item.dataset.name,
           option = document.createElement('option');
     option.value = dataValue;
-    option.text = dataName; // set first item in list as selected
-
-    if (item.dataset.default === 'true') {
-      option.setAttribute('selected', 'selected');
-    }
-
+    option.text = dataName;
     selectBox.appendChild(option);
-  });
+  }); // set first item in list as selected
+
+  if (defaultVisibility === 'true' && showAll === 'false') {
+    const options = parentElement.querySelectorAll('option');
+    options[1].setAttribute('selected', 'selected');
+  }
 }
 /**
  * Select change: respond to select change

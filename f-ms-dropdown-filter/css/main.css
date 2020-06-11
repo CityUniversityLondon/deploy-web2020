@@ -52827,6 +52827,10 @@ label:not(.finder__filters__label--always) {
     margin-left: 0.5rem;
 }
 
+.dropdown-filter {
+    margin-top: 1rem;
+}
+
 .dropdown-filter ul.data-group {
     margin-left: 0;
 }
@@ -52845,10 +52849,6 @@ label:not(.finder__filters__label--always) {
 
 .dropdown-filter ul li[data-hidden='true'] {
     display: none;
-}
-
-.dropdown-filter .wrapper--dropdown-filter__select {
-    display: flex;
 }
 
 .dropdown-filter select {
@@ -52873,6 +52873,7 @@ label:not(.finder__filters__label--always) {
     height: 3.25rem;
     position: relative;
     width: 100%;
+    margin-top: 1rem;
 }
 
 .dropdown-filter select i,
