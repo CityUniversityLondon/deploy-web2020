@@ -1760,7 +1760,7 @@ function prepareDropdown(element) {
   const listItems = element.querySelectorAll('ul.data-group > li'),
         defaultVisibility = element.dataset.firstItemShow; // Check if all items should be showed on load
 
-  showAll = element.dataset.showAll; // hide list items
+  showAll = element.dataset.displayAll; // hide list items
 
   hideListItems(listItems, defaultVisibility, showAll); // insert the select box to toggle items
 
@@ -1816,11 +1816,14 @@ function insertSelect(items, parentElement) {
   selectBox.className = 'dropdown-filter__select';
   selectBox.setAttribute('id', labelValue);
   selectBox.setAttribute('name', labelText);
-  selectWrapper.append(selectBox); // get and add default select text
+  selectWrapper.append(selectBox); // Add default select text if filter doesn't have show all enabled
 
-  const noSelection = document.createElement('option');
-  noSelection.text = parentElement.getAttribute('data-text');
-  selectBox.appendChild(noSelection);
+  if (parentElement.dataset.displayAll === 'false') {
+    const noSelection = document.createElement('option');
+    noSelection.text = parentElement.getAttribute('data-text');
+    selectBox.appendChild(noSelection);
+  }
+
   let firstItemOverride, lastItemOverride; // Sort by dataset.value if filter is configured to sort alphabetically
 
   if (parentElement.dataset.alphabetical === 'true') {
@@ -1835,11 +1838,15 @@ function insertSelect(items, parentElement) {
     o.dataset.last === 'true' ? lastItemOverride = o : null;
   }
 
-  const itemsLength = items.length;
-  let showAllOption = document.createElement('li');
-  showAllOption.dataset.name = 'Show all';
-  showAllOption.dataset.value = 'show-all';
-  items.splice(0, 0, showAllOption); // Remove item with dataset.first='true' from original position in array
+  const itemsLength = items.length; // Display show all option is pattern has this configuration option set as true
+
+  if (parentElement.dataset.displayAll === 'true') {
+    let showAllOption = document.createElement('li');
+    showAllOption.dataset.name = "All ".concat(parentElement.dataset.units);
+    showAllOption.dataset.value = 'show-all';
+    items.splice(0, 0, showAllOption);
+  } // Remove item with dataset.first='true' from original position in array
+
 
   if (firstItemOverride) {
     let firstPositionOriginal = items.indexOf(firstItemOverride);
