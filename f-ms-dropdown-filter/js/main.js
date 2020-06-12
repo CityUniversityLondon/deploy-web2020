@@ -1809,14 +1809,21 @@ function hideListItems(items, defaultVisibility, showAll) {
 
 function insertSelect(items, parentElement, defaultVisibility) {
   const selectBox = document.createElement('select');
-  const selectWrapper = parentElement.querySelector('.wrapper--dropdown-filter__select'); // const labelValue = parentElement.dataset.labelName;
+  const selectWrapper = parentElement.querySelector('.wrapper--dropdown-filter__select');
+  const labelFor = parentElement.dataset.labelFor;
+  const labelValue = parentElement.dataset.labelValue;
+  const labelEl = document.createElement('label');
+  labelEl.textContent = labelValue;
+  labelEl.setAttribute('for', labelFor);
 
-  const labelElement = parentElement.querySelector('label');
-  const labelText = labelElement.textContent;
-  const labelFor = labelElement.getAttribute('for');
+  if (parentElement.dataset.labelShow === 'false') {
+    labelEl.className = 'sr-only';
+  }
+
   selectBox.className = 'dropdown-filter__select';
   selectBox.setAttribute('id', labelFor);
-  selectBox.setAttribute('name', labelText);
+  selectBox.setAttribute('name', labelFor);
+  selectWrapper.append(labelEl);
   selectWrapper.append(selectBox); // Add default select text if filter doesn't have show all enabled
 
   if (parentElement.dataset.displayAll === 'false') {
