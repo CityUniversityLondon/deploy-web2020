@@ -1809,18 +1809,20 @@ function hideListItems(items, defaultVisibility, showAll) {
 
 function insertSelect(items, parentElement, defaultVisibility) {
   const selectBox = document.createElement('select');
-  const selectWrapper = parentElement.querySelector('.wrapper--dropdown-filter__select');
-  const labelValue = parentElement.dataset.labelName;
+  const selectWrapper = parentElement.querySelector('.wrapper--dropdown-filter__select'); // const labelValue = parentElement.dataset.labelName;
+
   const labelElement = parentElement.querySelector('label');
   const labelText = labelElement.textContent;
+  const labelFor = labelElement.getAttribute('for');
   selectBox.className = 'dropdown-filter__select';
-  selectBox.setAttribute('id', labelValue);
+  selectBox.setAttribute('id', labelFor);
   selectBox.setAttribute('name', labelText);
   selectWrapper.append(selectBox); // Add default select text if filter doesn't have show all enabled
 
   if (parentElement.dataset.displayAll === 'false') {
-    const noSelection = document.createElement('option');
+    let noSelection = document.createElement('option');
     noSelection.text = parentElement.getAttribute('data-text');
+    noSelection.setAttribute('value', 'no-selection');
     selectBox.appendChild(noSelection);
   }
 
@@ -1838,7 +1840,7 @@ function insertSelect(items, parentElement, defaultVisibility) {
     o.dataset.last === 'true' ? lastItemOverride = o : null;
   }
 
-  const itemsLength = items.length; // Display show all option is pattern has this configuration option set as true
+  const itemsLength = items.length; // Display show all option if pattern has this configuration option set as true
 
   if (parentElement.dataset.displayAll === 'true') {
     let showAllOption = document.createElement('li');
@@ -1898,22 +1900,23 @@ function selectChange(e) {
 
 
   showAll = 'false';
-  hideListItems(listItems, showAll); // if first option selected, return
-
-  if (e.srcElement.selectedIndex === 0) {
-    return;
-  } // get the list item corresponding to the select value chosen
-
+  hideListItems(listItems, showAll); // get the list item corresponding to the select value chosen
 
   const targetListItem = dataGroup.querySelector('li.data-group__item[data-value=' + e.target.value + ']');
   const otherListItems = dataGroup.querySelectorAll('li.data-group__item:not([data-value=' + e.target.value + '])');
 
-  if (e.target.value !== 'show-all') {
+  if (e.target.value !== 'show-all' && e.srcElement.selectedIndex !== 0) {
     targetListItem.removeAttribute('data-hidden');
 
     for (const o of otherListItems) {
       o.setAttribute('data-hidden', 'true');
     }
+  } else if (e.target.value !== 'show-all' && e.srcElement.selectedIndex === 0) {
+    for (const o of otherListItems) {
+      o.setAttribute('data-hidden', 'true');
+    }
+
+    return;
   }
 }
 
