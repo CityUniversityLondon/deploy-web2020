@@ -1756,15 +1756,15 @@ let showAll = '';
  */
 
 function prepareDropdown(element) {
-  // only get direct children
+  // Only get direct children
   const listItems = element.querySelectorAll('ul.data-group > li'),
-        defaultVisibility = element.dataset.firstItemShow; // Check if all items should be showed on load
+        firstItemVisible = element.dataset.firstItemShow; // Check if all items should be displayed on load
 
-  showAll = element.dataset.displayAll; // hide list items
+  showAll = element.dataset.displayAll; // Hide list items
 
-  hideListItems(listItems, defaultVisibility, showAll); // insert the select box to toggle items
+  hideListItems(listItems, firstItemVisible, showAll); // Insert the select box to toggle items
 
-  insertSelect(listItems, element, defaultVisibility, showAll); // Display list items on select change
+  insertSelect(listItems, element, firstItemVisible, showAll); // Display list items on select change
 
   const select = element.querySelector('.dropdown-filter__select');
   select.addEventListener('change', selectChange);
@@ -1773,21 +1773,22 @@ function prepareDropdown(element) {
  * Hide list items: both functions require all list items to be hidden.
  * Ths function takes care of this
  *
- * @param {HTMLElements} items: the list of items to hide
- * @param {string} defaultVisibility: whether first item should be visible on load (optional)
+ * @param {HTMLElements} items - The list of items to hide.
+ * @param {boolean} firstItemVisible - Whether first item should be visible on load.
+ * @param {boolean} showAll - Option to display all items.
  */
 
 
-function hideListItems(items, defaultVisibility, showAll) {
-  // Check whether dropdown should show/hide first item
-  if (defaultVisibility === 'true' && showAll === 'false') {
+function hideListItems(items, firstItemVisible, showAll) {
+  // Check if dropdown should show first item
+  if (firstItemVisible === 'true' && showAll === 'false') {
     let itemsArray = Array.from(items);
     itemsArray[0].setAttribute('data-hidden', 'false');
 
     for (var i = 1; i < itemsArray.length; i++) {
       itemsArray[i].setAttribute('data-hidden', 'true');
     }
-  } else if (defaultVisibility === 'false' && showAll === 'false') {
+  } else if (firstItemVisible === 'false' && showAll === 'false') {
     items.forEach(function (item) {
       item.setAttribute('data-hidden', 'true');
     });
@@ -1795,36 +1796,33 @@ function hideListItems(items, defaultVisibility, showAll) {
     items.forEach(function (item) {
       item.setAttribute('data-hidden', 'false');
     });
-  }
+  } // First item automatically visible is only relevant to component load. Other behaviour is applied when interacting with component.
 
-  defaultVisibility = 'false'; // First item automatically visible should only happen on load, not subsequent select changes
+
+  firstItemVisible = 'false';
 }
 /**
  * Insert select: build and add the select box to source
  *
- * @param {HTMLElements} items: the list of content for the select options
- * @param {HTMLElement} parentElement: the element where we need to insert the select
+ * @param {HTMLElements} items - The list of content for the select options.
+ * @param {HTMLElement} parentElement - The element where we need to insert the select.
+ * @param {boolean} firstItemVisible - Whether first item should be visible on load.
  */
 
 
-function insertSelect(items, parentElement, defaultVisibility) {
-  const selectBox = document.createElement('select');
-  const selectWrapper = parentElement.querySelector('.wrapper--dropdown-filter__select');
-  const labelFor = parentElement.dataset.labelFor;
-  const labelValue = parentElement.dataset.labelValue;
-  const labelEl = document.createElement('label');
+function insertSelect(items, parentElement, firstItemVisible) {
+  const selectBox = document.createElement('select'),
+        selectWrapper = parentElement.querySelector('.wrapper--dropdown-filter__select'),
+        labelFor = parentElement.dataset.labelFor,
+        labelValue = parentElement.dataset.labelValue,
+        labelEl = document.createElement('label');
   labelEl.textContent = labelValue;
   labelEl.setAttribute('for', labelFor);
-
-  if (parentElement.dataset.labelShow === 'false') {
-    labelEl.className = 'sr-only';
-  }
-
+  parentElement.dataset.labelShow === 'false' ? labelEl.className = 'sr-only' : null;
   selectBox.className = 'dropdown-filter__select';
   selectBox.setAttribute('id', labelFor);
   selectBox.setAttribute('name', labelFor);
-  selectWrapper.append(labelEl);
-  selectWrapper.append(selectBox); // Add default select text if filter doesn't have show all enabled
+  selectWrapper.append(labelEl, selectBox); // Add default select text if filter doesn't have show all enabled
 
   if (parentElement.dataset.displayAll === 'false') {
     let noSelection = document.createElement('option');
@@ -1842,12 +1840,12 @@ function insertSelect(items, parentElement, defaultVisibility) {
   } // Find items with first/last position overrides
 
 
-  for (const o of items) {
-    o.dataset.first === 'true' ? firstItemOverride = o : null;
-    o.dataset.last === 'true' ? lastItemOverride = o : null;
+  for (const item of items) {
+    item.dataset.first === 'true' ? firstItemOverride = item : null;
+    item.dataset.last === 'true' ? lastItemOverride = item : null;
   }
 
-  const itemsLength = items.length; // Display show all option if pattern has this configuration option set as true
+  const itemsLength = items.length; // Display show all option at top of dropdown if pattern has this configuration option set as true
 
   if (parentElement.dataset.displayAll === 'true') {
     let showAllOption = document.createElement('li');
@@ -1859,7 +1857,7 @@ function insertSelect(items, parentElement, defaultVisibility) {
 
   if (firstItemOverride) {
     let firstPositionOriginal = items.indexOf(firstItemOverride);
-    items.splice(firstPositionOriginal, 1); // Put item with dataset.first='true' at start of array
+    items.splice(firstPositionOriginal, 1); // If custom first option exists, place as first selectable option
 
     items.splice(1, 0, firstItemOverride);
   } // Remove item with dataset.last='true' from original position in array
@@ -1867,10 +1865,10 @@ function insertSelect(items, parentElement, defaultVisibility) {
 
   if (lastItemOverride) {
     let lastPositionOriginal = items.indexOf(lastItemOverride);
-    items.splice(lastPositionOriginal, 1); // Put item with dataset.last='true' at end of array
+    items.splice(lastPositionOriginal, 1); // If custom last option exists, place as last selectable option
 
     items.splice(itemsLength, 0, lastItemOverride);
-  } // iterate over each item and create/append select option
+  } // Iterate over each item and create/append select option
 
 
   Array.from(items).forEach(item => {
@@ -1880,37 +1878,38 @@ function insertSelect(items, parentElement, defaultVisibility) {
     option.value = dataValue;
     option.text = dataName;
     selectBox.appendChild(option);
-  }); // set first item in list as selected
+  }); // Set first item in list as selected
 
-  if (defaultVisibility === 'true' && showAll === 'false') {
+  if (firstItemVisible === 'true' && showAll === 'false') {
     const options = parentElement.querySelectorAll('option');
     options[1].setAttribute('selected', 'selected');
   }
 }
 /**
- * Select change: respond to select change
+ * Select change: respond to select change event
  *
- * @param {event} e: the event
+ * @param {event} e: The select change event.
  */
 
 
 function selectChange(e) {
-  // get the ul containing the list items
-  const dropdownFilter = e.target.closest('.dropdown-filter');
-  const dataGroup = dropdownFilter.querySelector('.data-group'); // get direct list items
+  // Get list items grouping
+  const dropdownFilter = e.target.closest('.dropdown-filter'),
+        dataGroup = dropdownFilter.querySelector('.data-group'); // Get direct children list items
 
   const listItems = dataGroup.querySelectorAll('ul.data-group > li');
 
   for (const listItem of listItems) {
     listItem.removeAttribute('data-hidden');
-  } // hide all items before displaying chosen item
+  } // Hide all items before displaying chosen item
 
 
   showAll = 'false';
-  hideListItems(listItems, showAll); // get the list item corresponding to the select value chosen
+  hideListItems(listItems, showAll); // Get the list item corresponding to the select value chosen
 
-  const targetListItem = dataGroup.querySelector('li.data-group__item[data-value=' + e.target.value + ']');
-  const otherListItems = dataGroup.querySelectorAll('li.data-group__item:not([data-value=' + e.target.value + '])');
+  const targetListItem = dataGroup.querySelector('li.data-group__item[data-value=' + e.target.value + ']'); // Get not selected list items
+
+  const otherListItems = dataGroup.querySelectorAll('li.data-group__item:not([data-value=' + e.target.value + '])'); // Show/hide content based on pattern's configuration options
 
   if (e.target.value !== 'show-all' && e.srcElement.selectedIndex !== 0) {
     targetListItem.removeAttribute('data-hidden');

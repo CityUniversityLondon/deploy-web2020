@@ -52923,10 +52923,6 @@ label:not(.finder__filters__label--always) {
     list-style-type: none;
 }
 
-.no-js label {
-    display: none;
-}
-
 .generic {
     display: block;
 }
