@@ -55103,7 +55103,7 @@ div.widget-123_test_ {
 }
 
 .event .footer-cards h2 {
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 0.125rem solid #ffffff;
 }
 
 .event .footer-cards a {
@@ -55258,7 +55258,7 @@ div.widget-123_test_ {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
-@media (max-width: 432px) {
+@media (max-width: 767px) {
     .event__info {
         padding: 1rem 0;
     }
@@ -55271,21 +55271,21 @@ div.widget-123_test_ {
     }
 }
 
-@media (max-width: 432px) and (min-width: 901px) {
+@media (max-width: 767px) and (min-width: 901px) {
     .event__info .event__info--wrapper {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-@media (max-width: 432px) and (min-width: 901px) {
+@media (max-width: 767px) and (min-width: 901px) {
     .event__info .event__info--wrapper {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media (max-width: 432px) and (min-width: 1441px) {
+@media (max-width: 767px) and (min-width: 1441px) {
     .event__info .event__info--wrapper {
         margin-left: auto;
         margin-right: auto;
@@ -55630,7 +55630,7 @@ div.widget-123_test_ {
     display: inline-block;
     width: 100%;
     height: 1rem;
-    border-bottom: 1px dotted #696969;
+    border-bottom: 0.125rem dotted #696969;
 }
 
 .event__speakers__name {
@@ -55778,7 +55778,8 @@ div.widget-123_test_ {
         transform: scale(1.04);
     }
     .event__sponsors a:hover .event__sponsors__image:before {
-        background-color: red;
+        background-color: rgba(12, 12, 14, 0.1);
+        z-index: 1;
     }
 }
 
@@ -55901,7 +55902,7 @@ div.widget-123_test_ {
 
 .event__contact-details h2 {
     color: #ffffff;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 0.125rem solid #ffffff;
 }
 
 .event__contact-details .icon {
