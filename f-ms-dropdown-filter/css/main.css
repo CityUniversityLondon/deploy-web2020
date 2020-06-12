@@ -52865,15 +52865,16 @@ label:not(.finder__filters__label--always) {
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
-    background-color: transparent;
+    background-color: #ffffff;
     color: #0c0c0e;
-    border: 0.125rem solid #3e1031;
+    border: 0.125rem solid #696969;
     bottom: 0.25rem;
     font-weight: 600;
     height: 3.25rem;
     position: relative;
     width: 100%;
     margin-top: 1rem;
+    border-color: #696969;
 }
 
 .dropdown-filter select i,
@@ -52920,6 +52921,10 @@ label:not(.finder__filters__label--always) {
 
 .dropdown-filter ul:first-of-type li {
     list-style-type: none;
+}
+
+.no-js label {
+    display: none;
 }
 
 .generic {
