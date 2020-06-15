@@ -22718,13 +22718,9 @@ Assign mixin:
     border-bottom: 0;
 }
 
-.card--casestudy--alternative .card--casestudy--alternative__content:hover {
+.card--casestudy--alternative .card--casestudy--alternative__content:hover, .card--casestudy--alternative .card--casestudy--alternative__content:focus {
     border-bottom: 0;
     background: #790b21;
-}
-
-.card--casestudy--alternative .card--casestudy--alternative__content:focus {
-    border-bottom: 0;
 }
 
 .card--casestudy--alternative .card--casestudy--alternative__label {
@@ -56564,35 +56560,84 @@ main .home .home__research__wrap .home__research__link {
     margin-top: 2rem;
 }
 
+main .home .home__research__wrap .home__research__link .linked-heading {
+    margin-left: 0.5rem;
+}
+
 main .home .home__whats-happening {
-    padding: 1.75rem;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+}
+
+@media (min-width: 768px) {
+    main .home .home__whats-happening {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    main .home .home__whats-happening {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    main .home .home__whats-happening {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    main .home .home__whats-happening {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 main .home .home__whats-happening h2 {
     text-align: center;
     margin-top: 0;
+    grid-column: 1/-1;
 }
 
 main .home .home__whats-happening .related-content {
-    display: flex;
-    margin-top: 1rem;
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    grid-column-gap: 1.5rem;
+    grid-column: 1/-1;
 }
 
-main .home .home__whats-happening .related-content .card {
-    flex-basis: 33%;
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
-}
-
-@media (max-width: 768px) {
-    main .home .home__whats-happening .related-content .card {
-        flex-basis: 50%;
+@media (min-width: 768px) {
+    main .home .home__whats-happening .related-content {
+        grid-column-gap: 1rem;
     }
 }
 
-@media (max-width: 432px) {
-    main .home .home__whats-happening .related-content .card {
-        flex-basis: 100%;
+@media (min-width: 901px) {
+    main .home .home__whats-happening .related-content {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    main .home .home__whats-happening .related-content {
+        grid-column: 6/-6;
+    }
+}
+
+@media (min-width: 900px) {
+    main .home .home__whats-happening .related-content {
+        grid-column: 7/-7;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .home .home__whats-happening .related-content {
+        display: grid;
+        grid-column: 2/-2;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
