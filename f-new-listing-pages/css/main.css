@@ -48674,19 +48674,19 @@ button
 }
 
 .chart--pink path:nth-child(1) {
-    stroke: #bb3094;
+    stroke: #cf44a7;
 }
 
 .chart--pink .chart__legend__item:nth-child(1) .fa.fa-circle {
-    color: #bb3094;
+    color: #cf44a7;
 }
 
 .chart--pink path:nth-child(2) {
-    stroke: #3e1031;
+    stroke: #5d184a;
 }
 
 .chart--pink .chart__legend__item:nth-child(2) .fa.fa-circle {
-    color: #3e1031;
+    color: #5d184a;
 }
 
 .chart-row {
@@ -48815,6 +48815,10 @@ button
 
 .chart--piechart__value.animate--svg-path--jsrun {
     display: block;
+}
+
+.chart--bar--horizontal {
+    margin-top: 0.75rem;
 }
 
 .chart--bar--horizontal__collection {
@@ -56905,6 +56909,7 @@ main .landing--functional__finder__cta {
 main .landing--functional__finder__cta a:after {
     content: '\f061';
     font-family: 'Font Awesome';
+    margin-left: 0.5rem;
 }
 
 main .landing:only-child {
@@ -57737,13 +57742,15 @@ ul.landing--functional__finder__tabs__columns li a:active {
 }
 
 @media (min-width: 768px) {
-    .landing--functional__finder__tabs .tabs {
+    .landing--functional__finder__tabs .tabs,
+    .landing--functional__finder__tabs > div:not(.tabs) {
         grid-column: 2 / 24;
     }
 }
 
 @media (min-width: 1024px) {
-    .landing--functional__finder__tabs .tabs {
+    .landing--functional__finder__tabs .tabs,
+    .landing--functional__finder__tabs > div:not(.tabs) {
         grid-column: 4 / 22;
     }
 }
