@@ -56315,7 +56315,6 @@ main .home .banner--home .banner__video {
 }
 
 main .home .banner--home .banner__video.embedded-video {
-    display: block;
     padding: 0;
 }
 
@@ -56517,10 +56516,6 @@ main .home .home__research__wrap .home__research__link {
     main .home .home__research__wrap h2 {
         grid-column: 3 / 23;
     }
-}
-
-main .home {
-    margin-top: 1.5rem;
 }
 
 @media (max-width: 767px) {
