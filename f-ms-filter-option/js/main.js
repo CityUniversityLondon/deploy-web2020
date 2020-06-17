@@ -2038,19 +2038,21 @@ function insertSelect(items, parentElement, firstItemVisible) {
   }); // Set first item in list as selected
 
   if (firstItemVisible === 'true' && showAll === 'false') {
-    const options = parentElement.querySelectorAll('option'); // options[1].setAttribute('selected', 'selected');
+    const options = parentElement.querySelectorAll('option');
 
     if (firstItemOverride) {
-      // options[firstPositionOriginal].setAttribute('selected', 'selected');
       if (lastItemOverride) {
-        options[firstPositionOriginal].setAttribute('selected', 'selected');
+        // Last item override exists
+        if (parentElement.dataset.alphabetical === 'true') {
+          options[firstPositionOriginal].setAttribute('selected', 'selected');
+        } else {
+          options[firstPositionOriginal + 1].setAttribute('selected', 'selected');
+        }
       } else {
+        // Default show & no last item override
         options[firstPositionOriginal + 1].setAttribute('selected', 'selected');
       }
-    } // if (firstItemOverride && parentElement.dataset.alphabetical === 'false') {
-    //     options[1].setAttribute('selected', 'selected');
-    // }
-
+    }
   }
 }
 /**
