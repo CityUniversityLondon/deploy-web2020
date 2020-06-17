@@ -1896,6 +1896,7 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 const className = 'dropdown-filter';
+let dataGroupElement = '';
 let showAll = '';
 /**
  * Entry function: loops through and hides list items, sets up event listener on
@@ -1960,6 +1961,7 @@ function hideListItems(items, firstItemVisible, showAll) {
 
 
 function insertSelect(items, parentElement, firstItemVisible) {
+  dataGroupElement = parentElement.querySelector('ul.data-group');
   const selectBox = document.createElement('select'),
         selectWrapper = parentElement.querySelector('.wrapper--dropdown-filter__select'),
         labelFor = parentElement.dataset.labelFor,
@@ -1980,17 +1982,22 @@ function insertSelect(items, parentElement, firstItemVisible) {
     selectBox.appendChild(noSelection);
   }
 
-  let firstItemOverride, lastItemOverride; // Sort by dataset.value if filter is configured to sort alphabetically
+  let defaultItemOverride, lastItemOverride; // Sort by dataset.value to display list alphabetically
 
   if (parentElement.dataset.alphabetical === 'true') {
     items = Array.from(items).sort((a, b) => a.dataset.value < b.dataset.value ? -1 : a.dataset.value > b.dataset.value ? 1 : 0);
   } else {
     items = [...items];
+  } // Update output list items to correct order
+
+
+  for (const item of items) {
+    dataGroupElement.append(item);
   } // Find items with first/last position overrides
 
 
   for (const item of items) {
-    item.dataset.first === 'true' ? firstItemOverride = item : null;
+    item.dataset.first === 'true' ? defaultItemOverride = item : null;
     item.dataset.last === 'true' ? lastItemOverride = item : null;
   }
 
@@ -2004,21 +2011,7 @@ function insertSelect(items, parentElement, firstItemVisible) {
   } // Remove item with dataset.first='true' from original position in array
 
 
-  let firstPositionOriginal = items.indexOf(firstItemOverride);
-
-  if (firstItemOverride) {
-    // items.splice(firstPositionOriginal, 1);
-    if (parentElement.dataset.displayAll === 'true') {
-      items.splice(firstPositionOriginal, 1);
-      items.splice(1, 0, firstItemOverride);
-    } // else if (parentElement.dataset.displayAll === 'false' && parentElement.dataset.alphabetical === 'false') {
-    //     items.splice(0, 0, firstItemOverride);
-    // } else {
-    //     items.splice(firstPositionOriginal, 0, firstItemOverride);
-    // }
-
-  } // Remove item with dataset.last='true' from original position in array
-
+  let defaultItemOverridePosition = items.indexOf(defaultItemOverride); // Remove item with dataset.last='true' from original position in array
 
   if (lastItemOverride) {
     let lastPositionOriginal = items.indexOf(lastItemOverride);
@@ -2040,17 +2033,17 @@ function insertSelect(items, parentElement, firstItemVisible) {
   if (firstItemVisible === 'true' && showAll === 'false') {
     const options = parentElement.querySelectorAll('option');
 
-    if (firstItemOverride) {
+    if (defaultItemOverride) {
       if (lastItemOverride) {
         // Last item override exists
         if (parentElement.dataset.alphabetical === 'true') {
-          options[firstPositionOriginal].setAttribute('selected', 'selected');
+          options[defaultItemOverridePosition].setAttribute('selected', 'selected');
         } else {
-          options[firstPositionOriginal + 1].setAttribute('selected', 'selected');
+          options[defaultItemOverridePosition + 1].setAttribute('selected', 'selected');
         }
       } else {
         // Default show & no last item override
-        options[firstPositionOriginal + 1].setAttribute('selected', 'selected');
+        options[defaultItemOverridePosition + 1].setAttribute('selected', 'selected');
       }
     }
   }
