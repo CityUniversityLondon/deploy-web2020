@@ -56413,8 +56413,10 @@ main .home .promo-area__wrap .promo-area.layout__right--split .promo-area__conte
     }
 }
 
-main .home .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__text {
-    margin-top: 2.5rem;
+@media (max-width: 767px) {
+    main .home .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__text {
+        margin-top: 2.5rem;
+    }
 }
 
 @media (max-width: 899px) {
