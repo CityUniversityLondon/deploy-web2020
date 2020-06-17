@@ -56373,6 +56373,64 @@ main .home .banner__ribbon {
     transform: rotate(280deg) scale(-1, -1);
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+    main .home .promo-area__wrap {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (min-width: 901px) {
+    main .home .promo-area__wrap {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+main .home .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__cta {
+    text-align: left;
+    margin-bottom: 2.25rem;
+}
+
+@media (min-width: 769px) {
+    main .home .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__cta {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 901px) {
+    main .home .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__cta {
+        margin-top: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 431px) {
+    main .home .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__cta a {
+        display: inline-block;
+    }
+}
+
+main .home .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__text {
+    margin-top: 2.5rem;
+}
+
+@media (max-width: 899px) {
+    main .home .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__text {
+        margin-bottom: 2.25rem;
+    }
+}
+
+@media (max-width: 767px) {
+    main .home .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__cta,
+    main .home .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__text {
+        margin-left: 2.25rem;
+        margin-right: 2.25rem;
+    }
+}
+
 main .home {
     grid-column: 1 / span 24;
 }
@@ -56480,21 +56538,6 @@ main .home {
 
 main .home .home__statistics h2 {
     text-align: center;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    main .home .promo-area__wrap {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) and (min-width: 901px) {
-    main .home .promo-area__wrap {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
 }
 
 main .home .home__research__wrap {
