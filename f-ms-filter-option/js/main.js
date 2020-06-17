@@ -2004,11 +2004,19 @@ function insertSelect(items, parentElement, firstItemVisible) {
   } // Remove item with dataset.first='true' from original position in array
 
 
-  if (firstItemOverride) {
-    let firstPositionOriginal = items.indexOf(firstItemOverride);
-    items.splice(firstPositionOriginal, 1); // If custom first option exists, place as first selectable option
+  let firstPositionOriginal = items.indexOf(firstItemOverride);
 
-    parentElement.dataset.displayAll === 'true' ? items.splice(1, 0, firstItemOverride) : items.splice(0, 0, firstItemOverride);
+  if (firstItemOverride) {
+    // items.splice(firstPositionOriginal, 1);
+    if (parentElement.dataset.displayAll === 'true') {
+      items.splice(firstPositionOriginal, 1);
+      items.splice(1, 0, firstItemOverride);
+    } // else if (parentElement.dataset.displayAll === 'false' && parentElement.dataset.alphabetical === 'false') {
+    //     items.splice(0, 0, firstItemOverride);
+    // } else {
+    //     items.splice(firstPositionOriginal, 0, firstItemOverride);
+    // }
+
   } // Remove item with dataset.last='true' from original position in array
 
 
@@ -2030,8 +2038,19 @@ function insertSelect(items, parentElement, firstItemVisible) {
   }); // Set first item in list as selected
 
   if (firstItemVisible === 'true' && showAll === 'false') {
-    const options = parentElement.querySelectorAll('option');
-    options[1].setAttribute('selected', 'selected');
+    const options = parentElement.querySelectorAll('option'); // options[1].setAttribute('selected', 'selected');
+
+    if (firstItemOverride) {
+      // options[firstPositionOriginal].setAttribute('selected', 'selected');
+      if (lastItemOverride) {
+        options[firstPositionOriginal].setAttribute('selected', 'selected');
+      } else {
+        options[firstPositionOriginal + 1].setAttribute('selected', 'selected');
+      }
+    } // if (firstItemOverride && parentElement.dataset.alphabetical === 'false') {
+    //     options[1].setAttribute('selected', 'selected');
+    // }
+
   }
 }
 /**
