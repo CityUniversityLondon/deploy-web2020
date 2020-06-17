@@ -53466,10 +53466,16 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .promo-area__wrap .promo-area .promo-area__content p {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
-    font-family: "Meta Sans", sans-serif;
+}
+
+.promo-area__wrap .promo-area .promo-area__content p i,
+.promo-area__wrap .promo-area .promo-area__content p em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
