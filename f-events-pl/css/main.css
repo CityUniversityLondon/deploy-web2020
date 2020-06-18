@@ -35618,7 +35618,9 @@ figure figcaption a:active {
     position: relative;
 }
 
-.carousel-gallery h3 {
+.carousel-gallery h2,
+.carousel-gallery h3,
+.carousel-gallery h4 {
     margin-top: 0;
     padding-bottom: 0.5rem;
     color: #ffffff;
@@ -47978,7 +47980,9 @@ button
     position: relative;
 }
 
-.carousel-gallery h3 {
+.carousel-gallery h2,
+.carousel-gallery h3,
+.carousel-gallery h4 {
     margin-top: 0;
     padding-bottom: 0.5rem;
     color: #ffffff;
@@ -55037,6 +55041,27 @@ div.widget-123_test_ {
 }
 
 @media (min-width: 1024px) {
+    main .navigation--secondary + .event .event__top__gradient {
+        grid-column: 1 / span 18;
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    main .navigation--secondary + .event .event__top__gradient {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main .navigation--secondary + .event .event__top__gradient {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
     main .navigation--secondary + .event .banner {
         grid-column: 1 / span 18;
     }
@@ -55080,16 +55105,17 @@ div.widget-123_test_ {
 }
 
 @media (min-width: 769px) {
-    .event .banner {
-        z-index: -1;
-    }
     .event .banner__overlay__heading {
         padding-bottom: 4rem;
         padding-top: 2rem;
     }
     .event .event__info {
-        z-index: 0;
+        position: relative;
     }
+}
+
+.event .event__top__gradient {
+    background-image: linear-gradient(to top, #ffffff, #f2f2f2);
 }
 
 .event .embedded-video,
@@ -55103,7 +55129,7 @@ div.widget-123_test_ {
 }
 
 .event .footer-cards h2 {
-    border-bottom: 0.125rem solid #ffffff;
+    border-bottom: 0.0625rem solid #f56067;
 }
 
 .event .footer-cards a {
@@ -55538,12 +55564,14 @@ div.widget-123_test_ {
 .event__social-cards {
     margin-top: 0;
     margin-left: 0;
+    max-width: unset;
 }
 
 .event__agenda {
     list-style-type: none;
     margin-top: 0;
     margin-left: 0;
+    max-width: unset;
 }
 
 .event__agenda--card {
@@ -55676,6 +55704,33 @@ div.widget-123_test_ {
 
 .event__speakers__details {
     display: flex;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .event__speakers__details {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .event__speakers__details {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .event__speakers__details {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .event__speakers__details {
+        letter-spacing: -0.017em;
+    }
 }
 
 .event__speakers__details span {
@@ -55712,12 +55767,15 @@ div.widget-123_test_ {
 .event__sponsors {
     margin-top: 0;
     margin-left: 0;
-    list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    list-style: none;
     justify-content: space-between;
 }
 
 .event__sponsors li {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
     width: 40%;
 }
 
@@ -55819,8 +55877,37 @@ div.widget-123_test_ {
     transition: all 0.3s ease-in-out;
 }
 
-.event__tags h6 {
+.event__tags h2 {
+    font-family: "Plex Sans", sans-serif;
     color: #696969;
+    margin-bottom: 1rem;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .event__tags h2 {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .event__tags h2 {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .event__tags h2 {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .event__tags h2 {
+        letter-spacing: -0.017em;
+    }
 }
 
 .event__tags .cta-block__cta {
@@ -55885,7 +55972,7 @@ div.widget-123_test_ {
 
 @media (min-width: 1025px) {
     .event_related-events li {
-        width: 30%;
+        width: 32%;
     }
 }
 
