@@ -22732,6 +22732,7 @@ Assign mixin:
     padding: 1.5rem;
     overflow: hidden;
     transition: background-color 0.2s ease-out;
+    border-bottom: none;
 }
 
 @media (max-width: 431px) {
