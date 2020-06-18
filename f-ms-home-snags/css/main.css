@@ -22316,6 +22316,186 @@ Assign mixin:
     list-style-type: none;
 }
 
+.card--casestudy--alternative {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 431px) {
+    .card--casestudy--alternative {
+        flex-direction: column;
+    }
+}
+
+.card--casestudy--alternative .card--casestudy--alternative__thumbnail {
+    margin-top: 1.75rem;
+    margin-bottom: 1.75rem;
+    width: 14rem;
+    overflow: hidden;
+}
+
+@media (max-width: 431px) {
+    .card--casestudy--alternative .card--casestudy--alternative__thumbnail {
+        width: auto;
+        margin: 0 1.75rem;
+        height: 15rem;
+    }
+}
+
+.card--casestudy--alternative .card--casestudy--alternative__thumbnail img {
+    min-height: 100%;
+    max-width: inherit;
+    width: 100%;
+}
+
+.card--casestudy--alternative .card--casestudy--alternative__content {
+    background-color: #9e111c;
+    border: 0;
+    width: 17rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    transition: background-color 0.2s ease-out;
+}
+
+@media (max-width: 431px) {
+    .card--casestudy--alternative .card--casestudy--alternative__content {
+        width: 100%;
+        height: auto;
+        min-height: 15rem;
+    }
+}
+
+.card--casestudy--alternative .card--casestudy--alternative__content:active {
+    background: #0c0c0e;
+    border-bottom: 0;
+}
+
+.card--casestudy--alternative .card--casestudy--alternative__content:hover, .card--casestudy--alternative .card--casestudy--alternative__content:focus {
+    border-bottom: 0;
+    background: #790b21;
+}
+
+.card--casestudy--alternative .card--casestudy--alternative__label {
+    color: #e5e5e5;
+    font-size: 0.79rem;
+    line-height: 1.625;
+    letter-spacing: 0.005em;
+    margin-bottom: 1.25rem;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .card--casestudy--alternative .card--casestudy--alternative__label {
+        letter-spacing: 0em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--casestudy--alternative .card--casestudy--alternative__label {
+        letter-spacing: -0.007em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--casestudy--alternative .card--casestudy--alternative__label {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--casestudy--alternative .card--casestudy--alternative__label {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--casestudy--alternative .card--casestudy--alternative__title {
+    margin-bottom: 1.25rem;
+}
+
+.card--casestudy--alternative .card--casestudy--alternative__title p {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    color: #ffffff;
+    border-bottom: 0.125rem solid #ffffff;
+    display: inline;
+}
+
+.card--casestudy--alternative .card--casestudy--alternative__title p i,
+.card--casestudy--alternative .card--casestudy--alternative__title p em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.card--casestudy--alternative .card--casestudy--alternative__title p b,
+.card--casestudy--alternative .card--casestudy--alternative__title p strong {
+    font-weight: inherit;
+}
+
+.card--casestudy--alternative .card--casestudy--alternative__title p i,
+.card--casestudy--alternative .card--casestudy--alternative__title p em {
+    font-style: italic;
+}
+
+.card--casestudy--alternative .card--casestudy--alternative__title p u {
+    text-decoration: none;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .card--casestudy--alternative .card--casestudy--alternative__title p {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--casestudy--alternative .card--casestudy--alternative__title p {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--casestudy--alternative .card--casestudy--alternative__title p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--casestudy--alternative .card--casestudy--alternative__title p {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--casestudy--alternative .card--casestudy--alternative__description p {
+    color: #ffffff;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .card--casestudy--alternative .card--casestudy--alternative__description p {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--casestudy--alternative .card--casestudy--alternative__description p {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--casestudy--alternative .card--casestudy--alternative__description p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--casestudy--alternative .card--casestudy--alternative__description p {
+        letter-spacing: -0.017em;
+    }
+}
+
 .card--casestudy a {
     display: inline-block;
     background-color: transparent;
@@ -22663,186 +22843,6 @@ Assign mixin:
 
 .card--casestudy__thumbnail {
     margin-right: 1.5rem;
-}
-
-.card--casestudy--alternative {
-    display: flex;
-    flex-direction: row;
-}
-
-@media (max-width: 431px) {
-    .card--casestudy--alternative {
-        flex-direction: column;
-    }
-}
-
-.card--casestudy--alternative .card--casestudy--alternative__thumbnail {
-    margin-top: 1.75rem;
-    margin-bottom: 1.75rem;
-    width: 14rem;
-    overflow: hidden;
-}
-
-@media (max-width: 431px) {
-    .card--casestudy--alternative .card--casestudy--alternative__thumbnail {
-        width: auto;
-        margin: 0 1.75rem;
-        height: 15rem;
-    }
-}
-
-.card--casestudy--alternative .card--casestudy--alternative__thumbnail img {
-    min-height: 100%;
-    max-width: inherit;
-    width: 100%;
-}
-
-.card--casestudy--alternative .card--casestudy--alternative__content {
-    border: 0;
-    width: 17rem;
-    padding: 1.5rem;
-    overflow: hidden;
-    transition: background-color 0.2s ease-out;
-}
-
-@media (max-width: 431px) {
-    .card--casestudy--alternative .card--casestudy--alternative__content {
-        width: 100%;
-        height: auto;
-        min-height: 15rem;
-    }
-}
-
-.card--casestudy--alternative .card--casestudy--alternative__content:active {
-    background: #0c0c0e;
-    border-bottom: 0;
-}
-
-.card--casestudy--alternative .card--casestudy--alternative__content:hover, .card--casestudy--alternative .card--casestudy--alternative__content:focus {
-    border-bottom: 0;
-    background: #790b21;
-}
-
-.card--casestudy--alternative .card--casestudy--alternative__label {
-    color: #e5e5e5;
-    font-size: 0.79rem;
-    line-height: 1.625;
-    letter-spacing: 0.005em;
-    margin-bottom: 1.25rem;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .card--casestudy--alternative .card--casestudy--alternative__label {
-        letter-spacing: 0em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--casestudy--alternative .card--casestudy--alternative__label {
-        letter-spacing: -0.007em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--casestudy--alternative .card--casestudy--alternative__label {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--casestudy--alternative .card--casestudy--alternative__label {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--casestudy--alternative .card--casestudy--alternative__title {
-    margin-bottom: 1.25rem;
-}
-
-.card--casestudy--alternative .card--casestudy--alternative__title p {
-    font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-    font-size: 1.125rem;
-    line-height: 1.25;
-    letter-spacing: -0.008em;
-    color: #ffffff;
-    border-color: #ffffff;
-    border-bottom: 0.125rem solid #ffffff;
-    display: inline;
-}
-
-.card--casestudy--alternative .card--casestudy--alternative__title p i,
-.card--casestudy--alternative .card--casestudy--alternative__title p em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-}
-
-.card--casestudy--alternative .card--casestudy--alternative__title p b,
-.card--casestudy--alternative .card--casestudy--alternative__title p strong {
-    font-weight: inherit;
-}
-
-.card--casestudy--alternative .card--casestudy--alternative__title p i,
-.card--casestudy--alternative .card--casestudy--alternative__title p em {
-    font-style: italic;
-}
-
-.card--casestudy--alternative .card--casestudy--alternative__title p u {
-    text-decoration: none;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .card--casestudy--alternative .card--casestudy--alternative__title p {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--casestudy--alternative .card--casestudy--alternative__title p {
-        letter-spacing: -0.014em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--casestudy--alternative .card--casestudy--alternative__title p {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--casestudy--alternative .card--casestudy--alternative__title p {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--casestudy--alternative .card--casestudy--alternative__description p {
-    color: #ffffff;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .card--casestudy--alternative .card--casestudy--alternative__description p {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--casestudy--alternative .card--casestudy--alternative__description p {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--casestudy--alternative .card--casestudy--alternative__description p {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--casestudy--alternative .card--casestudy--alternative__description p {
-        letter-spacing: -0.017em;
-    }
 }
 
 .contact-cards {
@@ -56327,14 +56327,14 @@ main .home .banner__ribbon {
     transform: rotate(280deg) scale(-1, -1);
 }
 
-main .home {
-    grid-column: 1 / span 24;
-}
-
 main .home .home__research__wrap {
     display: grid;
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
+    overflow: hidden;
+    position: relative;
+    padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
 }
 
 @media (min-width: 768px) {
@@ -56357,91 +56357,40 @@ main .home .home__research__wrap .home__research__content {
     grid-column: 4 / 13;
 }
 
-main .home .home__research__wrap .home__research__card {
-    grid-column: 13 / 22;
-    overflow: hidden;
-}
-
-main .home .home__research__wrap .home__research__link {
-    grid-column: 4 / 22;
-}
-
-@media (max-width: 1280px) {
-    main .home .home__research__wrap h2 {
-        grid-column: 3 / 23;
-    }
-    main .home .home__research__wrap .home__research__content {
-        grid-column: 3/ 13;
-    }
-    main .home .home__research__wrap .home__research__card {
-        grid-column: 13 / 23;
-        overflow: hidden;
-    }
-    main .home .home__research__wrap .home__research__link {
-        grid-column: 3 / 23;
-    }
-}
-
-@media (max-width: 1024px) {
-    main .home .home__research__wrap .home__research__content,
-    main .home .home__research__wrap .home__research__card,
-    main .home .home__research__wrap .home__research__link,
-    main .home .home__research__wrap h2 {
-        grid-column: 5/ 21;
-    }
-}
-
-@media (max-width: 900px) {
-    main .home .home__research__wrap .home__research__content,
-    main .home .home__research__wrap .home__research__card,
-    main .home .home__research__wrap .home__research__link,
-    main .home .home__research__wrap h2 {
-        grid-column: 4/ 22;
-    }
-}
-
-@media (max-width: 432px) {
-    main .home .home__research__wrap .home__research__content,
-    main .home .home__research__wrap .home__research__card,
-    main .home .home__research__wrap .home__research__link,
-    main .home .home__research__wrap h2 {
-        grid-column: 3/ 22;
-    }
-}
-
-main .home {
-    margin-top: 1.5rem;
-}
-
-main .home .home__statistics h2 {
-    text-align: center;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    main .home .promo-area__wrap {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) and (min-width: 901px) {
-    main .home .promo-area__wrap {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-main .home .home__research__wrap {
-    overflow: hidden;
-    position: relative;
-    padding-top: 2.75rem;
-    padding-bottom: 2.75rem;
-}
-
 @media (max-width: 1024px) {
     main .home .home__research__wrap .home__research__content {
         margin-bottom: 2.75rem;
+    }
+}
+
+main .home .home__research__wrap .home__research__content p {
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    font-family: "Meta Sans", sans-serif;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    main .home .home__research__wrap .home__research__content p {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    main .home .home__research__wrap .home__research__content p {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    main .home .home__research__wrap .home__research__content p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    main .home .home__research__wrap .home__research__content p {
+        letter-spacing: -0.017em;
     }
 }
 
@@ -56556,12 +56505,85 @@ main .home .home__research__wrap .home__research__content .home__research__conte
     color: #ffffff;
 }
 
+main .home .home__research__wrap .home__research__card {
+    grid-column: 13 / 22;
+    overflow: hidden;
+}
+
 main .home .home__research__wrap .home__research__link {
+    grid-column: 4 / 22;
     margin-top: 2rem;
 }
 
 main .home .home__research__wrap .home__research__link .linked-heading {
     margin-left: 0.5rem;
+}
+
+@media (max-width: 1280px) {
+    main .home .home__research__wrap h2 {
+        grid-column: 3 / 23;
+    }
+    main .home .home__research__wrap .home__research__content {
+        grid-column: 3/ 13;
+    }
+    main .home .home__research__wrap .home__research__card {
+        grid-column: 13 / 23;
+        overflow: hidden;
+    }
+    main .home .home__research__wrap .home__research__link {
+        grid-column: 3 / 23;
+    }
+}
+
+@media (max-width: 1024px) {
+    main .home .home__research__wrap .home__research__content,
+    main .home .home__research__wrap .home__research__card,
+    main .home .home__research__wrap .home__research__link,
+    main .home .home__research__wrap h2 {
+        grid-column: 5/ 21;
+    }
+}
+
+@media (max-width: 900px) {
+    main .home .home__research__wrap .home__research__content,
+    main .home .home__research__wrap .home__research__card,
+    main .home .home__research__wrap .home__research__link,
+    main .home .home__research__wrap h2 {
+        grid-column: 4/ 22;
+    }
+}
+
+@media (max-width: 432px) {
+    main .home .home__research__wrap .home__research__content,
+    main .home .home__research__wrap .home__research__card,
+    main .home .home__research__wrap .home__research__link,
+    main .home .home__research__wrap h2 {
+        grid-column: 3/ 22;
+    }
+}
+
+main .home {
+    grid-column: 1 / span 24;
+    margin-top: 1.5rem;
+}
+
+main .home .home__statistics h2 {
+    text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    main .home .promo-area__wrap {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (min-width: 901px) {
+    main .home .promo-area__wrap {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 main .home .home__whats-happening {
