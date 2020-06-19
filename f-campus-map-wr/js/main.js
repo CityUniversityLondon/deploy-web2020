@@ -2233,7 +2233,7 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'map-container';
 
 function createMap() {
-  console.log("map create run"); // == PROPERTIES ==
+  console.log("map create run..."); // == PROPERTIES ==
 
   let
   /**
