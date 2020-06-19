@@ -1624,7 +1624,8 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'map-container';
 
 function createMap() {
-  // == PROPERTIES ==
+  console.log("map create run"); // == PROPERTIES ==
+
   let
   /**
    * data source - relative to handle production and test environments
