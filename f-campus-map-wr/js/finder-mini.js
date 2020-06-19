@@ -236,18 +236,17 @@ function finder__clear(props) {
     className: "finder__clear",
     type: "button",
     onClick: () => {
-      props.clear(props.resetSort);
+      props.clear();
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fad fa-fw fa-times-circle icon "
+    className: "far fa-fw fa-times icon"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "finder__clear__text"
-  }, "Clear query"));
+  }, "Reset"));
 }
 
 finder__clear.propTypes = {
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  resetSort: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
 };
 /* harmony default export */ __webpack_exports__["default"] = (finder__clear);
 
@@ -350,19 +349,26 @@ function finder__query(props) {
     focusInput();
     const newQuery = props.query;
     newQuery.query = '';
-    newQuery.sortType = props.config.sort[0].type;
+    newQuery.sortBy = props.config.sort;
     props.update.query(newQuery);
     props.update.results(!props.update.updateState);
   };
 
   const submitForm = () => {
     let queryURL = '';
-    let finderMiniElement = document.getElementsByClassName('finder__mini')[0];
-    let courseLevel = finderMiniElement.getAttribute('data-level');
-    let courseSubject = finderMiniElement.getAttribute('data-subject');
-    let courseType = finderMiniElement.getAttribute('data-type');
-    queryURL = 'meta_level_sand=' + courseLevel + '&meta_subject_sand=' + courseSubject + '&meta_type_sand=' + courseType;
-    window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?".concat(queryURL, "&query=").concat(partialQuery));
+    let exclusions = ['Short courses', 'Professional development courses', 'City Health courses', 'In-house law courses'];
+    let courseLevel = document.getElementsByClassName('finder__mini')[0].getAttribute('data-level');
+
+    function exclusion(level) {
+      return level === courseLevel;
+    }
+
+    function buildURL(level) {
+      exclusions.filter(exclusion).length ? queryURL = 'meta_level_sand=Short+courses+and+professional+development&meta_type_sand=' + level : queryURL = 'meta_level_sand=' + level;
+      window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?".concat(queryURL, "&query=").concat(partialQuery));
+    }
+
+    buildURL(courseLevel);
   };
 
   const submitSuggestion = s => {
@@ -646,7 +652,8 @@ function Finder(props) {
     collection: props.config.collection,
     fixedFacets: props.config.fixedFacets,
     query: params.get('query') || '',
-    sortType: params.get('query') ? '' : params.get('sort') || props.config.sort,
+    sortBy: params.get('query') ? null : params.get('sort') || props.config.sort,
+    sortDirection: params.get('sortdirection') || props.config.sortDirection,
     startRank: params.get('start_rank') || 1,
     numRanks: params.get('num_ranks') || props.config.numRanks,
     facets: getFacetParams(props.config.facetLabels, params)
@@ -679,7 +686,7 @@ function Finder(props) {
 
     call.cancel(); // make a new, asynchronous request to Funnelback
 
-    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_10__["find"])(query.collection, query.fixedFacets, query.query, query.sortType, query.startRank, query.numRanks, query.facets); // save the requestToken, so
+    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_10__["find"])(query.collection, query.fixedFacets, query.query, query.sortBy, query.sortDirection, query.startRank, query.numRanks, query.facets); // save the requestToken, so
 
     setCall({
       cancel: () => {
@@ -771,14 +778,15 @@ const baseUrl = 'https://web2020.city.ac.uk/web-services',
  *
  * @param {string} collection The Funnelback collection to query.
  * @param {string} [query] The query string.
- * @param {string} [sortType] The field to sort by.
+ * @param {string} [sortBy] The field to sort by.
+ * @param {string} sortDirection Sort 'asc'ending or 'desc'ending.
  * @param {integer} startRank The first result to return.
  * @param {integer} numRank The number of results to return.
  * @param {object} [facets] A map of facets to query strings.
  * @return {Promise} - A promise of search results.
  */
 
-function find(collection, fixedFacets, query, sortType, startRank, numRank, facets) {
+function find(collection, fixedFacets, query, sortBy, sortDirection, startRank, numRank, facets) {
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
     fixedFacetParams["meta_".concat(facet.meta, "_sand")] = facet.value;
@@ -796,11 +804,11 @@ function find(collection, fixedFacets, query, sortType, startRank, numRank, face
     }),
     url: findRootUrl,
     timeout: timeout,
-    params: _objectSpread(_objectSpread(_objectSpread({}, fixedFacetParams), facetParams), {}, {
+    params: _objectSpread({}, fixedFacetParams, {}, facetParams, {
       collection: collection,
       num_ranks: numRank,
       query: query,
-      sort: sortType || '',
+      sort: sortBy ? "".concat('desc' === sortDirection ? 'd' : '').concat(sortBy) : null,
       start_rank: startRank
     })
   };
