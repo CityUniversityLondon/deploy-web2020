@@ -588,7 +588,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
 /* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
 /* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_campus_map_campus_map__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/campus-map/campus-map */ "./src/patterns/campus-map/campus-map.js");
+/* harmony import */ var _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/find-us/find-us */ "./src/patterns/find-us/find-us.js");
 /* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
 /* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
 /* harmony import */ var _patterns_video_video__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./patterns/video/video */ "./src/patterns/video/video.js");
@@ -637,7 +637,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_campus_map_campus_map__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_video_video__WEBPACK_IMPORTED_MODULE_33__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_video_video__WEBPACK_IMPORTED_MODULE_33__["default"]]);
 
 /***/ }),
 
@@ -1594,611 +1594,6 @@ function updateProgress(backToTopAnchor) {
 
 /***/ }),
 
-/***/ "./src/patterns/campus-map/campus-map.js":
-/*!***********************************************!*\
-  !*** ./src/patterns/campus-map/campus-map.js ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
-
-
-
-
-/**
- * Back To Top Link Scroll
- *
- * @module patterns/back-to-top/back-to-top
- * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019
- */
-
-const className = 'map-container';
-
-function createMap() {
-  console.log("map create run"); // == PROPERTIES ==
-
-  let
-  /**
-   * data source - relative to handle production and test environments
-   * @let {String}
-   */
-  dataSrc = 'https://web2020.city.ac.uk/staging/development/walter/campus-map/locations',
-
-  /**
-   * Create a LatLng object containing the coordinate for the center of the map
-   * @let {Object}
-   */
-  latlng = new google.maps.LatLng(51.527761, -0.103283),
-
-  /**
-   * jQuery object for map canvas
-   * @let {Object}
-   */
-  $mapContainer = document.getElementById('map-container'),
-
-  /**
-   * an object literal containing the properties we want to pass to the map
-   * @let {Object}
-   */
-  mapOptions = {
-    zoom: 17,
-    key: 'AIzaSyBvg6r1x2ZRKPAsceVaKPlg6tO20QiBDpo',
-    center: latlng,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    streetViewControl: true,
-    mapTypeControl: true,
-    mapTypeControlOptions: {
-      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
-    },
-    navigationControl: true
-  },
-
-  /**
-   * Call the constructor, thereby initializing the map  as soon as possible
-   * @let {Object}: Google maps Map object
-   */
-  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions),
-      searchBox = document.getElementById('map-search'),
-
-  /**
-   * initlaise infoWindow
-   * @let {Object}: Google maps InfoWindow object
-   */
-  infoWindow = new google.maps.InfoWindow({
-    maxWidth: 400
-  }),
-      // This was commented out already
-
-  /* points = [
-  new google.maps.LatLng(51.527701, -0.102509),
-  new google.maps.LatLng(51.521870, -0.090356)
-  ];
-   for (let i = 0; i < points.length; i++) {
-  marker = new google.maps.Marker({
-  position: points[i],
-  animation: google.maps.Animation.DROP
-   });
-  }
-   marker.setMap(map);
-  map.panTo(marker.position);
-  /**
-   * cityLayers object literal containing skeleton options for City related things - parsing the xml file adds to this
-   * it is where we keep arrays of markers to use when clearing/setting things on the map
-   * @let {Object}:
-   */
-  cityLayers = {
-    // array to hold each google marker object - for each University location
-    bigMarkersArray: [],
-    //arrray to hold building google marker objects - they never got removed from map
-    bigBuildingsArray: [],
-    buildingsObj: {},
-    buildings: {
-      toggler: null,
-      markersArray: [],
-      zoomLevel: 17,
-      list: ''
-    },
-    libraries: {
-      toggler: document.getElementById('toggle-libraries'),
-      markersArray: [],
-      zoomLevel: 17,
-      list: ''
-    },
-    accommodation: {
-      toggler: null,
-      markersArray: [],
-      zoomLevel: 17,
-      list: ''
-    },
-    lectureTheatres: {
-      toggler: null,
-      markersArray: [],
-      zoomLevel: 17,
-      list: ''
-    },
-    studentCentre: {
-      toggler: document.getElementById('toggle-studentCentre'),
-      markersArray: [],
-      zoomLevel: 17,
-      list: ''
-    },
-    sports: {
-      toggler: null,
-      markersArray: [],
-      zoomLevel: 17,
-      list: ''
-    },
-    computerLabs: {
-      toggler: document.getElementById('toggle-computerLabs'),
-      markersArray: [],
-      zoomLevel: 17,
-      list: ''
-    }
-  },
-
-  /**
-   * kmlLayers object - kml files containing useful third party location information
-   * @let {Object}:
-   */
-  kmlLayers = {
-    cycleHire: {
-      src: 'http://webapps.city.ac.uk/matrix/maps/cycle-hire.php',
-      toggler: document.getElementById('cycle-hire'),
-      preserveViewport: true
-    },
-    bikes: {
-      src: 'http://webapps.city.ac.uk/matrix/maps/cycle-parking.kml',
-      toggler: document.getElementById('bikes'),
-      preserveViewport: true
-    },
-    atms: {
-      src: 'http://webapps.city.ac.uk/matrix/maps/atms.kml',
-      toggler: document.getElementById('cash-points'),
-      preserveViewport: true
-    }
-  }; // == METHODS ==
-
-  /**
-   * Removes the overlays from the map, but keeps them in the array
-   * @param {Array} markersArray: a collections of markers
-   * @return {Undefined}
-   */
-
-  function clearOverlays(markersArray) {
-    let i;
-
-    if (markersArray) {
-      for (i in markersArray) {
-        if (markersArray.hasOwnProperty(i) && typeof markersArray[i] !== 'function') {
-          markersArray[i].setMap(null);
-        }
-      }
-    }
-  }
-
-  ;
-  /**
-   * the hashChange handler - listens for hash changes and then does cool stuff
-   * @param {string} id of building: the window hashchange event
-   * @return {Undefined}
-   */
-
-  function hashChange(id) {
-    let marker; //loop over  bigBuildingsArray to find marker
-
-    for (let building in cityLayers.buildingsObj) {
-      if (id === building) {
-        let found = cityLayers.buildingsObj[building];
-        marker = found; //open infoWindow for this marker
-        //clear all overlays first
-
-        clearOverlays(cityLayers.bigMarkersArray); //make marker visible
-
-        marker.setVisible(true); //set infoWindow content
-
-        infoWindow.setContent(marker.infoHtml); //open the infoWindow centered on the marker
-
-        infoWindow.open(map, marker); //pan map to marker position
-
-        map.panTo(marker.position); //add marker to map
-
-        marker.setMap(map);
-      }
-    }
-  }
-
-  ;
-  /**
-   * the updateHash called when a marker, infoWindow or marker link is clicked - updates hash
-   * @param {Object || String} caller: the marker, marker link or infoWindow firing the event
-   * @return {Undefined}
-   */
-
-  function updateHash(caller) {
-    let callerId = '';
-
-    if (!caller) {
-      return;
-    }
-
-    if (typeof caller === 'string') {
-      //a marker link was clicked
-      callerId = caller; // state[callerId] = 1;
-    } else if (caller.hasOwnProperty('id')) {
-      //a marker was clicked
-      callerId = caller.id; //state[callerId] = 1;
-    } else {
-      //an infoWindow was closed
-      callerId = 0;
-    }
-
-    location.hash = callerId;
-    hashChange(callerId);
-  }
-
-  ;
-  /**
-   * Shows any overlays currently in the array
-   * @param {Array} markersArray: a collection of markers
-   * @return {Undefined}
-   */
-
-  function showOverlays(markersArray) {
-    let i;
-
-    if (markersArray) {
-      for (i in markersArray) {
-        if (markersArray.hasOwnProperty(i) && typeof markersArray[i] !== 'function') {
-          markersArray[i].setMap(map);
-        }
-      }
-    }
-  }
-
-  ;
-  /**
-   * creates a new category of place in CityLayers object
-   * @param {String} name: the new name of the category ?
-   * @return {Undefined}
-   */
-
-  function newCategory(name) {
-    name.toggler = null; // walter replaced with name - was this
-
-    name.markersArray = [];
-    name.zoomLevel = 17;
-  }
-
-  ;
-  /**
-   *  loop through each kmllayer adding checked behaviour
-   * @param {Object} object: Config object for KML
-   * @return {?}
-   */
-
-  function initKmlLayers(layer) {
-    for (let key in layer) {
-      // skip loop if the property is from prototype
-      if (!layer.hasOwnProperty(key)) {} //end if
-
-
-      let obj = layer[key];
-      let toggler = obj.toggler;
-      let overlay = new google.maps.KmlLayer(obj.src, {
-        preserveViewport: obj.preserveViewport
-      });
-      /* 
-      Disabled for now as toggler empty - maybe even remove klmlyer as possible not required
-        toggler.addEventListener("click", function(){
-          console.log(`toggler`);
-          //toggler.toggleClass('enabled');
-          overlay.setMap(toggler.classList.contains('enabled') ? map : null);
-          return false;
-      }); //end click fn */
-    } // end for
-
-  }
-
-  ; //end initKmlLayers
-
-  /**
-   *  creates individual markers, builds a corresponding filter item, binds a infoWindow to marker with html
-   * @param {Object} markerConfig: an object containing letious marker configuration options
-   * @return {Object} marker - google maps marker
-   */
-
-  function createMarker(markerConfig) {
-    // let listId = '#' + markerConfig.category, >> walter maybe delete this now
-    let listId = document.getElementById(markerConfig.category),
-        listItem,
-        marker,
-        anchor,
-        html = ''; //build html for infoWindow
-    //if has link
-
-    if (markerConfig.linkHref.length !== 0) {
-      html = '<div id="info-window" style="min-height: 100px;"><h3><a href="' + markerConfig.linkHref + '">' + markerConfig.name + '</a></h3>';
-    } else {
-      html = '<div id="info-window" style="min-height: 100px;"><h3>' + markerConfig.name + '</h3>';
-    } //test to see if has a buildingPrefix
-
-
-    if (markerConfig.buildingPrefix.length !== 0) {
-      html += '<p class="building-prefix"><strong>Rooms beginning: ' + markerConfig.buildingPrefix + '</strong></p>';
-      markerConfig.buildingPrefix = '(' + markerConfig.buildingPrefix + ')';
-    } //add description and close div element
-
-
-    html += markerConfig.description + '</div>'; //create google maps marker
-
-    marker = new google.maps.Marker({
-      map: markerConfig.map,
-      position: markerConfig.point,
-      icon: markerConfig.icon,
-      animation: google.maps.Animation.DROP
-    }); //add a new property to the google maps marker object so we can id markers
-
-    marker.set('id', markerConfig.id); //add a new property of inHtml to populate infoWindow
-
-    marker.set('infoHtml', html); //attach event listener for marker click to handle infoWindow
-
-    google.maps.event.addListener(marker, 'click', function (e) {
-      //closure in a loop shizzle - I find this hard to get my head around - returning a closure seems to help
-      return updateHash(marker);
-    }); //create list element
-
-    listItem = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', [{
-      label: 'id',
-      val: 'building-' + markerConfig.id
-    }, {
-      label: 'class',
-      val: 'building'
-    }]); //create a element with click handler to open infoWindow
-
-    anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
-      label: 'html',
-      val: '<span>' + markerConfig.name + ' ' + markerConfig.buildingPrefix + '</span>'
-    }, {
-      label: 'href',
-      val: '#'
-    }]);
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      updateHash(e.target.parentElement.parentElement.getAttribute('id').replace('building-', ''));
-      return false;
-    });
-    anchor.style.background = 'transparent url(' + markerConfig.icon + '?v=1123) no-repeat left center'; //add li item to list
-
-    listId ? listId.appendChild(listItem).appendChild(anchor) : null;
-    return marker;
-  }
-
-  ; //end fn.createMarker
-  // Deletes all markers in the array by removing references to them
-  //commented out to keep JSLint happy as this function is not currently used
-
-  function deleteOverlays(markersArray) {
-    let i;
-
-    if (markersArray) {
-      for (i in markersArray) {
-        if (typeof markersArray[i] !== 'function') {
-          markersArray[i].setMap(null);
-        }
-      }
-
-      markersArray.length = 0;
-    }
-  }
-
-  ;
-
-  function findChildText(node, name) {
-    let value = '';
-    let children = node.getElementsByTagName(name);
-    let childrenLength = node.getElementsByTagName(name).length;
-
-    if (childrenLength > 0) {
-      value = children[0].textContent;
-    }
-
-    return value;
-  }
-
-  ;
-  /**
-   * parses locations xml and creates markers
-   * @param {Object} xml: xml returned from Ajax request
-   * @param {String} textStatus: standard ajax reposnse
-   * @param {Object} textStatus: standard ajax reposnse
-   * @return {?}
-   */
-
-  function parseXml(xml) {
-    let items = xml.getElementsByTagName('item');
-    let index = 0,
-        $self,
-        marker,
-        markerConfig = {},
-        searchTags = [],
-        searchIds = {};
-    items.forEach(function (item) {
-      $self = item;
-      markerConfig.index = index + 1;
-      markerConfig.name = $self.getElementsByTagName('title')[0].textContent;
-      markerConfig.linkHref = $self.getElementsByTagName('link')[0].textContent;
-      markerConfig.description = $self.getElementsByTagName('description')[0].textContent;
-      markerConfig.icon = findChildText($self, 'CUL:icon');
-      markerConfig.category = $self.getElementsByTagName('category')[0].textContent;
-      markerConfig.id = $self.getElementsByTagName('guid')[0].textContent; //markerConfig.isPolygon = $self.find("[nodeName='georss:polygon']"); always been commented out
-
-      markerConfig.buildingPrefix = findChildText($self, 'CUL:buildingPrefix');
-      markerConfig.hexColour = findChildText($self, 'CUL:hexColour');
-      markerConfig.geoLat = findChildText($self, 'geo:lat');
-      markerConfig.geoLong = findChildText($self, 'geo:long');
-      markerConfig.point = new google.maps.LatLng(parseFloat(markerConfig.geoLat), parseFloat(markerConfig.geoLong)); //call createmarker fn
-
-      marker = createMarker(markerConfig);
-
-      if (markerConfig.category !== 'buildings') {
-        //add returned marker to big array
-        cityLayers.bigMarkersArray.push(marker);
-      } else {
-        //add marker to buldings array
-        cityLayers.bigBuildingsArray.push(marker);
-      } //all markers go in here
-
-
-      cityLayers.buildingsObj[marker.id] = marker;
-      searchTags.push(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
-        label: 'content',
-        val: markerConfig.name
-      }, {
-        label: 'data-id',
-        val: markerConfig.id
-      }]));
-      searchIds[markerConfig.name] = markerConfig.id; //add returned marker to category array (if cat exisits)
-
-      if (cityLayers[markerConfig.category]) {
-        cityLayers[markerConfig.category].markersArray.push(marker);
-      } else {
-        /* Commented out for now. Not sure if this is needed
-            cityLayers[markerConfig.category] = newCategory(
-                markerConfig.category
-            ); */
-      }
-    }); //end iteration
-
-    function searchBoxInit() {
-      // creates HTML structure for suggestion list
-      let listWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
-        label: 'class',
-        val: 'query__suggestions__wrapper'
-      }]);
-      let list = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
-        label: 'id',
-        val: 'query__suggestions'
-      }, {
-        label: 'data-show',
-        val: false
-      }]);
-      /**
-       * creates list of anchors contaning building info below:
-       * @tag {HTMLelement} anchor containing building name and id
-       */
-
-      searchTags.forEach(function (tag) {
-        let item = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', []);
-        tag.addEventListener('click', function () {
-          searchQueryIdFind(tag.getAttribute('data-id'), tag.textContent);
-        });
-        list.appendChild(item).appendChild(tag);
-      });
-      searchBox.parentElement.appendChild(listWrapper).appendChild(list); // listens for search queries
-
-      searchBox.addEventListener('keyup', function () {
-        let searchString = searchBox.value;
-        let list = document.getElementById('query__suggestions');
-        let find = document.getElementById('query__suggestions').querySelectorAll('li'); // if a query is presesnt it show / hides relevant buildings using CSS instead of recreateing DOM elements all the time to help with performance
-
-        if (searchString.length > 0) {
-          list.setAttribute('data-show', true);
-          find.forEach(function (i) {
-            let label = i.querySelector('a').textContent;
-
-            if (label.indexOf(searchString) > -1) {
-              i.style.display = "block";
-            } else {
-              i.style.display = "none";
-            }
-          });
-        } else {
-          list.setAttribute('data-show', false);
-        }
-      });
-
-      function searchQueryIdFind(id, title) {
-        searchBox.value = title;
-        document.getElementById('query__suggestions').setAttribute('data-show', false);
-        hashChange(id);
-      }
-    }
-
-    ;
-    searchBoxInit(); // Walter >> needs reviewing if needed or to be changed this vs-butto below
-
-    document.getElementById('vs-button').addEventListener('click', function () {
-      searchBox.focus();
-    }); //clear marker when infoWIndow closed
-
-    google.maps.event.addListener(infoWindow, 'closeclick', function () {
-      updateHash(infoWindow);
-    }); //so all markers in the buildingsArray initalially
-
-    showOverlays(cityLayers.bigBuildingsArray);
-    $mapContainer.classList.remove('loading');
-    $mapContainer.querySelectorAll('.loading-fa-icon').forEach(function (i) {
-      i.remove();
-    }); // Bind an event to window.onhashchange that, when the history state changes,
-
-    window.addEventListener('hashchange', hashChange); // Since the event is only triggered when the hash changes, we need to trigger
-    // the event now, to handle the hash the page may have loaded with.
-
-    hashChange(location.hash.replace('#', ''));
-  }
-
-  ; //end parse xml,
-
-  function loadXml() {
-    let xhttp = new XMLHttpRequest();
-
-    xhttp.onreadystatechange = function () {
-      if (xhttp.readyState == 4 && xhttp.status === 200) {
-        parseXml(xhttp.responseXML);
-      }
-    };
-
-    xhttp.open('GET', dataSrc, true);
-    xhttp.send(null);
-  }
-
-  ;
-  /**
-   * init fn
-   * @return {Undefined}
-   */
-
-  function init() {
-    $mapContainer.classList.add('loading');
-    $mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('i', [{
-      label: 'class',
-      val: 'fa fa-refresh fa-spin loading-fa-icon'
-    }]));
-    initKmlLayers(kmlLayers);
-    loadXml();
-  }
-
-  ;
-  init();
-}
-
-;
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: createMap,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
 /***/ "./src/patterns/charts/charts.js":
 /*!***************************************!*\
   !*** ./src/patterns/charts/charts.js ***!
@@ -2803,6 +2198,611 @@ function launchFeedback(elem) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchFeedback,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/find-us/find-us.js":
+/*!*****************************************!*\
+  !*** ./src/patterns/find-us/find-us.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+
+
+
+/**
+ * Back To Top Link Scroll
+ *
+ * @module patterns/back-to-top/back-to-top
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019
+ */
+
+const className = 'map-container';
+
+function createMap() {
+  console.log("map create run"); // == PROPERTIES ==
+
+  let
+  /**
+   * data source - relative to handle production and test environments
+   * @let {String}
+   */
+  dataSrc = 'https://web2020.city.ac.uk/staging/development/walter/campus-map/locations',
+
+  /**
+   * Create a LatLng object containing the coordinate for the center of the map
+   * @let {Object}
+   */
+  latlng = new google.maps.LatLng(51.527761, -0.103283),
+
+  /**
+   * jQuery object for map canvas
+   * @let {Object}
+   */
+  $mapContainer = document.getElementById('map-container'),
+
+  /**
+   * an object literal containing the properties we want to pass to the map
+   * @let {Object}
+   */
+  mapOptions = {
+    zoom: 17,
+    key: 'AIzaSyBvg6r1x2ZRKPAsceVaKPlg6tO20QiBDpo',
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    streetViewControl: true,
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+    },
+    navigationControl: true
+  },
+
+  /**
+   * Call the constructor, thereby initializing the map  as soon as possible
+   * @let {Object}: Google maps Map object
+   */
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions),
+      searchBox = document.getElementById('map-search'),
+
+  /**
+   * initlaise infoWindow
+   * @let {Object}: Google maps InfoWindow object
+   */
+  infoWindow = new google.maps.InfoWindow({
+    maxWidth: 400
+  }),
+      // This was commented out already
+
+  /* points = [
+  new google.maps.LatLng(51.527701, -0.102509),
+  new google.maps.LatLng(51.521870, -0.090356)
+  ];
+   for (let i = 0; i < points.length; i++) {
+  marker = new google.maps.Marker({
+  position: points[i],
+  animation: google.maps.Animation.DROP
+   });
+  }
+   marker.setMap(map);
+  map.panTo(marker.position);
+  /**
+   * cityLayers object literal containing skeleton options for City related things - parsing the xml file adds to this
+   * it is where we keep arrays of markers to use when clearing/setting things on the map
+   * @let {Object}:
+   */
+  cityLayers = {
+    // array to hold each google marker object - for each University location
+    bigMarkersArray: [],
+    //arrray to hold building google marker objects - they never got removed from map
+    bigBuildingsArray: [],
+    buildingsObj: {},
+    buildings: {
+      toggler: null,
+      markersArray: [],
+      zoomLevel: 17,
+      list: ''
+    },
+    libraries: {
+      toggler: document.getElementById('toggle-libraries'),
+      markersArray: [],
+      zoomLevel: 17,
+      list: ''
+    },
+    accommodation: {
+      toggler: null,
+      markersArray: [],
+      zoomLevel: 17,
+      list: ''
+    },
+    lectureTheatres: {
+      toggler: null,
+      markersArray: [],
+      zoomLevel: 17,
+      list: ''
+    },
+    studentCentre: {
+      toggler: document.getElementById('toggle-studentCentre'),
+      markersArray: [],
+      zoomLevel: 17,
+      list: ''
+    },
+    sports: {
+      toggler: null,
+      markersArray: [],
+      zoomLevel: 17,
+      list: ''
+    },
+    computerLabs: {
+      toggler: document.getElementById('toggle-computerLabs'),
+      markersArray: [],
+      zoomLevel: 17,
+      list: ''
+    }
+  },
+
+  /**
+   * kmlLayers object - kml files containing useful third party location information
+   * @let {Object}:
+   */
+  kmlLayers = {
+    cycleHire: {
+      src: 'http://webapps.city.ac.uk/matrix/maps/cycle-hire.php',
+      toggler: document.getElementById('cycle-hire'),
+      preserveViewport: true
+    },
+    bikes: {
+      src: 'http://webapps.city.ac.uk/matrix/maps/cycle-parking.kml',
+      toggler: document.getElementById('bikes'),
+      preserveViewport: true
+    },
+    atms: {
+      src: 'http://webapps.city.ac.uk/matrix/maps/atms.kml',
+      toggler: document.getElementById('cash-points'),
+      preserveViewport: true
+    }
+  }; // == METHODS ==
+
+  /**
+   * Removes the overlays from the map, but keeps them in the array
+   * @param {Array} markersArray: a collections of markers
+   * @return {Undefined}
+   */
+
+  function clearOverlays(markersArray) {
+    let i;
+
+    if (markersArray) {
+      for (i in markersArray) {
+        if (markersArray.hasOwnProperty(i) && typeof markersArray[i] !== 'function') {
+          markersArray[i].setMap(null);
+        }
+      }
+    }
+  }
+
+  ;
+  /**
+   * the hashChange handler - listens for hash changes and then does cool stuff
+   * @param {string} id of building: the window hashchange event
+   * @return {Undefined}
+   */
+
+  function hashChange(id) {
+    let marker; //loop over  bigBuildingsArray to find marker
+
+    for (let building in cityLayers.buildingsObj) {
+      if (id === building) {
+        let found = cityLayers.buildingsObj[building];
+        marker = found; //open infoWindow for this marker
+        //clear all overlays first
+
+        clearOverlays(cityLayers.bigMarkersArray); //make marker visible
+
+        marker.setVisible(true); //set infoWindow content
+
+        infoWindow.setContent(marker.infoHtml); //open the infoWindow centered on the marker
+
+        infoWindow.open(map, marker); //pan map to marker position
+
+        map.panTo(marker.position); //add marker to map
+
+        marker.setMap(map);
+      }
+    }
+  }
+
+  ;
+  /**
+   * the updateHash called when a marker, infoWindow or marker link is clicked - updates hash
+   * @param {Object || String} caller: the marker, marker link or infoWindow firing the event
+   * @return {Undefined}
+   */
+
+  function updateHash(caller) {
+    let callerId = '';
+
+    if (!caller) {
+      return;
+    }
+
+    if (typeof caller === 'string') {
+      //a marker link was clicked
+      callerId = caller; // state[callerId] = 1;
+    } else if (caller.hasOwnProperty('id')) {
+      //a marker was clicked
+      callerId = caller.id; //state[callerId] = 1;
+    } else {
+      //an infoWindow was closed
+      callerId = 0;
+    }
+
+    location.hash = callerId;
+    hashChange(callerId);
+  }
+
+  ;
+  /**
+   * Shows any overlays currently in the array
+   * @param {Array} markersArray: a collection of markers
+   * @return {Undefined}
+   */
+
+  function showOverlays(markersArray) {
+    let i;
+
+    if (markersArray) {
+      for (i in markersArray) {
+        if (markersArray.hasOwnProperty(i) && typeof markersArray[i] !== 'function') {
+          markersArray[i].setMap(map);
+        }
+      }
+    }
+  }
+
+  ;
+  /**
+   * creates a new category of place in CityLayers object
+   * @param {String} name: the new name of the category ?
+   * @return {Undefined}
+   */
+
+  function newCategory(name) {
+    name.toggler = null; // walter replaced with name - was this
+
+    name.markersArray = [];
+    name.zoomLevel = 17;
+  }
+
+  ;
+  /**
+   *  loop through each kmllayer adding checked behaviour
+   * @param {Object} object: Config object for KML
+   * @return {?}
+   */
+
+  function initKmlLayers(layer) {
+    for (let key in layer) {
+      // skip loop if the property is from prototype
+      if (!layer.hasOwnProperty(key)) {} //end if
+
+
+      let obj = layer[key];
+      let toggler = obj.toggler;
+      let overlay = new google.maps.KmlLayer(obj.src, {
+        preserveViewport: obj.preserveViewport
+      });
+      /* 
+      Disabled for now as toggler empty - maybe even remove klmlyer as possible not required
+        toggler.addEventListener("click", function(){
+          console.log(`toggler`);
+          //toggler.toggleClass('enabled');
+          overlay.setMap(toggler.classList.contains('enabled') ? map : null);
+          return false;
+      }); //end click fn */
+    } // end for
+
+  }
+
+  ; //end initKmlLayers
+
+  /**
+   *  creates individual markers, builds a corresponding filter item, binds a infoWindow to marker with html
+   * @param {Object} markerConfig: an object containing letious marker configuration options
+   * @return {Object} marker - google maps marker
+   */
+
+  function createMarker(markerConfig) {
+    // let listId = '#' + markerConfig.category, >> walter maybe delete this now
+    let listId = document.getElementById(markerConfig.category),
+        listItem,
+        marker,
+        anchor,
+        html = ''; //build html for infoWindow
+    //if has link
+
+    if (markerConfig.linkHref.length !== 0) {
+      html = '<div id="info-window" style="min-height: 100px;"><h3><a href="' + markerConfig.linkHref + '">' + markerConfig.name + '</a></h3>';
+    } else {
+      html = '<div id="info-window" style="min-height: 100px;"><h3>' + markerConfig.name + '</h3>';
+    } //test to see if has a buildingPrefix
+
+
+    if (markerConfig.buildingPrefix.length !== 0) {
+      html += '<p class="building-prefix"><strong>Rooms beginning: ' + markerConfig.buildingPrefix + '</strong></p>';
+      markerConfig.buildingPrefix = '(' + markerConfig.buildingPrefix + ')';
+    } //add description and close div element
+
+
+    html += markerConfig.description + '</div>'; //create google maps marker
+
+    marker = new google.maps.Marker({
+      map: markerConfig.map,
+      position: markerConfig.point,
+      icon: markerConfig.icon,
+      animation: google.maps.Animation.DROP
+    }); //add a new property to the google maps marker object so we can id markers
+
+    marker.set('id', markerConfig.id); //add a new property of inHtml to populate infoWindow
+
+    marker.set('infoHtml', html); //attach event listener for marker click to handle infoWindow
+
+    google.maps.event.addListener(marker, 'click', function (e) {
+      //closure in a loop shizzle - I find this hard to get my head around - returning a closure seems to help
+      return updateHash(marker);
+    }); //create list element
+
+    listItem = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', [{
+      label: 'id',
+      val: 'building-' + markerConfig.id
+    }, {
+      label: 'class',
+      val: 'building'
+    }]); //create a element with click handler to open infoWindow
+
+    anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+      label: 'html',
+      val: '<span>' + markerConfig.name + ' ' + markerConfig.buildingPrefix + '</span>'
+    }, {
+      label: 'href',
+      val: '#'
+    }]);
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      updateHash(e.target.parentElement.parentElement.getAttribute('id').replace('building-', ''));
+      return false;
+    });
+    anchor.style.background = 'transparent url(' + markerConfig.icon + '?v=1123) no-repeat left center'; //add li item to list
+
+    listId ? listId.appendChild(listItem).appendChild(anchor) : null;
+    return marker;
+  }
+
+  ; //end fn.createMarker
+  // Deletes all markers in the array by removing references to them
+  //commented out to keep JSLint happy as this function is not currently used
+
+  function deleteOverlays(markersArray) {
+    let i;
+
+    if (markersArray) {
+      for (i in markersArray) {
+        if (typeof markersArray[i] !== 'function') {
+          markersArray[i].setMap(null);
+        }
+      }
+
+      markersArray.length = 0;
+    }
+  }
+
+  ;
+
+  function findChildText(node, name) {
+    let value = '';
+    let children = node.getElementsByTagName(name);
+    let childrenLength = node.getElementsByTagName(name).length;
+
+    if (childrenLength > 0) {
+      value = children[0].textContent;
+    }
+
+    return value;
+  }
+
+  ;
+  /**
+   * parses locations xml and creates markers
+   * @param {Object} xml: xml returned from Ajax request
+   * @param {String} textStatus: standard ajax reposnse
+   * @param {Object} textStatus: standard ajax reposnse
+   * @return {?}
+   */
+
+  function parseXml(xml) {
+    let items = xml.getElementsByTagName('item');
+    let index = 0,
+        $self,
+        marker,
+        markerConfig = {},
+        searchTags = [],
+        searchIds = {};
+    items.forEach(function (item) {
+      $self = item;
+      markerConfig.index = index + 1;
+      markerConfig.name = $self.getElementsByTagName('title')[0].textContent;
+      markerConfig.linkHref = $self.getElementsByTagName('link')[0].textContent;
+      markerConfig.description = $self.getElementsByTagName('description')[0].textContent;
+      markerConfig.icon = findChildText($self, 'CUL:icon');
+      markerConfig.category = $self.getElementsByTagName('category')[0].textContent;
+      markerConfig.id = $self.getElementsByTagName('guid')[0].textContent; //markerConfig.isPolygon = $self.find("[nodeName='georss:polygon']"); always been commented out
+
+      markerConfig.buildingPrefix = findChildText($self, 'CUL:buildingPrefix');
+      markerConfig.hexColour = findChildText($self, 'CUL:hexColour');
+      markerConfig.geoLat = findChildText($self, 'geo:lat');
+      markerConfig.geoLong = findChildText($self, 'geo:long');
+      markerConfig.point = new google.maps.LatLng(parseFloat(markerConfig.geoLat), parseFloat(markerConfig.geoLong)); //call createmarker fn
+
+      marker = createMarker(markerConfig);
+
+      if (markerConfig.category !== 'buildings') {
+        //add returned marker to big array
+        cityLayers.bigMarkersArray.push(marker);
+      } else {
+        //add marker to buldings array
+        cityLayers.bigBuildingsArray.push(marker);
+      } //all markers go in here
+
+
+      cityLayers.buildingsObj[marker.id] = marker;
+      searchTags.push(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+        label: 'content',
+        val: markerConfig.name
+      }, {
+        label: 'data-id',
+        val: markerConfig.id
+      }]));
+      searchIds[markerConfig.name] = markerConfig.id; //add returned marker to category array (if cat exisits)
+
+      if (cityLayers[markerConfig.category]) {
+        cityLayers[markerConfig.category].markersArray.push(marker);
+      } else {
+        /* Commented out for now. Not sure if this is needed
+            cityLayers[markerConfig.category] = newCategory(
+                markerConfig.category
+            ); */
+      }
+    }); //end iteration
+
+    function searchBoxInit() {
+      // creates HTML structure for suggestion list
+      let listWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+        label: 'class',
+        val: 'query__suggestions__wrapper'
+      }]);
+      let list = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
+        label: 'id',
+        val: 'query__suggestions'
+      }, {
+        label: 'data-show',
+        val: false
+      }]);
+      /**
+       * creates list of anchors contaning building info below:
+       * @tag {HTMLelement} anchor containing building name and id
+       */
+
+      searchTags.forEach(function (tag) {
+        let item = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', []);
+        tag.addEventListener('click', function () {
+          searchQueryIdFind(tag.getAttribute('data-id'), tag.textContent);
+        });
+        list.appendChild(item).appendChild(tag);
+      });
+      searchBox.parentElement.appendChild(listWrapper).appendChild(list); // listens for search queries
+
+      searchBox.addEventListener('keyup', function () {
+        let searchString = searchBox.value;
+        let list = document.getElementById('query__suggestions');
+        let find = document.getElementById('query__suggestions').querySelectorAll('li'); // if a query is presesnt it show / hides relevant buildings using CSS instead of recreateing DOM elements all the time to help with performance
+
+        if (searchString.length > 0) {
+          list.setAttribute('data-show', true);
+          find.forEach(function (i) {
+            let label = i.querySelector('a').textContent;
+
+            if (label.indexOf(searchString) > -1) {
+              i.style.display = "block";
+            } else {
+              i.style.display = "none";
+            }
+          });
+        } else {
+          list.setAttribute('data-show', false);
+        }
+      });
+
+      function searchQueryIdFind(id, title) {
+        searchBox.value = title;
+        document.getElementById('query__suggestions').setAttribute('data-show', false);
+        hashChange(id);
+      }
+    }
+
+    ;
+    searchBoxInit(); // Walter >> needs reviewing if needed or to be changed this vs-butto below
+
+    document.getElementById('vs-button').addEventListener('click', function () {
+      searchBox.focus();
+    }); //clear marker when infoWIndow closed
+
+    google.maps.event.addListener(infoWindow, 'closeclick', function () {
+      updateHash(infoWindow);
+    }); //so all markers in the buildingsArray initalially
+
+    showOverlays(cityLayers.bigBuildingsArray);
+    $mapContainer.classList.remove('loading');
+    $mapContainer.querySelectorAll('.loading-fa-icon').forEach(function (i) {
+      i.remove();
+    }); // Bind an event to window.onhashchange that, when the history state changes,
+
+    window.addEventListener('hashchange', hashChange); // Since the event is only triggered when the hash changes, we need to trigger
+    // the event now, to handle the hash the page may have loaded with.
+
+    hashChange(location.hash.replace('#', ''));
+  }
+
+  ; //end parse xml,
+
+  function loadXml() {
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+      if (xhttp.readyState == 4 && xhttp.status === 200) {
+        parseXml(xhttp.responseXML);
+      }
+    };
+
+    xhttp.open('GET', dataSrc, true);
+    xhttp.send(null);
+  }
+
+  ;
+  /**
+   * init fn
+   * @return {Undefined}
+   */
+
+  function init() {
+    $mapContainer.classList.add('loading');
+    $mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('i', [{
+      label: 'class',
+      val: 'fa fa-refresh fa-spin loading-fa-icon'
+    }]));
+    initKmlLayers(kmlLayers);
+    loadXml();
+  }
+
+  ;
+  init();
+}
+
+;
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: createMap,
   launchQuery: ".".concat(className)
 });
 
