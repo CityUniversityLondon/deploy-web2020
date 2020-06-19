@@ -542,7 +542,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
 /* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
 /* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_campus_map_campus_map__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/campus-map/campus-map */ "./src/patterns/campus-map/campus-map.js");
+/* harmony import */ var _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/find-us/find-us */ "./src/patterns/find-us/find-us.js");
 /* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
 /* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
 
@@ -586,7 +586,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_campus_map_campus_map__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_29__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_29__["default"]]);
 
 /***/ }),
 
@@ -1398,10 +1398,375 @@ function updateProgress(backToTopAnchor) {
 
 /***/ }),
 
-/***/ "./src/patterns/campus-map/campus-map.js":
-/*!***********************************************!*\
-  !*** ./src/patterns/campus-map/campus-map.js ***!
-  \***********************************************/
+/***/ "./src/patterns/cms-editor-warning/cms-editor-warning.js":
+/*!***************************************************************!*\
+  !*** ./src/patterns/cms-editor-warning/cms-editor-warning.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+
+
+/**
+ * Warning removal
+ *
+ * @module patterns/cms-editor-warning/cms-editor-warning
+ * @author Web Development
+ * @copyright City, University of London 2018
+ */
+
+const className = 'cms-editor',
+      warningClass = className + '-warning',
+      buttonClass = warningClass + '-remover',
+      wrapperClass = 'wrapper--' + buttonClass;
+/**
+ * Create a warning remover button.
+ *
+ * @returns {HTMLButtonElement} A button element.
+ */
+
+function createButton() {
+  const button = document.createElement('button');
+  button.className = buttonClass;
+  button.setAttribute('type', 'button');
+  button.appendChild(document.createTextNode('Remove CMS editor warnings'));
+  return button;
+}
+/**
+ * The Web 2020 design adds a class .cms-editor to the body tag if the current
+ * has write access to the page.
+ *
+ * If there are any CMS editor warnings inside the launch element, this will
+ * append a button to the element that will remove that class, the warnings,
+ * and the button itself, leaving the page as it would appear to the user.
+ *
+ * @param {HTMLElement} elem - An HTML element with the cms-editor class.
+ */
+
+
+function launchRemover(elem) {
+  const warnings = Array.from(elem.querySelectorAll(".".concat(warningClass)));
+
+  if (warnings.length) {
+    const button = createButton(),
+          wrapper = document.createElement('div');
+    button.addEventListener('click', () => {
+      warnings.forEach(w => w.parentNode.removeChild(w));
+      button.parentNode.removeChild(button);
+      Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(elem, className, false);
+    }, true);
+    wrapper.className = wrapperClass;
+    wrapper.appendChild(button);
+    document.querySelector('body').insertBefore(wrapper, document.querySelector('.global-footer'));
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchRemover,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/devcorate/devcorate.js":
+/*!*********************************************!*\
+  !*** ./src/patterns/devcorate/devcorate.js ***!
+  \*********************************************/
+/*! exports provided: devcorate */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "devcorate", function() { return devcorate; });
+/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
+/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+
+
+
+/**
+ * Devcorate
+ *
+ * @module patterns/devcorate/devcorate
+ * @author Web Development
+ * @copyright City, University of London 2018
+ */
+
+/**
+ * Persist a query parameter to all same-site anchors inside an element.
+ *
+ * @param {HTMLElement} elem - An element containing anchors to decorate.
+ * @param {string} param - The name of a query parameter.
+ * @param {string} value - The value for the query parameter.
+ */
+
+function devcorate(elem, param, value) {
+  Array.from(elem.querySelectorAll('a')).forEach(anchor => {
+    if (anchor.origin === window.location.origin) {
+      const parameters = anchor.search ? Object(_util__WEBPACK_IMPORTED_MODULE_2__["parametersToObject"])(anchor.search) : {};
+      parameters[param] = value;
+      anchor.href = "".concat(anchor.origin).concat(anchor.pathname).concat(Object(_util__WEBPACK_IMPORTED_MODULE_2__["objectToParameters"])(parameters)).concat(anchor.hash);
+    }
+  });
+}
+
+/***/ }),
+
+/***/ "./src/patterns/dropdown-filter/dropdown-filter.js":
+/*!*********************************************************!*\
+  !*** ./src/patterns/dropdown-filter/dropdown-filter.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+
+/**
+ * Dropdown filter
+ *
+ * @module patterns/dropdown-filter/dropdown-filter
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+const className = 'dropdown-filter';
+/**
+ * Entry function: loops through and hides list items, sets up event listener on
+ * child select box
+ *
+ * @param {HTMLElement} element: the dropdown div containing all elements
+ */
+
+function prepareDropdown(element) {
+  // only get direct children
+  const listItems = element.querySelectorAll('ul.data-group > li'); // hide list items
+
+  hideListItems(listItems); // insert the select box to toggle items
+
+  insertSelect(listItems, element);
+}
+/**
+ * Hide list items: both functions require all list items to be hidden.
+ * Ths function takes care of this
+ *
+ * @param {HTMLElements} items: the list of items to hide
+ */
+
+
+function hideListItems(items) {
+  // hide list items
+  items.forEach(function (item) {
+    item.setAttribute('data-hidden', 'true');
+  });
+}
+/**
+ * Insert select: build and add the select box to source
+ *
+ * @param {HTMLElements} items: the list of content for the select options
+ * @param {HTMLElement} parentElement: the element where we need to insert the select
+ */
+
+
+function insertSelect(items, parentElement) {
+  const selectBox = document.createElement('select');
+  selectBox.className = 'select-filter';
+  parentElement.prepend(selectBox); // get and add default select text
+
+  const noSelection = document.createElement('option');
+  noSelection.text = parentElement.getAttribute('data-text');
+  selectBox.appendChild(noSelection); // iterate over each item and create/append select option
+
+  Array.from(items).sort((a, b) => a.dataset.value < b.dataset.value ? -1 : a.dataset.value > b.dataset.value ? 1 : 0).forEach(item => {
+    const dataValue = item.dataset.value,
+          option = document.createElement('option');
+    option.value = dataValue;
+    option.text = dataValue; // set first item in list as selected
+
+    if (item.dataset.default === 'true') {
+      option.setAttribute('selected', 'selected');
+    }
+
+    selectBox.appendChild(option);
+  }); // add change listner to newly created select box
+
+  selectBox.addEventListener('change', selectChange); // dispatch event so first item is selected
+
+  selectBox.dispatchEvent(new Event('change'));
+}
+/**
+ * Select change: respond to select change
+ *
+ * @param {event} e: the event
+ */
+
+
+function selectChange(e) {
+  // get the ul containing the list items
+  const dataGroup = e.target.nextElementSibling; // get direct list items
+
+  const listItems = dataGroup.querySelectorAll('ul.data-group > li'); // hide all items before displaying chosen item
+
+  hideListItems(listItems); // if first option selected, return
+
+  if (e.srcElement.selectedIndex === 0) {
+    return;
+  } // get the list item corresponding to the select value chosen
+
+
+  const targetListItem = dataGroup.querySelector('li[data-value=' + e.target.value + ']'); // remove data-hidden
+
+  targetListItem.removeAttribute('data-hidden');
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: prepareDropdown,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/feedback/feedback.js":
+/*!*******************************************!*\
+  !*** ./src/patterns/feedback/feedback.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+
+
+
+/**
+ * Feedback
+ *
+ * @module patterns/feedback/feedback
+ * @author Web Development
+ * @copyright City, University of London 2018
+ */
+
+
+const className = 'feedback',
+      feedbackPage = '/feedback';
+/**
+ * Push a Google Analytics page feedback event into the data layer queue.
+ *
+ * @param {string} action - The event action.
+ * @param {number} value - The event value
+ */
+
+function sendFeedback(action, value) {
+  Object(_util__WEBPACK_IMPORTED_MODULE_3__["gaEvent"])('pageFeedback', 'Page feedback', action, window.location.toString(), value, true);
+}
+/**
+ * Handle a click on the "no, it's not useful" button.
+ *
+ * @param {HTMLParagraphElement} container - The button container.
+ */
+
+
+function handleNo(container) {
+  sendFeedback('Not useful', 0);
+  const message = document.createElement('p'),
+        messagePrefix = document.createTextNode('We’re sorry to hear that, please consider '),
+        linkText = document.createTextNode('sending us some feedback'),
+        link = document.createElement('a'),
+        messageSuffix = document.createTextNode(' so we can make it better.');
+  container.childNodes.forEach(elem => container.removeChild(elem));
+  link.href = feedbackPage;
+  link.appendChild(linkText);
+  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(message, [messagePrefix, link, messageSuffix]);
+  message.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].live, 'polite');
+  container.appendChild(message);
+}
+/**
+ * Handle a click on the "yes, it's useful" button.
+ *
+ * @param {HTMLParagraphElement} container - The button container.
+ */
+
+
+function handleYes(container) {
+  sendFeedback('Useful', 1);
+  const message = document.createElement('p'),
+        messageText = document.createTextNode('Thanks! Your feedback will be used to improve our website.');
+  container.childNodes.forEach(elem => container.removeChild(elem));
+  message.appendChild(messageText);
+  message.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].live, 'polite');
+  container.appendChild(message);
+}
+/**
+ * By default, the Feedback widget contains a link to the feedback form.
+ *
+ * With JavaScript, we add “is it useful?” buttons to track events to GA.
+ *
+ * @param {HTMLElement} elem - The feedback widget.
+ */
+
+
+function launchFeedback(elem) {
+  const questionText = document.createTextNode('Is this page useful?'),
+        directFeedbackWrapper = document.createElement('div'),
+        directFeedbackForm = document.createElement('form'),
+        directFeedbackFieldset = document.createElement('fieldset'),
+        questionLegend = document.createElement('legend'),
+        buttonWrapper = document.createElement('div'),
+        yesButton = document.createElement('button'),
+        noButton = document.createElement('button');
+  yesButton.setAttribute('type', 'button');
+  yesButton.appendChild(document.createTextNode('Yes'));
+  yesButton.addEventListener('click', () => handleYes(directFeedbackWrapper), true);
+  noButton.setAttribute('type', 'button');
+  noButton.appendChild(document.createTextNode('No'));
+  noButton.addEventListener('click', () => handleNo(directFeedbackWrapper), true);
+  buttonWrapper.className = 'feedback__direct__buttons';
+  questionLegend.appendChild(questionText);
+  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(buttonWrapper, [yesButton, noButton]);
+  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(directFeedbackFieldset, [questionLegend, buttonWrapper]);
+  directFeedbackForm.appendChild(directFeedbackFieldset);
+  directFeedbackWrapper.appendChild(directFeedbackForm);
+  directFeedbackWrapper.className = className + '__direct';
+  elem.insertBefore(directFeedbackWrapper, elem.firstElementChild);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchFeedback,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/find-us/find-us.js":
+/*!*****************************************!*\
+  !*** ./src/patterns/find-us/find-us.js ***!
+  \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1418,9 +1783,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Back To Top Link Scroll
+ * Find us page Google map
  *
- * @module patterns/back-to-top/back-to-top
+ * @module patterns/find-us/find-us
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
  * @copyright City, University of London 2019
  */
@@ -1998,371 +2363,6 @@ function createMap() {
 ;
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: createMap,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
-/***/ "./src/patterns/cms-editor-warning/cms-editor-warning.js":
-/*!***************************************************************!*\
-  !*** ./src/patterns/cms-editor-warning/cms-editor-warning.js ***!
-  \***************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
-
-
-
-/**
- * Warning removal
- *
- * @module patterns/cms-editor-warning/cms-editor-warning
- * @author Web Development
- * @copyright City, University of London 2018
- */
-
-const className = 'cms-editor',
-      warningClass = className + '-warning',
-      buttonClass = warningClass + '-remover',
-      wrapperClass = 'wrapper--' + buttonClass;
-/**
- * Create a warning remover button.
- *
- * @returns {HTMLButtonElement} A button element.
- */
-
-function createButton() {
-  const button = document.createElement('button');
-  button.className = buttonClass;
-  button.setAttribute('type', 'button');
-  button.appendChild(document.createTextNode('Remove CMS editor warnings'));
-  return button;
-}
-/**
- * The Web 2020 design adds a class .cms-editor to the body tag if the current
- * has write access to the page.
- *
- * If there are any CMS editor warnings inside the launch element, this will
- * append a button to the element that will remove that class, the warnings,
- * and the button itself, leaving the page as it would appear to the user.
- *
- * @param {HTMLElement} elem - An HTML element with the cms-editor class.
- */
-
-
-function launchRemover(elem) {
-  const warnings = Array.from(elem.querySelectorAll(".".concat(warningClass)));
-
-  if (warnings.length) {
-    const button = createButton(),
-          wrapper = document.createElement('div');
-    button.addEventListener('click', () => {
-      warnings.forEach(w => w.parentNode.removeChild(w));
-      button.parentNode.removeChild(button);
-      Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(elem, className, false);
-    }, true);
-    wrapper.className = wrapperClass;
-    wrapper.appendChild(button);
-    document.querySelector('body').insertBefore(wrapper, document.querySelector('.global-footer'));
-  }
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchRemover,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
-/***/ "./src/patterns/devcorate/devcorate.js":
-/*!*********************************************!*\
-  !*** ./src/patterns/devcorate/devcorate.js ***!
-  \*********************************************/
-/*! exports provided: devcorate */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "devcorate", function() { return devcorate; });
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
-
-
-
-
-/**
- * Devcorate
- *
- * @module patterns/devcorate/devcorate
- * @author Web Development
- * @copyright City, University of London 2018
- */
-
-/**
- * Persist a query parameter to all same-site anchors inside an element.
- *
- * @param {HTMLElement} elem - An element containing anchors to decorate.
- * @param {string} param - The name of a query parameter.
- * @param {string} value - The value for the query parameter.
- */
-
-function devcorate(elem, param, value) {
-  Array.from(elem.querySelectorAll('a')).forEach(anchor => {
-    if (anchor.origin === window.location.origin) {
-      const parameters = anchor.search ? Object(_util__WEBPACK_IMPORTED_MODULE_2__["parametersToObject"])(anchor.search) : {};
-      parameters[param] = value;
-      anchor.href = "".concat(anchor.origin).concat(anchor.pathname).concat(Object(_util__WEBPACK_IMPORTED_MODULE_2__["objectToParameters"])(parameters)).concat(anchor.hash);
-    }
-  });
-}
-
-/***/ }),
-
-/***/ "./src/patterns/dropdown-filter/dropdown-filter.js":
-/*!*********************************************************!*\
-  !*** ./src/patterns/dropdown-filter/dropdown-filter.js ***!
-  \*********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-
-
-/**
- * Dropdown filter
- *
- * @module patterns/dropdown-filter/dropdown-filter
- * @author Web Development
- * @copyright City, University of London 2019
- */
-const className = 'dropdown-filter';
-/**
- * Entry function: loops through and hides list items, sets up event listener on
- * child select box
- *
- * @param {HTMLElement} element: the dropdown div containing all elements
- */
-
-function prepareDropdown(element) {
-  // only get direct children
-  const listItems = element.querySelectorAll('ul.data-group > li'); // hide list items
-
-  hideListItems(listItems); // insert the select box to toggle items
-
-  insertSelect(listItems, element);
-}
-/**
- * Hide list items: both functions require all list items to be hidden.
- * Ths function takes care of this
- *
- * @param {HTMLElements} items: the list of items to hide
- */
-
-
-function hideListItems(items) {
-  // hide list items
-  items.forEach(function (item) {
-    item.setAttribute('data-hidden', 'true');
-  });
-}
-/**
- * Insert select: build and add the select box to source
- *
- * @param {HTMLElements} items: the list of content for the select options
- * @param {HTMLElement} parentElement: the element where we need to insert the select
- */
-
-
-function insertSelect(items, parentElement) {
-  const selectBox = document.createElement('select');
-  selectBox.className = 'select-filter';
-  parentElement.prepend(selectBox); // get and add default select text
-
-  const noSelection = document.createElement('option');
-  noSelection.text = parentElement.getAttribute('data-text');
-  selectBox.appendChild(noSelection); // iterate over each item and create/append select option
-
-  Array.from(items).sort((a, b) => a.dataset.value < b.dataset.value ? -1 : a.dataset.value > b.dataset.value ? 1 : 0).forEach(item => {
-    const dataValue = item.dataset.value,
-          option = document.createElement('option');
-    option.value = dataValue;
-    option.text = dataValue; // set first item in list as selected
-
-    if (item.dataset.default === 'true') {
-      option.setAttribute('selected', 'selected');
-    }
-
-    selectBox.appendChild(option);
-  }); // add change listner to newly created select box
-
-  selectBox.addEventListener('change', selectChange); // dispatch event so first item is selected
-
-  selectBox.dispatchEvent(new Event('change'));
-}
-/**
- * Select change: respond to select change
- *
- * @param {event} e: the event
- */
-
-
-function selectChange(e) {
-  // get the ul containing the list items
-  const dataGroup = e.target.nextElementSibling; // get direct list items
-
-  const listItems = dataGroup.querySelectorAll('ul.data-group > li'); // hide all items before displaying chosen item
-
-  hideListItems(listItems); // if first option selected, return
-
-  if (e.srcElement.selectedIndex === 0) {
-    return;
-  } // get the list item corresponding to the select value chosen
-
-
-  const targetListItem = dataGroup.querySelector('li[data-value=' + e.target.value + ']'); // remove data-hidden
-
-  targetListItem.removeAttribute('data-hidden');
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: prepareDropdown,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
-/***/ "./src/patterns/feedback/feedback.js":
-/*!*******************************************!*\
-  !*** ./src/patterns/feedback/feedback.js ***!
-  \*******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
-
-
-
-
-/**
- * Feedback
- *
- * @module patterns/feedback/feedback
- * @author Web Development
- * @copyright City, University of London 2018
- */
-
-
-const className = 'feedback',
-      feedbackPage = '/feedback';
-/**
- * Push a Google Analytics page feedback event into the data layer queue.
- *
- * @param {string} action - The event action.
- * @param {number} value - The event value
- */
-
-function sendFeedback(action, value) {
-  Object(_util__WEBPACK_IMPORTED_MODULE_3__["gaEvent"])('pageFeedback', 'Page feedback', action, window.location.toString(), value, true);
-}
-/**
- * Handle a click on the "no, it's not useful" button.
- *
- * @param {HTMLParagraphElement} container - The button container.
- */
-
-
-function handleNo(container) {
-  sendFeedback('Not useful', 0);
-  const message = document.createElement('p'),
-        messagePrefix = document.createTextNode('We’re sorry to hear that, please consider '),
-        linkText = document.createTextNode('sending us some feedback'),
-        link = document.createElement('a'),
-        messageSuffix = document.createTextNode(' so we can make it better.');
-  container.childNodes.forEach(elem => container.removeChild(elem));
-  link.href = feedbackPage;
-  link.appendChild(linkText);
-  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(message, [messagePrefix, link, messageSuffix]);
-  message.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].live, 'polite');
-  container.appendChild(message);
-}
-/**
- * Handle a click on the "yes, it's useful" button.
- *
- * @param {HTMLParagraphElement} container - The button container.
- */
-
-
-function handleYes(container) {
-  sendFeedback('Useful', 1);
-  const message = document.createElement('p'),
-        messageText = document.createTextNode('Thanks! Your feedback will be used to improve our website.');
-  container.childNodes.forEach(elem => container.removeChild(elem));
-  message.appendChild(messageText);
-  message.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].live, 'polite');
-  container.appendChild(message);
-}
-/**
- * By default, the Feedback widget contains a link to the feedback form.
- *
- * With JavaScript, we add “is it useful?” buttons to track events to GA.
- *
- * @param {HTMLElement} elem - The feedback widget.
- */
-
-
-function launchFeedback(elem) {
-  const questionText = document.createTextNode('Is this page useful?'),
-        directFeedbackWrapper = document.createElement('div'),
-        directFeedbackForm = document.createElement('form'),
-        directFeedbackFieldset = document.createElement('fieldset'),
-        questionLegend = document.createElement('legend'),
-        buttonWrapper = document.createElement('div'),
-        yesButton = document.createElement('button'),
-        noButton = document.createElement('button');
-  yesButton.setAttribute('type', 'button');
-  yesButton.appendChild(document.createTextNode('Yes'));
-  yesButton.addEventListener('click', () => handleYes(directFeedbackWrapper), true);
-  noButton.setAttribute('type', 'button');
-  noButton.appendChild(document.createTextNode('No'));
-  noButton.addEventListener('click', () => handleNo(directFeedbackWrapper), true);
-  buttonWrapper.className = 'feedback__direct__buttons';
-  questionLegend.appendChild(questionText);
-  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(buttonWrapper, [yesButton, noButton]);
-  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(directFeedbackFieldset, [questionLegend, buttonWrapper]);
-  directFeedbackForm.appendChild(directFeedbackFieldset);
-  directFeedbackWrapper.appendChild(directFeedbackForm);
-  directFeedbackWrapper.className = className + '__direct';
-  elem.insertBefore(directFeedbackWrapper, elem.firstElementChild);
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchFeedback,
   launchQuery: ".".concat(className)
 });
 
