@@ -2230,9 +2230,9 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 
-const className = 'map-container';
+const className = 'campus-map';
 
-function createMap() {
+function createMap(mapContainer) {
   console.log("create map init"); // == PROPERTIES ==
 
   let
@@ -2252,7 +2252,7 @@ function createMap() {
    * jQuery object for map canvas
    * @let {Object}
    */
-  $mapContainer = document.getElementById('map-container'),
+  //$mapContainer = mapContainer,
 
   /**
    * an object literal containing the properties we want to pass to the map
@@ -2753,9 +2753,12 @@ function createMap() {
       updateHash(infoWindow);
     }); //so all markers in the buildingsArray initalially
 
-    showOverlays(cityLayers.bigBuildingsArray);
-    $mapContainer.classList.remove('loading');
-    $mapContainer.querySelectorAll('.loading-fa-icon').forEach(function (i) {
+    showOverlays(cityLayers.bigBuildingsArray); // walter review to have college building show on first load
+    //showOverlays(9541);
+    //updateHash(9541);
+
+    mapContainer.classList.remove('loading');
+    mapContainer.querySelectorAll('.loading-fa-icon').forEach(function (i) {
       i.remove();
     }); // Bind an event to window.onhashchange that, when the history state changes,
 
@@ -2787,8 +2790,8 @@ function createMap() {
    */
 
   function init() {
-    $mapContainer.classList.add('loading');
-    $mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('i', [{
+    mapContainer.classList.add('loading');
+    mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('i', [{
       label: 'class',
       val: 'fa fa-refresh fa-spin loading-fa-icon'
     }]));
