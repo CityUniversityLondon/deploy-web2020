@@ -2585,7 +2585,13 @@ function createMap(mapContainer) {
       updateHash(e.target.parentElement.parentElement.getAttribute('id').replace('building-', ''));
       return false;
     });
-    anchor.style.background = 'transparent url(' + markerConfig.icon + '?v=1123) no-repeat left center'; //add li item to list
+    /*
+    anchor.style.background =
+        'transparent url(' +
+        markerConfig.icon +
+        '?v=1123) no-repeat left center';
+        */
+    //add li item to list
 
     listId ? listId.appendChild(listItem).appendChild(anchor) : null;
     return marker;
