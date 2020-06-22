@@ -53231,11 +53231,63 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .campus-map__controls {
     background: #f2f2f2;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 1.75rem;
+}
+
+.campus-map__controls__container {
+    display: flex;
+}
+
+.campus-map__controls__search__wrap {
+    background: #ffffff;
+    flex: 2;
+    margin-right: 2rem;
+    padding: 0.75rem;
+    position: relative;
+}
+
+.campus-map__controls__search__wrap:before {
+    content: '\f002';
+    font-family: 'Font Awesome';
+    font-weight: 900;
+    position: absolute;
+}
+
+.campus-map__controls__search__wrap .campus-map__controls__search {
+    border: none;
+    margin-left: 0.75rem;
+    width: 100%;
+}
+
+.campus-map__controls__locations__wrap {
+    flex: 1;
+    background: #ffffff;
+    padding: 0.75rem;
+}
+
+.campus-map__controls__locations__wrap .campus-map__controls__locations__heading {
+    width: 100%;
+}
+
+.campus-map__controls__locations__wrap .campus-map__controls__locations__heading button {
+    flex: 1;
+    text-align: left;
+    position: relative;
+    width: 100%;
+}
+
+.campus-map__controls__locations__wrap .campus-map__controls__locations__heading button:after {
+    content: '\f0d7';
+    font-family: 'Font Awesome';
+    font-weight: 900;
+    position: absolute;
+    right: 1px;
 }
 
 .query__suggestions__wrapper {
-    position: relative;
+    position: absolute;
+    left: 1px;
 }
 
 .query__suggestions__wrapper #query__suggestions {
