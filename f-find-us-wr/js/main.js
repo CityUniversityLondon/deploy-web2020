@@ -2252,7 +2252,8 @@ function createMap(mapContainer) {
    * jQuery object for map canvas
    * @let {Object}
    */
-  //$mapContainer = mapContainer,
+  //walter prob delete?
+  //$mapContainer = document.getElementById('map-container'),
 
   /**
    * an object literal containing the properties we want to pass to the map
@@ -2590,6 +2591,7 @@ function createMap(mapContainer) {
         'transparent url(' +
         markerConfig.icon +
         '?v=1123) no-repeat left center';
+        
         */
     //add li item to list
 
@@ -2751,9 +2753,14 @@ function createMap(mapContainer) {
     ;
     searchBoxInit(); // Walter >> needs reviewing if needed or to be changed this vs-butto below
 
-    document.getElementById('vs-button').addEventListener('click', function () {
-      searchBox.focus();
-    }); //clear marker when infoWIndow closed
+    /*
+    document
+        .getElementById('vs-button')
+        .addEventListener('click', function() {
+            searchBox.focus();
+        });
+        */
+    //clear marker when infoWIndow closed
 
     google.maps.event.addListener(infoWindow, 'closeclick', function () {
       updateHash(infoWindow);
@@ -2806,6 +2813,17 @@ function createMap(mapContainer) {
   }
 
   ;
+  mapContainer.getElementsByClassName('campus-map__controls__locations__heading')[0].addEventListener('click', function () {
+    let status = this.getAttribute('data-show');
+
+    if (status === 'false') {
+      this.setAttribute('data-show', true);
+      mapContainer.getElementsByClassName('campus-map__controls__locations')[0].setAttribute('data-show', true);
+    } else {
+      this.setAttribute('data-show', false);
+      mapContainer.getElementsByClassName('campus-map__controls__locations')[0].setAttribute('data-show', false);
+    }
+  });
   init();
 }
 

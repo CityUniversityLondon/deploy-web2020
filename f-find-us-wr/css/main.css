@@ -53228,11 +53228,15 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     padding: 1.75rem;
 }
 
-.campus-map__controls {
+.campus-map {
     background: #f2f2f2;
+    padding-top: 1.75rem;
+}
+
+.campus-map__controls {
     display: flex;
     flex-direction: column;
-    padding: 1.75rem;
+    margin: 0 1.75rem 1.75rem 1.75rem;
 }
 
 .campus-map__controls__container {
@@ -53260,29 +53264,50 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     width: 100%;
 }
 
-.campus-map__controls__locations__wrap {
+.campus-map__controls__locations__heading__wrap {
     flex: 1;
     background: #ffffff;
+}
+
+.campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading {
     padding: 0.75rem;
+    cursor: pointer;
 }
 
-.campus-map__controls__locations__wrap .campus-map__controls__locations__heading {
-    width: 100%;
-}
-
-.campus-map__controls__locations__wrap .campus-map__controls__locations__heading button {
-    flex: 1;
+.campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading span {
     text-align: left;
     position: relative;
     width: 100%;
+    display: block;
 }
 
-.campus-map__controls__locations__wrap .campus-map__controls__locations__heading button:after {
-    content: '\f0d7';
+.campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading span:after {
     font-family: 'Font Awesome';
     font-weight: 900;
     position: absolute;
-    right: 1px;
+    right: 0;
+    color: #b91924;
+}
+
+.campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading[data-show="false"] span:after {
+    content: '\f0dd';
+}
+
+.campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading[data-show="true"] span:after {
+    content: '\f0de';
+}
+
+.campus-map__controls__locations {
+    background: #ffffff;
+}
+
+.campus-map__controls__locations[data-show="true"] {
+    display: inherit;
+    position: absolute;
+}
+
+.campus-map__controls__locations[data-show="false"] {
+    display: none;
 }
 
 .query__suggestions__wrapper {
