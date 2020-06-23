@@ -52429,19 +52429,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .finder__results__card a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
     background-color: transparent;
     transition: background-color 0.2s ease-in;
     position: relative;
@@ -52449,6 +52436,13 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     padding: 1rem;
     display: flex;
     flex-direction: column;
+}
+
+.finder__results__card a:focus, .finder__results__card a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
 }
 
 @media (hover: hover) {
@@ -52701,17 +52695,11 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .finder__results__card a:active {
     background-color: #f2f2f2;
-    background-image: none;
-    outline-color: transparent;
-    outline-width: 0;
-    border: dotted 0.125rem;
+    border: 0;
 }
 
 .finder__results__card a:focus {
-    background-image: none;
-    outline-color: transparent;
-    outline-width: 0;
-    border: dotted 0.125rem;
+    border: 0;
 }
 
 .finder__results__card a:visited .finder__results__card__heading {
