@@ -579,16 +579,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
 /* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
 /* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
-/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
-/* harmony import */ var _how_to_apply_research__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./how-to-apply--research */ "./src/how-to-apply--research.js");
-/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
-/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
-/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
-/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
-/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
+/* harmony import */ var _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/animation/particle/particle */ "./src/patterns/animation/particle/particle.js");
+/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
+/* harmony import */ var _how_to_apply_research__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./how-to-apply--research */ "./src/how-to-apply--research.js");
+/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
+/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
+/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
+/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
+/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
+/* harmony import */ var _patterns_video_video__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./patterns/video/video */ "./src/patterns/video/video.js");
 
 
 /**
@@ -631,7 +633,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_30__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_22__["default"]]);
+
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_31__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_video_video__WEBPACK_IMPORTED_MODULE_32__["default"]]);
 
 /***/ }),
 
@@ -1276,6 +1280,151 @@ function init(elm) {
 
 /***/ }),
 
+/***/ "./src/patterns/animation/particle/particle.js":
+/*!*****************************************************!*\
+  !*** ./src/patterns/animation/particle/particle.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_particles_js_particles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/particles.js/particles.js */ "./node_modules/particles.js/particles.js");
+/* harmony import */ var _node_modules_particles_js_particles_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_particles_js_particles_js__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/**
+ * Back To Top Link Scroll
+ *
+ * @module patterns/animation/particle
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2019
+ */
+
+/**
+ * This pattern loads the particle.js NMP module. The function below executes the animation with given parameters below.
+ * For full documentation please refer to https://github.com/VincentGarreau/particles.js
+ * The function applies the particle animation to a div with the ID 'particles-js'.
+ */
+
+const className = 'particle-animation';
+
+function initParticles() {
+  particlesJS('particles-js', {
+    particles: {
+      number: {
+        value: 80
+      },
+      color: {
+        value: '#e5e5e5'
+      },
+      shape: {
+        type: 'circle',
+        stroke: {
+          width: 0,
+          color: '#000000'
+        },
+        polygon: {
+          nb_sides: 5
+        },
+        image: {
+          src: 'img/github.svg',
+          width: 100,
+          height: 100
+        }
+      },
+      opacity: {
+        value: 0.8,
+        random: false,
+        anim: {
+          enable: false,
+          speed: 1,
+          opacity_min: 0.4,
+          sync: false
+        }
+      },
+      size: {
+        value: 7,
+        random: true,
+        anim: {
+          enable: false,
+          speed: 40,
+          size_min: 3,
+          sync: false
+        }
+      },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: '#e5e5e5',
+        opacity: 0.9,
+        width: 2
+      },
+      move: {
+        enable: true,
+        speed: 1,
+        direction: 'none',
+        random: false,
+        straight: false,
+        out_mode: 'out',
+        bounce: false,
+        attract: {
+          enable: false,
+          rotateX: 600,
+          rotateY: 1200
+        }
+      }
+    },
+    interactivity: {
+      detect_on: 'canvas',
+      events: {
+        onhover: {
+          enable: true,
+          mode: 'grab'
+        },
+        onclick: {
+          enable: true,
+          mode: 'push'
+        },
+        resize: true
+      },
+      modes: {
+        grab: {
+          distance: 140,
+          line_linked: {
+            opacity: 1
+          }
+        },
+        bubble: {
+          distance: 400,
+          size: 40,
+          duration: 2,
+          opacity: 8,
+          speed: 3
+        },
+        repulse: {
+          distance: 200,
+          duration: 0.4
+        },
+        push: {
+          particles_nb: 4
+        },
+        remove: {
+          particles_nb: 2
+        }
+      }
+    },
+    retina_detect: true
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: initParticles,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
 /***/ "./src/patterns/animation/svg-path-animation/svg-path-animation.js":
 /*!*************************************************************************!*\
   !*** ./src/patterns/animation/svg-path-animation/svg-path-animation.js ***!
@@ -1724,10 +1873,16 @@ function devcorate(elem, param, value) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
+
+
 
 
 
@@ -1741,6 +1896,7 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 const className = 'dropdown-filter';
+let showAll = '';
 /**
  * Entry function: loops through and hides list items, sets up event listener on
  * child select box
@@ -1749,84 +1905,174 @@ const className = 'dropdown-filter';
  */
 
 function prepareDropdown(element) {
-  // only get direct children
-  const listItems = element.querySelectorAll('ul.data-group > li'); // hide list items
+  // Only get direct children
+  const listItems = element.querySelectorAll('ul.data-group > li'),
+        firstItemVisible = element.dataset.firstItemShow; // Check if all items should be displayed on load
 
-  hideListItems(listItems); // insert the select box to toggle items
+  showAll = element.dataset.displayAll; // Hide list items
 
-  insertSelect(listItems, element);
+  hideListItems(listItems, firstItemVisible, showAll); // Insert the select box to toggle items
+
+  insertSelect(listItems, element, firstItemVisible, showAll); // Display list items on select change
+
+  const select = element.querySelector('.dropdown-filter__select');
+  select.addEventListener('change', selectChange);
 }
 /**
  * Hide list items: both functions require all list items to be hidden.
  * Ths function takes care of this
  *
- * @param {HTMLElements} items: the list of items to hide
+ * @param {HTMLElements} items - The list of items to hide.
+ * @param {boolean} firstItemVisible - Whether first item should be visible on load.
+ * @param {boolean} showAll - Option to display all items.
  */
 
 
-function hideListItems(items) {
-  // hide list items
-  items.forEach(function (item) {
-    item.setAttribute('data-hidden', 'true');
-  });
+function hideListItems(items, firstItemVisible, showAll) {
+  // Check if dropdown should show first item
+  if (firstItemVisible === 'true' && showAll === 'false') {
+    let itemsArray = Array.from(items);
+    itemsArray[0].setAttribute('data-hidden', 'false');
+
+    for (var i = 1; i < itemsArray.length; i++) {
+      itemsArray[i].setAttribute('data-hidden', 'true');
+    }
+  } else if (firstItemVisible === 'false' && showAll === 'false') {
+    items.forEach(function (item) {
+      item.setAttribute('data-hidden', 'true');
+    });
+  } else if (showAll === 'true') {
+    items.forEach(function (item) {
+      item.setAttribute('data-hidden', 'false');
+    });
+  } // First item automatically visible is only relevant to component load. Other behaviour is applied when interacting with component.
+
+
+  firstItemVisible = 'false';
 }
 /**
  * Insert select: build and add the select box to source
  *
- * @param {HTMLElements} items: the list of content for the select options
- * @param {HTMLElement} parentElement: the element where we need to insert the select
+ * @param {HTMLElements} items - The list of content for the select options.
+ * @param {HTMLElement} parentElement - The element where we need to insert the select.
+ * @param {boolean} firstItemVisible - Whether first item should be visible on load.
  */
 
 
-function insertSelect(items, parentElement) {
-  const selectBox = document.createElement('select');
-  selectBox.className = 'select-filter';
-  parentElement.prepend(selectBox); // get and add default select text
+function insertSelect(items, parentElement, firstItemVisible) {
+  const selectBox = document.createElement('select'),
+        selectWrapper = parentElement.querySelector('.wrapper--dropdown-filter__select'),
+        labelFor = parentElement.dataset.labelFor,
+        labelValue = parentElement.dataset.labelValue,
+        labelEl = document.createElement('label');
+  labelEl.textContent = labelValue;
+  labelEl.setAttribute('for', labelFor);
+  parentElement.dataset.labelShow === 'false' ? labelEl.className = 'sr-only' : null;
+  selectBox.className = 'dropdown-filter__select';
+  selectBox.setAttribute('id', labelFor);
+  selectBox.setAttribute('name', labelFor);
+  selectWrapper.append(labelEl, selectBox); // Add default select text if filter doesn't have show all enabled
 
-  const noSelection = document.createElement('option');
-  noSelection.text = parentElement.getAttribute('data-text');
-  selectBox.appendChild(noSelection); // iterate over each item and create/append select option
+  if (parentElement.dataset.displayAll === 'false') {
+    let noSelection = document.createElement('option');
+    noSelection.text = parentElement.getAttribute('data-text');
+    noSelection.setAttribute('value', 'no-selection');
+    selectBox.appendChild(noSelection);
+  }
 
-  Array.from(items).sort((a, b) => a.dataset.value < b.dataset.value ? -1 : a.dataset.value > b.dataset.value ? 1 : 0).forEach(item => {
+  let firstItemOverride, lastItemOverride; // Sort by dataset.value if filter is configured to sort alphabetically
+
+  if (parentElement.dataset.alphabetical === 'true') {
+    items = Array.from(items).sort((a, b) => a.dataset.value < b.dataset.value ? -1 : a.dataset.value > b.dataset.value ? 1 : 0);
+  } else {
+    items = [...items];
+  } // Find items with first/last position overrides
+
+
+  for (const item of items) {
+    item.dataset.first === 'true' ? firstItemOverride = item : null;
+    item.dataset.last === 'true' ? lastItemOverride = item : null;
+  }
+
+  const itemsLength = items.length; // Display show all option at top of dropdown if pattern has this configuration option set as true
+
+  if (parentElement.dataset.displayAll === 'true') {
+    let showAllOption = document.createElement('li');
+    showAllOption.dataset.name = "All ".concat(parentElement.dataset.units);
+    showAllOption.dataset.value = 'show-all';
+    items.splice(0, 0, showAllOption);
+  } // Remove item with dataset.first='true' from original position in array
+
+
+  if (firstItemOverride) {
+    let firstPositionOriginal = items.indexOf(firstItemOverride);
+    items.splice(firstPositionOriginal, 1); // If custom first option exists, place as first selectable option
+
+    items.splice(1, 0, firstItemOverride);
+  } // Remove item with dataset.last='true' from original position in array
+
+
+  if (lastItemOverride) {
+    let lastPositionOriginal = items.indexOf(lastItemOverride);
+    items.splice(lastPositionOriginal, 1); // If custom last option exists, place as last selectable option
+
+    items.splice(itemsLength, 0, lastItemOverride);
+  } // Iterate over each item and create/append select option
+
+
+  Array.from(items).forEach(item => {
     const dataValue = item.dataset.value,
+          dataName = item.dataset.name,
           option = document.createElement('option');
     option.value = dataValue;
-    option.text = dataValue; // set first item in list as selected
-
-    if (item.dataset.default === 'true') {
-      option.setAttribute('selected', 'selected');
-    }
-
+    option.text = dataName;
     selectBox.appendChild(option);
-  }); // add change listner to newly created select box
+  }); // Set first item in list as selected
 
-  selectBox.addEventListener('change', selectChange); // dispatch event so first item is selected
-
-  selectBox.dispatchEvent(new Event('change'));
+  if (firstItemVisible === 'true' && showAll === 'false') {
+    const options = parentElement.querySelectorAll('option');
+    options[1].setAttribute('selected', 'selected');
+  }
 }
 /**
- * Select change: respond to select change
+ * Select change: respond to select change event
  *
- * @param {event} e: the event
+ * @param {event} e: The select change event.
  */
 
 
 function selectChange(e) {
-  // get the ul containing the list items
-  const dataGroup = e.target.nextElementSibling; // get direct list items
+  // Get list items grouping
+  const dropdownFilter = e.target.closest('.dropdown-filter'),
+        dataGroup = dropdownFilter.querySelector('.data-group'); // Get direct children list items
 
-  const listItems = dataGroup.querySelectorAll('ul.data-group > li'); // hide all items before displaying chosen item
+  const listItems = dataGroup.querySelectorAll('ul.data-group > li');
 
-  hideListItems(listItems); // if first option selected, return
+  for (const listItem of listItems) {
+    listItem.removeAttribute('data-hidden');
+  } // Hide all items before displaying chosen item
 
-  if (e.srcElement.selectedIndex === 0) {
+
+  showAll = 'false';
+  hideListItems(listItems, showAll); // Get the list item corresponding to the select value chosen
+
+  const targetListItem = dataGroup.querySelector('li.data-group__item[data-value=' + e.target.value + ']'); // Get not selected list items
+
+  const otherListItems = dataGroup.querySelectorAll('li.data-group__item:not([data-value=' + e.target.value + '])'); // Show/hide content based on pattern's configuration options
+
+  if (e.target.value !== 'show-all' && e.srcElement.selectedIndex !== 0) {
+    targetListItem.removeAttribute('data-hidden');
+
+    for (const o of otherListItems) {
+      o.setAttribute('data-hidden', 'true');
+    }
+  } else if (e.target.value !== 'show-all' && e.srcElement.selectedIndex === 0) {
+    for (const o of otherListItems) {
+      o.setAttribute('data-hidden', 'true');
+    }
+
     return;
-  } // get the list item corresponding to the select value chosen
-
-
-  const targetListItem = dataGroup.querySelector('li[data-value=' + e.target.value + ']'); // remove data-hidden
-
-  targetListItem.removeAttribute('data-hidden');
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3077,7 +3323,7 @@ function finder__filters(props) {
     resetSort: true
   }) : null;
   const sort = props.config.sort.length > 1 && props.config.displaySort ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "wrapper--finder__sort--mobile"
+    className: "wrapper--finder__select--sort--mobile"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_sort__WEBPACK_IMPORTED_MODULE_7__["default"], {
     config: props.config,
     query: props.query,
@@ -3093,7 +3339,7 @@ function finder__filters(props) {
     className: "far fa-sliders-h icon",
     "aria-hidden": "true"
   }), ' ', "Filter ".concat(props.config.summariseAs.plural)), clearFiltersMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__filters__wrapper--filters"
+    className: "wrapper--finder_filters--filters"
   }, props.config.facetLabels.map(facet => {
     if (dependencyMet(facet, props.query.facets)) {
       switch (facet.type) {
@@ -3171,7 +3417,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _finder_filters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.mjs");
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.esm.js");
 
 
 
@@ -3179,7 +3425,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * @module patterns/finder/components/finder__filters--mobile
+ * @module patterns/finder/components/wrapper--finder__filters--mobile
  * @author Web Development
  * @copyright City, University of London 2019
  */
@@ -3211,7 +3457,7 @@ function finder__filtersmobile(props) {
   Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(() => {
     if (!focusTrap.activate) {
       setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_6___default()(getFilters(), {
-        initialFocus: getFilters().querySelector('.finder__filters--mobile__apply'),
+        initialFocus: getFilters().querySelector('.wrapper--finder__filters--mobile__apply'),
         onDeactivate: () => setDisplay(false),
         clickOutsideDeactivates: true
       }));
@@ -3219,27 +3465,23 @@ function finder__filtersmobile(props) {
 
     if (display) {
       focusTrap.activate && focusTrap.activate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["disableBodyScroll"])(getFilters().querySelector('.finder__filters--mobile__filters'));
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["disableBodyScroll"])(getFilters().querySelector('.wrapper--finder__filters--mobile__filters'));
     } else {
       focusTrap.deactivate && focusTrap.deactivate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["enableBodyScroll"])(getFilters().querySelector('.finder__filters--mobile__filters'));
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["enableBodyScroll"])(getFilters().querySelector('.wrapper--finder__filters--mobile__filters'));
     }
   }, [display]);
   const totalMatching = props.response && props.response.summary && props.response.summary.totalMatching;
   const result = totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural;
   const totalMatchingMessage = totalMatching ? "Show ".concat(totalMatching, " ").concat(result) : 'Close';
   const filtersCount = props.config.displaySort ? props.config.sort[0].type !== props.query.sortType || Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filters", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "finder__filters--mobile__toggle__filterNo"
+    className: "wrapper--finder__filters--mobile__toggle__count"
   }, "(", props.config.sort[0].type !== props.query.sortType ? Object.keys(props.query.facets).length + 1 : Object.keys(props.query.facets).length, ")")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filter") : Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filters", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "finder__filters--mobile__toggle__filterNo"
+    className: "wrapper--finder__filters--mobile__toggle__count"
   }, "(", props.config.sort[0].type !== props.query.sortType ? Object.keys(props.query.facets).length + 1 : Object.keys(props.query.facets).length, ")")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filter");
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "finder__filters--mobile",
-    "data-open": display,
-    ref: mobilefilters => filters = mobilefilters
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+  const toggle = display ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
     type: "button",
-    className: "finder__filters--mobile__toggle",
+    className: "wrapper--finder__filters--mobile__toggle",
     "aria-haspopup": true,
     "aria-expanded": display,
     onClick: () => setDisplay(!display),
@@ -3247,10 +3489,15 @@ function finder__filtersmobile(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "far fa-sliders-h icon",
     "aria-hidden": "true"
-  }), ' ', filtersCount)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "finder__filters--mobile__filters"
+  }), ' ', filtersCount));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "wrapper--finder__filters--mobile",
+    "data-open": display,
+    ref: mobilefilters => filters = mobilefilters
+  }, toggle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "wrapper--finder__filters--mobile__filters"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "finder__filters--mobile__filters__content"
+    className: "wrapper--finder__filters--mobile__filters__content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_finder_filters__WEBPACK_IMPORTED_MODULE_5__["default"], {
     config: props.config,
     query: props.query,
@@ -3261,21 +3508,20 @@ function finder__filtersmobile(props) {
     className: "wrapper--finder__filters--mobile__apply"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
     type: "button",
-    className: "finder__filters--mobile__apply",
     "aria-expanded": display,
     onClick: () => setDisplay(!display),
     disabled: props.updating
   }, Object.keys(props.query.facets).length === 0 ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "far fa-chevron-left"
+    className: "far fa-chevron-left icon"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     "aria-live": "polite"
   }, props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-spinner fa-pulse icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "finder__filters--mobile__apply__text"
+    className: "wrapper--finder__filters--mobile__apply__text"
   }, "Updating ", props.summariseAs.plural, "\u2026")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "finder__filters--mobile__apply__text"
+    className: "wrapper--finder__filters--mobile__apply__text"
   }, Object.keys(props.query.facets).length === 0 ? 'Close' : totalMatchingMessage))))));
 }
 
@@ -3418,7 +3664,6 @@ function finder__select(props) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
       className: "finder__filter finder__select ".concat(currentValue && 'finder__select--selected')
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
-      className: "finder__select__overline",
       htmlFor: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
     }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("select", {
       name: props.facet.name,
@@ -3510,7 +3755,7 @@ function finder__sort(props) {
 
   const validSorts = props.config.sort.filter(sortType => sortType.type === '' ? props.query.query !== '' || Object.keys(props.query.facets).length > 0 || props.query.sortType === '' ? true : false : true);
   return validSorts.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "finder__sort finder__select".concat(props.query.sortType !== props.config.sort[0].type ? ' finder__select--selected' : '')
+    className: "finder__select--sort finder__select".concat(props.query.sortType !== props.config.sort[0].type ? ' finder__select--selected' : '')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
     className: "finder__select__overline",
     htmlFor: "sort--".concat(randomNumber)
@@ -4504,9 +4749,8 @@ function finder__results(props) {
       query: props.query,
       totalMatching: props.response.summary.totalMatching,
       update: props.update
-    }); // render either the results, or a spinner while we wait for Funnelback
-
-    const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, didYouMean, summary, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    });
+    const results = props.response.bestBets.length > 0 || props.response.results.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
       start: props.response.summary.currStart,
       className: resultsClass
     }, props.response.bestBets.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -4518,7 +4762,9 @@ function finder__results(props) {
       key: card.docNum,
       type: props.type,
       query: props.query
-    }))), pagination);
+    }))) : null; // render either the results, or a spinner while we wait for Funnelback
+
+    const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, didYouMean, summary, results, pagination);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "finder__results"
     }, resultsContent);
@@ -4620,7 +4866,7 @@ function finder__results__summary(props) {
   const result = props.totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural,
         formatter = new Intl.NumberFormat('en-GB'),
         sort = props.config.sort.length > 1 && props.config.displaySort ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "wrapper--finder__sort--desktop"
+    className: "wrapper--finder__select--sort--desktop"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_filters_finder_sort__WEBPACK_IMPORTED_MODULE_3__["default"], {
     config: props.config,
     query: props.query,
@@ -4629,7 +4875,7 @@ function finder__results__summary(props) {
 
   if (props.totalMatching === 0) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "finder__results__summary"
+      className: "finder__results__summary finder__results__summary--noresults"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
       className: "finder__results__summary__heading"
     }, "Your search did not match any ", props.summariseAs.plural, "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Suggestions:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try different keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try more general keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer filters"), Object.keys(props.query.facets).length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
@@ -5129,7 +5375,7 @@ function Finder(props) {
     summariseAs: props.config.summariseAs,
     clear: clear
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
-    className: "finder__filters--desktop"
+    className: "wrapper--finder__filters--desktop"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_14__["default"], {
     config: props.config,
     query: query,
@@ -9251,7 +9497,7 @@ function preparePanels(panels) {
     panelElements.forEach(element => wrapper.appendChild(element));
     panel.appendChild(wrapper);
     panel.setAttribute('role', 'tabpanel');
-    panel.setAttribute('tabindex', 0);
+    panel.setAttribute('tabindex', -1);
     panel.setAttribute('hidden', 'true');
   });
 }
@@ -9497,6 +9743,98 @@ function copyIconToClipboard(elem) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: copyIconToClipboard,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/video/video.js":
+/*!*************************************!*\
+  !*** ./src/patterns/video/video.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+/**
+ * Loop autoplayed video a defined number of times.
+ *
+ * @module patterns/video/video
+ * @author Web Development
+ * @copyright City, University of London
+ */
+
+const className = 'embedded-video--autoplay';
+/**
+ * Loop video as et number of times
+ *
+ * @param {element} video - A video with the 'embedded-video--autoplay' class.
+ * @param {number} maxPlays - Maximum number of times video should play.
+ */
+
+function loopVideo(video, maxPlays) {
+  let playInstance = 0;
+
+  video.onended = () => {
+    playInstance += 1;
+    playInstance === maxPlays ? video.pause() : null;
+  };
+}
+/**
+ * Create video play/pause button.
+ *
+ * @param {element} video - A video with the 'embedded-video--autoplay' class.
+ */
+
+
+function createController(video) {
+  const controllerIcon = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
+    label: 'class',
+    val: 'embedded-video--autoplay__controller-btn__icon'
+  }]),
+        controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
+    label: 'class',
+    val: 'embedded-video--autoplay__controller-btn'
+  }, {
+    label: 'data-status',
+    val: 'pause'
+  }, {
+    label: 'aria-label',
+    val: 'Pause video'
+  }]);
+  controllerBtn.append(controllerIcon);
+  video.append(controllerBtn);
+}
+
+function toggleController(video, status) {
+  let videoEl = video.querySelector('.embedded-video--autoplay__video');
+  const controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn');
+  status === 'pause' ? (controllerBtn.dataset.status = 'play', controllerBtn.setAttribute('aria-label', 'Play video'), videoEl.pause()) : (controllerBtn.dataset.status = 'pause', controllerBtn.setAttribute('aria-label', 'Pause video'), videoEl.play());
+}
+
+function launchAutoplayVideo(video) {
+  const videoEl = video.querySelector('.embedded-video--autoplay__video'),
+        plays = parseInt(videoEl.dataset.maxPlays);
+  loopVideo(video, plays);
+  createController(video);
+  let controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn');
+  controllerBtn.addEventListener('click', () => {
+    let controllerStatus = controllerBtn.dataset.status;
+    toggleController(video, controllerStatus);
+  }); // When video finishes autoplaying, switch controller from pause to play
+
+  videoEl.addEventListener('ended', () => {
+    controllerBtn.dataset.status = 'play';
+    controllerBtn.setAttribute('aria-label', 'Play video');
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchAutoplayVideo,
   launchQuery: ".".concat(className)
 });
 
