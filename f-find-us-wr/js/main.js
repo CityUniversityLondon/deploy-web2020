@@ -2816,7 +2816,7 @@ function createMap(mapContainer) {
   }
 
   ;
-  mapContainer.getElementsByClassName('campus-map__controls__locations__heading')[0].addEventListener('click', function () {
+  mapContainer.getElementsByClassName('campus-map__controls__locations__heading__wrap')[0].addEventListener('click', function () {
     let status = this.getAttribute('data-show');
 
     if (status === 'false') {
