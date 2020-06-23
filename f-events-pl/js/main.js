@@ -8673,7 +8673,17 @@ function setSwipe(slider, sliderType, sliderObject, sliderControl) {
         actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
       }
     } else {
-      let btn = swipe === -1 ? slider.nextSibling.lastChild.firstChild : swipe === 1 ? slider.nextSibling.lastChild.lastChild : null;
+      let e = slider.nextSibling.querySelectorAll('.slider-block__control__progress'),
+          convert = Array.from(e),
+          elType = convert.filter(e => {
+        let s = window.getComputedStyle(e).getPropertyValue('display');
+
+        if (s === 'block') {
+          return e;
+        }
+      });
+      let sliderType = elType[0].classList.contains('slider-block__control__progress--tablet') ? 'tablet' : 'default';
+      let btn = swipe === -1 ? slider.nextSibling.lastChild.querySelector(".prev--".concat(sliderType)) : swipe === 1 ? slider.nextSibling.lastChild.querySelector(".next--".concat(sliderType)) : null;
 
       if (btn && !btn.disabled) {
         defaultEvent(btn, slider, sliderType, sliderObject);
@@ -8697,7 +8707,7 @@ function setSwipe(slider, sliderType, sliderObject, sliderControl) {
 function setVisibility(slider, sliderType, sliderObject) {
   Array.from(slider.getElementsByTagName('li')).forEach((el, i) => {
     el.setAttribute(sliderObject.default.pageAttr, "".concat(i));
-    el.setAttribute(sliderObject.default.tabIndex, "-1");
+    el.setAttribute(sliderObject.default.tabIndex, '-1');
     el.setAttribute(sliderObject.default.ariaLabel, "Slide ".concat(i + 1));
 
     if (i === 0) {
@@ -8758,7 +8768,7 @@ function createProgressTracker(slider, sliderType, sliderObject) {
       createProgressElements(wrapper, 'tablet', sliderObject);
     }
 
-    if (sliderObject.default.totalPages > "".concat(sliderObject.tablet.maxItem)) {
+    if (sliderObject.default.totalPages > "".concat(sliderObject.desk.maxItem)) {
       createProgressElements(wrapper, 'desk', sliderObject);
     }
   }
