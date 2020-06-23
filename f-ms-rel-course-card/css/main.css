@@ -52434,6 +52434,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     position: relative;
     padding: 1rem;
     padding: 1rem;
+    border: 0;
     display: flex;
     flex-direction: column;
 }
@@ -52689,7 +52690,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
         background-image: none;
         outline-color: transparent;
         outline-width: 0;
-        border-bottom: none;
     }
 }
 
