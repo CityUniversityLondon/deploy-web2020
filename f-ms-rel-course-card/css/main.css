@@ -22690,6 +22690,10 @@ Assign mixin:
     }
 }
 
+.card--casestudy a .card__inner .card--casestudy__title {
+    border-bottom: solid 0.125rem;
+}
+
 .card--casestudy__thumbnail {
     margin-right: 1.5rem;
 }
@@ -52700,14 +52704,14 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     background-image: none;
     outline-color: transparent;
     outline-width: 0;
-    border-bottom: none;
+    border: dotted 0.125rem;
 }
 
 .finder__results__card a:focus {
     background-image: none;
     outline-color: transparent;
     outline-width: 0;
-    border-bottom: none;
+    border: dotted 0.125rem;
 }
 
 .finder__results__card a:visited .finder__results__card__heading {
