@@ -52690,6 +52690,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
         background-image: none;
         outline-color: transparent;
         outline-width: 0;
+        border: 0;
     }
 }
 
