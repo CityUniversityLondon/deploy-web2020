@@ -53237,6 +53237,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     display: flex;
     flex-direction: column;
     margin: 0 1.75rem 1.75rem 1.75rem;
+    position: relative;
 }
 
 .campus-map__controls__container {
@@ -53249,19 +53250,21 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     margin-right: 2rem;
     padding: 0.75rem;
     position: relative;
+    display: flex;
 }
 
 .campus-map__controls__search__wrap:before {
     content: '\f002';
     font-family: 'Font Awesome';
-    font-weight: 900;
+    font-weight: 500;
     position: absolute;
+    color: #a1a1a1;
 }
 
 .campus-map__controls__search__wrap .campus-map__controls__search {
     border: none;
-    margin-left: 0.75rem;
-    width: 100%;
+    margin-left: 2rem;
+    flex: 1;
 }
 
 .campus-map__controls__locations__heading__wrap {
@@ -53290,20 +53293,27 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading[data-show="false"] span:after {
-    content: '\f0dd';
+    content: '\f0d7';
 }
 
 .campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading[data-show="true"] span:after {
-    content: '\f0de';
+    content: '\f00d';
 }
 
 .campus-map__controls__locations {
     background: #ffffff;
 }
 
+.campus-map__controls__locations .accordion {
+    width: 100%;
+}
+
 .campus-map__controls__locations[data-show="true"] {
     display: inherit;
     position: absolute;
+    width: 100%;
+    top: 3rem;
+    z-index: 1;
 }
 
 .campus-map__controls__locations[data-show="false"] {
@@ -53312,7 +53322,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .query__suggestions__wrapper {
     position: absolute;
-    left: 1px;
+    left: 0;
+    width: 100%;
 }
 
 .query__suggestions__wrapper #query__suggestions {
@@ -53321,6 +53332,9 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     z-index: 2;
     margin: 0;
     padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    top: 1.75rem;
 }
 
 .query__suggestions__wrapper #query__suggestions[data-show='false'] {

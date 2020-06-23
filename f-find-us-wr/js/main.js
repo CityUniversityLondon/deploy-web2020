@@ -2583,7 +2583,10 @@ function createMap(mapContainer) {
     }]);
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      updateHash(e.target.parentElement.parentElement.getAttribute('id').replace('building-', ''));
+      updateHash(e.target.parentElement.parentElement.getAttribute('id').replace('building-', '')); // added to hide locations panel
+
+      mapContainer.getElementsByClassName('campus-map__controls__locations')[0].setAttribute('data-show', false);
+      mapContainer.getElementsByClassName('campus-map__controls__locations__heading')[0].setAttribute('data-show', false);
       return false;
     });
     /*
@@ -2653,8 +2656,9 @@ function createMap(mapContainer) {
       markerConfig.index = index + 1;
       markerConfig.name = $self.getElementsByTagName('title')[0].textContent;
       markerConfig.linkHref = $self.getElementsByTagName('link')[0].textContent;
-      markerConfig.description = $self.getElementsByTagName('description')[0].textContent;
-      markerConfig.icon = findChildText($self, 'CUL:icon');
+      markerConfig.description = $self.getElementsByTagName('description')[0].textContent; //markerConfig.icon = findChildText($self, 'CUL:icon');
+
+      markerConfig.icon = 'https://web2020.city.ac.uk/?a=537733';
       markerConfig.category = $self.getElementsByTagName('category')[0].textContent;
       markerConfig.id = $self.getElementsByTagName('guid')[0].textContent; //markerConfig.isPolygon = $self.find("[nodeName='georss:polygon']"); always been commented out
 
@@ -2732,7 +2736,7 @@ function createMap(mapContainer) {
           find.forEach(function (i) {
             let label = i.querySelector('a').textContent;
 
-            if (label.indexOf(searchString) > -1) {
+            if (label.toLowerCase().indexOf(searchString.toLowerCase()) > -1) {
               i.style.display = "block";
             } else {
               i.style.display = "none";
@@ -2765,11 +2769,10 @@ function createMap(mapContainer) {
     google.maps.event.addListener(infoWindow, 'closeclick', function () {
       updateHash(infoWindow);
     }); //so all markers in the buildingsArray initalially
+    //showOverlays(cityLayers.bigBuildingsArray);
+    // walter review to have college building show on first load
 
-    showOverlays(cityLayers.bigBuildingsArray); // walter review to have college building show on first load
-    //showOverlays(9541);
-    //updateHash(9541);
-
+    updateHash('9609');
     mapContainer.classList.remove('loading');
     mapContainer.querySelectorAll('.loading-fa-icon').forEach(function (i) {
       i.remove();
