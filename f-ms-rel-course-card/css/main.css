@@ -25336,7 +25336,7 @@ p.card--course__key-info .icon {
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
-    border-bottom: #4c2c92 solid 0.125rem;
+    border-bottom: solid 0.125rem;
 }
 
 .card--related-course__title i,
@@ -25409,10 +25409,6 @@ p.card--course__key-info .icon {
     .card--related-course__title {
         letter-spacing: -0.017em;
     }
-}
-
-.card--related-course__title:visited {
-    border-bottom-color: #4c2c92;
 }
 
 .card--related-course__type {
@@ -52323,6 +52319,10 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     position: relative;
 }
 
+.finder__results__card .finder__results__card__heading {
+    border-bottom: solid 0.125rem;
+}
+
 .finder__results__card:last-of-type {
     border-bottom: 0;
 }
@@ -52712,7 +52712,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .finder__results__card a:visited .finder__results__card__heading {
     color: #0c0c0e;
-    border-bottom: #0c0c0e solid 0.125rem;
 }
 
 @media (min-width: 768px) {
