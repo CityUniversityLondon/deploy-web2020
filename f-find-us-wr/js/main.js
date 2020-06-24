@@ -2768,11 +2768,7 @@ function createMap(mapContainer) {
 
     google.maps.event.addListener(infoWindow, 'closeclick', function () {
       updateHash(infoWindow);
-    }); //so all markers in the buildingsArray initalially
-
-    showOverlays(cityLayers.bigBuildingsArray); // walter review to have college building show on first load
-    //updateHash('9609');
-
+    });
     mapContainer.classList.remove('loading');
     mapContainer.querySelectorAll('.loading-fa-icon').forEach(function (i) {
       i.remove();
@@ -2829,7 +2825,7 @@ function createMap(mapContainer) {
     }
 
     flightPath.setMap(null);
-  }); // map overlay
+  }); // Map initial overlay to show city campus
 
   var cityCampus = [{
     lat: 51.527261,
@@ -2885,12 +2881,16 @@ function createMap(mapContainer) {
     paths: cityCampus,
     strokeColor: '#FF0000',
     strokeOpacity: 0.8,
-    strokeWeight: 2,
+    strokeWeight: 0,
     fillColor: '#FF0000',
-    fillOpacity: 0.35,
+    fillOpacity: 0.2,
     geodesic: true
   });
-  initialMapOverlay.setMap(map);
+  initialMapOverlay.setMap(map); // Optional - to show all markers in the buildingsArray on initial load
+  //showOverlays(cityLayers.bigBuildingsArray);
+  // Optional - to show College building marker on initial load
+  //updateHash('9609');
+
   init();
 }
 
