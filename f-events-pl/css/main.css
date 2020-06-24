@@ -56076,7 +56076,7 @@ div.widget-123_test_ {
     }
 }
 
-@media (max-width: 1023px) {
+@media (min-width: 1024px) {
     .event .content {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -56086,24 +56086,39 @@ div.widget-123_test_ {
     }
 }
 
-@media (max-width: 1023px) and (min-width: 901px) {
+@media (min-width: 1024px) and (min-width: 901px) {
     .event .content {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-@media (max-width: 1023px) and (min-width: 901px) {
+@media (min-width: 1024px) and (min-width: 901px) {
     .event .content {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media (max-width: 1023px) and (min-width: 1441px) {
+@media (min-width: 1024px) and (min-width: 1441px) {
     .event .content {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media (max-width: 1023px) {
+    .event .content {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .event .content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
@@ -56291,6 +56306,9 @@ div.widget-123_test_ {
     .event__info {
         padding: 1rem 0;
     }
+}
+
+@media (max-width: 767px) and (min-width: 1024px) {
     .event__info .event__info--wrapper {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -56300,24 +56318,39 @@ div.widget-123_test_ {
     }
 }
 
-@media (max-width: 767px) and (min-width: 901px) {
+@media (max-width: 767px) and (min-width: 1024px) and (min-width: 901px) {
     .event__info .event__info--wrapper {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-@media (max-width: 767px) and (min-width: 901px) {
+@media (max-width: 767px) and (min-width: 1024px) and (min-width: 901px) {
     .event__info .event__info--wrapper {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media (max-width: 767px) and (min-width: 1441px) {
+@media (max-width: 767px) and (min-width: 1024px) and (min-width: 1441px) {
     .event__info .event__info--wrapper {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media (max-width: 767px) and (max-width: 1023px) {
+    .event__info .event__info--wrapper {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 767px) and (max-width: 1023px) and (min-width: 901px) {
+    .event__info .event__info--wrapper {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
@@ -56936,33 +56969,53 @@ div.widget-123_test_ {
 
 .event_related-events .related-content {
     flex-wrap: wrap;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1024px) {
+    .event_related-events .related-content {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
     .event_related-events .related-content {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1024px) and (min-width: 901px) {
     .event_related-events .related-content {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1024px) and (min-width: 1441px) {
     .event_related-events .related-content {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media (max-width: 1023px) {
+    .event_related-events .related-content {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .event_related-events .related-content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
