@@ -2769,10 +2769,10 @@ function createMap(mapContainer) {
     google.maps.event.addListener(infoWindow, 'closeclick', function () {
       updateHash(infoWindow);
     }); //so all markers in the buildingsArray initalially
-    //showOverlays(cityLayers.bigBuildingsArray);
-    // walter review to have college building show on first load
 
-    updateHash('9609');
+    showOverlays(cityLayers.bigBuildingsArray); // walter review to have college building show on first load
+    //updateHash('9609');
+
     mapContainer.classList.remove('loading');
     mapContainer.querySelectorAll('.loading-fa-icon').forEach(function (i) {
       i.remove();
@@ -2815,7 +2815,8 @@ function createMap(mapContainer) {
     loadXml();
   }
 
-  ;
+  ; // location panel behavious
+
   mapContainer.getElementsByClassName('campus-map__controls__locations__heading__wrap')[0].addEventListener('click', function () {
     let status = this.getAttribute('data-show');
 
@@ -2826,7 +2827,70 @@ function createMap(mapContainer) {
       this.setAttribute('data-show', false);
       mapContainer.getElementsByClassName('campus-map__controls__locations')[0].setAttribute('data-show', false);
     }
+
+    flightPath.setMap(null);
+  }); // map overlay
+
+  var cityCampus = [{
+    lat: 51.527261,
+    lng: -0.107649
+  }, {
+    lat: 51.527333,
+    lng: -0.106411
+  }, {
+    lat: 51.527737,
+    lng: -0.104968
+  }, {
+    lat: 51.527824,
+    lng: -0.104421
+  }, {
+    lat: 51.528418,
+    lng: -0.101159
+  }, {
+    lat: 51.527840,
+    lng: -0.100794
+  }, {
+    lat: 51.527840,
+    lng: -0.100794
+  }, {
+    lat: 51.527590,
+    lng: -0.101888
+  }, {
+    lat: 51.527680,
+    lng: -0.102484
+  }, {
+    lat: 51.527624,
+    lng: -0.102693
+  }, {
+    lat: 51.527200,
+    lng: -0.103048
+  }, {
+    lat: 51.526903,
+    lng: -0.104104
+  }, {
+    lat: 51.527710,
+    lng: -0.104635
+  }, {
+    lat: 51.526669,
+    lng: -0.105284
+  }, {
+    lat: 51.527250,
+    lng: -0.106421
+  }, {
+    lat: 51.526689,
+    lng: -0.107671
+  }];
+  var initialMapOverlay = new google.maps.Polygon({
+    map: map,
+    paths: cityCampus,
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 2,
+    fillColor: '#FF0000',
+    fillOpacity: 0.35,
+    geodesic: true
   });
+  initialMapOverlay.setMap(map);
   init();
 }
 
