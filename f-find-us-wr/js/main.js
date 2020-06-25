@@ -2233,8 +2233,7 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'campus-map';
 
 function createMap(mapContainer) {
-  console.log("create map init"); // == PROPERTIES ==
-
+  // == PROPERTIES ==
   let
   /**
    * data source - relative to handle production and test environments
@@ -2823,11 +2822,11 @@ function createMap(mapContainer) {
     } else {
       this.setAttribute('data-show', false);
       mapContainer.getElementsByClassName('campus-map__controls__locations')[0].setAttribute('data-show', false);
-    } // hides map overlay for city campus
+    } // removes northampton square campus map overlay 
 
 
     initialMapOverlay.setMap(null);
-  }); // Map initial overlay to show city campus
+  }); // Map initial overlay to show northampton square campus
 
   var cityCampus = [{
     lat: 51.527261,
@@ -2890,11 +2889,27 @@ function createMap(mapContainer) {
   });
   initialMapOverlay.setMap(map); // Optional - to show all markers in the buildingsArray on initial load
   //showOverlays(cityLayers.bigBuildingsArray);
-  // Optional - to show College building marker on initial load
+  // Trigger - to show northampton square campus marker on initial load
 
-  updateHash('537921'); //537921
-  //155747
+  updateHash('537921'); // Accordion override - this closes location accordions other than the current one clicked on.
+  // This was necessary as 6 individual accordions were used instead of 1 accordion having 6 sections,
+  // due to layout requirements
 
+  const locationAccordions = mapContainer.getElementsByClassName('accordion').forEach(el => {
+    el.addEventListener('click', function () {
+      // remembers accordion being clicked on
+      const eleId = el.getAttribute('id');
+      const accordions = el.parentNode.querySelectorAll('.accordion'); // closes sibling accordions
+
+      accordions.forEach(accordion => {
+        if (accordion.getAttribute('id') !== eleId) {
+          accordion.querySelector('.accordion__heading').setAttribute('data-open', 'false');
+          accordion.querySelector('.accordion__heading button').setAttribute('aria-expanded', 'false');
+          accordion.querySelector('.accordion__body').setAttribute('data-closed', 'true');
+        }
+      });
+    });
+  });
   init();
 }
 
