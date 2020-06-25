@@ -53315,6 +53315,13 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .campus-map__controls__locations .accordion {
     flex-basis: 50%;
+    position: relative;
+}
+
+.campus-map__controls__locations .accordion .accordion__body {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
 }
 
 .campus-map__controls__locations[data-show="true"] {

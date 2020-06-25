@@ -2240,7 +2240,7 @@ function createMap(mapContainer) {
    * data source - relative to handle production and test environments
    * @let {String}
    */
-  dataSrc = 'https://web2020.city.ac.uk/staging/development/walter/campus-map/locations',
+  dataSrc = 'https://web2020.city.ac.uk/staging/development/walter/campus-map/locations/_nocache',
 
   /**
    * Create a LatLng object containing the coordinate for the center of the map
@@ -2721,6 +2721,7 @@ function createMap(mapContainer) {
         let item = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', []);
         tag.addEventListener('click', function () {
           searchQueryIdFind(tag.getAttribute('data-id'), tag.textContent);
+          updateHash(tag.getAttribute('data-id'));
         });
         list.appendChild(item).appendChild(tag);
       });
@@ -2891,7 +2892,9 @@ function createMap(mapContainer) {
   //showOverlays(cityLayers.bigBuildingsArray);
   // Optional - to show College building marker on initial load
 
-  updateHash('537906');
+  updateHash('537921'); //537921
+  //155747
+
   init();
 }
 
