@@ -2822,9 +2822,10 @@ function createMap(mapContainer) {
     } else {
       this.setAttribute('data-show', false);
       mapContainer.getElementsByClassName('campus-map__controls__locations')[0].setAttribute('data-show', false);
-    }
+    } // hides map overlay for city campus
 
-    flightPath.setMap(null);
+
+    initialMapOverlay.setMap(null);
   }); // Map initial overlay to show city campus
 
   var cityCampus = [{
@@ -2889,8 +2890,8 @@ function createMap(mapContainer) {
   initialMapOverlay.setMap(map); // Optional - to show all markers in the buildingsArray on initial load
   //showOverlays(cityLayers.bigBuildingsArray);
   // Optional - to show College building marker on initial load
-  //updateHash('9609');
 
+  updateHash('537906');
   init();
 }
 
