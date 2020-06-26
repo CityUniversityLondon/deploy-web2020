@@ -46728,7 +46728,7 @@ article .link-copy {
 .statistics-block .ksp__items .ksp__item .wrapper--ksp__item__logo img {
     text-align: center;
     width: auto;
-    max-height: 60px;
+    max-height: 4rem;
 }
 
 .statistics-block .ksp__items .ksp__item__overline {
@@ -46798,7 +46798,7 @@ article .link-copy {
         grid-column: 1 / 7;
     }
     .statistics-block .ksp__items.ksp__items--2 .ksp__item:nth-child(2) {
-        grid-column: 7 / 12;
+        grid-column: 7 / -1;
     }
 }
 
@@ -46820,7 +46820,7 @@ article .link-copy {
         grid-template-columns: repeat(12, 1fr);
     }
     .statistics-block .ksp__items.ksp__items--3 .ksp__item:nth-child(1) {
-        grid-column: 2 / 7;
+        grid-column: 1 / 7;
     }
     .statistics-block .ksp__items.ksp__items--3 .ksp__item:nth-child(2) {
         grid-column: 7 / -1;
@@ -46828,7 +46828,6 @@ article .link-copy {
     }
     .statistics-block .ksp__items.ksp__items--3 .ksp__item:nth-child(3) {
         grid-column: 4 / 10;
-        margin: 0 auto;
     }
 }
 
@@ -46866,10 +46865,10 @@ article .link-copy {
         grid-template-columns: repeat(12, 1fr);
     }
     .statistics-block .ksp__items.ksp__items--4 .ksp__item:nth-child(1), .statistics-block .ksp__items.ksp__items--4 .ksp__item:nth-child(3) {
-        grid-column: 2 / 7;
+        grid-column: 1 / 7;
     }
     .statistics-block .ksp__items.ksp__items--4 .ksp__item:nth-child(2), .statistics-block .ksp__items.ksp__items--4 .ksp__item:nth-child(4) {
-        grid-column: 7 / 12;
+        grid-column: 7 / -1;
     }
     .statistics-block .ksp__items.ksp__items--4 .ksp__item:nth-child(2) {
         border-right: 0;
@@ -46893,14 +46892,14 @@ article .link-copy {
         grid-column: 10 / -1;
     }
     .statistics-block .ksp__items.ksp__items--4[data-multi-logos='true'] .ksp__item:nth-child(1), .statistics-block .ksp__items.ksp__items--4[data-multi-logos='true'] .ksp__item:nth-child(3) {
-        grid-column: 2 / 7;
+        grid-column: 1 / 7;
     }
     .statistics-block .ksp__items.ksp__items--4[data-multi-logos='true'] .ksp__item:nth-child(2) {
-        grid-column: 7 / 12;
+        grid-column: 7 / -1;
         border-right: 0;
     }
     .statistics-block .ksp__items.ksp__items--4[data-multi-logos='true'] .ksp__item:nth-child(4) {
-        grid-column: 7 / 12;
+        grid-column: 7 / -1;
     }
 }
 
