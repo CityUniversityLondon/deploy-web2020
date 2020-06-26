@@ -2410,7 +2410,9 @@ function createMap(mapContainer) {
         let found = cityLayers.buildingsObj[building]; // clears map from previous markers
 
         if (marker) {
-          marker.setMap(null);
+          marker.setMap(null); // removes northampton square campus map overlay 
+
+          initialMapOverlay.setMap(null);
         } // allocates new marker info to variable
 
 
@@ -2593,7 +2595,7 @@ function createMap(mapContainer) {
       e.preventDefault();
       updateHash(e.target.parentElement.parentElement.getAttribute('id').replace('building-', '')); // closes locations panel and any open accordions
 
-      locationPanel(true);
+      locationPanel('true');
       closeAccordions();
       return false;
     });
@@ -2822,22 +2824,24 @@ function createMap(mapContainer) {
 
   ; // location panel behavious
 
-  mapContainer.querySelector('.campus-map__controls__locations__heading__wrap').addEventListener('click', function () {
+  mapContainer.querySelector('.campus-map__controls__locations__heading').addEventListener('click', function () {
     let status = this.getAttribute('data-show');
     locationPanel(status);
+  });
+  mapContainer.querySelector('.campus-map__controls__locations__heading').addEventListener('focus', function () {
+    //let status = this.getAttribute('data-show');
+    //locationPanel(status);
+    console.log("location in focus!!"); //locationPanel('false');
   });
 
   function locationPanel(status) {
     if (status === 'false') {
-      mapContainer.querySelector('.campus-map__controls__locations__heading__wrap').setAttribute('data-show', true);
+      mapContainer.querySelector('.campus-map__controls__locations__heading').setAttribute('data-show', true);
       mapContainer.querySelector('.campus-map__controls__locations').setAttribute('data-show', true);
     } else {
-      mapContainer.querySelector('.campus-map__controls__locations__heading__wrap').setAttribute('data-show', false);
+      mapContainer.querySelector('.campus-map__controls__locations__heading').setAttribute('data-show', false);
       mapContainer.querySelector('.campus-map__controls__locations').setAttribute('data-show', false);
-    } // removes northampton square campus map overlay 
-
-
-    initialMapOverlay.setMap(null);
+    }
   }
 
   ; // Map initial overlay to show northampton square campus

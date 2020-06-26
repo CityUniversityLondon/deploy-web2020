@@ -53270,41 +53270,49 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .campus-map__controls__locations__heading__wrap {
     flex: 1;
-    background: #ffffff;
-    border: 0.0625rem solid #d8d8d8;
+    position: relative;
 }
 
-.campus-map__controls__locations__heading__wrap[data-show="false"] span:after {
+.campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading {
+    background: #ffffff;
+    border: 0.0625rem solid #d8d8d8;
+    width: 100%;
+    padding: 0.75rem;
+    cursor: pointer;
+    display: flex;
+}
+
+.campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading:focus, .campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading:active {
+    outline: 0.125rem dotted #1e1e1e;
+}
+
+.campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading[data-show="false"]:after {
     content: '\f0d7';
 }
 
-.campus-map__controls__locations__heading__wrap[data-show="true"] {
+.campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading[data-show="true"] {
+    position: absolute;
     border-bottom: 0;
     z-index: 2;
 }
 
-.campus-map__controls__locations__heading__wrap[data-show="true"] span:after {
+.campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading[data-show="true"]:after {
     content: '\f00d';
 }
 
-.campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading {
-    padding: 0.75rem;
-    cursor: pointer;
-}
-
 .campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading span {
+    flex: 1;
     text-align: left;
-    position: relative;
     width: 100%;
     display: block;
 }
 
-.campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading span:after {
+.campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading:after {
     font-family: 'Font Awesome';
     font-weight: 900;
-    position: absolute;
     right: 0;
     color: #b91924;
+    text-align: right;
 }
 
 .campus-map__controls__locations {
