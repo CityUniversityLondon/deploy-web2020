@@ -56065,7 +56065,7 @@ div.widget-123_test_ {
 }
 
 @media (min-width: 1024px) {
-    main .navigation--secondary + .event .banner {
+    main .navigation--secondary + .event .banner-text {
         grid-column: 1 / span 18;
     }
     main .navigation--secondary + .event .event__info {
@@ -56073,37 +56073,6 @@ div.widget-123_test_ {
     }
     main .navigation--secondary + .event .content {
         grid-column: 4 / span 12;
-    }
-}
-
-@media (min-width: 1024px) {
-    .event .content {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 901px) {
-    .event .content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 901px) {
-    .event .content {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1441px) {
-    .event .content {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -56123,9 +56092,8 @@ div.widget-123_test_ {
 }
 
 @media (min-width: 769px) {
-    .event .banner__overlay__heading {
+    .event .banner-text {
         padding-bottom: 4rem;
-        padding-top: 2rem;
     }
     .event .event__info {
         position: relative;
@@ -56134,6 +56102,22 @@ div.widget-123_test_ {
 
 .event .event__top__gradient {
     background-image: linear-gradient(to top, #ffffff, #f2f2f2);
+}
+
+.event .event__top__gradient .background--purple80 {
+    background-color: #3f1464;
+}
+
+.event .event__top__gradient .background--pink80 {
+    background-color: #5d184a;
+}
+
+.event .event__top__gradient .background--blue80 {
+    background-color: #11334c;
+}
+
+.event .event__top__gradient .background--red80 {
+    background-color: #790b21;
 }
 
 .event .embedded-video,
@@ -56306,40 +56290,6 @@ div.widget-123_test_ {
     .event__info {
         padding: 1rem 0;
     }
-}
-
-@media (max-width: 767px) and (min-width: 1024px) {
-    .event__info .event__info--wrapper {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 767px) and (min-width: 1024px) and (min-width: 901px) {
-    .event__info .event__info--wrapper {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 767px) and (min-width: 1024px) and (min-width: 901px) {
-    .event__info .event__info--wrapper {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (max-width: 767px) and (min-width: 1024px) and (min-width: 1441px) {
-    .event__info .event__info--wrapper {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 767px) and (max-width: 1023px) {
     .event__info .event__info--wrapper {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -56347,7 +56297,7 @@ div.widget-123_test_ {
     }
 }
 
-@media (max-width: 767px) and (max-width: 1023px) and (min-width: 901px) {
+@media (max-width: 767px) and (min-width: 901px) {
     .event__info .event__info--wrapper {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -56416,21 +56366,21 @@ div.widget-123_test_ {
 
 .event__info .event__info--details__icons {
     margin-right: 0.5rem;
-    font-size: 1rem;
+    font-size: 0.889rem;
     line-height: 1.625;
-    letter-spacing: -0.005em;
+    letter-spacing: 0em;
     color: #d61726;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
     .event__info .event__info--details__icons {
-        letter-spacing: -0.008em;
+        letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .event__info .event__info--details__icons {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.01em;
     }
 }
 
@@ -56536,7 +56486,7 @@ div.widget-123_test_ {
 }
 
 .event__info--text {
-    grid-column: 9/ -1;
+    grid-column: 1/ -1;
     margin: 0.5rem 0;
 }
 
