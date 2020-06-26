@@ -2401,12 +2401,19 @@ function createMap(mapContainer) {
    * @return {Undefined}
    */
 
-  function hashChange(id) {
-    let marker; //loop over  bigBuildingsArray to find marker
+  let marker;
 
+  function hashChange(id) {
+    //loop over  bigBuildingsArray to find marker
     for (let building in cityLayers.buildingsObj) {
       if (id === building) {
-        let found = cityLayers.buildingsObj[building];
+        let found = cityLayers.buildingsObj[building]; // clears map from previous markers
+
+        if (marker) {
+          marker.setMap(null);
+        } // allocates new marker info to variable
+
+
         marker = found; //open infoWindow for this marker
         //clear all overlays first
 
@@ -2420,7 +2427,9 @@ function createMap(mapContainer) {
 
         map.panTo(marker.position); //add marker to map
 
-        marker.setMap(map);
+        console.log('2nd marker is:' + marker);
+        marker.setMap(map); //marker.setMap(null);
+        // setTimeout(function(){ marker.setMap(null) }, 5000);
       }
     }
   }
@@ -2582,10 +2591,10 @@ function createMap(mapContainer) {
     }]);
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      updateHash(e.target.parentElement.parentElement.getAttribute('id').replace('building-', '')); // added to hide locations panel
+      updateHash(e.target.parentElement.parentElement.getAttribute('id').replace('building-', '')); // closes locations panel and any open accordions
 
-      mapContainer.getElementsByClassName('campus-map__controls__locations')[0].setAttribute('data-show', false);
-      mapContainer.getElementsByClassName('campus-map__controls__locations__heading')[0].setAttribute('data-show', false);
+      locationPanel(true);
+      closeAccordions();
       return false;
     });
     /*
@@ -2813,20 +2822,25 @@ function createMap(mapContainer) {
 
   ; // location panel behavious
 
-  mapContainer.getElementsByClassName('campus-map__controls__locations__heading__wrap')[0].addEventListener('click', function () {
+  mapContainer.querySelector('.campus-map__controls__locations__heading__wrap').addEventListener('click', function () {
     let status = this.getAttribute('data-show');
+    locationPanel(status);
+  });
 
+  function locationPanel(status) {
     if (status === 'false') {
-      this.setAttribute('data-show', true);
-      mapContainer.getElementsByClassName('campus-map__controls__locations')[0].setAttribute('data-show', true);
+      mapContainer.querySelector('.campus-map__controls__locations__heading__wrap').setAttribute('data-show', true);
+      mapContainer.querySelector('.campus-map__controls__locations').setAttribute('data-show', true);
     } else {
-      this.setAttribute('data-show', false);
-      mapContainer.getElementsByClassName('campus-map__controls__locations')[0].setAttribute('data-show', false);
+      mapContainer.querySelector('.campus-map__controls__locations__heading__wrap').setAttribute('data-show', false);
+      mapContainer.querySelector('.campus-map__controls__locations').setAttribute('data-show', false);
     } // removes northampton square campus map overlay 
 
 
     initialMapOverlay.setMap(null);
-  }); // Map initial overlay to show northampton square campus
+  }
+
+  ; // Map initial overlay to show northampton square campus
 
   var cityCampus = [{
     lat: 51.527261,
@@ -2891,24 +2905,39 @@ function createMap(mapContainer) {
   //showOverlays(cityLayers.bigBuildingsArray);
   // Trigger - to show northampton square campus marker on initial load
 
-  updateHash('537921'); // Accordion override - this closes location accordions other than the current one clicked on.
-  // This was necessary as 6 individual accordions were used instead of 1 accordion having 6 sections,
-  // due to layout requirements
+  updateHash('537921');
+  /**
+   * Accordion overrides - this closes location accordions, it also have an optional
+   * paramater which closes all except the one. This would be when you want to close
+   * all except one being clicked on for example. This override was necessary 
+   * as 6 individual accordions were used instead of 1 accordion having 6 sections,
+   * due to layout requirements
+   *
+   * @param {id} exception - id of accordion not to close
+   */
 
-  const locationAccordions = mapContainer.getElementsByClassName('accordion').forEach(el => {
-    el.addEventListener('click', function () {
-      // remembers accordion being clicked on
-      const eleId = el.getAttribute('id');
-      const accordions = el.parentNode.querySelectorAll('.accordion'); // closes sibling accordions
-
-      accordions.forEach(accordion => {
-        if (accordion.getAttribute('id') !== eleId) {
-          accordion.querySelector('.accordion__heading').setAttribute('data-open', 'false');
-          accordion.querySelector('.accordion__heading button').setAttribute('aria-expanded', 'false');
-          accordion.querySelector('.accordion__body').setAttribute('data-closed', 'true');
-        }
-      });
+  function closeAccordions(exception) {
+    mapContainer.getElementsByClassName('accordion--location').forEach(el => {
+      if (el.getAttribute('id') !== exception) {
+        el.querySelector('.accordion__heading').setAttribute('data-open', 'false');
+        el.querySelector('.accordion__heading button').setAttribute('aria-expanded', 'false');
+        el.querySelector('.accordion__body').setAttribute('data-closed', 'true');
+      }
     });
+  }
+
+  ; // adds click event to close all accordions apart one from being clicked
+
+  const locationAccordions = mapContainer.getElementsByClassName('accordion--location').forEach(el => {
+    el.addEventListener('click', function () {
+      // capture which accordion clicked on and closes all others
+      closeAccordions(el.getAttribute('id'));
+    });
+  });
+  document.querySelector('.find-us__header').addEventListener('click', function () {
+    // capture which accordion clicked on and closes all others
+    console.log("cdc");
+    marker.setMap(null);
   });
   init();
 }
