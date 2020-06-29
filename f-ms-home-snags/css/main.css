@@ -3954,6 +3954,10 @@ readers do not read off random characters that represent icons */
     content: "\f78f";
 }
 
+.fa-deezer:before {
+    content: "\f977";
+}
+
 .fa-delicious:before {
     content: "\f1a5";
 }
@@ -4308,6 +4312,10 @@ readers do not read off random characters that represent icons */
 
 .fa-edge:before {
     content: "\f282";
+}
+
+.fa-edge-legacy:before {
+    content: "\f978";
 }
 
 .fa-edit:before {
@@ -5280,6 +5288,10 @@ readers do not read off random characters that represent icons */
 
 .fa-google-drive:before {
     content: "\f3aa";
+}
+
+.fa-google-pay:before {
+    content: "\f979";
 }
 
 .fa-google-play:before {
@@ -8078,6 +8090,10 @@ readers do not read off random characters that represent icons */
     content: "\f156";
 }
 
+.fa-rust:before {
+    content: "\f97a";
+}
+
 .fa-rv:before {
     content: "\f7be";
 }
@@ -9542,6 +9558,10 @@ readers do not read off random characters that represent icons */
     content: "\f3ff";
 }
 
+.fa-tiktok:before {
+    content: "\f97b";
+}
+
 .fa-tilde:before {
     content: "\f69f";
 }
@@ -9988,6 +10008,10 @@ readers do not read off random characters that represent icons */
 
 .fa-unlock-alt:before {
     content: "\f13e";
+}
+
+.fa-unsplash:before {
+    content: "\f97c";
 }
 
 .fa-untappd:before {
@@ -10743,7 +10767,7 @@ readers do not read off random characters that represent icons */
 }
 
 /*!
- * Font Awesome Pro 5.13.0 by @fontawesome - https://fontawesome.com
+ * Font Awesome Pro 5.13.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Commercial License)
  */
 @font-face {

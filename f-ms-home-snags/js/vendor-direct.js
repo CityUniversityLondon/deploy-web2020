@@ -1,11 +1,11 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendor-direct"],{
 
-/***/ "./node_modules/body-scroll-lock/lib/bodyScrollLock.mjs":
-/*!**************************************************************!*\
-  !*** ./node_modules/body-scroll-lock/lib/bodyScrollLock.mjs ***!
-  \**************************************************************/
+/***/ "./node_modules/body-scroll-lock/lib/bodyScrollLock.esm.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/body-scroll-lock/lib/bodyScrollLock.esm.js ***!
+  \*****************************************************************/
 /*! exports provided: disableBodyScroll, clearAllBodyScrollLocks, enableBodyScroll */
-/***/ (function(__webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
