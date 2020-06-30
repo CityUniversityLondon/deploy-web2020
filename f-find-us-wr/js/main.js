@@ -2710,63 +2710,74 @@ function createMap(mapContainer) {
     }); //end iteration
 
     function searchBoxInit() {
-      // creates HTML structure for suggestion list
-      let listWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
-        label: 'class',
-        val: 'query__suggestions__wrapper'
-      }]);
-      let list = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
-        label: 'id',
-        val: 'query__suggestions'
-      }, {
-        label: 'data-show',
-        val: false
-      }]);
-      /**
-       * creates list of anchors contaning building info below:
-       * @tag {HTMLelement} anchor containing building name and id
-       */
-
-      searchTags.forEach(function (tag) {
-        let item = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', []);
-        tag.addEventListener('click', function () {
-          searchQueryIdFind(tag.getAttribute('data-id'), tag.textContent);
-          updateHash(tag.getAttribute('data-id'));
-        });
-        list.appendChild(item).appendChild(tag);
-      });
-      searchBox.parentElement.appendChild(listWrapper).appendChild(list); // listens for search queries
-
+      // listens for search queries
       searchBox.addEventListener('keyup', function (e) {
-        let searchString = searchBox.value;
-        let list = document.getElementById('query__suggestions');
-        let find = document.getElementById('query__suggestions').querySelectorAll('li'); // if a query is presesnt it show / hides relevant buildings using CSS instead of recreateing DOM elements all the time to help with performance
-
-        if (searchString.length > 0) {
-          list.setAttribute('data-show', true);
-          find.forEach(function (i) {
-            let label = i.querySelector('a').textContent;
-
-            if (label.toLowerCase().indexOf(searchString.toLowerCase()) > -1) {
-              i.style.display = "block";
-            } else {
-              i.style.display = "none";
-            }
-          });
+        // && 38 && 27
+        if (e.keyCode == 40) {
+          searchItemFocus(e.keyCode);
         } else {
-          list.setAttribute('data-show', false);
+          // clears previous suggestions if exists
+          let listWrapper = searchBox.parentElement.querySelector('.query__suggestions__wrapper');
+
+          if (listWrapper) {
+            searchBox.parentElement.querySelector('.query__suggestions__wrapper').remove();
+          } // creates HTML structure for suggestion list
+
+
+          let createListWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+            label: 'class',
+            val: 'query__suggestions__wrapper'
+          }]);
+          let createList = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
+            label: 'id',
+            val: 'query__suggestions'
+          }, {
+            label: 'data-show',
+            val: false
+          }, {
+            label: 'data-focus',
+            val: -1
+          }]);
+          searchBox.parentElement.appendChild(createListWrapper).appendChild(createList);
+          let searchString = searchBox.value;
+          let list = document.getElementById('query__suggestions'); // if a query is presesnt it show / hides relevant buildings using CSS instead of recreateing DOM elements all the time to help with performance
+
+          if (searchString.length > 0) {
+            list.setAttribute('data-show', true);
+            /**
+             * creates list of anchors contaning building info below:
+             * @tag {HTMLelement} anchor containing building name and id
+             */
+
+            searchTags.forEach(function (tag) {
+              if (tag.textContent.toLowerCase().indexOf(searchString.toLowerCase()) > -1) {
+                // console.log(`tag is: ${tag.textContent}`);
+                let item = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', []);
+                let anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+                  label: 'tabindex',
+                  val: -1
+                }, {
+                  label: 'data-id',
+                  val: tag.getAttribute('data-id')
+                }, {
+                  label: 'content',
+                  val: tag.textContent
+                }]);
+                anchor.addEventListener('click', function () {
+                  searchQueryIdFind(tag.getAttribute('data-id'), tag.textContent);
+                  updateHash(tag.getAttribute('data-id'));
+                });
+                anchor.addEventListener('keyup', function (e) {
+                  e.preventDefault();
+                  searchItemFocus(e.keyCode);
+                });
+                list.appendChild(item).appendChild(anchor);
+              } else {}
+            });
+          } else {
+            list.setAttribute('data-show', false);
+          }
         }
-
-        console.log("key code: ".concat(e.keyCode));
-        let queryStatus = document.getElementById('query__suggestions').getAttribute('data-show');
-
-        if (queryStatus == 'true') {
-          console.log("true");
-        }
-
-        const keyCodeDown = 40;
-        const keyCodeUp = 38;
-        const keyCodeEcp = 27;
       });
 
       function searchQueryIdFind(id, title) {
@@ -2774,6 +2785,41 @@ function createMap(mapContainer) {
         document.getElementById('query__suggestions').setAttribute('data-show', false);
         hashChange(id);
       }
+
+      ;
+
+      function searchItemFocus(keyCode) {
+        // up 38
+        // down 40
+        //let focusState = parseInt(document.getElementById('query__suggestions').getAttribute('data-focus'));
+        let collectionNum = document.getElementById('query__suggestions').querySelectorAll('li').length;
+        console.log(" length is: ".concat(collectionNum));
+
+        if (keyCode == 40) {
+          console.log("not ".concat(keyCode));
+          let focusState = parseInt(document.getElementById('query__suggestions').getAttribute('data-focus'));
+
+          if (focusState + 1 !== collectionNum) {
+            document.getElementById('query__suggestions').querySelectorAll('a')[focusState + 1].focus();
+            document.getElementById('query__suggestions').setAttribute('data-focus', focusState + 1);
+          }
+        } else if (keyCode == 38) {
+          console.log("not ".concat(keyCode));
+          let focusState = parseInt(document.getElementById('query__suggestions').getAttribute('data-focus'));
+
+          if (focusState - 1 !== -1) {
+            document.getElementById('query__suggestions').querySelectorAll('a')[focusState - 1].focus();
+            document.getElementById('query__suggestions').setAttribute('data-focus', focusState - 1);
+          } else {
+            searchBox.focus();
+            document.getElementById('query__suggestions').setAttribute('data-focus', -1);
+          }
+        }
+
+        return;
+      }
+
+      ;
     }
 
     ;
