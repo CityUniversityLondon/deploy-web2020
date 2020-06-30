@@ -2737,7 +2737,7 @@ function createMap(mapContainer) {
       });
       searchBox.parentElement.appendChild(listWrapper).appendChild(list); // listens for search queries
 
-      searchBox.addEventListener('keyup', function () {
+      searchBox.addEventListener('keyup', function (e) {
         let searchString = searchBox.value;
         let list = document.getElementById('query__suggestions');
         let find = document.getElementById('query__suggestions').querySelectorAll('li'); // if a query is presesnt it show / hides relevant buildings using CSS instead of recreateing DOM elements all the time to help with performance
@@ -2756,6 +2756,17 @@ function createMap(mapContainer) {
         } else {
           list.setAttribute('data-show', false);
         }
+
+        console.log("key code: ".concat(e.keyCode));
+        let queryStatus = document.getElementById('query__suggestions').getAttribute('data-show');
+
+        if (queryStatus == 'true') {
+          console.log("true");
+        }
+
+        const keyCodeDown = 40;
+        const keyCodeUp = 38;
+        const keyCodeEcp = 27;
       });
 
       function searchQueryIdFind(id, title) {
