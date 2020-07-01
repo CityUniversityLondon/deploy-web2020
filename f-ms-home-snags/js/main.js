@@ -1873,10 +1873,16 @@ function devcorate(elem, param, value) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
+/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
+
+
 
 
 
@@ -1890,6 +1896,8 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 const className = 'dropdown-filter';
+let dataGroupElement = '';
+let showAll = '';
 /**
  * Entry function: loops through and hides list items, sets up event listener on
  * child select box
@@ -1898,84 +1906,187 @@ const className = 'dropdown-filter';
  */
 
 function prepareDropdown(element) {
-  // only get direct children
-  const listItems = element.querySelectorAll('ul.data-group > li'); // hide list items
+  // Only get direct children
+  const listItems = element.querySelectorAll('ul.data-group > li'),
+        firstItemVisible = element.dataset.firstItemShow; // Check if all items should be displayed on load
 
-  hideListItems(listItems); // insert the select box to toggle items
+  showAll = element.dataset.displayAll; // Hide list items
 
-  insertSelect(listItems, element);
+  hideListItems(listItems, firstItemVisible, showAll); // Insert the select box to toggle items
+
+  insertSelect(listItems, element, firstItemVisible, showAll); // Display list items on select change
+
+  const select = element.querySelector('.dropdown-filter__select');
+  select.addEventListener('change', selectChange);
 }
 /**
  * Hide list items: both functions require all list items to be hidden.
  * Ths function takes care of this
  *
- * @param {HTMLElements} items: the list of items to hide
+ * @param {HTMLElements} items - The list of items to hide.
+ * @param {boolean} firstItemVisible - Whether first item should be visible on load.
+ * @param {boolean} showAll - Option to display all items.
  */
 
 
-function hideListItems(items) {
-  // hide list items
-  items.forEach(function (item) {
-    item.setAttribute('data-hidden', 'true');
-  });
+function hideListItems(items, firstItemVisible, showAll) {
+  // Check if dropdown should show first item
+  if (firstItemVisible === 'true' && showAll === 'false') {
+    let itemsArray = Array.from(items);
+    itemsArray[0].setAttribute('data-hidden', 'false');
+
+    for (var i = 1; i < itemsArray.length; i++) {
+      itemsArray[i].setAttribute('data-hidden', 'true');
+    }
+  } else if (firstItemVisible === 'false' && showAll === 'false') {
+    items.forEach(function (item) {
+      item.setAttribute('data-hidden', 'true');
+    });
+  } else if (showAll === 'true') {
+    items.forEach(function (item) {
+      item.setAttribute('data-hidden', 'false');
+    });
+  } // First item automatically visible is only relevant to component load. Other behaviour is applied when interacting with component.
+
+
+  firstItemVisible = 'false';
 }
 /**
  * Insert select: build and add the select box to source
  *
- * @param {HTMLElements} items: the list of content for the select options
- * @param {HTMLElement} parentElement: the element where we need to insert the select
+ * @param {HTMLElements} items - The list of content for the select options.
+ * @param {HTMLElement} parentElement - The element where we need to insert the select.
+ * @param {boolean} firstItemVisible - Whether first item should be visible on load.
  */
 
 
-function insertSelect(items, parentElement) {
-  const selectBox = document.createElement('select');
-  selectBox.className = 'select-filter';
-  parentElement.prepend(selectBox); // get and add default select text
+function insertSelect(items, parentElement, firstItemVisible) {
+  dataGroupElement = parentElement.querySelector('ul.data-group');
+  const selectBox = document.createElement('select'),
+        selectWrapper = parentElement.querySelector('.wrapper--dropdown-filter__select'),
+        labelFor = parentElement.dataset.labelFor,
+        labelValue = parentElement.dataset.labelValue,
+        labelEl = document.createElement('label');
+  labelEl.textContent = labelValue;
+  labelEl.setAttribute('for', labelFor);
+  parentElement.dataset.labelShow === 'false' ? labelEl.className = 'sr-only' : null;
+  selectBox.className = 'dropdown-filter__select';
+  selectBox.setAttribute('id', labelFor);
+  selectBox.setAttribute('name', labelFor);
+  selectWrapper.append(labelEl, selectBox); // Add default select text if filter doesn't have show all enabled
 
-  const noSelection = document.createElement('option');
-  noSelection.text = parentElement.getAttribute('data-text');
-  selectBox.appendChild(noSelection); // iterate over each item and create/append select option
+  if (parentElement.dataset.displayAll === 'false') {
+    let noSelection = document.createElement('option');
+    noSelection.text = parentElement.getAttribute('data-text');
+    noSelection.setAttribute('value', 'no-selection');
+    selectBox.appendChild(noSelection);
+  }
 
-  Array.from(items).sort((a, b) => a.dataset.value < b.dataset.value ? -1 : a.dataset.value > b.dataset.value ? 1 : 0).forEach(item => {
+  let defaultItemOverride, lastItemOverride; // Sort by dataset.value to display list alphabetically
+
+  if (parentElement.dataset.alphabetical === 'true') {
+    items = Array.from(items).sort((a, b) => a.dataset.value < b.dataset.value ? -1 : a.dataset.value > b.dataset.value ? 1 : 0);
+  } else {
+    items = [...items];
+  } // Update output list items to correct order
+
+
+  for (const item of items) {
+    dataGroupElement.append(item);
+  } // Find items with first/last position overrides
+
+
+  for (const item of items) {
+    item.dataset.first === 'true' ? defaultItemOverride = item : null;
+    item.dataset.last === 'true' ? lastItemOverride = item : null;
+  }
+
+  const itemsLength = items.length; // Display show all option at top of dropdown if pattern has this configuration option set as true
+
+  if (parentElement.dataset.displayAll === 'true') {
+    let showAllOption = document.createElement('li');
+    showAllOption.dataset.name = "All ".concat(parentElement.dataset.units);
+    showAllOption.dataset.value = 'show-all';
+    items.splice(0, 0, showAllOption);
+  } // Remove item with dataset.first='true' from original position in array
+
+
+  let defaultItemOverridePosition = items.indexOf(defaultItemOverride); // Remove item with dataset.last='true' from original position in array
+
+  if (lastItemOverride) {
+    let lastPositionOriginal = items.indexOf(lastItemOverride);
+    items.splice(lastPositionOriginal, 1); // If custom last option exists, place as last selectable option
+
+    items.splice(itemsLength, 0, lastItemOverride);
+  } // Iterate over each item and create/append select option
+
+
+  Array.from(items).forEach(item => {
     const dataValue = item.dataset.value,
+          dataName = item.dataset.name,
           option = document.createElement('option');
     option.value = dataValue;
-    option.text = dataValue; // set first item in list as selected
-
-    if (item.dataset.default === 'true') {
-      option.setAttribute('selected', 'selected');
-    }
-
+    option.text = dataName;
     selectBox.appendChild(option);
-  }); // add change listner to newly created select box
+  }); // Set first item in list as selected
 
-  selectBox.addEventListener('change', selectChange); // dispatch event so first item is selected
+  if (firstItemVisible === 'true' && showAll === 'false') {
+    const options = parentElement.querySelectorAll('option');
 
-  selectBox.dispatchEvent(new Event('change'));
+    if (defaultItemOverride) {
+      if (lastItemOverride) {
+        // Last item override exists
+        if (parentElement.dataset.alphabetical === 'true') {
+          options[defaultItemOverridePosition].setAttribute('selected', 'selected');
+        } else {
+          options[defaultItemOverridePosition + 1].setAttribute('selected', 'selected');
+        }
+      } else {
+        // Default show & no last item override
+        options[defaultItemOverridePosition + 1].setAttribute('selected', 'selected');
+      }
+    }
+  }
 }
 /**
- * Select change: respond to select change
+ * Select change: respond to select change event
  *
- * @param {event} e: the event
+ * @param {event} e: The select change event.
  */
 
 
 function selectChange(e) {
-  // get the ul containing the list items
-  const dataGroup = e.target.nextElementSibling; // get direct list items
+  // Get list items grouping
+  const dropdownFilter = e.target.closest('.dropdown-filter'),
+        dataGroup = dropdownFilter.querySelector('.data-group'); // Get direct children list items
 
-  const listItems = dataGroup.querySelectorAll('ul.data-group > li'); // hide all items before displaying chosen item
+  const listItems = dataGroup.querySelectorAll('ul.data-group > li');
 
-  hideListItems(listItems); // if first option selected, return
+  for (const listItem of listItems) {
+    listItem.removeAttribute('data-hidden');
+  } // Hide all items before displaying chosen item
 
-  if (e.srcElement.selectedIndex === 0) {
+
+  showAll = 'false';
+  hideListItems(listItems, showAll); // Get the list item corresponding to the select value chosen
+
+  const targetListItem = dataGroup.querySelector('li.data-group__item[data-value=' + e.target.value + ']'); // Get not selected list items
+
+  const otherListItems = dataGroup.querySelectorAll('li.data-group__item:not([data-value=' + e.target.value + '])'); // Show/hide content based on pattern's configuration options
+
+  if (e.target.value !== 'show-all' && e.srcElement.selectedIndex !== 0) {
+    targetListItem.removeAttribute('data-hidden');
+
+    for (const o of otherListItems) {
+      o.setAttribute('data-hidden', 'true');
+    }
+  } else if (e.target.value !== 'show-all' && e.srcElement.selectedIndex === 0) {
+    for (const o of otherListItems) {
+      o.setAttribute('data-hidden', 'true');
+    }
+
     return;
-  } // get the list item corresponding to the select value chosen
-
-
-  const targetListItem = dataGroup.querySelector('li[data-value=' + e.target.value + ']'); // remove data-hidden
-
-  targetListItem.removeAttribute('data-hidden');
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3226,7 +3337,7 @@ function finder__filters(props) {
     resetSort: true
   }) : null;
   const sort = props.config.sort.length > 1 && props.config.displaySort ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "wrapper--finder__sort--mobile"
+    className: "wrapper--finder__select--sort--mobile"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_sort__WEBPACK_IMPORTED_MODULE_7__["default"], {
     config: props.config,
     query: props.query,
@@ -3242,7 +3353,7 @@ function finder__filters(props) {
     className: "far fa-sliders-h icon",
     "aria-hidden": "true"
   }), ' ', "Filter ".concat(props.config.summariseAs.plural)), clearFiltersMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__filters__wrapper--filters"
+    className: "wrapper--finder_filters--filters"
   }, props.config.facetLabels.map(facet => {
     if (dependencyMet(facet, props.query.facets)) {
       switch (facet.type) {
@@ -3328,7 +3439,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * @module patterns/finder/components/finder__filters--mobile
+ * @module patterns/finder/components/wrapper--finder__filters--mobile
  * @author Web Development
  * @copyright City, University of London 2019
  */
@@ -3360,7 +3471,7 @@ function finder__filtersmobile(props) {
   Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(() => {
     if (!focusTrap.activate) {
       setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_6___default()(getFilters(), {
-        initialFocus: getFilters().querySelector('.finder__filters--mobile__apply'),
+        initialFocus: getFilters().querySelector('.wrapper--finder__filters--mobile__apply'),
         onDeactivate: () => setDisplay(false),
         clickOutsideDeactivates: true
       }));
@@ -3368,27 +3479,23 @@ function finder__filtersmobile(props) {
 
     if (display) {
       focusTrap.activate && focusTrap.activate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["disableBodyScroll"])(getFilters().querySelector('.finder__filters--mobile__filters'));
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["disableBodyScroll"])(getFilters().querySelector('.wrapper--finder__filters--mobile__filters'));
     } else {
       focusTrap.deactivate && focusTrap.deactivate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["enableBodyScroll"])(getFilters().querySelector('.finder__filters--mobile__filters'));
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["enableBodyScroll"])(getFilters().querySelector('.wrapper--finder__filters--mobile__filters'));
     }
   }, [display]);
   const totalMatching = props.response && props.response.summary && props.response.summary.totalMatching;
   const result = totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural;
   const totalMatchingMessage = totalMatching ? "Show ".concat(totalMatching, " ").concat(result) : 'Close';
   const filtersCount = props.config.displaySort ? props.config.sort[0].type !== props.query.sortType || Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filters", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "finder__filters--mobile__toggle__filterNo"
+    className: "wrapper--finder__filters--mobile__toggle__count"
   }, "(", props.config.sort[0].type !== props.query.sortType ? Object.keys(props.query.facets).length + 1 : Object.keys(props.query.facets).length, ")")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filter") : Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filters", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "finder__filters--mobile__toggle__filterNo"
+    className: "wrapper--finder__filters--mobile__toggle__count"
   }, "(", props.config.sort[0].type !== props.query.sortType ? Object.keys(props.query.facets).length + 1 : Object.keys(props.query.facets).length, ")")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filter");
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "finder__filters--mobile",
-    "data-open": display,
-    ref: mobilefilters => filters = mobilefilters
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+  const toggle = display ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
     type: "button",
-    className: "finder__filters--mobile__toggle",
+    className: "wrapper--finder__filters--mobile__toggle",
     "aria-haspopup": true,
     "aria-expanded": display,
     onClick: () => setDisplay(!display),
@@ -3396,10 +3503,15 @@ function finder__filtersmobile(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "far fa-sliders-h icon",
     "aria-hidden": "true"
-  }), ' ', filtersCount)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "finder__filters--mobile__filters"
+  }), ' ', filtersCount));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "wrapper--finder__filters--mobile",
+    "data-open": display,
+    ref: mobilefilters => filters = mobilefilters
+  }, toggle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "wrapper--finder__filters--mobile__filters"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "finder__filters--mobile__filters__content"
+    className: "wrapper--finder__filters--mobile__filters__content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_finder_filters__WEBPACK_IMPORTED_MODULE_5__["default"], {
     config: props.config,
     query: props.query,
@@ -3410,21 +3522,20 @@ function finder__filtersmobile(props) {
     className: "wrapper--finder__filters--mobile__apply"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
     type: "button",
-    className: "finder__filters--mobile__apply",
     "aria-expanded": display,
     onClick: () => setDisplay(!display),
     disabled: props.updating
   }, Object.keys(props.query.facets).length === 0 ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "far fa-chevron-left"
+    className: "far fa-chevron-left icon"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     "aria-live": "polite"
   }, props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-spinner fa-pulse icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "finder__filters--mobile__apply__text"
+    className: "wrapper--finder__filters--mobile__apply__text"
   }, "Updating ", props.summariseAs.plural, "\u2026")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "finder__filters--mobile__apply__text"
+    className: "wrapper--finder__filters--mobile__apply__text"
   }, Object.keys(props.query.facets).length === 0 ? 'Close' : totalMatchingMessage))))));
 }
 
@@ -3567,7 +3678,6 @@ function finder__select(props) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
       className: "finder__filter finder__select ".concat(currentValue && 'finder__select--selected')
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
-      className: "finder__select__overline",
       htmlFor: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
     }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("select", {
       name: props.facet.name,
@@ -3659,7 +3769,7 @@ function finder__sort(props) {
 
   const validSorts = props.config.sort.filter(sortType => sortType.type === '' ? props.query.query !== '' || Object.keys(props.query.facets).length > 0 || props.query.sortType === '' ? true : false : true);
   return validSorts.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "finder__sort finder__select".concat(props.query.sortType !== props.config.sort[0].type ? ' finder__select--selected' : '')
+    className: "finder__select--sort finder__select".concat(props.query.sortType !== props.config.sort[0].type ? ' finder__select--selected' : '')
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
     className: "finder__select__overline",
     htmlFor: "sort--".concat(randomNumber)
@@ -4653,9 +4763,8 @@ function finder__results(props) {
       query: props.query,
       totalMatching: props.response.summary.totalMatching,
       update: props.update
-    }); // render either the results, or a spinner while we wait for Funnelback
-
-    const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, didYouMean, summary, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    });
+    const results = props.response.bestBets.length > 0 || props.response.results.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
       start: props.response.summary.currStart,
       className: resultsClass
     }, props.response.bestBets.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -4667,7 +4776,9 @@ function finder__results(props) {
       key: card.docNum,
       type: props.type,
       query: props.query
-    }))), pagination);
+    }))) : null; // render either the results, or a spinner while we wait for Funnelback
+
+    const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, didYouMean, summary, results, pagination);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "finder__results"
     }, resultsContent);
@@ -4769,7 +4880,7 @@ function finder__results__summary(props) {
   const result = props.totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural,
         formatter = new Intl.NumberFormat('en-GB'),
         sort = props.config.sort.length > 1 && props.config.displaySort ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "wrapper--finder__sort--desktop"
+    className: "wrapper--finder__select--sort--desktop"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_filters_finder_sort__WEBPACK_IMPORTED_MODULE_3__["default"], {
     config: props.config,
     query: props.query,
@@ -4778,7 +4889,7 @@ function finder__results__summary(props) {
 
   if (props.totalMatching === 0) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "finder__results__summary"
+      className: "finder__results__summary finder__results__summary--noresults"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
       className: "finder__results__summary__heading"
     }, "Your search did not match any ", props.summariseAs.plural, "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Suggestions:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try different keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try more general keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer filters"), Object.keys(props.query.facets).length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
@@ -5278,7 +5389,7 @@ function Finder(props) {
     summariseAs: props.config.summariseAs,
     clear: clear
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
-    className: "finder__filters--desktop"
+    className: "wrapper--finder__filters--desktop"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_14__["default"], {
     config: props.config,
     query: query,
@@ -8822,7 +8933,17 @@ function setSwipe(slider, sliderType, sliderObject, sliderControl) {
         actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
       }
     } else {
-      let btn = swipe === -1 ? slider.nextSibling.lastChild.firstChild : swipe === 1 ? slider.nextSibling.lastChild.lastChild : null;
+      let e = slider.nextSibling.querySelectorAll('.slider-block__control__progress'),
+          convert = Array.from(e),
+          elType = convert.filter(e => {
+        let s = window.getComputedStyle(e).getPropertyValue('display');
+
+        if (s === 'block') {
+          return e;
+        }
+      });
+      let sliderType = elType[0].classList.contains('slider-block__control__progress--tablet') ? 'tablet' : 'default';
+      let btn = swipe === -1 ? slider.nextSibling.lastChild.querySelector(".prev--".concat(sliderType)) : swipe === 1 ? slider.nextSibling.lastChild.querySelector(".next--".concat(sliderType)) : null;
 
       if (btn && !btn.disabled) {
         defaultEvent(btn, slider, sliderType, sliderObject);
@@ -8846,7 +8967,7 @@ function setSwipe(slider, sliderType, sliderObject, sliderControl) {
 function setVisibility(slider, sliderType, sliderObject) {
   Array.from(slider.getElementsByTagName('li')).forEach((el, i) => {
     el.setAttribute(sliderObject.default.pageAttr, "".concat(i));
-    el.setAttribute(sliderObject.default.tabIndex, "-1");
+    el.setAttribute(sliderObject.default.tabIndex, '-1');
     el.setAttribute(sliderObject.default.ariaLabel, "Slide ".concat(i + 1));
 
     if (i === 0) {
@@ -8907,7 +9028,7 @@ function createProgressTracker(slider, sliderType, sliderObject) {
       createProgressElements(wrapper, 'tablet', sliderObject);
     }
 
-    if (sliderObject.default.totalPages > "".concat(sliderObject.tablet.maxItem)) {
+    if (sliderObject.default.totalPages > "".concat(sliderObject.desk.maxItem)) {
       createProgressElements(wrapper, 'desk', sliderObject);
     }
   }
@@ -9390,7 +9511,7 @@ function preparePanels(panels) {
     panelElements.forEach(element => wrapper.appendChild(element));
     panel.appendChild(wrapper);
     panel.setAttribute('role', 'tabpanel');
-    panel.setAttribute('tabindex', 0);
+    panel.setAttribute('tabindex', -1);
     panel.setAttribute('hidden', 'true');
   });
 }
