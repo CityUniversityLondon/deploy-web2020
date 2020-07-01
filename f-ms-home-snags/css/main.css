@@ -57765,13 +57765,19 @@ main .home .home__whats-happening .related-content {
 
 @media (min-width: 432px) {
     main .home .home__whats-happening .related-content {
-        grid-column: 6/-6;
+        grid-column: 4/-4;
+    }
+}
+
+@media (min-width: 768px) {
+    main .home .home__whats-happening .related-content {
+        grid-column: 5/-5;
     }
 }
 
 @media (min-width: 900px) {
     main .home .home__whats-happening .related-content {
-        grid-column: 7/-7;
+        grid-column: 6/-6;
     }
 }
 
