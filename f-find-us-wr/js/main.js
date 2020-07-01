@@ -2546,9 +2546,9 @@ function createMap(mapContainer) {
     //if has link
 
     if (markerConfig.linkHref.length !== 0) {
-      html = '<div id="info-window" style="min-height: 100px;"><h3><a href="' + markerConfig.linkHref + '">' + markerConfig.name + '</a></h3>';
+      html = '<div id="info-window" style="min-height: 60px;"><h3><a href="' + markerConfig.linkHref + '">' + markerConfig.name + '</a></h3>';
     } else {
-      html = '<div id="info-window" style="min-height: 100px;"><h3>' + markerConfig.name + '</h3>';
+      html = '<div id="info-window" style="min-height: 60px;"><h3>' + markerConfig.name + '</h3>';
     } //test to see if has a buildingPrefix
 
 
@@ -2595,8 +2595,9 @@ function createMap(mapContainer) {
       e.preventDefault();
       updateHash(e.target.parentElement.parentElement.getAttribute('id').replace('building-', '')); // closes locations panel and any open accordions
 
-      locationPanel('true');
+      toggleLocationPanel('true');
       closeAccordions();
+      console.log("click activated");
       return false;
     });
     /*
@@ -2712,7 +2713,6 @@ function createMap(mapContainer) {
     function searchBoxInit() {
       // listens for search queries
       searchBox.addEventListener('keyup', function (e) {
-        // && 38 && 27
         if (e.keyCode == 40) {
           searchItemFocus(e.keyCode);
         } else {
@@ -2749,34 +2749,46 @@ function createMap(mapContainer) {
              * @tag {HTMLelement} anchor containing building name and id
              */
 
+            let maxNumberSuggestions = 10;
+            let counter = 0;
             searchTags.forEach(function (tag) {
               if (tag.textContent.toLowerCase().indexOf(searchString.toLowerCase()) > -1) {
-                // console.log(`tag is: ${tag.textContent}`);
-                let item = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', []);
-                let anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
-                  label: 'tabindex',
-                  val: -1
-                }, {
-                  label: 'data-id',
-                  val: tag.getAttribute('data-id')
-                }, {
-                  label: 'content',
-                  val: tag.textContent
-                }]);
-                anchor.addEventListener('click', function () {
-                  searchQueryIdFind(tag.getAttribute('data-id'), tag.textContent);
-                  updateHash(tag.getAttribute('data-id'));
-                });
-                anchor.addEventListener('keyup', function (e) {
-                  e.preventDefault();
-                  searchItemFocus(e.keyCode);
-                });
-                list.appendChild(item).appendChild(anchor);
-              } else {}
+                if (counter < maxNumberSuggestions) {
+                  let item = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', []);
+                  let anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+                    label: 'tabindex',
+                    val: -1
+                  }, {
+                    label: 'data-id',
+                    val: tag.getAttribute('data-id')
+                  }, {
+                    label: 'content',
+                    val: tag.textContent
+                  }]);
+                  anchor.addEventListener('click', function () {
+                    searchQueryIdFind(tag.getAttribute('data-id'), tag.textContent);
+                    updateHash(tag.getAttribute('data-id'));
+                  });
+                  anchor.addEventListener('keyup', function (e) {
+                    e.preventDefault();
+                    searchItemFocus(e.keyCode);
+                  });
+                  list.appendChild(item).appendChild(anchor);
+                  counter += 1;
+                }
+              }
             });
           } else {
             list.setAttribute('data-show', false);
           }
+        }
+      });
+      searchBox.addEventListener('focusin', function () {
+        toggleLocationPanel('true');
+        closeAccordions();
+
+        if (searchBox.value.length > 0) {
+          document.getElementById('query__suggestions').setAttribute('data-show', true);
         }
       });
 
@@ -2879,29 +2891,92 @@ function createMap(mapContainer) {
     loadXml();
   }
 
-  ; // location panel behavious
+  ;
 
-  mapContainer.querySelector('.campus-map__controls__locations__heading').addEventListener('click', function () {
-    let status = this.getAttribute('data-show');
-    locationPanel(status);
-  });
-  mapContainer.querySelector('.campus-map__controls__locations__heading').addEventListener('focus', function () {
-    //let status = this.getAttribute('data-show');
-    //locationPanel(status);
-    console.log("location in focus!!"); //locationPanel('false');
-  });
-
-  function locationPanel(status) {
+  function toggleLocationPanel(status) {
     if (status === 'false') {
       mapContainer.querySelector('.campus-map__controls__locations__heading').setAttribute('data-show', true);
       mapContainer.querySelector('.campus-map__controls__locations').setAttribute('data-show', true);
+      mapContainer.querySelector('.campus-map__controls__locations').focus();
+
+      if (document.getElementById('query__suggestions')) {
+        document.getElementById('query__suggestions').setAttribute('data-show', false); // walter maybe remove if clicked outside  
+      }
     } else {
       mapContainer.querySelector('.campus-map__controls__locations__heading').setAttribute('data-show', false);
       mapContainer.querySelector('.campus-map__controls__locations').setAttribute('data-show', false);
     }
   }
 
-  ; // Map initial overlay to show northampton square campus
+  ; // location panel behaviour
+
+  mapContainer.querySelector('.campus-map__controls__locations__heading').addEventListener('click', function () {
+    let status = this.getAttribute('data-show');
+    toggleLocationPanel(status);
+  });
+  /**
+   * Accordion overrides - this closes location accordions, it also have an optional
+   * paramater which closes all except the one. This would be when you want to close
+   * all except one being clicked on for example. This override was necessary 
+   * as 6 individual accordions were used instead of 1 accordion having 6 sections,
+   * due to layout requirements
+   *
+   * @param {id} exception - id of accordion not to close
+   */
+
+  function closeAccordions(exception) {
+    mapContainer.getElementsByClassName('accordion--location').forEach(el => {
+      if (el.getAttribute('id') !== exception) {
+        el.querySelector('.accordion__heading').setAttribute('data-open', 'false');
+        el.querySelector('.accordion__heading button').setAttribute('aria-expanded', 'false');
+        el.querySelector('.accordion__body').setAttribute('data-closed', 'true');
+      }
+    });
+  }
+
+  ; // adds click event to close all accordions apart one from being clicked
+
+  const locationAccordions = mapContainer.getElementsByClassName('accordion--location').forEach(el => {
+    el.addEventListener('click', function () {
+      // capture which accordion clicked on and closes all others
+      closeAccordions(el.getAttribute('id'));
+    });
+  }); // hh
+
+  /**/
+
+  document.addEventListener("click", function (evt) {
+    let locationDropDown = document.querySelector('.campus-map__controls__locations').getAttribute('data-show');
+
+    if (locationDropDown == 'true') {}
+
+    var accordionLocations = document.getElementById('map-controls'),
+        targetElement = evt.target; // clicked element
+
+    do {
+      if (targetElement == accordionLocations) {
+        // This is a click inside. Do nothing, just return.
+        console.log("clicked inside");
+        return;
+      } // Go up the DOM
+
+
+      targetElement = targetElement.parentNode;
+    } while (targetElement);
+
+    console.log("clicked OUTSIDE"); // This is a click outside
+    // toggleLocationPanel('true');
+    //closeAccordions(); 
+  });
+  /*
+  document.getElementById('map-controls').addEventListener('focusout',function(){
+      console.log(`main focus lost`);
+      toggleLocationPanel('true');
+          closeAccordions(); 
+          document.getElementById('query__suggestions').setAttribute('data-show', false);
+  });
+  */
+  // Map initial overlay to show northampton square campus
 
   var cityCampus = [{
     lat: 51.527261,
@@ -2967,39 +3042,6 @@ function createMap(mapContainer) {
   // Trigger - to show northampton square campus marker on initial load
 
   updateHash('537921');
-  /**
-   * Accordion overrides - this closes location accordions, it also have an optional
-   * paramater which closes all except the one. This would be when you want to close
-   * all except one being clicked on for example. This override was necessary 
-   * as 6 individual accordions were used instead of 1 accordion having 6 sections,
-   * due to layout requirements
-   *
-   * @param {id} exception - id of accordion not to close
-   */
-
-  function closeAccordions(exception) {
-    mapContainer.getElementsByClassName('accordion--location').forEach(el => {
-      if (el.getAttribute('id') !== exception) {
-        el.querySelector('.accordion__heading').setAttribute('data-open', 'false');
-        el.querySelector('.accordion__heading button').setAttribute('aria-expanded', 'false');
-        el.querySelector('.accordion__body').setAttribute('data-closed', 'true');
-      }
-    });
-  }
-
-  ; // adds click event to close all accordions apart one from being clicked
-
-  const locationAccordions = mapContainer.getElementsByClassName('accordion--location').forEach(el => {
-    el.addEventListener('click', function () {
-      // capture which accordion clicked on and closes all others
-      closeAccordions(el.getAttribute('id'));
-    });
-  });
-  document.querySelector('.find-us__header').addEventListener('click', function () {
-    // capture which accordion clicked on and closes all others
-    console.log("cdc");
-    marker.setMap(null);
-  });
   init();
 }
 
