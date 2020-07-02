@@ -2946,10 +2946,6 @@ function createMap(mapContainer) {
   /**/
 
   document.addEventListener("click", function (evt) {
-    let locationDropDown = document.querySelector('.campus-map__controls__locations').getAttribute('data-show');
-
-    if (locationDropDown == 'true') {}
-
     var accordionLocations = document.getElementById('map-controls'),
         targetElement = evt.target; // clicked element
 
@@ -2965,8 +2961,10 @@ function createMap(mapContainer) {
     } while (targetElement);
 
     console.log("clicked OUTSIDE"); // This is a click outside
-    // toggleLocationPanel('true');
-    //closeAccordions(); 
+
+    toggleLocationPanel('true');
+    closeAccordions();
+    document.getElementById('query__suggestions').setAttribute('data-show', false);
   });
   /*
   document.getElementById('map-controls').addEventListener('focusout',function(){
