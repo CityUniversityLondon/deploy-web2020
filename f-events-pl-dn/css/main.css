@@ -57018,6 +57018,18 @@ div.widget-123_test_ {
     }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+    .event_related-events .related-content {
+        flex-wrap: nowrap;
+    }
+    .event_related-events .related-content li:nth-child(2) {
+        margin-left: 0.5rem;
+    }
+    .event_related-events .related-content li:nth-child(3) {
+        margin-left: 0.5rem;
+    }
+}
+
 @media (min-width: 1025px) {
     .event_related-events li {
         width: 32%;
