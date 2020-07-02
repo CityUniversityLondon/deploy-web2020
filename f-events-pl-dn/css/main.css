@@ -56461,13 +56461,13 @@ div.widget-123_test_ {
 }
 
 .event__info--details {
-    grid-column: 1 / span 10;
+    grid-column: 1 / span 11;
 }
 
 @media (min-width: 769px) {
     .event__info--details {
         display: grid;
-        grid-template-columns: repeat(10, 1fr);
+        grid-template-columns: repeat(11, 1fr);
         grid-column-gap: 0;
     }
 }
@@ -56489,7 +56489,7 @@ div.widget-123_test_ {
         grid-column: 1 / span 6;
     }
     .event__info--details .event__info--details-bottom {
-        grid-column: 7 / span 4;
+        grid-column: 7 / span 5;
     }
 }
 
