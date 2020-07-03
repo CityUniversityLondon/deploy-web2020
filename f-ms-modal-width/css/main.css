@@ -41350,6 +41350,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
+.dialog[data-type='video'] .dialog__inner {
+    max-height: calc(100% - 10vh);
+}
+
 @media (min-width: 768px) {
     .dialog[data-type='video'] .dialog__inner {
         width: 80%;
