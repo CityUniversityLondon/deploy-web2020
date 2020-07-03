@@ -2223,7 +2223,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Find us page Google map
+ * Find us, campus map page using Google map API
  *
  * @module patterns/find-us/find-us
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
