@@ -2285,20 +2285,7 @@ function createMap(mapContainer) {
   infoWindow = new google.maps.InfoWindow({
     maxWidth: 400
   }),
-      // This was commented out already
 
-  /* points = [
-  new google.maps.LatLng(51.527701, -0.102509),
-  new google.maps.LatLng(51.521870, -0.090356)
-  ];
-   for (let i = 0; i < points.length; i++) {
-  marker = new google.maps.Marker({
-  position: points[i],
-  animation: google.maps.Animation.DROP
-   });
-  }
-   marker.setMap(map);
-  map.panTo(marker.position);
   /**
    * cityLayers object literal containing skeleton options for City related things - parsing the xml file adds to this
    * it is where we keep arrays of markers to use when clearing/setting things on the map
@@ -2506,6 +2493,7 @@ function createMap(mapContainer) {
    */
 
   function initKmlLayers(layer) {
+    // Walter possible remove KML
     for (let key in layer) {
       // skip loop if the property is from prototype
       if (!layer.hasOwnProperty(key)) {} //end if
@@ -2516,14 +2504,6 @@ function createMap(mapContainer) {
       let overlay = new google.maps.KmlLayer(obj.src, {
         preserveViewport: obj.preserveViewport
       });
-      /* 
-      Disabled for now as toggler empty - maybe even remove klmlyer as possible not required
-        toggler.addEventListener("click", function(){
-          console.log(`toggler`);
-          //toggler.toggleClass('enabled');
-          overlay.setMap(toggler.classList.contains('enabled') ? map : null);
-          return false;
-      }); //end click fn */
     } // end for
 
   }
@@ -2593,21 +2573,13 @@ function createMap(mapContainer) {
     }]);
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      updateHash(e.target.parentElement.parentElement.getAttribute('id').replace('building-', '')); // closes locations panel and any open accordions
+      updateHash(e.target.parentElement.parentElement.getAttribute('id').replace('building-', '')); // closes locations panel and any open accordions, clears search
 
       toggleLocationPanel('true');
       closeAccordions();
-      console.log("click activated");
+      clearSearchString();
       return false;
-    });
-    /*
-    anchor.style.background =
-        'transparent url(' +
-        markerConfig.icon +
-        '?v=1123) no-repeat left center';
-        
-        */
-    //add li item to list
+    }); //add li item to list
 
     listId ? listId.appendChild(listItem).appendChild(anchor) : null;
     return marker;
@@ -2718,51 +2690,46 @@ function createMap(mapContainer) {
           searchItemFocus(e.keyCode);
         } else {
           // clears previous suggestions, and 'clear search button' if exists
-          let listWrapper = searchBox.parentElement.querySelector('.query__suggestions__wrapper');
-          let clearSearch = document.querySelector('.campus-map__controls__search__clear');
-          let hideListWrapper = listWrapper ? searchBox.parentElement.querySelector('.query__suggestions__wrapper').remove() : null;
-          let hideClearSearchButton = clearSearch ? clearSearch.remove() : null; // creates HTML structure for suggestion list
+          clearsSearchSuggestions();
 
-          let createListWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
-            label: 'class',
-            val: 'query__suggestions__wrapper'
-          }]);
-          let createList = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
-            label: 'id',
-            val: 'query__suggestions'
-          }, {
-            label: 'data-show',
-            val: false
-          }, {
-            label: 'data-focus',
-            val: -1
-          }]);
-          let clearSearchButton = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
-            label: 'class',
-            val: 'campus-map__controls__search__clear'
-          }, {
-            label: 'html',
-            val: '<span class="fad fa-fw fa-times-circle icon "></span><span class="campus-map__controls__search__clear__text">Clear query</span>'
-          }]); // adds click event to clear search button
-
-          clearSearchButton.addEventListener('click', function () {
-            searchBox.value = '';
-            /*
-            searchBox.parentElement.querySelector('.query__suggestions__wrapper').remove();
-            clearSearch.remove();
-            */
-
-            test();
-          });
-          searchBox.parentElement.appendChild(createListWrapper).appendChild(createList);
-          let list = document.getElementById('query__suggestions');
-
-          function test() {
+          function searchSuggestions() {
             let searchString = searchBox.value; // if a query is presesnt it show / hides relevant buildings using CSS instead of recreateing DOM elements all the time to help with performance
 
             if (searchString.length > 0) {
+              //
+              // move create element here for creating search suggestions
+              //
+              //
+              // creates HTML structure for suggestion list
+              let createListWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+                label: 'class',
+                val: 'query__suggestions__wrapper'
+              }]);
+              let createList = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
+                label: 'id',
+                val: 'query__suggestions'
+              }, {
+                label: 'data-show',
+                val: false
+              }, {
+                label: 'data-focus',
+                val: -1
+              }]);
+              searchBox.parentElement.appendChild(createListWrapper).appendChild(createList);
+              let list = document.getElementById('query__suggestions'); // adds search clear button
+
+              let clearSearchButton = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
+                label: 'class',
+                val: 'campus-map__controls__search__clear'
+              }, {
+                label: 'html',
+                val: '<span class="fad fa-fw fa-times-circle icon "></span><span class="campus-map__controls__search__clear__text">Clear query</span>'
+              }]); // adds click event to clear search button
+
+              clearSearchButton.addEventListener('click', function () {
+                clearSearchString();
+              });
               searchBox.parentElement.appendChild(clearSearchButton);
-              list.setAttribute('data-show', true);
               /**
                * creates list of anchors contaning building info below:
                * @tag {HTMLelement} anchor containing building name and id
@@ -2796,18 +2763,17 @@ function createMap(mapContainer) {
                     list.appendChild(item).appendChild(anchor);
                     counter += 1;
                   }
+
+                  list.setAttribute('data-show', true);
                 }
               });
             } else {
-              console.log("else...");
-              let listShow = list ? list.setAttribute('data-show', false) : null;
-              let clearSearch = document.querySelector('.campus-map__controls__search__clear');
-              let hideClearSearchButton = clearSearch ? clearSearch.remove() : null;
+              clearSearchString();
             }
           }
 
           ;
-          test();
+          searchSuggestions();
         }
       }); // behaviour when searchbox recieves focus
 
@@ -2816,7 +2782,7 @@ function createMap(mapContainer) {
         toggleLocationPanel('true');
         closeAccordions(); // shows previous suggestions if they were hidden
 
-        if (searchBox.value.length > 0) {
+        if (searchBox.value.length > 0 && document.getElementById('query__suggestions').childElementCount > 0) {
           document.getElementById('query__suggestions').setAttribute('data-show', true);
         }
       }); // goes find marker and show on map
@@ -2853,10 +2819,11 @@ function createMap(mapContainer) {
           }
       }
 
-      ;
+      ; //end of searchItemFocus
     }
 
-    ;
+    ; // end of searchBoxInit
+
     searchBoxInit(); //clear marker when infoWIndow closed
 
     google.maps.event.addListener(infoWindow, 'closeclick', function () {
@@ -2891,8 +2858,8 @@ function createMap(mapContainer) {
 
   ;
   /**
-   * init fn
-   * @return {Undefined}
+   * Initialises the map, shows loading icon whilst doing so
+   * 
    */
 
   function init() {
@@ -2906,6 +2873,10 @@ function createMap(mapContainer) {
   }
 
   ;
+  /**
+   * Toggles location panel open or close depending on it's status
+   * @param {string} status - 'true' or 'false', passed from data-show attribute
+   */
 
   function toggleLocationPanel(status) {
     if (status === 'false') {
@@ -2914,7 +2885,7 @@ function createMap(mapContainer) {
       mapContainer.querySelector('.campus-map__controls__locations').focus();
 
       if (document.getElementById('query__suggestions')) {
-        document.getElementById('query__suggestions').setAttribute('data-show', false); // walter maybe remove if clicked outside  
+        document.getElementById('query__suggestions').setAttribute('data-show', false);
       }
     } else {
       mapContainer.querySelector('.campus-map__controls__locations__heading').setAttribute('data-show', false);
@@ -2955,40 +2926,50 @@ function createMap(mapContainer) {
       // capture which accordion clicked on and closes all others
       closeAccordions(el.getAttribute('id'));
     });
-  }); // hh
-
-  /**/
+  });
+  /**
+   * Closes search suggestions and location dropdowns
+   * when clicking outside of them elements
+   */
 
   document.addEventListener("click", function (evt) {
-    var accordionLocations = document.getElementById('map-controls'),
+    var mapControls = document.getElementById('map-controls'),
         targetElement = evt.target; // clicked element
 
     do {
-      if (targetElement == accordionLocations) {
+      if (targetElement == mapControls) {
         // This is a click inside. Do nothing, just return.
-        console.log("clicked inside");
         return;
       } // Go up the DOM
 
 
       targetElement = targetElement.parentNode;
-    } while (targetElement);
+    } while (targetElement); // This is a click outside
+    // closes location panel and location accorions
 
-    console.log("clicked OUTSIDE"); // This is a click outside
 
     toggleLocationPanel('true');
-    closeAccordions();
-    document.getElementById('query__suggestions').setAttribute('data-show', false);
-  });
-  /*
-  document.getElementById('map-controls').addEventListener('focusout',function(){
-      console.log(`main focus lost`);
-      toggleLocationPanel('true');
-          closeAccordions(); 
-          document.getElementById('query__suggestions').setAttribute('data-show', false);
-  });
-  */
-  // Map initial overlay to show northampton square campus
+    closeAccordions(); // closes search suggestions but don't remove them
+
+    if (document.getElementById('query__suggestions')) {
+      document.getElementById('query__suggestions').setAttribute('data-show', false);
+    }
+  }); // Clears search string from location search
+
+  function clearSearchString() {
+    searchBox.value = '';
+    let clearSearch = document.querySelector('.campus-map__controls__search__clear');
+    let hideClearSearchButton = clearSearch ? clearSearch.remove() : null;
+  } // clears existing search suggestions
+
+
+  function clearsSearchSuggestions() {
+    let listWrapper = searchBox.parentElement.querySelector('.query__suggestions__wrapper');
+    let clearSearchButton = document.querySelector('.campus-map__controls__search__clear');
+    let hideListWrapper = listWrapper ? searchBox.parentElement.querySelector('.query__suggestions__wrapper').remove() : null;
+    let hideClearSearchButton = clearSearchButton ? clearSearchButton.remove() : null;
+  } // Map initial overlay to show northampton square campus
+
 
   var cityCampus = [{
     lat: 51.527261,
