@@ -2248,13 +2248,6 @@ function createMap(mapContainer) {
   latlng = new google.maps.LatLng(51.527761, -0.103283),
 
   /**
-   * jQuery object for map canvas
-   * @let {Object}
-   */
-  //walter prob delete?
-  //$mapContainer = document.getElementById('map-container'),
-
-  /**
    * an object literal containing the properties we want to pass to the map
    * @let {Object}
    */
@@ -2416,9 +2409,7 @@ function createMap(mapContainer) {
 
         map.panTo(marker.position); //add marker to map
 
-        console.log('2nd marker is:' + marker);
-        marker.setMap(map); //marker.setMap(null);
-        // setTimeout(function(){ marker.setMap(null) }, 5000);
+        marker.setMap(map);
       }
     }
   }
@@ -2493,7 +2484,7 @@ function createMap(mapContainer) {
    */
 
   function initKmlLayers(layer) {
-    // Walter possible remove KML
+    // possibly not needed at this point
     for (let key in layer) {
       // skip loop if the property is from prototype
       if (!layer.hasOwnProperty(key)) {} //end if
@@ -2504,12 +2495,10 @@ function createMap(mapContainer) {
       let overlay = new google.maps.KmlLayer(obj.src, {
         preserveViewport: obj.preserveViewport
       });
-    } // end for
-
+    }
   }
 
-  ; //end initKmlLayers
-
+  ;
   /**
    *  creates individual markers, builds a corresponding filter item, binds a infoWindow to marker with html
    * @param {Object} markerConfig: an object containing letious marker configuration options
@@ -2522,39 +2511,39 @@ function createMap(mapContainer) {
         listItem,
         marker,
         anchor,
-        html = ''; //build html for infoWindow
-    //if has link
+        html = ''; // build html for infoWindow
+    // if has link
 
     if (markerConfig.linkHref.length !== 0) {
       html = '<div id="info-window" style="min-height: 60px;"><h3><a href="' + markerConfig.linkHref + '">' + markerConfig.name + '</a></h3>';
     } else {
       html = '<div id="info-window" style="min-height: 60px;"><h3>' + markerConfig.name + '</h3>';
-    } //test to see if has a buildingPrefix
+    } // test to see if has a buildingPrefix
 
 
     if (markerConfig.buildingPrefix.length !== 0) {
       html += '<p class="building-prefix"><strong>Rooms beginning: ' + markerConfig.buildingPrefix + '</strong></p>';
       markerConfig.buildingPrefix = '(' + markerConfig.buildingPrefix + ')';
-    } //add description and close div element
+    } // add description and close div element
 
 
-    html += markerConfig.description.replace(/\<h2/g, '<h4').replace(/\h2>/g, 'h4>') + '</div>'; //create google maps marker
+    html += markerConfig.description.replace(/\<h2/g, '<h4').replace(/\h2>/g, 'h4>') + '</div>'; // create google maps marker
 
     marker = new google.maps.Marker({
       map: markerConfig.map,
       position: markerConfig.point,
       icon: markerConfig.icon,
       animation: google.maps.Animation.DROP
-    }); //add a new property to the google maps marker object so we can id markers
+    }); // add a new property to the google maps marker object so we can id markers
 
     marker.set('id', markerConfig.id); //add a new property of inHtml to populate infoWindow
 
-    marker.set('infoHtml', html); //attach event listener for marker click to handle infoWindow
+    marker.set('infoHtml', html); // attach event listener for marker click to handle infoWindow
 
     google.maps.event.addListener(marker, 'click', function (e) {
       //closure in a loop shizzle - I find this hard to get my head around - returning a closure seems to help
       return updateHash(marker);
-    }); //create list element
+    }); // create list element
 
     listItem = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', [{
       label: 'id',
@@ -2562,7 +2551,7 @@ function createMap(mapContainer) {
     }, {
       label: 'class',
       val: 'building'
-    }]); //create a element with click handler to open infoWindow
+    }]); // create a element with click handler to open infoWindow
 
     anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
       label: 'html',
@@ -2674,11 +2663,7 @@ function createMap(mapContainer) {
 
       if (cityLayers[markerConfig.category]) {
         cityLayers[markerConfig.category].markersArray.push(marker);
-      } else {
-        /* Commented out for now. Not sure if this is needed
-            cityLayers[markerConfig.category] = newCategory(
-                markerConfig.category
-            ); */
+      } else {//not needed for now
       }
     }); //end iteration
 
@@ -2691,109 +2676,114 @@ function createMap(mapContainer) {
         } else {
           // clears previous suggestions, and 'clear search button' if exists
           clearsSearchSuggestions();
-
-          function searchSuggestions() {
-            let searchString = searchBox.value; // if a query is presesnt it show / hides relevant buildings using CSS instead of recreateing DOM elements all the time to help with performance
-
-            if (searchString.length > 0) {
-              //
-              // move create element here for creating search suggestions
-              //
-              //
-              // creates HTML structure for suggestion list
-              let createListWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
-                label: 'class',
-                val: 'query__suggestions__wrapper'
-              }]);
-              let createList = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
-                label: 'id',
-                val: 'query__suggestions'
-              }, {
-                label: 'data-show',
-                val: false
-              }, {
-                label: 'data-focus',
-                val: -1
-              }]);
-              searchBox.parentElement.appendChild(createListWrapper).appendChild(createList);
-              let list = document.getElementById('query__suggestions'); // adds search clear button
-
-              let clearSearchButton = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
-                label: 'class',
-                val: 'campus-map__controls__search__clear'
-              }, {
-                label: 'html',
-                val: '<span class="fad fa-fw fa-times-circle icon "></span><span class="campus-map__controls__search__clear__text">Clear query</span>'
-              }]); // adds click event to clear search button
-
-              clearSearchButton.addEventListener('click', function () {
-                clearSearchString();
-              });
-              searchBox.parentElement.appendChild(clearSearchButton);
-              /**
-               * creates list of anchors contaning building info below:
-               * @tag {HTMLelement} anchor containing building name and id
-               * @maxNumberSuggestions {viarable} to set max number of suggestions to show
-               */
-
-              let maxNumberSuggestions = 10;
-              let counter = 0;
-              searchTags.forEach(function (tag) {
-                if (tag.textContent.toLowerCase().indexOf(searchString.toLowerCase()) > -1) {
-                  if (counter < maxNumberSuggestions) {
-                    let item = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', []);
-                    let anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
-                      label: 'tabindex',
-                      val: -1
-                    }, {
-                      label: 'data-id',
-                      val: tag.getAttribute('data-id')
-                    }, {
-                      label: 'content',
-                      val: tag.textContent
-                    }]);
-                    anchor.addEventListener('click', function () {
-                      searchQueryIdFind(tag.getAttribute('data-id'), tag.textContent);
-                      updateHash(tag.getAttribute('data-id'));
-                    });
-                    anchor.addEventListener('keyup', function (e) {
-                      e.preventDefault();
-                      searchItemFocus(e.keyCode);
-                    });
-                    list.appendChild(item).appendChild(anchor);
-                    counter += 1;
-                  }
-
-                  list.setAttribute('data-show', true);
-                }
-              });
-            } else {
-              clearSearchString();
-            }
-          }
-
-          ;
           searchSuggestions();
         }
-      }); // behaviour when searchbox recieves focus
+      });
+
+      function searchSuggestions() {
+        clearsSearchSuggestions();
+        let searchString = searchBox.value; // if a query is presesnt and finds a match it creates suggestions
+
+        if (searchString.length > 0) {
+          // creates HTML structure for suggestion list
+          let createListWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+            label: 'class',
+            val: 'query__suggestions__wrapper'
+          }]);
+          let createList = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
+            label: 'id',
+            val: 'query__suggestions'
+          }, {
+            label: 'data-show',
+            val: false
+          }, {
+            label: 'data-focus',
+            val: -1
+          }]);
+          searchBox.parentElement.appendChild(createListWrapper).appendChild(createList);
+          let list = document.getElementById('query__suggestions'); // adds search clear button
+
+          let clearSearchButton = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
+            label: 'class',
+            val: 'campus-map__controls__search__clear'
+          }, {
+            label: 'html',
+            val: '<span class="fad fa-fw fa-times-circle icon "></span><span class="campus-map__controls__search__clear__text">Clear query</span>'
+          }]); // adds click event to clear search button
+
+          clearSearchButton.addEventListener('click', function () {
+            clearSearchString();
+          });
+          searchBox.parentElement.appendChild(clearSearchButton);
+          /**
+           * creates list of anchors contaning building info below:
+           * @tag {HTMLelement} anchor containing building name and id
+           * @maxNumberSuggestions {viarable} to set max number of suggestions to show
+           */
+
+          let maxNumberSuggestions = 10;
+          let counter = 0; // Cycles through all the locations to see if they match with the search string, 
+          // then builds a list containing the matches
+
+          searchTags.forEach(function (tag) {
+            if (tag.textContent.toLowerCase().indexOf(searchString.toLowerCase()) > -1) {
+              if (counter < maxNumberSuggestions) {
+                let item = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', []);
+                let anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+                  label: 'tabindex',
+                  val: -1
+                }, {
+                  label: 'data-id',
+                  val: tag.getAttribute('data-id')
+                }, {
+                  label: 'content',
+                  val: tag.textContent
+                }]);
+                anchor.addEventListener('click', function () {
+                  searchQueryIdFind(tag.getAttribute('data-id'), tag.textContent);
+                  searchBox.value = tag.textContent;
+                  updateHash(tag.getAttribute('data-id'));
+                });
+                anchor.addEventListener('keyup', function (e) {
+                  e.preventDefault();
+                  searchItemFocus(e.keyCode);
+                });
+                list.appendChild(item).appendChild(anchor);
+                counter += 1;
+              }
+
+              list.setAttribute('data-show', true);
+            }
+          });
+        } else {
+          clearSearchString();
+        }
+      }
+
+      ; // Handles searchbox focus behaviour
 
       searchBox.addEventListener('focusin', function () {
         // closes all accordions and location dropdown
         toggleLocationPanel('true');
-        closeAccordions(); // shows previous suggestions if they were hidden
+        closeAccordions(); // check if there's a search string and then runs suggestions
 
-        if (searchBox.value.length > 0 && document.getElementById('query__suggestions').childElementCount > 0) {
-          document.getElementById('query__suggestions').setAttribute('data-show', true);
-        }
-      }); // goes find marker and show on map
+        searchSuggestions();
+      });
+      /**
+       * goes find marker and show on map
+       * @id {string} string in number which is a unique identifier for each building i.e. 3252
+       */
 
-      function searchQueryIdFind(id, title) {
-        searchBox.value = title;
+      function searchQueryIdFind(id) {
         document.getElementById('query__suggestions').setAttribute('data-show', false);
         hashChange(id);
       }
 
       ;
+      /**
+       * Handles navigating search suggestions by keyboard
+       * @keyCode {number} keycode of keyboard key pressed
+       */
 
       function searchItemFocus(keyCode) {
         let collectionNum = document.getElementById('query__suggestions').querySelectorAll('li').length; // Down arrow pressed
@@ -2819,11 +2809,10 @@ function createMap(mapContainer) {
           }
       }
 
-      ; //end of searchItemFocus
+      ;
     }
 
-    ; // end of searchBoxInit
-
+    ;
     searchBoxInit(); //clear marker when infoWIndow closed
 
     google.maps.event.addListener(infoWindow, 'closeclick', function () {
@@ -2842,6 +2831,7 @@ function createMap(mapContainer) {
   }
 
   ; //end parse xml,
+  // Loads location data from 'dataSrc' -json containing location info
 
   function loadXml() {
     let xhttp = new XMLHttpRequest();
@@ -2875,7 +2865,7 @@ function createMap(mapContainer) {
   ;
   /**
    * Toggles location panel open or close depending on it's status
-   * @param {string} status - 'true' or 'false', passed from data-show attribute
+   * @status {string} being 'true' or 'false', passed from data-show attribute
    */
 
   function toggleLocationPanel(status) {
@@ -2945,15 +2935,12 @@ function createMap(mapContainer) {
 
       targetElement = targetElement.parentNode;
     } while (targetElement); // This is a click outside
-    // closes location panel and location accorions
+    // closes location panel and location accorions, then clears / hides search suggestions
 
 
     toggleLocationPanel('true');
-    closeAccordions(); // closes search suggestions but don't remove them
-
-    if (document.getElementById('query__suggestions')) {
-      document.getElementById('query__suggestions').setAttribute('data-show', false);
-    }
+    closeAccordions();
+    clearsSearchSuggestions();
   }); // Clears search string from location search
 
   function clearSearchString() {
@@ -2968,7 +2955,8 @@ function createMap(mapContainer) {
     let clearSearchButton = document.querySelector('.campus-map__controls__search__clear');
     let hideListWrapper = listWrapper ? searchBox.parentElement.querySelector('.query__suggestions__wrapper').remove() : null;
     let hideClearSearchButton = clearSearchButton ? clearSearchButton.remove() : null;
-  } // Map initial overlay to show northampton square campus
+  } // On page load the northampton square campus is shown on the map as an overlay
+  // co-ordinates below draws the 'shape' of the campus overlay
 
 
   var cityCampus = [{
