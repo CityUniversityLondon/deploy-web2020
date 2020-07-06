@@ -53328,6 +53328,10 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
+.campus-map__controls__search__wrap .campus-map__controls__search:focus, .campus-map__controls__search__wrap .campus-map__controls__search:active {
+    outline: none;
+}
+
 .campus-map__controls__search__wrap .campus-map__controls__search__clear {
     font-size: 1.602rem;
     line-height: 1.25;
