@@ -68395,57 +68395,20 @@ main .standard-content .banner-text {
     }
 }
 
-@media (min-width: 769px) and (min-width: 768px) {
-    .course--ug__usp__stats .statistics-block .ksp__items {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 769px) and (min-width: 901px) {
-    .course--ug__usp__stats .statistics-block .ksp__items {
-        grid-column-gap: 1.5rem;
-    }
-}
-
 @media (min-width: 1281px) {
     .course--ug__usp__stats .statistics-block .ksp__items {
         grid-template-columns: repeat(18, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--3 .ksp__item:nth-child(1) {
         grid-column-gap: 0;
-    }
-}
-
-@media (min-width: 1281px) and (min-width: 768px) {
-    .course--ug__usp__stats .statistics-block .ksp__items {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 1281px) and (min-width: 901px) {
-    .course--ug__usp__stats .statistics-block .ksp__items {
-        grid-column-gap: 1.5rem;
+        grid-column: 1 / 7;
     }
 }
 
 @media (min-width: 768px) {
-    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--3 .ksp__item:nth-child(1) {
-        padding-right: 2rem;
-        grid-column: 2 / 7;
-    }
-}
-
-@media (min-width: 1280px) {
-    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--3 .ksp__item:nth-child(1) {
-        grid-column: 2 / 7;
-    }
-}
-
-@media (min-width: 768px) {
-    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--3 .ksp__item:nth-child(2) {
-        grid-column: 7 / 12;
-    }
-}
-
-@media (min-width: 1280px) {
     .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--3 .ksp__item:nth-child(2) {
         grid-column: 7 / 13;
     }
@@ -68459,7 +68422,7 @@ main .standard-content .banner-text {
 
 @media (min-width: 1280px) {
     .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--3 .ksp__item:nth-child(3) {
-        grid-column: 13 / 18;
+        grid-column: 13 / -1;
     }
 }
 
