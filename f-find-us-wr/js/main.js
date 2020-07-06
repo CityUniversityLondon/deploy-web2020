@@ -1898,6 +1898,7 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 const className = 'dropdown-filter';
+let dataGroupElement = '';
 let showAll = '';
 /**
  * Entry function: loops through and hides list items, sets up event listener on
@@ -1962,6 +1963,7 @@ function hideListItems(items, firstItemVisible, showAll) {
 
 
 function insertSelect(items, parentElement, firstItemVisible) {
+  dataGroupElement = parentElement.querySelector('ul.data-group');
   const selectBox = document.createElement('select'),
         selectWrapper = parentElement.querySelector('.wrapper--dropdown-filter__select'),
         labelFor = parentElement.dataset.labelFor,
@@ -1982,17 +1984,22 @@ function insertSelect(items, parentElement, firstItemVisible) {
     selectBox.appendChild(noSelection);
   }
 
-  let firstItemOverride, lastItemOverride; // Sort by dataset.value if filter is configured to sort alphabetically
+  let defaultItemOverride, lastItemOverride; // Sort by dataset.value to display list alphabetically
 
   if (parentElement.dataset.alphabetical === 'true') {
     items = Array.from(items).sort((a, b) => a.dataset.value < b.dataset.value ? -1 : a.dataset.value > b.dataset.value ? 1 : 0);
   } else {
     items = [...items];
+  } // Update output list items to correct order
+
+
+  for (const item of items) {
+    dataGroupElement.append(item);
   } // Find items with first/last position overrides
 
 
   for (const item of items) {
-    item.dataset.first === 'true' ? firstItemOverride = item : null;
+    item.dataset.first === 'true' ? defaultItemOverride = item : null;
     item.dataset.last === 'true' ? lastItemOverride = item : null;
   }
 
@@ -2006,13 +2013,7 @@ function insertSelect(items, parentElement, firstItemVisible) {
   } // Remove item with dataset.first='true' from original position in array
 
 
-  if (firstItemOverride) {
-    let firstPositionOriginal = items.indexOf(firstItemOverride);
-    items.splice(firstPositionOriginal, 1); // If custom first option exists, place as first selectable option
-
-    items.splice(1, 0, firstItemOverride);
-  } // Remove item with dataset.last='true' from original position in array
-
+  let defaultItemOverridePosition = items.indexOf(defaultItemOverride); // Remove item with dataset.last='true' from original position in array
 
   if (lastItemOverride) {
     let lastPositionOriginal = items.indexOf(lastItemOverride);
@@ -2033,7 +2034,20 @@ function insertSelect(items, parentElement, firstItemVisible) {
 
   if (firstItemVisible === 'true' && showAll === 'false') {
     const options = parentElement.querySelectorAll('option');
-    options[1].setAttribute('selected', 'selected');
+
+    if (defaultItemOverride) {
+      if (lastItemOverride) {
+        // Last item override exists
+        if (parentElement.dataset.alphabetical === 'true') {
+          options[defaultItemOverridePosition].setAttribute('selected', 'selected');
+        } else {
+          options[defaultItemOverridePosition + 1].setAttribute('selected', 'selected');
+        }
+      } else {
+        // Default show & no last item override
+        options[defaultItemOverridePosition + 1].setAttribute('selected', 'selected');
+      }
+    }
   }
 }
 /**
@@ -9752,7 +9766,17 @@ function setSwipe(slider, sliderType, sliderObject, sliderControl) {
         actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
       }
     } else {
-      let btn = swipe === -1 ? slider.nextSibling.lastChild.firstChild : swipe === 1 ? slider.nextSibling.lastChild.lastChild : null;
+      let e = slider.nextSibling.querySelectorAll('.slider-block__control__progress'),
+          convert = Array.from(e),
+          elType = convert.filter(e => {
+        let s = window.getComputedStyle(e).getPropertyValue('display');
+
+        if (s === 'block') {
+          return e;
+        }
+      });
+      let sliderType = elType[0].classList.contains('slider-block__control__progress--tablet') ? 'tablet' : 'default';
+      let btn = swipe === -1 ? slider.nextSibling.lastChild.querySelector(".prev--".concat(sliderType)) : swipe === 1 ? slider.nextSibling.lastChild.querySelector(".next--".concat(sliderType)) : null;
 
       if (btn && !btn.disabled) {
         defaultEvent(btn, slider, sliderType, sliderObject);
@@ -9776,7 +9800,7 @@ function setSwipe(slider, sliderType, sliderObject, sliderControl) {
 function setVisibility(slider, sliderType, sliderObject) {
   Array.from(slider.getElementsByTagName('li')).forEach((el, i) => {
     el.setAttribute(sliderObject.default.pageAttr, "".concat(i));
-    el.setAttribute(sliderObject.default.tabIndex, "-1");
+    el.setAttribute(sliderObject.default.tabIndex, '-1');
     el.setAttribute(sliderObject.default.ariaLabel, "Slide ".concat(i + 1));
 
     if (i === 0) {
@@ -9837,7 +9861,7 @@ function createProgressTracker(slider, sliderType, sliderObject) {
       createProgressElements(wrapper, 'tablet', sliderObject);
     }
 
-    if (sliderObject.default.totalPages > "".concat(sliderObject.tablet.maxItem)) {
+    if (sliderObject.default.totalPages > "".concat(sliderObject.desk.maxItem)) {
       createProgressElements(wrapper, 'desk', sliderObject);
     }
   }
