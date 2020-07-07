@@ -23582,6 +23582,10 @@ p.card--course__key-info .icon {
     font-weight: 600;
 }
 
+.card--event__container {
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+}
+
 .card--event__icon {
     color: #d61726;
     width: 1rem;
@@ -23878,10 +23882,6 @@ p.card--course__key-info .icon {
 }
 
 /* -- Portrait/landscape specific styles -- */
-.card--event--portrait {
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-}
-
 .card--event--portrait .card--event__date--highlight {
     display: inline-flex;
     position: relative;
@@ -57520,6 +57520,7 @@ main .home .home__research__wrap .home__research__content p {
     font-size: 1.125rem;
     line-height: 1.25;
     letter-spacing: -0.008em;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-family: "Meta Sans", sans-serif;
 }
 
@@ -57545,6 +57546,11 @@ main .home .home__research__wrap .home__research__content p {
     main .home .home__research__wrap .home__research__content p {
         letter-spacing: -0.017em;
     }
+}
+
+main .home .home__research__wrap .home__research__content p i,
+main .home .home__research__wrap .home__research__content p em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 main .home .home__research__wrap .home__research__content .home__research__content__links ul li a {
