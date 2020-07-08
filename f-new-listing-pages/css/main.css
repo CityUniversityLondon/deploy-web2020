@@ -59273,40 +59273,10 @@ main .home .home__whats-happening .related-content {
 
 @media (min-width: 768px) {
     .landing--functional__finder .landing--functional__finder__tabs__columns {
-        display: grid;
-        grid-auto-flow: column;
-        grid-column-gap: 1.5rem;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .landing--functional__finder .landing--functional__finder__tabs__columns[data-rowcount='1'] {
-        grid-template-rows: repeat(1, auto);
-    }
-    .landing--functional__finder .landing--functional__finder__tabs__columns[data-rowcount='2'] {
-        grid-template-rows: repeat(2, auto);
-    }
-    .landing--functional__finder .landing--functional__finder__tabs__columns[data-rowcount='3'] {
-        grid-template-rows: repeat(3, auto);
-    }
-    .landing--functional__finder .landing--functional__finder__tabs__columns[data-rowcount='4'] {
-        grid-template-rows: repeat(4, auto);
-    }
-    .landing--functional__finder .landing--functional__finder__tabs__columns[data-rowcount='5'] {
-        grid-template-rows: repeat(5, auto);
-    }
-    .landing--functional__finder .landing--functional__finder__tabs__columns[data-rowcount='6'] {
-        grid-template-rows: repeat(6, auto);
-    }
-    .landing--functional__finder .landing--functional__finder__tabs__columns[data-rowcount='7'] {
-        grid-template-rows: repeat(7, auto);
-    }
-    .landing--functional__finder .landing--functional__finder__tabs__columns[data-rowcount='8'] {
-        grid-template-rows: repeat(8, auto);
-    }
-    .landing--functional__finder .landing--functional__finder__tabs__columns[data-rowcount='9'] {
-        grid-template-rows: repeat(9, auto);
-    }
-    .landing--functional__finder .landing--functional__finder__tabs__columns[data-rowcount='10'] {
-        grid-template-rows: repeat(10, auto);
+        -moz-column-count: 2;
+             column-count: 2;
+        -moz-column-gap: 1.5rem;
+             column-gap: 1.5rem;
     }
 }
 
