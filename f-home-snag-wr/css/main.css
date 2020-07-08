@@ -53488,15 +53488,17 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 @media (max-width: 767px) {
     .promo-area__wrap .promo-area.layout__left--split .promo-area__content, .promo-area__wrap .promo-area.layout__right--split .promo-area__content {
         grid-column: 2 / 24;
-        padding: 1rem 0;
+        padding: 1rem 0 0 0;
     }
-    .promo-area__wrap .promo-area.layout__left--split .promo-area__content .promo-area__heading,
-    .promo-area__wrap .promo-area.layout__left--split .promo-area__content .promo-area__text,
-    .promo-area__wrap .promo-area.layout__left--split .promo-area__content .promo-area__cta, .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__heading,
-    .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__text,
-    .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__cta {
+    .promo-area__wrap .promo-area.layout__left--split .promo-area__content .promo-area__heading, .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__heading {
         margin-right: 1.25rem;
         margin-left: 1.25rem;
+    }
+    .promo-area__wrap .promo-area.layout__left--split .promo-area__content .promo-area__container, .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__container {
+        padding: 2.5rem;
+    }
+    .promo-area__wrap .promo-area.layout__left--split .promo-area__content .promo-area__text p:first-of-type, .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__text p:first-of-type {
+        margin-top: 0;
     }
     .promo-area__wrap .promo-area.layout__left--split .promo-area__content .promo-area__image--mobile, .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__image--mobile {
         display: inline;
