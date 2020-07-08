@@ -53629,7 +53629,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 @media (max-width: 899px) {
     .promo-area__wrap .promo-area .promo-area__content .promo-area__cta {
         display: block;
-        text-align: center;
     }
     .promo-area__wrap .promo-area .promo-area__content .promo-area__cta ul {
         max-width: inherit;
