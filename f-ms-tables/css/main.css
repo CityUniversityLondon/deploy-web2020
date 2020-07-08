@@ -20504,11 +20504,26 @@ main table {
     font-weight: 450;
 }
 
-main table th,
-main table td {
+main table tr th,
+main table tr td {
     border: 0.0625rem solid #cbcbcb;
     padding: 0.5rem;
     vertical-align: top;
+}
+
+main table tr th:first-child,
+main table tr td:first-child {
+    text-align: left;
+}
+
+main table tr th:not(:first-child),
+main table tr td:not(:first-child) {
+    text-align: right;
+}
+
+main table th,
+main table strong {
+    font-weight: 600;
 }
 
 main table thead {
@@ -20521,6 +20536,10 @@ main table thead tr {
 
 main table thead tr:first-child th {
     background: #3e1031;
+}
+
+main table thead tr .heading__secondary {
+    background: #7c2062;
 }
 
 main table tbody {
