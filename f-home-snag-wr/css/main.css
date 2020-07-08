@@ -22396,7 +22396,6 @@ Assign mixin:
 }
 
 .card--casestudy--alternative .card--casestudy--alternative__thumbnail img {
-    min-height: 100%;
     max-width: inherit;
     width: 100%;
 }
@@ -57670,13 +57669,13 @@ main .home .home__research__wrap .home__research__card {
     overflow: hidden;
 }
 
+main .home .home__research__wrap .home__research__card ul {
+    margin-left: 0;
+}
+
 main .home .home__research__wrap .home__research__link {
     grid-column: 4 / 22;
     margin-top: 2rem;
-}
-
-main .home .home__research__wrap .home__research__link .linked-heading {
-    margin-left: 0.5rem;
 }
 
 @media (max-width: 1280px) {
@@ -57707,18 +57706,28 @@ main .home .home__research__wrap .home__research__link .linked-heading {
 @media (max-width: 900px) {
     main .home .home__research__wrap .home__research__content,
     main .home .home__research__wrap .home__research__card,
-    main .home .home__research__wrap .home__research__link,
     main .home .home__research__wrap h2 {
         grid-column: 4/ 22;
+    }
+}
+
+@media (max-width: 768px) {
+    main .home .home__research__wrap .home__research__card {
+        grid-column: 3/ 23;
+    }
+    main .home .home__research__wrap .home__research__card .home__research__link {
+        margin-left: 2rem;
     }
 }
 
 @media (max-width: 432px) {
     main .home .home__research__wrap .home__research__content,
     main .home .home__research__wrap .home__research__card,
-    main .home .home__research__wrap .home__research__link,
     main .home .home__research__wrap h2 {
         grid-column: 3/ 22;
+    }
+    main .home .home__research__wrap .home__research__card .home__research__link {
+        margin-left: 0;
     }
 }
 
