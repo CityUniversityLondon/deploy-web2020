@@ -20506,8 +20506,7 @@ main table {
 
 main table tr th,
 main table tr td {
-    border: 0.0625rem solid #cbcbcb;
-    padding: 0.5rem;
+    border: 0.0625rem solid #d8d8d8;
     vertical-align: top;
 }
 
@@ -20526,29 +20525,36 @@ main table strong {
     font-weight: 600;
 }
 
-main table thead {
-    font-family: "Meta Sans", sans-serif;
-}
-
 main table thead tr {
     color: #ffffff;
 }
 
 main table thead tr:first-child th {
-    background: #3e1031;
+    background: #5d184a;
 }
 
 main table thead tr .heading__secondary {
     background: #7c2062;
 }
 
+main table thead td,
+main table thead th {
+    padding: 1rem 0.5rem;
+    vertical-align: middle;
+}
+
 main table tbody {
-    font-family: "Plex Sans", sans-serif;
     color: #1e1e1e;
 }
 
 main table tbody tr:hover {
-    background-color: #f2f2f2;
+    background-color: #e5e5e5;
+}
+
+main table tbody th,
+main table tbody td {
+    padding: 0.5rem;
+    vertical-align: bottom;
 }
 
 /* Banned embeds – these are not accessible so cannot be allowed on the website. */
