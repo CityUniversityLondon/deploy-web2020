@@ -25657,7 +25657,7 @@ p.card--course__key-info .icon {
 .card--social-media__category {
     color: #696969;
     font-style: italic;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0;
     display: inline-block;
 }
 
@@ -41349,6 +41349,28 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
+.dialog[data-type='video'] .dialog__inner {
+    max-height: calc(100% - 10vh);
+}
+
+@media (min-width: 768px) {
+    .dialog[data-type='video'] .dialog__inner {
+        width: 80%;
+    }
+}
+
+@media (min-width: 900px) {
+    .dialog[data-type='video'] .dialog__inner {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .dialog[data-type='video'] .dialog__inner {
+        width: 60%;
+    }
+}
+
 .dialog-in.no-scroll {
     position: fixed;
     width: 100%;
@@ -41518,20 +41540,27 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 @media (min-width: 768px) {
     .dialog__inner {
+        width: 65%;
         margin-top: 15vh;
         max-height: calc(100% - 30vh);
     }
 }
 
+@media (min-width: 900px) {
+    .dialog__inner {
+        width: 60%;
+    }
+}
+
 @media (min-width: 1024px) {
     .dialog__inner {
-        width: 70%;
+        width: 50%;
     }
 }
 
 @media (min-width: 1280px) {
     .dialog__inner {
-        width: 60%;
+        width: 45%;
     }
 }
 
@@ -45942,6 +45971,12 @@ blockquote footer cite {
     display: flex;
     justify-content: flex-end;
     padding: 1rem 0;
+}
+
+@media (min-width: 769px) {
+    .slider-block__control[data-control-type='dot'] {
+        padding: 0;
+    }
 }
 
 .slider-block__control__progress {
@@ -56455,13 +56490,13 @@ div.widget-123_test_ {
 }
 
 .event__info--details {
-    grid-column: 1 / span 10;
+    grid-column: 1 / span 11;
 }
 
 @media (min-width: 769px) {
     .event__info--details {
         display: grid;
-        grid-template-columns: repeat(10, 1fr);
+        grid-template-columns: repeat(11, 1fr);
         grid-column-gap: 0;
     }
 }
@@ -56483,7 +56518,7 @@ div.widget-123_test_ {
         grid-column: 1 / span 6;
     }
     .event__info--details .event__info--details-bottom {
-        grid-column: 7 / span 4;
+        grid-column: 7 / span 5;
     }
 }
 
@@ -56778,21 +56813,21 @@ div.widget-123_test_ {
 }
 
 .event__speakers__details span {
-    font-size: 1rem;
+    font-size: 0.889rem;
     line-height: 1.625;
-    letter-spacing: -0.005em;
+    letter-spacing: 0em;
     margin-right: 0.5rem;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
     .event__speakers__details span {
-        letter-spacing: -0.008em;
+        letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .event__speakers__details span {
-        letter-spacing: -0.013em;
+        letter-spacing: -0.01em;
     }
 }
 
@@ -56983,30 +57018,8 @@ div.widget-123_test_ {
 
 @media (min-width: 1024px) {
     .event_related-events .related-content {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 901px) {
-    .event_related-events .related-content {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 901px) {
-    .event_related-events .related-content {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1441px) {
-    .event_related-events .related-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
         margin-left: auto;
         margin-right: auto;
     }
@@ -57034,6 +57047,18 @@ div.widget-123_test_ {
     }
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+    .event_related-events .related-content {
+        flex-wrap: nowrap;
+    }
+    .event_related-events .related-content li:nth-child(2) {
+        margin-left: 0.5rem;
+    }
+    .event_related-events .related-content li:nth-child(3) {
+        margin-left: 0.5rem;
+    }
+}
+
 @media (min-width: 1025px) {
     .event_related-events li {
         width: 32%;
@@ -57043,6 +57068,13 @@ div.widget-123_test_ {
 @media (min-width: 432px) and (max-width: 1024px) {
     .event_related-events li {
         width: 47%;
+    }
+}
+
+@media (max-width: 768px) {
+    .event .slider-block__control {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
@@ -66957,8 +66989,8 @@ main .standard-content .banner-text {
     }
 }
 
-@media (max-width: 1024px) {
-    .course--ug .course-info__wrapper .course-info .course-info__year .start-date .next-year {
+@media (max-width: 1280px) {
+    .course--ug .course-info__wrapper .course-info .course-info__year .start-date {
         text-align: center;
     }
 }
@@ -67997,62 +68029,66 @@ main .standard-content .banner-text {
     margin: 0;
 }
 
-@media (max-width: 767px) {
-    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items--3 {
-        grid-template-rows: repeat(3, auto);
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: '. a a a a .' '. b b b b .' '. c c c c .';
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1280px) {
-    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items--3 {
-        grid-template-rows: repeat(2, auto);
+@media (min-width: 769px) {
+    .course--ug__usp__stats .statistics-block .ksp__items {
         grid-template-columns: repeat(12, 1fr);
-        grid-template-areas: '. a a a a a b b b b b .' '. . . c c c c c c . . .';
+        grid-column-gap: 0;
     }
 }
 
 @media (min-width: 1281px) {
-    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items--3 {
+    .course--ug__usp__stats .statistics-block .ksp__items {
         grid-template-columns: repeat(18, 1fr);
-        grid-template-areas: '. a a a a a b b b b b b c c c c c .';
     }
 }
 
-@media (max-width: 767px) {
-    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--2 {
-        grid-template-rows: repeat(3, auto);
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: '. a a a a .' '. b b b b .';
+@media (min-width: 768px) {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--3 .ksp__item:nth-child(1) {
+        grid-column-gap: 0;
+        grid-column: 1 / 7;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1280px) {
-    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--2 {
-        grid-template-rows: repeat(2, auto);
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-areas: '. a a a a a b b b b b .';
+@media (min-width: 768px) {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--3 .ksp__item:nth-child(2) {
+        grid-column: 7 / 13;
+    }
+}
+
+@media (min-width: 768px) {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--3 .ksp__item:nth-child(3) {
+        grid-column: 4 / -4;
+    }
+}
+
+@media (min-width: 1280px) {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--3 .ksp__item:nth-child(3) {
+        grid-column: 13 / -1;
+    }
+}
+
+@media (min-width: 768px) {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--2 .ksp__item:nth-child(1) {
+        padding-right: 2rem;
     }
 }
 
 @media (min-width: 1281px) {
-    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--2 {
-        grid-template-columns: repeat(18, 1fr);
-        grid-template-areas: '. . a a a a a a b b b b b b b . .';
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--2 .ksp__item:nth-child(1) {
+        grid-column: 1 / 10;
     }
 }
 
-.course--ug__usp__stats .statistics-block .ksp__items .ksp__item:nth-child(1) {
-    grid-area: a;
+@media (min-width: 768px) {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--2 .ksp__item:nth-child(2) {
+        grid-column: 7 / -1;
+    }
 }
 
-.course--ug__usp__stats .statistics-block .ksp__items .ksp__item:nth-child(2) {
-    grid-area: b;
-}
-
-.course--ug__usp__stats .statistics-block .ksp__items .ksp__item:nth-child(3) {
-    grid-area: c;
+@media (min-width: 1281px) {
+    .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--2 .ksp__item:nth-child(2) {
+        grid-column: 10 / -1;
+    }
 }
 
 @media screen {

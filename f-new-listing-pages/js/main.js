@@ -6591,7 +6591,8 @@ function launchModal(modal) {
 
 
 function createDialog(parent, position, dialogArray) {
-  const slider = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(parent.getAttribute('data-slider'));
+  const slider = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(parent.getAttribute('data-slider')),
+        type = parent.dataset.type;
   const closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('button', [{
     label: 'class',
     val: 'dialog__close fas fa-times'
@@ -6605,6 +6606,9 @@ function createDialog(parent, position, dialogArray) {
   }, {
     label: 'data-position',
     val: "".concat(position)
+  }, {
+    label: 'data-type',
+    val: "".concat(type)
   }]);
   const bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
@@ -8543,7 +8547,7 @@ function slicedArrayIterator(arr, pageAttr, visibilityAttr) {
   }
 }
 /**
- * Called by the innitial launch function. It adds a progress bar/ page counter to the slider
+ * Called by the initial launch function. It adds a progress bar/ page counter to the slider
  *
  * @param {HTMLElement} slider - an HTML element with the slider class.
  * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
@@ -8610,6 +8614,7 @@ function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
   }]);
   const controlWrapper = slider.parentNode.querySelector('.slider-block__control');
   controlWrapper.appendChild(buttonWrapper);
+  controlWrapper.setAttribute('data-control-type', sliderControl);
 
   if (sliderControl === 'default') {
     let buttonPrev = createButtonElement('fas fa-arrow-left prev--default', 'default', sliderObject);
