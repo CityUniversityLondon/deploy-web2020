@@ -20530,11 +20530,11 @@ main table thead tr {
 }
 
 main table thead tr:first-child th {
-    background: #5d184a;
+    background: #3e1031;
 }
 
 main table thead tr .heading__secondary {
-    background: #7c2062;
+    background: #5d184a;
 }
 
 main table thead td,
