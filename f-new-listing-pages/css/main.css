@@ -58640,8 +58640,6 @@ main .home .home__whats-happening .related-content {
 
 @media (min-width: 768px) and (max-width: 1023px) {
     main > .landing--functional .wrapper--landing--functional__content .landing--functional__content {
-        margin-left: 0;
-        margin-right: 0;
         grid-column: 4 / span 18;
     }
 }
@@ -58779,7 +58777,9 @@ main .home .home__whats-happening .related-content {
 }
 
 .landing--functional .wrapper--landing__contact .landing__contact__heading {
-    border-bottom: 0.125rem solid #7c2062;
+    border-bottom-color: #7c2062;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
     padding-bottom: 0.5rem;
     text-align: left;
 }
