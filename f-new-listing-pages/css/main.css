@@ -58676,6 +58676,9 @@ main .home .home__whats-happening .related-content {
     main > .landing--functional .landing--functional__content {
         grid-column: 6 / span 14;
     }
+    main > .landing--functional .landing--functional__video .embedded-video {
+        grid-column: span 24;
+    }
     main > .landing--functional .landing__contact .landing__contact__details {
         grid-column: 2 / span 9;
     }
@@ -58722,6 +58725,9 @@ main .home .home__whats-happening .related-content {
 @media (min-width: 1024px) {
     main .navigation--secondary + .landing--functional .landing--functional__content {
         grid-column: 4 / span 12;
+    }
+    main .navigation--secondary + .landing--functional .landing--functional__video .embedded-video {
+        grid-column: span 18;
     }
     main .navigation--secondary + .landing--functional .landing__contact .landing__contact__details {
         grid-column: 2 / span 7;
