@@ -58642,7 +58642,7 @@ main .home .home__whats-happening .related-content {
     main > .landing--functional .wrapper--landing--functional__content .landing--functional__content {
         margin-left: 0;
         margin-right: 0;
-        grid-column: 6 / span 14;
+        grid-column: 4 / span 18;
     }
 }
 
@@ -58685,6 +58685,12 @@ main .home .home__whats-happening .related-content {
     main > .landing--functional .landing__contact .landing__contact__details:only-child,
     main > .landing--functional .landing__contact .landing__contact__location:only-child {
         grid-column: 2 / span 22;
+    }
+}
+
+@media (min-width: 1280px) {
+    main > .landing--functional .landing--functional__content {
+        grid-column: 7 / span 12;
     }
 }
 
