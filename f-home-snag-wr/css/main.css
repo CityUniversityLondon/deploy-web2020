@@ -24102,6 +24102,11 @@ p.card--course__key-info .icon {
     width: 100%;
 }
 
+.card--news__image-container .thumbnail__image-container figure {
+    margin-top: 0;
+    height: 100%;
+}
+
 .card--news__image-container .thumbnail__image-container img {
     height: 100%;
     width: 100%;
