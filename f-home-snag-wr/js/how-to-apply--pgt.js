@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([5,"vendor-dependencies","core","react","vendor-direct","axios"]);
+/******/ 	deferredModules.push([6,"vendor-dependencies","core","react","axios","vendor-direct"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -1138,7 +1138,7 @@ function arraySlicer(arr, len) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!****************************************!*\
   !*** multi ./src/how-to-apply--pgt.js ***!
   \****************************************/
