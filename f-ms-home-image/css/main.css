@@ -57451,6 +57451,7 @@ main .home .banner--home .banner__video {
 
 main .home .banner--home .banner__video.embedded-video {
     padding: 0;
+    display: block;
 }
 
 main .home .banner--home .banner__video.embedded-video figcaption {
