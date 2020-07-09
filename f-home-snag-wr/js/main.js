@@ -9822,6 +9822,13 @@ function createController(video) {
   }]);
   controllerBtn.append(controllerIcon);
   video.append(controllerBtn);
+
+  if (video.paused) {
+    controllerBtn.dataset.status = 'play';
+    controllerBtn.setAttribute('aria-label', 'Play video');
+  }
+
+  ;
 }
 
 function toggleController(video, status) {
