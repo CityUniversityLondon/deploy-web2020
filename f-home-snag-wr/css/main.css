@@ -25825,6 +25825,10 @@ p.card--course__key-info .icon {
     justify-content: flex-start;
 }
 
+.card--social-media-instagram .card--social-media__image img {
+    height: 100%;
+}
+
 .card--social-media-instagram .card--social-media__footer {
     padding: 0 1.5rem 1.5rem 1.5rem;
 }
