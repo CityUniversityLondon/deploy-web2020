@@ -25821,17 +25821,8 @@ p.card--course__key-info .icon {
 }
 
 .card--social-media-instagram .card--social-media__image {
-    position: relative;
-    padding-top: 100%;
-    overflow: hidden;
-}
-
-.card--social-media-instagram .card--social-media__image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .card--social-media-instagram .card--social-media__footer {
