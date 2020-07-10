@@ -53589,10 +53589,24 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .promo-area__wrap .promo-area .promo-area__content .promo-area__text__details p {
     margin-right: 0.5rem;
     font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
     display: inline;
+}
+
+.promo-area__wrap .promo-area .promo-area__content .promo-area__text__details p i,
+.promo-area__wrap .promo-area .promo-area__content .promo-area__text__details p em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
