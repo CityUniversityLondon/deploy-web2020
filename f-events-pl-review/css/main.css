@@ -56964,6 +56964,11 @@ div.widget-123_test_ {
     border-bottom: 0.0625rem solid #006bbd;
 }
 
+.event__sponsors .not-image-linked {
+    border: 0.0625rem solid #e5e5e5;
+    padding: 1rem;
+}
+
 .event__tags h2 {
     font-family: "Plex Sans", sans-serif;
     color: #696969;
