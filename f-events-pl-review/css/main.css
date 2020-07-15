@@ -56931,7 +56931,7 @@ div.widget-123_test_ {
         transition: none;
     }
     .event__sponsors a:hover .event__sponsors__image:before {
-        background-color: rgba(190, 190, 190, 0.1);
+        background-color: rgba(105, 105, 105, 0.1);
         z-index: 1;
     }
     .event__sponsors a:hover .event__sponsors__image:after {
@@ -56947,7 +56947,7 @@ div.widget-123_test_ {
 }
 
 .event__sponsors a:active .event__sponsors__image:before {
-    background-color: rgba(190, 190, 190, 0.1);
+    background-color: rgba(105, 105, 105, 0.1);
 }
 
 .event__sponsors a:focus, .event__sponsors a:active {
