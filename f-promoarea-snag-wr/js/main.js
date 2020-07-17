@@ -9343,28 +9343,55 @@ function loopVideo(video, maxPlays) {
 
 
 function createController(video) {
+  let controllerBtn;
   const controllerIcon = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
     label: 'class',
     val: 'embedded-video--autoplay__controller-btn__icon'
-  }]),
-        controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
-    label: 'class',
-    val: 'embedded-video--autoplay__controller-btn'
-  }, {
-    label: 'data-status',
-    val: 'pause'
-  }, {
-    label: 'aria-label',
-    val: 'Pause video'
   }]);
+  let statusPaused = video.querySelector('.embedded-video--autoplay__video').paused;
+
+  if (statusPaused) {
+    controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
+      label: 'class',
+      val: 'embedded-video--autoplay__controller-btn'
+    }, {
+      label: 'data-status',
+      val: 'play'
+    }, {
+      label: 'aria-label',
+      val: 'Play video'
+    }]);
+  } else {
+    controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
+      label: 'class',
+      val: 'embedded-video--autoplay__controller-btn'
+    }, {
+      label: 'data-status',
+      val: 'pause'
+    }, {
+      label: 'aria-label',
+      val: 'Pause video'
+    }]);
+  }
+
   controllerBtn.append(controllerIcon);
   video.append(controllerBtn);
 }
 
-function toggleController(video, status) {
+function toggleController(video) {
   let videoEl = video.querySelector('.embedded-video--autoplay__video');
   const controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn');
-  status === 'pause' ? (controllerBtn.dataset.status = 'play', controllerBtn.setAttribute('aria-label', 'Play video'), videoEl.pause()) : (controllerBtn.dataset.status = 'pause', controllerBtn.setAttribute('aria-label', 'Pause video'), videoEl.play());
+  let statusPaused = video.querySelector('.embedded-video--autoplay__video').paused;
+
+  if (statusPaused) {
+    controllerBtn.dataset.status = 'pause';
+    controllerBtn.setAttribute('aria-label', 'Pause video');
+    videoEl.play();
+  } else {
+    controllerBtn.dataset.status = 'play';
+    controllerBtn.setAttribute('aria-label', 'Play video');
+    videoEl.pause();
+  }
 }
 
 function launchAutoplayVideo(video) {
@@ -9374,8 +9401,7 @@ function launchAutoplayVideo(video) {
   createController(video);
   let controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn');
   controllerBtn.addEventListener('click', () => {
-    let controllerStatus = controllerBtn.dataset.status;
-    toggleController(video, controllerStatus);
+    toggleController(video);
   }); // When video finishes autoplaying, switch controller from pause to play
 
   videoEl.addEventListener('ended', () => {
