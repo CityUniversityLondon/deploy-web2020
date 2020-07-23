@@ -22514,32 +22514,13 @@ Assign mixin:
 }
 
 .card--casestudy a {
-    display: inline-block;
     background-color: transparent;
     transition: background-color 0.2s ease-in;
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    color: #696969;
-    background-image: linear-gradient(#696969, #696969);
-    background-position: 0% 100%;
-    background-size: 0% 0.1875rem;
-    background-repeat: no-repeat;
-    transition: background-size 0.6s ease-in;
-    padding-bottom: 0.125rem;
     position: relative;
     padding: 1rem;
     width: 100%;
+    border: 0;
+    display: inline-block;
 }
 
 @media (hover: hover) {
@@ -22610,64 +22591,6 @@ Assign mixin:
 @media (max-width: 1024px) {
     .card--casestudy a {
         background-color: #f2f2f2;
-    }
-}
-
-@media (hover: hover) {
-    .card--casestudy a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.card--casestudy a:focus, .card--casestudy a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-.card--casestudy a:focus, .card--casestudy a:active {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.card--casestudy a:visited {
-    color: #696969;
-}
-
-.card--casestudy a:focus {
-    color: #696969;
-    background-size: 100% 0.1875rem;
-}
-
-@media (hover: hover) {
-    .card--casestudy a:hover {
-        color: #1e1e1e;
-        background-image: linear-gradient(#1e1e1e, #1e1e1e);
-        background-size: 100% 0.1875rem;
     }
 }
 
@@ -22856,6 +22779,18 @@ Assign mixin:
     .card--casestudy a .card__inner > :nth-child(2) {
         margin-top: 0;
     }
+}
+
+.card--casestudy a:hover, .card--casestudy a:active {
+    background-color: #f2f2f2;
+}
+
+.card--casestudy a:hover, .card--casestudy a:focus {
+    border: 0;
+}
+
+.card--casestudy a h3 {
+    border-bottom: 0.125rem solid #0c0c0e;
 }
 
 .card--casestudy__thumbnail {
