@@ -22789,7 +22789,11 @@ Assign mixin:
     border: 0;
 }
 
-.card--casestudy a h3 {
+.card--casestudy a:visited .card__title {
+    color: #0c0c0e;
+}
+
+.card--casestudy a .card__title {
     border-bottom: 0.125rem solid #0c0c0e;
 }
 
