@@ -23377,7 +23377,6 @@ p.card--course__key-info .icon {
 }
 
 .card--event .underline-transition__title {
-    color: #006bbd;
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
@@ -23386,6 +23385,28 @@ p.card--course__key-info .icon {
     font-style: normal;
     font-weight: 600;
     margin-top: 1rem;
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
 }
 
 .card--event .underline-transition__title i,
@@ -23434,6 +23455,91 @@ p.card--course__key-info .icon {
 .card--event .underline-transition__title b,
 .card--event .underline-transition__title strong {
     font-weight: 600;
+}
+
+@media (hover: hover) {
+    .card--event .underline-transition__title:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card--event .underline-transition__title:focus, .card--event .underline-transition__title:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--event .underline-transition__title {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--event .underline-transition__title:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card--event .underline-transition__title:focus, .card--event .underline-transition__title:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card--event .underline-transition__title:visited {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+.card--event .underline-transition__title:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card--event .underline-transition__title:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card--event .underline-transition__title:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
 }
 
 .wrapper--event_image_content {
@@ -59618,12 +59724,24 @@ main > .news {
     font-weight: 100;
 }
 
-.news .news__related-events .card--event__container {
+.news .news__related-events {
+    border-bottom: 0.0625rem solid #cbcbcb;
+}
+
+.news .news__related-events .card {
+    margin-top: 1.25rem;
+}
+
+.news .news__related-events .card:not(:last-child) {
+    border-bottom: 0.0625rem dotted #cbcbcb;
+}
+
+.news .news__related-events .card .card--event__container {
     box-shadow: none;
     display: flex;
 }
 
-.news .news__related-events .card--event__container a {
+.news .news__related-events .card .card--event__container a {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -59649,7 +59767,7 @@ main > .news {
 }
 
 @media (hover: hover) {
-    .news .news__related-events .card--event__container a:hover {
+    .news .news__related-events .card .card--event__container a:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -59666,7 +59784,7 @@ main > .news {
     }
 }
 
-.news .news__related-events .card--event__container a:focus, .news .news__related-events .card--event__container a:active {
+.news .news__related-events .card .card--event__container a:focus, .news .news__related-events .card .card--event__container a:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -59683,33 +59801,33 @@ main > .news {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .news .news__related-events .card--event__container a {
+    .news .news__related-events .card .card--event__container a {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .news .news__related-events .card--event__container a:hover {
+    .news .news__related-events .card .card--event__container a:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
-.news .news__related-events .card--event__container a:focus, .news .news__related-events .card--event__container a:active {
+.news .news__related-events .card .card--event__container a:focus, .news .news__related-events .card .card--event__container a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.news .news__related-events .card--event__container a:visited {
+.news .news__related-events .card .card--event__container a:visited {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #006bbd;
 }
 
-.news .news__related-events .card--event__container a:focus {
+.news .news__related-events .card .card--event__container a:focus {
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -59717,7 +59835,7 @@ main > .news {
 }
 
 @media (hover: hover) {
-    .news .news__related-events .card--event__container a:hover {
+    .news .news__related-events .card .card--event__container a:hover {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
@@ -59725,7 +59843,7 @@ main > .news {
     }
 }
 
-.news .news__related-events .card--event__container a:active {
+.news .news__related-events .card .card--event__container a:active {
     background-color: #006bbd;
     border-bottom-color: #006bbd;
     border-bottom-style: solid;
@@ -59733,8 +59851,12 @@ main > .news {
     color: #ffffff;
 }
 
-.news .news__related-events .card--event__container .thumbnail__image-container {
+.news .news__related-events .card .card--event__container .thumbnail__image-container {
     display: none;
+}
+
+.news .news__related-events .card .card--event__container .card--event__content {
+    padding-bottom: 1.25rem;
 }
 
 .news .news__related-news {
