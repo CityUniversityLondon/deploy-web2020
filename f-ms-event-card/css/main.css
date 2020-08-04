@@ -23398,15 +23398,13 @@ p.card--course__key-info .icon {
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    transition: background-size 0.2s ease-in-out;
+    color: #696969;
+    background-image: linear-gradient(#696969, #696969);
+    background-position: 0% 100%;
+    background-size: 0% 0.1875rem;
     background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
+    transition: background-size 0.6s ease-in;
+    padding-bottom: 0.125rem;
 }
 
 .card--event .underline-transition__title i,
@@ -23491,19 +23489,6 @@ p.card--course__key-info .icon {
     text-decoration: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .card--event .underline-transition__title {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .card--event .underline-transition__title:hover {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    }
-}
-
 .card--event .underline-transition__title:focus, .card--event .underline-transition__title:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
@@ -23512,34 +23497,20 @@ p.card--course__key-info .icon {
 }
 
 .card--event .underline-transition__title:visited {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
+    color: #696969;
 }
 
 .card--event .underline-transition__title:focus {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
+    color: #696969;
+    background-size: 100% 0.1875rem;
 }
 
 @media (hover: hover) {
     .card--event .underline-transition__title:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        color: #ffffff;
+        color: #1e1e1e;
+        background-image: linear-gradient(#1e1e1e, #1e1e1e);
+        background-size: 100% 0.1875rem;
     }
-}
-
-.card--event .underline-transition__title:active {
-    background-color: #006bbd;
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #ffffff;
 }
 
 .wrapper--event_image_content {
@@ -23930,6 +23901,172 @@ p.card--course__key-info .icon {
 
 .card--event--landscape .card--event__content {
     margin-top: 2rem;
+}
+
+.card--event--landscape a {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    letter-spacing: -0.008em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+.card--event--landscape a i,
+.card--event--landscape a em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.card--event--landscape a b,
+.card--event--landscape a strong {
+    font-weight: inherit;
+}
+
+.card--event--landscape a i,
+.card--event--landscape a em {
+    font-style: italic;
+}
+
+.card--event--landscape a u {
+    text-decoration: none;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .card--event--landscape a {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--event--landscape a {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--event--landscape a {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--event--landscape a {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--event--landscape a b,
+.card--event--landscape a strong {
+    font-weight: 600;
+}
+
+@media (hover: hover) {
+    .card--event--landscape a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card--event--landscape a:focus, .card--event--landscape a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card--event--landscape a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--event--landscape a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card--event--landscape a:focus, .card--event--landscape a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card--event--landscape a:visited {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+.card--event--landscape a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card--event--landscape a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card--event--landscape a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
 }
 
 .card--event--landscape .card--event__price {
