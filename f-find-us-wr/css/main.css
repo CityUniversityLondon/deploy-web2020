@@ -53359,6 +53359,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
+    font-feature-settings: normal;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
