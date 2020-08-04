@@ -23513,8 +23513,10 @@ p.card--course__key-info .icon {
     }
 }
 
-.wrapper--event_image_content {
-    display: flex;
+@media (min-width: 769px) {
+    .wrapper--event_image_content {
+        display: flex;
+    }
 }
 
 .card--event__container {
@@ -23842,7 +23844,6 @@ p.card--course__key-info .icon {
 }
 
 .card--event--landscape {
-    padding: 1rem;
     background-color: transparent;
     transition: background-color 0.2s ease-in;
     background: transparent;
@@ -23872,11 +23873,18 @@ p.card--course__key-info .icon {
 @media (min-width: 769px) {
     .card--event--landscape {
         display: flex;
+        padding: 1rem;
     }
 }
 
 .card--event--landscape .thumbnail__image-container {
     height: 100%;
+}
+
+@media (max-width: 768px) {
+    .card--event--landscape .thumbnail__image-container figure {
+        margin-top: 0;
+    }
 }
 
 .card--event--landscape .card--event__image-container {
@@ -23890,9 +23898,16 @@ p.card--course__key-info .icon {
 }
 
 .card--event--landscape .card--event__date--highlight {
-    position: absolute;
-    right: 0;
-    top: 2rem;
+    display: table;
+    margin-top: -0.5rem;
+}
+
+@media (min-width: 769px) {
+    .card--event--landscape .card--event__date--highlight {
+        position: absolute;
+        right: 0;
+        top: 2rem;
+    }
 }
 
 .card--event--landscape .card--event__date-time-text {
