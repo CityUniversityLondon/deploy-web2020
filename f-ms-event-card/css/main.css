@@ -23519,14 +23519,6 @@ p.card--course__key-info .icon {
     }
 }
 
-@media (min-width: 769px) {
-    .wrapper--event_image_content .card--event__date--highlight {
-        position: absolute;
-        right: 0;
-        top: 2rem;
-    }
-}
-
 .card--event__container {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
@@ -23878,12 +23870,6 @@ p.card--course__key-info .icon {
     }
 }
 
-@media (min-width: 769px) {
-    .card--event--landscape {
-        padding: 1rem;
-    }
-}
-
 .card--event--landscape .thumbnail__image-container {
     height: 100%;
 }
@@ -23909,12 +23895,33 @@ p.card--course__key-info .icon {
     margin-top: -0.5rem;
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card--event--landscape .card--event__date--highlight {
+        margin-top: 0.75rem;
+    }
+}
+
 .card--event--landscape .card--event__date-time-text {
     margin-bottom: 1rem;
 }
 
+.card--event--landscape .wrapper--card--event__content {
+    padding-bottom: 1.75rem;
+}
+
 .card--event--landscape .card--event__content {
-    margin-top: 2rem;
+    padding: 0;
+}
+
+@media (min-width: 1025px) {
+    .card--event--landscape .card--event__content {
+        padding: 1.25rem 0 0 0;
+    }
+}
+
+.card--event--landscape .card--event__title-link,
+.card--event--landscape .card--event__inner {
+    padding: 0.5rem 1.75rem;
 }
 
 .card--event--landscape a {
@@ -24099,12 +24106,7 @@ p.card--course__key-info .icon {
 @media (min-width: 769px) {
     .card--event--landscape .card--event__inner {
         display: flex;
-        margin-top: 2.75rem;
     }
-}
-
-.card--event--landscape .card--event__inner div:nth-child(2) {
-    margin-top: 1rem;
 }
 
 @media (min-width: 769px) {
