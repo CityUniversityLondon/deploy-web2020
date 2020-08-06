@@ -23372,7 +23372,7 @@ p.card--course__key-info .icon {
         transform: scale(1.04);
     }
     .card--event:hover .thumbnail__image-container:after {
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: rgba(242, 242, 242, 0.1);
     }
 }
 
@@ -23578,6 +23578,12 @@ p.card--course__key-info .icon {
 @media (prefers-reduced-motion: reduce) {
     .card--event__image-container .thumbnail__image-container img {
         transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card--event__image-container:hover .thumbnail__image-container:after {
+        background-color: rgba(242, 242, 242, 0.1);
     }
 }
 
