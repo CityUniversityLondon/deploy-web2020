@@ -68403,7 +68403,12 @@ button
 
 @media (max-width: 1023px) {
     .school__content__news,
-    .school__content__events {
+    .school__content__events,
+    .school__content__cta,
+    .school__content__links,
+    .school__statistic,
+    .promo-area__wrap,
+    .school__content__facilities {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -68412,9 +68417,20 @@ button
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .school__content__news,
-    .school__content__events {
+    .school__content__events,
+    .school__content__cta,
+    .school__content__links,
+    .school__statistic,
+    .promo-area__wrap,
+    .school__content__facilities {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    .school__content__links--left {
+        margin-bottom: 1rem;
     }
 }
 
