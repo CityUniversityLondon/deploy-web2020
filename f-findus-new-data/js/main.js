@@ -2253,7 +2253,8 @@ function createMap(mapContainer) {
    * data source - relative to handle production and test environments
    * @let {String}
    */
-  dataSrc = 'https://web2020.city.ac.uk/staging/development/walter/campus-map/locations/_nocache',
+  dataSrc = 'https://web2020.city.ac.uk/feed/locations/city-buildings/_nocache',
+      //'https://web2020.city.ac.uk/staging/development/walter/campus-map/locations/_nocache',
 
   /**
    * Create a LatLng object containing the coordinate for the center of the map
@@ -2400,7 +2401,7 @@ function createMap(mapContainer) {
   function hashChange(id) {
     // Trigger - to show northampton square campus marker on initial load
     if (id === '') {
-      id = '537921';
+      id = '498711';
     }
 
     ; //loop over  bigBuildingsArray to find marker
@@ -2546,9 +2547,9 @@ function createMap(mapContainer) {
       html += '<p class="building-prefix"><strong>Rooms beginning: ' + markerConfig.buildingPrefix + '</strong></p>';
       markerConfig.buildingPrefix = '(' + markerConfig.buildingPrefix + ')';
     } // add description and close div element
+    //html += markerConfig.description.replace(/\<h2/g, '<h4').replace(/\h2>/g, 'h4>')  + '</div>';
+    // create google maps marker
 
-
-    html += markerConfig.description.replace(/\<h2/g, '<h4').replace(/\h2>/g, 'h4>') + '</div>'; // create google maps marker
 
     marker = new google.maps.Marker({
       map: markerConfig.map,
@@ -2647,17 +2648,30 @@ function createMap(mapContainer) {
     items.forEach(function (item) {
       $self = item;
       markerConfig.index = index + 1;
+      markerConfig.id = $self.getElementsByTagName('guid')[0].textContent;
       markerConfig.name = $self.getElementsByTagName('title')[0].textContent;
       markerConfig.linkHref = $self.getElementsByTagName('link')[0].textContent;
-      markerConfig.description = $self.getElementsByTagName('description')[0].textContent;
-      markerConfig.icon = 'https://web2020.city.ac.uk/?a=537733'; // default city marker
+      markerConfig.icon = 'https://web2020.city.ac.uk/?a=537733'; // default city marker  
 
       markerConfig.category = $self.getElementsByTagName('category')[0].textContent;
-      markerConfig.id = $self.getElementsByTagName('guid')[0].textContent;
-      markerConfig.buildingPrefix = findChildText($self, 'CUL:buildingPrefix');
-      markerConfig.hexColour = findChildText($self, 'CUL:hexColour');
-      markerConfig.geoLat = findChildText($self, 'geo:lat');
-      markerConfig.geoLong = findChildText($self, 'geo:long');
+      markerConfig.buildingPrefix = $self.getElementsByTagName('roomPrefix')[0].textContent;
+      markerConfig.room = $self.getElementsByTagName('room')[0].textContent;
+      markerConfig.floor = $self.getElementsByTagName('floor')[0].textContent;
+      markerConfig.building = $self.getElementsByTagName('building')[0].textContent;
+      markerConfig.campus = $self.getElementsByTagName('campus')[0].textContent;
+      markerConfig.street1 = $self.getElementsByTagName('street1')[0].textContent;
+      markerConfig.street2 = $self.getElementsByTagName('street2')[0].textContent;
+      markerConfig.city = $self.getElementsByTagName('city')[0].textContent;
+      markerConfig.postcode = $self.getElementsByTagName('postcode')[0].textContent;
+      markerConfig.country = $self.getElementsByTagName('country')[0].textContent;
+      markerConfig.tel = $self.getElementsByTagName('tel')[0].textContent;
+      markerConfig.email = $self.getElementsByTagName('email')[0].textContent;
+      markerConfig.openingHours = $self.getElementsByTagName('openingHours')[0].textContent;
+      markerConfig.accessibility = $self.getElementsByTagName('accessibility')[0].textContent;
+      markerConfig.walkingDistance = $self.getElementsByTagName('walkingDistance')[0].textContent;
+      markerConfig.suppports = $self.getElementsByTagName('supports')[0].textContent;
+      markerConfig.geoLat = $self.getElementsByTagName('geoLat')[0].textContent;
+      markerConfig.geoLong = $self.getElementsByTagName('geoLong')[0].textContent;
       markerConfig.point = new google.maps.LatLng(parseFloat(markerConfig.geoLat), parseFloat(markerConfig.geoLong)); //call createmarker fn
 
       marker = createMarker(markerConfig);
