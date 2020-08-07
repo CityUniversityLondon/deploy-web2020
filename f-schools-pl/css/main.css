@@ -68348,6 +68348,26 @@ button
 }
 
 @media (min-width: 1024px) {
+    .school__content__pathway .pathway-image-cards__blocks {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 0;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    .school__content__pathway .pathway-image-cards__blocks {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .school__content__pathway .pathway-image-cards__blocks {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
     .school__content__news .related-content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
