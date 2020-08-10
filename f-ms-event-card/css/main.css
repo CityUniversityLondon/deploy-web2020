@@ -59792,6 +59792,11 @@ main > .news {
     }
 }
 
+.news .news__body blockquote p {
+    font-family: "Meta Sans", sans-serif;
+    font-weight: 200;
+}
+
 .news .news__body p {
     font-family: "Plex Serif", serif;
 }
