@@ -67260,17 +67260,17 @@ button
     }
 }
 
-.course--ug__section-wrapper--grey {
-    background-color: #f2f2f2;
+.course--ug__section-wrapper--brown {
+    background-color: #e6e4e3;
     padding-top: 1rem;
 }
 
-.course--ug__section-wrapper--grey .tabs--accordion {
+.course--ug__section-wrapper--brown .tabs--accordion {
     grid-column: 2 / 18;
 }
 
 @media (max-width: 1023px) {
-    .course--ug__section-wrapper--grey .tabs--accordion {
+    .course--ug__section-wrapper--brown .tabs--accordion {
         grid-column: 1 / -1;
     }
 }
@@ -67316,11 +67316,11 @@ button
     }
 }
 
-.course--ug__section-wrapper--grey {
-    background-color: #f2f2f2;
+.course--ug__section-wrapper--brown {
+    background-color: #e6e4e3;
 }
 
-.course--ug__section-wrapper--grey .tabs--accordion:first-of-type {
+.course--ug__section-wrapper--brown .tabs--accordion:first-of-type {
     padding-bottom: 2.75rem;
 }
 
