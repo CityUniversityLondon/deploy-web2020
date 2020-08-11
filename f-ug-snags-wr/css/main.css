@@ -67260,19 +67260,22 @@ button
     }
 }
 
-.course--ug__section-wrapper--brown {
-    background-color: #e6e4e3;
+.course--ug__section-wrapper {
     padding-top: 1rem;
 }
 
-.course--ug__section-wrapper--brown .tabs--accordion {
+.course--ug__section-wrapper .tabs--accordion {
     grid-column: 2 / 18;
 }
 
 @media (max-width: 1023px) {
-    .course--ug__section-wrapper--brown .tabs--accordion {
+    .course--ug__section-wrapper .tabs--accordion {
         grid-column: 1 / -1;
     }
+}
+
+.course--ug__section-wrapper .tabs--accordion:first-of-type {
+    padding-bottom: 2.75rem;
 }
 
 .course--ug__usp {
@@ -67314,14 +67317,6 @@ button
     .course--ug__usp .standfirst {
         letter-spacing: -0.017em;
     }
-}
-
-.course--ug__section-wrapper--brown {
-    background-color: #e6e4e3;
-}
-
-.course--ug__section-wrapper--brown .tabs--accordion:first-of-type {
-    padding-bottom: 2.75rem;
 }
 
 .course--ug__usp__stats {
