@@ -23884,10 +23884,8 @@ p.card--course__key-info .icon {
     height: 100%;
 }
 
-@media (max-width: 768px) {
-    .card--event--landscape .thumbnail__image-container figure {
-        margin-top: 0;
-    }
+.card--event--landscape .thumbnail__image-container figure {
+    margin-top: 0;
 }
 
 .card--event--landscape .card--event__image-container {
@@ -23907,7 +23905,7 @@ p.card--course__key-info .icon {
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .card--event--landscape .card--event__date--highlight {
-        margin-top: 0.75rem;
+        margin-top: 0;
     }
 }
 
@@ -23919,14 +23917,14 @@ p.card--course__key-info .icon {
     padding-bottom: 1.75rem;
 }
 
-.card--event--landscape .card--event__content {
-    padding: 0;
+@media (min-width: 1025px) {
+    .card--event--landscape .wrapper--card--event__content .card--event__content {
+        padding: 0.5rem 0 0 0;
+    }
 }
 
-@media (min-width: 1025px) {
-    .card--event--landscape .card--event__content {
-        padding: 1.25rem 0 0 0;
-    }
+.card--event--landscape .card--event__content {
+    padding: 0;
 }
 
 .card--event--landscape .card--event__title-link,
