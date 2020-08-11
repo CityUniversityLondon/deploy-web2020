@@ -20849,7 +20849,7 @@ Assign mixin:
         padding: 1rem;
     }
     .js .accordion > .accordion__heading {
-        border-bottom: 0.0625rem solid #e5e5e5;
+        border-bottom: 0.125rem solid #e5e5e5;
         margin-top: 0;
     }
     .js .accordion > .accordion__heading:focus {
