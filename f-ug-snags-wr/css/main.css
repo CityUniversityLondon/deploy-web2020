@@ -66838,10 +66838,6 @@ button
     margin-top: 4rem;
 }
 
-.js .course--ug .accordion > .accordion__heading {
-    border-bottom-color: #ffffff;
-}
-
 @media (max-width: 899px) {
     .js .course--ug .accordion > .accordion__heading[data-open='true'] + .accordion__body p.ksp__item__overline,
     .js .course--ug .accordion > .accordion__heading[data-open='true'] + .accordion__body p.ksp__item__figure {
