@@ -46571,6 +46571,12 @@ article .link-copy {
     }
 }
 
+@media (max-width: 767px) {
+    .statistics-block .ksp__items {
+        padding: 0 1rem;
+    }
+}
+
 .statistics-block .ksp__items .ksp__item {
     padding: 1rem;
     margin: 0.5rem 0;
@@ -67666,6 +67672,12 @@ button
 
 .course--ug__usp__stats .statistics-block {
     padding: 1rem 0;
+}
+
+@media (max-width: 767px) {
+    .course--ug__usp__stats .statistics-block {
+        padding: 0;
+    }
 }
 
 .course--ug__usp__stats .statistics-block ul.slider {
