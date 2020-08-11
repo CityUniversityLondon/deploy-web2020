@@ -66778,7 +66778,6 @@ button
 }
 
 .course--ug__keyinfo__cta {
-    margin-bottom: 1.75rem;
     border-top: 0.125rem solid #d8d8d8;
 }
 
@@ -67204,6 +67203,7 @@ button
 
 .course--ug__keyinfo__wrapper {
     margin-top: 2rem;
+    padding-bottom: 2rem;
     display: grid;
 }
 
@@ -67660,14 +67660,9 @@ button
     padding: 1rem 1.5rem;
 }
 
-@media (min-width: 901px) {
-    .course--ug__usp__stats {
-        margin-top: 1.5rem;
-    }
-}
-
 .course--ug__usp__stats .course--ug__usp__stats__heading {
     margin-top: 0;
+    text-align: center;
 }
 
 .course--ug__usp__stats .statistics-block {
