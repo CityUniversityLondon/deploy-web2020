@@ -44661,23 +44661,18 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     background-color: #d61726;
     background-image: linear-gradient(to right, #d61726, #5d184a);
     color: #ffffff;
-    padding-top: 0.75rem;
-    padding-bottom: 2rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding: 2rem;
 }
 
-@media (min-width: 901px) {
+@media (min-width: 769px) and (max-width: 900px) {
     .promo-box {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding: 2rem 3rem;
     }
 }
 
 @media (min-width: 901px) {
     .promo-box {
-        padding-left: 5rem;
-        padding-right: 5rem;
+        padding: 2rem 5rem;
     }
 }
 
@@ -44712,6 +44707,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 .promo-box__card__body {
     display: flex;
+}
+
+.promo-box__card__body .promo-box__card__body__text p {
+    margin: 0;
 }
 
 .promo-box__card__body img {
