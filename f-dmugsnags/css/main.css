@@ -67082,7 +67082,7 @@ button
 .course--ug__keyinfo__accordion .wrapper--dropdown-filter__select,
 .course--ug__keyinfo__cta .wrapper--dropdown-filter__select {
     padding: 1rem;
-    background: #d61726;
+    background: #b91924;
     position: relative;
     display: flex;
     align-items: center;
@@ -67099,7 +67099,7 @@ button
     height: 0px;
     border-left: 1rem solid transparent;
     border-right: 1rem solid transparent;
-    border-top: 1rem solid #d61726;
+    border-top: 1rem solid #b91924;
 }
 
 .course--ug__keyinfo__intro .wrapper--dropdown-filter__select label,
