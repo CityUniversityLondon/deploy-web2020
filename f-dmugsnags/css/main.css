@@ -67077,10 +67077,7 @@ button
     border: 0.125rem solid #bebebe;
 }
 
-.course--ug__keyinfo__intro .wrapper--dropdown-filter__select,
-.course--ug__keyinfo__details .wrapper--dropdown-filter__select,
-.course--ug__keyinfo__accordion .wrapper--dropdown-filter__select,
-.course--ug__keyinfo__cta .wrapper--dropdown-filter__select {
+.course--ug__keyinfo__accordion .wrapper--dropdown-filter__select {
     padding: 1rem;
     background: #b91924;
     position: relative;
@@ -67089,10 +67086,7 @@ button
     flex-direction: column;
 }
 
-.course--ug__keyinfo__intro .wrapper--dropdown-filter__select:after,
-.course--ug__keyinfo__details .wrapper--dropdown-filter__select:after,
-.course--ug__keyinfo__accordion .wrapper--dropdown-filter__select:after,
-.course--ug__keyinfo__cta .wrapper--dropdown-filter__select:after {
+.course--ug__keyinfo__accordion .wrapper--dropdown-filter__select:after {
     content: '';
     position: absolute;
     bottom: -1rem;
@@ -67102,10 +67096,7 @@ button
     border-top: 1rem solid #b91924;
 }
 
-.course--ug__keyinfo__intro .wrapper--dropdown-filter__select label,
-.course--ug__keyinfo__details .wrapper--dropdown-filter__select label,
-.course--ug__keyinfo__accordion .wrapper--dropdown-filter__select label,
-.course--ug__keyinfo__cta .wrapper--dropdown-filter__select label {
+.course--ug__keyinfo__accordion .wrapper--dropdown-filter__select label {
     color: #ffffff;
     width: 100%;
 }
