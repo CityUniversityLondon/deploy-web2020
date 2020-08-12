@@ -67360,6 +67360,16 @@ button
     }
 }
 
+.course--ug__facilities__video .embedded-video {
+    padding: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .course--ug__facilities__video .embedded-video {
+        padding: 0;
+    }
+}
+
 .course--ug__facilities__video__intro {
     padding: 2rem 0;
 }
