@@ -66828,6 +66828,10 @@ button
     }
 }
 
+.js .course--ug .show-more__text[data-hidden='true'] {
+    max-height: 12rem;
+}
+
 .course--ug__related-courses__wrapper {
     background: linear-gradient(360deg, white 0%, #f2f2f2 100%);
 }
