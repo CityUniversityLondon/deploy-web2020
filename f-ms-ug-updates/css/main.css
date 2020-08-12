@@ -21922,6 +21922,11 @@ Assign mixin:
     }
 }
 
+.banner-svg--wrapper__svg {
+    grid-column: 3/23;
+    position: relative;
+}
+
 .banner-svg--wrapper__svg .hero-image {
     height: 14rem;
     position: absolute;
