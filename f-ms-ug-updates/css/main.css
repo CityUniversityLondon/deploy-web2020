@@ -21926,6 +21926,7 @@ Assign mixin:
     height: 14rem;
     position: absolute;
     left: 50%;
+    transform: translateX(-50%);
 }
 
 .banner-svg--wrapper__svg .hero-image img {
