@@ -66831,8 +66831,11 @@ button
 }
 
 .js .course--ug .tabs .tabs__panel {
-    border-top: none;
-    background: transparent;
+    border: 0.125rem solid #d8d8d8;
+}
+
+.js .course--ug .tabs .tabs__panel .show-more__text[data-hidden="true"]::after {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f2f2f2 90%);
 }
 
 .js .course--ug .tabs .tabs__panel__heading {
@@ -66841,6 +66844,14 @@ button
 
 .js .course--ug .tabs .tabs__panel__body {
     margin-top: 4rem;
+}
+
+.js .course--ug .tabs .tabs {
+    background: transparent;
+}
+
+.js .course--ug .tabs .tabs .tabs__panel {
+    background: #ffffff;
 }
 
 @media (max-width: 899px) {
@@ -67264,24 +67275,6 @@ button
     .js .course--ug .course--ug__keyinfo__accordion .accordion .accordion__heading button {
         letter-spacing: -0.017em;
     }
-}
-
-.course--ug__section-wrapper {
-    padding-top: 1rem;
-}
-
-.course--ug__section-wrapper .tabs--accordion {
-    grid-column: 2 / 18;
-}
-
-@media (max-width: 1023px) {
-    .course--ug__section-wrapper .tabs--accordion {
-        grid-column: 1 / -1;
-    }
-}
-
-.course--ug__section-wrapper .tabs--accordion:first-of-type {
-    padding-bottom: 2.75rem;
 }
 
 .course--ug__usp {
@@ -67751,6 +67744,24 @@ button
     .course--ug__usp__stats .statistics-block .ksp__items.ksp__items.ksp__items--2 .ksp__item:nth-child(2) {
         grid-column: 10 / -1;
     }
+}
+
+@media (max-width: 1023px) {
+    .course--ug .course--ug__tabs__wrap {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .course--ug .course--ug__tabs__wrap {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.course--ug .tabs--accordion:first-of-type {
+    padding-bottom: 2.75rem;
 }
 
 @media screen {
