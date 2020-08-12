@@ -67078,18 +67078,18 @@ button
 }
 
 .course--ug__keyinfo__accordion .wrapper--dropdown-filter__select {
-    padding: 1rem;
+    padding: 0.5rem;
     background: #b91924;
     position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    max-width: 55ch;
 }
 
 .course--ug__keyinfo__accordion .wrapper--dropdown-filter__select:after {
     content: '';
     position: absolute;
     bottom: -1rem;
+    left: 50%;
+    margin-left: -36px;
     height: 0px;
     border-left: 1rem solid transparent;
     border-right: 1rem solid transparent;
@@ -67097,8 +67097,35 @@ button
 }
 
 .course--ug__keyinfo__accordion .wrapper--dropdown-filter__select label {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
     color: #ffffff;
-    width: 100%;
+    display: block;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .course--ug__keyinfo__accordion .wrapper--dropdown-filter__select label {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .course--ug__keyinfo__accordion .wrapper--dropdown-filter__select label {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .course--ug__keyinfo__accordion .wrapper--dropdown-filter__select label {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .course--ug__keyinfo__accordion .wrapper--dropdown-filter__select label {
+        letter-spacing: -0.017em;
+    }
 }
 
 .course--ug__keyinfo__accordion .dropdown-filter[data-label-value='Countries'] select:active {
