@@ -21922,20 +21922,16 @@ Assign mixin:
     }
 }
 
-.banner-svg--wrapper__svg {
-    grid-column: 3/23;
-    position: relative;
-}
-
 .banner-svg--wrapper__svg .hero-image {
     height: 14rem;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
 }
 
 .banner-svg--wrapper__svg .hero-image img {
     width: 17.5rem;
+    position: relative;
+    top: 10%;
 }
 
 .banner-svg--wrapper__title {
