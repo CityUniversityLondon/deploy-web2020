@@ -67077,6 +67077,53 @@ button
     border: 0.125rem solid #bebebe;
 }
 
+.course--ug__keyinfo__intro .wrapper--dropdown-filter__select,
+.course--ug__keyinfo__details .wrapper--dropdown-filter__select,
+.course--ug__keyinfo__accordion .wrapper--dropdown-filter__select,
+.course--ug__keyinfo__cta .wrapper--dropdown-filter__select {
+    padding: 1rem;
+    background: #d61726;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.course--ug__keyinfo__intro .wrapper--dropdown-filter__select:after,
+.course--ug__keyinfo__details .wrapper--dropdown-filter__select:after,
+.course--ug__keyinfo__accordion .wrapper--dropdown-filter__select:after,
+.course--ug__keyinfo__cta .wrapper--dropdown-filter__select:after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    height: 0px;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1rem solid #d61726;
+}
+
+.course--ug__keyinfo__intro .wrapper--dropdown-filter__select label,
+.course--ug__keyinfo__details .wrapper--dropdown-filter__select label,
+.course--ug__keyinfo__accordion .wrapper--dropdown-filter__select label,
+.course--ug__keyinfo__cta .wrapper--dropdown-filter__select label {
+    color: #ffffff;
+    width: 100%;
+}
+
+.course--ug__keyinfo__accordion .dropdown-filter[data-label-value='Countries'] select:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.course--ug__keyinfo__accordion .dropdown-filter[data-label-value='Countries'] select:focus {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
 .course--ug__keyinfo__accordion,
 .course--ug__keyinfo__cta {
     padding-bottom: 1.75rem;
@@ -68202,7 +68249,7 @@ button
         border-bottom-color: #cbcbcb;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
+        color: #0c0c0e;
     }
 }
 
@@ -68211,5 +68258,5 @@ button
     border-bottom-color: #cbcbcb;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #ffffff;
+    color: #0c0c0e;
 }
