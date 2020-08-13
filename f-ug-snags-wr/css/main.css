@@ -67374,6 +67374,12 @@ button
     padding: 2rem 0;
 }
 
+@media (max-width: 768px) {
+    .course--ug__facilities__video__intro {
+        padding: 0;
+    }
+}
+
 .course--ug__student-coursework {
     grid-column: 1/-1;
 }
