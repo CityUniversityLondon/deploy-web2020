@@ -559,7 +559,7 @@ document.addEventListener('DOMContentLoaded', () => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./patterns/accordion/accordion */ "./src/patterns/accordion/accordion.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/accordion-timeline/accordion-timeline'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _patterns_accordion_timeline_accordion_timeline__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns/accordion-timeline/accordion-timeline */ "./src/patterns/accordion-timeline/accordion-timeline.js");
 /* harmony import */ var _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/back-to-top/back-to-top */ "./src/patterns/back-to-top/back-to-top.js");
 /* harmony import */ var _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/image-carousel/image-carousel */ "./src/patterns/image-carousel/image-carousel.js");
 /* harmony import */ var _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/charts/charts */ "./src/patterns/charts/charts.js");
@@ -635,7 +635,104 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], !(function webpackMissingModule() { var e = new Error("Cannot find module './patterns/accordion-timeline/accordion-timeline'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_31__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_video_video__WEBPACK_IMPORTED_MODULE_32__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_accordion_timeline_accordion_timeline__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_31__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_video_video__WEBPACK_IMPORTED_MODULE_32__["default"]]);
+
+/***/ }),
+
+/***/ "./src/patterns/accordion-timeline/accordion-timeline.js":
+/*!***************************************************************!*\
+  !*** ./src/patterns/accordion-timeline/accordion-timeline.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+
+// const className = 'timeline';
+function launchAccordionTimeline(accordionTimeline) {
+  const collection = accordionTimeline.querySelectorAll('.timeline__collection'),
+        headers = accordionTimeline.querySelectorAll('.timeline__collection__header'); //   let openGroup;
+  // Disable accordion header links' default behaviour
+
+  for (const header of headers) {
+    header.querySelector('a').addEventListener('click', e => {
+      e.preventDefault();
+    });
+  } // If accordion section open
+
+
+  for (const c of collection) {
+    if (c.classList.contains('closed')) {
+      // Update content visibility
+      let timelineContent = c.querySelector('.timeline__content');
+      timelineContent.classList.remove('collapsed');
+      timelineContent.classList.add('expanded'); // Update angle icon direction
+
+      let timelineHeaderIcon = c.querySelector('.timeline__collection__header__icon');
+      timelineHeaderIcon.classList.remove('fa-angle-down');
+      timelineHeaderIcon.classList.add('fa-angle-up'); // Update anchor aria attributes
+
+      let timelineHeaderIconAnchor = timelineHeaderIcon.closest('a');
+      timelineHeaderIconAnchor.setAttribute('aria-selected', 'true');
+      timelineHeaderIconAnchor.setAttribute('aria-expanded', 'true');
+    }
+  }
+} // var defer = require('./utils/defer'),
+//   init = function(){
+//     var collection = $('.timeline__collection');
+//     var header = $('.timeline__collection__header');
+//     $('.timeline__collection__header a').click(function( event ) {
+//       event.preventDefault();
+//     });
+//     var openGroup = collection.filter('.open');
+//     if (openGroup) {
+//       openGroup.find('.timeline__content').removeClass('collapsed').addClass('expanded').end().find('.timeline__collection__header__icon').removeClass('fa-angle-down').addClass('fa-angle-up');
+//       header.find('a').attr('aria-selected','true').attr('aria-expanded','true');
+//     }
+//    var accordion = function () {
+//       var closeItems = function (item,title) {
+//             item.find('.timeline__content').fadeOut('slow').removeClass('expanded').addClass('collapsed').find('.timeline__content__block').slideUp('slow');
+//             item.removeClass('open').addClass('closed').find('.timeline__content').slideUp("slow");
+//             title.find('a').attr('aria-selected','false').attr('aria-expanded','false');
+//             title.find('.timeline__collection__header__icon').removeClass('fa-angle-up').addClass('fa-angle-down');
+//             item.find('.timeline__verical-line-stop').fadeIn('slow');
+//           },
+//           openItems = function (item,title) {
+//             item.find('.timeline__content').fadeIn('slow').removeClass('collapsed').addClass('expanded').find('.timeline__content__block').slideDown('slow');
+//             item.removeClass('closed').addClass('open').find('.timeline__content').slideDown("slow");
+//             title.find('a').attr('aria-selected','true').attr('aria-expanded','true');
+//             title.find('.timeline__collection__header__icon').removeClass('fa-angle-down').addClass('fa-angle-up');
+//             item.find('.timeline__verical-line-stop').fadeIn('slow');
+//           };
+//       $('.timeline__collection__header').click(function () {
+//         var title = $(this),
+//             item = title.parent(),
+//             isOpen = item.hasClass('open');
+//         if (isOpen) {
+//             closeItems(item,title);
+//         } else {
+//             openItems(item,title);
+//         }
+//       });
+//   };
+// accordion();
+// defer(init);
+// }
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchAccordionTimeline,
+  launchQuery: '.${className}'
+});
 
 /***/ }),
 
