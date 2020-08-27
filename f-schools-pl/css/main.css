@@ -65348,6 +65348,9 @@ button
     .school__content__cta ul li p {
         max-width: 20rem;
     }
+    .school__content__pathway .pathway__cards .card--pathway {
+        width: calc(50% - 1rem);
+    }
 }
 
 @media (max-width: 1023px) {
