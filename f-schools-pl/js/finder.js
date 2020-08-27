@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([4,"vendor-dependencies","core","react","vendor-direct","axios"]);
+/******/ 	deferredModules.push([2,"core","vendor-dependencies","react","vendor-direct","axios"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -245,15 +245,16 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__results__accommodation(props) {
+function Finder__Results__Accommodation(props) {
   const mph = 60,
         calculateTime = minutes => Math.floor(minutes / mph) > 0 ? Math.floor(minutes / mph) + ' hour ' + minutes % mph : minutes,
         thumbnail = props.details.metaData.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
     src: props.details.metaData.thumbnail,
-    alt: ""
+    alt: "",
+    className: "card__thumbnail"
   }),
         level = props.details.metaData.level && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-fw fa-graduation-cap icon",
     "aria-hidden": "true"
@@ -262,7 +263,7 @@ function finder__results__accommodation(props) {
   }, "Level:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').join(' or '))),
         features = Object.keys(props.details.metaData).filter(meta => ['accessible', 'catered', 'ensuite'].includes(meta) && props.details.metaData[meta] === 'Yes').map(meta => meta.replace(/ensuite/, 'en suite')).sort().join(', '),
         type = props.details.metaData.type && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-fw fa-building icon",
     "aria-hidden": "true"
@@ -270,7 +271,7 @@ function finder__results__accommodation(props) {
     className: "sr-only"
   }, "Type:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.type.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.type).split('|').slice(0, -1).join(', ') + ' or ' + Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.type).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.type).split('|').join(' or '), features && ' (' + features + ')')),
         price = props.details.metaData.price && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-fw fa-pound-sign icon",
     "aria-hidden": "true"
@@ -279,7 +280,7 @@ function finder__results__accommodation(props) {
   }, "Price:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.price, " (", props.details.metaData.deposit, " deposit)")),
         transport = props.details.metaData.transport && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, ' ', "(", calculateTime(props.details.metaData.transport), " minutes by public transport)"),
         distance = props.details.metaData.walk && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-fw fa-walking icon",
     "aria-hidden": "true"
@@ -288,20 +289,21 @@ function finder__results__accommodation(props) {
   }, "Distance to Northampton Square campus:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, calculateTime(props.details.metaData.walk), " minutes walk to campus", transport));
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--accommodation"
+    className: "card card--accommodation"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
+    href: props.details.clickTrackingUrl,
+    className: "card__anchor card__details"
   }, thumbnail, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "finder__results__card__details"
+    className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
+    className: "card__heading"
   }, props.details.title), distance, type, price, level)));
 }
 
-finder__results__accommodation.propTypes = {
+Finder__Results__Accommodation.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__accommodation);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Accommodation);
 
 /***/ }),
 
@@ -334,24 +336,25 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__results__bestbet(props) {
+function Finder__Results__BestBet(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "finder__results__card finder__results__bestbet"
+    className: "card card--bestbet"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
+    href: props.details.clickTrackingUrl,
+    className: "card__anchor card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "finder__results__card__details"
+    className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
+    className: "card__heading"
   }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__description"
+    className: "card__description"
   }, props.details.description))));
 }
 
-finder__results__bestbet.propTypes = {
+Finder__Results__BestBet.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__bestbet);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__BestBet);
 
 /***/ }),
 
@@ -368,16 +371,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _finder_results_casestudy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finder__results__casestudy */ "./src/patterns/finder/components/cards/finder__results__casestudy.js");
-/* harmony import */ var _finder_results_centre__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__results__centre */ "./src/patterns/finder/components/cards/finder__results__centre.js");
-/* harmony import */ var _finder_results_contact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__results__contact */ "./src/patterns/finder/components/cards/finder__results__contact.js");
-/* harmony import */ var _finder_results_course__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__results__course */ "./src/patterns/finder/components/cards/finder__results__course.js");
-/* harmony import */ var _finder_results_funding__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__results__funding */ "./src/patterns/finder/components/cards/finder__results__funding.js");
-/* harmony import */ var _finder_results_generic__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__results__generic */ "./src/patterns/finder/components/cards/finder__results__generic.js");
-/* harmony import */ var _finder_results_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./finder__results__module */ "./src/patterns/finder/components/cards/finder__results__module.js");
-/* harmony import */ var _finder_results_news__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./finder__results__news */ "./src/patterns/finder/components/cards/finder__results__news.js");
-/* harmony import */ var _finder_results_profile__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./finder__results__profile */ "./src/patterns/finder/components/cards/finder__results__profile.js");
-/* harmony import */ var _finder_results_accommodation__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./finder__results__accommodation */ "./src/patterns/finder/components/cards/finder__results__accommodation.js");
+/* harmony import */ var _finder_results_accommodation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finder__results__accommodation */ "./src/patterns/finder/components/cards/finder__results__accommodation.js");
+/* harmony import */ var _finder_results_casestudy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__results__casestudy */ "./src/patterns/finder/components/cards/finder__results__casestudy.js");
+/* harmony import */ var _finder_results_centre__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__results__centre */ "./src/patterns/finder/components/cards/finder__results__centre.js");
+/* harmony import */ var _finder_results_contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__results__contact */ "./src/patterns/finder/components/cards/finder__results__contact.js");
+/* harmony import */ var _finder_results_course__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__results__course */ "./src/patterns/finder/components/cards/finder__results__course.js");
+/* harmony import */ var _finder_results_event__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__results__event */ "./src/patterns/finder/components/cards/finder__results__event.js");
+/* harmony import */ var _finder_results_funding__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./finder__results__funding */ "./src/patterns/finder/components/cards/finder__results__funding.js");
+/* harmony import */ var _finder_results_generic__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./finder__results__generic */ "./src/patterns/finder/components/cards/finder__results__generic.js");
+/* harmony import */ var _finder_results_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./finder__results__module */ "./src/patterns/finder/components/cards/finder__results__module.js");
+/* harmony import */ var _finder_results_news__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./finder__results__news */ "./src/patterns/finder/components/cards/finder__results__news.js");
+/* harmony import */ var _finder_results_profile__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./finder__results__profile */ "./src/patterns/finder/components/cards/finder__results__profile.js");
 
 
 /**
@@ -397,6 +401,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * Render a Funnelback result as the appropriate card type.
  *
@@ -404,71 +409,76 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__results__course(props) {
+function Finder__Results__Course(props) {
   switch (props.type) {
     case 'accommodation':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_accommodation__WEBPACK_IMPORTED_MODULE_11__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_accommodation__WEBPACK_IMPORTED_MODULE_2__["default"], {
         details: props.details
       });
 
     case 'casestudy':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_casestudy__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_casestudy__WEBPACK_IMPORTED_MODULE_3__["default"], {
         details: props.details
       });
 
     case 'centre':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_centre__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_centre__WEBPACK_IMPORTED_MODULE_4__["default"], {
         details: props.details,
         query: props.query
       });
 
     case 'contact':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_contact__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_contact__WEBPACK_IMPORTED_MODULE_5__["default"], {
         details: props.details,
         query: props.query
       });
 
     case 'course':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_course__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_course__WEBPACK_IMPORTED_MODULE_6__["default"], {
         details: props.details,
         query: props.query
       });
 
+    case 'event':
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_event__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        details: props.details
+      });
+
     case 'funding':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_funding__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_funding__WEBPACK_IMPORTED_MODULE_8__["default"], {
         details: props.details,
         query: props.query
       });
 
     case 'module':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_module__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_module__WEBPACK_IMPORTED_MODULE_10__["default"], {
         details: props.details,
         query: props.query
       });
 
     case 'news':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_news__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_news__WEBPACK_IMPORTED_MODULE_11__["default"], {
         details: props.details
       });
 
     case 'profile':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_profile__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_profile__WEBPACK_IMPORTED_MODULE_12__["default"], {
         details: props.details
       });
 
     default:
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_generic__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_generic__WEBPACK_IMPORTED_MODULE_9__["default"], {
         details: props.details
       });
   }
 }
 
-finder__results__course.propTypes = {
+Finder__Results__Course.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__course);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Course);
 
 /***/ }),
 
@@ -505,45 +515,48 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__results__casestudy(props) {
+function Finder__Results__CaseStudy(props) {
   const subtitle = props.details.metaData.status ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__description"
+    className: "card__type"
   }, props.details.metaData.status) : props.details.metaData.type && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__description"
+    className: "card__type"
   }, props.details.metaData.type),
         school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
         department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-building icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Department:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(', and '))),
         centre = props.details.metaData.centre && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-vial icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Research centre:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.centre.split('|').length > 2 ? props.details.metaData.centre.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.centre.split('|').slice(-1) : props.details.metaData.centre.split('|').join(', and ')));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--casestudy"
+    className: "card card--casestudy"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
+    href: props.details.clickTrackingUrl,
+    className: "card__anchor card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__results__card__details"
+    className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.details.title), subtitle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department, centre)));
+    className: "card__heading"
+  }, props.details.title), subtitle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "card__description"
+  }, props.details.metaData.c && props.details.metaData.c), school, department, centre)));
 }
 
-finder__results__casestudy.propTypes = {
+Finder__Results__CaseStudy.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__casestudy);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__CaseStudy);
 
 /***/ }),
 
@@ -582,38 +595,41 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__results__centre(props) {
+function Finder__Results__Centre(props) {
   const school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
         department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-building icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Department:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(', and '))),
         subject = props.details.metaData.related && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__description"
+    className: "card__type"
   }, props.details.metaData.related.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.related).split('|').slice(0, -1).join(', ') + ' and ' + Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.related).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.related).split('|').join(' and '));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--centre"
+    className: "card card--centre"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
+    href: props.details.clickTrackingUrl,
+    className: "card__anchor card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__results__card__details"
+    className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.details.title), subject, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department)));
+    className: "card__heading"
+  }, props.details.title), subject, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "card__description"
+  }, props.details.metaData.c && props.details.metaData.c), school, department)));
 }
 
-finder__results__centre.propTypes = {
+Finder__Results__Centre.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__centre);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Centre);
 
 /***/ }),
 
@@ -646,18 +662,18 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__results__contact(props) {
+function Finder__Results__Contact(props) {
   const department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-fw fa-building icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Department:"), " ", props.details.metaData.department),
         jobtitle = props.details.metaData.jobtitle && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__description"
+    className: "card__type"
   }, props.details.metaData.jobtitle),
         email = props.details.metaData.email && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-fw fa-envelope icon",
     "aria-hidden": "true"
@@ -665,7 +681,7 @@ function finder__results__contact(props) {
     href: 'mailto:' + props.details.metaData.email
   }, props.details.metaData.email)),
         telephone = props.details.metaData.telephone && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-fw fa-phone fa-rotate-90 icon",
     "aria-hidden": "true"
@@ -673,24 +689,26 @@ function finder__results__contact(props) {
     href: 'tel:' + props.details.metaData.telephone
   }, props.details.metaData.friendlytelephone)),
         room = props.details.metaData.room && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-fw fa-door-open icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Room:"), " ", props.details.metaData.room);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--contact"
+    className: "card card--contact"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "finder__results__card__details"
+    className: "card__details"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.details.title), jobtitle, department, room, email, telephone));
+    className: "card__heading"
+  }, props.details.title), jobtitle, department, room, email, telephone)));
 }
 
-finder__results__contact.propTypes = {
+Finder__Results__Contact.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__contact);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Contact);
 
 /***/ }),
 
@@ -709,7 +727,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../results/finder__results__highlight__query */ "./src/patterns/finder/components/results/finder__results__highlight__query.js");
+/* harmony import */ var _results_formatLabel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../results/formatLabel */ "./src/patterns/finder/components/results/formatLabel.js");
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
 
 
@@ -731,69 +749,155 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__results__course(props) {
+function Finder__Results__Course(props) {
   const subtitle = props.details.metaData.type || props.details.metaData.level || null,
         award = props.details.metaData.qualification && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-award icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Award", props.details.metaData.qualification.split('|').length > 1 && 's', ":"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.qualification.split('|').join(', '))),
         duration = props.details.metaData.duration && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fal fa-fw fa-clock icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Duration:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.duration)),
         method = props.details.metaData.method && (props.query.facets.method || props.query.query.indexOf(props.details.metaData.method) >= 0 || props.details.metaData.method.indexOf('Online') >= 0) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-book-reader icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Method", props.details.metaData.method.split('|').length > 1 && 's', ' ', "of study:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, Object(_util__WEBPACK_IMPORTED_MODULE_4__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').join(', '))),
         location = props.details.metaData.location && props.query.facets.location && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-map-marker-alt icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Location:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.location)),
         school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school)),
         clearing = props.details.metaData.clearing === '1' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "clearing_label"
+    className: "card__label card--course__label--clearing"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Available in clearing")),
         external = props.details.indexUrl.indexOf('cass.city.ac.uk') >= 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-external-link icon",
     "aria-label": "(external link)"
   })),
         courseCode = props.details.metaData.code && (['Undergraduate degree', 'Foundation course', 'Postgraduate taught degree'].some(s => props.details.metaData.level.indexOf(s) >= 0) || props.query.query.indexOf(props.details.metaData.code) >= 0) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-graduation-cap icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Course code", props.details.metaData.code.split('|').length > 1 && 's', ":"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.code.split('|').join('/'))) : null;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--course"
+    className: "card card--course"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
+    href: props.details.clickTrackingUrl,
+    className: "card__anchor card__details"
   }, clearing, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__results__card__details"
+    className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.title, props.query.query) : props.details.title, external), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__description"
-  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(subtitle, props.query.query) : subtitle && subtitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.c, props.query.query) : props.details.metaData.c && props.details.metaData.c), school, award, duration, courseCode, method, location)));
+    className: "card__heading"
+  }, props.query.query ? Object(_results_formatLabel__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.title, props.query.query) : props.details.title, external), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "card__type"
+  }, props.query.query ? Object(_results_formatLabel__WEBPACK_IMPORTED_MODULE_3__["default"])(subtitle, props.query.query) : subtitle && subtitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "card__description"
+  }, props.query.query ? Object(_results_formatLabel__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.c, props.query.query) : props.details.metaData.c && props.details.metaData.c), school, award, duration, courseCode, method, location)));
 }
 
-finder__results__course.propTypes = {
+Finder__Results__Course.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__course);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Course);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/components/cards/finder__results__event.js":
+/*!************************************************************************!*\
+  !*** ./src/patterns/finder/components/cards/finder__results__event.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+/**
+ * @module patterns/finder/components/cards/finder__results__event
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+ // import { formatReactDate } from '../../../../util';
+
+function formatShortDate(dateString) {
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        date = new Date(dateString),
+        month = months[date.getUTCMonth()];
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "card--event__label--shortdate"
+  }, month, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, date.getUTCDate()));
+}
+/**
+ * Render a Funnelback result as an event card.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+
+function Finder__Results__Event(props) {
+  const shortDate = props.details.metaData.d && formatShortDate(props.details.metaData.d.split('|')[0]),
+        location = props.details.metaData.location && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "card__tag"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "fas fa-fw icon fa-map-marker-alt",
+    "aria-hidden": "true"
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Location:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.location.split('|').join(', '))),
+        audience = props.details.metaData.audience && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "card__tag"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "fas fa-fw icon fa-users",
+    "aria-hidden": "true"
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Audience:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.audience)),
+        thumbnail = props.details.metaData.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: props.details.metaData.thumbnail,
+    alt: "",
+    className: "card__thumbnail"
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    className: "card card--event"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: props.details.clickTrackingUrl,
+    className: "card__anchor card__details"
+  }, shortDate, thumbnail, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "card__details__text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "card__heading"
+  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "card__description"
+  }, props.details.metaData.c && props.details.metaData.c), location, audience)));
+}
+
+Finder__Results__Event.propTypes = {
+  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Event);
 
 /***/ }),
 
@@ -832,46 +936,49 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__results__funding(props) {
+function Finder__Results__Funding(props) {
   const school = props.details.metaData.school && props.query.facets.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', or ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', or '))),
         hardship = props.details.metaData.hardship === '1' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "hardship-label"
+    className: "card--funding__label--hardship"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Hardship funding")),
         programme = props.details.metaData.level && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-graduation-cap icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Funding for:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.level.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').slice(0, -1).join(', ') + ' or ' + Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').join(' or '))),
         feestatus = props.details.metaData.feestatus && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "far fa-fw fa-globe-europe icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Fee status:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.feestatus.split('|').length > 2 ? props.details.metaData.feestatus.split('|').slice(0, -1).join(', ') + ' or ' + props.details.metaData.feestatus.split('|').slice(-1) : props.details.metaData.feestatus.split('|').join(' or ')));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--funding"
+    className: "card card--funding"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
+    href: props.details.clickTrackingUrl,
+    className: "card__anchor card__details"
   }, hardship, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__results__card__details"
+    className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
+    className: "card__heading"
   }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__description"
-  }, props.details.metaData.type), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), programme, feestatus, school)));
+    className: "card__type"
+  }, props.details.metaData.type), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "card__description"
+  }, props.details.metaData.c && props.details.metaData.c), programme, feestatus, school)));
 }
 
-finder__results__funding.propTypes = {
+Finder__Results__Funding.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__funding);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Funding);
 
 /***/ }),
 
@@ -908,34 +1015,37 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__results__contact(props) {
+function Finder__Results__Generic(props) {
   const school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
         department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-building icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Department:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(', and ')));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--generic"
+    className: "card card--generic"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
+    href: props.details.clickTrackingUrl,
+    className: "card__anchor card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__results__card__details"
+    className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department)));
+    className: "card__heading"
+  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "card__description"
+  }, props.details.metaData.c && props.details.metaData.c), school, department)));
 }
 
-finder__results__contact.propTypes = {
+Finder__Results__Generic.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__contact);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Generic);
 
 /***/ }),
 
@@ -975,33 +1085,33 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__results__module(props) {
+function Finder__Results__Module(props) {
   const location = props.details.metaData.location && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-fw fa-map-marker-alt icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Location:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.location)),
         title = props.details.metaData.code ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "finder__results__card--module__code"
+    className: "card--module__code"
   }, props.details.metaData.code), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.title)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.title)),
         school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
         term = props.details.metaData.term && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "far fa-fw fa-calendar icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Semester:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.term.split('|').length > 2 ? 'All year' : props.details.metaData.term.split('|').join(' or '))),
         topic = props.details.metaData.related && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "finder__results__card__description"
+    className: "card__type"
   }, props.details.metaData.related.split('|').sort().map((topic, i) => i > 0 ? topic.toLowerCase() : topic).join(', ')),
         specification = props.details.metaData.specification && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "far fa-fw fa-file-pdf icon",
     "aria-label": "PDF"
@@ -1009,19 +1119,23 @@ function finder__results__module(props) {
     href: props.details.metaData.specification
   }, "Download module specification"));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--module"
+    className: "card card--module"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "finder__results__card__details"
+    className: "card__details"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, title), topic, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, props.details.metaData.c), term, school, location, specification));
+    className: "card__heading"
+  }, title), topic, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+    className: "card__description"
+  }, props.details.metaData.c), term, school, location, specification)));
 }
 
-finder__results__module.propTypes = {
+Finder__Results__Module.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__module);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Module);
 
 /***/ }),
 
@@ -1060,32 +1174,40 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__results__news(props) {
+function Finder__Results__News(props) {
   const formattedDate = Object(_util__WEBPACK_IMPORTED_MODULE_3__["formatReactDate"])(new Date(props.details.metaData.d)),
         dateString = props.details.metaData.d && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__description"
+    className: "card__type"
   }, formattedDate),
         hashtags = props.details.metaData.hashtagtext && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fad fa-fw fa-hashtag icon",
     "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Hashtag", props.details.metaData.hashtagtext.split('|').length > 1 && 's', ":"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.hashtagtext.split('|').join(', ')));
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Hashtag", props.details.metaData.hashtagtext.split('|').length > 1 && 's', ":"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.hashtagtext.split('|').join(', '))),
+        thumbnail = props.details.metaData.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: props.details.metaData.thumbnail,
+    alt: "",
+    className: "card__thumbnail"
+  });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--news"
+    className: "card card--news"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__results__card__details"
+    href: props.details.clickTrackingUrl,
+    className: "card__anchor card__details"
+  }, thumbnail, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.details.title), dateString, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), hashtags)));
+    className: "card__heading"
+  }, props.details.title), dateString, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "card__description"
+  }, props.details.metaData.c && props.details.metaData.c), hashtags)));
 }
 
-finder__results__news.propTypes = {
+Finder__Results__News.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__news);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__News);
 
 /***/ }),
 
@@ -1118,42 +1240,43 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__results__profile(props) {
+function Finder__Results__Profile(props) {
   const school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "School:"), " ", props.details.metaData.school),
         department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__tag"
+    className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-fw fa-building icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Department:"), " ", props.details.metaData.department),
         headshot = props.details.metaData.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "thumbnail__image-container"
+    className: "card__thumbnail"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: props.details.metaData.thumbnail,
-    alt: 'Photo of ' + props.details.metaData.title
+    alt: 'Photo of ' + props.details.title
   }));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--profile"
+    className: "card card--profile"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
+    href: props.details.clickTrackingUrl,
+    className: "card__anchor card__details"
   }, headshot, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "finder__results__card__details"
+    className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
+    className: "card__heading"
   }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__description"
+    className: "card__type"
   }, props.details.metaData.jobtitle), school, department)));
 }
 
-finder__results__profile.propTypes = {
+Finder__Results__Profile.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__profile);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Profile);
 
 /***/ }),
 
@@ -1190,7 +1313,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function finder__checkbox(props) {
+function Finder__Checkbox(props) {
   const stringLength = 16,
         stringOffset = -4,
         randomNumber = Math.random().toString(stringLength).slice(stringOffset),
@@ -1235,14 +1358,14 @@ function finder__checkbox(props) {
   }
 }
 
-finder__checkbox.propTypes = {
+Finder__Checkbox.propTypes = {
   facet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
   responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object),
   update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
   dependencies: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object)
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__checkbox);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Checkbox);
 
 /***/ }),
 
@@ -1314,7 +1437,7 @@ function dependencyMet(facet, facetMap) {
  */
 
 
-function finder__filters(props) {
+function Finder__Filters(props) {
   const clearFiltersDesktop = Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "finder__filters__reset finder__filters__reset--desktop"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_reset__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -1387,14 +1510,14 @@ function finder__filters(props) {
   }, "No filters are valid for the current query."), clearFiltersDesktop, sort)));
 }
 
-finder__filters.propTypes = {
+Finder__Filters.propTypes = {
   config: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
   response: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
   update: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
   clear: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__filters);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Filters);
 
 /***/ }),
 
@@ -1439,6 +1562,9 @@ __webpack_require__.r(__webpack_exports__);
 // may not be necessary long-term, but I was in a hurry
 
 
+let filters = null;
+
+const getFilters = () => filters;
 /**
  * Render the mobile version of the filters.
  *
@@ -1449,13 +1575,10 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__filtersmobile(props) {
+
+function Finder__FiltersMobile(props) {
   const [display, setDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false);
-  const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({});
-  let filters = null;
-
-  const getFilters = () => filters; // trap tab focus when the filters are open
-
+  const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({}); // trap tab focus when the filters are open
 
   Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(() => {
     if (!focusTrap.activate) {
@@ -1473,7 +1596,7 @@ function finder__filtersmobile(props) {
       focusTrap.deactivate && focusTrap.deactivate();
       Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["enableBodyScroll"])(getFilters().querySelector('.wrapper--finder__filters--mobile__filters'));
     }
-  }, [display]);
+  }, [display, focusTrap]);
   const totalMatching = props.response && props.response.summary && props.response.summary.totalMatching;
   const result = totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural;
   const totalMatchingMessage = totalMatching ? "Show ".concat(totalMatching, " ").concat(result) : 'Close';
@@ -1528,7 +1651,7 @@ function finder__filtersmobile(props) {
   }, Object.keys(props.query.facets).length === 0 ? 'Close' : totalMatchingMessage))))));
 }
 
-finder__filtersmobile.propTypes = {
+Finder__FiltersMobile.propTypes = {
   config: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
   response: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
@@ -1537,7 +1660,7 @@ finder__filtersmobile.propTypes = {
   updating: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
   summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__filtersmobile);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__FiltersMobile);
 
 /***/ }),
 
@@ -1570,7 +1693,7 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__reset(props) {
+function Finder__Reset(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "finder__reset",
     type: "button",
@@ -1584,11 +1707,11 @@ function finder__reset(props) {
   }, "Reset"));
 }
 
-finder__reset.propTypes = {
+Finder__Reset.propTypes = {
   clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   resetSort: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__reset);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Reset);
 
 /***/ }),
 
@@ -1625,7 +1748,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function finder__select(props) {
+function Finder__Select(props) {
   const stringLength = 16,
         stringOffset = -4,
         randomNumber = Math.random().toString(stringLength).slice(stringOffset),
@@ -1694,14 +1817,14 @@ function finder__select(props) {
   }
 }
 
-finder__select.propTypes = {
+Finder__Select.propTypes = {
   facet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
   responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object),
   update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
   dependencies: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object)
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__select);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Select);
 
 /***/ }),
 
@@ -1741,7 +1864,7 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {object} - React component.
  */
 
-function finder__sort(props) {
+function Finder__Sort(props) {
   const stringLength = 16,
         stringOffset = -4,
         randomNumber = Math.random().toString(stringLength).slice(stringOffset);
@@ -1775,12 +1898,12 @@ function finder__sort(props) {
   }))) : null;
 }
 
-finder__sort.propTypes = {
+Finder__Sort.propTypes = {
   config: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
   update: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__sort);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Sort);
 
 /***/ }),
 
@@ -1814,7 +1937,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function finder__tag(props) {
+function Finder__Tag(props) {
   const deleteFacet = () => {
     const newQuery = props.query;
     props.dependencies.map(facet => {
@@ -1843,14 +1966,14 @@ function finder__tag(props) {
   }, "Remove filter for "), props.facet.name, ":", ' ', props.facet.values.filter(value => value.data === props.query.facets[props.facet.meta])[0].label))) : null;
 }
 
-finder__tag.propTypes = {
+Finder__Tag.propTypes = {
   facet: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
   responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object),
   update: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
   dependencies: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object)
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__tag);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Tag);
 
 /***/ }),
 
@@ -1883,7 +2006,7 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__clear(props) {
+function Finder__Clear(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     className: "finder__clear",
     type: "button",
@@ -1897,11 +2020,11 @@ function finder__clear(props) {
   }, "Clear query"));
 }
 
-finder__clear.propTypes = {
+Finder__Clear.propTypes = {
   clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   resetSort: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__clear);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Clear);
 
 /***/ }),
 
@@ -1968,7 +2091,7 @@ function highlightQueryTerm(suggestion, partialQuery) {
  */
 
 
-function finder__query(props) {
+function Finder__Query(props) {
   // save what they're typing
   const [partialQuery, setPartialQuery] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(props.query.query); // Funnelback suggestions for the currently typed text
 
@@ -1986,7 +2109,7 @@ function finder__query(props) {
         [activeSuggestionID, setActiveSuggestionID] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])('');
   Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(() => {
     setPartialQuery(props.query.query);
-  }, [props.updating]);
+  }, [props.query.query, props.updating]);
   let textInput = null;
 
   function focusInput() {
@@ -2197,13 +2320,13 @@ function finder__query(props) {
   }, "Find"))));
 }
 
-finder__query.propTypes = {
+Finder__Query.propTypes = {
   config: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
   update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
   updating: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__query);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Query);
 
 /***/ }),
 
@@ -2243,7 +2366,7 @@ __webpack_require__.r(__webpack_exports__);
  * @returns {object} - React component.
  */
 
-function finder__didyoumean(props) {
+function Finder__DidYouMean(props) {
   const didyoumean = props.query.misspelling ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "finder__results__didyoumean"
   }, "No ", props.summariseAs.plural, " found for \u201C", props.query.misspelling, "\u201D. Searching instead for \u201C", props.query.query, "\u201D.") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
@@ -2265,13 +2388,13 @@ function finder__didyoumean(props) {
   return didyoumean;
 }
 
-finder__didyoumean.propTypes = {
+Finder__DidYouMean.propTypes = {
   query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
   response: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
   summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
   update: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__didyoumean);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__DidYouMean);
 
 /***/ }),
 
@@ -2304,7 +2427,7 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__pagination(props) {
+function Finder__Pagination(props) {
   const numberOfPages = Math.ceil(props.totalMatching / props.numRanks),
         currentPage = Math.ceil(props.currStart / props.numRanks),
         pages = [];
@@ -2390,14 +2513,14 @@ function finder__pagination(props) {
   }, pages));
 }
 
-finder__pagination.propTypes = {
+Finder__Pagination.propTypes = {
   currStart: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   numRanks: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
   totalMatching: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
   update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__pagination);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Pagination);
 
 /***/ }),
 
@@ -2440,7 +2563,7 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__results(props) {
+function Finder__Results(props) {
   const updating = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__updating",
     "aria-live": "polite"
@@ -2502,7 +2625,7 @@ function finder__results(props) {
   }
 }
 
-finder__results.propTypes = {
+Finder__Results.propTypes = {
   clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   response: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
@@ -2511,46 +2634,7 @@ finder__results.propTypes = {
   update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   updating: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__results);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/results/finder__results__highlight__query.js":
-/*!*************************************************************************************!*\
-  !*** ./src/patterns/finder/components/results/finder__results__highlight__query.js ***!
-  \*************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-
-
-const formatLabel = (label, value) => {
-  if (value) {
-    return label;
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, label.split(value).reduce((prev, current, i) => {
-    if (!i) {
-      return [current];
-    }
-
-    return prev.concat( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-      className: "highlightText",
-      key: value + current
-    }, value), current);
-  }, []));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (formatLabel);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results);
 
 /***/ }),
 
@@ -2589,7 +2673,7 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function finder__results__summary(props) {
+function Finder__Results__Summary(props) {
   const result = props.totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural,
         formatter = new Intl.NumberFormat('en-GB'),
         sort = props.config.sort.length > 1 && props.config.displaySort ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -2633,7 +2717,7 @@ function finder__results__summary(props) {
   }
 }
 
-finder__results__summary.propTypes = {
+Finder__Results__Summary.propTypes = {
   clear: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
   config: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
   currEnd: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
@@ -2644,7 +2728,46 @@ finder__results__summary.propTypes = {
   totalMatching: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
   update: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__summary);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Summary);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/components/results/formatLabel.js":
+/*!***************************************************************!*\
+  !*** ./src/patterns/finder/components/results/formatLabel.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+
+const formatLabel = (label, value) => {
+  if (value) {
+    return label;
+  } else {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, label.split(value).reduce((prev, current, i) => {
+      if (!i) {
+        return [current];
+      }
+
+      return prev.concat( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "highlightText",
+        key: value + current
+      }, value), current);
+    }, []));
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (formatLabel);
 
 /***/ }),
 
@@ -2799,7 +2922,7 @@ function Finder(props) {
    * Dummy, empty Funnelback response object for initial state.
    */
 
-  const initialResponse = {
+  const initialResponse = Object.freeze({
     bestBets: [],
     facets: [],
     results: [],
@@ -2810,7 +2933,7 @@ function Finder(props) {
       numRanks: 0,
       totalMatching: 0
     }
-  }; // State objects for the Funnelback query and response
+  }); // State objects for the Funnelback query and response
 
   const [query, setQuery] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(initialQuery);
   const [funnelbackResponse, setResponse] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(initialResponse); // Boolean to indicate when a query is in progress
@@ -2841,7 +2964,7 @@ function Finder(props) {
 
     call.cancel(); // make a new, asynchronous request to Funnelback
 
-    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_12__["find"])(query.collection, query.fixedFacets, query.query, query.sortType, query.startRank, query.numRanks, query.facets); // save the requestToken, so
+    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_12__["find"])(query.collection, query.fixedFacets, query.query, query.sortType, query.startRank, query.numRanks, query.facets); // save the requestToken
 
     setCall({
       cancel: () => {
@@ -2868,7 +2991,7 @@ function Finder(props) {
     }).catch(() => {
       setResponse(initialResponse);
       setUpdating(false);
-    });
+    }); // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [update]); // update props so child components can update the query
 
   const updater = {
@@ -3436,18 +3559,19 @@ function arraySlicer(arr, len) {
 
 /***/ }),
 
-/***/ 1:
-/*!**********************!*\
-  !*** util (ignored) ***!
-  \**********************/
+/***/ 2:
+/*!*****************************!*\
+  !*** multi ./src/finder.js ***!
+  \*****************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-/* (ignored) */
+module.exports = __webpack_require__(/*! /home/rof/src/github.com/CityUniversityLondon/web2020/src/finder.js */"./src/finder.js");
+
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!**********************!*\
   !*** util (ignored) ***!
   \**********************/
@@ -3459,14 +3583,13 @@ function arraySlicer(arr, len) {
 /***/ }),
 
 /***/ 4:
-/*!*****************************!*\
-  !*** multi ./src/finder.js ***!
-  \*****************************/
+/*!**********************!*\
+  !*** util (ignored) ***!
+  \**********************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__(/*! /home/rof/src/github.com/CityUniversityLondon/web2020/src/finder.js */"./src/finder.js");
-
+/* (ignored) */
 
 /***/ })
 

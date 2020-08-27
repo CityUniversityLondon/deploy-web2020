@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([5,"vendor-dependencies","core","react","vendor-direct","axios"]);
+/******/ 	deferredModules.push([5,"core","vendor-dependencies","react","vendor-direct","axios"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
