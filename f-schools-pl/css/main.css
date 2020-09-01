@@ -65187,7 +65187,7 @@ button
         grid-column: 1 / span 18;
     }
     main .navigation--secondary + .school .school__content {
-        grid-column: 3 / 17;
+        grid-column: 1 / -1;
     }
     main .navigation--secondary + .school .school__content .school__content__cta,
     main .navigation--secondary + .school .school__content .school__content__links,
@@ -65222,7 +65222,7 @@ button
 @media (min-width: 1024px) {
     main .navigation--secondary + .school .school__content .school__statistic .statistics-block,
     main .navigation--secondary + .school .school__content .school__statistic h2 {
-        grid-column: 2/18;
+        grid-column: 3/17;
     }
     main .navigation--secondary + .school .school__content .school__content__links {
         grid-template-columns: repeat(18, 1fr);
@@ -65277,6 +65277,10 @@ button
 }
 
 @media (min-width: 1024px) {
+    .school__content__pathway .pathway {
+        margin-top: 0;
+        padding-top: 0;
+    }
     .school__content__pathway .pathway-image-cards__blocks {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
