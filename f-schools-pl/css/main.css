@@ -65187,7 +65187,7 @@ button
         grid-column: 1 / span 18;
     }
     main .navigation--secondary + .school .school__content {
-        grid-column: 1 / span 18;
+        grid-column: 3 / 17;
     }
     main .navigation--secondary + .school .school__content .school__content__cta,
     main .navigation--secondary + .school .school__content .school__content__links,
@@ -65222,7 +65222,7 @@ button
 @media (min-width: 1024px) {
     main .navigation--secondary + .school .school__content .school__statistic .statistics-block,
     main .navigation--secondary + .school .school__content .school__statistic h2 {
-        grid-column: 3/17;
+        grid-column: 2/18;
     }
     main .navigation--secondary + .school .school__content .school__content__links {
         grid-template-columns: repeat(18, 1fr);
@@ -65390,6 +65390,10 @@ button
     background-image: linear-gradient(to top, #ffffff, #f2f2f2);
 }
 
+.school__top-gradient .cta-block {
+    max-width: initial;
+}
+
 .school__content__middle-wrapper {
     background-color: #f2f2f2;
 }
@@ -65405,6 +65409,8 @@ button
 
 .school__content__links .school__content__links--right ul {
     list-style: none;
+    margin-left: 0;
+    margin-top: 0;
 }
 
 .school__content__links .school__content__links--right .anchor-inline--gray4 {
@@ -65428,120 +65434,6 @@ button
     }
 }
 
-.school__content__links .school__content__links--right .school__anchor-inline--gray4 {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    transition: background-size 0.2s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #cbcbcb;
-}
-
-@media (hover: hover) {
-    .school__content__links .school__content__links--right .school__anchor-inline--gray4:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.school__content__links .school__content__links--right .school__anchor-inline--gray4:focus, .school__content__links .school__content__links--right .school__anchor-inline--gray4:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .school__content__links .school__content__links--right .school__anchor-inline--gray4 {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .school__content__links .school__content__links--right .school__anchor-inline--gray4:hover {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
-    }
-}
-
-.school__content__links .school__content__links--right .school__anchor-inline--gray4:focus, .school__content__links .school__content__links--right .school__anchor-inline--gray4:active {
-    outline-color: #ffffff;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.school__content__links .school__content__links--right .school__anchor-inline--gray4:visited {
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #cbcbcb;
-}
-
-.school__content__links .school__content__links--right .school__anchor-inline--gray4:focus {
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #cbcbcb;
-}
-
-@media (hover: hover) {
-    .school__content__links .school__content__links--right .school__anchor-inline--gray4:hover {
-        border-bottom-color: #cbcbcb;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        color: #cbcbcb;
-    }
-}
-
-.school__content__links .school__content__links--right .school__anchor-inline--gray4:active {
-    background-color: #cbcbcb;
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #cbcbcb;
-}
-
-.school__content__links .school__content__links--right .school__anchor-inline--gray4:hover {
-    color: #0c0c0e;
-}
-
 .school__content__cta ul {
     list-style: none;
     margin-left: 0;
@@ -65560,6 +65452,17 @@ button
 
 .school__statistic h2 {
     text-align: center;
+    position: relative;
+}
+
+.school__statistic h2:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 10%;
+    left: 45%;
+    border-bottom: 0.25rem solid #d61726;
+    bottom: -0.5rem;
 }
 
 .school__statistic .ksp__items {
@@ -65572,12 +65475,22 @@ button
     background-color: #f2f2f2;
     height: 100%;
     width: 100%;
-    top: 7rem;
+    top: 3rem;
     z-index: -1;
 }
 
+.school__statistic .ksp__items {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.school__content__links {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 .shs .banner__standfirst h1 {
-    color: #3f1464;
+    color: #11334c;
 }
 
 .shs .banner__standfirst-cta {
@@ -65591,9 +65504,12 @@ button
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: transparent;
-    border: 0.125rem solid #213d50;
-    color: #015a79;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+    border-color: #11334c;
+    background: #11334c;
+    color: #ffffff;
 }
 
 .shs .banner__standfirst-cta:disabled {
@@ -65681,14 +65597,14 @@ button
 }
 
 .shs .banner__standfirst-cta:visited {
-    border-color: #213d50;
-    color: #015a79;
+    border-color: #d61726;
+    color: #ffffff;
 }
 
 .shs .banner__standfirst-cta:focus {
-    background: #ffffff;
-    color: #015a79;
-    border-color: #213d50;
+    background: #d61726;
+    border-color: #d61726;
+    color: #ffffff;
 }
 
 .shs .banner__standfirst-cta:focus:focus, .shs .banner__standfirst-cta:focus:active {
@@ -65700,17 +65616,17 @@ button
 
 @media (hover: hover) {
     .shs .banner__standfirst-cta:hover {
-        background: #213d50;
-        border-color: #213d50;
-        color: #ffffff;
+        background: #ffffff;
+        border-color: #d61726;
+        color: #d61726;
     }
 }
 
 .shs .banner__standfirst-cta:active {
-    background: #213d50;
-    border-color: #213d50;
+    border-color: #d61726;
     box-shadow: none;
-    color: #ffffff;
+    color: #d61726;
+    background: transparent;
 }
 
 .shs .banner__standfirst-cta:active:focus, .shs .banner__standfirst-cta:active:active {
@@ -65721,25 +65637,72 @@ button
 }
 
 .shs .banner__standfirst-cta:disabled {
-    color: #015a79;
-    background: transparent;
-    border: 0.125rem solid #213d50;
+    color: #ffffff;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .shs .banner__standfirst-cta span {
     transition: none;
 }
 
+.shs .banner__standfirst-cta:visited {
+    border-color: #11334c;
+    color: #ffffff;
+}
+
 .shs .banner__standfirst-cta:after {
     content: '';
+}
+
+.shs .banner__standfirst-cta:focus, .shs .banner__standfirst-cta:active {
+    color: #11334c;
+}
+
+.shs .banner__standfirst-cta:focus {
+    border-color: #11334c;
+    background: #11334c;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .shs .banner__standfirst-cta:hover {
+        background: transparent;
+        border-color: #11334c;
+        color: #11334c;
+    }
+}
+
+.shs .banner__standfirst-cta:active {
+    color: #11334c;
+    border-color: #11334c;
+    background: transparent;
 }
 
 .shs .banner__standfirst-cta:active span, .shs .banner__standfirst-cta:focus span, .shs .banner__standfirst-cta:hover span {
     transform: none;
 }
 
+.shs .banner__standfirst-cta:disabled {
+    border-color: #11334c;
+    background: #11334c;
+    color: #ffffff;
+}
+
 .shs .school__content__links--right {
     background-color: #11334c;
+}
+
+.shs .school__content__links--left:hover .linked-heading__text:before {
+    background: #015a79;
+}
+
+.shs .school__content__links--left .linked-heading__icons {
+    background: #11334c;
+}
+
+.shs .school__statistic h2:after {
+    border-bottom-color: #11334c;
 }
 
 .mcse .banner__standfirst h1 {
@@ -65757,9 +65720,12 @@ button
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: transparent;
-    border: 0.125rem solid #286760;
-    color: #427844;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+    border-color: #427844;
+    background: #427844;
+    color: #286760;
 }
 
 .mcse .banner__standfirst-cta:disabled {
@@ -65847,14 +65813,14 @@ button
 }
 
 .mcse .banner__standfirst-cta:visited {
-    border-color: #286760;
-    color: #427844;
+    border-color: #d61726;
+    color: #ffffff;
 }
 
 .mcse .banner__standfirst-cta:focus {
-    background: #ffffff;
-    color: #427844;
-    border-color: #286760;
+    background: #d61726;
+    border-color: #d61726;
+    color: #ffffff;
 }
 
 .mcse .banner__standfirst-cta:focus:focus, .mcse .banner__standfirst-cta:focus:active {
@@ -65866,17 +65832,17 @@ button
 
 @media (hover: hover) {
     .mcse .banner__standfirst-cta:hover {
-        background: #286760;
-        border-color: #286760;
-        color: #ffffff;
+        background: #ffffff;
+        border-color: #d61726;
+        color: #d61726;
     }
 }
 
 .mcse .banner__standfirst-cta:active {
-    background: #286760;
-    border-color: #286760;
+    border-color: #d61726;
     box-shadow: none;
-    color: #ffffff;
+    color: #d61726;
+    background: transparent;
 }
 
 .mcse .banner__standfirst-cta:active:focus, .mcse .banner__standfirst-cta:active:active {
@@ -65887,25 +65853,64 @@ button
 }
 
 .mcse .banner__standfirst-cta:disabled {
-    color: #427844;
-    background: transparent;
-    border: 0.125rem solid #286760;
+    color: #ffffff;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
 }
 
 .mcse .banner__standfirst-cta span {
     transition: none;
 }
 
+.mcse .banner__standfirst-cta:visited {
+    border-color: #427844;
+    color: #286760;
+}
+
 .mcse .banner__standfirst-cta:after {
     content: '';
+}
+
+.mcse .banner__standfirst-cta:focus, .mcse .banner__standfirst-cta:active {
+    color: #427844;
+}
+
+.mcse .banner__standfirst-cta:focus {
+    border-color: #427844;
+    background: #427844;
+    color: #286760;
+}
+
+@media (hover: hover) {
+    .mcse .banner__standfirst-cta:hover {
+        background: transparent;
+        border-color: #427844;
+        color: #427844;
+    }
+}
+
+.mcse .banner__standfirst-cta:active {
+    color: #427844;
+    border-color: #427844;
+    background: transparent;
 }
 
 .mcse .banner__standfirst-cta:active span, .mcse .banner__standfirst-cta:focus span, .mcse .banner__standfirst-cta:hover span {
     transform: none;
 }
 
+.mcse .banner__standfirst-cta:disabled {
+    border-color: #427844;
+    background: #427844;
+    color: #286760;
+}
+
 .mcse .school__content__links--right {
     background-color: #004a51;
+}
+
+.mcse .school__statistic h2:after {
+    border-bottom-color: #004a51;
 }
 
 .cls .banner__standfirst h1 {
@@ -66074,6 +66079,10 @@ button
     background-color: #3f1464;
 }
 
+.cls .school__statistic h2:after {
+    border-bottom-color: #3f1464;
+}
+
 .sass .banner__standfirst h1 {
     color: #005058;
 }
@@ -66238,4 +66247,8 @@ button
 
 .sass .school__content__links--right {
     background-color: #005058;
+}
+
+.sass .school__statistic h2:after {
+    border-bottom-color: #005058;
 }
