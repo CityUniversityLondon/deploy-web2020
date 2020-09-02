@@ -65746,6 +65746,7 @@ button
 .school__statistic h2 {
     text-align: center;
     position: relative;
+    padding-bottom: 0.5rem;
 }
 
 .school__statistic h2:after {
@@ -65758,6 +65759,11 @@ button
     bottom: -0.5rem;
 }
 
+.school__statistic .statistics-block .ksp__items {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .school__statistic .ksp__items {
     background-color: #ffffff;
 }
@@ -65768,13 +65774,13 @@ button
     background-color: #f2f2f2;
     height: 100%;
     width: 100%;
-    top: 3rem;
+    top: 3.5rem;
     z-index: -1;
 }
 
 .school__statistic .ksp__items {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
 }
 
 .school__content__links {
