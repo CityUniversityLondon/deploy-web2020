@@ -22464,30 +22464,11 @@ Assign mixin:
     }
 }
 
-.js
-.accordion
-> .accordion__heading[data-open='true']
-+ .accordion__body
-> .timeline__content.expanded {
-    top: 0.25rem;
-}
-
-@media (min-width: 1024px) {
-    .js
-.accordion
-> .accordion__heading[data-open='true']
-+ .accordion__body
-> .timeline__content.expanded {
-        top: 2.25rem;
-        margin-bottom: 3.25rem;
-    }
-}
-
-.timeline__content {
+.accordion.accordion--timeline .timeline__content {
     position: relative;
 }
 
-.timeline__content.expanded::before {
+.accordion.accordion--timeline .timeline__content.expanded::before {
     /* Vertical line */
     content: '';
     position: absolute;
@@ -22499,91 +22480,84 @@ Assign mixin:
 }
 
 @media (min-width: 1024px) {
-    .timeline__content.expanded::before {
+    .accordion.accordion--timeline .timeline__content.expanded::before {
         left: 50%;
     }
 }
 
-.timeline__content__block {
-    width: 100%;
+.accordion.accordion--timeline .timeline__content__block {
     padding-bottom: 1rem;
     position: relative;
 }
 
-.timeline__content__block:nth-child(1) {
+.accordion.accordion--timeline .timeline__content__block:nth-child(1) {
     padding-top: 1rem;
 }
 
-.timeline__content__block:first-of-type {
+.accordion.accordion--timeline .timeline__content__block:first-of-type {
     top: 0.25rem;
 }
 
 @media (min-width: 1024px) {
-    .timeline__content__block:first-of-type .timeline__content__block__item__connector {
+    .accordion.accordion--timeline .timeline__content__block:first-of-type .timeline__content__block__item__connector {
         top: 2.25rem;
     }
 }
 
 @media (min-width: 1024px) {
-    .timeline__content__block {
+    .accordion.accordion--timeline .timeline__content__block {
         margin-top: -5%;
     }
-    .timeline__content__block:nth-child(even) .timeline__content__block__item {
+    .accordion.accordion--timeline .timeline__content__block:nth-child(even) {
+        animation: timeline-bounce-2 0.6s;
+    }
+    .accordion.accordion--timeline .timeline__content__block:nth-child(even) .timeline__content__block__item {
         position: relative;
         left: 55%;
     }
-    .timeline__content__block:nth-child(even) .timeline__content__block__item__connector {
+    .accordion.accordion--timeline .timeline__content__block:nth-child(even) .timeline__content__block__item .timeline__content__block__item__connector {
         left: -11%;
     }
-    .timeline__content__block:nth-child(even) .timeline__content__block__item__connector span {
+    .accordion.accordion--timeline .timeline__content__block:nth-child(even) .timeline__content__block__item .timeline__content__block__item__connector span {
         left: 80px;
+    }
+    .accordion.accordion--timeline .timeline__content__block:nth-child(odd) {
+        animation: timeline-bounce-2-inverse 0.6s;
     }
 }
 
-.timeline__content__block__item {
-    border: 1px solid #ccc;
+.accordion.accordion--timeline .timeline__content__block__item {
+    border: 0.0625rem solid #d8d8d8;
     padding: 1rem;
     margin: 0 20px 0 45px;
     background-color: #ffffff;
 }
 
 @media (min-width: 1024px) {
-    .timeline__content__block__item {
+    .accordion.accordion--timeline .timeline__content__block__item {
         margin: 0 45px 0 0;
         width: 45%;
     }
 }
 
-.timeline__content__block__item h2 {
-    font-weight: bold;
-    font-size: 1.49em;
-}
-
-.timeline__content__block__item .timeline__content__block__item__text:last-child {
+.accordion.accordion--timeline .timeline__content__block__item .timeline__content__block__item__text:last-child {
     margin-bottom: 0;
 }
 
-.timeline__content__block__item .timeline__content__block__item__text img {
+.accordion.accordion--timeline .timeline__content__block__item .timeline__content__block__item__text img {
     display: block;
     margin-bottom: 1rem;
 }
 
-.timeline__content__block__item__connector {
-    border-top: solid 2px black;
+.accordion.accordion--timeline .timeline__content__block__item__connector {
+    border-top: 0.125rem solid #0c0c0e;
     position: relative;
     left: -42px;
     width: 50px;
-    height: 1px;
-}
-
-@media (min-width: 768px) {
-    .timeline__content__block__item__connector {
-        border-top: solid 2px black;
-    }
 }
 
 @media (min-width: 1024px) {
-    .timeline__content__block__item__connector {
+    .accordion.accordion--timeline .timeline__content__block__item__connector {
         position: absolute;
         width: 80px;
         left: auto;
@@ -22591,10 +22565,10 @@ Assign mixin:
     }
 }
 
-.timeline__content__block__item__connector span {
+.accordion.accordion--timeline .timeline__content__block__item__connector span {
     width: 7px;
     height: 7px;
-    border: solid 1px black;
+    border: 0.0625rem solid #0c0c0e;
     border-radius: 50%;
     display: block;
     color: transparent;
@@ -22604,28 +22578,19 @@ Assign mixin:
 }
 
 @media (min-width: 768px) {
-    .timeline__content__block__item__connector span {
+    .accordion.accordion--timeline .timeline__content__block__item__connector span {
         width: 10px;
         height: 10px;
-        border: solid 2px black;
+        border: 0.125rem solid #0c0c0e;
         top: -6px;
         left: 50px;
     }
 }
 
 @media (min-width: 1024px) {
-    .timeline__content__block__item__connector span {
+    .accordion.accordion--timeline .timeline__content__block__item__connector span {
         left: auto;
         right: 10px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .timeline .timeline__content__block:nth-child(even) {
-        animation: timeline-bounce-2 0.6s;
-    }
-    .timeline .timeline__content__block:nth-child(odd) {
-        animation: timeline-bounce-2-inverse 0.6s;
     }
 }
 
@@ -22657,8 +22622,48 @@ Assign mixin:
     }
 }
 
-.no-js .timeline .collapsed {
+.js
+.accordion
+> .accordion__heading[data-open='true']
++ .accordion__body
+> .timeline__content.expanded {
+    top: 0.25rem;
+}
+
+@media (min-width: 1024px) {
+    .js
+.accordion
+> .accordion__heading[data-open='true']
++ .accordion__body
+> .timeline__content.expanded {
+        top: 2.25rem;
+        margin-bottom: 3.25rem;
+    }
+}
+
+.no-js .accordion.accordion--timeline {
+    margin-top: 3.25rem;
+}
+
+.no-js .accordion.accordion--timeline .collapsed {
     display: block;
+}
+
+.no-js .accordion.accordion--timeline .accordion__heading {
+    height: 0;
+    margin: 0 0 0 3rem;
+}
+
+@media (min-width: 1024px) {
+    .no-js .accordion.accordion--timeline .accordion__heading {
+        margin: 0;
+    }
+}
+
+.no-js .accordion.accordion--timeline .timeline__content__block:first-of-type {
+    margin: 0;
+    padding: 0 0 3.5rem 0;
+    top: 2.5rem;
 }
 
 .back-to-top {
