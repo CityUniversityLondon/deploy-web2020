@@ -599,84 +599,92 @@
     background-color: #001323;
 }
 
+.color--brown5 {
+    color: #f2f0f0;
+}
+
+.background--brown5 {
+    background-color: #f2f0f0;
+}
+
 .color--brown10 {
-    color: #e6e4e3;
+    color: #ece8e5;
 }
 
 .background--brown10 {
-    background-color: #e6e4e3;
+    background-color: #ece8e5;
 }
 
 .color--brown20 {
-    color: #123456;
+    color: #dfdcdb;
 }
 
 .background--brown20 {
-    background-color: #123456;
+    background-color: #dfdcdb;
 }
 
 .color--brown30 {
-    color: #123456;
+    color: #cdc8c7;
 }
 
 .background--brown30 {
-    background-color: #123456;
+    background-color: #cdc8c7;
 }
 
 .color--brown40 {
-    color: #123456;
+    color: #bab4b2;
 }
 
 .background--brown40 {
-    background-color: #123456;
+    background-color: #bab4b2;
 }
 
 .color--brown50 {
-    color: #123456;
+    color: #a7a09d;
 }
 
 .background--brown50 {
-    background-color: #123456;
+    background-color: #a7a09d;
 }
 
 .color--brown60 {
-    color: #123456;
+    color: #958c89;
 }
 
 .background--brown60 {
-    background-color: #123456;
+    background-color: #958c89;
 }
 
 .color--brown70 {
-    color: #123456;
+    color: #827874;
 }
 
 .background--brown70 {
-    background-color: #123456;
+    background-color: #827874;
 }
 
 .color--brown80 {
-    color: #123456;
+    color: #6d6562;
 }
 
 .background--brown80 {
-    background-color: #123456;
+    background-color: #6d6562;
 }
 
 .color--brown90 {
-    color: #123456;
+    color: #59524f;
 }
 
 .background--brown90 {
-    background-color: #123456;
+    background-color: #59524f;
 }
 
 .color--brown100 {
-    color: #123456;
+    color: #443f3d;
 }
 
 .background--brown100 {
-    background-color: #123456;
+    background-color: #443f3d;
 }
 
 .color--green10 {
@@ -736,59 +744,59 @@
 }
 
 .color--green80 {
-    color: #004a51;
+    color: #305731;
 }
 
 .background--green80 {
-    background-color: #004a51;
+    background-color: #305731;
 }
 
 .color--green90 {
-    color: #003035;
+    color: #274728;
 }
 
 .background--green90 {
-    background-color: #003035;
+    background-color: #274728;
 }
 
 .color--green100 {
-    color: #002125;
+    color: #1f3920;
 }
 
 .background--green100 {
-    background-color: #002125;
+    background-color: #1f3920;
 }
 
 .color--orange10 {
-    color: #d5d2d0;
+    color: #fbc9b5;
 }
 
 .background--orange10 {
-    background-color: #d5d2d0;
+    background-color: #fbc9b5;
 }
 
 .color--orange20 {
-    color: #bab4b2;
+    color: #f9ae90;
 }
 
 .background--orange20 {
-    background-color: #bab4b2;
+    background-color: #f9ae90;
 }
 
 .color--orange30 {
-    color: #dca691;
+    color: #f6936b;
 }
 
 .background--orange30 {
-    background-color: #dca691;
+    background-color: #f6936b;
 }
 
 .color--orange40 {
-    color: #f58659;
+    color: #f47846;
 }
 
 .background--orange40 {
-    background-color: #f58659;
+    background-color: #f47846;
 }
 
 .color--orange50 {
@@ -66015,7 +66023,7 @@ button
 }
 
 .mcse .banner__standfirst h1 {
-    color: #004a51;
+    color: #305731;
 }
 
 .mcse .banner__standfirst-cta {
@@ -66210,11 +66218,11 @@ button
 }
 
 .mcse .school__content__links--right {
-    background-color: #004a51;
+    background-color: #305731;
 }
 
 .mcse .school__statistic h2:after {
-    border-bottom-color: #004a51;
+    border-bottom-color: #305731;
 }
 
 .cls .banner__standfirst h1 {
