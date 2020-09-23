@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([0,"core","vendor-dependencies","react","vendor-direct","axios"]);
+/******/ 	deferredModules.push([0,"vendor-dependencies","core","react","axios","vendor-direct"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -567,12 +567,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
 /* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
 /* harmony import */ var _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/dropdown-filter/dropdown-filter */ "./src/patterns/dropdown-filter/dropdown-filter.js");
-/* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
-/* harmony import */ var _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/image-carousel/default-carousel/default-carousel */ "./src/patterns/image-carousel/default-carousel/default-carousel.js");
-/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
-/* harmony import */ var _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/key-information/key-information--lifelong-learning */ "./src/patterns/key-information/key-information--lifelong-learning.js");
-/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
-/* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
+/* harmony import */ var _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/event-form/event-form */ "./src/patterns/event-form/event-form.js");
+/* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
+/* harmony import */ var _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/image-carousel/default-carousel/default-carousel */ "./src/patterns/image-carousel/default-carousel/default-carousel.js");
+/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
+/* harmony import */ var _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/key-information/key-information--lifelong-learning */ "./src/patterns/key-information/key-information--lifelong-learning.js");
+/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
 /* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
 /* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
 /* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
@@ -631,7 +631,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_29__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_video_video__WEBPACK_IMPORTED_MODULE_30__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_29__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_video_video__WEBPACK_IMPORTED_MODULE_30__["default"]]);
 
 /***/ }),
 
@@ -2092,6 +2092,128 @@ function selectChange(e) {
 
 /***/ }),
 
+/***/ "./src/patterns/event-form/event-form.js":
+/*!***********************************************!*\
+  !*** ./src/patterns/event-form/event-form.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+
+
+/**
+ * @module patterns/event-form/event-form
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+
+const oneSecond = 1000,
+      tenthOfASecond = 100,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
+      scrollTo = true;
+const className = 'wrapper--event__info--formassembly';
+
+function calculateFormBodyHeight(form) {
+  form.dataset.open = true;
+  const height = form.offsetHeight + 'px';
+  form.dataset.open = false;
+  return height;
+}
+
+function toggleForm(form, button, buttonText, closeButtonText) {
+  const opening = !Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(form.dataset.open),
+        doneTarget = opening ? form.querySelector('.event__formassembly__form__heading') : button;
+
+  if (opening) {
+    // Calclulate and save how big we're transitioning to
+    const formHeight = calculateFormBodyHeight(form);
+    form.addEventListener('transitionend', function openForm() {
+      form.removeEventListener('transitionend', openForm, true);
+      form.style = null;
+
+      if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_1__["verticallyInWindow"])(doneTarget)) {
+        zenscroll__WEBPACK_IMPORTED_MODULE_0___default.a.to(doneTarget, scrollDuration);
+      }
+    }, true); // Starting height is 0
+
+    form.style.height = '0px';
+    form.dataset.open = true; // setTimeout lets the DOM recalculate before we continue, so the transition will fire
+
+    setTimeout(() => {
+      form.style.height = formHeight;
+    }, tenthOfASecond);
+    button.querySelector('span').innerText = closeButtonText;
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, true);
+    form.focus();
+  } else {
+    // Starting height is the current height
+    form.style.height = form.offsetHeight + 'px';
+    form.addEventListener('transitionend', function closeForm() {
+      form.removeEventListener('transitionend', closeForm, true);
+      form.style = null;
+      form.dataset.open = false;
+
+      if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_1__["verticallyInWindow"])(doneTarget)) {
+        zenscroll__WEBPACK_IMPORTED_MODULE_0___default.a.to(doneTarget, scrollDuration);
+      }
+    }, true); // setTimeout lets the DOM recalculate before we continue, so the transition will fire
+
+    setTimeout(() => {
+      form.style.height = '0px';
+    }, tenthOfASecond);
+    button.querySelector('span').innerText = buttonText;
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, false);
+    button.focus();
+  }
+}
+
+function launchFormAssemblyForm(eventInfo) {
+  const link = eventInfo.querySelector('.event__formassembly__button'),
+        form = eventInfo.querySelector('.event__formassembly__form'),
+        formActual = eventInfo.querySelector('.event__formassembly__form > .formassembly-form'),
+        buttonText = link.innerText,
+        button = document.createElement('button'),
+        buttonSpan = document.createElement('span'),
+        closeButtonText = 'Close registration form',
+        closeButton = document.createElement('button'),
+        closeButtonSpan = document.createElement('span'),
+        closeButtonIcon = document.createElement('span');
+  buttonSpan.appendChild(document.createTextNode(buttonText));
+  button.setAttribute('type', 'button');
+  button.className = 'event__formassembly__button';
+  button.appendChild(buttonSpan);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, false);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].owns, 'event__formassembly__form');
+  closeButtonSpan.appendChild(document.createTextNode(closeButtonText));
+  closeButtonSpan.className = 'event__formassembly__form__close-button__text';
+  closeButtonIcon.className = 'fa fas fa-fw fa-times';
+  closeButton.setAttribute('type', 'button');
+  closeButton.className = 'event__formassembly__form__close-button';
+  closeButton.appendChild(closeButtonIcon);
+  closeButton.appendChild(closeButtonSpan);
+  button.addEventListener('click', () => toggleForm(form, button, buttonText, closeButtonText), true);
+  closeButton.addEventListener('click', () => toggleForm(form, button, buttonText, closeButtonText), true);
+  form.setAttribute('tabindex', -1);
+  form.dataset.open = false;
+  form.insertBefore(closeButton, formActual);
+  link.parentNode.replaceChild(button, link);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchFormAssemblyForm,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
 /***/ "./src/patterns/feedback/feedback.js":
 /*!*******************************************!*\
   !*** ./src/patterns/feedback/feedback.js ***!
@@ -3369,193 +3491,6 @@ function findLinks(e) {
 
 /***/ }),
 
-/***/ "./src/patterns/load-more/load-more.js":
-/*!*********************************************!*\
-  !*** ./src/patterns/load-more/load-more.js ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
-
-/**
- * Load more - show additional items on 'Load more' button click. Update URL to illustrate where user is in item set.
- *
- * @module patterns/load-more/load-more
- * @author Mark Skinsley <mark.skinsley@city.ac.uk>
- * @copyright City, University of London 2019
- */
-
-
-const className = 'load-more';
-let hashedUrl = window.location.hash,
-    loadMoreId;
-/**
- * Control what items will display based on wrapper's 'data-listings-show' data attribute.
- *
- * @param {HTMLElements} [items] - Elements controlled by 'Load more' button.
- * @param {number} visibleItems - Number of items visible at any one time.
- * @param {HTMLElement} loadMoreBtn - Button controlling particular item group.
- */
-
-function itemsDisplay(items, visibleItems, loadMoreBtn) {
-  for (const item of items.entries()) {
-    item[1].setAttribute('tabindex', '-1');
-
-    if (item[0] >= visibleItems) {
-      item[1].classList.add('hide');
-      item[1].style.display = 'none';
-    } else {
-      item[1].classList.remove('hide');
-      item[1].style.display = 'grid';
-    }
-  } // Hide 'load more' button when reached end of listings
-
-
-  if (visibleItems > items.length) {
-    loadMoreBtn.classList.add('hide');
-  } else {
-    loadMoreBtn.classList.remove('hide');
-  }
-}
-/**
- * Scroll to, and focus first listing of newly visible items batch.
- *
- * @param {HTMLElement} [items] - Elements controlled by 'Load more' button.
- * @param {number} visibleItems - Number of items visible at any one time.
- * @param {number} itemsIncrement - Number of additional items shown when 'Load more' button is clicked.
- */
-
-
-function scrollToItem(items, visibleItems, itemsIncrement) {
-  let targetItem = visibleItems - itemsIncrement;
-
-  for (const item of items.entries()) {
-    if (item[0] === targetItem) {
-      item[1].focus();
-      zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(item[1]);
-    } else if (visibleItems === itemsIncrement) {
-      if (item[0] === 0) {
-        item[1].focus();
-        zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(item[1]);
-      }
-    }
-  }
-}
-/**
- * Push state to URL: used to build initial hash after first 'Load more' click.
- *
- * @param {string} parentType - Data attribute describing parent group.
- * @param {string} childrenType - Data attribute describing child items.
- * @param {HTMLElement} wrapperId - Parent element wrapping items and 'Load more' button.
- * @param {number} visibleItems - Number of items visible at any one time.
- * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
- */
-
-
-function pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
-  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
-  history.pushState('', '', "#".concat(parentType).concat(wrapperId, "-").concat(childrenType).concat(targetListingUrlParam));
-}
-/**
- * Replace URL state: used to swap existing hash
- *
- * @param {string} parentType - Data attribute describing parent group.
- * @param {string} childrenType - Data attribute describing child items.
- * @param {HTMLElement} wrapperId - Parent element wrapping items and 'Load more' button.
- * @param {number} visibleItems - Number of items visible at any one time.
- * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
- */
-
-
-function replaceUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
-  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
-  history.replaceState('', '', "#".concat(parentType).concat(wrapperId, "-").concat(childrenType).concat(targetListingUrlParam));
-}
-
-function launchLoadMore(e) {
-  let wrapperId = e.getAttribute('id'),
-      items = e.querySelectorAll('.item'),
-      itemsIncrement = parseInt(e.dataset.increment),
-      loadMoreBtn = e.querySelector('.content-toggle button'),
-      parentType = e.getAttribute('data-item-parent'),
-      childrenType = e.getAttribute('data-item-children');
-  /**
-   * Give wrapper a numeric data attribute. As this changes, so
-   * will the number of visible items.
-   */
-
-  e.setAttribute('data-items-visible', itemsIncrement);
-  let visibleItems = parseInt(e.getAttribute('data-items-visible')); // Load correct number of items based on URL hash
-
-  if (hashedUrl) {
-    let hashedUrlParts = hashedUrl.split('-');
-    let activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[1]));
-    visibleItems = activeItem + (itemsIncrement - 1);
-    e.setAttribute('data-items-visible', visibleItems);
-    itemsDisplay(items, visibleItems, loadMoreBtn);
-    scrollToItem(items, visibleItems, itemsIncrement);
-  } else {
-    itemsDisplay(items, visibleItems, loadMoreBtn);
-  } // Run on every 'load more' click: increase listings by batch number
-
-
-  loadMoreBtn.addEventListener('click', () => {
-    visibleItems += itemsIncrement;
-    e.setAttribute('data-items-visible', visibleItems);
-    itemsDisplay(items, visibleItems, loadMoreBtn);
-    scrollToItem(items, visibleItems, itemsIncrement);
-    hashedUrl = window.location.hash;
-    hashedUrl ? replaceUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) : pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement);
-    loadMoreId = e.id;
-  }); // Back/forward browser clicks.
-
-  window.onpopstate = () => {
-    let loadMoreIdElement = document.getElementById(loadMoreId); // Must re-assign variable on pop state change
-
-    hashedUrl = window.location.hash;
-
-    if (hashedUrl) {
-      // Capture latest hash
-      let updatedUrlParts = window.location.hash.split('-');
-      let currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(updatedUrlParts[1]));
-      currentItem = currentItem + (itemsIncrement - 1);
-      visibleItems = currentItem;
-      e.setAttribute('data-items-visible', visibleItems);
-      itemsDisplay(items, visibleItems, loadMoreBtn);
-      scrollToItem(items, visibleItems, itemsIncrement);
-    } else {
-      let relatedItems = loadMoreIdElement.querySelectorAll('.item');
-      visibleItems = itemsIncrement;
-      itemsDisplay(items, visibleItems, loadMoreBtn);
-      e.setAttribute('data-items-visible', itemsIncrement);
-      scrollToItem(relatedItems, visibleItems, itemsIncrement);
-    }
-  };
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchLoadMore,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
 /***/ "./src/patterns/menu/menu-formatters.js":
 /*!**********************************************!*\
   !*** ./src/patterns/menu/menu-formatters.js ***!
@@ -3883,7 +3818,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'modal',
       bodyClassName = className + '__body',
-      keyCodeEscape = 27,
+      escapeKey = 'Escape',
       oneSecond = 1000,
       scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = true;
@@ -4017,7 +3952,7 @@ function createDialog(parent, position, dialogArray) {
   const main = document.querySelector('main');
   main.appendChild(dialog);
   dialog.addEventListener('keydown', e => {
-    if (e.keyCode === keyCodeEscape) {
+    if (e.key === escapeKey) {
       e.preventDefault();
       document.body.classList.remove('dialog-in', 'no-scroll');
       trap.deactivate();
@@ -4263,8 +4198,8 @@ const className = 'navigation',
       openText = 'Open',
       closeText = 'Close',
       navigationText = 'navigation section',
-      keyCodeTab = 9,
-      keyCodeEscape = 27;
+      tabKey = 'Tab',
+      escapeKey = 'Escape';
 /**
  * Return a function to toggle everything closed.
  *
@@ -4355,7 +4290,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
         restButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:first-of-type) > .navigation__button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   firstButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
       closeAll();
     }
   });
@@ -4365,7 +4300,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
           lastNavigationAnchor = previousSection.querySelector('.navigation__level2 > li:last-of-type > a') ? previousSection.querySelector('.navigation__level2 > li:last-of-type > a') : previousSection.querySelector('.navigation__level2 > li:last-of-type').previousElementSibling.querySelector('a'),
           togglePreviousSection = createSectionToggle(previousSectionButton, closeAll, veil);
     thisSectionButton.addEventListener('keydown', e => {
-      if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
+      if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
         e.preventDefault();
         togglePreviousSection();
         lastNavigationAnchor.focus();
@@ -4388,7 +4323,7 @@ function setupTabNext(navigation, closeAll, veil) {
         restSectionsCloseButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:last-of-type) .wrapper--navigation--primary__menu__close button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   closeButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && keyCodeTab === e.keyCode && !e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && tabKey === e.key && !e.shiftKey) {
       closeAll();
     }
   });
@@ -4396,7 +4331,7 @@ function setupTabNext(navigation, closeAll, veil) {
     const nextSectionButton = closeButton.closest('.navigation--primary__level1').nextElementSibling.querySelector('button'),
           toggleNextSection = createSectionToggle(nextSectionButton, closeAll, veil);
     closeButton.addEventListener('keydown', e => {
-      if (keyCodeTab === e.keyCode && !e.shiftKey) {
+      if (tabKey === e.key && !e.shiftKey) {
         e.preventDefault();
         toggleNextSection();
         nextSectionButton.closest('.navigation--primary__level1').querySelector(".".concat(headerClassName, " a")).focus();
@@ -4501,7 +4436,7 @@ function launchPrimaryNavigation(navigation) {
   setupTabNext(navigation, closeAll, veil); // If the navigation is open, close on escape.
 
   navigation.addEventListener('keydown', e => {
-    if (navigation.querySelector(".".concat(buttonClassName, "[aria-expanded='true']")) && keyCodeEscape === e.keyCode) {
+    if (navigation.querySelector(".".concat(buttonClassName, "[aria-expanded='true']")) && escapeKey === e.key) {
       e.preventDefault();
       closeAll();
     }
@@ -5808,122 +5743,115 @@ function launchTabs(tabs) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../aria-attributes */ "./src/aria-attributes.js");
 
 
 /**
- * Image accreditation tooltip
+ * Image credit tooltip
  *
  * @module patterns/tooltip/image-credit
  * @author Web Development
- * @copyright City, University of London
+ * @copyright City, University of London 2020
  */
 
-const className = 'hero-image';
-let authorElement, sourceElement;
+
+const className = 'picture[data-authorname], picture[data-sourcename]',
+      openText = 'Show image credit',
+      closeText = 'Hide image credit';
 /**
- * Respond to button clicks - open if closed, close if opened.
+ * Toggle the image credit open or closed.
  *
- * @param {event} e - The information icon click event.
+ * @param  {HTMLElement} wrapper - The image credit container
  */
 
-function showCredit(e) {
-  let tooltipWrapper = e.target.closest('.wrapper--tooltip__label');
-  tooltipWrapper.getAttribute('data-selected') === 'false' ? tooltipWrapper.setAttribute('data-selected', 'true') : tooltipWrapper.setAttribute('data-selected', 'false');
-}
-/**
- * Create label(s) to go alongside the information icon.
- *
- * @param {string} el - Blank variable that is returned as an HTML element after function is complete.
- * @param {string} elText - Label's link or link text value.
- * @param {url} elUrl - Label's link value.
- */
+function toggleImageCredit(wrapper) {
+  const button = wrapper.querySelector('button'),
+        buttonText = button.querySelector('.sr-only'),
+        label = wrapper.querySelector('.tooltip__label');
 
-
-function createLabel(el, elText, elUrl) {
-  if (elText) {
-    const elTextNode = document.createTextNode(elText);
-
-    if (elUrl) {
-      el = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
-      el.href = elUrl;
-      el.appendChild(elTextNode);
-    } else {
-      el = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', []);
-      el.appendChild(elTextNode);
-    }
-
-    return el;
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(wrapper.dataset.open)) {
+    wrapper.dataset.open = false;
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'false');
+    buttonText.innerText = openText;
+    button.focus();
+  } else {
+    wrapper.dataset.open = true;
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'true');
+    buttonText.innerText = closeText;
+    label.focus();
   }
 }
 /**
- * Create an accreditation tooltip from the data attributes of a banner image.
+ * Render the credit label.
  *
- * @param {HTMLElement} banner - A banner image.
+ * @param  {string} text - The entity to credit
+ * @param  {string} url - Optional URL for the entity
+ * @returns {HTMLElement} A span or anchor.
  */
 
 
-function launchBannerTooltip(banner) {
-  const tooltipDisplay = banner.getAttribute('data-tooltip-display'),
-        authorText = banner.getAttribute('data-author-name'),
-        authorUrl = banner.getAttribute('data-author-url'),
-        sourceText = banner.getAttribute('data-source-name'),
-        sourceUrl = banner.getAttribute('data-source-url');
-
-  if (tooltipDisplay === 'true') {
-    const tooltipWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'wrapper--tooltip__label'
-    }, {
-      label: 'data-selected',
-      val: false
-    }]);
-    const iconBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
-      label: 'class',
-      val: 'tooltip tooltip--image-credit'
-    }, {
-      label: 'aria-label',
-      val: 'Show image credit'
-    }]);
-    const iconSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
-      label: 'class',
-      val: 'tooltip__icon icon fas fa-info-circle'
-    }, {
-      label: 'aria-label',
-      val: 'Information icon'
-    }]);
-    const labelSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'tooltip__label'
-    }]); // Build labels
-
-    let author = createLabel(authorElement, authorText, authorUrl);
-    let source = createLabel(sourceElement, sourceText, sourceUrl); // Append tooltip elements to banner
-
-    iconBtn.appendChild(iconSpan);
-    authorText && !sourceText ? labelSpan.appendChild(author) : null;
-    sourceText && !authorText ? labelSpan.appendChild(source) : null; // Add divider if author and source text values exist
-
-    if (authorText && sourceText) {
-      labelSpan.appendChild(author);
-      const dividerText = document.createTextNode(' / ');
-      labelSpan.appendChild(dividerText);
-      labelSpan.appendChild(source);
-    }
-
-    tooltipWrapper.appendChild(labelSpan);
-    tooltipWrapper.appendChild(iconBtn); // Only append tooltip if at least one name is supplied (author or source)
-
-    authorText || sourceText ? banner.appendChild(tooltipWrapper) : null; // Show/hide icon label(s) on click
-
-    iconBtn.addEventListener('click', e => {
-      showCredit(e);
-    });
+function createLabel(text, url) {
+  if (url) {
+    const element = document.createElement('a');
+    element.href = url;
+    element.appendChild(document.createTextNode(text));
+    return element;
+  } else {
+    const element = document.createElement('span');
+    element.appendChild(document.createTextNode(text));
+    return element;
   }
+}
+/**
+ * Create an image credit tooltip from the data attributes of an image.
+ *
+ * @param {HTMLElement} picture - A picture element with credit data attributes.
+ */
+
+
+function launchImageCredit(picture) {
+  const display = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(picture.dataset.tooltipdisplay),
+        authorText = picture.dataset.authorname,
+        authorUrl = picture.dataset.authorurl,
+        sourceText = picture.dataset.sourcename,
+        sourceUrl = picture.dataset.sourceurl;
+
+  if (!display || !(authorText && sourceText)) {
+    return;
+  }
+
+  const wrapper = document.createElement('div'),
+        button = document.createElement('button'),
+        spanIcon = document.createElement('span'),
+        spanText = document.createElement('span'),
+        label = document.createElement('div'),
+        author = authorText ? createLabel(authorText, authorUrl) : null,
+        source = sourceText ? createLabel(sourceText, sourceUrl) : null;
+  wrapper.className = 'wrapper--tooltip__label';
+  wrapper.dataset.open = false;
+  button.className = 'tooltip tooltip--image-credit';
+  button.setAttribute('type', 'button');
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, false);
+  button.addEventListener('click', () => toggleImageCredit(wrapper), true);
+  spanIcon.className = 'tooltip__icon icon fas fa-info-circle';
+  spanIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
+  spanText.className = 'sr-only';
+  spanText.appendChild(document.createTextNode(openText));
+  button.appendChild(spanIcon);
+  button.appendChild(spanText);
+  label.className = 'tooltip__label';
+  label.setAttribute('tabindex', -1);
+  author && label.appendChild(author);
+  author && source && label.appendChild(document.createTextNode(' / '));
+  source && label.appendChild(source);
+  wrapper.appendChild(label);
+  wrapper.appendChild(button);
+  (author || source) && picture.appendChild(wrapper);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchBannerTooltip,
-  launchQuery: ".".concat(className)
+  launchFn: launchImageCredit,
+  launchQuery: "".concat(className)
 });
 
 /***/ }),
