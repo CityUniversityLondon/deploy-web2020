@@ -69445,6 +69445,21 @@ button
     border-bottom-color: #005058;
 }
 
+@media (max-width: 1023px) {
+    .department .department__tabs {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .department .department__tabs {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
 .department .tabs__panel:not([hidden]) {
     padding: 0;
 }
@@ -69510,6 +69525,7 @@ button
     }
 }
 
-.department .tabs--accordion .show-more .show-more__content[data-hidden="true"]::after, .department .tabs .show-more .show-more__content[data-hidden="true"]::after {
+.department .tabs--accordion .show-more .show-more__content[data-hidden='true']::after,
+.department .tabs .show-more .show-more__content[data-hidden='true']::after {
     background-image: linear-gradient(to bottom, rgba(242, 242, 242, 0), #f2f2f2 90%);
 }
