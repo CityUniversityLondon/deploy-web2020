@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([0,"core","vendor-dependencies","react","vendor-direct","axios"]);
+/******/ 	deferredModules.push([0,"vendor-dependencies","core","react","axios","vendor-direct"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -2152,6 +2152,7 @@ function toggleForm(form, button, buttonText, closeButtonText) {
     }, tenthOfASecond);
     button.querySelector('span').innerText = closeButtonText;
     button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, true);
+    form.focus();
   } else {
     // Starting height is the current height
     form.style.height = form.offsetHeight + 'px';
@@ -2200,6 +2201,7 @@ function launchFormAssemblyForm(eventInfo) {
   closeButton.appendChild(closeButtonSpan);
   button.addEventListener('click', () => toggleForm(form, button, buttonText, closeButtonText), true);
   closeButton.addEventListener('click', () => toggleForm(form, button, buttonText, closeButtonText), true);
+  form.setAttribute('tabindex', -1);
   form.dataset.open = false;
   form.insertBefore(closeButton, formActual);
   link.parentNode.replaceChild(button, link);
@@ -3816,7 +3818,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'modal',
       bodyClassName = className + '__body',
-      keyCodeEscape = 27,
+      escapeKey = 'Escape',
       oneSecond = 1000,
       scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = true;
@@ -3950,7 +3952,7 @@ function createDialog(parent, position, dialogArray) {
   const main = document.querySelector('main');
   main.appendChild(dialog);
   dialog.addEventListener('keydown', e => {
-    if (e.keyCode === keyCodeEscape) {
+    if (e.key === escapeKey) {
       e.preventDefault();
       document.body.classList.remove('dialog-in', 'no-scroll');
       trap.deactivate();
@@ -4196,8 +4198,8 @@ const className = 'navigation',
       openText = 'Open',
       closeText = 'Close',
       navigationText = 'navigation section',
-      keyCodeTab = 9,
-      keyCodeEscape = 27;
+      tabKey = 'Tab',
+      escapeKey = 'Escape';
 /**
  * Return a function to toggle everything closed.
  *
@@ -4288,7 +4290,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
         restButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:first-of-type) > .navigation__button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   firstButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
       closeAll();
     }
   });
@@ -4298,7 +4300,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
           lastNavigationAnchor = previousSection.querySelector('.navigation__level2 > li:last-of-type > a') ? previousSection.querySelector('.navigation__level2 > li:last-of-type > a') : previousSection.querySelector('.navigation__level2 > li:last-of-type').previousElementSibling.querySelector('a'),
           togglePreviousSection = createSectionToggle(previousSectionButton, closeAll, veil);
     thisSectionButton.addEventListener('keydown', e => {
-      if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
+      if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
         e.preventDefault();
         togglePreviousSection();
         lastNavigationAnchor.focus();
@@ -4321,7 +4323,7 @@ function setupTabNext(navigation, closeAll, veil) {
         restSectionsCloseButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:last-of-type) .wrapper--navigation--primary__menu__close button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   closeButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && keyCodeTab === e.keyCode && !e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && tabKey === e.key && !e.shiftKey) {
       closeAll();
     }
   });
@@ -4329,7 +4331,7 @@ function setupTabNext(navigation, closeAll, veil) {
     const nextSectionButton = closeButton.closest('.navigation--primary__level1').nextElementSibling.querySelector('button'),
           toggleNextSection = createSectionToggle(nextSectionButton, closeAll, veil);
     closeButton.addEventListener('keydown', e => {
-      if (keyCodeTab === e.keyCode && !e.shiftKey) {
+      if (tabKey === e.key && !e.shiftKey) {
         e.preventDefault();
         toggleNextSection();
         nextSectionButton.closest('.navigation--primary__level1').querySelector(".".concat(headerClassName, " a")).focus();
@@ -4434,7 +4436,7 @@ function launchPrimaryNavigation(navigation) {
   setupTabNext(navigation, closeAll, veil); // If the navigation is open, close on escape.
 
   navigation.addEventListener('keydown', e => {
-    if (navigation.querySelector(".".concat(buttonClassName, "[aria-expanded='true']")) && keyCodeEscape === e.keyCode) {
+    if (navigation.querySelector(".".concat(buttonClassName, "[aria-expanded='true']")) && escapeKey === e.key) {
       e.preventDefault();
       closeAll();
     }
@@ -5741,122 +5743,115 @@ function launchTabs(tabs) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../aria-attributes */ "./src/aria-attributes.js");
 
 
 /**
- * Image accreditation tooltip
+ * Image credit tooltip
  *
  * @module patterns/tooltip/image-credit
  * @author Web Development
- * @copyright City, University of London
+ * @copyright City, University of London 2020
  */
 
-const className = 'hero-image';
-let authorElement, sourceElement;
+
+const className = 'picture[data-authorname], picture[data-sourcename]',
+      openText = 'Show image credit',
+      closeText = 'Hide image credit';
 /**
- * Respond to button clicks - open if closed, close if opened.
+ * Toggle the image credit open or closed.
  *
- * @param {event} e - The information icon click event.
+ * @param  {HTMLElement} wrapper - The image credit container
  */
 
-function showCredit(e) {
-  let tooltipWrapper = e.target.closest('.wrapper--tooltip__label');
-  tooltipWrapper.getAttribute('data-selected') === 'false' ? tooltipWrapper.setAttribute('data-selected', 'true') : tooltipWrapper.setAttribute('data-selected', 'false');
-}
-/**
- * Create label(s) to go alongside the information icon.
- *
- * @param {string} el - Blank variable that is returned as an HTML element after function is complete.
- * @param {string} elText - Label's link or link text value.
- * @param {url} elUrl - Label's link value.
- */
+function toggleImageCredit(wrapper) {
+  const button = wrapper.querySelector('button'),
+        buttonText = button.querySelector('.sr-only'),
+        label = wrapper.querySelector('.tooltip__label');
 
-
-function createLabel(el, elText, elUrl) {
-  if (elText) {
-    const elTextNode = document.createTextNode(elText);
-
-    if (elUrl) {
-      el = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
-      el.href = elUrl;
-      el.appendChild(elTextNode);
-    } else {
-      el = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', []);
-      el.appendChild(elTextNode);
-    }
-
-    return el;
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(wrapper.dataset.open)) {
+    wrapper.dataset.open = false;
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'false');
+    buttonText.innerText = openText;
+    button.focus();
+  } else {
+    wrapper.dataset.open = true;
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'true');
+    buttonText.innerText = closeText;
+    label.focus();
   }
 }
 /**
- * Create an accreditation tooltip from the data attributes of a banner image.
+ * Render the credit label.
  *
- * @param {HTMLElement} banner - A banner image.
+ * @param  {string} text - The entity to credit
+ * @param  {string} url - Optional URL for the entity
+ * @returns {HTMLElement} A span or anchor.
  */
 
 
-function launchBannerTooltip(banner) {
-  const tooltipDisplay = banner.getAttribute('data-tooltip-display'),
-        authorText = banner.getAttribute('data-author-name'),
-        authorUrl = banner.getAttribute('data-author-url'),
-        sourceText = banner.getAttribute('data-source-name'),
-        sourceUrl = banner.getAttribute('data-source-url');
-
-  if (tooltipDisplay === 'true') {
-    const tooltipWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'wrapper--tooltip__label'
-    }, {
-      label: 'data-selected',
-      val: false
-    }]);
-    const iconBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
-      label: 'class',
-      val: 'tooltip tooltip--image-credit'
-    }, {
-      label: 'aria-label',
-      val: 'Show image credit'
-    }]);
-    const iconSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
-      label: 'class',
-      val: 'tooltip__icon icon fas fa-info-circle'
-    }, {
-      label: 'aria-label',
-      val: 'Information icon'
-    }]);
-    const labelSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'tooltip__label'
-    }]); // Build labels
-
-    let author = createLabel(authorElement, authorText, authorUrl);
-    let source = createLabel(sourceElement, sourceText, sourceUrl); // Append tooltip elements to banner
-
-    iconBtn.appendChild(iconSpan);
-    authorText && !sourceText ? labelSpan.appendChild(author) : null;
-    sourceText && !authorText ? labelSpan.appendChild(source) : null; // Add divider if author and source text values exist
-
-    if (authorText && sourceText) {
-      labelSpan.appendChild(author);
-      const dividerText = document.createTextNode(' / ');
-      labelSpan.appendChild(dividerText);
-      labelSpan.appendChild(source);
-    }
-
-    tooltipWrapper.appendChild(labelSpan);
-    tooltipWrapper.appendChild(iconBtn); // Only append tooltip if at least one name is supplied (author or source)
-
-    authorText || sourceText ? banner.appendChild(tooltipWrapper) : null; // Show/hide icon label(s) on click
-
-    iconBtn.addEventListener('click', e => {
-      showCredit(e);
-    });
+function createLabel(text, url) {
+  if (url) {
+    const element = document.createElement('a');
+    element.href = url;
+    element.appendChild(document.createTextNode(text));
+    return element;
+  } else {
+    const element = document.createElement('span');
+    element.appendChild(document.createTextNode(text));
+    return element;
   }
+}
+/**
+ * Create an image credit tooltip from the data attributes of an image.
+ *
+ * @param {HTMLElement} picture - A picture element with credit data attributes.
+ */
+
+
+function launchImageCredit(picture) {
+  const display = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(picture.dataset.tooltipdisplay),
+        authorText = picture.dataset.authorname,
+        authorUrl = picture.dataset.authorurl,
+        sourceText = picture.dataset.sourcename,
+        sourceUrl = picture.dataset.sourceurl;
+
+  if (!display || !(authorText && sourceText)) {
+    return;
+  }
+
+  const wrapper = document.createElement('div'),
+        button = document.createElement('button'),
+        spanIcon = document.createElement('span'),
+        spanText = document.createElement('span'),
+        label = document.createElement('div'),
+        author = authorText ? createLabel(authorText, authorUrl) : null,
+        source = sourceText ? createLabel(sourceText, sourceUrl) : null;
+  wrapper.className = 'wrapper--tooltip__label';
+  wrapper.dataset.open = false;
+  button.className = 'tooltip tooltip--image-credit';
+  button.setAttribute('type', 'button');
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, false);
+  button.addEventListener('click', () => toggleImageCredit(wrapper), true);
+  spanIcon.className = 'tooltip__icon icon fas fa-info-circle';
+  spanIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
+  spanText.className = 'sr-only';
+  spanText.appendChild(document.createTextNode(openText));
+  button.appendChild(spanIcon);
+  button.appendChild(spanText);
+  label.className = 'tooltip__label';
+  label.setAttribute('tabindex', -1);
+  author && label.appendChild(author);
+  author && source && label.appendChild(document.createTextNode(' / '));
+  source && label.appendChild(source);
+  wrapper.appendChild(label);
+  wrapper.appendChild(button);
+  (author || source) && picture.appendChild(wrapper);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchBannerTooltip,
-  launchQuery: ".".concat(className)
+  launchFn: launchImageCredit,
+  launchQuery: "".concat(className)
 });
 
 /***/ }),

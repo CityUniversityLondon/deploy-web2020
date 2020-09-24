@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([2,"core","vendor-dependencies","react","vendor-direct","axios"]);
+/******/ 	deferredModules.push([2,"vendor-dependencies","core","react","axios","vendor-direct"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -409,7 +409,7 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-function Finder__Results__Course(props) {
+function Finder__Results__Card(props) {
   switch (props.type) {
     case 'accommodation':
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_accommodation__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -473,12 +473,12 @@ function Finder__Results__Course(props) {
   }
 }
 
-Finder__Results__Course.propTypes = {
+Finder__Results__Card.propTypes = {
   details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
 };
-/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Course);
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Card);
 
 /***/ }),
 
@@ -2068,11 +2068,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const maximumSuggestions = 5,
-      keyCodeEscape = 27,
-      keyCodeUp = 38,
-      keyCodeDown = 40,
-      keyCodeEnd = 35,
-      keyCodeHome = 36;
+      escapeKey = 'Escape',
+      endKey = 'End',
+      homeKey = 'Home',
+      arrowUp = 'ArrowUp',
+      arrowDown = 'ArrowDown';
 
 function highlightQueryTerm(suggestion, partialQuery) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
@@ -2178,14 +2178,14 @@ function Finder__Query(props) {
     onMouseDown: () => submitSuggestion(suggestion),
     onClick: () => submitSuggestion(suggestion),
     onKeyDown: e => {
-      switch (e.keyCode) {
-        case keyCodeEscape:
+      switch (e.key) {
+        case escapeKey:
           e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
           setSuggestions([]);
           setActiveSuggestionID('');
           break;
 
-        case keyCodeUp:
+        case arrowUp:
           if (e.target.parentNode.previousElementSibling && e.target.parentNode.previousElementSibling.querySelector('button')) {
             e.preventDefault();
             e.target.parentNode.previousElementSibling.querySelector('button').focus();
@@ -2198,7 +2198,7 @@ function Finder__Query(props) {
 
           break;
 
-        case keyCodeDown:
+        case arrowDown:
           e.preventDefault();
 
           if (e.target.parentNode.nextElementSibling && e.target.parentNode.nextElementSibling.querySelector('button')) {
@@ -2209,7 +2209,7 @@ function Finder__Query(props) {
 
           break;
 
-        case keyCodeHome:
+        case homeKey:
           e.preventDefault();
 
           if (e.target.parentNode.parentNode.firstChild && e.target.parentNode.parentNode.firstChild.querySelector('button')) {
@@ -2220,7 +2220,7 @@ function Finder__Query(props) {
 
           break;
 
-        case keyCodeEnd:
+        case endKey:
           e.preventDefault();
 
           if (e.target.parentNode.parentNode.lastChild && e.target.parentNode.parentNode.lastChild.querySelector('button')) {
@@ -2257,12 +2257,12 @@ function Finder__Query(props) {
     type: "text",
     value: partialQuery,
     onKeyDown: e => {
-      switch (e.keyCode) {
-        case keyCodeEscape:
+      switch (e.key) {
+        case escapeKey:
           clearQuery();
           break;
 
-        case keyCodeDown:
+        case arrowDown:
           if (suggestions && suggestions.length > 0) {
             e.preventDefault();
             e.target.parentNode.querySelector('.finder__query__suggestions button').focus();
@@ -3108,6 +3108,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 const baseUrl = 'https://web2020.city.ac.uk/web-services',
       findRootUrl = '/funnelback-find',
       suggestRootUrl = '/funnelback-suggest',
+      maximumSuggestions = 100,
       timeout = 30000;
 /**
  * Funnelback search query.
@@ -3167,7 +3168,8 @@ function suggest(collection, partialQuery) {
     timeout: timeout,
     params: {
       collection: collection,
-      partial_query: partialQuery
+      partial_query: partialQuery,
+      show: maximumSuggestions
     }
   };
   return [Object(_util_js__WEBPACK_IMPORTED_MODULE_3__["axiosRequest"])(config), call];
