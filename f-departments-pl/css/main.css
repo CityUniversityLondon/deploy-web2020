@@ -67979,3 +67979,82 @@ button
         grid-column: 6 / span 14;
     }
 }
+
+@media (min-width: 1024px) {
+    main .navigation--secondary + .department .department__additional-info {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    main .navigation--secondary + .department .department__additional-info {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main .navigation--secondary + .department .department__additional-info {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .navigation--secondary + .department .department__additional-info h2,
+    main .navigation--secondary + .department .department__additional-info .department__additional-info__content {
+        grid-column: 4 / 15;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .department__additional-info {
+        grid-template-columns: repeat(24, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) and (min-width: 768px) {
+    .department__additional-info {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) and (min-width: 901px) {
+    .department__additional-info {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .department__additional-info h2,
+    .department__additional-info .department__additional-info__content {
+        grid-column: 4 / span 18;
+    }
+}
+
+@media (max-width: 768px) {
+    .department__additional-info,
+    .department__multimedia {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 901px) {
+    .department__additional-info,
+    .department__multimedia {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.department__additional-info h2 {
+    text-align: center;
+}
+
+.department__usp {
+    background-image: linear-gradient(to top, #ffffff, #f2f2f2);
+}
