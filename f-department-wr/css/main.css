@@ -69459,6 +69459,26 @@ button
     }
 }
 
+@media (max-width: 1023px) {
+    .department .department__multimedia {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .department .department__multimedia {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.department .department__heading--underlined {
+    border-bottom: 0.0625rem solid #cbcbcb;
+    padding-bottom: 0.5rem;
+}
+
 .department .tabs__panel:not([hidden]) {
     padding: 0;
 }
