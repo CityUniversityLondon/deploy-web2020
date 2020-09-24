@@ -49054,7 +49054,6 @@ button
 }
 
 .embedded-video .embedded-video-details {
-    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
