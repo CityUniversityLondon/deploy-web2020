@@ -5974,52 +5974,48 @@ function createController(video) {
   video.querySelector('.embedded-video--autoplay__video').onplaying = function () {
     console.log('video started playing');
   };
-  /*
-          setTimeout(function(){
-              document.getElementById("myVideo").play();
-            }, 5000); */
 
-
-  Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
-    get: function get() {
-      return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+  setTimeout(function () {
+    if (!statusPaused) {
+      console.log('statusPaused is: ' + statusPaused);
+      controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
+        label: 'class',
+        val: 'embedded-video--autoplay__controller-btn'
+      }, {
+        label: 'data-status',
+        val: 'pause'
+      }, {
+        label: 'aria-label',
+        val: 'Pause video'
+      }]);
+    } else {
+      console.log('statusPaused is: ' + statusPaused);
+      controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
+        label: 'class',
+        val: 'embedded-video--autoplay__controller-btn'
+      }, {
+        label: 'data-status',
+        val: 'play'
+      }, {
+        label: 'aria-label',
+        val: 'Play video'
+      }]);
     }
-  });
 
-  if (video.querySelector('.embedded-video--autoplay__video').playing) {
-    // checks if element is playing right now
-    // Do anything you want to
-    console.log('check ehck');
+    controllerBtn.append(controllerIcon);
+    video.append(controllerBtn);
+  }, 300);
+  /*
+  Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+  get: function(){
+      return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
   }
-
-  if (!statusPaused) {
-    console.log('statusPaused is: ' + statusPaused);
-    controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
-      label: 'class',
-      val: 'embedded-video--autoplay__controller-btn'
-    }, {
-      label: 'data-status',
-      val: 'pause'
-    }, {
-      label: 'aria-label',
-      val: 'Pause video'
-    }]);
-  } else {
-    console.log('statusPaused is: ' + statusPaused);
-    controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
-      label: 'class',
-      val: 'embedded-video--autoplay__controller-btn'
-    }, {
-      label: 'data-status',
-      val: 'play'
-    }, {
-      label: 'aria-label',
-      val: 'Play video'
-    }]);
+  })
+   if(video.querySelector('.embedded-video--autoplay__video').playing){ // checks if element is playing right now
+      // Do anything you want to
+      console.log('check ehck')
   }
-
-  controllerBtn.append(controllerIcon);
-  video.append(controllerBtn);
+   */
 }
 
 function toggleController(video) {
