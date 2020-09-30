@@ -5948,12 +5948,17 @@ const className = 'embedded-video--autoplay';
  * @param {number} maxPlays - Maximum number of times video should play.
  */
 
-function loopVideo(video, maxPlays) {
-  let playInstance = 0;
+function loopVideo(maxPlays, videoEl) {
+  let playInstance = 0; // When video finishes autoplaying, switch controller from pause to play
 
-  video.onended = () => {
+  videoEl.onended = () => {
     playInstance += 1;
-    playInstance === maxPlays ? video.pause() : null;
+
+    if (playInstance === maxPlays) {
+      videoEl.pause();
+    } else {
+      videoEl.play();
+    }
   };
 }
 /**
@@ -5963,71 +5968,42 @@ function loopVideo(video, maxPlays) {
  */
 
 
-function createController(video) {
-  let controllerBtn;
+function createController(video, videoEl) {
   const controllerIcon = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
     label: 'class',
     val: 'embedded-video--autoplay__controller-btn__icon'
   }]);
-  let statusPaused = video.querySelector('.embedded-video--autoplay__video').paused;
-  /*
-  if (!statusPaused) {
-      console.log('statusPaused is: '+statusPaused);
-      controllerBtn = createHTMLElement('button', [
-          { label: 'class', val: 'embedded-video--autoplay__controller-btn' },
-          { label: 'data-status', val: 'pause' },
-          { label: 'aria-label', val: 'Pause video' },
-      ]);
-  } else {
-      console.log('statusPaused is: '+statusPaused);
-      controllerBtn = createHTMLElement('button', [
-          { label: 'class', val: 'embedded-video--autoplay__controller-btn' },
-          { label: 'data-status', val: 'play' },
-          { label: 'aria-label', val: 'Play video' },
-      ]);
-  }
-  */
-
-  Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
-    get: function get() {
-      return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
-    }
+  const controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
+    label: 'class',
+    val: 'embedded-video--autoplay__controller-btn'
+  }]);
+  controllerBtn.addEventListener('click', () => {
+    toggleController(video, videoEl);
   });
+  controllerBtn.append(controllerIcon);
+  video.append(controllerBtn); // checks if browser 'auto play' is enabled
 
-  if (video.querySelector('.embedded-video--autoplay__video').playing) {
-    // checks if element is playing right now
-    controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
-      label: 'class',
-      val: 'embedded-video--autoplay__controller-btn'
-    }, {
-      label: 'data-status',
-      val: 'pause'
-    }, {
-      label: 'aria-label',
-      val: 'Pause video'
-    }]);
-    controllerBtn.append(controllerIcon);
-    video.append(controllerBtn);
-  } else {
-    controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
-      label: 'class',
-      val: 'embedded-video--autoplay__controller-btn'
-    }, {
-      label: 'data-status',
-      val: 'play'
-    }, {
-      label: 'aria-label',
-      val: 'Play video'
-    }]);
-    controllerBtn.append(controllerIcon);
-    video.append(controllerBtn);
+  var promise = videoEl.play();
+
+  if (promise !== undefined) {
+    promise.then(() => {
+      // autoplay enabled
+      console.log('autoplay enabled');
+      controllerBtn.dataset.status = 'pause';
+      controllerBtn.setAttribute('aria-label', 'Pause video');
+    }).catch(error => {
+      // autoplay disabled
+      console.log('autoplay disabled');
+      controllerBtn.dataset.status = 'play';
+      controllerBtn.setAttribute('aria-label', 'Play video');
+    });
   }
-}
+} // handles click for pause and play
 
-function toggleController(video) {
-  const videoEl = video.querySelector('.embedded-video--autoplay__video'),
-        controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn'),
-        statusPaused = video.querySelector('.embedded-video--autoplay__video').paused;
+
+function toggleController(video, videoEl) {
+  const controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn'),
+        statusPaused = videoEl.paused;
 
   if (statusPaused) {
     controllerBtn.dataset.status = 'pause';
@@ -6043,25 +6019,8 @@ function toggleController(video) {
 function launchAutoplayVideo(video) {
   const videoEl = video.querySelector('.embedded-video--autoplay__video'),
         plays = parseInt(videoEl.dataset.maxPlays);
-  loopVideo(video, plays);
-
-  do {
-    if (videoEl.readyState == 4) {
-      createController(video);
-      console.log('This version is correct.');
-      break;
-    }
-  } while (videoEl.readyState < 4);
-
-  const controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn');
-  controllerBtn.addEventListener('click', () => {
-    toggleController(video);
-  }); // When video finishes autoplaying, switch controller from pause to play
-
-  videoEl.addEventListener('ended', () => {
-    controllerBtn.dataset.status = 'play';
-    controllerBtn.setAttribute('aria-label', 'Play video');
-  });
+  loopVideo(plays, videoEl);
+  createController(video, videoEl);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
