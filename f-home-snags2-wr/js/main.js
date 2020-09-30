@@ -5996,8 +5996,6 @@ function createController(video) {
 
   if (video.querySelector('.embedded-video--autoplay__video').playing) {
     // checks if element is playing right now
-    // Do anything you want to
-    console.log('video started playing......');
     controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
       label: 'class',
       val: 'embedded-video--autoplay__controller-btn'
@@ -6011,7 +6009,6 @@ function createController(video) {
     controllerBtn.append(controllerIcon);
     video.append(controllerBtn);
   } else {
-    console.log('video not......');
     controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
       label: 'class',
       val: 'embedded-video--autoplay__controller-btn'
@@ -6046,17 +6043,12 @@ function toggleController(video) {
 function launchAutoplayVideo(video) {
   const videoEl = video.querySelector('.embedded-video--autoplay__video'),
         plays = parseInt(videoEl.dataset.maxPlays);
-  loopVideo(video, plays); ///
-  //
-  /// check ready state to be == 4
-  // vid.readyState; 
-  /// maybe do while untill = to 4 then run createController func
-  //
-  //
+  loopVideo(video, plays);
 
   do {
     if (videoEl.readyState == 4) {
       createController(video);
+      console.log('this version is correct.');
       break;
     }
   } while (videoEl.readyState < 4);
