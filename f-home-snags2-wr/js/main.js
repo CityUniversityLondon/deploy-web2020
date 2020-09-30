@@ -6046,8 +6046,21 @@ function toggleController(video) {
 function launchAutoplayVideo(video) {
   const videoEl = video.querySelector('.embedded-video--autoplay__video'),
         plays = parseInt(videoEl.dataset.maxPlays);
-  loopVideo(video, plays);
-  createController(video);
+  loopVideo(video, plays); ///
+  //
+  /// check ready state to be == 4
+  // vid.readyState; 
+  /// maybe do while untill = to 4 then run createController func
+  //
+  //
+
+  do {
+    if (videoEl.readyState == 4) {
+      createController(video);
+      break;
+    }
+  } while (videoEl.readyState < 4);
+
   const controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn');
   controllerBtn.addEventListener('click', () => {
     toggleController(video);
