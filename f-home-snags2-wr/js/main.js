@@ -6048,7 +6048,7 @@ function launchAutoplayVideo(video) {
   do {
     if (videoEl.readyState == 4) {
       createController(video);
-      console.log('this version is correct.');
+      console.log('This version is correct.');
       break;
     }
   } while (videoEl.readyState < 4);
