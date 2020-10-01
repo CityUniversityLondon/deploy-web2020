@@ -2185,7 +2185,12 @@ function launchFormAssemblyForm(eventInfo) {
         closeButtonText = 'Close registration form',
         closeButton = document.createElement('button'),
         closeButtonSpan = document.createElement('span'),
-        closeButtonIcon = document.createElement('span');
+        closeButtonIcon = document.createElement('span'),
+        closeButtonEnd = document.createElement('button'),
+        closeButtonEndSpan = document.createElement('span'),
+        closeButtonEndIcon = document.createElement('span'),
+        heading = eventInfo.querySelector('.event__formassembly__form__heading'),
+        wrapperHeading = document.createElement('div');
   buttonSpan.appendChild(document.createTextNode(buttonText));
   button.setAttribute('type', 'button');
   button.className = 'event__formassembly__button';
@@ -2199,11 +2204,23 @@ function launchFormAssemblyForm(eventInfo) {
   closeButton.className = 'event__formassembly__form__close-button';
   closeButton.appendChild(closeButtonIcon);
   closeButton.appendChild(closeButtonSpan);
+  closeButtonEndSpan.appendChild(document.createTextNode(closeButtonText));
+  closeButtonEndSpan.className = 'event__formassembly__form__close-button__text';
+  closeButtonEndIcon.className = 'fa fas fa-fw fa-times';
+  closeButtonEnd.setAttribute('type', 'button');
+  closeButtonEnd.className = 'event__formassembly__form__close-button';
+  closeButtonEnd.appendChild(closeButtonEndIcon);
+  closeButtonEnd.appendChild(closeButtonEndSpan);
   button.addEventListener('click', () => toggleForm(form, button, buttonText, closeButtonText), true);
   closeButton.addEventListener('click', () => toggleForm(form, button, buttonText, closeButtonText), true);
+  closeButtonEnd.addEventListener('click', () => toggleForm(form, button, buttonText, closeButtonText), true);
   form.setAttribute('tabindex', -1);
   form.dataset.open = false;
-  form.insertBefore(closeButton, formActual);
+  wrapperHeading.className = 'wrapper--event__formassembly__form__heading';
+  wrapperHeading.appendChild(heading);
+  wrapperHeading.appendChild(closeButton);
+  form.insertBefore(wrapperHeading, formActual);
+  form.appendChild(closeButtonEnd);
   link.parentNode.replaceChild(button, link);
 }
 
