@@ -258,6 +258,131 @@ Finder__Results__Accommodation.propTypes = {
 
 /***/ }),
 
+/***/ "./src/patterns/finder/components/cards/finder__results__card.js":
+/*!***********************************************************************!*\
+  !*** ./src/patterns/finder/components/cards/finder__results__card.js ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _finder_results_accommodation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finder__results__accommodation */ "./src/patterns/finder/components/cards/finder__results__accommodation.js");
+/* harmony import */ var _finder_results_casestudy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__results__casestudy */ "./src/patterns/finder/components/cards/finder__results__casestudy.js");
+/* harmony import */ var _finder_results_centre__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__results__centre */ "./src/patterns/finder/components/cards/finder__results__centre.js");
+/* harmony import */ var _finder_results_contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__results__contact */ "./src/patterns/finder/components/cards/finder__results__contact.js");
+/* harmony import */ var _finder_results_course__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__results__course */ "./src/patterns/finder/components/cards/finder__results__course.js");
+/* harmony import */ var _finder_results_event__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__results__event */ "./src/patterns/finder/components/cards/finder__results__event.js");
+/* harmony import */ var _finder_results_funding__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./finder__results__funding */ "./src/patterns/finder/components/cards/finder__results__funding.js");
+/* harmony import */ var _finder_results_generic__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./finder__results__generic */ "./src/patterns/finder/components/cards/finder__results__generic.js");
+/* harmony import */ var _finder_results_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./finder__results__module */ "./src/patterns/finder/components/cards/finder__results__module.js");
+/* harmony import */ var _finder_results_news__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./finder__results__news */ "./src/patterns/finder/components/cards/finder__results__news.js");
+/* harmony import */ var _finder_results_profile__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./finder__results__profile */ "./src/patterns/finder/components/cards/finder__results__profile.js");
+
+
+/**
+ * @module patterns/finder/components/cards/finder__results__card
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Render a Funnelback result as the appropriate card type.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function Finder__Results__Card(props) {
+  switch (props.type) {
+    case 'accommodation':
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_accommodation__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        details: props.details
+      });
+
+    case 'casestudy':
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_casestudy__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        details: props.details
+      });
+
+    case 'centre':
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_centre__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        details: props.details,
+        query: props.query
+      });
+
+    case 'contact':
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_contact__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        details: props.details,
+        query: props.query
+      });
+
+    case 'course':
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_course__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        details: props.details,
+        query: props.query
+      });
+
+    case 'event':
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_event__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        details: props.details
+      });
+
+    case 'funding':
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_funding__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        details: props.details,
+        query: props.query
+      });
+
+    case 'module':
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_module__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        details: props.details,
+        query: props.query
+      });
+
+    case 'news':
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_news__WEBPACK_IMPORTED_MODULE_11__["default"], {
+        details: props.details
+      });
+
+    case 'profile':
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_profile__WEBPACK_IMPORTED_MODULE_12__["default"], {
+        details: props.details,
+        query: props.query
+      });
+
+    default:
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_generic__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        details: props.details
+      });
+  }
+}
+
+Finder__Results__Card.propTypes = {
+  details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Card);
+
+/***/ }),
+
 /***/ "./src/patterns/finder/components/cards/finder__results__casestudy.js":
 /*!****************************************************************************!*\
   !*** ./src/patterns/finder/components/cards/finder__results__casestudy.js ***!
@@ -539,13 +664,13 @@ function Finder__Results__Course(props) {
     className: "fal fa-fw fa-clock icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Duration:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.duration)),
-        method = props.details.metaData.method && (props.query.facets.method || props.query.query.indexOf(props.details.metaData.method) >= 0 || props.details.metaData.method.indexOf('Online') >= 0) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+        method = props.details.metaData.method && (props.query.facets && props.query.facets.method || props.query.query.indexOf(props.details.metaData.method) >= 0 || props.details.metaData.method.indexOf('Online') >= 0) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-book-reader icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Method", props.details.metaData.method.split('|').length > 1 && 's', ' ', "of study:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, Object(_util__WEBPACK_IMPORTED_MODULE_4__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').join(', '))),
-        location = props.details.metaData.location && props.query.facets.location && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+        location = props.details.metaData.location && props.query.facets && props.query.facets.location && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-map-marker-alt icon",
@@ -657,7 +782,7 @@ function Finder__Results__Event(props) {
     className: "card__thumbnail"
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    className: "card card--event"
+    className: "card card--event card--landscape"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.clickTrackingUrl,
     className: "card__anchor card__details"
@@ -713,7 +838,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Finder__Results__Funding(props) {
-  const school = props.details.metaData.school && props.query.facets.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  const school = props.details.metaData.school && props.query.facets && props.query.facets.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
@@ -996,10 +1121,14 @@ Finder__Results__News.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+
+
 
 
 /**
@@ -1017,42 +1146,175 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Finder__Results__Profile(props) {
-  const school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  const school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-university icon",
     "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "School:"), " ", props.details.metaData.school),
-        department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), " ", props.details.metaData.school),
+        department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-building icon",
     "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Department:"), " ", props.details.metaData.department),
-        headshot = props.details.metaData.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Department:"), " ", props.details.metaData.department),
+        headshot = props.details.metaData.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__thumbnail"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     src: props.details.metaData.thumbnail,
     alt: 'Photo of ' + props.details.title
-  }));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  })),
+        country = props.query.facets && props.query.facets.country && props.details.metaData.country && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "card__tag"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "fad fa-fw fa-globe-europe icon",
+    "aria-hidden": "true"
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Country:"), ' ', props.details.metaData.country.split('|').length > 2 ? props.details.metaData.country.split('|').slice(0, -1).join(', ') + ' and ' + props.details.metaData.country.split('|').slice(-1) : props.details.metaData.country.split('|').join(' and '));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "card card--profile"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.clickTrackingUrl,
     className: "card__anchor card__details"
-  }, headshot, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, headshot, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__details__text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "card__heading"
-  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "card__type"
-  }, props.details.metaData.jobtitle), school, department)));
+  }, props.details.metaData.jobtitle), school, department, country)));
 }
 
 Finder__Results__Profile.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Profile);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/components/results/finder__pagination.js":
+/*!**********************************************************************!*\
+  !*** ./src/patterns/finder/components/results/finder__pagination.js ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/finder/components/finder__pagination
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+/**
+ * Renders standard pagination controls patttern for the results.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function Finder__Pagination(props) {
+  const numberOfPages = Math.ceil(props.totalMatching / props.numRanks),
+        currentPage = Math.ceil(props.currStart / props.numRanks),
+        pages = [];
+
+  const changePage = pageNumber => {
+    const newStartRank = 1 + (pageNumber - 1) * props.numRanks,
+          newQuery = props.query;
+    newQuery.startRank = newStartRank;
+    newQuery.misspelling = null;
+    newQuery.interacted = true;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "pagination__controls__button--prev",
+    key: "prev",
+    type: "button",
+    disabled: currentPage === 1 ? true : false,
+    onClick: () => {
+      changePage(currentPage - 1);
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Previous page")));
+
+  for (let page = 1; page <= numberOfPages; page++) {
+    let className;
+
+    switch (page - numberOfPages) {
+      case 0:
+        className = 'pagination__controls__element pagination__controls__button pagination__controls__button--last';
+        break;
+
+      case -1:
+        className = 'pagination__controls__element pagination__controls__button pagination__controls__button--penultimate';
+        break;
+
+      default:
+        className = 'pagination__controls__element pagination__controls__button';
+    }
+
+    pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      "aria-current": page === currentPage ? 'page' : null,
+      "aria-expanded": page === currentPage ? true : false,
+      "aria-label": "Open page ".concat(page),
+      className: className,
+      "data-page": page,
+      "data-proximity": Math.abs(page - currentPage),
+      disabled: page === currentPage ? true : false,
+      key: page,
+      type: "button",
+      onClick: () => {
+        changePage(page);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, page)));
+
+    if (page === 1) {
+      pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        key: "firstEllipsis",
+        className: "pagination__controls__element pagination__controls__ellipsis pagination__controls__ellipsis--first"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u2026")));
+    } else if (page === numberOfPages - 1) {
+      pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        key: "lastEllipsis",
+        className: "pagination__controls__element pagination__controls__ellipsis pagination__controls__ellipsis--last"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u2026")));
+    }
+  }
+
+  pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "pagination__controls__button--next",
+    key: "next",
+    type: "button",
+    disabled: currentPage === numberOfPages ? true : false,
+    onClick: () => {
+      changePage(currentPage + 1);
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Next page")));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "pagination__wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    className: "pagination__controls",
+    "data-pagecount": numberOfPages
+  }, pages));
+}
+
+Finder__Pagination.propTypes = {
+  currStart: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  numRanks: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+  totalMatching: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Pagination);
 
 /***/ }),
 
@@ -1496,17 +1758,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _finder_components_cards_finder_results_accommodation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../finder/components/cards/finder__results__accommodation */ "./src/patterns/finder/components/cards/finder__results__accommodation.js");
-/* harmony import */ var _finder_components_cards_finder_results_casestudy__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../finder/components/cards/finder__results__casestudy */ "./src/patterns/finder/components/cards/finder__results__casestudy.js");
-/* harmony import */ var _finder_components_cards_finder_results_centre__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../finder/components/cards/finder__results__centre */ "./src/patterns/finder/components/cards/finder__results__centre.js");
-/* harmony import */ var _finder_components_cards_finder_results_contact__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../finder/components/cards/finder__results__contact */ "./src/patterns/finder/components/cards/finder__results__contact.js");
-/* harmony import */ var _finder_components_cards_finder_results_course__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../finder/components/cards/finder__results__course */ "./src/patterns/finder/components/cards/finder__results__course.js");
-/* harmony import */ var _finder_components_cards_finder_results_event__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../finder/components/cards/finder__results__event */ "./src/patterns/finder/components/cards/finder__results__event.js");
-/* harmony import */ var _finder_components_cards_finder_results_funding__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../finder/components/cards/finder__results__funding */ "./src/patterns/finder/components/cards/finder__results__funding.js");
-/* harmony import */ var _finder_components_cards_finder_results_generic__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../finder/components/cards/finder__results__generic */ "./src/patterns/finder/components/cards/finder__results__generic.js");
-/* harmony import */ var _finder_components_cards_finder_results_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../finder/components/cards/finder__results__module */ "./src/patterns/finder/components/cards/finder__results__module.js");
-/* harmony import */ var _finder_components_cards_finder_results_news__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../finder/components/cards/finder__results__news */ "./src/patterns/finder/components/cards/finder__results__news.js");
-/* harmony import */ var _finder_components_cards_finder_results_profile__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../finder/components/cards/finder__results__profile */ "./src/patterns/finder/components/cards/finder__results__profile.js");
 
 
 /**
@@ -1515,18 +1766,40 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2020
  */
 
+ // FIXME for go live
 
+const siteUrl = 'web2020.city.ac.uk';
 
-
-
-
-
-
-
-
-
-
-
+function genericResult(result, type) {
+  const thumbnail = result.metaData.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card__thumbnail"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("picture", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: result.metaData.thumbnail,
+    alt: ""
+  }))),
+        label = type && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "card__label"
+  }, type),
+        external = result.liveUrl.indexOf(siteUrl) < 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fas fa-external-link icon",
+    "aria-label": "(external link)"
+  }));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "card--search",
+    key: result.docNum
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: result.clickTrackingUrl,
+    className: "card__details card__anchor"
+  }, thumbnail, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card__details__text"
+  }, label, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "card__heading"
+  }, result.title, external), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "card__description"
+  }, result.metaData.c), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "card__url"
+  }, result.liveUrl))));
+}
 /**
  * Suggestions.
  *
@@ -1534,83 +1807,50 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
+
 function InlineSearch__TopResults(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "search--inline__topresults"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Top results"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, props.results.map(result => {
     switch (result.collection) {
       case 'web2020-residentialhalls':
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_cards_finder_results_accommodation__WEBPACK_IMPORTED_MODULE_2__["default"], {
-          details: result,
-          key: result.docNum
-        });
+        return genericResult(result, 'Residential hall');
 
       case 'web2020-business-impact':
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_cards_finder_results_casestudy__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          details: result,
-          key: result.docNum
-        });
+        return genericResult(result, 'Case study');
 
       case 'web2020-research':
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_cards_finder_results_casestudy__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          details: result,
-          key: result.docNum
-        });
+        return genericResult(result, 'Case study');
 
       case 'web2020-centres':
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_cards_finder_results_centre__WEBPACK_IMPORTED_MODULE_4__["default"], {
-          details: result,
-          query: props.query,
-          key: result.docNum
-        });
-
-      case 'web2020-directory':
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_cards_finder_results_contact__WEBPACK_IMPORTED_MODULE_5__["default"], {
-          details: result,
-          query: props.query,
-          key: result.docNum
-        });
+        return genericResult(result, 'Research centre');
 
       case 'web2020-courses':
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_cards_finder_results_course__WEBPACK_IMPORTED_MODULE_6__["default"], {
-          details: result,
-          query: props.query,
-          key: result.docNum
-        });
+        return genericResult(result, 'Course');
 
       case 'web2020-events':
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_cards_finder_results_event__WEBPACK_IMPORTED_MODULE_7__["default"], {
-          details: result,
-          key: result.docNum
-        });
+        return genericResult(result, 'Event');
+
+      case 'web2020-facilities':
+        return genericResult(result, 'Facility');
+
+      case 'web2020-locations':
+        return genericResult(result, 'Location');
+
+      case 'web2020-pathways':
+        return genericResult(result, 'Career pathway');
 
       case 'web2020-funding':
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_cards_finder_results_funding__WEBPACK_IMPORTED_MODULE_8__["default"], {
-          details: result,
-          query: props.query,
-          key: result.docNum
-        });
-
-      case 'web2020-studyabroad':
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_cards_finder_results_module__WEBPACK_IMPORTED_MODULE_10__["default"], {
-          details: result,
-          query: props.query
-        });
+        return genericResult(result, 'Funding');
 
       case 'web2020-news':
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_cards_finder_results_news__WEBPACK_IMPORTED_MODULE_11__["default"], {
-          details: result
-        });
+        return genericResult(result, 'News');
 
       case 'web2020-profiles':
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_cards_finder_results_profile__WEBPACK_IMPORTED_MODULE_12__["default"], {
-          details: result
-        });
+        return genericResult(result, 'Profile');
 
       default:
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_cards_finder_results_generic__WEBPACK_IMPORTED_MODULE_9__["default"], {
-          details: result
-        });
+        return genericResult(result, null);
     }
   })));
 }
@@ -1620,6 +1860,928 @@ InlineSearch__TopResults.propTypes = {
   results: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object)
 };
 /* harmony default export */ __webpack_exports__["default"] = (InlineSearch__TopResults);
+
+/***/ }),
+
+/***/ "./src/patterns/search/components/main/query/search__clear.js":
+/*!********************************************************************!*\
+  !*** ./src/patterns/search/components/main/query/search__clear.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/search/components/search__clear
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+/**
+ * Clear input button.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function Search__Clear(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "search__clear",
+    type: "button",
+    onClick: () => {
+      props.clear();
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fad fa-fw fa-times-circle icon"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "search__clear__text"
+  }, "Clear query"));
+}
+
+Search__Clear.propTypes = {
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
+};
+/* harmony default export */ __webpack_exports__["default"] = (Search__Clear);
+
+/***/ }),
+
+/***/ "./src/patterns/search/components/main/query/search__collection.js":
+/*!*************************************************************************!*\
+  !*** ./src/patterns/search/components/main/query/search__collection.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**<
+ * @module patterns/search/components/main/query/search__collection
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+
+function Search__Collection(props) {
+  const currentValue = props.query.collection || props.config.primary[0].collection;
+
+  const setCollection = value => {
+    const newQuery = props.query;
+    newQuery.startRank = 1;
+    newQuery.misspelling = null;
+    newQuery.interacted = true;
+    newQuery.collection = value;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "search__filter search__select ".concat(currentValue !== props.config.primary.collections[0].collection && 'search__select--selected')
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    htmlFor: "search__collection"
+  }, props.config.primary.collections[0].label), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
+    name: "collection",
+    id: "search__collection",
+    onChange: e => setCollection(e.target.value),
+    value: currentValue
+  }, props.config.primary.collections.map((collection, i) => {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
+      key: i,
+      value: collection.collection.toLowerCase()
+    }, collection.label);
+  })));
+}
+
+Search__Collection.propTypes = {
+  config: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (Search__Collection);
+
+/***/ }),
+
+/***/ "./src/patterns/search/components/main/query/search__query.js":
+/*!********************************************************************!*\
+  !*** ./src/patterns/search/components/main/query/search__query.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _finder_funnelback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../finder/funnelback */ "./src/patterns/finder/funnelback.js");
+/* harmony import */ var _search_clear__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./search__clear */ "./src/patterns/search/components/main/query/search__clear.js");
+/* harmony import */ var _search_collection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./search__collection */ "./src/patterns/search/components/main/query/search__collection.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+/**
+ * @module patterns/search/components/search__query
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+
+
+
+const maximumSuggestions = 5,
+      escapeKey = 'Escape',
+      endKey = 'End',
+      homeKey = 'Home',
+      arrowUp = 'ArrowUp',
+      arrowDown = 'ArrowDown';
+
+function highlightQueryTerm(suggestion, partialQuery) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_7___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+    className: "sr-only"
+  }, suggestion), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+    "aria-hidden": "true"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+    className: "search__suggestion"
+  }, suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()), partialQuery.length)), suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()) + partialQuery.length))));
+}
+/**
+ * Search input field and autocomplete.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+
+function Search__Query(props) {
+  // save what they're typing
+  const [partialQuery, setPartialQuery] = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(props.query.query); // Funnelback suggestions for the currently typed text
+
+  const [suggestions, setSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])([]); // Request token for calls to the Funnelback suggestions service, so we
+  // can cancel it
+
+  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])({
+    cancel: () => {}
+  }); // ref for the input field, so we can .focus() it
+
+  const stringLength = 16,
+        stringOffset = -4,
+        [inputId] = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])('search--' + props.query.collection + '--' + Math.random().toString(stringLength).slice(stringOffset));
+  const [showSuggestions, setShowSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(false),
+        [activeSuggestionID, setActiveSuggestionID] = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])('');
+  Object(react__WEBPACK_IMPORTED_MODULE_7__["useEffect"])(() => {
+    setPartialQuery(props.query.query);
+  }, [props.query.query, props.updating]);
+  let textInput = null;
+
+  function focusInput() {
+    textInput.focus();
+  } // on clear, make a default request for results
+
+
+  const clearQuery = () => {
+    call.cancel();
+    setPartialQuery('');
+    setSuggestions([]);
+    focusInput();
+    const newQuery = props.query;
+    newQuery.misspelling = null;
+    newQuery.query = '';
+    newQuery.sortType = '';
+    newQuery.startRank = 1;
+    newQuery.interacted = true;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  const submitForm = query => {
+    call.cancel();
+    setSuggestions([]);
+    const newQuery = props.query;
+    newQuery.misspelling = null;
+    newQuery.query = query ? query : partialQuery ? partialQuery : '';
+    newQuery.sortType = '';
+    newQuery.startRank = 1;
+    newQuery.interacted = true;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  const clear = partialQuery && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_search_clear__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    clear: () => {
+      clearQuery();
+    }
+  });
+
+  const submitSuggestion = suggestion => {
+    setShowSuggestions(false);
+    setSuggestions([]);
+    focusInput();
+    submitForm(suggestion);
+  }; // render suggestions
+
+
+  const suggestionsList = suggestions && suggestions.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ul", {
+    role: "listbox",
+    "aria-label": "Search suggestions",
+    "aria-activedescendant": activeSuggestionID,
+    className: showSuggestions ? 'search__query__suggestions show' : 'search__query__suggestions hide'
+  }, [...new Set(suggestions)].slice(0, maximumSuggestions).map((suggestion, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+    key: suggestion,
+    role: "option",
+    id: inputId + '--' + i
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+    type: "button",
+    onBlur: () => {
+      setActiveSuggestionID('');
+      setShowSuggestions(false);
+    },
+    onFocus: () => setShowSuggestions(true),
+    onMouseDown: () => submitSuggestion(suggestion),
+    onClick: () => submitSuggestion(suggestion),
+    onKeyDown: e => {
+      switch (e.key) {
+        case escapeKey:
+          e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
+          setSuggestions([]);
+          setActiveSuggestionID('');
+          break;
+
+        case arrowUp:
+          if (e.target.parentNode.previousElementSibling && e.target.parentNode.previousElementSibling.querySelector('button')) {
+            e.preventDefault();
+            e.target.parentNode.previousElementSibling.querySelector('button').focus();
+            setActiveSuggestionID(e.target.parentNode.previousElementSibling.id);
+          } else {
+            e.preventDefault();
+            e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
+            setActiveSuggestionID('');
+          }
+
+          break;
+
+        case arrowDown:
+          e.preventDefault();
+
+          if (e.target.parentNode.nextElementSibling && e.target.parentNode.nextElementSibling.querySelector('button')) {
+            e.preventDefault();
+            e.target.parentNode.nextElementSibling.querySelector('button').focus();
+            setActiveSuggestionID(e.target.parentNode.nextElementSibling.id);
+          }
+
+          break;
+
+        case homeKey:
+          e.preventDefault();
+
+          if (e.target.parentNode.parentNode.firstChild && e.target.parentNode.parentNode.firstChild.querySelector('button')) {
+            e.preventDefault();
+            e.target.parentNode.parentNode.firstChild.querySelector('button').focus();
+            setActiveSuggestionID(e.target.parentNode.firstChild.id);
+          }
+
+          break;
+
+        case endKey:
+          e.preventDefault();
+
+          if (e.target.parentNode.parentNode.lastChild && e.target.parentNode.parentNode.lastChild.querySelector('button')) {
+            e.preventDefault();
+            e.target.parentNode.parentNode.lastChild.querySelector('button').focus();
+            setActiveSuggestionID(e.target.parentNode.lastChild.id);
+          }
+
+          break;
+
+        default:
+          break;
+      }
+    }
+  }, highlightQueryTerm(suggestion, partialQuery)))));
+  const input = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+    className: "search__query__input"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+    className: "search__query__icon--wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+    className: "search__icon fal fa-search icon",
+    "aria-hidden": "true"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("label", {
+    className: "sr-only",
+    htmlFor: inputId
+  }, "Search"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
+    autoComplete: "off",
+    id: inputId,
+    name: "query",
+    placeholder: props.primary[0].placeholder,
+    ref: input => {
+      textInput = input;
+    },
+    type: "text",
+    value: partialQuery,
+    onKeyDown: e => {
+      switch (e.key) {
+        case escapeKey:
+          clearQuery();
+          break;
+
+        case arrowDown:
+          if (suggestions && suggestions.length > 0) {
+            e.preventDefault();
+            e.target.parentNode.querySelector('.search__query__suggestions button').focus();
+            setActiveSuggestionID(e.target.parentNode.querySelector('.search__query__suggestions li').id);
+          }
+
+          break;
+
+        default:
+          break;
+      }
+    },
+    onFocus: () => setShowSuggestions(true),
+    onBlur: () => setShowSuggestions(false),
+    onChange: e => {
+      //clear old suggestions
+      setSuggestions([]); // keep  what they're typing
+
+      setPartialQuery(e.target.value);
+      /**
+       * if we have a request to the suggestions service in progress,
+       * cancel it. Stops old suggestions overwriting new ones because
+       * the requests can't keep up with fast typing.
+       */
+
+      call.cancel();
+
+      if (e.target.value) {
+        // input is populated, ask for suggestions
+        const [suggestionsPromise, newCall] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_3__["suggest"])(props.query.collection, e.target.value); // update our request cancel function for the new request
+
+        setCall({
+          cancel: () => {
+            newCall.cancel();
+          }
+        });
+        suggestionsPromise.then(data => setSuggestions(data)).catch(() => setSuggestions([]));
+      } else {
+        // input is empty, empty suggestions
+        setSuggestions([]);
+      }
+    }
+  }), suggestionsList, clear);
+  const collection = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_search_collection__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    config: props.config,
+    query: props.query,
+    update: props.update
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("fieldset", {
+    className: "search-form__query"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+    className: "wrapper--search-form__query__fields"
+  }, collection, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+    className: "wrapper--search-form__query__fields__input"
+  }, input, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
+    type: "submit",
+    className: "search__query__submit",
+    onClick: () => submitForm()
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+    className: "fal fa-search search__query__submit__icon",
+    "aria-hidden": "true"
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+    className: "search__query__submit__text"
+  }, "Search")))));
+}
+
+Search__Query.propTypes = {
+  config: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
+  primary: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object),
+  updating: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.bool
+};
+/* harmony default export */ __webpack_exports__["default"] = (Search__Query);
+
+/***/ }),
+
+/***/ "./src/patterns/search/components/main/results/search__bestbets.js":
+/*!*************************************************************************!*\
+  !*** ./src/patterns/search/components/main/results/search__bestbets.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/search/components/main/results/search__bestbets
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+const maximumBestBetsToDisplay = 3;
+/**
+ * Render Funnelback results.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function Search__BestBets(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "wrapper--search__bestbets"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "search__bestbets"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "search__bestbets__heading sr-only"
+  }, "Best bets"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "search__bestbets__list"
+  }, props.bestbets.slice(0, maximumBestBetsToDisplay).map((bestBet, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "card--search card--bestbet",
+    key: 'bestBet' + i
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: bestBet.linkUrl,
+    className: "card__anchor card__details"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card__details__text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "card__heading"
+  }, bestBet.titleHtml), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "card__description"
+  }, bestBet.descriptionHtml), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "card__url"
+  }, bestBet.displayUrl))))))));
+}
+
+Search__BestBets.propTypes = {
+  bestbets: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object)
+};
+/* harmony default export */ __webpack_exports__["default"] = (Search__BestBets);
+
+/***/ }),
+
+/***/ "./src/patterns/search/components/main/results/search__othersites.js":
+/*!***************************************************************************!*\
+  !*** ./src/patterns/search/components/main/results/search__othersites.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
+/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+/**
+ * @module patterns/search/components/main/results/search__othersites
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+ // FIXME for go live
+
+const siteUrl = 'web2020.city.ac.uk';
+const maximumResultsToDisplay = 0;
+
+function genericResult(result, collection, i) {
+  const thumbnail = result.metaData.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "card__thumbnail"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("picture", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: result.metaData.thumbnail,
+    alt: ""
+  }))),
+        external = result.liveUrl.indexOf(siteUrl) < 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "fas fa-external-link icon",
+    "aria-label": "(external link)"
+  }));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    className: "card--search",
+    key: collection + i
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: result.clickTrackingUrl,
+    className: "card__details card__anchor"
+  }, thumbnail, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "card__details__text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
+    className: "card__heading"
+  }, result.title, external), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "card__description"
+  }, result.metaData.c))));
+}
+/**
+ * Render Funnelback results.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+
+function Search__OtherSites(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "wrapper--search__othersites"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "search__othersites"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "search__othersites__heading"
+  }, "Results on other City sites"), props.collections.map((collection, i) => {
+    if (!collection.updating && collection.response && collection.response.summary.totalMatching > 0) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "search__othersites__site",
+        key: 'site' + i
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+        className: "search__othersites__site__heading"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+        href: collection.search + '?query=' + props.query.query
+      }, collection.label, " (", collection.response.summary.totalMatching, ")"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "fas fa-arrow-right icon",
+        "aria-hidden": "true"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "search__results"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
+        className: "search__results__list"
+      }, collection.response.results.slice(0, maximumResultsToDisplay).map((result, j) => genericResult(result, collection.collection, j)))));
+    } else {
+      return null;
+    }
+  }), props.nonpublic.map((collection, i) => {
+    if (!collection.updating && collection.response && collection.response.summary.totalMatching > 0) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: "search__othersites__site",
+        key: 'site' + i
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+        className: "search__othersites__site__heading"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+        href: collection.search + '?query=' + props.query.query
+      }, collection.label, " (", collection.response.summary.totalMatching, ")"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: "fad fa-lock-alt icon",
+        "aria-label": "Login required"
+      })));
+    } else {
+      return null;
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "search__othersites__noresults"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "No results found."))));
+}
+
+Search__OtherSites.propTypes = {
+  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  collections: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object),
+  nonpublic: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object)
+};
+/* harmony default export */ __webpack_exports__["default"] = (Search__OtherSites);
+
+/***/ }),
+
+/***/ "./src/patterns/search/components/main/results/search__results.js":
+/*!************************************************************************!*\
+  !*** ./src/patterns/search/components/main/results/search__results.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
+/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _finder_components_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../finder/components/cards/finder__results__card */ "./src/patterns/finder/components/cards/finder__results__card.js");
+/* harmony import */ var _finder_components_results_finder_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../finder/components/results/finder__pagination */ "./src/patterns/finder/components/results/finder__pagination.js");
+
+
+
+
+
+
+/**
+ * @module patterns/search/components/main/results/search__results
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+
+ // FIXME for go live
+
+const siteUrl = 'web2020.city.ac.uk';
+const endKey = 'End',
+      homeKey = 'Home',
+      arrowLeft = 'ArrowLeft',
+      arrowUp = 'ArrowUp',
+      arrowRight = 'ArrowRight',
+      arrowDown = 'ArrowDown';
+
+function genericResult(result, type, i) {
+  const thumbnail = result.metaData.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "card__thumbnail"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("picture", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
+    src: result.metaData.thumbnail,
+    alt: ""
+  }))),
+        label = type && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+    className: "card__label"
+  }, type),
+        external = result.liveUrl.indexOf(siteUrl) < 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    className: "fas fa-external-link icon",
+    "aria-label": "(external link)"
+  }));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+    className: "card--search",
+    key: 'all' + i
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
+    href: result.clickTrackingUrl,
+    className: "card__details card__anchor"
+  }, thumbnail, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "card__details__text"
+  }, label, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
+    className: "card__heading"
+  }, result.title, external), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+    className: "card__description"
+  }, result.metaData.c), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+    className: "card__url"
+  }, result.liveUrl))));
+}
+/**
+ * Render Funnelback results.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+
+function Search__Results(props) {
+  const [currentTab, setCurrentTab] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(0);
+
+  const updating = results => {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+      className: "search__results__updating",
+      "aria-live": "polite"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "fas fa-spinner fa-pulse icon",
+      "aria-hidden": "true"
+    }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Updating ", results, "\u2026"));
+  };
+  /**
+   * Respond to cursor key events inside the tabbed section.
+   *
+   * @param {Event} e - The initiating keydown event.
+   */
+
+
+  function keyEvents(e) {
+    switch (e.key) {
+      case arrowLeft:
+        props.element.querySelector(".tabs__links li:nth-child(".concat(currentTab !== 0 ? currentTab : 1, ") button")).focus();
+        currentTab !== 0 && setCurrentTab(currentTab - 1);
+        break;
+
+      case arrowRight:
+        props.element.querySelector(".tabs__links li:nth-child(".concat(currentTab !== props.finders.length ? currentTab + 2 : currentTab + 1, ") button")).focus();
+        currentTab !== props.finders.length && setCurrentTab(currentTab + 1);
+        break;
+
+      case arrowUp:
+        /**
+         * Move focus to the currently selected tab control.
+         */
+        props.element.querySelector('.tabs__links button[aria-current="true"]').focus();
+        break;
+
+      case arrowDown:
+        /**
+         * Move focus into the tab content.
+         */
+        props.element.querySelector('.tabs__panel:not([hidden])').focus();
+        break;
+
+      case homeKey:
+        /**
+         * First tab
+         */
+        setCurrentTab(0);
+        break;
+
+      case endKey:
+        /**
+         * Last tab
+         */
+        setCurrentTab(props.finders.length);
+        break;
+
+      default:
+        break;
+    }
+  }
+
+  const links = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+    className: "tabs__links",
+    role: "tablist"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+    key: "tabs__links__primary"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    role: "tab",
+    id: 'link--search443531__tabs__' + props.primary[0].collection,
+    title: props.primary[0].label,
+    "aria-selected": currentTab === 0,
+    "aria-current": currentTab === 0,
+    onClick: () => setCurrentTab(0)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.primary[0].label, " (", props.primary[0].updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    className: "fas fa-spinner fa-pulse icon",
+    "aria-label": "Updating\u2026"
+  }) : props.primary[0].response && props.primary[0].response.summary.totalMatching, ")"))), props.finders.map((finder, i) => {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      key: 'tabs__links__finder' + i,
+      role: "presentation"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+      id: 'link--search443531__tabs__' + finder.collection,
+      title: finder.label,
+      "aria-selected": currentTab === i + 1,
+      "aria-current": currentTab === i + 1,
+      onClick: () => setCurrentTab(i + 1)
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, finder.label, " (", finder.updating || !finder.response ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "fas fa-spinner fa-pulse icon",
+      "aria-label": "Updating\u2026"
+    }) : finder.response.summary.totalMatching, ")")));
+  })); // if we have more results than will fit on a single page, we need
+  // pagination
+
+  const primaryPagination = props.primary[0].response && props.primary[0].response.summary.totalMatching > props.primary[0].response.summary.numRanks && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_finder_components_results_finder_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    currStart: props.primary[0].response.summary.currStart,
+    numRanks: props.primary[0].response.summary.numRanks,
+    query: props.query,
+    totalMatching: props.primary[0].response.summary.totalMatching,
+    update: props.update
+  });
+  const panels = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("section", {
+    className: "tabs__panel",
+    id: 'search443531__tabs__' + props.primary[0].collection,
+    "aria-labelledby": 'link--search443531__tabs__' + props.primary[0].collection,
+    key: "primary",
+    role: "tabpanel",
+    tabIndex: "-1",
+    hidden: currentTab !== 0
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h2", {
+    className: "tabs__panel__heading sr-only"
+  }, props.primary[0].label), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "tabs__panel__body"
+  }, props.primary[0].updating ? updating('results') : props.primary[0].response && props.primary[0].response.summary.totalMatching > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "search__results"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "search__results__summary"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
+    "aria-live": "polite",
+    className: "search__results__summary__heading"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "(showing", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.primary[0].response.summary.currStart), "\u2013", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.primary[0].response.summary.currEnd), ' ', "of", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.primary[0].response.summary.totalMatching), ' ', props.primary[0].response.summary.totalMatching === 0 ? 'results' : props.primary[0].response.summary.totalMatching === 1 ? 'result' : 'results', ")"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ol", {
+    className: "search__results__list",
+    start: props.primary[0].response.summary.currStart
+  }, props.primary[0].response.results.map((result, i) => {
+    switch (result.collection) {
+      case 'web2020-residentialhalls':
+        return genericResult(result, 'Residential hall', i);
+
+      case 'web2020-business-impact':
+        return genericResult(result, 'Case study', i);
+
+      case 'web2020-research':
+        return genericResult(result, 'Case study', i);
+
+      case 'web2020-centres':
+        return genericResult(result, 'Research centre', i);
+
+      case 'web2020-courses':
+        return genericResult(result, 'Course', i);
+
+      case 'web2020-events':
+        return genericResult(result, 'Event', i);
+
+      case 'web2020-facilities':
+        return genericResult(result, 'Facility', i);
+
+      case 'web2020-locations':
+        return genericResult(result, 'Location', i);
+
+      case 'web2020-pathways':
+        return genericResult(result, 'Career pathway', i);
+
+      case 'web2020-funding':
+        return genericResult(result, 'Funding', i);
+
+      case 'web2020-news':
+        return genericResult(result, 'News', i);
+
+      case 'web2020-profiles':
+        return genericResult(result, 'Profile', i);
+
+      default:
+        return genericResult(result, null, i);
+    }
+  })), primaryPagination) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "search__results__summary search__results__summary--noresults"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
+    className: "search__results__summary__heading"
+  }, "Your search did not match any results."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Suggestions:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Try different keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Try more general keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Try fewer keywords"))))), props.finders.map((finder, i) => {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("section", {
+      className: "tabs__panel",
+      id: 'search443531__tabs__' + finder.collection,
+      "aria-labelledby": 'link--search443531__tabs__' + finder.collection,
+      key: 'finder' + i,
+      role: "tabpanel",
+      tabIndex: "-1",
+      hidden: currentTab !== i + 1
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h2", {
+      className: "tabs__panel__heading sr-only"
+    }, finder.label), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      className: "tabs__panel__body"
+    }, finder.updating || !finder.response ? updating(finder.summariseAs.plural) : finder.response.summary.totalMatching > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      className: "search__results"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      className: "search__results__summary"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
+      "aria-live": "polite",
+      className: "search__results__summary__heading"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "(showing", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, finder.response && finder.response.summary.currStart), "\u2013", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, finder.response && finder.response.summary.currEnd), ' ', "of", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, finder.response && finder.response.summary.totalMatching), ' ', finder.response && finder.response.summary.totalMatching === 0 ? finder.summariseAs.plural : finder.response && finder.response.summary.totalMatching === 1 ? finder.summariseAs.singular : finder.summariseAs.plural, ")"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ol", {
+      className: "search__results__list",
+      start: finder.response && finder.response.summary.currStart
+    }, finder.response && finder.response.results.map((result, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_finder_components_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      bestBet: false,
+      details: result,
+      key: finder.collection + i,
+      type: finder.resultCard,
+      query: props.query
+    }))), finder.response && finder.response.summary.totalMatching > finder.response.summary.currEnd && finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+      className: "search__results__more"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
+      href: finder.search + '?query=' + props.query.query
+    }, "Browse more", ' ', finder.summariseAs.plural, ' '), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "fas fa-arrow-right icon",
+      "aria-hidden": "true"
+    }))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+      className: "search__summary__noresults"
+    }, "No matching ", finder.summariseAs.plural, ".", ' ', finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
+      href: finder.search
+    }, "Browse", ' ', finder.summariseAs.plural, ' ', "instead"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "fas fa-arrow-right icon",
+      "aria-hidden": "true"
+    })))));
+  }));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "tabs wrapper--search__results",
+    onKeyDown: e => keyEvents(e)
+  }, links, panels);
+}
+
+Search__Results.propTypes = {
+  config: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  finders: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object),
+  primary: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object),
+  query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (Search__Results);
 
 /***/ }),
 
@@ -1768,14 +2930,14 @@ function InlineSearch(props) {
       setUpdating(false);
     }).catch(() => {
       setResponse(initialResponse);
-      setUpdating(false);
     });
     suggestionsRequest.then(data => {
-      setSuggestions(data);
-      setSuggestionsUpdating(false);
+      if (data) {
+        setSuggestions(data);
+        setSuggestionsUpdating(false);
+      }
     }).catch(() => {
       setSuggestions(initialSuggestions);
-      setSuggestionsUpdating(false);
     }); // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [update]); // update props so child components can update the query
 
@@ -1863,7 +3025,7 @@ function InlineSearch(props) {
     alt: "City, University of London"
   })))), toggleButton), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "global-header__search__modal__body"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h2", null, "Search"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("form", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h2", null, "What are you looking for?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("form", {
     action: "/search",
     method: "get"
   }, inputField), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
@@ -1876,6 +3038,333 @@ InlineSearch.propTypes = {
   element: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (InlineSearch);
+
+/***/ }),
+
+/***/ "./src/patterns/search/search.js":
+/*!***************************************!*\
+  !*** ./src/patterns/search/search.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
+/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_web_url__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.url */ "./node_modules/core-js/modules/web.url.js");
+/* harmony import */ var core_js_modules_web_url__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_url__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _finder_funnelback__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../finder/funnelback */ "./src/patterns/finder/funnelback.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _components_main_results_search_bestbets__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/main/results/search__bestbets */ "./src/patterns/search/components/main/results/search__bestbets.js");
+/* harmony import */ var _components_main_results_search_othersites__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/main/results/search__othersites */ "./src/patterns/search/components/main/results/search__othersites.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _components_main_query_search_query__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/main/query/search__query */ "./src/patterns/search/components/main/query/search__query.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _components_main_results_search_results__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/main/results/search__results */ "./src/patterns/search/components/main/results/search__results.js");
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Search form.
+ *
+ * Don't run this via patterns.js, it's a separate compilation.
+ *
+ * @module patterns/search/search
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+
+
+
+
+
+
+
+const oneSecond = 1000,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_9__["reduceMotion"])() ? 0 : oneSecond,
+      screenOffsetRatio = 10;
+/**
+ * Preserve the search state in the URL parameters.
+ *
+ * @param {string} currQuery The search query.
+ * @param {integer} currStartRank The start rank.
+ * @param {object[]} currFacets A map of facet meta labels to their values.
+ * @param {*} facetLabels Array of facet definitions.
+ */
+
+function replaceHistory(currQuery, currStartRank, currCollection, defaultCollection) {
+  if (window) {
+    const params = new URLSearchParams(window.location.search);
+    currQuery !== '' ? params.set('query', currQuery) : params.delete('query');
+    currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
+    currCollection !== defaultCollection ? params.set('collection', currCollection) : params.delete('collection');
+    const hasParams = params.toString().length ? '?' : '';
+    window.history.replaceState({}, '', "".concat(window.location.pathname).concat(hasParams).concat(params.toString()));
+  }
+}
+/**
+ * Launch search.
+ *
+ * @param {object} props The JSON configuration file for search.
+ * @return {object} The React component to render.
+ */
+
+
+function Search(props) {
+  const params = new URLSearchParams(window.location.search);
+  /**
+   * initial state for the Funnelback query, taken from URL parameters and
+   * configuration
+   **/
+
+  const initialQuery = {
+    collection: params.get('collection') || props.config.primary.collections[0].collection,
+    interacted: false,
+    misspelling: null,
+    numRanks: params.get('num_ranks') || props.config.primary.numRanks,
+    query: params.get('query') || '',
+    sortType: '',
+    startRank: params.get('start_rank') || 1
+  };
+  /**
+   * Dummy, empty Funnelback response object for initial state.
+   */
+
+  const initialResponse = Object.freeze({
+    bestBets: [],
+    facets: [],
+    results: [],
+    spell: null,
+    summary: {
+      currEnd: 0,
+      currStart: 0,
+      numRanks: 0,
+      totalMatching: 0
+    }
+  });
+  const initialResponses = {
+    primary: props.config.primary.collections.map(collection => {
+      return {
+        label: collection.label,
+        collection: collection.collection,
+        placeholder: collection.placeholder,
+        response: initialResponse,
+        search: collection.search,
+        updating: false,
+        call: {
+          cancel: () => {}
+        }
+      };
+    }),
+    finders: props.config.finders.map(finder => {
+      return {
+        label: finder.label,
+        summariseAs: finder.summariseAs,
+        resultCard: finder.resultCard,
+        search: finder.search,
+        collection: finder.collection,
+        response: initialResponse,
+        updating: false,
+        call: {
+          cancel: () => {}
+        }
+      };
+    }),
+    nonpublic: props.config.nonpublic.map(collection => {
+      return {
+        label: collection.label,
+        collection: collection.collection,
+        response: initialResponse,
+        search: collection.search,
+        updating: false,
+        call: {
+          cancel: () => {}
+        }
+      };
+    })
+  }; // eslint-disable-next-line no-unused-vars
+
+  const [response, setResponse] = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])(0); // State objects for the Funnelback query and response
+
+  const [query, setQuery] = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])(initialQuery);
+  const [fbResponses, setFbResponses] = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])(initialResponses); // useEffect doesn't deep inspect objects, so we need an additional, plain
+  // state variable to indicate that the query state has changed and the
+  // component should render
+  // the value isn't important, it's just easy to toggle a bool back and forth
+
+  const [update, setUpdate] = Object(react__WEBPACK_IMPORTED_MODULE_14__["useState"])(false); // Retrieve Funnelback results
+
+  Object(react__WEBPACK_IMPORTED_MODULE_14__["useEffect"])(() => {
+    // preserve the state
+    replaceHistory(query.query, query.startRank, query.collection, props.config.primary.collections[0].collection);
+
+    if (query.query.length > 0) {
+      query.interacted && props.element.querySelector('.search__results') && zenscroll__WEBPACK_IMPORTED_MODULE_15___default.a.center(props.element.querySelector('.search__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
+      props.config.primary.collections.forEach((collection, i) => {
+        fbResponses.primary[i].call.cancel();
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_8__["find"])(collection.collection, [], query.query, '', query.startRank, query.numRanks, []),
+              newResponses = fbResponses;
+        newResponses.primary[i].call = {
+          cancel: () => {
+            requestToken.cancel();
+          }
+        };
+        newResponses.primary[i].updating = true;
+        setFbResponses(newResponses);
+        setResponse(Math.random());
+        request.then(data => {
+          const responses = fbResponses;
+          responses.primary[i].response = data;
+          responses.primary[i].updating = false;
+
+          if (newResponses.primary[i].collection === query.collection && data.spell && data.summary.totalMatching === 0) {
+            const newQueryText = data.spell.text.split(/\|/)[0].trim(),
+                  newQuery = query;
+            newQuery.misspelling = query.query;
+            newQuery.query = newQueryText;
+            newQuery.startRank = 1;
+            setQuery(newQuery);
+            setUpdate(!update);
+          }
+
+          setFbResponses(responses);
+          setResponse(Math.random());
+        }).catch(() => {
+          const responses = fbResponses;
+          responses.primary[i].response = initialResponse;
+          responses.primary[i].updating = false;
+          setFbResponses(responses);
+          setResponse(Math.random());
+        });
+      });
+      props.config.finders.forEach((finder, i) => {
+        fbResponses.finders[i].call.cancel();
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_8__["find"])(finder.collection, [], query.query, '', 1, finder.numRanks, []),
+              newResponses = fbResponses;
+        newResponses.finders[i].call = {
+          cancel: () => {
+            requestToken.cancel();
+          }
+        };
+        newResponses.finders[i].updating = true;
+        setFbResponses(newResponses);
+        setResponse(Math.random());
+        request.then(data => {
+          const responses = fbResponses;
+          responses.finders[i].response = data;
+          responses.finders[i].updating = false;
+          setFbResponses(responses);
+          setResponse(Math.random());
+        }).then(() => {
+          props.element.querySelector('.tabs__links') && query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_15___default.a.center(props.element.querySelector('.tabs__links'), scrollDuration);
+        }).catch(() => {
+          const responses = fbResponses;
+          responses.finders[i].response = initialResponse;
+          responses.finders[i].updating = false;
+          setFbResponses(responses);
+          setResponse(Math.random());
+        });
+      });
+      props.config.nonpublic.forEach((nonpublic, i) => {
+        fbResponses.nonpublic[i].call.cancel();
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_8__["find"])(nonpublic.collection, [], query.query, '', 1, 0, []),
+              newResponses = fbResponses;
+        newResponses.nonpublic[i].call = {
+          cancel: () => {
+            requestToken.cancel();
+          }
+        };
+        newResponses.nonpublic[i].updating = true;
+        setFbResponses(newResponses);
+        setResponse(Math.random());
+        request.then(data => {
+          const responses = fbResponses;
+          responses.nonpublic[i].response = data;
+          responses.nonpublic[i].updating = false;
+          setFbResponses(responses);
+          setResponse(Math.random());
+        }).catch(() => {
+          const responses = fbResponses;
+          responses.nonpublic[i].response = initialResponse;
+          responses.nonpublic[i].updating = false;
+          setFbResponses(responses);
+          setResponse(Math.random());
+        });
+      });
+    } else {
+      setFbResponses(initialResponses);
+    } // eslint-disable-next-line react-hooks/exhaustive-deps
+
+  }, [update]); // update props so child components can update the query
+
+  const updater = {
+    query: newQuery => setQuery(newQuery),
+    results: newUpdate => setUpdate(newUpdate),
+    updateState: update
+  };
+  const queryElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_components_main_query_search_query__WEBPACK_IMPORTED_MODULE_13__["default"], {
+    config: props.config,
+    query: query,
+    update: updater,
+    primary: fbResponses.primary.filter(collection => collection.collection === query.collection),
+    updating: fbResponses.primary[0].updating
+  });
+  const otherSites = query.query && !fbResponses.primary[0].updating && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_components_main_results_search_othersites__WEBPACK_IMPORTED_MODULE_11__["default"], {
+    query: query,
+    collections: fbResponses.primary.filter(collection => collection.collection !== query.collection),
+    nonpublic: fbResponses.nonpublic
+  });
+  const bestBets = query.query && !fbResponses.primary[0].updating && fbResponses.primary[0].response && fbResponses.primary[0].response.bestBets && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_components_main_results_search_bestbets__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    bestbets: fbResponses.primary[0].response.bestBets
+  });
+  const results = query.query && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement(_components_main_results_search_results__WEBPACK_IMPORTED_MODULE_16__["default"], {
+    config: props.config,
+    query: query,
+    update: updater,
+    primary: fbResponses.primary.filter(collection => collection.collection === query.collection),
+    finders: fbResponses.finders,
+    element: props.element
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_14___default.a.createElement("form", {
+    className: "search-form",
+    onSubmit: e => {
+      e.preventDefault();
+    }
+  }, queryElement, bestBets, results, otherSites);
+}
+
+Search.propTypes = {
+  config: prop_types__WEBPACK_IMPORTED_MODULE_12___default.a.object,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_12___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (Search);
 
 /***/ }),
 
@@ -1892,8 +3381,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _patterns_search_search_inline__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/search/search--inline */ "./src/patterns/search/search--inline.js");
-/* harmony import */ var _patterns_finder_funnelback__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/finder/funnelback */ "./src/patterns/finder/funnelback.js");
+/* harmony import */ var _patterns_search_search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/search/search */ "./src/patterns/search/search.js");
+/* harmony import */ var _patterns_search_search_inline__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/search/search--inline */ "./src/patterns/search/search--inline.js");
+/* harmony import */ var _patterns_finder_funnelback__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/finder/funnelback */ "./src/patterns/finder/funnelback.js");
 
 
 /**
@@ -1903,7 +3393,7 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2020
  */
 
- // import Search from './patterns/search/search';
+
 
 
 
@@ -1911,17 +3401,19 @@ document.addEventListener('DOMContentLoaded', () => {
   if (/(Trident|MSIE)/.test(navigator.userAgent)) {
     return;
   } else {
-    // const search = document.querySelector('.wrapper--search'),
-    const inlineSearch = document.querySelector('.global-header__search'); // search &&
-    //     searchConfig(search.dataset.config).then((config) => {
-    //         render(<Search config={config} element={search} />, search);
-    //     });
-
-    inlineSearch && Object(_patterns_finder_funnelback__WEBPACK_IMPORTED_MODULE_3__["finderConfig"])(inlineSearch.dataset.config).then(config => {
-      Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patterns_search_search_inline__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    const search = document.querySelector('.wrapper--search'),
+          inlineSearch = document.querySelector('.global-header__search');
+    inlineSearch && Object(_patterns_finder_funnelback__WEBPACK_IMPORTED_MODULE_4__["finderConfig"])(inlineSearch.dataset.config).then(config => {
+      Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patterns_search_search_inline__WEBPACK_IMPORTED_MODULE_3__["default"], {
         config: config,
         element: inlineSearch
       }), inlineSearch);
+    });
+    search && Object(_patterns_finder_funnelback__WEBPACK_IMPORTED_MODULE_4__["finderConfig"])(search.dataset.config).then(config => {
+      Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patterns_search_search__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        config: config,
+        element: search
+      }), search);
     });
   }
 });
