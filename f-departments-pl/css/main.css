@@ -71957,6 +71957,12 @@ button
     }
 }
 
+@media (max-width: 432px) {
+    .department__additional-info {
+        padding: 0;
+    }
+}
+
 .department__additional-info h2 {
     text-align: center;
 }
@@ -71972,20 +71978,6 @@ button
 
 .department .tabs__panel:not([hidden]) {
     padding: 0;
-}
-
-@media (max-width: 432px) {
-    .department .tabs__panel:not([hidden]) .tabs__panel__content {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 432px) and (min-width: 901px) {
-    .department .tabs__panel:not([hidden]) .tabs__panel__content {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
 }
 
 .department .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
