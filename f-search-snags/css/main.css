@@ -47000,7 +47000,9 @@ article .link-copy {
 }
 
 .search .search__results__more {
-    max-width: unset;
+    max-width: calc( 55ch + 10rem + 1rem);
+    margin-left: auto;
+    margin-right: auto;
     text-align: right;
 }
 
