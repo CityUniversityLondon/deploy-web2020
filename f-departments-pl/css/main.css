@@ -20873,12 +20873,17 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card--casestudy:not(.card--casestudy--alternative) .card__details__text {
-    align-self: center;
     padding-top: 0.5rem;
 }
 
 .card--casestudy:not(.card--casestudy--alternative) .card__thumbnail {
     overflow: hidden;
+}
+
+@media (max-width: 1023px) {
+    .card--casestudy:not(.card--casestudy--alternative) .card__thumbnail {
+        padding-left: 1rem;
+    }
 }
 
 @media (max-width: 899px) {
