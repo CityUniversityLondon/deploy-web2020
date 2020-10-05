@@ -21707,17 +21707,9 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-@media (max-width: 1023px) {
-    .related-content .card--profile .card__thumbnail + .card__details__text {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-@media (min-width: 1024px) {
-    .related-content .card--profile .card__thumbnail + .card__details__text {
-        padding-top: 0;
-    }
+.related-content .card--profile .card__thumbnail {
+    padding-left: 1rem;
+    padding-top: 1rem;
 }
 
 .finder__results .card--profile .card__details,
