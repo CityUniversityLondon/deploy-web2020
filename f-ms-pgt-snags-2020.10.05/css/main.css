@@ -62239,6 +62239,7 @@ main > .news {
 .wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper .ksp__items {
     max-width: none;
     margin: 0;
+    display: flex;
 }
 
 .wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper .ksp__items .ksp__item__icon {
@@ -62247,6 +62248,7 @@ main > .news {
 
 .wrapper--course--pgt__usp .course--pgt__usp .course--pgt__usp__content .statistics-block .content-wrapper .ksp__items .ksp__item {
     list-style: none;
+    flex: 1;
 }
 
 .course--pgt__our-students {
@@ -62632,6 +62634,19 @@ main > .news {
     color: #ffffff;
 }
 
+.course--pgt__contact-cards .footer-cards .related-content {
+    justify-content: left;
+}
+
+.course--pgt__contact-cards .footer-cards .related-content .card.card--contact .card__details__text {
+    padding-left: 0;
+}
+
+.course--pgt__contact-cards .footer-cards .related-content .card.card--contact + .card--contact {
+    padding-top: 0;
+    border-top: 0;
+}
+
 .course--pgt__related-courses {
     padding: 1rem 0 1rem;
 }
@@ -62689,7 +62704,19 @@ main > .news {
 .course--pgt .wrapper--dropdown-filter__select {
     background-color: #b91924;
     color: #ffffff;
-    padding: 1rem;
+    padding: 1rem 1rem 0;
+}
+
+.course--pgt .wrapper--dropdown-filter__select:after {
+    content: '';
+    width: 0;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1rem solid #b91924;
+    margin: auto;
+    display: block;
+    top: 1rem;
+    position: relative;
 }
 
 .course--pgt__tabs {
