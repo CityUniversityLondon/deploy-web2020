@@ -42945,14 +42945,6 @@ blockquote footer cite {
     margin-top: 1rem;
 }
 
-.related-links--with-images__wrapper .related-links--with-images__1-column .related-links--with-images {
-    margin-bottom: 1rem;
-}
-
-.related-links--with-images__wrapper .related-links--with-images__1-column .related-links--with-images:last-child {
-    margin-bottom: 0;
-}
-
 .related-links--with-images__wrapper .related-links--with-images {
     padding: 0.5rem;
     flex-basis: 50%;
