@@ -42945,17 +42945,17 @@ blockquote footer cite {
     margin-top: 1rem;
 }
 
-.related-links--with-images__wrapper .related-links--with-images {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    flex-basis: 50%;
+.related-links--with-images__wrapper .related-links--with-images__1-column .related-links--with-images {
+    margin-bottom: 1rem;
 }
 
-@media (min-width: 901px) {
-    .related-links--with-images__wrapper .related-links--with-images {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
+.related-links--with-images__wrapper .related-links--with-images__1-column .related-links--with-images:last-child {
+    margin-bottom: 0;
+}
+
+.related-links--with-images__wrapper .related-links--with-images {
+    padding: 0.5rem;
+    flex-basis: 50%;
 }
 
 @media (max-width: 767px) {
