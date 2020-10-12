@@ -57981,6 +57981,12 @@ main .home .banner--home .banner__video {
     }
 }
 
+@media (max-width: 1279px) {
+    main .home .banner--home .banner__intro .cta-block__cta {
+        margin-bottom: 1rem;
+    }
+}
+
 @media (min-width: 1024px) and (max-width: 1279px) {
     main .home .banner--home .banner__intro {
         grid-column: 2/11;
