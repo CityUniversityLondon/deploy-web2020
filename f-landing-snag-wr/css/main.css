@@ -53318,6 +53318,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
         margin-top: 0;
     }
     .promo-area__wrap .promo-area.layout__left--split .promo-area__content .promo-area__image--mobile, .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__image--mobile {
+        text-align: center;
         display: inline;
     }
 }
