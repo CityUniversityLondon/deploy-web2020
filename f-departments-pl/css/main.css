@@ -71985,3 +71985,16 @@ button
 .department .tabs .show-more .show-more__content[data-hidden='true']::after {
     background-image: linear-gradient(to bottom, rgba(242, 242, 242, 0), #f2f2f2 90%);
 }
+
+.department .tabs--accordion .card__anchor,
+.department .tabs .card__anchor {
+    border-color: #d8d8d8;
+}
+
+@media (hover: hover) {
+    .department .tabs--accordion .card__anchor:hover,
+    .department .tabs .card__anchor:hover {
+        background-color: #ffffff;
+        border-color: #ffffff;
+    }
+}
