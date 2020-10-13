@@ -46669,12 +46669,6 @@ article .link-copy {
     padding-top: 1rem;
 }
 
-.search .search__results__list .card .card__anchor,
-.search .search__bestbets__list .card .card__anchor {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-
 .search .search__results__list .card .card__anchor .card__type,
 .search .search__bestbets__list .card .card__anchor .card__type {
     color: #0c0c0e;
@@ -46781,17 +46775,23 @@ article .link-copy {
     }
 }
 
-@media (max-width: 432px) {
-    .search .search__results__list .card .card__anchor,
-    .search .search__bestbets__list .card .card__anchor {
-        flex-direction: column-reverse;
-    }
-}
-
 .search .search__results__list .card + .card,
 .search .search__bestbets__list .card + .card {
     border-top: 0.0625rem solid #d8d8d8;
     padding-top: 1rem;
+}
+
+.search .search__results__list .card .card--profile--thumbnailAvailable,
+.search .search__bestbets__list .card .card--profile--thumbnailAvailable {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+@media (max-width: 432px) {
+    .search .search__results__list .card .card--profile--thumbnailAvailable,
+    .search .search__bestbets__list .card .card--profile--thumbnailAvailable {
+        flex-direction: column-reverse;
+    }
 }
 
 @media (min-width: 1025px) {
