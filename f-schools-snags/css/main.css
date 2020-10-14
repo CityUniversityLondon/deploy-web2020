@@ -70947,6 +70947,12 @@ button
     }
 }
 
+@media (hover: hover) {
+    .school__content__cta .school__cta-outlined-light-bg:hover {
+        color: #0c0c0e;
+    }
+}
+
 @media (max-width: 767px) {
     .school__content__cta .school__cta-outlined-light-bg {
         display: flex;
