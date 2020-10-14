@@ -70774,7 +70774,7 @@ button
     color: #0c0c0e;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .school__content__cta {
         margin-bottom: 2rem;
     }
@@ -70793,7 +70793,7 @@ button
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-height: 3.5rem;
+        min-height: 4.75rem;
     }
 }
 
@@ -70809,7 +70809,7 @@ button
     text-align: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .school__content__cta ul li p {
         max-width: initial;
     }
@@ -71004,7 +71004,6 @@ button
     width: 10%;
     left: 45%;
     border-bottom: 0.25rem solid #d61726;
-    bottom: -0.5rem;
 }
 
 .school__statistic .statistics-block .ksp__items {
