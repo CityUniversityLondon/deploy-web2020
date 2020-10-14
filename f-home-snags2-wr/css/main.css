@@ -53323,6 +53323,12 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
+@media (max-width: 767px) and (max-width: 767px) {
+    .promo-area__wrap .promo-area.layout__left--split .promo-area__content .promo-area__image--mobile img, .promo-area__wrap .promo-area.layout__right--split .promo-area__content .promo-area__image--mobile img {
+        width: 100%;
+    }
+}
+
 @media (max-width: 767px) {
     .promo-area__wrap .promo-area.layout__left--split .promo-area__image, .promo-area__wrap .promo-area.layout__right--split .promo-area__image {
         display: none;
