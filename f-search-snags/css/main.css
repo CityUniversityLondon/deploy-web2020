@@ -46766,6 +46766,11 @@ article .link-copy {
     }
 }
 
+.search .search__results__list .card .card__anchor .card__details__text,
+.search .search__bestbets__list .card .card__anchor .card__details__text {
+    padding-bottom: 1rem;
+}
+
 @media (hover: hover) {
     .search .search__results__list .card .card__anchor:hover .card__heading,
     .search .search__bestbets__list .card .card__anchor:hover .card__heading {
