@@ -70972,6 +70972,7 @@ button
     width: 10%;
     left: 45%;
     border-bottom: 0.25rem solid #d61726;
+    bottom: 0;
 }
 
 .school__statistic .school__statistic--wrapper {
@@ -70981,6 +70982,12 @@ button
 .school__statistic .statistics-block .ksp__items {
     margin-left: 0;
     margin-right: 0;
+}
+
+@media (max-width: 767px) {
+    .school__statistic .statistics-block {
+        padding-top: 0;
+    }
 }
 
 .school__statistic .ksp__items {
