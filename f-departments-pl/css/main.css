@@ -20847,13 +20847,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     flex-wrap: nowrap;
 }
 
-@media (max-width: 432px) {
+@media (max-width: 767px) {
     .card--casestudy:not(.card--casestudy--alternative) .card__details {
         flex-direction: column;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .card--casestudy:not(.card--casestudy--alternative) .card__details {
         flex-direction: row;
     }
@@ -21695,13 +21695,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     flex-wrap: nowrap;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .related-content .card--profile .card__details {
         flex-direction: column;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .related-content .card--profile .card__details {
         flex-direction: row;
     }
