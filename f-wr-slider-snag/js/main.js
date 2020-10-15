@@ -5442,8 +5442,7 @@ function launchDot(slider) {
       dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, 'false');
     }
 
-    dot.addEventListener('click', function () {//dotEvent(this, slider, wrapper);
-    });
+    dot.addEventListener('click', () => handleDotClick(slider, controlsWrapper, i), true);
     controlsWrapper.appendChild(dot);
   }); // Accessiblity wait for key press anywhere within slider
   // add something
@@ -5453,6 +5452,139 @@ function launchDot(slider) {
   controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'Slider navigation'); // Move controls outside of slider UL / Why the if statement? CHECK IF THIS IS NEEDED @WR
 
   slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper);
+}
+
+function handleDotClick(slider, controls, selection) {
+  const slides = Array.from(slider.children),
+        dotButtons = Array.from(controls.children);
+  dotButtons.forEach((dot, i) => {
+    dot.setAttribute('disabled', true);
+  });
+  slides.forEach((slide, i) => {
+    if (i === selection) {
+      slide.dataset.sliderposition = 0;
+      slide.dataset.smallposition = 0;
+      slide.addEventListener('transitionend', function focusNext() {
+        slide.removeEventListener('transitionend', focusNext, true);
+        slide.focus();
+        updateDotButtonState(i, dotButtons);
+      }, true);
+    } else if (i > selection) {
+      //
+      console.log("greater");
+      slide.dataset.sliderposition = 1;
+      slide.dataset.smallposition = 1;
+    } else {
+      //
+      console.log("less");
+      slide.dataset.sliderposition = -1;
+      slide.dataset.smallposition = -1;
+    }
+  });
+  /*
+     // NEXT
+     if (direction === 1) {
+         const next = current.nextElementSibling;
+          if (next) {
+             // Disable if everyothing other than current item is true
+             nextButton.setAttribute('disabled', true);
+             prevButton.setAttribute('disabled', true);
+              // Move focus to next slide, wait for transition to finish
+             next.addEventListener(
+                 'transitionend',
+                 function focusNext() {
+                     next.removeEventListener('transitionend', focusNext, true);
+                     next.focus();
+                     updateButtonState(slider, controls);
+                 },
+                 true
+             );
+              // Hide current slide once transition has finished
+             current.addEventListener(
+                 'transitionend',
+                 function hideCurrent() {
+                     current.removeEventListener(
+                         'transitionend',
+                         hideCurrent,
+                         true
+                     );
+                     current.dataset.hidden = true;
+                     current.dataset.smallhidden = true;
+                 },
+                 true
+             );
+              // MOVE POSITION OF CURRENT SLIDE to PREVIOUS
+             current.dataset.sliderposition = -1;
+             current.dataset.smallposition = -1;
+             // UPDATE ACTIVE SLIDE
+             next.dataset.hidden = false;
+             next.dataset.sliderposition = 0;
+             next.dataset.smallposition = 0;
+             // CHANGE CURRENT PAGE NUMBER TEXT
+             currentPage.innerText = startDates.indexOf(next) + 1;
+         }
+     } else {
+         // PREVIOUS
+         const previous = current.previousElementSibling;
+          if (previous) {
+             nextButton.setAttribute('disabled', true);
+             prevButton.setAttribute('disabled', true);
+              previous.addEventListener(
+                 'transitionend',
+                 function focusPrevious() {
+                     previous.removeEventListener(
+                         'transitionend',
+                         focusPrevious,
+                         true
+                     );
+                     previous.focus();
+                     updateButtonState(slider, controls);
+                 },
+                 true
+             );
+              current.addEventListener(
+                 'transitionend',
+                 function hideCurrent() {
+                     current.removeEventListener(
+                         'transitionend',
+                         hideCurrent,
+                         true
+                     );
+                     current.dataset.hidden = true;
+                     current.dataset.smallhidden = true;
+                 },
+                 true
+             );
+              current.dataset.sliderposition = 1;
+             current.dataset.smallposition = 1;
+             previous.dataset.hidden = false;
+             previous.dataset.smallhidden = false;
+             previous.dataset.sliderposition = 0;
+             previous.dataset.smallposition = 0;
+             currentPage.innerText = startDates.indexOf(previous) + 1;
+         }
+     }
+     */
+}
+/**
+ * @param  {HTMLElement} slider - The slider element.
+ * @param  {HTMLElement} controls - The slider controls element.
+ */
+
+
+function updateDotButtonState(active, dotButtons) {
+  dotButtons.forEach((dot, i) => {
+    if (i === active) {
+      dot.setAttribute('disabled', true);
+    } else {
+      dot.removeAttribute('disabled');
+    }
+  }); // REMOVE NEXT OR PREVIOUS BUTTONS IF ON FIRST OR LAST CARD
+
+  const nextButton = controls.querySelector(".".concat(className, "__controls__next")),
+        prevButton = controls.querySelector(".".concat(className, "__controls__prev"));
+  slider.querySelector('[data-sliderposition="-1"]') ? prevButton.removeAttribute('disabled') : prevButton.setAttribute('disabled', true);
+  slider.querySelector('[data-sliderposition="1"]') ? nextButton.removeAttribute('disabled') : nextButton.setAttribute('disabled', true);
 }
 /**
  * Transform an element with the slider class name into a slider section controlled by arrows.
