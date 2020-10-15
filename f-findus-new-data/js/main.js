@@ -567,31 +567,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/animation/content-separator/content-separator */ "./src/patterns/animation/content-separator/content-separator.js");
 /* harmony import */ var _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./patterns/animation/content-slide-up/content-slide-up */ "./src/patterns/animation/content-slide-up/content-slide-up.js");
 /* harmony import */ var _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./patterns/dropdown-filter/dropdown-filter */ "./src/patterns/dropdown-filter/dropdown-filter.js");
-/* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
-/* harmony import */ var _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/finder/finder */ "./src/patterns/finder/finder.js");
-/* harmony import */ var _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/finder/finder-mini */ "./src/patterns/finder/finder-mini.js");
-/* harmony import */ var _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/image-carousel/default-carousel/default-carousel */ "./src/patterns/image-carousel/default-carousel/default-carousel.js");
-/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
+/* harmony import */ var _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./patterns/event-form/event-form */ "./src/patterns/event-form/event-form.js");
+/* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
+/* harmony import */ var _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/image-carousel/default-carousel/default-carousel */ "./src/patterns/image-carousel/default-carousel/default-carousel.js");
+/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
+/* harmony import */ var _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/key-information/key-information--lifelong-learning */ "./src/patterns/key-information/key-information--lifelong-learning.js");
 /* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
-/* harmony import */ var _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/load-more/load-more */ "./src/patterns/load-more/load-more.js");
-/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
-/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
-/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
-/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
-/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
-/* harmony import */ var _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/animation/particle/particle */ "./src/patterns/animation/particle/particle.js");
-/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
-/* harmony import */ var _how_to_apply_research__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./how-to-apply--research */ "./src/how-to-apply--research.js");
-/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
-/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
-/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/slider-responsive/slider-responsive */ "./src/patterns/slider-responsive/slider-responsive.js");
-/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/find-us/find-us */ "./src/patterns/find-us/find-us.js");
-/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
-/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
-/* harmony import */ var _patterns_video_video__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./patterns/video/video */ "./src/patterns/video/video.js");
+/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
+/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
+/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
+/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
+/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
+/* harmony import */ var _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/animation/particle/particle */ "./src/patterns/animation/particle/particle.js");
+/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
+/* harmony import */ var _how_to_apply_research__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./how-to-apply--research */ "./src/how-to-apply--research.js");
+/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
+/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
+/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/find-us/find-us */ "./src/patterns/find-us/find-us.js");
+/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
+/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
+/* harmony import */ var _patterns_video_video__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/video/video */ "./src/patterns/video/video.js");
 
 
 /**
@@ -635,9 +633,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_finder_finder__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_finder_finder_mini__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_load_more_load_more__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_slider_responsive_slider_responsive__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_video_video__WEBPACK_IMPORTED_MODULE_33__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_30__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_video_video__WEBPACK_IMPORTED_MODULE_31__["default"]]);
 
 /***/ }),
 
@@ -2098,6 +2094,145 @@ function selectChange(e) {
 
 /***/ }),
 
+/***/ "./src/patterns/event-form/event-form.js":
+/*!***********************************************!*\
+  !*** ./src/patterns/event-form/event-form.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+
+
+/**
+ * @module patterns/event-form/event-form
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+
+const oneSecond = 1000,
+      tenthOfASecond = 100,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
+      scrollTo = true;
+const className = 'wrapper--event__info--formassembly';
+
+function calculateFormBodyHeight(form) {
+  form.dataset.open = true;
+  const height = form.offsetHeight + 'px';
+  form.dataset.open = false;
+  return height;
+}
+
+function toggleForm(form, button, buttonText, closeButtonText) {
+  const opening = !Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(form.dataset.open),
+        doneTarget = opening ? form.querySelector('.event__formassembly__form__heading') : button;
+
+  if (opening) {
+    // Calclulate and save how big we're transitioning to
+    const formHeight = calculateFormBodyHeight(form);
+    form.addEventListener('transitionend', function openForm() {
+      form.removeEventListener('transitionend', openForm, true);
+      form.style = null;
+
+      if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_1__["verticallyInWindow"])(doneTarget)) {
+        zenscroll__WEBPACK_IMPORTED_MODULE_0___default.a.to(doneTarget, scrollDuration);
+      }
+    }, true); // Starting height is 0
+
+    form.style.height = '0px';
+    form.dataset.open = true; // setTimeout lets the DOM recalculate before we continue, so the transition will fire
+
+    setTimeout(() => {
+      form.style.height = formHeight;
+    }, tenthOfASecond);
+    button.querySelector('span').innerText = closeButtonText;
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, true);
+    form.focus();
+  } else {
+    // Starting height is the current height
+    form.style.height = form.offsetHeight + 'px';
+    form.addEventListener('transitionend', function closeForm() {
+      form.removeEventListener('transitionend', closeForm, true);
+      form.style = null;
+      form.dataset.open = false;
+
+      if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_1__["verticallyInWindow"])(doneTarget)) {
+        zenscroll__WEBPACK_IMPORTED_MODULE_0___default.a.to(doneTarget, scrollDuration);
+      }
+    }, true); // setTimeout lets the DOM recalculate before we continue, so the transition will fire
+
+    setTimeout(() => {
+      form.style.height = '0px';
+    }, tenthOfASecond);
+    button.querySelector('span').innerText = buttonText;
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, false);
+    button.focus();
+  }
+}
+
+function launchFormAssemblyForm(eventInfo) {
+  const link = eventInfo.querySelector('.event__formassembly__button'),
+        form = eventInfo.querySelector('.event__formassembly__form'),
+        formActual = eventInfo.querySelector('.event__formassembly__form > .formassembly-form'),
+        buttonText = link.innerText,
+        button = document.createElement('button'),
+        buttonSpan = document.createElement('span'),
+        closeButtonText = 'Close registration form',
+        closeButton = document.createElement('button'),
+        closeButtonSpan = document.createElement('span'),
+        closeButtonIcon = document.createElement('span'),
+        closeButtonEnd = document.createElement('button'),
+        closeButtonEndSpan = document.createElement('span'),
+        closeButtonEndIcon = document.createElement('span'),
+        heading = eventInfo.querySelector('.event__formassembly__form__heading'),
+        wrapperHeading = document.createElement('div');
+  buttonSpan.appendChild(document.createTextNode(buttonText));
+  button.setAttribute('type', 'button');
+  button.className = 'event__formassembly__button';
+  button.appendChild(buttonSpan);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, false);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].owns, 'event__formassembly__form');
+  closeButtonSpan.appendChild(document.createTextNode(closeButtonText));
+  closeButtonSpan.className = 'event__formassembly__form__close-button__text';
+  closeButtonIcon.className = 'fa fas fa-fw fa-times';
+  closeButton.setAttribute('type', 'button');
+  closeButton.className = 'event__formassembly__form__close-button';
+  closeButton.appendChild(closeButtonIcon);
+  closeButton.appendChild(closeButtonSpan);
+  closeButtonEndSpan.appendChild(document.createTextNode(closeButtonText));
+  closeButtonEndSpan.className = 'event__formassembly__form__close-button__text';
+  closeButtonEndIcon.className = 'fa fas fa-fw fa-times';
+  closeButtonEnd.setAttribute('type', 'button');
+  closeButtonEnd.className = 'event__formassembly__form__close-button';
+  closeButtonEnd.appendChild(closeButtonEndIcon);
+  closeButtonEnd.appendChild(closeButtonEndSpan);
+  button.addEventListener('click', () => toggleForm(form, button, buttonText, closeButtonText), true);
+  closeButton.addEventListener('click', () => toggleForm(form, button, buttonText, closeButtonText), true);
+  closeButtonEnd.addEventListener('click', () => toggleForm(form, button, buttonText, closeButtonText), true);
+  form.setAttribute('tabindex', -1);
+  form.dataset.open = false;
+  wrapperHeading.className = 'wrapper--event__formassembly__form__heading';
+  wrapperHeading.appendChild(heading);
+  wrapperHeading.appendChild(closeButton);
+  form.insertBefore(wrapperHeading, formActual);
+  form.appendChild(closeButtonEnd);
+  link.parentNode.replaceChild(button, link);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchFormAssemblyForm,
+  launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
 /***/ "./src/patterns/feedback/feedback.js":
 /*!*******************************************!*\
   !*** ./src/patterns/feedback/feedback.js ***!
@@ -3085,3334 +3220,6 @@ function createMap(mapContainer) {
 
 /***/ }),
 
-/***/ "./src/patterns/finder/components/cards/finder__results__accommodation.js":
-/*!********************************************************************************!*\
-  !*** ./src/patterns/finder/components/cards/finder__results__accommodation.js ***!
-  \********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
-
-
-
-
-
-
-/**
- * @module patterns/finder/components/cards/finder__results__accommodation
- * @author Web Development
- * @copyright City, University of London 2020
- */
-
-
-
-/**
- * Render a Funnelback result as an accommodation card.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__results__accommodation(props) {
-  const mph = 60,
-        calculateTime = minutes => Math.floor(minutes / mph) > 0 ? Math.floor(minutes / mph) + ' hour ' + minutes % mph : minutes,
-        thumbnail = props.details.metaData.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
-    src: props.details.metaData.thumbnail,
-    alt: ""
-  }),
-        level = props.details.metaData.level && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "fas fa-fw fa-graduation-cap icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "sr-only"
-  }, "Level:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').join(' or '))),
-        features = Object.keys(props.details.metaData).filter(meta => ['accessible', 'catered', 'ensuite'].includes(meta) && props.details.metaData[meta] === 'Yes').map(meta => meta.replace(/ensuite/, 'en suite')).sort().join(', '),
-        type = props.details.metaData.type && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "fas fa-fw fa-building icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "sr-only"
-  }, "Type:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.type.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.type).split('|').slice(0, -1).join(', ') + ' or ' + Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.type).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_5__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.type).split('|').join(' or '), features && ' (' + features + ')')),
-        price = props.details.metaData.price && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "fas fa-fw fa-pound-sign icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "sr-only"
-  }, "Price:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, props.details.metaData.price, " (", props.details.metaData.deposit, " deposit)")),
-        transport = props.details.metaData.transport && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, ' ', "(", calculateTime(props.details.metaData.transport), " minutes by public transport)"),
-        distance = props.details.metaData.walk && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "fas fa-fw fa-walking icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "sr-only"
-  }, "Distance to Northampton Square campus:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, calculateTime(props.details.metaData.walk), " minutes walk to campus", transport));
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--accommodation"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
-  }, thumbnail, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "finder__results__card__details"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.details.title), distance, type, price, level)));
-}
-
-finder__results__accommodation.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__accommodation);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/cards/finder__results__bestbet.js":
-/*!**************************************************************************!*\
-  !*** ./src/patterns/finder/components/cards/finder__results__bestbet.js ***!
-  \**************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/**
- * @module patterns/finder/components/cards/finder__results__bestbet
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-/**
- * Render a Funnelback best bet as a results card.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__results__bestbet(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "finder__results__card finder__results__bestbet"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "finder__results__card__details"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__description"
-  }, props.details.description))));
-}
-
-finder__results__bestbet.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__bestbet);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/cards/finder__results__card.js":
-/*!***********************************************************************!*\
-  !*** ./src/patterns/finder/components/cards/finder__results__card.js ***!
-  \***********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _finder_results_casestudy__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./finder__results__casestudy */ "./src/patterns/finder/components/cards/finder__results__casestudy.js");
-/* harmony import */ var _finder_results_centre__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__results__centre */ "./src/patterns/finder/components/cards/finder__results__centre.js");
-/* harmony import */ var _finder_results_contact__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__results__contact */ "./src/patterns/finder/components/cards/finder__results__contact.js");
-/* harmony import */ var _finder_results_course__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__results__course */ "./src/patterns/finder/components/cards/finder__results__course.js");
-/* harmony import */ var _finder_results_funding__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__results__funding */ "./src/patterns/finder/components/cards/finder__results__funding.js");
-/* harmony import */ var _finder_results_generic__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__results__generic */ "./src/patterns/finder/components/cards/finder__results__generic.js");
-/* harmony import */ var _finder_results_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./finder__results__module */ "./src/patterns/finder/components/cards/finder__results__module.js");
-/* harmony import */ var _finder_results_news__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./finder__results__news */ "./src/patterns/finder/components/cards/finder__results__news.js");
-/* harmony import */ var _finder_results_profile__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./finder__results__profile */ "./src/patterns/finder/components/cards/finder__results__profile.js");
-/* harmony import */ var _finder_results_accommodation__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./finder__results__accommodation */ "./src/patterns/finder/components/cards/finder__results__accommodation.js");
-
-
-/**
- * @module patterns/finder/components/cards/finder__results__card
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * Render a Funnelback result as the appropriate card type.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__results__course(props) {
-  switch (props.type) {
-    case 'accommodation':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_accommodation__WEBPACK_IMPORTED_MODULE_11__["default"], {
-        details: props.details
-      });
-
-    case 'casestudy':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_casestudy__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        details: props.details
-      });
-
-    case 'centre':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_centre__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        details: props.details,
-        query: props.query
-      });
-
-    case 'contact':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_contact__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        details: props.details,
-        query: props.query
-      });
-
-    case 'course':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_course__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        details: props.details,
-        query: props.query
-      });
-
-    case 'funding':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_funding__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        details: props.details,
-        query: props.query
-      });
-
-    case 'module':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_module__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        details: props.details,
-        query: props.query
-      });
-
-    case 'news':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_news__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        details: props.details
-      });
-
-    case 'profile':
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_profile__WEBPACK_IMPORTED_MODULE_10__["default"], {
-        details: props.details
-      });
-
-    default:
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_generic__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        details: props.details
-      });
-  }
-}
-
-finder__results__course.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__course);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/cards/finder__results__casestudy.js":
-/*!****************************************************************************!*\
-  !*** ./src/patterns/finder/components/cards/finder__results__casestudy.js ***!
-  \****************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-
-/**
- * @module patterns/finder/components/cards/finder__results__casestudy
- * @author Web Development
- * @copyright City, University of London 2020
- */
-
-
-/**
- * Render a Funnelback result as a case study card.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__results__casestudy(props) {
-  const subtitle = props.details.metaData.status ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__description"
-  }, props.details.metaData.status) : props.details.metaData.type && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__description"
-  }, props.details.metaData.type),
-        school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-fw fa-university icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
-        department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-fw fa-building icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Department:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(', and '))),
-        centre = props.details.metaData.centre && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-fw fa-vial icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Research centre:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.centre.split('|').length > 2 ? props.details.metaData.centre.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.centre.split('|').slice(-1) : props.details.metaData.centre.split('|').join(', and ')));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--casestudy"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__results__card__details"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.details.title), subtitle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department, centre)));
-}
-
-finder__results__casestudy.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__casestudy);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/cards/finder__results__centre.js":
-/*!*************************************************************************!*\
-  !*** ./src/patterns/finder/components/cards/finder__results__centre.js ***!
-  \*************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
-
-
-
-
-/**
- * @module patterns/finder/components/cards/finder__results__centre
- * @author Web Development
- * @copyright City, University of London 2020
- */
-
-
-
-/**
- * Render a Funnelback result as a centre card.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__results__centre(props) {
-  const school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-fw fa-university icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
-        department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-fw fa-building icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Department:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(', and '))),
-        subject = props.details.metaData.related && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__description"
-  }, props.details.metaData.related.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.related).split('|').slice(0, -1).join(', ') + ' and ' + Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.related).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.related).split('|').join(' and '));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--centre"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__results__card__details"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.details.title), subject, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department)));
-}
-
-finder__results__centre.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__centre);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/cards/finder__results__contact.js":
-/*!**************************************************************************!*\
-  !*** ./src/patterns/finder/components/cards/finder__results__contact.js ***!
-  \**************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/**
- * @module patterns/finder/components/cards/finder__results__contact
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-/**
- * Render a Funnelback result as a contact card.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__results__contact(props) {
-  const department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fas fa-fw fa-building icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Department:"), " ", props.details.metaData.department),
-        jobtitle = props.details.metaData.jobtitle && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__description"
-  }, props.details.metaData.jobtitle),
-        email = props.details.metaData.email && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fas fa-fw fa-envelope icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Email:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: 'mailto:' + props.details.metaData.email
-  }, props.details.metaData.email)),
-        telephone = props.details.metaData.telephone && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fas fa-fw fa-phone fa-rotate-90 icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Telephone:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: 'tel:' + props.details.metaData.telephone
-  }, props.details.metaData.friendlytelephone)),
-        room = props.details.metaData.room && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fas fa-fw fa-door-open icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Room:"), " ", props.details.metaData.room);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--contact"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "finder__results__card__details"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.details.title), jobtitle, department, room, email, telephone));
-}
-
-finder__results__contact.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__contact);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/cards/finder__results__course.js":
-/*!*************************************************************************!*\
-  !*** ./src/patterns/finder/components/cards/finder__results__course.js ***!
-  \*************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../results/finder__results__highlight__query */ "./src/patterns/finder/components/results/finder__results__highlight__query.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
-
-
-
-
-/**
- * @module patterns/finder/components/cards/finder__results__course
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-
-/**
- * Render a Funnelback result as a course card.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__results__course(props) {
-  const subtitle = props.details.metaData.type || props.details.metaData.level || null,
-        award = props.details.metaData.qualification && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-fw fa-award icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Award", props.details.metaData.qualification.split('|').length > 1 && 's', ":"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.qualification.split('|').join(', '))),
-        duration = props.details.metaData.duration && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fal fa-fw fa-clock icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Duration:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.duration)),
-        method = props.details.metaData.method && (props.query.facets.method || props.query.query.indexOf(props.details.metaData.method) >= 0 || props.details.metaData.method.indexOf('Online') >= 0) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-fw fa-book-reader icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Method", props.details.metaData.method.split('|').length > 1 && 's', ' ', "of study:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, Object(_util__WEBPACK_IMPORTED_MODULE_4__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.method).split('|').join(', '))),
-        location = props.details.metaData.location && props.query.facets.location && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-fw fa-map-marker-alt icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Location:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.location)),
-        school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-fw fa-university icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school)),
-        clearing = props.details.metaData.clearing === '1' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "clearing_label"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Available in clearing")),
-        external = props.details.indexUrl.indexOf('cass.city.ac.uk') >= 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-external-link icon",
-    "aria-label": "(external link)"
-  })),
-        courseCode = props.details.metaData.code && (['Undergraduate degree', 'Foundation course', 'Postgraduate taught degree'].some(s => props.details.metaData.level.indexOf(s) >= 0) || props.query.query.indexOf(props.details.metaData.code) >= 0) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-fw fa-graduation-cap icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Course code", props.details.metaData.code.split('|').length > 1 && 's', ":"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.code.split('|').join('/'))) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--course"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
-  }, clearing, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__results__card__details"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.title, props.query.query) : props.details.title, external), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__description"
-  }, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(subtitle, props.query.query) : subtitle && subtitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.query.query ? Object(_results_finder_results_highlight_query__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.c, props.query.query) : props.details.metaData.c && props.details.metaData.c), school, award, duration, courseCode, method, location)));
-}
-
-finder__results__course.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__course);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/cards/finder__results__funding.js":
-/*!**************************************************************************!*\
-  !*** ./src/patterns/finder/components/cards/finder__results__funding.js ***!
-  \**************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
-
-
-
-
-/**
- * @module patterns/finder/components/cards/finder__results__funding
- * @author Web Development
- * @copyright City, University of London 2020
- */
-
-
-
-/**
- * Render a Funnelback result as a funding card.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__results__funding(props) {
-  const school = props.details.metaData.school && props.query.facets.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-fw fa-university icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', or ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', or '))),
-        hardship = props.details.metaData.hardship === '1' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "hardship-label"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Hardship funding")),
-        programme = props.details.metaData.level && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-fw fa-graduation-cap icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Funding for:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.level.split('|').length > 2 ? Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').slice(0, -1).join(', ') + ' or ' + Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').slice(-1) : Object(_util__WEBPACK_IMPORTED_MODULE_3__["uppercaseFirstLetterLowercaseRest"])(props.details.metaData.level).split('|').join(' or '))),
-        feestatus = props.details.metaData.feestatus && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "far fa-fw fa-globe-europe icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Fee status:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.feestatus.split('|').length > 2 ? props.details.metaData.feestatus.split('|').slice(0, -1).join(', ') + ' or ' + props.details.metaData.feestatus.split('|').slice(-1) : props.details.metaData.feestatus.split('|').join(' or ')));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--funding"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
-  }, hardship, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__results__card__details"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__description"
-  }, props.details.metaData.type), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), programme, feestatus, school)));
-}
-
-finder__results__funding.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__funding);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/cards/finder__results__generic.js":
-/*!**************************************************************************!*\
-  !*** ./src/patterns/finder/components/cards/finder__results__generic.js ***!
-  \**************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-
-
-
-
-/**
- * @module patterns/finder/components/cards/finder__results__generic
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-/**
- * Render a Funnelback result as a generic card.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__results__contact(props) {
-  const school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-fw fa-university icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
-        department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-fw fa-building icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Department:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(', and ')));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--generic"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__results__card__details"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), school, department)));
-}
-
-finder__results__contact.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__contact);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/cards/finder__results__module.js":
-/*!*************************************************************************!*\
-  !*** ./src/patterns/finder/components/cards/finder__results__module.js ***!
-  \*************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-
-/**
- * @module patterns/finder/components/cards/finder__results__module
- * @author Web Development
- * @copyright City, University of London 2020
- */
-
-
-/**
- * Render a Funnelback result as a module card.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__results__module(props) {
-  const location = props.details.metaData.location && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-fw fa-map-marker-alt icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Location:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.location)),
-        title = props.details.metaData.code ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "finder__results__card--module__code"
-  }, props.details.metaData.code), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.title)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.title)),
-        school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-fw fa-university icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
-        term = props.details.metaData.term && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "far fa-fw fa-calendar icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Semester:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.term.split('|').length > 2 ? 'All year' : props.details.metaData.term.split('|').join(' or '))),
-        topic = props.details.metaData.related && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "finder__results__card__description"
-  }, props.details.metaData.related.split('|').sort().map((topic, i) => i > 0 ? topic.toLowerCase() : topic).join(', ')),
-        specification = props.details.metaData.specification && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "far fa-fw fa-file-pdf icon",
-    "aria-label": "PDF"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    href: props.details.metaData.specification
-  }, "Download module specification"));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--module"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "finder__results__card__details"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, title), topic, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, props.details.metaData.c), term, school, location, specification));
-}
-
-finder__results__module.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__module);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/cards/finder__results__news.js":
-/*!***********************************************************************!*\
-  !*** ./src/patterns/finder/components/cards/finder__results__news.js ***!
-  \***********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
-
-
-
-
-/**
- * @module patterns/finder/components/cards/finder__results__news
- * @author Web Development
- * @copyright City, University of London 2020
- */
-
-
-
-/**
- * Render a Funnelback result as a generic card.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__results__news(props) {
-  const formattedDate = Object(_util__WEBPACK_IMPORTED_MODULE_3__["formatReactDate"])(new Date(props.details.metaData.d)),
-        dateString = props.details.metaData.d && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__description"
-  }, formattedDate),
-        hashtags = props.details.metaData.hashtagtext && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fad fa-fw fa-hashtag icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Hashtag", props.details.metaData.hashtagtext.split('|').length > 1 && 's', ":"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.hashtagtext.split('|').join(', ')));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--news"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__results__card__details"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.details.title), dateString, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.details.metaData.c && props.details.metaData.c), hashtags)));
-}
-
-finder__results__news.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__news);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/cards/finder__results__profile.js":
-/*!**************************************************************************!*\
-  !*** ./src/patterns/finder/components/cards/finder__results__profile.js ***!
-  \**************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/**
- * @module patterns/finder/components/cards/finder__results__profile
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-/**
- * Render a Funnelback result as a profile card.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__results__profile(props) {
-  const school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fas fa-fw fa-university icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "School:"), " ", props.details.metaData.school),
-        department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fas fa-fw fa-building icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Department:"), " ", props.details.metaData.department),
-        headshot = props.details.metaData.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "thumbnail__image-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: props.details.metaData.thumbnail,
-    alt: 'Photo of ' + props.details.metaData.title
-  }));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "finder__results__card finder__results__card--profile"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: props.details.clickTrackingUrl
-  }, headshot, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "finder__results__card__details"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "card__title finder__results__card__heading"
-  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__card__description"
-  }, props.details.metaData.jobtitle), school, department)));
-}
-
-finder__results__profile.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__profile);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/filters/finder__checkbox.js":
-/*!********************************************************************!*\
-  !*** ./src/patterns/finder/components/filters/finder__checkbox.js ***!
-  \********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
-
-/**
- * @module patterns/finder/components/finder__checkbox
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-function finder__checkbox(props) {
-  const stringLength = 16,
-        stringOffset = -4,
-        randomNumber = Math.random().toString(stringLength).slice(stringOffset),
-        toggleChecked = (props.facet.meta in props.query.facets),
-        responseFacetValue = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values.filter(value => value.data.toLowerCase() === props.facet.checkedValue.toLowerCase());
-
-  if (responseFacetValue && responseFacetValue[0] && responseFacetValue[0].count > 0) {
-    const toggleFacet = () => {
-      const newQuery = props.query;
-      props.dependencies.map(facet => {
-        delete newQuery.facets[facet.meta];
-      });
-      toggleChecked ? delete newQuery.facets[props.facet.meta] : newQuery.facets[props.facet.meta] = props.facet.checkedValue;
-      newQuery.startRank = 1;
-      newQuery.misspelling = null;
-      newQuery.interacted = true;
-      props.update.query(newQuery);
-      props.update.results(!props.update.updateState);
-    };
-
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      className: "finder__filter finder__checkbox"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
-      type: "checkbox",
-      id: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber),
-      name: "meta_".concat(props.facet.meta, "_sand"),
-      value: props.facet.checkedValue,
-      onChange: () => toggleFacet(),
-      checked: toggleChecked
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      className: "finder__checkbox__indicator finder__checkbox__indicator",
-      "aria-hidden": "true",
-      onClick: () => toggleFacet()
-    }, toggleChecked ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-      className: "fa fa-fw fas fa-check icon"
-    }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
-      className: "finder__filters__label--always",
-      htmlFor: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
-    }, props.facet.name, !toggleChecked && responseFacetValue && ' (' + responseFacetValue[0].count + ')'));
-  } else {
-    return null;
-  }
-}
-
-finder__checkbox.propTypes = {
-  facet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object),
-  update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object)
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__checkbox);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/filters/finder__filters.js":
-/*!*******************************************************************!*\
-  !*** ./src/patterns/finder/components/filters/finder__filters.js ***!
-  \*******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _finder_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__select */ "./src/patterns/finder/components/filters/finder__select.js");
-/* harmony import */ var _finder_checkbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__checkbox */ "./src/patterns/finder/components/filters/finder__checkbox.js");
-/* harmony import */ var _finder_tag__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__tag */ "./src/patterns/finder/components/filters/finder__tag.js");
-/* harmony import */ var _finder_reset__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__reset */ "./src/patterns/finder/components/filters/finder__reset.js");
-/* harmony import */ var _finder_sort__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__sort */ "./src/patterns/finder/components/filters/finder__sort.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
-
-
-
-
-/**
- * @module patterns/finder/components/finder__filters
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-
-
-
-
-
-/**
- * Predicate for whether a facet should be displayed, if it's dependent on
- * another facet being set.
- *
- * @param {object} facet The facet to potentially display.
- * @param {object} facetMap The facets currently set on the query.
- * @return {bool} - Has any dependency been met
- */
-
-function dependencyMet(facet, facetMap) {
-  const setFacets = Object.keys(facetMap);
-
-  if (!facet.dependency) {
-    return true;
-  }
-
-  if (setFacets.indexOf(facet.dependency) >= 0 && facetMap[facet.dependency] !== '') {
-    return true;
-  }
-
-  return false;
-}
-/**
- * Component to update facet values in the query.
- *
- * @param {object} props React props.
- * @returns {object} - React component.
- */
-
-
-function finder__filters(props) {
-  const clearFiltersDesktop = Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__filters__reset finder__filters__reset--desktop"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_reset__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    clear: props.clear,
-    resetSort: false
-  })) : null,
-        clearFiltersMobile = Object.keys(props.query.facets).length > 0 || props.query.sortType !== props.config.sort[0].type ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_reset__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    clear: props.clear,
-    resetSort: true
-  }) : null;
-  const sort = props.config.sort.length > 1 && props.config.displaySort ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "wrapper--finder__select--sort--mobile"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_sort__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    config: props.config,
-    query: props.query,
-    update: props.update
-  })) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__filters"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
-    className: "finder__filters__heading"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "finder__filters__heading__text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "far fa-sliders-h icon",
-    "aria-hidden": "true"
-  }), ' ', "Filter ".concat(props.config.summariseAs.plural)), clearFiltersMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "wrapper--finder_filters--filters"
-  }, props.config.facetLabels.map(facet => {
-    if (dependencyMet(facet, props.query.facets)) {
-      switch (facet.type) {
-        case 'select':
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
-            key: facet.meta,
-            facet: facet,
-            query: props.query,
-            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
-            update: props.update,
-            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
-          });
-
-        case 'checkbox':
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_checkbox__WEBPACK_IMPORTED_MODULE_4__["default"], {
-            key: facet.meta,
-            facet: facet,
-            query: props.query,
-            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
-            update: props.update,
-            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
-          });
-
-        case 'tag':
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_tag__WEBPACK_IMPORTED_MODULE_5__["default"], {
-            key: facet.meta,
-            facet: facet,
-            query: props.query,
-            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
-            update: props.update,
-            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
-          });
-
-        default:
-          Object(_util__WEBPACK_IMPORTED_MODULE_8__["gaEvent"])('jsError', 'JavaScript error', 'finder__filters()', 'Unknown filter type in finder__filters.js', true);
-      }
-    } else {
-      return null;
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__filters__nofilters"
-  }, "No filters are valid for the current query."), clearFiltersDesktop, sort)));
-}
-
-finder__filters.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  response: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__filters);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/filters/finder__filtersmobile.js":
-/*!*************************************************************************!*\
-  !*** ./src/patterns/finder/components/filters/finder__filtersmobile.js ***!
-  \*************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _finder_filters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.esm.js");
-
-
-
-
-
-
-/**
- * @module patterns/finder/components/wrapper--finder__filters--mobile
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
- // seems to fix most issues with old iPhones and position: fixed
-// may not be necessary long-term, but I was in a hurry
-
-
-/**
- * Render the mobile version of the filters.
- *
- * TODO: this is a bit flaky on old iPhones with long facets (i.e. longer than
- * the main body of the page)
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__filtersmobile(props) {
-  const [display, setDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false);
-  const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({});
-  let filters = null;
-
-  const getFilters = () => filters; // trap tab focus when the filters are open
-
-
-  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(() => {
-    if (!focusTrap.activate) {
-      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_6___default()(getFilters(), {
-        initialFocus: getFilters().querySelector('.wrapper--finder__filters--mobile__apply'),
-        onDeactivate: () => setDisplay(false),
-        clickOutsideDeactivates: true
-      }));
-    }
-
-    if (display) {
-      focusTrap.activate && focusTrap.activate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["disableBodyScroll"])(getFilters().querySelector('.wrapper--finder__filters--mobile__filters'));
-    } else {
-      focusTrap.deactivate && focusTrap.deactivate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["enableBodyScroll"])(getFilters().querySelector('.wrapper--finder__filters--mobile__filters'));
-    }
-  }, [display]);
-  const totalMatching = props.response && props.response.summary && props.response.summary.totalMatching;
-  const result = totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural;
-  const totalMatchingMessage = totalMatching ? "Show ".concat(totalMatching, " ").concat(result) : 'Close';
-  const filtersCount = props.config.displaySort ? props.config.sort[0].type !== props.query.sortType || Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filters", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "wrapper--finder__filters--mobile__toggle__count"
-  }, "(", props.config.sort[0].type !== props.query.sortType ? Object.keys(props.query.facets).length + 1 : Object.keys(props.query.facets).length, ")")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filter") : Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filters", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "wrapper--finder__filters--mobile__toggle__count"
-  }, "(", props.config.sort[0].type !== props.query.sortType ? Object.keys(props.query.facets).length + 1 : Object.keys(props.query.facets).length, ")")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filter");
-  const toggle = display ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
-    type: "button",
-    className: "wrapper--finder__filters--mobile__toggle",
-    "aria-haspopup": true,
-    "aria-expanded": display,
-    onClick: () => setDisplay(!display),
-    "data-filters-applied": Object.keys(props.query.facets).length !== 0 || props.config.displaySort && props.config.sort[0].type !== props.query.sortType ? true : false
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "far fa-sliders-h icon",
-    "aria-hidden": "true"
-  }), ' ', filtersCount));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "wrapper--finder__filters--mobile",
-    "data-open": display,
-    ref: mobilefilters => filters = mobilefilters
-  }, toggle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "wrapper--finder__filters--mobile__filters"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "wrapper--finder__filters--mobile__filters__content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_finder_filters__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    config: props.config,
-    query: props.query,
-    response: props.response,
-    update: props.update,
-    clear: props.clear
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "wrapper--finder__filters--mobile__apply"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
-    type: "button",
-    "aria-expanded": display,
-    onClick: () => setDisplay(!display),
-    disabled: props.updating
-  }, Object.keys(props.query.facets).length === 0 ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "far fa-chevron-left icon"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    "aria-live": "polite"
-  }, props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "fas fa-spinner fa-pulse icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "wrapper--finder__filters--mobile__apply__text"
-  }, "Updating ", props.summariseAs.plural, "\u2026")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "wrapper--finder__filters--mobile__apply__text"
-  }, Object.keys(props.query.facets).length === 0 ? 'Close' : totalMatchingMessage))))));
-}
-
-finder__filtersmobile.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  response: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
-  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__filtersmobile);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/filters/finder__reset.js":
-/*!*****************************************************************!*\
-  !*** ./src/patterns/finder/components/filters/finder__reset.js ***!
-  \*****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/**
- * @module patterns/finder/components/filters/finder__reset
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-/**
- * Clear input button.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__reset(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "finder__reset",
-    type: "button",
-    onClick: () => {
-      props.clear(props.resetSort);
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "far fa-fw fa-times icon"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "finder__reset__text"
-  }, "Reset"));
-}
-
-finder__reset.propTypes = {
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  resetSort: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__reset);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/filters/finder__select.js":
-/*!******************************************************************!*\
-  !*** ./src/patterns/finder/components/filters/finder__select.js ***!
-  \******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
-
-/**<
- * @module patterns/finder/components/finder__select
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-function finder__select(props) {
-  const stringLength = 16,
-        stringOffset = -4,
-        randomNumber = Math.random().toString(stringLength).slice(stringOffset),
-        currentValue = props.query.facets[props.facet.meta] || ''; // reduce the facet configuration to an array of all possible values for
-  // the facet
-
-  const allFacets = props.facet.values.reduce((acc, data) => {
-    return [...acc, data];
-  }, []); // reduce the Funnelback response for the facet to an array of valid
-  // values for the current query
-
-  const responseFacets = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values ? props.responseFacet[0].categories[0].values.reduce((acc, data) => {
-    return [...acc, data.data];
-  }, []) : []; // count how many possible facets are not valid for the current query
-  // and will be hidden
-
-  const hiddenFacets = allFacets.map(facet => facet.data).filter(facet => responseFacets.indexOf(facet.toLowerCase()) < 0).length;
-
-  const setFacet = value => {
-    const newQuery = props.query;
-    props.dependencies.map(facet => {
-      delete newQuery.facets[facet.meta];
-    });
-
-    if (value) {
-      newQuery.facets[props.facet.meta] = value;
-    } else {
-      delete newQuery.facets[props.facet.meta];
-    }
-
-    newQuery.startRank = 1;
-    newQuery.misspelling = null;
-    newQuery.interacted = true;
-    props.update.query(newQuery);
-    props.update.results(!props.update.updateState);
-  };
-
-  if (props.facet.values.length > hiddenFacets) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      className: "finder__filter finder__select ".concat(currentValue && 'finder__select--selected')
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
-      htmlFor: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
-    }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("select", {
-      name: props.facet.name,
-      id: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber),
-      onChange: e => setFacet(e.target.value),
-      value: currentValue
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("option", {
-      value: "",
-      id: "meta".concat(props.facet.meta, "all"),
-      name: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
-    }, props.facet.noSelection), props.facet.values.map((value, i) => {
-      const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.toLowerCase());
-
-      if (currentValue.toLowerCase() === value.data.toLowerCase() || responseFacetDetails && responseFacetDetails[0]) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("option", {
-          key: i,
-          value: value.data
-        }, value.label, currentValue !== value.data ? responseFacetDetails[0].count > 0 && " (".concat(responseFacetDetails[0].count, ")") : '');
-      } else {
-        return null;
-      }
-    })));
-  } else {
-    return null;
-  }
-}
-
-finder__select.propTypes = {
-  facet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object),
-  update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object)
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__select);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/filters/finder__sort.js":
-/*!****************************************************************!*\
-  !*** ./src/patterns/finder/components/filters/finder__sort.js ***!
-  \****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-
-/**
- * @module patterns/finder/components/finder__sort
- * @author Web Development
- * @copyright City, University of London 2020
- */
-
-
-/**
- * Component to change the sort order of the query.
- *
- * @param {object} props React props.
- * @returns {object} - React component.
- */
-
-function finder__sort(props) {
-  const stringLength = 16,
-        stringOffset = -4,
-        randomNumber = Math.random().toString(stringLength).slice(stringOffset);
-
-  const setSort = type => {
-    const newQuery = props.query;
-    newQuery.sortType = type;
-    newQuery.startRank = 1;
-    newQuery.misspelling = null;
-    newQuery.interacted = true;
-    props.update.query(newQuery);
-    props.update.results(!props.update.updateState);
-  };
-
-  const validSorts = props.config.sort.filter(sortType => sortType.type === '' ? props.query.query !== '' || Object.keys(props.query.facets).length > 0 || props.query.sortType === '' ? true : false : true);
-  return validSorts.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "finder__select--sort finder__select".concat(props.query.sortType !== props.config.sort[0].type ? ' finder__select--selected' : '')
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
-    className: "finder__select__overline",
-    htmlFor: "sort--".concat(randomNumber)
-  }, "Sort by"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("select", {
-    name: "sort",
-    id: "sort--".concat(randomNumber),
-    onChange: e => setSort(e.target.value),
-    value: props.query.sortType
-  }, validSorts.map((sortType, i) => {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("option", {
-      key: i,
-      value: sortType.type
-    }, sortType.label);
-  }))) : null;
-}
-
-finder__sort.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__sort);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/filters/finder__tag.js":
-/*!***************************************************************!*\
-  !*** ./src/patterns/finder/components/filters/finder__tag.js ***!
-  \***************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-
-/**
- * @module patterns/finder/components/finder__tag
- * @author Web Development
- * @copyright City, University of London 2020
- */
-
-
-
-function finder__tag(props) {
-  const deleteFacet = () => {
-    const newQuery = props.query;
-    props.dependencies.map(facet => {
-      delete newQuery.facets[facet.meta];
-    });
-    delete newQuery.facets[props.facet.meta];
-    newQuery.startRank = 1;
-    newQuery.misspelling = null;
-    newQuery.interacted = true;
-    props.update.query(newQuery);
-    props.update.results(!props.update.updateState);
-  };
-
-  return props.query.facets[props.facet.meta] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "finder__filter finder__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    onClick: () => deleteFacet(),
-    type: "button"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fa-fw far fa-times icon",
-    "aria-hidden": "true"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "finder__tag__text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "sr-only"
-  }, "Remove filter for "), props.facet.name, ":", ' ', props.facet.values.filter(value => value.data === props.query.facets[props.facet.meta])[0].label))) : null;
-}
-
-finder__tag.propTypes = {
-  facet: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object),
-  update: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object)
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__tag);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/query/finder__clear.js":
-/*!***************************************************************!*\
-  !*** ./src/patterns/finder/components/query/finder__clear.js ***!
-  \***************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/**
- * @module patterns/finder/components/finder__clear
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-/**
- * Clear input button.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__clear(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "finder__clear",
-    type: "button",
-    onClick: () => {
-      props.clear(props.resetSort);
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fad fa-fw fa-times-circle icon "
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "finder__clear__text"
-  }, "Clear query"));
-}
-
-finder__clear.propTypes = {
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  resetSort: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__clear);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/query/finder__query--mini.js":
-/*!*********************************************************************!*\
-  !*** ./src/patterns/finder/components/query/finder__query--mini.js ***!
-  \*********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
-
-
-
-
-
-
-
-
-/**
- * @module patterns/finder/components/finder__query
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-
-const maximumSuggestions = 5,
-      keyCodeEscape = 27,
-      keyCodeUp = 38,
-      keyCodeDown = 40;
-
-function highlightQueryTerm(suggestion, partialQuery) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-    className: "sr-only"
-  }, suggestion), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-    "aria-hidden": "true"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-    className: "finder__suggestion"
-  }, suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()), partialQuery.length)), suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()) + partialQuery.length))));
-}
-/**
- * Search input field and autocomplete.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-
-function finder__query(props) {
-  // save what they're typing
-  const [partialQuery, setPartialQuery] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(props.query.query); // Funnelback suggestions for the currently typed text
-
-  const [suggestions, setSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])([]); // Request token for calls to the Funnelback suggestions service, so we
-  // can cancel it
-
-  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])({
-    cancel: () => {}
-  }); // ref for the input field, so we can .focus() it
-
-  const stringLength = 16,
-        stringOffset = -4,
-        [inputId] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(stringLength).slice(stringOffset)); // boolean to show or hide suggestions
-
-  const [showSuggestions, setShowSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(false);
-  Object(react__WEBPACK_IMPORTED_MODULE_5__["useEffect"])(() => {
-    setPartialQuery(props.query.query);
-  }, [props.updating]);
-  let textInput = null;
-
-  function focusInput() {
-    textInput.focus();
-  } // on clear, make a default request for results
-
-
-  const clearQuery = () => {
-    call.cancel();
-    setPartialQuery('');
-    setSuggestions([]);
-    focusInput();
-    const newQuery = props.query;
-    newQuery.query = '';
-    newQuery.sortType = props.config.sort[0].type;
-    props.update.query(newQuery);
-    props.update.results(!props.update.updateState);
-  };
-
-  const submitForm = () => {
-    let queryURL = '';
-    let finderMiniElement = document.getElementsByClassName('finder__mini')[0];
-    let courseLevel = finderMiniElement.getAttribute('data-level');
-    let courseSubject = finderMiniElement.getAttribute('data-subject');
-    let courseType = finderMiniElement.getAttribute('data-type');
-    queryURL = 'meta_level_sand=' + courseLevel + '&meta_subject_sand=' + courseSubject + '&meta_type_sand=' + courseType;
-    window.location.replace("https://web2020.city.ac.uk/prospective-students/courses?".concat(queryURL, "&query=").concat(partialQuery));
-  };
-
-  const submitSuggestion = s => {
-    call.cancel();
-    const newQuery = props.query;
-    newQuery.query = s;
-    props.update.query(newQuery);
-    props.update.results(!props.update.updateState);
-  };
-
-  const clear = partialQuery && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    clear: () => {
-      clearQuery();
-    }
-  }); // render suggestions
-  // TODO: probably should be refactored into a separate component
-
-  const suggestionsList = suggestions && suggestions.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
-    className: showSuggestions ? 'finder__query__suggestions show' : 'finder__query__suggestions hide'
-  }, [...new Set(suggestions)].slice(0, maximumSuggestions).map(suggestion => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-    key: suggestion
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
-    type: "button",
-    onBlur: () => setShowSuggestions(false),
-    onFocus: () => setShowSuggestions(true),
-    onMouseDown: () => {
-      //for browsers because onBlur get excuted before onClick
-      setShowSuggestions(true);
-      setPartialQuery(suggestion);
-      setSuggestions([]);
-      focusInput();
-      submitSuggestion(suggestion); //passing suggestion because partialQuery value get overwritten for some reason.
-    },
-    onClick: () => {
-      //for mobile
-      setShowSuggestions(true);
-      setPartialQuery(suggestion);
-      setSuggestions([]);
-      focusInput();
-      submitSuggestion(suggestion); //passing suggestion because partialQuery value get overwritten for some reason.
-    },
-    onKeyDown: e => {
-      switch (e.keyCode) {
-        case keyCodeEscape:
-          e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
-          setSuggestions([]);
-          break;
-
-        case keyCodeUp:
-          if (e.target.parentNode.previousElementSibling && e.target.parentNode.previousElementSibling.querySelector('button')) {
-            e.preventDefault();
-            e.target.parentNode.previousElementSibling.querySelector('button').focus();
-          } else {
-            e.preventDefault();
-            e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
-          }
-
-          break;
-
-        case keyCodeDown:
-          e.preventDefault();
-
-          if (e.target.parentNode.nextElementSibling && e.target.parentNode.nextElementSibling.querySelector('button')) {
-            e.preventDefault();
-            e.target.parentNode.nextElementSibling.querySelector('button').focus();
-          }
-
-          break;
-
-        default:
-          break;
-      }
-    }
-  }, highlightQueryTerm(suggestion, partialQuery)))));
-  const input = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-    className: "finder__query__input"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-    className: "finder__query__icon--wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-    className: "finder__icon fal fa-search"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("label", {
-    className: "sr-only",
-    htmlFor: inputId
-  }, "Search ".concat(props.config.summariseAs.plural)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
-    autoComplete: "off",
-    id: inputId,
-    name: "query",
-    placeholder: props.config.placeholder,
-    ref: input => {
-      textInput = input;
-    },
-    type: "text",
-    value: partialQuery,
-    onKeyDown: e => {
-      switch (e.keyCode) {
-        case keyCodeEscape:
-          clearQuery();
-          break;
-
-        case keyCodeDown:
-          if (suggestions && suggestions.length > 0) {
-            e.preventDefault();
-            e.target.parentNode.querySelector('.finder__query__suggestions button').focus();
-          }
-
-          break;
-
-        default:
-          break;
-      }
-    },
-    onFocus: () => setShowSuggestions(true),
-    onBlur: () => setShowSuggestions(false),
-    onChange: e => {
-      //clear old suggestions
-      setSuggestions([]); // keep  what they're typing
-
-      setPartialQuery(e.target.value);
-      /**
-       * if we have a request to the suggestions service in progress,
-       * cancel it. Stops old suggestions overwriting new ones because
-       * the requests can't keep up with fast typing.
-       */
-
-      call.cancel();
-
-      if (e.target.value) {
-        // input is populated, ask for suggestions
-        const [suggestionsPromise, newCall] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_6__["suggest"])(props.query.collection, e.target.value); // update our request cancel function for the new request
-
-        setCall({
-          cancel: () => {
-            newCall.cancel();
-          }
-        });
-        suggestionsPromise.then(data => setSuggestions(data)).catch(() => setSuggestions([]));
-      } else {
-        // input is empty, empty suggestions
-        setSuggestions([]);
-      }
-    }
-  }), suggestionsList, clear);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("fieldset", {
-    className: "finder__query"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, input, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
-    type: "submit",
-    className: "finder__query__submit",
-    onClick: () => submitForm()
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-    className: "fal fa-search finder__query__submit__icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
-    className: "finder__query__submit__text"
-  }, "Find"))));
-}
-
-finder__query.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.bool
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__query);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/query/finder__query.js":
-/*!***************************************************************!*\
-  !*** ./src/patterns/finder/components/query/finder__query.js ***!
-  \***************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var _finder_clear__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__clear */ "./src/patterns/finder/components/query/finder__clear.js");
-
-
-
-
-
-
-
-/**
- * @module patterns/finder/components/finder__query
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-
-const maximumSuggestions = 5,
-      keyCodeEscape = 27,
-      keyCodeUp = 38,
-      keyCodeDown = 40,
-      keyCodeEnd = 35,
-      keyCodeHome = 36;
-
-function highlightQueryTerm(suggestion, partialQuery) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
-    className: "sr-only"
-  }, suggestion), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
-    "aria-hidden": "true"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
-    className: "finder__suggestion"
-  }, suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()), partialQuery.length)), suggestion.slice(suggestion.indexOf(partialQuery.toLowerCase()) + partialQuery.length))));
-}
-/**
- * Search input field and autocomplete.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-
-function finder__query(props) {
-  // save what they're typing
-  const [partialQuery, setPartialQuery] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(props.query.query); // Funnelback suggestions for the currently typed text
-
-  const [suggestions, setSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])([]); // Request token for calls to the Funnelback suggestions service, so we
-  // can cancel it
-
-  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])({
-    cancel: () => {}
-  }); // ref for the input field, so we can .focus() it
-
-  const stringLength = 16,
-        stringOffset = -4,
-        [inputId] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])('finder--' + props.query.collection + '--' + Math.random().toString(stringLength).slice(stringOffset));
-  const [showSuggestions, setShowSuggestions] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])(false),
-        [activeSuggestionID, setActiveSuggestionID] = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])('');
-  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(() => {
-    setPartialQuery(props.query.query);
-  }, [props.updating]);
-  let textInput = null;
-
-  function focusInput() {
-    textInput.focus();
-  } // on clear, make a default request for results
-
-
-  const clearQuery = () => {
-    call.cancel();
-    setPartialQuery('');
-    setSuggestions([]);
-    focusInput();
-    const newQuery = props.query;
-    newQuery.misspelling = null;
-    newQuery.query = '';
-    newQuery.sortType = props.config.sort[0].type;
-    newQuery.startRank = 1;
-    newQuery.interacted = true;
-    props.update.query(newQuery);
-    props.update.results(!props.update.updateState);
-  };
-
-  const submitForm = query => {
-    call.cancel();
-    setSuggestions([]);
-    const newQuery = props.query;
-    newQuery.misspelling = null;
-    newQuery.query = query ? query : partialQuery ? partialQuery : '';
-    newQuery.sortType = partialQuery ? '' : props.config.sort[0].type;
-    newQuery.startRank = 1;
-    newQuery.interacted = true;
-    props.update.query(newQuery);
-    props.update.results(!props.update.updateState);
-  };
-
-  const clear = partialQuery && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_finder_clear__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    clear: () => {
-      clearQuery();
-    }
-  });
-
-  const submitSuggestion = suggestion => {
-    setShowSuggestions(false);
-    setSuggestions([]);
-    focusInput();
-    submitForm(suggestion);
-  }; // render suggestions
-
-
-  const suggestionsList = suggestions && suggestions.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("ul", {
-    role: "listbox",
-    "aria-label": "Search suggestions",
-    "aria-activedescendant": activeSuggestionID,
-    className: showSuggestions ? 'finder__query__suggestions show' : 'finder__query__suggestions hide'
-  }, [...new Set(suggestions)].slice(0, maximumSuggestions).map((suggestion, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("li", {
-    key: suggestion,
-    role: "option",
-    id: inputId + '--' + i
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("button", {
-    type: "button",
-    onBlur: () => {
-      setActiveSuggestionID('');
-      setShowSuggestions(false);
-    },
-    onFocus: () => setShowSuggestions(true),
-    onMouseDown: () => submitSuggestion(suggestion),
-    onClick: () => submitSuggestion(suggestion),
-    onKeyDown: e => {
-      switch (e.keyCode) {
-        case keyCodeEscape:
-          e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
-          setSuggestions([]);
-          setActiveSuggestionID('');
-          break;
-
-        case keyCodeUp:
-          if (e.target.parentNode.previousElementSibling && e.target.parentNode.previousElementSibling.querySelector('button')) {
-            e.preventDefault();
-            e.target.parentNode.previousElementSibling.querySelector('button').focus();
-            setActiveSuggestionID(e.target.parentNode.previousElementSibling.id);
-          } else {
-            e.preventDefault();
-            e.target.parentNode.parentNode.parentNode.querySelector('input').focus();
-            setActiveSuggestionID('');
-          }
-
-          break;
-
-        case keyCodeDown:
-          e.preventDefault();
-
-          if (e.target.parentNode.nextElementSibling && e.target.parentNode.nextElementSibling.querySelector('button')) {
-            e.preventDefault();
-            e.target.parentNode.nextElementSibling.querySelector('button').focus();
-            setActiveSuggestionID(e.target.parentNode.nextElementSibling.id);
-          }
-
-          break;
-
-        case keyCodeHome:
-          e.preventDefault();
-
-          if (e.target.parentNode.parentNode.firstChild && e.target.parentNode.parentNode.firstChild.querySelector('button')) {
-            e.preventDefault();
-            e.target.parentNode.parentNode.firstChild.querySelector('button').focus();
-            setActiveSuggestionID(e.target.parentNode.firstChild.id);
-          }
-
-          break;
-
-        case keyCodeEnd:
-          e.preventDefault();
-
-          if (e.target.parentNode.parentNode.lastChild && e.target.parentNode.parentNode.lastChild.querySelector('button')) {
-            e.preventDefault();
-            e.target.parentNode.parentNode.lastChild.querySelector('button').focus();
-            setActiveSuggestionID(e.target.parentNode.lastChild.id);
-          }
-
-          break;
-
-        default:
-          break;
-      }
-    }
-  }, highlightQueryTerm(suggestion, partialQuery)))));
-  const input = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
-    className: "finder__query__input"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
-    className: "finder__query__icon--wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
-    className: "finder__icon fal fa-search icon",
-    "aria-hidden": "true"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
-    className: "sr-only",
-    htmlFor: inputId
-  }, "Search ".concat(props.config.summariseAs.plural)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("input", {
-    autoComplete: "off",
-    id: inputId,
-    name: "query",
-    placeholder: props.config.placeholder,
-    ref: input => {
-      textInput = input;
-    },
-    type: "text",
-    value: partialQuery,
-    onKeyDown: e => {
-      switch (e.keyCode) {
-        case keyCodeEscape:
-          clearQuery();
-          break;
-
-        case keyCodeDown:
-          if (suggestions && suggestions.length > 0) {
-            e.preventDefault();
-            e.target.parentNode.querySelector('.finder__query__suggestions button').focus();
-            setActiveSuggestionID(e.target.parentNode.querySelector('.finder__query__suggestions li').id);
-          }
-
-          break;
-
-        default:
-          break;
-      }
-    },
-    onFocus: () => setShowSuggestions(true),
-    onBlur: () => setShowSuggestions(false),
-    onChange: e => {
-      //clear old suggestions
-      setSuggestions([]); // keep  what they're typing
-
-      setPartialQuery(e.target.value);
-      /**
-       * if we have a request to the suggestions service in progress,
-       * cancel it. Stops old suggestions overwriting new ones because
-       * the requests can't keep up with fast typing.
-       */
-
-      call.cancel();
-
-      if (e.target.value) {
-        // input is populated, ask for suggestions
-        const [suggestionsPromise, newCall] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_6__["suggest"])(props.query.collection, e.target.value); // update our request cancel function for the new request
-
-        setCall({
-          cancel: () => {
-            newCall.cancel();
-          }
-        });
-        suggestionsPromise.then(data => setSuggestions(data)).catch(() => setSuggestions([]));
-      } else {
-        // input is empty, empty suggestions
-        setSuggestions([]);
-      }
-    }
-  }), suggestionsList, clear);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("fieldset", {
-    className: "finder__query"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", null, input, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("button", {
-    type: "submit",
-    className: "finder__query__submit",
-    onClick: () => submitForm()
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
-    className: "fal fa-search finder__query__submit__icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
-    className: "finder__query__submit__text"
-  }, "Find"))));
-}
-
-finder__query.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__query);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/results/finder__didyoumean.js":
-/*!**********************************************************************!*\
-  !*** ./src/patterns/finder/components/results/finder__didyoumean.js ***!
-  \**********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-
-/**
- * @module patterns/finder/components/finder__didyoumean
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-/**
- * Returns a Funnelback spelling suggestion as a button to update the query.
- *
- * @param {object} props React props.
- * @returns {object} - React component.
- */
-
-function finder__didyoumean(props) {
-  const didyoumean = props.query.misspelling ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "finder__results__didyoumean"
-  }, "No ", props.summariseAs.plural, " found for \u201C", props.query.misspelling, "\u201D. Searching instead for \u201C", props.query.query, "\u201D.") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "finder__results__didyoumean"
-  }, "Did you mean", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    type: "button",
-    className: "finder__didyoumean__button",
-    onClick: () => {
-      const newQuery = props.query;
-      newQuery.query = props.response.spell.text.split(/\|/)[0].trim();
-      newQuery.startRank = 1;
-      newQuery.misspelling = null;
-      newQuery.interacted = true;
-      newQuery.facets = {};
-      props.update.query(newQuery);
-      props.update.results(!props.update.updateState);
-    }
-  }, "\u201C", props.response.spell.text.split(/\|/)[0].trim(), "\u201D"), "?");
-  return didyoumean;
-}
-
-finder__didyoumean.propTypes = {
-  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  response: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__didyoumean);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/results/finder__pagination.js":
-/*!**********************************************************************!*\
-  !*** ./src/patterns/finder/components/results/finder__pagination.js ***!
-  \**********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/**
- * @module patterns/finder/components/finder__pagination
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-/**
- * Renders standard pagination controls patttern for the results.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__pagination(props) {
-  const numberOfPages = Math.ceil(props.totalMatching / props.numRanks),
-        currentPage = Math.ceil(props.currStart / props.numRanks),
-        pages = [];
-
-  const changePage = pageNumber => {
-    const newStartRank = 1 + (pageNumber - 1) * props.numRanks,
-          newQuery = props.query;
-    newQuery.startRank = newStartRank;
-    newQuery.misspelling = null;
-    newQuery.interacted = true;
-    props.update.query(newQuery);
-    props.update.results(!props.update.updateState);
-  };
-
-  pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "pagination__controls__button--prev",
-    key: "prev",
-    type: "button",
-    disabled: currentPage === 1 ? true : false,
-    onClick: () => {
-      changePage(currentPage - 1);
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Previous page")));
-
-  for (let page = 1; page <= numberOfPages; page++) {
-    let className;
-
-    switch (page - numberOfPages) {
-      case 0:
-        className = 'pagination__controls__element pagination__controls__button pagination__controls__button--last';
-        break;
-
-      case -1:
-        className = 'pagination__controls__element pagination__controls__button pagination__controls__button--penultimate';
-        break;
-
-      default:
-        className = 'pagination__controls__element pagination__controls__button';
-    }
-
-    pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      "aria-current": page === currentPage ? 'page' : null,
-      "aria-expanded": page === currentPage ? true : false,
-      "aria-label": "Open page ".concat(page),
-      className: className,
-      "data-page": page,
-      "data-proximity": Math.abs(page - currentPage),
-      disabled: page === currentPage ? true : false,
-      key: page,
-      type: "button",
-      onClick: () => {
-        changePage(page);
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, page)));
-
-    if (page === 1) {
-      pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        key: "firstEllipsis",
-        className: "pagination__controls__element pagination__controls__ellipsis pagination__controls__ellipsis--first"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u2026")));
-    } else if (page === numberOfPages - 1) {
-      pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        key: "lastEllipsis",
-        className: "pagination__controls__element pagination__controls__ellipsis pagination__controls__ellipsis--last"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u2026")));
-    }
-  }
-
-  pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "pagination__controls__button--next",
-    key: "next",
-    type: "button",
-    disabled: currentPage === numberOfPages ? true : false,
-    onClick: () => {
-      changePage(currentPage + 1);
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Next page")));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "pagination__wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: "pagination__controls",
-    "data-pagecount": numberOfPages
-  }, pages));
-}
-
-finder__pagination.propTypes = {
-  currStart: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  numRanks: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
-  totalMatching: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__pagination);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/results/finder__results.js":
-/*!*******************************************************************!*\
-  !*** ./src/patterns/finder/components/results/finder__results.js ***!
-  \*******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../cards/finder__results__card */ "./src/patterns/finder/components/cards/finder__results__card.js");
-/* harmony import */ var _cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../cards/finder__results__bestbet */ "./src/patterns/finder/components/cards/finder__results__bestbet.js");
-/* harmony import */ var _finder_didyoumean__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__didyoumean */ "./src/patterns/finder/components/results/finder__didyoumean.js");
-/* harmony import */ var _finder_results_summary__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__results__summary */ "./src/patterns/finder/components/results/finder__results__summary.js");
-/* harmony import */ var _finder_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__pagination */ "./src/patterns/finder/components/results/finder__pagination.js");
-
-
-/**
- * @module patterns/finder/components/finder__results
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-
-
-
-
-/**
- * Render Funnelback results.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__results(props) {
-  const updating = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__updating",
-    "aria-live": "polite"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fas fa-spinner fa-pulse icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Updating ", props.summariseAs.plural, "\u2026"));
-  const resultsClass = 'resultsVariant' in props.config ? "finder__results__list finder__results__list--".concat(props.config.resultsVariant) : 'finder__results__list';
-
-  if (props.response) {
-    const summary = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_results_summary__WEBPACK_IMPORTED_MODULE_5__["default"], {
-      clear: props.clear,
-      config: props.config,
-      currEnd: props.response.summary.currEnd,
-      currStart: props.response.summary.currStart,
-      numRanks: props.response.summary.numRanks,
-      query: props.query,
-      summariseAs: props.summariseAs,
-      totalMatching: props.response.summary.totalMatching,
-      update: props.update
-    });
-    const didYouMean = (props.query.misspelling || props.response.spell) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_didyoumean__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      query: props.query,
-      summariseAs: props.summariseAs,
-      response: props.response,
-      update: props.update
-    }); // if we have more results than will fit on a single page, we need
-    // pagination
-
-    const pagination = props.response.summary.totalMatching > props.response.summary.numRanks && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      currStart: props.response.summary.currStart,
-      numRanks: props.response.summary.numRanks,
-      query: props.query,
-      totalMatching: props.response.summary.totalMatching,
-      update: props.update
-    });
-    const results = props.response.bestBets.length > 0 || props.response.results.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
-      start: props.response.summary.currStart,
-      className: resultsClass
-    }, props.response.bestBets.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_3__["default"], {
-      details: card,
-      key: card.docNum
-    })), props.response.results.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      bestBet: false,
-      details: card,
-      key: card.docNum,
-      type: props.type,
-      query: props.query
-    }))) : null; // render either the results, or a spinner while we wait for Funnelback
-
-    const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, didYouMean, summary, results, pagination);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "finder__results"
-    }, resultsContent);
-  } else {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "finder__results"
-    }, updating);
-  }
-}
-
-finder__results.propTypes = {
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  response: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__results);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/results/finder__results__highlight__query.js":
-/*!*************************************************************************************!*\
-  !*** ./src/patterns/finder/components/results/finder__results__highlight__query.js ***!
-  \*************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-
-
-const formatLabel = (label, value) => {
-  if (value) {
-    return label;
-  }
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, label.split(value).reduce((prev, current, i) => {
-    if (!i) {
-      return [current];
-    }
-
-    return prev.concat( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-      className: "highlightText",
-      key: value + current
-    }, value), current);
-  }, []));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (formatLabel);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/results/finder__results__summary.js":
-/*!****************************************************************************!*\
-  !*** ./src/patterns/finder/components/results/finder__results__summary.js ***!
-  \****************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _filters_finder_sort__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../filters/finder__sort */ "./src/patterns/finder/components/filters/finder__sort.js");
-
-
-
-
-/**
- * @module patterns/finder/components/finder__results__summary
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-/**
- * Results heading, summarising the response.
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-function finder__results__summary(props) {
-  const result = props.totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural,
-        formatter = new Intl.NumberFormat('en-GB'),
-        sort = props.config.sort.length > 1 && props.config.displaySort ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "wrapper--finder__select--sort--desktop"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_filters_finder_sort__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    config: props.config,
-    query: props.query,
-    update: props.update
-  })) : null;
-
-  if (props.totalMatching === 0) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "finder__results__summary finder__results__summary--noresults"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
-      className: "finder__results__summary__heading"
-    }, "Your search did not match any ", props.summariseAs.plural, "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Suggestions:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try different keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try more general keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, "Try fewer filters"), Object.keys(props.query.facets).length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
-      type: "button",
-      onClick: () => {
-        props.clear(true);
-      }
-    }, "Reset filters")), props.query.query && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
-      type: "button",
-      onClick: () => {
-        const newQuery = props.query;
-        newQuery.query = '';
-        newQuery.sortType = props.config.sort[0].type;
-        newQuery.misspelling = null;
-        newQuery.startRank = 1;
-        newQuery.interacted = true;
-        props.update.query(newQuery);
-        props.update.results(!props.update.updateState);
-      }
-    }, "Reset query"))));
-  } else {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "finder__results__summary"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
-      "aria-live": "polite",
-      className: "finder__results__summary__heading"
-    }, props.query.query || Object.keys(props.query.facets).length > 0 ? 'Matching' : 'All', ' ', result, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "(showing", ' ', props.totalMatching > props.numRanks && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, formatter.format(props.currStart)), "\u2013", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, formatter.format(props.currEnd)), ' ', "of", ' '), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, formatter.format(props.totalMatching)), ' ', result, props.query.query && " for \u201C".concat(props.query.query, "\u201D"), ")")), sort);
-  }
-}
-
-finder__results__summary.propTypes = {
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
-  config: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  currEnd: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-  currStart: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-  numRanks: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  totalMatching: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.number,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (finder__results__summary);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/finder-mini.js":
-/*!********************************************!*\
-  !*** ./src/patterns/finder/finder-mini.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.assign */ "./node_modules/core-js/modules/es.object.assign.js");
-/* harmony import */ var core_js_modules_es_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_assign__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_web_url__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.url */ "./node_modules/core-js/modules/web.url.js");
-/* harmony import */ var core_js_modules_web_url__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_url__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var _components_query_finder_query_mini__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/query/finder__query--mini */ "./src/patterns/finder/components/query/finder__query--mini.js");
-
-
-
-
-
-
-
-
-
-
-
-/**
- * Universal finder
- *
- * Don't run this via patterns.js, it's a separate compilation.
- *
- * @module patterns/finder/finder
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-
-/**
- * Retrieve current values for facets from the URL parameters.
- *
- * @param {object[]} facets Array of facet definitions.
- * @param {object} params URLSearchParams object for the current page.
- * @return {object} - Map of facet meta labels to their current value from the URL.
- */
-
-function getFacetParams(facets, params) {
-  return facets.map(facet => {
-    const param = {};
-
-    if (params.get("meta_".concat(facet.meta, "_orsand"))) {
-      param[facet.meta] = params.get("meta_".concat(facet.meta, "_orsand"));
-    }
-
-    return param;
-  }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
-}
-/**
- * Preserve the search state in the URL parameters.
- *
- * @param {string} currQuery The search query.
- * @param {integer} currStartRank The start rank.
- * @param {object[]} currFacets A map of facet meta labels to their values.
- * @param {*} facetLabels Array of facet definitions.
- */
-
-
-function replaceHistory(currQuery, currStartRank, currFacets, facetLabels) {
-  const params = new URLSearchParams(window.location.search);
-  currQuery !== '' ? params.set('query', currQuery) : params.delete('query');
-  currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
-  facetLabels.forEach(facet => {
-    if (currFacets[facet.meta]) {
-      params.set("meta_".concat(facet.meta, "_orsand"), currFacets[facet.meta]);
-    } else {
-      params.delete("meta_".concat(facet.meta, "_orsand"));
-    }
-  });
-  const hasParams = params.toString().length ? '?' : '';
-  window.history.replaceState({}, '', "".concat(window.location.pathname).concat(hasParams).concat(params.toString()));
-}
-/**
- * Launch the universal Finder.
- *
- * @param {object} props The JSON configuration file for the Finder.
- * @return {object} The React component to render.
- */
-
-
-function Finder(props) {
-  const params = new URLSearchParams(window.location.search);
-  /**
-   * initial state for the Funnelback query, taken from URL parameters and
-   * configuration
-   **/
-
-  const initialQuery = {
-    collection: props.config.collection,
-    fixedFacets: props.config.fixedFacets,
-    query: params.get('query') || '',
-    sortType: params.get('query') ? '' : params.get('sort') || props.config.sort,
-    startRank: params.get('start_rank') || 1,
-    numRanks: params.get('num_ranks') || props.config.numRanks,
-    facets: getFacetParams(props.config.facetLabels, params)
-  }; // State objects for the Funnelback query and response
-
-  const [query, setQuery] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(initialQuery); // Boolean to indicate when a query is in progress
-
-  const [updating, setUpdating] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(true); // Request token from the Funnelback request object, so we can cancel if
-  // another request is triggered by the user
-
-  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])({
-    cancel: () => {}
-  }); // useEffect doesn't deep inspect objects, so we need an additional, plain
-  // state variable to indicate that the query state has changed and the
-  // component should render
-  // the value isn't important, it's just easy to toggle a bool back and forth
-
-  const [update, setUpdate] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(false); // Retrieve Funnelback results
-
-  Object(react__WEBPACK_IMPORTED_MODULE_8__["useEffect"])(() => {
-    // preserve the state
-    replaceHistory(query.query, query.startRank, query.facets, props.config.facetLabels); // indicate a request is in progress
-
-    setUpdating(true);
-    /**
-     * cancel any request already in progress
-     *
-     * async requests can return out of order
-     */
-
-    call.cancel(); // make a new, asynchronous request to Funnelback
-
-    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_10__["find"])(query.collection, query.fixedFacets, query.query, query.sortType, query.startRank, query.numRanks, query.facets); // save the requestToken, so
-
-    setCall({
-      cancel: () => {
-        requestToken.cancel();
-      }
-    }); // when the response from Funnelback arrives,
-    // update the results and display them
-
-    request.then(() => {
-      setUpdating(false);
-    }).catch(() => {
-      setUpdating(false);
-    });
-  }, [update]); // update props so child components can update the query
-
-  const updater = {
-    query: newQuery => setQuery(newQuery),
-    results: newUpdate => setUpdate(newUpdate),
-    updateState: update
-  };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("form", {
-    onSubmit: e => {
-      e.preventDefault();
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_query_finder_query_mini__WEBPACK_IMPORTED_MODULE_11__["default"], {
-    config: props.config,
-    query: query,
-    update: updater,
-    updating: updating
-  }));
-}
-
-Finder.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (Finder);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/finder.js":
-/*!***************************************!*\
-  !*** ./src/patterns/finder/finder.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_object_assign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.assign */ "./node_modules/core-js/modules/es.object.assign.js");
-/* harmony import */ var core_js_modules_es_object_assign__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_assign__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
-/* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var core_js_modules_web_url__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/web.url */ "./node_modules/core-js/modules/web.url.js");
-/* harmony import */ var core_js_modules_web_url__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_url__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var _components_query_finder_query__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/query/finder__query */ "./src/patterns/finder/components/query/finder__query.js");
-/* harmony import */ var _components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/filters/finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
-/* harmony import */ var _components_filters_finder_filtersmobile__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/filters/finder__filtersmobile */ "./src/patterns/finder/components/filters/finder__filtersmobile.js");
-/* harmony import */ var _components_results_finder_results__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/results/finder__results */ "./src/patterns/finder/components/results/finder__results.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * Universal finder
- *
- * Don't run this via patterns.js, it's a separate compilation.
- *
- * @module patterns/finder/finder
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-
-
-
-
-
-
-const oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_18__["reduceMotion"])() ? 0 : oneSecond,
-      screenOffsetRatio = 10;
-/**
- * Retrieve current values for facets from the URL parameters.
- *
- * @param {object[]} facets Array of facet definitions.
- * @param {object} params URLSearchParams object for the current page.
- * @return {object} - Map of facet meta labels to their current value from the URL.
- */
-
-function getFacetParams(facets, params) {
-  return facets.map(facet => {
-    const param = {};
-
-    if (params.get("meta_".concat(facet.meta, "_sand"))) {
-      param[facet.meta] = params.get("meta_".concat(facet.meta, "_sand"));
-    }
-
-    return param;
-  }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
-}
-/**
- * Preserve the search state in the URL parameters.
- *
- * @param {string} currQuery The search query.
- * @param {integer} currStartRank The start rank.
- * @param {object[]} currFacets A map of facet meta labels to their values.
- * @param {*} facetLabels Array of facet definitions.
- */
-
-
-function replaceHistory(currQuery, currStartRank, currFacets, currSort, facetLabels, defaultSort) {
-  if (window) {
-    const params = new URLSearchParams(window.location.search);
-    currQuery !== '' ? params.set('query', currQuery) : params.delete('query');
-    currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
-    currSort !== defaultSort && currSort !== '' ? params.set('sort', currSort) : params.delete('sort');
-    facetLabels.forEach(facet => {
-      if (currFacets[facet.meta]) {
-        params.set("meta_".concat(facet.meta, "_sand"), currFacets[facet.meta]);
-      } else {
-        params.delete("meta_".concat(facet.meta, "_sand"));
-      }
-    });
-    const hasParams = params.toString().length ? '?' : '';
-    window.history.replaceState({}, '', "".concat(window.location.pathname).concat(hasParams).concat(params.toString()));
-  }
-}
-/**
- * Launch the universal Finder.
- *
- * @param {object} props The JSON configuration file for the Finder.
- * @return {object} The React component to render.
- */
-
-
-function Finder(props) {
-  const params = new URLSearchParams(window.location.search);
-  /**
-   * initial state for the Funnelback query, taken from URL parameters and
-   * configuration
-   **/
-
-  const initialQuery = {
-    collection: props.config.collection,
-    facets: props.config.facetLabels.length > 0 ? getFacetParams(props.config.facetLabels, params) : {},
-    fixedFacets: props.config.fixedFacets,
-    interacted: false,
-    misspelling: null,
-    numRanks: params.get('num_ranks') || props.config.numRanks,
-    query: params.get('query') || '',
-    sortType: params.get('query') ? '' : params.get('sort') || props.config.sort[0].type,
-    startRank: params.get('start_rank') || 1
-  };
-  /**
-   * Dummy, empty Funnelback response object for initial state.
-   */
-
-  const initialResponse = {
-    bestBets: [],
-    facets: [],
-    results: [],
-    spell: null,
-    summary: {
-      currEnd: 0,
-      currStart: 0,
-      numRanks: 0,
-      totalMatching: 0
-    }
-  }; // State objects for the Funnelback query and response
-
-  const [query, setQuery] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(initialQuery);
-  const [funnelbackResponse, setResponse] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(initialResponse); // Boolean to indicate when a query is in progress
-
-  const [updating, setUpdating] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(true); // Request token from the Funnelback request object, so we can cancel if
-  // another request is triggered by the user
-
-  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])({
-    cancel: () => {}
-  }); // useEffect doesn't deep inspect objects, so we need an additional, plain
-  // state variable to indicate that the query state has changed and the
-  // component should render
-  // the value isn't important, it's just easy to toggle a bool back and forth
-
-  const [update, setUpdate] = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(false); // Retrieve Funnelback results
-
-  Object(react__WEBPACK_IMPORTED_MODULE_10__["useEffect"])(() => {
-    // preserve the state
-    replaceHistory(query.query, query.startRank, query.facets, query.sortType, props.config.facetLabels, props.config.sort[0].type); // indicate a request is in progress
-
-    setUpdating(true);
-    query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_17___default.a.center(props.element.querySelector('.finder__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
-    /**
-     * cancel any request already in progress
-     *
-     * async requests can return out of order
-     */
-
-    call.cancel(); // make a new, asynchronous request to Funnelback
-
-    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_12__["find"])(query.collection, query.fixedFacets, query.query, query.sortType, query.startRank, query.numRanks, query.facets); // save the requestToken, so
-
-    setCall({
-      cancel: () => {
-        requestToken.cancel();
-      }
-    }); // when the response from Funnelback arrives,
-    // update the results and display them
-
-    request.then(data => {
-      setResponse(data);
-      setUpdating(false);
-
-      if (data.spell && data.summary.totalMatching === 0) {
-        const newQueryText = data.spell.text.split(/\|/)[0].trim(),
-              newQuery = query;
-        newQuery.misspelling = query.query;
-        newQuery.query = newQueryText;
-        newQuery.startRank = 1;
-        setQuery(newQuery);
-        setUpdate(!update);
-      }
-    }).then(() => {
-      query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_17___default.a.center(props.element.querySelector('.finder__results h2'), scrollDuration);
-    }).catch(() => {
-      setResponse(initialResponse);
-      setUpdating(false);
-    });
-  }, [update]); // update props so child components can update the query
-
-  const updater = {
-    query: newQuery => setQuery(newQuery),
-    results: newUpdate => setUpdate(newUpdate),
-    updateState: update
-  };
-  /**
-   * @param  {boolean} resetSort - Reset the sort order too?
-   */
-
-  const clear = resetSort => {
-    const newQuery = query;
-    call.cancel();
-    newQuery.sortType = resetSort ? props.config.sort[0].type : newQuery.sortType;
-    newQuery.facets = {};
-    newQuery.startRank = 1;
-    newQuery.misspelling = null;
-    newQuery.interacted = true;
-    setQuery(newQuery);
-    setUpdate(!update);
-  };
-
-  const queryElement = props.config.noQuery && props.config.noQuery === true ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_13__["default"], {
-    config: props.config,
-    query: query,
-    update: updater,
-    updating: updating
-  });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("form", {
-    className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
-    onSubmit: e => {
-      e.preventDefault();
-    }
-  }, queryElement, props.config.facetLabels.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_filters_finder_filtersmobile__WEBPACK_IMPORTED_MODULE_15__["default"], {
-    config: props.config,
-    query: query,
-    response: funnelbackResponse,
-    update: updater,
-    updating: updating,
-    summariseAs: props.config.summariseAs,
-    clear: clear
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
-    className: "wrapper--finder__filters--desktop"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_14__["default"], {
-    config: props.config,
-    query: query,
-    response: funnelbackResponse,
-    update: updater,
-    clear: clear
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_results_finder_results__WEBPACK_IMPORTED_MODULE_16__["default"], {
-    clear: clear,
-    config: props.config,
-    query: query,
-    response: funnelbackResponse,
-    summariseAs: props.config.summariseAs,
-    type: props.config.resultCard,
-    update: updater,
-    updating: updating
-  }));
-}
-
-Finder.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_11___default.a.object,
-  element: prop_types__WEBPACK_IMPORTED_MODULE_11___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (Finder);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/funnelback.js":
-/*!*******************************************!*\
-  !*** ./src/patterns/finder/funnelback.js ***!
-  \*******************************************/
-/*! exports provided: find, suggest, finderConfig */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "find", function() { return find; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "suggest", function() { return suggest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "finderConfig", function() { return finderConfig; });
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var https__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! https */ "./node_modules/https-browserify/index.js");
-/* harmony import */ var https__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(https__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util.js */ "./src/util.js");
-
-
-
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-/**
- * Functions for making requests to Funnelback
- *
- * @module funnelback
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-/**
- * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
- */
-
-const baseUrl = 'https://web2020.city.ac.uk/web-services',
-      findRootUrl = '/funnelback-find',
-      suggestRootUrl = '/funnelback-suggest',
-      timeout = 30000;
-/**
- * Funnelback search query.
- *
- * @param {string} collection The Funnelback collection to query.
- * @param {string} [query] The query string.
- * @param {string} [sortType] The field to sort by.
- * @param {integer} startRank The first result to return.
- * @param {integer} numRank The number of results to return.
- * @param {object} [facets] A map of facets to query strings.
- * @return {Promise} - A promise of search results.
- */
-
-function find(collection, fixedFacets, query, sortType, startRank, numRank, facets) {
-  const fixedFacetParams = {};
-  fixedFacets.forEach(facet => {
-    fixedFacetParams["meta_".concat(facet.meta, "_sand")] = facet.value;
-  });
-  const facetParams = {},
-        facetKeys = Object.keys(facets);
-  facetKeys.forEach(key => facetParams["meta_".concat(key, "_sand")] = facets[key]);
-  const CancelToken = axios__WEBPACK_IMPORTED_MODULE_1___default.a.CancelToken,
-        call = CancelToken.source(),
-        config = {
-    baseURL: baseUrl,
-    cancelToken: call.token,
-    httpsAgent: new https__WEBPACK_IMPORTED_MODULE_2___default.a.Agent({
-      keepAlive: true
-    }),
-    url: findRootUrl,
-    timeout: timeout,
-    params: _objectSpread(_objectSpread(_objectSpread({}, fixedFacetParams), facetParams), {}, {
-      collection: collection,
-      num_ranks: numRank,
-      query: query,
-      sort: sortType || '',
-      start_rank: startRank
-    })
-  };
-  return [Object(_util_js__WEBPACK_IMPORTED_MODULE_3__["axiosRequest"])(config), call];
-}
-/**
- * Funnelback suggestion query.
- *
- * @param {string} collection The Funnelback collection to query.
- * @param {string} partialQuery The string to make suggestions for.
- * @return {Promise} - A promise of an array of suggestion strings.
- */
-
-function suggest(collection, partialQuery) {
-  const CancelToken = axios__WEBPACK_IMPORTED_MODULE_1___default.a.CancelToken,
-        call = CancelToken.source(),
-        config = {
-    baseURL: baseUrl,
-    cancelToken: call.token,
-    url: suggestRootUrl,
-    timeout: timeout,
-    params: {
-      collection: collection,
-      partial_query: partialQuery
-    }
-  };
-  return [Object(_util_js__WEBPACK_IMPORTED_MODULE_3__["axiosRequest"])(config), call];
-}
-/**
- * Finder configuration.
- *
- * @param {string} url The Finder configuration file.
- * @return {Promise} - A promise of  configuration object.
- */
-
-function finderConfig(url) {
-  const config = {
-    timeout: timeout,
-    url: url
-  };
-  return Object(_util_js__WEBPACK_IMPORTED_MODULE_3__["axiosRequest"])(config);
-}
-
-/***/ }),
-
 /***/ "./src/patterns/image-carousel/carousel-constructor.js":
 /*!*************************************************************!*\
   !*** ./src/patterns/image-carousel/carousel-constructor.js ***!
@@ -7199,31 +4006,267 @@ function init(elem) {
 
 /***/ }),
 
-/***/ "./src/patterns/image-carousel/swipe.js":
-/*!**********************************************!*\
-  !*** ./src/patterns/image-carousel/swipe.js ***!
-  \**********************************************/
-/*! exports provided: swipeCal */
+/***/ "./src/patterns/key-information/key-information--lifelong-learning.js":
+/*!****************************************************************************!*\
+  !*** ./src/patterns/key-information/key-information--lifelong-learning.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "swipeCal", function() { return swipeCal; });
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
-function unify(e) {
-  return e.changedTouches ? e.changedTouches[0] : e;
+
+
+/**
+ * Short courses/CPD key information
+ *
+ * @module patterns/key-information/key-information--lifelong-learning
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+
+const className = 'key-information--lifelong-learning',
+      loadMoreBatch = 3,
+      arrowLeft = 'ArrowLeft',
+      arrowRight = 'ArrowRight',
+      oneSecond = 1000,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
+      scrollTo = true;
+/**
+ * Initialise data atributes on the start dates.
+ *
+ * @param  {HTMLLIElement[]} startDates - The start dates.
+ */
+
+function prepareStartDates(startDates) {
+  startDates.forEach((startDate, i) => {
+    startDate.setAttribute('tabindex', -1);
+    startDate.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, "Start date ".concat(i + 1, " of ").concat(startDates.length));
+
+    if (i < 1) {
+      startDate.dataset.sliderposition = 0;
+      startDate.dataset.loadmorevisible = true;
+      startDate.dataset.hidden = false;
+    } else if (i < loadMoreBatch) {
+      startDate.dataset.sliderposition = 1;
+      startDate.dataset.loadmorevisible = true;
+      startDate.dataset.hidden = true;
+    } else {
+      startDate.dataset.sliderposition = 1;
+      startDate.dataset.loadmorevisible = false;
+      startDate.dataset.hidden = true;
+    }
+  });
+}
+/**
+ * @param  {HTMLElement} keyInformation - The key information element.
+ */
+
+
+function updateButtonState(keyInformation) {
+  const nextButton = keyInformation.querySelector(".".concat(className, "__controls__next")),
+        prevButton = keyInformation.querySelector(".".concat(className, "__controls__prev")),
+        loadMoreButton = keyInformation.querySelector(".".concat(className, "__controls__loadmore"));
+  keyInformation.querySelector('[data-sliderposition="-1"]') ? prevButton.removeAttribute('disabled') : prevButton.setAttribute('disabled', true);
+  keyInformation.querySelector('[data-sliderposition="1"]') ? nextButton.removeAttribute('disabled') : nextButton.setAttribute('disabled', true);
+
+  if (loadMoreButton && !keyInformation.querySelector('[data-loadmorevisible="false"]')) {
+    loadMoreButton.parentNode.removeChild(loadMoreButton);
+  }
+}
+/**
+ * Handle clicks on the next/previous buttons.
+ *
+ * @param  {HTMLElement} keyInformation - The keyInformation element.
+ * @param  {Number} direction - The scroll direction, 1 = next, -1 = previous.
+ */
+
+
+function handleNextPrevClick(keyInformation, direction) {
+  const startDates = Array.from(keyInformation.querySelectorAll(".".concat(className, "__dates > li"))),
+        current = keyInformation.querySelector('[data-sliderposition="0"]'),
+        currentPage = keyInformation.querySelector(".".concat(className, "__indicator__current")),
+        nextButton = keyInformation.querySelector(".".concat(className, "__controls__next")),
+        prevButton = keyInformation.querySelector(".".concat(className, "__controls__prev"));
+
+  if (direction === 1) {
+    const next = current.nextElementSibling;
+
+    if (next) {
+      nextButton.setAttribute('disabled', true);
+      prevButton.setAttribute('disabled', true);
+      next.addEventListener('transitionend', function focusNext() {
+        next.removeEventListener('transitionend', focusNext, true);
+        next.focus();
+        updateButtonState(keyInformation);
+      }, true);
+      current.addEventListener('transitionend', function hideCurrent() {
+        current.removeEventListener('transitionend', hideCurrent, true);
+        current.dataset.hidden = true;
+      }, true);
+      current.dataset.sliderposition = -1;
+      next.dataset.hidden = false;
+      next.dataset.sliderposition = 0;
+      next.dataset.loadmorevisible = true;
+      currentPage.innerText = startDates.indexOf(next) + 1;
+    }
+  } else {
+    const previous = current.previousElementSibling;
+
+    if (previous) {
+      nextButton.setAttribute('disabled', true);
+      prevButton.setAttribute('disabled', true);
+      previous.addEventListener('transitionend', function focusPrevious() {
+        previous.removeEventListener('transitionend', focusPrevious, true);
+        previous.focus();
+        updateButtonState(keyInformation);
+      }, true);
+      current.addEventListener('transitionend', function hideCurrent() {
+        current.removeEventListener('transitionend', hideCurrent, true);
+        current.dataset.hidden = true;
+      }, true);
+      current.dataset.sliderposition = 1;
+      previous.dataset.hidden = false;
+      previous.dataset.sliderposition = 0;
+      currentPage.innerText = startDates.indexOf(previous) + 1;
+    }
+  }
+}
+/**
+ * Load another batch of start dates, remove the button if we're done.
+ *
+ * @param  {HTMLElement} keyInformation - The key information element.
+ */
+
+
+function handleLoadMoreClick(keyInformation) {
+  const hiddenDates = Array.from(keyInformation.querySelectorAll(".".concat(className, "__dates > [data-loadmorevisible=\"false\"]"))),
+        loadMoreButton = keyInformation.querySelector(".".concat(className, "__controls__loadmore"));
+
+  if (loadMoreBatch >= hiddenDates.length) {
+    loadMoreButton.parentNode.removeChild(loadMoreButton);
+  }
+
+  hiddenDates.slice(0, loadMoreBatch).forEach(date => {
+    date.dataset.loadmorevisible = true;
+  });
+  const firstElement = hiddenDates.shift();
+
+  if (firstElement && scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_2__["verticallyInWindow"])(firstElement)) {
+    zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(firstElement, scrollDuration);
+  }
+
+  firstElement && firstElement.focus();
+}
+/**
+ * Adds a slider and load more functionality to a short course key information section.
+ *
+ * @param  {HTMLElement} keyInformation - The key information element.
+ */
+
+
+function launchKeyInformation(keyInformation) {
+  const startDates = Array.from(keyInformation.querySelectorAll(".".concat(className, "__dates > li"))),
+        startDateList = keyInformation.querySelector(".".concat(className, "__dates"));
+
+  if (startDates.length < 2) {
+    return;
+  } else {
+    keyInformation.classList.add("".concat(className, "__dates--controllable"));
+    startDateList.setAttribute('role', 'presentation');
+  }
+
+  const controlsWrapper = document.createElement('nav'),
+        nextButton = document.createElement('button'),
+        nextButtonSpan = document.createElement('span'),
+        prevButton = document.createElement('button'),
+        prevButtonSpan = document.createElement('span'),
+        indicator = document.createElement('div'),
+        currentPage = document.createElement('span'),
+        totalPages = document.createElement('span'),
+        divider = document.createElement('span'),
+        dividerVisible = document.createElement('span'),
+        dividerScreenReader = document.createElement('span'),
+        loadMoreButton = document.createElement('button'),
+        loadMoreButtonSpan = document.createElement('span');
+  nextButtonSpan.appendChild(document.createTextNode('Next start date'));
+  nextButton.appendChild(nextButtonSpan);
+  nextButton.setAttribute('type', 'button');
+  nextButton.className = className + '__controls__next';
+  nextButton.addEventListener('click', () => handleNextPrevClick(keyInformation, 1), true);
+  prevButtonSpan.appendChild(document.createTextNode('Previous start date'));
+  prevButton.appendChild(prevButtonSpan);
+  prevButton.setAttribute('type', 'button');
+  prevButton.setAttribute('disabled', 'true');
+  prevButton.className = className + '__controls__prev';
+  prevButton.addEventListener('click', () => handleNextPrevClick(keyInformation, -1), true);
+  keyInformation.addEventListener('keydown', e => {
+    switch (e.key) {
+      case arrowLeft:
+        prevButton.click();
+        break;
+
+      case arrowRight:
+        nextButton.click();
+        break;
+
+      default:
+        break;
+    }
+  }, true);
+
+  if (startDates.length > loadMoreBatch) {
+    loadMoreButtonSpan.appendChild(document.createTextNode('Load more start dates'));
+    loadMoreButton.appendChild(loadMoreButtonSpan);
+    loadMoreButton.setAttribute('type', 'button');
+    loadMoreButton.className = className + '__controls__loadmore';
+    loadMoreButton.addEventListener('click', () => handleLoadMoreClick(keyInformation), true);
+  }
+
+  currentPage.appendChild(document.createTextNode(1));
+  currentPage.className = className + '__indicator__current';
+  dividerVisible.appendChild(document.createTextNode('/'));
+  dividerVisible.className = className + '__indicator__divider--visible';
+  dividerVisible.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+  dividerScreenReader.appendChild(document.createTextNode(' of '));
+  dividerScreenReader.className = className + '__indicator__divider--sr';
+  divider.appendChild(dividerVisible);
+  divider.appendChild(dividerScreenReader);
+  divider.className = className + '__indicator__divider';
+  totalPages.appendChild(document.createTextNode(startDates.length));
+  totalPages.className = className + '__indicator__total';
+  indicator.appendChild(currentPage);
+  indicator.appendChild(divider);
+  indicator.appendChild(totalPages);
+  indicator.className = className + '__indicator';
+  controlsWrapper.appendChild(indicator);
+  controlsWrapper.appendChild(prevButton);
+  controlsWrapper.appendChild(nextButton);
+
+  if (startDates.length > loadMoreBatch) {
+    controlsWrapper.appendChild(loadMoreButton);
+  }
+
+  controlsWrapper.className = className + '__controls';
+  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'Course start dates navigation');
+  prepareStartDates(startDates);
+  keyInformation.appendChild(controlsWrapper);
 }
 
-function mousePosition(event) {
-  return unify(event).clientX;
-}
-
-function swipeCal(x) {
-  return function (y) {
-    return mousePosition(x) - mousePosition(y);
-  };
-}
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchKeyInformation,
+  launchQuery: ".".concat(className)
+});
 
 /***/ }),
 
@@ -7276,7 +4319,7 @@ function prependIcon(anchor, className) {
 
 
 function findExternalLink(anchor) {
-  if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && !anchor.parentElement.className.includes('cta-like-anchor') && anchor.className !== 'social-icon' && !anchor.className.includes('cta') && !anchor.parentElement.className.includes('cta-block') && !anchor.parentElement.className.includes('card') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.origin) {
+  if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && !anchor.parentElement.className.includes('cta-like-anchor') && anchor.className !== 'social-icon' && !anchor.className.includes('cta') && !anchor.parentElement.className.includes('cta-block') && !anchor.parentElement.className.includes('card') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.href.indexOf('javascript:') !== 0 && anchor.origin) {
     let node = document.createElement('span');
     node.className = 'far fa-external-link inline-external-link';
     node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, '(external link)');
@@ -7330,193 +4373,6 @@ function findLinks(e) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: findLinks,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
-/***/ "./src/patterns/load-more/load-more.js":
-/*!*********************************************!*\
-  !*** ./src/patterns/load-more/load-more.js ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
-
-/**
- * Load more - show additional items on 'Load more' button click. Update URL to illustrate where user is in item set.
- *
- * @module patterns/load-more/load-more
- * @author Mark Skinsley <mark.skinsley@city.ac.uk>
- * @copyright City, University of London 2019
- */
-
-
-const className = 'load-more';
-let hashedUrl = window.location.hash,
-    loadMoreId;
-/**
- * Control what items will display based on wrapper's 'data-listings-show' data attribute.
- *
- * @param {HTMLElements} [items] - Elements controlled by 'Load more' button.
- * @param {number} visibleItems - Number of items visible at any one time.
- * @param {HTMLElement} loadMoreBtn - Button controlling particular item group.
- */
-
-function itemsDisplay(items, visibleItems, loadMoreBtn) {
-  for (const item of items.entries()) {
-    item[1].setAttribute('tabindex', '-1');
-
-    if (item[0] >= visibleItems) {
-      item[1].classList.add('hide');
-      item[1].style.display = 'none';
-    } else {
-      item[1].classList.remove('hide');
-      item[1].style.display = 'grid';
-    }
-  } // Hide 'load more' button when reached end of listings
-
-
-  if (visibleItems > items.length) {
-    loadMoreBtn.classList.add('hide');
-  } else {
-    loadMoreBtn.classList.remove('hide');
-  }
-}
-/**
- * Scroll to, and focus first listing of newly visible items batch.
- *
- * @param {HTMLElement} [items] - Elements controlled by 'Load more' button.
- * @param {number} visibleItems - Number of items visible at any one time.
- * @param {number} itemsIncrement - Number of additional items shown when 'Load more' button is clicked.
- */
-
-
-function scrollToItem(items, visibleItems, itemsIncrement) {
-  let targetItem = visibleItems - itemsIncrement;
-
-  for (const item of items.entries()) {
-    if (item[0] === targetItem) {
-      item[1].focus();
-      zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(item[1]);
-    } else if (visibleItems === itemsIncrement) {
-      if (item[0] === 0) {
-        item[1].focus();
-        zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(item[1]);
-      }
-    }
-  }
-}
-/**
- * Push state to URL: used to build initial hash after first 'Load more' click.
- *
- * @param {string} parentType - Data attribute describing parent group.
- * @param {string} childrenType - Data attribute describing child items.
- * @param {HTMLElement} wrapperId - Parent element wrapping items and 'Load more' button.
- * @param {number} visibleItems - Number of items visible at any one time.
- * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
- */
-
-
-function pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
-  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
-  history.pushState('', '', "#".concat(parentType).concat(wrapperId, "-").concat(childrenType).concat(targetListingUrlParam));
-}
-/**
- * Replace URL state: used to swap existing hash
- *
- * @param {string} parentType - Data attribute describing parent group.
- * @param {string} childrenType - Data attribute describing child items.
- * @param {HTMLElement} wrapperId - Parent element wrapping items and 'Load more' button.
- * @param {number} visibleItems - Number of items visible at any one time.
- * @param {number} itemsIncrement - Number of additional tems shown when 'Load more' button is clicked.
- */
-
-
-function replaceUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) {
-  let targetListingUrlParam = visibleItems - (itemsIncrement - 1);
-  history.replaceState('', '', "#".concat(parentType).concat(wrapperId, "-").concat(childrenType).concat(targetListingUrlParam));
-}
-
-function launchLoadMore(e) {
-  let wrapperId = e.getAttribute('id'),
-      items = e.querySelectorAll('.item'),
-      itemsIncrement = parseInt(e.dataset.increment),
-      loadMoreBtn = e.querySelector('.content-toggle button'),
-      parentType = e.getAttribute('data-item-parent'),
-      childrenType = e.getAttribute('data-item-children');
-  /**
-   * Give wrapper a numeric data attribute. As this changes, so
-   * will the number of visible items.
-   */
-
-  e.setAttribute('data-items-visible', itemsIncrement);
-  let visibleItems = parseInt(e.getAttribute('data-items-visible')); // Load correct number of items based on URL hash
-
-  if (hashedUrl) {
-    let hashedUrlParts = hashedUrl.split('-');
-    let activeItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(hashedUrlParts[1]));
-    visibleItems = activeItem + (itemsIncrement - 1);
-    e.setAttribute('data-items-visible', visibleItems);
-    itemsDisplay(items, visibleItems, loadMoreBtn);
-    scrollToItem(items, visibleItems, itemsIncrement);
-  } else {
-    itemsDisplay(items, visibleItems, loadMoreBtn);
-  } // Run on every 'load more' click: increase listings by batch number
-
-
-  loadMoreBtn.addEventListener('click', () => {
-    visibleItems += itemsIncrement;
-    e.setAttribute('data-items-visible', visibleItems);
-    itemsDisplay(items, visibleItems, loadMoreBtn);
-    scrollToItem(items, visibleItems, itemsIncrement);
-    hashedUrl = window.location.hash;
-    hashedUrl ? replaceUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement) : pushUrlState(parentType, childrenType, wrapperId, visibleItems, itemsIncrement);
-    loadMoreId = e.id;
-  }); // Back/forward browser clicks.
-
-  window.onpopstate = () => {
-    let loadMoreIdElement = document.getElementById(loadMoreId); // Must re-assign variable on pop state change
-
-    hashedUrl = window.location.hash;
-
-    if (hashedUrl) {
-      // Capture latest hash
-      let updatedUrlParts = window.location.hash.split('-');
-      let currentItem = parseInt(Object(_util__WEBPACK_IMPORTED_MODULE_3__["numberFromString"])(updatedUrlParts[1]));
-      currentItem = currentItem + (itemsIncrement - 1);
-      visibleItems = currentItem;
-      e.setAttribute('data-items-visible', visibleItems);
-      itemsDisplay(items, visibleItems, loadMoreBtn);
-      scrollToItem(items, visibleItems, itemsIncrement);
-    } else {
-      let relatedItems = loadMoreIdElement.querySelectorAll('.item');
-      visibleItems = itemsIncrement;
-      itemsDisplay(items, visibleItems, loadMoreBtn);
-      e.setAttribute('data-items-visible', itemsIncrement);
-      scrollToItem(relatedItems, visibleItems, itemsIncrement);
-    }
-  };
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchLoadMore,
   launchQuery: ".".concat(className)
 });
 
@@ -7666,16 +4522,13 @@ function listenForNavigationToggles(subNavigation, rootClass) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _menu_formatters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./menu-formatters */ "./src/patterns/menu/menu-formatters.js");
-
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _menu_formatters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menu-formatters */ "./src/patterns/menu/menu-formatters.js");
 
 
 
@@ -7719,7 +4572,7 @@ function menuSetter(menu, button) {
     const buttonText = button.querySelector(".".concat(buttonTextClassName));
     menu.dataset.open = open;
     buttonText.innerText = open ? 'Close' : 'Menu';
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, open);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
   };
 
   return setMenu;
@@ -7737,9 +4590,9 @@ function menuSetter(menu, button) {
 
 
 function toggleMenu(button, setMenu, trap, veil) {
-  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded);
+  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded);
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(expanded)) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(expanded)) {
     trap.deactivate();
     veil.dataset.on = 'false';
     setMenu(false);
@@ -7768,17 +4621,17 @@ function createMenuToggle(label, button, setMenu, veil) {
   button.className = 'menu__display__button__button';
   buttonWrapper.className = 'menu__display__button__button__wrapper';
   button.setAttribute('type', 'button');
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hasPopup, 'menu');
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hasPopup, 'menu');
   Array.from(label.childNodes).forEach(child => buttonWrapper.appendChild(child));
   button.appendChild(buttonWrapper);
-  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_2___default()(menu, {
+  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(menu, {
     /**
      * Initial focus should be whichever of: the current page; a menu item
      * in the asset lineage or; the first item in the last column appears
      * last in the DOM and is visible.
      */
     initialFocus: () => {
-      const open = Array.from(menu.querySelectorAll([".".concat(contentHeaderClassName, " > span"), ".".concat(currentClassName, " > .").concat(controlsClassName, " > a"), ".".concat(hierarchyClassName, " > .").concat(controlsClassName, " > a"), ".".concat(level1ClassName, " > ul > li:first-of-type > .").concat(controlsClassName, " > a"), ".".concat(currentPage, " > a")].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_3__["isVisible"])(elem));
+      const open = Array.from(menu.querySelectorAll([".".concat(contentHeaderClassName, " > span"), ".".concat(currentClassName, " > .").concat(controlsClassName, " > a"), ".".concat(hierarchyClassName, " > .").concat(controlsClassName, " > a"), ".".concat(level1ClassName, " > ul > li:first-of-type > .").concat(controlsClassName, " > a"), ".".concat(currentPage, " > a")].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_2__["isVisible"])(elem));
       return open[open.length - 1];
     },
     onDeactivate: () => toggleMenu(button, setMenu, trap, veil),
@@ -7795,19 +4648,19 @@ function createMenuToggle(label, button, setMenu, veil) {
 
 function launchMenu(menu) {
   // During testing only: remove 'under construction' indicators globally
-  menu.innerHTML = menu.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
+  // menu.innerHTML = menu.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
   const label = menu.querySelector(".".concat(buttonDisplayClassName)),
         button = document.createElement('button'),
         veil = document.createElement('div'),
         setMenu = menuSetter(menu, button);
   veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   createMenuToggle(label, button, setMenu, veil);
   label.appendChild(button);
   setMenu(false);
-  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_5__["prepareNavigation"])(menu.querySelector(".".concat(level1ClassName)), className);
-  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_5__["listenForNavigationToggles"])(menu.querySelector(".".concat(level1ClassName)), className);
+  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_4__["prepareNavigation"])(menu.querySelector(".".concat(level1ClassName)), className);
+  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_4__["listenForNavigationToggles"])(menu.querySelector(".".concat(level1ClassName)), className);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -7852,7 +4705,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'modal',
       bodyClassName = className + '__body',
-      keyCodeEscape = 27,
+      escapeKey = 'Escape',
       oneSecond = 1000,
       scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = true;
@@ -7870,6 +4723,7 @@ function launchModal(modal) {
     if (!list.dataset.modalcontent || list.dataset.modalcontent === 'true') {
       const wrapper = document.createElement('div'),
             listButton = document.createElement('button'),
+            listButtonSpan = document.createElement('span'),
             listBody = Array.from(list.childNodes),
             listHeader = list.firstElementChild,
             customHeader = list.getAttribute('data-header'),
@@ -7880,7 +4734,9 @@ function launchModal(modal) {
           shortName = list.getAttribute('data-shortname');
       listButton.classList.add('modal__button');
       listButton.setAttribute('type', 'button');
-      listButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'open dialog');
+      listButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'Open dialog');
+      listButtonSpan.classList.add('inline-text');
+      listButton.appendChild(listButtonSpan);
       list.appendChild(wrapper);
       Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(wrapper, listBody);
       wrapper.classList.add("".concat(bodyClassName));
@@ -7901,7 +4757,7 @@ function launchModal(modal) {
           createDialog(modal, "".concat(i), dialogArray);
         });
       } else {
-        listButton.textContent = listHeader.textContent;
+        listButtonSpan.textContent = listHeader.textContent;
         header.appendChild(listHeader);
         list.insertBefore(listButton, wrapper);
         listButton.addEventListener('click', function () {
@@ -7929,7 +4785,8 @@ function launchModal(modal) {
 
 
 function createDialog(parent, position, dialogArray) {
-  const slider = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(parent.getAttribute('data-slider'));
+  const slider = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(parent.getAttribute('data-slider')),
+        type = parent.dataset.type;
   const closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('button', [{
     label: 'class',
     val: 'dialog__close fas fa-times'
@@ -7943,6 +4800,9 @@ function createDialog(parent, position, dialogArray) {
   }, {
     label: 'data-position',
     val: "".concat(position)
+  }, {
+    label: 'data-type',
+    val: "".concat(type)
   }]);
   const bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
     label: 'class',
@@ -7979,7 +4839,7 @@ function createDialog(parent, position, dialogArray) {
   const main = document.querySelector('main');
   main.appendChild(dialog);
   dialog.addEventListener('keydown', e => {
-    if (e.keyCode === keyCodeEscape) {
+    if (e.key === escapeKey) {
       e.preventDefault();
       document.body.classList.remove('dialog-in', 'no-scroll');
       trap.deactivate();
@@ -8194,15 +5054,12 @@ function trapFocus(modal) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 
@@ -8228,8 +5085,8 @@ const className = 'navigation',
       openText = 'Open',
       closeText = 'Close',
       navigationText = 'navigation section',
-      keyCodeTab = 9,
-      keyCodeEscape = 27;
+      tabKey = 'Tab',
+      escapeKey = 'Escape';
 /**
  * Return a function to toggle everything closed.
  *
@@ -8242,7 +5099,7 @@ function createCloseAll(navigation, veil) {
   return () => {
     const buttons = Array.from(navigation.querySelectorAll('.navigation--primary__level1 > .navigation__button'));
     buttons.forEach(button => {
-      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, 'false');
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(openText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     });
     veil.dataset.on = 'false';
@@ -8259,13 +5116,13 @@ function createCloseAll(navigation, veil) {
 
 function createSectionToggle(button, closeAll, veil) {
   return () => {
-    const open = !Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded));
+    const open = !Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded));
     closeAll();
 
     if (open) {
       button.closest(".".concat(classNameSpecific)).dataset.open = 'true';
       veil.dataset.on = 'true';
-      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, open);
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(closeText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     }
   };
@@ -8290,8 +5147,8 @@ function prepareTopLevel(navigation, veil, closeAll) {
           toggleSection = createSectionToggle(button, closeAll, veil); // LIs have tabindex so they're accessible with no JS, remove it
 
     el.removeAttribute('tabindex');
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].owns, el.nextElementSibling.id);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, 'false');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].owns, el.nextElementSibling.id);
     button.setAttribute('type', 'button');
     button.id = el.nextElementSibling.id + '-button';
     button.className = buttonClassName;
@@ -8300,7 +5157,7 @@ function prepareTopLevel(navigation, veil, closeAll) {
     srNavigationSpan.className = navigationTextClassName;
     srNavigationSpan.appendChild(document.createTextNode(navigationText));
     button.addEventListener('click', () => toggleSection(), true);
-    Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(buttonDiv, [srOpenCloseSpan, document.createTextNode(' '), el, document.createTextNode(' '), srNavigationSpan]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(buttonDiv, [srOpenCloseSpan, document.createTextNode(' '), el, document.createTextNode(' '), srNavigationSpan]);
     button.append(buttonDiv);
     listItem.prepend(button);
   });
@@ -8320,7 +5177,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
         restButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:first-of-type) > .navigation__button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   firstButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
       closeAll();
     }
   });
@@ -8330,7 +5187,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
           lastNavigationAnchor = previousSection.querySelector('.navigation__level2 > li:last-of-type > a') ? previousSection.querySelector('.navigation__level2 > li:last-of-type > a') : previousSection.querySelector('.navigation__level2 > li:last-of-type').previousElementSibling.querySelector('a'),
           togglePreviousSection = createSectionToggle(previousSectionButton, closeAll, veil);
     thisSectionButton.addEventListener('keydown', e => {
-      if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded)) && keyCodeTab === e.keyCode && e.shiftKey) {
+      if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
         e.preventDefault();
         togglePreviousSection();
         lastNavigationAnchor.focus();
@@ -8353,7 +5210,7 @@ function setupTabNext(navigation, closeAll, veil) {
         restSectionsCloseButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:last-of-type) .wrapper--navigation--primary__menu__close button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   closeButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded)) && keyCodeTab === e.keyCode && !e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && tabKey === e.key && !e.shiftKey) {
       closeAll();
     }
   });
@@ -8361,7 +5218,7 @@ function setupTabNext(navigation, closeAll, veil) {
     const nextSectionButton = closeButton.closest('.navigation--primary__level1').nextElementSibling.querySelector('button'),
           toggleNextSection = createSectionToggle(nextSectionButton, closeAll, veil);
     closeButton.addEventListener('keydown', e => {
-      if (keyCodeTab === e.keyCode && !e.shiftKey) {
+      if (tabKey === e.key && !e.shiftKey) {
         e.preventDefault();
         toggleNextSection();
         nextSectionButton.closest('.navigation--primary__level1').querySelector(".".concat(headerClassName, " a")).focus();
@@ -8426,11 +5283,11 @@ function addCloseButtons(navigation, closeAll) {
           text = 'Close ' + header.innerText.trim() + ' menu';
     closeButtonText.appendChild(document.createTextNode(text));
     closeButtonText.className = 'navigation--primary__menu__close__text';
-    closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
+    closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
     closeButtonIcon.className = 'fas fa-fw fa-times navigation--primary__menu__close__icon';
     closeButtonWrapper.className = 'wrapper--navigation--primary__menu__close';
     closeButton.className = 'navigation--primary__menu__close';
-    Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
     closeButton.appendChild(closeButtonDiv);
     closeButton.setAttribute('type', 'button');
     closeButton.title = text;
@@ -8448,11 +5305,13 @@ function addCloseButtons(navigation, closeAll) {
 
 function launchPrimaryNavigation(navigation) {
   // During testing only: remove 'under construction' indicators globally
-  navigation.innerHTML = navigation.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
+  // navigation.innerHTML = navigation.innerHTML
+  //     .replace(/\(\( /g, '')
+  //     .replace(/ \)\)/g, '');
   const veil = document.createElement('div'),
         closeAll = createCloseAll(navigation, veil);
   veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   prepareTopLevel(navigation, veil, closeAll);
   prepareLowerLevels(navigation, veil);
@@ -8464,7 +5323,7 @@ function launchPrimaryNavigation(navigation) {
   setupTabNext(navigation, closeAll, veil); // If the navigation is open, close on escape.
 
   navigation.addEventListener('keydown', e => {
-    if (navigation.querySelector(".".concat(buttonClassName, "[aria-expanded='true']")) && keyCodeEscape === e.keyCode) {
+    if (navigation.querySelector(".".concat(buttonClassName, "[aria-expanded='true']")) && escapeKey === e.key) {
       e.preventDefault();
       closeAll();
     }
@@ -8493,11 +5352,7 @@ function launchPrimaryNavigation(navigation) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _menu_menu_formatters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menu/menu-formatters */ "./src/patterns/menu/menu-formatters.js");
-
-
+/* harmony import */ var _menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../menu/menu-formatters */ "./src/patterns/menu/menu-formatters.js");
 
 
 /**
@@ -8518,9 +5373,11 @@ const className = 'navigation',
 
 function launchSecondaryNavigation(navigation) {
   // During testing only: remove 'under construction' indicators globally
-  navigation.innerHTML = navigation.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
-  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_1__["prepareNavigation"])(navigation, className);
-  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_1__["listenForNavigationToggles"])(navigation, className);
+  // navigation.innerHTML = navigation.innerHTML
+  //     .replace(/\(\( /g, '')
+  //     .replace(/ \)\)/g, '');
+  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__["prepareNavigation"])(navigation, className);
+  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__["listenForNavigationToggles"])(navigation, className);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -9029,8 +5886,10 @@ function addPagination(elem, itemCount) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -9044,49 +5903,35 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-const className = 'show-more';
+
+const className = 'show-more',
+      oneSecond = 1000,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : oneSecond,
+      scrollTo = true;
 /**
- * innitial function on page load; it hides text container of 'show-more' DOM element, and calles
- * createShowMoreButton(element) function to create a control button
+ * Open or close the show-more element.
  *
- * @param {HTMLElement} element - HTML parent element with classname 'show-more'
+ * @param {object} showMore - The show-more element
  */
 
-function showMore(element) {
-  let showMoreTextElements = document.querySelectorAll('.show-more__text');
-  showMoreTextElements.forEach(element => {
-    element.setAttribute('data-hidden', 'true');
-  });
-  createShowMoreButton(element);
-}
-/**
- * event listener that handles click event of 'show-more' button
- *
- * @param {object} e - MouseEvent object
- */
-
-
-function handleShowMoreClick(e) {
-  e.preventDefault();
-  let parent = e.currentTarget.parentNode.parentNode.parentNode;
-  let showMoreText = parent.querySelector('.show-more__text');
-  let showMoreAnchorLinkText = parent.querySelector('.show-more__link-text');
-  let hiddenElement = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(showMoreText.dataset.hidden);
+function toggleShowMore(showMore) {
+  const firstHeadingElement = showMore.querySelector('.show-more__heading, h2, h3, h4, h5, h6'),
+        contentElement = showMore.querySelector('.show-more__content'),
+        showMoreAnchorLinkText = showMore.querySelector('.show-more__link-text'),
+        hiddenElement = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(contentElement.dataset.hidden);
 
   if (hiddenElement) {
-    e.currentTarget.setAttribute('data-open', 'true');
-    showMoreText.setAttribute('data-hidden', 'false');
+    showMore.dataset.open = true;
+    contentElement.dataset.hidden = false;
     showMoreAnchorLinkText.textContent = 'Show less';
-    showMoreText.style.maxHeight = '100%';
-    let headingElement = parent.querySelector('h2');
-    headingElement.scrollIntoView();
   } else {
-    e.currentTarget.setAttribute('data-open', 'false');
-    showMoreText.setAttribute('data-hidden', 'true');
+    showMore.dataset.open = false;
+    contentElement.dataset.hidden = true;
     showMoreAnchorLinkText.textContent = 'Show more';
-    showMoreText.style.maxHeight = null;
-    let headingElement = parent.querySelector('h2');
-    headingElement.scrollIntoView();
+  }
+
+  if (firstHeadingElement && !Object(_util__WEBPACK_IMPORTED_MODULE_3__["verticallyInWindow"])(firstHeadingElement)) {
+    scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(firstHeadingElement, scrollDuration);
   }
 }
 /**
@@ -9102,515 +5947,56 @@ function handleShowMoreClick(e) {
  *  </span>
  * </div>
  *
- * @param {HTMLElement} element - HTML parent element with classname 'show-more'
+ * @param {HTMLElement} showMoreElement - HTML parent element with classname 'show-more'
  */
 
 
-function createShowMoreButton(element) {
-  let showMoreButtonDiv = document.createElement('div');
+function createShowMoreButton(showMoreElement) {
+  const showMoreButtonDiv = document.createElement('div'),
+        showMoreButtonSpan = document.createElement('span'),
+        showMoreButton = document.createElement('button'),
+        icon = document.createElement('span'),
+        showMoreText = document.createElement('span'),
+        dataTitle = showMoreElement.getAttribute('data-title'),
+        srTextElement = document.createElement('span');
   showMoreButtonDiv.classList.add('show-more__button__container');
-  let showMoreButton = document.createElement('span');
-  showMoreButton.classList.add('show-more__button');
-  showMoreButtonDiv.appendChild(showMoreButton);
-  let showMoreAnchor = document.createElement('a');
-  showMoreAnchor.setAttribute('href', '');
-  showMoreAnchor.addEventListener('click', handleShowMoreClick);
-  showMoreButton.appendChild(showMoreAnchor);
-  element.appendChild(showMoreButtonDiv);
-  let plusIcon = document.createElement('span');
-  plusIcon.classList.add('icon');
-  plusIcon.classList.add('fal');
-  plusIcon.classList.add('fa-plus-circle');
-  plusIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
-  let minusIcon = document.createElement('span');
-  minusIcon.classList.add('icon');
-  minusIcon.classList.add('fal');
-  minusIcon.classList.add('fa-minus-circle');
-  minusIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
-  let showMoreText = document.createElement('span');
+  showMoreButtonSpan.classList.add('show-more__button');
+  showMoreButtonDiv.appendChild(showMoreButtonSpan);
+  showMoreButton.setAttribute('type', 'button');
+  showMoreButton.addEventListener('click', () => toggleShowMore(showMoreElement));
+  showMoreButtonSpan.appendChild(showMoreButton);
+  icon.classList.add('icon');
+  icon.classList.add('fal');
+  icon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, true);
   showMoreText.classList.add('show-more__link-text');
   showMoreText.appendChild(document.createTextNode('Show more'));
-  let dataTitle = element.getAttribute('data-title');
-  let srTextElement = document.createElement('span');
   srTextElement.appendChild(document.createTextNode('about ' + dataTitle));
   srTextElement.classList.add('sr-only');
-  showMoreAnchor.appendChild(plusIcon);
-  showMoreAnchor.appendChild(minusIcon);
-  showMoreAnchor.appendChild(showMoreText);
-  showMoreAnchor.appendChild(srTextElement);
+  showMoreButton.appendChild(icon);
+  showMoreButton.appendChild(showMoreText);
+  showMoreButton.appendChild(srTextElement);
+  showMoreElement.appendChild(showMoreButtonDiv);
+}
+/**
+ * Initial function on page load; it hides text container of 'show-more' DOM
+ * element, and creates the controlling button.
+ *
+ * @param {HTMLElement} showMoreElement - HTML parent element with classname 'show-more'
+ */
+
+
+function showMore(showMoreElement) {
+  const showMoreTextElements = showMoreElement.querySelectorAll('.show-more__content');
+  showMoreTextElements.forEach(element => {
+    element.dataset.hidden = true;
+  });
+  createShowMoreButton(showMoreElement);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: showMore,
   launchQuery: ".".concat(className)
 });
-
-/***/ }),
-
-/***/ "./src/patterns/slider-responsive/slider-responsive.js":
-/*!*************************************************************!*\
-  !*** ./src/patterns/slider-responsive/slider-responsive.js ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
-
-
-
-
-/**
- * Responsive Slider
- *
- * @module patterns/slider-responsive/slider-responsive
- * @author Mark Skinsley <mark.skinsley@city.ac.uk>
- * @copyright City, University of London 2019
- */
-
-const className = 'slider-responsive';
-let sliderChildren, sliderChildrenLength, updatedPosition;
-/**
- * The number of items to display on each slide.
- *
- * @param {Number} sliderIncrement - Amount to increase/decrease visible listing index number.
- * @param {Number} currentPosition - Index number of first item to be visible.
- * @param {String} sliderDirection - Increase or decrease visible index number.
- * @param {Element} slider - The slider.
- */
-
-function itemsDisplay(sliderIncrement, currentPosition, sliderDirection, slider) {
-  // Show next, or previous, group of listings based on button's slider direction
-  sliderDirection === 'forward' ? updatedPosition = parseInt(currentPosition + sliderIncrement) : updatedPosition = parseInt(currentPosition - sliderIncrement); // Prevent updated index position dropping below 1
-
-  updatedPosition < 1 ? updatedPosition = 1 : null;
-  let items = slider.querySelectorAll('li');
-  /**
-   * Loop through all slides, adding data-device attributes to items based on their
-   * position within the list. The CSS will target what to show/hide at different breakpoints.
-   * You will end up with HTML similar to the following:
-   *
-   * <li data-device="mobile"></li>
-   * <li data-device="tablet"></li>
-   * <li data-device="desktop"></li>
-   */
-
-  for (let i = 0; i < items.length; i++) {
-    // Check item exists before adding data attribute to prevent errors
-    items[i].getAttribute('data-device') ? items[i].removeAttribute('data-device') : null;
-    items[updatedPosition - 1] ? items[updatedPosition - 1].setAttribute('data-device', 'mobile') : null;
-    items[updatedPosition] ? items[updatedPosition].setAttribute('data-device', 'tablet') : null;
-    items[updatedPosition + 1] ? items[updatedPosition + 1].setAttribute('data-device', 'desktop') : null;
-  }
-}
-/**
- * Determines controller's behaviour, i.e. what slide the user is currently at within the
- * items list. Depending on the slider increment and the total number of items, the total
- * slides number adjusts too.
- *
- * For example, by default a grouping with 5 items will show as '1/2' on desktop, as this
- * viewport has an increment of 3 and there are effectively 2 slides at this point. However,
- * if user is at position 2, this will update to read '2/3'.
- *
- * This function updates all 3 controllers concurrently, updating their values indepenently.
- *
- * @param {Number} sliderIncrement - Amount to increase/decrease visible listing index number.
- * @param {Number} currentPosition - Index number of first item to be visible.
- * @param {String} sliderDirection - Increase or decrease visible index number.
- * @param {Element} slider - The slider.
- */
-
-
-function progressUpdate(sliderIncrement, currentPosition, sliderDirection, slider) {
-  let controlWraps = slider.querySelectorAll('.slider__controls__wrap');
-
-  for (const controlWrap of controlWraps) {
-    // Increase/decrease progrees indicator based on button click.
-    if (sliderDirection === 'forward') {
-      updatedPosition = currentPosition + sliderIncrement;
-    }
-
-    if (sliderDirection === 'back' && currentPosition - sliderIncrement >= 1) {
-      updatedPosition = currentPosition - sliderIncrement;
-    }
-
-    if (sliderDirection === 'back' && currentPosition - sliderIncrement < 1) {
-      updatedPosition = 1;
-    }
-
-    controlWrap.setAttribute('data-currentposition', updatedPosition);
-  } // Update properties on all controls, not just the active control
-
-
-  for (const control of controlWraps) {
-    control.setAttribute('data-currentposition', updatedPosition);
-    sliderIncrement = control.getAttribute('data-increment');
-    let currentGroup = updatedPosition / sliderIncrement;
-    let progressIndicator = control.querySelector('.slide__controls__progress__active');
-    let totalSlides = parseInt(control.getAttribute('data-slides'));
-    let totalSlidesDisplay = control.querySelector('.slide__controls__progress__total');
-    /**
-     * Check if there is a remainder when dividing the current listing position by it's controller's
-     * increment. If there is, increase progress indicator and total slides by 1.
-     */
-
-    let firstInGroup = false;
-
-    if ((updatedPosition - 1) % sliderIncrement === 0) {
-      firstInGroup = true;
-    } // If index position not first in group
-
-
-    if (!firstInGroup) {
-      // Increase group position by 1 to account for extra slide
-      currentGroup += 1; // Not within final group of items and has a remainder -> add slide
-
-      if (sliderChildrenLength - updatedPosition >= sliderIncrement && updatedPosition < sliderChildrenLength && (sliderChildrenLength - 1) % sliderIncrement !== 0) {
-        totalSlides += 1;
-        totalSlidesDisplay.textContent = totalSlides; // Not within final group of items and has no remainder -> don't add slide
-      } else if (sliderChildrenLength - updatedPosition >= sliderIncrement && updatedPosition < sliderChildrenLength && (sliderChildrenLength - 1) % sliderIncrement === 0) {
-        totalSlidesDisplay.textContent = totalSlides; // Within final group and only one slide in group -> add slide
-      } else if (sliderChildrenLength - updatedPosition < sliderIncrement && totalSlides === 1) {
-        totalSlides += 1;
-        totalSlidesDisplay.textContent = totalSlides;
-        currentGroup = totalSlides;
-      } // First in group and ndex position is 1 -> don't add slide
-
-    } else if (sliderChildrenLength === sliderIncrement && updatedPosition === 1) {
-      totalSlidesDisplay.textContent = totalSlides;
-    }
-    /**
-     * If increment increase exceeds total slides' length, limit the current
-     * position value to the total slides' length. This can happen when
-     * clicking on desktop viewport and reducing screen size to tablet or
-     * mobile.
-     */
-
-
-    if (currentGroup > totalSlides) {
-      control.setAttribute('data-currentposition', totalSlides);
-    } else {
-      progressIndicator.textContent = Math.ceil(currentGroup);
-    } // Disable control buttons if at start or end of items in slider.
-
-
-    if (Math.ceil(currentGroup) >= totalSlides) {
-      control.querySelector('.slider__controls__buttons__next').setAttribute('disabled', true);
-    } else {
-      control.querySelector('.slider__controls__buttons__next').removeAttribute('disabled');
-    }
-
-    if (Math.ceil(currentGroup) <= 1) {
-      control.querySelector('.slider__controls__buttons__prev').setAttribute('disabled', true);
-    } else {
-      control.querySelector('.slider__controls__buttons__prev').removeAttribute('disabled');
-    }
-  }
-}
-/**
- * Turn a group of list items into a responsive slider where, depending on viewport, the number of visible items
- * at any one time, varies. This pattern is designed to accommodate up to three items per slide.
- *
- * @param {HTMLElement} slider - The slider.
- */
-
-
-function launchResponsiveSlider(slider) {
-  // Slider items count
-  sliderChildren = [...slider.children];
-  sliderChildrenLength = sliderChildren.length; // Disable responsive slider if less than 2 items exists
-
-  if (sliderChildrenLength < 2) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(slider, className, false);
-    return;
-  }
-
-  for (const sliderChild of sliderChildren.entries()) {
-    sliderChild[1].classList.add('slider__slide');
-    let items = slider.querySelectorAll('li');
-    /**
-     * Add data attribute to first three listings. This will control what is visible on load,
-     * depending on device type.
-     **/
-
-    for (let i = 0; i <= 2 || i < sliderChildrenLength; i++) {
-      items[0] ? items[0].setAttribute('data-device', 'mobile') : null;
-      items[1] ? items[1].setAttribute('data-device', 'tablet') : null;
-      items[2] ? items[2].setAttribute('data-device', 'desktop') : null;
-    }
-  }
-  /**
-   * Builds slider controls.
-   * @param {String} deviceType
-   * @param {Number} increment
-   * @param {Number} currentPosition
-   */
-
-
-  function buildControls(deviceType, increment, currentPosition) {
-    let slides = Math.ceil(sliderChildrenLength / increment);
-    let sliderControlsWrap = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'slider__controls__wrap'
-    }, {
-      label: 'data-device',
-      val: deviceType
-    }, {
-      label: 'data-increment',
-      val: increment
-    }, {
-      label: 'data-currentPosition',
-      val: currentPosition
-    }, {
-      label: 'data-length',
-      val: sliderChildrenLength
-    }, {
-      label: 'data-slides',
-      val: slides
-    }]);
-    let sliderControls = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'slider__controls'
-    }]);
-    let sliderProgress = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'slider__controls__progress'
-    }]);
-    let sliderButtons = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'slider__controls__buttons'
-    }]); // Slider progress
-
-    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('span', [{
-      label: 'content',
-      val: '1'
-    }, {
-      label: 'class',
-      val: 'slide__controls__progress__active'
-    }]));
-    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('span', [{
-      label: 'content',
-      val: '/'
-    }, {
-      label: 'class',
-      val: 'slide__controls__progress__separator'
-    }])); // Total slides display
-
-    sliderProgress.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('span', [{
-      label: 'content',
-      val: Math.ceil(sliderChildrenLength / increment)
-    }, {
-      label: 'class',
-      val: 'slide__controls__progress__total'
-    }])); // Next / previous buttons
-
-    sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
-      label: 'aria-label',
-      val: 'Previous item'
-    }, {
-      label: 'disabled',
-      val: true
-    }, {
-      label: 'class',
-      val: 'fas fa-arrow-left slider__controls__buttons__prev swiper-slider-arrow arrow-left--btn-prev'
-    }])); // If slider children items is equal to slider increment, disable next button by default.
-
-    if (sliderChildrenLength === increment) {
-      sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
-        label: 'aria-label',
-        val: 'Next item'
-      }, {
-        label: 'class',
-        val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-left--btn-next'
-      }, {
-        label: 'disabled',
-        val: true
-      }]));
-    } else {
-      sliderButtons.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
-        label: 'aria-label',
-        val: 'Next item'
-      }, {
-        label: 'class',
-        val: 'fas fa-arrow-right slider__controls__buttons__next swiper-slider-arrow arrow-left--btn-next'
-      }]));
-    }
-
-    sliderControlsWrap.appendChild(sliderControls).appendChild(sliderProgress);
-    slider.appendChild(sliderControlsWrap);
-    sliderControls.appendChild(sliderButtons);
-    slider.querySelectorAll('.slider__controls__buttons__prev')[0].classList.add('slider__controls__buttons__disabled');
-  } // Build each type of controller (mobile, tablet, desktop)
-
-
-  sliderChildrenLength > 1 ? buildControls('mobile', 1, 1, false) : null;
-  sliderChildrenLength >= 2 ? buildControls('tablet', 2, 1, false) : null;
-  sliderChildrenLength >= 3 ? buildControls('desktop', 3, 1, false) : null;
-  let controlWraps = slider.querySelectorAll('.slider__controls__wrap');
-  /**
-   * For each instance of the controls, update the current position data attribute when next previous/buttons
-   * are selected. This means if the viewport changes, the correct value is passed to each control.
-   */
-
-  for (const controlWrap of controlWraps) {
-    let nextBtn = controlWrap.querySelector('.slider__controls__buttons__next');
-    /**
-     * Slide content display. Isolate event listener to specific controller clicked. This is needed
-     * to apply data attributes to the correct listings regardless of which controller is clicked.
-     */
-
-    nextBtn.addEventListener('click', () => {
-      //Get data attribute values from specific controller clicked.
-      let parentWrapper = nextBtn.closest('.slider__controls__wrap');
-      let sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
-      let currentPosition = parseInt(parentWrapper.getAttribute('data-currentposition'));
-      let sliderDirection = 'forward';
-      itemsDisplay(sliderIncrement, currentPosition, sliderDirection, slider);
-    }); // Controller display. When user clicks, update each slider's progress indicator.
-
-    controlWrap.querySelector('.slider__controls__buttons__next').addEventListener('click', () => {
-      let currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
-      let sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
-      progressUpdate(sliderIncrement, currentPosition, 'forward', slider);
-    });
-    let prevBtn = controlWrap.querySelector('.slider__controls__buttons__prev');
-    /**
-     * Slide content display. Isolate event listener to specific controller clicked. This is needed
-     * to apply data attributes to the correct listings regardless of which controller is clicked.
-     */
-
-    prevBtn.addEventListener('click', () => {
-      //Get data attribute values from specific controller clicked.
-      let parentWrapper = prevBtn.closest('.slider__controls__wrap');
-      let sliderIncrement = parseInt(parentWrapper.getAttribute('data-increment'));
-      let currentPosition = parseInt(parentWrapper.getAttribute('data-currentposition'));
-      let sliderDirection = 'back';
-      itemsDisplay(sliderIncrement, currentPosition, sliderDirection, slider);
-    }); // Update all controllers' values accordingly
-
-    controlWrap.querySelector('.slider__controls__buttons__prev').addEventListener('click', () => {
-      let currentPosition = parseInt(controlWrap.getAttribute('data-currentposition'));
-      let sliderIncrement = parseInt(controlWrap.getAttribute('data-increment'));
-      progressUpdate(sliderIncrement, currentPosition, 'back', slider);
-    });
-  }
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchResponsiveSlider,
-  launchQuery: ".".concat(className)
-});
-
-/***/ }),
-
-/***/ "./src/patterns/slider/custom_counter/slider_dot_counter.js":
-/*!******************************************************************!*\
-  !*** ./src/patterns/slider/custom_counter/slider_dot_counter.js ***!
-  \******************************************************************/
-/*! exports provided: createSliderDot, dotEvent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createSliderDot", function() { return createSliderDot; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "dotEvent", function() { return dotEvent; });
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../aria-attributes */ "./src/aria-attributes.js");
-
-
-
-
-
-
-/**
- * 'dot' style counter customisation for global slider
- *
- * @module patterns/slider/slider/custom_counter
- * @author Web Development
- * @copyright City, University of London 2020
- */
-
-
-/**
- * Creates HTML elements for the control buttons (called only if type = 'dot')
- *
- * @param {HTMLElement} slider - an HTML element with the slider class
- * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
- * @param {HTMLElement} wrapper - parent-wrapper HTML of buttons
- * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
- */
-
-function createSliderDot(slider, sliderType, wrapper, sliderObject) {
-  let slidesTotal = sliderObject[sliderType].totalPages;
-  wrapper.classList.add('slider-block__control__buttons--dot');
-
-  for (let i = 0; i < slidesTotal; i++) {
-    let dot = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('button', [{
-      label: 'data-page',
-      val: i
-    }, {
-      label: 'aria-label',
-      val: "Open slide ".concat(i + 1)
-    }, {
-      label: 'type',
-      val: 'button'
-    }]);
-
-    if (i === 0) {
-      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'slide');
-      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'true');
-      dot.setAttribute('disabled', 'true');
-    } else {
-      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
-    }
-
-    dot.addEventListener('click', function () {
-      dotEvent(this, slider, wrapper);
-    });
-    wrapper.appendChild(dot);
-  }
-}
-/**
- * Event listener added to control buttons (if control type is 'dot')
- *
- * @param {HTMLElement} dot - HTML element the event listener is attached to
- * @param {HTMLElement} slider - an HTML element with the slider class
- * @param {HTMLElement} parent - parent-wrapper HTML element of buttons (dots)
- */
-
-function dotEvent(dot, slider, parent) {
-  let dots = parent.querySelectorAll('button'),
-      slides = [...slider.children],
-      active = dot.getAttribute('data-page');
-  dots.forEach(el => {
-    el.removeAttribute('disabled');
-    el.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
-    el.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'slide');
-  });
-  dot.setAttribute('disabled', true);
-  dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'slide');
-  dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'true');
-  slides.forEach(el => {
-    el.setAttribute('data-visible', false);
-
-    if (active === el.getAttribute('data-page')) {
-      el.setAttribute('data-visible', true);
-      el.focus();
-    }
-  });
-}
 
 /***/ }),
 
@@ -9623,476 +6009,257 @@ function dotEvent(dot, slider, parent) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./custom_counter/slider_dot_counter */ "./src/patterns/slider/custom_counter/slider_dot_counter.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _image_carousel_swipe__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../image-carousel/swipe */ "./src/patterns/image-carousel/swipe.js");
-
-
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 
 
 /**
- * Global slider
+ * Slider
  *
  * @module patterns/slider/slider
  * @author Web Development
  * @copyright City, University of London 2020
  */
+// import scroll from 'zenscroll';
+// import { reduceMotion, removeClass, toBool } from '../../util';
 
 
-
-
-const className = 'slider';
+const className = 'slider',
+      defaultStyle = 'numbers',
+      defaultRowSize = 2,
+      arrowLeft = 'ArrowLeft',
+      arrowRight = 'ArrowRight';
 /**
- * initial function that creates an object called sliderObject, this object will hold the necessary parameters to create the right
- * behaviour for each slider customisation types
- * it also calls 3 further functions: setVisibility() createProgressTracker() createSliderButton()
- *
- * @param {HTMLElement} slider - an HTML element with the slider class.
- *
+ * @param  {HTMLElement} slider - The slider element.
+ * @param  {HTMLElement} controls - The slider controls element.
  */
 
-function launchSlider(slider) {
-  const sliderChildren = [...slider.children],
-        totalItems = sliderChildren.length,
-        perPageTablet = 2,
-        // if this needs to be customisable in the future then it could come from a data attribute with set default values
-  perPageDesk = 3,
-        maxTablet = Math.ceil(totalItems / perPageTablet),
-        maxDesk = Math.ceil(totalItems / perPageDesk);
-  const sliderObject = {
-    default: {
-      totalPages: totalItems,
-      endPosition: totalItems - 1,
-      maxItem: 1,
-      pageAttr: 'data-page',
-      visAttr: 'data-visible',
-      counterAttr: 'data-currentdefault',
-      tabIndex: 'tabindex',
-      ariaLabel: 'aria-label'
-    },
-    mobile: {
-      totalPages: totalItems,
-      endPosition: totalItems - 1,
-      maxItem: 1,
-      pageAttr: 'data-page',
-      visAttr: 'data-visible',
-      counterAttr: 'data-currentdefault',
-      tabIndex: 'tabindex',
-      ariaLabel: 'aria-label'
-    },
-    tablet: {
-      totalPages: maxTablet,
-      endPosition: maxTablet - 1,
-      maxItem: perPageTablet,
-      pageAttr: 'data-pagetablet',
-      visAttr: 'data-visibletablet',
-      counterAttr: 'data-currenttablet',
-      tabIndex: 'tabindex',
-      ariaLabel: 'aria-label'
-    },
-    desk: {
-      totalPages: maxDesk,
-      endPosition: maxDesk - 1,
-      maxItem: perPageDesk,
-      pageAttr: 'data-pagedesk',
-      visAttr: 'data-visibledesk',
-      counterAttr: 'data-currentdesk',
-      tabIndex: 'tabindex',
-      ariaLabel: 'aria-label'
-    }
-  };
-
-  if (totalItems < 2) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(slider, className, false);
-    return true;
-  }
-
-  let sliderType = slider.getAttribute('data-type'),
-      sliderControl = slider.getAttribute('data-control'),
-      sliderProgress = slider.getAttribute('data-progress');
-
-  if (!sliderType) {
-    sliderType = 'default';
-  }
-
-  if (!sliderControl) {
-    sliderControl = 'default';
-  }
-
-  if (!sliderProgress) {
-    sliderProgress = 'default';
-  }
-
-  let wrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
-    label: 'class',
-    val: "slider-block slider-block--".concat(sliderType)
-  }]);
-  slider.parentNode.insertBefore(wrapper, slider);
-  wrapper.appendChild(slider);
-
-  if (sliderProgress !== 'off' || sliderControl !== 'off') {
-    let controlWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'slider-block__control'
-    }]);
-    wrapper.appendChild(controlWrapper);
-  }
-
-  setVisibility(slider, sliderType, sliderObject);
-
-  if (sliderProgress !== 'off') {
-    createProgressTracker(slider, sliderType, sliderObject);
-  }
-
-  if (sliderControl !== 'off') {
-    createSliderButton(slider, sliderControl, sliderType, sliderObject);
-  }
-
-  setSwipe(slider, sliderType, sliderObject, sliderControl);
+function updateButtonState(slider, controls) {
+  const nextButton = controls.querySelector(".".concat(className, "__controls__next")),
+        prevButton = controls.querySelector(".".concat(className, "__controls__prev"));
+  slider.querySelector('[data-sliderposition="-1"]') ? prevButton.removeAttribute('disabled') : prevButton.setAttribute('disabled', true);
+  slider.querySelector('[data-sliderposition="1"]') ? nextButton.removeAttribute('disabled') : nextButton.setAttribute('disabled', true);
 }
 /**
- * setup swipe listeners
- * this function add events listener to calculate touch direction
+ * Handle clicks on the next/previous buttons.
  *
- * @param {HTMLElement} slider - an HTML element with the slider class.
- * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
- * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
- * @param {string} sliderControl - type of control- determines is the control is dot
+ * @param  {HTMLElement} slider - The slider element.
+ * @param  {Number} direction - The scroll direction, 1 = next, -1 = previous.
  */
 
 
-function setSwipe(slider, sliderType, sliderObject, sliderControl) {
-  let t = null;
-  slider.addEventListener('mousedown', swipeDown, false);
-  slider.addEventListener('touchstart', swipeDown, false);
-  slider.addEventListener('mouseup', swipeUp, false);
-  slider.addEventListener('touchend', swipeUp, false);
+function handleNextPrevClick(slider, controls, direction) {
+  const startDates = Array.from(slider.querySelectorAll('.slide')),
+        current = slider.querySelector('[data-sliderposition="0"]'),
+        currentPage = controls.querySelector(".".concat(className, "__indicator__current")),
+        nextButton = controls.querySelector(".".concat(className, "__controls__next")),
+        prevButton = controls.querySelector(".".concat(className, "__controls__prev"));
 
-  function swipeDown(e) {
-    e.preventDefault();
-    t = Object(_image_carousel_swipe__WEBPACK_IMPORTED_MODULE_6__["swipeCal"])(e);
-  }
+  if (direction === 1) {
+    const next = current.nextElementSibling;
 
-  function swipeUp(e) {
-    e.preventDefault();
-    let swipe = Math.sign(t(e));
+    if (next) {
+      nextButton.setAttribute('disabled', true);
+      prevButton.setAttribute('disabled', true);
+      next.addEventListener('transitionend', function focusNext() {
+        next.removeEventListener('transitionend', focusNext, true);
+        next.focus();
+        updateButtonState(slider, controls);
+      }, true);
+      current.addEventListener('transitionend', function hideCurrent() {
+        current.removeEventListener('transitionend', hideCurrent, true);
+        current.dataset.hidden = true;
+        current.dataset.smallhidden = true;
+      }, true);
+      current.dataset.sliderposition = -1;
+      current.dataset.smallposition = -1;
+      next.dataset.hidden = false;
+      next.dataset.sliderposition = 0;
+      next.dataset.smallposition = 0;
+      currentPage.innerText = startDates.indexOf(next) + 1;
+    }
+  } else {
+    const previous = current.previousElementSibling;
 
-    if (sliderControl === 'dot') {
-      let btnWrap = slider.nextSibling,
-          curBtn = btnWrap.querySelector('[aria-expanded="true"]'),
-          actionBtn = null;
-
-      if (curBtn.nextSibling && curBtn.previousSibling) {
-        actionBtn = swipe === -1 ? curBtn.previousSibling : swipe === 1 ? curBtn.nextSibling : null;
-        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
-      } else if (!curBtn.nextSibling) {
-        actionBtn = swipe === -1 ? curBtn.previousSibling : swipe === 1 ? curBtn.parentElement.childNodes[0] : null;
-        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
-      } else {
-        let btnLength = btnWrap.firstChild.childNodes.length;
-        actionBtn = swipe === -1 ? curBtn.parentElement.childNodes[btnLength - 1] : swipe === 1 ? curBtn.nextSibling : null;
-        actionBtn && Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["dotEvent"])(actionBtn, slider, btnWrap.firstChild);
-      }
-    } else {
-      let e = slider.nextSibling.querySelectorAll('.slider-block__control__progress'),
-          convert = Array.from(e),
-          elType = convert.filter(e => {
-        let s = window.getComputedStyle(e).getPropertyValue('display');
-
-        if (s === 'block') {
-          return e;
-        }
-      });
-      let sliderType = elType[0].classList.contains('slider-block__control__progress--tablet') ? 'tablet' : 'default';
-      let btn = swipe === -1 ? slider.nextSibling.lastChild.querySelector(".prev--".concat(sliderType)) : swipe === 1 ? slider.nextSibling.lastChild.querySelector(".next--".concat(sliderType)) : null;
-
-      if (btn && !btn.disabled) {
-        defaultEvent(btn, slider, sliderType, sliderObject);
-      }
+    if (previous) {
+      nextButton.setAttribute('disabled', true);
+      prevButton.setAttribute('disabled', true);
+      previous.addEventListener('transitionend', function focusPrevious() {
+        previous.removeEventListener('transitionend', focusPrevious, true);
+        previous.focus();
+        updateButtonState(slider, controls);
+      }, true);
+      current.addEventListener('transitionend', function hideCurrent() {
+        current.removeEventListener('transitionend', hideCurrent, true);
+        current.dataset.hidden = true;
+        current.dataset.smallhidden = true;
+      }, true);
+      current.dataset.sliderposition = 1;
+      current.dataset.smallposition = 1;
+      previous.dataset.hidden = false;
+      previous.dataset.smallhidden = false;
+      previous.dataset.sliderposition = 0;
+      previous.dataset.smallposition = 0;
+      currentPage.innerText = startDates.indexOf(previous) + 1;
     }
   }
 }
 /**
- * setting visibility
- * this function sets adds data attributes to <li> elements within slider, this attribute will be used by CSS to determine
- * if slides are visible or not on page load. This data attribute will be used to turn visibility on/off with the slider buttons'
- * event listener
+ * Transform an element with the slider class name into a slider section controlled by arrows.
  *
- * @param {HTMLElement} slider - an HTML element with the slider class.
- * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
- * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
- *
+ * @param {HTMLElement} slider - An element with the slider class
  */
 
 
-function setVisibility(slider, sliderType, sliderObject) {
-  Array.from(slider.getElementsByTagName('li')).forEach((el, i) => {
-    el.setAttribute(sliderObject.default.pageAttr, "".concat(i));
-    el.setAttribute(sliderObject.default.tabIndex, '-1');
-    el.setAttribute(sliderObject.default.ariaLabel, "Slide ".concat(i + 1));
+function launchNumbers(slider) {
+  const slides = Array.from(slider.children),
+        controlsWrapper = document.createElement('nav'),
+        nextButton = document.createElement('button'),
+        nextButtonSpan = document.createElement('span'),
+        prevButton = document.createElement('button'),
+        prevButtonSpan = document.createElement('span'),
+        indicator = document.createElement('div'),
+        currentPage = document.createElement('span'),
+        totalPages = document.createElement('span'),
+        divider = document.createElement('span'),
+        dividerVisible = document.createElement('span'),
+        dividerScreenReader = document.createElement('span');
+
+  if (1 >= slides.length) {
+    Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(slider, className, false);
+    return;
+  }
+
+  if (slider.dataset.rowsize !== 1) {
+    slider.dataset.rowsize = 1;
+  }
+
+  slides.forEach((slide, i) => {
+    slide.setAttribute('tabindex', -1);
+    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length));
+    slide.classList.add('slide');
 
     if (i === 0) {
-      el.setAttribute(sliderObject.default.visAttr, true);
+      slide.dataset.sliderposition = 0;
+      slide.dataset.smallposition = 0;
     } else {
-      el.setAttribute(sliderObject.default.visAttr, false);
+      slide.dataset.sliderposition = 1;
+      slide.dataset.smallposition = 1;
+      slide.dataset.hidden = 'true';
+      slide.dataset.smallhidden = 'true';
     }
   });
+  nextButtonSpan.appendChild(document.createTextNode('Next slide'));
+  nextButton.appendChild(nextButtonSpan);
+  nextButton.setAttribute('type', 'button');
+  nextButton.className = className + '__controls__next';
+  nextButton.addEventListener('click', () => handleNextPrevClick(slider, controlsWrapper, 1), true);
+  prevButtonSpan.appendChild(document.createTextNode('Previous slide'));
+  prevButton.appendChild(prevButtonSpan);
+  prevButton.setAttribute('type', 'button');
+  prevButton.setAttribute('disabled', 'true');
+  prevButton.className = className + '__controls__prev';
+  prevButton.addEventListener('click', () => handleNextPrevClick(slider, controlsWrapper, -1), true);
+  slider.addEventListener('keydown', e => {
+    switch (e.key) {
+      case arrowLeft:
+        prevButton.click();
+        break;
 
-  if (sliderType === 'responsive') {
-    const el = [...slider.children];
-    let tabletSlides = Object(_util__WEBPACK_IMPORTED_MODULE_3__["arraySlicer"])(el, sliderObject.tablet.maxItem);
-    let deskSlides = Object(_util__WEBPACK_IMPORTED_MODULE_3__["arraySlicer"])(el, sliderObject.desk.maxItem);
-    slicedArrayIterator(tabletSlides, sliderObject.tablet.pageAttr, sliderObject.tablet.visAttr);
-    slicedArrayIterator(deskSlides, sliderObject.desk.pageAttr, sliderObject.desk.visAttr);
-  }
-}
-/**
- * array iterator to set the same visibility attribute for groups of slides
- * this is necessary when you want to have different number of slides visible on different screen sizes
- *
- * @param {array} arr - array that will be iterated
- * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
- * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
- */
+      case arrowRight:
+        nextButton.click();
+        break;
 
-
-function slicedArrayIterator(arr, pageAttr, visibilityAttr) {
-  for (let i = 0; i < arr.length; i++) {
-    let subArray = arr[i];
-
-    for (let j = 0; j < subArray.length; j++) {
-      subArray[j].setAttribute(pageAttr, "".concat(i));
-
-      if (i === 0) {
-        subArray[j].setAttribute(visibilityAttr, 'true');
-      } else {
-        subArray[j].setAttribute(visibilityAttr, 'false');
-      }
+      default:
+        break;
     }
-  }
+  }, true);
+  currentPage.appendChild(document.createTextNode(1));
+  currentPage.className = className + '__indicator__current';
+  dividerVisible.appendChild(document.createTextNode('/'));
+  dividerVisible.className = className + '__indicator__divider--visible';
+  dividerVisible.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
+  dividerScreenReader.appendChild(document.createTextNode(' of '));
+  dividerScreenReader.className = className + '__indicator__divider--sr';
+  divider.appendChild(dividerVisible);
+  divider.appendChild(dividerScreenReader);
+  divider.className = className + '__indicator__divider';
+  totalPages.appendChild(document.createTextNode(slides.length));
+  totalPages.className = className + '__indicator__total';
+  indicator.appendChild(currentPage);
+  indicator.appendChild(divider);
+  indicator.appendChild(totalPages);
+  indicator.className = className + '__indicator';
+  controlsWrapper.appendChild(indicator);
+  controlsWrapper.appendChild(prevButton);
+  controlsWrapper.appendChild(nextButton);
+  controlsWrapper.className = className + '__controls';
+  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'Slider navigation');
+  slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper);
 }
 /**
- * Called by the innitial launch function. It adds a progress bar/ page counter to the slider
+ * Transform an element with the slider class name into a slider section controlled by arrows.
  *
- * @param {HTMLElement} slider - an HTML element with the slider class.
- * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
- * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
+ * @param {HTMLElement} slider - An element with the slider class
+ * @param {Number} rowSize - Number of cards to display at once
  */
 
 
-function createProgressTracker(slider, sliderType, sliderObject) {
-  const wrapper = slider.parentNode.querySelector('.slider-block__control');
-  createProgressElements(wrapper, 'default', sliderObject);
+function launchButtons(slider) {
+  const slides = Array.from(slider.children),
+        rowSize = parseInt(slider.dataset.rowsize) || defaultRowSize;
 
-  if (sliderType === 'responsive') {
-    if (sliderObject.default.totalPages > "".concat(sliderObject.tablet.maxItem)) {
-      createProgressElements(wrapper, 'tablet', sliderObject);
+  if (1 >= slides.length) {
+    Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(slider, className, false);
+    return;
+  }
+
+  slides.forEach((slide, i) => {
+    slide.setAttribute('tabindex', -1);
+    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length));
+    slide.classList.add('slide');
+
+    if (i === 0) {
+      slide.dataset.sliderposition = i % rowSize;
+      slide.dataset.smallposition = 0;
+    } else if (i < rowSize) {
+      slide.dataset.sliderposition = i % rowSize;
+      slide.dataset.smallposition = 1;
+      slide.dataset.smallhidden = true;
+    } else {
+      slide.dataset.sliderposition = rowSize + i % rowSize;
+      slide.dataset.hidden = true;
+      slide.dataset.smallposition = 1;
+      slide.dataset.smallhidden = true;
     }
-
-    if (sliderObject.default.totalPages > "".concat(sliderObject.desk.maxItem)) {
-      createProgressElements(wrapper, 'desk', sliderObject);
-    }
-  }
-}
-/**
- * Called by the createProgressTracker() function. It generates the HTML elements for the progress bar
- *
- * @param {HTMLElement} wrapper - an HTML element with the slider-block__control class.
- * @param {string} type - it tells you which key to use from the sliderObject
- * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
- */
-
-
-function createProgressElements(wrapper, type, sliderObject) {
-  let progress = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
-    label: 'class',
-    val: "slider-block__control__progress slider-block__control__progress--".concat(type)
-  }]);
-  wrapper.appendChild(progress);
-  let firstPage = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('span', [{
-    label: "".concat(sliderObject[type].counterAttr),
-    val: true
-  }]);
-  firstPage.innerText = '1';
-  let separator = document.createElement('span');
-  separator.innerText = '/';
-  let lastPage = document.createElement('span');
-  lastPage.innerText = "".concat(sliderObject[type].totalPages);
-  progress.appendChild(firstPage);
-  progress.appendChild(separator);
-  progress.appendChild(lastPage);
-}
-/**
- * Called by the innitial launch function. It adds control buttons to the slider
- *
- * @param {HTMLElement} slider - an HTML element with the slider class.
- * @param {string} sliderControl - determines what type of buttons to add to the slider
- * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
- * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
- */
-
-
-function createSliderButton(slider, sliderControl, sliderType, sliderObject) {
-  const buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('div', [{
-    label: 'class',
-    val: 'slider-block__control__buttons'
-  }]);
-  const controlWrapper = slider.parentNode.querySelector('.slider-block__control');
-  controlWrapper.appendChild(buttonWrapper);
-
-  if (sliderControl === 'default') {
-    let buttonPrev = createButtonElement('fas fa-arrow-left prev--default', 'default', sliderObject);
-    let buttonNext = createButtonElement('fas fa-arrow-right next--default', 'default', sliderObject);
-    buttonNext.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
-    buttonNext.addEventListener('click', function () {
-      defaultEvent(this, slider, 'default', sliderObject);
-    });
-    buttonPrev.addEventListener('click', function () {
-      defaultEvent(this, slider, 'default', sliderObject);
-    });
-    buttonWrapper.appendChild(buttonPrev);
-    buttonWrapper.appendChild(buttonNext);
-    buttonWrapper.classList.add('slider-block__control__buttons--default');
-
-    if (sliderType === 'responsive') {
-      if (sliderObject.default.totalPages > "".concat(sliderObject.tablet.maxItem)) {
-        let buttonPrevTablet = createButtonElement('fas fa-arrow-left prev--tablet', 'tablet', sliderObject),
-            buttonNextTablet = createButtonElement('fas fa-arrow-right next--tablet', 'tablet', sliderObject);
-        buttonPrevTablet.addEventListener('click', function () {
-          defaultEvent(this, slider, 'tablet', sliderObject);
-        });
-        buttonNextTablet.addEventListener('click', function () {
-          defaultEvent(this, slider, 'tablet', sliderObject);
-        });
-        buttonWrapper.appendChild(buttonPrevTablet);
-        buttonWrapper.appendChild(buttonNextTablet);
-      }
-
-      if (sliderObject.default.totalPages > "".concat(sliderObject.desk.maxItem)) {
-        let buttonPrevDesk = createButtonElement('fas fa-arrow-left prev--desk', 'desk', sliderObject),
-            buttonNextDesk = createButtonElement('fas fa-arrow-right next--desk', 'desk', sliderObject);
-        buttonPrevDesk.addEventListener('click', function () {
-          defaultEvent(this, slider, 'desk', sliderObject);
-        });
-        buttonNextDesk.addEventListener('click', function () {
-          defaultEvent(this, slider, 'desk', sliderObject);
-        });
-        buttonWrapper.appendChild(buttonPrevDesk);
-        buttonWrapper.appendChild(buttonNextDesk);
-      }
-    }
-  }
-
-  if (sliderControl === 'dot') {
-    Object(_custom_counter_slider_dot_counter__WEBPACK_IMPORTED_MODULE_4__["createSliderDot"])(slider, sliderType, buttonWrapper, sliderObject);
-  }
-}
-/**
- * Creates HTML elements for the control buttons
- *
- * @param {string} classname - classname to be added to the button being generated
- * @param {string} type - it tells you which key to use from the sliderObject
- * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
- */
-
-
-function createButtonElement(classname, type, sliderObject) {
-  let value;
-
-  if (classname.indexOf('prev') !== -1) {
-    value = -1;
-  } else {
-    value = 1;
-  }
-
-  let button = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('button', [{
-    label: 'class',
-    val: classname
-  }, {
-    label: 'type',
-    val: 'button'
-  }, {
-    label: 'data-next',
-    val: value
-  }, {
-    label: "".concat(sliderObject[type].visAttr),
-    val: true
-  }]);
-
-  if (classname.indexOf('prev') !== -1) {
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'previous item');
-    button.setAttribute('disabled', true);
-  } else {
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'next item');
-  }
-
-  return button;
-}
-/**
- * Event listener attached to default buttons
- *
- * @param {HTMLElement} slider - an HTML element with the slider class
- * @param {string} sliderType - type of slider - determines how many elements need to be visible on page load
- * @param {HTMLElement} wrapper - parent-wrapper HTML of buttons
- * @param {object} sliderObject - holds values for each slider type to be able to set slider behaviour
- *
- */
-
-
-function defaultEvent(button, slider, type, sliderObject) {
-  const currentSlide = Array.from(slider.querySelectorAll("[".concat(sliderObject[type].visAttr, " = 'true']"))),
-        nextPage = button.getAttribute('data-next'),
-        nextSlide = Array.from(slider.querySelectorAll('[' + sliderObject[type].pageAttr + '= "' + nextPage + '"]')),
-        prevButton = button.parentNode.querySelector(".prev--".concat(type)),
-        nextButton = button.parentNode.querySelector(".next--".concat(type)),
-        counterEl = slider.parentNode.querySelector("span[".concat(sliderObject[type].counterAttr, "]"));
-  let counterValue = parseInt(counterEl.innerText);
-  currentSlide.forEach(el => {
-    el.setAttribute("".concat(sliderObject[type].visAttr), false);
   });
-  nextSlide.forEach(el => {
-    el.setAttribute("".concat(sliderObject[type].visAttr), true);
-  });
+}
+/**
+ * Transform an element with the slider class name into a slider section.
+ *
+ * @param {HTMLElement} slider - An element with the slider class
+ */
 
-  if (button.classList.contains("next--".concat(type))) {
-    let nextAttr = parseInt(button.getAttribute('data-next'));
 
-    if (nextAttr === sliderObject[type].endPosition) {
-      button.setAttribute('disabled', true);
-    }
+function launchSlider(slider) {
+  const style = slider.dataset.style || defaultStyle,
+        rowSize = parseInt(slider.dataset.rowsize) || defaultRowSize;
 
-    nextAttr++;
-    button.setAttribute('data-next', nextAttr);
-    let prevAttr = parseInt(prevButton.getAttribute('data-next'));
-    prevAttr++;
-    prevButton.setAttribute('data-next', prevAttr);
-    prevButton.removeAttribute('disabled');
-    counterValue++;
-    counterEl.innerText = counterValue;
-  } else {
-    let prevAttr = parseInt(button.getAttribute('data-next'));
+  switch (style) {
+    case 'numbers':
+      launchNumbers(slider, rowSize);
+      break;
 
-    if (prevAttr === 0) {
-      button.setAttribute('disabled', true);
-    }
+    case 'buttons':
+      launchButtons(slider, rowSize);
+      break;
 
-    prevAttr--;
-    button.setAttribute('data-next', prevAttr);
-    let nextAttr = parseInt(nextButton.getAttribute('data-next'));
-    nextAttr--;
-    nextButton.setAttribute('data-next', nextAttr);
-    nextButton.removeAttribute('disabled');
-    counterValue--;
-    counterEl.innerText = counterValue;
+    default:
+      launchNumbers(slider, rowSize);
   }
 }
 
@@ -10224,12 +6391,12 @@ const className = 'tabs',
       panelClassName = className + '__panel',
       contentClassName = panelClassName + '__content',
       linksClassName = className + '__links',
-      endKey = 35,
-      homeKey = 36,
-      arrowLeft = 37,
-      arrowUp = 38,
-      arrowRight = 39,
-      arrowDown = 40,
+      endKey = 'End',
+      homeKey = 'Home',
+      arrowLeft = 'ArrowLeft',
+      arrowUp = 'ArrowUp',
+      arrowRight = 'ArrowRight',
+      arrowDown = 'ArrowDown',
       oneSecond = 1000,
       scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = false;
@@ -10309,38 +6476,53 @@ function keyEvents(e, tabs) {
         currentTabLI = currentTab.parentNode;
   let newTab = null;
 
-  if (arrowLeft === e.which) {
-    /**
-     * Previous tab has been requested - if we're already at the beginning,
-     * we need to wrap around to the last tab.
-     */
-    currentTabLI.previousElementSibling ? newTab = currentTabLI.previousElementSibling.firstElementChild : newTab = tabs.querySelector('li:last-of-type a');
-  } else if (arrowRight === e.which) {
-    /**
-     * Next tab has been requested - if we're already at the end, we need
-     * to wrap around to the first tab.
-     */
-    currentTabLI.nextElementSibling ? newTab = currentTabLI.nextElementSibling.firstElementChild : newTab = tabs.querySelector('li:first-of-type a');
-  } else if (arrowDown === e.which) {
-    /**
-     * Move focus into the tab content.
-     */
-    tabs.querySelector(currentTab.dataset.hash).focus();
-  } else if (arrowUp === e.which) {
-    /**
-     * Move focus to the currently selected tab control.
-     */
-    currentTab.focus();
-  } else if (homeKey === e.which) {
-    /**
-     * First tab
-     */
-    newTab = tabs.querySelector('li:first-of-type a');
-  } else if (endKey === e.which) {
-    /**
-     * Last tab
-     */
-    newTab = tabs.querySelector('li:last-of-type a');
+  switch (e.key) {
+    case arrowLeft:
+      /**
+       * Previous tab has been requested - if we're already at the beginning,
+       * we need to wrap around to the last tab.
+       */
+      currentTabLI.previousElementSibling ? newTab = currentTabLI.previousElementSibling.firstElementChild : newTab = tabs.querySelector('li:last-of-type a');
+      break;
+
+    case arrowRight:
+      /**
+       * Next tab has been requested - if we're already at the end, we need
+       * to wrap around to the first tab.
+       */
+      currentTabLI.nextElementSibling ? newTab = currentTabLI.nextElementSibling.firstElementChild : newTab = tabs.querySelector('li:first-of-type a');
+      break;
+
+    case arrowDown:
+      /**
+       * Move focus into the tab content.
+       */
+      tabs.querySelector(currentTab.dataset.hash).focus();
+      break;
+
+    case arrowUp:
+      /**
+       * Move focus to the currently selected tab control.
+       */
+      currentTab.focus();
+      break;
+
+    case homeKey:
+      /**
+       * First tab
+       */
+      newTab = tabs.querySelector('li:first-of-type a');
+      break;
+
+    case endKey:
+      /**
+       * Last tab
+       */
+      newTab = tabs.querySelector('li:last-of-type a');
+      break;
+
+    default:
+      break;
   }
 
   newTab && selectTabEvent(e, newTab);
@@ -10448,122 +6630,115 @@ function launchTabs(tabs) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../aria-attributes */ "./src/aria-attributes.js");
 
 
 /**
- * Image accreditation tooltip
+ * Image credit tooltip
  *
  * @module patterns/tooltip/image-credit
  * @author Web Development
- * @copyright City, University of London
+ * @copyright City, University of London 2020
  */
 
-const className = 'hero-image';
-let authorElement, sourceElement;
+
+const className = 'picture[data-authorname], picture[data-sourcename]',
+      openText = 'Show image credit',
+      closeText = 'Hide image credit';
 /**
- * Respond to button clicks - open if closed, close if opened.
+ * Toggle the image credit open or closed.
  *
- * @param {event} e - The information icon click event.
+ * @param  {HTMLElement} wrapper - The image credit container
  */
 
-function showCredit(e) {
-  let tooltipWrapper = e.target.closest('.wrapper--tooltip__label');
-  tooltipWrapper.getAttribute('data-selected') === 'false' ? tooltipWrapper.setAttribute('data-selected', 'true') : tooltipWrapper.setAttribute('data-selected', 'false');
-}
-/**
- * Create label(s) to go alongside the information icon.
- *
- * @param {string} el - Blank variable that is returned as an HTML element after function is complete.
- * @param {string} elText - Label's link or link text value.
- * @param {url} elUrl - Label's link value.
- */
+function toggleImageCredit(wrapper) {
+  const button = wrapper.querySelector('button'),
+        buttonText = button.querySelector('.sr-only'),
+        label = wrapper.querySelector('.tooltip__label');
 
-
-function createLabel(el, elText, elUrl) {
-  if (elText) {
-    const elTextNode = document.createTextNode(elText);
-
-    if (elUrl) {
-      el = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', []);
-      el.href = elUrl;
-      el.appendChild(elTextNode);
-    } else {
-      el = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', []);
-      el.appendChild(elTextNode);
-    }
-
-    return el;
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(wrapper.dataset.open)) {
+    wrapper.dataset.open = false;
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'false');
+    buttonText.innerText = openText;
+    button.focus();
+  } else {
+    wrapper.dataset.open = true;
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'true');
+    buttonText.innerText = closeText;
+    label.focus();
   }
 }
 /**
- * Create an accreditation tooltip from the data attributes of a banner image.
+ * Render the credit label.
  *
- * @param {HTMLElement} banner - A banner image.
+ * @param  {string} text - The entity to credit
+ * @param  {string} url - Optional URL for the entity
+ * @returns {HTMLElement} A span or anchor.
  */
 
 
-function launchBannerTooltip(banner) {
-  const tooltipDisplay = banner.getAttribute('data-tooltip-display'),
-        authorText = banner.getAttribute('data-author-name'),
-        authorUrl = banner.getAttribute('data-author-url'),
-        sourceText = banner.getAttribute('data-source-name'),
-        sourceUrl = banner.getAttribute('data-source-url');
-
-  if (tooltipDisplay === 'true') {
-    const tooltipWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'wrapper--tooltip__label'
-    }, {
-      label: 'data-selected',
-      val: false
-    }]);
-    const iconBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
-      label: 'class',
-      val: 'tooltip tooltip--image-credit'
-    }, {
-      label: 'aria-label',
-      val: 'Show image credit'
-    }]);
-    const iconSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
-      label: 'class',
-      val: 'tooltip__icon icon fas fa-info-circle'
-    }, {
-      label: 'aria-label',
-      val: 'Information icon'
-    }]);
-    const labelSpan = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
-      label: 'class',
-      val: 'tooltip__label'
-    }]); // Build labels
-
-    let author = createLabel(authorElement, authorText, authorUrl);
-    let source = createLabel(sourceElement, sourceText, sourceUrl); // Append tooltip elements to banner
-
-    iconBtn.appendChild(iconSpan);
-    authorText && !sourceText ? labelSpan.appendChild(author) : null;
-    sourceText && !authorText ? labelSpan.appendChild(source) : null; // Add divider if author and source text values exist
-
-    if (authorText && sourceText) {
-      labelSpan.appendChild(author);
-      const dividerText = document.createTextNode(' / ');
-      labelSpan.appendChild(dividerText);
-      labelSpan.appendChild(source);
-    }
-
-    tooltipWrapper.appendChild(labelSpan);
-    tooltipWrapper.appendChild(iconBtn); // Only append tooltip if at least one name is supplied (author or source)
-
-    authorText || sourceText ? banner.appendChild(tooltipWrapper) : null; // Show/hide icon label(s) on click
-
-    iconBtn.addEventListener('click', e => {
-      showCredit(e);
-    });
+function createLabel(text, url) {
+  if (url) {
+    const element = document.createElement('a');
+    element.href = url;
+    element.appendChild(document.createTextNode(text));
+    return element;
+  } else {
+    const element = document.createElement('span');
+    element.appendChild(document.createTextNode(text));
+    return element;
   }
+}
+/**
+ * Create an image credit tooltip from the data attributes of an image.
+ *
+ * @param {HTMLElement} picture - A picture element with credit data attributes.
+ */
+
+
+function launchImageCredit(picture) {
+  const display = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(picture.dataset.tooltipdisplay),
+        authorText = picture.dataset.authorname,
+        authorUrl = picture.dataset.authorurl,
+        sourceText = picture.dataset.sourcename,
+        sourceUrl = picture.dataset.sourceurl;
+
+  if (!display || !(authorText && sourceText)) {
+    return;
+  }
+
+  const wrapper = document.createElement('div'),
+        button = document.createElement('button'),
+        spanIcon = document.createElement('span'),
+        spanText = document.createElement('span'),
+        label = document.createElement('div'),
+        author = authorText ? createLabel(authorText, authorUrl) : null,
+        source = sourceText ? createLabel(sourceText, sourceUrl) : null;
+  wrapper.className = 'wrapper--tooltip__label';
+  wrapper.dataset.open = false;
+  button.className = 'tooltip tooltip--image-credit';
+  button.setAttribute('type', 'button');
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, false);
+  button.addEventListener('click', () => toggleImageCredit(wrapper), true);
+  spanIcon.className = 'tooltip__icon icon fas fa-info-circle';
+  spanIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
+  spanText.className = 'sr-only';
+  spanText.appendChild(document.createTextNode(openText));
+  button.appendChild(spanIcon);
+  button.appendChild(spanText);
+  label.className = 'tooltip__label';
+  label.setAttribute('tabindex', -1);
+  author && label.appendChild(author);
+  author && source && label.appendChild(document.createTextNode(' / '));
+  source && label.appendChild(source);
+  wrapper.appendChild(label);
+  wrapper.appendChild(button);
+  (author || source) && picture.appendChild(wrapper);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchBannerTooltip,
-  launchQuery: ".".concat(className)
+  launchFn: launchImageCredit,
+  launchQuery: "".concat(className)
 });
 
 /***/ }),
@@ -10676,28 +6851,55 @@ function loopVideo(video, maxPlays) {
 
 
 function createController(video) {
+  let controllerBtn;
   const controllerIcon = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
     label: 'class',
     val: 'embedded-video--autoplay__controller-btn__icon'
-  }]),
-        controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
-    label: 'class',
-    val: 'embedded-video--autoplay__controller-btn'
-  }, {
-    label: 'data-status',
-    val: 'pause'
-  }, {
-    label: 'aria-label',
-    val: 'Pause video'
   }]);
+  let statusPaused = video.querySelector('.embedded-video--autoplay__video').paused;
+
+  if (statusPaused) {
+    controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
+      label: 'class',
+      val: 'embedded-video--autoplay__controller-btn'
+    }, {
+      label: 'data-status',
+      val: 'play'
+    }, {
+      label: 'aria-label',
+      val: 'Play video'
+    }]);
+  } else {
+    controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
+      label: 'class',
+      val: 'embedded-video--autoplay__controller-btn'
+    }, {
+      label: 'data-status',
+      val: 'pause'
+    }, {
+      label: 'aria-label',
+      val: 'Pause video'
+    }]);
+  }
+
   controllerBtn.append(controllerIcon);
   video.append(controllerBtn);
 }
 
-function toggleController(video, status) {
-  let videoEl = video.querySelector('.embedded-video--autoplay__video');
-  const controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn');
-  status === 'pause' ? (controllerBtn.dataset.status = 'play', controllerBtn.setAttribute('aria-label', 'Play video'), videoEl.pause()) : (controllerBtn.dataset.status = 'pause', controllerBtn.setAttribute('aria-label', 'Pause video'), videoEl.play());
+function toggleController(video) {
+  const videoEl = video.querySelector('.embedded-video--autoplay__video'),
+        controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn'),
+        statusPaused = video.querySelector('.embedded-video--autoplay__video').paused;
+
+  if (statusPaused) {
+    controllerBtn.dataset.status = 'pause';
+    controllerBtn.setAttribute('aria-label', 'Pause video');
+    videoEl.play();
+  } else {
+    controllerBtn.dataset.status = 'play';
+    controllerBtn.setAttribute('aria-label', 'Play video');
+    videoEl.pause();
+  }
 }
 
 function launchAutoplayVideo(video) {
@@ -10705,10 +6907,9 @@ function launchAutoplayVideo(video) {
         plays = parseInt(videoEl.dataset.maxPlays);
   loopVideo(video, plays);
   createController(video);
-  let controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn');
+  const controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn');
   controllerBtn.addEventListener('click', () => {
-    let controllerStatus = controllerBtn.dataset.status;
-    toggleController(video, controllerStatus);
+    toggleController(video);
   }); // When video finishes autoplaying, switch controller from pause to play
 
   videoEl.addEventListener('ended', () => {
@@ -11103,28 +7304,6 @@ function arraySlicer(arr, len) {
 
 module.exports = __webpack_require__(/*! /home/rof/src/github.com/CityUniversityLondon/web2020/src/main.js */"./src/main.js");
 
-
-/***/ }),
-
-/***/ 1:
-/*!**********************!*\
-  !*** util (ignored) ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 2:
-/*!**********************!*\
-  !*** util (ignored) ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
 
 /***/ })
 
