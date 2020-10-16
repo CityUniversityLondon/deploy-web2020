@@ -49437,11 +49437,11 @@ button
 }
 
 .chart--pink path:nth-child(1) {
-    stroke: #cf44a7;
+    stroke: #bb3094;
 }
 
 .chart--pink .chart__legend__item:nth-child(1) .fa.fa-circle {
-    color: #cf44a7;
+    color: #bb3094;
 }
 
 .chart--pink path:nth-child(2) {
@@ -49453,7 +49453,7 @@ button
 }
 
 .chart--bar--horizontal.chart--pink .chart--bar--horizontal__value {
-    background: #cf44a7;
+    background: #bb3094;
 }
 
 .chart--bar--horizontal.chart--pink .chart--bar--horizontal__collection {
@@ -50439,7 +50439,7 @@ button
     height: 0px;
     border-top: 0.5rem solid transparent;
     border-bottom: 0.5rem solid transparent;
-    border-left: 0.5rem solid #cf44a7;
+    border-left: 0.5rem solid #bb3094;
 }
 
 @media (max-width: 1439px) {
@@ -62297,6 +62297,10 @@ main > .news {
     }
 }
 
+.course--pgt__our-students .course--pgt__testimonials.course--pgt__testimonials--full-width {
+    grid-column: 1/-1;
+}
+
 .course--pgt__our-students .course--pgt__testimonials .slider {
     grid-column: 1/-1;
     display: block;
@@ -62717,6 +62721,14 @@ main > .news {
     display: block;
     top: 1rem;
     position: relative;
+}
+
+.course--pgt .dropdown-filter__select:focus {
+    outline-color: #ffffff;
+}
+
+.course--pgt .dropdown-filter .data-group li {
+    padding: 0 1rem;
 }
 
 .course--pgt__tabs {
