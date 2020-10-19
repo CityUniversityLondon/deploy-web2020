@@ -62341,7 +62341,7 @@ main > .news {
 }
 
 .wrapper--course--pgt__student-life {
-    margin: 0 0 0;
+    margin: 1rem 0 0;
     padding: 0 0 2rem;
 }
 
@@ -62374,12 +62374,6 @@ main > .news {
     .wrapper--course--pgt__student-life .course--pgt__student-life {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 767px) {
-    .wrapper--course--pgt__student-life .course--pgt__student-life {
-        margin-top: 1rem;
     }
 }
 
