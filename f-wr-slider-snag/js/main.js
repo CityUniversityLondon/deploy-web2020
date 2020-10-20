@@ -5184,6 +5184,7 @@ function updateButtonState(slider, controls) {
         prevButton = controls.querySelector(".".concat(className, "__controls__prev"));
   slider.querySelector('[data-sliderposition="-1"]') ? prevButton.removeAttribute('disabled') : prevButton.setAttribute('disabled', true);
   slider.querySelector('[data-sliderposition="1"]') ? nextButton.removeAttribute('disabled') : nextButton.setAttribute('disabled', true);
+  slider.removeAttribute('disabled');
 }
 /**
  * Handle clicks on the next/previous buttons for arrow slider.
@@ -5499,7 +5500,7 @@ function handleDotClick(slider, controlsWrapper, selection) {
       slide.addEventListener('transitionend', function focusNext() {
         slide.removeEventListener('transitionend', focusNext, true);
         slide.focus();
-        updateDotButtonState(i, dotButtons);
+        updateDotButtonState(i, dotButtons, slider);
       }, true);
     } else if (i > selection) {
       slide.dataset.sliderposition = 1;
@@ -5518,7 +5519,7 @@ function handleDotClick(slider, controlsWrapper, selection) {
  */
 
 
-function updateDotButtonState(active, dotButtons) {
+function updateDotButtonState(active, dotButtons, slider) {
   dotButtons.forEach((dot, i) => {
     if (i === active) {
       dot.setAttribute('disabled', true);
@@ -5528,6 +5529,7 @@ function updateDotButtonState(active, dotButtons) {
       dot.setAttribute('aria-expanded', false);
     }
   });
+  slider.removeAttribute('disabled');
 }
 /**
  * Transform an element with the slider class name into a slider section controlled by arrows.
@@ -5580,11 +5582,14 @@ let x0;
 
 function lock(e, slider) {
   console.log("lock and ".concat(e.type));
-  slider.setAttribute('disabled', true);
-  x0 = unify(e).clientX; //set mousedown clientX value
-  //e.target.classList.toggle('smooth', !(this.locked = true));
+  const locked = slider.getAttribute('disabled');
 
-  console.log("x0 is ".concat(x0));
+  if (!locked) {
+    x0 = unify(e).clientX; //set mousedown clientX value
+    //e.target.classList.toggle('smooth', !(this.locked = true));
+
+    console.log("x0 is ".concat(x0));
+  }
 }
 
 ;
@@ -5602,8 +5607,8 @@ function move(e, slider, controlsWrapper) {
 
   ;
 
-  if (locked) {
-    console.log("is locked!");
+  if (!locked) {
+    console.log("is NOT locked");
     let dx = unify(e).clientX - x0,
         //dx is value calculate by using clientX mousedown and after value
     s = Math.sign(dx),
@@ -5615,10 +5620,12 @@ function move(e, slider, controlsWrapper) {
 
     if (s == -1 && currentSlide.nextElementSibling && dx < -25) {
       ///add check if dot slider or arrows
+      slider.setAttribute('disabled', true);
       sliderType == 'numbers' ? handleNextPrevClick(slider, controlsWrapper, 1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) + 1);
     } // Previous slide 
     else if (s == 1 && currentSlide.previousElementSibling && dx > 25) {
         ///add check if dot slider or arrows
+        slider.setAttribute('disabled', true);
         sliderType == 'numbers' ? handleNextPrevClick(slider, controlsWrapper, -1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) - 1);
       }
   }
