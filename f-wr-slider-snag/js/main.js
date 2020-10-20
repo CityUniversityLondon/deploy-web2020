@@ -5139,10 +5139,19 @@ function showMore(showMoreElement) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+
+
+
 
 
 
@@ -5273,7 +5282,7 @@ function launchArrow(slider) {
         dividerScreenReader = document.createElement('span'); // If not enough slides, don't create it.
 
   if (1 >= slides.length) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(slider, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(slider, className, false);
     return;
   } // REVIEW THIS CODE????
   // CHECK WHAT MAX ROW SIZE SHOULD BE? @RC > @DB
@@ -5287,7 +5296,7 @@ function launchArrow(slider) {
   slides.forEach((slide, i) => {
     slide.setAttribute('tabindex', -1); // Remove inactive
 
-    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length)); // Accesiblity
+    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length)); // Accesiblity
 
     slide.classList.add('slide'); // Add slide class of slide
     // Controls current position of cards? -1 0 and 1
@@ -5295,6 +5304,7 @@ function launchArrow(slider) {
     if (i === 0) {
       slide.dataset.sliderposition = 0;
       slide.dataset.smallposition = 0;
+      slide.dataset.hidden = false;
     } else {
       slide.dataset.sliderposition = 1;
       slide.dataset.smallposition = 1;
@@ -5339,7 +5349,7 @@ function launchArrow(slider) {
 
   dividerVisible.appendChild(document.createTextNode('/'));
   dividerVisible.className = className + '__indicator__divider--visible';
-  dividerVisible.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
+  dividerVisible.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].hidden, 'true');
   dividerScreenReader.appendChild(document.createTextNode(' of '));
   dividerScreenReader.className = className + '__indicator__divider--sr';
   divider.appendChild(dividerVisible);
@@ -5358,7 +5368,7 @@ function launchArrow(slider) {
   controlsWrapper.appendChild(prevButton);
   controlsWrapper.appendChild(nextButton);
   controlsWrapper.className = className + '__controls';
-  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'Slider navigation'); // Move controls outside of slider UL / Why the if statement? CHECK IF THIS IS NEEDED @WR
+  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'Slider navigation'); // Move controls outside of slider UL / Why the if statement? CHECK IF THIS IS NEEDED @WR
 
   slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper);
 }
@@ -5375,23 +5385,10 @@ function launchDot(slider) {
   console.log("dot slider loanched"); // Creates pagination and control elements
 
   const slides = Array.from(slider.children),
-        controlsWrapper = document.createElement('nav');
-  /*
-  nextButton = document.createElement('button'),
-  nextButtonSpan = document.createElement('span'),
-  prevButton = document.createElement('button'),
-  prevButtonSpan = document.createElement('span'),
-  indicator = document.createElement('div'),
-  currentPage = document.createElement('span'),
-  totalPages = document.createElement('span'),
-  divider = document.createElement('span'),
-  dividerVisible = document.createElement('span'),
-  dividerScreenReader = document.createElement('span');
-  */
-  // If not enough slides, don't create it.
+        controlsWrapper = document.createElement('nav'); // If not enough slides, don't create it.
 
   if (1 >= slides.length) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(slider, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(slider, className, false);
     return;
   } // REVIEW THIS CODE????
   // CHECK WHAT MAX ROW SIZE SHOULD BE? @RC > @DB
@@ -5405,7 +5402,7 @@ function launchDot(slider) {
   slides.forEach((slide, i) => {
     slide.setAttribute('tabindex', -1); // Remove inactive
 
-    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length)); // Accesiblity
+    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length)); // Accesiblity
 
     slide.classList.add('slide'); // Add slide class of slide
     // Controls current position of cards? -1 0 and 1
@@ -5413,6 +5410,7 @@ function launchDot(slider) {
     if (i === 0) {
       slide.dataset.sliderposition = 0;
       slide.dataset.smallposition = 0;
+      slide.dataset.hidden = false;
     } else {
       slide.dataset.sliderposition = 1;
       slide.dataset.smallposition = 1;
@@ -5423,7 +5421,7 @@ function launchDot(slider) {
     /**/
 
 
-    let dot = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('button', [{
+    let dot = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('button', [{
       label: 'data-page',
       val: i
     }, {
@@ -5435,11 +5433,11 @@ function launchDot(slider) {
     }]);
 
     if (i === 0) {
-      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].current, 'slide');
-      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, 'true');
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].current, 'slide');
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].expanded, 'true');
       dot.setAttribute('disabled', 'true');
     } else {
-      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, 'false');
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].expanded, 'false');
     }
 
     dot.addEventListener('click', () => handleDotClick(slider, controlsWrapper, i), true);
@@ -5449,14 +5447,34 @@ function launchDot(slider) {
   // Wrap element around slider__controls
 
   controlsWrapper.className = className + '__controls';
-  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'Slider navigation'); // Move controls outside of slider UL / Why the if statement? CHECK IF THIS IS NEEDED @WR
+  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'Slider navigation'); // Move controls outside of slider UL / Why the if statement? CHECK IF THIS IS NEEDED @WR
 
-  slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper);
+  slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper); //add event listeners
+
+  slider.addEventListener('mousedown', function (e) {
+    lock(e, slider);
+  });
+  slider.addEventListener('touchstart', function (e) {
+    lock(e, slider);
+  });
+  slider.addEventListener('mouseup', function (e) {
+    move(e, slider, controlsWrapper);
+  });
+  slider.addEventListener('touchend', function (e) {
+    move(e, slider, controlsWrapper);
+  });
 }
+/**
+ * Handle clicks on the next/previous buttons.
+ *
+ * @param  {HTMLElement} slider - The slider element.
+ * @param  {Number} selection - pass the paramaetr of selected slide as a number
+ */
 
-function handleDotClick(slider, controls, selection) {
+
+function handleDotClick(slider, controlsWrapper, selection) {
   const slides = Array.from(slider.children),
-        dotButtons = Array.from(controls.children);
+        dotButtons = Array.from(controlsWrapper.children);
   dotButtons.forEach((dot, i) => {
     dot.setAttribute('disabled', true);
   });
@@ -5464,111 +5482,26 @@ function handleDotClick(slider, controls, selection) {
     if (i === selection) {
       slide.dataset.sliderposition = 0;
       slide.dataset.smallposition = 0;
+      slide.dataset.hidden = false;
       slide.addEventListener('transitionend', function focusNext() {
         slide.removeEventListener('transitionend', focusNext, true);
         slide.focus();
         updateDotButtonState(i, dotButtons);
       }, true);
     } else if (i > selection) {
-      //
-      console.log("greater");
       slide.dataset.sliderposition = 1;
       slide.dataset.smallposition = 1;
+      slide.dataset.hidden = true; // @ WR review smallhidden - what was intended by it?
     } else {
-      //
-      console.log("less");
       slide.dataset.sliderposition = -1;
       slide.dataset.smallposition = -1;
+      slide.dataset.hidden = true; // @ WR review smallhidden - what was intended by it?
     }
   });
-  /*
-     // NEXT
-     if (direction === 1) {
-         const next = current.nextElementSibling;
-          if (next) {
-             // Disable if everyothing other than current item is true
-             nextButton.setAttribute('disabled', true);
-             prevButton.setAttribute('disabled', true);
-              // Move focus to next slide, wait for transition to finish
-             next.addEventListener(
-                 'transitionend',
-                 function focusNext() {
-                     next.removeEventListener('transitionend', focusNext, true);
-                     next.focus();
-                     updateButtonState(slider, controls);
-                 },
-                 true
-             );
-              // Hide current slide once transition has finished
-             current.addEventListener(
-                 'transitionend',
-                 function hideCurrent() {
-                     current.removeEventListener(
-                         'transitionend',
-                         hideCurrent,
-                         true
-                     );
-                     current.dataset.hidden = true;
-                     current.dataset.smallhidden = true;
-                 },
-                 true
-             );
-              // MOVE POSITION OF CURRENT SLIDE to PREVIOUS
-             current.dataset.sliderposition = -1;
-             current.dataset.smallposition = -1;
-             // UPDATE ACTIVE SLIDE
-             next.dataset.hidden = false;
-             next.dataset.sliderposition = 0;
-             next.dataset.smallposition = 0;
-             // CHANGE CURRENT PAGE NUMBER TEXT
-             currentPage.innerText = startDates.indexOf(next) + 1;
-         }
-     } else {
-         // PREVIOUS
-         const previous = current.previousElementSibling;
-          if (previous) {
-             nextButton.setAttribute('disabled', true);
-             prevButton.setAttribute('disabled', true);
-              previous.addEventListener(
-                 'transitionend',
-                 function focusPrevious() {
-                     previous.removeEventListener(
-                         'transitionend',
-                         focusPrevious,
-                         true
-                     );
-                     previous.focus();
-                     updateButtonState(slider, controls);
-                 },
-                 true
-             );
-              current.addEventListener(
-                 'transitionend',
-                 function hideCurrent() {
-                     current.removeEventListener(
-                         'transitionend',
-                         hideCurrent,
-                         true
-                     );
-                     current.dataset.hidden = true;
-                     current.dataset.smallhidden = true;
-                 },
-                 true
-             );
-              current.dataset.sliderposition = 1;
-             current.dataset.smallposition = 1;
-             previous.dataset.hidden = false;
-             previous.dataset.smallhidden = false;
-             previous.dataset.sliderposition = 0;
-             previous.dataset.smallposition = 0;
-             currentPage.innerText = startDates.indexOf(previous) + 1;
-         }
-     }
-     */
 }
 /**
- * @param  {HTMLElement} slider - The slider element.
- * @param  {HTMLElement} controls - The slider controls element.
+ * @param  {number} active - This is the number/index of the 'active' slide.
+ * @param  {array} dotButtons - An array of all the dot buttons.
  */
 
 
@@ -5579,12 +5512,7 @@ function updateDotButtonState(active, dotButtons) {
     } else {
       dot.removeAttribute('disabled');
     }
-  }); // REMOVE NEXT OR PREVIOUS BUTTONS IF ON FIRST OR LAST CARD
-
-  const nextButton = controls.querySelector(".".concat(className, "__controls__next")),
-        prevButton = controls.querySelector(".".concat(className, "__controls__prev"));
-  slider.querySelector('[data-sliderposition="-1"]') ? prevButton.removeAttribute('disabled') : prevButton.setAttribute('disabled', true);
-  slider.querySelector('[data-sliderposition="1"]') ? nextButton.removeAttribute('disabled') : nextButton.setAttribute('disabled', true);
+  });
 }
 /**
  * Transform an element with the slider class name into a slider section controlled by arrows.
@@ -5599,13 +5527,13 @@ function launchButtons(slider) {
         rowSize = parseInt(slider.dataset.rowsize) || defaultRowSize;
 
   if (1 >= slides.length) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(slider, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(slider, className, false);
     return;
   }
 
   slides.forEach((slide, i) => {
     slide.setAttribute('tabindex', -1);
-    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length));
+    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length));
     slide.classList.add('slide');
 
     if (i === 0) {
@@ -5622,6 +5550,74 @@ function launchButtons(slider) {
       slide.dataset.smallhidden = true;
     }
   });
+} // Touch swip functions below:
+//
+//
+//
+//
+
+
+function unify(e) {
+  return e.changedTouches ? e.changedTouches[0] : e;
+}
+
+let x0;
+
+function lock(e, slider) {
+  console.log("lock and ".concat(e.type));
+  slider.setAttribute('disabled', true);
+  x0 = unify(e).clientX; //set mousedown clientX value
+  //e.target.classList.toggle('smooth', !(this.locked = true));
+
+  console.log("x0 is ".concat(x0));
+}
+
+;
+
+function drag(e) {
+  console.log("drag");
+
+  if (this.i !== e.target.children.length - 1 && this.i !== 0) {
+    if (this.locked) {
+      e.target.style.setProperty('--tx', "".concat(Math.round(this.unify(e).clientX - this.x0), "px"));
+    }
+  }
+}
+
+;
+
+function move(e, slider, controlsWrapper) {
+  console.log("move");
+  const locked = slider.getAttribute('disabled');
+  console.log("locked status is: ".concat(locked));
+  let currentSlide = slider.querySelector("li[data-hidden=false]");
+
+  function getElementIndex(element) {
+    return [...element.parentNode.children].indexOf(element);
+  }
+
+  ;
+
+  if (locked) {
+    console.log("is locked!");
+    let dx = unify(e).clientX - x0,
+        //dx is value calculate by using clientX mousedown and after value
+    s = Math.sign(dx),
+        //check if swipe is left or right by checking value is negative or positive
+    tx = getComputedStyle(e.target).getPropertyValue('--tx'),
+        p = parseInt(tx.replace(/\D/g, '')); // MAY use the drag length as a condition to move slider
+
+    console.log("x0 is: ".concat(x0, ", dx is: ").concat(dx, ", s is: ").concat(s)); // Next slide
+
+    if (s == -1 && currentSlide.nextElementSibling) {
+      ///add check if dot slider or arrows
+      handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) + 1);
+    } // Previous slide 
+    else if (s == 1 && currentSlide.previousElementSibling) {
+        ///add check if dot slider or arrows
+        handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) - 1);
+      }
+  }
 }
 /**
  * Transform an element with the slider class name into a slider section.
@@ -5637,7 +5633,7 @@ function launchButtons(slider) {
 
 function launchSlider(slider) {
   const style = slider.dataset.style || defaultStyle,
-        rowSize = parseInt(slider.dataset.rowsize) || defaultRowSize;
+        rowSize = parseInt(slider.dataset.rowsize) || defaultRowSize; // @WR possible put slider required here if more than 2 slides???
 
   switch (style) {
     case 'numbers':
@@ -5655,6 +5651,16 @@ function launchSlider(slider) {
     default:
       launchNumbers(slider, rowSize);
   }
+  /*
+  slider.addEventListener('mousedown', this.lock.bind(this), false);
+  slider.addEventListener('touchstart', this.lock.bind(this), false);
+  slider.addEventListener('mousemove', this.drag.bind(this), false);
+  slider.addEventListener('touchmove', this.drag.bind(this), false);
+  slider.addEventListener('mouseup', this.move.bind(this), false);
+  slider.addEventListener('touchend', this.move.bind(this), false);
+  slider.addEventListener('mouseout', this.stopDrag.bind(this), false);
+  */
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
