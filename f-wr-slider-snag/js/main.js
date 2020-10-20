@@ -5186,7 +5186,7 @@ function updateButtonState(slider, controls) {
   slider.querySelector('[data-sliderposition="1"]') ? nextButton.removeAttribute('disabled') : nextButton.setAttribute('disabled', true);
 }
 /**
- * Handle clicks on the next/previous buttons.
+ * Handle clicks on the next/previous buttons for arrow slider.
  *
  * @param  {HTMLElement} slider - The slider element.
  * @param  {Number} direction - The scroll direction, 1 = next, -1 = previous.
@@ -5370,7 +5370,20 @@ function launchArrow(slider) {
   controlsWrapper.className = className + '__controls';
   controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'Slider navigation'); // Move controls outside of slider UL / Why the if statement? CHECK IF THIS IS NEEDED @WR
 
-  slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper);
+  slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper); //add event listeners
+
+  slider.addEventListener('mousedown', function (e) {
+    lock(e, slider);
+  });
+  slider.addEventListener('touchstart', function (e) {
+    lock(e, slider);
+  });
+  slider.addEventListener('mouseup', function (e) {
+    move(e, slider, controlsWrapper);
+  });
+  slider.addEventListener('touchend', function (e) {
+    move(e, slider, controlsWrapper);
+  });
 }
 /**
  * Transform an element with the slider class name into a slider section controlled by arrows.
@@ -5574,23 +5587,12 @@ function lock(e, slider) {
 
 ;
 
-function drag(e) {
-  console.log("drag");
-
-  if (this.i !== e.target.children.length - 1 && this.i !== 0) {
-    if (this.locked) {
-      e.target.style.setProperty('--tx', "".concat(Math.round(this.unify(e).clientX - this.x0), "px"));
-    }
-  }
-}
-
-;
-
 function move(e, slider, controlsWrapper) {
   console.log("move");
   const locked = slider.getAttribute('disabled');
   console.log("locked status is: ".concat(locked));
   let currentSlide = slider.querySelector("li[data-hidden=false]");
+  const sliderType = slider.getAttribute('data-style');
 
   function getElementIndex(element) {
     return [...element.parentNode.children].indexOf(element);
@@ -5609,13 +5611,13 @@ function move(e, slider, controlsWrapper) {
 
     console.log("x0 is: ".concat(x0, ", dx is: ").concat(dx, ", s is: ").concat(s)); // Next slide
 
-    if (s == -1 && currentSlide.nextElementSibling) {
+    if (s == -1 && currentSlide.nextElementSibling && dx < -10) {
       ///add check if dot slider or arrows
-      handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) + 1);
+      sliderType == 'numbers' ? handleNextPrevClick(slider, controlsWrapper, 1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) + 1);
     } // Previous slide 
-    else if (s == 1 && currentSlide.previousElementSibling) {
+    else if (s == 1 && currentSlide.previousElementSibling && dx > 10) {
         ///add check if dot slider or arrows
-        handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) - 1);
+        sliderType == 'numbers' ? handleNextPrevClick(slider, controlsWrapper, -1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) - 1);
       }
   }
 }
@@ -5651,16 +5653,6 @@ function launchSlider(slider) {
     default:
       launchNumbers(slider, rowSize);
   }
-  /*
-  slider.addEventListener('mousedown', this.lock.bind(this), false);
-  slider.addEventListener('touchstart', this.lock.bind(this), false);
-  slider.addEventListener('mousemove', this.drag.bind(this), false);
-  slider.addEventListener('touchmove', this.drag.bind(this), false);
-  slider.addEventListener('mouseup', this.move.bind(this), false);
-  slider.addEventListener('touchend', this.move.bind(this), false);
-  slider.addEventListener('mouseout', this.stopDrag.bind(this), false);
-  */
-
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
