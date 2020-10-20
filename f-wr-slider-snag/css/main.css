@@ -43882,11 +43882,15 @@ blockquote footer cite {
 
 .js .slider[data-style='dots'] + nav button {
     border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    background: red;
-    margin-right: 10px;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #696969;
+    margin-right: 1rem;
     border: solid thin black;
+}
+
+.js .slider[data-style='dots'] + nav button[aria-expanded='true'] {
+    background-color: #1e1e1e;
 }
 
 .wrapper--tooltip__label {

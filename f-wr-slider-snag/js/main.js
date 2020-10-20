@@ -5522,8 +5522,10 @@ function updateDotButtonState(active, dotButtons) {
   dotButtons.forEach((dot, i) => {
     if (i === active) {
       dot.setAttribute('disabled', true);
+      dot.setAttribute('aria-expanded', true);
     } else {
       dot.removeAttribute('disabled');
+      dot.setAttribute('aria-expanded', false);
     }
   });
 }
@@ -5611,11 +5613,11 @@ function move(e, slider, controlsWrapper) {
 
     console.log("x0 is: ".concat(x0, ", dx is: ").concat(dx, ", s is: ").concat(s)); // Next slide
 
-    if (s == -1 && currentSlide.nextElementSibling && dx < -10) {
+    if (s == -1 && currentSlide.nextElementSibling && dx < -25) {
       ///add check if dot slider or arrows
       sliderType == 'numbers' ? handleNextPrevClick(slider, controlsWrapper, 1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) + 1);
     } // Previous slide 
-    else if (s == 1 && currentSlide.previousElementSibling && dx > 10) {
+    else if (s == 1 && currentSlide.previousElementSibling && dx > 25) {
         ///add check if dot slider or arrows
         sliderType == 'numbers' ? handleNextPrevClick(slider, controlsWrapper, -1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) - 1);
       }
