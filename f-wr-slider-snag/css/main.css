@@ -43886,11 +43886,36 @@ blockquote footer cite {
     height: 1.5rem;
     background-color: #696969;
     margin-right: 1rem;
-    border: solid thin black;
+    border: 0.125rem dotted transparent;
+}
+
+@media (hover: hover) {
+    .js .slider[data-style='dots'] + nav button:hover {
+        background-color: #1e1e1e;
+    }
+}
+
+.js .slider[data-style='dots'] + nav button:active, .js .slider[data-style='dots'] + nav button:focus {
+    background-color: #1e1e1e;
+    border: 0.125rem dotted #1e1e1e;
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
 }
 
 .js .slider[data-style='dots'] + nav button[aria-expanded='true'] {
     background-color: #1e1e1e;
+}
+
+@media (hover: hover) {
+    .js .slider[data-style='dots'] + nav button[aria-expanded='true']:hover {
+        box-shadow: none;
+    }
+}
+
+.js .slider[data-style='dots'] + nav button[aria-expanded='true']:active, .js .slider[data-style='dots'] + nav button[aria-expanded='true']:focus {
+    box-shadow: none;
 }
 
 .wrapper--tooltip__label {
