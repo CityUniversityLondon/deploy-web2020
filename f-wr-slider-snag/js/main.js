@@ -5173,10 +5173,42 @@ const className = 'slider',
       defaultRowSize = 2,
       arrowLeft = 'ArrowLeft',
       arrowRight = 'ArrowRight';
+
+function responsiveOptimise(slides, slider) {
+  // optimise below
+  const responsiveNum = 2;
+  let tempSlides = [];
+  let i;
+  let d;
+
+  for (i = 0; i < slides.length; i += responsiveNum) {
+    console.log("-- for started --");
+    let liElement = document.createElement('li');
+    let ulElement = document.createElement('ul');
+    liElement.appendChild(ulElement);
+
+    for (d = 0; d < responsiveNum; d++) {
+      if (slides[i + d]) {
+        ulElement.appendChild(slides[i + d]);
+        console.log(slides[i + d]);
+      }
+    }
+
+    tempSlides[tempSlides.length] = liElement;
+    slider.appendChild(liElement);
+  }
+
+  slides = tempSlides; // add to update pagination
+
+  return slides;
+}
 /**
+ * Updates buttons of arrow slider
+ * 
  * @param  {HTMLElement} slider - The slider element.
  * @param  {HTMLElement} controls - The slider controls element.
  */
+
 
 function updateButtonState(slider, controls) {
   // REMOVE NEXT OR PREVIOUS BUTTONS IF ON FIRST OR LAST CARD
@@ -5206,7 +5238,7 @@ function handleNextPrevClick(slider, controls, direction) {
     const next = current.nextElementSibling;
 
     if (next) {
-      // Disable if everyothing other than current item is true
+      // Disables buttons during slide animation from current to next
       nextButton.setAttribute('disabled', true);
       prevButton.setAttribute('disabled', true); // Move focus to next slide, wait for transition to finish
 
@@ -5269,8 +5301,8 @@ function handleNextPrevClick(slider, controls, direction) {
 
 function launchArrow(slider) {
   // Pagination and Controls
-  const slides = Array.from(slider.children),
-        controlsWrapper = document.createElement('nav'),
+  let slides = Array.from(slider.children);
+  const controlsWrapper = document.createElement('nav'),
         nextButton = document.createElement('button'),
         nextButtonSpan = document.createElement('span'),
         prevButton = document.createElement('button'),
@@ -5292,7 +5324,45 @@ function launchArrow(slider) {
   if (slider.dataset.rowsize !== 1) {
     slider.dataset.rowsize = 1;
   } // END REVIEW
+  //// Reconstructs slides for responsive slider
+  ///
 
+
+  const responsive = slider.getAttribute("data-addon");
+
+  if (responsive) {
+    // & screen size > tablet
+
+    /*
+    console.log(`Optimisation starts...`);
+    responsiveOptimise(slides, slider);
+    console.log(`Optimisation ends...`);*/
+    const responsiveNum = 2;
+    let tempSlides = [];
+    let i;
+    let d;
+
+    for (i = 0; i < slides.length; i += responsiveNum) {
+      console.log("-- for started --");
+      let liElement = document.createElement('li');
+      let ulElement = document.createElement('ul');
+      liElement.appendChild(ulElement);
+
+      for (d = 0; d < responsiveNum; d++) {
+        if (slides[i + d]) {
+          ulElement.appendChild(slides[i + d]);
+          console.log(slides[i + d]);
+        }
+      }
+
+      tempSlides[tempSlides.length] = liElement;
+      slider.appendChild(liElement);
+    }
+
+    slides = tempSlides; // add to update pagination
+  }
+
+  ; // Sets up the positions of the cards / slides
 
   slides.forEach((slide, i) => {
     slide.setAttribute('tabindex', -1); // Remove inactive
@@ -5300,13 +5370,14 @@ function launchArrow(slider) {
     slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length)); // Accesiblity
 
     slide.classList.add('slide'); // Add slide class of slide
-    // Controls current position of cards? -1 0 and 1
+    // 0 = active / first slide
 
     if (i === 0) {
       slide.dataset.sliderposition = 0;
       slide.dataset.smallposition = 0;
       slide.dataset.hidden = false;
     } else {
+      // 1 = next slide
       slide.dataset.sliderposition = 1;
       slide.dataset.smallposition = 1;
       slide.dataset.hidden = 'true';
