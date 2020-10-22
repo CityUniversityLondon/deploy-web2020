@@ -5174,10 +5174,9 @@ const className = 'slider',
       arrowLeft = 'ArrowLeft',
       arrowRight = 'ArrowRight';
 
-function responsiveOptimise(slides, slider) {
+function responsiveOptimisation(slides, slider) {
   // optimise below
   const responsiveNum = 2;
-  let tempSlides = [];
   let i;
   let d;
 
@@ -5190,15 +5189,12 @@ function responsiveOptimise(slides, slider) {
     for (d = 0; d < responsiveNum; d++) {
       if (slides[i + d]) {
         ulElement.appendChild(slides[i + d]);
-        console.log(slides[i + d]);
       }
     }
 
-    tempSlides[tempSlides.length] = liElement;
     slider.appendChild(liElement);
-  }
+  } // posible add pagination update!! @WR
 
-  slides = tempSlides; // add to update pagination
 
   return slides;
 }
@@ -5332,34 +5328,10 @@ function launchArrow(slider) {
 
   if (responsive) {
     // & screen size > tablet
-
-    /*
-    console.log(`Optimisation starts...`);
-    responsiveOptimise(slides, slider);
-    console.log(`Optimisation ends...`);*/
-    const responsiveNum = 2;
-    let tempSlides = [];
-    let i;
-    let d;
-
-    for (i = 0; i < slides.length; i += responsiveNum) {
-      console.log("-- for started --");
-      let liElement = document.createElement('li');
-      let ulElement = document.createElement('ul');
-      liElement.appendChild(ulElement);
-
-      for (d = 0; d < responsiveNum; d++) {
-        if (slides[i + d]) {
-          ulElement.appendChild(slides[i + d]);
-          console.log(slides[i + d]);
-        }
-      }
-
-      tempSlides[tempSlides.length] = liElement;
-      slider.appendChild(liElement);
-    }
-
-    slides = tempSlides; // add to update pagination
+    console.log("Optimisation starts...");
+    responsiveOptimisation(slides, slider);
+    console.log("Optimisation ends...");
+    slides = Array.from(slider.children);
   }
 
   ; // Sets up the positions of the cards / slides
