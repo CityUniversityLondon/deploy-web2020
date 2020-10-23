@@ -5173,15 +5173,19 @@ const className = 'slider',
       defaultRowSize = 2,
       arrowLeft = 'ArrowLeft',
       arrowRight = 'ArrowRight';
+/**
+ * Opimises slide elements for responsive slider on bigger screens
+ * 
+ * @param  {HTMLElement} slider - The slider element.
+ * @param  {Array} slides - an array containing the individual slides as li elements
+ */
 
 function responsiveOptimisation(slides, slider) {
-  // optimise below
   const responsiveNum = 2;
   let i;
   let d;
 
   for (i = 0; i < slides.length; i += responsiveNum) {
-    console.log("-- for started --");
     let liElement = document.createElement('li');
     let ulElement = document.createElement('ul');
     liElement.appendChild(ulElement);
@@ -5189,14 +5193,49 @@ function responsiveOptimisation(slides, slider) {
     for (d = 0; d < responsiveNum; d++) {
       if (slides[i + d]) {
         ulElement.appendChild(slides[i + d]);
+        slides[i + d].classList.remove('slide');
       }
     }
 
     slider.appendChild(liElement);
-  } // posible add pagination update!! @WR
+  } // Re-map slide items after re-structure
 
+
+  slides = Array.from(slider.children);
+  prepareSlides(slides);
+  slider.setAttribute('data-optimised', 'true'); // posible add pagination update!! @WR
+  ///
+  /////
+  /////
 
   return slides;
+}
+/**
+ * Updates buttons of arrow slider
+ * 
+ * @param  {HTMLElement} slider - The slider element.
+ * @param  {Array} slides - an array containing the individual slides as li elements
+ */
+
+
+function reverseOptimisation(slider, controls) {
+  console.log(" -- reverse optimisation started --");
+  let slides = Array.from(slider.children);
+  let i;
+
+  for (i = 0; i < slides.length; i++) {
+    const slidesChildren = Array.from(slides[i].querySelector('ul').children);
+    slidesChildren.forEach((slide, n) => {
+      slider.appendChild(slide);
+    });
+    slides[i].remove();
+  } // Re-map slide items after re-structure
+
+
+  slides = Array.from(slider.children);
+  prepareSlides(slides);
+  slider.setAttribute('data-optimised', 'false');
+  controls.querySelector('.slider__indicator__total').innerText = slides.length;
 }
 /**
  * Updates buttons of arrow slider
@@ -5223,7 +5262,18 @@ function updateButtonState(slider, controls) {
 
 
 function handleNextPrevClick(slider, controls, direction) {
-  // What does startDates do? Rename to something else? @WR
+  let slides = Array.from(slider.children);
+  const responsive = slider.getAttribute('data-addon');
+  const optimised = slider.getAttribute('data-optimised');
+  let screenSize = window.innerWidth;
+
+  if (responsive && screenSize < 768 && optimised == 'true') {
+    reverseOptimisation(slider, controls);
+  } else if (responsive && screenSize >= 768 && optimised !== 'true') {
+    responsiveOptimisation(slides, slider, controls);
+  } // What does startDates do? Rename to something else? @WR
+
+
   const startDates = Array.from(slider.querySelectorAll('.slide')),
         current = slider.querySelector('[data-sliderposition="0"]'),
         currentPage = controls.querySelector(".".concat(className, "__indicator__current")),
@@ -5285,6 +5335,37 @@ function handleNextPrevClick(slider, controls, direction) {
       currentPage.innerText = startDates.indexOf(previous) + 1;
     }
   }
+} //
+// prepares slide function
+//
+//
+// FOR ARROW SLIDER @WR
+//
+
+
+function prepareSlides(slides) {
+  console.log("-- prepareSlides executed --");
+  slides.forEach((slide, i) => {
+    slide.setAttribute('tabindex', -1); // Remove inactive
+
+    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length)); // Accesiblity
+
+    slide.classList.add('slide'); // Add slide class of slide
+    // 0 = active / first slide
+
+    if (i === 0) {
+      slide.dataset.sliderposition = 0;
+      slide.dataset.smallposition = 0;
+      slide.dataset.hidden = false;
+    } else {
+      // 1 = next slide
+      slide.dataset.sliderposition = 1;
+      slide.dataset.smallposition = 1;
+      slide.dataset.hidden = 'true';
+      slide.dataset.smallhidden = 'true';
+    }
+  });
+  return slides;
 }
 /**
  * Transform an element with the slider class name into a slider section controlled by arrows.
@@ -5324,38 +5405,18 @@ function launchArrow(slider) {
   ///
 
 
-  const responsive = slider.getAttribute("data-addon");
+  const responsive = slider.getAttribute('data-addon');
+  let screenSize = window.innerWidth;
 
-  if (responsive) {
-    // & screen size > tablet
-    console.log("Optimisation starts...");
-    responsiveOptimisation(slides, slider);
-    console.log("Optimisation ends...");
+  if (responsive && screenSize >= 768) {
+    responsiveOptimisation(slides, slider); // Re-map slide items after re-structure
+
     slides = Array.from(slider.children);
   }
 
   ; // Sets up the positions of the cards / slides
 
-  slides.forEach((slide, i) => {
-    slide.setAttribute('tabindex', -1); // Remove inactive
-
-    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length)); // Accesiblity
-
-    slide.classList.add('slide'); // Add slide class of slide
-    // 0 = active / first slide
-
-    if (i === 0) {
-      slide.dataset.sliderposition = 0;
-      slide.dataset.smallposition = 0;
-      slide.dataset.hidden = false;
-    } else {
-      // 1 = next slide
-      slide.dataset.sliderposition = 1;
-      slide.dataset.smallposition = 1;
-      slide.dataset.hidden = 'true';
-      slide.dataset.smallhidden = 'true';
-    }
-  }); // Build the next button
+  prepareSlides(slides); // Build the next button
 
   nextButtonSpan.appendChild(document.createTextNode('Next slide'));
   nextButton.appendChild(nextButtonSpan);
