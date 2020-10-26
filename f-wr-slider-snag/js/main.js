@@ -5180,7 +5180,7 @@ const className = 'slider',
  * @param  {Array} slides - an array containing the individual slides as li elements
  */
 
-function responsiveOptimisation(slides, slider) {
+function responsiveOptimisation(slides, slider, controls) {
   const responsiveNum = 2;
   let i;
   let d;
@@ -5203,10 +5203,18 @@ function responsiveOptimisation(slides, slider) {
 
   slides = Array.from(slider.children);
   prepareSlides(slides);
-  slider.setAttribute('data-optimised', 'true'); // posible add pagination update!! @WR
+  slider.setAttribute('data-optimised', 'true'); // Resets pagination during screensize change - not during launch
+
+  if (controls) {
+    slider.querySelector('.slide').focus();
+    controls.querySelector('.slider__indicator__total').innerText = slides.length;
+    controls.querySelector('.slider__indicator__current').innerText = '1';
+    updateButtonState(slider, controls);
+  } // posible add pagination update!! @WR
   ///
   /////
   /////
+
 
   return slides;
 }
@@ -5235,7 +5243,10 @@ function reverseOptimisation(slider, controls) {
   slides = Array.from(slider.children);
   prepareSlides(slides);
   slider.setAttribute('data-optimised', 'false');
+  slider.querySelector('.slide').focus();
   controls.querySelector('.slider__indicator__total').innerText = slides.length;
+  controls.querySelector('.slider__indicator__current').innerText = '1';
+  updateButtonState(slider, controls);
 }
 /**
  * Updates buttons of arrow slider
@@ -5268,13 +5279,18 @@ function handleNextPrevClick(slider, controls, direction) {
   let screenSize = window.innerWidth;
 
   if (responsive && screenSize < 768 && optimised == 'true') {
+    console.log("reverse opimisation called");
     reverseOptimisation(slider, controls);
+    return;
   } else if (responsive && screenSize >= 768 && optimised !== 'true') {
+    console.log(" optimisation called");
     responsiveOptimisation(slides, slider, controls);
-  } // What does startDates do? Rename to something else? @WR
+    return;
+  }
 
+  console.log("cont..."); // What does startDates do? Rename to something else? @WR
 
-  const startDates = Array.from(slider.querySelectorAll('.slide')),
+  const startDates = Array.from(slider.children),
         current = slider.querySelector('[data-sliderposition="0"]'),
         currentPage = controls.querySelector(".".concat(className, "__indicator__current")),
         nextButton = controls.querySelector(".".concat(className, "__controls__next")),
