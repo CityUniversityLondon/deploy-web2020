@@ -43525,8 +43525,14 @@ blockquote footer cite {
     }
 }
 
+.js .slider:not([data-small="true"]) .slide[data-smallposition="0"] {
+    margin-top: 0;
+}
+
 .js .slider .slide {
     width: 100%;
+    list-style: none;
+    margin-top: 1rem;
 }
 
 .js .slider .slide:focus {

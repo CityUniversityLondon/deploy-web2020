@@ -5180,6 +5180,21 @@ const className = 'slider',
  * @param  {Array} slides - an array containing the individual slides as li elements
  */
 
+function addSwipeEvents(slider, controlsWrapper) {
+  slider.addEventListener('mousedown', function (e) {
+    lock(e, slider);
+  });
+  slider.addEventListener('touchstart', function (e) {
+    lock(e, slider);
+  });
+  slider.addEventListener('mouseup', function (e) {
+    move(e, slider, controlsWrapper);
+  });
+  slider.addEventListener('touchend', function (e) {
+    move(e, slider, controlsWrapper);
+  });
+}
+
 function responsiveOptimisation(slides, slider, controls) {
   const responsiveNum = 2;
   let i;
@@ -5194,6 +5209,7 @@ function responsiveOptimisation(slides, slider, controls) {
       if (slides[i + d]) {
         ulElement.appendChild(slides[i + d]);
         slides[i + d].classList.remove('slide');
+        slides[i + d].removeAttribute('data-sliderposition');
       }
     }
 
@@ -5210,11 +5226,7 @@ function responsiveOptimisation(slides, slider, controls) {
     controls.querySelector('.slider__indicator__total').innerText = slides.length;
     controls.querySelector('.slider__indicator__current').innerText = '1';
     updateButtonState(slider, controls);
-  } // posible add pagination update!! @WR
-  ///
-  /////
-  /////
-
+  }
 
   return slides;
 }
@@ -5257,7 +5269,8 @@ function reverseOptimisation(slider, controls) {
 
 
 function updateButtonState(slider, controls) {
-  // REMOVE NEXT OR PREVIOUS BUTTONS IF ON FIRST OR LAST CARD
+  console.log("updated buttons executed"); // REMOVE NEXT OR PREVIOUS BUTTONS IF ON FIRST OR LAST CARD
+
   const nextButton = controls.querySelector(".".concat(className, "__controls__next")),
         prevButton = controls.querySelector(".".concat(className, "__controls__prev"));
   slider.querySelector('[data-sliderposition="-1"]') ? prevButton.removeAttribute('disabled') : prevButton.setAttribute('disabled', true);
@@ -5297,6 +5310,7 @@ function handleNextPrevClick(slider, controls, direction) {
         prevButton = controls.querySelector(".".concat(className, "__controls__prev")); // NEXT
 
   if (direction === 1) {
+    console.log("next click");
     const next = current.nextElementSibling;
 
     if (next) {
@@ -5320,6 +5334,7 @@ function handleNextPrevClick(slider, controls, direction) {
       current.dataset.smallposition = -1; // UPDATE ACTIVE SLIDE
 
       next.dataset.hidden = false;
+      previous.dataset.smallhidden = false;
       next.dataset.sliderposition = 0;
       next.dataset.smallposition = 0; // CHANGE CURRENT PAGE NUMBER TEXT
 
@@ -5327,6 +5342,7 @@ function handleNextPrevClick(slider, controls, direction) {
     }
   } else {
     // PREVIOUS
+    console.log("previous clicked");
     const previous = current.previousElementSibling;
 
     if (previous) {
@@ -5360,7 +5376,6 @@ function handleNextPrevClick(slider, controls, direction) {
 
 
 function prepareSlides(slides) {
-  console.log("-- prepareSlides executed --");
   slides.forEach((slide, i) => {
     slide.setAttribute('tabindex', -1); // Remove inactive
 
@@ -5418,7 +5433,6 @@ function launchArrow(slider) {
     slider.dataset.rowsize = 1;
   } // END REVIEW
   //// Reconstructs slides for responsive slider
-  ///
 
 
   const responsive = slider.getAttribute('data-addon');
@@ -5493,18 +5507,7 @@ function launchArrow(slider) {
 
   slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper); //add event listeners
 
-  slider.addEventListener('mousedown', function (e) {
-    lock(e, slider);
-  });
-  slider.addEventListener('touchstart', function (e) {
-    lock(e, slider);
-  });
-  slider.addEventListener('mouseup', function (e) {
-    move(e, slider, controlsWrapper);
-  });
-  slider.addEventListener('touchend', function (e) {
-    move(e, slider, controlsWrapper);
-  });
+  addSwipeEvents(slider, controlsWrapper);
 }
 /**
  * Transform an element with the slider class name into a slider section controlled by arrows.
@@ -5516,22 +5519,14 @@ function launchArrow(slider) {
 
 
 function launchDot(slider) {
-  console.log("dot slider loanched"); // Creates pagination and control elements
-
+  // Creates pagination and control elements
   const slides = Array.from(slider.children),
         controlsWrapper = document.createElement('nav'); // If not enough slides, don't create it.
 
   if (1 >= slides.length) {
     Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(slider, className, false);
     return;
-  } // REVIEW THIS CODE????
-  // CHECK WHAT MAX ROW SIZE SHOULD BE? @RC > @DB
-
-
-  if (slider.dataset.rowsize !== 1) {
-    slider.dataset.rowsize = 1;
-  } // END REVIEW
-
+  }
 
   slides.forEach((slide, i) => {
     slide.setAttribute('tabindex', -1); // Remove inactive
@@ -5551,8 +5546,6 @@ function launchDot(slider) {
       slide.dataset.hidden = 'true';
       slide.dataset.smallhidden = 'true';
     } // Creates dot buttons for each slide
-
-    /**/
 
 
     let dot = Object(_util__WEBPACK_IMPORTED_MODULE_4__["createHTMLElement"])('button', [{
@@ -5577,26 +5570,38 @@ function launchDot(slider) {
     dot.addEventListener('click', () => handleDotClick(slider, controlsWrapper, i), true);
     controlsWrapper.appendChild(dot);
   }); // Accessiblity wait for key press anywhere within slider
-  // add something
-  // Wrap element around slider__controls
+
+  slider.addEventListener('keydown', e => {
+    const current = slider.querySelector('[data-sliderposition="0"]');
+    const next = current.nextElementSibling;
+    const previous = current.previousElementSibling;
+    const pos = slides.indexOf(current) + 1;
+
+    switch (e.key) {
+      case arrowLeft:
+        //prevButton.click();
+        break;
+
+      case arrowRight:
+        if (next) {
+          console.log("next av and current ".concat(pos));
+        }
+
+        ; //nextButton.click();
+
+        break;
+
+      default:
+        break;
+    }
+  }, true); // Wrap element around slider__controls
 
   controlsWrapper.className = className + '__controls';
   controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'Slider navigation'); // Move controls outside of slider UL / Why the if statement? CHECK IF THIS IS NEEDED @WR
 
   slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper); //add event listeners
 
-  slider.addEventListener('mousedown', function (e) {
-    lock(e, slider);
-  });
-  slider.addEventListener('touchstart', function (e) {
-    lock(e, slider);
-  });
-  slider.addEventListener('mouseup', function (e) {
-    move(e, slider, controlsWrapper);
-  });
-  slider.addEventListener('touchend', function (e) {
-    move(e, slider, controlsWrapper);
-  });
+  addSwipeEvents(slider, controlsWrapper);
 }
 /**
  * Handle clicks on the next/previous buttons.
@@ -5701,23 +5706,18 @@ function unify(e) {
 let x0;
 
 function lock(e, slider) {
-  console.log("lock and ".concat(e.type));
   const locked = slider.getAttribute('disabled');
 
   if (!locked) {
     x0 = unify(e).clientX; //set mousedown clientX value
     //e.target.classList.toggle('smooth', !(this.locked = true));
-
-    console.log("x0 is ".concat(x0));
   }
 }
 
 ;
 
 function move(e, slider, controlsWrapper) {
-  console.log("move");
   const locked = slider.getAttribute('disabled');
-  console.log("locked status is: ".concat(locked));
   let currentSlide = slider.querySelector("li[data-hidden=false]");
   const sliderType = slider.getAttribute('data-style');
 
@@ -5728,15 +5728,13 @@ function move(e, slider, controlsWrapper) {
   ;
 
   if (!locked) {
-    console.log("is NOT locked");
     let dx = unify(e).clientX - x0,
         //dx is value calculate by using clientX mousedown and after value
     s = Math.sign(dx),
         //check if swipe is left or right by checking value is negative or positive
     tx = getComputedStyle(e.target).getPropertyValue('--tx'),
-        p = parseInt(tx.replace(/\D/g, '')); // MAY use the drag length as a condition to move slider
-
-    console.log("x0 is: ".concat(x0, ", dx is: ").concat(dx, ", s is: ").concat(s)); // Next slide
+        p = parseInt(tx.replace(/\D/g, '')); // May use the drag length as a condition to move slider
+    // Next slide
 
     if (s == -1 && currentSlide.nextElementSibling && dx < -25) {
       ///add check if dot slider or arrows
