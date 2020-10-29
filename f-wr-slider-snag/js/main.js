@@ -5299,9 +5299,8 @@ function handleNextPrevClick(slider, controls, direction) {
     console.log(" optimisation called");
     responsiveOptimisation(slides, slider, controls);
     return;
-  }
+  } // What does startDates do? Rename to something else? @WR
 
-  console.log("cont..."); // What does startDates do? Rename to something else? @WR
 
   const startDates = Array.from(slider.children),
         current = slider.querySelector('[data-sliderposition="0"]'),
@@ -5334,7 +5333,7 @@ function handleNextPrevClick(slider, controls, direction) {
       current.dataset.smallposition = -1; // UPDATE ACTIVE SLIDE
 
       next.dataset.hidden = false;
-      previous.dataset.smallhidden = false;
+      next.dataset.smallhidden = false;
       next.dataset.sliderposition = 0;
       next.dataset.smallposition = 0; // CHANGE CURRENT PAGE NUMBER TEXT
 
@@ -5342,7 +5341,6 @@ function handleNextPrevClick(slider, controls, direction) {
     }
   } else {
     // PREVIOUS
-    console.log("previous clicked");
     const previous = current.previousElementSibling;
 
     if (previous) {

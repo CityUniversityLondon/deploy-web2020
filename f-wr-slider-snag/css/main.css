@@ -43452,6 +43452,10 @@ blockquote footer cite {
     margin-right: 1rem;
 }
 
+.js .slider {
+    display: flex;
+}
+
 @media (max-width: 767px) {
     .js .slider[data-small='true'] {
         overflow: hidden;
