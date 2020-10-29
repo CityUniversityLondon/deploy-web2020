@@ -43896,6 +43896,13 @@ blockquote footer cite {
     }
 }
 
+@media (min-width: 768px) {
+    .js .slider[data-style='dots'] {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
 .js .slider[data-style='dots'] + .slider__controls {
     text-align: center;
 }
