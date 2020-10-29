@@ -5573,20 +5573,23 @@ function launchDot(slider) {
     const current = slider.querySelector('[data-sliderposition="0"]');
     const next = current.nextElementSibling;
     const previous = current.previousElementSibling;
-    const pos = slides.indexOf(current) + 1;
+    const pos = slides.indexOf(current);
+    const buttons = Array.from(controlsWrapper.children);
 
     switch (e.key) {
       case arrowLeft:
-        //prevButton.click();
+        if (previous) {
+          buttons[pos - 1].click();
+        }
+
         break;
 
       case arrowRight:
         if (next) {
-          console.log("next av and current ".concat(pos));
+          buttons[pos + 1].click();
         }
 
-        ; //nextButton.click();
-
+        ;
         break;
 
       default:

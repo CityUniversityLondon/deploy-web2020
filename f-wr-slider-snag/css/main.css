@@ -43529,7 +43529,7 @@ blockquote footer cite {
     }
 }
 
-.js .slider:not([data-small="true"]) .slide[data-smallposition="0"] {
+.js .slider:not([data-small='true']) .slide[data-smallposition='0'] {
     margin-top: 0;
 }
 
