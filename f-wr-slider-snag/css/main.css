@@ -43886,11 +43886,17 @@ blockquote footer cite {
     }
 }
 
-.js .slider[data-style='dots'] + nav {
+.js .slider[data-style='dots'] + .slider__controls {
     text-align: center;
 }
 
-.js .slider[data-style='dots'] + nav button {
+@media (min-width: 768px) {
+    .js .slider[data-style='dots'] + .slider__controls {
+        display: none;
+    }
+}
+
+.js .slider[data-style='dots'] + .slider__controls button {
     border-radius: 50%;
     width: 1.5rem;
     height: 1.5rem;
@@ -43900,12 +43906,12 @@ blockquote footer cite {
 }
 
 @media (hover: hover) {
-    .js .slider[data-style='dots'] + nav button:hover {
+    .js .slider[data-style='dots'] + .slider__controls button:hover {
         background-color: #1e1e1e;
     }
 }
 
-.js .slider[data-style='dots'] + nav button:active, .js .slider[data-style='dots'] + nav button:focus {
+.js .slider[data-style='dots'] + .slider__controls button:active, .js .slider[data-style='dots'] + .slider__controls button:focus {
     background-color: #1e1e1e;
     border: 0.125rem dotted #1e1e1e;
     outline-color: #0c0c0e;
@@ -43914,17 +43920,17 @@ blockquote footer cite {
     outline-width: 0.125rem;
 }
 
-.js .slider[data-style='dots'] + nav button[aria-expanded='true'] {
+.js .slider[data-style='dots'] + .slider__controls button[aria-expanded='true'] {
     background-color: #1e1e1e;
 }
 
 @media (hover: hover) {
-    .js .slider[data-style='dots'] + nav button[aria-expanded='true']:hover {
+    .js .slider[data-style='dots'] + .slider__controls button[aria-expanded='true']:hover {
         box-shadow: none;
     }
 }
 
-.js .slider[data-style='dots'] + nav button[aria-expanded='true']:active, .js .slider[data-style='dots'] + nav button[aria-expanded='true']:focus {
+.js .slider[data-style='dots'] + .slider__controls button[aria-expanded='true']:active, .js .slider[data-style='dots'] + .slider__controls button[aria-expanded='true']:focus {
     box-shadow: none;
 }
 
