@@ -43740,7 +43740,7 @@ blockquote footer cite {
 }
 
 @media (min-width: 768px) {
-    .js .slider[data-count='2'][data-rowsize='1']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-count='2'][data-rowsize='1']:not([data-small='true']) .slide [data-sliderposition='-1'], .js .slider[data-count='2'][data-rowsize='1']:not([data-small='true']) .slide [data-sliderposition='0'], .js .slider[data-count='2'][data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-count='2'][data-rowsize='2']:not([data-small='true']) .slide [data-sliderposition='-1'], .js .slider[data-count='2'][data-rowsize='2']:not([data-small='true']) .slide [data-sliderposition='0'], .js .slider[data-count='2'][data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-count='2'][data-rowsize='3']:not([data-small='true']) .slide [data-sliderposition='-1'], .js .slider[data-count='2'][data-rowsize='3']:not([data-small='true']) .slide [data-sliderposition='0'] {
+    .js .slider[data-count='2'][data-rowsize='1']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-count='2'][data-rowsize='1']:not([data-small='true']) .slide[data-sliderposition='-1'], .js .slider[data-count='2'][data-rowsize='1']:not([data-small='true']) .slide[data-sliderposition='0'], .js .slider[data-count='2'][data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-count='2'][data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='-1'], .js .slider[data-count='2'][data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='0'], .js .slider[data-count='2'][data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-count='2'][data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='-1'], .js .slider[data-count='2'][data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='0'] {
         visibility: visible;
         position: static;
     }
@@ -43897,23 +43897,27 @@ blockquote footer cite {
 }
 
 @media (min-width: 768px) {
-    .js .slider[data-style='dots'] {
+    .js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']), .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) {
         display: flex;
         flex-wrap: wrap;
     }
+    .js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']) .slide[data-sliderposition='1'], .js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']) .slide[data-sliderposition='-1'], .js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']) .slide[data-sliderposition='0'], .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) .slide[data-sliderposition='1'], .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) .slide[data-sliderposition='-1'], .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) .slide[data-sliderposition='0'] {
+        visibility: visible;
+        position: static;
+    }
 }
 
-.js .slider[data-style='dots'] + .slider__controls {
+.js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']) + .slider__controls, .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) + .slider__controls {
     text-align: center;
 }
 
 @media (min-width: 768px) {
-    .js .slider[data-style='dots'] + .slider__controls {
+    .js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']) + .slider__controls, .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) + .slider__controls {
         display: none;
     }
 }
 
-.js .slider[data-style='dots'] + .slider__controls button {
+.js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']) + .slider__controls button, .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) + .slider__controls button {
     border-radius: 50%;
     width: 1.5rem;
     height: 1.5rem;
@@ -43923,12 +43927,12 @@ blockquote footer cite {
 }
 
 @media (hover: hover) {
-    .js .slider[data-style='dots'] + .slider__controls button:hover {
+    .js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']) + .slider__controls button:hover, .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) + .slider__controls button:hover {
         background-color: #1e1e1e;
     }
 }
 
-.js .slider[data-style='dots'] + .slider__controls button:active, .js .slider[data-style='dots'] + .slider__controls button:focus {
+.js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']) + .slider__controls button:active, .js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']) + .slider__controls button:focus, .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) + .slider__controls button:active, .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) + .slider__controls button:focus {
     background-color: #1e1e1e;
     border: 0.125rem dotted #1e1e1e;
     outline-color: #0c0c0e;
@@ -43937,17 +43941,17 @@ blockquote footer cite {
     outline-width: 0.125rem;
 }
 
-.js .slider[data-style='dots'] + .slider__controls button[aria-expanded='true'] {
+.js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']) + .slider__controls button[aria-expanded='true'], .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) + .slider__controls button[aria-expanded='true'] {
     background-color: #1e1e1e;
 }
 
 @media (hover: hover) {
-    .js .slider[data-style='dots'] + .slider__controls button[aria-expanded='true']:hover {
+    .js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']) + .slider__controls button[aria-expanded='true']:hover, .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) + .slider__controls button[aria-expanded='true']:hover {
         box-shadow: none;
     }
 }
 
-.js .slider[data-style='dots'] + .slider__controls button[aria-expanded='true']:active, .js .slider[data-style='dots'] + .slider__controls button[aria-expanded='true']:focus {
+.js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']) + .slider__controls button[aria-expanded='true']:active, .js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']) + .slider__controls button[aria-expanded='true']:focus, .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) + .slider__controls button[aria-expanded='true']:active, .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) + .slider__controls button[aria-expanded='true']:focus {
     box-shadow: none;
 }
 
