@@ -5169,7 +5169,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const className = 'slider',
-      defaultStyle = 'numbers',
+      defaultStyle = 'arrows',
       defaultRowSize = 2,
       arrowLeft = 'ArrowLeft',
       arrowRight = 'ArrowRight';
@@ -5287,7 +5287,7 @@ function updateButtonState(slider, controls) {
 
 function handleNextPrevClick(slider, controls, direction) {
   let slides = Array.from(slider.children);
-  const responsive = slider.getAttribute('data-addon');
+  const responsive = slider.getAttribute('data-style-alt');
   const optimised = slider.getAttribute('data-optimised');
   let screenSize = window.innerWidth;
 
@@ -5433,7 +5433,7 @@ function launchArrow(slider) {
   //// Reconstructs slides for responsive slider
 
 
-  const responsive = slider.getAttribute('data-addon');
+  const responsive = slider.getAttribute('data-style-alt');
   let screenSize = window.innerWidth;
 
   if (responsive && screenSize >= 768) {
@@ -5658,46 +5658,17 @@ function updateDotButtonState(active, dotButtons, slider) {
   slider.removeAttribute('disabled');
 }
 /**
- * Transform an element with the slider class name into a slider section controlled by arrows.
+ * 3 Swipe functions below. Unify records touche coordinates to determine left or right swipe.
+ * Lock function locks the ul element to prevent too many additional touches interfering with the sliding 
+ * functionality. I.e. when a slide is in progress it locks it not to register additional touches.
+ * Move function monitors the 'end' of the swipe action to determine the direction of the swipe i.e. left / right.
+ * The "dx" parameter can be used to adjust the sensitivity of the swiping. The larger the number the longer the swipe needs
+ * to be to register as an actual swipe.
  *
- * @param {HTMLElement} slider - An element with the slider class
- * @param {Number} rowSize - Number of cards to display at once
+ * @param {event} e - Touch event
+ * @param {HTMLElement} Slider - The ul element containing the "li" slides
+ * @param {HTMLElement} ControlsWrapper - The nav element containing the slider controls
  */
-
-
-function launchButtons(slider) {
-  const slides = Array.from(slider.children),
-        rowSize = parseInt(slider.dataset.rowsize) || defaultRowSize;
-
-  if (1 >= slides.length) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(slider, className, false);
-    return;
-  }
-
-  slides.forEach((slide, i) => {
-    slide.setAttribute('tabindex', -1);
-    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length));
-    slide.classList.add('slide');
-
-    if (i === 0) {
-      slide.dataset.sliderposition = i % rowSize;
-      slide.dataset.smallposition = 0;
-    } else if (i < rowSize) {
-      slide.dataset.sliderposition = i % rowSize;
-      slide.dataset.smallposition = 1;
-      slide.dataset.smallhidden = true;
-    } else {
-      slide.dataset.sliderposition = rowSize + i % rowSize;
-      slide.dataset.hidden = true;
-      slide.dataset.smallposition = 1;
-      slide.dataset.smallhidden = true;
-    }
-  });
-} // Touch swip functions below:
-//
-//
-//
-//
 
 
 function unify(e) {
@@ -5740,15 +5711,16 @@ function move(e, slider, controlsWrapper) {
     if (s == -1 && currentSlide.nextElementSibling && dx < -25) {
       ///add check if dot slider or arrows
       slider.setAttribute('disabled', true);
-      sliderType == 'numbers' ? handleNextPrevClick(slider, controlsWrapper, 1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) + 1);
+      sliderType == 'arrows' ? handleNextPrevClick(slider, controlsWrapper, 1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) + 1);
     } // Previous slide 
     else if (s == 1 && currentSlide.previousElementSibling && dx > 25) {
         ///add check if dot slider or arrows
         slider.setAttribute('disabled', true);
-        sliderType == 'numbers' ? handleNextPrevClick(slider, controlsWrapper, -1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) - 1);
+        sliderType == 'arrows' ? handleNextPrevClick(slider, controlsWrapper, -1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) - 1);
       }
   }
-}
+} // End of swipe functions
+
 /**
  * Transform an element with the slider class name into a slider section.
  *
@@ -5766,12 +5738,8 @@ function launchSlider(slider) {
         rowSize = parseInt(slider.dataset.rowsize) || defaultRowSize; // @WR possible put slider required here if more than 2 slides???
 
   switch (style) {
-    case 'numbers':
+    case 'arrows':
       launchArrow(slider, rowSize);
-      break;
-
-    case 'buttons':
-      launchButtons(slider, rowSize);
       break;
 
     case 'dots':
@@ -5779,7 +5747,7 @@ function launchSlider(slider) {
       break;
 
     default:
-      launchNumbers(slider, rowSize);
+      launchArrow(slider, rowSize);
   }
 }
 
