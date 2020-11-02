@@ -69329,6 +69329,10 @@ button
     margin-top: 0.75rem;
 }
 
+.course--ug__student-testimonials__full-width {
+    grid-column: 1 / -1;
+}
+
 .course--ug__keyinfo__intro,
 .course--ug__keyinfo__details,
 .course--ug__keyinfo__accordion,
