@@ -69554,10 +69554,11 @@ button
 .course--ug__keyinfo__wrapper {
     margin-top: 2rem;
     display: grid;
+    background-image: linear-gradient(to bottom, #f2f2f2, #d8d8d8);
 }
 
 @media (max-width: 767px) {
-    .course--ug__keyinfo__wrapper {
+    .course--ug__keyinfo__wrapper:not(.no-image) {
         background-image: linear-gradient(to bottom, #f2f2f2, #d8d8d8) !important;
     }
 }
