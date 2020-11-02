@@ -43749,7 +43749,7 @@ blockquote footer cite {
     }
 }
 
-.js .slider[data-style='arrows'] + .slider__controls {
+.js .slider[data-style='arrows'] + .slider__controls, .js .slider[data-style='responsive'] + .slider__controls {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -43758,47 +43758,48 @@ blockquote footer cite {
     margin-top: 1rem;
 }
 
-.js .slider[data-style='arrows'] + .slider__controls .slider__indicator {
+.js .slider[data-style='arrows'] + .slider__controls .slider__indicator, .js .slider[data-style='responsive'] + .slider__controls .slider__indicator {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .js .slider[data-style='arrows'] + .slider__controls .slider__indicator {
+    .js .slider[data-style='arrows'] + .slider__controls .slider__indicator, .js .slider[data-style='responsive'] + .slider__controls .slider__indicator {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .js .slider[data-style='arrows'] + .slider__controls .slider__indicator {
+    .js .slider[data-style='arrows'] + .slider__controls .slider__indicator, .js .slider[data-style='responsive'] + .slider__controls .slider__indicator {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .js .slider[data-style='arrows'] + .slider__controls .slider__indicator {
+    .js .slider[data-style='arrows'] + .slider__controls .slider__indicator, .js .slider[data-style='responsive'] + .slider__controls .slider__indicator {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .js .slider[data-style='arrows'] + .slider__controls .slider__indicator {
+    .js .slider[data-style='arrows'] + .slider__controls .slider__indicator, .js .slider[data-style='responsive'] + .slider__controls .slider__indicator {
         letter-spacing: -0.017em;
     }
 }
 
 .js .slider[data-style='arrows'] + .slider__controls .slider__indicator .slider__indicator__current,
-.js .slider[data-style='arrows'] + .slider__controls .slider__indicator .slider__indicator__divider {
+.js .slider[data-style='arrows'] + .slider__controls .slider__indicator .slider__indicator__divider, .js .slider[data-style='responsive'] + .slider__controls .slider__indicator .slider__indicator__current,
+.js .slider[data-style='responsive'] + .slider__controls .slider__indicator .slider__indicator__divider {
     color: #696969;
 }
 
-.js .slider[data-style='arrows'] + .slider__controls .slider__indicator .slider__indicator__divider {
+.js .slider[data-style='arrows'] + .slider__controls .slider__indicator .slider__indicator__divider, .js .slider[data-style='responsive'] + .slider__controls .slider__indicator .slider__indicator__divider {
     margin-left: 0.25rem;
     margin-right: 0.25rem;
 }
 
-.js .slider[data-style='arrows'] + .slider__controls .slider__indicator .slider__indicator__divider .slider__indicator__divider--sr {
+.js .slider[data-style='arrows'] + .slider__controls .slider__indicator .slider__indicator__divider .slider__indicator__divider--sr, .js .slider[data-style='responsive'] + .slider__controls .slider__indicator .slider__indicator__divider .slider__indicator__divider--sr {
     border: 0;
     clip: rect(0, 0, 0, 0);
     height: 1px;
@@ -43809,12 +43810,13 @@ blockquote footer cite {
     width: 1px;
 }
 
-.js .slider[data-style='arrows'] + .slider__controls .slider__indicator .slider__indicator__total {
+.js .slider[data-style='arrows'] + .slider__controls .slider__indicator .slider__indicator__total, .js .slider[data-style='responsive'] + .slider__controls .slider__indicator .slider__indicator__total {
     color: #d61726;
 }
 
 .js .slider[data-style='arrows'] + .slider__controls .slider__controls__prev,
-.js .slider[data-style='arrows'] + .slider__controls .slider__controls__next {
+.js .slider[data-style='arrows'] + .slider__controls .slider__controls__next, .js .slider[data-style='responsive'] + .slider__controls .slider__controls__prev,
+.js .slider[data-style='responsive'] + .slider__controls .slider__controls__next {
     background-color: transparent;
     border-color: #d61726;
     border-style: solid;
@@ -43826,7 +43828,8 @@ blockquote footer cite {
 
 @media (prefers-reduced-motion: reduce) {
     .js .slider[data-style='arrows'] + .slider__controls .slider__controls__prev,
-    .js .slider[data-style='arrows'] + .slider__controls .slider__controls__next {
+    .js .slider[data-style='arrows'] + .slider__controls .slider__controls__next, .js .slider[data-style='responsive'] + .slider__controls .slider__controls__prev,
+    .js .slider[data-style='responsive'] + .slider__controls .slider__controls__next {
         /* We can't completely disable the transition becasuse we action on transitionend */
         transition: background-color 0.001s ease-in, border-color 0.001s ease-in, color 0.001s ease-in;
     }
@@ -43834,7 +43837,9 @@ blockquote footer cite {
 
 .js .slider[data-style='arrows'] + .slider__controls .slider__controls__prev:focus:not(:disabled), .js .slider[data-style='arrows'] + .slider__controls .slider__controls__prev:active:not(:disabled),
 .js .slider[data-style='arrows'] + .slider__controls .slider__controls__next:focus:not(:disabled),
-.js .slider[data-style='arrows'] + .slider__controls .slider__controls__next:active:not(:disabled) {
+.js .slider[data-style='arrows'] + .slider__controls .slider__controls__next:active:not(:disabled), .js .slider[data-style='responsive'] + .slider__controls .slider__controls__prev:focus:not(:disabled), .js .slider[data-style='responsive'] + .slider__controls .slider__controls__prev:active:not(:disabled),
+.js .slider[data-style='responsive'] + .slider__controls .slider__controls__next:focus:not(:disabled),
+.js .slider[data-style='responsive'] + .slider__controls .slider__controls__next:active:not(:disabled) {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
@@ -43843,27 +43848,31 @@ blockquote footer cite {
 
 @media (hover: hover) {
     .js .slider[data-style='arrows'] + .slider__controls .slider__controls__prev:hover:not(:disabled),
-    .js .slider[data-style='arrows'] + .slider__controls .slider__controls__next:hover:not(:disabled) {
+    .js .slider[data-style='arrows'] + .slider__controls .slider__controls__next:hover:not(:disabled), .js .slider[data-style='responsive'] + .slider__controls .slider__controls__prev:hover:not(:disabled),
+    .js .slider[data-style='responsive'] + .slider__controls .slider__controls__next:hover:not(:disabled) {
         background-color: #d61726;
         color: #ffffff;
     }
 }
 
 .js .slider[data-style='arrows'] + .slider__controls .slider__controls__prev:disabled,
-.js .slider[data-style='arrows'] + .slider__controls .slider__controls__next:disabled {
+.js .slider[data-style='arrows'] + .slider__controls .slider__controls__next:disabled, .js .slider[data-style='responsive'] + .slider__controls .slider__controls__prev:disabled,
+.js .slider[data-style='responsive'] + .slider__controls .slider__controls__next:disabled {
     border-color: transparent;
     color: #696969;
     cursor: default;
 }
 
 .js .slider[data-style='arrows'] + .slider__controls .slider__controls__prev,
-.js .slider[data-style='arrows'] + .slider__controls .slider__controls__next {
+.js .slider[data-style='arrows'] + .slider__controls .slider__controls__next, .js .slider[data-style='responsive'] + .slider__controls .slider__controls__prev,
+.js .slider[data-style='responsive'] + .slider__controls .slider__controls__next {
     font-family: "Font Awesome";
     font-weight: 400;
 }
 
 .js .slider[data-style='arrows'] + .slider__controls .slider__controls__prev span,
-.js .slider[data-style='arrows'] + .slider__controls .slider__controls__next span {
+.js .slider[data-style='arrows'] + .slider__controls .slider__controls__next span, .js .slider[data-style='responsive'] + .slider__controls .slider__controls__prev span,
+.js .slider[data-style='responsive'] + .slider__controls .slider__controls__next span {
     border: 0;
     clip: rect(0, 0, 0, 0);
     height: 1px;
@@ -43874,24 +43883,24 @@ blockquote footer cite {
     width: 1px;
 }
 
-.js .slider[data-style='arrows'] + .slider__controls .slider__controls__prev {
+.js .slider[data-style='arrows'] + .slider__controls .slider__controls__prev, .js .slider[data-style='responsive'] + .slider__controls .slider__controls__prev {
     margin-left: 1rem;
 }
 
-.js .slider[data-style='arrows'] + .slider__controls .slider__controls__prev:before {
+.js .slider[data-style='arrows'] + .slider__controls .slider__controls__prev:before, .js .slider[data-style='responsive'] + .slider__controls .slider__controls__prev:before {
     content: '\f060';
 }
 
-.js .slider[data-style='arrows'] + .slider__controls .slider__controls__prev + .slider__controls__next {
+.js .slider[data-style='arrows'] + .slider__controls .slider__controls__prev + .slider__controls__next, .js .slider[data-style='responsive'] + .slider__controls .slider__controls__prev + .slider__controls__next {
     margin-left: 1rem;
 }
 
-.js .slider[data-style='arrows'] + .slider__controls .slider__controls__next:before {
+.js .slider[data-style='arrows'] + .slider__controls .slider__controls__next:before, .js .slider[data-style='responsive'] + .slider__controls .slider__controls__next:before {
     content: '\f061';
 }
 
 @media (min-width: 768px) {
-    .js .slider[data-style='arrows'][data-small='true'] + .slider__controls {
+    .js .slider[data-style='arrows'][data-small='true'] + .slider__controls, .js .slider[data-style='responsive'][data-small='true'] + .slider__controls {
         display: none;
     }
 }
