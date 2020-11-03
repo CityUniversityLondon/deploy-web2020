@@ -5090,21 +5090,19 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2020
  */
-// import scroll from 'zenscroll';
-// import { reduceMotion, removeClass, toBool } from '../../util';
 
 
 
 const className = 'slider',
       defaultStyle = 'arrows',
-      defaultRowSize = 2,
+      defaultCardsPerRow = 2,
       arrowLeft = 'ArrowLeft',
       arrowRight = 'ArrowRight';
 /**
- * Opimises slide elements for responsive slider on bigger screens
+ * This adds a few swipe related events listeners to the "ul" element of sliders
  * 
- * @param  {HTMLElement} slider - The slider element.
- * @param  {Array} slides - an array containing the individual slides as li elements
+ * @param  {HTMLElement} slider - The slider ul element.
+ * @param  {HTMLElement} controlsWrapper - The nav element containing the slider controls
  */
 
 function addSwipeEvents(slider, controlsWrapper) {
@@ -5121,11 +5119,35 @@ function addSwipeEvents(slider, controlsWrapper) {
     move(e, slider, controlsWrapper);
   });
 }
+/**
+* For arrow responsive slider. Opimises slide elements for responsive slider on 
+* bigger screens by creating a new "ul li" structure containing the slides
+* 
+* @param  {HTMLElement} slider - The slider "ul" element.
+* @param  {Array} slides - an array containing the individual slides as li elements.
+* @param  {HTMLElement} controls - The "nav" element containing the controls
+* 
+*/
+
 
 function responsiveOptimisation(slides, slider, controls) {
-  const responsiveNum = 2;
+  const responsiveNum = 2; // number of items per slide to display
+
   let i;
-  let d;
+  let d; // This cycles through all the current slides and re-structure the list by creating a "new" which list contains
+  // the number of items per slide, as set above (responsiveNum)
+  //i.e. 
+  //  <ul>
+  //      <li> slide 1
+  //          <ul>
+  //              <li>item 1</li>
+  //              <li>item 2</li>
+  //          </ul>
+  //      </li>
+  //
+  //      <li> slide 2...item 3 & 4</li>
+  //      <li> slide 3...item 5 & 6</li>
+  //  </ul>
 
   for (i = 0; i < slides.length; i += responsiveNum) {
     let liElement = document.createElement('li');
@@ -5158,10 +5180,11 @@ function responsiveOptimisation(slides, slider, controls) {
   return slides;
 }
 /**
- * Updates buttons of arrow slider
+ * For arrow responsive slider.This reverses the optimasation (re-structure) that was done in
+ * the function (responsiveOptimisation) above by creating a "normal" single structure ul list
  * 
- * @param  {HTMLElement} slider - The slider element.
- * @param  {Array} slides - an array containing the individual slides as li elements
+ * @param  {HTMLElement} slider - The slider "ul" element.
+ * @param  {HTMLElement} controls - The "nav" element containing the controls
  */
 
 
@@ -5180,14 +5203,15 @@ function reverseOptimisation(slider, controls) {
 
   slides = Array.from(slider.children);
   prepareSlides(slides);
-  slider.setAttribute('data-optimised', 'false');
+  slider.setAttribute('data-optimised', 'false'); // Resets pagination and places focus on first slide
+
   slider.querySelector('.slide').focus();
   controls.querySelector('.slider__indicator__total').innerText = slides.length;
   controls.querySelector('.slider__indicator__current').innerText = '1';
   updateButtonState(slider, controls);
 }
 /**
- * Updates buttons of arrow slider
+ * Updates buttons for arrow slider
  * 
  * @param  {HTMLElement} slider - The slider element.
  * @param  {HTMLElement} controls - The slider controls element.
@@ -5195,7 +5219,7 @@ function reverseOptimisation(slider, controls) {
 
 
 function updateButtonState(slider, controls) {
-  // REMOVE NEXT OR PREVIOUS BUTTONS IF ON FIRST OR LAST CARD
+  // Disables "next" or "prev" buttons if on first or last slide
   const nextButton = controls.querySelector(".".concat(className, "__controls__next")),
         prevButton = controls.querySelector(".".concat(className, "__controls__prev"));
   slider.querySelector('[data-sliderposition="-1"]') ? prevButton.removeAttribute('disabled') : prevButton.setAttribute('disabled', true);
@@ -5214,7 +5238,7 @@ function handleNextPrevClick(slider, controls, direction) {
   let slides = Array.from(slider.children);
   const responsive = slider.getAttribute('data-style');
   const optimised = slider.getAttribute('data-optimised');
-  let screenSize = window.innerWidth;
+  let screenSize = window.innerWidth; // This is for responsive slider only, checking if re-structuring is necesssary in case the viewport size changed.
 
   if (responsive === 'responsive' && screenSize < 768 && optimised == 'true') {
     reverseOptimisation(slider, controls);
@@ -5222,14 +5246,12 @@ function handleNextPrevClick(slider, controls, direction) {
   } else if (responsive === 'responsive' && screenSize >= 768 && optimised !== 'true') {
     responsiveOptimisation(slides, slider, controls);
     return;
-  } // What does startDates do? Rename to something else? @WR
+  }
 
-
-  const startDates = Array.from(slider.children),
-        current = slider.querySelector('[data-sliderposition="0"]'),
+  const current = slider.querySelector('[data-sliderposition="0"]'),
         currentPage = controls.querySelector(".".concat(className, "__indicator__current")),
         nextButton = controls.querySelector(".".concat(className, "__controls__next")),
-        prevButton = controls.querySelector(".".concat(className, "__controls__prev")); // NEXT
+        prevButton = controls.querySelector(".".concat(className, "__controls__prev")); // Next arrow clicked
 
   if (direction === 1) {
     const next = current.nextElementSibling;
@@ -5249,20 +5271,21 @@ function handleNextPrevClick(slider, controls, direction) {
         current.removeEventListener('transitionend', hideCurrent, true);
         current.dataset.hidden = true;
         current.dataset.smallhidden = true;
-      }, true); // MOVE POSITION OF CURRENT SLIDE to PREVIOUS
+      }, true); // Updates position of slides
+      // Moves current slide to back to previous position
 
       current.dataset.sliderposition = -1;
-      current.dataset.smallposition = -1; // UPDATE ACTIVE SLIDE
+      current.dataset.smallposition = -1; // Sets 'active' current slide
 
       next.dataset.hidden = false;
       next.dataset.smallhidden = false;
       next.dataset.sliderposition = 0;
-      next.dataset.smallposition = 0; // CHANGE CURRENT PAGE NUMBER TEXT
+      next.dataset.smallposition = 0; // Updates pagination to current slide position
 
-      currentPage.innerText = startDates.indexOf(next) + 1;
+      currentPage.innerText = slides.indexOf(next) + 1;
     }
   } else {
-    // PREVIOUS
+    // Previous arrow clicked
     const previous = current.previousElementSibling;
 
     if (previous) {
@@ -5277,22 +5300,27 @@ function handleNextPrevClick(slider, controls, direction) {
         current.removeEventListener('transitionend', hideCurrent, true);
         current.dataset.hidden = true;
         current.dataset.smallhidden = true;
-      }, true);
+      }, true); // Updates position of slides
+      // Moves current slide forward to next position
+
       current.dataset.sliderposition = 1;
-      current.dataset.smallposition = 1;
+      current.dataset.smallposition = 1; // Sets current / active slide
+
       previous.dataset.hidden = false;
       previous.dataset.smallhidden = false;
       previous.dataset.sliderposition = 0;
-      previous.dataset.smallposition = 0;
-      currentPage.innerText = startDates.indexOf(previous) + 1;
+      previous.dataset.smallposition = 0; // Updates pagination to current slide
+
+      currentPage.innerText = slides.indexOf(previous) + 1;
     }
   }
-} //
-// prepares slide function
-//
-//
-// FOR ARROW SLIDER @WR
-//
+}
+/**
+ * This is for arrow slider only. It applies the necessary data attribues needed
+ *  for the functionality of the slider which positions the slides into their starting positions
+ * 
+ * @param  {Array} slides - an array containing the individual slides as li elements
+ */
 
 
 function prepareSlides(slides) {
@@ -5323,12 +5351,11 @@ function prepareSlides(slides) {
  *
  * @param {HTMLElement} slider - An element with the slider class
  * 
- * TO BE RENAMED TO ARROWS?
  */
 
 
 function launchArrow(slider) {
-  // Pagination and Controls
+  // creates elements for pagination and controls
   let slides = Array.from(slider.children);
   const controlsWrapper = document.createElement('nav'),
         nextButton = document.createElement('button'),
@@ -5345,14 +5372,12 @@ function launchArrow(slider) {
   if (1 >= slides.length) {
     Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(slider, className, false);
     return;
-  } // REVIEW THIS CODE????
-  // CHECK WHAT MAX ROW SIZE SHOULD BE? @RC > @DB
+  } // @WR, Tom's code. Not currently in use
 
 
-  if (slider.dataset.rowsize !== 1) {
-    slider.dataset.rowsize = 1;
-  } // END REVIEW
-  //// Reconstructs slides for responsive slider
+  if (slider.dataset.cardsPerRow !== 1) {
+    slider.dataset.cardsPerRow = 1;
+  } //// Reconstructs slides for responsive slider
 
 
   const responsive = slider.getAttribute('data-style');
@@ -5646,10 +5671,7 @@ function move(e, slider, controlsWrapper) {
 /**
  * Transform an element with the slider class name into a slider section.
  *
- * NUMBERS = ARROWS / BUTTONS = DOTS
- * RENAME TO LAUNCH ARROWS / LAUNCH DOTS @WR
- * ROW SIZE? NUMBER OF CARDS ON ONE LINE?  3 MAX? TO BE COMPLETED?
- * RENAME TO [CARDS PER ROW????] @WR
+ * ROW SIZE? NUMBER OF CARDS ON ONE LINE?  3 MAX? TO BE COMPLETED? RENAME TO [CARDS PER ROW????] @WR
  * 
  * @param {HTMLElement} slider - An element with the slider class
  */
@@ -5657,23 +5679,23 @@ function move(e, slider, controlsWrapper) {
 
 function launchSlider(slider) {
   const style = slider.dataset.style || defaultStyle,
-        rowSize = parseInt(slider.dataset.rowsize) || defaultRowSize; // @WR possible put slider required here if more than 2 slides???
+        cardsPerRow = parseInt(slider.dataset.cardsPerRow) || defaultCardsPerRow;
 
   switch (style) {
     case 'arrows':
-      launchArrow(slider, rowSize);
+      launchArrow(slider, cardsPerRow);
       break;
 
     case 'responsive':
-      launchArrow(slider, rowSize);
+      launchArrow(slider, cardsPerRow);
       break;
 
     case 'dots':
-      launchDot(slider, rowSize);
+      launchDot(slider, cardsPerRow);
       break;
 
     default:
-      launchArrow(slider, rowSize);
+      launchArrow(slider, cardsPerRow);
   }
 }
 
