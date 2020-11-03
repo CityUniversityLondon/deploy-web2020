@@ -43548,203 +43548,203 @@ blockquote footer cite {
 }
 
 @media (max-width: 767px) {
-    .js .slider[data-rowsize='1'][data-small='true'] .slide[data-smallposition='-1'] {
+    .js .slider[data-cardsperrow='1'][data-small='true'] .slide[data-smallposition='-1'] {
         left: -100%;
         position: absolute;
     }
-    .js .slider[data-rowsize='1'][data-small='true'] .slide[data-smallposition='-1'][data-smallhidden='true'] {
+    .js .slider[data-cardsperrow='1'][data-small='true'] .slide[data-smallposition='-1'][data-smallhidden='true'] {
         visibility: hidden;
     }
-    .js .slider[data-rowsize='1'][data-small='true'] .slide[data-smallposition='0'] {
+    .js .slider[data-cardsperrow='1'][data-small='true'] .slide[data-smallposition='0'] {
         left: 0;
         position: relative;
     }
-    .js .slider[data-rowsize='1'][data-small='true'] .slide[data-smallposition='1'] {
+    .js .slider[data-cardsperrow='1'][data-small='true'] .slide[data-smallposition='1'] {
         left: 100%;
         position: absolute;
     }
-    .js .slider[data-rowsize='1'][data-small='true'] .slide[data-smallposition='1'][data-smallhidden='true'] {
+    .js .slider[data-cardsperrow='1'][data-small='true'] .slide[data-smallposition='1'][data-smallhidden='true'] {
         visibility: hidden;
     }
 }
 
-.js .slider[data-rowsize='1']:not([data-small='true']) .slide[data-smallposition='-1'] {
+.js .slider[data-cardsperrow='1']:not([data-small='true']) .slide[data-smallposition='-1'] {
     left: -100%;
     position: absolute;
 }
 
-.js .slider[data-rowsize='1']:not([data-small='true']) .slide[data-smallposition='-1'][data-smallhidden='true'] {
+.js .slider[data-cardsperrow='1']:not([data-small='true']) .slide[data-smallposition='-1'][data-smallhidden='true'] {
     visibility: hidden;
 }
 
-.js .slider[data-rowsize='1']:not([data-small='true']) .slide[data-smallposition='0'] {
+.js .slider[data-cardsperrow='1']:not([data-small='true']) .slide[data-smallposition='0'] {
     left: 0;
     position: relative;
 }
 
-.js .slider[data-rowsize='1']:not([data-small='true']) .slide[data-smallposition='1'] {
+.js .slider[data-cardsperrow='1']:not([data-small='true']) .slide[data-smallposition='1'] {
     left: 100%;
     position: absolute;
 }
 
-.js .slider[data-rowsize='1']:not([data-small='true']) .slide[data-smallposition='1'][data-smallhidden='true'] {
+.js .slider[data-cardsperrow='1']:not([data-small='true']) .slide[data-smallposition='1'][data-smallhidden='true'] {
     visibility: hidden;
 }
 
 @media (max-width: 767px) {
-    .js .slider[data-rowsize='2'][data-small='true'] .slide[data-smallposition='-1'] {
+    .js .slider[data-cardsperrow='2'][data-small='true'] .slide[data-smallposition='-1'] {
         left: -100%;
         position: absolute;
     }
-    .js .slider[data-rowsize='2'][data-small='true'] .slide[data-smallposition='-1'][data-smallhidden='true'] {
+    .js .slider[data-cardsperrow='2'][data-small='true'] .slide[data-smallposition='-1'][data-smallhidden='true'] {
         visibility: hidden;
     }
-    .js .slider[data-rowsize='2'][data-small='true'] .slide[data-smallposition='0'] {
+    .js .slider[data-cardsperrow='2'][data-small='true'] .slide[data-smallposition='0'] {
         left: 0;
         position: relative;
     }
-    .js .slider[data-rowsize='2'][data-small='true'] .slide[data-smallposition='1'] {
+    .js .slider[data-cardsperrow='2'][data-small='true'] .slide[data-smallposition='1'] {
         left: 100%;
         position: absolute;
     }
-    .js .slider[data-rowsize='2'][data-small='true'] .slide[data-smallposition='1'][data-smallhidden='true'] {
+    .js .slider[data-cardsperrow='2'][data-small='true'] .slide[data-smallposition='1'][data-smallhidden='true'] {
         visibility: hidden;
     }
 }
 
 @media (min-width: 768px) {
-    .js .slider[data-rowsize='2'][data-small='true'] {
+    .js .slider[data-cardsperrow='2'][data-small='true'] {
         margin-right: 1.5rem;
         width: calc(50% - 1.5rem);
     }
 }
 
 @media (max-width: 767px) {
-    .js .slider[data-rowsize='2']:not([data-small='true']) .slide[data-smallposition='-1'] {
+    .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-smallposition='-1'] {
         left: -100%;
         position: absolute;
     }
-    .js .slider[data-rowsize='2']:not([data-small='true']) .slide[data-smallposition='-1'][data-smallhidden='true'] {
+    .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-smallposition='-1'][data-smallhidden='true'] {
         visibility: hidden;
     }
-    .js .slider[data-rowsize='2']:not([data-small='true']) .slide[data-smallposition='0'] {
+    .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-smallposition='0'] {
         left: 0;
         position: relative;
     }
-    .js .slider[data-rowsize='2']:not([data-small='true']) .slide[data-smallposition='1'] {
+    .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-smallposition='1'] {
         left: 100%;
         position: absolute;
     }
-    .js .slider[data-rowsize='2']:not([data-small='true']) .slide[data-smallposition='1'][data-smallhidden='true'] {
+    .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-smallposition='1'][data-smallhidden='true'] {
         visibility: hidden;
     }
 }
 
 @media (min-width: 768px) {
-    .js .slider[data-rowsize='2']:not([data-small='true']) .slide {
+    .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide {
         margin-right: 1.5rem;
         width: calc(50% - 1.5rem);
     }
-    .js .slider[data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='-2'], .js .slider[data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='-1'] {
+    .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='-2'], .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='-1'] {
         left: -100%;
         position: absolute;
     }
-    .js .slider[data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='-2'][data-hidden='true'], .js .slider[data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='-1'][data-hidden='true'] {
+    .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='-2'][data-hidden='true'], .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='-1'][data-hidden='true'] {
         visibility: hidden;
     }
-    .js .slider[data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='0'], .js .slider[data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='1'] {
+    .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='0'], .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='1'] {
         left: 0;
         position: relative;
     }
-    .js .slider[data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='2'], .js .slider[data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='3'] {
+    .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='2'], .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='3'] {
         left: 100%;
         position: absolute;
     }
-    .js .slider[data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='2'][data-hidden='true'], .js .slider[data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='3'][data-hidden='true'] {
+    .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='2'][data-hidden='true'], .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='3'][data-hidden='true'] {
         visibility: hidden;
     }
 }
 
 @media (max-width: 767px) {
-    .js .slider[data-rowsize='3'][data-small='true'] .slide[data-smallposition='-1'] {
+    .js .slider[data-cardsperrow='3'][data-small='true'] .slide[data-smallposition='-1'] {
         left: -100%;
         position: absolute;
     }
-    .js .slider[data-rowsize='3'][data-small='true'] .slide[data-smallposition='-1'][data-smallhidden='true'] {
+    .js .slider[data-cardsperrow='3'][data-small='true'] .slide[data-smallposition='-1'][data-smallhidden='true'] {
         visibility: hidden;
     }
-    .js .slider[data-rowsize='3'][data-small='true'] .slide[data-smallposition='0'] {
+    .js .slider[data-cardsperrow='3'][data-small='true'] .slide[data-smallposition='0'] {
         left: 0;
         position: relative;
     }
-    .js .slider[data-rowsize='3'][data-small='true'] .slide[data-smallposition='1'] {
+    .js .slider[data-cardsperrow='3'][data-small='true'] .slide[data-smallposition='1'] {
         left: 100%;
         position: absolute;
     }
-    .js .slider[data-rowsize='3'][data-small='true'] .slide[data-smallposition='1'][data-smallhidden='true'] {
+    .js .slider[data-cardsperrow='3'][data-small='true'] .slide[data-smallposition='1'][data-smallhidden='true'] {
         visibility: hidden;
     }
 }
 
 @media (min-width: 768px) {
-    .js .slider[data-rowsize='3'][data-small='true'] .slide {
+    .js .slider[data-cardsperrow='3'][data-small='true'] .slide {
         margin-right: 1.5rem;
         width: calc(33% - 1.5rem);
     }
 }
 
 @media (max-width: 767px) {
-    .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-smallposition='-1'] {
+    .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-smallposition='-1'] {
         left: -100%;
         position: absolute;
     }
-    .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-smallposition='-1'][data-smallhidden='true'] {
+    .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-smallposition='-1'][data-smallhidden='true'] {
         visibility: hidden;
     }
-    .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-smallposition='0'] {
+    .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-smallposition='0'] {
         left: 0;
         position: relative;
     }
-    .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-smallposition='1'] {
+    .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-smallposition='1'] {
         left: 100%;
         position: absolute;
     }
-    .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-smallposition='1'][data-smallhidden='true'] {
+    .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-smallposition='1'][data-smallhidden='true'] {
         visibility: hidden;
     }
 }
 
 @media (min-width: 768px) {
-    .js .slider[data-rowsize='3']:not([data-small='true']) .slide {
+    .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide {
         margin-right: 1.5rem;
         width: calc(33% - 1.5rem);
     }
-    .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='-3'], .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='-2'], .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='-1'] {
+    .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='-3'], .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='-2'], .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='-1'] {
         left: -100%;
         position: absolute;
     }
-    .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='-3'][data-hidden='true'], .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='-2'][data-hidden='true'], .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='-1'][data-hidden='true'] {
+    .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='-3'][data-hidden='true'], .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='-2'][data-hidden='true'], .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='-1'][data-hidden='true'] {
         visibility: hidden;
     }
-    .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='0'], .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='2'] {
+    .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='0'], .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='2'] {
         left: 0;
         position: relative;
     }
-    .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='3'], .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='4'], .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='5'] {
+    .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='3'], .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='4'], .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='5'] {
         left: 100%;
         position: absolute;
     }
-    .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='3'][data-hidden='true'], .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='4'][data-hidden='true'], .js .slider[data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='5'][data-hidden='true'] {
+    .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='3'][data-hidden='true'], .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='4'][data-hidden='true'], .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='5'][data-hidden='true'] {
         visibility: hidden;
     }
 }
 
 @media (min-width: 768px) {
-    .js .slider[data-count='2'][data-rowsize='1']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-count='2'][data-rowsize='1']:not([data-small='true']) .slide[data-sliderposition='-1'], .js .slider[data-count='2'][data-rowsize='1']:not([data-small='true']) .slide[data-sliderposition='0'], .js .slider[data-count='2'][data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-count='2'][data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='-1'], .js .slider[data-count='2'][data-rowsize='2']:not([data-small='true']) .slide[data-sliderposition='0'], .js .slider[data-count='2'][data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-count='2'][data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='-1'], .js .slider[data-count='2'][data-rowsize='3']:not([data-small='true']) .slide[data-sliderposition='0'] {
+    .js .slider[data-count='2'][data-cardsperrow='1']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-count='2'][data-cardsperrow='1']:not([data-small='true']) .slide[data-sliderposition='-1'], .js .slider[data-count='2'][data-cardsperrow='1']:not([data-small='true']) .slide[data-sliderposition='0'], .js .slider[data-count='2'][data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-count='2'][data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='-1'], .js .slider[data-count='2'][data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='0'], .js .slider[data-count='2'][data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-count='2'][data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='-1'], .js .slider[data-count='2'][data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='0'] {
         visibility: visible;
         position: static;
     }
-    .js .slider[data-count='2'][data-rowsize='1']:not([data-small='true']) + .slider__controls, .js .slider[data-count='2'][data-rowsize='2']:not([data-small='true']) + .slider__controls, .js .slider[data-count='2'][data-rowsize='3']:not([data-small='true']) + .slider__controls {
+    .js .slider[data-count='2'][data-cardsperrow='1']:not([data-small='true']) + .slider__controls, .js .slider[data-count='2'][data-cardsperrow='2']:not([data-small='true']) + .slider__controls, .js .slider[data-count='2'][data-cardsperrow='3']:not([data-small='true']) + .slider__controls {
         display: none;
     }
 }
