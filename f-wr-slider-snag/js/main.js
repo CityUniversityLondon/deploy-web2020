@@ -5375,8 +5375,8 @@ function launchArrow(slider) {
   } // @WR, Tom's code. Not currently in use
 
 
-  if (slider.dataset.cardsPerRow !== 1) {
-    slider.dataset.cardsPerRow = 1;
+  if (slider.dataset.cardsperrow !== 1) {
+    slider.dataset.cardsperrow = 1;
   } //// Reconstructs slides for responsive slider
 
 
@@ -5679,7 +5679,7 @@ function move(e, slider, controlsWrapper) {
 
 function launchSlider(slider) {
   const style = slider.dataset.style || defaultStyle,
-        cardsPerRow = parseInt(slider.dataset.cardsPerRow) || defaultCardsPerRow;
+        cardsPerRow = parseInt(slider.dataset.cardsperrow) || defaultCardsPerRow;
 
   switch (style) {
     case 'arrows':
