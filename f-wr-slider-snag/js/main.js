@@ -5372,12 +5372,12 @@ function launchArrow(slider) {
   if (1 >= slides.length) {
     Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(slider, className, false);
     return;
-  } // @WR, Tom's code. Not currently in use
+  } // @WR, Tom's code. Not currently in use - probably use case for bigger screens which displays more than one item per slide
 
 
   if (slider.dataset.cardsperrow !== 1) {
     slider.dataset.cardsperrow = 1;
-  } //// Reconstructs slides for responsive slider
+  } // Reconstructs slides for responsive slider
 
 
   const responsive = slider.getAttribute('data-style');
@@ -5448,18 +5448,18 @@ function launchArrow(slider) {
   controlsWrapper.appendChild(prevButton);
   controlsWrapper.appendChild(nextButton);
   controlsWrapper.className = className + '__controls';
-  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'Slider navigation'); // Move controls outside of slider UL / Why the if statement? CHECK IF THIS IS NEEDED @WR
+  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'Slider navigation'); // Places controls directly after 'ul' containing the slides
 
-  slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper); //add event listeners
+  slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper); // Add event listeners
 
   addSwipeEvents(slider, controlsWrapper);
 }
 /**
- * Transform an element with the slider class name into a slider section controlled by arrows.
+ * Transform an element with the slider class name into a slider section controlled by dots.
+ * This is to be launched on smaller screens only.
  *
  * @param {HTMLElement} slider - An element with the slider class
  * 
- * TO BE RENAMED TO ARROWS?
  */
 
 
@@ -5479,14 +5479,16 @@ function launchDot(slider) {
     slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length)); // Accesiblity
 
     slide.classList.add('slide'); // Add slide class of slide
-    // Controls current position of cards? -1 0 and 1
+    // Sets data attributes for slides which controls their position within slide collection
 
     if (i === 0) {
-      slide.dataset.sliderposition = 0;
+      slide.dataset.sliderposition = 0; // 0 for active slide
+
       slide.dataset.smallposition = 0;
       slide.dataset.hidden = false;
     } else {
-      slide.dataset.sliderposition = 1;
+      slide.dataset.sliderposition = 1; // 1 for 'next' slide
+
       slide.dataset.smallposition = 1;
       slide.dataset.hidden = 'true';
       slide.dataset.smallhidden = 'true';
@@ -5505,10 +5507,12 @@ function launchDot(slider) {
     }]);
 
     if (i === 0) {
+      // Active slide
       dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'slide');
       dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'true');
       dot.setAttribute('disabled', 'true');
     } else {
+      // All other slides
       dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
     }
 
@@ -5545,27 +5549,31 @@ function launchDot(slider) {
   }, true); // Wrap element around slider__controls
 
   controlsWrapper.className = className + '__controls';
-  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'Slider navigation'); // Move controls outside of slider UL / Why the if statement? CHECK IF THIS IS NEEDED @WR
+  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'Slider navigation'); // Places controls directly after 'ul' containing the slides
 
   slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper); //add event listeners
 
   addSwipeEvents(slider, controlsWrapper);
 }
 /**
- * Handle clicks on the next/previous buttons.
+ * Handle clicks for dot slider
  *
  * @param  {HTMLElement} slider - The slider element.
  * @param  {Number} selection - pass the paramaetr of selected slide as a number
+ * @param  {HTMLElement} controlsWrapper - Element containing the control buttons
  */
 
 
 function handleDotClick(slider, controlsWrapper, selection) {
   const slides = Array.from(slider.children),
-        dotButtons = Array.from(controlsWrapper.children);
+        dotButtons = Array.from(controlsWrapper.children); // Disables all buttons after click to avoid multiple clicks
+
   dotButtons.forEach((dot, i) => {
     dot.setAttribute('disabled', true);
-  });
+  }); // Re-arranges the positions of the slides
+
   slides.forEach((slide, i) => {
+    // Cycles through slides and makes active the one 'selected'
     if (i === selection) {
       slide.dataset.sliderposition = 0;
       slide.dataset.smallposition = 0;
@@ -5575,15 +5583,17 @@ function handleDotClick(slider, controlsWrapper, selection) {
         slide.focus();
         updateDotButtonState(i, dotButtons, slider);
       }, true);
-    } else if (i > selection) {
-      slide.dataset.sliderposition = 1;
-      slide.dataset.smallposition = 1;
-      slide.dataset.hidden = true; // @ WR review smallhidden - what was intended by it?
-    } else {
-      slide.dataset.sliderposition = -1;
-      slide.dataset.smallposition = -1;
-      slide.dataset.hidden = true; // @ WR review smallhidden - what was intended by it?
-    }
+    } // Places slides 'after' current slide in next position
+    else if (i > selection) {
+        slide.dataset.sliderposition = 1;
+        slide.dataset.smallposition = 1;
+        slide.dataset.hidden = true; // @ WR review smallhidden - what was intended by it?
+      } // Places slides 'before' current slide in previous position
+      else {
+          slide.dataset.sliderposition = -1;
+          slide.dataset.smallposition = -1;
+          slide.dataset.hidden = true; // @ WR review smallhidden - what was intended by it?
+        }
   });
 }
 /**
@@ -5605,7 +5615,7 @@ function updateDotButtonState(active, dotButtons, slider) {
   slider.removeAttribute('disabled');
 }
 /**
- * 3 Swipe functions below. Unify records touche coordinates to determine left or right swipe.
+ * 3 Swipe functions below. Unify records touch coordinates to determine left or right swipe.
  * Lock function locks the ul element to prevent too many additional touches interfering with the sliding 
  * functionality. I.e. when a slide is in progress it locks it not to register additional touches.
  * Move function monitors the 'end' of the swipe action to determine the direction of the swipe i.e. left / right.
@@ -5618,11 +5628,11 @@ function updateDotButtonState(active, dotButtons, slider) {
  */
 
 
+let x0;
+
 function unify(e) {
   return e.changedTouches ? e.changedTouches[0] : e;
 }
-
-let x0;
 
 function lock(e, slider) {
   const locked = slider.getAttribute('disabled');
@@ -5656,12 +5666,12 @@ function move(e, slider, controlsWrapper) {
     // Next slide
 
     if (s == -1 && currentSlide.nextElementSibling && dx < -25) {
-      ///add check if dot slider or arrows
+      // Checks which type of slider you are using and handles slide
       slider.setAttribute('disabled', true);
       sliderType == 'arrows' || sliderType === 'responsive' ? handleNextPrevClick(slider, controlsWrapper, 1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) + 1);
     } // Previous slide 
     else if (s == 1 && currentSlide.previousElementSibling && dx > 25) {
-        ///add check if dot slider or arrows
+        // Checks which type of slider you are using and handles slide
         slider.setAttribute('disabled', true);
         sliderType == 'arrows' || sliderType === 'responsive' ? handleNextPrevClick(slider, controlsWrapper, -1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) - 1);
       }
@@ -5670,8 +5680,6 @@ function move(e, slider, controlsWrapper) {
 
 /**
  * Transform an element with the slider class name into a slider section.
- *
- * ROW SIZE? NUMBER OF CARDS ON ONE LINE?  3 MAX? TO BE COMPLETED? RENAME TO [CARDS PER ROW????] @WR
  * 
  * @param {HTMLElement} slider - An element with the slider class
  */
@@ -5679,7 +5687,8 @@ function move(e, slider, controlsWrapper) {
 
 function launchSlider(slider) {
   const style = slider.dataset.style || defaultStyle,
-        cardsPerRow = parseInt(slider.dataset.cardsperrow) || defaultCardsPerRow;
+        cardsPerRow = parseInt(slider.dataset.cardsperrow) || defaultCardsPerRow; // CardsPerRow not currently in use. Tom's old code. 
+  // Might have use case for bigger screen which have capacity to have more than 1 item per slide.
 
   switch (style) {
     case 'arrows':
