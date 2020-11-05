@@ -55468,6 +55468,169 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     color: #ffffff;
 }
 
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-color: transparent;
+    transition: background-color 0.2s ease-in, transform 0.2s ease-in-out;
+    border: 0.0625rem solid #5d184a;
+    color: #ffffff;
+    display: block;
+}
+
+@media (hover: hover) {
+    .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:focus, .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:hover {
+        background-color: #ffffff;
+    }
+}
+
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:active {
+    background-color: #ffffff;
+}
+
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:focus {
+    background-color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a {
+        background-color: #ffffff;
+    }
+}
+
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a .card--pathway__content__heading {
+    color: #ffffff;
+}
+
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a .card--pathway__content__heading__text {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a p {
+    color: #ffffff;
+}
+
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a .card--pathway__content__img {
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:hover .card--pathway__content__img {
+        transform: scale(1.02);
+    }
+    .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:hover .card--pathway__content__heading,
+    .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:hover p {
+        color: #0c0c0e;
+    }
+    .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:hover .card--pathway__content__heading__text {
+        border-bottom-color: #0c0c0e;
+    }
+}
+
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:active, .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:focus {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:active .card--pathway__content__heading,
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:active p, .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:focus .card--pathway__content__heading,
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:focus p {
+    color: #0c0c0e;
+}
+
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:active .card--pathway__content__heading__text, .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:focus .card--pathway__content__heading__text {
+    border-bottom-color: #0c0c0e;
+}
+
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:visited .card--pathway__content__heading {
+    color: #ffffff;
+}
+
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:visited p {
+    color: #ffffff;
+}
+
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:visited .card--pathway__content__heading__text {
+    border-bottom-color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a .card--pathway__content__heading,
+    .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a p {
+        color: #0c0c0e;
+    }
+    .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:visited .card--pathway__content__heading,
+    .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:visited p {
+        color: #0c0c0e;
+    }
+}
+
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway__content--border {
+    border-top-color: #5d184a;
+}
+
 @media (min-width: 768px) {
     .content-hub__block-two .careers__intro {
         grid-column: 3 / 23;
