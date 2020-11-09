@@ -5471,6 +5471,11 @@ function launchDot(slider) {
   if (1 >= slides.length) {
     Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(slider, className, false);
     return;
+  } // @WR, Tom's code. Not currently in use - probably use case for bigger screens which displays more than one item per slide
+
+
+  if (slider.dataset.cardsperrow !== 1) {
+    slider.dataset.cardsperrow = 1;
   }
 
   slides.forEach((slide, i) => {
