@@ -5691,7 +5691,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-const className = 'picture[data-authorname], picture[data-sourcename]',
+const className = 'picture[data-authorname], picture[data-sourcename], picture[data-licencetype]',
       openText = 'Show image credit',
       closeText = 'Hide image credit';
 /**
@@ -5750,9 +5750,11 @@ function launchImageCredit(picture) {
         authorText = picture.dataset.authorname,
         authorUrl = picture.dataset.authorurl,
         sourceText = picture.dataset.sourcename,
-        sourceUrl = picture.dataset.sourceurl;
+        sourceUrl = picture.dataset.sourceurl,
+        licenceText = picture.dataset.licencetype,
+        licenceUrl = picture.dataset.licenceurl;
 
-  if (!display || !(authorText || sourceText)) {
+  if (!display || !(authorText || sourceText || licenceText)) {
     return;
   }
 
@@ -5762,7 +5764,8 @@ function launchImageCredit(picture) {
         spanText = document.createElement('span'),
         label = document.createElement('div'),
         author = authorText ? createLabel(authorText, authorUrl) : null,
-        source = sourceText ? createLabel(sourceText, sourceUrl) : null;
+        source = sourceText ? createLabel(sourceText, sourceUrl) : null,
+        licence = licenceText ? createLabel(licenceText, licenceUrl) : null;
   wrapper.className = 'wrapper--tooltip__label';
   wrapper.dataset.open = false;
   button.className = 'tooltip tooltip--image-credit';
@@ -5780,9 +5783,11 @@ function launchImageCredit(picture) {
   author && label.appendChild(author);
   author && source && label.appendChild(document.createTextNode(' / '));
   source && label.appendChild(source);
+  licence.className = 'tooltip__label__licence';
+  licence && label.appendChild(licence);
   wrapper.appendChild(label);
   wrapper.appendChild(button);
-  (author || source) && picture.appendChild(wrapper);
+  (author || source || licence) && picture.appendChild(wrapper);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({

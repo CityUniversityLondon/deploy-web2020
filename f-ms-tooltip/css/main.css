@@ -43996,6 +43996,10 @@ blockquote footer cite {
     border-bottom-width: 0.125rem;
 }
 
+.wrapper--tooltip__label .tooltip__label .tooltip__label__licence {
+    display: table;
+}
+
 .wrapper--tooltip__label .tooltip--image-credit {
     font-size: 0.889rem;
     line-height: 1.625;
