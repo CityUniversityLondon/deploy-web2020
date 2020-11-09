@@ -28982,6 +28982,7 @@ figure figcaption a:active,
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-top: 1rem;
+    padding-bottom: 1.5rem;
     /*
     .course-footer__columns-two,
     .course-footer__columns-three {
@@ -29066,6 +29067,7 @@ figure figcaption a:active,
 
 .course-footer .related-content .card.card--contact {
     padding-top: 0;
+    padding-bottom: 0;
 }
 
 .course-footer .related-content .card.card--contact .card__details__text {
@@ -29075,10 +29077,6 @@ figure figcaption a:active,
 .course-footer .related-content .card.card--contact + .card--contact {
     padding-top: 0;
     border-top: 0;
-}
-
-.course-footer .related-content .card.card--contact:first-child {
-    padding-bottom: 0;
 }
 
 .course-footer .related-content .card.card--contact + .card--contact {
