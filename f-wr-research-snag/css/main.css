@@ -29060,6 +29060,27 @@ figure figcaption a:active,
     }
 }
 
+.course-footer .related-content {
+    justify-content: left;
+}
+
+.course-footer .related-content .card.card--contact {
+    padding-top: 0;
+}
+
+.course-footer .related-content .card.card--contact .card__details__text {
+    padding-left: 0;
+}
+
+.course-footer .related-content .card.card--contact + .card--contact {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.course-footer .related-content .card.card--contact:first-child {
+    padding-bottom: 0;
+}
+
 .course-footer .related-content .card.card--contact + .card--contact {
     border-top: none;
 }
@@ -29070,6 +29091,120 @@ figure figcaption a:active,
 
 .course-footer.background--pink80 h2 {
     border-bottom: 0.0625rem solid #7c2062;
+}
+
+.course-footer.background--pink80 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+@media (hover: hover) {
+    .course-footer.background--pink80 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.course-footer.background--pink80 a:focus, .course-footer.background--pink80 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .course-footer.background--pink80 a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .course-footer.background--pink80 a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+    }
+}
+
+.course-footer.background--pink80 a:focus, .course-footer.background--pink80 a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.course-footer.background--pink80 a:visited {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+.course-footer.background--pink80 a:focus {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+@media (hover: hover) {
+    .course-footer.background--pink80 a:hover {
+        border-bottom-color: #cbcbcb;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #0c0c0e;
+    }
+}
+
+.course-footer.background--pink80 a:active {
+    background-color: #cbcbcb;
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
+}
+
+.course-footer.background--pink80 .card .card__details .card__tag .icon {
+    color: #ffffff;
 }
 
 .course-footer .useful-links {
