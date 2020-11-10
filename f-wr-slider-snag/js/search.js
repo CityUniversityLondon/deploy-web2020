@@ -1164,6 +1164,7 @@ function Finder__Results__Profile(props) {
     src: props.details.metaData.thumbnail,
     alt: 'Photo of ' + props.details.title
   })),
+        thumbnailExist = props.details.metaData.thumbnail && 'card--profile--thumbnailAvailable',
         country = props.query.facets && props.query.facets.country && props.details.metaData.country && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
@@ -1174,7 +1175,7 @@ function Finder__Results__Profile(props) {
     className: "card card--profile"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.clickTrackingUrl,
-    className: "card__anchor card__details"
+    className: "card__anchor card__details ".concat(thumbnailExist)
   }, headshot, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
@@ -2511,13 +2512,7 @@ const endKey = 'End',
       arrowDown = 'ArrowDown';
 
 function genericResult(result, type, i) {
-  const thumbnail = result.metaData.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "card__thumbnail"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("picture", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
-    src: result.metaData.thumbnail,
-    alt: ""
-  }))),
-        label = type && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+  const label = type && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
     className: "card__label"
   }, type),
         external = result.liveUrl.indexOf(siteUrl) < 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
@@ -2530,7 +2525,7 @@ function genericResult(result, type, i) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
     href: result.clickTrackingUrl,
     className: "card__details card__anchor"
-  }, thumbnail, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "card__details__text"
   }, label, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
     className: "card__heading"
@@ -3334,7 +3329,7 @@ function Search(props) {
     collections: fbResponses.primary.filter(collection => collection.collection !== query.collection),
     nonpublic: fbResponses.nonpublic
   });
-  const bestBets = query.query && !fbResponses.primary[0].updating && fbResponses.primary[0].response && fbResponses.primary[0].response.bestBets && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_components_main_results_search_bestbets__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  const bestBets = query.query && !fbResponses.primary[0].updating && fbResponses.primary[0].response && fbResponses.primary[0].response.bestBets.length && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_components_main_results_search_bestbets__WEBPACK_IMPORTED_MODULE_9__["default"], {
     bestbets: fbResponses.primary[0].response.bestBets
   });
   const results = query.query && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_components_main_results_search_results__WEBPACK_IMPORTED_MODULE_15__["default"], {

@@ -1260,6 +1260,7 @@ function Finder__Results__Profile(props) {
     src: props.details.metaData.thumbnail,
     alt: 'Photo of ' + props.details.title
   })),
+        thumbnailExist = props.details.metaData.thumbnail && 'card--profile--thumbnailAvailable',
         country = props.query.facets && props.query.facets.country && props.details.metaData.country && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
@@ -1270,7 +1271,7 @@ function Finder__Results__Profile(props) {
     className: "card card--profile"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.clickTrackingUrl,
-    className: "card__anchor card__details"
+    className: "card__anchor card__details ".concat(thumbnailExist)
   }, headshot, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
