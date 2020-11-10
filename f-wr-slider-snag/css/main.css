@@ -43429,7 +43429,7 @@ blockquote footer cite {
 @media (max-width: 767px) {
     .js .slider[data-small='true'] {
         overflow: hidden;
-        padding: 1rem;
+        margin: 1rem;
         position: relative;
     }
     .js .slider[data-small='true'] .slide {
@@ -43456,7 +43456,7 @@ blockquote footer cite {
 @media (max-width: 767px) {
     .js .slider:not([data-small='true']) {
         overflow: hidden;
-        padding: 1rem;
+        margin: 1rem;
         position: relative;
     }
     .js .slider:not([data-small='true']) .slide {
@@ -43475,7 +43475,7 @@ blockquote footer cite {
 @media (min-width: 768px) {
     .js .slider:not([data-small='true']) {
         overflow: hidden;
-        padding: 1rem;
+        margin: 1rem;
         position: relative;
     }
     .js .slider:not([data-small='true']) .slide {
@@ -43499,14 +43499,9 @@ blockquote footer cite {
     }
 }
 
-.js .slider:not([data-small='true']) .slide[data-smallposition='0'] {
-    margin-top: 0;
-}
-
 .js .slider .slide {
     width: 100%;
     list-style: none;
-    margin-top: 1rem;
 }
 
 .js .slider .slide:focus {
@@ -43515,6 +43510,10 @@ blockquote footer cite {
     outline-style: dotted;
     outline-width: 0.125rem;
     outline-offset: -0.1875rem;
+}
+
+.js .slider .slide:last-of-type {
+    margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
@@ -43896,6 +43895,25 @@ blockquote footer cite {
     .js .slider[data-style='responsive'][data-small='true'] + .slider__controls {
         display: none;
     }
+}
+
+.js .slider[data-style='arrows'].related-content .card.card--contact + .card--contact,
+.js .slider[data-style='responsive'].related-content .card.card--contact + .card--contact {
+    border-top: none;
+    padding-top: 0;
+}
+
+.js .slider[data-style='responsive'] .slide ul {
+    display: flex;
+    max-width: 100%;
+}
+
+.js .slider[data-style='responsive'] .slide ul li {
+    flex: 1;
+}
+
+.js .slider[data-style='responsive'] .slide ul li:first-child {
+    margin-right: 0.5rem;
 }
 
 @media (min-width: 768px) {
