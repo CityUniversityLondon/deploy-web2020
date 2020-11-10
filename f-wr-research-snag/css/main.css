@@ -28983,75 +28983,6 @@ figure figcaption a:active,
     padding-right: 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1.5rem;
-    /*
-    .course-footer__columns-two,
-    .course-footer__columns-three {
-        display: flex;
-
-        @include media('<between') {
-            flex-direction: column;
-        }
-        .course-footer__contact {
-            display: flex;
-            flex-direction: column;
-            flex-basis: 66%;
-        }
-
-        .related-content {
-            display: flex;
-            margin-right: $measure--small2;
-            padding-top: $measure--small2;
-            border-top: $border-width-hairline $border-style-solid $color-gray4;
-
-            @include media('<between') {
-                flex-basis: 100%;
-                margin-right: 0;
-            }
-
-            @include media('<tablet') {
-                display: inline-block;
-            }
-
-            li {
-                flex: 1;
-                &:not(:last-child) {
-                    margin-right: $measure--small2;
-
-                    @include media('<tablet') {
-                        margin-right: 0;
-                    }
-                }
-            }
-        }
-    }
-    */
-    /*
-    .course-footer__columns-two {
-        @include media('>tablet') {
-            flex-direction: row;
-
-            .related-content {
-                margin-right: $measure--small2;
-            }
-
-            .useful-links {
-                margin-top: 0;
-            }
-        }
-
-        .course-footer__contact {
-            flex-basis: 33%;
-
-            @include media('<between') {
-                flex-basis: 50%;
-            }
-
-            @include media('<tablet') {
-                flex-basis: 100%;
-            }
-        }
-    }
-    */
 }
 
 @media (min-width: 901px) {
@@ -29061,6 +28992,14 @@ figure figcaption a:active,
     }
 }
 
+.course-footer h2 {
+    border-bottom: 0.0625rem solid #cbcbcb;
+}
+
+.course-footer h2:not(:first-child) {
+    margin-top: 2rem;
+}
+
 .course-footer .related-content {
     justify-content: left;
 }
@@ -29068,6 +29007,10 @@ figure figcaption a:active,
 .course-footer .related-content .card.card--contact {
     padding-top: 0;
     padding-bottom: 0;
+}
+
+.course-footer .related-content .card.card--contact:not(:first-child) .card__details .card__details__text {
+    padding-top: 0;
 }
 
 .course-footer .related-content .card.card--contact .card__details__text {
