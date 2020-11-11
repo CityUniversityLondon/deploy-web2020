@@ -5134,7 +5134,8 @@ function responsiveOptimisation(slides, slider, controls) {
   const responsiveNum = 2; // number of items per slide to display
 
   let i;
-  let d; // This cycles through all the current slides and re-structure the list by creating a "new" which list contains
+  let d;
+  let current; // This cycles through all the current slides and re-structure the list by creating a "new" which list contains
   // the number of items per slide, as set above (responsiveNum)
   //i.e. 
   //  <ul>
@@ -5157,6 +5158,14 @@ function responsiveOptimisation(slides, slider, controls) {
     for (d = 0; d < responsiveNum; d++) {
       if (slides[i + d]) {
         ulElement.appendChild(slides[i + d]);
+        let sliderposition = slides[i + d].getAttribute('data-sliderposition');
+
+        if (sliderposition == '0') {
+          current = i + d; //>>>>>>>>devide current by 2
+
+          console.log("one found!!!! ".concat(current));
+        }
+
         slides[i + d].classList.remove('slide');
         slides[i + d].removeAttribute('data-sliderposition');
       }
@@ -5166,8 +5175,9 @@ function responsiveOptimisation(slides, slider, controls) {
   } // Re-map slide items after re-structure
 
 
-  slides = Array.from(slider.children);
-  prepareSlides(slides);
+  slides = Array.from(slider.children); // Adds appropriate data attributes to slides
+
+  prepareSlides(slides, current / 2);
   slider.setAttribute('data-optimised', 'true'); // Resets pagination during screensize change - not during launch
 
   if (controls) {
@@ -5202,7 +5212,7 @@ function reverseOptimisation(slider, controls) {
 
 
   slides = Array.from(slider.children);
-  prepareSlides(slides);
+  prepareSlides(slides, 0);
   slider.setAttribute('data-optimised', 'false'); // Resets pagination and places focus on first slide
 
   slider.querySelector('.slide').focus();
@@ -5323,7 +5333,8 @@ function handleNextPrevClick(slider, controls, direction) {
  */
 
 
-function prepareSlides(slides) {
+function prepareSlides(slides, current) {
+  //// TRY TO MAKE CURRENT 0 IF NO CURRENT > LOOK AT 
   slides.forEach((slide, i) => {
     slide.setAttribute('tabindex', -1); // Remove inactive
 
@@ -5332,16 +5343,20 @@ function prepareSlides(slides) {
     slide.classList.add('slide'); // Add slide class of slide
     // 0 = active / first slide
 
-    if (i === 0) {
+    if (i === current) {
       slide.dataset.sliderposition = 0;
       slide.dataset.smallposition = 0;
       slide.dataset.hidden = false;
-    } else {
+    } else if (i > current) {
       // 1 = next slide
       slide.dataset.sliderposition = 1;
       slide.dataset.smallposition = 1;
       slide.dataset.hidden = 'true';
       slide.dataset.smallhidden = 'true';
+    } else {
+      slide.dataset.sliderposition = -1;
+      slide.dataset.smallposition = -1;
+      slide.dataset.hidden = true; // @ WR review smallhidden - what was intended by it?
     }
   });
   return slides;
@@ -5391,7 +5406,7 @@ function launchArrow(slider) {
 
   ; // Sets up the positions of the cards / slides
 
-  prepareSlides(slides); // Build the next button
+  prepareSlides(slides, 0); // Build the next button
 
   nextButtonSpan.appendChild(document.createTextNode('Next slide'));
   nextButton.appendChild(nextButtonSpan);
