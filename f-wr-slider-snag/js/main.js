@@ -5130,12 +5130,12 @@ function addSwipeEvents(slider, controlsWrapper) {
 */
 
 
-function responsiveOptimisation(slides, slider, controls) {
+function responsiveOptimisation(slides, slider, controls, direction) {
   const responsiveNum = 2; // number of items per slide to display
 
   let i;
   let d;
-  let current; // This cycles through all the current slides and re-structure the list by creating a "new" which list contains
+  let currentSlide; // This cycles through all the current slides and re-structure the list by creating a "new" which list contains
   // the number of items per slide, as set above (responsiveNum)
   //i.e. 
   //  <ul>
@@ -5161,9 +5161,7 @@ function responsiveOptimisation(slides, slider, controls) {
         let sliderposition = slides[i + d].getAttribute('data-sliderposition');
 
         if (sliderposition == '0') {
-          current = i + d; //>>>>>>>>devide current by 2
-
-          console.log("one found!!!! ".concat(current));
+          currentSlide = i + d;
         }
 
         slides[i + d].classList.remove('slide');
@@ -5177,13 +5175,15 @@ function responsiveOptimisation(slides, slider, controls) {
 
   slides = Array.from(slider.children); // Adds appropriate data attributes to slides
 
-  prepareSlides(slides, current / 2);
+  console.log("Current slide before is: ".concat(currentSlide));
+  console.log("current slide after is ".concat(currentSlide * 2 + Math.round(direction / 2) + direction));
+  prepareSlides(slides, currentSlide * 2 + Math.round(direction / 2) + direction);
   slider.setAttribute('data-optimised', 'true'); // Resets pagination during screensize change - not during launch
 
   if (controls) {
-    slider.querySelector('.slide').focus();
+    //slider.querySelector('.slide').focus();
     controls.querySelector('.slider__indicator__total').innerText = slides.length;
-    controls.querySelector('.slider__indicator__current').innerText = '1';
+    controls.querySelector('.slider__indicator__current').innerText = Math.round(currentSlide / 2) + 1;
     updateButtonState(slider, controls);
   }
 
@@ -5198,11 +5198,21 @@ function responsiveOptimisation(slides, slider, controls) {
  */
 
 
-function reverseOptimisation(slider, controls) {
+function reverseOptimisation(slider, controls, direction, click) {
+  //formula for reverse is working
   let slides = Array.from(slider.children);
   let i;
+  let currentSlide;
 
   for (i = 0; i < slides.length; i++) {
+    let sliderposition = slides[i].getAttribute('data-sliderposition');
+
+    if (sliderposition == '0') {
+      currentSlide = i;
+      console.log("CurrentSlide: ".concat(i, " and direction is: ").concat(direction, " and ").concat(typeof direction));
+      console.log("prepSlide is: ".concat(currentSlide * 2 + Math.round(direction / 2)));
+    }
+
     const slidesChildren = Array.from(slides[i].querySelector('ul').children);
     slidesChildren.forEach((slide, n) => {
       slider.appendChild(slide);
@@ -5212,13 +5222,24 @@ function reverseOptimisation(slider, controls) {
 
 
   slides = Array.from(slider.children);
-  prepareSlides(slides, 0);
-  slider.setAttribute('data-optimised', 'false'); // Resets pagination and places focus on first slide
+  console.log("Current slide before is: ".concat(currentSlide));
+  console.log("current slide after is ".concat(currentSlide * 2 + Math.round(direction / 2) + direction));
+  prepareSlides(slides, currentSlide * 2 + Math.round(direction / 2) + direction);
+  slider.setAttribute('data-optimised', 'false');
+  /*
+      if(click){
+          console.log(`click true`);
+         handleNextPrevClick(slider, controls, direction); 
+         
+      }
+  */
+  // Resets pagination and places focus on first slide
+  //slider.querySelector('.slide').focus();
 
-  slider.querySelector('.slide').focus();
   controls.querySelector('.slider__indicator__total').innerText = slides.length;
-  controls.querySelector('.slider__indicator__current').innerText = '1';
+  controls.querySelector('.slider__indicator__current').innerText = currentSlide * 2 + (Math.round(direction / 2) + direction + 1);
   updateButtonState(slider, controls);
+  return slides;
 }
 /**
  * Updates buttons for arrow slider
@@ -5251,10 +5272,10 @@ function handleNextPrevClick(slider, controls, direction) {
   let screenSize = window.innerWidth; // This is for responsive slider only, checking if re-structuring is necesssary in case the viewport size changed.
 
   if (responsive === 'responsive' && screenSize < 768 && optimised == 'true') {
-    reverseOptimisation(slider, controls);
+    reverseOptimisation(slider, controls, direction, true);
     return;
   } else if (responsive === 'responsive' && screenSize >= 768 && optimised !== 'true') {
-    responsiveOptimisation(slides, slider, controls);
+    responsiveOptimisation(slides, slider, controls, direction);
     return;
   }
 
@@ -5334,7 +5355,6 @@ function handleNextPrevClick(slider, controls, direction) {
 
 
 function prepareSlides(slides, current) {
-  //// TRY TO MAKE CURRENT 0 IF NO CURRENT > LOOK AT 
   slides.forEach((slide, i) => {
     slide.setAttribute('tabindex', -1); // Remove inactive
 
