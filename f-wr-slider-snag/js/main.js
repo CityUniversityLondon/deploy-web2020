@@ -5175,15 +5175,13 @@ function responsiveOptimisation(slides, slider, controls, direction) {
 
   slides = Array.from(slider.children); // Adds appropriate data attributes to slides
 
-  console.log("Current slide before is: ".concat(currentSlide));
-  console.log("current slide after is ".concat(currentSlide * 2 + Math.round(direction / 2) + direction));
-  prepareSlides(slides, currentSlide * 2 + Math.round(direction / 2) + direction);
+  prepareSlides(slides, Math.floor((currentSlide + direction) / 2));
   slider.setAttribute('data-optimised', 'true'); // Resets pagination during screensize change - not during launch
 
   if (controls) {
-    //slider.querySelector('.slide').focus();
+    slides[Math.floor((currentSlide + direction) / 2)].focus();
     controls.querySelector('.slider__indicator__total').innerText = slides.length;
-    controls.querySelector('.slider__indicator__current').innerText = Math.round(currentSlide / 2) + 1;
+    controls.querySelector('.slider__indicator__current').innerText = Math.floor((currentSlide + direction) / 2) + 1;
     updateButtonState(slider, controls);
   }
 
@@ -5222,20 +5220,10 @@ function reverseOptimisation(slider, controls, direction, click) {
 
 
   slides = Array.from(slider.children);
-  console.log("Current slide before is: ".concat(currentSlide));
-  console.log("current slide after is ".concat(currentSlide * 2 + Math.round(direction / 2) + direction));
   prepareSlides(slides, currentSlide * 2 + Math.round(direction / 2) + direction);
-  slider.setAttribute('data-optimised', 'false');
-  /*
-      if(click){
-          console.log(`click true`);
-         handleNextPrevClick(slider, controls, direction); 
-         
-      }
-  */
-  // Resets pagination and places focus on first slide
-  //slider.querySelector('.slide').focus();
+  slider.setAttribute('data-optimised', 'false'); // Resets pagination and places focus on first slide
 
+  slides[currentSlide * 2 + (Math.round(direction / 2) + direction + 1)].focus();
   controls.querySelector('.slider__indicator__total').innerText = slides.length;
   controls.querySelector('.slider__indicator__current').innerText = currentSlide * 2 + (Math.round(direction / 2) + direction + 1);
   updateButtonState(slider, controls);
