@@ -21678,6 +21678,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     color: #d61726;
 }
 
+.card--research {
+    background-color: #ffffff;
+    padding: 1rem;
+}
+
 .card--socialmedia .card__anchor {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
@@ -23883,7 +23888,7 @@ Assign mixin:
     grid-column: 3/23;
     position: relative;
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     text-align: center;
 }
 
@@ -28974,21 +28979,10 @@ figure figcaption a:active,
 }
 
 .course-footer {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    max-width: 80rem;
-    padding-top: 1.5rem;
-    padding-bottom: 3rem;
-}
-
-@media (min-width: 901px) {
-    .course-footer {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
 }
 
 @media (min-width: 901px) {
@@ -28998,102 +28992,160 @@ figure figcaption a:active,
     }
 }
 
-@media (min-width: 1441px) {
-    .course-footer {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 .course-footer h2 {
-    margin-bottom: 1.5rem;
+    border-bottom: 0.0625rem solid #cbcbcb;
 }
 
-.course-footer .course-footer__columns-two,
-.course-footer .course-footer__columns-three {
-    display: flex;
+.course-footer h2:not(:first-child) {
+    margin-top: 2rem;
 }
 
-@media (max-width: 899px) {
-    .course-footer .course-footer__columns-two,
-    .course-footer .course-footer__columns-three {
-        flex-direction: column;
+.course-footer .related-content {
+    justify-content: left;
+}
+
+.course-footer .related-content .card.card--contact {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.course-footer .related-content .card.card--contact:not(:first-child) .card__details .card__details__text {
+    padding-top: 0;
+}
+
+.course-footer .related-content .card.card--contact .card__details__text {
+    padding-left: 0;
+}
+
+.course-footer .related-content .card.card--contact + .card--contact {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.course-footer .related-content .card.card--contact + .card--contact {
+    border-top: none;
+}
+
+.course-footer.background--pink80 {
+    color: #ffffff;
+}
+
+.course-footer.background--pink80 h2 {
+    border-bottom: 0.0625rem solid #7c2062;
+}
+
+.course-footer.background--pink80 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+@media (hover: hover) {
+    .course-footer.background--pink80 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
     }
 }
 
-.course-footer .course-footer__columns-two .course-footer__contact,
-.course-footer .course-footer__columns-three .course-footer__contact {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 66%;
+.course-footer.background--pink80 a:focus, .course-footer.background--pink80 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
 }
 
-.course-footer .course-footer__columns-two .related-content,
-.course-footer .course-footer__columns-three .related-content {
-    display: flex;
-    margin-right: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 0.0625rem solid #cbcbcb;
-}
-
-@media (max-width: 899px) {
-    .course-footer .course-footer__columns-two .related-content,
-    .course-footer .course-footer__columns-three .related-content {
-        flex-basis: 100%;
-        margin-right: 0;
+@media (prefers-reduced-motion: reduce) {
+    .course-footer.background--pink80 a {
+        transition: none;
     }
 }
 
-@media (max-width: 767px) {
-    .course-footer .course-footer__columns-two .related-content,
-    .course-footer .course-footer__columns-three .related-content {
-        display: inline-block;
+@media (hover: hover) {
+    .course-footer.background--pink80 a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
     }
 }
 
-.course-footer .course-footer__columns-two .related-content li,
-.course-footer .course-footer__columns-three .related-content li {
-    flex: 1;
+.course-footer.background--pink80 a:focus, .course-footer.background--pink80 a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
 }
 
-.course-footer .course-footer__columns-two .related-content li:not(:last-child),
-.course-footer .course-footer__columns-three .related-content li:not(:last-child) {
-    margin-right: 1.5rem;
+.course-footer.background--pink80 a:visited {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
 }
 
-@media (max-width: 767px) {
-    .course-footer .course-footer__columns-two .related-content li:not(:last-child),
-    .course-footer .course-footer__columns-three .related-content li:not(:last-child) {
-        margin-right: 0;
+.course-footer.background--pink80 a:focus {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+@media (hover: hover) {
+    .course-footer.background--pink80 a:hover {
+        border-bottom-color: #cbcbcb;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #0c0c0e;
     }
 }
 
-@media (min-width: 769px) {
-    .course-footer .course-footer__columns-two {
-        flex-direction: row;
-    }
-    .course-footer .course-footer__columns-two .related-content {
-        margin-right: 1.5rem;
-    }
-    .course-footer .course-footer__columns-two .useful-links {
-        margin-top: 0;
-    }
+.course-footer.background--pink80 a:active {
+    background-color: #cbcbcb;
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
 }
 
-.course-footer .course-footer__columns-two .course-footer__contact {
-    flex-basis: 33%;
-}
-
-@media (max-width: 899px) {
-    .course-footer .course-footer__columns-two .course-footer__contact {
-        flex-basis: 50%;
-    }
-}
-
-@media (max-width: 767px) {
-    .course-footer .course-footer__columns-two .course-footer__contact {
-        flex-basis: 100%;
-    }
+.course-footer.background--pink80 .card .card__details .card__tag .icon {
+    color: #ffffff;
 }
 
 .course-footer .useful-links {
@@ -31773,7 +31825,7 @@ figure figcaption a:active,
         border-color: #cbcbcb;
         border-style: solid;
         border-width: 0.0625rem;
-        color: #ffffff;
+        color: #0c0c0e;
     }
 }
 
@@ -39350,11 +39402,11 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .navigation--primary .navigation--primary__level1[data-title='Prospective students'] .navigation__level2, .navigation--primary .navigation--primary__level1[data-title='About us'] .navigation__level2 {
-    grid-template-rows: repeat(8, auto);
+    grid-template-rows: repeat(9, auto);
 }
 
 .navigation--primary .navigation--primary__level1[data-title='Prospective students'] .navigation__level2 > li:first-of-type, .navigation--primary .navigation--primary__level1[data-title='About us'] .navigation__level2 > li:first-of-type {
-    grid-row: 1 / span 8;
+    grid-row: 1 / span 9;
     justify-content: flex-start;
 }
 
@@ -43849,6 +43901,10 @@ blockquote footer cite {
     border-bottom-width: 0.125rem;
 }
 
+.wrapper--tooltip__label .tooltip__label .tooltip__label__licence {
+    display: table;
+}
+
 .wrapper--tooltip__label .tooltip--image-credit {
     font-size: 0.889rem;
     line-height: 1.625;
@@ -45188,10 +45244,10 @@ article .link-copy {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    font-style: italic;
     margin-top: 1rem;
     max-width: unset;
-    text-align: right;
+    color: #f2f2f2;
+    word-break: break-word;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -46052,6 +46108,10 @@ article .link-copy {
     }
 }
 
+.search .search-form__query + .wrapper--search__results .tabs__links {
+    margin-top: 1.75rem;
+}
+
 .search .search__bestbets {
     margin-top: 3rem;
 }
@@ -46491,6 +46551,7 @@ article .link-copy {
     margin-top: 1rem;
     max-width: unset;
     color: #696969;
+    word-break: break-word;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -46642,6 +46703,7 @@ article .link-copy {
 
 .search .search__results__list .card .card__anchor .card__details__text,
 .search .search__bestbets__list .card .card__anchor .card__details__text {
+    padding: initial;
     padding-bottom: 1rem;
 }
 
@@ -46664,6 +46726,7 @@ article .link-copy {
 .search .search__bestbets__list .card .card--profile--thumbnailAvailable {
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding-bottom: 1rem;
 }
 
 @media (max-width: 432px) {
@@ -46697,10 +46760,18 @@ article .link-copy {
     }
 }
 
+.search .search__results__list .card {
+    margin-top: initial;
+}
+
 .search .search__results__list .card .card__anchor:after {
     content: '';
     background-color: initial;
     color: initial;
+}
+
+.search .search__results__list .card .card__tag .icon {
+    color: #0c0c0e;
 }
 
 .search .search__othersites__noresults {
@@ -59131,7 +59202,8 @@ main .home .home__whats-happening .related-content {
 
 @media (min-width: 768px) and (max-width: 1023px) {
     main > .landing--functional .wrapper--landing--functional__content .landing--functional__content,
-    main > .landing--functional .wrapper--landing--functional__content .wrapper--finder--mini {
+    main > .landing--functional .wrapper--landing--functional__content .wrapper--finder--mini,
+    main > .landing--functional .wrapper--landing--functional__content .landing--functional__finder__links__content {
         grid-column: 4 / span 18;
         padding-left: 0;
         padding-right: 0;
@@ -59168,7 +59240,8 @@ main .home .home__whats-happening .related-content {
     main > .landing--functional .landing--functional__content {
         grid-column: 6 / span 14;
     }
-    main > .landing--functional .wrapper--finder--mini {
+    main > .landing--functional .wrapper--finder--mini,
+    main > .landing--functional .landing--functional__finder__links__content {
         grid-column: 5 / span 16;
     }
     main > .landing--functional .landing--functional__video .embedded-video {
@@ -59209,7 +59282,8 @@ main .home .home__whats-happening .related-content {
     main .navigation--secondary + .landing--functional .landing--functional__content {
         grid-column: 4 / span 12;
     }
-    main .navigation--secondary + .landing--functional .wrapper--finder--mini {
+    main .navigation--secondary + .landing--functional .wrapper--finder--mini,
+    main .navigation--secondary + .landing--functional .landing--functional__finder__links__content {
         grid-column: 3 / span 14;
     }
     main .navigation--secondary + .landing--functional .landing--functional__video .embedded-video {
@@ -59988,18 +60062,21 @@ main .home .home__whats-happening .related-content {
     margin-left: 0.5rem;
 }
 
-.landing--functional__finder .landing--functional__finder__tabs__columns {
+.landing--functional__finder .landing--functional__finder__tabs__columns,
+.landing--functional__finder .landing--functional__finder__links__content--links {
     max-width: none;
     margin-left: 0;
 }
 
-.landing--functional__finder .landing--functional__finder__tabs__columns li {
+.landing--functional__finder .landing--functional__finder__tabs__columns li,
+.landing--functional__finder .landing--functional__finder__links__content--links li {
     list-style: none;
     margin-bottom: 1.5rem;
     margin-top: 0;
 }
 
-.landing--functional__finder .landing--functional__finder__tabs__columns li a {
+.landing--functional__finder .landing--functional__finder__tabs__columns li a,
+.landing--functional__finder .landing--functional__finder__links__content--links li a {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -60026,7 +60103,8 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (hover: hover) {
-    .landing--functional__finder .landing--functional__finder__tabs__columns li a:hover {
+    .landing--functional__finder .landing--functional__finder__tabs__columns li a:hover,
+    .landing--functional__finder .landing--functional__finder__links__content--links li a:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -60043,7 +60121,9 @@ main .home .home__whats-happening .related-content {
     }
 }
 
-.landing--functional__finder .landing--functional__finder__tabs__columns li a:focus, .landing--functional__finder .landing--functional__finder__tabs__columns li a:active {
+.landing--functional__finder .landing--functional__finder__tabs__columns li a:focus, .landing--functional__finder .landing--functional__finder__tabs__columns li a:active,
+.landing--functional__finder .landing--functional__finder__links__content--links li a:focus,
+.landing--functional__finder .landing--functional__finder__links__content--links li a:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -60060,33 +60140,39 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .landing--functional__finder .landing--functional__finder__tabs__columns li a {
+    .landing--functional__finder .landing--functional__finder__tabs__columns li a,
+    .landing--functional__finder .landing--functional__finder__links__content--links li a {
         transition: none;
     }
 }
 
 @media (hover: hover) {
-    .landing--functional__finder .landing--functional__finder__tabs__columns li a:hover {
+    .landing--functional__finder .landing--functional__finder__tabs__columns li a:hover,
+    .landing--functional__finder .landing--functional__finder__links__content--links li a:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #1e1e1e 0%, #1e1e1e 100%);
     }
 }
 
-.landing--functional__finder .landing--functional__finder__tabs__columns li a:focus, .landing--functional__finder .landing--functional__finder__tabs__columns li a:active {
+.landing--functional__finder .landing--functional__finder__tabs__columns li a:focus, .landing--functional__finder .landing--functional__finder__tabs__columns li a:active,
+.landing--functional__finder .landing--functional__finder__links__content--links li a:focus,
+.landing--functional__finder .landing--functional__finder__links__content--links li a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.landing--functional__finder .landing--functional__finder__tabs__columns li a:visited {
+.landing--functional__finder .landing--functional__finder__tabs__columns li a:visited,
+.landing--functional__finder .landing--functional__finder__links__content--links li a:visited {
     border-bottom-color: #4c2c92;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #4c2c92;
 }
 
-.landing--functional__finder .landing--functional__finder__tabs__columns li a:focus {
+.landing--functional__finder .landing--functional__finder__tabs__columns li a:focus,
+.landing--functional__finder .landing--functional__finder__links__content--links li a:focus {
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
@@ -60094,7 +60180,8 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (hover: hover) {
-    .landing--functional__finder .landing--functional__finder__tabs__columns li a:hover {
+    .landing--functional__finder .landing--functional__finder__tabs__columns li a:hover,
+    .landing--functional__finder .landing--functional__finder__links__content--links li a:hover {
         border-bottom-color: #1e1e1e;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
@@ -60102,7 +60189,8 @@ main .home .home__whats-happening .related-content {
     }
 }
 
-.landing--functional__finder .landing--functional__finder__tabs__columns li a:active {
+.landing--functional__finder .landing--functional__finder__tabs__columns li a:active,
+.landing--functional__finder .landing--functional__finder__links__content--links li a:active {
     background-color: #1e1e1e;
     border-bottom-color: #1e1e1e;
     border-bottom-style: solid;
@@ -60111,12 +60199,14 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (min-width: 768px) {
-    .landing--functional__finder .landing--functional__finder__tabs__columns {
+    .landing--functional__finder .landing--functional__finder__tabs__columns,
+    .landing--functional__finder .landing--functional__finder__links__content--links {
         column-count: 2;
         column-gap: 1.5rem;
     }
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .landing--functional__finder__tabs__columns__icon,
 .landing--functional__finder .landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon {
     font-size: 1.125rem;
     line-height: 1.33333;
@@ -60127,95 +60217,125 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
+    .landing--functional__finder .landing--functional__finder__links__content--links .landing--functional__finder__tabs__columns__icon,
     .landing--functional__finder .landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon {
         letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
+    .landing--functional__finder .landing--functional__finder__links__content--links .landing--functional__finder__tabs__columns__icon,
     .landing--functional__finder .landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon {
         letter-spacing: -0.014em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
+    .landing--functional__finder .landing--functional__finder__links__content--links .landing--functional__finder__tabs__columns__icon,
     .landing--functional__finder .landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
+    .landing--functional__finder .landing--functional__finder__links__content--links .landing--functional__finder__tabs__columns__icon,
     .landing--functional__finder .landing--functional__finder__tabs .landing--functional__finder__tabs__columns__icon {
         letter-spacing: -0.017em;
     }
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--arts_and_media:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--arts_and_media:before {
     content: '\f618';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--business:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--business:before {
     content: '\f0b1';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--computing_and_computer_science:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--computing_and_computer_science:before {
     content: '\f108';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--engineering:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--engineering:before {
     content: '\f013';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--health:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--health:before {
     content: '\f5f8';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--history:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--history:before {
     content: '\f70f';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--languages:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--languages:before {
     content: '\f075';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--literature:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--literature:before {
     content: '\f040';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--mathematics:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--mathematics:before {
     content: '\f64c';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--politics_and_law:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--politics_and_law:before {
     content: '\f0e3';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--psychology:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--psychology:before {
     content: '\f0c0';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--class-based:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--class-based:before {
     content: '\f63d';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--full-time:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--full-time:before {
     content: '\f017';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--online:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--online:before {
     content: '\f109';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--part-time:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--part-time:before {
     content: '\f4fd';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--summer_school:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--summer_school:before {
     content: '\f185';
 }
 
+.landing--functional__finder .landing--functional__finder__links__content--links .icon--workshop:before,
 .landing--functional__finder .landing--functional__finder__tabs .icon--workshop:before {
     content: '\f685';
+}
+
+.landing--functional__finder .landing--functional__finder__links__content--wrapper {
+    border: 0.0625rem solid #d8d8d8;
+    padding-bottom: 1.75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1rem;
+    background-color: #f2f2f2;
 }
 
 .landing--functional__finder .landing--functional__finder__tabs .tabs .tabs__panel {
@@ -63094,7 +63214,7 @@ main > .news {
 
 .js .course--pgt .tabs .tabs__panel {
     background-color: #ffffff;
-    border-top: none;
+    border: 0;
 }
 
 .js .wrapper--alumni-testimonials .card--testimonial .card__details .card--testimonial__quote {
@@ -68757,12 +68877,6 @@ button
     }
 }
 
-@media (max-width: 1023px) {
-    main > .course--ug .course--ug__usp {
-        margin-bottom: 1.75rem;
-    }
-}
-
 .course--ug .parallax {
     background-attachment: fixed;
     background-size: cover;
@@ -69167,6 +69281,10 @@ button
     }
 }
 
+.course--ug__related-courses .course--ug__related-courses__kis-widget {
+    margin: 1.5rem 0 1rem;
+}
+
 .course--ug__related-courses h2 {
     text-align: center;
 }
@@ -69275,6 +69393,10 @@ button
 
 .course--ug__student-testimonials__half .card--testimonial .card--testimonial__text .card--testimonial__quote {
     margin-top: 0.75rem;
+}
+
+.course--ug__student-testimonials__full-width {
+    grid-column: 1 / -1;
 }
 
 .course--ug__keyinfo__intro,
@@ -69433,6 +69555,43 @@ button
     margin-bottom: 0.25rem;
 }
 
+.course--ug__keyinfo__details ul,
+.course--ug__keyinfo__details p:not(.label) {
+    font-weight: 500;
+    font-family: "Plex Sans", sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    letter-spacing: -0.008em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .course--ug__keyinfo__details ul,
+    .course--ug__keyinfo__details p:not(.label) {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .course--ug__keyinfo__details ul,
+    .course--ug__keyinfo__details p:not(.label) {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .course--ug__keyinfo__details ul,
+    .course--ug__keyinfo__details p:not(.label) {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .course--ug__keyinfo__details ul,
+    .course--ug__keyinfo__details p:not(.label) {
+        letter-spacing: -0.017em;
+    }
+}
+
 .course--ug__keyinfo__wrapper__chevron {
     display: none;
 }
@@ -69463,10 +69622,8 @@ button
     display: grid;
 }
 
-@media (max-width: 767px) {
-    .course--ug__keyinfo__wrapper {
-        background-image: linear-gradient(to bottom, #f2f2f2, #d8d8d8) !important;
-    }
+.course--ug__keyinfo__wrapper.no-image {
+    background-image: linear-gradient(to bottom, #f2f2f2, #d8d8d8) !important;
 }
 
 .course--ug__keyinfo__details__ucas-code {
@@ -69479,6 +69636,10 @@ button
 
 .course--ug__keyinfo__accordion {
     border-top: 0.125rem solid #d8d8d8;
+}
+
+.js .course--ug .dropdown-filter .data-group li {
+    padding: 0 1rem 0.25rem;
 }
 
 .js .course--ug .course--ug__keyinfo__accordion .accordion {
@@ -69522,6 +69683,32 @@ button
     }
 }
 
+.js .course--ug .course--ug__keyinfo__accordion .accordion .dropdown-filter {
+    background: #ffffff;
+}
+
+.js .course--ug .course--ug__keyinfo__accordion .accordion .dropdown-filter .wrapper--dropdown-filter__select {
+    background-color: #b91924;
+    color: #ffffff;
+    padding: 1rem 1rem 0;
+}
+
+.js .course--ug .course--ug__keyinfo__accordion .accordion .dropdown-filter .wrapper--dropdown-filter__select:after {
+    content: '';
+    width: 0;
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-top: 1rem solid #b91924;
+    margin: auto;
+    display: block;
+    top: 1rem;
+    position: relative;
+}
+
+.js .course--ug .course--ug__keyinfo__accordion .accordion .dropdown-filter .wrapper--dropdown-filter__select select:focus {
+    outline-color: #ffffff;
+}
+
 .course--ug__section-wrapper--grey {
     background-color: #f2f2f2;
     padding-top: 1rem;
@@ -69539,6 +69726,7 @@ button
 
 .course--ug__usp {
     grid-column: 2 / 18;
+    margin-bottom: 1.75rem;
 }
 
 @media (max-width: 1023px) {
@@ -70527,6 +70715,151 @@ button
     color: #ffffff;
 }
 
+.course--ug__contact-cards.footer-cards {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    color: #ffffff;
+    padding-top: 1rem;
+}
+
+@media (min-width: 901px) {
+    .course--ug__contact-cards.footer-cards {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.course--ug__contact-cards.footer-cards h2 {
+    border-bottom: 0.0625rem solid #7c2062;
+}
+
+.course--ug__contact-cards.footer-cards a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+@media (hover: hover) {
+    .course--ug__contact-cards.footer-cards a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.course--ug__contact-cards.footer-cards a:focus, .course--ug__contact-cards.footer-cards a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .course--ug__contact-cards.footer-cards a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .course--ug__contact-cards.footer-cards a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+    }
+}
+
+.course--ug__contact-cards.footer-cards a:focus, .course--ug__contact-cards.footer-cards a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.course--ug__contact-cards.footer-cards a:visited {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+.course--ug__contact-cards.footer-cards a:focus {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+@media (hover: hover) {
+    .course--ug__contact-cards.footer-cards a:hover {
+        border-bottom-color: #cbcbcb;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #0c0c0e;
+    }
+}
+
+.course--ug__contact-cards.footer-cards a:active {
+    background-color: #cbcbcb;
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
+}
+
+.course--ug__contact-cards.footer-cards .card .card__details .card__tag .icon {
+    color: #ffffff;
+}
+
+.course--ug__contact-cards.footer-cards .related-content {
+    justify-content: left;
+}
+
+.course--ug__contact-cards.footer-cards .related-content .card.card--contact .card__details__text {
+    padding-left: 0;
+}
+
+.course--ug__contact-cards.footer-cards .related-content .card.card--contact + .card--contact {
+    padding-top: 0;
+    border-top: 0;
+}
+
 @media (min-width: 1024px) {
     main > .school {
         grid-column: 6 / span 14;
@@ -70737,6 +71070,12 @@ button
 .school__content__links .school__content__links--left ul {
     list-style: none;
     margin-left: 0;
+}
+
+.school__content__links .school__content__links--left .school__content__links--left__all-research-centres:after {
+    font-family: "Font Awesome";
+    content: '\f061';
+    margin-left: 0.5rem;
 }
 
 .school__content__links .school__content__links--right {
