@@ -5180,7 +5180,8 @@ function responsiveOptimisation(slides, slider, controls, direction) {
 
   if (controls) {
     slides[Math.floor((currentSlide + direction) / 2)].focus();
-    controls.querySelector('.slider__indicator__total').innerText = slides.length;
+    controls.querySelector('.slider__indicator__total').innerText = slides.length; //slides.length == 1? controls.querySelector('.slider__indicator__total').innerText=9 : controls.querySelector('.slider__indicator__total').innerText=slides.length;
+
     controls.querySelector('.slider__indicator__current').innerText = Math.floor((currentSlide + direction) / 2) + 1;
     updateButtonState(slider, controls);
   }
@@ -5209,7 +5210,7 @@ function reverseOptimisation(slider, controls, direction, click) {
     if (sliderposition == '0') {
       currentSlide = i;
       console.log("CurrentSlide: ".concat(i, " and direction is: ").concat(direction, " and ").concat(typeof direction));
-      console.log("prepSlide is: ".concat(currentSlide * 2 + Math.round(direction / 2)));
+      console.log("prepSlide is: ".concat(currentSlide * 2 + (Math.round(direction / 2) + direction)));
     }
 
     const slidesChildren = Array.from(slides[i].querySelector('ul').children);
@@ -5456,8 +5457,17 @@ function launchArrow(slider) {
   divider.appendChild(dividerScreenReader);
   divider.className = className + '__indicator__divider'; // Total pages
 
-  totalPages.appendChild(document.createTextNode(slides.length));
-  totalPages.className = className + '__indicator__total'; // Add to page
+  totalPages.className = className + '__indicator__total';
+
+  if (responsive && slides.length == 1) {
+    // Edge case senario for responsive slider with 2 slides. By having page total set to 2 instead of 1 on bigger screens, allow the arrows to be clickable 
+    // when re-sizing to a smaller screen and 'reserve responsive' to take place.
+    totalPages.appendChild(document.createTextNode(2));
+  } else {
+    // Normal circumstances
+    totalPages.appendChild(document.createTextNode(slides.length));
+  } // Add to page
+
 
   indicator.appendChild(currentPage);
   indicator.appendChild(divider);
