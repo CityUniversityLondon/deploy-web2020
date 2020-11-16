@@ -43708,16 +43708,6 @@ blockquote footer cite {
     }
 }
 
-@media (min-width: 768px) {
-    .js .slider[data-count='2'][data-cardsperrow='1']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-count='2'][data-cardsperrow='1']:not([data-small='true']) .slide[data-sliderposition='-1'], .js .slider[data-count='2'][data-cardsperrow='1']:not([data-small='true']) .slide[data-sliderposition='0'], .js .slider[data-count='2'][data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-count='2'][data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='-1'], .js .slider[data-count='2'][data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='0'], .js .slider[data-count='2'][data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='1'], .js .slider[data-count='2'][data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='-1'], .js .slider[data-count='2'][data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='0'] {
-        visibility: visible;
-        position: static;
-    }
-    .js .slider[data-count='2'][data-cardsperrow='1']:not([data-small='true']) + .slider__controls, .js .slider[data-count='2'][data-cardsperrow='2']:not([data-small='true']) + .slider__controls, .js .slider[data-count='2'][data-cardsperrow='3']:not([data-small='true']) + .slider__controls {
-        display: none;
-    }
-}
-
 .js .slider[data-style='arrows'] + .slider__controls,
 .js .slider[data-style='responsive'] + .slider__controls {
     align-items: center;

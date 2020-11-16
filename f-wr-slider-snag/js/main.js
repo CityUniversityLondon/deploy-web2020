@@ -5095,7 +5095,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'slider',
       defaultStyle = 'arrows',
-      defaultCardsPerRow = 2,
+      defaultCardsPerRow = 1,
       arrowLeft = 'ArrowLeft',
       arrowRight = 'ArrowRight';
 /**
