@@ -43502,6 +43502,8 @@ blockquote footer cite {
 .js .slider .slide {
     width: 100%;
     list-style: none;
+    padding: 0.1875rem;
+    margin-top: 2rem;
 }
 
 .js .slider .slide:focus {

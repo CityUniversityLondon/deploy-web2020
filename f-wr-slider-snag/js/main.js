@@ -5203,13 +5203,14 @@ function reverseOptimisation(slider, controls, direction, click) {
   let slides = Array.from(slider.children);
   let i;
   let currentSlide;
+  let adjustment = 0;
 
   for (i = 0; i < slides.length; i++) {
     let sliderposition = slides[i].getAttribute('data-sliderposition');
 
     if (sliderposition == '0') {
       currentSlide = i;
-      console.log("CurrentSlide: ".concat(i, " and direction is: ").concat(direction, " and ").concat(typeof direction));
+      console.log("CurrentSlide: ".concat(i));
       console.log("prepSlide is: ".concat(currentSlide * 2 + (Math.round(direction / 2) + direction)));
     }
 
@@ -5221,13 +5222,19 @@ function reverseOptimisation(slider, controls, direction, click) {
   } // Re-map slide items after re-structure
 
 
-  slides = Array.from(slider.children);
-  prepareSlides(slides, currentSlide * 2 + Math.round(direction / 2) + direction);
+  slides = Array.from(slider.children); // Edge case for responsive sliders with only 2 items to avoid 'over scroll' in screen size switch over
+
+  if (currentSlide * 2 + (Math.round(direction / 2) + direction) >= slides.length) {
+    adjustment = -1;
+  } // Assigns data attributes and positioning to slides
+
+
+  prepareSlides(slides, currentSlide * 2 + Math.round(direction / 2) + direction + adjustment);
   slider.setAttribute('data-optimised', 'false'); // Resets pagination and places focus on first slide
 
-  slides[currentSlide * 2 + (Math.round(direction / 2) + direction + 1)].focus();
+  slides[currentSlide * 2 + (Math.round(direction / 2) + direction) + adjustment].focus();
   controls.querySelector('.slider__indicator__total').innerText = slides.length;
-  controls.querySelector('.slider__indicator__current').innerText = currentSlide * 2 + (Math.round(direction / 2) + direction + 1);
+  controls.querySelector('.slider__indicator__current').innerText = currentSlide * 2 + (Math.round(direction / 2) + direction + 1) + adjustment;
   slider.setAttribute('data-count', slides.length);
   updateButtonState(slider, controls);
   return slides;
@@ -5246,7 +5253,11 @@ function updateButtonState(slider, controls) {
         prevButton = controls.querySelector(".".concat(className, "__controls__prev"));
   slider.querySelector('[data-sliderposition="-1"]') ? prevButton.removeAttribute('disabled') : prevButton.setAttribute('disabled', true);
   slider.querySelector('[data-sliderposition="1"]') ? nextButton.removeAttribute('disabled') : nextButton.setAttribute('disabled', true);
-  slider.removeAttribute('disabled');
+  slider.removeAttribute('disabled'); // Responsive slider edge case for when 2 items to allow next arrow to be clicable to allow switch over
+
+  const responsive = slider.getAttribute('data-style');
+  let slides = Array.from(slider.children);
+  responsive && slides.length == 1 ? nextButton.removeAttribute('disabled') : null;
 }
 /**
  * Handle clicks on the next/previous buttons for arrow slider.
@@ -5458,16 +5469,7 @@ function launchArrow(slider) {
   divider.className = className + '__indicator__divider'; // Total pages
 
   totalPages.className = className + '__indicator__total';
-
-  if (responsive && slides.length == 1) {
-    // Edge case senario for responsive slider with 2 slides. By having page total set to 2 instead of 1 on bigger screens, allow the arrows to be clickable 
-    // when re-sizing to a smaller screen and 'reserve responsive' to take place.
-    totalPages.appendChild(document.createTextNode(2));
-  } else {
-    // Normal circumstances
-    totalPages.appendChild(document.createTextNode(slides.length));
-  } // Add to page
-
+  totalPages.appendChild(document.createTextNode(slides.length)); // Add to page
 
   indicator.appendChild(currentPage);
   indicator.appendChild(divider);
