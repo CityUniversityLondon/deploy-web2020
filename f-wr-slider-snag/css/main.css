@@ -43708,6 +43708,12 @@ blockquote footer cite {
     }
 }
 
+@media (min-width: 768px) {
+    .js .slider[data-count='1']:not([data-small='true']) + .slider__controls {
+        display: none;
+    }
+}
+
 .js .slider[data-style='arrows'] + .slider__controls,
 .js .slider[data-style='responsive'] + .slider__controls {
     align-items: center;

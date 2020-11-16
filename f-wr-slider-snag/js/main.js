@@ -5185,6 +5185,7 @@ function responsiveOptimisation(slides, slider, controls, direction) {
     updateButtonState(slider, controls);
   }
 
+  slider.setAttribute('data-count', slides.length);
   return slides;
 }
 /**
@@ -5226,6 +5227,7 @@ function reverseOptimisation(slider, controls, direction, click) {
   slides[currentSlide * 2 + (Math.round(direction / 2) + direction + 1)].focus();
   controls.querySelector('.slider__indicator__total').innerText = slides.length;
   controls.querySelector('.slider__indicator__current').innerText = currentSlide * 2 + (Math.round(direction / 2) + direction + 1);
+  slider.setAttribute('data-count', slides.length);
   updateButtonState(slider, controls);
   return slides;
 }
