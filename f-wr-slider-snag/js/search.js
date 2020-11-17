@@ -3329,7 +3329,7 @@ function Search(props) {
     collections: fbResponses.primary.filter(collection => collection.collection !== query.collection),
     nonpublic: fbResponses.nonpublic
   });
-  const bestBets = query.query && !fbResponses.primary[0].updating && fbResponses.primary[0].response && fbResponses.primary[0].response.bestBets.length && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_components_main_results_search_bestbets__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  const bestBets = query.query && !fbResponses.primary[0].updating && fbResponses.primary[0].response && fbResponses.primary[0].response.bestBets && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_components_main_results_search_bestbets__WEBPACK_IMPORTED_MODULE_9__["default"], {
     bestbets: fbResponses.primary[0].response.bestBets
   });
   const results = query.query && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_components_main_results_search_results__WEBPACK_IMPORTED_MODULE_15__["default"], {

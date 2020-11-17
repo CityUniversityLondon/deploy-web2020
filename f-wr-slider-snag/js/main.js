@@ -6099,8 +6099,8 @@ function launchTabs(tabs) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
 
 
 /**
@@ -6112,7 +6112,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-const className = 'picture[data-authorname], picture[data-sourcename]',
+const className = 'picture[data-authorname], picture[data-sourcename], picture[data-licencetype]',
       openText = 'Show image credit',
       closeText = 'Hide image credit';
 /**
@@ -6126,14 +6126,14 @@ function toggleImageCredit(wrapper) {
         buttonText = button.querySelector('.sr-only'),
         label = wrapper.querySelector('.tooltip__label');
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(wrapper.dataset.open)) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(wrapper.dataset.open)) {
     wrapper.dataset.open = false;
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'false');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].expanded, 'false');
     buttonText.innerText = openText;
     button.focus();
   } else {
     wrapper.dataset.open = true;
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'true');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].expanded, 'true');
     buttonText.innerText = closeText;
     label.focus();
   }
@@ -6167,13 +6167,15 @@ function createLabel(text, url) {
 
 
 function launchImageCredit(picture) {
-  const display = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(picture.dataset.tooltipdisplay),
+  const display = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(picture.dataset.tooltipdisplay),
         authorText = picture.dataset.authorname,
         authorUrl = picture.dataset.authorurl,
         sourceText = picture.dataset.sourcename,
-        sourceUrl = picture.dataset.sourceurl;
+        sourceUrl = picture.dataset.sourceurl,
+        licenceText = picture.dataset.licencetype,
+        licenceUrl = picture.dataset.licenceurl;
 
-  if (!display || !(authorText && sourceText)) {
+  if (!display || !(authorText || sourceText || licenceText)) {
     return;
   }
 
@@ -6183,15 +6185,16 @@ function launchImageCredit(picture) {
         spanText = document.createElement('span'),
         label = document.createElement('div'),
         author = authorText ? createLabel(authorText, authorUrl) : null,
-        source = sourceText ? createLabel(sourceText, sourceUrl) : null;
+        source = sourceText ? createLabel(sourceText, sourceUrl) : null,
+        licence = licenceText ? createLabel(licenceText, licenceUrl) : null;
   wrapper.className = 'wrapper--tooltip__label';
   wrapper.dataset.open = false;
   button.className = 'tooltip tooltip--image-credit';
   button.setAttribute('type', 'button');
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, false);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].expanded, false);
   button.addEventListener('click', () => toggleImageCredit(wrapper), true);
   spanIcon.className = 'tooltip__icon icon fas fa-info-circle';
-  spanIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
+  spanIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].hidden, true);
   spanText.className = 'sr-only';
   spanText.appendChild(document.createTextNode(openText));
   button.appendChild(spanIcon);
@@ -6201,9 +6204,11 @@ function launchImageCredit(picture) {
   author && label.appendChild(author);
   author && source && label.appendChild(document.createTextNode(' / '));
   source && label.appendChild(source);
+  licence.className = 'tooltip__label__licence';
+  licence && label.appendChild(licence);
   wrapper.appendChild(label);
   wrapper.appendChild(button);
-  (author || source) && picture.appendChild(wrapper);
+  (author || source || licence) && picture.appendChild(wrapper);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
