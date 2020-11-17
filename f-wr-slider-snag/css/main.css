@@ -43710,12 +43710,6 @@ blockquote footer cite {
     }
 }
 
-@media (min-width: 768px) {
-    .js .slider[data-count='1']:not([data-small='true']) + .slider__controls {
-        display: none;
-    }
-}
-
 .js .slider[data-style='arrows'] + .slider__controls,
 .js .slider[data-style='responsive'] + .slider__controls {
     align-items: center;
@@ -43901,17 +43895,22 @@ blockquote footer cite {
     padding-top: 0;
 }
 
+@media (min-width: 768px) {
+    .js .slider[data-style='responsive'][data-count='1']:not([data-small='true']) + .slider__controls {
+        display: none;
+    }
+}
+
 .js .slider[data-style='responsive'] .slide ul {
     display: flex;
     max-width: 100%;
+    margin: 0;
 }
 
 .js .slider[data-style='responsive'] .slide ul li {
     flex: 1;
-}
-
-.js .slider[data-style='responsive'] .slide ul li:first-child {
     margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 @media (min-width: 768px) {
