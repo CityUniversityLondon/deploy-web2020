@@ -43765,6 +43765,7 @@ blockquote footer cite {
     flex-wrap: nowrap;
     justify-content: center;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .js .slider[data-style='arrows'] + .slider__controls .slider__indicator,
@@ -43963,7 +43964,7 @@ blockquote footer cite {
 }
 
 .js .slider[data-style='responsive'] .slide ul li {
-    flex: 1;
+    flex-basis: 50%;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
 }
@@ -43986,6 +43987,7 @@ blockquote footer cite {
 .js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']) + .slider__controls,
 .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) + .slider__controls {
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -66995,6 +66997,9 @@ button
     }
     main > .lifelong-learning .lifelong-learning__testimonials .related-content {
         grid-column: 1 / span 24;
+    }
+    main > .lifelong-learning .lifelong-learning__testimonials .slider__controls {
+        grid-column: 1 / -1;
     }
 }
 
