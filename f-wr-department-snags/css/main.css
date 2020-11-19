@@ -72464,7 +72464,12 @@ button
 @media (max-width: 1023px) {
     .department__tabs,
     .department__multimedia,
-    .department__additional-info {
+    .department__additional-info,
+    .department__facilities,
+    .department__news,
+    .department__events,
+    .department__social-media,
+    .department__contact-us {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -72474,7 +72479,12 @@ button
 @media (max-width: 1023px) and (min-width: 901px) {
     .department__tabs,
     .department__multimedia,
-    .department__additional-info {
+    .department__additional-info,
+    .department__facilities,
+    .department__news,
+    .department__events,
+    .department__social-media,
+    .department__contact-us {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
