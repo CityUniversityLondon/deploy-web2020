@@ -69552,6 +69552,10 @@ button
     grid-column: 1 / 8;
 }
 
+.course--ug__student-testimonials__half:nth-child(1) + .related-content__wrapper {
+    grid-column: 8 / -1;
+}
+
 .course--ug__student-testimonials__half:nth-child(2) {
     grid-column: 8 / -1;
 }
