@@ -72527,12 +72527,38 @@ button
     display: flex;
 }
 
+@media (min-width: 768px) {
+    .department .department__contact-us .department__contact-us__contacts .related-content__heading {
+        margin-right: 1rem;
+    }
+}
+
+.department .department__contact-us .related-content__heading {
+    border-bottom: 0.0625rem solid #cbcbcb;
+}
+
+@media (max-width: 767px) {
+    .department .department__contact-us {
+        flex-direction: column;
+    }
+}
+
 .department .department__contact-us .department__contact-us__contacts .related-content {
     display: flex;
 }
 
+@media (max-width: 767px) {
+    .department .department__contact-us .department__contact-us__contacts .related-content {
+        flex-direction: column;
+    }
+}
+
 .department .department__contact-us .department__contact-us__contacts .related-content .card.card--contact {
     flex: 1;
+}
+
+.department .department__contact-us .department__contact-us__contacts .related-content .card.card--contact .card__details__text {
+    padding-left: 0;
 }
 
 .department .department__contact-us .department__contact-us__contacts .related-content .card.card--contact + .card.card--contact {
