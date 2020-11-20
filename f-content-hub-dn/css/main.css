@@ -25474,7 +25474,7 @@ Assign mixin:
 }
 
 .outline-cta-arrow--dark:after {
-    content: "a";
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -25620,7 +25620,7 @@ Assign mixin:
 }
 
 .outline-cta--dark:after {
-    content: "a";
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
@@ -53552,7 +53552,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .promo-area__wrap .promo-area .promo-area__content.background--pink90 .cta-block__cta a:after, .promo-area__wrap .promo-area .promo-area__content.background--red60 .cta-block__cta a:after, .promo-area__wrap .promo-area .promo-area__content.background--teal70 .cta-block__cta a:after {
-    content: "a";
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
