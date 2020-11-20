@@ -55316,6 +55316,9 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     .content-hub__block-two .careers .card--pathway a:active, .content-hub__block-two .careers .card--pathway a:focus {
         background-color: #ffffff;
     }
+    .content-hub__block-two .careers .card--pathway a .card--pathway__content {
+        min-height: 15rem;
+    }
 }
 
 @media (max-width: 1023px) {
