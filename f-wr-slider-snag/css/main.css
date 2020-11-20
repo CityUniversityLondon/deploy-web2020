@@ -69422,6 +69422,26 @@ button
     margin-top: 1rem;
 }
 
+@media (min-width: 768px) {
+    .course--ug__related-courses .related-content {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+    .course--ug__related-courses .related-content {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (min-width: 901px) {
+    .course--ug__related-courses .related-content {
+        grid-column-gap: 1.5rem;
+    }
+}
+
 .course--ug__related-courses .related-content .card a:not(:hover) {
     background-color: #ffffff;
 }
@@ -69550,10 +69570,6 @@ button
 
 .course--ug__student-testimonials__half:nth-child(1) {
     grid-column: 1 / 8;
-}
-
-.course--ug__student-testimonials__half:nth-child(1) + .related-content__wrapper {
-    grid-column: 8 / -1;
 }
 
 .course--ug__student-testimonials__half:nth-child(2) {
