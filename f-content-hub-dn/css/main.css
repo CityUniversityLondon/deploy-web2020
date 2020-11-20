@@ -54897,7 +54897,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .content-hub .banner .cta-block .cta-block__cta a:after,
 .content-hub .banner-text .cta-block .cta-block__cta a:after {
-    content: "a";
+    content: "";
     font-family: 'Font Awesome';
     font-style: normal;
     font-weight: normal;
