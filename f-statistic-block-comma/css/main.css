@@ -47583,6 +47583,15 @@ article .link-copy {
     transition: opacity 1500ms;
 }
 
+.statistics-block .ksp__items .animate--number--init .animate--number__unit {
+    opacity: 0;
+}
+
+.statistics-block .ksp__items .animate--number--complete .animate--number__unit {
+    transition: opacity 1s;
+    opacity: 1;
+}
+
 @media (min-width: 768px) {
     .statistics-block .ksp__items.ksp__items--2 {
         display: flex;
