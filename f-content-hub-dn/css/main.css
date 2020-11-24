@@ -55593,9 +55593,11 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     border-bottom-color: #ffffff;
 }
 
-.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:visited .card--pathway__content__heading,
-.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:visited p {
-    color: #0c0c0e;
+@media (hover: hover) {
+    .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:hover:visited .card--pathway__content__heading,
+    .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:hover:visited p {
+        color: #0c0c0e;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -55611,6 +55613,12 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway__content--border {
     border-top-color: #5d184a;
+    max-width: unset;
+}
+
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway__content--border h3,
+.content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway__content--border p {
+    max-width: unset;
 }
 
 @media (min-width: 768px) {
