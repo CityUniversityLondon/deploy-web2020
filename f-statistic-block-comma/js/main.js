@@ -1197,7 +1197,8 @@ function runNumberAnimation(widget) {
 
       if (lastValue !== v) {
         lastValue = v;
-        numberContainer.innerHTML = format ? v : v.toLocaleString('en-GB'); // append and format to GB
+        numberContainer.innerHTML = format === 'true' ? v.toLocaleString('en-GB') // append and format to GB
+        : v;
       }
 
       if (finish) {
