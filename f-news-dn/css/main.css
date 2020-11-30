@@ -60849,6 +60849,15 @@ main .home .home__whats-happening .related-content {
     color: #0c0c0e;
 }
 
+@media (max-width: 1023px) and (min-width: 768px) {
+    .listing .finder__results__list--three-up .card--news a {
+        flex-direction: column;
+    }
+    .listing .finder__results__list--three-up .card--news a img {
+        width: 100%;
+    }
+}
+
 @media (max-width: 767px) {
     .listing .wrapper--finder__filters--mobile[data-open='false'] {
         margin-top: -4rem;
