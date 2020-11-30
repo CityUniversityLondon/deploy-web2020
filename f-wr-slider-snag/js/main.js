@@ -3607,15 +3607,11 @@ function listenForNavigationToggles(subNavigation, rootClass) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _menu_formatters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menu-formatters */ "./src/patterns/menu/menu-formatters.js");
-
-
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _menu_formatters__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menu-formatters */ "./src/patterns/menu/menu-formatters.js");
 
 
 /**
@@ -3657,7 +3653,7 @@ function menuSetter(menu, button) {
     const buttonText = button.querySelector(".".concat(buttonTextClassName));
     menu.dataset.open = open;
     buttonText.innerText = open ? 'Close' : 'Menu';
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, open);
   };
 
   return setMenu;
@@ -3675,9 +3671,9 @@ function menuSetter(menu, button) {
 
 
 function toggleMenu(button, setMenu, trap, veil) {
-  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded);
+  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded);
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(expanded)) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(expanded)) {
     trap.deactivate();
     veil.dataset.on = 'false';
     setMenu(false);
@@ -3706,17 +3702,17 @@ function createMenuToggle(label, button, setMenu, veil) {
   button.className = 'menu__display__button__button';
   buttonWrapper.className = 'menu__display__button__button__wrapper';
   button.setAttribute('type', 'button');
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hasPopup, 'menu');
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hasPopup, 'menu');
   Array.from(label.childNodes).forEach(child => buttonWrapper.appendChild(child));
   button.appendChild(buttonWrapper);
-  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(menu, {
+  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_0___default()(menu, {
     /**
      * Initial focus should be whichever of: the current page; a menu item
      * in the asset lineage or; the first item in the last column appears
      * last in the DOM and is visible.
      */
     initialFocus: () => {
-      const open = Array.from(menu.querySelectorAll([".".concat(contentHeaderClassName, " > span"), ".".concat(currentClassName, " > .").concat(controlsClassName, " > a"), ".".concat(hierarchyClassName, " > .").concat(controlsClassName, " > a"), ".".concat(level1ClassName, " > ul > li:first-of-type > .").concat(controlsClassName, " > a"), ".".concat(currentPage, " > a")].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_2__["isVisible"])(elem));
+      const open = Array.from(menu.querySelectorAll([".".concat(contentHeaderClassName, " > span"), ".".concat(currentClassName, " > .").concat(controlsClassName, " > a"), ".".concat(hierarchyClassName, " > .").concat(controlsClassName, " > a"), ".".concat(level1ClassName, " > ul > li:first-of-type > .").concat(controlsClassName, " > a"), ".".concat(currentPage, " > a")].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_1__["isVisible"])(elem));
       return open[open.length - 1];
     },
     onDeactivate: () => toggleMenu(button, setMenu, trap, veil),
@@ -3733,19 +3729,19 @@ function createMenuToggle(label, button, setMenu, veil) {
 
 function launchMenu(menu) {
   // During testing only: remove 'under construction' indicators globally
-  menu.innerHTML = menu.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
+  // menu.innerHTML = menu.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
   const label = menu.querySelector(".".concat(buttonDisplayClassName)),
         button = document.createElement('button'),
         veil = document.createElement('div'),
         setMenu = menuSetter(menu, button);
   veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   createMenuToggle(label, button, setMenu, veil);
   label.appendChild(button);
   setMenu(false);
-  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_4__["prepareNavigation"])(menu.querySelector(".".concat(level1ClassName)), className);
-  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_4__["listenForNavigationToggles"])(menu.querySelector(".".concat(level1ClassName)), className);
+  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_3__["prepareNavigation"])(menu.querySelector(".".concat(level1ClassName)), className);
+  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_3__["listenForNavigationToggles"])(menu.querySelector(".".concat(level1ClassName)), className);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4135,13 +4131,10 @@ function trapFocus(modal) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 
@@ -4180,7 +4173,7 @@ function createCloseAll(navigation, veil) {
   return () => {
     const buttons = Array.from(navigation.querySelectorAll('.navigation--primary__level1 > .navigation__button'));
     buttons.forEach(button => {
-      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, 'false');
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, 'false');
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(openText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     });
     veil.dataset.on = 'false';
@@ -4197,13 +4190,13 @@ function createCloseAll(navigation, veil) {
 
 function createSectionToggle(button, closeAll, veil) {
   return () => {
-    const open = !Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded));
+    const open = !Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded));
     closeAll();
 
     if (open) {
       button.closest(".".concat(classNameSpecific)).dataset.open = 'true';
       veil.dataset.on = 'true';
-      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, open);
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(closeText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     }
   };
@@ -4228,8 +4221,8 @@ function prepareTopLevel(navigation, veil, closeAll) {
           toggleSection = createSectionToggle(button, closeAll, veil); // LIs have tabindex so they're accessible with no JS, remove it
 
     el.removeAttribute('tabindex');
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, 'false');
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].owns, el.nextElementSibling.id);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, 'false');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].owns, el.nextElementSibling.id);
     button.setAttribute('type', 'button');
     button.id = el.nextElementSibling.id + '-button';
     button.className = buttonClassName;
@@ -4238,7 +4231,7 @@ function prepareTopLevel(navigation, veil, closeAll) {
     srNavigationSpan.className = navigationTextClassName;
     srNavigationSpan.appendChild(document.createTextNode(navigationText));
     button.addEventListener('click', () => toggleSection(), true);
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(buttonDiv, [srOpenCloseSpan, document.createTextNode(' '), el, document.createTextNode(' '), srNavigationSpan]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(buttonDiv, [srOpenCloseSpan, document.createTextNode(' '), el, document.createTextNode(' '), srNavigationSpan]);
     button.append(buttonDiv);
     listItem.prepend(button);
   });
@@ -4258,7 +4251,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
         restButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:first-of-type) > .navigation__button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   firstButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
       closeAll();
     }
   });
@@ -4268,7 +4261,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
           lastNavigationAnchor = previousSection.querySelector('.navigation__level2 > li:last-of-type > a') ? previousSection.querySelector('.navigation__level2 > li:last-of-type > a') : previousSection.querySelector('.navigation__level2 > li:last-of-type').previousElementSibling.querySelector('a'),
           togglePreviousSection = createSectionToggle(previousSectionButton, closeAll, veil);
     thisSectionButton.addEventListener('keydown', e => {
-      if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
+      if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
         e.preventDefault();
         togglePreviousSection();
         lastNavigationAnchor.focus();
@@ -4291,7 +4284,7 @@ function setupTabNext(navigation, closeAll, veil) {
         restSectionsCloseButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:last-of-type) .wrapper--navigation--primary__menu__close button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   closeButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && tabKey === e.key && !e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded)) && tabKey === e.key && !e.shiftKey) {
       closeAll();
     }
   });
@@ -4364,11 +4357,11 @@ function addCloseButtons(navigation, closeAll) {
           text = 'Close ' + header.innerText.trim() + ' menu';
     closeButtonText.appendChild(document.createTextNode(text));
     closeButtonText.className = 'navigation--primary__menu__close__text';
-    closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+    closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
     closeButtonIcon.className = 'fas fa-fw fa-times navigation--primary__menu__close__icon';
     closeButtonWrapper.className = 'wrapper--navigation--primary__menu__close';
     closeButton.className = 'navigation--primary__menu__close';
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
     closeButton.appendChild(closeButtonDiv);
     closeButton.setAttribute('type', 'button');
     closeButton.title = text;
@@ -4386,11 +4379,13 @@ function addCloseButtons(navigation, closeAll) {
 
 function launchPrimaryNavigation(navigation) {
   // During testing only: remove 'under construction' indicators globally
-  navigation.innerHTML = navigation.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
+  // navigation.innerHTML = navigation.innerHTML
+  //     .replace(/\(\( /g, '')
+  //     .replace(/ \)\)/g, '');
   const veil = document.createElement('div'),
         closeAll = createCloseAll(navigation, veil);
   veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   prepareTopLevel(navigation, veil, closeAll);
   prepareLowerLevels(navigation, veil);
@@ -4431,11 +4426,7 @@ function launchPrimaryNavigation(navigation) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _menu_menu_formatters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../menu/menu-formatters */ "./src/patterns/menu/menu-formatters.js");
-
-
+/* harmony import */ var _menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../menu/menu-formatters */ "./src/patterns/menu/menu-formatters.js");
 
 
 /**
@@ -4456,9 +4447,11 @@ const className = 'navigation',
 
 function launchSecondaryNavigation(navigation) {
   // During testing only: remove 'under construction' indicators globally
-  navigation.innerHTML = navigation.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
-  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_1__["prepareNavigation"])(navigation, className);
-  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_1__["listenForNavigationToggles"])(navigation, className);
+  // navigation.innerHTML = navigation.innerHTML
+  //     .replace(/\(\( /g, '')
+  //     .replace(/ \)\)/g, '');
+  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__["prepareNavigation"])(navigation, className);
+  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__["listenForNavigationToggles"])(navigation, className);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
