@@ -259,13 +259,14 @@ function HowToApply(props) {
   },
         [modalVisible, setModalVisible] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
         [preferences, setPreferences] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(initialPreferences),
+        [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:'),
         [question, setQuestion] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(nextQuestion(preferences, entryPoints)),
         [multipleSubjects, setMultipleSubjects] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
         [multipleEntryPoints, setMultipleEntryPoints] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
         [multipleLocations, setMultipleLocations] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
         qualificationQuestion = question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the qualification you wish to apply for:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, windowPrompt)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
   }, entryPoints.map((qualification, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     key: 'qualification' + i
@@ -281,17 +282,17 @@ function HowToApply(props) {
 
       if (filteredQualData[0]['options'].length > 1) {// console.log('Open subjects window');
         // Begin multiple subjects route
-        // No multiple subjects route
       } else {
         // Are there multiple entry dates?
-        if (filteredQualData[0]['options'][0]['options'].length > 1) {// console.log('Open dates window');
+        if (filteredQualData[0]['options'][0]['options'].length > 1) {//  console.log('Open dates window');
         } else {
           setMultipleSubjects(false); // Are there multiple methods of study, e.g. 'full-time', 'part-time'?
           // console.log('Dont open dates window');
           // console.log(filteredQualData[0]['options'][0]['options'][0]['options']);
 
-          if (filteredQualData[0]['options'][0]['options'][0]['options'][0]['options'].length > 1) {// console.log('Open methods window');
-          } else {// console.log('Qualification buttons should be apply links');
+          if (filteredQualData[0]['options'][0]['options'][0]['options'][0]['options'].length > 1) {
+            setWindowPrompt('Apply online now:'); // console.log('Open methods window');
+          } else {//  console.log('Qualification buttons should be apply links');
             }
         }
       } // End of no multiple subjects routes
