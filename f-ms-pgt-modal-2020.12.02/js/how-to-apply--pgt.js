@@ -251,9 +251,12 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 
 function HowToApply(props) {
   let configArray = props.config,
-      filteredQuals;
+      filteredQuals,
+      subjectQuestion,
+      entryQuestion;
   const entryPoints = distilConfiguration(props.config),
         initialPreferences = {
+    // If single qualification, set this as selected qualification, else set to null
     qualification: Object.keys(entryPoints).length === 1 ? Object.keys(entryPoints[0])[0] : null,
     subject: null,
     entry: null,
@@ -265,9 +268,6 @@ function HowToApply(props) {
         [multipleSubjects, setMultipleSubjects] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
         [multipleEntryPoints, setMultipleEntryPoints] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
         [multipleLocations, setMultipleLocations] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
-        // [subjectDisplay, setSubjectDisplay] = useState(true),
-  [entryDisplay, setEntryDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
-        [applyDisplay, setApplyDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
         qualificationQuestion = question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the qualification you wish to apply for:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
@@ -276,10 +276,10 @@ function HowToApply(props) {
     key: 'qualification' + i
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: () => {
-      const newPreferences = preferences;
+      let newPreferences = preferences;
       newPreferences.qualification = Object.keys(qualification)[0];
       const subjectOptions = qualification[newPreferences.qualification]; // console.log(newPreferences.qualification);
-      // Only one subject (route) => set subjectDisplay to false;
+      // No multiple subject/route; skip this window and check entry points
 
       if (subjectOptions.length === 1) {
         newPreferences.subject = 'UNIQUE';
@@ -287,23 +287,35 @@ function HowToApply(props) {
 
         let filteredQualsOptions = filteredQuals[0]['options'][0]['options'];
 
-        if (filteredQualsOptions.length === 1) {
-          // One date, skip this step
-          setEntryDisplay(false);
-          setApplyDisplay(true);
+        if (filteredQualsOptions.length === 1) {// One date, skip this step
+          // setEntryDisplay(false);
+          // setApplyDisplay(true);
         }
 
         setMultipleSubjects(false);
+        filteredQuals = configArray.filter(c => c.header === newPreferences.qualification); // Calculate number of entry points (dates)
+
+        let qualEntryPoints = filteredQuals[0]['options'][0]['options'].length;
+
+        if (qualEntryPoints === 1) {
+          // This closes the modal, ERR: Cannot read property 'UNIQUE' of undefined at nextLevel
+          // newPreferences.entry = 'UNIQUE';
+          setMultipleEntryPoints(false);
+          subjectQuestion = false;
+          entryQuestion = true;
+        }
       } else {
         newPreferences.subject = null;
         setMultipleSubjects(true);
-      }
+      } // console.log('entry points: ' + entryPoints);
+
 
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(qualification)[0])))))),
-        subjectQuestion = question === 'subject' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(qualification)[0])))))); // console.log(question);
+
+  subjectQuestion = question === 'subject' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the route you wish to apply for:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
@@ -317,44 +329,58 @@ function HowToApply(props) {
 
       if (entryOptions.length === 1) {
         newPreferences.entry = Object.keys(entryOptions[0])[0];
-        setMultipleEntryPoints(false);
       } else {
         newPreferences.entry = null;
-        setMultipleEntryPoints(true);
       }
 
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(subject)[0])))))),
-        entryQuestion = question === 'entry' && entryDisplay && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the entry point you wish to apply for:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "how-to-apply--pgt--js__options"
-  }, nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject).map((entryPoint, i) => {
-    const formattedDate = new Date(Object.keys(entryPoint)[0]);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-      key: 'entry-point' + i
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-      onClick: () => {
-        const newPreferences = preferences;
-        newPreferences.entry = Object.keys(entryPoint)[0];
-        const locationOptions = entryPoint[newPreferences.entry];
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(subject)[0]))))));
+  let qual = preferences.qualification ? preferences.qualification : null;
+  let eFilteredDates; // If single qualification exists (or selected)
 
-        if (locationOptions.length === 1) {
-          newPreferences.location = Object.keys(locationOptions[0])[0];
-          setMultipleLocations(false);
-        } else {
-          newPreferences.location = null;
-          setMultipleLocations(true);
-        }
+  if (qual) {
+    // Check entry dates for selected qualification against original config data
+    let eFilteredQuals = configArray.filter(c => c.header === qual);
+    eFilteredDates = eFilteredQuals[0]['options'][0]['options'];
+  }
 
-        setPreferences(newPreferences);
-        setQuestion(nextQuestion(newPreferences, entryPoints));
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, months[formattedDate.getUTCMonth()], ' ', formattedDate.getUTCFullYear())));
-  }))),
-        locationQuestion = question === 'location' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  if (eFilteredDates) {
+    if (eFilteredDates.length > 1) {
+      entryQuestion = question === 'entry' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "how-to-apply--pgt--js__modal__content-wrapper"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the entry point you wish to apply for:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+        className: "how-to-apply--pgt--js__options"
+      }, nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject).map((entryPoint, i) => {
+        const formattedDate = new Date(Object.keys(entryPoint)[0]);
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+          key: 'entry-point' + i
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+          onClick: () => {
+            const newPreferences = preferences;
+            newPreferences.entry = Object.keys(entryPoint)[0];
+            const locationOptions = entryPoint[newPreferences.entry];
+
+            if (locationOptions.length === 1) {
+              newPreferences.location = Object.keys(locationOptions[0])[0];
+              setMultipleLocations(false);
+            } else {
+              newPreferences.location = null;
+              setMultipleLocations(true);
+            }
+
+            setPreferences(newPreferences);
+            setQuestion(nextQuestion(newPreferences, entryPoints));
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, months[formattedDate.getUTCMonth()], ' ', formattedDate.getUTCFullYear())));
+      })));
+    } else {
+      entryQuestion = false;
+    }
+  }
+
+  const locationQuestion = question === 'location' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose where you wish to study:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
@@ -367,8 +393,8 @@ function HowToApply(props) {
       setPreferences(newPreferences);
       setQuestion(nextQuestion(newPreferences, entryPoints));
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(location)[0])))))),
-        applyQuestion = question === 'apply' && applyDisplay && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(location)[0]))))));
+  let applyQuestion = question === 'apply' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Apply online now:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
@@ -379,8 +405,20 @@ function HowToApply(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(method)[0], ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "far fa-external-link",
     "aria-label": "(external link)"
-  }))))))),
-        qualificationsProgress = Object.keys(entryPoints).length > 1 ? question === 'qualification' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  })))))));
+
+  if (qual) {
+    if (eFilteredDates.length === 1) {
+      // console.log('load apply');
+      const newPreferences = preferences; // newPreferences.entry = 'UNIQUE';
+      // console.log(newPreferences);
+
+      setPreferences(newPreferences);
+      setQuestion(nextQuestion(newPreferences, entryPoints));
+    }
+  }
+
+  let qualificationsProgress = Object.keys(entryPoints).length > 1 ? question === 'qualification' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
@@ -411,7 +449,7 @@ function HowToApply(props) {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, preferences.qualification))) : null : null,
-        subjectsProgress = multipleSubjects ? question === 'subject' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      subjectsProgress = multipleSubjects ? question === 'subject' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
@@ -441,7 +479,7 @@ function HowToApply(props) {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, preferences.subject))) : null : null,
-        entryPointsProgress = multipleEntryPoints ? question === 'entry' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      entryPointsProgress = multipleEntryPoints ? question === 'entry' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
@@ -470,7 +508,7 @@ function HowToApply(props) {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, months[new Date(preferences.entry).getUTCMonth()], ' ', new Date(preferences.entry).getUTCFullYear()))) : null : null,
-        locationsProgress = multipleLocations ? question === 'location' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      locationsProgress = multipleLocations ? question === 'location' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
@@ -498,7 +536,7 @@ function HowToApply(props) {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, preferences.location))) : null : null,
-        nextStep = question !== 'apply' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      nextStep = question !== 'apply' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__next"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
@@ -518,7 +556,7 @@ function HowToApply(props) {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Method of study"))),
-        qualificationsProgressMobile = Object.keys(entryPoints).length > 1 && (question === 'qualification' || preferences.qualification) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      qualificationsProgressMobile = Object.keys(entryPoints).length > 1 && (question === 'qualification' || preferences.qualification) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: question === 'qualification' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
@@ -529,7 +567,7 @@ function HowToApply(props) {
   })), question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Qualification"))) : null,
-        subjectsProgressMobile = multipleSubjects && (question === 'subject' || preferences.subject) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      subjectsProgressMobile = multipleSubjects && (question === 'subject' || preferences.subject) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: question === 'subject' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
@@ -540,7 +578,7 @@ function HowToApply(props) {
   })), question === 'subject' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Subject"))) : null,
-        entryPointsProgressMobile = multipleEntryPoints && (question === 'entry' || preferences.entry) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      entryPointsProgressMobile = multipleEntryPoints && (question === 'entry' || preferences.entry) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: question === 'entry' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
@@ -551,7 +589,7 @@ function HowToApply(props) {
   })), question === 'entry' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Entry point"))) : null,
-        locationsProgressMobile = multipleLocations && (question === 'location' || preferences.location) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      locationsProgressMobile = multipleLocations && (question === 'location' || preferences.location) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: question === 'location' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
@@ -562,7 +600,7 @@ function HowToApply(props) {
   })), question === 'location' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Location"))) : null,
-        nextStepMobile = question !== 'apply' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      nextStepMobile = question !== 'apply' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__next"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
@@ -581,12 +619,12 @@ function HowToApply(props) {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Method of study"))),
-        alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+      alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "how-to-apply--pgt--js__modal__alternative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: props.element.dataset.otherurl
   }, props.element.dataset.otheryear, " entry is also available.")),
-        reset = JSON.stringify(preferences) !== JSON.stringify(initialPreferences) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      reset = JSON.stringify(preferences) !== JSON.stringify(initialPreferences) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__reset"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: () => {
@@ -726,7 +764,7 @@ function distilConfiguration(config) {
 
     return qualificationObj;
   });
-} // Determines what modal questions appears
+} // Function takes in preferences (defined in state) on initial load and every subsequent click
 
 
 function nextQuestion(preferences) {
