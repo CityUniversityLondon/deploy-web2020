@@ -21031,10 +21031,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     padding-bottom: 1rem;
 }
 
-.background--pink80 .related-content .card.card--contact .card__type {
-    color: #ffffff;
-}
-
 .card--contact .card__details .card__tag .icon {
     color: #d61726;
 }
