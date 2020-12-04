@@ -252,16 +252,26 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
  */
 
 function HowToApply(props) {
-  const entryPoints = props.config,
-        initialPreferences = {
+  let entryPoints = props.config,
+      methods;
+  const initialPreferences = {
     qualification: Object.keys(entryPoints).length === 1 ? Object.keys(entryPoints[0])[0] : null,
     subject: null,
     entry: null,
-    location: null
+    location: null,
+    methods: null
   },
         [modalVisible, setModalVisible] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
         [preferences, setPreferences] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(initialPreferences),
-        [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:');
+        [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:'); // for (const e of entryPoints) {
+  //     let methods = e['options'][0]['options'][0]['options'][0]['options'].length;
+  //     if (methods > 1) {
+  //         entryPoints.methods = 'multiple';
+  //     } else {
+  //         entryPoints.methods = 'single';
+  //     }
+  // }
+
   let [selection, setSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('bbb');
   let options = document.querySelector('.how-to-apply--pgt--js__options');
   const [question, setQuestion] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(nextQuestion(preferences, entryPoints)),
@@ -272,9 +282,10 @@ function HowToApply(props) {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, windowPrompt), selection), selection = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, entryPoints.map((qualification, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, entryPoints.map((qualification, i) => (qualification['options'][0]['options'][0]['options'][0]['options'].length > 1 ? methods = 'multiple' : methods = 'single', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     key: 'qualification' + i
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    methods: methods,
     onClick: e => {
       const newPreferences = preferences;
       newPreferences.qualification = Object.keys(qualification)[0]; // Target clicked qualification button and its text value, e.g. 'MSc'
@@ -312,14 +323,14 @@ function HowToApply(props) {
             })); // Make revised options markup available in the state
 
             setSelection(options);
-          } else {//  console.log('Qualification buttons should be apply links');
+          } else {// console.log('Qualification buttons should be apply links. Should do top-level check to see if direct link and output accordingly.');
           }
         } // End multiple dates check
 
       } // End of no multiple subjects routes
 
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, qualification.header)))))),
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, qualification.header))))))),
         subjectQuestion = question === 'subject' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the route you wish to apply for:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
