@@ -219,10 +219,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.esm.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_5__);
+!(function webpackMissingModule() { var e = new Error("Cannot find module './buttons/apply'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
@@ -237,6 +238,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2020
  */
+
 
 
 
@@ -301,21 +303,13 @@ function HowToApply(props) {
             } // Extract apply links data
 
 
-            let applyLinks = filteredQualData[0]['options'][0]['options'][0]['options'][0]['options'];
-            let applyLinksMarkup = applyLinks.map((d, index) => {
-              return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-                key: index
-              }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-                href: d['options']['apply']
-              }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, d['header']), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-                className: "far fa-external-link",
-                "aria-label": "(external link)"
-              })));
-            }); // Update options block to apply links JSX
+            let applyLinks = filteredQualData[0]['options'][0]['options'][0]['options'][0]['options']; // Update options block to apply links JSX
 
             options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
               className: "how-to-apply--pgt--js__options"
-            }, applyLinksMarkup); // Make revised options markup available in the state
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(!(function webpackMissingModule() { var e = new Error("Cannot find module './buttons/apply'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()), {
+              data: applyLinks
+            })); // Make revised options markup available in the state
 
             setSelection(options);
           } else {//  console.log('Qualification buttons should be apply links');
@@ -628,7 +622,7 @@ function HowToApply(props) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
     if (!focusTrap.activate) {
-      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_5___default()(getModalContent(), {
+      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_6___default()(getModalContent(), {
         initialFocus: getModalContent().querySelector('.how-to-apply--pgt--js__options button, .how-to-apply--pgt--js__options a'),
         onDeactivate: () => setModalVisible(false),
         clickOutsideDeactivates: true
@@ -686,8 +680,8 @@ function nextQuestion(preferences) {
 }
 
 HowToApply.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.array,
-  element: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
+  config: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.array,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (HowToApply);
 
