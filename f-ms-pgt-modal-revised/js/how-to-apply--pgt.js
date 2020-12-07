@@ -220,12 +220,15 @@ __webpack_require__.r(__webpack_exports__);
 
 function ApplyLinks(props) {
   if (props.data) {
+    // console.log('data: ' + props.data);
     return props.data.map((d, index) => {
+      // console.log('btnText: ' + props.btnText);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        key: index
+        key: index,
+        className: "apply"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: d['options']['apply']
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, d['header']), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.btnText), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "far fa-external-link",
         "aria-label": "(external link)"
       })));
@@ -245,19 +248,66 @@ function ApplyLinks(props) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return StartDates; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _buttons_apply__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../buttons/apply */ "./src/patterns/how-to-apply/buttons/apply.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
 
 
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 function StartDates(props) {
   if (props.data) {
+    // console.log('SD: ' + props.data + props.data.length);
+    // Format date so it's possible to filter on based on button text value
+    let data = props.data;
+    let formattedDate;
+
+    for (const d of data) {
+      formattedDate = new Date(d.header);
+      d.header = "".concat(months[formattedDate.getUTCMonth()], " ").concat(formattedDate.getUTCFullYear());
+    }
+
     return props.data.map((d, index) => {
-      const formattedDate = new Date(d.header);
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        key: index
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, months[formattedDate.getUTCMonth()], ' ', formattedDate.getUTCFullYear()));
+      if (d['options'][0]['options'].length > 1) {
+        // console.log('load methods screen');
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+          key: index
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+          onClick: e => {
+            // Target selected date button's text value, e.g. 'September 2021'
+            let dateBtn = e.target.querySelector('span');
+            let dateVal = dateBtn.textContent; // Filter entry points data on selected qualification
+
+            let filteredDateData = props.data.filter(e => e.header === dateVal); // Multiple methods of study? (Skipping Location for now)
+
+            for (const f of filteredDateData) {
+              if (f['options'][0]['options'].length > 1) {// Open method of study selection
+              } else {
+                /*#__PURE__*/
+                react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+                  className: "how-to-apply--pgt--js__options"
+                }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                  btnText: 'abc',
+                  data: f['options'][0]['options'][0]['options']
+                }));
+              }
+            }
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, d.header)));
+      } else {
+        // console.log([d['options'][0]['options'][0]]);
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          btnText: d.header,
+          data: [d['options'][0]['options'][0]]
+        });
+      }
     });
   }
 }
@@ -373,7 +423,8 @@ function HowToApply(props) {
           } // Extract dates data
 
 
-          let dateButtons = filteredQualData[0]['options'][0]['options']; // Update options block to apply links JSX
+          let dateButtons = filteredQualData[0]['options'][0]['options']; // console.log(dateButtons);
+          // Update options block to apply links JSX
 
           options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
             className: "how-to-apply--pgt--js__options"
