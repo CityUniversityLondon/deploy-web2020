@@ -376,9 +376,64 @@ function HowToApply(props) {
         [preferences, setPreferences] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(initialPreferences),
         [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:');
   let [selection, setSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let options = document.querySelector('.how-to-apply--pgt--js__options'); // const [question, setQuestion] = useState(
-  //         nextQuestion(preferences, entryPoints)
-  //     ),
+  let options = document.querySelector('.how-to-apply--pgt--js__options');
+
+  function modalJourney(singleQualData) {
+    if (singleQualData[0]['options'].length > 1) {// Multiple subjects
+    } else {
+      // Are there multiple subject routes?
+      if (singleQualData[0]['options'].length > 1) {// console.log('Open subjects window');
+        // Begin multiple subjects route
+      } else {
+        // Are there multiple entry dates?
+        if (singleQualData[0]['options'][0]['options'].length > 1) {
+          setWindowPrompt('Choose the entry point you wish to apply for:'); // Remove existing options buttons
+
+          while (options.firstChild) {
+            options.removeChild(options.firstChild);
+          } // Extract dates data
+
+
+          let dateButtons = singleQualData[0]['options'][0]['options']; // console.log(dateButtons);
+          // Update options block to apply links JSX
+
+          options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+            className: "how-to-apply--pgt--js__options"
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_date__WEBPACK_IMPORTED_MODULE_6__["default"], {
+            data: dateButtons
+          })); // Make revised options markup available in the state
+
+          setSelection(options); // console.log(dateButtons);
+        } else {
+          setMultipleSubjects(false); // Are there multiple methods of study, e.g. 'full-time', 'part-time'?
+          // console.log('Dont open dates window');
+          // console.log(filteredQualData[0]['options'][0]['options'][0]['options']);
+
+          if (singleQualData[0]['options'][0]['options'][0]['options'][0]['options'].length > 1) {
+            setWindowPrompt('Apply online now:'); // Remove existing options buttons
+            // options.removeChild();
+
+            while (options.firstChild) {
+              options.removeChild(options.firstChild);
+            } // Extract apply links data
+
+
+            let applyLinks = singleQualData[0]['options'][0]['options'][0]['options'][0]['options']; // Update options block to apply links JSX
+
+            options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+              className: "how-to-apply--pgt--js__options"
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
+              data: applyLinks
+            })); // Make revised options markup available in the state
+
+            setSelection(options);
+          } else {// console.log('Qualification buttons should be apply links. Should do top-level check to see if direct link and output accordingly.');
+          }
+        } // End multiple dates check
+
+      }
+    }
+  }
 
   const question = 'qualification',
         [multipleSubjects, setMultipleSubjects] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
@@ -400,10 +455,6 @@ function HowToApply(props) {
     key: 'qualification' + i
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: e => {
-      // const newPreferences = preferences;
-      // newPreferences.qualification = Object.keys(
-      //     qualification
-      // )[0];
       // Target clicked qualification button and its text value, e.g. 'MSc'
       let qualBtn = e.target.querySelector('span'); // console.log(qualBtn);
 
@@ -411,59 +462,112 @@ function HowToApply(props) {
       // Filter entry points data on selected qualification
 
       let filteredQualData = entryPoints.filter(e => e.header === qualVal); // console.log(filteredQualData);
-      // Are there multiple subject routes?
 
-      if (filteredQualData[0]['options'].length > 1) {// console.log('Open subjects window');
-        // Begin multiple subjects route
-      } else {
-        // Are there multiple entry dates?
-        if (filteredQualData[0]['options'][0]['options'].length > 1) {
-          setWindowPrompt('Choose dates:'); // Remove existing options buttons
-
-          while (options.firstChild) {
-            options.removeChild(options.firstChild);
-          } // Extract dates data
-
-
-          let dateButtons = filteredQualData[0]['options'][0]['options']; // console.log(dateButtons);
-          // Update options block to apply links JSX
-
-          options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-            className: "how-to-apply--pgt--js__options"
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_date__WEBPACK_IMPORTED_MODULE_6__["default"], {
-            data: dateButtons
-          })); // Make revised options markup available in the state
-
-          setSelection(options); // console.log(dateButtons);
-        } else {
-          setMultipleSubjects(false); // Are there multiple methods of study, e.g. 'full-time', 'part-time'?
-          // console.log('Dont open dates window');
-          // console.log(filteredQualData[0]['options'][0]['options'][0]['options']);
-
-          if (filteredQualData[0]['options'][0]['options'][0]['options'][0]['options'].length > 1) {
-            setWindowPrompt('Apply online now:'); // Remove existing options buttons
-            // options.removeChild();
-
-            while (options.firstChild) {
-              options.removeChild(options.firstChild);
-            } // Extract apply links data
-
-
-            let applyLinks = filteredQualData[0]['options'][0]['options'][0]['options'][0]['options']; // Update options block to apply links JSX
-
-            options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-              className: "how-to-apply--pgt--js__options"
-            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
-              data: applyLinks
-            })); // Make revised options markup available in the state
-
-            setSelection(options);
-          } else {// console.log('Qualification buttons should be apply links. Should do top-level check to see if direct link and output accordingly.');
-          }
-        } // End multiple dates check
-
-      } // End of no multiple subjects routes
-
+      modalJourney(filteredQualData); // // Are there multiple subject routes?
+      // if (
+      //     filteredQualData[0][
+      //         'options'
+      //     ].length > 1
+      // ) {
+      //     // console.log('Open subjects window');
+      //     // Begin multiple subjects route
+      // } else {
+      //     // Are there multiple entry dates?
+      //     if (
+      //         filteredQualData[0][
+      //             'options'
+      //         ][0]['options'].length >
+      //         1
+      //     ) {
+      //         setWindowPrompt(
+      //             'Choose the entry point you wish to apply for:'
+      //         );
+      //         // Remove existing options buttons
+      //         while (
+      //             options.firstChild
+      //         ) {
+      //             options.removeChild(
+      //                 options.firstChild
+      //             );
+      //         }
+      //         // Extract dates data
+      //         let dateButtons =
+      //             filteredQualData[0][
+      //                 'options'
+      //             ][0]['options'];
+      //         // console.log(dateButtons);
+      //         // Update options block to apply links JSX
+      //         options = (
+      //             <ul className="how-to-apply--pgt--js__options">
+      //                 {
+      //                     <StartDates
+      //                         data={
+      //                             dateButtons
+      //                         }
+      //                     />
+      //                 }
+      //             </ul>
+      //         );
+      //         // Make revised options markup available in the state
+      //         setSelection(options);
+      //         // console.log(dateButtons);
+      //     } else {
+      //         setMultipleSubjects(
+      //             false
+      //         );
+      //         // Are there multiple methods of study, e.g. 'full-time', 'part-time'?
+      //         // console.log('Dont open dates window');
+      //         // console.log(filteredQualData[0]['options'][0]['options'][0]['options']);
+      //         if (
+      //             filteredQualData[0][
+      //                 'options'
+      //             ][0]['options'][0][
+      //                 'options'
+      //             ][0]['options']
+      //                 .length > 1
+      //         ) {
+      //             setWindowPrompt(
+      //                 'Apply online now:'
+      //             );
+      //             // Remove existing options buttons
+      //             // options.removeChild();
+      //             while (
+      //                 options.firstChild
+      //             ) {
+      //                 options.removeChild(
+      //                     options.firstChild
+      //                 );
+      //             }
+      //             // Extract apply links data
+      //             let applyLinks =
+      //                 filteredQualData[0][
+      //                     'options'
+      //                 ][0][
+      //                     'options'
+      //                 ][0][
+      //                     'options'
+      //                 ][0]['options'];
+      //             // Update options block to apply links JSX
+      //             options = (
+      //                 <ul className="how-to-apply--pgt--js__options">
+      //                     {
+      //                         <ApplyLinks
+      //                             data={
+      //                                 applyLinks
+      //                             }
+      //                         />
+      //                     }
+      //                 </ul>
+      //             );
+      //             // Make revised options markup available in the state
+      //             setSelection(
+      //                 options
+      //             );
+      //         } else {
+      //             // console.log('Qualification buttons should be apply links. Should do top-level check to see if direct link and output accordingly.');
+      //         }
+      //     } // End multiple dates check
+      // } // End of no multiple subjects routes
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, qualification.header)))))),
         // subjectQuestion = question === 'subject' && (
