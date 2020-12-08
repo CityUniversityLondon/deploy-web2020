@@ -61005,6 +61005,15 @@ main .home .home__whats-happening .related-content {
     color: #0c0c0e;
 }
 
+@media (max-width: 1023px) and (min-width: 768px) {
+    .listing .finder__results__list--three-up .card--news a {
+        flex-direction: column;
+    }
+    .listing .finder__results__list--three-up .card--news a img {
+        width: 100%;
+    }
+}
+
 @media (max-width: 767px) {
     .listing .wrapper--finder__filters--mobile[data-open='false'] {
         margin-top: -4rem;
@@ -67588,6 +67597,16 @@ button
     margin-top: 2rem;
 }
 
+.lifelong-learning .lifelong-learning__content .overview__subject-wrapper {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #d8d8d8;
+}
+
+.lifelong-learning .lifelong-learning__content .overview__subject-wrapper h3 {
+    margin-top: 0;
+}
+
 .lifelong-learning .lifelong-learning__contact {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -71352,7 +71371,7 @@ button
     .school__content__events,
     .school__content__cta,
     .school__content__links,
-    .promo-area__wrap,
+    .school__content .promo-area__wrap,
     .school__content__facilities {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -71365,7 +71384,7 @@ button
     .school__content__events,
     .school__content__cta,
     .school__content__links,
-    .promo-area__wrap,
+    .school__content .promo-area__wrap,
     .school__content__facilities {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -72734,7 +72753,12 @@ button
 @media (max-width: 1023px) {
     .department__tabs,
     .department__multimedia,
-    .department__additional-info {
+    .department__additional-info,
+    .department__facilities,
+    .department__news,
+    .department__events,
+    .department__social-media,
+    .department__contact-us {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -72744,7 +72768,12 @@ button
 @media (max-width: 1023px) and (min-width: 901px) {
     .department__tabs,
     .department__multimedia,
-    .department__additional-info {
+    .department__additional-info,
+    .department__facilities,
+    .department__news,
+    .department__events,
+    .department__social-media,
+    .department__contact-us {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
@@ -72783,6 +72812,61 @@ button
     padding-bottom: 0.5rem;
 }
 
+.department .department__contact-us {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .department .department__contact-us .department__contact-us__contacts .related-content__heading {
+        margin-right: 1rem;
+    }
+}
+
+.department .department__contact-us .related-content__heading {
+    border-bottom: 0.0625rem solid #cbcbcb;
+}
+
+@media (max-width: 767px) {
+    .department .department__contact-us {
+        flex-direction: column;
+    }
+}
+
+.department .department__contact-us .department__contact-us__contacts .related-content {
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    .department .department__contact-us .department__contact-us__contacts .related-content {
+        flex-direction: column;
+    }
+}
+
+.department .department__contact-us .department__contact-us__contacts .related-content .card.card--contact {
+    flex: 1;
+}
+
+.department .department__contact-us .department__contact-us__contacts .related-content .card.card--contact .card__details__text {
+    padding-left: 0;
+}
+
+.department .department__contact-us .department__contact-us__contacts .related-content .card.card--contact + .card.card--contact {
+    border-top: none;
+    padding-top: 0;
+}
+
+.department .department__contact-us .department__contact-us__contacts--2columns {
+    flex: 2;
+}
+
+.department .department__contact-us .department__contact-us__contacts--1column {
+    flex: 1;
+}
+
+.department .department__contact-us .department__contact-us__footer__find-us {
+    flex: 1;
+}
+
 .department .tabs__panel:not([hidden]) {
     padding: 0;
 }
@@ -72799,6 +72883,13 @@ button
 .department .tabs--accordion .card__anchor,
 .department .tabs .card__anchor {
     border-color: #d8d8d8;
+}
+
+@media (max-width: 899px) {
+    .department .tabs--accordion .card__anchor,
+    .department .tabs .card__anchor {
+        background: #ffffff;
+    }
 }
 
 @media (hover: hover) {
