@@ -54907,6 +54907,11 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
+.case-study--business .case-study--business__global-details__container .contact-cards .related-content__heading {
+    border-bottom: 0.0625rem solid #cbcbcb;
+    margin-top: 2rem;
+}
+
 .case-study--business .case-study--business__global-details__container .contact-cards .related-content {
     margin-top: 0.75rem;
 }
@@ -54922,8 +54927,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     padding-top: 0;
     padding-bottom: 0;
     border-top: none;
-    background-color: #ffffff;
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 768px) {
