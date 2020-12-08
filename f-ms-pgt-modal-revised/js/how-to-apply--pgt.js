@@ -220,15 +220,13 @@ __webpack_require__.r(__webpack_exports__);
 
 function ApplyLinks(props) {
   if (props.data) {
-    // console.log('data: ' + props.data);
     return props.data.map((d, index) => {
-      // console.log('btnText: ' + props.btnText);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         key: index,
         className: "apply"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         href: d['options']['apply']
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, d.header), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.btnText ? props.btnText : d.header), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "far fa-external-link",
         "aria-label": "(external link)"
       })));
@@ -277,7 +275,7 @@ function StartDates(props) {
     return props.data.map((d, index) => {
       if (d['options'][0]['options'].length > 1) {
         // console.log('load methods screen');
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Choose the entry point you wish to apply for:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
           key: index
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
           onClick: e => {
@@ -300,7 +298,7 @@ function StartDates(props) {
               }
             }
           }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, d.header)));
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, d.header))));
       } else {
         // console.log([d['options'][0]['options'][0]]);
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -451,7 +449,21 @@ function HowToApply(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, qualification.header), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "far fa-external-link",
     "aria-label": "(external link)"
-  }))) : entryPoints.length === 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Only one qualification") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }))) : entryPoints.length === 1 ? entryPoints[0]['options'].length > 1 ?
+  /*#__PURE__*/
+  // Multiple subjects
+  react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Load subject select") : entryPoints[0]['options'][0]['options'].length > 1 ?
+  /*#__PURE__*/
+  // Single subject => Multiple dates
+  // Update options block to apply links JSX
+  react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    className: "how-to-apply--pgt--js__options"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_date__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    data: entryPoints[0]['options'][0]['options']
+  })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Load single date") // Single subject => Single date
+  :
+  /*#__PURE__*/
+  react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     key: 'qualification' + i
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: e => {
