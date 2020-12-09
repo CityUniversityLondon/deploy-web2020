@@ -355,12 +355,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+function formatDate(sourceDate) {
+  let formattedDate = new Date(sourceDate);
+  return "".concat(months[formattedDate.getUTCMonth()], " ").concat(formattedDate.getUTCFullYear());
+}
 /**
  * Launch the how to apply modal.
  *
  * @param {object} props The JSON configuration file for the modal.
  * @return {object} The React component to render.
  */
+
 
 function HowToApply(props) {
   let entryPoints = props.config;
@@ -414,7 +420,7 @@ function HowToApply(props) {
                     className: "how-to-apply--pgt--js__options"
                   }, options));
                 }
-              }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, d.header)));
+              }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, formatDate(d.header))));
             }));
           } else {
             // Single method of study; date button(s) are apply link(s)
@@ -425,16 +431,14 @@ function HowToApply(props) {
               let methodsData = d['options'][0]['options'];
               return options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
                 key: d,
-                btnText: d.header,
+                btnText: formatDate(d.header),
                 data: methodsData
               });
             }));
-          } // console.log(dateButtons[0]);
-          // Update options block to apply links JSX
-          // Make revised options markup available in the state
+          } // Make revised options markup available in the state
 
 
-          setSelection(options); // console.log(dateButtons);
+          setSelection(options);
         } else {
           setMultipleSubjects(false); // Are there multiple methods of study, e.g. 'full-time', 'part-time'?
           // console.log('Dont open dates window');
