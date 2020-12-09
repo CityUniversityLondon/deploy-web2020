@@ -392,14 +392,47 @@ function HowToApply(props) {
           } // Extract dates data
 
 
-          let dateButtons = singleQualData[0]['options'][0]['options']; // console.log(dateButtons);
-          // Update options block to apply links JSX
+          let dateButtons = singleQualData[0]['options'][0]['options'];
+          let methods = dateButtons[0]['options'][0]['options'];
 
-          options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-            className: "how-to-apply--pgt--js__options"
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_date__WEBPACK_IMPORTED_MODULE_6__["default"], {
-            data: dateButtons
-          })); // Make revised options markup available in the state
+          if (methods.length > 1) {
+            // Single method of study; date button(s) will open methods selection
+            setWindowPrompt('Choose the entry point you wish to apply for:');
+            options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+              className: "how-to-apply--pgt--js__options"
+            }, dateButtons.map(d => {
+              let methodsData = d['options'][0]['options'];
+              return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+                key: d
+              }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+                onClick: () => {
+                  // Open methods select as direct links
+                  options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                    data: methodsData
+                  });
+                  setSelection( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+                    className: "how-to-apply--pgt--js__options"
+                  }, options));
+                }
+              }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, d.header)));
+            }));
+          } else {
+            // Single method of study; date button(s) are apply link(s)
+            setWindowPrompt('Choose the entry point you wish to apply for:');
+            options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+              className: "how-to-apply--pgt--js__options"
+            }, dateButtons.map(d => {
+              let methodsData = d['options'][0]['options'];
+              return options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                key: d,
+                btnText: d.header,
+                data: methodsData
+              });
+            }));
+          } // console.log(dateButtons[0]);
+          // Update options block to apply links JSX
+          // Make revised options markup available in the state
+
 
           setSelection(options); // console.log(dateButtons);
         } else {
