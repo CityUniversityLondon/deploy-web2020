@@ -383,7 +383,60 @@ function HowToApply(props) {
   let options = document.querySelector('.how-to-apply--pgt--js__options');
 
   function modalJourney(singleQualData) {
-    if (singleQualData[0]['options'].length > 1) {// Multiple subjects
+    if (singleQualData[0]['options'].length > 1) {
+      // Multiple subjects
+      let subjects = singleQualData[0]['options'];
+
+      if (subjects.length > 1) {
+        while (options.firstChild) {
+          options.removeChild(options.firstChild);
+        }
+
+        setWindowPrompt('Choose the route you wish to apply for:');
+        options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+          className: "how-to-apply--pgt--js__options"
+        }, subjects.map(d => {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+            key: d
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, d.header)));
+        }));
+        setSelection(options);
+      } // let dates = singleQualData[0]['options'][0]['options'];
+      // console.log(dates);
+      // if (dates.length > 1) {
+      //     // Remove existing options buttons
+      //     while (options.firstChild) {
+      //         options.removeChild(options.firstChild);
+      //     }
+      // let methods = singleQualData[0]['options'][0]['options'][0]['options'][0]['options'];
+      // setWindowPrompt('Choose the entry point you wish to apply for:');
+      // if (methods.length > 1) {
+      //     options = (
+      //         <ul className="how-to-apply--pgt--js__options">
+      //             {dates.map((d) => {
+      //                 return (
+      //                     <li
+      //                         key={d}
+      //                         >
+      //                             <button>
+      //                                 <span>{formatDate(d.header)}</span>
+      //                             </button>
+      //                         </li>
+      //                     );
+      //                 })}
+      //             </ul>
+      //         );
+      //     }
+      //     console.log(methods);
+      //     // options = (
+      //     //     <p>Date select buttons</p>
+      //     // );
+      //     // Make revised options markup available in the state
+      //     setSelection(options);
+      // } else {
+      //     // console.log('Selected subject button to check for methods of study count');
+      // }
+
     } else {
       // Are there multiple subject routes?
       if (singleQualData[0]['options'].length > 1) {// console.log('Open subjects window');
