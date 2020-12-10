@@ -569,7 +569,7 @@ function HowToApply(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, windowPrompt), selection), selection = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
   }, entryPoints.map((qualification, i) => // Create top-level link to apply, or button creating next step in modal
-  entryPoints.length > 1 && qualification['options'][0]['options'].length === 1 && qualification['options'][0]['options'][0]['options'][0]['options'].length === 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  entryPoints.length > 1 && qualification['options'].length === 1 && qualification['options'][0]['options'].length === 1 && qualification['options'][0]['options'][0]['options'].length === 1 && qualification['options'][0]['options'][0]['options'][0]['options'].length === 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     key: 'qualification' + i
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: qualification['options'][0]['options'][0]['options'][0]['options'][0]['options']['apply']
@@ -595,13 +595,10 @@ function HowToApply(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: e => {
       // Target clicked qualification button and its text value, e.g. 'MSc'
-      let qualBtn = e.target.querySelector('span'); // console.log(qualBtn);
+      let qualBtn = e.target.querySelector('span');
+      let qualVal = qualBtn.textContent; // Filter entry points data on selected qualification
 
-      let qualVal = qualBtn.textContent; // console.log(qualVal);
-      // Filter entry points data on selected qualification
-
-      let filteredQualData = entryPoints.filter(e => e.header === qualVal); // console.log(filteredQualData);
-
+      let filteredQualData = entryPoints.filter(e => e.header === qualVal);
       modalJourney(filteredQualData); // // Are there multiple subject routes?
       // if (
       //     filteredQualData[0][
