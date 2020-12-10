@@ -2658,21 +2658,24 @@ function createMap(mapContainer) {
     markerConfig.supports ? html += '<p>Supports: ' + markerConfig.supports + '</p>' : null;
     html += '<p>';
     markerConfig.room ? html += markerConfig.room + '</br>' : null;
-    markerConfig.floor ? html += markerConfig.floor + '</br>' : null;
-    markerConfig.building ? html += markerConfig.building + '</br>' : null;
-    markerConfig.campus ? html += markerConfig.campus + '</br>' : null;
+    markerConfig.floor ? html += 'Floor ' + markerConfig.floor + '</br>' : null;
     markerConfig.street1 ? html += markerConfig.street1 + '</br>' : null;
     markerConfig.street2 ? html += markerConfig.street2 + '</br>' : null;
     markerConfig.city ? html += markerConfig.city + '</br>' : null;
     markerConfig.postcode ? html += markerConfig.postcode + '</br>' : null;
     html += '</p>';
     html += '<p>';
+    markerConfig.building ? html += 'Building: ' + markerConfig.building + '</br>' : null;
+    markerConfig.campus ? html += 'Campus: ' + markerConfig.campus + '</br>' : null;
+    html += '</p>';
+    html += '<p>';
     markerConfig.email ? html += markerConfig.email + '</br>' : null;
     markerConfig.tel ? html += markerConfig.tel + '</br>' : null;
     html += '</p>';
     markerConfig.openingHours ? html += '<p>Opening hours: ' + markerConfig.openingHours + '</p>' : null;
-    markerConfig.walkingDistance ? html += '<p>walking distance to campus: ' + markerConfig.walkingDistance + '</p>' : null;
-    markerConfig.accessibility ? html += '<p>' + markerConfig.accessibility + '</p>' : null; // create google maps marker
+    markerConfig.walkingDistance ? html += '<p>Walking distance to campus: ' + markerConfig.walkingDistance + '</p>' : null;
+    markerConfig.accessibility ? html += '<p>Accessibility: ' + markerConfig.accessibility + '</p>' : null;
+    markerConfig.entrance ? html += '<p>' + markerConfig.entrance + '</p>' : null; // create google maps marker
 
     marker = new google.maps.Marker({
       map: markerConfig.map,
@@ -2779,6 +2782,7 @@ function createMap(mapContainer) {
       markerConfig.category = $self.getElementsByTagName('category')[0].textContent;
       markerConfig.buildingPrefix = $self.getElementsByTagName('roomPrefix')[0].textContent;
       markerConfig.room = $self.getElementsByTagName('room')[0].textContent;
+      markerConfig.entrance = $self.getElementsByTagName('entrance')[0].textContent;
       markerConfig.floor = $self.getElementsByTagName('floor')[0].textContent;
       markerConfig.building = $self.getElementsByTagName('building')[0].textContent;
       markerConfig.campus = $self.getElementsByTagName('campus')[0].textContent;
