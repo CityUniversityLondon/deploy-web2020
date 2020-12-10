@@ -386,6 +386,8 @@ function HowToApply(props) {
     if (singleQualData[0]['options'].length > 1) {
       // Multiple subjects
       let subjects = singleQualData[0]['options'];
+      let dates = singleQualData[0]['options'][0]['options']; // let methods = singleQualData[0]['options'][0]['options'][0]['options'][0]['options'];
+      // console.log(dates);
 
       if (subjects.length > 1) {
         while (options.firstChild) {
@@ -398,7 +400,21 @@ function HowToApply(props) {
         }, subjects.map(d => {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
             key: d
-          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, d.header)));
+          }, dates.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+            onClick: () => {
+              options = dates.map(d => {
+                return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+                  key: d
+                }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, formatDate(d.header))));
+              });
+              setSelection( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+                className: "how-to-apply--pgt--js__options"
+              }, options));
+            }
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, d.header)) :
+          /*#__PURE__*/
+          // Multiple subjects > single date
+          react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, d.header)));
         }));
         setSelection(options);
       } // let dates = singleQualData[0]['options'][0]['options'];
