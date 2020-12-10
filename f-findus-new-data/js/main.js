@@ -2644,12 +2644,6 @@ function createMap(mapContainer) {
       html = '<div id="info-window" style="min-height: 60px;"><h3><a href="' + markerConfig.linkHref + '">' + markerConfig.name + '</a></h3>';
     } else {
       html = '<div id="info-window" style="min-height: 60px;"><h3>' + markerConfig.name + '</h3>';
-    } // test to see if has a buildingPrefix
-
-
-    if (markerConfig.buildingPrefix.length !== 0) {
-      html += '<p class="building-prefix"><strong>Rooms beginning: ' + markerConfig.buildingPrefix + '</strong></p>';
-      markerConfig.buildingPrefix = '(' + markerConfig.buildingPrefix + ')';
     } // add description and close div element
     //html += markerConfig.description.replace(/\<h2/g, '<h4').replace(/\h2>/g, 'h4>')  + '</div>';
 
