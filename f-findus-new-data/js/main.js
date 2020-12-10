@@ -165,10 +165,6 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actionOnScroll", function() { return actionOnScroll; });
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-
-
 
 
 /**
@@ -446,13 +442,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
 /* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns */ "./src/patterns.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./util */ "./src/util.js");
-/* harmony import */ var _patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/devcorate/devcorate */ "./src/patterns/devcorate/devcorate.js");
-/* harmony import */ var _patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./patterns/tabs/prepareAccordionTabs */ "./src/patterns/tabs/prepareAccordionTabs.js");
-
+/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns */ "./src/patterns.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./util */ "./src/util.js");
+/* harmony import */ var _patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/devcorate/devcorate */ "./src/patterns/devcorate/devcorate.js");
+/* harmony import */ var _patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/tabs/prepareAccordionTabs */ "./src/patterns/tabs/prepareAccordionTabs.js");
 
 
 
@@ -480,7 +473,7 @@ function tryCatch(f) {
     return f();
   } catch (e) {
     // console.log(e);
-    Object(_util__WEBPACK_IMPORTED_MODULE_4__["gaEvent"])('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "Pattern launch ".concat(e.fileName, " (").concat(window.location, ")"), true);
+    Object(_util__WEBPACK_IMPORTED_MODULE_3__["gaEvent"])('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "Pattern launch ".concat(e.fileName, " (").concat(window.location, ")"), true);
   }
 }
 /**
@@ -512,7 +505,7 @@ function launchPattern(pattern) {
 
 function accordionizeTabs(root) {
   Array.from(root.querySelectorAll('.tabs')).filter(elem => elem.className.indexOf('.tabs-no-js')).forEach(elem => {
-    const potential = tryCatch(() => Object(_patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_6__["default"])(elem));
+    const potential = tryCatch(() => Object(_patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_5__["default"])(elem));
     potential && accordionizeTabs(potential);
   });
 }
@@ -530,8 +523,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }, false);
     // }
     Array.from(document.getElementsByTagName('html')).forEach(html => {
-      let ie = Object(_util__WEBPACK_IMPORTED_MODULE_4__["detectIE"])();
-      Object(_util__WEBPACK_IMPORTED_MODULE_4__["removeClass"])(html, 'no-js', false);
+      let ie = Object(_util__WEBPACK_IMPORTED_MODULE_3__["detectIE"])();
+      Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(html, 'no-js', false);
 
       if (ie >= edgeVersion) {
         html.className = (html.className + ' js ' + 'edge').trim();
@@ -540,10 +533,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
     accordionizeTabs(document);
-    _patterns__WEBPACK_IMPORTED_MODULE_3__["default"].forEach(launchPattern);
-    const parameters = Object(_util__WEBPACK_IMPORTED_MODULE_4__["parametersToObject"])(location.search);
-    parameters['dev'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_5__["devcorate"])(document.querySelector('body'), 'dev', parameters['dev']);
-    parameters['rel'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_5__["devcorate"])(document.querySelector('body'), 'rel', parameters['rel']);
+    _patterns__WEBPACK_IMPORTED_MODULE_2__["default"].forEach(launchPattern);
+    const parameters = Object(_util__WEBPACK_IMPORTED_MODULE_3__["parametersToObject"])(location.search);
+    parameters['dev'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_4__["devcorate"])(document.querySelector('body'), 'dev', parameters['dev']);
+    parameters['rel'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_4__["devcorate"])(document.querySelector('body'), 'rel', parameters['rel']);
   }
 }, false);
 
@@ -646,12 +639,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -665,7 +656,6 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-
 const className = 'accordion',
       headingClassName = className + '__heading',
       headingTextClassName = headingClassName + '__text',
@@ -673,7 +663,7 @@ const className = 'accordion',
       bodyClassName = className + '__body',
       oneSecond = 1000,
       tenthOfASecond = 100,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_0__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = true;
 /**
  * Sets a heading and the button nested within to be open or closed.
@@ -684,7 +674,7 @@ const className = 'accordion',
 
 function setSection(heading, open) {
   heading.dataset.open = open;
-  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, open);
+  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, open);
 }
 /**
  * Open a section, calculate its height, then close it again.
@@ -726,7 +716,7 @@ function setupTransition(element, initialHeight) {
 
 
 function cleanupTransition(section) {
-  const open = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(section.previousElementSibling.dataset.open);
+  const open = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(section.previousElementSibling.dataset.open);
   section.style.height = null;
   section.dataset.closed = open ? 'false' : 'true';
 }
@@ -757,7 +747,7 @@ function buttonClick(button, headings, toggleOpen) {
     once: true
   });
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded))) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded))) {
     // Starting height is the current height
     setupTransition(accordionSection, accordionSection.offsetHeight + 'px'); // setTimeout lets the DOM recalculate before we continue, so the transition will fire
 
@@ -785,8 +775,8 @@ function buttonClick(button, headings, toggleOpen) {
 
     setSection(heading, true);
 
-    if (scrollTo && !(Object(_util__WEBPACK_IMPORTED_MODULE_3__["verticallyInWindow"])(heading) && Object(_util__WEBPACK_IMPORTED_MODULE_3__["verticallyInWindow"])(accordionSection))) {
-      zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(heading, scrollDuration);
+    if (scrollTo && !(Object(_util__WEBPACK_IMPORTED_MODULE_0__["verticallyInWindow"])(heading) && Object(_util__WEBPACK_IMPORTED_MODULE_0__["verticallyInWindow"])(accordionSection))) {
+      zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
     }
   }
 }
@@ -806,10 +796,10 @@ function buttonFromHeading(heading) {
         iconSpan = document.createElement('span');
   textSpan.className = headingTextClassName;
   iconSpan.className = headingIconClassName;
-  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, true);
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
   button.setAttribute('type', 'button');
   textSpan.appendChild(document.createTextNode(heading.textContent));
-  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(wrapper, [textSpan, iconSpan]);
+  Object(_util__WEBPACK_IMPORTED_MODULE_0__["appendAll"])(wrapper, [textSpan, iconSpan]);
   button.appendChild(wrapper);
   return button;
 }
@@ -835,9 +825,9 @@ function buttonFromHeading(heading) {
 
 
 function launchAccordion(accordion) {
-  const toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(accordion.dataset.toggleopen),
-        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(accordion.dataset.defaultopen),
-        allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(accordion.dataset.allowsingle),
+  const toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(accordion.dataset.toggleopen),
+        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(accordion.dataset.defaultopen),
+        allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(accordion.dataset.allowsingle),
         headings = Array.from(accordion.parentNode.querySelectorAll("#".concat(accordion.id, " > .").concat(headingClassName)));
   let idLinked = false;
 
@@ -845,14 +835,14 @@ function launchAccordion(accordion) {
     /**
      * not enough content to accordion
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(accordion, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_0__["removeClass"])(accordion, className, false);
     return;
   }
 
   headings.forEach(heading => {
     const content = heading.nextElementSibling,
           button = buttonFromHeading(heading);
-    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].labelledBy, heading.id);
+    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].labelledBy, heading.id);
     content.setAttribute('role', 'region');
     heading.replaceChild(button, heading.firstChild);
     setSection(heading, false);
@@ -1113,11 +1103,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
 /* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _action_on_scroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../action-on-scroll */ "./src/action-on-scroll.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
-
+/* harmony import */ var _action_on_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../action-on-scroll */ "./src/action-on-scroll.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
 
 
 
@@ -1182,6 +1169,7 @@ function runNumberAnimation(widget) {
   const numberContainer = findNumberContainer(widget);
   const isFloat = widget.dataset.animationNumberFloat;
   const value = parseInt(widget.dataset.animationNumberValue);
+  const format = widget.dataset.animationNumberFormat;
 
   if (value !== 0) {
     let first = true;
@@ -1212,7 +1200,8 @@ function runNumberAnimation(widget) {
 
       if (lastValue !== v) {
         lastValue = v;
-        numberContainer.innerHTML = v.toLocaleString('en-GB'); // append and format to GB
+        numberContainer.innerHTML = format === 'true' ? v.toLocaleString('en-GB') // append and format to GB
+        : v;
       }
 
       if (finish) {
@@ -1258,7 +1247,7 @@ function init(elm) {
    * check if browser support IntersectionObserver api
    */
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_5__["checkIntersectionObserver"])()) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_4__["checkIntersectionObserver"])()) {
     lazyNumbers.forEach(function (lazyUnit) {
       initNumberAnimation(lazyUnit);
       /**
@@ -1266,7 +1255,7 @@ function init(elm) {
        * to animate when element is intersecting
        */
 
-      Object(_action_on_scroll__WEBPACK_IMPORTED_MODULE_4__["actionOnScroll"])(lazyUnit, runNumberAnimation);
+      Object(_action_on_scroll__WEBPACK_IMPORTED_MODULE_3__["actionOnScroll"])(lazyUnit, runNumberAnimation);
     });
   }
 }
@@ -1432,10 +1421,6 @@ function initParticles() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-
-
 
 
 /**
@@ -1746,11 +1731,7 @@ function launchChart(chartCollection) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
-
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 /**
@@ -1799,7 +1780,7 @@ function launchRemover(elem) {
     button.addEventListener('click', () => {
       warnings.forEach(w => w.parentNode.removeChild(w));
       button.parentNode.removeChild(button);
-      Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(elem, className, false);
+      Object(_util__WEBPACK_IMPORTED_MODULE_0__["removeClass"])(elem, className, false);
     }, true);
     wrapper.className = wrapperClass;
     wrapper.appendChild(button);
@@ -1826,10 +1807,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "devcorate", function() { return devcorate; });
 /* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.search */ "./node_modules/core-js/modules/es.string.search.js");
 /* harmony import */ var core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -1853,9 +1831,9 @@ __webpack_require__.r(__webpack_exports__);
 function devcorate(elem, param, value) {
   Array.from(elem.querySelectorAll('a')).forEach(anchor => {
     if (anchor.origin === window.location.origin) {
-      const parameters = anchor.search ? Object(_util__WEBPACK_IMPORTED_MODULE_2__["parametersToObject"])(anchor.search) : {};
+      const parameters = anchor.search ? Object(_util__WEBPACK_IMPORTED_MODULE_1__["parametersToObject"])(anchor.search) : {};
       parameters[param] = value;
-      anchor.href = "".concat(anchor.origin).concat(anchor.pathname).concat(Object(_util__WEBPACK_IMPORTED_MODULE_2__["objectToParameters"])(parameters)).concat(anchor.hash);
+      anchor.href = "".concat(anchor.origin).concat(anchor.pathname).concat(Object(_util__WEBPACK_IMPORTED_MODULE_1__["objectToParameters"])(parameters)).concat(anchor.hash);
     }
   });
 }
@@ -1875,11 +1853,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort */ "./node_modules/core-js/modules/es.array.sort.js");
 /* harmony import */ var core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
-
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -2244,11 +2219,8 @@ function launchFormAssemblyForm(eventInfo) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string */ "./node_modules/core-js/modules/es.regexp.to-string.js");
 /* harmony import */ var core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -2272,7 +2244,7 @@ const className = 'feedback',
  */
 
 function sendFeedback(action, value) {
-  Object(_util__WEBPACK_IMPORTED_MODULE_3__["gaEvent"])('pageFeedback', 'Page feedback', action, window.location.toString(), value, true);
+  Object(_util__WEBPACK_IMPORTED_MODULE_2__["gaEvent"])('pageFeedback', 'Page feedback', action, window.location.toString(), value, true);
 }
 /**
  * Handle a click on the "no, it's not useful" button.
@@ -2291,8 +2263,8 @@ function handleNo(container) {
   container.childNodes.forEach(elem => container.removeChild(elem));
   link.href = feedbackPage;
   link.appendChild(linkText);
-  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(message, [messagePrefix, link, messageSuffix]);
-  message.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].live, 'polite');
+  Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(message, [messagePrefix, link, messageSuffix]);
+  message.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].live, 'polite');
   container.appendChild(message);
 }
 /**
@@ -2308,7 +2280,7 @@ function handleYes(container) {
         messageText = document.createTextNode('Thanks! Your feedback will be used to improve our website.');
   container.childNodes.forEach(elem => container.removeChild(elem));
   message.appendChild(messageText);
-  message.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].live, 'polite');
+  message.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].live, 'polite');
   container.appendChild(message);
 }
 /**
@@ -2337,8 +2309,8 @@ function launchFeedback(elem) {
   noButton.addEventListener('click', () => handleNo(directFeedbackWrapper), true);
   buttonWrapper.className = 'feedback__direct__buttons';
   questionLegend.appendChild(questionText);
-  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(buttonWrapper, [yesButton, noButton]);
-  Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(directFeedbackFieldset, [questionLegend, buttonWrapper]);
+  Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(buttonWrapper, [yesButton, noButton]);
+  Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(directFeedbackFieldset, [questionLegend, buttonWrapper]);
   directFeedbackForm.appendChild(directFeedbackFieldset);
   directFeedbackWrapper.appendChild(directFeedbackForm);
   directFeedbackWrapper.className = className + '__direct';
@@ -2363,10 +2335,7 @@ function launchFeedback(elem) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -2721,7 +2690,7 @@ function createMap(mapContainer) {
       return updateHash(marker);
     }); // create list element
 
-    listItem = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', [{
+    listItem = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('li', [{
       label: 'id',
       val: 'building-' + markerConfig.id
     }, {
@@ -2729,7 +2698,7 @@ function createMap(mapContainer) {
       val: 'building'
     }]); // create a element with click handler to open infoWindow
 
-    anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+    anchor = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('a', [{
       label: 'html',
       val: '<span>' + markerConfig.name + ' ' + markerConfig.buildingPrefix + '</span>'
     }, {
@@ -2799,7 +2768,7 @@ function createMap(mapContainer) {
         markerConfig = {},
         searchTags = [],
         searchIds = {};
-    items.forEach(function (item) {
+    Array.from(items).forEach(function (item) {
       $self = item;
       markerConfig.index = index + 1;
       markerConfig.id = $self.getElementsByTagName('guid')[0].textContent;
@@ -2840,7 +2809,7 @@ function createMap(mapContainer) {
 
 
       cityLayers.buildingsObj[marker.id] = marker;
-      searchTags.push(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+      searchTags.push(Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('a', [{
         label: 'content',
         val: markerConfig.name
       }, {
@@ -2874,11 +2843,11 @@ function createMap(mapContainer) {
 
         if (searchString.length > 0) {
           // creates HTML structure for suggestion list
-          let createListWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+          let createListWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
             label: 'class',
             val: 'query__suggestions__wrapper'
           }]);
-          let createList = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
+          let createList = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('ul', [{
             label: 'id',
             val: 'query__suggestions'
           }, {
@@ -2891,7 +2860,7 @@ function createMap(mapContainer) {
           searchBox.parentElement.appendChild(createListWrapper).appendChild(createList);
           let list = document.getElementById('query__suggestions'); // adds search clear button
 
-          let clearSearchButton = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
+          let clearSearchButton = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('button', [{
             label: 'class',
             val: 'campus-map__controls__search__clear'
           }, {
@@ -2913,11 +2882,11 @@ function createMap(mapContainer) {
           let counter = 0; // Cycles through all the locations to see if they match with the search string, 
           // then builds a list containing the matches
 
-          searchTags.forEach(function (tag) {
+          Array.from(searchTags).forEach(function (tag) {
             if (tag.textContent.toLowerCase().indexOf(searchString.toLowerCase()) > -1) {
               if (counter < maxNumberSuggestions) {
-                let item = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', []);
-                let anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+                let item = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('li', []);
+                let anchor = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('a', [{
                   label: 'tabindex',
                   val: -1
                 }, {
@@ -3008,7 +2977,7 @@ function createMap(mapContainer) {
     }); // map loading icon
 
     mapContainer.classList.remove('loading');
-    mapContainer.querySelectorAll('.loading-fa-icon').forEach(function (i) {
+    Array.from(mapContainer.querySelectorAll('.loading-fa-icon')).forEach(function (i) {
       i.remove();
     }); // Bind an event to window.onhashchange that, when the history state changes,
 
@@ -3042,7 +3011,7 @@ function createMap(mapContainer) {
 
   function init() {
     mapContainer.classList.add('loading');
-    mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('i', [{
+    mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('i', [{
       label: 'class',
       val: 'fa fa-refresh fa-spin loading-fa-icon'
     }]));
@@ -3088,7 +3057,7 @@ function createMap(mapContainer) {
    */
 
   function closeAccordions(exception) {
-    mapContainer.getElementsByClassName('accordion--location').forEach(el => {
+    Array.from(mapContainer.getElementsByClassName('accordion--location')).forEach(el => {
       if (el.getAttribute('id') !== exception) {
         el.querySelector('.accordion__heading').setAttribute('data-open', 'false');
         el.querySelector('.accordion__heading button').setAttribute('aria-expanded', 'false');
@@ -3099,12 +3068,14 @@ function createMap(mapContainer) {
 
   ; // adds click event to close all accordions apart one from being clicked
 
-  const locationAccordions = mapContainer.getElementsByClassName('accordion--location').forEach(el => {
+  const locationAccordions = Array.from(mapContainer.getElementsByClassName('accordion--location')).forEach(el => {
     el.addEventListener('click', function () {
       // capture which accordion clicked on and closes all others
       closeAccordions(el.getAttribute('id'));
     });
   });
+  /* */
+
   /**
    * Closes search suggestions and location dropdowns
    * when clicking outside of them elements
@@ -3232,15 +3203,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Carousel; });
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
 
-
-const ie = Object(_util__WEBPACK_IMPORTED_MODULE_2__["detectIE"])();
+const ie = Object(_util__WEBPACK_IMPORTED_MODULE_1__["detectIE"])();
 class Carousel {
   constructor(elem, options) {
     this.elem = elem;
@@ -3271,7 +3239,7 @@ class Carousel {
 
 
   activeSlider(index, sliders) {
-    let a = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toArray"])(sliders.querySelectorAll('.swiper-slide'));
+    let a = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toArray"])(sliders.querySelectorAll('.swiper-slide'));
     a.forEach(e => {
       e.classList.remove('active');
       e.querySelectorAll('a').forEach(a => a.tabIndex = -1); // disable focus on non active slider with hyperlinks
@@ -3539,7 +3507,7 @@ class Carousel {
 
 
   totalSliderWidth(e) {
-    const sliders = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toArray"])(this.checkEventType(e).querySelectorAll('.swiper-slide'));
+    const sliders = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toArray"])(this.checkEventType(e).querySelectorAll('.swiper-slide'));
     let totalWidth = 0;
     sliders.forEach(s => {
       let style = window.getComputedStyle ? getComputedStyle(s, null) : s.currentStyle;
@@ -3730,13 +3698,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Defaultcarousel; });
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
-/* harmony import */ var _carousel_constructor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../carousel-constructor */ "./src/patterns/image-carousel/carousel-constructor.js");
-
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+/* harmony import */ var _carousel_constructor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../carousel-constructor */ "./src/patterns/image-carousel/carousel-constructor.js");
 
 
 
@@ -3745,7 +3710,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const keyCodeTab = 9,
       keyCodeEnter = 13;
-class Defaultcarousel extends _carousel_constructor__WEBPACK_IMPORTED_MODULE_4__["default"] {
+class Defaultcarousel extends _carousel_constructor__WEBPACK_IMPORTED_MODULE_3__["default"] {
   constructor(elem, options) {
     super(elem, options);
   }
@@ -3802,9 +3767,9 @@ class Defaultcarousel extends _carousel_constructor__WEBPACK_IMPORTED_MODULE_4__
       }, false);
       e.setAttribute('aria-hidden', 'false');
 
-      if (_util__WEBPACK_IMPORTED_MODULE_3__["checkIntersectionObserver"] && !edge) {
+      if (_util__WEBPACK_IMPORTED_MODULE_2__["checkIntersectionObserver"] && !edge) {
         thumbnailsObserver.observe(e);
-      } else if (_util__WEBPACK_IMPORTED_MODULE_3__["checkIntersectionObserver"] && edge) {
+      } else if (_util__WEBPACK_IMPORTED_MODULE_2__["checkIntersectionObserver"] && edge) {
         edgeThumbnailsObserver.observe(e);
       }
     });
@@ -4015,14 +3980,10 @@ function init(elem) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
-
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 /**
@@ -4040,7 +4001,7 @@ const className = 'key-information--lifelong-learning',
       arrowLeft = 'ArrowLeft',
       arrowRight = 'ArrowRight',
       oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = true;
 /**
  * Initialise data atributes on the start dates.
@@ -4051,7 +4012,7 @@ const className = 'key-information--lifelong-learning',
 function prepareStartDates(startDates) {
   startDates.forEach((startDate, i) => {
     startDate.setAttribute('tabindex', -1);
-    startDate.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, "Start date ".concat(i + 1, " of ").concat(startDates.length));
+    startDate.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, "Start date ".concat(i + 1, " of ").concat(startDates.length));
 
     if (i < 1) {
       startDate.dataset.sliderposition = 0;
@@ -4162,8 +4123,8 @@ function handleLoadMoreClick(keyInformation) {
   });
   const firstElement = hiddenDates.shift();
 
-  if (firstElement && scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_2__["verticallyInWindow"])(firstElement)) {
-    zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(firstElement, scrollDuration);
+  if (firstElement && scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_1__["verticallyInWindow"])(firstElement)) {
+    zenscroll__WEBPACK_IMPORTED_MODULE_0___default.a.to(firstElement, scrollDuration);
   }
 
   firstElement && firstElement.focus();
@@ -4237,7 +4198,7 @@ function launchKeyInformation(keyInformation) {
   currentPage.className = className + '__indicator__current';
   dividerVisible.appendChild(document.createTextNode('/'));
   dividerVisible.className = className + '__indicator__divider--visible';
-  dividerVisible.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+  dividerVisible.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
   dividerScreenReader.appendChild(document.createTextNode(' of '));
   dividerScreenReader.className = className + '__indicator__divider--sr';
   divider.appendChild(dividerVisible);
@@ -4258,7 +4219,7 @@ function launchKeyInformation(keyInformation) {
   }
 
   controlsWrapper.className = className + '__controls';
-  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'Course start dates navigation');
+  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'Course start dates navigation');
   prepareStartDates(startDates);
   keyInformation.appendChild(controlsWrapper);
 }
@@ -4281,10 +4242,7 @@ function launchKeyInformation(keyInformation) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes */ "./node_modules/core-js/modules/es.string.includes.js");
 /* harmony import */ var core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 
@@ -4308,7 +4266,7 @@ const className = 'link-finder';
 function prependIcon(anchor, className) {
   let node = document.createElement('span');
   node.className = 'fas ' + className + '  link-decorator';
-  node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, true);
+  node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
   anchor.parentNode.insertBefore(node, anchor);
 }
 /**
@@ -4322,7 +4280,7 @@ function findExternalLink(anchor) {
   if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && !anchor.parentElement.className.includes('cta-like-anchor') && anchor.className !== 'social-icon' && !anchor.className.includes('cta') && !anchor.parentElement.className.includes('cta-block') && !anchor.parentElement.className.includes('card') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.href.indexOf('javascript:') !== 0 && anchor.origin) {
     let node = document.createElement('span');
     node.className = 'far fa-external-link inline-external-link';
-    node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, '(external link)');
+    node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].label, '(external link)');
     anchor.appendChild(node);
   }
 }
@@ -4389,14 +4347,10 @@ function findLinks(e) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prepareNavigation", function() { return prepareNavigation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "listenForNavigationToggles", function() { return listenForNavigationToggles; });
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
-
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 /**
@@ -4410,7 +4364,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond;
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond;
 /**
  * Set sub-menu button attributes for the open/closed state.
  *
@@ -4428,7 +4382,7 @@ function setNavigationItemButtonDetails(button, open, rootClass) {
         text = open ? 'Close ' : 'Open ';
   open && Array.from(button.closest('ul').querySelectorAll('button')).forEach(button => setNavigationItemButtonDetails(button, false, rootClass));
   navigationItem.dataset.open = open;
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, open);
   button.title = text + sectionText;
   textSpan.innerText = text + sectionText;
 }
@@ -4438,9 +4392,9 @@ function setNavigationItemButtonDetails(button, open, rootClass) {
 
 
 function toggleSubNavigation(button, rootClass) {
-  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded);
-  Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(expanded) ? setNavigationItemButtonDetails(button, false, rootClass) : setNavigationItemButtonDetails(button, true, rootClass);
-  zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.intoView(button.closest('li'), scrollDuration);
+  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded);
+  Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(expanded) ? setNavigationItemButtonDetails(button, false, rootClass) : setNavigationItemButtonDetails(button, true, rootClass);
+  zenscroll__WEBPACK_IMPORTED_MODULE_0___default.a.intoView(button.closest('li'), scrollDuration);
 }
 /**
  * Decorate sub-navigation element with the appropriate attributes.
@@ -4462,10 +4416,10 @@ function prepareSubNavigation(navigationItem, rootClass) {
         hierarchyClassName = rootClass + '__hierarchy',
         controlsWrapper = navigationItem.querySelector(".".concat(controlsClassName));
   navigationItemBtn.setAttribute('type', 'button');
-  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
   iconSpan.className = "".concat(buttonIconClassName, " fal fa-fw");
   textSpan.className = "".concat(buttonTextClassName);
-  Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(navigationItemBtn, [iconSpan, textSpan]);
+  Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(navigationItemBtn, [iconSpan, textSpan]);
   controlsWrapper.appendChild(navigationItemBtn);
 
   if (navigationItem.className.indexOf(currentClassName) >= 0 || navigationItem.className.indexOf(hierarchyClassName) >= 0) {
@@ -4522,15 +4476,11 @@ function listenForNavigationToggles(subNavigation, rootClass) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _menu_formatters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./menu-formatters */ "./src/patterns/menu/menu-formatters.js");
-
-
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _menu_formatters__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./menu-formatters */ "./src/patterns/menu/menu-formatters.js");
 
 
 /**
@@ -4572,7 +4522,7 @@ function menuSetter(menu, button) {
     const buttonText = button.querySelector(".".concat(buttonTextClassName));
     menu.dataset.open = open;
     buttonText.innerText = open ? 'Close' : 'Menu';
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, open);
   };
 
   return setMenu;
@@ -4590,9 +4540,9 @@ function menuSetter(menu, button) {
 
 
 function toggleMenu(button, setMenu, trap, veil) {
-  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded);
+  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded);
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(expanded)) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(expanded)) {
     trap.deactivate();
     veil.dataset.on = 'false';
     setMenu(false);
@@ -4621,17 +4571,17 @@ function createMenuToggle(label, button, setMenu, veil) {
   button.className = 'menu__display__button__button';
   buttonWrapper.className = 'menu__display__button__button__wrapper';
   button.setAttribute('type', 'button');
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hasPopup, 'menu');
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hasPopup, 'menu');
   Array.from(label.childNodes).forEach(child => buttonWrapper.appendChild(child));
   button.appendChild(buttonWrapper);
-  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_1___default()(menu, {
+  const trap = focus_trap__WEBPACK_IMPORTED_MODULE_0___default()(menu, {
     /**
      * Initial focus should be whichever of: the current page; a menu item
      * in the asset lineage or; the first item in the last column appears
      * last in the DOM and is visible.
      */
     initialFocus: () => {
-      const open = Array.from(menu.querySelectorAll([".".concat(contentHeaderClassName, " > span"), ".".concat(currentClassName, " > .").concat(controlsClassName, " > a"), ".".concat(hierarchyClassName, " > .").concat(controlsClassName, " > a"), ".".concat(level1ClassName, " > ul > li:first-of-type > .").concat(controlsClassName, " > a"), ".".concat(currentPage, " > a")].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_2__["isVisible"])(elem));
+      const open = Array.from(menu.querySelectorAll([".".concat(contentHeaderClassName, " > span"), ".".concat(currentClassName, " > .").concat(controlsClassName, " > a"), ".".concat(hierarchyClassName, " > .").concat(controlsClassName, " > a"), ".".concat(level1ClassName, " > ul > li:first-of-type > .").concat(controlsClassName, " > a"), ".".concat(currentPage, " > a")].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_1__["isVisible"])(elem));
       return open[open.length - 1];
     },
     onDeactivate: () => toggleMenu(button, setMenu, trap, veil),
@@ -4654,13 +4604,13 @@ function launchMenu(menu) {
         veil = document.createElement('div'),
         setMenu = menuSetter(menu, button);
   veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   createMenuToggle(label, button, setMenu, veil);
   label.appendChild(button);
   setMenu(false);
-  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_4__["prepareNavigation"])(menu.querySelector(".".concat(level1ClassName)), className);
-  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_4__["listenForNavigationToggles"])(menu.querySelector(".".concat(level1ClassName)), className);
+  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_3__["prepareNavigation"])(menu.querySelector(".".concat(level1ClassName)), className);
+  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_3__["listenForNavigationToggles"])(menu.querySelector(".".concat(level1ClassName)), className);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4679,16 +4629,12 @@ function launchMenu(menu) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
-
-
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_3__);
 
 
 /**
@@ -4707,7 +4653,7 @@ const className = 'modal',
       bodyClassName = className + '__body',
       escapeKey = 'Escape',
       oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_0__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = true;
 let trap;
 /**
@@ -4730,15 +4676,15 @@ function launchModal(modal) {
             format = list.getAttribute('data-keepformat'),
             header = document.createElement('div');
       let title,
-          keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(format),
+          keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(format),
           shortName = list.getAttribute('data-shortname');
       listButton.classList.add('modal__button');
       listButton.setAttribute('type', 'button');
-      listButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'Open dialog');
+      listButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].label, 'Open dialog');
       listButtonSpan.classList.add('inline-text');
       listButton.appendChild(listButtonSpan);
       list.appendChild(wrapper);
-      Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(wrapper, listBody);
+      Object(_util__WEBPACK_IMPORTED_MODULE_0__["appendAll"])(wrapper, listBody);
       wrapper.classList.add("".concat(bodyClassName));
 
       if (customHeader) {
@@ -4785,16 +4731,16 @@ function launchModal(modal) {
 
 
 function createDialog(parent, position, dialogArray) {
-  const slider = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(parent.getAttribute('data-slider')),
+  const slider = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(parent.getAttribute('data-slider')),
         type = parent.dataset.type;
-  const closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('button', [{
+  const closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
     label: 'class',
     val: 'dialog__close fas fa-times'
   }, {
     label: 'aria-label',
     val: 'Close modal'
   }]);
-  const dialog = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
+  const dialog = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog'
   }, {
@@ -4804,26 +4750,26 @@ function createDialog(parent, position, dialogArray) {
     label: 'data-type',
     val: "".concat(type)
   }]);
-  const bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
+  const bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__content'
   }]);
-  const wrapperWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
+  const wrapperWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__inner'
   }, {
     label: 'role',
     val: 'role'
   }]);
-  const dialogStrapline = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('p', [{
+  const dialogStrapline = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('p', [{
     label: 'class',
     val: 'dialog__strapline'
   }]);
-  const dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('p', [{
+  const dialogTitle = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('p', [{
     label: 'class',
     val: 'dialog__heading'
   }]);
-  const dialogBody = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
+  const dialogBody = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__body-copy'
   }]);
@@ -4881,7 +4827,7 @@ function createDialog(parent, position, dialogArray) {
 
 function createControl(dialog, dialogArray) {
   let position = parseInt(dialog.getAttribute('data-position'));
-  const buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
+  const buttonWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
     label: 'class',
     val: 'dialog__slider-control'
   }]);
@@ -4958,15 +4904,15 @@ function controlButton(dialogArray, position, direction) {
     buttonLabel.innerText = dialogArray[nextState].title;
   }
 
-  const buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('span', [{
+  const buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
     label: 'class',
     val: "icon far fa-long-arrow-".concat(direction)
   }]);
 
   if (direction === 'left') {
-    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'previous item');
+    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].label, 'previous item');
   } else {
-    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'next item');
+    buttonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].label, 'next item');
   }
 
   const buttonLabelWrapper = document.createElement('div');
@@ -5025,14 +4971,14 @@ function closeDialog(dialog, modal) {
   const parent = dialog.parentNode;
   parent.removeChild(dialog);
 
-  if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_1__["verticallyInWindow"])(modal)) {
-    zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(modal, scrollDuration);
+  if (scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_0__["verticallyInWindow"])(modal)) {
+    zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(modal, scrollDuration);
   }
 }
 
 function trapFocus(modal) {
   let modalInner = modal.querySelector('.dialog__inner');
-  trap = focus_trap__WEBPACK_IMPORTED_MODULE_3___default()(modalInner, {
+  trap = focus_trap__WEBPACK_IMPORTED_MODULE_2___default()(modalInner, {
     clickOutsideDeactivates: true
   });
   trap.activate();
@@ -5056,11 +5002,8 @@ function trapFocus(modal) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
 /* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 
@@ -5099,7 +5042,7 @@ function createCloseAll(navigation, veil) {
   return () => {
     const buttons = Array.from(navigation.querySelectorAll('.navigation--primary__level1 > .navigation__button'));
     buttons.forEach(button => {
-      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, 'false');
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, 'false');
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(openText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     });
     veil.dataset.on = 'false';
@@ -5116,13 +5059,13 @@ function createCloseAll(navigation, veil) {
 
 function createSectionToggle(button, closeAll, veil) {
   return () => {
-    const open = !Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded));
+    const open = !Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded));
     closeAll();
 
     if (open) {
       button.closest(".".concat(classNameSpecific)).dataset.open = 'true';
       veil.dataset.on = 'true';
-      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, open);
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(closeText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     }
   };
@@ -5147,8 +5090,8 @@ function prepareTopLevel(navigation, veil, closeAll) {
           toggleSection = createSectionToggle(button, closeAll, veil); // LIs have tabindex so they're accessible with no JS, remove it
 
     el.removeAttribute('tabindex');
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, 'false');
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].owns, el.nextElementSibling.id);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, 'false');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].owns, el.nextElementSibling.id);
     button.setAttribute('type', 'button');
     button.id = el.nextElementSibling.id + '-button';
     button.className = buttonClassName;
@@ -5157,7 +5100,7 @@ function prepareTopLevel(navigation, veil, closeAll) {
     srNavigationSpan.className = navigationTextClassName;
     srNavigationSpan.appendChild(document.createTextNode(navigationText));
     button.addEventListener('click', () => toggleSection(), true);
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(buttonDiv, [srOpenCloseSpan, document.createTextNode(' '), el, document.createTextNode(' '), srNavigationSpan]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(buttonDiv, [srOpenCloseSpan, document.createTextNode(' '), el, document.createTextNode(' '), srNavigationSpan]);
     button.append(buttonDiv);
     listItem.prepend(button);
   });
@@ -5177,7 +5120,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
         restButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:first-of-type) > .navigation__button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   firstButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
       closeAll();
     }
   });
@@ -5187,7 +5130,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
           lastNavigationAnchor = previousSection.querySelector('.navigation__level2 > li:last-of-type > a') ? previousSection.querySelector('.navigation__level2 > li:last-of-type > a') : previousSection.querySelector('.navigation__level2 > li:last-of-type').previousElementSibling.querySelector('a'),
           togglePreviousSection = createSectionToggle(previousSectionButton, closeAll, veil);
     thisSectionButton.addEventListener('keydown', e => {
-      if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
+      if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
         e.preventDefault();
         togglePreviousSection();
         lastNavigationAnchor.focus();
@@ -5210,7 +5153,7 @@ function setupTabNext(navigation, closeAll, veil) {
         restSectionsCloseButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:last-of-type) .wrapper--navigation--primary__menu__close button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   closeButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded)) && tabKey === e.key && !e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded)) && tabKey === e.key && !e.shiftKey) {
       closeAll();
     }
   });
@@ -5283,11 +5226,11 @@ function addCloseButtons(navigation, closeAll) {
           text = 'Close ' + header.innerText.trim() + ' menu';
     closeButtonText.appendChild(document.createTextNode(text));
     closeButtonText.className = 'navigation--primary__menu__close__text';
-    closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+    closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
     closeButtonIcon.className = 'fas fa-fw fa-times navigation--primary__menu__close__icon';
     closeButtonWrapper.className = 'wrapper--navigation--primary__menu__close';
     closeButton.className = 'navigation--primary__menu__close';
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
     closeButton.appendChild(closeButtonDiv);
     closeButton.setAttribute('type', 'button');
     closeButton.title = text;
@@ -5311,7 +5254,7 @@ function launchPrimaryNavigation(navigation) {
   const veil = document.createElement('div'),
         closeAll = createCloseAll(navigation, veil);
   veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   prepareTopLevel(navigation, veil, closeAll);
   prepareLowerLevels(navigation, veil);
@@ -5396,13 +5339,9 @@ function launchSecondaryNavigation(navigation) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _pagination_pagination_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../pagination/pagination.js */ "./src/patterns/pagination/pagination.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes.js */ "./src/aria-attributes.js");
-
-
+/* harmony import */ var _pagination_pagination_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../pagination/pagination.js */ "./src/patterns/pagination/pagination.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes.js */ "./src/aria-attributes.js");
 
 
 /**
@@ -5452,7 +5391,7 @@ function launchPaginatedList(list) {
      * not a list, remove the classname
      * to avoid conflicting styles then bail
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(list, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(list, className, false);
     return;
   }
 
@@ -5466,7 +5405,7 @@ function launchPaginatedList(list) {
      * remove the classname to avoid conflicting
      * styles then bail
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(list, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(list, className, false);
     return;
   }
 
@@ -5510,9 +5449,9 @@ function launchPaginatedList(list) {
 
     pageItems.forEach(listItem => newList.appendChild(listItem));
     page.appendChild(newList);
-    page.className = _pagination_pagination_js__WEBPACK_IMPORTED_MODULE_1__["pageClassName"];
+    page.className = _pagination_pagination_js__WEBPACK_IMPORTED_MODULE_0__["pageClassName"];
     page.setAttribute('tabindex', -1);
-    page.setAttribute(_aria_attributes_js__WEBPACK_IMPORTED_MODULE_3__["default"].label, "Page ".concat(pageNumber + 1));
+    page.setAttribute(_aria_attributes_js__WEBPACK_IMPORTED_MODULE_2__["default"].label, "Page ".concat(pageNumber + 1));
     pages.push(page);
     /* try to fetch another page */
 
@@ -5523,7 +5462,7 @@ function launchPaginatedList(list) {
 
 
   pages.forEach(page => list.appendChild(page));
-  Object(_pagination_pagination_js__WEBPACK_IMPORTED_MODULE_1__["addPagination"])(list, listItems.length);
+  Object(_pagination_pagination_js__WEBPACK_IMPORTED_MODULE_0__["addPagination"])(list, listItems.length);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -5546,13 +5485,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageClassName", function() { return pageClassName; });
 /* harmony import */ var core_js_modules_es_string_match__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.match */ "./node_modules/core-js/modules/es.string.match.js");
 /* harmony import */ var core_js_modules_es_string_match__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_match__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 
@@ -5578,7 +5514,7 @@ const className = 'pagination',
       nextPrevRegEx = /pagination__controls__button--(next|prev)/,
       maximumButtonsToDisplay = 6,
       oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
       minimumPagesRequiringEllipsis = 2;
 /**
  * Creates a function for enabling/disabling the next/previous page buttons when
@@ -5632,9 +5568,9 @@ function setProximity(pageCount, controls, pageNumber) {
 
 
 function toggleButton(button, selected) {
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, selected);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, selected);
   selected ? button.setAttribute('disabled', 'true') : button.removeAttribute('disabled');
-  selected ? button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'page') : button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current);
+  selected ? button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].current, 'page') : button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].current);
 }
 /**
  * 'Close' all pages and mark all buttons as not selected.
@@ -5682,7 +5618,7 @@ function createOpenPage(pages, controls, toggleNextPrev) {
     page.dataset.open = true;
     toggleButton(button, true);
     focus && page.focus();
-    scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(page, scrollDuration);
+    scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(page, scrollDuration);
   };
 
   return openPage;
@@ -5702,7 +5638,7 @@ function createNextPrevOpenPage(controls, newPageFn, openPage) {
    * Returns a function that responds to next/previous button clicks.
    */
   const nextPrevOpenPage = () => {
-    const currentPage = Number.parseInt(controls.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, "=\"true\"]")).dataset.page);
+    const currentPage = Number.parseInt(controls.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, "=\"true\"]")).dataset.page);
     openPage(newPageFn(currentPage), true, false);
   };
 
@@ -5775,7 +5711,7 @@ function createPageButton(pageNumber, totalPages) {
   buttonSpan.appendChild(document.createTextNode(pageNumber));
   button.dataset.page = pageNumber;
   button.setAttribute('type', 'button');
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, "Open page ".concat(pageNumber));
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, "Open page ".concat(pageNumber));
 
   if (totalPages - pageNumber === 1) {
     button.className = "".concat(controlsElementClassName, " ").concat(buttonClassName, " ").concat(buttonClassName, "--penultimate");
@@ -5824,7 +5760,7 @@ function addPagination(elem, itemCount) {
      * remove the classname to avoid conflicting
      * styles then bail
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(elem, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(elem, className, false);
     return;
   }
 
@@ -5856,7 +5792,7 @@ function addPagination(elem, itemCount) {
   wrapper.className = wrapperClassName;
   controls.className = controlsClassName;
   controls.dataset.pagecount = pages.length;
-  controls.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'Pagination');
+  controls.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'Pagination');
   summary.className = summaryClassName;
   setSummaryText(summary, pages.length, itemCount);
   elem.parentNode.replaceChild(wrapper, elem);
@@ -5884,14 +5820,10 @@ function addPagination(elem, itemCount) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
-
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 /**
@@ -5906,7 +5838,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'show-more',
       oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_3__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = true;
 /**
  * Open or close the show-more element.
@@ -5918,7 +5850,7 @@ function toggleShowMore(showMore) {
   const firstHeadingElement = showMore.querySelector('.show-more__heading, h2, h3, h4, h5, h6'),
         contentElement = showMore.querySelector('.show-more__content'),
         showMoreAnchorLinkText = showMore.querySelector('.show-more__link-text'),
-        hiddenElement = Object(_util__WEBPACK_IMPORTED_MODULE_3__["toBool"])(contentElement.dataset.hidden);
+        hiddenElement = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(contentElement.dataset.hidden);
 
   if (hiddenElement) {
     showMore.dataset.open = true;
@@ -5930,8 +5862,8 @@ function toggleShowMore(showMore) {
     showMoreAnchorLinkText.textContent = 'Show more';
   }
 
-  if (firstHeadingElement && !Object(_util__WEBPACK_IMPORTED_MODULE_3__["verticallyInWindow"])(firstHeadingElement)) {
-    scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(firstHeadingElement, scrollDuration);
+  if (firstHeadingElement && !Object(_util__WEBPACK_IMPORTED_MODULE_2__["verticallyInWindow"])(firstHeadingElement)) {
+    scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_0___default.a.to(firstHeadingElement, scrollDuration);
   }
 }
 /**
@@ -5967,7 +5899,7 @@ function createShowMoreButton(showMoreElement) {
   showMoreButtonSpan.appendChild(showMoreButton);
   icon.classList.add('icon');
   icon.classList.add('fal');
-  icon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, true);
+  icon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
   showMoreText.classList.add('show-more__link-text');
   showMoreText.appendChild(document.createTextNode('Show more'));
   srTextElement.appendChild(document.createTextNode('about ' + dataTitle));
@@ -6009,10 +5941,16 @@ function showMore(showMoreElement) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+
+
 
 
 
@@ -6024,28 +5962,177 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2020
  */
-// import scroll from 'zenscroll';
-// import { reduceMotion, removeClass, toBool } from '../../util';
+
 
 
 const className = 'slider',
-      defaultStyle = 'numbers',
-      defaultRowSize = 2,
+      defaultStyle = 'arrows',
+      defaultCardsPerRow = 1,
       arrowLeft = 'ArrowLeft',
       arrowRight = 'ArrowRight';
 /**
+ * This adds a few swipe related events listeners to the "ul" element of sliders
+ * 
+ * @param  {HTMLElement} slider - The slider ul element.
+ * @param  {HTMLElement} controlsWrapper - The nav element containing the slider controls
+ */
+
+function addSwipeEvents(slider, controlsWrapper) {
+  slider.addEventListener('mousedown', function (e) {
+    lock(e, slider);
+  });
+  slider.addEventListener('touchstart', function (e) {
+    lock(e, slider);
+  });
+  slider.addEventListener('mouseup', function (e) {
+    move(e, slider, controlsWrapper);
+  });
+  slider.addEventListener('touchend', function (e) {
+    move(e, slider, controlsWrapper);
+  });
+}
+/**
+* For arrow responsive slider. Opimises slide elements for responsive slider on 
+* bigger screens by creating a new "ul li" structure containing the slides
+* 
+* @param  {HTMLElement} slider - The slider "ul" element.
+* @param  {Array} slides - an array containing the individual slides as li elements.
+* @param  {HTMLElement} controls - The "nav" element containing the controls
+* 
+*/
+
+
+function responsiveOptimisation(slides, slider, controls, direction) {
+  const responsiveNum = 2; // number of items per slide to display
+
+  let i;
+  let d;
+  let currentSlide; // This cycles through all the current slides and re-structure the list by creating a "new" which list contains
+  // the number of items per slide, as set above (responsiveNum)
+  //i.e. 
+  //  <ul>
+  //      <li> slide 1
+  //          <ul>
+  //              <li>item 1</li>
+  //              <li>item 2</li>
+  //          </ul>
+  //      </li>
+  //
+  //      <li> slide 2...item 3 & 4</li>
+  //      <li> slide 3...item 5 & 6</li>
+  //  </ul>
+
+  for (i = 0; i < slides.length; i += responsiveNum) {
+    let liElement = document.createElement('li');
+    let ulElement = document.createElement('ul');
+    liElement.appendChild(ulElement);
+
+    for (d = 0; d < responsiveNum; d++) {
+      if (slides[i + d]) {
+        ulElement.appendChild(slides[i + d]);
+        let sliderposition = slides[i + d].getAttribute('data-sliderposition');
+
+        if (sliderposition == '0') {
+          currentSlide = i + d;
+        }
+
+        slides[i + d].classList.remove('slide');
+        slides[i + d].removeAttribute('data-sliderposition');
+      }
+    }
+
+    slider.appendChild(liElement);
+  } // Re-map slide items after re-structure
+
+
+  slides = Array.from(slider.children); // Adds appropriate data attributes to slides
+
+  prepareSlides(slides, Math.floor((currentSlide + direction) / 2));
+  slider.setAttribute('data-optimised', 'true'); // Resets pagination during screensize change - not during launch
+
+  if (controls) {
+    slides[Math.floor((currentSlide + direction) / 2)].focus();
+    controls.querySelector('.slider__indicator__total').innerText = slides.length; //slides.length == 1? controls.querySelector('.slider__indicator__total').innerText=9 : controls.querySelector('.slider__indicator__total').innerText=slides.length;
+
+    controls.querySelector('.slider__indicator__current').innerText = Math.floor((currentSlide + direction) / 2) + 1;
+    updateButtonState(slider, controls);
+  }
+
+  slider.setAttribute('data-count', slides.length);
+  return slides;
+}
+/**
+ * For arrow responsive slider.This reverses the optimasation (re-structure) that was done in
+ * the function (responsiveOptimisation) above by creating a "normal" single structure ul list
+ * 
+ * @param  {HTMLElement} slider - The slider "ul" element.
+ * @param  {HTMLElement} controls - The "nav" element containing the controls
+ */
+
+
+function reverseOptimisation(slider, controls, direction, click) {
+  //formula for reverse is working
+  let slides = Array.from(slider.children);
+  let i;
+  let currentSlide;
+  let adjustment = 0;
+
+  for (i = 0; i < slides.length; i++) {
+    let sliderposition = slides[i].getAttribute('data-sliderposition');
+
+    if (sliderposition == '0') {
+      currentSlide = i;
+      console.log("CurrentSlide: ".concat(i));
+      console.log("prepSlide is: ".concat(currentSlide * 2 + (Math.round(direction / 2) + direction)));
+    }
+
+    const slidesChildren = Array.from(slides[i].querySelector('ul').children);
+    slidesChildren.forEach((slide, n) => {
+      slider.appendChild(slide);
+    });
+    slides[i].remove();
+  } // Re-map slide items after re-structure
+
+
+  slides = Array.from(slider.children); // Edge case for responsive sliders with only 2 items to avoid 'over scroll' in screen size switch over
+
+  if (currentSlide * 2 + (Math.round(direction / 2) + direction) >= slides.length) {
+    adjustment = -1;
+  } // Assigns data attributes and positioning to slides
+
+
+  prepareSlides(slides, currentSlide * 2 + Math.round(direction / 2) + direction + adjustment);
+  slider.setAttribute('data-optimised', 'false'); // Resets pagination and places focus on first slide
+
+  slides[currentSlide * 2 + (Math.round(direction / 2) + direction) + adjustment].focus();
+  controls.querySelector('.slider__indicator__total').innerText = slides.length;
+  controls.querySelector('.slider__indicator__current').innerText = currentSlide * 2 + (Math.round(direction / 2) + direction + 1) + adjustment;
+  slider.setAttribute('data-count', slides.length);
+  updateButtonState(slider, controls);
+  return slides;
+}
+/**
+ * Updates buttons for arrow slider
+ * 
  * @param  {HTMLElement} slider - The slider element.
  * @param  {HTMLElement} controls - The slider controls element.
  */
 
+
 function updateButtonState(slider, controls) {
+  // Disables "next" or "prev" buttons if on first or last slide
   const nextButton = controls.querySelector(".".concat(className, "__controls__next")),
         prevButton = controls.querySelector(".".concat(className, "__controls__prev"));
   slider.querySelector('[data-sliderposition="-1"]') ? prevButton.removeAttribute('disabled') : prevButton.setAttribute('disabled', true);
   slider.querySelector('[data-sliderposition="1"]') ? nextButton.removeAttribute('disabled') : nextButton.setAttribute('disabled', true);
+  slider.removeAttribute('disabled'); // Responsive slider edge case for when 2 items to allow next arrow to be clicable to allow switch over
+
+  const responsive = slider.getAttribute('data-style');
+  let slides = Array.from(slider.children);
+  responsive && slides.length == 1 ? nextButton.removeAttribute('disabled') : null;
 }
 /**
- * Handle clicks on the next/previous buttons.
+ * Handle clicks on the next/previous buttons for arrow slider.
  *
  * @param  {HTMLElement} slider - The slider element.
  * @param  {Number} direction - The scroll direction, 1 = next, -1 = previous.
@@ -6053,36 +6140,57 @@ function updateButtonState(slider, controls) {
 
 
 function handleNextPrevClick(slider, controls, direction) {
-  const startDates = Array.from(slider.querySelectorAll('.slide')),
-        current = slider.querySelector('[data-sliderposition="0"]'),
+  let slides = Array.from(slider.children);
+  const responsive = slider.getAttribute('data-style');
+  const optimised = slider.getAttribute('data-optimised');
+  let screenSize = window.innerWidth; // This is for responsive slider only, checking if re-structuring is necesssary in case the viewport size changed.
+
+  if (responsive === 'responsive' && screenSize < 768 && optimised == 'true') {
+    reverseOptimisation(slider, controls, direction, true);
+    return;
+  } else if (responsive === 'responsive' && screenSize >= 768 && optimised !== 'true') {
+    responsiveOptimisation(slides, slider, controls, direction);
+    return;
+  }
+
+  const current = slider.querySelector('[data-sliderposition="0"]'),
         currentPage = controls.querySelector(".".concat(className, "__indicator__current")),
         nextButton = controls.querySelector(".".concat(className, "__controls__next")),
-        prevButton = controls.querySelector(".".concat(className, "__controls__prev"));
+        prevButton = controls.querySelector(".".concat(className, "__controls__prev")); // Next arrow clicked
 
   if (direction === 1) {
     const next = current.nextElementSibling;
 
     if (next) {
+      // Disables buttons during slide animation from current to next
       nextButton.setAttribute('disabled', true);
-      prevButton.setAttribute('disabled', true);
+      prevButton.setAttribute('disabled', true); // Move focus to next slide, wait for transition to finish
+
       next.addEventListener('transitionend', function focusNext() {
         next.removeEventListener('transitionend', focusNext, true);
         next.focus();
         updateButtonState(slider, controls);
-      }, true);
+      }, true); // Hide current slide once transition has finished
+
       current.addEventListener('transitionend', function hideCurrent() {
         current.removeEventListener('transitionend', hideCurrent, true);
         current.dataset.hidden = true;
         current.dataset.smallhidden = true;
-      }, true);
+      }, true); // Updates position of slides
+      // Moves current slide to back to previous position
+
       current.dataset.sliderposition = -1;
-      current.dataset.smallposition = -1;
+      current.dataset.smallposition = -1; // Sets 'active' current slide
+
       next.dataset.hidden = false;
+      next.dataset.smallhidden = false;
       next.dataset.sliderposition = 0;
-      next.dataset.smallposition = 0;
-      currentPage.innerText = startDates.indexOf(next) + 1;
+      next.dataset.smallposition = 0; // Updates pagination to current slide position
+
+      currentPage.innerText = slides.indexOf(next) + 1;
     }
   } else {
+    // Previous arrow clicked
     const previous = current.previousElementSibling;
 
     if (previous) {
@@ -6097,27 +6205,68 @@ function handleNextPrevClick(slider, controls, direction) {
         current.removeEventListener('transitionend', hideCurrent, true);
         current.dataset.hidden = true;
         current.dataset.smallhidden = true;
-      }, true);
+      }, true); // Updates position of slides
+      // Moves current slide forward to next position
+
       current.dataset.sliderposition = 1;
-      current.dataset.smallposition = 1;
+      current.dataset.smallposition = 1; // Sets current / active slide
+
       previous.dataset.hidden = false;
       previous.dataset.smallhidden = false;
       previous.dataset.sliderposition = 0;
-      previous.dataset.smallposition = 0;
-      currentPage.innerText = startDates.indexOf(previous) + 1;
+      previous.dataset.smallposition = 0; // Updates pagination to current slide
+
+      currentPage.innerText = slides.indexOf(previous) + 1;
     }
   }
+}
+/**
+ * This is for arrow slider only. It applies the necessary data attribues needed
+ *  for the functionality of the slider which positions the slides into their starting positions
+ * 
+ * @param  {Array} slides - an array containing the individual slides as li elements
+ */
+
+
+function prepareSlides(slides, current) {
+  slides.forEach((slide, i) => {
+    slide.setAttribute('tabindex', -1); // Remove inactive
+
+    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length)); // Accesiblity
+
+    slide.classList.add('slide'); // Add slide class of slide
+    // 0 = active / first slide
+
+    if (i === current) {
+      slide.dataset.sliderposition = 0;
+      slide.dataset.smallposition = 0;
+      slide.dataset.hidden = false;
+    } else if (i > current) {
+      // 1 = next slide
+      slide.dataset.sliderposition = 1;
+      slide.dataset.smallposition = 1;
+      slide.dataset.hidden = 'true';
+      slide.dataset.smallhidden = 'true';
+    } else {
+      slide.dataset.sliderposition = -1;
+      slide.dataset.smallposition = -1;
+      slide.dataset.hidden = true; // @ WR review smallhidden - what was intended by it?
+    }
+  });
+  return slides;
 }
 /**
  * Transform an element with the slider class name into a slider section controlled by arrows.
  *
  * @param {HTMLElement} slider - An element with the slider class
+ * 
  */
 
 
-function launchNumbers(slider) {
-  const slides = Array.from(slider.children),
-        controlsWrapper = document.createElement('nav'),
+function launchArrow(slider) {
+  // creates elements for pagination and controls
+  let slides = Array.from(slider.children);
+  const controlsWrapper = document.createElement('nav'),
         nextButton = document.createElement('button'),
         nextButtonSpan = document.createElement('span'),
         prevButton = document.createElement('button'),
@@ -6127,43 +6276,42 @@ function launchNumbers(slider) {
         totalPages = document.createElement('span'),
         divider = document.createElement('span'),
         dividerVisible = document.createElement('span'),
-        dividerScreenReader = document.createElement('span');
+        dividerScreenReader = document.createElement('span'); // If not enough slides, don't create it.
 
   if (1 >= slides.length) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(slider, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(slider, className, false);
     return;
+  } // Reconstructs slides for responsive slider
+
+
+  const responsive = slider.getAttribute('data-style');
+  let screenSize = window.innerWidth;
+
+  if (responsive === 'responsive' && screenSize >= 768) {
+    responsiveOptimisation(slides, slider); // Re-map slide items after re-structure
+
+    slides = Array.from(slider.children);
   }
 
-  if (slider.dataset.rowsize !== 1) {
-    slider.dataset.rowsize = 1;
-  }
+  ; // Sets up the positions of the cards / slides
 
-  slides.forEach((slide, i) => {
-    slide.setAttribute('tabindex', -1);
-    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length));
-    slide.classList.add('slide');
+  prepareSlides(slides, 0); // Build the next button
 
-    if (i === 0) {
-      slide.dataset.sliderposition = 0;
-      slide.dataset.smallposition = 0;
-    } else {
-      slide.dataset.sliderposition = 1;
-      slide.dataset.smallposition = 1;
-      slide.dataset.hidden = 'true';
-      slide.dataset.smallhidden = 'true';
-    }
-  });
   nextButtonSpan.appendChild(document.createTextNode('Next slide'));
   nextButton.appendChild(nextButtonSpan);
   nextButton.setAttribute('type', 'button');
-  nextButton.className = className + '__controls__next';
-  nextButton.addEventListener('click', () => handleNextPrevClick(slider, controlsWrapper, 1), true);
+  nextButton.className = className + '__controls__next'; // Wait for Click on next button
+
+  nextButton.addEventListener('click', () => handleNextPrevClick(slider, controlsWrapper, 1), true); // Build the previous button
+
   prevButtonSpan.appendChild(document.createTextNode('Previous slide'));
   prevButton.appendChild(prevButtonSpan);
   prevButton.setAttribute('type', 'button');
   prevButton.setAttribute('disabled', 'true');
-  prevButton.className = className + '__controls__prev';
-  prevButton.addEventListener('click', () => handleNextPrevClick(slider, controlsWrapper, -1), true);
+  prevButton.className = className + '__controls__prev'; // Wait for Click on previous button
+
+  prevButton.addEventListener('click', () => handleNextPrevClick(slider, controlsWrapper, -1), true); // Accessiblity wait for key press anywhere within slider
+
   slider.addEventListener('keydown', e => {
     switch (e.key) {
       case arrowLeft:
@@ -6177,89 +6325,290 @@ function launchNumbers(slider) {
       default:
         break;
     }
-  }, true);
-  currentPage.appendChild(document.createTextNode(1));
-  currentPage.className = className + '__indicator__current';
+  }, true); // apply CSS to card which is currently visible
+
+  currentPage.appendChild(document.createTextNode(1)); // default is 1 when page loads
+
+  currentPage.className = className + '__indicator__current'; // Divider between 1 / 4 etc.
+
   dividerVisible.appendChild(document.createTextNode('/'));
   dividerVisible.className = className + '__indicator__divider--visible';
-  dividerVisible.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
+  dividerVisible.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].hidden, 'true');
   dividerScreenReader.appendChild(document.createTextNode(' of '));
   dividerScreenReader.className = className + '__indicator__divider--sr';
   divider.appendChild(dividerVisible);
   divider.appendChild(dividerScreenReader);
-  divider.className = className + '__indicator__divider';
-  totalPages.appendChild(document.createTextNode(slides.length));
+  divider.className = className + '__indicator__divider'; // Total pages
+
   totalPages.className = className + '__indicator__total';
+  totalPages.appendChild(document.createTextNode(slides.length)); // Add to page
+
   indicator.appendChild(currentPage);
   indicator.appendChild(divider);
   indicator.appendChild(totalPages);
-  indicator.className = className + '__indicator';
+  indicator.className = className + '__indicator'; // Wrap element around slider__controls
+
   controlsWrapper.appendChild(indicator);
   controlsWrapper.appendChild(prevButton);
   controlsWrapper.appendChild(nextButton);
   controlsWrapper.className = className + '__controls';
-  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'Slider navigation');
-  slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper);
+  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'Slider navigation'); // Places controls directly after 'ul' containing the slides
+
+  slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper); // Add event listeners
+
+  addSwipeEvents(slider, controlsWrapper);
 }
 /**
- * Transform an element with the slider class name into a slider section controlled by arrows.
+ * Transform an element with the slider class name into a slider section controlled by dots.
+ * This is to be launched on smaller screens only.
  *
  * @param {HTMLElement} slider - An element with the slider class
- * @param {Number} rowSize - Number of cards to display at once
+ * 
  */
 
 
-function launchButtons(slider) {
+function launchDot(slider) {
+  // Creates pagination and control elements
   const slides = Array.from(slider.children),
-        rowSize = parseInt(slider.dataset.rowsize) || defaultRowSize;
+        controlsWrapper = document.createElement('nav'); // If not enough slides, don't create it.
 
   if (1 >= slides.length) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(slider, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(slider, className, false);
     return;
   }
 
   slides.forEach((slide, i) => {
-    slide.setAttribute('tabindex', -1);
-    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length));
-    slide.classList.add('slide');
+    slide.setAttribute('tabindex', -1); // Remove inactive
+
+    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length)); // Accesiblity
+
+    slide.classList.add('slide'); // Add slide class of slide
+    // Sets data attributes for slides which controls their position within slide collection
 
     if (i === 0) {
-      slide.dataset.sliderposition = i % rowSize;
+      slide.dataset.sliderposition = 0; // 0 for active slide
+
       slide.dataset.smallposition = 0;
-    } else if (i < rowSize) {
-      slide.dataset.sliderposition = i % rowSize;
-      slide.dataset.smallposition = 1;
-      slide.dataset.smallhidden = true;
+      slide.dataset.hidden = false;
     } else {
-      slide.dataset.sliderposition = rowSize + i % rowSize;
-      slide.dataset.hidden = true;
+      slide.dataset.sliderposition = 1; // 1 for 'next' slide
+
       slide.dataset.smallposition = 1;
-      slide.dataset.smallhidden = true;
+      slide.dataset.hidden = 'true';
+      slide.dataset.smallhidden = 'true';
+    } // Creates dot buttons for each slide
+
+
+    let dot = Object(_util__WEBPACK_IMPORTED_MODULE_3__["createHTMLElement"])('button', [{
+      label: 'data-page',
+      val: i
+    }, {
+      label: 'aria-label',
+      val: "Open slide ".concat(i + 1)
+    }, {
+      label: 'type',
+      val: 'button'
+    }]);
+
+    if (i === 0) {
+      // Active slide
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'slide');
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'true');
+      dot.setAttribute('disabled', 'true');
+    } else {
+      // All other slides
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'false');
     }
+
+    dot.addEventListener('click', () => handleDotClick(slider, controlsWrapper, i), true);
+    controlsWrapper.appendChild(dot);
+  }); // Accessiblity wait for key press anywhere within slider
+
+  slider.addEventListener('keydown', e => {
+    const current = slider.querySelector('[data-sliderposition="0"]');
+    const next = current.nextElementSibling;
+    const previous = current.previousElementSibling;
+    const pos = slides.indexOf(current);
+    const buttons = Array.from(controlsWrapper.children);
+
+    switch (e.key) {
+      case arrowLeft:
+        if (previous) {
+          buttons[pos - 1].click();
+        }
+
+        break;
+
+      case arrowRight:
+        if (next) {
+          buttons[pos + 1].click();
+        }
+
+        ;
+        break;
+
+      default:
+        break;
+    }
+  }, true); // Wrap element around slider__controls
+
+  controlsWrapper.className = className + '__controls';
+  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, 'Slider navigation'); // Places controls directly after 'ul' containing the slides
+
+  slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper); //add event listeners
+
+  addSwipeEvents(slider, controlsWrapper);
+}
+/**
+ * Handle clicks for dot slider
+ *
+ * @param  {HTMLElement} slider - The slider element.
+ * @param  {Number} selection - pass the paramaetr of selected slide as a number
+ * @param  {HTMLElement} controlsWrapper - Element containing the control buttons
+ */
+
+
+function handleDotClick(slider, controlsWrapper, selection) {
+  const slides = Array.from(slider.children),
+        dotButtons = Array.from(controlsWrapper.children); // Disables all buttons after click to avoid multiple clicks
+
+  dotButtons.forEach((dot, i) => {
+    dot.setAttribute('disabled', true);
+  }); // Re-arranges the positions of the slides
+
+  slides.forEach((slide, i) => {
+    // Cycles through slides and makes active the one 'selected'
+    if (i === selection) {
+      slide.dataset.sliderposition = 0;
+      slide.dataset.smallposition = 0;
+      slide.dataset.hidden = false;
+      slide.addEventListener('transitionend', function focusNext() {
+        slide.removeEventListener('transitionend', focusNext, true);
+        slide.focus();
+        updateDotButtonState(i, dotButtons, slider);
+      }, true);
+    } // Places slides 'after' current slide in next position
+    else if (i > selection) {
+        slide.dataset.sliderposition = 1;
+        slide.dataset.smallposition = 1;
+        slide.dataset.hidden = true; // @ WR review smallhidden - what was intended by it?
+      } // Places slides 'before' current slide in previous position
+      else {
+          slide.dataset.sliderposition = -1;
+          slide.dataset.smallposition = -1;
+          slide.dataset.hidden = true; // @ WR review smallhidden - what was intended by it?
+        }
   });
 }
 /**
- * Transform an element with the slider class name into a slider section.
+ * @param  {number} active - This is the number/index of the 'active' slide.
+ * @param  {array} dotButtons - An array of all the dot buttons.
+ */
+
+
+function updateDotButtonState(active, dotButtons, slider) {
+  dotButtons.forEach((dot, i) => {
+    if (i === active) {
+      dot.setAttribute('disabled', true);
+      dot.setAttribute('aria-expanded', true);
+    } else {
+      dot.removeAttribute('disabled');
+      dot.setAttribute('aria-expanded', false);
+    }
+  });
+  slider.removeAttribute('disabled');
+}
+/**
+ * 3 Swipe functions below. Unify records touch coordinates to determine left or right swipe.
+ * Lock function locks the ul element to prevent too many additional touches interfering with the sliding 
+ * functionality. I.e. when a slide is in progress it locks it not to register additional touches.
+ * Move function monitors the 'end' of the swipe action to determine the direction of the swipe i.e. left / right.
+ * The "dx" parameter can be used to adjust the sensitivity of the swiping. The larger the number the longer the swipe needs
+ * to be to register as an actual swipe.
  *
+ * @param {event} e - Touch event
+ * @param {HTMLElement} Slider - The ul element containing the "li" slides
+ * @param {HTMLElement} ControlsWrapper - The nav element containing the slider controls
+ */
+
+
+let x0;
+
+function unify(e) {
+  return e.changedTouches ? e.changedTouches[0] : e;
+}
+
+function lock(e, slider) {
+  const locked = slider.getAttribute('disabled');
+
+  if (!locked) {
+    x0 = unify(e).clientX; //set mousedown clientX value
+    //e.target.classList.toggle('smooth', !(this.locked = true));
+  }
+}
+
+;
+
+function move(e, slider, controlsWrapper) {
+  const locked = slider.getAttribute('disabled');
+  let currentSlide = slider.querySelector("li[data-hidden=false]");
+  const sliderType = slider.getAttribute('data-style');
+
+  function getElementIndex(element) {
+    return [...element.parentNode.children].indexOf(element);
+  }
+
+  ;
+
+  if (!locked) {
+    let dx = unify(e).clientX - x0,
+        //dx is value calculate by using clientX mousedown and after value
+    s = Math.sign(dx),
+        //check if swipe is left or right by checking value is negative or positive
+    tx = getComputedStyle(e.target).getPropertyValue('--tx'),
+        p = parseInt(tx.replace(/\D/g, '')); // May use the drag length as a condition to move slider
+    // Next slide
+
+    if (s == -1 && currentSlide.nextElementSibling && dx < -25) {
+      // Checks which type of slider you are using and handles slide
+      slider.setAttribute('disabled', true);
+      sliderType == 'arrows' || sliderType === 'responsive' ? handleNextPrevClick(slider, controlsWrapper, 1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) + 1);
+    } // Previous slide 
+    else if (s == 1 && currentSlide.previousElementSibling && dx > 25) {
+        // Checks which type of slider you are using and handles slide
+        slider.setAttribute('disabled', true);
+        sliderType == 'arrows' || sliderType === 'responsive' ? handleNextPrevClick(slider, controlsWrapper, -1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) - 1);
+      }
+  }
+} // End of swipe functions
+
+/**
+ * Transform an element with the slider class name into a slider section.
+ * 
  * @param {HTMLElement} slider - An element with the slider class
  */
 
 
 function launchSlider(slider) {
   const style = slider.dataset.style || defaultStyle,
-        rowSize = parseInt(slider.dataset.rowsize) || defaultRowSize;
+        cardsPerRow = parseInt(slider.dataset.cardsperrow) || defaultCardsPerRow; // CardsPerRow not currently in use. Tom's old code. 
+  // Might have use case for bigger screen which have capacity to have more than 1 item per slide.
 
   switch (style) {
-    case 'numbers':
-      launchNumbers(slider, rowSize);
+    case 'arrows':
+      launchArrow(slider, cardsPerRow);
       break;
 
-    case 'buttons':
-      launchButtons(slider, rowSize);
+    case 'responsive':
+      launchArrow(slider, cardsPerRow);
+      break;
+
+    case 'dots':
+      launchDot(slider, cardsPerRow);
       break;
 
     default:
-      launchNumbers(slider, rowSize);
+      launchArrow(slider, cardsPerRow);
   }
 }
 
@@ -6281,11 +6630,8 @@ function launchSlider(slider) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
 /* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -6327,14 +6673,14 @@ function accordionize(tabs) {
           accordionWrapper = document.createElement('div');
     accordionHeading.className = 'accordion__heading';
     accordionHeading.id = "accordion".concat(tabs.dataset.assetid, "-header").concat(panel.dataset.assetid);
-    accordionHeading.dataset.tabid = panel.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].labelledBy);
+    accordionHeading.dataset.tabid = panel.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].labelledBy);
     accordionHeading.innerText = heading.innerText.trim();
     accordionSection.className = 'accordion__body';
     accordionSection.id = "accordion".concat(tabs.dataset.assetid, "-body").concat(panel.dataset.assetid);
     accordionWrapper.className = 'wrapper--accordion__body__content';
     accordionWrapper.innerHTML = body.innerHTML;
     accordionSection.appendChild(accordionWrapper);
-    Object(_util__WEBPACK_IMPORTED_MODULE_3__["appendAll"])(accordion, [accordionHeading, accordionSection]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(accordion, [accordionHeading, accordionSection]);
   });
   tabs.parentNode.insertBefore(wrapper, tabs);
   wrapper.appendChild(tabs);
@@ -6367,14 +6713,10 @@ function prepareAccordionTabs(tabs) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
-
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 /**
@@ -6398,7 +6740,7 @@ const className = 'tabs',
       arrowRight = 'ArrowRight',
       arrowDown = 'ArrowDown',
       oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = false;
 /**
  * Set the attributes of a tab to be selected or not selected.
@@ -6410,12 +6752,12 @@ const className = 'tabs',
  */
 
 function toggleButton(button, selected) {
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].selected, selected);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].selected, selected);
 
   if (selected) {
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].current, true);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].current, true);
   } else {
-    button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].current);
+    button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].current);
   }
 }
 /**
@@ -6449,7 +6791,7 @@ function selectTab(newTab) {
    */
 
   newTab.focus();
-  scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(tabs, scrollDuration);
+  scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_0___default.a.to(tabs, scrollDuration);
 }
 /**
  * Respond to event changing tab selection.
@@ -6472,7 +6814,7 @@ function selectTabEvent(e, newTab) {
 
 
 function keyEvents(e, tabs) {
-  const currentTab = tabs.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].selected, "=\"true\"]")),
+  const currentTab = tabs.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].selected, "=\"true\"]")),
         currentTabLI = currentTab.parentNode;
   let newTab = null;
 
@@ -6597,7 +6939,7 @@ function launchTabs(tabs) {
     /**
      * don't make one tab into a tabbed section, makes no sense
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(tabs, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(tabs, className, false);
     return;
   }
 
@@ -6629,8 +6971,8 @@ function launchTabs(tabs) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
 
 
 /**
@@ -6656,14 +6998,14 @@ function toggleImageCredit(wrapper) {
         buttonText = button.querySelector('.sr-only'),
         label = wrapper.querySelector('.tooltip__label');
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(wrapper.dataset.open)) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(wrapper.dataset.open)) {
     wrapper.dataset.open = false;
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'false');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].expanded, 'false');
     buttonText.innerText = openText;
     button.focus();
   } else {
     wrapper.dataset.open = true;
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'true');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].expanded, 'true');
     buttonText.innerText = closeText;
     label.focus();
   }
@@ -6678,11 +7020,12 @@ function toggleImageCredit(wrapper) {
 
 
 function createLabel(text, url) {
+  // If URL; create hyperlink
   if (url) {
     const element = document.createElement('a');
     element.href = url;
     element.appendChild(document.createTextNode(text));
-    return element;
+    return element; // No URL; create span
   } else {
     const element = document.createElement('span');
     element.appendChild(document.createTextNode(text));
@@ -6697,13 +7040,15 @@ function createLabel(text, url) {
 
 
 function launchImageCredit(picture) {
-  const display = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(picture.dataset.tooltipdisplay),
+  const display = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(picture.dataset.tooltipdisplay),
         authorText = picture.dataset.authorname,
         authorUrl = picture.dataset.authorurl,
         sourceText = picture.dataset.sourcename,
-        sourceUrl = picture.dataset.sourceurl;
+        sourceUrl = picture.dataset.sourceurl,
+        licenceText = picture.dataset.licencetype,
+        licenceUrl = picture.dataset.licenceurl; // Pattern only launches if set to display and has either an author/source name
 
-  if (!display || !(authorText && sourceText)) {
+  if (!display || !(authorText || sourceText)) {
     return;
   }
 
@@ -6713,15 +7058,16 @@ function launchImageCredit(picture) {
         spanText = document.createElement('span'),
         label = document.createElement('div'),
         author = authorText ? createLabel(authorText, authorUrl) : null,
-        source = sourceText ? createLabel(sourceText, sourceUrl) : null;
+        source = sourceText ? createLabel(sourceText, sourceUrl) : null,
+        licence = licenceText ? createLabel(licenceText, licenceUrl) : null;
   wrapper.className = 'wrapper--tooltip__label';
   wrapper.dataset.open = false;
   button.className = 'tooltip tooltip--image-credit';
   button.setAttribute('type', 'button');
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, false);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].expanded, false);
   button.addEventListener('click', () => toggleImageCredit(wrapper), true);
   spanIcon.className = 'tooltip__icon icon fas fa-info-circle';
-  spanIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
+  spanIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].hidden, true);
   spanText.className = 'sr-only';
   spanText.appendChild(document.createTextNode(openText));
   button.appendChild(spanIcon);
@@ -6731,6 +7077,8 @@ function launchImageCredit(picture) {
   author && label.appendChild(author);
   author && source && label.appendChild(document.createTextNode(' / '));
   source && label.appendChild(source);
+  licence ? licence.className = 'tooltip__label__licence' : null;
+  licence && label.appendChild(licence);
   wrapper.appendChild(label);
   wrapper.appendChild(button);
   (author || source) && picture.appendChild(wrapper);
@@ -6831,67 +7179,73 @@ const className = 'embedded-video--autoplay';
 /**
  * Loop video as et number of times
  *
- * @param {element} video - A video with the 'embedded-video--autoplay' class.
+ * @param {element} video - Figure with the 'embedded-video--autoplay' class.
+ * @param {element} videoEl - HTML video element.
  * @param {number} maxPlays - Maximum number of times video should play.
  */
 
-function loopVideo(video, maxPlays) {
-  let playInstance = 0;
+function loopVideo(maxPlays, video, videoEl) {
+  let playInstance = 0; // When video finishes autoplaying, switch controller from pause to play
 
-  video.onended = () => {
+  videoEl.onended = () => {
     playInstance += 1;
-    playInstance === maxPlays ? video.pause() : null;
+
+    if (playInstance === maxPlays) {
+      toggleController(false, video, videoEl);
+    } else {
+      videoEl.play();
+    }
   };
 }
 /**
  * Create video play/pause button.
  *
- * @param {element} video - A video with the 'embedded-video--autoplay' class.
+ * @param {element} video - Figure with the 'embedded-video--autoplay' class.
+ * @param {element} videoEl - HTML video element.
  */
 
 
-function createController(video) {
-  let controllerBtn;
+function createController(video, videoEl) {
   const controllerIcon = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
     label: 'class',
     val: 'embedded-video--autoplay__controller-btn__icon'
   }]);
-  let statusPaused = video.querySelector('.embedded-video--autoplay__video').paused;
-
-  if (statusPaused) {
-    controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
-      label: 'class',
-      val: 'embedded-video--autoplay__controller-btn'
-    }, {
-      label: 'data-status',
-      val: 'play'
-    }, {
-      label: 'aria-label',
-      val: 'Play video'
-    }]);
-  } else {
-    controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
-      label: 'class',
-      val: 'embedded-video--autoplay__controller-btn'
-    }, {
-      label: 'data-status',
-      val: 'pause'
-    }, {
-      label: 'aria-label',
-      val: 'Pause video'
-    }]);
-  }
-
+  const controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
+    label: 'class',
+    val: 'embedded-video--autoplay__controller-btn'
+  }]);
+  controllerBtn.addEventListener('click', () => {
+    toggleController(videoEl.paused, video, videoEl);
+  });
   controllerBtn.append(controllerIcon);
-  video.append(controllerBtn);
+  video.append(controllerBtn); // checks if browser 'auto play' is enabled
+
+  var promise = videoEl.play();
+
+  if (promise !== undefined) {
+    promise.then(() => {
+      // autoplay enabled
+      controllerBtn.dataset.status = 'pause';
+      toggleController(true, video, videoEl);
+    }).catch(error => {
+      // autoplay disabled
+      toggleController(false, video, videoEl);
+    });
+  }
 }
+/**
+* Handles click for pause and play
+*
+* @param {element} video - Figure with the 'embedded-video--autoplay' class.
+* @param {element} videoEl - HTML video element.
+* @param {bolean} status - current status of video true/false = paused/playing  
+*/
 
-function toggleController(video) {
-  const videoEl = video.querySelector('.embedded-video--autoplay__video'),
-        controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn'),
-        statusPaused = video.querySelector('.embedded-video--autoplay__video').paused;
 
-  if (statusPaused) {
+function toggleController(status, video, videoEl) {
+  const controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn');
+
+  if (status) {
     controllerBtn.dataset.status = 'pause';
     controllerBtn.setAttribute('aria-label', 'Pause video');
     videoEl.play();
@@ -6905,17 +7259,8 @@ function toggleController(video) {
 function launchAutoplayVideo(video) {
   const videoEl = video.querySelector('.embedded-video--autoplay__video'),
         plays = parseInt(videoEl.dataset.maxPlays);
-  loopVideo(video, plays);
-  createController(video);
-  const controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn');
-  controllerBtn.addEventListener('click', () => {
-    toggleController(video);
-  }); // When video finishes autoplaying, switch controller from pause to play
-
-  videoEl.addEventListener('ended', () => {
-    controllerBtn.dataset.status = 'play';
-    controllerBtn.setAttribute('aria-label', 'Play video');
-  });
+  loopVideo(plays, video, videoEl);
+  createController(video, videoEl);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -6961,15 +7306,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
 /* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
@@ -7234,14 +7576,14 @@ function uppercaseFirstLetterLowercaseRest(s) {
 
 function axiosRequest(config) {
   const httpOK = 200;
-  return axios__WEBPACK_IMPORTED_MODULE_6___default()(config).then(response => {
+  return axios__WEBPACK_IMPORTED_MODULE_5___default()(config).then(response => {
     if (httpOK === response.status) {
       return response.data;
     } else {
       throw "Bad response: ".concat(response.status);
     }
   }).catch(e => {
-    if (!axios__WEBPACK_IMPORTED_MODULE_6___default.a.isCancel(e)) {
+    if (!axios__WEBPACK_IMPORTED_MODULE_5___default.a.isCancel(e)) {
       gaEvent('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "axiosRequest ".concat(e.fileName, " (").concat(window.location, ")"), true);
     }
   });
@@ -7270,9 +7612,9 @@ function daySuffix(day) {
 function formatReactDate(date) {
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
         days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("time", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("time", {
     dateTime: date.toISOString().split('T')[0]
-  }, days[date.getUTCDay()], ", ", date.getUTCDate(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("sup", null, daySuffix(date.getUTCDate())), ' ', months[date.getUTCMonth()], " ", date.getUTCFullYear());
+  }, days[date.getUTCDay()], ", ", date.getUTCDate(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("sup", null, daySuffix(date.getUTCDate())), ' ', months[date.getUTCMonth()], " ", date.getUTCFullYear());
 }
 /**
  * Array slicer
