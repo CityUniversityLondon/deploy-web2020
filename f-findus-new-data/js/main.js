@@ -2335,7 +2335,10 @@ function launchFeedback(elem) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
 /* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.trim */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
 
 
 
@@ -2666,7 +2669,55 @@ function createMap(mapContainer) {
     markerConfig.email ? html += markerConfig.email + '</br>' : null;
     markerConfig.tel ? html += markerConfig.tel + '</br>' : null;
     html += '</p>';
-    markerConfig.openingHours ? html += '<p>Opening hours: ' + markerConfig.openingHours + '</p>' : null;
+
+    if (markerConfig.openingHours.length > 0) {
+      let daySlot = [];
+      let timeSlot = [];
+      console.log("--------------------------");
+      console.log("openinghours length is: ".concat(markerConfig.openingHours.length));
+      markerConfig.openingHours.forEach(function (item) {
+        let string = item.trim();
+        let day = string.slice(0, 3);
+        let hours = string.slice(3); //if array empty
+
+        if (timeSlot.length === 0) {
+          daySlot.push(day); //push time to array
+
+          timeSlot.push(hours);
+          console.log("IF and ".concat(day, " and ").concat(hours));
+        } else {
+          console.log("ELSE and ".concat(timeSlot.length));
+          let match;
+
+          for (let i = 0; i < timeSlot.length; i++) {
+            if (hours == timeSlot[i]) {
+              console.log("** same");
+              daySlot[i] += ', ' + day; //console.log(`day is: ${daySlot[i]}`);
+
+              match = 1;
+            }
+          }
+
+          if (match != 1) {
+            console.log("** not");
+            daySlot.push(day);
+            timeSlot.push(hours);
+          }
+        }
+      }) / console.log("days ".concat(daySlot.length, " and hours ").concat(timeSlot.length)); //console.log(`days ${daySlot[0]} and hours ${timeSlot[0]}`);
+      //console.log(`days ${daySlot[1]} and hours ${timeSlot[1]}`);
+
+      console.log("--------------------------");
+      html += '<p>Opening hours: </br>';
+
+      for (let i = 0; i < timeSlot.length; i++) {
+        html += timeSlot[i] + ' (' + daySlot[i] + ')</br>';
+      }
+
+      html += '</p>';
+    } // Build opening house from arrays
+
+
     markerConfig.walkingDistance ? html += '<p>Walking distance to campus: ' + markerConfig.walkingDistance + '</p>' : null;
     markerConfig.accessibility ? html += '<p>Accessibility: ' + markerConfig.accessibility + '</p>' : null;
     markerConfig.entrance ? html += '<p>' + markerConfig.entrance + '</p>' : null; // create google maps marker
@@ -2687,7 +2738,7 @@ function createMap(mapContainer) {
       return updateHash(marker);
     }); // create list element
 
-    listItem = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('li', [{
+    listItem = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', [{
       label: 'id',
       val: 'building-' + markerConfig.id
     }, {
@@ -2695,7 +2746,7 @@ function createMap(mapContainer) {
       val: 'building'
     }]); // create a element with click handler to open infoWindow
 
-    anchor = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('a', [{
+    anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
       label: 'html',
       val: '<span>' + markerConfig.name + ' ' + markerConfig.buildingPrefix + '</span>'
     }, {
@@ -2767,6 +2818,7 @@ function createMap(mapContainer) {
         searchIds = {};
     Array.from(items).forEach(function (item) {
       $self = item;
+      markerConfig.openingHours = [];
       markerConfig.index = index + 1;
       markerConfig.id = $self.getElementsByTagName('guid')[0].textContent;
       markerConfig.name = $self.getElementsByTagName('title')[0].textContent;
@@ -2787,12 +2839,18 @@ function createMap(mapContainer) {
       markerConfig.country = $self.getElementsByTagName('country')[0].textContent;
       markerConfig.tel = $self.getElementsByTagName('tel')[0].textContent;
       markerConfig.email = $self.getElementsByTagName('email')[0].textContent;
-      markerConfig.openingHours = $self.getElementsByTagName('openingHours')[0].textContent;
       markerConfig.accessibility = $self.getElementsByTagName('accessibility')[0].textContent;
       markerConfig.walkingDistance = $self.getElementsByTagName('walkingDistance')[0].textContent;
       markerConfig.supports = $self.getElementsByTagName('supports')[0].textContent;
       markerConfig.geoLat = $self.getElementsByTagName('geoLat')[0].textContent;
       markerConfig.geoLong = $self.getElementsByTagName('geoLong')[0].textContent;
+      $self.getElementsByTagName('ohMon')[0].textContent ? markerConfig.openingHours.push('Mon' + $self.getElementsByTagName('ohMon')[0].textContent) : null;
+      $self.getElementsByTagName('ohTue')[0].textContent ? markerConfig.openingHours.push('Tue' + $self.getElementsByTagName('ohTue')[0].textContent) : null;
+      $self.getElementsByTagName('ohWed')[0].textContent ? markerConfig.openingHours.push('Wed' + $self.getElementsByTagName('ohWed')[0].textContent) : null;
+      $self.getElementsByTagName('ohThu')[0].textContent ? markerConfig.openingHours.push('Thu' + $self.getElementsByTagName('ohThu')[0].textContent) : null;
+      $self.getElementsByTagName('ohFri')[0].textContent ? markerConfig.openingHours.push('Fri' + $self.getElementsByTagName('ohFri')[0].textContent) : null;
+      $self.getElementsByTagName('ohSat')[0].textContent ? markerConfig.openingHours.push('Sat' + $self.getElementsByTagName('ohSat')[0].textContent) : null;
+      $self.getElementsByTagName('ohSun')[0].textContent ? markerConfig.openingHours.push('Sun' + $self.getElementsByTagName('ohSun')[0].textContent) : null;
       markerConfig.point = new google.maps.LatLng(parseFloat(markerConfig.geoLat), parseFloat(markerConfig.geoLong)); //call createmarker fn
 
       marker = createMarker(markerConfig);
@@ -2807,7 +2865,7 @@ function createMap(mapContainer) {
 
 
       cityLayers.buildingsObj[marker.id] = marker;
-      searchTags.push(Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('a', [{
+      searchTags.push(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
         label: 'content',
         val: markerConfig.name
       }, {
@@ -2841,11 +2899,11 @@ function createMap(mapContainer) {
 
         if (searchString.length > 0) {
           // creates HTML structure for suggestion list
-          let createListWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
+          let createListWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
             label: 'class',
             val: 'query__suggestions__wrapper'
           }]);
-          let createList = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('ul', [{
+          let createList = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
             label: 'id',
             val: 'query__suggestions'
           }, {
@@ -2858,7 +2916,7 @@ function createMap(mapContainer) {
           searchBox.parentElement.appendChild(createListWrapper).appendChild(createList);
           let list = document.getElementById('query__suggestions'); // adds search clear button
 
-          let clearSearchButton = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('button', [{
+          let clearSearchButton = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
             label: 'class',
             val: 'campus-map__controls__search__clear'
           }, {
@@ -2883,8 +2941,8 @@ function createMap(mapContainer) {
           Array.from(searchTags).forEach(function (tag) {
             if (tag.textContent.toLowerCase().indexOf(searchString.toLowerCase()) > -1) {
               if (counter < maxNumberSuggestions) {
-                let item = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('li', []);
-                let anchor = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('a', [{
+                let item = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', []);
+                let anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
                   label: 'tabindex',
                   val: -1
                 }, {
@@ -3009,7 +3067,7 @@ function createMap(mapContainer) {
 
   function init() {
     mapContainer.classList.add('loading');
-    mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('i', [{
+    mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('i', [{
       label: 'class',
       val: 'fa fa-refresh fa-spin loading-fa-icon'
     }]));
