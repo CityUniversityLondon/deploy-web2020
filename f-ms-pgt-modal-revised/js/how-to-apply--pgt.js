@@ -589,6 +589,34 @@ function HowToApply(props) {
       }
     }
   }
+  /**
+   * Launch the how to apply modal from a button click.
+   *
+   * @param {event} e The button click event.
+   */
+
+
+  function journeyFromButton(e) {
+    // Target clicked qualification button and its text value, e.g. 'MSc'
+    let qualBtn = e.target.querySelector('span');
+    let qualVal = qualBtn.textContent; // Filter entry points data on selected qualification
+
+    let filteredQualData = entryPoints.filter(e => e.header === qualVal);
+    modalJourney(filteredQualData);
+  }
+  /**
+   * Launch the how to apply modal from a button's child span click.
+   *
+   * @param {event} e The span click event.
+   */
+
+
+  function journeyFromSpan(e) {
+    let spanText = e.target.textContent; // Filter entry points data on selected qualification
+
+    let filteredQualData = entryPoints.filter(e => e.header === spanText);
+    modalJourney(filteredQualData);
+  }
 
   const question = 'qualification',
         [multipleSubjects, setMultipleSubjects] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
@@ -639,12 +667,8 @@ function HowToApply(props) {
     key: 'qualification' + i
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: e => {
-      // Target clicked qualification button and its text value, e.g. 'MSc'
-      let qualBtn = e.target.querySelector('span');
-      let qualVal = qualBtn.textContent; // Filter entry points data on selected qualification
-
-      let filteredQualData = entryPoints.filter(e => e.header === qualVal);
-      modalJourney(filteredQualData); // // Are there multiple subject routes?
+      // btn func
+      journeyFromButton(e); // // Are there multiple subject routes?
       // if (
       //     filteredQualData[0][
       //         'options'
@@ -752,10 +776,17 @@ function HowToApply(props) {
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     onClick: e => {
-      let spanText = e.target.textContent; // Filter entry points data on selected qualification
-
-      let filteredQualData = entryPoints.filter(e => e.header === spanText);
-      modalJourney(filteredQualData);
+      journeyFromSpan(e); // let spanText =
+      //     e.target.textContent;
+      // // Filter entry points data on selected qualification
+      // let filteredQualData = entryPoints.filter(
+      //     (e) =>
+      //         e.header ===
+      //         spanText
+      // );
+      // modalJourney(
+      //     filteredQualData
+      // );
     }
   }, qualification.header)))))),
         // subjectQuestion = question === 'subject' && (
@@ -1132,7 +1163,15 @@ function HowToApply(props) {
       }, entryPoints.map(q => {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
           key: q
-        }, q.header);
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+          onClick: e => {
+            journeyFromButton(e);
+          }
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+          onClick: e => {
+            journeyFromSpan(e);
+          }
+        }, q.header)));
       })) : null;
       setSelection(options);
     }
