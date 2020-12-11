@@ -67320,8 +67320,33 @@ button
 
 .lifelong-learning .wrapper--lifelong-learning__higher-right-course {
     padding: 0.75rem;
-    background-color: #e7ebed;
+    background-color: #f2f2f2;
     border-top: 0.125rem solid #d8d8d8;
+}
+
+.lifelong-learning .wrapper--lifelong-learning__higher-right-course .tabs__panel:not([hidden]) {
+    background: #e7ebed;
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .lifelong-learning .wrapper--lifelong-learning__higher-right-course .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__heading,
+    .lifelong-learning .wrapper--lifelong-learning__higher-right-course .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
+        grid-column: 1 / -1;
+    }
+}
+
+.lifelong-learning .wrapper--lifelong-learning__higher-right-course .tabs__links {
+    justify-content: left;
+}
+
+.lifelong-learning .wrapper--lifelong-learning__higher-right-course .wrapper--key-information--lifelong-learning {
+    background-color: initial;
+    border-bottom: initial;
+}
+
+.lifelong-learning .wrapper--lifelong-learning__higher-right-course .wrapper--key-information--lifelong-learning h2,
+.lifelong-learning .wrapper--lifelong-learning__higher-right-course .wrapper--key-information--lifelong-learning .key-information--lifelong-learning__dates {
+    grid-column: 1/-1;
 }
 
 .lifelong-learning .lifelong-learning__introduction {
