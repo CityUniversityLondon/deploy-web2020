@@ -734,7 +734,14 @@ function HowToApply(props) {
       //     } // End multiple dates check
       // } // End of no multiple subjects routes
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, qualification.header)))))),
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    onClick: e => {
+      let spanText = e.target.textContent; // Filter entry points data on selected qualification
+
+      let filteredQualData = entryPoints.filter(e => e.header === spanText);
+      modalJourney(filteredQualData);
+    }
+  }, qualification.header)))))),
         // subjectQuestion = question === 'subject' && (
   //     <>
   //         <div className="how-to-apply--pgt--js__modal__content-wrapper">
