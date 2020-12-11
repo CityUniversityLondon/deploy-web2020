@@ -380,7 +380,23 @@ function HowToApply(props) {
         [preferences, setPreferences] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(initialPreferences),
         [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:');
   let [selection, setSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let options = document.querySelector('.how-to-apply--pgt--js__options'); // console.log('subject: '  + entryPoints[0]['options'].length); // subject
+  let options = document.querySelector('.how-to-apply--pgt--js__options'); // const reset = JSON.stringify(preferences) !==
+  //     JSON.stringify(initialPreferences) && (
+  //     <div className="how-to-apply--pgt--js__modal__reset">
+  //         <button
+  //             onClick={() => {
+  //                 setPreferences(initialPreferences);
+  //                 // setQuestion(
+  //                 //     nextQuestion(initialPreferences, entryPoints)
+  //                 // );
+  //             }}
+  //         >
+  //             <span className="fas fa-redo"></span>{' '}
+  //             <span>Start again</span>
+  //         </button>
+  //     </div>
+  // );
+  // console.log('subject: '  + entryPoints[0]['options'].length); // subject
   // console.log('date: '     + entryPoints[0]['options'][0]['options'].length); // date
   // console.log('location: ' + entryPoints[0]['options'][0]['options'][0]['options'].length); // location
   // console.log('method: '   + entryPoints[0]['options'][0]['options'][0]['options'][0]['options'].length); // subjects
@@ -1058,18 +1074,7 @@ function HowToApply(props) {
     className: "how-to-apply--pgt--js__modal__alternative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: props.element.dataset.otherurl
-  }, props.element.dataset.otheryear, " entry is also available.")),
-        reset = JSON.stringify(preferences) !== JSON.stringify(initialPreferences) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "how-to-apply--pgt--js__modal__reset"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    onClick: () => {
-      setPreferences(initialPreferences); // setQuestion(
-      //     nextQuestion(initialPreferences, entryPoints)
-      // );
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-redo"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Start again")));
+  }, props.element.dataset.otheryear, " entry is also available."));
   const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({});
   let modalRef = null,
       modalContentRef = null;
@@ -1118,7 +1123,22 @@ function HowToApply(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-times icon",
     "aria-label": "Close"
-  })), reset, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__reset"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+    onClick: () => {
+      entryPoints.length > 1 ? options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+        className: "how-to-apply--pgt--js__options"
+      }, entryPoints.map(q => {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+          key: q
+        }, q.header);
+      })) : null;
+      setSelection(options);
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-redo"
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Start again"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
     className: "how-to-apply--pgt--js__modal__progress"
   }, qualificationsProgress, subjectsProgress, entryPointsProgress, locationsProgress, nextStep), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
     className: "how-to-apply--pgt--js__modal__progress--mobile"
