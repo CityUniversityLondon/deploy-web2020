@@ -2652,9 +2652,8 @@ function createMap(mapContainer) {
 
 
     markerConfig.buildingPrefix ? html += '<p>Rooms beginning: ' + markerConfig.buildingPrefix + '</p>' : null;
-    markerConfig.supports ? html += '<p>Supports: ' + markerConfig.supports + '</p>' : null;
     html += '<p>';
-    markerConfig.room ? html += markerConfig.room + '</br>' : null;
+    markerConfig.roomNumber ? html += 'Room ' + markerConfig.roomNumber + '</br>' : null;
     markerConfig.floor ? html += 'Floor ' + markerConfig.floor + '</br>' : null;
     markerConfig.street1 ? html += markerConfig.street1 + '</br>' : null;
     markerConfig.street2 ? html += markerConfig.street2 + '</br>' : null;
@@ -2662,52 +2661,41 @@ function createMap(mapContainer) {
     markerConfig.postcode ? html += markerConfig.postcode + '</br>' : null;
     html += '</p>';
     html += '<p>';
-    markerConfig.building ? html += 'Building: ' + markerConfig.building + '</br>' : null;
-    markerConfig.campus ? html += 'Campus: ' + markerConfig.campus + '</br>' : null;
+    markerConfig.building ? html += markerConfig.building + '</br>' : null;
+    markerConfig.campus ? html += markerConfig.campus + '</br>' : null;
     html += '</p>';
-    html += '<p>';
-    markerConfig.email ? html += markerConfig.email + '</br>' : null;
-    markerConfig.tel ? html += markerConfig.tel + '</br>' : null;
-    html += '</p>';
+    markerConfig.supports ? html += '<p>' + markerConfig.supports + '</p>' : null;
+    markerConfig.walkingDistance ? html += '<p>Walking distance to campus: ' + markerConfig.walkingDistance + '</p>' : null;
+    markerConfig.entrance ? html += '<p>' + markerConfig.entrance + '</p>' : null;
+    markerConfig.accessibility ? html += '<p>' + markerConfig.accessibility + '</p>' : null; // Build opening hours from arrays
 
     if (markerConfig.openingHours.length > 0) {
-      let daySlot = [];
-      let timeSlot = [];
-      console.log("--------------------------");
-      console.log("openinghours length is: ".concat(markerConfig.openingHours.length));
+      let daySlot = []; // array for days which has unique opening hours
+
+      let timeSlot = []; // array for different time slots
+
       markerConfig.openingHours.forEach(function (item) {
         let string = item.trim();
         let day = string.slice(0, 3);
-        let hours = string.slice(3); //if array empty
+        let hours = string.slice(3);
+        let match;
 
-        if (timeSlot.length === 0) {
-          daySlot.push(day); //push time to array
+        for (let i = 0; i < timeSlot.length; i++) {
+          // checks current days opening hours to see if it matches opening hours of an existing day already
+          if (hours == timeSlot[i]) {
+            daySlot[i] += ', ' + day; // remembers that it found a match
 
+            match = 1;
+          }
+        } // if no mathes are found then 'hours' are pushed into array
+
+
+        if (match != 1) {
+          daySlot.push(day);
           timeSlot.push(hours);
-          console.log("IF and ".concat(day, " and ").concat(hours));
-        } else {
-          console.log("ELSE and ".concat(timeSlot.length));
-          let match;
-
-          for (let i = 0; i < timeSlot.length; i++) {
-            if (hours == timeSlot[i]) {
-              console.log("** same");
-              daySlot[i] += ', ' + day; //console.log(`day is: ${daySlot[i]}`);
-
-              match = 1;
-            }
-          }
-
-          if (match != 1) {
-            console.log("** not");
-            daySlot.push(day);
-            timeSlot.push(hours);
-          }
         }
-      }) / console.log("days ".concat(daySlot.length, " and hours ").concat(timeSlot.length)); //console.log(`days ${daySlot[0]} and hours ${timeSlot[0]}`);
-      //console.log(`days ${daySlot[1]} and hours ${timeSlot[1]}`);
+      }); // Builds opening hours text
 
-      console.log("--------------------------");
       html += '<p>Opening hours: </br>';
 
       for (let i = 0; i < timeSlot.length; i++) {
@@ -2715,12 +2703,12 @@ function createMap(mapContainer) {
       }
 
       html += '</p>';
-    } // Build opening house from arrays
+    }
 
-
-    markerConfig.walkingDistance ? html += '<p>Walking distance to campus: ' + markerConfig.walkingDistance + '</p>' : null;
-    markerConfig.accessibility ? html += '<p>Accessibility: ' + markerConfig.accessibility + '</p>' : null;
-    markerConfig.entrance ? html += '<p>' + markerConfig.entrance + '</p>' : null; // create google maps marker
+    html += '<p>';
+    markerConfig.tel ? html += 'Tel: ' + markerConfig.tel + '</br>' : null;
+    markerConfig.email ? html += 'Email: ' + markerConfig.email + '</br>' : null;
+    html += '</p>'; // create google maps marker
 
     marker = new google.maps.Marker({
       map: markerConfig.map,
@@ -2827,7 +2815,7 @@ function createMap(mapContainer) {
 
       markerConfig.category = $self.getElementsByTagName('category')[0].textContent;
       markerConfig.buildingPrefix = $self.getElementsByTagName('roomPrefix')[0].textContent;
-      markerConfig.room = $self.getElementsByTagName('room')[0].textContent;
+      markerConfig.roomNumber = $self.getElementsByTagName('roomNumber')[0].textContent;
       markerConfig.entrance = $self.getElementsByTagName('entrance')[0].textContent;
       markerConfig.floor = $self.getElementsByTagName('floor')[0].textContent;
       markerConfig.building = $self.getElementsByTagName('building')[0].textContent;
