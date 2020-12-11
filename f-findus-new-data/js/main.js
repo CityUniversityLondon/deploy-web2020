@@ -2790,7 +2790,7 @@ function createMap(mapContainer) {
       markerConfig.openingHours = $self.getElementsByTagName('openingHours')[0].textContent;
       markerConfig.accessibility = $self.getElementsByTagName('accessibility')[0].textContent;
       markerConfig.walkingDistance = $self.getElementsByTagName('walkingDistance')[0].textContent;
-      markerConfig.suppports = $self.getElementsByTagName('supports')[0].textContent;
+      markerConfig.supports = $self.getElementsByTagName('supports')[0].textContent;
       markerConfig.geoLat = $self.getElementsByTagName('geoLat')[0].textContent;
       markerConfig.geoLong = $self.getElementsByTagName('geoLong')[0].textContent;
       markerConfig.point = new google.maps.LatLng(parseFloat(markerConfig.geoLat), parseFloat(markerConfig.geoLong)); //call createmarker fn
