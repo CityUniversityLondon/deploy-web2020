@@ -380,9 +380,17 @@ function HowToApply(props) {
         [preferences, setPreferences] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(initialPreferences),
         [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:');
   let [selection, setSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let options = document.querySelector('.how-to-apply--pgt--js__options');
+  let options = document.querySelector('.how-to-apply--pgt--js__options'); // console.log('subject: '  + entryPoints[0]['options'].length); // subject
+  // console.log('date: '     + entryPoints[0]['options'][0]['options'].length); // date
+  // console.log('location: ' + entryPoints[0]['options'][0]['options'][0]['options'].length); // location
+  // console.log('method: '   + entryPoints[0]['options'][0]['options'][0]['options'][0]['options'].length); // subjects
 
   function modalJourney(singleQualData) {
+    // Single qualification
+    // if (singleQualData.length === 1) {
+    //     console.log('Single qual');
+    //     setWindowPrompt('')
+    // }
     if (singleQualData[0]['options'].length > 1) {
       // Multiple subjects
       let subjects = singleQualData[0]['options'];
@@ -390,8 +398,10 @@ function HowToApply(props) {
       let methods = singleQualData[0]['options'][0]['options'][0]['options'][0]['options'];
 
       if (subjects.length > 1) {
-        while (options.firstChild) {
-          options.removeChild(options.firstChild);
+        if (options.firstChild) {
+          while (options.firstChild) {
+            options.removeChild(options.firstChild);
+          }
         }
 
         setWindowPrompt('Choose the route you wish to apply for:');
@@ -483,8 +493,10 @@ function HowToApply(props) {
         if (singleQualData[0]['options'][0]['options'].length > 1) {
           setWindowPrompt('Choose the entry point you wish to apply for:'); // Remove existing options buttons
 
-          while (options.firstChild) {
-            options.removeChild(options.firstChild);
+          if (options.firstChild) {
+            while (options.firstChild) {
+              options.removeChild(options.firstChild);
+            }
           } // Extract dates data
 
 
@@ -538,8 +550,10 @@ function HowToApply(props) {
             setWindowPrompt('Apply online now:'); // Remove existing options buttons
             // options.removeChild();
 
-            while (options.firstChild) {
-              options.removeChild(options.firstChild);
+            if (options.firstChild) {
+              while (options.firstChild) {
+                options.removeChild(options.firstChild);
+              }
             } // Extract apply links data
 
 
@@ -587,7 +601,22 @@ function HowToApply(props) {
     className: "how-to-apply--pgt--js__options"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_date__WEBPACK_IMPORTED_MODULE_6__["default"], {
     data: entryPoints[0]['options'][0]['options']
-  })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Load single date") // Single subject => Single date
+  })) :
+  /** Single qualification logic; logic to work out which modal screen to show on CTA click
+  *  Top-level, initial modal render required. Look through entry points object and see which
+  *  options to provide user. Once determined, run modalJourney function.
+  *
+  * NOT YET DONE => when multiple subjects, dates or locations exist:
+  *
+  * - map relevant level array
+  * - print buttons {d.header}
+  * - on button click, run modalJourney but enter at one level below default to avoid extra click
+  **/
+  entryPoints[0]['options'].length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, "Subject select") : entryPoints[0]['options'][0]['options'].length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, "Date select") : entryPoints[0]['options'][0]['options'][0]['options'].length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, "Location select") : entryPoints[0]['options'][0]['options'][0]['options'][0]['options'].length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    className: "how-to-apply--pgt--js__options"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    data: entryPoints[0]['options'][0]['options'][0]['options'][0]['options']
+  })) : null // Single subject => Single date
   :
   /*#__PURE__*/
   react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
