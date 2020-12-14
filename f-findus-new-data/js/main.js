@@ -2655,13 +2655,13 @@ function createMap(mapContainer) {
     html += '<p>';
     markerConfig.roomNumber ? html += 'Room ' + markerConfig.roomNumber + '</br>' : null;
     markerConfig.floor ? html += 'Floor ' + markerConfig.floor + '</br>' : null;
+    markerConfig.building ? html += markerConfig.building + '</br>' : null;
     markerConfig.street1 ? html += markerConfig.street1 + '</br>' : null;
     markerConfig.street2 ? html += markerConfig.street2 + '</br>' : null;
     markerConfig.city ? html += markerConfig.city + '</br>' : null;
     markerConfig.postcode ? html += markerConfig.postcode + '</br>' : null;
     html += '</p>';
     html += '<p>';
-    markerConfig.building ? html += markerConfig.building + '</br>' : null;
     markerConfig.campus ? html += markerConfig.campus + '</br>' : null;
     html += '</p>';
     markerConfig.supports ? html += '<p>' + markerConfig.supports + '</p>' : null;
