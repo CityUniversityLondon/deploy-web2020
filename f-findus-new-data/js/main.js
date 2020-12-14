@@ -2506,21 +2506,10 @@ function createMap(mapContainer) {
   let marker;
 
   function hashChange(id) {
-    // Trigger - to show northampton square campus marker on initial load
-    if (id === '') {
-      id = '498711'; // loads northampton square campus map overlay on initial load
-      //or can be displayed using: initialMapOverlay.setMap(map);
+    console.log('hashchange'); // Trigger - to show northampton square campus marker on initial load
 
-      var initialMapOverlay = new google.maps.Polygon({
-        map: map,
-        paths: cityCampus,
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.8,
-        strokeWeight: 0,
-        fillColor: '#FF0000',
-        fillOpacity: 0.2,
-        geodesic: true
-      });
+    if (id === '') {
+      id = '498711';
     }
 
     ; //loop over  bigBuildingsArray to find marker
@@ -3224,7 +3213,19 @@ function createMap(mapContainer) {
     lng: -0.107671
   }]; // Optional - to show all markers in the buildingsArray on initial load
   //showOverlays(cityLayers.bigBuildingsArray);
+  // loads northampton square campus map overlay on initial load
+  //or can be displayed using: initialMapOverlay.setMap(map);
 
+  var initialMapOverlay = new google.maps.Polygon({
+    map: map,
+    paths: cityCampus,
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 0,
+    fillColor: '#FF0000',
+    fillOpacity: 0.2,
+    geodesic: true
+  });
   init();
 }
 
