@@ -67339,12 +67339,17 @@ button
     justify-content: left;
 }
 
+.lifelong-learning .wrapper--lifelong-learning__higher-right-course .tabs .tabs__panel {
+    border: 0.125rem solid #d8d8d8;
+}
+
 .lifelong-learning .wrapper--lifelong-learning__higher-right-course .wrapper--key-information--lifelong-learning {
     background-color: initial;
     border-bottom: initial;
 }
 
 .lifelong-learning .wrapper--lifelong-learning__higher-right-course .wrapper--key-information--lifelong-learning h2,
+.lifelong-learning .wrapper--lifelong-learning__higher-right-course .wrapper--key-information--lifelong-learning h3,
 .lifelong-learning .wrapper--lifelong-learning__higher-right-course .wrapper--key-information--lifelong-learning .key-information--lifelong-learning__dates {
     grid-column: 1/-1;
 }
@@ -67473,7 +67478,8 @@ button
     grid-template-rows: repeat(2, auto);
 }
 
-.lifelong-learning .key-information--lifelong-learning > h2 {
+.lifelong-learning .key-information--lifelong-learning > h2,
+.lifelong-learning .key-information--lifelong-learning h3 {
     color: #5d184a;
     grid-column: 2 / -2;
 }
