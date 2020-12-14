@@ -53846,6 +53846,12 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     display: none;
 }
 
+@media (max-width: 767px) {
+    .gm-style-iw.gm-style-iw-c {
+        width: 25rem;
+    }
+}
+
 .promo-area__wrap {
     padding-top: 2rem;
     padding-bottom: 2rem;
