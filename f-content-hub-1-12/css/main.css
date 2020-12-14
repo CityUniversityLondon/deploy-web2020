@@ -56542,15 +56542,15 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
-@media (min-width: 1024px) {
-    .content-hub__block-three .news-events h2 {
-        grid-column: 2 / span 11;
-    }
-}
-
 @media (min-width: 768px) {
     .content-hub__block-three .news-events h2 {
         grid-column: 6 / span 14;
+    }
+}
+
+@media (min-width: 1024px) {
+    .content-hub__block-three .news-events h2 {
+        grid-column: 2 / span 11;
     }
 }
 
