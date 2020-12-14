@@ -369,7 +369,8 @@ function formatDate(sourceDate) {
 
 
 function HowToApply(props) {
-  let entryPoints = props.config;
+  let entryPoints = props.config,
+      initialModalDisplay;
   const initialPreferences = {
     qualification: Object.keys(entryPoints).length === 1 ? Object.keys(entryPoints[0])[0] : null,
     subject: null,
@@ -378,35 +379,31 @@ function HowToApply(props) {
   },
         [modalVisible, setModalVisible] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
         [preferences, setPreferences] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(initialPreferences),
-        [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:');
+        [firstStep, setFirstStep] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+        // Controls 'Start again' visibility
+  [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:');
   let [selection, setSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let options = document.querySelector('.how-to-apply--pgt--js__options'); // const reset = JSON.stringify(preferences) !==
-  //     JSON.stringify(initialPreferences) && (
-  //     <div className="how-to-apply--pgt--js__modal__reset">
-  //         <button
-  //             onClick={() => {
-  //                 setPreferences(initialPreferences);
-  //                 // setQuestion(
-  //                 //     nextQuestion(initialPreferences, entryPoints)
-  //                 // );
-  //             }}
-  //         >
-  //             <span className="fas fa-redo"></span>{' '}
-  //             <span>Start again</span>
-  //         </button>
-  //     </div>
-  // );
+  let [initialSelection, setInitialSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
+  let options = document.querySelector('.how-to-apply--pgt--js__options'); // Test logs
   // console.log('subject: '  + entryPoints[0]['options'].length); // subject
   // console.log('date: '     + entryPoints[0]['options'][0]['options'].length); // date
   // console.log('location: ' + entryPoints[0]['options'][0]['options'][0]['options'].length); // location
   // console.log('method: '   + entryPoints[0]['options'][0]['options'][0]['options'][0]['options'].length); // subjects
 
   function modalJourney(singleQualData) {
-    // Single qualification
+    // If reset option has been used, remove buttons from DOM to avoid unwanted buttons rendering.
+    setInitialSelection(); // Single qualification - I think we have a condition for this. Check and remove block if possible.
     // if (singleQualData.length === 1) {
     //     console.log('Single qual');
     //     setWindowPrompt('')
     // }
+    // function filterSubjData(subject) {
+    //     for (const s of singleQualData) {
+    //         let subjData = singleQualData[0]['options'];
+    //         // let filteredSubjData = subjData.filter((s) => s.header === subject);
+    //     }
+    // }
+
     if (singleQualData[0]['options'].length > 1) {
       // Multiple subjects
       let subjects = singleQualData[0]['options'];
@@ -429,7 +426,12 @@ function HowToApply(props) {
               key: d
             }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
               onClick: () => {
-                // Multiple subjects > Multiple dates > Multiple methods
+                // Target clicked qualification button and its text value, e.g. 'MSc'
+                // let subjBtn = e.target.querySelector('span');
+                // let subjVal = subjBtn.textContent;
+                // filterSubjData(subjVal);
+                setFirstStep(false); // Multiple subjects > Multiple dates > Multiple methods
+
                 methods.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
                   key: d,
                   data: methods,
@@ -451,7 +453,8 @@ function HowToApply(props) {
             methods.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
               key: d
             }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-              onClick: () => {// console.log('methods screen');
+              onClick: () => {
+                setFirstStep(false); // console.log('methods screen');
               }
             }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, d.header))) : // Multiple subjects > Single date > Single method. Subject is link.
             dates.map(date => {
@@ -464,42 +467,7 @@ function HowToApply(props) {
           );
         }));
         setSelection(options);
-      } // let dates = singleQualData[0]['options'][0]['options'];
-      // console.log(dates);
-      // if (dates.length > 1) {
-      //     // Remove existing options buttons
-      //     while (options.firstChild) {
-      //         options.removeChild(options.firstChild);
-      //     }
-      // let methods = singleQualData[0]['options'][0]['options'][0]['options'][0]['options'];
-      // setWindowPrompt('Choose the entry point you wish to apply for:');
-      // if (methods.length > 1) {
-      //     options = (
-      //         <ul className="how-to-apply--pgt--js__options">
-      //             {dates.map((d) => {
-      //                 return (
-      //                     <li
-      //                         key={d}
-      //                         >
-      //                             <button>
-      //                                 <span>{formatDate(d.header)}</span>
-      //                             </button>
-      //                         </li>
-      //                     );
-      //                 })}
-      //             </ul>
-      //         );
-      //     }
-      //     console.log(methods);
-      //     // options = (
-      //     //     <p>Date select buttons</p>
-      //     // );
-      //     // Make revised options markup available in the state
-      //     setSelection(options);
-      // } else {
-      //     // console.log('Selected subject button to check for methods of study count');
-      // }
-
+      }
     } else {
       // Are there multiple subject routes?
       if (singleQualData[0]['options'].length > 1) {// console.log('Open subjects window');
@@ -530,7 +498,8 @@ function HowToApply(props) {
                 key: d
               }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
                 onClick: () => {
-                  // Open methods select as direct links
+                  setFirstStep(false); // Open methods select as direct links
+
                   options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
                     data: methodsData
                   });
@@ -618,181 +587,13 @@ function HowToApply(props) {
     modalJourney(filteredQualData);
   }
 
-  function topLevelModal(entryPoints) {
-    return options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-      className: "how-to-apply--pgt--js__options"
-    }, entryPoints.map((qualification, i) => // Create top-level link to apply, or button creating next step in modal
-    entryPoints.length > 1 && qualification['options'].length === 1 && qualification['options'][0]['options'].length === 1 && qualification['options'][0]['options'][0]['options'].length === 1 && qualification['options'][0]['options'][0]['options'][0]['options'].length === 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-      key: 'qualification' + i
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-      href: qualification['options'][0]['options'][0]['options'][0]['options'][0]['options']['apply']
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, qualification.header), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-      className: "far fa-external-link",
-      "aria-label": "(external link)"
-    }))) : entryPoints.length === 1 ? entryPoints[0]['options'].length > 1 ?
-    /*#__PURE__*/
-    // Multiple subjects
-    react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Load subject select") : entryPoints[0]['options'][0]['options'].length > 1 ?
-    /*#__PURE__*/
-    // Single subject => Multiple dates
-    // Update options block to apply links JSX
-    react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-      className: "how-to-apply--pgt--js__options"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_date__WEBPACK_IMPORTED_MODULE_6__["default"], {
-      data: entryPoints[0]['options'][0]['options']
-    })) :
-    /** Single qualification logic; logic to work out which modal screen to show on CTA click
-    *  Top-level, initial modal render required. Look through entry points object and see which
-    *  options to provide user. Once determined, run modalJourney function.
-    *
-    * NOT YET DONE => when multiple subjects, dates or locations exist:
-    *
-    * - map relevant level array
-    * - print buttons {d.header}
-    * - on button click, run modalJourney but enter at one level below default to avoid extra click
-    **/
-    entryPoints[0]['options'].length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, "Subject select") : entryPoints[0]['options'][0]['options'].length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, "Date select") : entryPoints[0]['options'][0]['options'][0]['options'].length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", null, "Location select") : entryPoints[0]['options'][0]['options'][0]['options'][0]['options'].length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-      className: "how-to-apply--pgt--js__options"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      data: entryPoints[0]['options'][0]['options'][0]['options'][0]['options']
-    })) : null // Single subject => Single date
-    :
-    /*#__PURE__*/
-    react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-      key: 'qualification' + i
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-      onClick: e => {
-        // btn func
-        journeyFromButton(e); // // Are there multiple subject routes?
-        // if (
-        //     filteredQualData[0][
-        //         'options'
-        //     ].length > 1
-        // ) {
-        //     // console.log('Open subjects window');
-        //     // Begin multiple subjects route
-        // } else {
-        //     // Are there multiple entry dates?
-        //     if (
-        //         filteredQualData[0][
-        //             'options'
-        //         ][0]['options'].length >
-        //         1
-        //     ) {
-        //         setWindowPrompt(
-        //             'Choose the entry point you wish to apply for:'
-        //         );
-        //         // Remove existing options buttons
-        //         while (
-        //             options.firstChild
-        //         ) {
-        //             options.removeChild(
-        //                 options.firstChild
-        //             );
-        //         }
-        //         // Extract dates data
-        //         let dateButtons =
-        //             filteredQualData[0][
-        //                 'options'
-        //             ][0]['options'];
-        //         // console.log(dateButtons);
-        //         // Update options block to apply links JSX
-        //         options = (
-        //             <ul className="how-to-apply--pgt--js__options">
-        //                 {
-        //                     <StartDates
-        //                         data={
-        //                             dateButtons
-        //                         }
-        //                     />
-        //                 }
-        //             </ul>
-        //         );
-        //         // Make revised options markup available in the state
-        //         setSelection(options);
-        //         // console.log(dateButtons);
-        //     } else {
-        //         setMultipleSubjects(
-        //             false
-        //         );
-        //         // Are there multiple methods of study, e.g. 'full-time', 'part-time'?
-        //         // console.log('Dont open dates window');
-        //         // console.log(filteredQualData[0]['options'][0]['options'][0]['options']);
-        //         if (
-        //             filteredQualData[0][
-        //                 'options'
-        //             ][0]['options'][0][
-        //                 'options'
-        //             ][0]['options']
-        //                 .length > 1
-        //         ) {
-        //             setWindowPrompt(
-        //                 'Apply online now:'
-        //             );
-        //             // Remove existing options buttons
-        //             // options.removeChild();
-        //             while (
-        //                 options.firstChild
-        //             ) {
-        //                 options.removeChild(
-        //                     options.firstChild
-        //                 );
-        //             }
-        //             // Extract apply links data
-        //             let applyLinks =
-        //                 filteredQualData[0][
-        //                     'options'
-        //                 ][0][
-        //                     'options'
-        //                 ][0][
-        //                     'options'
-        //                 ][0]['options'];
-        //             // Update options block to apply links JSX
-        //             options = (
-        //                 <ul className="how-to-apply--pgt--js__options">
-        //                     {
-        //                         <ApplyLinks
-        //                             data={
-        //                                 applyLinks
-        //                             }
-        //                         />
-        //                     }
-        //                 </ul>
-        //             );
-        //             // Make revised options markup available in the state
-        //             setSelection(
-        //                 options
-        //             );
-        //         } else {
-        //             // console.log('Qualification buttons should be apply links. Should do top-level check to see if direct link and output accordingly.');
-        //         }
-        //     } // End multiple dates check
-        // } // End of no multiple subjects routes
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-      onClick: e => {
-        journeyFromSpan(e); // let spanText =
-        //     e.target.textContent;
-        // // Filter entry points data on selected qualification
-        // let filteredQualData = entryPoints.filter(
-        //     (e) =>
-        //         e.header ===
-        //         spanText
-        // );
-        // modalJourney(
-        //     filteredQualData
-        // );
-      }
-    }, qualification.header)))));
-  }
-
   const question = 'qualification',
         [multipleSubjects, setMultipleSubjects] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
         // [multipleEntryPoints, setMultipleEntryPoints] = useState(true),
-  [multipleLocations, setMultipleLocations] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
-        qualificationQuestion = question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  // [multipleLocations, setMultipleLocations] = useState(true),
+  qualificationQuestion = question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, windowPrompt), selection), selection = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, windowPrompt), selection, initialSelection), initialModalDisplay = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
   }, entryPoints.map((qualification, i) => // Create top-level link to apply, or button creating next step in modal
   entryPoints.length > 1 && qualification['options'].length === 1 && qualification['options'][0]['options'].length === 1 && qualification['options'][0]['options'][0]['options'].length === 1 && qualification['options'][0]['options'][0]['options'][0]['options'].length === 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
@@ -835,232 +636,16 @@ function HowToApply(props) {
     key: 'qualification' + i
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: e => {
-      // btn func
-      journeyFromButton(e); // // Are there multiple subject routes?
-      // if (
-      //     filteredQualData[0][
-      //         'options'
-      //     ].length > 1
-      // ) {
-      //     // console.log('Open subjects window');
-      //     // Begin multiple subjects route
-      // } else {
-      //     // Are there multiple entry dates?
-      //     if (
-      //         filteredQualData[0][
-      //             'options'
-      //         ][0]['options'].length >
-      //         1
-      //     ) {
-      //         setWindowPrompt(
-      //             'Choose the entry point you wish to apply for:'
-      //         );
-      //         // Remove existing options buttons
-      //         while (
-      //             options.firstChild
-      //         ) {
-      //             options.removeChild(
-      //                 options.firstChild
-      //             );
-      //         }
-      //         // Extract dates data
-      //         let dateButtons =
-      //             filteredQualData[0][
-      //                 'options'
-      //             ][0]['options'];
-      //         // console.log(dateButtons);
-      //         // Update options block to apply links JSX
-      //         options = (
-      //             <ul className="how-to-apply--pgt--js__options">
-      //                 {
-      //                     <StartDates
-      //                         data={
-      //                             dateButtons
-      //                         }
-      //                     />
-      //                 }
-      //             </ul>
-      //         );
-      //         // Make revised options markup available in the state
-      //         setSelection(options);
-      //         // console.log(dateButtons);
-      //     } else {
-      //         setMultipleSubjects(
-      //             false
-      //         );
-      //         // Are there multiple methods of study, e.g. 'full-time', 'part-time'?
-      //         // console.log('Dont open dates window');
-      //         // console.log(filteredQualData[0]['options'][0]['options'][0]['options']);
-      //         if (
-      //             filteredQualData[0][
-      //                 'options'
-      //             ][0]['options'][0][
-      //                 'options'
-      //             ][0]['options']
-      //                 .length > 1
-      //         ) {
-      //             setWindowPrompt(
-      //                 'Apply online now:'
-      //             );
-      //             // Remove existing options buttons
-      //             // options.removeChild();
-      //             while (
-      //                 options.firstChild
-      //             ) {
-      //                 options.removeChild(
-      //                     options.firstChild
-      //                 );
-      //             }
-      //             // Extract apply links data
-      //             let applyLinks =
-      //                 filteredQualData[0][
-      //                     'options'
-      //                 ][0][
-      //                     'options'
-      //                 ][0][
-      //                     'options'
-      //                 ][0]['options'];
-      //             // Update options block to apply links JSX
-      //             options = (
-      //                 <ul className="how-to-apply--pgt--js__options">
-      //                     {
-      //                         <ApplyLinks
-      //                             data={
-      //                                 applyLinks
-      //                             }
-      //                         />
-      //                     }
-      //                 </ul>
-      //             );
-      //             // Make revised options markup available in the state
-      //             setSelection(
-      //                 options
-      //             );
-      //         } else {
-      //             // console.log('Qualification buttons should be apply links. Should do top-level check to see if direct link and output accordingly.');
-      //         }
-      //     } // End multiple dates check
-      // } // End of no multiple subjects routes
+      setFirstStep(false); // btn func
+
+      journeyFromButton(e);
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     onClick: e => {
-      journeyFromSpan(e); // let spanText =
-      //     e.target.textContent;
-      // // Filter entry points data on selected qualification
-      // let filteredQualData = entryPoints.filter(
-      //     (e) =>
-      //         e.header ===
-      //         spanText
-      // );
-      // modalJourney(
-      //     filteredQualData
-      // );
+      setFirstStep(false);
+      journeyFromSpan(e);
     }
   }, qualification.header)))))),
-        // subjectQuestion = question === 'subject' && (
-  //     <>
-  //         <div className="how-to-apply--pgt--js__modal__content-wrapper">
-  //             <p>Choose the route you wish to apply for:</p>
-  //         </div>
-  //         <ul className="how-to-apply--pgt--js__options">
-  //             {nextLevel(entryPoints, preferences.qualification).map(
-  //                 (subject, i) => (
-  //                     <li key={'subject' + i}>
-  //                         <button
-  //                             onClick={() => {
-  //                                 const newPreferences = preferences;
-  //                                 newPreferences.subject = Object.keys(
-  //                                     subject
-  //                                 )[0];
-  //                                 const entryOptions =
-  //                                     subject[newPreferences.subject];
-  //                                 if (entryOptions.length === 1) {
-  //                                     newPreferences.entry = Object.keys(
-  //                                         entryOptions[0]
-  //                                     )[0];
-  //                                     setMultipleEntryPoints(false);
-  //                                 } else {
-  //                                     newPreferences.entry = null;
-  //                                     setMultipleEntryPoints(true);
-  //                                 }
-  //                                 setPreferences(newPreferences);
-  //                                 setQuestion(
-  //                                     nextQuestion(
-  //                                         newPreferences,
-  //                                         entryPoints
-  //                                     )
-  //                                 );
-  //                             }}
-  //                         >
-  //                             <span>{Object.keys(subject)[0]}</span>
-  //                         </button>
-  //                     </li>
-  //                 )
-  //             )}
-  //         </ul>
-  //     </>
-  // ),
-  entryQuestion = question === 'entry' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the entry point you wish to apply for:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "how-to-apply--pgt--js__options"
-  }, nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject).map((entryPoint, i) => {
-    const formattedDate = new Date(Object.keys(entryPoint)[0]);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-      key: 'entry-point' + i
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-      onClick: () => {
-        const newPreferences = preferences;
-        newPreferences.entry = Object.keys(entryPoint)[0];
-        const locationOptions = entryPoint[newPreferences.entry];
-
-        if (locationOptions.length === 1) {
-          newPreferences.location = Object.keys(locationOptions[0])[0];
-          setMultipleLocations(false);
-        } else {
-          newPreferences.location = null;
-          setMultipleLocations(true);
-        }
-
-        setPreferences(newPreferences); // setQuestion(
-        //     nextQuestion(
-        //         newPreferences,
-        //         entryPoints
-        //     )
-        // );
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, months[formattedDate.getUTCMonth()], ' ', formattedDate.getUTCFullYear())));
-  }))),
-        locationQuestion = question === 'location' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose where you wish to study:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "how-to-apply--pgt--js__options"
-  }, nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry).map((location, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    key: 'location' + i
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    onClick: () => {
-      const newPreferences = preferences;
-      newPreferences.entry = Object.keys(location)[0];
-      setPreferences(newPreferences); // setQuestion(
-      //     nextQuestion(
-      //         newPreferences,
-      //         entryPoints
-      //     )
-      // );
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(location)[0])))))),
-        applyQuestion = question === 'apply' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Apply online now:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "how-to-apply--pgt--js__options"
-  }, nextLevel(nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry), preferences.location).map((method, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    key: 'method' + i
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    href: method[Object.keys(method)[0]]
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(method)[0], ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "far fa-external-link",
-    "aria-label": "(external link)"
-  }))))))),
         qualificationsProgress = Object.keys(entryPoints).length > 1 ? question === 'qualification' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
@@ -1156,36 +741,45 @@ function HowToApply(props) {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, months[new Date(preferences.entry).getUTCMonth()], ' ', new Date(preferences.entry).getUTCFullYear()))) : // ) : null
   null,
-        locationsProgress = multipleLocations ? question === 'location' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__current"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Location"))) : preferences.location ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__previous"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper",
-    onClick: () => {
-      const newPreferences = preferences;
-      newPreferences.location = null;
-      setPreferences(newPreferences); // setQuestion(
-      //     nextQuestion(newPreferences, entryPoints)
-      // );
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-check icon",
-    "aria-label": "Back to choose location"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, preferences.location))) : null : null,
-        nextStep = question !== 'apply' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+        // locationsProgress = multipleLocations ? (
+  //     question === 'location' ? (
+  //         <li className="how-to-apply--pgt--js__modal__progress__current">
+  //             <span className="how-to-apply--pgt--js__modal__progress__wrapper">
+  //                 <span className="how-to-apply--pgt--js__modal__progress__circle">
+  //                     <span className="fas fa-circle icon"></span>
+  //                 </span>
+  //                 <span className="how-to-apply--pgt--js__modal__progress__text">
+  //                     Location
+  //                 </span>
+  //             </span>
+  //         </li>
+  //     ) : preferences.location ? (
+  //         <li className="how-to-apply--pgt--js__modal__progress__previous">
+  //             <button
+  //                 className="how-to-apply--pgt--js__modal__progress__wrapper"
+  //                 onClick={() => {
+  //                     const newPreferences = preferences;
+  //                     newPreferences.location = null;
+  //                     setPreferences(newPreferences);
+  //                     // setQuestion(
+  //                     //     nextQuestion(newPreferences, entryPoints)
+  //                     // );
+  //                 }}
+  //             >
+  //                 <span className="how-to-apply--pgt--js__modal__progress__circle">
+  //                     <span
+  //                         className="fas fa-check icon"
+  //                         aria-label="Back to choose location"
+  //                     ></span>
+  //                 </span>
+  //                 <span className="how-to-apply--pgt--js__modal__progress__text">
+  //                     {preferences.location}
+  //                 </span>
+  //             </button>
+  //         </li>
+  //     ) : null
+  // ) : null,
+  nextStep = question !== 'apply' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__next"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
@@ -1239,18 +833,35 @@ function HowToApply(props) {
   })), question === 'entry' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__text"
   }, "Entry point"))) : null,
-        locationsProgressMobile = multipleLocations && (question === 'location' || preferences.location) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: question === 'location' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: question === 'location' ? 'fas fa-circle icon' : 'fas fa-check icon'
-  })), question === 'location' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Location"))) : null,
-        nextStepMobile = question !== 'apply' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+        // locationsProgressMobile =
+  //     multipleLocations &&
+  //     (question === 'location' || preferences.location) ? (
+  //         <li
+  //             className={
+  //                 question === 'location'
+  //                     ? 'how-to-apply--pgt--js__modal__progress__current'
+  //                     : 'how-to-apply--pgt--js__modal__progress__previous'
+  //             }
+  //         >
+  //             <span className="how-to-apply--pgt--js__modal__progress__wrapper">
+  //                 <span className="how-to-apply--pgt--js__modal__progress__circle">
+  //                     <span
+  //                         className={
+  //                             question === 'location'
+  //                                 ? 'fas fa-circle icon'
+  //                                 : 'fas fa-check icon'
+  //                         }
+  //                     ></span>
+  //                 </span>
+  //                 {question === 'location' && (
+  //                     <span className="how-to-apply--pgt--js__modal__progress__text">
+  //                         Location
+  //                     </span>
+  //                 )}
+  //             </span>
+  //         </li>
+  //     ) : null,
+  nextStepMobile = question !== 'apply' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__next"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
@@ -1304,7 +915,10 @@ function HowToApply(props) {
     className: "cta-block__cta"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     className: "primary-cta-arrow--bright",
-    onClick: () => setModalVisible(true)
+    onClick: () => {
+      setModalVisible(true);
+      setFirstStep(true);
+    }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Apply now")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal",
     "data-open": modalVisible,
@@ -1322,72 +936,31 @@ function HowToApply(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-times icon",
     "aria-label": "Close"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  })), !firstStep ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__reset",
     style: {
       display: 'block'
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: () => {
-      // // entryPoints.length > 1
-      //     ? (options = (
-      //           <ul className="how-to-apply--pgt--js__options">
-      //               {entryPoints[0]['options'].length > 1 ?
-      //                 entryPoints.map((q) => {
-      //                   return (
-      //                       <li key={q}>
-      //                           <button
-      //                               onClick={(e) => {
-      //                                   journeyFromButton(
-      //                                       e
-      //                                   );
-      //                               }}
-      //                           >
-      //                               <span
-      //                                   onClick={(
-      //                                       e
-      //                                   ) => {
-      //                                       journeyFromSpan(
-      //                                           e
-      //                                       );
-      //                                   }}
-      //                               >
-      //                                   {q.header}
-      //                               </span>
-      //                           </button>
-      //                       </li>
-      //                   );
-      //               }) :
-      //                 // <ApplyLinks
-      //                 //     data={
-      //                 //         entryPoints[0][
-      //                 //             'options'
-      //                 //         ][0]['options'][0][
-      //                 //             'options'
-      //                 //         ][0]['options']
-      //                 //     }
-      //                 // /> }
-      //                 <p>qual selection</p> }
-      //           </ul>
-      //       ))
-      //     :
-      //         <p>not qual selection</p>;
-      setSelection(topLevelModal(entryPoints));
+      // Clear options display and render what user would see if modal first opened
+      setSelection();
+      setInitialSelection(initialModalDisplay);
+      setFirstStep(true);
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-redo"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Start again"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Start again"))) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
     className: "how-to-apply--pgt--js__modal__progress"
-  }, qualificationsProgress, subjectsProgress, entryPointsProgress, locationsProgress, nextStep), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
+  }, qualificationsProgress, subjectsProgress, entryPointsProgress, nextStep), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
     className: "how-to-apply--pgt--js__modal__progress--mobile"
-  }, qualificationsProgressMobile, subjectsProgressMobile, entryPointsProgressMobile, locationsProgressMobile, nextStepMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, qualificationsProgressMobile, subjectsProgressMobile, entryPointsProgressMobile, nextStepMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Start in ", props.element.dataset.year)), qualificationQuestion, entryQuestion, locationQuestion, applyQuestion, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Start in ", props.element.dataset.year)), qualificationQuestion, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
   }, alternative))));
-}
-
-const nextLevel = (arr, k) => arr.filter(i => Object.keys(i)[0] === k)[0][k]; // function nextQuestion(preferences) {
+} // const nextLevel = (arr, k) => arr.filter((i) => Object.keys(i)[0] === k)[0][k];
+// function nextQuestion(preferences) {
 //     const question =
 //         preferences.qualification === null
 //             ? 'qualification'
