@@ -2506,10 +2506,16 @@ function createMap(mapContainer) {
   let marker;
 
   function hashChange(id) {
-    console.log('hashchange'); // Trigger - to show northampton square campus marker on initial load
-
-    if (id === '') {
+    // Trigger - to show northampton square campus marker on initial load
+    if (id === '' || id == '498711') {
       id = '498711';
+    }
+
+    ;
+
+    if (id != '498711') {
+      // removes northampton square campus map overlay  
+      initialMapOverlay.setMap(null);
     }
 
     ; //loop over  bigBuildingsArray to find marker
@@ -2519,9 +2525,7 @@ function createMap(mapContainer) {
         let found = cityLayers.buildingsObj[building]; // clears map from previous markers
 
         if (marker) {
-          marker.setMap(null); // removes northampton square campus map overlay 
-
-          initialMapOverlay.setMap(null);
+          marker.setMap(null);
         } // allocates new marker info to variable
 
 
