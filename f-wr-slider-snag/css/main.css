@@ -61925,18 +61925,22 @@ main > .news {
 
 .news .news__related-news {
     background: #f2f2f2;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+}
+
+.news .news__related-news .news__related-news__container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
 }
 
 @media (min-width: 901px) {
-    .news .news__related-news {
-        padding-left: 2rem;
-        padding-right: 2rem;
+    .news .news__related-news .news__related-news__container {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
-.news .news__related-news h2 {
+.news .news__related-news .news__related-news__container h2 {
     text-align: center;
 }
 
@@ -63431,19 +63435,39 @@ main > .news {
 
 .course--pgt__related-courses {
     padding: 1rem 0 1rem;
+    /*
+    .related-content {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include media('<between') {
+            flex-direction: column;
+        }
+
+        @include media('>=between') {
+            flex-direction: row;
+
+            .card {
+                width: calc(50% - 1.5rem);
+                margin-right: $measure--small2;
+            }
+        }
+    }
+    */
 }
 
 @media (max-width: 1024px) {
     .course--pgt__related-courses {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
     }
 }
 
 @media (max-width: 1024px) and (min-width: 901px) {
     .course--pgt__related-courses {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
@@ -63460,27 +63484,6 @@ main > .news {
     margin-right: auto;
     margin-top: 0.5rem;
     width: 6rem;
-}
-
-.course--pgt__related-courses .related-content {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-@media (max-width: 899px) {
-    .course--pgt__related-courses .related-content {
-        flex-direction: column;
-    }
-}
-
-@media (min-width: 900px) {
-    .course--pgt__related-courses .related-content {
-        flex-direction: row;
-    }
-    .course--pgt__related-courses .related-content .card {
-        width: calc(50% - 1.5rem);
-        margin-right: 1.5rem;
-    }
 }
 
 .course--pgt .wrapper--dropdown-filter__select {
@@ -69796,38 +69799,20 @@ button
 
 .course--ug__related-courses {
     padding: 1rem 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
 }
 
-.course--ug__related-courses .related-content {
-    margin-top: 1rem;
+@media (min-width: 901px) {
+    .course--ug__related-courses {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 .course--ug__related-courses .related-content .card a:not(:hover) {
     background-color: #ffffff;
-}
-
-@media (min-width: 768px) {
-    .course--ug__related-courses .related-content .card:nth-child(odd) {
-        grid-column: 2/10;
-    }
-    .course--ug__related-courses .related-content .card:nth-child(even) {
-        grid-column: 10/-2;
-    }
-}
-
-@media (max-width: 767px) {
-    .course--ug__related-courses .related-content {
-        display: block;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 767px) and (min-width: 901px) {
-    .course--ug__related-courses .related-content {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
 }
 
 .course--ug__related-courses .course--ug__related-courses__kis-widget {
