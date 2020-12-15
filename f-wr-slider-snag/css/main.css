@@ -67843,6 +67843,10 @@ button
     justify-content: center;
 }
 
+.lifelong-learning .lifelong-learning__testimonials .related-content .card__details {
+    justify-content: center;
+}
+
 .lifelong-learning .lifelong-learning__video {
     background: #fdf0ed;
     margin-bottom: 1rem;
