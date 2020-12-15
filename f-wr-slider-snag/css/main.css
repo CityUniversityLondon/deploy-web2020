@@ -66132,8 +66132,7 @@ button
 
 @media (min-width: 768px) {
     .wrapper--research-degree__pre-overview,
-    .wrapper--research-degree__overview,
-    .wrapper--research-degree__research-projects {
+    .wrapper--research-degree__overview {
         grid-template-columns: repeat(18, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -66142,24 +66141,21 @@ button
 
 @media (min-width: 768px) and (min-width: 768px) {
     .wrapper--research-degree__pre-overview,
-    .wrapper--research-degree__overview,
-    .wrapper--research-degree__research-projects {
+    .wrapper--research-degree__overview {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 768px) and (min-width: 901px) {
     .wrapper--research-degree__pre-overview,
-    .wrapper--research-degree__overview,
-    .wrapper--research-degree__research-projects {
+    .wrapper--research-degree__overview {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (max-width: 1023px) {
     .wrapper--research-degree__pre-overview,
-    .wrapper--research-degree__overview,
-    .wrapper--research-degree__research-projects {
+    .wrapper--research-degree__overview {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -66167,24 +66163,55 @@ button
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .wrapper--research-degree__pre-overview,
-    .wrapper--research-degree__overview,
-    .wrapper--research-degree__research-projects {
+    .wrapper--research-degree__overview {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media (max-width: 1023px) {
-    .wrapper--research-degree__promo-box,
+@media (min-width: 768px) {
+    .wrapper--research-degree__research-projects {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+    .wrapper--research-degree__research-projects {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (min-width: 901px) {
+    .wrapper--research-degree__research-projects {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 900px) {
     .wrapper--research-degree__research-projects {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
-@media (max-width: 1023px) and (min-width: 901px) {
-    .wrapper--research-degree__promo-box,
+@media (max-width: 900px) and (min-width: 901px) {
     .wrapper--research-degree__research-projects {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .wrapper--research-degree__promo-box {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 901px) {
+    .wrapper--research-degree__promo-box {
         padding-left: 2rem;
         padding-right: 2rem;
     }
@@ -66249,51 +66276,6 @@ button
 
 .wrapper--research-degree__research-projects {
     padding-top: 1rem;
-}
-
-@media (max-width: 899px) {
-    .wrapper--research-degree__research-projects {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 901px) {
-    .wrapper--research-degree__research-projects {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 901px) {
-    .wrapper--research-degree__research-projects {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 1441px) {
-    .wrapper--research-degree__research-projects {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1023px) {
-    .wrapper--research-degree__research-projects {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .wrapper--research-degree__research-projects {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
 }
 
 .wrapper--research-degree__research-projects h2.research-degree__research-projects__heading {
