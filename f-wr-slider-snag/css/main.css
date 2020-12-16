@@ -44005,7 +44005,7 @@ blockquote footer cite {
 }
 
 .js .slider[data-style='arrows'] + .slider__controls {
-    max-width: 49.6rem;
+    max-width: 44.4rem;
     margin-right: 1rem;
     margin-left: 1rem;
 }
@@ -69887,34 +69887,6 @@ button
 
 .course--ug__student-testimonials {
     grid-column: 8/-1;
-}
-
-.course--ug__student-testimonials .card {
-    margin-top: 0;
-}
-
-.course--ug__student-testimonials .card .card__thumbnail {
-    margin: 1rem 0 0 0;
-}
-
-@media (max-width: 768px) {
-    .course--ug__student-testimonials .card .card__thumbnail {
-        margin: 0;
-    }
-}
-
-.course--ug__student-testimonials .card .card__details__text {
-    padding-top: 0;
-}
-
-@media (max-width: 768px) {
-    .course--ug__student-testimonials .card .card__details__text {
-        padding: 1rem 0 0 0;
-    }
-}
-
-.course--ug__student-testimonials .card .card__details__text .card--testimonial__quote {
-    margin-top: 0;
 }
 
 .course--ug__student-testimonials__half:nth-child(1) {
