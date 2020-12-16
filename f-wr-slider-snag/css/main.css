@@ -43826,7 +43826,6 @@ blockquote footer cite {
     justify-content: right;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    margin-right: 1rem;
     padding: 0.1875rem;
 }
 
@@ -44003,6 +44002,12 @@ blockquote footer cite {
 .js .slider[data-style='responsive'].related-content .card.card--contact + .card--contact {
     border-top: none;
     padding-top: 0;
+}
+
+.js .slider[data-style='arrows'] + .slider__controls {
+    max-width: 49.6rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 .js .slider[data-style='responsive'] {
