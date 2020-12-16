@@ -220,6 +220,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function ApplyLinks(props) {
   if (props.data) {
+    // console.log(props.data);
     return props.data.map((d, index) => {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
         key: index,
@@ -384,7 +385,10 @@ function HowToApply(props) {
   [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:');
   let [selection, setSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
   let [initialSelection, setInitialSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let options = document.querySelector('.how-to-apply--pgt--js__options'); // Test logs
+  let options = document.querySelector('.how-to-apply--pgt--js__options'),
+      // promptQualification = 'Choose the qualification you wish to apply for:',
+  promptRoute = 'Choose the route you wish to apply for:',
+      promptEntryPoint = 'Choose the entry point you wish to apply for:'; // Test logs
   // console.log('subject: '  + entryPoints[0]['options'].length); // subject
   // console.log('date: '     + entryPoints[0]['options'][0]['options'].length); // date
   // console.log('location: ' + entryPoints[0]['options'][0]['options'][0]['options'].length); // location
@@ -392,20 +396,103 @@ function HowToApply(props) {
 
   function modalJourney(singleQualData) {
     // If reset option has been used, remove buttons from DOM to avoid unwanted buttons rendering.
-    setInitialSelection(); // Single qualification - I think we have a condition for this. Check and remove block if possible.
-    // if (singleQualData.length === 1) {
-    //     console.log('Single qual');
-    //     setWindowPrompt('')
-    // }
-    // function filterSubjData(subject) {
-    //     for (const s of singleQualData) {
-    //         let subjData = singleQualData[0]['options'];
-    //         // let filteredSubjData = subjData.filter((s) => s.header === subject);
-    //     }
+    setInitialSelection();
+    let filteredSubjData; // function filterMethods(methods) {
+    //     // Loop methods; see if they can
+    //     (options = (
+    //         <ApplyLinks
+    //             data={methods}
+    //         />
+    //     ));
+    //     setSelection(
+    //         <ul className="how-to-apply--pgt--js__options">
+    //             {options}
+    //         </ul>
+    //     );
     // }
 
+    function filterDatesData(filterDatesData) {
+      // Loop dates; see if they can be direct links
+      filterDatesData.map(s => {
+        let dates = s['options'];
+        dates.map(d => {
+          let locations = d['options'];
+          locations.map(l => {
+            let methods = l['options'];
+            methods.map(() => {
+              if (dates.length > 1 && (locations.length > 1 || methods.length > 1)) {// Multiple locations and/or methods exist. Render Regular buttons. Next window content decided in filterLocationsData function.
+              } else {
+                // Display dates as links
+                options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+                  className: "how-to-apply--pgt--js__options"
+                }, filterDatesData[0]['options'].map(d => {
+                  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                    key: d,
+                    data: d['options'][0]['options'],
+                    btnText: formatDate(d.header)
+                  });
+                }));
+                setWindowPrompt(promptEntryPoint);
+                setSelection(options);
+              }
+            });
+          });
+        });
+      });
+    } // See if we can perform data filter on click; don't think we need separate function for this.
+
+
+    function filterSubjData(subject) {
+      let subjData = singleQualData[0]['options'];
+      filteredSubjData = subjData.filter(s => s.header === subject);
+      filterDatesData(filteredSubjData);
+    }
+
+    function filterSubjectData() {
+      singleQualData.map(s => {
+        let subjectNames = s['options'];
+        filterSubjData(subjectNames);
+        subjectNames.map(s => {
+          let dates = s['options'];
+          dates.map(d => {
+            let locations = d['options'];
+            locations.map(l => {
+              let methods = l['options'];
+
+              if (subjectNames.length > 1 && (dates.length || locations.length || methods.length > 1)) {
+                // Multiple dates, locations and/or methods exist. Render Regular buttons. Next window content decided in filterDatesData function.
+                options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+                  className: "how-to-apply--pgt--js__options"
+                }, subjectNames.map(s => {
+                  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+                    key: s
+                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+                    onClick: e => {
+                      let subjBtn = e.target.querySelector('span');
+                      let subjVal = subjBtn.textContent;
+                      let filteredSubjData = subjectNames.filter(s => s.header === subjVal);
+                      filterDatesData(filteredSubjData);
+                    }
+                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+                    onClick: e => {
+                      let spanText = e.target.textContent;
+                      let filteredSubjData = subjectNames.filter(s => s.header === spanText);
+                      filterDatesData(filteredSubjData);
+                    }
+                  }, s.header)));
+                }));
+                setWindowPrompt(promptRoute);
+                setSelection(options);
+              } else {// Display subjects as links
+              }
+            });
+          });
+        });
+      });
+    }
+
     if (singleQualData[0]['options'].length > 1) {
-      // Multiple subjects
+      // Multiple subjects - can't use (not filtered)
       let subjects = singleQualData[0]['options'];
       let dates = singleQualData[0]['options'][0]['options'];
       let methods = singleQualData[0]['options'][0]['options'][0]['options'][0]['options'];
@@ -418,6 +505,7 @@ function HowToApply(props) {
         }
 
         setWindowPrompt('Choose the route you wish to apply for:');
+        filterSubjectData();
         options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
           className: "how-to-apply--pgt--js__options"
         }, subjects.map(d => {
@@ -425,25 +513,38 @@ function HowToApply(props) {
             dates.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
               key: d
             }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-              onClick: () => {
+              // subject button
+              onClick: e => {
                 // Target clicked qualification button and its text value, e.g. 'MSc'
-                // let subjBtn = e.target.querySelector('span');
-                // let subjVal = subjBtn.textContent;
-                // filterSubjData(subjVal);
+                let subjBtn = e.target.querySelector('span');
+                let subjVal = subjBtn.textContent;
+                filterSubjData(subjVal);
                 setFirstStep(false); // Multiple subjects > Multiple dates > Multiple methods
+                // methods.length > 1 ? (
+                //     <ApplyLinks
+                //         key={d}
+                //         data={methods}
+                //         btnText={d.header}
+                //     />
+                // ) : (
+                //     // Multiple subjects > Multiple dates > Single methods. Date is link.
+                //     (options = dates.map(
+                //         (d) => {
+                //             return (
+                //                 <ApplyLinks
+                //                     key={d}
+                //                     data={
+                //                         methods
+                //                     }
+                //                     btnText={formatDate(
+                //                         d.header
+                //                     )}
+                //                 />
+                //             );
+                //         }
+                //     ))
+                // );
 
-                methods.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
-                  key: d,
-                  data: methods,
-                  btnText: d.header
-                }) : // Multiple subjects > Multiple dates > Single methods. Date is link.
-                options = dates.map(d => {
-                  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
-                    key: d,
-                    data: methods,
-                    btnText: formatDate(d.header)
-                  });
-                });
                 setSelection( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
                   className: "how-to-apply--pgt--js__options"
                 }, options));
@@ -456,14 +557,20 @@ function HowToApply(props) {
               onClick: () => {
                 setFirstStep(false); // console.log('methods screen');
               }
-            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, d.header))) : // Multiple subjects > Single date > Single method. Subject is link.
-            dates.map(date => {
-              return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
-                key: date,
-                data: methods,
-                btnText: d.header
-              });
-            })
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, d.header))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "placeholder") // Filter links data and pass as props
+            // Multiple subjects > Single date > Single method. Subject is link.
+            // dates.map((date) => {
+            // console.log('2: ' + singleQualData)
+            // return (
+            // ***
+            //         <ApplyLinks
+            //             key={date}
+            //             data={methods}
+            //             btnText={d.header}
+            //         />
+            //     );
+            // })
+
           );
         }));
         setSelection(options);
@@ -527,6 +634,7 @@ function HowToApply(props) {
 
           setSelection(options);
         } else {
+          // console.log('multiple subjects, single date')
           setMultipleSubjects(false); // Are there multiple methods of study, e.g. 'full-time', 'part-time'?
           // console.log('Dont open dates window');
           // console.log(filteredQualData[0]['options'][0]['options'][0]['options']);
@@ -636,8 +744,7 @@ function HowToApply(props) {
     key: 'qualification' + i
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: e => {
-      setFirstStep(false); // btn func
-
+      setFirstStep(false);
       journeyFromButton(e);
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
@@ -947,6 +1054,7 @@ function HowToApply(props) {
       setSelection();
       setInitialSelection(initialModalDisplay);
       setFirstStep(true);
+      setWindowPrompt('Original prompt');
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-redo"
