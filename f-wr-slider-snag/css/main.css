@@ -43626,6 +43626,10 @@ blockquote footer cite {
     margin-bottom: 0;
 }
 
+.js .slider .slide.card--research {
+    padding: 1rem;
+}
+
 @media (max-width: 767px) {
     .js .slider[data-cardsperrow='1'][data-small='true'] .slide[data-smallposition='-1'] {
         left: -100%;
