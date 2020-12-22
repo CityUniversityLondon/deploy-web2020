@@ -225,8 +225,8 @@ function ApplyLinks(props) {
         key: index,
         className: "apply"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: d['options']['apply']
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.btnText ? props.btnText : d.header), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        href: d['link']
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, d.text), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "far fa-external-link",
         "aria-label": "(external link)"
       })));
@@ -276,19 +276,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; // function formatDate(sourceDate) {
-//     let formattedDate = new Date(sourceDate);
-//     return `${
-//         months[formattedDate.getUTCMonth()]
-//     } ${formattedDate.getUTCFullYear()}`;
-// }
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
+function formatDate(sourceDate) {
+  let formattedDate = new Date(sourceDate);
+  return "".concat(months[formattedDate.getUTCMonth()], " ").concat(formattedDate.getUTCFullYear());
+}
 /**
  * Launch the how to apply modal.
  *
  * @param {object} props The JSON configuration file for the modal.
  * @return {object} The React component to render.
  */
+
 
 function HowToApply(props) {
   let entryPoints = props.config;
@@ -305,129 +305,195 @@ function HowToApply(props) {
   [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:');
   let [selection, setSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
   let [btnSelection, setBtnSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let [linkSelection, setLinkSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(); // let [initialSelection, setInitialSelection] = useState();
+  let [dateSelection, setDateSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
+  let [linkSelection, setLinkSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
+  let [methodSelection, setMethodSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(); // let [initialSelection, setInitialSelection] = useState();
   // let [qualificationSelect, setQualificationSelect] = useState(false);
+  // let options = document.querySelector('.how-to-apply--pgt--js__options'),
 
-  let options = document.querySelector('.how-to-apply--pgt--js__options'),
-      // promptQualification = 'Choose the qualification you wish to apply for:',
-  promptRoute = 'Choose the route you wish to apply for:'; // promptEntryPoint = 'Choose the entry point you wish to apply for:';
+  let promptQualification = 'Choose the qualification you wish to apply for:',
+      promptRoute = 'Choose the route you wish to apply for:',
+      promptEntryPoint = 'Choose the entry point you wish to apply for:',
+      promptMethod = 'Apply online now:';
 
   function filterMethodsData(methods) {
-    // console.log(methods);
-    // console.log(methods.length);
-    // console.log('filter methods function');
-    // No additional validation required at this level; print methods of study as links
-    options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-      className: "how-to-apply--pgt--js__options"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      data: methods
-    }));
-    setSelection(options);
+    setWindowPrompt(promptMethod);
+    setDateSelection();
     setBtnSelection();
     setLinkSelection();
+    let methodLinks = [];
+    let linkOptions;
+    methods.map(m => {
+      const methodLink = {
+        text: m.header,
+        link: m.options.apply
+      };
+      methodLinks.push(methodLink);
+      linkOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        data: methodLinks
+      });
+      setMethodSelection(linkOptions);
+    });
   }
+  /**
+   * Completed programme and subject filter. Analyse dates data.
+   *
+   * @param {object} data The filtered data record data, where dates are at the top level.
+   */
 
-  function filterDatesData(filterDatesData) {
-    // console.log('fdd: ' + filterDatesData);
-    let methodStandardButtons = [];
-    let methodLinkButtons = []; // Loop dates; see if they can be direct links
 
-    filterDatesData.map(d => {
+  function filterDatesData(data) {
+    setWindowPrompt(promptEntryPoint);
+    setBtnSelection();
+    setLinkSelection();
+    let buttonOptions;
+    let linkOptions;
+    let dateLinks = [];
+    let dateButtons = [];
+    data.map(d => {
       let locations = d['options'];
       locations.map(l => {
-        // console.log(l);
         let methods = l['options'];
-        methods.map(() => {
-          // console.log('dates: ' + filterDatesData.length);
-          // console.log('locations: ' + locations.length);
-          // console.log('methods: ' + methods.length);
-          // console.log(filterDatesData.length);
-          if (filterDatesData.length > 1) {
+        methods.map(m => {
+          // Multiple dates; print buttons
+          if (data.length > 1) {
             if (locations.length > 1 || methods.length > 1) {
-              methodStandardButtons.push(d.header);
+              // Dates as standard button; further options to follow
+              dateButtons.push(d.header);
+              dateButtons = dateButtons.reduce(function (a, i) {
+                a.indexOf(i) === -1 ? a.push(i) : null;
+                return a;
+              }, []);
+              buttonOptions = dateButtons.map(db => {
+                return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+                  key: db
+                }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+                  "data-date-src": db,
+                  onClick: e => {
+                    let dateSrc = e.target.getAttribute('data-date-src');
+                    let filteredData = data.filter(fd => fd.header === dateSrc);
+                    filterMethodsData(filteredData[0]['options'][0]['options']);
+                  }
+                }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+                  "data-date-src": db,
+                  onClick: e => {
+                    let dateSrc = e.target.getAttribute('data-date-src');
+                    let filteredData = data.filter(fd => fd.header === dateSrc);
+                    filterMethodsData(filteredData[0]['options'][0]['options']);
+                  }
+                }, formatDate(db))));
+              });
+              setDateSelection(buttonOptions);
             } else {
-              methodLinkButtons.push(d.header);
+              // Dates as link buttons; no further options to follow
+              const dateLink = {
+                text: formatDate(d.header),
+                link: m.options.apply
+              };
+              dateLinks.push(dateLink);
+              linkOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                data: dateLinks
+              });
             }
           } else {
-            // Single date; skip location level as handled in dates window and move to methods
-            filterMethodsData(filterDatesData[0]['options'][0]['options']);
+            filterMethodsData(data[0]['options'][0]['options']);
           }
         });
       });
     });
+    setLinkSelection(linkOptions);
+    setBtnSelection(buttonOptions);
   }
 
   function filterSubjectData(data) {
-    setBtnSelection(); // console.log('fsdf: ' + data);
-
+    setBtnSelection();
+    setLinkSelection();
+    let buttonQuals = [];
+    let linkQuals = [];
+    let buttonOptions;
+    let linkOptions;
     data.map(s => {
-      // console.log(s);
-      let subjectNames = s['options'];
-      subjectNames.map(s => {
-        let dates = s['options'];
-        dates.map(d => {
-          // console.log(d);
-          let locations = d['options'];
-          locations.map(l => {
-            let methods = l['options'];
-
-            if (subjectNames.length > 1 && (dates.length || locations.length || methods.length > 1)) {
-              // Multiple dates, locations and/or methods exist. Render Regular buttons. Next window content decided in filterDatesData function.
-              options = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-                className: "how-to-apply--pgt--js__options"
-              }, subjectNames.map(s => {
-                return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-                  key: s
-                }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-                  onClick: e => {
-                    let subjBtn = e.target.querySelector('span');
-                    let subjVal = subjBtn.textContent;
-                    let filteredSubjData = subjectNames.filter(s => s.header === subjVal);
-                    filterDatesData(filteredSubjData);
-                  }
-                }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-                  onClick: e => {
-                    let spanText = e.target.textContent;
-                    let filteredSubjData = subjectNames.filter(s => s.header === spanText);
-                    filterDatesData(filteredSubjData);
-                  }
-                }, s.header)));
-              }));
-              setWindowPrompt(promptRoute);
-              setSelection(options);
-            } else if (subjectNames.length > 1 && (dates.length || locations.length || methods.length === 1)) {// Display subjects as links
-            } else if (subjectNames.length === 1 && (dates.length || locations.length || methods.length > 1)) {
-              // Open next window (dates)
-              // console.log('open dates window');
-              filterDatesData(subjectNames[0]['options']);
+      setWindowPrompt(promptRoute);
+      let dates = s['options'];
+      dates.map(d => {
+        let locations = d['options'];
+        locations.map(l => {
+          let methods = l['options'];
+          methods.map(() => {
+            if (data.length > 1) {
+              if (dates.length > 1 || locations.length > 1 || methods.length > 1) {
+                // Standard subject button
+                buttonQuals.push(s.header);
+                buttonQuals = buttonQuals.reduce(function (a, i) {
+                  a.indexOf(i) === -1 ? a.push(i) : null;
+                  return a;
+                }, []);
+                buttonOptions = buttonQuals.map(bq => {
+                  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+                    key: bq
+                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+                    onClick: e => {
+                      let btnEl = e.target.querySelector('span');
+                      let subjectVal = btnEl.textContent;
+                      let filteredData = data.filter(subj => subj.header === subjectVal);
+                      filterDatesData(filteredData[0]['options']);
+                    }
+                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+                    onClick: e => {
+                      let subjectVal = e.target.textContent;
+                      let filteredData = data.filter(subj => subj.header === subjectVal);
+                      filterDatesData(filteredData[0]['options']);
+                    }
+                  }, bq)));
+                });
+                setBtnSelection(buttonOptions);
+              } else {
+                // Route as link
+                linkQuals.push(s.header);
+                linkQuals = linkQuals.reduce(function (a, i) {
+                  a.indexOf(i) === -1 ? a.push(i) : null;
+                  return a;
+                }, []);
+                linkOptions = linkQuals.map(lq => {
+                  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                    key: lq,
+                    data: methods,
+                    btnText: lq
+                  });
+                });
+                setLinkSelection(linkOptions);
+              }
+            } else {
+              // Move to dates function
+              filterDatesData(data[0]['options']);
             }
           });
         });
       });
     });
+    setBtnSelection(buttonOptions);
+    setLinkSelection(linkOptions);
   }
 
   function filterQualificationData(data) {
+    setWindowPrompt(promptQualification);
+    setDateSelection();
+    setMethodSelection();
+    setBtnSelection();
+    setLinkSelection();
     let buttonQuals = [];
     let linkQuals = [];
     let buttonOptions;
     let linkOptions;
     data.length > 1 ? data.map(e => {
-      let subjectNames = e['options']; // console.log(subjectNames);
-      // console.log(subjectNames.length);
-
+      let subjectNames = e['options'];
       subjectNames.map(s => {
-        // console.log('TL subjects: ' + s);
-        // console.log('TL subjects: ' + s.length);
         let dates = s['options'];
         dates.map(d => {
-          // console.log('TL dates: ' + d.length);
           let locations = d['options'];
           locations.map(l => {
-            // console.log('TL locations: ' + l.length);
             let methods = l['options'];
             methods.map(() => {
-              // console.log('TL methods: ' + m.length);
               if (data.length > 1) {
                 if (subjectNames.length > 1 || dates.length > 1 || locations.length > 1 || methods.length > 1) {
                   buttonQuals.push(e.header);
@@ -440,17 +506,16 @@ function HowToApply(props) {
                       key: bq
                     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
                       onClick: e => {
-                        let qualBtn = e.target.querySelector('span'); // console.log(qualBtn);
-
-                        let qualVal = qualBtn.textContent; // console.log(qualVal);
-
-                        let filteredQualData = data.filter(s => s.header === qualVal); // console.log(filteredQualData);
-
-                        filteredQualData;
-                        filterSubjectData(filteredQualData);
+                        let qualBtn = e.target.querySelector('span');
+                        let qualVal = qualBtn.textContent;
+                        let filteredQualData = data.filter(qual => qual.header === qualVal);
+                        filterSubjectData(filteredQualData[0]['options']);
                       }
                     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-                      onClick: () => {// console.log('span btn click');
+                      onClick: e => {
+                        let qualVal = e.target.textContent;
+                        let filteredQualData = data.filter(qual => qual.header === qualVal);
+                        filterSubjectData(filteredQualData[0]['options']);
                       }
                     }, bq)));
                   });
@@ -460,13 +525,19 @@ function HowToApply(props) {
                   linkQuals = linkQuals.reduce(function (a, i) {
                     a.indexOf(i) === -1 ? a.push(i) : null;
                     return a;
-                  }, []);
-                  linkOptions = linkQuals.map(lq => {
-                    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
-                      key: lq,
-                      data: methods,
-                      btnText: lq
-                    });
+                  }, []); // Map each unique qualification and filter data to extract correct apply links
+
+                  const methodLinks = [];
+                  linkQuals.map(lq => {
+                    let filteredQualData = data.filter(q => q.header === lq);
+                    const methodLink = {
+                      text: lq,
+                      link: filteredQualData[0]['options'][0]['options'][0]['options'][0]['options'][0]['options']['apply']
+                    };
+                    methodLinks.push(methodLink);
+                  });
+                  linkOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                    data: methodLinks
                   });
                   setLinkSelection(linkOptions);
                 }
@@ -477,41 +548,7 @@ function HowToApply(props) {
       });
     }) : // One qualification; move to subjects function
     filterSubjectData(entryPoints[0]['options']);
-  } // filterQualificationData(entryPoints);
-  // function arrayReduce(arr) {
-  //     arr.reduce(function (a, i) {
-  //         a.indexOf(i) === -1 ? a.push(i) : null;
-  //         return a;
-  //     }, []);
-  // }
-  // let reducedButtonQuals = arrayReduce(buttonQuals);
-
-  /**
-   * Launch the how to apply modal from a button click.
-   *
-   * @param {event} e The button click event.
-   */
-  // function journeyFromButton(e) {
-  //     // Target clicked qualification button and its text value, e.g. 'MSc'
-  //     let qualBtn = e.target.querySelector('span');
-  //     let qualVal = qualBtn.textContent;
-  //     // Filter entry points data on selected qualification
-  //     let filteredQualData = entryPoints.filter((e) => e.header === qualVal);
-  //     modalJourney(filteredQualData);
-  // }
-
-  /**
-   * Launch the how to apply modal from a button's child span click.
-   *
-   * @param {event} e The span click event.
-   */
-  // function journeyFromSpan(e) {
-  //     let spanText = e.target.textContent;
-  //     // Filter entry points data on selected qualification
-  //     let filteredQualData = entryPoints.filter((e) => e.header === spanText);
-  //     modalJourney(filteredQualData);
-  // }
-
+  }
 
   const question = 'qualification',
         // [multipleSubjects, setMultipleSubjects] = useState(true),
@@ -521,7 +558,7 @@ function HowToApply(props) {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, windowPrompt), selection, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, btnSelection, linkSelection))),
+  }, dateSelection, methodSelection, btnSelection, linkSelection))),
         qualificationsProgress = Object.keys(entryPoints).length > 1 ? question === 'qualification' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
@@ -836,6 +873,10 @@ function HowToApply(props) {
     onClick: () => {
       setModalVisible(true);
       setFirstStep(true);
+      setDateSelection();
+      setMethodSelection();
+      setBtnSelection();
+      setLinkSelection();
       filterQualificationData(entryPoints);
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Apply now")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
@@ -865,8 +906,7 @@ function HowToApply(props) {
       // Clear options display and render what user would see if modal first opened
       setSelection(); // setInitialSelection(initialModalDisplay);
 
-      setFirstStep(true);
-      setWindowPrompt('Original prompt');
+      setFirstStep(true); // setWindowPrompt('Original prompt');
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-redo"
