@@ -302,8 +302,8 @@ function HowToApply(props) {
         [preferences, setPreferences] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(initialPreferences),
         [firstStep, setFirstStep] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
         // Controls 'Start again' visibility
-  [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:');
-  let [selection, setSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
+  [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:'); // let [selection, setSelection] = useState();
+
   let [btnSelection, setBtnSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
   let [dateSelection, setDateSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
   let [linkSelection, setLinkSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
@@ -327,6 +327,7 @@ function HowToApply(props) {
     setDateSelection();
     setBtnSelection();
     setLinkSelection();
+    setFirstStep(false);
     let methodLinks = [];
     let linkOptions;
     methods.map(m => {
@@ -352,6 +353,7 @@ function HowToApply(props) {
     setWindowPrompt(promptEntryPoint);
     setBtnSelection();
     setLinkSelection();
+    setFirstStep(false);
     let buttonOptions;
     let linkOptions;
     let dateButtons = [];
@@ -398,7 +400,7 @@ function HowToApply(props) {
                   // Dates as links
                   const dateLink = {
                     text: formatDate(fd.header),
-                    link: m.options.apply
+                    link: fd['options'][0]['options'][0]['options']['apply']
                   };
                   locationOneDateLinks.push(dateLink);
                   locationOneDateLinks = Array.from(new Set(locationOneDateLinks.map(a => a.text))).map(text => {
@@ -422,7 +424,7 @@ function HowToApply(props) {
                   // Dates as links
                   const dateLink = {
                     text: formatDate(fd.header),
-                    link: m.options.apply
+                    link: fd['options'][0]['options'][0]['options']['apply']
                   };
                   locationTwoDateLinks.push(dateLink);
                   locationTwoDateLinks = Array.from(new Set(locationTwoDateLinks.map(a => a.text))).map(text => {
@@ -494,10 +496,12 @@ function HowToApply(props) {
   function filterSubjectData(data) {
     setBtnSelection();
     setLinkSelection();
+    setFirstStep(false);
     let buttonQuals = [];
     let linkQuals = [];
     let buttonOptions;
     let linkOptions;
+    let locationOptions = [];
     data.map(s => {
       setWindowPrompt(promptRoute);
       let dates = s['options'];
@@ -506,8 +510,17 @@ function HowToApply(props) {
         locations.map(l => {
           let methods = l['options'];
           methods.map(() => {
+            // Store each unique location value in an array
+            locations.map(lo => {
+              locationOptions.push(lo.header);
+            });
+            locationOptions = locationOptions.reduce(function (a, i) {
+              a.indexOf(i) === -1 ? a.push(i) : null;
+              return a;
+            }, []);
+
             if (data.length > 1) {
-              if (dates.length > 1 || locations.length > 1 || methods.length > 1) {
+              if (dates.length > 1 || locationOptions.length > 1 || methods.length > 1) {
                 // Standard subject button
                 buttonQuals.push(s.header);
                 buttonQuals = buttonQuals.reduce(function (a, i) {
@@ -567,10 +580,12 @@ function HowToApply(props) {
     setMethodSelection();
     setBtnSelection();
     setLinkSelection();
+    setFirstStep(true);
     let buttonQuals = [];
     let linkQuals = [];
     let buttonOptions;
     let linkOptions;
+    let locationOptions = [];
     data.length > 1 ? data.map(e => {
       let subjectNames = e['options'];
       subjectNames.map(s => {
@@ -580,8 +595,17 @@ function HowToApply(props) {
           locations.map(l => {
             let methods = l['options'];
             methods.map(() => {
+              // Store each unique location value in an array
+              locations.map(lo => {
+                locationOptions.push(lo.header);
+              });
+              locationOptions = locationOptions.reduce(function (a, i) {
+                a.indexOf(i) === -1 ? a.push(i) : null;
+                return a;
+              }, []);
+
               if (data.length > 1) {
-                if (subjectNames.length > 1 || dates.length > 1 || locations.length > 1 || methods.length > 1) {
+                if (subjectNames.length > 1 || dates.length > 1 || locationOptions.length > 1 || methods.length > 1) {
                   buttonQuals.push(e.header);
                   buttonQuals = buttonQuals.reduce(function (a, i) {
                     a.indexOf(i) === -1 ? a.push(i) : null;
@@ -642,11 +666,13 @@ function HowToApply(props) {
   // [multipleLocations, setMultipleLocations] = useState(true),
   qualificationQuestion = question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, windowPrompt), selection, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, windowPrompt), !(locationOneHeading || locationOneDateSelectionButton || locationOneDateSelectionLink || locationTwoHeading || locationTwoDateSelectionButton || locationTwoDateSelectionLink) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, dateSelection, methodSelection, btnSelection, linkSelection), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  }, dateSelection, methodSelection, btnSelection, linkSelection) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationOneHeading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, locationOneHeading, locationOneDateSelectionButton, locationOneDateSelectionLink, locationTwoHeading, locationTwoDateSelectionButton, locationTwoDateSelectionLink))),
+  }, locationOneDateSelectionButton, locationOneDateSelectionLink), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationTwoHeading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    className: "how-to-apply--pgt--js__options"
+  }, locationTwoDateSelectionButton, locationTwoDateSelectionLink)))),
         qualificationsProgress = Object.keys(entryPoints).length > 1 ? question === 'qualification' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__current"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
@@ -992,9 +1018,8 @@ function HowToApply(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: () => {
       // Clear options display and render what user would see if modal first opened
-      setSelection(); // setInitialSelection(initialModalDisplay);
-
-      setFirstStep(true); // setWindowPrompt('Original prompt');
+      setFirstStep(true);
+      filterQualificationData(entryPoints);
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "fas fa-redo"
