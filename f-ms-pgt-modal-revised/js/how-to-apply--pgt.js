@@ -291,16 +291,19 @@ function formatDate(sourceDate) {
 
 
 function HowToApply(props) {
-  let entryPoints = props.config;
-  const initialPreferences = {
-    qualification: Object.keys(entryPoints).length === 1 ? Object.keys(entryPoints[0])[0] : null,
-    subject: null,
-    entry: null,
-    location: null
-  },
-        [modalVisible, setModalVisible] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
-        [preferences, setPreferences] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(initialPreferences),
-        [firstStep, setFirstStep] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+  let entryPoints = props.config; // const initialPreferences = {
+  //         qualification:
+  //             Object.keys(entryPoints).length === 1
+  //                 ? Object.keys(entryPoints[0])[0]
+  //                 : null,
+  //         subject: null,
+  //         entry: null,
+  //         location: null,
+  //     },
+
+  const [modalVisible, setModalVisible] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+        // [preferences, setPreferences] = useState(initialPreferences),
+  [firstStep, setFirstStep] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
         // Controls 'Start again' visibility
   [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:'); // let [selection, setSelection] = useState();
 
@@ -320,7 +323,17 @@ function HowToApply(props) {
   let promptQualification = 'Choose the qualification you wish to apply for:',
       promptRoute = 'Choose the route you wish to apply for:',
       promptEntryPoint = 'Choose the entry point you wish to apply for:',
-      promptMethod = 'Apply online now:';
+      promptMethod = 'Apply online now:',
+      selectedQualificationData,
+      selectedQualificationValue,
+      selectedSubjectData,
+      selectedSubjectValue,
+      selectedDateData,
+      selectedDateValue;
+  const [progressQualification, setProgressQualification] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
+  const [progressSubject, setProgressSubject] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
+  const [progressDate, setProgressDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
+  const [progressMethod, setProgressMethod] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
 
   function filterMethodsData(methods) {
     setWindowPrompt(promptMethod);
@@ -328,6 +341,63 @@ function HowToApply(props) {
     setBtnSelection();
     setLinkSelection();
     setFirstStep(false);
+    let qualNav;
+    let subjNav;
+    let dateNav;
+    selectedQualificationData ? qualNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      className: "how-to-apply--pgt--js__modal__progress__previous"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+      className: "how-to-apply--pgt--js__modal__progress__wrapper",
+      onClick: () => {
+        filterQualificationData(entryPoints);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__circle"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "fas fa-check icon",
+      "aria-label": "Back to choose qualification"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__text"
+    }, selectedQualificationValue))) : qualNav = null;
+    setProgressQualification(qualNav);
+    selectedSubjectData ? subjNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      className: "how-to-apply--pgt--js__modal__progress__previous"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+      className: "how-to-apply--pgt--js__modal__progress__wrapper",
+      onClick: () => {
+        filterSubjectData(selectedQualificationData[0]['options']);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__circle"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "fas fa-check icon",
+      "aria-label": "Back to choose subject"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__text"
+    }, selectedSubjectValue))) : subjNav = null;
+    setProgressSubject(subjNav);
+    selectedDateData ? dateNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      className: "how-to-apply--pgt--js__modal__progress__previous"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+      className: "how-to-apply--pgt--js__modal__progress__wrapper",
+      onClick: () => {
+        if (selectedSubjectData) {
+          filterDatesData(selectedSubjectData[0]['options']);
+        } else if (selectedQualificationData) {
+          filterSubjectData(selectedQualificationData[0]['options']);
+        } else {
+          filterQualificationData(entryPoints);
+        }
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__circle"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "fas fa-check icon",
+      "aria-label": "Back to choose subject"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__text"
+    }, selectedDateValue))) : subjNav = null;
+    setProgressDate(dateNav);
     let methodLinks = [];
     let linkOptions;
     methods.map(m => {
@@ -350,6 +420,7 @@ function HowToApply(props) {
 
 
   function filterDatesData(data) {
+    setMethodSelection();
     setWindowPrompt(promptEntryPoint);
     setBtnSelection();
     setLinkSelection();
@@ -365,6 +436,42 @@ function HowToApply(props) {
     let locationOneDateAsLink = false;
     let locationTwoDateAsButton = false;
     let locationTwoDateAsLink = false;
+    let qualNav;
+    let subjNav;
+    selectedQualificationData ? qualNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      className: "how-to-apply--pgt--js__modal__progress__previous"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+      className: "how-to-apply--pgt--js__modal__progress__wrapper",
+      onClick: () => {
+        filterQualificationData(entryPoints);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__circle"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "fas fa-check icon",
+      "aria-label": "Back to choose qualification"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__text"
+    }, selectedQualificationValue))) : qualNav = null;
+    setProgressQualification(qualNav);
+    selectedSubjectData ? subjNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      className: "how-to-apply--pgt--js__modal__progress__previous"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+      className: "how-to-apply--pgt--js__modal__progress__wrapper",
+      onClick: () => {
+        filterSubjectData(selectedQualificationData[0]['options']);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__circle"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "fas fa-check icon",
+      "aria-label": "Back to choose subject"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__text"
+    }, selectedSubjectValue))) : subjNav = null;
+    setProgressSubject(subjNav);
+    setProgressDate();
+    setProgressMethod();
     data.map(d => {
       let locations = d['options'];
       locations.map(l => {
@@ -457,15 +564,17 @@ function HowToApply(props) {
                     "data-date-src": db,
                     onClick: e => {
                       let dateSrc = e.target.getAttribute('data-date-src');
-                      let filteredData = data.filter(fd => fd.header === dateSrc);
-                      filterMethodsData(filteredData[0]['options'][0]['options']);
+                      selectedDateValue = formatDate(dateSrc);
+                      selectedDateData = data.filter(fd => fd.header === dateSrc);
+                      filterMethodsData(selectedDateData[0]['options'][0]['options']);
                     }
                   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
                     "data-date-src": db,
                     onClick: e => {
                       let dateSrc = e.target.getAttribute('data-date-src');
-                      let filteredData = data.filter(fd => fd.header === dateSrc);
-                      filterMethodsData(filteredData[0]['options'][0]['options']);
+                      selectedDateValue = formatDate(dateSrc);
+                      selectedDateData = data.filter(fd => fd.header === dateSrc);
+                      filterMethodsData(selectedDateData[0]['options'][0]['options']);
                     }
                   }, formatDate(db))));
                 });
@@ -502,6 +611,26 @@ function HowToApply(props) {
     let buttonOptions;
     let linkOptions;
     let locationOptions = [];
+    let qualNav;
+    selectedQualificationData ? qualNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      className: "how-to-apply--pgt--js__modal__progress__previous"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+      className: "how-to-apply--pgt--js__modal__progress__wrapper",
+      onClick: () => {
+        filterQualificationData(entryPoints);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__circle"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "fas fa-check icon",
+      "aria-label": "Back to choose qualification"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__text"
+    }, selectedQualificationValue))) : qualNav = null;
+    setProgressQualification(qualNav);
+    setProgressSubject();
+    setProgressDate();
+    setProgressMethod();
     data.map(s => {
       setWindowPrompt(promptRoute);
       let dates = s['options'];
@@ -533,15 +662,15 @@ function HowToApply(props) {
                   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
                     onClick: e => {
                       let btnEl = e.target.querySelector('span');
-                      let subjectVal = btnEl.textContent;
-                      let filteredData = data.filter(subj => subj.header === subjectVal);
-                      filterDatesData(filteredData[0]['options']);
+                      selectedSubjectValue = btnEl.textContent;
+                      selectedSubjectData = data.filter(subj => subj.header === selectedSubjectValue);
+                      filterDatesData(selectedSubjectData[0]['options']);
                     }
                   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
                     onClick: e => {
-                      let subjectVal = e.target.textContent;
-                      let filteredData = data.filter(subj => subj.header === subjectVal);
-                      filterDatesData(filteredData[0]['options']);
+                      selectedSubjectValue = e.target.textContent;
+                      selectedSubjectData = data.filter(subj => subj.header === selectedSubjectValue);
+                      filterDatesData(selectedSubjectData[0]['options']);
                     }
                   }, bq)));
                 });
@@ -586,6 +715,26 @@ function HowToApply(props) {
     let buttonOptions;
     let linkOptions;
     let locationOptions = [];
+    let qualNav;
+
+    if (data.length > 1) {
+      selectedQualificationValue = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+        className: "how-to-apply--pgt--js__modal__progress__current"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+        className: "how-to-apply--pgt--js__modal__progress__wrapper"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+        className: "how-to-apply--pgt--js__modal__progress__circle"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+        className: "fas fa-circle icon"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+        className: "how-to-apply--pgt--js__modal__progress__text"
+      }, "Qualification")));
+    }
+
+    setProgressQualification(selectedQualificationValue);
+    setProgressSubject();
+    setProgressDate();
+    setProgressMethod();
     data.length > 1 ? data.map(e => {
       let subjectNames = e['options'];
       subjectNames.map(s => {
@@ -617,15 +766,15 @@ function HowToApply(props) {
                     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
                       onClick: e => {
                         let qualBtn = e.target.querySelector('span');
-                        let qualVal = qualBtn.textContent;
-                        let filteredQualData = data.filter(qual => qual.header === qualVal);
-                        filterSubjectData(filteredQualData[0]['options']);
+                        selectedQualificationValue = qualBtn.textContent;
+                        selectedQualificationData = data.filter(qual => qual.header === selectedQualificationValue);
+                        filterSubjectData(selectedQualificationData[0]['options']);
                       }
                     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
                       onClick: e => {
-                        let qualVal = e.target.textContent;
-                        let filteredQualData = data.filter(qual => qual.header === qualVal);
-                        filterSubjectData(filteredQualData[0]['options']);
+                        selectedQualificationValue = e.target.textContent;
+                        selectedQualificationData = data.filter(qual => qual.header === selectedQualificationValue);
+                        filterSubjectData(selectedQualificationData[0]['options']);
                       }
                     }, bq)));
                   });
@@ -657,14 +806,11 @@ function HowToApply(props) {
         });
       });
     }) : // One qualification; move to subjects function
-    filterSubjectData(entryPoints[0]['options']);
+    filterSubjectData(entryPoints[0]['options'], qualNav);
   }
 
   const question = 'qualification',
-        // [multipleSubjects, setMultipleSubjects] = useState(true),
-  // [multipleEntryPoints, setMultipleEntryPoints] = useState(true),
-  // [multipleLocations, setMultipleLocations] = useState(true),
-  qualificationQuestion = question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        qualificationQuestion = question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, windowPrompt), !(locationOneHeading || locationOneDateSelectionButton || locationOneDateSelectionLink || locationTwoHeading || locationTwoDateSelectionButton || locationTwoDateSelectionLink) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
@@ -673,39 +819,49 @@ function HowToApply(props) {
   }, locationOneDateSelectionButton, locationOneDateSelectionLink), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationTwoHeading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
   }, locationTwoDateSelectionButton, locationTwoDateSelectionLink)))),
-        qualificationsProgress = Object.keys(entryPoints).length > 1 ? question === 'qualification' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__current"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Qualification"))) : preferences.qualification ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__previous"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper",
-    onClick: () => {
-      const newPreferences = preferences;
-      newPreferences.qualification = null;
-      newPreferences.subject = null;
-      newPreferences.entry = null;
-      newPreferences.location = null;
-      setPreferences(newPreferences); // setQuestion(
-      //     nextQuestion(newPreferences, entryPoints)
-      // );
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-check icon",
-    "aria-label": "Back to choose qualification"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, preferences.qualification))) : null : null,
-        // subjectsProgress = multipleSubjects ? (
+        // qualificationsProgress =
+  // Object.keys(entryPoints).length > 1 ? (
+  //     question === 'qualification' ? (
+  //         <li className="how-to-apply--pgt--js__modal__progress__current">
+  //             <span className="how-to-apply--pgt--js__modal__progress__wrapper">
+  //                 <span className="how-to-apply--pgt--js__modal__progress__circle">
+  //                     <span className="fas fa-circle icon"></span>
+  //                 </span>
+  //                 <span className="how-to-apply--pgt--js__modal__progress__text">
+  //                     Qualification
+  //                 </span>
+  //             </span>
+  //         </li>
+  //     ) : preferences.qualification ? (
+  //         <li className="how-to-apply--pgt--js__modal__progress__previous">
+  //             <button
+  //                 className="how-to-apply--pgt--js__modal__progress__wrapper"
+  //                 onClick={() => {
+  //                     const newPreferences = preferences;
+  //                     newPreferences.qualification = null;
+  //                     newPreferences.subject = null;
+  //                     newPreferences.entry = null;
+  //                     newPreferences.location = null;
+  //                     setPreferences(newPreferences);
+  //                     // setQuestion(
+  //                     //     nextQuestion(newPreferences, entryPoints)
+  //                     // );
+  //                 }}
+  //             >
+  //                 <span className="how-to-apply--pgt--js__modal__progress__circle">
+  //                     <span
+  //                         className="fas fa-check icon"
+  //                         aria-label="Back to choose qualification"
+  //                     ></span>
+  //                 </span>
+  //                 <span className="how-to-apply--pgt--js__modal__progress__text">
+  //                     {preferences.qualification}
+  //                 </span>
+  //             </button>
+  //         </li>
+  //     ) : null
+  // ) : null,
+  // subjectsProgress = multipleSubjects ? (
   //     question === 'subject' ? (
   //         <li className="how-to-apply--pgt--js__modal__progress__current">
   //             <span className="how-to-apply--pgt--js__modal__progress__wrapper">
@@ -745,39 +901,48 @@ function HowToApply(props) {
   //         </li>
   //     ) : null
   // ) : null,
-  entryPointsProgress = // multipleEntryPoints ? (
-  question === 'entry' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__current"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Entry point"))) : preferences.entry ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__previous"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper",
-    onClick: () => {
-      const newPreferences = preferences;
-      newPreferences.entry = null;
-      newPreferences.location = null;
-      setPreferences(newPreferences); // setQuestion(
-      //     nextQuestion(newPreferences, entryPoints)
-      // );
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-check icon",
-    "aria-label": "Back to choose entry point"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, months[new Date(preferences.entry).getUTCMonth()], ' ', new Date(preferences.entry).getUTCFullYear()))) : // ) : null
-  null,
-        // locationsProgress = multipleLocations ? (
+  // entryPointsProgress =
+  //     // multipleEntryPoints ? (
+  //     question === 'entry' ? (
+  //         <li className="how-to-apply--pgt--js__modal__progress__current">
+  //             <span className="how-to-apply--pgt--js__modal__progress__wrapper">
+  //                 <span className="how-to-apply--pgt--js__modal__progress__circle">
+  //                     <span className="fas fa-circle icon"></span>
+  //                 </span>
+  //                 <span className="how-to-apply--pgt--js__modal__progress__text">
+  //                     Entry point
+  //                 </span>
+  //             </span>
+  //         </li>
+  //     ) : preferences.entry ? (
+  //         <li className="how-to-apply--pgt--js__modal__progress__previous">
+  //             <button
+  //                 className="how-to-apply--pgt--js__modal__progress__wrapper"
+  //                 onClick={() => {
+  //                     const newPreferences = preferences;
+  //                     newPreferences.entry = null;
+  //                     newPreferences.location = null;
+  //                     setPreferences(newPreferences);
+  //                     // setQuestion(
+  //                     //     nextQuestion(newPreferences, entryPoints)
+  //                     // );
+  //                 }}
+  //             >
+  //                 <span className="how-to-apply--pgt--js__modal__progress__circle">
+  //                     <span
+  //                         className="fas fa-check icon"
+  //                         aria-label="Back to choose entry point"
+  //                     ></span>
+  //                 </span>
+  //                 <span className="how-to-apply--pgt--js__modal__progress__text">
+  //                     {months[new Date(preferences.entry).getUTCMonth()]}{' '}
+  //                     {new Date(preferences.entry).getUTCFullYear()}
+  //                 </span>
+  //             </button>
+  //         </li>
+  //     ) : // ) : null
+  //     null,
+  // locationsProgress = multipleLocations ? (
   //     question === 'location' ? (
   //         <li className="how-to-apply--pgt--js__modal__progress__current">
   //             <span className="how-to-apply--pgt--js__modal__progress__wrapper">
@@ -815,38 +980,59 @@ function HowToApply(props) {
   //         </li>
   //     ) : null
   // ) : null,
-  nextStep = question !== 'apply' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__next"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon",
-    "aria-hidden": "true"
-  })))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__current how-to-apply--pgt--js__modal__progress__last"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Method of study"))),
-        qualificationsProgressMobile = Object.keys(entryPoints).length > 1 && (question === 'qualification' || preferences.qualification) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: question === 'qualification' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: question === 'qualification' ? 'fas fa-circle icon' : 'fas fa-check icon'
-  })), question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Qualification"))) : null,
-        // subjectsProgressMobile =
+  // nextStep =
+  //     question !== 'apply' ? (
+  //         <li className="how-to-apply--pgt--js__modal__progress__next">
+  //             <span className="how-to-apply--pgt--js__modal__progress__wrapper">
+  //                 <span className="how-to-apply--pgt--js__modal__progress__circle">
+  //                     <span
+  //                         className="fas fa-circle icon"
+  //                         aria-hidden="true"
+  //                     ></span>
+  //                 </span>
+  //             </span>
+  //         </li>
+  //     ) : (
+  //         <li className="how-to-apply--pgt--js__modal__progress__current how-to-apply--pgt--js__modal__progress__last">
+  //             <span className="how-to-apply--pgt--js__modal__progress__wrapper">
+  //                 <span className="how-to-apply--pgt--js__modal__progress__circle">
+  //                     <span className="fas fa-circle icon"></span>
+  //                 </span>
+  //                 <span className="how-to-apply--pgt--js__modal__progress__text">
+  //                     Method of study
+  //                 </span>
+  //             </span>
+  //         </li>
+  //     ),
+  // qualificationsProgressMobile =
+  //     Object.keys(entryPoints).length > 1 &&
+  //     (question === 'qualification' || preferences.qualification) ? (
+  //         <li
+  //             className={
+  //                 question === 'qualification'
+  //                     ? 'how-to-apply--pgt--js__modal__progress__current'
+  //                     : 'how-to-apply--pgt--js__modal__progress__previous'
+  //             }
+  //         >
+  //             <span className="how-to-apply--pgt--js__modal__progress__wrapper">
+  //                 <span className="how-to-apply--pgt--js__modal__progress__circle">
+  //                     <span
+  //                         className={
+  //                             question === 'qualification'
+  //                                 ? 'fas fa-circle icon'
+  //                                 : 'fas fa-check icon'
+  //                         }
+  //                     ></span>
+  //                 </span>
+  //                 {question === 'qualification' && (
+  //                     <span className="how-to-apply--pgt--js__modal__progress__text">
+  //                         Qualification
+  //                     </span>
+  //                 )}
+  //             </span>
+  //         </li>
+  //     ) : null,
+  // subjectsProgressMobile =
   //     multipleSubjects &&
   //     (question === 'subject' || preferences.subject) ? (
   //         <li
@@ -930,26 +1116,28 @@ function HowToApply(props) {
   //             </span>
   //         </li>
   //     ) : null,
-  nextStepMobile = question !== 'apply' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__next"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
-  })))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__current how-to-apply--pgt--js__modal__progress__last"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Method of study"))),
-        alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  // nextStepMobile =
+  //     question !== 'apply' ? (
+  //         <li className="how-to-apply--pgt--js__modal__progress__next">
+  //             <span className="how-to-apply--pgt--js__modal__progress__wrapper">
+  //                 <span className="how-to-apply--pgt--js__modal__progress__circle">
+  //                     <span className="fas fa-circle icon"></span>
+  //                 </span>
+  //             </span>
+  //         </li>
+  //     ) : (
+  //         <li className="how-to-apply--pgt--js__modal__progress__current how-to-apply--pgt--js__modal__progress__last">
+  //             <span className="how-to-apply--pgt--js__modal__progress__wrapper">
+  //                 <span className="how-to-apply--pgt--js__modal__progress__circle">
+  //                     <span className="fas fa-circle icon"></span>
+  //                 </span>
+  //                 <span className="how-to-apply--pgt--js__modal__progress__text">
+  //                     Method of study
+  //                 </span>
+  //             </span>
+  //         </li>
+  //     ),
+  alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "how-to-apply--pgt--js__modal__alternative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: props.element.dataset.otherurl
@@ -1025,9 +1213,9 @@ function HowToApply(props) {
     className: "fas fa-redo"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Start again"))) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
     className: "how-to-apply--pgt--js__modal__progress"
-  }, qualificationsProgress, entryPointsProgress, nextStep), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
+  }, progressQualification, progressSubject, progressDate, progressMethod), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
     className: "how-to-apply--pgt--js__modal__progress--mobile"
-  }, qualificationsProgressMobile, nextStepMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, progressQualification, progressSubject, progressDate, progressMethod), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Start in ", props.element.dataset.year)), qualificationQuestion, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
