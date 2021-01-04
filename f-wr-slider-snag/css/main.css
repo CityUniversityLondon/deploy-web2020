@@ -59822,6 +59822,10 @@ main .home .home__whats-happening .related-content {
     }
 }
 
+.landing--informational .landing__promotional__flexible {
+    margin-bottom: 1rem;
+}
+
 .landing--informational .landing__promotional__flexible h2:first-of-type {
     text-align: center;
 }
