@@ -44119,6 +44119,15 @@ blockquote footer cite {
 }
 
 @media (min-width: 768px) {
+    .js .related-content[data-style='responsive']:not(.slider) {
+        justify-content: initial;
+    }
+    .js .related-content[data-style='responsive']:not(.slider) .card {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 768px) {
     .js .slider[data-style='dots']:not([data-small='true']):not([data-count='0']),
     .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) {
         display: flex;
