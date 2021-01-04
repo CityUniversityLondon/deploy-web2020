@@ -70740,7 +70740,7 @@ button
 }
 
 .course--ug__usp__stats .statistics-block {
-    padding: 1rem 0;
+    padding: 0 0 1rem 0;
 }
 
 .course--ug__usp__stats .statistics-block ul.slider {
