@@ -44205,7 +44205,7 @@ blockquote footer cite {
 
 .js .statistics-block .ksp__items.slider[data-small="true"] {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 0;
 }
 
