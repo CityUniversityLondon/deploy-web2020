@@ -59826,12 +59826,6 @@ main .home .home__whats-happening .related-content {
     text-align: center;
 }
 
-.landing--informational .landing__promotional__flexible .ksp__items,
-.landing--informational .landing__related .ksp__items {
-    margin: 0;
-    padding: 0;
-}
-
 .landing--informational .landing__related .wrapper--landing__contact .landing__contact__heading {
     text-align: left;
 }
