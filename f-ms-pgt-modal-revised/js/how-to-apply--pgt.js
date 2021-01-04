@@ -307,7 +307,8 @@ function HowToApply(props) {
         // Controls 'Start again' visibility
   [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:'); // let [selection, setSelection] = useState();
 
-  let [btnSelection, setBtnSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
+  let [btnSelection, setBtnSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(); // let [sujbectSelection, setSubjectSelection] = useState();
+
   let [dateSelection, setDateSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
   let [linkSelection, setLinkSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
   let [methodSelection, setMethodSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
@@ -351,7 +352,6 @@ function HowToApply(props) {
     setDateSelection();
     setBtnSelection();
     setLinkSelection();
-    setFirstStep(false);
     let qualNav;
     let subjNav;
     let dateNav;
@@ -465,8 +465,9 @@ function HowToApply(props) {
     setMethodSelection();
     setWindowPrompt(promptEntryPoint);
     setBtnSelection();
-    setLinkSelection();
-    setFirstStep(false);
+    setLinkSelection(); // Clear data stored from previous post-subject selections
+
+    selectedDateData = null;
     let buttonOptions;
     let linkOptions;
     let dateButtons = [];
@@ -626,9 +627,6 @@ function HowToApply(props) {
               // Single location, multiple dates
               if (locations.length > 1 || methods.length > 1) {
                 // Single location, multiple dates, multiple methods => Dates as standard button; further options to follow
-                // setFurtherStepsPendingIndicator(
-                //     furtherStepsPending
-                // );
                 dateButtons.push(d.header);
                 dateButtons = dateButtons.reduce(function (a, i) {
                   a.indexOf(i) === -1 ? a.push(i) : null;
@@ -644,6 +642,7 @@ function HowToApply(props) {
                       selectedDateValue = formatDate(dateSrc);
                       selectedDateData = data.filter(fd => fd.header === dateSrc);
                       filterMethodsData(selectedDateData[0]['options'][0]['options']);
+                      setFirstStep(false);
                     }
                   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
                     "data-date-src": db,
@@ -652,10 +651,13 @@ function HowToApply(props) {
                       selectedDateValue = formatDate(dateSrc);
                       selectedDateData = data.filter(fd => fd.header === dateSrc);
                       filterMethodsData(selectedDateData[0]['options'][0]['options']);
+                      setFirstStep(false);
                     }
                   }, formatDate(db))));
                 });
-                setDateSelection(buttonOptions);
+                setDateSelection(buttonOptions); // Modal journey incomplete; display further steps pending indicator
+
+                setFurtherStepsPendingIndicator(furtherStepsPending);
               } else {
                 // Single location, multiple dates, single method => Dates as links
                 setFurtherStepsPendingIndicator();
@@ -681,9 +683,14 @@ function HowToApply(props) {
   }
 
   function filterSubjectData(data) {
+    setProgressSubject();
+    setProgressDate();
+    setProgressMethod();
     setBtnSelection();
-    setLinkSelection();
-    setFirstStep(false);
+    setLinkSelection(); // Clear data stored from previous post-qualification selections
+
+    selectedSubjectData = null;
+    selectedDateData = null;
     let buttonQuals = [];
     let linkQuals = [];
     let buttonOptions;
@@ -757,12 +764,14 @@ function HowToApply(props) {
                       selectedSubjectValue = btnEl.textContent;
                       selectedSubjectData = data.filter(subj => subj.header === selectedSubjectValue);
                       filterDatesData(selectedSubjectData[0]['options']);
+                      setFirstStep(false);
                     }
                   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
                     onClick: e => {
                       selectedSubjectValue = e.target.textContent;
                       selectedSubjectData = data.filter(subj => subj.header === selectedSubjectValue);
                       filterDatesData(selectedSubjectData[0]['options']);
+                      setFirstStep(false);
                     }
                   }, bq)));
                 });
@@ -798,21 +807,33 @@ function HowToApply(props) {
   }
 
   function filterQualificationData(data) {
-    setWindowPrompt(promptQualification);
+    // If qualification select required, this will be first modal window; update state to remove 'Start again' functionality
+    setFirstStep(true); // Qualification-specific pre-selection prompt text
+
+    setWindowPrompt(promptQualification); // Empty relevant state variables to remove existing button/link rendering
+
     setDateSelection();
     setMethodSelection();
     setBtnSelection();
-    setLinkSelection();
-    setFirstStep(true);
-    let buttonQuals = [];
-    let linkQuals = [];
-    let buttonOptions;
-    let linkOptions;
-    let locationOptions = [];
-    let qualNav;
+    setLinkSelection(); // Clear data stored from previous selections
+
+    selectedQualificationData = null;
+    selectedSubjectData = null;
+    selectedDateData = null; // Empty relevant state variables to remove existing progress indicator rendering
+
+    setProgressSubject();
+    setProgressDate();
+    setProgressMethod(); // Variables scoped to this function
+
+    let buttonQuals = [],
+        linkQuals = [],
+        buttonOptions,
+        linkOptions,
+        locationOptions = [],
+        qualNav;
 
     if (data.length > 1) {
-      // Qualification selection required: set progress indicator to qualification and remove subjects/dates/methods
+      // Qualification selection required: set progress indicator to qualification select
       selectedQualificationValue = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
         className: "how-to-apply--pgt--js__modal__progress__current"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
@@ -827,9 +848,6 @@ function HowToApply(props) {
     }
 
     setProgressQualification(selectedQualificationValue);
-    setProgressSubject();
-    setProgressDate();
-    setProgressMethod();
     data.length > 1 ? data.map(e => {
       let subjectNames = e['options'];
       subjectNames.map(s => {
@@ -864,12 +882,14 @@ function HowToApply(props) {
                         selectedQualificationValue = qualBtn.textContent;
                         selectedQualificationData = data.filter(qual => qual.header === selectedQualificationValue);
                         filterSubjectData(selectedQualificationData[0]['options']);
+                        setFirstStep(false);
                       }
                     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
                       onClick: e => {
                         selectedQualificationValue = e.target.textContent;
                         selectedQualificationData = data.filter(qual => qual.header === selectedQualificationValue);
                         filterSubjectData(selectedQualificationData[0]['options']);
+                        setFirstStep(false);
                       }
                     }, bq)));
                   });
