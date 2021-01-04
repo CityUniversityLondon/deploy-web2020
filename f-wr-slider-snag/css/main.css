@@ -43696,9 +43696,9 @@ blockquote footer cite {
 }
 
 @media (min-width: 768px) {
-    .js .slider[data-cardsperrow='2'][data-small='true'] {
+    .js .slider[data-cardsperrow='2'][data-small='true'] .slide {
         margin-right: 1.5rem;
-        width: calc(50% - 1.5rem);
+        flex: 1;
     }
 }
 
@@ -43726,7 +43726,7 @@ blockquote footer cite {
 @media (min-width: 768px) {
     .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide {
         margin-right: 1.5rem;
-        width: calc(50% - 1.5rem);
+        flex: 1;
     }
     .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='-2'], .js .slider[data-cardsperrow='2']:not([data-small='true']) .slide[data-sliderposition='-1'] {
         left: -100%;
@@ -43772,7 +43772,7 @@ blockquote footer cite {
 @media (min-width: 768px) {
     .js .slider[data-cardsperrow='3'][data-small='true'] .slide {
         margin-right: 1.5rem;
-        width: calc(33% - 1.5rem);
+        flex: 1;
     }
 }
 
@@ -43800,7 +43800,7 @@ blockquote footer cite {
 @media (min-width: 768px) {
     .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide {
         margin-right: 1.5rem;
-        width: calc(33% - 1.5rem);
+        flex: 1;
     }
     .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='-3'], .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='-2'], .js .slider[data-cardsperrow='3']:not([data-small='true']) .slide[data-sliderposition='-1'] {
         left: -100%;
@@ -43846,7 +43846,7 @@ blockquote footer cite {
 @media (min-width: 768px) {
     .js .slider[data-cardsperrow='4'][data-small='true'] .slide {
         margin-right: 1.5rem;
-        width: calc(33% - 1.5rem);
+        flex: 1;
     }
 }
 
@@ -43874,7 +43874,7 @@ blockquote footer cite {
 @media (min-width: 768px) {
     .js .slider[data-cardsperrow='4']:not([data-small='true']) .slide {
         margin-right: 1.5rem;
-        width: calc(33% - 1.5rem);
+        flex: 1;
     }
     .js .slider[data-cardsperrow='4']:not([data-small='true']) .slide[data-sliderposition='-3'], .js .slider[data-cardsperrow='4']:not([data-small='true']) .slide[data-sliderposition='-2'], .js .slider[data-cardsperrow='4']:not([data-small='true']) .slide[data-sliderposition='-1'] {
         left: -100%;
@@ -44196,6 +44196,20 @@ blockquote footer cite {
 .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) + .slider__controls button[aria-expanded='true']:active,
 .js .slider[data-style='dots'][data-small='true']:not([data-count='0']) + .slider__controls button[aria-expanded='true']:focus {
     box-shadow: none;
+}
+
+.statistics-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.statistics-block .ksp__item__overline, .statistics-block .ksp__item__description p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.statistics-block .slider__controls {
+    margin-top: 1rem;
 }
 
 .wrapper--tooltip__label {
@@ -47624,7 +47638,8 @@ article .link-copy {
 
 @media (max-width: 767px) {
     .statistics-block {
-        padding: 1rem 1.5rem;
+        padding: 0 1.5rem 1rem 1.5rem;
+        margin-top: 0;
     }
 }
 
