@@ -44116,6 +44116,11 @@ blockquote footer cite {
 
 .js .slider[data-style='responsive'] .slide ul li:nth-child(2) {
     margin-left: 0.5rem;
+    margin-bottom: 0;
+}
+
+.js .slider[data-style='responsive'] .slide ul li:last-of-type {
+    margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
