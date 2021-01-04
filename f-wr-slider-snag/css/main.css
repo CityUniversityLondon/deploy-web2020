@@ -44203,17 +44203,18 @@ blockquote footer cite {
     box-shadow: none;
 }
 
-.statistics-block {
+.js .statistics-block .ksp__items.slider[data-small="true"] {
     display: flex;
     flex-direction: column;
+    margin-top: 0;
 }
 
-.statistics-block .ksp__item__overline, .statistics-block .ksp__item__description p {
+.js .statistics-block .ksp__item__overline, .js .statistics-block .ksp__item__description p {
     margin-left: auto;
     margin-right: auto;
 }
 
-.statistics-block .slider__controls {
+.js .statistics-block .slider__controls {
     margin-top: 1rem;
 }
 
