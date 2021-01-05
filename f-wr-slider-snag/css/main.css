@@ -44108,6 +44108,10 @@ blockquote footer cite {
     padding: 0.1875rem;
 }
 
+.js .slider[data-style='responsive'][data-optimised='true'] li ul li a {
+    height: 100%;
+}
+
 .js .slider[data-style='responsive'] .slide ul {
     display: flex;
     max-width: 100%;
@@ -70661,6 +70665,10 @@ button
     }
 }
 
+.ug-career__testimonial .slider {
+    margin: 0rem;
+}
+
 .ug-career__testimonial .card {
     margin: 0;
 }
@@ -70963,18 +70971,6 @@ button
     .js .course--ug .tabs .tabs .tabs__panel {
         background-color: #ffffff;
     }
-    .js .ug-career__testimonial .slider:not([data-small='true']) {
-        padding: 1rem 0;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .js .ug-career__testimonial .slider:not([data-small='true']) {
-        padding: 0;
-    }
-}
-
-@media screen {
     .js main > .course--ug .tabs__panel:not([hidden]) {
         padding: 0;
     }
