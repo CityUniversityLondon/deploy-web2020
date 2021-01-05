@@ -44092,6 +44092,10 @@ blockquote footer cite {
     margin-left: 1rem;
 }
 
+.js .content-hub .slider[data-style='arrows'] + .slider__controls {
+    max-width: 47.4rem;
+}
+
 .js .slider[data-style='responsive'] {
     margin-left: 0;
     margin-right: 0;
