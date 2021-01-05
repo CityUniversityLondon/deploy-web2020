@@ -627,16 +627,7 @@ function HowToApply(props) {
                 buttonOptions = dateButtons.map(db => {
                   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
                     key: db
-                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-                    "data-date-src": db,
-                    onClick: e => {
-                      let dateSrc = e.target.getAttribute('data-date-src');
-                      selectedDateValue = formatDate(dateSrc);
-                      selectedDateData = data.filter(fd => fd.header === dateSrc);
-                      filterMethodsData(selectedDateData[0]['options'][0]['options']);
-                      setFirstStep(false);
-                    }
-                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
                     "data-date-src": db,
                     onClick: e => {
                       let dateSrc = e.target.getAttribute('data-date-src');
@@ -766,15 +757,7 @@ function HowToApply(props) {
                 buttonOptions = buttonQuals.map(bq => {
                   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
                     key: bq
-                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-                    onClick: e => {
-                      let btnEl = e.target.querySelector('span');
-                      selectedSubjectValue = btnEl.textContent;
-                      selectedSubjectData = data.filter(subj => subj.header === selectedSubjectValue);
-                      filterDatesData(selectedSubjectData[0]['options']);
-                      setFirstStep(false);
-                    }
-                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
                     onClick: e => {
                       selectedSubjectValue = e.target.textContent;
                       selectedSubjectData = data.filter(subj => subj.header === selectedSubjectValue);
@@ -892,17 +875,9 @@ function HowToApply(props) {
                   buttonOptions = buttonQuals.map(bq => {
                     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
                       key: bq
-                    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+                    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
                       onClick: e => {
-                        let qualBtn = e.target.querySelector('span');
-                        selectedQualificationValue = qualBtn.textContent;
-                        selectedQualificationData = data.filter(qual => qual.header === selectedQualificationValue);
-                        filterSubjectData(selectedQualificationData[0]['options']);
-                        setFirstStep(false);
-                      }
-                    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-                      onClick: e => {
-                        selectedQualificationValue = e.target.textContent;
+                        selectedQualificationValue = e.target.innerText;
                         selectedQualificationData = data.filter(qual => qual.header === selectedQualificationValue);
                         filterSubjectData(selectedQualificationData[0]['options']);
                         setFirstStep(false);
