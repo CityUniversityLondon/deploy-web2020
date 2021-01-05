@@ -699,7 +699,8 @@ function HowToApply(props) {
     selectedDateData = null; // Variables scoped to this function
 
     let buttonQuals = [],
-        linkQuals = [],
+        linkRoutes = [],
+        routeLink,
         buttonOptions,
         linkOptions,
         locationOptions = [],
@@ -788,19 +789,26 @@ function HowToApply(props) {
                 setFurtherStepsPendingIndicator(furtherStepsPending);
               } else {
                 // Route as link
-                linkQuals.push(s.header);
-                linkQuals = linkQuals.reduce(function (a, i) {
+                linkRoutes.push(s.header);
+                linkRoutes = linkRoutes.reduce(function (a, i) {
                   a.indexOf(i) === -1 ? a.push(i) : null;
                   return a;
-                }, []);
-                linkOptions = linkQuals.map(lq => {
-                  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
-                    key: lq,
-                    data: methods,
-                    btnText: lq
-                  });
+                }, []); // Map each unique route and filter data to extract correct apply links
+
+                const routeLinksData = [];
+                linkRoutes.map(lr => {
+                  let filteredRouteData = data.filter(q => q.header === lr);
+                  routeLink = {
+                    text: lr,
+                    link: filteredRouteData[0]['options'][0]['options'][0]['options'][0]['options']['apply']
+                  };
+                  routeLinksData.push(routeLink);
                 });
-                setLinkSelection(linkOptions);
+                linkOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                  data: routeLinksData
+                }); // Final modal step; remove further steps indicator
+
+                setFurtherStepsPendingIndicator();
               }
             } else {
               // Move to dates function
