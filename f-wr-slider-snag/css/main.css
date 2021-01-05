@@ -44104,6 +44104,10 @@ blockquote footer cite {
     margin-top: 0;
 }
 
+.js .slider[data-style='responsive'][data-optimised='true'] li ul li {
+    padding: 0.1875rem;
+}
+
 .js .slider[data-style='responsive'] .slide ul {
     display: flex;
     max-width: 100%;
