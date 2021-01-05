@@ -73027,7 +73027,7 @@ button
     main .navigation--secondary + .department .tabs__panel:not([hidden]) .tabs__panel__content .department__additional-info__content,
     main .navigation--secondary + .department .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__heading,
     main .navigation--secondary + .department .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
-        grid-column: 4 / 15;
+        grid-column: 4 / span 12;
     }
 }
 
