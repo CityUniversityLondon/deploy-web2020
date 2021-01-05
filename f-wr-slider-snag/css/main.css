@@ -43772,7 +43772,10 @@ blockquote footer cite {
 @media (min-width: 768px) {
     .js .slider[data-cardsperrow='3'][data-small='true'] .slide {
         margin-right: 1.5rem;
-        flex: 1;
+        width: calc(33% - 1.5rem);
+    }
+    .js .slider[data-cardsperrow='3'][data-small='true'] .slide:last-of-type {
+        margin-right: 0;
     }
 }
 
