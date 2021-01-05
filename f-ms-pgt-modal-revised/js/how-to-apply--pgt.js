@@ -276,12 +276,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-function formatDate(sourceDate) {
-  let formattedDate = new Date(sourceDate);
-  return "".concat(months[formattedDate.getUTCMonth()], " ").concat(formattedDate.getUTCFullYear());
-}
 /**
  * Launch the how to apply modal.
  *
@@ -289,34 +283,22 @@ function formatDate(sourceDate) {
  * @return {object} The React component to render.
  */
 
-
 function HowToApply(props) {
   let entryPoints = props.config;
   const [modalVisible, setModalVisible] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
         [firstStep, setFirstStep] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
         // Controls 'Start again' visibility
-  [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:');
-  let [btnSelection, setBtnSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let [dateSelection, setDateSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let [linkSelection, setLinkSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let [methodSelection, setMethodSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let [locationOneHeading, setLocationOneHeading] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let [locationOneDateSelectionButton, setLocationOneDateSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let [locationOneDateSelectionLink, setLocationOneDateSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let [locationTwoHeading, setLocationTwoHeading] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let [locationTwoDateSelectionButton, setLocationTwoDateSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let [locationTwoDateSelectionLink, setLocationTwoDateSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  let promptQualification = 'Choose the qualification you wish to apply for:',
-      promptRoute = 'Choose the route you wish to apply for:',
-      promptEntryPoint = 'Choose the entry point you wish to apply for:',
-      promptMethod = 'Apply online now:',
-      selectedQualificationData,
-      selectedQualificationValue,
-      selectedSubjectData,
-      selectedSubjectValue,
-      selectedDateData,
-      selectedDateValue,
-      furtherStepsPending = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  [progressQualification, setProgressQualification] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+        [progressSubject, setProgressSubject] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+        [progressDate, setProgressDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+        [progressMethod, setProgressMethod] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+        [furtherStepsPendingIndicator, setFurtherStepsPendingIndicator] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+        [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:'),
+        promptQualification = 'Choose the qualification you wish to apply for:',
+        promptRoute = 'Choose the route you wish to apply for:',
+        promptEntryPoint = 'Choose the entry point you wish to apply for:',
+        promptMethod = 'Apply online now:',
+        furtherStepsPending = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__next"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
@@ -326,11 +308,39 @@ function HowToApply(props) {
     className: "fas fa-circle icon",
     "aria-hidden": "true"
   }))));
-  const [progressQualification, setProgressQualification] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  const [progressSubject, setProgressSubject] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  const [progressDate, setProgressDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  const [progressMethod, setProgressMethod] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
-  const [furtherStepsPendingIndicator, setFurtherStepsPendingIndicator] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])();
+  let [btnSelection, setBtnSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [dateSelection, setDateSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [linkSelection, setLinkSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [methodSelection, setMethodSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [locationOneHeading, setLocationOneHeading] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [locationOneDateSelectionButton, setLocationOneDateSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [locationOneDateSelectionLink, setLocationOneDateSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [locationTwoHeading, setLocationTwoHeading] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [locationTwoDateSelectionButton, setLocationTwoDateSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [locationTwoDateSelectionLink, setLocationTwoDateSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      selectedQualificationData,
+      selectedQualificationValue,
+      selectedSubjectData,
+      selectedSubjectValue,
+      selectedDateData,
+      selectedDateValue;
+  /**
+   * Convert raw date values to full month/year for rendering to buttons.
+   *
+   * @param {string} sourceDate The unformatted date string.
+   */
+
+  function formatDate(sourceDate) {
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let formattedDate = new Date(sourceDate);
+    return "".concat(months[formattedDate.getUTCMonth()], " ").concat(formattedDate.getUTCFullYear());
+  }
+  /**
+   * Completed programme, subject and dates filter. Analyse methods data.
+   *
+   * @param {object} data The filtered data record data, where methods are at the top level.
+   */
+
 
   function filterMethodsData(methods) {
     // Methods of study pre-selection prompt text
@@ -674,6 +684,12 @@ function HowToApply(props) {
     linkOptions ? setDateSelection(linkOptions) : null;
     buttonOptions ? setDateSelection(buttonOptions) : null;
   }
+  /**
+   * Completed programme filter. Analyse subjects data.
+   *
+   * @param {object} data The filtered data record data, where subjects are at the top level.
+   */
+
 
   function filterSubjectData(data) {
     // Empty relevant state variables to remove superfluous button/link rendering
@@ -803,6 +819,12 @@ function HowToApply(props) {
     setBtnSelection(buttonOptions);
     setLinkSelection(linkOptions);
   }
+  /**
+   * Analyse programmes data.
+   *
+   * @param {object} data The original data record data, where programmes are at the top level.
+   */
+
 
   function filterQualificationData(data) {
     // If qualification select exists, it will be the first step in the modal; disable 'Start again' option
@@ -915,7 +937,8 @@ function HowToApply(props) {
       });
     }) : // One qualification; move to subjects function
     filterSubjectData(entryPoints[0]['options'], qualNav);
-  }
+  } // Modal wrapper render
+
 
   const question = 'qualification',
         qualificationQuestion = question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
@@ -931,7 +954,9 @@ function HowToApply(props) {
     className: "how-to-apply--pgt--js__modal__alternative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
     href: props.element.dataset.otherurl
-  }, props.element.dataset.otheryear, " entry is also available."));
+  }, props.element.dataset.otheryear, " entry is also available.")); // End modal wrapper render
+  // Focus trap
+
   const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({});
   let modalRef = null,
       modalContentRef = null;
@@ -955,7 +980,9 @@ function HowToApply(props) {
       focusTrap.deactivate && focusTrap.deactivate();
       Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_3__["enableBodyScroll"])(getModal());
     }
-  }, [modalVisible]);
+  }, [modalVisible]); // End focus trap
+  // Render the 'Apply now' CTA which launches the modal
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "cta-block"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
@@ -995,7 +1022,7 @@ function HowToApply(props) {
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: () => {
-      // Clear options display and render what user would see if modal first opened
+      // Clear options display and render what user would see when modal is first opened
       setFirstStep(true);
       filterQualificationData(entryPoints);
     }
