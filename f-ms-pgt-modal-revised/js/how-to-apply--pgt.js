@@ -579,7 +579,16 @@ function HowToApply(props) {
                   // Dates as buttons
                   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
                     key: fd
-                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, fd.header)));
+                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+                    "data-date-src": fd,
+                    onClick: e => {
+                      let dateSrc = e.target.getAttribute('data-date-src');
+                      selectedDateValue = formatDate(dateSrc);
+                      selectedDateData = data.filter(fd => fd.header === dateSrc);
+                      filterMethodsData(selectedDateData[0]['options'][0]['options']);
+                      setFirstStep(false);
+                    }
+                  }, formatDate(fd))));
                 } else {
                   // Dates as links
                   const dateLink = {
@@ -603,7 +612,16 @@ function HowToApply(props) {
                   // Dates as buttons
                   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
                     key: fd
-                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, fd.header)));
+                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+                    "data-date-src": fd,
+                    onClick: e => {
+                      let dateSrc = e.target.getAttribute('data-date-src');
+                      selectedDateValue = formatDate(dateSrc);
+                      selectedDateData = data.filter(fd => fd.header === dateSrc);
+                      filterMethodsData(selectedDateData[0]['options'][0]['options']);
+                      setFirstStep(false);
+                    }
+                  }, formatDate(fd))));
                 } else {
                   // Dates as links
                   const dateLink = {
