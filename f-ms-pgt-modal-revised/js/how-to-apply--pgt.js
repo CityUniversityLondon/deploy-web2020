@@ -289,7 +289,7 @@ function HowToApply(props) {
         [firstStep, setFirstStep] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
         // Controls 'Start again' visibility
   [progressQualification, setProgressQualification] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-        [progressSubject, setProgressSubject] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+        [progressRoute, setProgressRoute] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
         [progressDate, setProgressDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
         [progressMethod, setProgressMethod] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
         [furtherStepsPendingIndicator, setFurtherStepsPendingIndicator] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
@@ -320,8 +320,8 @@ function HowToApply(props) {
       [locationTwoDateSelectionLink, setLocationTwoDateSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
       selectedQualificationData,
       selectedQualificationValue,
-      selectedSubjectData,
-      selectedSubjectValue,
+      selectedRouteData,
+      selectedRouteValue,
       selectedDateData,
       selectedDateValue;
   /**
@@ -336,7 +336,7 @@ function HowToApply(props) {
     return "".concat(months[formattedDate.getUTCMonth()], " ").concat(formattedDate.getUTCFullYear());
   }
   /**
-   * Completed programme, subject and dates filter. Analyse methods data.
+   * Completed programme, route and dates filter. Analyse methods data.
    *
    * @param {object} data The filtered data record data, where methods are at the top level.
    */
@@ -351,15 +351,15 @@ function HowToApply(props) {
     setBtnSelection();
     setLinkSelection(); // Variables scoped to this function
 
-    let qualNav, subjNav, dateNav, methodNav;
+    let qualNav, routeNav, dateNav, methodNav;
     selectedQualificationData ? qualNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
       className: "how-to-apply--pgt--js__modal__progress__previous"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
       className: "how-to-apply--pgt--js__modal__progress__wrapper",
       onClick: () => {
-        // Load qualification select; clear subject, date and method from progress navigation
+        // Load qualification select; clear route, date and method from progress navigation
         filterQualificationData(entryPoints);
-        setProgressSubject();
+        setProgressRoute();
         setProgressDate();
         setProgressMethod();
       }
@@ -372,17 +372,17 @@ function HowToApply(props) {
       className: "how-to-apply--pgt--js__modal__progress__text"
     }, selectedQualificationValue))) : qualNav = null;
     setProgressQualification(qualNav);
-    selectedSubjectData ? subjNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    selectedRouteData ? routeNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
       className: "how-to-apply--pgt--js__modal__progress__previous"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
       className: "how-to-apply--pgt--js__modal__progress__wrapper",
       onClick: () => {
-        // Load subject select; clear date and method from progress navigation
+        // Load route select; clear date and method from progress navigation
         setProgressDate();
         setProgressMethod();
 
         if (selectedQualificationData) {
-          filterSubjectData(selectedQualificationData[0]['options']);
+          filterRouteData(selectedQualificationData[0]['options']);
         } else {
           filterQualificationData(entryPoints);
         }
@@ -391,11 +391,11 @@ function HowToApply(props) {
       className: "how-to-apply--pgt--js__modal__progress__circle"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       className: "fas fa-check icon",
-      "aria-label": "Back to choose subject"
+      "aria-label": "Back to choose route"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       className: "how-to-apply--pgt--js__modal__progress__text"
-    }, selectedSubjectValue))) : subjNav = null;
-    setProgressSubject(subjNav);
+    }, selectedRouteValue))) : routeNav = null;
+    setProgressRoute(routeNav);
     selectedDateData ? dateNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
       className: "how-to-apply--pgt--js__modal__progress__previous"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
@@ -404,10 +404,10 @@ function HowToApply(props) {
         // Load date select; clear method from progress navigation
         setProgressMethod();
 
-        if (selectedSubjectData) {
-          filterDatesData(selectedSubjectData[0]['options']);
+        if (selectedRouteData) {
+          filterDatesData(selectedRouteData[0]['options']);
         } else if (selectedQualificationData) {
-          filterSubjectData(selectedQualificationData[0]['options']);
+          filterRouteData(selectedQualificationData[0]['options']);
         } else {
           filterQualificationData(entryPoints);
         }
@@ -416,7 +416,7 @@ function HowToApply(props) {
       className: "how-to-apply--pgt--js__modal__progress__circle"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       className: "fas fa-check icon",
-      "aria-label": "Back to choose subject"
+      "aria-label": "Back to choose route"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       className: "how-to-apply--pgt--js__modal__progress__text"
     }, selectedDateValue))) : dateNav = null;
@@ -451,7 +451,7 @@ function HowToApply(props) {
     });
   }
   /**
-   * Completed programme and subject filter. Analyse dates data.
+   * Completed programme and route filter. Analyse dates data.
    *
    * @param {object} data The filtered data record data, where dates are at the top level.
    */
@@ -481,9 +481,9 @@ function HowToApply(props) {
         locationTwoDateAsButton = false,
         locationTwoDateAsLink = false,
         qualNav,
-        subjNav,
+        routeNav,
         dateNav,
-        dateLink; // Progress indicator; display selected qualification and subject values
+        dateLink; // Progress indicator; display selected qualification and route values
 
     selectedQualificationData ? qualNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
       className: "how-to-apply--pgt--js__modal__progress__previous"
@@ -501,22 +501,22 @@ function HowToApply(props) {
       className: "how-to-apply--pgt--js__modal__progress__text"
     }, selectedQualificationValue))) : qualNav = null;
     setProgressQualification(qualNav);
-    selectedSubjectData ? subjNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+    selectedRouteData ? routeNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
       className: "how-to-apply--pgt--js__modal__progress__previous"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
       className: "how-to-apply--pgt--js__modal__progress__wrapper",
       onClick: () => {
-        filterSubjectData(selectedQualificationData[0]['options']);
+        filterRouteData(selectedQualificationData[0]['options']);
       }
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       className: "how-to-apply--pgt--js__modal__progress__circle"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       className: "fas fa-check icon",
-      "aria-label": "Back to choose subject"
+      "aria-label": "Back to choose route"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       className: "how-to-apply--pgt--js__modal__progress__text"
-    }, selectedSubjectValue))) : subjNav = null;
-    setProgressSubject(subjNav); // Method loads apply links and, if present, will always be the last step, therefore progress icon does nothing on click
+    }, selectedRouteValue))) : routeNav = null;
+    setProgressRoute(routeNav); // Method loads apply links and, if present, will always be the last step, therefore progress icon does nothing on click
 
     if (selectedDateData) {
       dateNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
@@ -542,7 +542,7 @@ function HowToApply(props) {
         methods.map(() => {
           // Multiple dates; print buttons
           if (data.length > 1) {
-            // Date selection required: set progress indicator to subject and remove methods
+            // Date selection required: set progress indicator to route and remove methods
             selectedDateValue = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
               className: "how-to-apply--pgt--js__modal__progress__current"
             }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
@@ -685,13 +685,13 @@ function HowToApply(props) {
     buttonOptions ? setDateSelection(buttonOptions) : null;
   }
   /**
-   * Completed programme filter. Analyse subjects data.
+   * Completed programme filter. Analyse routes data.
    *
-   * @param {object} data The filtered data record data, where subjects are at the top level.
+   * @param {object} data The filtered data record data, where routes are at the top level.
    */
 
 
-  function filterSubjectData(data) {
+  function filterRouteData(data) {
     // Empty relevant state variables to remove superfluous button/link rendering
     setDateSelection();
     setMethodSelection();
@@ -701,7 +701,7 @@ function HowToApply(props) {
     setProgressDate();
     setProgressMethod(); // Clear data stored from previous selections
 
-    selectedSubjectData = null;
+    selectedRouteData = null;
     selectedDateData = null; // Variables scoped to this function
 
     let buttonQuals = [],
@@ -729,7 +729,7 @@ function HowToApply(props) {
     }, selectedQualificationValue))) : qualNav = null;
     setProgressQualification(qualNav);
     data.map(s => {
-      // Subjects pre-selection prompt text
+      // Routes pre-selection prompt text
       setWindowPrompt(promptRoute);
       let dates = s['options'];
       dates.map(d => {
@@ -747,8 +747,8 @@ function HowToApply(props) {
             }, []);
 
             if (data.length > 1) {
-              // Subject selection required: set progress indicator to subject and remove dates/methods
-              selectedSubjectValue = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+              // Route selection required: set progress indicator to route and remove dates/methods
+              selectedRouteValue = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
                 className: "how-to-apply--pgt--js__modal__progress__current"
               }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
                 className: "how-to-apply--pgt--js__modal__progress__wrapper"
@@ -759,12 +759,12 @@ function HowToApply(props) {
               })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
                 className: "how-to-apply--pgt--js__modal__progress__text"
               }, "Route")));
-              setProgressSubject(selectedSubjectValue);
+              setProgressRoute(selectedRouteValue);
               setProgressDate();
               setProgressMethod();
 
               if (dates.length > 1 || locationOptions.length > 1 || methods.length > 1) {
-                // Standard subject button
+                // Standard route button
                 buttonQuals.push(s.header);
                 buttonQuals = buttonQuals.reduce(function (a, i) {
                   a.indexOf(i) === -1 ? a.push(i) : null;
@@ -775,9 +775,9 @@ function HowToApply(props) {
                     key: bq
                   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
                     onClick: e => {
-                      selectedSubjectValue = e.target.textContent;
-                      selectedSubjectData = data.filter(subj => subj.header === selectedSubjectValue);
-                      filterDatesData(selectedSubjectData[0]['options']);
+                      selectedRouteValue = e.target.textContent;
+                      selectedRouteData = data.filter(sr => sr.header === selectedRouteValue);
+                      filterDatesData(selectedRouteData[0]['options']);
                       setFirstStep(false);
                     }
                   }, bq)));
@@ -831,30 +831,28 @@ function HowToApply(props) {
     setFirstStep(true); // Qualification pre-selection prompt text
 
     setWindowPrompt(promptQualification); // Empty relevant state variables to remove superfluous button/link rendering
-    // setSubjectSelection();
 
     setDateSelection();
     setMethodSelection();
     setBtnSelection();
     setLinkSelection(); // Empty relevant state variables to remove superfluous progress navigation rendering
 
-    setProgressSubject();
+    setProgressRoute();
     setProgressDate();
     setProgressMethod(); // Clear data stored from previous selections
 
     selectedQualificationData = null;
-    selectedSubjectData = null;
+    selectedRouteData = null;
     selectedDateData = null; // Variables scoped to this function
 
     let buttonQuals = [],
         linkQuals = [],
         buttonOptions,
         linkOptions,
-        locationOptions = [],
-        qualNav;
+        locationOptions = [];
 
     if (data.length > 1) {
-      // Qualification selection required: set progress indicator to qualification and remove subjects/dates/methods
+      // Qualification selection required: set progress indicator to qualification and remove routes/dates/methods
       selectedQualificationValue = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
         className: "how-to-apply--pgt--js__modal__progress__current"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
@@ -870,8 +868,8 @@ function HowToApply(props) {
     }
 
     data.length > 1 ? data.map(e => {
-      let subjectNames = e['options'];
-      subjectNames.map(s => {
+      let routeNames = e['options'];
+      routeNames.map(s => {
         let dates = s['options'];
         dates.map(d => {
           let locations = d['options'];
@@ -888,7 +886,7 @@ function HowToApply(props) {
               }, []);
 
               if (data.length > 1) {
-                if (subjectNames.length > 1 || dates.length > 1 || locationOptions.length > 1 || methods.length > 1) {
+                if (routeNames.length > 1 || dates.length > 1 || locationOptions.length > 1 || methods.length > 1) {
                   buttonQuals.push(e.header);
                   buttonQuals = buttonQuals.reduce(function (a, i) {
                     a.indexOf(i) === -1 ? a.push(i) : null;
@@ -901,7 +899,7 @@ function HowToApply(props) {
                       onClick: e => {
                         selectedQualificationValue = e.target.innerText;
                         selectedQualificationData = data.filter(qual => qual.header === selectedQualificationValue);
-                        filterSubjectData(selectedQualificationData[0]['options']);
+                        filterRouteData(selectedQualificationData[0]['options']);
                         setFirstStep(false);
                       }
                     }, bq)));
@@ -935,8 +933,8 @@ function HowToApply(props) {
           });
         });
       });
-    }) : // One qualification; move to subjects function
-    filterSubjectData(entryPoints[0]['options'], qualNav);
+    }) : // One qualification; move to routes function
+    filterRouteData(entryPoints[0]['options']);
   } // Modal wrapper render
 
 
@@ -1030,9 +1028,9 @@ function HowToApply(props) {
     className: "fas fa-redo"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Start again"))) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
     className: "how-to-apply--pgt--js__modal__progress"
-  }, progressQualification, progressSubject, progressDate, progressMethod, furtherStepsPendingIndicator), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
+  }, progressQualification, progressRoute, progressDate, progressMethod, furtherStepsPendingIndicator), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
     className: "how-to-apply--pgt--js__modal__progress--mobile"
-  }, progressQualification, progressSubject, progressDate, progressMethod, furtherStepsPendingIndicator), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, progressQualification, progressRoute, progressDate, progressMethod, furtherStepsPendingIndicator), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Start in ", props.element.dataset.year)), qualificationQuestion, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
