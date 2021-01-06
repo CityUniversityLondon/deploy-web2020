@@ -5213,8 +5213,6 @@ function reverseOptimisation(slider, controls, direction, click) {
 
     if (sliderposition == '0') {
       currentSlide = i;
-      console.log("CurrentSlide: ".concat(i));
-      console.log("prepSlide is: ".concat(currentSlide * 2 + (Math.round(direction / 2) + direction)));
     }
 
     const slidesChildren = Array.from(slides[i].querySelector('ul').children);
@@ -5670,6 +5668,7 @@ function updateDotButtonState(active, dotButtons, slider) {
 function slideHeightFix(slider) {
   let slides = Array.from(slider.children);
   let sliderSetHeight = 0;
+  slider.style.minHeight = '0px';
   slides.forEach(slide => {
     let slideHeight = slide.offsetHeight;
     slideHeight > sliderSetHeight ? sliderSetHeight = slideHeight : null;
