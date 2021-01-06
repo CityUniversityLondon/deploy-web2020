@@ -44238,6 +44238,11 @@ blockquote footer cite {
     margin-top: 0;
 }
 
+.js .statistics-block .ksp__items.slider[data-small="true"] .ksp__item {
+    margin-right: 0;
+    flex: 1;
+}
+
 .js .statistics-block .ksp__item__overline, .js .statistics-block .ksp__item__description p {
     margin-left: auto;
     margin-right: auto;
