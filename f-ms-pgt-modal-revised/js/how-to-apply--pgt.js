@@ -308,19 +308,19 @@ function HowToApply(props) {
     className: "fas fa-circle icon",
     "aria-hidden": "true"
   }))));
-  let [qualificationSelectionButton, setQualificationSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [qualificationSelectionLink, setQualificationSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [routeSelectionButton, setRouteSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [routeSelectionLink, setRouteSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [locationOneHeading, setLocationOneHeading] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [locationOneDateSelectionButton, setLocationOneDateSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
-      [locationOneDateSelectionLink, setLocationOneDateSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
-      [locationTwoHeading, setLocationTwoHeading] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [locationTwoDateSelectionButton, setLocationTwoDateSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
-      [locationTwoDateSelectionLink, setLocationTwoDateSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
-      [dateSelectionButton, setDateSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [dateSelectionLink, setDateSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [methodSelectionLink, setmethodSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+  let [selectionButtonQualification, setSelectionButtonQualification] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [selectionLinkQualification, setSelectionLinkQualification] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [selectionButtonRoute, setSelectionButtonRoute] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [selectionLinkRoute, setSelectionLinkRoute] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [selectionButtonDate, setSelectionButtonDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [selectionLinkDate, setSelectionLinkDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [selectionHeadingLocationOne, setSelectionHeadingLocationOne] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [selectionButtonLocationOneDate, setSelectionButtonLocationOneDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+      [selectionLinkLocationOneDate, setSelectionLinkLocationOneDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+      [selectionHeadingLocationTwo, setSelectionHeadingLocationTwo] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [selectionButtonLocationTwoDate, setSelectionButtonLocationTwoDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+      [selectionLinkLocationTwoDate, setSelectionLinkLocationTwoDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+      [selectionLinkMethod, setSelectionLinkMethod] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
       selectedQualificationData,
       selectedQualificationValue,
       selectedRouteData,
@@ -328,23 +328,23 @@ function HowToApply(props) {
       selectedDateData,
       selectedDateValue;
   /**
-   * Clear any previously rendered selection buttons/links from the state to avoid superfluous button/link rendering
+   * Clear any previously rendered selection buttons/links from the state to prevent superfluous button/link rendering
    */
 
   function clearSelectionOptions() {
-    setQualificationSelectionButton();
-    setQualificationSelectionLink();
-    setRouteSelectionButton();
-    setRouteSelectionLink();
-    setLocationOneHeading();
-    setLocationOneDateSelectionButton();
-    setLocationOneDateSelectionLink();
-    setLocationTwoHeading();
-    setLocationTwoDateSelectionButton();
-    setLocationTwoDateSelectionLink();
-    setDateSelectionButton();
-    setDateSelectionLink();
-    setmethodSelectionLink();
+    setSelectionButtonQualification();
+    setSelectionLinkQualification();
+    setSelectionButtonRoute();
+    setSelectionLinkRoute();
+    setSelectionHeadingLocationOne();
+    setSelectionButtonLocationOneDate();
+    setSelectionLinkLocationOneDate();
+    setSelectionHeadingLocationTwo();
+    setSelectionButtonLocationTwoDate();
+    setSelectionLinkLocationTwoDate();
+    setSelectionButtonDate();
+    setSelectionLinkDate();
+    setSelectionLinkMethod();
   }
   /**
    * Convert raw date values to full month/year for rendering to buttons.
@@ -367,7 +367,7 @@ function HowToApply(props) {
 
   function filterMethodsData(methods) {
     // Methods of study pre-selection prompt text
-    setWindowPrompt(promptMethod); // Clear any previously rendered selection buttons/links from the state to avoid superfluous button/link rendering
+    setWindowPrompt(promptMethod); // Clear any previously rendered selection buttons/links from the state to prevent superfluous button/link rendering
 
     clearSelectionOptions(); // Variables scoped to this function
 
@@ -467,7 +467,7 @@ function HowToApply(props) {
       linkOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
         data: methodLinks
       });
-      setmethodSelectionLink(linkOptions);
+      setSelectionLinkMethod(linkOptions);
     });
   }
   /**
@@ -479,7 +479,7 @@ function HowToApply(props) {
 
   function filterDatesData(data) {
     // Date pre-selection prompt text
-    setWindowPrompt(promptEntryPoint); // Clear any previously rendered selection buttons/links from the state to avoid superfluous button/link rendering
+    setWindowPrompt(promptEntryPoint); // Clear any previously rendered selection buttons/links from the state to prevent superfluous button/link rendering
 
     clearSelectionOptions(); // Empty relevant state variables to remove superfluous progress navigation rendering
 
@@ -613,7 +613,7 @@ function HowToApply(props) {
                   locationOneDateLinks = Array.from(new Set(locationOneDateLinks.map(a => a.text))).map(text => {
                     return locationOneDateLinks.find(a => a.text === text);
                   });
-                  locationOneDateSelectionLink = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                  selectionLinkLocationOneDate = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
                     data: locationOneDateLinks
                   });
                 }
@@ -646,17 +646,17 @@ function HowToApply(props) {
                   locationTwoDateLinks = Array.from(new Set(locationTwoDateLinks.map(a => a.text))).map(text => {
                     return locationTwoDateLinks.find(a => a.text === text);
                   });
-                  locationTwoDateSelectionLink = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                  selectionLinkLocationTwoDate = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
                     data: locationTwoDateLinks
                   });
                 }
               });
-              setLocationOneHeading( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationsAll[0][0]['options'][0]['header']));
-              setLocationOneDateSelectionButton(locationOneDateSelectionButton);
-              setLocationOneDateSelectionLink(locationOneDateSelectionLink);
-              setLocationTwoHeading( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationsAll[1][0]['options'][0]['header']));
-              setLocationTwoDateSelectionButton(locationTwoDateSelectionButton);
-              setLocationTwoDateSelectionLink(locationTwoDateSelectionLink); // End multiple locations
+              setSelectionHeadingLocationOne( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationsAll[0][0]['options'][0]['header']));
+              setSelectionButtonLocationOneDate(selectionButtonLocationOneDate);
+              setSelectionLinkLocationOneDate(selectionLinkLocationOneDate);
+              setSelectionHeadingLocationTwo( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationsAll[1][0]['options'][0]['header']));
+              setSelectionButtonLocationTwoDate(selectionButtonLocationTwoDate);
+              setSelectionLinkLocationTwoDate(selectionLinkLocationTwoDate); // End multiple locations
             } else {
               // Single location, multiple dates
               if (locations.length > 1 || methods.length > 1) {
@@ -713,8 +713,8 @@ function HowToApply(props) {
         });
       });
     });
-    linkOptions ? setDateSelectionLink(linkOptions) : null;
-    buttonOptions ? setDateSelectionButton(buttonOptions) : null;
+    linkOptions ? setSelectionLinkDate(linkOptions) : null;
+    buttonOptions ? setSelectionButtonDate(buttonOptions) : null;
   }
   /**
    * Completed programme filter. Analyse routes data.
@@ -724,7 +724,7 @@ function HowToApply(props) {
 
 
   function filterRouteData(data) {
-    // Clear any previously rendered selection buttons/links from the state to avoid superfluous button/link rendering
+    // Clear any previously rendered selection buttons/links from the state to prevent superfluous button/link rendering
     clearSelectionOptions(); // Empty relevant state variables to remove superfluous progress navigation rendering
 
     setProgressDate();
@@ -845,8 +845,8 @@ function HowToApply(props) {
       });
     }); // If route options and/or links exist, update state to render relevant JSX
 
-    buttonOptions ? setRouteSelectionButton(buttonOptions) : null;
-    linkOptions ? setRouteSelectionLink(linkOptions) : null;
+    buttonOptions ? setSelectionButtonRoute(buttonOptions) : null;
+    linkOptions ? setSelectionLinkRoute(linkOptions) : null;
   }
   /**
    * Analyse programme data record data.
@@ -859,7 +859,7 @@ function HowToApply(props) {
     // If qualification select exists, it will be the first step in the modal; disable 'Start again' option
     setFirstStep(true); // Qualification pre-selection prompt text
 
-    setWindowPrompt(promptQualification); // Clear any previously rendered selection buttons/links from the state to avoid superfluous button/link rendering
+    setWindowPrompt(promptQualification); // Clear any previously rendered selection buttons/links from the state to prevent superfluous button/link rendering
 
     clearSelectionOptions(); // Empty relevant state variables to remove superfluous progress navigation rendering
 
@@ -959,21 +959,21 @@ function HowToApply(props) {
       });
     }) : // One qualification; move to routes function
     filterRouteData(entryPoints[0]['options']);
-    buttonOptions ? setQualificationSelectionButton(buttonOptions) : null;
-    linkOptions ? setQualificationSelectionLink(linkOptions) : null;
+    buttonOptions ? setSelectionButtonQualification(buttonOptions) : null;
+    linkOptions ? setSelectionLinkQualification(linkOptions) : null;
   } // Modal wrapper render
 
 
   const question = 'qualification',
         qualificationQuestion = question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, windowPrompt), !(locationOneHeading || locationOneDateSelectionButton || locationOneDateSelectionLink || locationTwoHeading || locationTwoDateSelectionButton || locationTwoDateSelectionLink) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, windowPrompt), !(selectionHeadingLocationOne || selectionButtonLocationOneDate || selectionLinkLocationOneDate || selectionHeadingLocationTwo || selectionButtonLocationTwoDate || selectionLinkLocationTwoDate) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, qualificationSelectionButton, qualificationSelectionLink, routeSelectionButton, routeSelectionLink, dateSelectionButton, dateSelectionLink, methodSelectionLink) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationOneHeading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  }, selectionButtonQualification, selectionLinkQualification, selectionButtonRoute, selectionLinkRoute, selectionButtonDate, selectionLinkDate, selectionLinkMethod) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, selectionHeadingLocationOne), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, locationOneDateSelectionButton, locationOneDateSelectionLink), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationTwoHeading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  }, selectionButtonLocationOneDate, selectionLinkLocationOneDate), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, selectionHeadingLocationTwo), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, locationTwoDateSelectionButton, locationTwoDateSelectionLink)))),
+  }, selectionButtonLocationTwoDate, selectionLinkLocationTwoDate)))),
         alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "how-to-apply--pgt--js__modal__alternative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
