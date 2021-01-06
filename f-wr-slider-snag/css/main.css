@@ -43905,7 +43905,7 @@ blockquote footer cite {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: right;
+    justify-content: flex-end;
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 0.1875rem;
