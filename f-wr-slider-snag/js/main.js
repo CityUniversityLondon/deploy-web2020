@@ -5349,7 +5349,10 @@ function handleNextPrevClick(slider, controls, direction) {
 
       currentPage.innerText = slides.indexOf(previous) + 1;
     }
-  }
+  } // Set the height of the slider container to be fixed. This fixes the issue of having 'arrow navigation'
+
+
+  slideHeightFix(slider);
 }
 /**
  * This is for arrow slider only. It applies the necessary data attribues needed
@@ -5487,8 +5490,12 @@ function launchArrow(slider) {
 
   slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper); // Add event listeners
 
-  addSwipeEvents(slider, controlsWrapper);
+  addSwipeEvents(slider, controlsWrapper); // Set the height of the slider container to be fixed. This fixes the issue of having 'arrow navigation'
+
+  slideHeightFix(slider);
 }
+
+;
 /**
  * Transform an element with the slider class name into a slider section controlled by dots.
  * This is to be launched on smaller screens only.
@@ -5496,7 +5503,6 @@ function launchArrow(slider) {
  * @param {HTMLElement} slider - An element with the slider class
  * 
  */
-
 
 function launchDot(slider) {
   // Creates pagination and control elements
@@ -5588,7 +5594,9 @@ function launchDot(slider) {
 
   slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper); //add event listeners
 
-  addSwipeEvents(slider, controlsWrapper);
+  addSwipeEvents(slider, controlsWrapper); // Set the height of the slider container to be fixed. This fixes the issue of having 'arrow navigation'
+
+  slideHeightFix(slider);
 }
 /**
  * Handle clicks for dot slider
@@ -5629,7 +5637,9 @@ function handleDotClick(slider, controlsWrapper, selection) {
           slide.dataset.smallposition = -1;
           slide.dataset.hidden = true; // @ WR review smallhidden - what was intended by it?
         }
-  });
+  }); // Set the height of the slider container to be fixed. This fixes the issue of having 'arrow navigation'
+
+  slideHeightFix(slider);
 }
 /**
  * @param  {number} active - This is the number/index of the 'active' slide.
@@ -5650,6 +5660,25 @@ function updateDotButtonState(active, dotButtons, slider) {
   slider.removeAttribute('disabled');
 }
 /**
+ * This function creates a fix height for the slider container so the height don't change depending on each 
+ * slides individual height which would cause the navigation arrows to move up and down when adjusting to the 
+ * height of the current slide
+ * @param  {HTMLElement} slider - The slider element.
+ */
+
+
+function slideHeightFix(slider) {
+  let slides = Array.from(slider.children);
+  let sliderSetHeight = 0;
+  slides.forEach(slide => {
+    let slideHeight = slide.offsetHeight;
+    slideHeight > sliderSetHeight ? sliderSetHeight = slideHeight : null;
+  });
+  slider.style.minHeight = sliderSetHeight + 'px';
+}
+
+;
+/**
  * 3 Swipe functions below. Unify records touch coordinates to determine left or right swipe.
  * Lock function locks the ul element to prevent too many additional touches interfering with the sliding 
  * functionality. I.e. when a slide is in progress it locks it not to register additional touches.
@@ -5661,7 +5690,6 @@ function updateDotButtonState(active, dotButtons, slider) {
  * @param {HTMLElement} Slider - The ul element containing the "li" slides
  * @param {HTMLElement} ControlsWrapper - The nav element containing the slider controls
  */
-
 
 let x0;
 
