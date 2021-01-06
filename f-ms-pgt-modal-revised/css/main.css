@@ -32229,12 +32229,6 @@ figure figcaption a:active,
     outline-offset: 0;
 }
 
-@media (min-width: 1024px) {
-    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__reset {
-        display: none;
-    }
-}
-
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile {
     display: flex;
     flex-direction: row;

@@ -277,7 +277,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Launch the how to apply modal.
+ * Launch the How to apply modal.
  *
  * @param {object} props The JSON configuration file for the modal.
  * @return {object} The React component to render.
@@ -308,16 +308,19 @@ function HowToApply(props) {
     className: "fas fa-circle icon",
     "aria-hidden": "true"
   }))));
-  let [btnSelection, setBtnSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [dateSelection, setDateSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [linkSelection, setLinkSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [methodSelection, setMethodSelection] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+  let [qualificationSelectionButton, setQualificationSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [qualificationSelectionLink, setQualificationSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [routeSelectionButton, setRouteSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [routeSelectionLink, setRouteSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
       [locationOneHeading, setLocationOneHeading] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [locationOneDateSelectionButton, setLocationOneDateSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [locationOneDateSelectionLink, setLocationOneDateSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [locationOneDateSelectionButton, setLocationOneDateSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+      [locationOneDateSelectionLink, setLocationOneDateSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
       [locationTwoHeading, setLocationTwoHeading] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [locationTwoDateSelectionButton, setLocationTwoDateSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [locationTwoDateSelectionLink, setLocationTwoDateSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [locationTwoDateSelectionButton, setLocationTwoDateSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+      [locationTwoDateSelectionLink, setLocationTwoDateSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
+      [dateSelectionButton, setDateSelectionButton] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [dateSelectionLink, setDateSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      [methodSelectionLink, setmethodSelectionLink] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
       selectedQualificationData,
       selectedQualificationValue,
       selectedRouteData,
@@ -325,10 +328,30 @@ function HowToApply(props) {
       selectedDateData,
       selectedDateValue;
   /**
+   * Clear any previously rendered selection buttons/links from the state to avoid superfluous button/link rendering
+   */
+
+  function clearSelectionOptions() {
+    setQualificationSelectionButton();
+    setQualificationSelectionLink();
+    setRouteSelectionButton();
+    setRouteSelectionLink();
+    setLocationOneHeading();
+    setLocationOneDateSelectionButton();
+    setLocationOneDateSelectionLink();
+    setLocationTwoHeading();
+    setLocationTwoDateSelectionButton();
+    setLocationTwoDateSelectionLink();
+    setDateSelectionButton();
+    setDateSelectionLink();
+    setmethodSelectionLink();
+  }
+  /**
    * Convert raw date values to full month/year for rendering to buttons.
    *
    * @param {string} sourceDate The unformatted date string.
    */
+
 
   function formatDate(sourceDate) {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -344,12 +367,9 @@ function HowToApply(props) {
 
   function filterMethodsData(methods) {
     // Methods of study pre-selection prompt text
-    setWindowPrompt(promptMethod); // Empty relevant state variables to remove superfluous button/link rendering
+    setWindowPrompt(promptMethod); // Clear any previously rendered selection buttons/links from the state to avoid superfluous button/link rendering
 
-    setMethodSelection();
-    setDateSelection();
-    setBtnSelection();
-    setLinkSelection(); // Variables scoped to this function
+    clearSelectionOptions(); // Variables scoped to this function
 
     let qualNav, routeNav, dateNav, methodNav;
     selectedQualificationData ? qualNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
@@ -447,7 +467,7 @@ function HowToApply(props) {
       linkOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
         data: methodLinks
       });
-      setMethodSelection(linkOptions);
+      setmethodSelectionLink(linkOptions);
     });
   }
   /**
@@ -459,11 +479,9 @@ function HowToApply(props) {
 
   function filterDatesData(data) {
     // Date pre-selection prompt text
-    setWindowPrompt(promptEntryPoint); // Empty relevant state variables to remove superfluous button/link rendering
+    setWindowPrompt(promptEntryPoint); // Clear any previously rendered selection buttons/links from the state to avoid superfluous button/link rendering
 
-    setMethodSelection();
-    setBtnSelection();
-    setLinkSelection(); // Empty relevant state variables to remove superfluous progress navigation rendering
+    clearSelectionOptions(); // Empty relevant state variables to remove superfluous progress navigation rendering
 
     setProgressMethod(); // Clear data stored from previous selections
 
@@ -476,10 +494,6 @@ function HowToApply(props) {
         locationOneDateLinks = [],
         locationTwoDateLinks = [],
         locationOptions = [],
-        locationOneDateAsButton = false,
-        locationOneDateAsLink = false,
-        locationTwoDateAsButton = false,
-        locationTwoDateAsLink = false,
         qualNav,
         routeNav,
         dateNav,
@@ -599,7 +613,7 @@ function HowToApply(props) {
                   locationOneDateLinks = Array.from(new Set(locationOneDateLinks.map(a => a.text))).map(text => {
                     return locationOneDateLinks.find(a => a.text === text);
                   });
-                  locationOneDateAsLink = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                  locationOneDateSelectionLink = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
                     data: locationOneDateLinks
                   });
                 }
@@ -632,17 +646,17 @@ function HowToApply(props) {
                   locationTwoDateLinks = Array.from(new Set(locationTwoDateLinks.map(a => a.text))).map(text => {
                     return locationTwoDateLinks.find(a => a.text === text);
                   });
-                  locationTwoDateAsLink = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                  locationTwoDateSelectionLink = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
                     data: locationTwoDateLinks
                   });
                 }
               });
               setLocationOneHeading( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationsAll[0][0]['options'][0]['header']));
-              setLocationOneDateSelectionButton(locationOneDateAsButton);
-              setLocationOneDateSelectionLink(locationOneDateAsLink);
+              setLocationOneDateSelectionButton(locationOneDateSelectionButton);
+              setLocationOneDateSelectionLink(locationOneDateSelectionLink);
               setLocationTwoHeading( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationsAll[1][0]['options'][0]['header']));
-              setLocationTwoDateSelectionButton(locationTwoDateAsButton);
-              setLocationTwoDateSelectionLink(locationTwoDateAsLink); // End multiple locations
+              setLocationTwoDateSelectionButton(locationTwoDateSelectionButton);
+              setLocationTwoDateSelectionLink(locationTwoDateSelectionLink); // End multiple locations
             } else {
               // Single location, multiple dates
               if (locations.length > 1 || methods.length > 1) {
@@ -699,8 +713,8 @@ function HowToApply(props) {
         });
       });
     });
-    linkOptions ? setDateSelection(linkOptions) : null;
-    buttonOptions ? setDateSelection(buttonOptions) : null;
+    linkOptions ? setDateSelectionLink(linkOptions) : null;
+    buttonOptions ? setDateSelectionButton(buttonOptions) : null;
   }
   /**
    * Completed programme filter. Analyse routes data.
@@ -710,11 +724,8 @@ function HowToApply(props) {
 
 
   function filterRouteData(data) {
-    // Empty relevant state variables to remove superfluous button/link rendering
-    setDateSelection();
-    setMethodSelection();
-    setBtnSelection();
-    setLinkSelection(); // Empty relevant state variables to remove superfluous progress navigation rendering
+    // Clear any previously rendered selection buttons/links from the state to avoid superfluous button/link rendering
+    clearSelectionOptions(); // Empty relevant state variables to remove superfluous progress navigation rendering
 
     setProgressDate();
     setProgressMethod(); // Clear data stored from previous selections
@@ -799,8 +810,7 @@ function HowToApply(props) {
                       setFirstStep(false);
                     }
                   }, bq)));
-                });
-                setBtnSelection(buttonOptions); // Modal journey incomplete; display further steps pending indicator
+                }); // Modal journey incomplete; display further steps pending indicator
 
                 setFurtherStepsPendingIndicator(furtherStepsPending);
               } else {
@@ -833,12 +843,13 @@ function HowToApply(props) {
           });
         });
       });
-    });
-    setBtnSelection(buttonOptions);
-    setLinkSelection(linkOptions);
+    }); // If route options and/or links exist, update state to render relevant JSX
+
+    buttonOptions ? setRouteSelectionButton(buttonOptions) : null;
+    linkOptions ? setRouteSelectionLink(linkOptions) : null;
   }
   /**
-   * Analyse programmes data.
+   * Analyse programme data record data.
    *
    * @param {object} data The original data record data, where programmes are at the top level.
    */
@@ -848,12 +859,9 @@ function HowToApply(props) {
     // If qualification select exists, it will be the first step in the modal; disable 'Start again' option
     setFirstStep(true); // Qualification pre-selection prompt text
 
-    setWindowPrompt(promptQualification); // Empty relevant state variables to remove superfluous button/link rendering
+    setWindowPrompt(promptQualification); // Clear any previously rendered selection buttons/links from the state to avoid superfluous button/link rendering
 
-    setDateSelection();
-    setMethodSelection();
-    setBtnSelection();
-    setLinkSelection(); // Empty relevant state variables to remove superfluous progress navigation rendering
+    clearSelectionOptions(); // Empty relevant state variables to remove superfluous progress navigation rendering
 
     setProgressRoute();
     setProgressDate();
@@ -921,8 +929,7 @@ function HowToApply(props) {
                         setFirstStep(false);
                       }
                     }, bq)));
-                  });
-                  setBtnSelection(buttonOptions); // Modal journey incomplete; display further steps pending indicator
+                  }); // Modal journey incomplete; display further steps pending indicator
 
                   setFurtherStepsPendingIndicator(furtherStepsPending);
                 } else {
@@ -943,8 +950,7 @@ function HowToApply(props) {
                   });
                   linkOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
                     data: methodLinks
-                  });
-                  setLinkSelection(linkOptions);
+                  }); // Move to end of function and use qualification variable? Similar approach to ternary operator used at end of dates function
                 }
               }
             });
@@ -953,6 +959,8 @@ function HowToApply(props) {
       });
     }) : // One qualification; move to routes function
     filterRouteData(entryPoints[0]['options']);
+    buttonOptions ? setQualificationSelectionButton(buttonOptions) : null;
+    linkOptions ? setQualificationSelectionLink(linkOptions) : null;
   } // Modal wrapper render
 
 
@@ -961,7 +969,7 @@ function HowToApply(props) {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, windowPrompt), !(locationOneHeading || locationOneDateSelectionButton || locationOneDateSelectionLink || locationTwoHeading || locationTwoDateSelectionButton || locationTwoDateSelectionLink) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, dateSelection, methodSelection, btnSelection, linkSelection) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationOneHeading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  }, qualificationSelectionButton, qualificationSelectionLink, routeSelectionButton, routeSelectionLink, dateSelectionButton, dateSelectionLink, methodSelectionLink) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationOneHeading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
   }, locationOneDateSelectionButton, locationOneDateSelectionLink), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationTwoHeading), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
@@ -1007,11 +1015,10 @@ function HowToApply(props) {
     className: "primary-cta-arrow--bright",
     onClick: () => {
       setModalVisible(true);
-      setFirstStep(true);
-      setDateSelection();
-      setMethodSelection();
-      setBtnSelection();
-      setLinkSelection();
+      setFirstStep(true); // Don't show 'Start again' option on initial modal load
+
+      clearSelectionOptions(); // Clear any previously rendered selection buttons/links from the state
+
       filterQualificationData(entryPoints);
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Apply now")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
@@ -1032,10 +1039,8 @@ function HowToApply(props) {
     className: "fas fa-times icon",
     "aria-label": "Close"
   })), !firstStep ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "how-to-apply--pgt--js__modal__reset",
-    style: {
-      display: 'block'
-    }
+    className: "how-to-apply--pgt--js__modal__reset" // style={{ display: 'block' }}
+
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
     onClick: () => {
       // Clear options display and render what user would see when modal is first opened
@@ -1046,8 +1051,6 @@ function HowToApply(props) {
     className: "fas fa-redo"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Start again"))) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
     className: "how-to-apply--pgt--js__modal__progress"
-  }, progressQualification, progressRoute, progressDate, progressMethod, furtherStepsPendingIndicator), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
-    className: "how-to-apply--pgt--js__modal__progress--mobile"
   }, progressQualification, progressRoute, progressDate, progressMethod, furtherStepsPendingIndicator), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Start in ", props.element.dataset.year)), qualificationQuestion, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
