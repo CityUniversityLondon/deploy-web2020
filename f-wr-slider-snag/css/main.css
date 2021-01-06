@@ -58962,7 +58962,7 @@ main .home .home__research__wrap {
     grid-column-gap: 0;
     overflow: hidden;
     position: relative;
-    padding-top: 2.75rem;
+    padding-top: 1.75rem;
 }
 
 @media (min-width: 768px) {
@@ -67136,8 +67136,7 @@ button
 
 @media (max-width: 1023px) {
     main > .lifelong-learning .lifelong-learning__tutors,
-    main > .lifelong-learning .lifelong-learning__testimonials,
-    main > .lifelong-learning .related-content--profiles {
+    main > .lifelong-learning .lifelong-learning__testimonials {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -67148,8 +67147,7 @@ button
 
 @media (max-width: 1023px) and (min-width: 901px) {
     main > .lifelong-learning .lifelong-learning__tutors,
-    main > .lifelong-learning .lifelong-learning__testimonials,
-    main > .lifelong-learning .related-content--profiles {
+    main > .lifelong-learning .lifelong-learning__testimonials {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
@@ -67157,8 +67155,7 @@ button
 
 @media (max-width: 1023px) and (min-width: 901px) {
     main > .lifelong-learning .lifelong-learning__tutors,
-    main > .lifelong-learning .lifelong-learning__testimonials,
-    main > .lifelong-learning .related-content--profiles {
+    main > .lifelong-learning .lifelong-learning__testimonials {
         padding-left: 2rem;
         padding-right: 2rem;
     }
@@ -67166,14 +67163,36 @@ button
 
 @media (max-width: 1023px) and (min-width: 1441px) {
     main > .lifelong-learning .lifelong-learning__tutors,
-    main > .lifelong-learning .lifelong-learning__testimonials,
-    main > .lifelong-learning .related-content--profiles {
+    main > .lifelong-learning .lifelong-learning__testimonials {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (max-width: 1023px) {
+    main > .lifelong-learning .related-content--profiles {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    main > .lifelong-learning .related-content--profiles {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    main > .lifelong-learning .related-content--profiles {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    main > .lifelong-learning .related-content--profiles .card {
+        grid-column: 4 / -4;
+    }
     main > .lifelong-learning .lifelong-learning__video,
     main > .lifelong-learning .lifelong-learning__related-courses {
         margin-left: 1rem;
@@ -67228,6 +67247,12 @@ button
     main > .lifelong-learning .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact .key-information--lifelong-learning--bespoke__contact__related-links {
         grid-column: 1 / span 24;
         grid-row: 4;
+    }
+}
+
+@media (max-width: 767px) {
+    main > .lifelong-learning .related-content--profiles {
+        display: initial;
     }
 }
 
@@ -67847,6 +67872,12 @@ button
     padding-top: 4.25rem;
 }
 
+.lifelong-learning .lifelong-learning__tutors__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .lifelong-learning .lifelong-learning__tutors,
 .lifelong-learning .lifelong-learning__testimonials {
     padding-bottom: 4.25rem;
@@ -67875,6 +67906,10 @@ button
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.lifelong-learning .slider:not([data-small="true"]) {
+    margin-bottom: 0;
 }
 
 .lifelong-learning .lifelong-learning__testimonials .related-content .card__details {
