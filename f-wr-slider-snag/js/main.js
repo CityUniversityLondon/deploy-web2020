@@ -5348,9 +5348,8 @@ function handleNextPrevClick(slider, controls, direction) {
       currentPage.innerText = slides.indexOf(previous) + 1;
     }
   } // Set the height of the slider container to be fixed. This fixes the issue of having 'arrow navigation'
+  //slideHeightFix(slider);
 
-
-  slideHeightFix(slider);
 }
 /**
  * This is for arrow slider only. It applies the necessary data attribues needed
@@ -5489,8 +5488,7 @@ function launchArrow(slider) {
   slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper); // Add event listeners
 
   addSwipeEvents(slider, controlsWrapper); // Set the height of the slider container to be fixed. This fixes the issue of having 'arrow navigation'
-
-  slideHeightFix(slider);
+  //slideHeightFix(slider);
 }
 
 ;
@@ -5593,8 +5591,7 @@ function launchDot(slider) {
   slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper); //add event listeners
 
   addSwipeEvents(slider, controlsWrapper); // Set the height of the slider container to be fixed. This fixes the issue of having 'arrow navigation'
-
-  slideHeightFix(slider);
+  //slideHeightFix(slider);
 }
 /**
  * Handle clicks for dot slider
@@ -5636,8 +5633,7 @@ function handleDotClick(slider, controlsWrapper, selection) {
           slide.dataset.hidden = true; // @ WR review smallhidden - what was intended by it?
         }
   }); // Set the height of the slider container to be fixed. This fixes the issue of having 'arrow navigation'
-
-  slideHeightFix(slider);
+  //slideHeightFix(slider);
 }
 /**
  * @param  {number} active - This is the number/index of the 'active' slide.
