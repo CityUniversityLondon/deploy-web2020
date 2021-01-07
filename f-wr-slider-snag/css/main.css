@@ -63432,25 +63432,6 @@ main > .news {
 
 .course--pgt__related-courses {
     padding: 1rem 0 1rem;
-    /*
-    .related-content {
-        display: flex;
-        flex-wrap: wrap;
-
-        @include media('<between') {
-            flex-direction: column;
-        }
-
-        @include media('>=between') {
-            flex-direction: row;
-
-            .card {
-                width: calc(50% - 1.5rem);
-                margin-right: $measure--small2;
-            }
-        }
-    }
-    */
 }
 
 @media (max-width: 1024px) {
@@ -63627,28 +63608,13 @@ main > .news {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
-.course--pgt .wrapper--alumni-testimonials {
-    padding: 0 0.5rem;
-}
-
 .course--pgt .tabs__panel__heading {
     text-align: center;
 }
 
-@media (min-width: 769px) {
-    .course--pgt .wrapper--tabs__panel__body__content {
-        margin: 1rem 7rem 0;
-    }
-}
-
-@media (min-width: 1281px) {
-    .course--pgt .wrapper--tabs__panel__body__content {
-        margin: 1rem 8.5rem 0;
-    }
-}
-
 .course--pgt .wrapper--alumni-testimonials {
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .course--pgt .wrapper--alumni-testimonials .card--testimonial .card--testimonial__text .card--testimonial__quote,
@@ -63806,6 +63772,95 @@ main > .news {
 
 .js .course--pgt .tabs {
     padding-bottom: 1rem;
+    /* new start styles WR */
+    /* new end styles WR */
+}
+
+.js .course--pgt .tabs .tabs__panel__content {
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+@media (min-width: 768px) {
+    .js .course--pgt .tabs .tabs__panel__content {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .js .course--pgt .tabs .tabs__panel__content {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+.js .course--pgt .tabs .tabs__panel__content .tabs__panel__heading {
+    grid-row: 1;
+}
+
+.js .course--pgt .tabs .tabs__panel__content .tabs__panel__body {
+    grid-row: 2;
+}
+
+.js .course--pgt .tabs .tabs__panel__content .tabs__panel__heading,
+.js .course--pgt .tabs .tabs__panel__content .tabs__panel__body {
+    grid-column: 1 / span 24;
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .js .course--pgt .tabs .tabs__panel__content .tabs__panel__heading,
+    .js .course--pgt .tabs .tabs__panel__content .tabs__panel__body {
+        grid-column: 5 / span 16;
+    }
+}
+
+@media (min-width: 901px) {
+    .js .course--pgt .tabs .tabs__panel__content .tabs__panel__heading,
+    .js .course--pgt .tabs .tabs__panel__content .tabs__panel__body {
+        grid-column: 7 / span 12;
+    }
+}
+
+@media (min-width: 1024px) {
+    .js .course--pgt .tabs .tabs__panel__content {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    .js .course--pgt .tabs .tabs__panel__content {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .js .course--pgt .tabs .tabs__panel__content {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .js .course--pgt .tabs .tabs__panel__content .tabs__panel__heading,
+    .js .course--pgt .tabs .tabs__panel__content .tabs__panel__body {
+        grid-column: 4 / span 12;
+    }
+}
+
+@media (max-width: 432px) {
+    .js .course--pgt .tabs .tabs__panel__content {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 432px) and (min-width: 901px) {
+    .js .course--pgt .tabs .tabs__panel__content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 .js .course--pgt .tabs .tabs__links {
