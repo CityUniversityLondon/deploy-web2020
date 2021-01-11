@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([3,"vendor-dependencies","core"]);
+/******/ 	deferredModules.push([1,"vendor-dependencies","core"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -214,7 +214,7 @@ self.addEventListener('fetch', function (event) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 1:
 /*!************************************!*\
   !*** multi ./service-worker/sw.js ***!
   \************************************/
