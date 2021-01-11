@@ -54030,6 +54030,10 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     position: relative;
 }
 
+.campus-map__controls__locations .accordion button {
+    border-top: solid 0.125rem transparent;
+}
+
 @media (max-width: 768px) {
     .campus-map__controls__locations .accordion {
         flex-basis: 100%;

@@ -2741,7 +2741,7 @@ function createMap(mapContainer) {
 
     anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
       label: 'html',
-      val: '<span>' + markerConfig.name + ' ' + markerConfig.buildingPrefix + '</span>'
+      val: '<span>' + markerConfig.name + '</span>'
     }, {
       label: 'href',
       val: '#'
