@@ -63036,6 +63036,20 @@ main > .news {
     padding: 0 1.5rem;
 }
 
+@media (max-width: 1023px) {
+    .wrapper--course--pgt__usp {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .wrapper--course--pgt__usp {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
 .course--pgt__our-students {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
