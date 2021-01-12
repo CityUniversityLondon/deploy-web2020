@@ -2361,7 +2361,6 @@ function createMap(mapContainer) {
    * @let {String}
    */
   dataSrc = 'https://web2020.city.ac.uk/feed/locations/city-buildings/_nocache',
-      //'https://web2020.city.ac.uk/staging/development/walter/campus-map/locations/_nocache',
 
   /**
    * Create a LatLng object containing the coordinate for the center of the map
@@ -2646,12 +2645,17 @@ function createMap(mapContainer) {
         marker,
         anchor,
         html = ''; // build html for infoWindow
-    // if has link
+    // check to see if there's custom URL first
 
-    if (markerConfig.linkHref.length !== 0) {
-      html = '<div id="info-window" style="min-height: 60px;"><h3><a href="' + markerConfig.linkHref + '">' + markerConfig.name + '</a></h3>';
+    if (markerConfig.urlCustom) {
+      html = '<div id="info-window" style="min-height: 60px;"><h3><a href="' + markerConfig.urlCustom + '">' + markerConfig.name + '</a></h3>';
     } else {
-      html = '<div id="info-window" style="min-height: 60px;"><h3>' + markerConfig.name + '</h3>';
+      // if has asset has a link
+      if (markerConfig.linkHref.length !== 0) {
+        html = '<div id="info-window" style="min-height: 60px;"><h3><a href="' + markerConfig.linkHref + '">' + markerConfig.name + '</a></h3>';
+      } else {
+        html = '<div id="info-window" style="min-height: 60px;"><h3>' + markerConfig.name + '</h3>';
+      }
     } // add description and close div element
     //html += markerConfig.description.replace(/\<h2/g, '<h4').replace(/\h2>/g, 'h4>')  + '</div>';
 
@@ -2816,6 +2820,7 @@ function createMap(mapContainer) {
       markerConfig.id = $self.getElementsByTagName('guid')[0].textContent;
       markerConfig.name = $self.getElementsByTagName('title')[0].textContent;
       markerConfig.linkHref = $self.getElementsByTagName('link')[0].textContent;
+      markerConfig.urlCustom = $self.getElementsByTagName('urlCustom')[0].textContent;
       markerConfig.icon = 'https://web2020.city.ac.uk/?a=537733'; // default city marker  
 
       markerConfig.category = $self.getElementsByTagName('category')[0].textContent;
