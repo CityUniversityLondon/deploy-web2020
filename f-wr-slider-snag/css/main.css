@@ -60415,14 +60415,13 @@ main .home .home__whats-happening .related-content {
 @media (min-width: 1024px) {
     main > .landing--latest .landing--latest__content,
     main > .landing--latest .landing--latest__event-categories {
-        grid-column: 6 / span 14;
+        grid-column: 1 / span 14;
     }
 }
 
 @media (min-width: 1280px) {
     main > .landing--latest .landing__standfirst > .standfirst,
-    main > .landing--latest .landing--latest__content,
-    main > .landing--latest .landing--latest__event-categories {
+    main > .landing--latest .landing--latest__content {
         grid-column: 7 / span 12;
     }
 }
@@ -60456,7 +60455,7 @@ main .home .home__whats-happening .related-content {
 @media (min-width: 1024px) {
     main .navigation--secondary + .landing--latest .landing--latest__content,
     main .navigation--secondary + .landing--latest .landing--latest__event-categories {
-        grid-column: 4 / span 12;
+        grid-column: 1 / span 12;
     }
 }
 
