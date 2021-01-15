@@ -60312,9 +60312,8 @@ main .home .home__whats-happening .related-content {
     main > .landing--latest .landing__contact,
     main > .landing--latest .landing--latest__content,
     main > .landing--latest .landing--latest__event-categories,
-    main > .landing--latest .related-content__heading,
-    main > .landing--latest .related-content,
-    main > .landing--latest > .latest-content,
+    main > .landing--latest .landing--latest__featured-news,
+    main > .landing--latest .wrapper--landing--latest__latest-content--news,
     main > .landing--latest .wrapper--landing--latest__latest-content--events {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -60326,9 +60325,8 @@ main .home .home__whats-happening .related-content {
     main > .landing--latest .landing__contact,
     main > .landing--latest .landing--latest__content,
     main > .landing--latest .landing--latest__event-categories,
-    main > .landing--latest .related-content__heading,
-    main > .landing--latest .related-content,
-    main > .landing--latest > .latest-content,
+    main > .landing--latest .landing--latest__featured-news,
+    main > .landing--latest .wrapper--landing--latest__latest-content--news,
     main > .landing--latest .wrapper--landing--latest__latest-content--events {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -60459,6 +60457,15 @@ main .home .home__whats-happening .related-content {
     }
 }
 
+@media (max-width: 1023px) and (min-width: 768px) {
+    .landing--latest .wrapper--landing--latest__latest-content--news .finder__results__list--three-up .card--news a {
+        flex-direction: column;
+    }
+    .landing--latest .wrapper--landing--latest__latest-content--news .finder__results__list--three-up .card--news a img {
+        width: 100%;
+    }
+}
+
 .landing--latest .wrapper--landing--latest__latest-content--events {
     margin-top: 2rem;
 }
@@ -60502,6 +60509,15 @@ main .home .home__whats-happening .related-content {
 @media (min-width: 7680px) {
     .landing--latest .landing--latest__event-categories p {
         letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing--latest .wrapper--landing--latest__latest-content--news .related-content, .landing--latest .wrapper--landing--latest__latest-content--news .related-content + .slider__controls,
+    .landing--latest .wrapper--landing--latest__latest-content--events .related-content,
+    .landing--latest .wrapper--landing--latest__latest-content--events .related-content + .slider__controls {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
