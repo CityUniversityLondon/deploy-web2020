@@ -2479,7 +2479,7 @@ function createMap(mapContainer) {
 
   /**
    * Removes the overlays from the map, but keeps them in the array
-   * @param {Array} markersArray: a collections of markers
+   * @parameter {Array} markersArray: a collections of markers
    * @return {Undefined}
    */
 
@@ -2498,7 +2498,7 @@ function createMap(mapContainer) {
   ;
   /**
    * the hashChange handler - listens for hash changes and then does cool stuff
-   * @param {string} id of building: the window hashchange event
+   * @parameter {string} id of building: the window hashchange event
    * @return {Undefined}
    */
 
@@ -2549,7 +2549,7 @@ function createMap(mapContainer) {
   ;
   /**
    * the updateHash called when a marker, infoWindow or marker link is clicked - updates hash
-   * @param {Object || String} caller: the marker, marker link or infoWindow firing the event
+   * @parameter {Object || String} caller: the marker, marker link or infoWindow firing the event
    * @return {Undefined}
    */
 
@@ -2578,7 +2578,7 @@ function createMap(mapContainer) {
   ;
   /**
    * Shows any overlays currently in the array
-   * @param {Array} markersArray: a collection of markers
+   * @parameter {Array} markersArray: a collection of markers
    * @return {Undefined}
    */
 
@@ -2597,7 +2597,7 @@ function createMap(mapContainer) {
   ;
   /**
    * creates a new category of place in CityLayers object
-   * @param {String} name: the new name of the category ?
+   * @parameter {String} name: the new name of the category ?
    * @return {Undefined}
    */
 
@@ -2611,7 +2611,7 @@ function createMap(mapContainer) {
   ;
   /**
    *  loop through each kmllayer adding checked behaviour
-   * @param {Object} object: Config object for KML
+   * @parameter {Object} object: Config object for KML
    * @return {?}
    */
 
@@ -2634,7 +2634,7 @@ function createMap(mapContainer) {
   /**
    *  creates individual markers, builds a corresponding filter item, binds a infoWindow to marker with html
    * and populates accordions
-   * @param {Object} markerConfig: an object containing letious marker configuration options
+   * @parameter {Object} markerConfig: an object containing letious marker configuration options
    * @return {Object} marker - google maps marker
    */
 
@@ -2799,9 +2799,9 @@ function createMap(mapContainer) {
   ;
   /**
    * parses locations xml and creates markers
-   * @param {Object} xml: xml returned from Ajax request
-   * @param {String} textStatus: standard ajax reposnse
-   * @param {Object} textStatus: standard ajax reposnse
+   * @parameter {Object} xml: xml returned from Ajax request
+   * @parameter {String} textStatus: standard ajax reposnse
+   * @parameter {Object} textStatus: standard ajax reposnse
    * @return {?}
    */
 
@@ -3102,12 +3102,12 @@ function createMap(mapContainer) {
   });
   /**
    * Accordion overrides - this closes location accordions, it also have an optional
-   * paramater which closes all except the one. This would be when you want to close
+   * parameterater which closes all except the one. This would be when you want to close
    * all except one being clicked on for example. This override was necessary 
    * as 6 individual accordions were used instead of 1 accordion having 6 sections,
    * due to layout requirements
    *
-   * @param {id} exception - id of accordion not to close
+   * @parameter {id} exception - id of accordion not to close
    */
 
   function closeAccordions(exception) {
