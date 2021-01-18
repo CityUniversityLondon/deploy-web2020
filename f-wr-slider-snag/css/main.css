@@ -60458,10 +60458,10 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {
-    .landing--latest .wrapper--landing--latest__latest-content--news .finder__results__list--three-up .card--news a {
+    .landing--latest .wrapper--landing--latest__latest-content--news .card--news a {
         flex-direction: column;
     }
-    .landing--latest .wrapper--landing--latest__latest-content--news .finder__results__list--three-up .card--news a img {
+    .landing--latest .wrapper--landing--latest__latest-content--news .card--news a img {
         width: 100%;
     }
 }
