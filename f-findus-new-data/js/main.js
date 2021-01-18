@@ -2360,7 +2360,7 @@ function createMap(mapContainer) {
    * data source - relative to handle production and test environments
    * @let {String}
    */
-  dataSrc = 'https://web2020.city.ac.uk/feed/locations/city-buildings/_nocache',
+  dataSrc = '/feed/locations/city-buildings/_nocache',
 
   /**
    * Create a LatLng object containing the coordinate for the center of the map
@@ -2452,28 +2452,6 @@ function createMap(mapContainer) {
       markersArray: [],
       zoomLevel: 17,
       list: ''
-    }
-  },
-
-  /**
-   * kmlLayers object - kml files containing useful third party location information
-   * @let {Object}:
-   */
-  kmlLayers = {
-    cycleHire: {
-      src: 'http://webapps.city.ac.uk/matrix/maps/cycle-hire.php',
-      toggler: document.getElementById('cycle-hire'),
-      preserveViewport: true
-    },
-    bikes: {
-      src: 'http://webapps.city.ac.uk/matrix/maps/cycle-parking.kml',
-      toggler: document.getElementById('bikes'),
-      preserveViewport: true
-    },
-    atms: {
-      src: 'http://webapps.city.ac.uk/matrix/maps/atms.kml',
-      toggler: document.getElementById('cash-points'),
-      preserveViewport: true
     }
   }; // == METHODS ==
 
@@ -2606,28 +2584,6 @@ function createMap(mapContainer) {
 
     name.markersArray = [];
     name.zoomLevel = 17;
-  }
-
-  ;
-  /**
-   *  loop through each kmllayer adding checked behaviour
-   * @parameter {Object} object: Config object for KML
-   * @return {?}
-   */
-
-  function initKmlLayers(layer) {
-    // possibly not needed at this point
-    for (let key in layer) {
-      // skip loop if the property is from prototype
-      if (!layer.hasOwnProperty(key)) {} //end if
-
-
-      let obj = layer[key];
-      let toggler = obj.toggler;
-      let overlay = new google.maps.KmlLayer(obj.src, {
-        preserveViewport: obj.preserveViewport
-      });
-    }
   }
 
   ;
@@ -3069,7 +3025,6 @@ function createMap(mapContainer) {
       label: 'class',
       val: 'fa fa-refresh fa-spin loading-fa-icon'
     }]));
-    initKmlLayers(kmlLayers);
     loadXml();
   }
 
