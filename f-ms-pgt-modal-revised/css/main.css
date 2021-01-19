@@ -32215,6 +32215,12 @@ figure figcaption a:active,
     color: #d61726;
 }
 
+@media (max-width: 767px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__current .how-to-apply--pgt--js__modal__progress__text {
+        display: none;
+    }
+}
+
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous:after {
     background-color: #d61726;
     content: ' ';
