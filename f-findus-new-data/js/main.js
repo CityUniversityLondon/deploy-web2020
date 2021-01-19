@@ -2348,7 +2348,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/find-us/find-us
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019
+ * @copyright City, University of London 2020
  */
 
 const className = 'campus-map';
