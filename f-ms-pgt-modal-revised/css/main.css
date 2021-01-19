@@ -32078,182 +32078,6 @@ figure figcaption a:active,
     outline-offset: 0;
 }
 
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    list-style: none;
-    margin-left: 0;
-    margin-top: 1.5rem;
-    max-width: unset;
-    text-align: left;
-}
-
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li {
-    position: relative;
-    text-align: center;
-    width: 5rem;
-}
-
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li:not(:last-of-type) {
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-}
-
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__circle {
-    align-items: center;
-    border-radius: 100%;
-    border-width: 0.1875rem;
-    display: flex;
-    height: 1.5rem;
-    justify-content: center;
-    margin: 0 auto;
-    width: 1.5rem;
-}
-
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__text {
-    font-family: "Plex Sans", sans-serif;
-    /**
-     * IBM Plex OpenType stylistic sets:
-     *
-     * ss01: 0/1 double-storey/simple 'a'
-     * ss02: 0/1 double-storey/simple 'g'
-     * ss03: 0/1 plain/slashed '0'
-     * ss04: 0/1 plain/dotted '0'
-     */
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
-    font-size: 1rem;
-    line-height: 1.625;
-    letter-spacing: -0.005em;
-    font-style: normal;
-    font-weight: 450;
-    max-width: 55ch;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    color: #696969;
-    display: block;
-    font-weight: 450;
-    line-height: 1.25rem;
-    margin-top: 0.5rem;
-    text-align: center;
-}
-
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__text i,
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__text em {
-    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__text {
-        letter-spacing: -0.008em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__text {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__text {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__text {
-        letter-spacing: -0.017em;
-    }
-}
-
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__text b,
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__text strong {
-    font-weight: 700;
-}
-
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__text i,
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__text em {
-    font-style: italic;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__text {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__text {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__text {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li .how-to-apply--pgt--js__modal__progress__text {
-        letter-spacing: -0.017em;
-    }
-}
-
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li.how-to-apply--pgt--js__modal__progress__current .how-to-apply--pgt--js__modal__progress__circle {
-    background-color: #d61726;
-    border-color: #d61726;
-    border-style: solid;
-    color: #d61726;
-}
-
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li.how-to-apply--pgt--js__modal__progress__previous:after {
-    background-color: #d61726;
-    content: ' ';
-    display: block;
-    height: 0.25rem;
-    left: 3.25rem;
-    position: absolute;
-    top: 0.5rem;
-    width: 4.75rem;
-}
-
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li.how-to-apply--pgt--js__modal__progress__previous .how-to-apply--pgt--js__modal__progress__circle {
-    background-color: #ffffff;
-    border-color: #d61726;
-    border-style: solid;
-    color: #d61726;
-}
-
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li.how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
-    background-color: #d8d8d8;
-    content: ' ';
-    display: block;
-    height: 0.25rem;
-    right: 3.25rem;
-    position: absolute;
-    top: 0.5rem;
-    width: 4.5rem;
-}
-
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li.how-to-apply--pgt--js__modal__progress__next .how-to-apply--pgt--js__modal__progress__circle {
-    border-color: #d8d8d8;
-    border-style: dashed;
-}
-
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile li.how-to-apply--pgt--js__modal__progress__next .how-to-apply--pgt--js__modal__progress__circle .icon {
-    color: #ffffff;
-}
-
-@media (min-width: 1024px) {
-    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress--mobile {
-        display: none;
-    }
-}
-
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress {
     display: flex;
     flex-direction: row;
@@ -32269,12 +32093,13 @@ figure figcaption a:active,
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li {
     position: relative;
     text-align: center;
-    width: 7rem;
+    width: 11rem;
+    margin-left: 0;
+    margin-right: 0;
 }
 
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:not(:last-of-type) {
-    margin-right: 3rem;
-    margin-bottom: 1rem;
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__wrapper {
+    margin: auto;
 }
 
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__circle {
@@ -32379,6 +32204,10 @@ figure figcaption a:active,
     }
 }
 
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__current {
+    z-index: 1;
+}
+
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__current .how-to-apply--pgt--js__modal__progress__circle {
     background-color: #d61726;
     border-color: #d61726;
@@ -32391,10 +32220,42 @@ figure figcaption a:active,
     content: ' ';
     display: block;
     height: 0.25rem;
-    left: 4.5rem;
     position: absolute;
     top: 1.25rem;
-    width: 10rem;
+}
+
+@media (min-width: 1024px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous:after {
+        left: 6.75rem;
+        width: 98%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous:after {
+        left: 60%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 519px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous:after {
+        width: 98%;
+        left: 64%;
+    }
+}
+
+@media (max-width: 431px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous:after {
+        left: 64%;
+    }
+}
+
+@media (max-width: 374px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous:after {
+        width: 92%;
+        left: 72%;
+    }
 }
 
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous button {
@@ -32436,10 +32297,28 @@ figure figcaption a:active,
     content: ' ';
     display: block;
     height: 0.25rem;
-    right: 4.75rem;
+    right: 6.5rem;
     position: absolute;
     top: 1.25rem;
-    width: 7.5rem;
+    width: 82%;
+}
+
+@media (max-width: 767px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+        right: 63%;
+    }
+}
+
+@media (max-width: 499px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+        right: 65%;
+    }
+}
+
+@media (max-width: 431px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+        right: 67%;
+    }
 }
 
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__next .how-to-apply--pgt--js__modal__progress__circle {
