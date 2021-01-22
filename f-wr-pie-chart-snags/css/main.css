@@ -49913,6 +49913,10 @@ button
     display: none;
 }
 
+.pie-chart-block .chart__legend__item:nth-child(3) svg {
+    display: block;
+}
+
 .pie-chart-block .chart__legend__item:nth-child(4) svg {
     display: none;
 }
