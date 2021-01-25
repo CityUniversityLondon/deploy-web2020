@@ -1395,7 +1395,7 @@ function checkIntersectionObserver() {
 function createHTMLElement(type, attributes) {
   let el = document.createElement(type);
   attributes.map(function (att) {
-    att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : el.setAttribute(att.label, att.val);
+    att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : att.label === 'html' ? el.innerHTML = att.val : el.setAttribute(att.label, att.val);
   });
   return el;
 }
