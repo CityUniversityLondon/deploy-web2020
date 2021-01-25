@@ -32228,39 +32228,34 @@ figure figcaption a:active,
     height: 0.25rem;
     position: absolute;
     top: 1.25rem;
+    left: 60%;
+    width: 100%;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 579px) {
     .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous:after {
-        left: 6.75rem;
-        width: 98%;
-    }
-}
-
-@media (max-width: 1023px) {
-    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous:after {
-        left: 60%;
-        width: 100%;
+        left: 62%;
+        width: 97%;
     }
 }
 
 @media (max-width: 519px) {
     .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous:after {
-        width: 98%;
         left: 64%;
+        width: 98%;
     }
 }
 
 @media (max-width: 431px) {
     .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous:after {
-        left: 64%;
+        left: 67%;
     }
 }
 
 @media (max-width: 374px) {
     .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous:after {
-        width: 92%;
         left: 72%;
+        width: 92%;
     }
 }
 
@@ -32298,8 +32293,57 @@ figure figcaption a:active,
     color: #d61726;
 }
 
-.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__next:before {
     background-color: #d8d8d8;
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(2).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+    content: ' ';
+    display: block;
+    height: 0.25rem;
+    right: 60%;
+    position: absolute;
+    top: 1.25rem;
+    width: 80%;
+}
+
+@media (max-width: 1023px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(2).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+        right: 61%;
+    }
+}
+
+@media (max-width: 399px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(2).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+        right: 62%;
+    }
+}
+
+@media (max-width: 374px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(2).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+        right: 63%;
+    }
+}
+
+@media (max-width: 359px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(2).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+        right: 64%;
+    }
+}
+
+@media (max-width: 334px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(2).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+        right: 65%;
+    }
+}
+
+@media (max-width: 314px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(2).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+        right: 66%;
+    }
+}
+
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(3).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
     content: ' ';
     display: block;
     height: 0.25rem;
@@ -32310,20 +32354,50 @@ figure figcaption a:active,
 }
 
 @media (max-width: 767px) {
-    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(3).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+        right: 61%;
+    }
+}
+
+@media (max-width: 549px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(3).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
         right: 63%;
     }
 }
 
 @media (max-width: 499px) {
-    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(3).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
         right: 65%;
     }
 }
 
 @media (max-width: 431px) {
-    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(3).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
         right: 67%;
+    }
+}
+
+@media (max-width: 374px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(3).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+        right: 69%;
+    }
+}
+
+@media (max-width: 349px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(3).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+        right: 71%;
+    }
+}
+
+@media (max-width: 324px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(3).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+        right: 73%;
+    }
+}
+
+@media (max-width: 309px) {
+    .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li:nth-of-type(3).how-to-apply--pgt--js__modal__progress__next:not(.how-to-apply--pgt--js__modal__progress__last):before {
+        right: 74%;
     }
 }
 

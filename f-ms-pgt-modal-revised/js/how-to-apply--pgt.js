@@ -390,7 +390,7 @@ function HowToApply(props) {
       "aria-label": "Back to choose qualification"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       className: "how-to-apply--pgt--js__modal__progress__text"
-    }, selectedQualificationValue))) : qualNav = null;
+    }, "Qualification"))) : qualNav = null;
     setProgressQualification(qualNav);
     selectedRouteData ? routeNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
       className: "how-to-apply--pgt--js__modal__progress__previous"
@@ -414,7 +414,7 @@ function HowToApply(props) {
       "aria-label": "Back to choose route"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       className: "how-to-apply--pgt--js__modal__progress__text"
-    }, selectedRouteValue))) : routeNav = null;
+    }, "Route"))) : routeNav = null;
     setProgressRoute(routeNav);
     selectedDateData ? dateNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
       className: "how-to-apply--pgt--js__modal__progress__previous"
@@ -513,7 +513,7 @@ function HowToApply(props) {
       "aria-label": "Back to choose qualification"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       className: "how-to-apply--pgt--js__modal__progress__text"
-    }, selectedQualificationValue))) : qualNav = null;
+    }, "Qualification"))) : qualNav = null;
     setProgressQualification(qualNav);
     selectedRouteData ? routeNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
       className: "how-to-apply--pgt--js__modal__progress__previous"
@@ -529,7 +529,7 @@ function HowToApply(props) {
       "aria-label": "Back to choose route"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       className: "how-to-apply--pgt--js__modal__progress__text"
-    }, selectedRouteValue))) : routeNav = null;
+    }, "Route"))) : routeNav = null;
     setProgressRoute(routeNav); // Method loads apply links and, if present, will always be the last step, therefore progress icon does nothing on click
 
     if (selectedDateData) {
@@ -755,7 +755,7 @@ function HowToApply(props) {
       "aria-label": "Back to choose qualification"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       className: "how-to-apply--pgt--js__modal__progress__text"
-    }, selectedQualificationValue))) : qualNav = null;
+    }, "Qualification"))) : qualNav = null;
     setProgressQualification(qualNav);
     data.map(s => {
       // Routes pre-selection prompt text
