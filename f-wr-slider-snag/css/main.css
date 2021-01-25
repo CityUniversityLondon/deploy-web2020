@@ -21641,6 +21641,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
+@media (min-width: 433px) and (max-width: 1023px) {
+    .card--news .card__anchor .card--news__label--news + .card__details__text {
+        padding-top: 3rem;
+    }
+}
+
 .card--news .card__anchor .card--news__label--news {
     font-size: 0.889rem;
     line-height: 1.625;
