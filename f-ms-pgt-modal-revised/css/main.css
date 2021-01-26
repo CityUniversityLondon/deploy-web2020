@@ -31684,7 +31684,7 @@ figure figcaption a:active,
     position: relative;
     text-align: left;
     width: 90%;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 @media (min-width: 768px) {
