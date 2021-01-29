@@ -54148,6 +54148,49 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     margin-right: 0;
 }
 
+.destination-leaver {
+    grid-column: 1/-1;
+}
+
+.destination-leaver .destination-leaver-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.destination-leaver .destination-leaver-content[data-length='3'] div {
+    width: 50%;
+}
+
+.destination-leaver .destination-leaver-content[data-length='2'] div {
+    width: 50%;
+}
+
+.wrapper--destination-leavers-HE .wrapper--finder__filters--desktop .finder__filters label:not(.finder__filters__label--always) {
+    border: initial;
+    clip: initial;
+    height: initial;
+    overflow: initial;
+    position: initial;
+    width: initial;
+    margin-bottom: 0.5rem;
+    color: #0c0c0e;
+}
+
+.wrapper--destination-leavers-HE .wrapper--finder_filters--filters {
+    display: block;
+}
+
+.wrapper--destination-leavers-HE .wrapper--finder__filters--desktop .finder__filters .finder__filter:not(.finder__tag) {
+    width: 100%;
+}
+
+@media (max-width: 1023px) {
+    .destination .destination-content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
 .generic {
     display: block;
 }

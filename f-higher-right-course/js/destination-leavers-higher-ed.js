@@ -291,7 +291,7 @@ function Finder__Filters(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "far fa-sliders-h icon",
     "aria-hidden": "true"
-  }), ' ', "Filter ".concat(props.config.summariseAs.plural)), clearFiltersMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }), ' ', 'Use the filter to show data that is of interest to you'), clearFiltersMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "wrapper--finder_filters--filters"
   }, props.config.facetLabels.map(facet => {
     if (dependencyMet(facet, props.query.facets)) {
@@ -507,6 +507,55 @@ Finder__Chart.propTypes = {
 
 /***/ }),
 
+/***/ "./src/patterns/destination-leavers-higher-ed/components/results/companys.js":
+/*!***********************************************************************************!*\
+  !*** ./src/patterns/destination-leavers-higher-ed/components/results/companys.js ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/finder/components/cards/finder__results__generic
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+/**
+ * Render a Funnelback result as a generic card.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function Company__Container(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "company-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Company names"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "company-list",
+    dangerouslySetInnerHTML: {
+      __html: props.text
+    }
+  }));
+}
+
+Company__Container.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array,
+  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  text: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
+/* harmony default export */ __webpack_exports__["default"] = (Company__Container);
+
+/***/ }),
+
 /***/ "./src/patterns/destination-leavers-higher-ed/components/results/content.js":
 /*!**********************************************************************************!*\
   !*** ./src/patterns/destination-leavers-higher-ed/components/results/content.js ***!
@@ -523,6 +572,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _chart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chart */ "./src/patterns/destination-leavers-higher-ed/components/results/chart.js");
+/* harmony import */ var _companys__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./companys */ "./src/patterns/destination-leavers-higher-ed/components/results/companys.js");
+/* harmony import */ var _institutions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./institutions */ "./src/patterns/destination-leavers-higher-ed/components/results/institutions.js");
+/* harmony import */ var _job__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./job */ "./src/patterns/destination-leavers-higher-ed/components/results/job.js");
 
 
 
@@ -535,6 +587,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 /**
  * Render a Funnelback result as a generic card.
  *
@@ -543,10 +598,23 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Finder__Results__Generic(props) {
+  const company = props.details.metaData.companys ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_companys__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    text: props.details.metaData.companys
+  }) : null,
+        institutions = props.details.metaData.institutions ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_institutions__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    text: props.details.metaData.institutions
+  }) : null,
+        jobT = props.details.metaData.jobT ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_job__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    text: props.details.metaData.jobT
+  }) : null;
   const charts = props.details.metaData.chart.split('|'),
         data = charts.map(d => JSON.parse(d));
+  let count = 0;
+  props.details.metaData.companys && count++;
+  props.details.metaData.institutions && count++;
+  props.details.metaData.jobT && count++;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "card card--generic"
+    className: "destination-leaver"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
@@ -557,11 +625,18 @@ function Finder__Results__Generic(props) {
     className: "chart-row chart-row--columns"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
     className: "chart-row__group-heading"
-  }, "Charts"), data.map(c => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_chart__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    key: c.title,
-    data: c.chart,
-    title: c.title
-  }))));
+  }, "Charts"), data.map((c, i) => {
+    let k = "".concat(c[0].title).concat(i);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_chart__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      key: k,
+      data: c[0].chart,
+      title: c[0].title,
+      id: c[0].id
+    });
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "destination-leaver-content",
+    "data-length": count
+  }, company, institutions, jobT));
 }
 
 Finder__Results__Generic.propTypes = {
@@ -617,6 +692,104 @@ Finder__Results__Card.propTypes = {
 
 /***/ }),
 
+/***/ "./src/patterns/destination-leavers-higher-ed/components/results/institutions.js":
+/*!***************************************************************************************!*\
+  !*** ./src/patterns/destination-leavers-higher-ed/components/results/institutions.js ***!
+  \***************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/finder/components/cards/finder__results__generic
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+/**
+ * Render a Funnelback result as a generic card.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function Institutions__Container(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "institutions-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Institutions of further study"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "institutions-list",
+    dangerouslySetInnerHTML: {
+      __html: props.text
+    }
+  }));
+}
+
+Institutions__Container.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array,
+  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  text: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
+/* harmony default export */ __webpack_exports__["default"] = (Institutions__Container);
+
+/***/ }),
+
+/***/ "./src/patterns/destination-leavers-higher-ed/components/results/job.js":
+/*!******************************************************************************!*\
+  !*** ./src/patterns/destination-leavers-higher-ed/components/results/job.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/finder/components/cards/finder__results__generic
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+/**
+ * Render a Funnelback result as a generic card.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function Jobs__Container(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "jobs-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Jobs titles"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "jobs-list",
+    dangerouslySetInnerHTML: {
+      __html: props.text
+    }
+  }));
+}
+
+Jobs__Container.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array,
+  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  text: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
+/* harmony default export */ __webpack_exports__["default"] = (Jobs__Container);
+
+/***/ }),
+
 /***/ "./src/patterns/destination-leavers-higher-ed/components/results/results.js":
 /*!**********************************************************************************!*\
   !*** ./src/patterns/destination-leavers-higher-ed/components/results/results.js ***!
@@ -656,7 +829,8 @@ function Finder__Results(props) {
         course = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__updating",
     "aria-live": "polite"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Please select a course"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Please select a course")),
+        text = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "If you do not see the course you are interested in, please contact the careers department at City for full details");
   const resultsClass = 'resultsVariant' in props.config ? "finder__results__list finder__results__list--".concat(props.config.resultsVariant) : 'finder__results__list';
 
   if (props.response && props.query.facets.level && props.query.facets.t) {
@@ -674,16 +848,16 @@ function Finder__Results(props) {
     const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, results);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "finder__results"
-    }, resultsContent);
+    }, resultsContent, text);
   } else {
     if (props.query.facets.level) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "finder__results"
-      }, course);
+      }, course, text);
     } else {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "finder__results"
-      }, updating);
+      }, updating, text);
     }
   }
 }
@@ -828,7 +1002,7 @@ function replaceHistory(currQuery, currStartRank, currFacets, currSort, facetLab
  */
 
 
-function Finder(props) {
+function DestinationLeaversHE(props) {
   const params = new URLSearchParams(window.location.search);
   /**
    * initial state for the Funnelback query, taken from URL parameters and
@@ -974,11 +1148,11 @@ function Finder(props) {
   }));
 }
 
-Finder.propTypes = {
+DestinationLeaversHE.propTypes = {
   config: prop_types__WEBPACK_IMPORTED_MODULE_11___default.a.object,
   element: prop_types__WEBPACK_IMPORTED_MODULE_11___default.a.object
 };
-/* harmony default export */ __webpack_exports__["default"] = (Finder);
+/* harmony default export */ __webpack_exports__["default"] = (DestinationLeaversHE);
 
 /***/ }),
 
