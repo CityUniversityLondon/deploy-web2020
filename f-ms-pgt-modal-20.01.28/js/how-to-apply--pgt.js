@@ -314,13 +314,31 @@ function HowToApply(props) {
       [selectionLinkRoute, setSelectionLinkRoute] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
       [selectionButtonDate, setSelectionButtonDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
       [selectionLinkDate, setSelectionLinkDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [selectionHeadingLocationOne, setSelectionHeadingLocationOne] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [selectionButtonLocationOneDate, setSelectionButtonLocationOneDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
-      [selectionLinkLocationOneDate, setSelectionLinkLocationOneDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
-      [selectionHeadingLocationTwo, setSelectionHeadingLocationTwo] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-      [selectionButtonLocationTwoDate, setSelectionButtonLocationTwoDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
-      [selectionLinkLocationTwoDate, setSelectionLinkLocationTwoDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
-      [selectionLinkMethod, setSelectionLinkMethod] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+      // [
+  //     selectionHeadingLocationOne,
+  //     setSelectionHeadingLocationOne,
+  // ] = useState(),
+  // [
+  //     selectionButtonLocationOneDate,
+  //     setSelectionButtonLocationOneDate,
+  // ] = useState(false),
+  // [
+  //     selectionLinkLocationOneDate,
+  //     setSelectionLinkLocationOneDate,
+  // ] = useState(false),
+  // [
+  //     selectionHeadingLocationTwo,
+  //     setSelectionHeadingLocationTwo,
+  // ] = useState(),
+  // [
+  //     selectionButtonLocationTwoDate,
+  //     setSelectionButtonLocationTwoDate,
+  // ] = useState(false),
+  // [
+  //     selectionLinkLocationTwoDate,
+  //     setSelectionLinkLocationTwoDate,
+  // ] = useState(false),
+  [selectionLinkMethod, setSelectionLinkMethod] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
       selectedQualificationData,
       selectedQualificationValue,
       selectedRouteData,
@@ -335,13 +353,13 @@ function HowToApply(props) {
     setSelectionButtonQualification();
     setSelectionLinkQualification();
     setSelectionButtonRoute();
-    setSelectionLinkRoute();
-    setSelectionHeadingLocationOne();
-    setSelectionButtonLocationOneDate();
-    setSelectionLinkLocationOneDate();
-    setSelectionHeadingLocationTwo();
-    setSelectionButtonLocationTwoDate();
-    setSelectionLinkLocationTwoDate();
+    setSelectionLinkRoute(); // setSelectionHeadingLocationOne();
+    // setSelectionButtonLocationOneDate();
+    // setSelectionLinkLocationOneDate();
+    // setSelectionHeadingLocationTwo();
+    // setSelectionButtonLocationTwoDate();
+    // setSelectionLinkLocationTwoDate();
+
     setSelectionButtonDate();
     setSelectionLinkDate();
     setSelectionLinkMethod();
@@ -491,9 +509,9 @@ function HowToApply(props) {
         linkOptions,
         dateButtons = [],
         dateLinks = [],
-        locationOneDateLinks = [],
-        locationTwoDateLinks = [],
-        locationOptions = [],
+        // locationOneDateLinks = [],
+    // locationTwoDateLinks = [],
+    locationOptions = [],
         qualNav,
         routeNav,
         dateNav,
@@ -578,133 +596,211 @@ function HowToApply(props) {
               a.indexOf(i) === -1 ? a.push(i) : null;
               return a;
             }, []); // Multiple locations, multiple dates => create array of objects per location
+            // if (locationOptions.length > 1) {
+            //     let locationsAll = [];
+            //     locationOptions.map((lo) => {
+            //         let filteredData = data.filter(
+            //             (fd) => fd['options'][0]['header'] === lo
+            //         );
+            //         locationsAll.push(filteredData);
+            //     });
+            //     // Location 1 output
+            //     locationsAll[0].map((fd) => {
+            //         let methods = fd['options'][0]['options'];
+            //         if (methods.length > 1) {
+            //             // Dates as buttons
+            //             return (
+            //                 <li key={fd}>
+            //                     <button>
+            //                         <span
+            //                             data-date-src={fd}
+            //                             onClick={(e) => {
+            //                                 let dateSrc = e.target.getAttribute(
+            //                                     'data-date-src'
+            //                                 );
+            //                                 selectedDateValue = formatDate(
+            //                                     dateSrc
+            //                                 );
+            //                                 selectedDateData = data.filter(
+            //                                     (fd) =>
+            //                                         fd.header ===
+            //                                         dateSrc
+            //                                 );
+            //                                 filterMethodsData(
+            //                                     selectedDateData[0][
+            //                                         'options'
+            //                                     ][0]['options']
+            //                                 );
+            //                                 setFirstStep(false);
+            //                             }}
+            //                         >
+            //                             {formatDate(fd)}
+            //                         </span>
+            //                     </button>
+            //                 </li>
+            //             );
+            //         } else {
+            //             // Dates as links
+            //             const dateLink = {
+            //                 text: formatDate(fd.header),
+            //                 link:
+            //                     fd['options'][0]['options'][0][
+            //                         'options'
+            //                     ]['apply'],
+            //             };
+            //             locationOneDateLinks.push(dateLink);
+            //             locationOneDateLinks = Array.from(
+            //                 new Set(
+            //                     locationOneDateLinks.map(
+            //                         (a) => a.text
+            //                     )
+            //                 )
+            //             ).map((text) => {
+            //                 return locationOneDateLinks.find(
+            //                     (a) => a.text === text
+            //                 );
+            //             });
+            //             selectionLinkLocationOneDate = (
+            //                 <ApplyLinks
+            //                     data={locationOneDateLinks}
+            //                 />
+            //             );
+            //         }
+            //     });
+            //     // Location 2 output
+            //     locationsAll[1].map((fd) => {
+            //         let methods = fd['options'][0]['options'];
+            //         if (methods.length > 1) {
+            //             // Dates as buttons
+            //             return (
+            //                 <li key={fd}>
+            //                     <button>
+            //                         <span
+            //                             data-date-src={fd}
+            //                             onClick={(e) => {
+            //                                 let dateSrc = e.target.getAttribute(
+            //                                     'data-date-src'
+            //                                 );
+            //                                 selectedDateValue = formatDate(
+            //                                     dateSrc
+            //                                 );
+            //                                 selectedDateData = data.filter(
+            //                                     (fd) =>
+            //                                         fd.header ===
+            //                                         dateSrc
+            //                                 );
+            //                                 filterMethodsData(
+            //                                     selectedDateData[0][
+            //                                         'options'
+            //                                     ][0]['options']
+            //                                 );
+            //                                 setFirstStep(false);
+            //                             }}
+            //                         >
+            //                             {formatDate(fd)}
+            //                         </span>
+            //                     </button>
+            //                 </li>
+            //             );
+            //         } else {
+            //             // Dates as links
+            //             const dateLink = {
+            //                 text: formatDate(fd.header),
+            //                 link:
+            //                     fd['options'][0]['options'][0][
+            //                         'options'
+            //                     ]['apply'],
+            //             };
+            //             locationTwoDateLinks.push(dateLink);
+            //             locationTwoDateLinks = Array.from(
+            //                 new Set(
+            //                     locationTwoDateLinks.map(
+            //                         (a) => a.text
+            //                     )
+            //                 )
+            //             ).map((text) => {
+            //                 return locationTwoDateLinks.find(
+            //                     (a) => a.text === text
+            //                 );
+            //             });
+            //             selectionLinkLocationTwoDate = (
+            //                 <ApplyLinks
+            //                     data={locationTwoDateLinks}
+            //                 />
+            //             );
+            //         }
+            //     });
+            //     setSelectionHeadingLocationOne(
+            //         <h3>
+            //             {locationsAll[0][0]['options'][0]['header']}
+            //         </h3>
+            //     );
+            //     setSelectionButtonLocationOneDate(
+            //         selectionButtonLocationOneDate
+            //     );
+            //     setSelectionLinkLocationOneDate(
+            //         selectionLinkLocationOneDate
+            //     );
+            //     setSelectionHeadingLocationTwo(
+            //         <h3>
+            //             {locationsAll[1][0]['options'][0]['header']}
+            //         </h3>
+            //     );
+            //     setSelectionButtonLocationTwoDate(
+            //         selectionButtonLocationTwoDate
+            //     );
+            //     setSelectionLinkLocationTwoDate(
+            //         selectionLinkLocationTwoDate
+            //     );
+            //  }
+            // End multiple locations
+            // Single location, multiple dates
 
-            if (locationOptions.length > 1) {
-              let locationsAll = [];
-              locationOptions.map(lo => {
-                let filteredData = data.filter(fd => fd['options'][0]['header'] === lo);
-                locationsAll.push(filteredData);
-              }); // Location 1 output
+            if (locations.length > 1 || methods.length > 1) {
+              // Single location, multiple dates, multiple methods => Dates as standard button; further options to follow
+              dateButtons.push(d.header);
+              dateButtons = dateButtons.reduce(function (a, i) {
+                a.indexOf(i) === -1 ? a.push(i) : null;
+                return a;
+              }, []);
+              buttonOptions = dateButtons.map(db => {
+                return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+                  key: db
+                }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+                  "data-date-src": db,
+                  onClick: e => {
+                    let dateSrc = e.target.getAttribute('data-date-src');
+                    selectedDateValue = formatDate(dateSrc);
+                    selectedDateData = data.filter(fd => fd.header === dateSrc);
+                    filterMethodsData(selectedDateData[0]['options'][0]['options']);
+                    setFirstStep(false);
+                  }
+                }, formatDate(db))));
+              }); // Modal journey incomplete; display further steps pending indicator
 
-              locationsAll[0].map(fd => {
-                let methods = fd['options'][0]['options'];
-
-                if (methods.length > 1) {
-                  // Dates as buttons
-                  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-                    key: fd
-                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-                    "data-date-src": fd,
-                    onClick: e => {
-                      let dateSrc = e.target.getAttribute('data-date-src');
-                      selectedDateValue = formatDate(dateSrc);
-                      selectedDateData = data.filter(fd => fd.header === dateSrc);
-                      filterMethodsData(selectedDateData[0]['options'][0]['options']);
-                      setFirstStep(false);
-                    }
-                  }, formatDate(fd))));
-                } else {
-                  // Dates as links
-                  const dateLink = {
-                    text: formatDate(fd.header),
-                    link: fd['options'][0]['options'][0]['options']['apply']
-                  };
-                  locationOneDateLinks.push(dateLink);
-                  locationOneDateLinks = Array.from(new Set(locationOneDateLinks.map(a => a.text))).map(text => {
-                    return locationOneDateLinks.find(a => a.text === text);
-                  });
-                  selectionLinkLocationOneDate = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
-                    data: locationOneDateLinks
-                  });
-                }
-              }); // Location 2 output
-
-              locationsAll[1].map(fd => {
-                let methods = fd['options'][0]['options'];
-
-                if (methods.length > 1) {
-                  // Dates as buttons
-                  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-                    key: fd
-                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-                    "data-date-src": fd,
-                    onClick: e => {
-                      let dateSrc = e.target.getAttribute('data-date-src');
-                      selectedDateValue = formatDate(dateSrc);
-                      selectedDateData = data.filter(fd => fd.header === dateSrc);
-                      filterMethodsData(selectedDateData[0]['options'][0]['options']);
-                      setFirstStep(false);
-                    }
-                  }, formatDate(fd))));
-                } else {
-                  // Dates as links
-                  const dateLink = {
-                    text: formatDate(fd.header),
-                    link: fd['options'][0]['options'][0]['options']['apply']
-                  };
-                  locationTwoDateLinks.push(dateLink);
-                  locationTwoDateLinks = Array.from(new Set(locationTwoDateLinks.map(a => a.text))).map(text => {
-                    return locationTwoDateLinks.find(a => a.text === text);
-                  });
-                  selectionLinkLocationTwoDate = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
-                    data: locationTwoDateLinks
-                  });
-                }
-              });
-              setSelectionHeadingLocationOne( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationsAll[0][0]['options'][0]['header']));
-              setSelectionButtonLocationOneDate(selectionButtonLocationOneDate);
-              setSelectionLinkLocationOneDate(selectionLinkLocationOneDate);
-              setSelectionHeadingLocationTwo( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, locationsAll[1][0]['options'][0]['header']));
-              setSelectionButtonLocationTwoDate(selectionButtonLocationTwoDate);
-              setSelectionLinkLocationTwoDate(selectionLinkLocationTwoDate); // End multiple locations
+              setFurtherStepsPendingIndicator(furtherStepsPending);
             } else {
-              // Single location, multiple dates
-              if (locations.length > 1 || methods.length > 1) {
-                // Single location, multiple dates, multiple methods => Dates as standard button; further options to follow
-                dateButtons.push(d.header);
-                dateButtons = dateButtons.reduce(function (a, i) {
-                  a.indexOf(i) === -1 ? a.push(i) : null;
-                  return a;
-                }, []);
-                buttonOptions = dateButtons.map(db => {
-                  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-                    key: db
-                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-                    "data-date-src": db,
-                    onClick: e => {
-                      let dateSrc = e.target.getAttribute('data-date-src');
-                      selectedDateValue = formatDate(dateSrc);
-                      selectedDateData = data.filter(fd => fd.header === dateSrc);
-                      filterMethodsData(selectedDateData[0]['options'][0]['options']);
-                      setFirstStep(false);
-                    }
-                  }, formatDate(db))));
-                }); // Modal journey incomplete; display further steps pending indicator
+              // Single location, multiple dates, single method => Dates as links
+              dateLinks.push(d.header);
+              dateLinks = dateLinks.reduce(function (a, i) {
+                a.indexOf(i) === -1 ? a.push(i) : null;
+                return a;
+              }, []); // Map each unique date and filter data to extract correct apply links
 
-                setFurtherStepsPendingIndicator(furtherStepsPending);
-              } else {
-                // Single location, multiple dates, single method => Dates as links
-                dateLinks.push(d.header);
-                dateLinks = dateLinks.reduce(function (a, i) {
-                  a.indexOf(i) === -1 ? a.push(i) : null;
-                  return a;
-                }, []); // Map each unique date and filter data to extract correct apply links
+              const dateLinksData = [];
+              dateLinks.map(lq => {
+                let filteredDateData = data.filter(q => q.header === lq);
+                dateLink = {
+                  text: formatDate(lq),
+                  link: filteredDateData[0]['options'][0]['options'][0]['options']['apply']
+                };
+                dateLinksData.push(dateLink);
+              });
+              linkOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                data: dateLinksData
+              }); // Final modal step; remove further steps indicator
 
-                const dateLinksData = [];
-                dateLinks.map(lq => {
-                  let filteredDateData = data.filter(q => q.header === lq);
-                  dateLink = {
-                    text: formatDate(lq),
-                    link: filteredDateData[0]['options'][0]['options'][0]['options']['apply']
-                  };
-                  dateLinksData.push(dateLink);
-                });
-                linkOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_4__["default"], {
-                  data: dateLinksData
-                }); // Final modal step; remove further steps indicator
-
-                setFurtherStepsPendingIndicator();
-              }
+              setFurtherStepsPendingIndicator();
             }
           } else {
             // Single date; move to methods function
@@ -967,13 +1063,9 @@ function HowToApply(props) {
   const question = 'qualification',
         qualificationQuestion = question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, windowPrompt), !(selectionHeadingLocationOne || selectionButtonLocationOneDate || selectionLinkLocationOneDate || selectionHeadingLocationTwo || selectionButtonLocationTwoDate || selectionLinkLocationTwoDate) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, windowPrompt), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, selectionButtonQualification, selectionLinkQualification, selectionButtonRoute, selectionLinkRoute, selectionButtonDate, selectionLinkDate, selectionLinkMethod) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, selectionHeadingLocationOne), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "how-to-apply--pgt--js__options"
-  }, selectionButtonLocationOneDate, selectionLinkLocationOneDate), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, selectionHeadingLocationTwo), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "how-to-apply--pgt--js__options"
-  }, selectionButtonLocationTwoDate, selectionLinkLocationTwoDate)))),
+  }, selectionButtonQualification, selectionLinkQualification, selectionButtonRoute, selectionLinkRoute, selectionButtonDate, selectionLinkDate, selectionLinkMethod))),
         alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "how-to-apply--pgt--js__modal__alternative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
