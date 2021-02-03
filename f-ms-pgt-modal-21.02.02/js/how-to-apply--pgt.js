@@ -291,8 +291,8 @@ function HowToApply(props) {
   [progressQualification, setProgressQualification] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
         [progressRoute, setProgressRoute] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
         [progressDate, setProgressDate] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
-        [progressMethod, setProgressMethod] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
         [furtherStepsPendingIndicator, setFurtherStepsPendingIndicator] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+        [progressMethod, setProgressMethod] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
         [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])('Choose the qualification you wish to apply for:'),
         promptQualification = 'Choose the qualification you wish to apply for:',
         promptRoute = 'Choose the route you wish to apply for:',
@@ -308,7 +308,9 @@ function HowToApply(props) {
     className: "fas fa-circle icon",
     "aria-hidden": "true"
   }))));
-  let [selectionButtonQualification, setSelectionButtonQualification] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
+  let counter = 1,
+      fsp,
+      [selectionButtonQualification, setSelectionButtonQualification] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
       [selectionLinkQualification, setSelectionLinkQualification] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
       [selectionButtonRoute, setSelectionButtonRoute] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
       [selectionLinkRoute, setSelectionLinkRoute] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(),
@@ -444,6 +446,17 @@ function HowToApply(props) {
     setProgressMethod(methodNav); // Final modal step; remove further steps pending indicator
 
     setFurtherStepsPendingIndicator();
+    fsp = false; // Calculate number of progress bar steps currently visible and set as data attribute on wrapper
+
+    counter = 1;
+    selectedQualificationData ? counter += 1 : null;
+    selectedRouteData ? counter += 1 : null;
+    selectedDateData ? counter += 1 : null;
+    fsp ? counter += 1 : null; // Modify JSX of progress bar wrapper to indicate no further steps are pending
+
+    let wrapper = document.querySelector('.how-to-apply--pgt--js__modal__progress');
+    wrapper.setAttribute('data-further-steps-pending', 'false');
+    wrapper.setAttribute('data-total-steps', counter);
     let methodLinks = [];
     let linkOptions;
     methods.map(m => {
@@ -579,6 +592,7 @@ function HowToApply(props) {
               }); // Modal journey incomplete; display further steps pending indicator
 
               setFurtherStepsPendingIndicator(furtherStepsPending);
+              fsp = true;
             } else {
               // Single location, multiple dates, single method => Dates as links
               dateLinks.push(d.header);
@@ -601,6 +615,7 @@ function HowToApply(props) {
               }); // Final modal step; remove further steps indicator
 
               setFurtherStepsPendingIndicator();
+              fsp = false;
             }
           } else {
             // Single date; move to methods function
@@ -608,7 +623,16 @@ function HowToApply(props) {
           }
         });
       });
-    });
+    }); // Calculate number of progress bar steps currently visible and set as data attribute on wrapper
+
+    counter = 1;
+    selectedQualificationData ? counter += 1 : null;
+    selectedRouteData ? counter += 1 : null;
+    fsp ? counter += 1 : null; // Modify JSX of progress bar wrapper to indicate whether further steps are pending
+
+    let wrapper = document.querySelector('.how-to-apply--pgt--js__modal__progress');
+    fsp ? wrapper.setAttribute('data-further-steps-pending', 'true') : wrapper.setAttribute('data-further-steps-pending', 'false');
+    wrapper.setAttribute('data-total-steps', counter);
     linkOptions ? setSelectionLinkDate(linkOptions) : null;
     buttonOptions ? setSelectionButtonDate(buttonOptions) : null;
   }
@@ -699,6 +723,7 @@ function HowToApply(props) {
                 }); // Modal journey incomplete; display further steps pending indicator
 
                 setFurtherStepsPendingIndicator(furtherStepsPending);
+                fsp = true;
               } else {
                 // Route as link
                 linkRoutes.push(s.header);
@@ -721,6 +746,7 @@ function HowToApply(props) {
                 }); // Final modal step; remove further steps indicator
 
                 setFurtherStepsPendingIndicator();
+                fsp = false;
               }
             } else {
               // Move to dates function
@@ -729,7 +755,17 @@ function HowToApply(props) {
           });
         });
       });
-    }); // If route options and/or links exist, update state to render relevant JSX
+    }); // Calculate number of progress bar steps currently visible and set as data attribute on wrapper
+
+    counter = 1;
+    selectedQualificationData ? counter += 1 : null;
+    fsp ? counter += 1 : null; // Modify JSX of progress bar wrapper to indicate whether further steps are pending
+    // Query DOM to capture latest DOM values (changes depending on modal step)
+
+    let wrapper = document.querySelector('.how-to-apply--pgt--js__modal__progress');
+    fsp ? wrapper.setAttribute('data-further-steps-pending', 'true') : wrapper.setAttribute('data-further-steps-pending', 'false');
+    wrapper.setAttribute('data-total-steps', counter); // Modify JSX of progress bar wrapper to reflect number of progress steps currently visible
+    // If route options and/or links exist, update state to render relevant JSX
 
     buttonOptions ? setSelectionButtonRoute(buttonOptions) : null;
     linkOptions ? setSelectionLinkRoute(linkOptions) : null;
@@ -808,6 +844,7 @@ function HowToApply(props) {
                   }); // Modal journey incomplete; display further steps pending indicator
 
                   setFurtherStepsPendingIndicator(furtherStepsPending);
+                  fsp = true;
                 } else {
                   linkQuals.push(e.header);
                   linkQuals = linkQuals.reduce(function (a, i) {
@@ -834,7 +871,15 @@ function HowToApply(props) {
         });
       });
     }) : // One qualification; move to routes function
-    filterRouteData(entryPoints[0]['options']);
+    filterRouteData(entryPoints[0]['options']); // Calculate number of progress bar steps currently visible and set as data attribute on wrapper
+
+    counter = 1;
+    fsp ? counter += 1 : null; // Modify JSX of progress bar wrapper to indicate whether further steps are pending
+
+    let wrapper = document.querySelector('.how-to-apply--pgt--js__modal__progress');
+    fsp ? wrapper.setAttribute('data-further-steps-pending', 'true') : wrapper.setAttribute('data-further-steps-pending', 'false');
+    wrapper.setAttribute('data-total-steps', counter); // Modify JSX of progress bar wrapper to reflect number of progress steps currently visible
+
     buttonOptions ? setSelectionButtonQualification(buttonOptions) : null;
     linkOptions ? setSelectionLinkQualification(linkOptions) : null;
   } // Modal wrapper render
