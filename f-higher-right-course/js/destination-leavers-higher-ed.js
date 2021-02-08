@@ -291,7 +291,11 @@ function Finder__Filters(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "far fa-sliders-h icon",
     "aria-hidden": "true"
-  }), ' ', 'Use the filter to show data that is of interest to you'), clearFiltersMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }), ' ', 'Use the filter to show data that is of interest to you'), clearFiltersMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "wrapper--destination-leavers-HE__info-text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "If you do not see the course you are interested in, please contact the", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: "https://web2020.city.ac.uk/prospective-students/career-development"
+  }, "careers department"), ' ', "at City for full details")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "wrapper--finder_filters--filters"
   }, props.config.facetLabels.map(facet => {
     if (dependencyMet(facet, props.query.facets)) {
@@ -325,6 +329,152 @@ Finder__Filters.propTypes = {
   clear: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Filters);
+
+/***/ }),
+
+/***/ "./src/patterns/destination-leavers-higher-ed/components/filters/filtersmobile.js":
+/*!****************************************************************************************!*\
+  !*** ./src/patterns/destination-leavers-higher-ed/components/filters/filtersmobile.js ***!
+  \****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort.js */ "./node_modules/core-js/modules/es.array.sort.js");
+/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _finder_components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../finder/components/filters/finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.esm.js");
+
+
+
+
+
+
+/**
+ * @module patterns/finder/components/wrapper--finder__filters--mobile
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+
+ // seems to fix most issues with old iPhones and position: fixed
+// may not be necessary long-term, but I was in a hurry
+
+
+let filters = null;
+
+const getFilters = () => filters;
+/**
+ * Render the mobile version of the filters.
+ *
+ * TODO: this is a bit flaky on old iPhones with long facets (i.e. longer than
+ * the main body of the page)
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+
+function Finder__FiltersMobile(props) {
+  const [display, setDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false);
+  const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({}); // trap tab focus when the filters are open
+
+  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(() => {
+    if (!focusTrap.activate) {
+      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_6___default()(getFilters(), {
+        initialFocus: getFilters().querySelector('.wrapper--finder__filters--mobile__apply'),
+        onDeactivate: () => setDisplay(false),
+        clickOutsideDeactivates: true
+      }));
+    }
+
+    if (display) {
+      focusTrap.activate && focusTrap.activate();
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["disableBodyScroll"])(getFilters().querySelector('.wrapper--finder__filters--mobile__filters'));
+    } else {
+      focusTrap.deactivate && focusTrap.deactivate();
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["enableBodyScroll"])(getFilters().querySelector('.wrapper--finder__filters--mobile__filters'));
+    }
+  }, [display, focusTrap]);
+  const totalMatching = props.response && props.response.summary && props.response.summary.totalMatching;
+  const totalMatchingMessage = totalMatching ? "Show ".concat(totalMatching, " Graduate Outcomes") : 'Close';
+  const filtersCount = props.config.displaySort ? props.config.sort[0].type !== props.query.sortType || Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filters", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    className: "wrapper--finder__filters--mobile__toggle__count"
+  }, "(", props.config.sort[0].type !== props.query.sortType ? Object.keys(props.query.facets).length + 1 : Object.keys(props.query.facets).length, ")")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filter") : Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filters", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    className: "wrapper--finder__filters--mobile__toggle__count"
+  }, "(", props.config.sort[0].type !== props.query.sortType ? Object.keys(props.query.facets).length + 1 : Object.keys(props.query.facets).length, ")")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filter");
+  const toggle = display ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    type: "button",
+    className: "wrapper--finder__filters--mobile__toggle",
+    "aria-haspopup": true,
+    "aria-expanded": display,
+    onClick: () => setDisplay(!display),
+    "data-filters-applied": Object.keys(props.query.facets).length !== 0 || props.config.displaySort && props.config.sort[0].type !== props.query.sortType ? true : false
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    className: "far fa-sliders-h icon",
+    "aria-hidden": "true"
+  }), ' ', filtersCount));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "wrapper--finder__filters--mobile",
+    "data-open": display,
+    ref: mobilefilters => filters = mobilefilters
+  }, toggle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "wrapper--finder__filters--mobile__filters"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "wrapper--finder__filters--mobile__filters__content"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_finder_components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    config: props.config,
+    query: props.query,
+    response: props.response,
+    update: props.update,
+    clear: props.clear
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+    className: "wrapper--finder__filters--mobile__filters__content--text"
+  }, "If you do not see the course you are interested in, please contact the", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
+    href: "https://web2020.city.ac.uk/prospective-students/career-development"
+  }, "careers department"), ' ', "at City for full details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "wrapper--finder__filters--mobile__apply"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    type: "button",
+    "aria-expanded": display,
+    onClick: () => setDisplay(!display),
+    disabled: props.updating
+  }, Object.keys(props.query.facets).length === 0 ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    className: "far fa-chevron-left icon"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    "aria-live": "polite"
+  }, props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    className: "fas fa-spinner fa-pulse icon",
+    "aria-hidden": "true"
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    className: "wrapper--finder__filters--mobile__apply__text"
+  }, "Updating ", props.summariseAs.plural, "\u2026")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    className: "wrapper--finder__filters--mobile__apply__text"
+  }, !props.query.facets.t ? 'Close' : totalMatchingMessage))))));
+}
+
+Finder__FiltersMobile.propTypes = {
+  config: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  response: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
+  updating: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
+  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
+};
+/* harmony default export */ __webpack_exports__["default"] = (Finder__FiltersMobile);
 
 /***/ }),
 
@@ -396,7 +546,7 @@ function Finder__Chart(props) {
     let y1 = -100 * Math.cos(arcAcc);
     let d = "M ".concat(x0, " ").concat(y0, " A 100 100  0 ").concat(largeAngle, " ").concat(sweep, " ").concat(x1, " ").concat(y1); // If not single segment, build segments proportionately
 
-    if (!(firstSegmentFull || secondSegmentFull) && i < 2) {
+    if (!(firstSegmentFull || secondSegmentFull) && i < 7) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("path", {
         key: key,
         strokeWidth: strokeWidth,
@@ -448,7 +598,7 @@ function Finder__Chart(props) {
     let text = "".concat(e[0], ": ").concat(100 * e[1] / sum, "%");
     let randomNum = Math.floor(Math.random() * 100 + 1) + i++;
 
-    if (i === 3) {
+    if (i === 8) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
         key: randomNum,
         className: "chart__legend__item"
@@ -463,7 +613,7 @@ function Finder__Chart(props) {
         r: "9",
         stroke: "black",
         strokeWidth: "1",
-        fill: "qurl(#striped)"
+        fill: "url(#striped)"
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
         className: "chart__legend__item__label"
       }, text));
@@ -480,7 +630,7 @@ function Finder__Chart(props) {
     }
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "chart chart--blue"
+    className: "chart"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h5", {
     className: "chart__title"
   }, props.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
@@ -575,6 +725,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _companys__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./companys */ "./src/patterns/destination-leavers-higher-ed/components/results/companys.js");
 /* harmony import */ var _institutions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./institutions */ "./src/patterns/destination-leavers-higher-ed/components/results/institutions.js");
 /* harmony import */ var _job__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./job */ "./src/patterns/destination-leavers-higher-ed/components/results/job.js");
+/* harmony import */ var _salary__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./salary */ "./src/patterns/destination-leavers-higher-ed/components/results/salary.js");
 
 
 
@@ -584,6 +735,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2019
  */
+
 
 
 
@@ -606,6 +758,9 @@ function Finder__Results__Generic(props) {
   }) : null,
         jobT = props.details.metaData.jobT ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_job__WEBPACK_IMPORTED_MODULE_6__["default"], {
     text: props.details.metaData.jobT
+  }) : null,
+        salary = props.details.metaData.salary ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_salary__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    text: props.details.metaData.salary
   }) : null;
   const charts = props.details.metaData.chart.split('|'),
         data = charts.map(d => JSON.parse(d));
@@ -613,19 +768,18 @@ function Finder__Results__Generic(props) {
   props.details.metaData.companys && count++;
   props.details.metaData.institutions && count++;
   props.details.metaData.jobT && count++;
+  props.details.metaData.salary && count++;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "destination-leaver"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__details__text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     className: "card__heading"
-  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, "Showing data for ", props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "card__description"
   }, props.details.metaData.c && props.details.metaData.c)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "chart-row chart-row--columns"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
-    className: "chart-row__group-heading"
-  }, "Charts"), data.map((c, i) => {
+  }, data.map((c, i) => {
     let k = "".concat(c[0].title).concat(i);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_chart__WEBPACK_IMPORTED_MODULE_3__["default"], {
       key: k,
@@ -636,7 +790,7 @@ function Finder__Results__Generic(props) {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "destination-leaver-content",
     "data-length": count
-  }, company, institutions, jobT));
+  }, salary, company, institutions, jobT));
 }
 
 Finder__Results__Generic.propTypes = {
@@ -829,8 +983,7 @@ function Finder__Results(props) {
         course = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__updating",
     "aria-live": "polite"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Please select a course")),
-        text = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "If you do not see the course you are interested in, please contact the careers department at City for full details");
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Please select a course"));
   const resultsClass = 'resultsVariant' in props.config ? "finder__results__list finder__results__list--".concat(props.config.resultsVariant) : 'finder__results__list';
 
   if (props.response && props.query.facets.level && props.query.facets.t) {
@@ -848,16 +1001,16 @@ function Finder__Results(props) {
     const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, results);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "finder__results"
-    }, resultsContent, text);
+    }, resultsContent);
   } else {
     if (props.query.facets.level) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "finder__results"
-      }, course, text);
+      }, course);
     } else {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "finder__results"
-      }, updating, text);
+      });
     }
   }
 }
@@ -872,6 +1025,55 @@ Finder__Results.propTypes = {
   updating: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Results);
+
+/***/ }),
+
+/***/ "./src/patterns/destination-leavers-higher-ed/components/results/salary.js":
+/*!*********************************************************************************!*\
+  !*** ./src/patterns/destination-leavers-higher-ed/components/results/salary.js ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/finder/components/cards/finder__results__generic
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+/**
+ * Render a Funnelback result as a generic card.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function Salary__Container(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "salary-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Salary"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "salary-list",
+    dangerouslySetInnerHTML: {
+      __html: props.text
+    }
+  }));
+}
+
+Salary__Container.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array,
+  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  text: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
+/* harmony default export */ __webpack_exports__["default"] = (Salary__Container);
 
 /***/ }),
 
@@ -910,7 +1112,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_11__);
 /* harmony import */ var _finder_funnelback__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../finder/funnelback */ "./src/patterns/finder/funnelback.js");
 /* harmony import */ var _components_filters_filters__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/filters/filters */ "./src/patterns/destination-leavers-higher-ed/components/filters/filters.js");
-/* harmony import */ var _finder_components_filters_finder_filtersmobile__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../finder/components/filters/finder__filtersmobile */ "./src/patterns/finder/components/filters/finder__filtersmobile.js");
+/* harmony import */ var _components_filters_filtersmobile__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/filters/filtersmobile */ "./src/patterns/destination-leavers-higher-ed/components/filters/filtersmobile.js");
 /* harmony import */ var _components_results_results__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/results/results */ "./src/patterns/destination-leavers-higher-ed/components/results/results.js");
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_16__);
@@ -1120,7 +1322,7 @@ function DestinationLeaversHE(props) {
     onSubmit: e => {
       e.preventDefault();
     }
-  }, props.config.facetLabels.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_finder_components_filters_finder_filtersmobile__WEBPACK_IMPORTED_MODULE_14__["default"], {
+  }, props.config.facetLabels.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_filters_filtersmobile__WEBPACK_IMPORTED_MODULE_14__["default"], {
     config: props.config,
     query: query,
     response: funnelbackResponse,
@@ -1394,149 +1596,6 @@ Finder__Filters.propTypes = {
   clear: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Filters);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/filters/finder__filtersmobile.js":
-/*!*************************************************************************!*\
-  !*** ./src/patterns/finder/components/filters/finder__filtersmobile.js ***!
-  \*************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.sort.js */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _finder_filters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.esm.js");
-
-
-
-
-
-
-/**
- * @module patterns/finder/components/wrapper--finder__filters--mobile
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
- // seems to fix most issues with old iPhones and position: fixed
-// may not be necessary long-term, but I was in a hurry
-
-
-let filters = null;
-
-const getFilters = () => filters;
-/**
- * Render the mobile version of the filters.
- *
- * TODO: this is a bit flaky on old iPhones with long facets (i.e. longer than
- * the main body of the page)
- *
- * @param {object} props React props.
- * @return {object} - React component.
- */
-
-
-function Finder__FiltersMobile(props) {
-  const [display, setDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false);
-  const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({}); // trap tab focus when the filters are open
-
-  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(() => {
-    if (!focusTrap.activate) {
-      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_6___default()(getFilters(), {
-        initialFocus: getFilters().querySelector('.wrapper--finder__filters--mobile__apply'),
-        onDeactivate: () => setDisplay(false),
-        clickOutsideDeactivates: true
-      }));
-    }
-
-    if (display) {
-      focusTrap.activate && focusTrap.activate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["disableBodyScroll"])(getFilters().querySelector('.wrapper--finder__filters--mobile__filters'));
-    } else {
-      focusTrap.deactivate && focusTrap.deactivate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__["enableBodyScroll"])(getFilters().querySelector('.wrapper--finder__filters--mobile__filters'));
-    }
-  }, [display, focusTrap]);
-  const totalMatching = props.response && props.response.summary && props.response.summary.totalMatching;
-  const result = totalMatching === 1 ? props.summariseAs.singular : props.summariseAs.plural;
-  const totalMatchingMessage = totalMatching ? "Show ".concat(totalMatching, " ").concat(result) : 'Close';
-  const filtersCount = props.config.displaySort ? props.config.sort[0].type !== props.query.sortType || Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filters", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "wrapper--finder__filters--mobile__toggle__count"
-  }, "(", props.config.sort[0].type !== props.query.sortType ? Object.keys(props.query.facets).length + 1 : Object.keys(props.query.facets).length, ")")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filter") : Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filters", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "wrapper--finder__filters--mobile__toggle__count"
-  }, "(", props.config.sort[0].type !== props.query.sortType ? Object.keys(props.query.facets).length + 1 : Object.keys(props.query.facets).length, ")")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filter");
-  const toggle = display ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
-    type: "button",
-    className: "wrapper--finder__filters--mobile__toggle",
-    "aria-haspopup": true,
-    "aria-expanded": display,
-    onClick: () => setDisplay(!display),
-    "data-filters-applied": Object.keys(props.query.facets).length !== 0 || props.config.displaySort && props.config.sort[0].type !== props.query.sortType ? true : false
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "far fa-sliders-h icon",
-    "aria-hidden": "true"
-  }), ' ', filtersCount));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "wrapper--finder__filters--mobile",
-    "data-open": display,
-    ref: mobilefilters => filters = mobilefilters
-  }, toggle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "wrapper--finder__filters--mobile__filters"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "wrapper--finder__filters--mobile__filters__content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_finder_filters__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    config: props.config,
-    query: props.query,
-    response: props.response,
-    update: props.update,
-    clear: props.clear
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "wrapper--finder__filters--mobile__apply"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
-    type: "button",
-    "aria-expanded": display,
-    onClick: () => setDisplay(!display),
-    disabled: props.updating
-  }, Object.keys(props.query.facets).length === 0 ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "far fa-chevron-left icon"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    "aria-live": "polite"
-  }, props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "fas fa-spinner fa-pulse icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "wrapper--finder__filters--mobile__apply__text"
-  }, "Updating ", props.summariseAs.plural, "\u2026")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-    className: "wrapper--finder__filters--mobile__apply__text"
-  }, Object.keys(props.query.facets).length === 0 ? 'Close' : totalMatchingMessage))))));
-}
-
-Finder__FiltersMobile.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  response: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.func,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.bool,
-  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
-};
-/* harmony default export */ __webpack_exports__["default"] = (Finder__FiltersMobile);
 
 /***/ }),
 

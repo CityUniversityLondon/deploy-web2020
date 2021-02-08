@@ -54888,17 +54888,18 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     grid-column: 1/-1;
 }
 
-.destination-leaver .destination-leaver-content {
-    display: flex;
-    flex-wrap: wrap;
+@media (min-width: 433px) {
+    .destination-leaver .destination-leaver-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .destination-leaver .destination-leaver-content:not([data-length='1']) div {
+        width: 50%;
+    }
 }
 
-.destination-leaver .destination-leaver-content[data-length='3'] div {
-    width: 50%;
-}
-
-.destination-leaver .destination-leaver-content[data-length='2'] div {
-    width: 50%;
+.wrapper--destination-leavers-HE {
+    margin-bottom: 1rem;
 }
 
 .wrapper--destination-leavers-HE .wrapper--finder__filters--desktop .finder__filters label:not(.finder__filters__label--always) {
@@ -54912,6 +54913,23 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     color: #0c0c0e;
 }
 
+.wrapper--destination-leavers-HE .wrapper--finder__filters--desktop .finder__filters .finder__filters__reset--desktop {
+    margin-top: 1rem;
+}
+
+.wrapper--destination-leavers-HE .wrapper--finder__filters--desktop .finder__filters .wrapper--destination-leavers-HE__info-text {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+}
+
+@media (min-width: 901px) {
+    .wrapper--destination-leavers-HE .wrapper--finder__filters--desktop .finder__filters .wrapper--destination-leavers-HE__info-text {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
 .wrapper--destination-leavers-HE .wrapper--finder_filters--filters {
     display: block;
 }
@@ -54920,11 +54938,113 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     width: 100%;
 }
 
+.destination .destination-content {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.wrapper--finder__filters--mobile[data-open='false'] .wrapper--finder__filters--mobile__filters__content--text {
+    display: none;
+}
+
 @media (max-width: 1023px) {
-    .destination .destination-content {
+    .wrapper--finder__filters--mobile__filters__content--text {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.destination-content {
+    border-top: 0.0625rem solid #cbcbcb;
+}
+
+.destination-leaver {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+}
+
+@media (min-width: 901px) {
+    .destination-leaver {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
+}
+
+.destination-leaver .chart-row {
+    margin-top: 1rem;
+    padding-left: initial;
+    padding-right: initial;
+    margin-left: initial;
+    margin-right: initial;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .destination-leaver .chart-row {
+        display: block;
+    }
+    .destination-leaver .chart-row .chart {
+        width: 100%;
+    }
+    .destination-leaver .chart-row .chart__columns {
+        display: flex;
+    }
+}
+
+.destination-leaver .chart-row .chart path:nth-child(1) {
+    stroke: #d763b6;
+}
+
+.destination-leaver .chart-row .chart path:nth-child(2) {
+    stroke: #002225;
+}
+
+.destination-leaver .chart-row .chart path:nth-child(3) {
+    stroke: #015a79;
+}
+
+.destination-leaver .chart-row .chart path:nth-child(4) {
+    stroke: #541b85;
+}
+
+.destination-leaver .chart-row .chart path:nth-child(5) {
+    stroke: #e93745;
+}
+
+.destination-leaver .chart-row .chart path:nth-child(6) {
+    stroke: #11334c;
+}
+
+.destination-leaver .chart-row .chart path:nth-child(7) {
+    stroke: #8e3bbb;
+}
+
+.destination-leaver .chart-row .chart .chart__legend__item:nth-child(1) .fa.fa-circle {
+    color: #d763b6;
+}
+
+.destination-leaver .chart-row .chart .chart__legend__item:nth-child(2) .fa.fa-circle {
+    color: #002225;
+}
+
+.destination-leaver .chart-row .chart .chart__legend__item:nth-child(3) .fa.fa-circle {
+    color: #015a79;
+}
+
+.destination-leaver .chart-row .chart .chart__legend__item:nth-child(4) .fa.fa-circle {
+    color: #541b85;
+}
+
+.destination-leaver .chart-row .chart .chart__legend__item:nth-child(5) .fa.fa-circle {
+    color: #e93745;
+}
+
+.destination-leaver .chart-row .chart .chart__legend__item:nth-child(6) .fa.fa-circle {
+    color: #11334c;
+}
+
+.destination-leaver .chart-row .chart .chart__legend__item:nth-child(7) .fa.fa-circle {
+    color: #8e3bbb;
 }
 
 .generic {
