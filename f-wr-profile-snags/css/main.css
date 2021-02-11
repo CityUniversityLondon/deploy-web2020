@@ -65464,11 +65464,11 @@ button
     background-repeat: no-repeat;
     background-size: 100% 0;
     background-position: 0 100%;
-    background-image: linear-gradient(120deg, #919191 0%, #919191 100%);
-    border-bottom-color: #919191;
+    background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+    border-bottom-color: #cbcbcb;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #919191;
+    color: #cbcbcb;
 }
 
 @media (hover: hover) {
@@ -65514,7 +65514,7 @@ button
 @media (hover: hover) {
     .profile .profile__banner__content__details__organisation a:hover {
         background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #919191 0%, #919191 100%);
+        background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
     }
 }
 
@@ -65526,34 +65526,34 @@ button
 }
 
 .profile .profile__banner__content__details__organisation a:visited {
-    border-bottom-color: #919191;
+    border-bottom-color: #cbcbcb;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #919191;
+    color: #cbcbcb;
 }
 
 .profile .profile__banner__content__details__organisation a:focus {
-    border-bottom-color: #919191;
+    border-bottom-color: #cbcbcb;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #919191;
+    color: #cbcbcb;
 }
 
 @media (hover: hover) {
     .profile .profile__banner__content__details__organisation a:hover {
-        border-bottom-color: #919191;
+        border-bottom-color: #cbcbcb;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
-        color: #ffffff;
+        color: #0c0c0e;
     }
 }
 
 .profile .profile__banner__content__details__organisation a:active {
-    background-color: #919191;
-    border-bottom-color: #919191;
+    background-color: #cbcbcb;
+    border-bottom-color: #cbcbcb;
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
-    color: #ffffff;
+    color: #0c0c0e;
 }
 
 .profile .profile__banner__content__details__organisation span:not(:first-of-type):not(:last-of-type):after {
