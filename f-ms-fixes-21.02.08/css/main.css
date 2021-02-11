@@ -33724,7 +33724,7 @@ figure figcaption a:active,
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
         grid-template-rows: repeat(2, auto);
-        grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading' 'date date date date date date date location location location location location location location location button button button' 'explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation';
+        grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading' 'date date date date date date date location location location location location location location button button button button' 'explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation';
     }
 }
 
