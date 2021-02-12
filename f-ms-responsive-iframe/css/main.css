@@ -32697,9 +32697,24 @@ figure figcaption a:active,
 
 .wrapper--iframe {
     height: 0;
-    padding-bottom: 56.25%;
     position: relative;
     width: 100%;
+}
+
+.wrapper--iframe[data-aspect-ratio='1:1'] {
+    padding-bottom: 100%;
+}
+
+.wrapper--iframe[data-aspect-ratio='4:3'] {
+    padding-bottom: 75%;
+}
+
+.wrapper--iframe[data-aspect-ratio='16:9'] {
+    padding-bottom: 56.25%;
+}
+
+.wrapper--iframe[data-aspect-ratio='2:1'] {
+    padding-bottom: 50%;
 }
 
 .wrapper--iframe iframe {
