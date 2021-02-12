@@ -54991,6 +54991,10 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
+.destination-leaver .chart-row .chart {
+    width: 50%;
+}
+
 .destination-leaver .chart-row .chart path:nth-child(1) {
     stroke: #d763b6;
 }

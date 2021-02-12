@@ -215,7 +215,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _finder_components_filters_finder_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../finder/components/filters/finder__select */ "./src/patterns/finder/components/filters/finder__select.js");
+/* harmony import */ var _select_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./select__filter */ "./src/patterns/destination-leavers-higher-ed/components/filters/select__filter.js");
 /* harmony import */ var _finder_components_filters_finder_reset__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../finder/components/filters/finder__reset */ "./src/patterns/finder/components/filters/finder__reset.js");
 /* harmony import */ var _finder_components_filters_finder_sort__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../finder/components/filters/finder__sort */ "./src/patterns/finder/components/filters/finder__sort.js");
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
@@ -301,7 +301,7 @@ function Finder__Filters(props) {
     if (dependencyMet(facet, props.query.facets)) {
       switch (facet.type) {
         case 'select':
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_components_filters_finder_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_select_filter__WEBPACK_IMPORTED_MODULE_3__["default"], {
             key: facet.meta,
             facet: facet,
             query: props.query,
@@ -351,7 +351,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _finder_components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../finder/components/filters/finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
+/* harmony import */ var _mobile_select_filter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./mobile__select-filter */ "./src/patterns/destination-leavers-higher-ed/components/filters/mobile__select-filter.js");
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
 /* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.esm.js");
@@ -434,7 +434,7 @@ function Finder__FiltersMobile(props) {
     className: "wrapper--finder__filters--mobile__filters"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "wrapper--finder__filters--mobile__filters__content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_finder_components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_mobile_select_filter__WEBPACK_IMPORTED_MODULE_5__["default"], {
     config: props.config,
     query: props.query,
     response: props.response,
@@ -475,6 +475,274 @@ Finder__FiltersMobile.propTypes = {
   summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__FiltersMobile);
+
+/***/ }),
+
+/***/ "./src/patterns/destination-leavers-higher-ed/components/filters/mobile__select-filter.js":
+/*!************************************************************************************************!*\
+  !*** ./src/patterns/destination-leavers-higher-ed/components/filters/mobile__select-filter.js ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort.js */ "./node_modules/core-js/modules/es.array.sort.js");
+/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _select_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./select__filter */ "./src/patterns/destination-leavers-higher-ed/components/filters/select__filter.js");
+/* harmony import */ var _finder_components_filters_finder_checkbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../finder/components/filters/finder__checkbox */ "./src/patterns/finder/components/filters/finder__checkbox.js");
+/* harmony import */ var _finder_components_filters_finder_tag__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../finder/components/filters/finder__tag */ "./src/patterns/finder/components/filters/finder__tag.js");
+/* harmony import */ var _finder_components_filters_finder_reset__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../finder/components/filters/finder__reset */ "./src/patterns/finder/components/filters/finder__reset.js");
+/* harmony import */ var _finder_components_filters_finder_sort__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../finder/components/filters/finder__sort */ "./src/patterns/finder/components/filters/finder__sort.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
+
+
+
+
+/**
+ * @module patterns/finder/components/finder__filters
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+
+
+
+
+
+
+/**
+ * Predicate for whether a facet should be displayed, if it's dependent on
+ * another facet being set.
+ *
+ * @param {object} facet The facet to potentially display.
+ * @param {object} facetMap The facets currently set on the query.
+ * @return {bool} - Has any dependency been met
+ */
+
+function dependencyMet(facet, facetMap) {
+  const setFacets = Object.keys(facetMap);
+
+  if (!facet.dependency) {
+    return true;
+  }
+
+  if (setFacets.indexOf(facet.dependency) >= 0 && facetMap[facet.dependency] !== '') {
+    return true;
+  }
+
+  return false;
+}
+/**
+ * Component to update facet values in the query.
+ *
+ * @param {object} props React props.
+ * @returns {object} - React component.
+ */
+
+
+function Finder__Filters(props) {
+  const clearFiltersDesktop = Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "finder__filters__reset finder__filters__reset--desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_components_filters_finder_reset__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    clear: props.clear,
+    resetSort: false
+  })) : null,
+        clearFiltersMobile = Object.keys(props.query.facets).length > 0 || props.query.sortType !== props.config.sort[0].type ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_components_filters_finder_reset__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    clear: props.clear,
+    resetSort: true
+  }) : null;
+  const sort = props.config.sort.length > 1 && props.config.displaySort ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "wrapper--finder__select--sort--mobile"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_components_filters_finder_sort__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    config: props.config,
+    query: props.query,
+    update: props.update
+  })) : null;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "finder__filters"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "finder__filters__heading"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "finder__filters__heading__text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "far fa-sliders-h icon",
+    "aria-hidden": "true"
+  }), ' ', "Filter ".concat(props.config.summariseAs.plural)), clearFiltersMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "wrapper--finder_filters--filters"
+  }, props.config.facetLabels.map(facet => {
+    if (dependencyMet(facet, props.query.facets)) {
+      switch (facet.type) {
+        case 'select':
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_select_filter__WEBPACK_IMPORTED_MODULE_3__["default"], {
+            key: facet.meta,
+            facet: facet,
+            query: props.query,
+            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
+            update: props.update,
+            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
+          });
+
+        case 'checkbox':
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_components_filters_finder_checkbox__WEBPACK_IMPORTED_MODULE_4__["default"], {
+            key: facet.meta,
+            facet: facet,
+            query: props.query,
+            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
+            update: props.update,
+            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
+          });
+
+        case 'tag':
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_components_filters_finder_tag__WEBPACK_IMPORTED_MODULE_5__["default"], {
+            key: facet.meta,
+            facet: facet,
+            query: props.query,
+            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
+            update: props.update,
+            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
+          });
+
+        default:
+          Object(_util__WEBPACK_IMPORTED_MODULE_8__["gaEvent"])('jsError', 'JavaScript error', 'finder__filters()', 'Unknown filter type in finder__filters.js', true);
+      }
+    } else {
+      return null;
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "finder__filters__nofilters"
+  }, "No filters are valid for the current query."), clearFiltersDesktop, sort)));
+}
+
+Finder__Filters.propTypes = {
+  config: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  response: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func
+};
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Filters);
+
+/***/ }),
+
+/***/ "./src/patterns/destination-leavers-higher-ed/components/filters/select__filter.js":
+/*!*****************************************************************************************!*\
+  !*** ./src/patterns/destination-leavers-higher-ed/components/filters/select__filter.js ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.reduce.js */ "./node_modules/core-js/modules/es.array.reduce.js");
+/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string.js */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+
+/**<
+ * @module patterns/finder/components/finder__select
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+
+function Finder__Select(props) {
+  const stringLength = 16,
+        stringOffset = -4,
+        randomNumber = Math.random().toString(stringLength).slice(stringOffset),
+        currentValue = props.query.facets[props.facet.meta] || ''; // reduce the facet configuration to an array of all possible values for
+  // the facet
+
+  const allFacets = props.facet.values.reduce((acc, data) => {
+    return [...acc, data];
+  }, []); // reduce the Funnelback response for the facet to an array of valid
+  // values for the current query
+
+  const responseFacets = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values ? props.responseFacet[0].categories[0].values.reduce((acc, data) => {
+    return [...acc, data.data];
+  }, []) : []; // count how many possible facets are not valid for the current query
+  // and will be hidden
+
+  const hiddenFacets = allFacets.map(facet => facet.data).filter(facet => responseFacets.indexOf(facet.toLowerCase()) < 0).length;
+
+  const setFacet = value => {
+    const newQuery = props.query;
+    props.dependencies.map(facet => {
+      delete newQuery.facets[facet.meta];
+    });
+
+    if (value) {
+      newQuery.facets[props.facet.meta] = value;
+    } else {
+      delete newQuery.facets[props.facet.meta];
+    }
+
+    newQuery.startRank = 1;
+    newQuery.misspelling = null;
+    newQuery.interacted = true;
+    props.update.query(newQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  if (props.facet.values.length > hiddenFacets) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
+      className: "finder__filter finder__select ".concat(currentValue && 'finder__select--selected')
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
+      htmlFor: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
+    }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("select", {
+      name: props.facet.name,
+      id: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber),
+      onChange: e => setFacet(e.target.value),
+      value: currentValue
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
+      value: "",
+      id: "meta".concat(props.facet.meta, "all"),
+      name: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
+    }, props.facet.noSelection), props.facet.values.map((value, i) => {
+      const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.toLowerCase());
+
+      if (currentValue.toLowerCase() === value.data.toLowerCase() || responseFacetDetails && responseFacetDetails[0]) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
+          key: i,
+          value: value.data.toLowerCase()
+        }, value.label);
+      } else {
+        return null;
+      }
+    })));
+  } else {
+    return null;
+  }
+}
+
+Finder__Select.propTypes = {
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object)
+};
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Select);
 
 /***/ }),
 
@@ -519,12 +787,14 @@ function Finder__Chart(props) {
   let firstSegmentFull = false,
       secondSegmentFull = false;
 
-  if (data[0][1] === '100') {
+  if (data[0][1] === 100) {
     firstSegmentFull = true;
   }
 
-  if (data[1][1] === '100') {
-    secondSegmentFull = true;
+  if (props.chartsLength) {
+    if (data[1][1] === 100) {
+      secondSegmentFull = true;
+    }
   } // Total value of data segments (should be 100)
 
 
@@ -538,7 +808,7 @@ function Finder__Chart(props) {
     let arc = 2 * Math.PI * value;
     let largeAngle = arc > Math.PI ? 1 : 0;
     let sweep = 1;
-    let key = "".concat(props.title).concat(row[0].replace(/\s+/g, '')).concat(row[1]);
+    let key = "".concat(props.title).concat(row[0].replace(/\s+/g, '')).concat(row[1]).concat(props.chartId);
     let x0 = 100 * Math.sin(arcAcc);
     let y0 = -100 * Math.cos(arcAcc);
     arcAcc += arc;
@@ -556,31 +826,31 @@ function Finder__Chart(props) {
       });
     } else if (firstSegmentFull) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("path", {
+        key: key,
         strokeWidth: "32",
         className: "chart--piechart__value animate--svg-path animate--svg-path--jsinit animate--svg-path--jsrun",
         d: "M 0 -100 A 100 100  0 1 1 -0.6283143965558805 -99.99802608561372",
-        fill: "none",
-        style: "stroke-dashoffset: 0; stroke-dasharray: 627.778px, 627.778px;"
+        fill: "none"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("path", {
+        key: key,
         strokeWidth: "32",
         className: "chart--piechart__value animate--svg-path animate--svg-path--jsinit animate--svg-path--jsrun",
         d: "M -0.6283143965558805 -99.99802608561372 A 100 100  0 0 1 -2.4492127076447545e-14 -100",
-        fill: "none",
-        style: "stroke-dashoffset: 0; stroke-dasharray: 0.628317px, 0.628317px;"
+        fill: "none"
       }));
     } else if (secondSegmentFull) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("path", {
+        key: key,
         strokeWidth: "32",
         className: "chart--piechart__value animate--svg-path animate--svg-path--jsinit animate--svg-path--jsrun",
         d: "M -0.6283143965558805 -99.99802608561372 A 100 100  0 0 1 -2.4492127076447545e-14 -100",
-        fill: "none",
-        style: "stroke-dashoffset: 0; stroke-dasharray: 0.628317px, 0.628317px;"
+        fill: "none"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("path", {
+        key: key,
         strokeWidth: "32",
         className: "chart--piechart__value animate--svg-path animate--svg-path--jsinit animate--svg-path--jsrun",
         d: "M 0 -100 A 100 100  0 1 1 -0.6283143965558805 -99.99802608561372",
-        fill: "none",
-        style: "stroke-dashoffset: 0; stroke-dasharray: 627.778px, 627.778px;"
+        fill: "none"
       }));
     } else {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("path", {
@@ -595,8 +865,9 @@ function Finder__Chart(props) {
   }); //let scale = 100 / (100 + strokeWidth / 2);
 
   let legend = data.map(function (e, i) {
-    let text = "".concat(e[0], ": ").concat(100 * e[1] / sum, "%");
-    let randomNum = Math.floor(Math.random() * 100 + 1) + i++;
+    let val = Math.round((e[1] + Number.EPSILON) * 100) / 100;
+    let text = "".concat(e[0], ": ").concat(Math.round((100 * val / sum + Number.EPSILON) * 100) / 100, "%");
+    let randomNum = "legend-".concat(props.title).concat(e[0].replace(/\s+/g, '')).concat(e[1]).concat(props.chartId);
 
     if (i === 8) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
@@ -644,14 +915,16 @@ function Finder__Chart(props) {
     viewBox: "0 0 200 200"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("g", {
     transform: "translate(100,100) scale(0.8620689655172413)"
-  }, valueElements.map(e => e))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, valueElements)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "chart__legend"
-  }, legend.map(e => e))));
+  }, legend)));
 }
 
 Finder__Chart.propTypes = {
   data: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.array,
-  title: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string
+  title: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string,
+  chartsLength: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.bool,
+  chartId: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.number
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Chart);
 
@@ -780,12 +1053,15 @@ function Finder__Results__Generic(props) {
   }, props.details.metaData.c && props.details.metaData.c)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "chart-row chart-row--columns"
   }, data.map((c, i) => {
-    let k = "".concat(c[0].title).concat(i);
+    let k = "".concat(c[0].title).concat(i).concat(c[0].id);
+    let chartsLength = data.length === 1 ? true : false;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_chart__WEBPACK_IMPORTED_MODULE_3__["default"], {
       key: k,
       data: c[0].chart,
       title: c[0].title,
-      id: c[0].id
+      id: c[0].id,
+      chartsLength: chartsLength,
+      chartId: c[0].id
     });
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "destination-leaver-content",
@@ -1447,158 +1723,6 @@ Finder__Checkbox.propTypes = {
 
 /***/ }),
 
-/***/ "./src/patterns/finder/components/filters/finder__filters.js":
-/*!*******************************************************************!*\
-  !*** ./src/patterns/finder/components/filters/finder__filters.js ***!
-  \*******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.sort.js */ "./node_modules/core-js/modules/es.array.sort.js");
-/* harmony import */ var core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_sort_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _finder_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__select */ "./src/patterns/finder/components/filters/finder__select.js");
-/* harmony import */ var _finder_checkbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__checkbox */ "./src/patterns/finder/components/filters/finder__checkbox.js");
-/* harmony import */ var _finder_tag__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__tag */ "./src/patterns/finder/components/filters/finder__tag.js");
-/* harmony import */ var _finder_reset__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__reset */ "./src/patterns/finder/components/filters/finder__reset.js");
-/* harmony import */ var _finder_sort__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__sort */ "./src/patterns/finder/components/filters/finder__sort.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
-
-
-
-
-/**
- * @module patterns/finder/components/finder__filters
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-
-
-
-
-
-/**
- * Predicate for whether a facet should be displayed, if it's dependent on
- * another facet being set.
- *
- * @param {object} facet The facet to potentially display.
- * @param {object} facetMap The facets currently set on the query.
- * @return {bool} - Has any dependency been met
- */
-
-function dependencyMet(facet, facetMap) {
-  const setFacets = Object.keys(facetMap);
-
-  if (!facet.dependency) {
-    return true;
-  }
-
-  if (setFacets.indexOf(facet.dependency) >= 0 && facetMap[facet.dependency] !== '') {
-    return true;
-  }
-
-  return false;
-}
-/**
- * Component to update facet values in the query.
- *
- * @param {object} props React props.
- * @returns {object} - React component.
- */
-
-
-function Finder__Filters(props) {
-  const clearFiltersDesktop = Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__filters__reset finder__filters__reset--desktop"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_reset__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    clear: props.clear,
-    resetSort: false
-  })) : null,
-        clearFiltersMobile = Object.keys(props.query.facets).length > 0 || props.query.sortType !== props.config.sort[0].type ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_reset__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    clear: props.clear,
-    resetSort: true
-  }) : null;
-  const sort = props.config.sort.length > 1 && props.config.displaySort ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "wrapper--finder__select--sort--mobile"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_sort__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    config: props.config,
-    query: props.query,
-    update: props.update
-  })) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__filters"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
-    className: "finder__filters__heading"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "finder__filters__heading__text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "far fa-sliders-h icon",
-    "aria-hidden": "true"
-  }), ' ', "Filter ".concat(props.config.summariseAs.plural)), clearFiltersMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "wrapper--finder_filters--filters"
-  }, props.config.facetLabels.map(facet => {
-    if (dependencyMet(facet, props.query.facets)) {
-      switch (facet.type) {
-        case 'select':
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
-            key: facet.meta,
-            facet: facet,
-            query: props.query,
-            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
-            update: props.update,
-            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
-          });
-
-        case 'checkbox':
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_checkbox__WEBPACK_IMPORTED_MODULE_4__["default"], {
-            key: facet.meta,
-            facet: facet,
-            query: props.query,
-            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
-            update: props.update,
-            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
-          });
-
-        case 'tag':
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_finder_tag__WEBPACK_IMPORTED_MODULE_5__["default"], {
-            key: facet.meta,
-            facet: facet,
-            query: props.query,
-            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
-            update: props.update,
-            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
-          });
-
-        default:
-          Object(_util__WEBPACK_IMPORTED_MODULE_8__["gaEvent"])('jsError', 'JavaScript error', 'finder__filters()', 'Unknown filter type in finder__filters.js', true);
-      }
-    } else {
-      return null;
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "finder__filters__nofilters"
-  }, "No filters are valid for the current query."), clearFiltersDesktop, sort)));
-}
-
-Finder__Filters.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  response: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func
-};
-/* harmony default export */ __webpack_exports__["default"] = (Finder__Filters);
-
-/***/ }),
-
 /***/ "./src/patterns/finder/components/filters/finder__reset.js":
 /*!*****************************************************************!*\
   !*** ./src/patterns/finder/components/filters/finder__reset.js ***!
@@ -1647,122 +1771,6 @@ Finder__Reset.propTypes = {
   resetSort: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Reset);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/filters/finder__select.js":
-/*!******************************************************************!*\
-  !*** ./src/patterns/finder/components/filters/finder__select.js ***!
-  \******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.reduce.js */ "./node_modules/core-js/modules/es.array.reduce.js");
-/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string.js */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
-
-
-
-
-
-
-
-/**<
- * @module patterns/finder/components/finder__select
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-function Finder__Select(props) {
-  const stringLength = 16,
-        stringOffset = -4,
-        randomNumber = Math.random().toString(stringLength).slice(stringOffset),
-        currentValue = props.query.facets[props.facet.meta] || ''; // reduce the facet configuration to an array of all possible values for
-  // the facet
-
-  const allFacets = props.facet.values.reduce((acc, data) => {
-    return [...acc, data];
-  }, []); // reduce the Funnelback response for the facet to an array of valid
-  // values for the current query
-
-  const responseFacets = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values ? props.responseFacet[0].categories[0].values.reduce((acc, data) => {
-    return [...acc, data.data];
-  }, []) : []; // count how many possible facets are not valid for the current query
-  // and will be hidden
-
-  const hiddenFacets = allFacets.map(facet => facet.data).filter(facet => responseFacets.indexOf(facet.toLowerCase()) < 0).length;
-
-  const setFacet = value => {
-    const newQuery = props.query;
-    props.dependencies.map(facet => {
-      delete newQuery.facets[facet.meta];
-    });
-
-    if (value) {
-      newQuery.facets[props.facet.meta] = value;
-    } else {
-      delete newQuery.facets[props.facet.meta];
-    }
-
-    newQuery.startRank = 1;
-    newQuery.misspelling = null;
-    newQuery.interacted = true;
-    props.update.query(newQuery);
-    props.update.results(!props.update.updateState);
-  };
-
-  if (props.facet.values.length > hiddenFacets) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
-      className: "finder__filter finder__select ".concat(currentValue && 'finder__select--selected')
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
-      htmlFor: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
-    }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("select", {
-      name: props.facet.name,
-      id: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber),
-      onChange: e => setFacet(e.target.value),
-      value: currentValue
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
-      value: "",
-      id: "meta".concat(props.facet.meta, "all"),
-      name: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
-    }, props.facet.noSelection), props.facet.values.map((value, i) => {
-      const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.toLowerCase());
-
-      if (currentValue.toLowerCase() === value.data.toLowerCase() || responseFacetDetails && responseFacetDetails[0]) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("option", {
-          key: i,
-          value: value.data.toLowerCase()
-        }, value.label, currentValue !== value.data ? responseFacetDetails[0].count > 0 && " (".concat(responseFacetDetails[0].count, ")") : '');
-      } else {
-        return null;
-      }
-    })));
-  } else {
-    return null;
-  }
-}
-
-Finder__Select.propTypes = {
-  facet: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
-  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object),
-  update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
-  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object)
-};
-/* harmony default export */ __webpack_exports__["default"] = (Finder__Select);
 
 /***/ }),
 
