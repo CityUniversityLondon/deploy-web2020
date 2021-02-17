@@ -66090,6 +66090,7 @@ button
 }
 
 @media (max-width: 767px) {
+    .profile .profile--staff .profile--global__personal-links,
     .profile .profile--academic .profile--global__personal-links {
         margin-top: 2rem;
     }
