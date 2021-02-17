@@ -43866,6 +43866,9 @@ blockquote footer cite {
 }
 
 @media (min-width: 768px) {
+    .js .slider[data-cardsperrow='3'][data-small='true'] {
+        justify-content: center;
+    }
     .js .slider[data-cardsperrow='3'][data-small='true'] .slide {
         margin-right: 1.25rem;
         width: calc(33% - 1.25rem);
@@ -50073,6 +50076,22 @@ button
     color: #001323;
 }
 
+.chart--blue path:nth-child(3) {
+    stroke: url(#striped);
+}
+
+.chart--blue .chart__legend__item:nth-child(3) .fa.fa-circle {
+    color: url(#striped);
+}
+
+.chart--blue path:nth-child(4) {
+    stroke: #213d50;
+}
+
+.chart--blue .chart__legend__item:nth-child(4) .fa.fa-circle {
+    color: #213d50;
+}
+
 .chart--red path:nth-child(1) {
     stroke: #e93745;
 }
@@ -50082,11 +50101,27 @@ button
 }
 
 .chart--red path:nth-child(2) {
-    stroke: #5b0b1b;
+    stroke: #370612;
 }
 
 .chart--red .chart__legend__item:nth-child(2) .fa.fa-circle {
-    color: #5b0b1b;
+    color: #370612;
+}
+
+.chart--red path:nth-child(3) {
+    stroke: url(#striped);
+}
+
+.chart--red .chart__legend__item:nth-child(3) .fa.fa-circle {
+    color: url(#striped);
+}
+
+.chart--red path:nth-child(4) {
+    stroke: #9e111c;
+}
+
+.chart--red .chart__legend__item:nth-child(4) .fa.fa-circle {
+    color: #9e111c;
 }
 
 .chart--pink path:nth-child(1) {
@@ -50098,11 +50133,39 @@ button
 }
 
 .chart--pink path:nth-child(2) {
-    stroke: #5d184a;
+    stroke: #250020;
 }
 
 .chart--pink .chart__legend__item:nth-child(2) .fa.fa-circle {
-    color: #5d184a;
+    color: #250020;
+}
+
+.chart--pink path:nth-child(3) {
+    stroke: url(#striped);
+}
+
+.chart--pink .chart__legend__item:nth-child(3) .fa.fa-circle {
+    color: url(#striped);
+}
+
+.chart--pink path:nth-child(4) {
+    stroke: #7c2062;
+}
+
+.chart--pink .chart__legend__item:nth-child(4) .fa.fa-circle {
+    color: #7c2062;
+}
+
+.pie-chart-block .chart__legend__item:nth-child(3) .fa.fa-circle::before {
+    display: none;
+}
+
+.pie-chart-block .chart__legend__item:nth-child(3) svg {
+    display: block;
+}
+
+.pie-chart-block .chart__legend__item:nth-child(4) svg {
+    display: none;
 }
 
 .chart--bar--horizontal.chart--pink .chart--bar--horizontal__value {
@@ -57222,7 +57285,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .content-hub__block-three .news-events .content-hub__block-three__happening .related-content {
     grid-column: 1 / -1;
-    grid-column-gap: 0;
 }
 
 @media (max-width: 768px) {
@@ -57242,17 +57304,14 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 @media (min-width: 768px) {
     .content-hub__block-three .news-events .content-hub__block-three__happening .related-content {
-        grid-column-gap: 1rem;
         grid-column: 2 / 24;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
-@media (min-width: 901px) {
-    .content-hub__block-three .news-events .content-hub__block-three__happening .related-content {
-        grid-column-gap: 1.5rem;
-    }
+.content-hub__block-three .news-events .content-hub__block-three__happening .slider__controls {
+    grid-column: 1 / -1;
 }
 
 .content-hub__block-three .news-events:before {
@@ -57479,7 +57538,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 @media (min-width: 768px) {
     .content-hub__block-three .news-events h2 {
-        grid-column: 6 / span 14;
+        grid-column: 2 / span 11;
     }
 }
 
@@ -65858,25 +65917,17 @@ button
 
 .profile .profile--global__other-contact-methods {
     margin-top: 2rem;
+    display: flex;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
     .profile .profile--global__other-contact-methods {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 2rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .profile .profile--global__other-contact-methods {
-        grid-column: 2 / span 14;
+        flex-direction: column;
     }
 }
 
 @media (min-width: 1280px) {
     .profile .profile--global__other-contact-methods {
-        grid-column: 8 / span 8;
         margin-top: 1rem;
     }
 }
@@ -65937,6 +65988,20 @@ button
 .profile .profile--global__other-contact-methods .profile--global__details__content i,
 .profile .profile--global__other-contact-methods .profile--global__details__content em {
     font-style: italic;
+}
+
+.profile .profile--global__other-contact-methods .profile--global__details {
+    flex: 1;
+}
+
+.profile .profile--global__other-contact-methods .profile--global__personal-links {
+    flex: 1;
+}
+
+@media (min-width: 769px) {
+    .profile .profile--global__other-contact-methods .profile--global__personal-links {
+        margin-left: 1.5rem;
+    }
 }
 
 .profile .tabs--profile {
@@ -66324,6 +66389,17 @@ button
 .profile--staff,
 .profile--academic {
     background: #ffffff;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 1279px) {
+    .profile--staff,
+    .profile--academic {
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 768px) {
@@ -66337,23 +66413,6 @@ button
     .profile--staff,
     .profile--academic {
         grid-column: 2 / span 16;
-        display: grid;
-        grid-template-columns: repeat(16, 1fr);
-        grid-column-gap: 0;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 768px) {
-    .profile--staff,
-    .profile--academic {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 901px) {
-    .profile--staff,
-    .profile--academic {
-        grid-column-gap: 1.5rem;
     }
 }
 
@@ -66390,6 +66449,37 @@ button
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+.profile--staff .profile--global__contact-details,
+.profile--academic .profile--global__contact-details {
+    flex: 1.4;
+}
+
+@media (max-width: 1279px) {
+    .profile--staff .profile--global__contact-details,
+    .profile--academic .profile--global__contact-details {
+        flex: 1;
+    }
+}
+
+.profile--staff .profile--global__other-contact-methods,
+.profile--academic .profile--global__other-contact-methods {
+    flex: 1;
+    margin-left: 2rem;
+}
+
+@media (max-width: 1279px) {
+    .profile--staff .profile--global__other-contact-methods,
+    .profile--academic .profile--global__other-contact-methods {
+        flex: 1;
+        margin-left: 0;
+    }
+}
+
+.profile--staff .profile--global__other-contact-methods.columns-2,
+.profile--academic .profile--global__other-contact-methods.columns-2 {
+    flex: 2;
 }
 
 .research-degree .highlighted-border--left {
