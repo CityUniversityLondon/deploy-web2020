@@ -55014,16 +55014,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .wrapper--destination-leavers-HE .wrapper--destination-leavers-HE__info-text {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
-}
-
-@media (min-width: 901px) {
-    .wrapper--destination-leavers-HE .wrapper--destination-leavers-HE__info-text {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 }
 
 .destination .destination-content {
@@ -55046,13 +55038,15 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     border-top: 0.0625rem solid #cbcbcb;
 }
 
-.destination-leaver {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
+@media (min-width: 768px) {
+    .destination-leaver {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 768px) and (min-width: 901px) {
     .destination-leaver {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
