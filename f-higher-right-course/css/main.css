@@ -55005,25 +55005,25 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     margin-top: 1rem;
 }
 
-.wrapper--destination-leavers-HE .wrapper--finder__filters--desktop .finder__filters .wrapper--destination-leavers-HE__info-text {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
-}
-
-@media (min-width: 901px) {
-    .wrapper--destination-leavers-HE .wrapper--finder__filters--desktop .finder__filters .wrapper--destination-leavers-HE__info-text {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
 .wrapper--destination-leavers-HE .wrapper--finder_filters--filters {
     display: block;
 }
 
 .wrapper--destination-leavers-HE .wrapper--finder__filters--desktop .finder__filters .finder__filter:not(.finder__tag) {
     width: 100%;
+}
+
+.wrapper--destination-leavers-HE .wrapper--destination-leavers-HE__info-text {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+}
+
+@media (min-width: 901px) {
+    .wrapper--destination-leavers-HE .wrapper--destination-leavers-HE__info-text {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 .destination .destination-content {
@@ -55065,18 +55065,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     padding-right: initial;
     margin-left: initial;
     margin-right: initial;
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    .destination-leaver .chart-row {
-        display: block;
-    }
-    .destination-leaver .chart-row .chart {
-        width: 100%;
-    }
-    .destination-leaver .chart-row .chart__columns {
-        display: flex;
-    }
 }
 
 @media (min-width: 1024px) {
