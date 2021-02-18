@@ -54888,7 +54888,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     grid-column: 1/-1;
 }
 
-@media (min-width: 433px) {
+@media (min-width: 769px) {
     .destination-leaver .destination-leaver-content {
         display: flex;
         flex-wrap: wrap;
@@ -54991,8 +54991,10 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
-.destination-leaver .chart-row .chart {
-    width: 50%;
+@media (min-width: 1024px) {
+    .destination-leaver .chart-row .chart {
+        width: 50%;
+    }
 }
 
 .destination-leaver .chart-row .chart path:nth-child(1) {
@@ -55008,7 +55010,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .destination-leaver .chart-row .chart path:nth-child(4) {
-    stroke: #541b85;
+    stroke: #6d6562;
 }
 
 .destination-leaver .chart-row .chart path:nth-child(5) {
@@ -55036,7 +55038,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .destination-leaver .chart-row .chart .chart__legend__item:nth-child(4) .fa.fa-circle {
-    color: #541b85;
+    color: #6d6562;
 }
 
 .destination-leaver .chart-row .chart .chart__legend__item:nth-child(5) .fa.fa-circle {

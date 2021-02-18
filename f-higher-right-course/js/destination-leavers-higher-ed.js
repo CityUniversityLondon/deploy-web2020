@@ -294,7 +294,7 @@ function Finder__Filters(props) {
   }), ' ', 'Use the filter to show data that is of interest to you'), clearFiltersMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "wrapper--destination-leavers-HE__info-text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "If you do not see the course you are interested in, please contact the", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: "https://web2020.city.ac.uk/prospective-students/career-development"
+    href: "https://web2020.city.ac.uk/prospective-students/career-development/job-prospects-and-career-destinations"
   }, "careers department"), ' ', "at City for full details")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "wrapper--finder_filters--filters"
   }, props.config.facetLabels.map(facet => {
@@ -409,7 +409,7 @@ function Finder__FiltersMobile(props) {
     }
   }, [display, focusTrap]);
   const totalMatching = props.response && props.response.summary && props.response.summary.totalMatching;
-  const totalMatchingMessage = totalMatching ? "Show ".concat(totalMatching, " Graduate Outcomes") : 'Close';
+  const totalMatchingMessage = totalMatching ? 'Show Graduate Outcomes' : 'Close';
   const filtersCount = props.config.displaySort ? props.config.sort[0].type !== props.query.sortType || Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filters", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "wrapper--finder__filters--mobile__toggle__count"
   }, "(", props.config.sort[0].type !== props.query.sortType ? Object.keys(props.query.facets).length + 1 : Object.keys(props.query.facets).length, ")")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filter") : Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Filters", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
@@ -443,7 +443,7 @@ function Finder__FiltersMobile(props) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
     className: "wrapper--finder__filters--mobile__filters__content--text"
   }, "If you do not see the course you are interested in, please contact the", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
-    href: "https://web2020.city.ac.uk/prospective-students/career-development"
+    href: "https://web2020.city.ac.uk/prospective-students/career-development/job-prospects-and-career-destinations"
   }, "careers department"), ' ', "at City for full details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "wrapper--finder__filters--mobile__apply"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
@@ -869,7 +869,7 @@ function Finder__Chart(props) {
     let text = "".concat(e[0], ": ").concat(Math.round((100 * val / sum + Number.EPSILON) * 100) / 100, "%");
     let randomNum = "legend-".concat(props.title).concat(e[0].replace(/\s+/g, '')).concat(e[1]).concat(props.chartId);
 
-    if (i === 8) {
+    if (i === 7) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
         key: randomNum,
         className: "chart__legend__item"
@@ -902,7 +902,7 @@ function Finder__Chart(props) {
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "chart"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h5", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
     className: "chart__title"
   }, props.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "chart__columns"
@@ -1061,7 +1061,7 @@ function Finder__Results__Generic(props) {
       title: c[0].title,
       id: c[0].id,
       chartsLength: chartsLength,
-      chartId: c[0].id
+      chartId: parseInt(c[0].id)
     });
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "destination-leaver-content",
@@ -1255,39 +1255,29 @@ function Finder__Results(props) {
   const updating = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__results__updating",
     "aria-live": "polite"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Please select a course level")),
-        course = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__results__updating",
-    "aria-live": "polite"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Please select a course"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Please select a course level"));
   const resultsClass = 'resultsVariant' in props.config ? "finder__results__list finder__results__list--".concat(props.config.resultsVariant) : 'finder__results__list';
 
   if (props.response && props.query.facets.level && props.query.facets.t) {
     const results = props.response.bestBets.length > 0 || props.response.results.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       start: props.response.summary.currStart,
       className: resultsClass
-    }, props.response.results.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_content_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_content_container__WEBPACK_IMPORTED_MODULE_2__["default"], {
       bestBet: false,
-      details: card,
-      key: card.docNum,
+      details: props.response.results[0],
+      key: props.response.results[0].docNum,
       type: props.type,
       query: props.query
-    }))) : null; // render either the results, or a spinner while we wait for Funnelback
+    })) : null; // render either the results, or a spinner while we wait for Funnelback
 
     const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, results);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "finder__results"
     }, resultsContent);
   } else {
-    if (props.query.facets.level) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "finder__results"
-      }, course);
-    } else {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "finder__results"
-      });
-    }
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "finder__results"
+    });
   }
 }
 
@@ -1614,7 +1604,11 @@ function DestinationLeaversHE(props) {
     response: funnelbackResponse,
     update: updater,
     clear: clear
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_results_results__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
+    className: "wrapper--destination-leavers-HE__info-text"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("p", null, "If you do not see the course you are interested in, please contact the", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("a", {
+    href: "https://web2020.city.ac.uk/prospective-students/career-development/job-prospects-and-career-destinations"
+  }, "careers department"), ' ', "at City for full details")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_results_results__WEBPACK_IMPORTED_MODULE_15__["default"], {
     clear: clear,
     config: props.config,
     query: query,
