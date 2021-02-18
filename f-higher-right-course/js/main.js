@@ -3855,7 +3855,7 @@ class Defaultcarousel extends _carousel_constructor__WEBPACK_IMPORTED_MODULE_3__
 
     if (thumbindex !== 0 && thumbnailLength > 4) {
       let galleria = thumbnailLi.getElementsByTagName('li');
-      galleria.forEach((e, i) => {
+      Array.from(galleria).forEach((e, i) => {
         if (i < thumbindex - 1) {
           let style = window.getComputedStyle ? getComputedStyle(e, null) : e.currentStyle;
           let width = parseInt(style.width) + parseInt(style.marginRight);
