@@ -439,7 +439,7 @@ function Finder__FiltersMobile(props) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
     className: "wrapper--finder__filters--mobile__filters__content--text"
   }, "If you do not see the course you are interested in, please contact the", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
-    href: "https://web2020.city.ac.uk/prospective-students/career-development/job-prospects-and-career-destinations"
+    href: "/prospective-students/career-development/careers-team"
   }, "careers department"), ' ', "at City for full details"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "wrapper--finder__filters--mobile__apply"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
@@ -1599,7 +1599,7 @@ function DestinationLeaversHE(props) {
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("div", {
     className: "wrapper--destination-leavers-HE__info-text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("p", null, "If you do not see the course you are interested in, please contact the", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("a", {
-    href: "https://web2020.city.ac.uk/prospective-students/career-development/job-prospects-and-career-destinations"
+    href: "/prospective-students/career-development/careers-team"
   }, "careers department"), ' ', "at City for full details")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_results_results__WEBPACK_IMPORTED_MODULE_15__["default"], {
     clear: clear,
     config: props.config,
