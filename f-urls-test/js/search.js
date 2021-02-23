@@ -1765,7 +1765,7 @@ __webpack_require__.r(__webpack_exports__);
 
  // FIXME for go live
 
-const siteUrl = 'web2020.city.ac.uk';
+const siteUrl = 'web2021.city.ac.uk';
 
 function genericResult(result, type) {
   const thumbnail = result.metaData.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2503,7 +2503,7 @@ __webpack_require__.r(__webpack_exports__);
 
  // FIXME for go live
 
-const siteUrl = 'web2020.city.ac.uk';
+const siteUrl = 'web2021.city.ac.uk';
 const endKey = 'End',
       homeKey = 'Home',
       arrowLeft = 'ArrowLeft',
@@ -3007,7 +3007,7 @@ function InlineSearch(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "header-logo__responsive"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
-    href: "https://web2020.city.ac.uk",
+    href: "https://web2021.city.ac.uk",
     rel: "home"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("img", {
     className: "logo",
