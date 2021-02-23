@@ -2777,7 +2777,7 @@ function createMap(mapContainer) {
       markerConfig.name = $self.getElementsByTagName('title')[0].textContent;
       markerConfig.linkHref = $self.getElementsByTagName('link')[0].textContent;
       markerConfig.urlCustom = $self.getElementsByTagName('urlCustom')[0].textContent;
-      markerConfig.icon = 'https://web2020.city.ac.uk/?a=537733'; // default city marker  
+      markerConfig.icon = '/?a=537733'; // default city marker  
 
       markerConfig.category = $self.getElementsByTagName('category')[0].textContent;
       markerConfig.buildingPrefix = $self.getElementsByTagName('roomPrefix')[0].textContent;
