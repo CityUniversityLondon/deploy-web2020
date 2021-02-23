@@ -1948,7 +1948,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
  */
 
-const baseUrl = 'https://city.ac.uk/web-services',
+const baseUrl = 'https://www.city.ac.uk/web-services',
       findRootUrl = '/funnelback-find',
       suggestRootUrl = '/funnelback-suggest',
       maximumSuggestions = 100,
